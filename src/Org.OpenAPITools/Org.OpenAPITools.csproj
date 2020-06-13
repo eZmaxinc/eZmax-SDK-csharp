@@ -12,7 +12,7 @@ Contact: support@ezmax.ca
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A2E81F8D-F0B2-4124-91D2-7835890E6B14}</ProjectGuid>
+    <ProjectGuid>{1C6E7FCE-4B5A-4BE3-BF40-BDDA3D3D6A2C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Org.OpenAPITools</RootNamespace>
