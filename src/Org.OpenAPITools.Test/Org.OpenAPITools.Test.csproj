@@ -81,7 +81,7 @@ Contact: support@ezmax.ca
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\Org.OpenAPITools\Org.OpenAPITools.csproj">
-          <Project>{42466398-B251-4629-B20F-E58E0525F7BB}</Project>
+          <Project>{10338CB5-03A0-4F62-8E2D-FB0EFD8C91F5}</Project>
           <Name>Org.OpenAPITools</Name>
       </ProjectReference>
   </ItemGroup>
