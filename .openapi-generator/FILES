@@ -19,6 +19,7 @@ docs/CommonWebhook.md
 docs/ContactRequest.md
 docs/ContactRequestCompound.md
 docs/ContactRequestCompoundAllOf.md
+docs/ContactinformationsRequest.md
 docs/ContactinformationsRequestCompound.md
 docs/EmailRequest.md
 docs/EzsigndocumentApi.md
@@ -119,6 +120,7 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ContactRequestCompoundAllOfTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ContactRequestCompoundTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ContactRequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ContactinformationsRequestCompoundTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ContactinformationsRequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/EmailRequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/EzsigndocumentCreateObjectV1RequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/EzsigndocumentCreateObjectV1ResponseMPayloadTests.cs
@@ -220,6 +222,7 @@ src/eZmaxinc/eZmax-SDK-csharp/Model/CommonWebhook.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/ContactRequest.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/ContactRequestCompound.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/ContactRequestCompoundAllOf.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/ContactinformationsRequest.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/ContactinformationsRequestCompound.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/EmailRequest.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/EzsigndocumentCreateObjectV1Request.cs
