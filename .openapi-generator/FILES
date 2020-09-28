@@ -10,6 +10,8 @@ docs/ActivesessionGetCurrentV1ResponseMPayload.md
 docs/AddressRequest.md
 docs/AttemptResponse.md
 docs/CommonAudit.md
+docs/CommonGetAutocompleteV1Response.md
+docs/CommonGetAutocompleteV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
 docs/CommonResponseObjDebug.md
@@ -89,6 +91,7 @@ docs/FranchisereferalincomeCreateObjectV1Response.md
 docs/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
 docs/FranchisereferalincomeRequest.md
 docs/FranchisereferalincomeRequestCompound.md
+docs/PeriodApi.md
 docs/PhoneRequest.md
 docs/WebhookEzsignDocumentCompleted.md
 docs/WebhookEzsignDocumentCompletedAllOf.md
@@ -105,11 +108,14 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/Api/EzsignfolderApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/EzsignfoldersignerassociationApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/EzsignsignatureApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/FranchisereferalincomeApiTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Api/PeriodApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ActivesessionGetCurrentV1ResponseMPayloadTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ActivesessionGetCurrentV1ResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/AddressRequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/AttemptResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/CommonAuditTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/CommonGetAutocompleteV1ResponseMPayloadTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/CommonGetAutocompleteV1ResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/CommonResponseErrorTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/CommonResponseObjDebugPayloadTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/CommonResponseObjDebugTests.cs
@@ -199,6 +205,7 @@ src/eZmaxinc/eZmax-SDK-csharp/Api/EzsignfolderApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/EzsignfoldersignerassociationApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/EzsignsignatureApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/FranchisereferalincomeApi.cs
+src/eZmaxinc/eZmax-SDK-csharp/Api/PeriodApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Client/ApiClient.cs
 src/eZmaxinc/eZmax-SDK-csharp/Client/ApiException.cs
 src/eZmaxinc/eZmax-SDK-csharp/Client/ApiResponse.cs
@@ -213,6 +220,8 @@ src/eZmaxinc/eZmax-SDK-csharp/Model/ActivesessionGetCurrentV1ResponseMPayload.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/AddressRequest.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/AttemptResponse.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/CommonAudit.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/CommonGetAutocompleteV1Response.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/CommonGetAutocompleteV1ResponseMPayload.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/CommonResponse.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/CommonResponseError.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/CommonResponseObjDebug.cs
