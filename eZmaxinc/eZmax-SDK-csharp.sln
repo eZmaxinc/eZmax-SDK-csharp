@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eZmaxinc/eZmax-SDK-csharp", "src\eZmaxinc/eZmax-SDK-csharp\eZmaxinc/eZmax-SDK-csharp.csproj", "{9E5441E4-EF26-420E-8A73-A56EB383A405}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eZmaxinc/eZmax-SDK-csharp", "src\eZmaxinc/eZmax-SDK-csharp\eZmaxinc/eZmax-SDK-csharp.csproj", "{3F2E735F-EDC4-43BE-A523-43C96DE74D14}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eZmaxinc/eZmax-SDK-csharp.Test", "src\eZmaxinc/eZmax-SDK-csharp.Test\eZmaxinc/eZmax-SDK-csharp.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9E5441E4-EF26-420E-8A73-A56EB383A405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E5441E4-EF26-420E-8A73-A56EB383A405}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E5441E4-EF26-420E-8A73-A56EB383A405}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E5441E4-EF26-420E-8A73-A56EB383A405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F2E735F-EDC4-43BE-A523-43C96DE74D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F2E735F-EDC4-43BE-A523-43C96DE74D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F2E735F-EDC4-43BE-A523-43C96DE74D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F2E735F-EDC4-43BE-A523-43C96DE74D14}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

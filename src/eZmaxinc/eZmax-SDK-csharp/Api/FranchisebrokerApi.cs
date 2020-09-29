@@ -22,70 +22,74 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IPeriodApi : IApiAccessor
+    public interface IFranchisebrokerApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// Retrieve Periods and IDs
+        /// Retrieve Franchisebrokers and IDs
         /// </summary>
         /// <remarks>
-        /// Get the list of Periods to be used in a dropdown or autocomplete control.
+        /// Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The types of Periods to return</param>
+        /// <param name="sSelector">The type of Franchisebrokers to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
-        CommonGetAutocompleteV1Response PeriodGetAutocompleteV1 (string sSelector);
+        CommonGetAutocompleteV1Response FranchisebrokerGetAutocompleteV1 (string sSelector, string sQuery = default(string));
 
         /// <summary>
-        /// Retrieve Periods and IDs
+        /// Retrieve Franchisebrokers and IDs
         /// </summary>
         /// <remarks>
-        /// Get the list of Periods to be used in a dropdown or autocomplete control.
+        /// Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The types of Periods to return</param>
+        /// <param name="sSelector">The type of Franchisebrokers to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
-        ApiResponse<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1WithHttpInfo (string sSelector);
+        ApiResponse<CommonGetAutocompleteV1Response> FranchisebrokerGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Retrieve Periods and IDs
+        /// Retrieve Franchisebrokers and IDs
         /// </summary>
         /// <remarks>
-        /// Get the list of Periods to be used in a dropdown or autocomplete control.
+        /// Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The types of Periods to return</param>
+        /// <param name="sSelector">The type of Franchisebrokers to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
-        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1Async (string sSelector, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> FranchisebrokerGetAutocompleteV1Async (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Retrieve Periods and IDs
+        /// Retrieve Franchisebrokers and IDs
         /// </summary>
         /// <remarks>
-        /// Get the list of Periods to be used in a dropdown or autocomplete control.
+        /// Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The types of Periods to return</param>
+        /// <param name="sSelector">The type of Franchisebrokers to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> PeriodGetAutocompleteV1WithHttpInfoAsync (string sSelector, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> FranchisebrokerGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class PeriodApi : IPeriodApi
+    public partial class FranchisebrokerApi : IFranchisebrokerApi
     {
         private eZmaxinc/eZmax-SDK-csharp.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PeriodApi"/> class.
+        /// Initializes a new instance of the <see cref="FranchisebrokerApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public PeriodApi(String basePath)
+        public FranchisebrokerApi(String basePath)
         {
             this.Configuration = new eZmaxinc/eZmax-SDK-csharp.Client.Configuration { BasePath = basePath };
 
@@ -93,10 +97,10 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PeriodApi"/> class
+        /// Initializes a new instance of the <see cref="FranchisebrokerApi"/> class
         /// </summary>
         /// <returns></returns>
-        public PeriodApi()
+        public FranchisebrokerApi()
         {
             this.Configuration = eZmaxinc/eZmax-SDK-csharp.Client.Configuration.Default;
 
@@ -104,12 +108,12 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PeriodApi"/> class
+        /// Initializes a new instance of the <see cref="FranchisebrokerApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public PeriodApi(eZmaxinc/eZmax-SDK-csharp.Client.Configuration configuration = null)
+        public FranchisebrokerApi(eZmaxinc/eZmax-SDK-csharp.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = eZmaxinc/eZmax-SDK-csharp.Client.Configuration.Default;
@@ -183,30 +187,32 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
         }
 
         /// <summary>
-        /// Retrieve Periods and IDs Get the list of Periods to be used in a dropdown or autocomplete control.
+        /// Retrieve Franchisebrokers and IDs Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The types of Periods to return</param>
+        /// <param name="sSelector">The type of Franchisebrokers to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
-        public CommonGetAutocompleteV1Response PeriodGetAutocompleteV1 (string sSelector)
+        public CommonGetAutocompleteV1Response FranchisebrokerGetAutocompleteV1 (string sSelector, string sQuery = default(string))
         {
-             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = PeriodGetAutocompleteV1WithHttpInfo(sSelector);
+             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = FranchisebrokerGetAutocompleteV1WithHttpInfo(sSelector, sQuery);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Retrieve Periods and IDs Get the list of Periods to be used in a dropdown or autocomplete control.
+        /// Retrieve Franchisebrokers and IDs Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The types of Periods to return</param>
+        /// <param name="sSelector">The type of Franchisebrokers to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
-        public ApiResponse<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1WithHttpInfo (string sSelector)
+        public ApiResponse<CommonGetAutocompleteV1Response> FranchisebrokerGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
-                throw new ApiException(400, "Missing required parameter 'sSelector' when calling PeriodApi->PeriodGetAutocompleteV1");
+                throw new ApiException(400, "Missing required parameter 'sSelector' when calling FranchisebrokerApi->FranchisebrokerGetAutocompleteV1");
 
-            var localVarPath = "/1/object/period/getAutocomplete/{sSelector}";
+            var localVarPath = "/1/object/franchisebroker/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -228,6 +234,7 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
+            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -244,7 +251,7 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PeriodGetAutocompleteV1", localVarResponse);
+                Exception exception = ExceptionFactory("FranchisebrokerGetAutocompleteV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -254,33 +261,35 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
         }
 
         /// <summary>
-        /// Retrieve Periods and IDs Get the list of Periods to be used in a dropdown or autocomplete control.
+        /// Retrieve Franchisebrokers and IDs Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The types of Periods to return</param>
+        /// <param name="sSelector">The type of Franchisebrokers to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
-        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1Async (string sSelector, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> FranchisebrokerGetAutocompleteV1Async (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await PeriodGetAutocompleteV1WithHttpInfoAsync(sSelector, cancellationToken);
+             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await FranchisebrokerGetAutocompleteV1WithHttpInfoAsync(sSelector, sQuery, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Retrieve Periods and IDs Get the list of Periods to be used in a dropdown or autocomplete control.
+        /// Retrieve Franchisebrokers and IDs Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The types of Periods to return</param>
+        /// <param name="sSelector">The type of Franchisebrokers to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> PeriodGetAutocompleteV1WithHttpInfoAsync (string sSelector, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> FranchisebrokerGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
-                throw new ApiException(400, "Missing required parameter 'sSelector' when calling PeriodApi->PeriodGetAutocompleteV1");
+                throw new ApiException(400, "Missing required parameter 'sSelector' when calling FranchisebrokerApi->FranchisebrokerGetAutocompleteV1");
 
-            var localVarPath = "/1/object/period/getAutocomplete/{sSelector}";
+            var localVarPath = "/1/object/franchisebroker/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -302,6 +311,7 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
+            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -318,7 +328,7 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PeriodGetAutocompleteV1", localVarResponse);
+                Exception exception = ExceptionFactory("FranchisebrokerGetAutocompleteV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 

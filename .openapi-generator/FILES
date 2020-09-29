@@ -85,6 +85,7 @@ docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
 docs/FieldEPhoneType.md
+docs/FranchisebrokerApi.md
 docs/FranchisereferalincomeApi.md
 docs/FranchisereferalincomeCreateObjectV1Request.md
 docs/FranchisereferalincomeCreateObjectV1Response.md
@@ -107,6 +108,7 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/Api/EzsigndocumentApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/EzsignfolderApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/EzsignfoldersignerassociationApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/EzsignsignatureApiTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Api/FranchisebrokerApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/FranchisereferalincomeApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/PeriodApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ActivesessionGetCurrentV1ResponseMPayloadTests.cs
@@ -204,6 +206,7 @@ src/eZmaxinc/eZmax-SDK-csharp/Api/EzsigndocumentApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/EzsignfolderApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/EzsignfoldersignerassociationApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/EzsignsignatureApi.cs
+src/eZmaxinc/eZmax-SDK-csharp/Api/FranchisebrokerApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/FranchisereferalincomeApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/PeriodApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Client/ApiClient.cs
