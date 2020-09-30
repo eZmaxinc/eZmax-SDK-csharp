@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## PeriodGetAutocompleteV1
 
-> CommonGetAutocompleteV1Response PeriodGetAutocompleteV1 (string sSelector)
+> CommonGetAutocompleteV1Response PeriodGetAutocompleteV1 (string sSelector, string sQuery = null)
 
 Retrieve Periods and IDs
 
@@ -39,11 +39,12 @@ namespace Example
 
             var apiInstance = new PeriodApi(Configuration.Default);
             var sSelector = sSelector_example;  // string | The types of Periods to return
+            var sQuery = sQuery_example;  // string | Allow to filter on the option value (optional) 
 
             try
             {
                 // Retrieve Periods and IDs
-                CommonGetAutocompleteV1Response result = apiInstance.PeriodGetAutocompleteV1(sSelector);
+                CommonGetAutocompleteV1Response result = apiInstance.PeriodGetAutocompleteV1(sSelector, sQuery);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -63,6 +64,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **string**| The types of Periods to return | 
+ **sQuery** | **string**| Allow to filter on the option value | [optional] 
 
 ### Return type
 

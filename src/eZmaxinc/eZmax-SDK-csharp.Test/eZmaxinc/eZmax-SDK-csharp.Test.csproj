@@ -4,7 +4,7 @@ eZmax API Definition
 
 This API expose all the functionnalities for the eZmax and eZsign application.  We provide SDKs for customers. They are generated using OpenAPI codegen, we encourage customers to use them as we also provide samples for them.  You can choose to build your own implementation manually or can use any compatible OpenAPI 3.0 generator like Swagger Codegen, OpenAPI codegen or any commercial generators.  If you need helping understanding how to use this API, don't waste too much time looking for it. Contact support-api@ezmax.ca, we're here to help. We are developpers so we know programmers don't like bad documentation. If you don't find what you need in the documentation, let us know, we'll improve it and put you rapidly up on track.
 
-The version of the OpenAPI document: 1.0.16
+The version of the OpenAPI document: 1.0.17
 Contact: support-api@ezmax.ca
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -81,7 +81,7 @@ Contact: support-api@ezmax.ca
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\eZmaxinc/eZmax-SDK-csharp\eZmaxinc/eZmax-SDK-csharp.csproj">
-          <Project>{3F2E735F-EDC4-43BE-A523-43C96DE74D14}</Project>
+          <Project>{E4F7ACC3-EE31-4C09-819F-4CEB49065C3A}</Project>
           <Name>eZmaxinc/eZmax-SDK-csharp</Name>
       </ProjectReference>
   </ItemGroup>
