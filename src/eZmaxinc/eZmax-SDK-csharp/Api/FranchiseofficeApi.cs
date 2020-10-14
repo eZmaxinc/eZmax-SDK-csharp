@@ -22,70 +22,74 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IFranchisereferalincomeApi : IApiAccessor
+    public interface IFranchiseofficeApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a new Franchisereferalincome
+        /// Retrieve Franchiseoffices and IDs
         /// </summary>
         /// <remarks>
-        /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+        /// Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
-        /// <returns>FranchisereferalincomeCreateObjectV1Response</returns>
-        FranchisereferalincomeCreateObjectV1Response FranchisereferalincomeCreateObjectV1 (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request);
+        /// <param name="sSelector">The type of Franchiseoffices to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <returns>CommonGetAutocompleteV1Response</returns>
+        CommonGetAutocompleteV1Response FranchiseofficeGetAutocompleteV1 (string sSelector, string sQuery = default(string));
 
         /// <summary>
-        /// Create a new Franchisereferalincome
+        /// Retrieve Franchiseoffices and IDs
         /// </summary>
         /// <remarks>
-        /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+        /// Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
-        /// <returns>ApiResponse of FranchisereferalincomeCreateObjectV1Response</returns>
-        ApiResponse<FranchisereferalincomeCreateObjectV1Response> FranchisereferalincomeCreateObjectV1WithHttpInfo (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request);
+        /// <param name="sSelector">The type of Franchiseoffices to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
+        ApiResponse<CommonGetAutocompleteV1Response> FranchiseofficeGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a new Franchisereferalincome
+        /// Retrieve Franchiseoffices and IDs
         /// </summary>
         /// <remarks>
-        /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+        /// Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
+        /// <param name="sSelector">The type of Franchiseoffices to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of FranchisereferalincomeCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<FranchisereferalincomeCreateObjectV1Response> FranchisereferalincomeCreateObjectV1Async (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of CommonGetAutocompleteV1Response</returns>
+        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> FranchiseofficeGetAutocompleteV1Async (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Create a new Franchisereferalincome
+        /// Retrieve Franchiseoffices and IDs
         /// </summary>
         /// <remarks>
-        /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+        /// Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
+        /// <param name="sSelector">The type of Franchiseoffices to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (FranchisereferalincomeCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FranchisereferalincomeCreateObjectV1Response>> FranchisereferalincomeCreateObjectV1WithHttpInfoAsync (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> FranchiseofficeGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class FranchisereferalincomeApi : IFranchisereferalincomeApi
+    public partial class FranchiseofficeApi : IFranchiseofficeApi
     {
         private eZmaxinc/eZmax-SDK-csharp.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FranchisereferalincomeApi"/> class.
+        /// Initializes a new instance of the <see cref="FranchiseofficeApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public FranchisereferalincomeApi(String basePath)
+        public FranchiseofficeApi(String basePath)
         {
             this.Configuration = new eZmaxinc/eZmax-SDK-csharp.Client.Configuration { BasePath = basePath };
 
@@ -93,10 +97,10 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FranchisereferalincomeApi"/> class
+        /// Initializes a new instance of the <see cref="FranchiseofficeApi"/> class
         /// </summary>
         /// <returns></returns>
-        public FranchisereferalincomeApi()
+        public FranchiseofficeApi()
         {
             this.Configuration = eZmaxinc/eZmax-SDK-csharp.Client.Configuration.Default;
 
@@ -104,12 +108,12 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FranchisereferalincomeApi"/> class
+        /// Initializes a new instance of the <see cref="FranchiseofficeApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public FranchisereferalincomeApi(eZmaxinc/eZmax-SDK-csharp.Client.Configuration configuration = null)
+        public FranchiseofficeApi(eZmaxinc/eZmax-SDK-csharp.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = eZmaxinc/eZmax-SDK-csharp.Client.Configuration.Default;
@@ -183,30 +187,32 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
         }
 
         /// <summary>
-        /// Create a new Franchisereferalincome The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+        /// Retrieve Franchiseoffices and IDs Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
-        /// <returns>FranchisereferalincomeCreateObjectV1Response</returns>
-        public FranchisereferalincomeCreateObjectV1Response FranchisereferalincomeCreateObjectV1 (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request)
+        /// <param name="sSelector">The type of Franchiseoffices to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <returns>CommonGetAutocompleteV1Response</returns>
+        public CommonGetAutocompleteV1Response FranchiseofficeGetAutocompleteV1 (string sSelector, string sQuery = default(string))
         {
-             ApiResponse<FranchisereferalincomeCreateObjectV1Response> localVarResponse = FranchisereferalincomeCreateObjectV1WithHttpInfo(franchisereferalincomeCreateObjectV1Request);
+             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = FranchiseofficeGetAutocompleteV1WithHttpInfo(sSelector, sQuery);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create a new Franchisereferalincome The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+        /// Retrieve Franchiseoffices and IDs Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
-        /// <returns>ApiResponse of FranchisereferalincomeCreateObjectV1Response</returns>
-        public ApiResponse<FranchisereferalincomeCreateObjectV1Response> FranchisereferalincomeCreateObjectV1WithHttpInfo (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request)
+        /// <param name="sSelector">The type of Franchiseoffices to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
+        public ApiResponse<CommonGetAutocompleteV1Response> FranchiseofficeGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string))
         {
-            // verify the required parameter 'franchisereferalincomeCreateObjectV1Request' is set
-            if (franchisereferalincomeCreateObjectV1Request == null)
-                throw new ApiException(400, "Missing required parameter 'franchisereferalincomeCreateObjectV1Request' when calling FranchisereferalincomeApi->FranchisereferalincomeCreateObjectV1");
+            // verify the required parameter 'sSelector' is set
+            if (sSelector == null)
+                throw new ApiException(400, "Missing required parameter 'sSelector' when calling FranchiseofficeApi->FranchiseofficeGetAutocompleteV1");
 
-            var localVarPath = "/1/object/franchisereferalincome";
+            var localVarPath = "/1/object/franchiseoffice/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -216,7 +222,6 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -228,14 +233,8 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (franchisereferalincomeCreateObjectV1Request != null && franchisereferalincomeCreateObjectV1Request.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(franchisereferalincomeCreateObjectV1Request); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = franchisereferalincomeCreateObjectV1Request; // byte array
-            }
+            if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
+            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -245,50 +244,52 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FranchisereferalincomeCreateObjectV1", localVarResponse);
+                Exception exception = ExceptionFactory("FranchiseofficeGetAutocompleteV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FranchisereferalincomeCreateObjectV1Response>(localVarStatusCode,
+            return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (FranchisereferalincomeCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FranchisereferalincomeCreateObjectV1Response)));
+                (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
         }
 
         /// <summary>
-        /// Create a new Franchisereferalincome The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+        /// Retrieve Franchiseoffices and IDs Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
+        /// <param name="sSelector">The type of Franchiseoffices to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of FranchisereferalincomeCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<FranchisereferalincomeCreateObjectV1Response> FranchisereferalincomeCreateObjectV1Async (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of CommonGetAutocompleteV1Response</returns>
+        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> FranchiseofficeGetAutocompleteV1Async (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<FranchisereferalincomeCreateObjectV1Response> localVarResponse = await FranchisereferalincomeCreateObjectV1WithHttpInfoAsync(franchisereferalincomeCreateObjectV1Request, cancellationToken);
+             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await FranchiseofficeGetAutocompleteV1WithHttpInfoAsync(sSelector, sQuery, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Create a new Franchisereferalincome The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+        /// Retrieve Franchiseoffices and IDs Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
+        /// <param name="sSelector">The type of Franchiseoffices to return</param>
+        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (FranchisereferalincomeCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FranchisereferalincomeCreateObjectV1Response>> FranchisereferalincomeCreateObjectV1WithHttpInfoAsync (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> FranchiseofficeGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'franchisereferalincomeCreateObjectV1Request' is set
-            if (franchisereferalincomeCreateObjectV1Request == null)
-                throw new ApiException(400, "Missing required parameter 'franchisereferalincomeCreateObjectV1Request' when calling FranchisereferalincomeApi->FranchisereferalincomeCreateObjectV1");
+            // verify the required parameter 'sSelector' is set
+            if (sSelector == null)
+                throw new ApiException(400, "Missing required parameter 'sSelector' when calling FranchiseofficeApi->FranchiseofficeGetAutocompleteV1");
 
-            var localVarPath = "/1/object/franchisereferalincome";
+            var localVarPath = "/1/object/franchiseoffice/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -298,7 +299,6 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -310,14 +310,8 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (franchisereferalincomeCreateObjectV1Request != null && franchisereferalincomeCreateObjectV1Request.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(franchisereferalincomeCreateObjectV1Request); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = franchisereferalincomeCreateObjectV1Request; // byte array
-            }
+            if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
+            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -327,20 +321,20 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FranchisereferalincomeCreateObjectV1", localVarResponse);
+                Exception exception = ExceptionFactory("FranchiseofficeGetAutocompleteV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FranchisereferalincomeCreateObjectV1Response>(localVarStatusCode,
+            return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (FranchisereferalincomeCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FranchisereferalincomeCreateObjectV1Response)));
+                (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
         }
 
     }
