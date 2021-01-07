@@ -7,6 +7,12 @@ build.sh
 docs/ActivesessionGetCurrentV1Response.md
 docs/ActivesessionGetCurrentV1ResponseMPayload.md
 docs/AddressRequest.md
+docs/ApikeyCreateObjectV1Request.md
+docs/ApikeyCreateObjectV1Response.md
+docs/ApikeyCreateObjectV1ResponseMPayload.md
+docs/ApikeyRequest.md
+docs/ApikeyRequestCompound.md
+docs/ApikeyResponse.md
 docs/AttemptResponse.md
 docs/CommonAudit.md
 docs/CommonGetAutocompleteV1Response.md
@@ -89,7 +95,9 @@ docs/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
 docs/FranchisereferalincomeRequest.md
 docs/FranchisereferalincomeRequestCompound.md
 docs/ModuleUserApi.md
+docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
+docs/ObjectApikeyApi.md
 docs/ObjectEzsigndocumentApi.md
 docs/ObjectEzsignfolderApi.md
 docs/ObjectEzsignfoldersignerassociationApi.md
@@ -117,6 +125,7 @@ git_push.sh
 mono_nunit_test.sh
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/ModuleUserApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/ObjectActivesessionApiTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Api/ObjectApikeyApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/ObjectEzsigndocumentApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/ObjectEzsignfolderApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/ObjectEzsignfoldersignerassociationApiTests.cs
@@ -128,6 +137,12 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/Api/ObjectPeriodApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ActivesessionGetCurrentV1ResponseMPayloadTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ActivesessionGetCurrentV1ResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/AddressRequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ApikeyCreateObjectV1RequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ApikeyCreateObjectV1ResponseMPayloadTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ApikeyCreateObjectV1ResponseTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ApikeyRequestCompoundTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ApikeyRequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/ApikeyResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/AttemptResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/CommonAuditTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/CommonGetAutocompleteV1ResponseMPayloadTests.cs
@@ -209,6 +224,7 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeCreateObjectV1Res
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeCreateObjectV1ResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeRequestCompoundTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeRequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/MultilingualApikeyDescriptionTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/PhoneRequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/UserCreateEzsignuserV1RequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/UserCreateEzsignuserV1ResponseMPayloadTests.cs
@@ -227,6 +243,7 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/eZmaxinc/eZmax-SDK-csharp.Test.csproj
 src/eZmaxinc/eZmax-SDK-csharp.Test/packages.config
 src/eZmaxinc/eZmax-SDK-csharp/Api/ModuleUserApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/ObjectActivesessionApi.cs
+src/eZmaxinc/eZmax-SDK-csharp/Api/ObjectApikeyApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/ObjectEzsigndocumentApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/ObjectEzsignfolderApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/ObjectEzsignfoldersignerassociationApi.cs
@@ -247,6 +264,12 @@ src/eZmaxinc/eZmax-SDK-csharp/Client/OpenAPIDateConverter.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/ActivesessionGetCurrentV1Response.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/ActivesessionGetCurrentV1ResponseMPayload.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/AddressRequest.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/ApikeyCreateObjectV1Request.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/ApikeyCreateObjectV1Response.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/ApikeyCreateObjectV1ResponseMPayload.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/ApikeyRequest.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/ApikeyRequestCompound.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/ApikeyResponse.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/AttemptResponse.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/CommonAudit.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/CommonGetAutocompleteV1Response.cs
@@ -328,6 +351,7 @@ src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeCreateObjectV1Response
 src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeCreateObjectV1ResponseMPayload.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeRequest.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeRequestCompound.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/MultilingualApikeyDescription.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/PhoneRequest.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/UserCreateEzsignuserV1Request.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/UserCreateEzsignuserV1Response.cs
