@@ -94,6 +94,8 @@ docs/FranchisereferalincomeCreateObjectV1Response.md
 docs/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
 docs/FranchisereferalincomeRequest.md
 docs/FranchisereferalincomeRequestCompound.md
+docs/GlobalCustomerApi.md
+docs/GlobalCustomerGetEndpointV1Response.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
@@ -123,6 +125,7 @@ docs/WebsiteRequest.md
 eZmaxinc/eZmax-SDK-csharp.sln
 git_push.sh
 mono_nunit_test.sh
+src/eZmaxinc/eZmax-SDK-csharp.Test/Api/GlobalCustomerApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/ModuleUserApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/ObjectActivesessionApiTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Api/ObjectApikeyApiTests.cs
@@ -224,6 +227,7 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeCreateObjectV1Res
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeCreateObjectV1ResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeRequestCompoundTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeRequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/GlobalCustomerGetEndpointV1ResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/MultilingualApikeyDescriptionTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/PhoneRequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/UserCreateEzsignuserV1RequestTests.cs
@@ -241,6 +245,7 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/Model/WebhookUserUserCreatedTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/WebsiteRequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/eZmaxinc/eZmax-SDK-csharp.Test.csproj
 src/eZmaxinc/eZmax-SDK-csharp.Test/packages.config
+src/eZmaxinc/eZmax-SDK-csharp/Api/GlobalCustomerApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/ModuleUserApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/ObjectActivesessionApi.cs
 src/eZmaxinc/eZmax-SDK-csharp/Api/ObjectApikeyApi.cs
@@ -351,6 +356,7 @@ src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeCreateObjectV1Response
 src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeCreateObjectV1ResponseMPayload.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeRequest.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeRequestCompound.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/GlobalCustomerGetEndpointV1Response.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/MultilingualApikeyDescription.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/PhoneRequest.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/UserCreateEzsignuserV1Request.cs

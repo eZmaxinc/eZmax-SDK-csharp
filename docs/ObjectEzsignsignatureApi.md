@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**EzsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 [**EzsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**EzsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Modify an existing Ezsignsignature
-[**EzsignsignatureGetObjectGetChildrenV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectgetchildrenv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
+[**EzsignsignatureGetChildrenV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetchildrenv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
 [**EzsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 
 
@@ -253,9 +253,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## EzsignsignatureGetObjectGetChildrenV1
+## EzsignsignatureGetChildrenV1
 
-> void EzsignsignatureGetObjectGetChildrenV1 (int pkiEzsignsignatureID)
+> void EzsignsignatureGetChildrenV1 (int pkiEzsignsignatureID)
 
 Retrieve an existing Ezsignsignature's children IDs
 
@@ -270,7 +270,7 @@ using eZmaxinc/eZmax-SDK-csharp.Model;
 
 namespace Example
 {
-    public class EzsignsignatureGetObjectGetChildrenV1Example
+    public class EzsignsignatureGetChildrenV1Example
     {
         public static void Main()
         {
@@ -286,11 +286,11 @@ namespace Example
             try
             {
                 // Retrieve an existing Ezsignsignature's children IDs
-                apiInstance.EzsignsignatureGetObjectGetChildrenV1(pkiEzsignsignatureID);
+                apiInstance.EzsignsignatureGetChildrenV1(pkiEzsignsignatureID);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureGetObjectGetChildrenV1: " + e.Message );
+                Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureGetChildrenV1: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
