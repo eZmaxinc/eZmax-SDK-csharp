@@ -22,66 +22,66 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IObjectActivesessionApi : IApiAccessor
+    public interface IModuleSsprApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get Current Activesession
+        /// Remind of forgotten username(s)
         /// </summary>
         /// <remarks>
-        /// Retrieve the details about the current activesession
+        /// This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ActivesessionGetCurrentV1Response</returns>
-        ActivesessionGetCurrentV1Response ActivesessionGetCurrentV1 ();
+        /// <returns></returns>
+        void SsprRemindUsernamesV1 ();
 
         /// <summary>
-        /// Get Current Activesession
+        /// Remind of forgotten username(s)
         /// </summary>
         /// <remarks>
-        /// Retrieve the details about the current activesession
+        /// This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ActivesessionGetCurrentV1Response</returns>
-        ApiResponse<ActivesessionGetCurrentV1Response> ActivesessionGetCurrentV1WithHttpInfo ();
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SsprRemindUsernamesV1WithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get Current Activesession
+        /// Remind of forgotten username(s)
         /// </summary>
         /// <remarks>
-        /// Retrieve the details about the current activesession
+        /// This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ActivesessionGetCurrentV1Response</returns>
-        System.Threading.Tasks.Task<ActivesessionGetCurrentV1Response> ActivesessionGetCurrentV1Async (CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SsprRemindUsernamesV1Async (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Get Current Activesession
+        /// Remind of forgotten username(s)
         /// </summary>
         /// <remarks>
-        /// Retrieve the details about the current activesession
+        /// This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
         /// </remarks>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (ActivesessionGetCurrentV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActivesessionGetCurrentV1Response>> ActivesessionGetCurrentV1WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SsprRemindUsernamesV1WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class ObjectActivesessionApi : IObjectActivesessionApi
+    public partial class ModuleSsprApi : IModuleSsprApi
     {
         private eZmaxinc/eZmax-SDK-csharp.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ObjectActivesessionApi"/> class.
+        /// Initializes a new instance of the <see cref="ModuleSsprApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public ObjectActivesessionApi(String basePath)
+        public ModuleSsprApi(String basePath)
         {
             this.Configuration = new eZmaxinc/eZmax-SDK-csharp.Client.Configuration { BasePath = basePath };
 
@@ -89,10 +89,10 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ObjectActivesessionApi"/> class
+        /// Initializes a new instance of the <see cref="ModuleSsprApi"/> class
         /// </summary>
         /// <returns></returns>
-        public ObjectActivesessionApi()
+        public ModuleSsprApi()
         {
             this.Configuration = eZmaxinc/eZmax-SDK-csharp.Client.Configuration.Default;
 
@@ -100,12 +100,12 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ObjectActivesessionApi"/> class
+        /// Initializes a new instance of the <see cref="ModuleSsprApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ObjectActivesessionApi(eZmaxinc/eZmax-SDK-csharp.Client.Configuration configuration = null)
+        public ModuleSsprApi(eZmaxinc/eZmax-SDK-csharp.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = eZmaxinc/eZmax-SDK-csharp.Client.Configuration.Default;
@@ -179,25 +179,24 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
         }
 
         /// <summary>
-        /// Get Current Activesession Retrieve the details about the current activesession
+        /// Remind of forgotten username(s) This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ActivesessionGetCurrentV1Response</returns>
-        public ActivesessionGetCurrentV1Response ActivesessionGetCurrentV1 ()
+        /// <returns></returns>
+        public void SsprRemindUsernamesV1 ()
         {
-             ApiResponse<ActivesessionGetCurrentV1Response> localVarResponse = ActivesessionGetCurrentV1WithHttpInfo();
-             return localVarResponse.Data;
+             SsprRemindUsernamesV1WithHttpInfo();
         }
 
         /// <summary>
-        /// Get Current Activesession Retrieve the details about the current activesession
+        /// Remind of forgotten username(s) This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ActivesessionGetCurrentV1Response</returns>
-        public ApiResponse<ActivesessionGetCurrentV1Response> ActivesessionGetCurrentV1WithHttpInfo ()
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SsprRemindUsernamesV1WithHttpInfo ()
         {
 
-            var localVarPath = "/1/object/activesession/getCurrent";
+            var localVarPath = "/1/module/sspr/remindUsernames";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -227,45 +226,44 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ActivesessionGetCurrentV1", localVarResponse);
+                Exception exception = ExceptionFactory("SsprRemindUsernamesV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ActivesessionGetCurrentV1Response>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (ActivesessionGetCurrentV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivesessionGetCurrentV1Response)));
+                null);
         }
 
         /// <summary>
-        /// Get Current Activesession Retrieve the details about the current activesession
+        /// Remind of forgotten username(s) This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ActivesessionGetCurrentV1Response</returns>
-        public async System.Threading.Tasks.Task<ActivesessionGetCurrentV1Response> ActivesessionGetCurrentV1Async (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SsprRemindUsernamesV1Async (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ActivesessionGetCurrentV1Response> localVarResponse = await ActivesessionGetCurrentV1WithHttpInfoAsync(cancellationToken);
-             return localVarResponse.Data;
+             await SsprRemindUsernamesV1WithHttpInfoAsync(cancellationToken);
 
         }
 
         /// <summary>
-        /// Get Current Activesession Retrieve the details about the current activesession
+        /// Remind of forgotten username(s) This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
         /// </summary>
         /// <exception cref="eZmaxinc/eZmax-SDK-csharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (ActivesessionGetCurrentV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ActivesessionGetCurrentV1Response>> ActivesessionGetCurrentV1WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SsprRemindUsernamesV1WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/1/object/activesession/getCurrent";
+            var localVarPath = "/1/module/sspr/remindUsernames";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -295,20 +293,20 @@ namespace eZmaxinc/eZmax-SDK-csharp.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ActivesessionGetCurrentV1", localVarResponse);
+                Exception exception = ExceptionFactory("SsprRemindUsernamesV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ActivesessionGetCurrentV1Response>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (ActivesessionGetCurrentV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivesessionGetCurrentV1Response)));
+                null);
         }
 
     }
