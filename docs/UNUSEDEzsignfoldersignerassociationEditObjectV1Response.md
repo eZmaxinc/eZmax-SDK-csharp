@@ -1,5 +1,5 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.EzsignfolderEditObjectV1Response
+# eZmaxinc/eZmax-SDK-csharp.Model.UNUSEDEzsignfoldersignerassociationEditObjectV1Response
 
 ## Properties
 

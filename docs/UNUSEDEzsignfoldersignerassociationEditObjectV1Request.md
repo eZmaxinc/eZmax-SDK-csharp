@@ -1,12 +1,11 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.EzsigndocumentEditObjectV1Response
+# eZmaxinc/eZmax-SDK-csharp.Model.UNUSEDEzsignfoldersignerassociationEditObjectV1Request
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
-**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
+**objEzsignfoldersignerassociation** | [**EzsignfoldersignerassociationRequest**](EzsignfoldersignerassociationRequest.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

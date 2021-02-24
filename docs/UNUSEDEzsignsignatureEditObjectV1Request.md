@@ -1,5 +1,5 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.EzsignsignatureEditObjectV1Request
+# eZmaxinc/eZmax-SDK-csharp.Model.UNUSEDEzsignsignatureEditObjectV1Request
 
 ## Properties
 
