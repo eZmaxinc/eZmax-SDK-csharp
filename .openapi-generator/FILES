@@ -81,6 +81,7 @@ docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
+docs/FieldEUserTypeSSPR.md
 docs/FranchisereferalincomeCreateObjectV1Request.md
 docs/FranchisereferalincomeCreateObjectV1Response.md
 docs/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
@@ -102,6 +103,11 @@ docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
 docs/ObjectPeriodApi.md
 docs/PhoneRequest.md
+docs/SsprResetPasswordRequestV1Request.md
+docs/SsprResetPasswordV1Request.md
+docs/SsprSendUsernamesV1Request.md
+docs/SsprUnlockAccountRequestV1Request.md
+docs/SsprUnlockAccountV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Response.md
 docs/UNUSEDEzsignfolderEditObjectV1Request.md
@@ -215,6 +221,7 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FieldEEzsigndocumentStepTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FieldEEzsignfolderSendreminderfrequencyTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FieldEEzsignfolderStepTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FieldEPhoneTypeTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FieldEUserTypeSSPRTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FieldEUserTypeTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeCreateObjectV1RequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeCreateObjectV1ResponseMPayloadTests.cs
@@ -224,6 +231,11 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/Model/FranchisereferalincomeRequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/GlobalCustomerGetEndpointV1ResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/MultilingualApikeyDescriptionTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/PhoneRequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/SsprResetPasswordRequestV1RequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/SsprResetPasswordV1RequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/SsprSendUsernamesV1RequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/SsprUnlockAccountRequestV1RequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/SsprUnlockAccountV1RequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/UNUSEDEzsigndocumentEditObjectV1RequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/UNUSEDEzsigndocumentEditObjectV1ResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/UNUSEDEzsignfolderEditObjectV1RequestTests.cs
@@ -346,6 +358,7 @@ src/eZmaxinc/eZmax-SDK-csharp/Model/FieldEEzsignfolderSendreminderfrequency.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/FieldEEzsignfolderStep.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/FieldEPhoneType.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/FieldEUserType.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/FieldEUserTypeSSPR.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeCreateObjectV1Request.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeCreateObjectV1Response.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeCreateObjectV1ResponseMPayload.cs
@@ -354,6 +367,11 @@ src/eZmaxinc/eZmax-SDK-csharp/Model/FranchisereferalincomeRequestCompound.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/GlobalCustomerGetEndpointV1Response.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/MultilingualApikeyDescription.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/PhoneRequest.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/SsprResetPasswordRequestV1Request.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/SsprResetPasswordV1Request.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/SsprSendUsernamesV1Request.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/SsprUnlockAccountRequestV1Request.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/SsprUnlockAccountV1Request.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/UNUSEDEzsigndocumentEditObjectV1Request.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/UNUSEDEzsigndocumentEditObjectV1Response.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/UNUSEDEzsignfolderEditObjectV1Request.cs
