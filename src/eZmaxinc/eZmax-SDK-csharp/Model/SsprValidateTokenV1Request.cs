@@ -25,18 +25,18 @@ using OpenAPIDateConverter = eZmaxinc/eZmax-SDK-csharp.Client.OpenAPIDateConvert
 namespace eZmaxinc/eZmax-SDK-csharp.Model
 {
     /// <summary>
-    /// Request for the /1/module/sspr/resetPassword API Request
+    /// Request for the /1/module/sspr/validateToken API Request
     /// </summary>
     [DataContract]
-    public partial class SsprResetPasswordV1Request :  IEquatable<SsprResetPasswordV1Request>, IValidatableObject
+    public partial class SsprValidateTokenV1Request :  IEquatable<SsprValidateTokenV1Request>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SsprResetPasswordV1Request" /> class.
+        /// Initializes a new instance of the <see cref="SsprValidateTokenV1Request" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected SsprResetPasswordV1Request() { }
+        protected SsprValidateTokenV1Request() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SsprResetPasswordV1Request" /> class.
+        /// Initializes a new instance of the <see cref="SsprValidateTokenV1Request" /> class.
         /// </summary>
         /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
@@ -44,13 +44,12 @@ namespace eZmaxinc/eZmax-SDK-csharp.Model
         /// <param name="sEmailAddress">The email address..</param>
         /// <param name="sUserLoginname">The Login name of the User..</param>
         /// <param name="binUserSSPRtoken">Hex Encoded Secret SSPR token (required).</param>
-        /// <param name="sPassword">A Password.  Must meet complexity requirements (required).</param>
-        public SsprResetPasswordV1Request(string pksCustomerCode = default(string), int fkiLanguageID = default(int), FieldEUserTypeSSPR eUserTypeSSPR = default(FieldEUserTypeSSPR), string sEmailAddress = default(string), string sUserLoginname = default(string), string binUserSSPRtoken = default(string), string sPassword = default(string))
+        public SsprValidateTokenV1Request(string pksCustomerCode = default(string), int fkiLanguageID = default(int), FieldEUserTypeSSPR eUserTypeSSPR = default(FieldEUserTypeSSPR), string sEmailAddress = default(string), string sUserLoginname = default(string), string binUserSSPRtoken = default(string))
         {
             // to ensure "pksCustomerCode" is required (not null)
             if (pksCustomerCode == null)
             {
-                throw new InvalidDataException("pksCustomerCode is a required property for SsprResetPasswordV1Request and cannot be null");
+                throw new InvalidDataException("pksCustomerCode is a required property for SsprValidateTokenV1Request and cannot be null");
             }
             else
             {
@@ -60,7 +59,7 @@ namespace eZmaxinc/eZmax-SDK-csharp.Model
             // to ensure "fkiLanguageID" is required (not null)
             if (fkiLanguageID == null)
             {
-                throw new InvalidDataException("fkiLanguageID is a required property for SsprResetPasswordV1Request and cannot be null");
+                throw new InvalidDataException("fkiLanguageID is a required property for SsprValidateTokenV1Request and cannot be null");
             }
             else
             {
@@ -70,7 +69,7 @@ namespace eZmaxinc/eZmax-SDK-csharp.Model
             // to ensure "eUserTypeSSPR" is required (not null)
             if (eUserTypeSSPR == null)
             {
-                throw new InvalidDataException("eUserTypeSSPR is a required property for SsprResetPasswordV1Request and cannot be null");
+                throw new InvalidDataException("eUserTypeSSPR is a required property for SsprValidateTokenV1Request and cannot be null");
             }
             else
             {
@@ -80,21 +79,11 @@ namespace eZmaxinc/eZmax-SDK-csharp.Model
             // to ensure "binUserSSPRtoken" is required (not null)
             if (binUserSSPRtoken == null)
             {
-                throw new InvalidDataException("binUserSSPRtoken is a required property for SsprResetPasswordV1Request and cannot be null");
+                throw new InvalidDataException("binUserSSPRtoken is a required property for SsprValidateTokenV1Request and cannot be null");
             }
             else
             {
                 this.binUserSSPRtoken = binUserSSPRtoken;
-            }
-
-            // to ensure "sPassword" is required (not null)
-            if (sPassword == null)
-            {
-                throw new InvalidDataException("sPassword is a required property for SsprResetPasswordV1Request and cannot be null");
-            }
-            else
-            {
-                this.sPassword = sPassword;
             }
 
             this.sEmailAddress = sEmailAddress;
@@ -143,27 +132,19 @@ namespace eZmaxinc/eZmax-SDK-csharp.Model
         public string binUserSSPRtoken { get; set; }
 
         /// <summary>
-        /// A Password.  Must meet complexity requirements
-        /// </summary>
-        /// <value>A Password.  Must meet complexity requirements</value>
-        [DataMember(Name="sPassword", EmitDefaultValue=true)]
-        public string sPassword { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SsprResetPasswordV1Request {\n");
+            sb.Append("class SsprValidateTokenV1Request {\n");
             sb.Append("  pksCustomerCode: ").Append(pksCustomerCode).Append("\n");
             sb.Append("  fkiLanguageID: ").Append(fkiLanguageID).Append("\n");
             sb.Append("  eUserTypeSSPR: ").Append(eUserTypeSSPR).Append("\n");
             sb.Append("  sEmailAddress: ").Append(sEmailAddress).Append("\n");
             sb.Append("  sUserLoginname: ").Append(sUserLoginname).Append("\n");
             sb.Append("  binUserSSPRtoken: ").Append(binUserSSPRtoken).Append("\n");
-            sb.Append("  sPassword: ").Append(sPassword).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -184,15 +165,15 @@ namespace eZmaxinc/eZmax-SDK-csharp.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as SsprResetPasswordV1Request);
+            return this.Equals(input as SsprValidateTokenV1Request);
         }
 
         /// <summary>
-        /// Returns true if SsprResetPasswordV1Request instances are equal
+        /// Returns true if SsprValidateTokenV1Request instances are equal
         /// </summary>
-        /// <param name="input">Instance of SsprResetPasswordV1Request to be compared</param>
+        /// <param name="input">Instance of SsprValidateTokenV1Request to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SsprResetPasswordV1Request input)
+        public bool Equals(SsprValidateTokenV1Request input)
         {
             if (input == null)
                 return false;
@@ -227,11 +208,6 @@ namespace eZmaxinc/eZmax-SDK-csharp.Model
                     this.binUserSSPRtoken == input.binUserSSPRtoken ||
                     (this.binUserSSPRtoken != null &&
                     this.binUserSSPRtoken.Equals(input.binUserSSPRtoken))
-                ) && 
-                (
-                    this.sPassword == input.sPassword ||
-                    (this.sPassword != null &&
-                    this.sPassword.Equals(input.sPassword))
                 );
         }
 
@@ -256,8 +232,6 @@ namespace eZmaxinc/eZmax-SDK-csharp.Model
                     hashCode = hashCode * 59 + this.sUserLoginname.GetHashCode();
                 if (this.binUserSSPRtoken != null)
                     hashCode = hashCode * 59 + this.binUserSSPRtoken.GetHashCode();
-                if (this.sPassword != null)
-                    hashCode = hashCode * 59 + this.sPassword.GetHashCode();
                 return hashCode;
             }
         }

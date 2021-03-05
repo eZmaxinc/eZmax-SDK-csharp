@@ -108,6 +108,7 @@ docs/SsprResetPasswordV1Request.md
 docs/SsprSendUsernamesV1Request.md
 docs/SsprUnlockAccountRequestV1Request.md
 docs/SsprUnlockAccountV1Request.md
+docs/SsprValidateTokenV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Response.md
 docs/UNUSEDEzsignfolderEditObjectV1Request.md
@@ -236,6 +237,7 @@ src/eZmaxinc/eZmax-SDK-csharp.Test/Model/SsprResetPasswordV1RequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/SsprSendUsernamesV1RequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/SsprUnlockAccountRequestV1RequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/SsprUnlockAccountV1RequestTests.cs
+src/eZmaxinc/eZmax-SDK-csharp.Test/Model/SsprValidateTokenV1RequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/UNUSEDEzsigndocumentEditObjectV1RequestTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/UNUSEDEzsigndocumentEditObjectV1ResponseTests.cs
 src/eZmaxinc/eZmax-SDK-csharp.Test/Model/UNUSEDEzsignfolderEditObjectV1RequestTests.cs
@@ -372,6 +374,7 @@ src/eZmaxinc/eZmax-SDK-csharp/Model/SsprResetPasswordV1Request.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/SsprSendUsernamesV1Request.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/SsprUnlockAccountRequestV1Request.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/SsprUnlockAccountV1Request.cs
+src/eZmaxinc/eZmax-SDK-csharp/Model/SsprValidateTokenV1Request.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/UNUSEDEzsigndocumentEditObjectV1Request.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/UNUSEDEzsigndocumentEditObjectV1Response.cs
 src/eZmaxinc/eZmax-SDK-csharp/Model/UNUSEDEzsignfolderEditObjectV1Request.cs

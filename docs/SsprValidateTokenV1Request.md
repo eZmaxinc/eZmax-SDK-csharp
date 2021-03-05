@@ -1,5 +1,5 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.SsprResetPasswordV1Request
+# eZmaxinc/eZmax-SDK-csharp.Model.SsprValidateTokenV1Request
 
 ## Properties
 
@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **sEmailAddress** | **string** | The email address. | [optional] 
 **sUserLoginname** | **string** | The Login name of the User. | [optional] 
 **binUserSSPRtoken** | **string** | Hex Encoded Secret SSPR token | 
-**sPassword** | **string** | A Password.  Must meet complexity requirements | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
