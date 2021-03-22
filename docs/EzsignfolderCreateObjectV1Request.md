@@ -1,12 +1,12 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.EzsignfolderCreateObjectV1Request
+# eZmaxApi.Model.EzsignfolderCreateObjectV1Request
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignfolder** | [**EzsignfolderRequest**](EzsignfolderRequest.md) |  | [optional] 
-**objEzsignfolderCompound** | [**EzsignfolderRequestCompound**](EzsignfolderRequestCompound.md) |  | [optional] 
+**ObjEzsignfolder** | [**EzsignfolderRequest**](EzsignfolderRequest.md) |  | [optional] 
+**ObjEzsignfolderCompound** | [**EzsignfolderRequestCompound**](EzsignfolderRequestCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

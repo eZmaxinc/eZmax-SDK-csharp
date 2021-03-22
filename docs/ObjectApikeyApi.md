@@ -1,4 +1,4 @@
-# eZmaxinc/eZmax-SDK-csharp.Api.ObjectApikeyApi
+# eZmaxApi.Api.ObjectApikeyApi
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
@@ -21,9 +21,9 @@ The endpoint allows to create one or many elements at once.  The array can conta
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using eZmaxinc/eZmax-SDK-csharp.Api;
-using eZmaxinc/eZmax-SDK-csharp.Client;
-using eZmaxinc/eZmax-SDK-csharp.Model;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
 
 namespace Example
 {

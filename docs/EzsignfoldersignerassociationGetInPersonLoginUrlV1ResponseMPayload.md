@@ -1,11 +1,11 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload
+# eZmaxApi.Model.EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sLoginUrl** | **string** | The Url to login to the signing application.    Url will expire after 30 minutes.   | 
+**SLoginUrl** | **string** | The Url to login to the signing application.    Url will expire after 30 minutes.   | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

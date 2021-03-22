@@ -1,5 +1,5 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.FieldEUserTypeSSPR
+# eZmaxApi.Model.FieldEUserTypeSSPR
 
 ## Properties
 

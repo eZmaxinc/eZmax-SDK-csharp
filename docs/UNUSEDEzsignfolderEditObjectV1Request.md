@@ -1,11 +1,11 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.UNUSEDEzsignfolderEditObjectV1Request
+# eZmaxApi.Model.UNUSEDEzsignfolderEditObjectV1Request
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignfolder** | [**EzsignfolderRequest**](EzsignfolderRequest.md) |  | [optional] 
+**ObjEzsignfolder** | [**EzsignfolderRequest**](EzsignfolderRequest.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

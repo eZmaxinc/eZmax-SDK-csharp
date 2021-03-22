@@ -1,5 +1,5 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.FieldEEzsignfolderSendreminderfrequency
+# eZmaxApi.Model.FieldEEzsignfolderSendreminderfrequency
 
 ## Properties
 

@@ -1,5 +1,5 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.FieldEPhoneType
+# eZmaxApi.Model.FieldEPhoneType
 
 ## Properties
 

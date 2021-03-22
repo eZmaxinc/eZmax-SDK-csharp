@@ -1,11 +1,11 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.WebhookUserUserCreatedAllOf
+# eZmaxApi.Model.WebhookUserUserCreatedAllOf
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objUser** | [**UserResponse**](UserResponse.md) |  | 
+**ObjUser** | [**UserResponse**](UserResponse.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

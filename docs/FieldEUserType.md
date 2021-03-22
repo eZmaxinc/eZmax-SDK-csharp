@@ -1,5 +1,5 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.FieldEUserType
+# eZmaxApi.Model.FieldEUserType
 
 ## Properties
 

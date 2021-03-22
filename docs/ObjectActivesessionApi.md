@@ -1,4 +1,4 @@
-# eZmaxinc/eZmax-SDK-csharp.Api.ObjectActivesessionApi
+# eZmaxApi.Api.ObjectActivesessionApi
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
@@ -21,9 +21,9 @@ Retrieve the details about the current activesession
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using eZmaxinc/eZmax-SDK-csharp.Api;
-using eZmaxinc/eZmax-SDK-csharp.Client;
-using eZmaxinc/eZmax-SDK-csharp.Model;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
 
 namespace Example
 {

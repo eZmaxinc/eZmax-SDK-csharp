@@ -6,17 +6,17 @@
 wget -nc https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 mozroots --import --sync
 
-echo "[INFO] remove bin/Debug/eZmaxinc/eZmax-SDK-csharp.Test.dll"
-rm src/eZmaxinc/eZmax-SDK-csharp.Test/bin/Debug/eZmaxinc/eZmax-SDK-csharp.Test.dll 2> /dev/null
+echo "[INFO] remove bin/Debug/eZmaxApi.Test.dll"
+rm src/eZmaxApi.Test/bin/Debug/eZmaxApi.Test.dll 2> /dev/null
 
 echo "[INFO] install NUnit runners via NuGet"
 wget -nc https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 mozroots --import --sync
-mono nuget.exe install src/eZmaxinc/eZmax-SDK-csharp.Test/packages.config -o packages
+mono nuget.exe install src/eZmaxApi.Test/packages.config -o packages
 
 echo "[INFO] Install NUnit Console 3.x runners via NuGet"
 mono nuget.exe install NUnit.ConsoleRunner -Version 3.10.0 -OutputDirectory packages
 
 echo "[INFO] Build the solution and run the unit test"
-xbuild eZmaxinc/eZmax-SDK-csharp.sln && \
-    mono ./packages/NUnit.ConsoleRunner.3.10.0/tools/nunit3-console.exe src/eZmaxinc/eZmax-SDK-csharp.Test/bin/Debug/eZmaxinc/eZmax-SDK-csharp.Test.dll
+xbuild eZmaxApi.sln && \
+    mono ./packages/NUnit.ConsoleRunner.3.10.0/tools/nunit3-console.exe src/eZmaxApi.Test/bin/Debug/eZmaxApi.Test.dll

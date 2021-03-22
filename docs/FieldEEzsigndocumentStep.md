@@ -1,5 +1,5 @@
 
-# eZmaxinc/eZmax-SDK-csharp.Model.FieldEEzsigndocumentStep
+# eZmaxApi.Model.FieldEEzsigndocumentStep
 
 ## Properties
 
