@@ -274,6 +274,7 @@ src/eZmaxApi/Api/ObjectFranchisebrokerApi.cs
 src/eZmaxApi/Api/ObjectFranchiseofficeApi.cs
 src/eZmaxApi/Api/ObjectFranchisereferalincomeApi.cs
 src/eZmaxApi/Api/ObjectPeriodApi.cs
+src/eZmaxApi/Api/RequestSignature.cs
 src/eZmaxApi/Client/ApiClient.cs
 src/eZmaxApi/Client/ApiException.cs
 src/eZmaxApi/Client/ApiResponse.cs
