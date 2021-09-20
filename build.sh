@@ -5,7 +5,7 @@
 
 frameworkVersion=net452
 
-# sdk must match installed framworks under PREFIX/lib/mono/[value]
+# sdk must match installed frameworks under PREFIX/lib/mono/[value]
 sdk=4.5.2-api
 
 # langversion refers to C# language features. see man mcs for details.

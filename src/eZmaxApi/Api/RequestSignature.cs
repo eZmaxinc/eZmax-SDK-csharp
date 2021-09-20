@@ -12,9 +12,6 @@ namespace eZmaxApi.Api
     public class RequestSignature
     {
 		
-		/// <summary>
-    	/// 
-    	/// </summary>
 		public static string GetFingerprintV1 (string sAuthorization, 
                                                string dtDate, 
                                                string sMethod, 
@@ -99,83 +96,80 @@ namespace eZmaxApi.Api
             //////////////////
 			var sAuthorization = Configuration.Default.GetApiKeyWithPrefix("Authorization");
                 
-            
             //Get Secret
             ////////////
 			var sSecret = Configuration.Default.GetApiKeyWithPrefix("secret");
-            if (sSecret == null) {
+			
+			//If no secret is defined, we skiped all the processing to generate the fingerprint and signature
+			if (sSecret != null) {
+				
+	            //Get Method
+	            ////////////
+				var sMethod = method.ToString(); 
 
-                sSecret = "";
-            }
-
-            //Get Method
-            ////////////
-			var sMethod = method.ToString(); 
-
-
-            //We need to recreate the full URL
-            //////////////////////////////////
-            var sURL = Configuration.Default.ApiClient.RestClient.BaseUrl.ToString();
-            sURL += path;
+	            //We need to recreate the full URL
+	            //////////////////////////////////
+	            var sURL = Configuration.Default.ApiClient.RestClient.BaseUrl.ToString();
+	            sURL += path;
 
 
-            //Put the pathParams back in URL
-            foreach(var param in pathParams) {
+	            //Put the pathParams back in URL
+	            foreach(var param in pathParams) {
 
-                sURL = sURL.Replace("{" + param.Key + "}", 
-                                    ApiClient.UrlEncode(param.Value) );
-            }
-                
+	                sURL = sURL.Replace("{" + param.Key + "}", 
+	                                    ApiClient.UrlEncode(param.Value) );
+	            }
+	                
 
-            //Put the queries back in URL
-            if (queryParams != null) {
+	            //Put the queries back in URL
+	            if (queryParams != null) {
 
-                
-                if (queryParams.Count > 0) {
+	                
+	                if (queryParams.Count > 0) {
 
-                    sURL += "?";
-                }
+	                    sURL += "?";
+	                }
 
-                var iRemain = queryParams.Count;
-                foreach(KeyValuePair<string, string> entry in queryParams)
-                {
-                     
-                    sURL += ApiClient.UrlEncode(entry.Key) + 
-                            "=" + 
-                            ApiClient.UrlEncode(entry.Value);
-                          
+	                var iRemain = queryParams.Count;
+	                foreach(KeyValuePair<string, string> entry in queryParams)
+	                {
+	                     
+	                    sURL += ApiClient.UrlEncode(entry.Key) + 
+	                            "=" + 
+	                            ApiClient.UrlEncode(entry.Value);
+	                          
 
-                    iRemain -= 1;
-                    if (iRemain > 0) {
+	                    iRemain -= 1;
+	                    if (iRemain > 0) {
 
-                        sURL += "&";
-                    }
-                }
-            }
-
-
-            //Exctact the body
-            //////////////////
-            var sBody = "";
-            if (postBody != null) {
-
-                sBody = postBody.ToString();
-            }   
+	                        sURL += "&";
+	                    }
+	                }
+	            }
 
 
-            //Get the 3 signature headers
-            /////////////////////////////
-            var headersV1 = RequestSignature.GetHeadersV1(sAuthorization: sAuthorization, 
-                                                                 sSecret: sSecret, 
-                                                                 sMethod: sMethod, 
-                                                                    sURL: sURL, 
-                                                                   sBody: sBody);
+	            //Exctact the body
+	            //////////////////
+	            var sBody = "";
+	            if (postBody != null) {
 
-            //Inject the new headers in the headers
-            ///////////////////////////////////////
-            headerParams = headerParams.Concat(headersV1).ToDictionary(x=>x.Key,
-                                                                       x=>x.Value);
-		
+	                sBody = postBody.ToString();
+	            }   
+
+
+	            //Get the 3 signature headers
+	            /////////////////////////////
+	            var headersV1 = RequestSignature.GetHeadersV1(sAuthorization: sAuthorization, 
+	                                                                 sSecret: sSecret, 
+	                                                                 sMethod: sMethod, 
+	                                                                    sURL: sURL, 
+	                                                                   sBody: sBody);
+
+	            //Inject the new headers in the headers
+	            ///////////////////////////////////////
+	            headerParams = headerParams.Concat(headersV1).ToDictionary(x=>x.Key,
+	                                                                       x=>x.Value);
+			}
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
