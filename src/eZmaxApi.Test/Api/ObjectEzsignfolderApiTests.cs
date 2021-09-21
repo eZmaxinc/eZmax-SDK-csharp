@@ -100,6 +100,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsignfolderGetFormsDataV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderGetFormsDataV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //var response = instance.EzsignfolderGetFormsDataV1(pkiEzsignfolderID);
+            //Assert.IsInstanceOf(typeof(System.IO.Stream), response, "response is System.IO.Stream");
+        }
+        
+        /// <summary>
         /// Test EzsignfolderGetObjectV1
         /// </summary>
         [Test]

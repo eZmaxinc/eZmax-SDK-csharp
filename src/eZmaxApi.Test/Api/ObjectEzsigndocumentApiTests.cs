@@ -126,6 +126,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsigndocumentGetEzsignpagesV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentGetEzsignpagesV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentGetEzsignpagesV1Response), response, "response is EzsigndocumentGetEzsignpagesV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsigndocumentGetFormDataV1
         /// </summary>
         [Test]

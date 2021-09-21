@@ -53,7 +53,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>EzsignfoldersignerassociationDeleteObjectV1Response</returns>
         EzsignfoldersignerassociationDeleteObjectV1Response EzsignfoldersignerassociationDeleteObjectV1 (int pkiEzsignfoldersignerassociationID);
 
@@ -64,7 +64,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>ApiResponse of EzsignfoldersignerassociationDeleteObjectV1Response</returns>
         ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo (int pkiEzsignfoldersignerassociationID);
         /// <summary>
@@ -74,7 +74,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns></returns>
         void EzsignfoldersignerassociationGetChildrenV1 (int pkiEzsignfoldersignerassociationID);
 
@@ -85,7 +85,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> EzsignfoldersignerassociationGetChildrenV1WithHttpInfo (int pkiEzsignfoldersignerassociationID);
         /// <summary>
@@ -95,7 +95,7 @@ namespace eZmaxApi.Api
         /// This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>EzsignfoldersignerassociationGetInPersonLoginUrlV1Response</returns>
         EzsignfoldersignerassociationGetInPersonLoginUrlV1Response EzsignfoldersignerassociationGetInPersonLoginUrlV1 (int pkiEzsignfoldersignerassociationID);
 
@@ -106,7 +106,7 @@ namespace eZmaxApi.Api
         /// This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>ApiResponse of EzsignfoldersignerassociationGetInPersonLoginUrlV1Response</returns>
         ApiResponse<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> EzsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo (int pkiEzsignfoldersignerassociationID);
         /// <summary>
@@ -116,7 +116,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>EzsignfoldersignerassociationGetObjectV1Response</returns>
         EzsignfoldersignerassociationGetObjectV1Response EzsignfoldersignerassociationGetObjectV1 (int pkiEzsignfoldersignerassociationID);
 
@@ -127,7 +127,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>ApiResponse of EzsignfoldersignerassociationGetObjectV1Response</returns>
         ApiResponse<EzsignfoldersignerassociationGetObjectV1Response> EzsignfoldersignerassociationGetObjectV1WithHttpInfo (int pkiEzsignfoldersignerassociationID);
         #endregion Synchronous Operations
@@ -162,7 +162,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldersignerassociationDeleteObjectV1Response</returns>
         System.Threading.Tasks.Task<EzsignfoldersignerassociationDeleteObjectV1Response> EzsignfoldersignerassociationDeleteObjectV1Async (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken));
@@ -174,7 +174,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationDeleteObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response>> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken));
@@ -185,7 +185,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task EzsignfoldersignerassociationGetChildrenV1Async (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken));
@@ -197,7 +197,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> EzsignfoldersignerassociationGetChildrenV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken));
@@ -208,7 +208,7 @@ namespace eZmaxApi.Api
         /// This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldersignerassociationGetInPersonLoginUrlV1Response</returns>
         System.Threading.Tasks.Task<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> EzsignfoldersignerassociationGetInPersonLoginUrlV1Async (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken));
@@ -220,7 +220,7 @@ namespace eZmaxApi.Api
         /// This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationGetInPersonLoginUrlV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>> EzsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken));
@@ -231,7 +231,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldersignerassociationGetObjectV1Response</returns>
         System.Threading.Tasks.Task<EzsignfoldersignerassociationGetObjectV1Response> EzsignfoldersignerassociationGetObjectV1Async (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken));
@@ -243,7 +243,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationGetObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationGetObjectV1Response>> EzsignfoldersignerassociationGetObjectV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken));
@@ -523,7 +523,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsignfoldersignerassociation 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>EzsignfoldersignerassociationDeleteObjectV1Response</returns>
         public EzsignfoldersignerassociationDeleteObjectV1Response EzsignfoldersignerassociationDeleteObjectV1 (int pkiEzsignfoldersignerassociationID)
         {
@@ -535,7 +535,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsignfoldersignerassociation 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>ApiResponse of EzsignfoldersignerassociationDeleteObjectV1Response</returns>
         public ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo (int pkiEzsignfoldersignerassociationID)
         {
@@ -594,7 +594,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsignfoldersignerassociation 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldersignerassociationDeleteObjectV1Response</returns>
         public async System.Threading.Tasks.Task<EzsignfoldersignerassociationDeleteObjectV1Response> EzsignfoldersignerassociationDeleteObjectV1Async (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken))
@@ -608,7 +608,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsignfoldersignerassociation 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationDeleteObjectV1Response)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response>> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken))
@@ -668,7 +668,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns></returns>
         public void EzsignfoldersignerassociationGetChildrenV1 (int pkiEzsignfoldersignerassociationID)
         {
@@ -679,7 +679,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> EzsignfoldersignerassociationGetChildrenV1WithHttpInfo (int pkiEzsignfoldersignerassociationID)
         {
@@ -738,7 +738,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task EzsignfoldersignerassociationGetChildrenV1Async (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken))
@@ -751,7 +751,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> EzsignfoldersignerassociationGetChildrenV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken))
@@ -811,7 +811,7 @@ namespace eZmaxApi.Api
         /// Retrieve a Login Url to allow In-Person signing This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>EzsignfoldersignerassociationGetInPersonLoginUrlV1Response</returns>
         public EzsignfoldersignerassociationGetInPersonLoginUrlV1Response EzsignfoldersignerassociationGetInPersonLoginUrlV1 (int pkiEzsignfoldersignerassociationID)
         {
@@ -823,7 +823,7 @@ namespace eZmaxApi.Api
         /// Retrieve a Login Url to allow In-Person signing This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>ApiResponse of EzsignfoldersignerassociationGetInPersonLoginUrlV1Response</returns>
         public ApiResponse<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> EzsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo (int pkiEzsignfoldersignerassociationID)
         {
@@ -882,7 +882,7 @@ namespace eZmaxApi.Api
         /// Retrieve a Login Url to allow In-Person signing This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldersignerassociationGetInPersonLoginUrlV1Response</returns>
         public async System.Threading.Tasks.Task<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> EzsignfoldersignerassociationGetInPersonLoginUrlV1Async (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken))
@@ -896,7 +896,7 @@ namespace eZmaxApi.Api
         /// Retrieve a Login Url to allow In-Person signing This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationGetInPersonLoginUrlV1Response)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>> EzsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken))
@@ -956,7 +956,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignfoldersignerassociation ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>EzsignfoldersignerassociationGetObjectV1Response</returns>
         public EzsignfoldersignerassociationGetObjectV1Response EzsignfoldersignerassociationGetObjectV1 (int pkiEzsignfoldersignerassociationID)
         {
@@ -968,7 +968,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignfoldersignerassociation ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>ApiResponse of EzsignfoldersignerassociationGetObjectV1Response</returns>
         public ApiResponse<EzsignfoldersignerassociationGetObjectV1Response> EzsignfoldersignerassociationGetObjectV1WithHttpInfo (int pkiEzsignfoldersignerassociationID)
         {
@@ -1027,7 +1027,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignfoldersignerassociation ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldersignerassociationGetObjectV1Response</returns>
         public async System.Threading.Tasks.Task<EzsignfoldersignerassociationGetObjectV1Response> EzsignfoldersignerassociationGetObjectV1Async (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken))
@@ -1041,7 +1041,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignfoldersignerassociation ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation</param>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationGetObjectV1Response)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationGetObjectV1Response>> EzsignfoldersignerassociationGetObjectV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken))

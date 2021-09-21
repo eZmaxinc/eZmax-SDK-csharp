@@ -32,7 +32,7 @@ namespace eZmaxApi.Api
         /// Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pksCustomerCode">The customer code assigned to your account</param>
+        /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>GlobalCustomerGetEndpointV1Response</returns>
         GlobalCustomerGetEndpointV1Response GlobalCustomerGetEndpointV1 (string pksCustomerCode, string sInfrastructureproductCode = default(string));
@@ -44,7 +44,7 @@ namespace eZmaxApi.Api
         /// Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pksCustomerCode">The customer code assigned to your account</param>
+        /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>ApiResponse of GlobalCustomerGetEndpointV1Response</returns>
         ApiResponse<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1WithHttpInfo (string pksCustomerCode, string sInfrastructureproductCode = default(string));
@@ -57,7 +57,7 @@ namespace eZmaxApi.Api
         /// Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pksCustomerCode">The customer code assigned to your account</param>
+        /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of GlobalCustomerGetEndpointV1Response</returns>
@@ -70,7 +70,7 @@ namespace eZmaxApi.Api
         /// Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pksCustomerCode">The customer code assigned to your account</param>
+        /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (GlobalCustomerGetEndpointV1Response)</returns>
@@ -190,7 +190,7 @@ namespace eZmaxApi.Api
         /// Get customer endpoint Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pksCustomerCode">The customer code assigned to your account</param>
+        /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>GlobalCustomerGetEndpointV1Response</returns>
         public GlobalCustomerGetEndpointV1Response GlobalCustomerGetEndpointV1 (string pksCustomerCode, string sInfrastructureproductCode = default(string))
@@ -203,7 +203,7 @@ namespace eZmaxApi.Api
         /// Get customer endpoint Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pksCustomerCode">The customer code assigned to your account</param>
+        /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>ApiResponse of GlobalCustomerGetEndpointV1Response</returns>
         public ApiResponse<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1WithHttpInfo (string pksCustomerCode, string sInfrastructureproductCode = default(string))
@@ -264,7 +264,7 @@ namespace eZmaxApi.Api
         /// Get customer endpoint Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pksCustomerCode">The customer code assigned to your account</param>
+        /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of GlobalCustomerGetEndpointV1Response</returns>
@@ -279,7 +279,7 @@ namespace eZmaxApi.Api
         /// Get customer endpoint Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pksCustomerCode">The customer code assigned to your account</param>
+        /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (GlobalCustomerGetEndpointV1Response)</returns>

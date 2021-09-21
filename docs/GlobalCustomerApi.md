@@ -38,7 +38,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new GlobalCustomerApi(Configuration.Default);
-            var pksCustomerCode = pksCustomerCode_example;  // string | The customer code assigned to your account
+            var pksCustomerCode = pksCustomerCode_example;  // string | 
             var sInfrastructureproductCode = sInfrastructureproductCode_example;  // string | The infrastructure product Code  If undefined, \"appcluster01\" is assumed (optional) 
 
             try
@@ -63,7 +63,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pksCustomerCode** | **string**| The customer code assigned to your account | 
+ **pksCustomerCode** | **string**|  | 
  **sInfrastructureproductCode** | **string**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] 
 
 ### Return type

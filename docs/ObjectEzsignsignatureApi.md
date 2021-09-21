@@ -120,7 +120,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignsignatureApi(Configuration.Default);
-            var pkiEzsignsignatureID = 56;  // int | The unique ID of the Ezsignsignature
+            var pkiEzsignsignatureID = 56;  // int | 
 
             try
             {
@@ -144,7 +144,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **int**| The unique ID of the Ezsignsignature | 
+ **pkiEzsignsignatureID** | **int**|  | 
 
 ### Return type
 
@@ -203,7 +203,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignsignatureApi(Configuration.Default);
-            var pkiEzsignsignatureID = 56;  // int | The unique ID of the Ezsignsignature
+            var pkiEzsignsignatureID = 56;  // int | 
 
             try
             {
@@ -226,7 +226,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **int**| The unique ID of the Ezsignsignature | 
+ **pkiEzsignsignatureID** | **int**|  | 
 
 ### Return type
 
@@ -283,7 +283,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignsignatureApi(Configuration.Default);
-            var pkiEzsignsignatureID = 56;  // int | The unique ID of the Ezsignsignature
+            var pkiEzsignsignatureID = 56;  // int | 
 
             try
             {
@@ -307,7 +307,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **int**| The unique ID of the Ezsignsignature | 
+ **pkiEzsignsignatureID** | **int**|  | 
 
 ### Return type
 

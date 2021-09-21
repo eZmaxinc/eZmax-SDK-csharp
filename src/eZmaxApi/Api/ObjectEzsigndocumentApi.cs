@@ -32,7 +32,7 @@ namespace eZmaxApi.Api
         /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <returns>EzsigndocumentApplyEzsigntemplateV1Response</returns>
         EzsigndocumentApplyEzsigntemplateV1Response EzsigndocumentApplyEzsigntemplateV1 (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request);
@@ -44,7 +44,7 @@ namespace eZmaxApi.Api
         /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateV1Response</returns>
         ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> EzsigndocumentApplyEzsigntemplateV1WithHttpInfo (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request);
@@ -76,7 +76,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>EzsigndocumentDeleteObjectV1Response</returns>
         EzsigndocumentDeleteObjectV1Response EzsigndocumentDeleteObjectV1 (int pkiEzsigndocumentID);
 
@@ -87,7 +87,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>ApiResponse of EzsigndocumentDeleteObjectV1Response</returns>
         ApiResponse<EzsigndocumentDeleteObjectV1Response> EzsigndocumentDeleteObjectV1WithHttpInfo (int pkiEzsigndocumentID);
         /// <summary>
@@ -97,7 +97,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns></returns>
         void EzsigndocumentGetChildrenV1 (int pkiEzsigndocumentID);
 
@@ -108,7 +108,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> EzsigndocumentGetChildrenV1WithHttpInfo (int pkiEzsigndocumentID);
         /// <summary>
@@ -118,7 +118,7 @@ namespace eZmaxApi.Api
         /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <returns>EzsigndocumentGetDownloadUrlV1Response</returns>
         EzsigndocumentGetDownloadUrlV1Response EzsigndocumentGetDownloadUrlV1 (int pkiEzsigndocumentID, string eDocumentType);
@@ -130,10 +130,31 @@ namespace eZmaxApi.Api
         /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <returns>ApiResponse of EzsigndocumentGetDownloadUrlV1Response</returns>
         ApiResponse<EzsigndocumentGetDownloadUrlV1Response> EzsigndocumentGetDownloadUrlV1WithHttpInfo (int pkiEzsigndocumentID, string eDocumentType);
+        /// <summary>
+        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+        /// </summary>
+        /// <remarks>
+        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <returns>EzsigndocumentGetEzsignpagesV1Response</returns>
+        EzsigndocumentGetEzsignpagesV1Response EzsigndocumentGetEzsignpagesV1 (int pkiEzsigndocumentID);
+
+        /// <summary>
+        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+        /// </summary>
+        /// <remarks>
+        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <returns>ApiResponse of EzsigndocumentGetEzsignpagesV1Response</returns>
+        ApiResponse<EzsigndocumentGetEzsignpagesV1Response> EzsigndocumentGetEzsignpagesV1WithHttpInfo (int pkiEzsigndocumentID);
         /// <summary>
         /// Retrieve an existing Ezsigndocument&#39;s Form Data
         /// </summary>
@@ -141,7 +162,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>System.IO.Stream</returns>
         System.IO.Stream EzsigndocumentGetFormDataV1 (int pkiEzsigndocumentID);
 
@@ -152,7 +173,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> EzsigndocumentGetFormDataV1WithHttpInfo (int pkiEzsigndocumentID);
         /// <summary>
@@ -162,7 +183,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>EzsigndocumentGetObjectV1Response</returns>
         EzsigndocumentGetObjectV1Response EzsigndocumentGetObjectV1 (int pkiEzsigndocumentID);
 
@@ -173,7 +194,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>ApiResponse of EzsigndocumentGetObjectV1Response</returns>
         ApiResponse<EzsigndocumentGetObjectV1Response> EzsigndocumentGetObjectV1WithHttpInfo (int pkiEzsigndocumentID);
         /// <summary>
@@ -183,7 +204,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentGetWordsPositionsV1Request"></param>
         /// <returns>EzsigndocumentGetWordsPositionsV1Response</returns>
         EzsigndocumentGetWordsPositionsV1Response EzsigndocumentGetWordsPositionsV1 (int pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request);
@@ -195,7 +216,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentGetWordsPositionsV1Request"></param>
         /// <returns>ApiResponse of EzsigndocumentGetWordsPositionsV1Response</returns>
         ApiResponse<EzsigndocumentGetWordsPositionsV1Response> EzsigndocumentGetWordsPositionsV1WithHttpInfo (int pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request);
@@ -208,7 +229,7 @@ namespace eZmaxApi.Api
         /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentApplyEzsigntemplateV1Response</returns>
@@ -221,7 +242,7 @@ namespace eZmaxApi.Api
         /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateV1Response)</returns>
@@ -256,7 +277,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentDeleteObjectV1Response</returns>
         System.Threading.Tasks.Task<EzsigndocumentDeleteObjectV1Response> EzsigndocumentDeleteObjectV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
@@ -268,7 +289,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentDeleteObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentDeleteObjectV1Response>> EzsigndocumentDeleteObjectV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
@@ -279,7 +300,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task EzsigndocumentGetChildrenV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
@@ -291,7 +312,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> EzsigndocumentGetChildrenV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
@@ -302,7 +323,7 @@ namespace eZmaxApi.Api
         /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentGetDownloadUrlV1Response</returns>
@@ -315,11 +336,34 @@ namespace eZmaxApi.Api
         /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetDownloadUrlV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetDownloadUrlV1Response>> EzsigndocumentGetDownloadUrlV1WithHttpInfoAsync (int pkiEzsigndocumentID, string eDocumentType, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+        /// </summary>
+        /// <remarks>
+        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigndocumentGetEzsignpagesV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentGetEzsignpagesV1Response> EzsigndocumentGetEzsignpagesV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+        /// </summary>
+        /// <remarks>
+        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigndocumentGetEzsignpagesV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetEzsignpagesV1Response>> EzsigndocumentGetEzsignpagesV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsigndocument&#39;s Form Data
         /// </summary>
@@ -327,7 +371,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of System.IO.Stream</returns>
         System.Threading.Tasks.Task<System.IO.Stream> EzsigndocumentGetFormDataV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
@@ -339,7 +383,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> EzsigndocumentGetFormDataV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
@@ -350,7 +394,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentGetObjectV1Response</returns>
         System.Threading.Tasks.Task<EzsigndocumentGetObjectV1Response> EzsigndocumentGetObjectV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
@@ -362,7 +406,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetObjectV1Response>> EzsigndocumentGetObjectV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
@@ -373,7 +417,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentGetWordsPositionsV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentGetWordsPositionsV1Response</returns>
@@ -386,7 +430,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentGetWordsPositionsV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetWordsPositionsV1Response)</returns>
@@ -506,7 +550,7 @@ namespace eZmaxApi.Api
         /// Apply an Ezsign Template to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <returns>EzsigndocumentApplyEzsigntemplateV1Response</returns>
         public EzsigndocumentApplyEzsigntemplateV1Response EzsigndocumentApplyEzsigntemplateV1 (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request)
@@ -519,7 +563,7 @@ namespace eZmaxApi.Api
         /// Apply an Ezsign Template to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateV1Response</returns>
         public ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> EzsigndocumentApplyEzsigntemplateV1WithHttpInfo (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request)
@@ -591,7 +635,7 @@ namespace eZmaxApi.Api
         /// Apply an Ezsign Template to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentApplyEzsigntemplateV1Response</returns>
@@ -606,7 +650,7 @@ namespace eZmaxApi.Api
         /// Apply an Ezsign Template to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateV1Response)</returns>
@@ -840,7 +884,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsigndocument 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>EzsigndocumentDeleteObjectV1Response</returns>
         public EzsigndocumentDeleteObjectV1Response EzsigndocumentDeleteObjectV1 (int pkiEzsigndocumentID)
         {
@@ -852,7 +896,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsigndocument 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>ApiResponse of EzsigndocumentDeleteObjectV1Response</returns>
         public ApiResponse<EzsigndocumentDeleteObjectV1Response> EzsigndocumentDeleteObjectV1WithHttpInfo (int pkiEzsigndocumentID)
         {
@@ -911,7 +955,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsigndocument 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentDeleteObjectV1Response</returns>
         public async System.Threading.Tasks.Task<EzsigndocumentDeleteObjectV1Response> EzsigndocumentDeleteObjectV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
@@ -925,7 +969,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsigndocument 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentDeleteObjectV1Response)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EzsigndocumentDeleteObjectV1Response>> EzsigndocumentDeleteObjectV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
@@ -985,7 +1029,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns></returns>
         public void EzsigndocumentGetChildrenV1 (int pkiEzsigndocumentID)
         {
@@ -996,7 +1040,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> EzsigndocumentGetChildrenV1WithHttpInfo (int pkiEzsigndocumentID)
         {
@@ -1055,7 +1099,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task EzsigndocumentGetChildrenV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
@@ -1068,7 +1112,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> EzsigndocumentGetChildrenV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
@@ -1128,7 +1172,7 @@ namespace eZmaxApi.Api
         /// Retrieve a URL to download documents. This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <returns>EzsigndocumentGetDownloadUrlV1Response</returns>
         public EzsigndocumentGetDownloadUrlV1Response EzsigndocumentGetDownloadUrlV1 (int pkiEzsigndocumentID, string eDocumentType)
@@ -1141,7 +1185,7 @@ namespace eZmaxApi.Api
         /// Retrieve a URL to download documents. This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <returns>ApiResponse of EzsigndocumentGetDownloadUrlV1Response</returns>
         public ApiResponse<EzsigndocumentGetDownloadUrlV1Response> EzsigndocumentGetDownloadUrlV1WithHttpInfo (int pkiEzsigndocumentID, string eDocumentType)
@@ -1205,7 +1249,7 @@ namespace eZmaxApi.Api
         /// Retrieve a URL to download documents. This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentGetDownloadUrlV1Response</returns>
@@ -1220,7 +1264,7 @@ namespace eZmaxApi.Api
         /// Retrieve a URL to download documents. This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetDownloadUrlV1Response)</returns>
@@ -1282,10 +1326,155 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <returns>EzsigndocumentGetEzsignpagesV1Response</returns>
+        public EzsigndocumentGetEzsignpagesV1Response EzsigndocumentGetEzsignpagesV1 (int pkiEzsigndocumentID)
+        {
+             ApiResponse<EzsigndocumentGetEzsignpagesV1Response> localVarResponse = EzsigndocumentGetEzsignpagesV1WithHttpInfo(pkiEzsigndocumentID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <returns>ApiResponse of EzsigndocumentGetEzsignpagesV1Response</returns>
+        public ApiResponse<EzsigndocumentGetEzsignpagesV1Response> EzsigndocumentGetEzsignpagesV1WithHttpInfo (int pkiEzsigndocumentID)
+        {
+            // verify the required parameter 'pkiEzsigndocumentID' is set
+            if (pkiEzsigndocumentID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigndocumentID' when calling ObjectEzsigndocumentApi->EzsigndocumentGetEzsignpagesV1");
+
+            var localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigndocumentID != null) localVarPathParams.Add("pkiEzsigndocumentID", this.Configuration.ApiClient.ParameterToString(pkiEzsigndocumentID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigndocumentGetEzsignpagesV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigndocumentGetEzsignpagesV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigndocumentGetEzsignpagesV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigndocumentGetEzsignpagesV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigndocumentGetEzsignpagesV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentGetEzsignpagesV1Response> EzsigndocumentGetEzsignpagesV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsigndocumentGetEzsignpagesV1Response> localVarResponse = await EzsigndocumentGetEzsignpagesV1WithHttpInfoAsync(pkiEzsigndocumentID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigndocumentGetEzsignpagesV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetEzsignpagesV1Response>> EzsigndocumentGetEzsignpagesV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsigndocumentID' is set
+            if (pkiEzsigndocumentID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigndocumentID' when calling ObjectEzsigndocumentApi->EzsigndocumentGetEzsignpagesV1");
+
+            var localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigndocumentID != null) localVarPathParams.Add("pkiEzsigndocumentID", this.Configuration.ApiClient.ParameterToString(pkiEzsigndocumentID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigndocumentGetEzsignpagesV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigndocumentGetEzsignpagesV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigndocumentGetEzsignpagesV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigndocumentGetEzsignpagesV1Response)));
+        }
+
+        /// <summary>
         /// Retrieve an existing Ezsigndocument&#39;s Form Data ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>System.IO.Stream</returns>
         public System.IO.Stream EzsigndocumentGetFormDataV1 (int pkiEzsigndocumentID)
         {
@@ -1297,7 +1486,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s Form Data ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         public ApiResponse<System.IO.Stream> EzsigndocumentGetFormDataV1WithHttpInfo (int pkiEzsigndocumentID)
         {
@@ -1357,7 +1546,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s Form Data ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of System.IO.Stream</returns>
         public async System.Threading.Tasks.Task<System.IO.Stream> EzsigndocumentGetFormDataV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
@@ -1371,7 +1560,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s Form Data ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> EzsigndocumentGetFormDataV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
@@ -1432,7 +1621,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>EzsigndocumentGetObjectV1Response</returns>
         public EzsigndocumentGetObjectV1Response EzsigndocumentGetObjectV1 (int pkiEzsigndocumentID)
         {
@@ -1444,7 +1633,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <returns>ApiResponse of EzsigndocumentGetObjectV1Response</returns>
         public ApiResponse<EzsigndocumentGetObjectV1Response> EzsigndocumentGetObjectV1WithHttpInfo (int pkiEzsigndocumentID)
         {
@@ -1503,7 +1692,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentGetObjectV1Response</returns>
         public async System.Threading.Tasks.Task<EzsigndocumentGetObjectV1Response> EzsigndocumentGetObjectV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
@@ -1517,7 +1706,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetObjectV1Response)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetObjectV1Response>> EzsigndocumentGetObjectV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
@@ -1577,7 +1766,7 @@ namespace eZmaxApi.Api
         /// Retrieve positions X,Y of given words from a Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentGetWordsPositionsV1Request"></param>
         /// <returns>EzsigndocumentGetWordsPositionsV1Response</returns>
         public EzsigndocumentGetWordsPositionsV1Response EzsigndocumentGetWordsPositionsV1 (int pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request)
@@ -1590,7 +1779,7 @@ namespace eZmaxApi.Api
         /// Retrieve positions X,Y of given words from a Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentGetWordsPositionsV1Request"></param>
         /// <returns>ApiResponse of EzsigndocumentGetWordsPositionsV1Response</returns>
         public ApiResponse<EzsigndocumentGetWordsPositionsV1Response> EzsigndocumentGetWordsPositionsV1WithHttpInfo (int pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request)
@@ -1662,7 +1851,7 @@ namespace eZmaxApi.Api
         /// Retrieve positions X,Y of given words from a Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentGetWordsPositionsV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentGetWordsPositionsV1Response</returns>
@@ -1677,7 +1866,7 @@ namespace eZmaxApi.Api
         /// Retrieve positions X,Y of given words from a Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument</param>
+        /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentGetWordsPositionsV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetWordsPositionsV1Response)</returns>

@@ -39,12 +39,12 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignsignatureRequest" /> class.
         /// </summary>
         /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="iEzsignpagePagenumber">The page number in the document where to apply the signature (required).</param>
+        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
         /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
         /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
         /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign. (required).</param>
         /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
-        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
         public EzsignsignatureRequest(int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)
@@ -127,9 +127,9 @@ namespace eZmaxApi.Model
         public int FkiEzsignfoldersignerassociationID { get; set; }
 
         /// <summary>
-        /// The page number in the document where to apply the signature
+        /// The page number in the Ezsigndocument
         /// </summary>
-        /// <value>The page number in the document where to apply the signature</value>
+        /// <value>The page number in the Ezsigndocument</value>
         [DataMember(Name="iEzsignpagePagenumber", EmitDefaultValue=true)]
         public int IEzsignpagePagenumber { get; set; }
 
@@ -161,9 +161,9 @@ namespace eZmaxApi.Model
         public FieldEEzsignsignatureType EEzsignsignatureType { get; set; }
 
         /// <summary>
-        /// The unique ID of the Ezsigntemplate
+        /// The unique ID of the Ezsigndocument
         /// </summary>
-        /// <value>The unique ID of the Ezsigntemplate</value>
+        /// <value>The unique ID of the Ezsigndocument</value>
         [DataMember(Name="fkiEzsigndocumentID", EmitDefaultValue=true)]
         public int FkiEzsigndocumentID { get; set; }
 

@@ -121,7 +121,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfoldersignerassociationApi(Configuration.Default);
-            var pkiEzsignfoldersignerassociationID = 56;  // int | The unique ID of the Ezsignfoldersignerassociation
+            var pkiEzsignfoldersignerassociationID = 56;  // int | 
 
             try
             {
@@ -145,7 +145,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **int**| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **int**|  | 
 
 ### Return type
 
@@ -204,7 +204,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfoldersignerassociationApi(Configuration.Default);
-            var pkiEzsignfoldersignerassociationID = 56;  // int | The unique ID of the Ezsignfoldersignerassociation
+            var pkiEzsignfoldersignerassociationID = 56;  // int | 
 
             try
             {
@@ -227,7 +227,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **int**| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **int**|  | 
 
 ### Return type
 
@@ -284,7 +284,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfoldersignerassociationApi(Configuration.Default);
-            var pkiEzsignfoldersignerassociationID = 56;  // int | The unique ID of the Ezsignfoldersignerassociation
+            var pkiEzsignfoldersignerassociationID = 56;  // int | 
 
             try
             {
@@ -308,7 +308,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **int**| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **int**|  | 
 
 ### Return type
 
@@ -367,7 +367,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfoldersignerassociationApi(Configuration.Default);
-            var pkiEzsignfoldersignerassociationID = 56;  // int | The unique ID of the Ezsignfoldersignerassociation
+            var pkiEzsignfoldersignerassociationID = 56;  // int | 
 
             try
             {
@@ -391,7 +391,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **int**| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **int**|  | 
 
 ### Return type
 

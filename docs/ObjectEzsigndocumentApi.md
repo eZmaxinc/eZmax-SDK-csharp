@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**EzsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentdeleteobjectv1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 [**EzsigndocumentGetChildrenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetchildrenv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument&#39;s children IDs
 [**EzsigndocumentGetDownloadUrlV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
+[**EzsigndocumentGetEzsignpagesV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetezsignpagesv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages | Retrieve an existing Ezsigndocument&#39;s Ezsignpages
 [**EzsigndocumentGetFormDataV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetformdatav1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
 [**EzsigndocumentGetObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetobjectv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 [**EzsigndocumentGetWordsPositionsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetwordspositionsv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
@@ -45,7 +46,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
-            var pkiEzsigndocumentID = 56;  // int | The unique ID of the Ezsigndocument
+            var pkiEzsigndocumentID = 56;  // int | 
             var ezsigndocumentApplyEzsigntemplateV1Request = new EzsigndocumentApplyEzsigntemplateV1Request(); // EzsigndocumentApplyEzsigntemplateV1Request | 
 
             try
@@ -70,7 +71,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **int**| The unique ID of the Ezsigndocument | 
+ **pkiEzsigndocumentID** | **int**|  | 
  **ezsigndocumentApplyEzsigntemplateV1Request** | [**EzsigndocumentApplyEzsigntemplateV1Request**](EzsigndocumentApplyEzsigntemplateV1Request.md)|  | 
 
 ### Return type
@@ -209,7 +210,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
-            var pkiEzsigndocumentID = 56;  // int | The unique ID of the Ezsigndocument
+            var pkiEzsigndocumentID = 56;  // int | 
 
             try
             {
@@ -233,7 +234,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **int**| The unique ID of the Ezsigndocument | 
+ **pkiEzsigndocumentID** | **int**|  | 
 
 ### Return type
 
@@ -292,7 +293,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
-            var pkiEzsigndocumentID = 56;  // int | The unique ID of the Ezsigndocument
+            var pkiEzsigndocumentID = 56;  // int | 
 
             try
             {
@@ -315,7 +316,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **int**| The unique ID of the Ezsigndocument | 
+ **pkiEzsigndocumentID** | **int**|  | 
 
 ### Return type
 
@@ -372,7 +373,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
-            var pkiEzsigndocumentID = 56;  // int | The unique ID of the Ezsigndocument
+            var pkiEzsigndocumentID = 56;  // int | 
             var eDocumentType = eDocumentType_example;  // string | The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
 
             try
@@ -397,12 +398,95 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **int**| The unique ID of the Ezsigndocument | 
+ **pkiEzsigndocumentID** | **int**|  | 
  **eDocumentType** | **string**| The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more.  | 
 
 ### Return type
 
 [**EzsigndocumentGetDownloadUrlV1Response**](EzsigndocumentGetDownloadUrlV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The element you are trying to work on does not exist |  -  |
+| **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## EzsigndocumentGetEzsignpagesV1
+
+> EzsigndocumentGetEzsignpagesV1Response EzsigndocumentGetEzsignpagesV1 (int pkiEzsigndocumentID)
+
+Retrieve an existing Ezsigndocument's Ezsignpages
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsigndocumentGetEzsignpagesV1Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
+            var pkiEzsigndocumentID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Ezsigndocument's Ezsignpages
+                EzsigndocumentGetEzsignpagesV1Response result = apiInstance.EzsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectEzsigndocumentApi.EzsigndocumentGetEzsignpagesV1: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **int**|  | 
+
+### Return type
+
+[**EzsigndocumentGetEzsignpagesV1Response**](EzsigndocumentGetEzsignpagesV1Response.md)
 
 ### Authorization
 
@@ -457,7 +541,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
-            var pkiEzsigndocumentID = 56;  // int | The unique ID of the Ezsigndocument
+            var pkiEzsigndocumentID = 56;  // int | 
 
             try
             {
@@ -481,7 +565,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **int**| The unique ID of the Ezsigndocument | 
+ **pkiEzsigndocumentID** | **int**|  | 
 
 ### Return type
 
@@ -540,7 +624,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
-            var pkiEzsigndocumentID = 56;  // int | The unique ID of the Ezsigndocument
+            var pkiEzsigndocumentID = 56;  // int | 
 
             try
             {
@@ -564,7 +648,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **int**| The unique ID of the Ezsigndocument | 
+ **pkiEzsigndocumentID** | **int**|  | 
 
 ### Return type
 
@@ -622,7 +706,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
-            var pkiEzsigndocumentID = 56;  // int | The unique ID of the Ezsigndocument
+            var pkiEzsigndocumentID = 56;  // int | 
             var ezsigndocumentGetWordsPositionsV1Request = new EzsigndocumentGetWordsPositionsV1Request(); // EzsigndocumentGetWordsPositionsV1Request | 
 
             try
@@ -647,7 +731,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **int**| The unique ID of the Ezsigndocument | 
+ **pkiEzsigndocumentID** | **int**|  | 
  **ezsigndocumentGetWordsPositionsV1Request** | [**EzsigndocumentGetWordsPositionsV1Request**](EzsigndocumentGetWordsPositionsV1Request.md)|  | 
 
 ### Return type

@@ -47,6 +47,9 @@ docs/EzsigndocumentDeleteObjectV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
+docs/EzsigndocumentGetEzsignpagesV1Response.md
+docs/EzsigndocumentGetEzsignpagesV1ResponseAllOf.md
+docs/EzsigndocumentGetEzsignpagesV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
 docs/EzsigndocumentGetObjectV1ResponseAllOf.md
 docs/EzsigndocumentGetObjectV1ResponseMPayload.md
@@ -57,7 +60,6 @@ docs/EzsigndocumentGetWordsPositionsV1ResponseMPayload.md
 docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
-docs/EzsigndocumentResponseAllOf.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
@@ -86,6 +88,7 @@ docs/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignpageResponse.md
 docs/EzsignsignatureCreateObjectV1Request.md
 docs/EzsignsignatureCreateObjectV1Response.md
 docs/EzsignsignatureCreateObjectV1ResponseAllOf.md
@@ -218,6 +221,9 @@ src/eZmaxApi.Test/Model/EzsigndocumentDeleteObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetDownloadUrlV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetDownloadUrlV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetDownloadUrlV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentGetEzsignpagesV1ResponseAllOfTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentGetEzsignpagesV1ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentGetEzsignpagesV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetObjectV1ResponseTests.cs
@@ -227,7 +233,6 @@ src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseMPayloadTests.c
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentRequestTests.cs
-src/eZmaxApi.Test/Model/EzsigndocumentResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentResponseCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderCreateObjectV1RequestTests.cs
@@ -257,6 +262,7 @@ src/eZmaxApi.Test/Model/EzsignfoldersignerassociationGetObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestTests.cs
+src/eZmaxApi.Test/Model/EzsignpageResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureCreateObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureCreateObjectV1ResponseMPayloadTests.cs
@@ -384,6 +390,9 @@ src/eZmaxApi/Model/EzsigndocumentDeleteObjectV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetDownloadUrlV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetDownloadUrlV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.cs
+src/eZmaxApi/Model/EzsigndocumentGetEzsignpagesV1Response.cs
+src/eZmaxApi/Model/EzsigndocumentGetEzsignpagesV1ResponseAllOf.cs
+src/eZmaxApi/Model/EzsigndocumentGetEzsignpagesV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigndocumentGetObjectV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsigndocumentGetObjectV1ResponseMPayload.cs
@@ -394,7 +403,6 @@ src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigndocumentRequest.cs
 src/eZmaxApi/Model/EzsigndocumentRequestCompound.cs
 src/eZmaxApi/Model/EzsigndocumentResponse.cs
-src/eZmaxApi/Model/EzsigndocumentResponseAllOf.cs
 src/eZmaxApi/Model/EzsigndocumentResponseCompound.cs
 src/eZmaxApi/Model/EzsignfolderCreateObjectV1Request.cs
 src/eZmaxApi/Model/EzsignfolderCreateObjectV1Response.cs
@@ -423,6 +431,7 @@ src/eZmaxApi/Model/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequest.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequestCompound.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequestCompoundAllOf.cs
+src/eZmaxApi/Model/EzsignpageResponse.cs
 src/eZmaxApi/Model/EzsignsignatureCreateObjectV1Request.cs
 src/eZmaxApi/Model/EzsignsignatureCreateObjectV1Response.cs
 src/eZmaxApi/Model/EzsignsignatureCreateObjectV1ResponseAllOf.cs

@@ -42,7 +42,7 @@ namespace eZmaxApi.Model
         /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the document can be signed. (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
         /// <param name="eEzsigndocumentStep">eEzsigndocumentStep (required).</param>
         /// <param name="dtEzsigndocumentFirstsend">The date and time when the Ezsigndocument was first sent. (required).</param>
         /// <param name="dtEzsigndocumentLastsend">The date and time when the Ezsigndocument was sent the last time. (required).</param>
@@ -236,9 +236,9 @@ namespace eZmaxApi.Model
         public string SEzsigndocumentName { get; set; }
 
         /// <summary>
-        /// The unique ID of the Ezsigntemplate
+        /// The unique ID of the Ezsigndocument
         /// </summary>
-        /// <value>The unique ID of the Ezsigntemplate</value>
+        /// <value>The unique ID of the Ezsigndocument</value>
         [DataMember(Name="pkiEzsigndocumentID", EmitDefaultValue=true)]
         public int PkiEzsigndocumentID { get; set; }
 

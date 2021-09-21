@@ -53,7 +53,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>EzsignsignatureDeleteObjectV1Response</returns>
         EzsignsignatureDeleteObjectV1Response EzsignsignatureDeleteObjectV1 (int pkiEzsignsignatureID);
 
@@ -64,7 +64,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>ApiResponse of EzsignsignatureDeleteObjectV1Response</returns>
         ApiResponse<EzsignsignatureDeleteObjectV1Response> EzsignsignatureDeleteObjectV1WithHttpInfo (int pkiEzsignsignatureID);
         /// <summary>
@@ -74,7 +74,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns></returns>
         void EzsignsignatureGetChildrenV1 (int pkiEzsignsignatureID);
 
@@ -85,7 +85,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> EzsignsignatureGetChildrenV1WithHttpInfo (int pkiEzsignsignatureID);
         /// <summary>
@@ -95,7 +95,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>EzsignsignatureGetObjectV1Response</returns>
         EzsignsignatureGetObjectV1Response EzsignsignatureGetObjectV1 (int pkiEzsignsignatureID);
 
@@ -106,7 +106,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>ApiResponse of EzsignsignatureGetObjectV1Response</returns>
         ApiResponse<EzsignsignatureGetObjectV1Response> EzsignsignatureGetObjectV1WithHttpInfo (int pkiEzsignsignatureID);
         #endregion Synchronous Operations
@@ -141,7 +141,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignsignatureDeleteObjectV1Response</returns>
         System.Threading.Tasks.Task<EzsignsignatureDeleteObjectV1Response> EzsignsignatureDeleteObjectV1Async (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken));
@@ -153,7 +153,7 @@ namespace eZmaxApi.Api
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignsignatureDeleteObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignsignatureDeleteObjectV1Response>> EzsignsignatureDeleteObjectV1WithHttpInfoAsync (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken));
@@ -164,7 +164,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task EzsignsignatureGetChildrenV1Async (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken));
@@ -176,7 +176,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> EzsignsignatureGetChildrenV1WithHttpInfoAsync (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken));
@@ -187,7 +187,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignsignatureGetObjectV1Response</returns>
         System.Threading.Tasks.Task<EzsignsignatureGetObjectV1Response> EzsignsignatureGetObjectV1Async (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken));
@@ -199,7 +199,7 @@ namespace eZmaxApi.Api
         /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignsignatureGetObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignsignatureGetObjectV1Response>> EzsignsignatureGetObjectV1WithHttpInfoAsync (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken));
@@ -479,7 +479,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsignsignature 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>EzsignsignatureDeleteObjectV1Response</returns>
         public EzsignsignatureDeleteObjectV1Response EzsignsignatureDeleteObjectV1 (int pkiEzsignsignatureID)
         {
@@ -491,7 +491,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsignsignature 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>ApiResponse of EzsignsignatureDeleteObjectV1Response</returns>
         public ApiResponse<EzsignsignatureDeleteObjectV1Response> EzsignsignatureDeleteObjectV1WithHttpInfo (int pkiEzsignsignatureID)
         {
@@ -550,7 +550,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsignsignature 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignsignatureDeleteObjectV1Response</returns>
         public async System.Threading.Tasks.Task<EzsignsignatureDeleteObjectV1Response> EzsignsignatureDeleteObjectV1Async (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken))
@@ -564,7 +564,7 @@ namespace eZmaxApi.Api
         /// Delete an existing Ezsignsignature 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignsignatureDeleteObjectV1Response)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EzsignsignatureDeleteObjectV1Response>> EzsignsignatureDeleteObjectV1WithHttpInfoAsync (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken))
@@ -624,7 +624,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignsignature&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns></returns>
         public void EzsignsignatureGetChildrenV1 (int pkiEzsignsignatureID)
         {
@@ -635,7 +635,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignsignature&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> EzsignsignatureGetChildrenV1WithHttpInfo (int pkiEzsignsignatureID)
         {
@@ -694,7 +694,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignsignature&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task EzsignsignatureGetChildrenV1Async (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken))
@@ -707,7 +707,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignsignature&#39;s children IDs ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> EzsignsignatureGetChildrenV1WithHttpInfoAsync (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken))
@@ -767,7 +767,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignsignature ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>EzsignsignatureGetObjectV1Response</returns>
         public EzsignsignatureGetObjectV1Response EzsignsignatureGetObjectV1 (int pkiEzsignsignatureID)
         {
@@ -779,7 +779,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignsignature ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>ApiResponse of EzsignsignatureGetObjectV1Response</returns>
         public ApiResponse<EzsignsignatureGetObjectV1Response> EzsignsignatureGetObjectV1WithHttpInfo (int pkiEzsignsignatureID)
         {
@@ -838,7 +838,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignsignature ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignsignatureGetObjectV1Response</returns>
         public async System.Threading.Tasks.Task<EzsignsignatureGetObjectV1Response> EzsignsignatureGetObjectV1Async (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken))
@@ -852,7 +852,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsignsignature ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature</param>
+        /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignsignatureGetObjectV1Response)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EzsignsignatureGetObjectV1Response>> EzsignsignatureGetObjectV1WithHttpInfoAsync (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken))

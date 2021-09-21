@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**EzsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**EzsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**EzsignfolderGetChildrenV1**](ObjectEzsignfolderApi.md#ezsignfoldergetchildrenv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
+[**EzsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**EzsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**EzsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 
@@ -121,7 +122,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfolderApi(Configuration.Default);
-            var pkiEzsignfolderID = 56;  // int | The unique ID of the Ezsignfolder
+            var pkiEzsignfolderID = 56;  // int | 
 
             try
             {
@@ -145,7 +146,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **int**| The unique ID of the Ezsignfolder | 
+ **pkiEzsignfolderID** | **int**|  | 
 
 ### Return type
 
@@ -204,7 +205,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfolderApi(Configuration.Default);
-            var pkiEzsignfolderID = 56;  // int | The unique ID of the Ezsignfolder
+            var pkiEzsignfolderID = 56;  // int | 
 
             try
             {
@@ -227,7 +228,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **int**| The unique ID of the Ezsignfolder | 
+ **pkiEzsignfolderID** | **int**|  | 
 
 ### Return type
 
@@ -247,6 +248,89 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **404** | The element you are trying to work on does not exist |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## EzsignfolderGetFormsDataV1
+
+> System.IO.Stream EzsignfolderGetFormsDataV1 (int pkiEzsignfolderID)
+
+Retrieve an existing Ezsignfolder's forms data
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfolderGetFormsDataV1Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfolderApi(Configuration.Default);
+            var pkiEzsignfolderID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Ezsignfolder's forms data
+                System.IO.Stream result = apiInstance.EzsignfolderGetFormsDataV1(pkiEzsignfolderID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderGetFormsDataV1: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **int**|  | 
+
+### Return type
+
+**System.IO.Stream**
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/zip, application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The element you are trying to work on does not exist |  -  |
+| **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -284,7 +368,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfolderApi(Configuration.Default);
-            var pkiEzsignfolderID = 56;  // int | The unique ID of the Ezsignfolder
+            var pkiEzsignfolderID = 56;  // int | 
 
             try
             {
@@ -308,7 +392,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **int**| The unique ID of the Ezsignfolder | 
+ **pkiEzsignfolderID** | **int**|  | 
 
 ### Return type
 
@@ -364,7 +448,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfolderApi(Configuration.Default);
-            var pkiEzsignfolderID = 56;  // int | The unique ID of the Ezsignfolder
+            var pkiEzsignfolderID = 56;  // int | 
             var ezsignfolderSendV1Request = new EzsignfolderSendV1Request(); // EzsignfolderSendV1Request | 
 
             try
@@ -389,7 +473,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **int**| The unique ID of the Ezsignfolder | 
+ **pkiEzsignfolderID** | **int**|  | 
  **ezsignfolderSendV1Request** | [**EzsignfolderSendV1Request**](EzsignfolderSendV1Request.md)|  | 
 
 ### Return type
