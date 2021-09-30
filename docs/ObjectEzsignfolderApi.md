@@ -257,7 +257,7 @@ void (empty response body)
 
 ## EzsignfolderGetFormsDataV1
 
-> System.IO.Stream EzsignfolderGetFormsDataV1 (int pkiEzsignfolderID)
+> EzsignfolderGetFormsDataV1Response EzsignfolderGetFormsDataV1 (int pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder's forms data
 
@@ -290,7 +290,7 @@ namespace Example
             try
             {
                 // Retrieve an existing Ezsignfolder's forms data
-                System.IO.Stream result = apiInstance.EzsignfolderGetFormsDataV1(pkiEzsignfolderID);
+                EzsignfolderGetFormsDataV1Response result = apiInstance.EzsignfolderGetFormsDataV1(pkiEzsignfolderID);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+[**EzsignfolderGetFormsDataV1Response**](EzsignfolderGetFormsDataV1Response.md)
 
 ### Authorization
 
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/zip, application/json
+- **Accept**: application/json, application/zip
 
 
 ### HTTP response details
@@ -330,6 +330,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The element you are trying to work on does not exist |  -  |
+| **406** | Accept header is not defined or invalid. |  -  |
 | **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 
 [[Back to top]](#)

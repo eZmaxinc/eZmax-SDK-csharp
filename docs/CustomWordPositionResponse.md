@@ -1,5 +1,5 @@
 
-# eZmaxApi.Model.WordPositionResponse
+# eZmaxApi.Model.CustomWordPositionResponse
 
 ## Properties
 

@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**EzsigndocumentApplyEzsigntemplateV1**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
+[**EzsigndocumentApplyEzsigntemplateV2**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 [**EzsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 [**EzsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentdeleteobjectv1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 [**EzsigndocumentGetChildrenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetchildrenv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument&#39;s children IDs
@@ -22,7 +23,7 @@ Method | HTTP request | Description
 
 Apply an Ezsign Template to the Ezsigndocument.
 
-This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
 
 ### Example
 
@@ -77,6 +78,91 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentApplyEzsigntemplateV1Response**](EzsigndocumentApplyEzsigntemplateV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The element you are trying to work on does not exist |  -  |
+| **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## EzsigndocumentApplyEzsigntemplateV2
+
+> EzsigndocumentApplyEzsigntemplateV2Response EzsigndocumentApplyEzsigntemplateV2 (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request)
+
+Apply an Ezsign Template to the Ezsigndocument.
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsigndocumentApplyEzsigntemplateV2Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
+            var pkiEzsigndocumentID = 56;  // int | 
+            var ezsigndocumentApplyEzsigntemplateV2Request = new EzsigndocumentApplyEzsigntemplateV2Request(); // EzsigndocumentApplyEzsigntemplateV2Request | 
+
+            try
+            {
+                // Apply an Ezsign Template to the Ezsigndocument.
+                EzsigndocumentApplyEzsigntemplateV2Response result = apiInstance.EzsigndocumentApplyEzsigntemplateV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectEzsigndocumentApi.EzsigndocumentApplyEzsigntemplateV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **int**|  | 
+ **ezsigndocumentApplyEzsigntemplateV2Request** | [**EzsigndocumentApplyEzsigntemplateV2Request**](EzsigndocumentApplyEzsigntemplateV2Request.md)|  | 
+
+### Return type
+
+[**EzsigndocumentApplyEzsigntemplateV2Response**](EzsigndocumentApplyEzsigntemplateV2Response.md)
 
 ### Authorization
 
@@ -434,8 +520,6 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsigndocument's Ezsignpages
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-
 ### Example
 
 ```csharp
@@ -513,7 +597,7 @@ Name | Type | Description  | Notes
 
 ## EzsigndocumentGetFormDataV1
 
-> System.IO.Stream EzsigndocumentGetFormDataV1 (int pkiEzsigndocumentID)
+> EzsigndocumentGetFormDataV1Response EzsigndocumentGetFormDataV1 (int pkiEzsigndocumentID)
 
 Retrieve an existing Ezsigndocument's Form Data
 
@@ -546,7 +630,7 @@ namespace Example
             try
             {
                 // Retrieve an existing Ezsigndocument's Form Data
-                System.IO.Stream result = apiInstance.EzsigndocumentGetFormDataV1(pkiEzsigndocumentID);
+                EzsigndocumentGetFormDataV1Response result = apiInstance.EzsigndocumentGetFormDataV1(pkiEzsigndocumentID);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -569,7 +653,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+[**EzsigndocumentGetFormDataV1Response**](EzsigndocumentGetFormDataV1Response.md)
 
 ### Authorization
 
@@ -578,7 +662,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/zip, application/json
+- **Accept**: application/json, application/zip, text/csv
 
 
 ### HTTP response details
@@ -587,6 +671,7 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The element you are trying to work on does not exist |  -  |
 | **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
+| **406** | Accept header is not defined or invalid. |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
