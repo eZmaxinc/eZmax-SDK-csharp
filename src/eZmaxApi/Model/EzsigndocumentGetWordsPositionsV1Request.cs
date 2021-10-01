@@ -31,33 +31,50 @@ namespace eZmaxApi.Model
     public partial class EzsigndocumentGetWordsPositionsV1Request :  IEquatable<EzsigndocumentGetWordsPositionsV1Request>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Request" /> class.
+        /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentGetWordsPositionsV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Request" /> class.
-        /// </summary>
-        /// <param name="aSWords">aSWords (required).</param>
-        public EzsigndocumentGetWordsPositionsV1Request(List<string> aSWords = default(List<string>))
+        /// <value>Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EGetEnum
         {
-            // to ensure "aSWords" is required (not null)
-            if (aSWords == null)
-            {
-                throw new InvalidDataException("aSWords is a required property for EzsigndocumentGetWordsPositionsV1Request and cannot be null");
-            }
-            else
-            {
-                this.ASWords = aSWords;
-            }
+            /// <summary>
+            /// Enum All for value: All
+            /// </summary>
+            [EnumMember(Value = "All")]
+            All = 1,
+
+            /// <summary>
+            /// Enum Words for value: Words
+            /// </summary>
+            [EnumMember(Value = "Words")]
+            Words = 2
 
         }
 
         /// <summary>
-        /// Gets or Sets ASWords
+        /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
         /// </summary>
-        [DataMember(Name="a_sWords", EmitDefaultValue=true)]
-        public List<string> ASWords { get; set; }
+        /// <value>Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.</value>
+        [DataMember(Name="eGet", EmitDefaultValue=false)]
+        public EGetEnum? EGet { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Request" /> class.
+        /// </summary>
+        /// <param name="eGet">Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*..</param>
+        /// <param name="aSWord">Array of words to find in the document.</param>
+        public EzsigndocumentGetWordsPositionsV1Request(EGetEnum? eGet = default(EGetEnum?), List<string> aSWord = default(List<string>))
+        {
+            this.EGet = eGet;
+            this.ASWord = aSWord;
+        }
+
+
+        /// <summary>
+        /// Array of words to find in the document
+        /// </summary>
+        /// <value>Array of words to find in the document</value>
+        [DataMember(Name="a_sWord", EmitDefaultValue=false)]
+        public List<string> ASWord { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,7 +84,8 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsigndocumentGetWordsPositionsV1Request {\n");
-            sb.Append("  ASWords: ").Append(ASWords).Append("\n");
+            sb.Append("  EGet: ").Append(EGet).Append("\n");
+            sb.Append("  ASWord: ").Append(ASWord).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -103,10 +121,15 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.ASWords == input.ASWords ||
-                    this.ASWords != null &&
-                    input.ASWords != null &&
-                    this.ASWords.SequenceEqual(input.ASWords)
+                    this.EGet == input.EGet ||
+                    (this.EGet != null &&
+                    this.EGet.Equals(input.EGet))
+                ) && 
+                (
+                    this.ASWord == input.ASWord ||
+                    this.ASWord != null &&
+                    input.ASWord != null &&
+                    this.ASWord.SequenceEqual(input.ASWord)
                 );
         }
 
@@ -119,8 +142,10 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ASWords != null)
-                    hashCode = hashCode * 59 + this.ASWords.GetHashCode();
+                if (this.EGet != null)
+                    hashCode = hashCode * 59 + this.EGet.GetHashCode();
+                if (this.ASWord != null)
+                    hashCode = hashCode * 59 + this.ASWord.GetHashCode();
                 return hashCode;
             }
         }

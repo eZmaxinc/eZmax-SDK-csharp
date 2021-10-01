@@ -42,7 +42,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiUserID">The unique ID of the User.</param>
         /// <param name="sContactFirstname">The First name of the contact (required).</param>
         /// <param name="sContactLastname">The Last name of the contact (required).</param>
-        /// <param name="aObjEzsignformfieldgroupCompound">This array contains the labels or each Form fields in the form but WITHOUT the values (required).</param>
+        /// <param name="aObjEzsignformfieldgroupCompound">aObjEzsignformfieldgroupCompound (required).</param>
         public CustomFormDataSignerResponse(int fkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound = default(List<EzsignformfieldgroupResponseCompound>))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)
@@ -117,9 +117,8 @@ namespace eZmaxApi.Model
         public string SContactLastname { get; set; }
 
         /// <summary>
-        /// This array contains the labels or each Form fields in the form but WITHOUT the values
+        /// Gets or Sets AObjEzsignformfieldgroupCompound
         /// </summary>
-        /// <value>This array contains the labels or each Form fields in the form but WITHOUT the values</value>
         [DataMember(Name="a_objEzsignformfieldgroupCompound", EmitDefaultValue=true)]
         public List<EzsignformfieldgroupResponseCompound> AObjEzsignformfieldgroupCompound { get; set; }
 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **FkiUserID** | **int** | The unique ID of the User | [optional] 
 **SContactFirstname** | **string** | The First name of the contact | 
 **SContactLastname** | **string** | The Last name of the contact | 
-**AObjEzsignformfieldgroupCompound** | [**List&lt;EzsignformfieldgroupResponseCompound&gt;**](EzsignformfieldgroupResponseCompound.md) | This array contains the labels or each Form fields in the form but WITHOUT the values | 
+**AObjEzsignformfieldgroupCompound** | [**List&lt;EzsignformfieldgroupResponseCompound&gt;**](EzsignformfieldgroupResponseCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

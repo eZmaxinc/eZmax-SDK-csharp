@@ -65,14 +65,6 @@ namespace eZmaxApi.Test
         }
 
 
-        /// <summary>
-        /// Test the property 'ASWords'
-        /// </summary>
-        [Test]
-        public void ASWordsTest()
-        {
-            // TODO unit test for the property 'ASWords'
-        }
 
     }
 

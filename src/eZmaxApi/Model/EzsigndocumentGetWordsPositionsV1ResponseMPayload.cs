@@ -34,31 +34,9 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1ResponseMPayload" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected EzsigndocumentGetWordsPositionsV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aSWords">An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request. (required).</param>
-        public EzsigndocumentGetWordsPositionsV1ResponseMPayload(List<CustomWordPositionResponse> aSWords = default(List<CustomWordPositionResponse>))
+        public EzsigndocumentGetWordsPositionsV1ResponseMPayload()
         {
-            // to ensure "aSWords" is required (not null)
-            if (aSWords == null)
-            {
-                throw new InvalidDataException("aSWords is a required property for EzsigndocumentGetWordsPositionsV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.ASWords = aSWords;
-            }
-
         }
-
-        /// <summary>
-        /// An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request.
-        /// </summary>
-        /// <value>An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request.</value>
-        [DataMember(Name="a_sWords", EmitDefaultValue=true)]
-        public List<CustomWordPositionResponse> ASWords { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -68,7 +46,6 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsigndocumentGetWordsPositionsV1ResponseMPayload {\n");
-            sb.Append("  ASWords: ").Append(ASWords).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,13 +79,7 @@ namespace eZmaxApi.Model
             if (input == null)
                 return false;
 
-            return 
-                (
-                    this.ASWords == input.ASWords ||
-                    this.ASWords != null &&
-                    input.ASWords != null &&
-                    this.ASWords.SequenceEqual(input.ASWords)
-                );
+            return false;
         }
 
         /// <summary>
@@ -120,8 +91,6 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ASWords != null)
-                    hashCode = hashCode * 59 + this.ASWords.GetHashCode();
                 return hashCode;
             }
         }
