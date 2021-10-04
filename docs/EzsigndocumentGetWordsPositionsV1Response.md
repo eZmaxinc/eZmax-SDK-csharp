@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MPayload** | [**EzsigndocumentGetWordsPositionsV1ResponseMPayload**](EzsigndocumentGetWordsPositionsV1ResponseMPayload.md) |  | 
+**MPayload** | [**List&lt;CustomWordPositionWordResponse&gt;**](CustomWordPositionWordResponse.md) | Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request | 
 **ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
 **ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 

@@ -38,8 +38,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1ResponseAllOf" /> class.
         /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
-        public EzsigndocumentGetWordsPositionsV1ResponseAllOf(EzsigndocumentGetWordsPositionsV1ResponseMPayload mPayload = default(EzsigndocumentGetWordsPositionsV1ResponseMPayload))
+        /// <param name="mPayload">Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request (required).</param>
+        public EzsigndocumentGetWordsPositionsV1ResponseAllOf(List<CustomWordPositionWordResponse> mPayload = default(List<CustomWordPositionWordResponse>))
         {
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
@@ -54,10 +54,11 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets MPayload
+        /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
         /// </summary>
+        /// <value>Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request</value>
         [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public EzsigndocumentGetWordsPositionsV1ResponseMPayload MPayload { get; set; }
+        public List<CustomWordPositionWordResponse> MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -104,8 +105,9 @@ namespace eZmaxApi.Model
             return 
                 (
                     this.MPayload == input.MPayload ||
-                    (this.MPayload != null &&
-                    this.MPayload.Equals(input.MPayload))
+                    this.MPayload != null &&
+                    input.MPayload != null &&
+                    this.MPayload.SequenceEqual(input.MPayload)
                 );
         }
 

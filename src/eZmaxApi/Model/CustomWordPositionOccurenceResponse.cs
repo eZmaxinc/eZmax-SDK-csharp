@@ -28,15 +28,15 @@ namespace eZmaxApi.Model
     /// A Word Position Object
     /// </summary>
     [DataContract]
-    public partial class CustomWordPositionResponse :  IEquatable<CustomWordPositionResponse>, IValidatableObject
+    public partial class CustomWordPositionOccurenceResponse :  IEquatable<CustomWordPositionOccurenceResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CustomWordPositionResponse" /> class.
+        /// Initializes a new instance of the <see cref="CustomWordPositionOccurenceResponse" /> class.
         /// </summary>
         /// <param name="iPage">The page where the word occurence was found.</param>
         /// <param name="iX">The X coordinate (Horizontal) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch)..</param>
         /// <param name="iY">The Y coordinate (Vertical) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch)..</param>
-        public CustomWordPositionResponse(int iPage = default(int), int iX = default(int), int iY = default(int))
+        public CustomWordPositionOccurenceResponse(int iPage = default(int), int iX = default(int), int iY = default(int))
         {
             this.IPage = iPage;
             this.IX = iX;
@@ -71,7 +71,7 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CustomWordPositionResponse {\n");
+            sb.Append("class CustomWordPositionOccurenceResponse {\n");
             sb.Append("  IPage: ").Append(IPage).Append("\n");
             sb.Append("  IX: ").Append(IX).Append("\n");
             sb.Append("  IY: ").Append(IY).Append("\n");
@@ -95,15 +95,15 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CustomWordPositionResponse);
+            return this.Equals(input as CustomWordPositionOccurenceResponse);
         }
 
         /// <summary>
-        /// Returns true if CustomWordPositionResponse instances are equal
+        /// Returns true if CustomWordPositionOccurenceResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of CustomWordPositionResponse to be compared</param>
+        /// <param name="input">Instance of CustomWordPositionOccurenceResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CustomWordPositionResponse input)
+        public bool Equals(CustomWordPositionOccurenceResponse input)
         {
             if (input == null)
                 return false;

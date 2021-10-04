@@ -38,10 +38,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Response" /> class.
         /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
+        /// <param name="mPayload">Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request (required).</param>
         /// <param name="objDebugPayload">objDebugPayload.</param>
         /// <param name="objDebug">objDebug.</param>
-        public EzsigndocumentGetWordsPositionsV1Response(EzsigndocumentGetWordsPositionsV1ResponseMPayload mPayload = default(EzsigndocumentGetWordsPositionsV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        public EzsigndocumentGetWordsPositionsV1Response(List<CustomWordPositionWordResponse> mPayload = default(List<CustomWordPositionWordResponse>), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
@@ -58,10 +58,11 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets MPayload
+        /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
         /// </summary>
+        /// <value>Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request</value>
         [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public EzsigndocumentGetWordsPositionsV1ResponseMPayload MPayload { get; set; }
+        public List<CustomWordPositionWordResponse> MPayload { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjDebugPayload
@@ -122,8 +123,9 @@ namespace eZmaxApi.Model
             return 
                 (
                     this.MPayload == input.MPayload ||
-                    (this.MPayload != null &&
-                    this.MPayload.Equals(input.MPayload))
+                    this.MPayload != null &&
+                    input.MPayload != null &&
+                    this.MPayload.SequenceEqual(input.MPayload)
                 ) && 
                 (
                     this.ObjDebugPayload == input.ObjDebugPayload ||

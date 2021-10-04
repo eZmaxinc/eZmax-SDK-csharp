@@ -1,10 +1,12 @@
 
-# eZmaxApi.Model.EzsigndocumentGetWordsPositionsV1ResponseMPayload
+# eZmaxApi.Model.CustomWordPositionWordResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**SWord** | **string** | The searched word | 
+**ObjWordPositionOccurence** | [**List&lt;CustomWordPositionOccurenceResponse&gt;**](CustomWordPositionOccurenceResponse.md) | The found occurences for the seached word | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

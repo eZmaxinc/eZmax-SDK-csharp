@@ -39,7 +39,8 @@ docs/ContactinformationsRequestCompoundAllOf.md
 docs/CustomFormDataDocumentResponse.md
 docs/CustomFormDataFolderResponse.md
 docs/CustomFormDataSignerResponse.md
-docs/CustomWordPositionResponse.md
+docs/CustomWordPositionOccurenceResponse.md
+docs/CustomWordPositionWordResponse.md
 docs/EmailRequest.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
@@ -65,7 +66,6 @@ docs/EzsigndocumentGetObjectV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
-docs/EzsigndocumentGetWordsPositionsV1ResponseMPayload.md
 docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
@@ -229,7 +229,8 @@ src/eZmaxApi.Test/Model/ContactinformationsRequestTests.cs
 src/eZmaxApi.Test/Model/CustomFormDataDocumentResponseTests.cs
 src/eZmaxApi.Test/Model/CustomFormDataFolderResponseTests.cs
 src/eZmaxApi.Test/Model/CustomFormDataSignerResponseTests.cs
-src/eZmaxApi.Test/Model/CustomWordPositionResponseTests.cs
+src/eZmaxApi.Test/Model/CustomWordPositionOccurenceResponseTests.cs
+src/eZmaxApi.Test/Model/CustomWordPositionWordResponseTests.cs
 src/eZmaxApi.Test/Model/EmailRequestTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentApplyEzsigntemplateV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentApplyEzsigntemplateV1ResponseTests.cs
@@ -254,7 +255,6 @@ src/eZmaxApi.Test/Model/EzsigndocumentGetObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseAllOfTests.cs
-src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentRequestTests.cs
@@ -414,7 +414,8 @@ src/eZmaxApi/Model/ContactinformationsRequestCompoundAllOf.cs
 src/eZmaxApi/Model/CustomFormDataDocumentResponse.cs
 src/eZmaxApi/Model/CustomFormDataFolderResponse.cs
 src/eZmaxApi/Model/CustomFormDataSignerResponse.cs
-src/eZmaxApi/Model/CustomWordPositionResponse.cs
+src/eZmaxApi/Model/CustomWordPositionOccurenceResponse.cs
+src/eZmaxApi/Model/CustomWordPositionWordResponse.cs
 src/eZmaxApi/Model/EmailRequest.cs
 src/eZmaxApi/Model/EzsigndocumentApplyEzsigntemplateV1Request.cs
 src/eZmaxApi/Model/EzsigndocumentApplyEzsigntemplateV1Response.cs
@@ -440,7 +441,6 @@ src/eZmaxApi/Model/EzsigndocumentGetObjectV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1Request.cs
 src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1ResponseAllOf.cs
-src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigndocumentRequest.cs
 src/eZmaxApi/Model/EzsigndocumentRequestCompound.cs
 src/eZmaxApi/Model/EzsigndocumentResponse.cs
