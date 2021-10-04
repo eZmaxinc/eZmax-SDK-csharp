@@ -74,12 +74,12 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SWord'
         }
         /// <summary>
-        /// Test the property 'ObjWordPositionOccurence'
+        /// Test the property 'AObjWordPositionOccurence'
         /// </summary>
         [Test]
-        public void ObjWordPositionOccurenceTest()
+        public void AObjWordPositionOccurenceTest()
         {
-            // TODO unit test for the property 'ObjWordPositionOccurence'
+            // TODO unit test for the property 'AObjWordPositionOccurence'
         }
 
     }

@@ -39,8 +39,8 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CustomWordPositionWordResponse" /> class.
         /// </summary>
         /// <param name="sWord">The searched word (required).</param>
-        /// <param name="objWordPositionOccurence">The found occurences for the seached word (required).</param>
-        public CustomWordPositionWordResponse(string sWord = default(string), List<CustomWordPositionOccurenceResponse> objWordPositionOccurence = default(List<CustomWordPositionOccurenceResponse>))
+        /// <param name="aObjWordPositionOccurence">The found occurences for the seached word (required).</param>
+        public CustomWordPositionWordResponse(string sWord = default(string), List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence = default(List<CustomWordPositionOccurenceResponse>))
         {
             // to ensure "sWord" is required (not null)
             if (sWord == null)
@@ -52,14 +52,14 @@ namespace eZmaxApi.Model
                 this.SWord = sWord;
             }
 
-            // to ensure "objWordPositionOccurence" is required (not null)
-            if (objWordPositionOccurence == null)
+            // to ensure "aObjWordPositionOccurence" is required (not null)
+            if (aObjWordPositionOccurence == null)
             {
-                throw new InvalidDataException("objWordPositionOccurence is a required property for CustomWordPositionWordResponse and cannot be null");
+                throw new InvalidDataException("aObjWordPositionOccurence is a required property for CustomWordPositionWordResponse and cannot be null");
             }
             else
             {
-                this.ObjWordPositionOccurence = objWordPositionOccurence;
+                this.AObjWordPositionOccurence = aObjWordPositionOccurence;
             }
 
         }
@@ -75,8 +75,8 @@ namespace eZmaxApi.Model
         /// The found occurences for the seached word
         /// </summary>
         /// <value>The found occurences for the seached word</value>
-        [DataMember(Name="objWordPositionOccurence", EmitDefaultValue=true)]
-        public List<CustomWordPositionOccurenceResponse> ObjWordPositionOccurence { get; set; }
+        [DataMember(Name="a_objWordPositionOccurence", EmitDefaultValue=true)]
+        public List<CustomWordPositionOccurenceResponse> AObjWordPositionOccurence { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class CustomWordPositionWordResponse {\n");
             sb.Append("  SWord: ").Append(SWord).Append("\n");
-            sb.Append("  ObjWordPositionOccurence: ").Append(ObjWordPositionOccurence).Append("\n");
+            sb.Append("  AObjWordPositionOccurence: ").Append(AObjWordPositionOccurence).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,10 +128,10 @@ namespace eZmaxApi.Model
                     this.SWord.Equals(input.SWord))
                 ) && 
                 (
-                    this.ObjWordPositionOccurence == input.ObjWordPositionOccurence ||
-                    this.ObjWordPositionOccurence != null &&
-                    input.ObjWordPositionOccurence != null &&
-                    this.ObjWordPositionOccurence.SequenceEqual(input.ObjWordPositionOccurence)
+                    this.AObjWordPositionOccurence == input.AObjWordPositionOccurence ||
+                    this.AObjWordPositionOccurence != null &&
+                    input.AObjWordPositionOccurence != null &&
+                    this.AObjWordPositionOccurence.SequenceEqual(input.AObjWordPositionOccurence)
                 );
         }
 
@@ -146,8 +146,8 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.SWord != null)
                     hashCode = hashCode * 59 + this.SWord.GetHashCode();
-                if (this.ObjWordPositionOccurence != null)
-                    hashCode = hashCode * 59 + this.ObjWordPositionOccurence.GetHashCode();
+                if (this.AObjWordPositionOccurence != null)
+                    hashCode = hashCode * 59 + this.AObjWordPositionOccurence.GetHashCode();
                 return hashCode;
             }
         }
