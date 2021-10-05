@@ -31,9 +31,9 @@ namespace eZmaxApi.Model
     public partial class EzsigndocumentGetWordsPositionsV1Request :  IEquatable<EzsigndocumentGetWordsPositionsV1Request>, IValidatableObject
     {
         /// <summary>
-        /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+        /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
         /// </summary>
-        /// <value>Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.</value>
+        /// <value>Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum EGetEnum
         {
@@ -52,22 +52,54 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+        /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
         /// </summary>
-        /// <value>Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.</value>
-        [DataMember(Name="eGet", EmitDefaultValue=false)]
-        public EGetEnum? EGet { get; set; }
+        /// <value>Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.</value>
+        [DataMember(Name="eGet", EmitDefaultValue=true)]
+        public EGetEnum EGet { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Request" /> class.
         /// </summary>
-        /// <param name="eGet">Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*..</param>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentGetWordsPositionsV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Request" /> class.
+        /// </summary>
+        /// <param name="eGet">Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*. (required).</param>
+        /// <param name="bWordCaseSensitive">IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive. (required).</param>
         /// <param name="aSWord">Array of words to find in the document.</param>
-        public EzsigndocumentGetWordsPositionsV1Request(EGetEnum? eGet = default(EGetEnum?), List<string> aSWord = default(List<string>))
+        public EzsigndocumentGetWordsPositionsV1Request(EGetEnum eGet = default(EGetEnum), bool bWordCaseSensitive = default(bool), List<string> aSWord = default(List<string>))
         {
-            this.EGet = eGet;
+            // to ensure "eGet" is required (not null)
+            if (eGet == null)
+            {
+                throw new InvalidDataException("eGet is a required property for EzsigndocumentGetWordsPositionsV1Request and cannot be null");
+            }
+            else
+            {
+                this.EGet = eGet;
+            }
+
+            // to ensure "bWordCaseSensitive" is required (not null)
+            if (bWordCaseSensitive == null)
+            {
+                throw new InvalidDataException("bWordCaseSensitive is a required property for EzsigndocumentGetWordsPositionsV1Request and cannot be null");
+            }
+            else
+            {
+                this.BWordCaseSensitive = bWordCaseSensitive;
+            }
+
             this.ASWord = aSWord;
         }
 
+
+        /// <summary>
+        /// IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
+        /// </summary>
+        /// <value>IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.</value>
+        [DataMember(Name="bWordCaseSensitive", EmitDefaultValue=true)]
+        public bool BWordCaseSensitive { get; set; }
 
         /// <summary>
         /// Array of words to find in the document
@@ -85,6 +117,7 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class EzsigndocumentGetWordsPositionsV1Request {\n");
             sb.Append("  EGet: ").Append(EGet).Append("\n");
+            sb.Append("  BWordCaseSensitive: ").Append(BWordCaseSensitive).Append("\n");
             sb.Append("  ASWord: ").Append(ASWord).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -126,6 +159,11 @@ namespace eZmaxApi.Model
                     this.EGet.Equals(input.EGet))
                 ) && 
                 (
+                    this.BWordCaseSensitive == input.BWordCaseSensitive ||
+                    (this.BWordCaseSensitive != null &&
+                    this.BWordCaseSensitive.Equals(input.BWordCaseSensitive))
+                ) && 
+                (
                     this.ASWord == input.ASWord ||
                     this.ASWord != null &&
                     input.ASWord != null &&
@@ -144,6 +182,8 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.EGet != null)
                     hashCode = hashCode * 59 + this.EGet.GetHashCode();
+                if (this.BWordCaseSensitive != null)
+                    hashCode = hashCode * 59 + this.BWordCaseSensitive.GetHashCode();
                 if (this.ASWord != null)
                     hashCode = hashCode * 59 + this.ASWord.GetHashCode();
                 return hashCode;

@@ -24,6 +24,7 @@ docs/CommonAudit.md
 docs/CommonGetAutocompleteV1Response.md
 docs/CommonGetAutocompleteV1ResponseAllOf.md
 docs/CommonGetAutocompleteV1ResponseMPayload.md
+docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
 docs/CommonResponseObjDebug.md
@@ -100,6 +101,11 @@ docs/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignfoldertypeGetListV1Response.md
+docs/EzsignfoldertypeGetListV1ResponseAllOf.md
+docs/EzsignfoldertypeGetListV1ResponseMPayload.md
+docs/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.md
+docs/EzsignfoldertypeListElement.md
 docs/EzsignformfieldResponse.md
 docs/EzsignformfieldResponseCompound.md
 docs/EzsignformfieldgroupResponse.md
@@ -144,6 +150,7 @@ docs/ObjectApikeyApi.md
 docs/ObjectEzsigndocumentApi.md
 docs/ObjectEzsignfolderApi.md
 docs/ObjectEzsignfoldersignerassociationApi.md
+docs/ObjectEzsignfoldertypeApi.md
 docs/ObjectEzsignsignatureApi.md
 docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
@@ -189,6 +196,7 @@ src/eZmaxApi.Test/Api/ObjectApikeyApiTests.cs
 src/eZmaxApi.Test/Api/ObjectEzsigndocumentApiTests.cs
 src/eZmaxApi.Test/Api/ObjectEzsignfolderApiTests.cs
 src/eZmaxApi.Test/Api/ObjectEzsignfoldersignerassociationApiTests.cs
+src/eZmaxApi.Test/Api/ObjectEzsignfoldertypeApiTests.cs
 src/eZmaxApi.Test/Api/ObjectEzsignsignatureApiTests.cs
 src/eZmaxApi.Test/Api/ObjectFranchisebrokerApiTests.cs
 src/eZmaxApi.Test/Api/ObjectFranchiseofficeApiTests.cs
@@ -214,6 +222,7 @@ src/eZmaxApi.Test/Model/CommonAuditTests.cs
 src/eZmaxApi.Test/Model/CommonGetAutocompleteV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/CommonGetAutocompleteV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/CommonGetAutocompleteV1ResponseTests.cs
+src/eZmaxApi.Test/Model/CommonGetListV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/CommonResponseErrorTests.cs
 src/eZmaxApi.Test/Model/CommonResponseObjDebugPayloadTests.cs
 src/eZmaxApi.Test/Model/CommonResponseObjDebugTests.cs
@@ -290,6 +299,11 @@ src/eZmaxApi.Test/Model/EzsignfoldersignerassociationGetObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestTests.cs
+src/eZmaxApi.Test/Model/EzsignfoldertypeGetListV1ResponseAllOfTests.cs
+src/eZmaxApi.Test/Model/EzsignfoldertypeGetListV1ResponseMPayloadAllOfTests.cs
+src/eZmaxApi.Test/Model/EzsignfoldertypeGetListV1ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/EzsignfoldertypeGetListV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsignfoldertypeListElementTests.cs
 src/eZmaxApi.Test/Model/EzsignformfieldResponseCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignformfieldResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignformfieldgroupResponseCompoundAllOfTests.cs
@@ -364,6 +378,7 @@ src/eZmaxApi/Api/ObjectApikeyApi.cs
 src/eZmaxApi/Api/ObjectEzsigndocumentApi.cs
 src/eZmaxApi/Api/ObjectEzsignfolderApi.cs
 src/eZmaxApi/Api/ObjectEzsignfoldersignerassociationApi.cs
+src/eZmaxApi/Api/ObjectEzsignfoldertypeApi.cs
 src/eZmaxApi/Api/ObjectEzsignsignatureApi.cs
 src/eZmaxApi/Api/ObjectFranchisebrokerApi.cs
 src/eZmaxApi/Api/ObjectFranchiseofficeApi.cs
@@ -399,6 +414,7 @@ src/eZmaxApi/Model/CommonAudit.cs
 src/eZmaxApi/Model/CommonGetAutocompleteV1Response.cs
 src/eZmaxApi/Model/CommonGetAutocompleteV1ResponseAllOf.cs
 src/eZmaxApi/Model/CommonGetAutocompleteV1ResponseMPayload.cs
+src/eZmaxApi/Model/CommonGetListV1ResponseMPayload.cs
 src/eZmaxApi/Model/CommonResponse.cs
 src/eZmaxApi/Model/CommonResponseError.cs
 src/eZmaxApi/Model/CommonResponseObjDebug.cs
@@ -475,6 +491,11 @@ src/eZmaxApi/Model/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequest.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequestCompound.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequestCompoundAllOf.cs
+src/eZmaxApi/Model/EzsignfoldertypeGetListV1Response.cs
+src/eZmaxApi/Model/EzsignfoldertypeGetListV1ResponseAllOf.cs
+src/eZmaxApi/Model/EzsignfoldertypeGetListV1ResponseMPayload.cs
+src/eZmaxApi/Model/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.cs
+src/eZmaxApi/Model/EzsignfoldertypeListElement.cs
 src/eZmaxApi/Model/EzsignformfieldResponse.cs
 src/eZmaxApi/Model/EzsignformfieldResponseCompound.cs
 src/eZmaxApi/Model/EzsignformfieldgroupResponse.cs
