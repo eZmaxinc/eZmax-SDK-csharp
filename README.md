@@ -226,6 +226,7 @@ Class | Method | HTTP request | Description
  - [Model.EzsigndocumentResponseCompound](docs/EzsigndocumentResponseCompound.md)
  - [Model.EzsignfolderCreateObjectV1Request](docs/EzsignfolderCreateObjectV1Request.md)
  - [Model.EzsignfolderCreateObjectV1Response](docs/EzsignfolderCreateObjectV1Response.md)
+ - [Model.EzsignfolderCreateObjectV1ResponseAllOf](docs/EzsignfolderCreateObjectV1ResponseAllOf.md)
  - [Model.EzsignfolderCreateObjectV1ResponseMPayload](docs/EzsignfolderCreateObjectV1ResponseMPayload.md)
  - [Model.EzsignfolderDeleteObjectV1Response](docs/EzsignfolderDeleteObjectV1Response.md)
  - [Model.EzsignfolderGetFormsDataV1Response](docs/EzsignfolderGetFormsDataV1Response.md)
