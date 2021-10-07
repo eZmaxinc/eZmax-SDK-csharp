@@ -10,11 +10,11 @@ Method | HTTP request | Description
 
 ## EzsignfoldertypeGetListV1
 
-> EzsignfoldertypeGetListV1Response EzsignfoldertypeGetListV1 ()
+> EzsignfoldertypeGetListV1Response EzsignfoldertypeGetListV1 (string eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string sFilter = null)
 
 Retrieve Ezsignfoldertype list
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
 
 ### Example
 
@@ -38,11 +38,16 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfoldertypeApi(Configuration.Default);
+            var eOrderBy = eOrderBy_example;  // string | Specify how you want the results to be sorted (optional) 
+            var iRowMax = 56;  // int? |  (optional) 
+            var iRowOffset = 56;  // int? |  (optional) 
+            var acceptLanguage = ;  // HeaderAcceptLanguage? |  (optional) 
+            var sFilter = sFilter_example;  // string |  (optional) 
 
             try
             {
                 // Retrieve Ezsignfoldertype list
-                EzsignfoldertypeGetListV1Response result = apiInstance.EzsignfoldertypeGetListV1();
+                EzsignfoldertypeGetListV1Response result = apiInstance.EzsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -58,7 +63,14 @@ namespace Example
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eOrderBy** | **string**| Specify how you want the results to be sorted | [optional] 
+ **iRowMax** | **int?**|  | [optional] 
+ **iRowOffset** | **int?**|  | [optional] 
+ **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
+ **sFilter** | **string**|  | [optional] 
 
 ### Return type
 
@@ -71,13 +83,14 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
+| **406** | One of the accept header is not defined or invalid. |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

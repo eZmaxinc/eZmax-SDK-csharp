@@ -1,5 +1,5 @@
 
-# eZmaxApi.Model.CustomFormDataFolderResponse
+# eZmaxApi.Model.CustomFormsDataFolderResponse
 
 ## Properties
 

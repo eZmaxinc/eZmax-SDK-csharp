@@ -70,7 +70,12 @@ namespace eZmaxApi.Test
         public void EzsignfoldertypeGetListV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.EzsignfoldertypeGetListV1();
+            //string eOrderBy = null;
+            //int? iRowMax = null;
+            //int? iRowOffset = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string sFilter = null;
+            //var response = instance.EzsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(EzsignfoldertypeGetListV1Response), response, "response is EzsignfoldertypeGetListV1Response");
         }
         

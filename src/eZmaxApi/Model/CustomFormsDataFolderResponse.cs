@@ -25,28 +25,28 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// A form Data Folder Object
+    /// A forms Data Folder Object
     /// </summary>
     [DataContract]
-    public partial class CustomFormDataFolderResponse :  IEquatable<CustomFormDataFolderResponse>, IValidatableObject
+    public partial class CustomFormsDataFolderResponse :  IEquatable<CustomFormsDataFolderResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CustomFormDataFolderResponse" /> class.
+        /// Initializes a new instance of the <see cref="CustomFormsDataFolderResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected CustomFormDataFolderResponse() { }
+        protected CustomFormsDataFolderResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CustomFormDataFolderResponse" /> class.
+        /// Initializes a new instance of the <see cref="CustomFormsDataFolderResponse" /> class.
         /// </summary>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="sEzsignfolderDescription">The description of the Ezsign Folder (required).</param>
         /// <param name="aObjFormDataDocument">aObjFormDataDocument (required).</param>
-        public CustomFormDataFolderResponse(int pkiEzsignfolderID = default(int), string sEzsignfolderDescription = default(string), List<CustomFormDataDocumentResponse> aObjFormDataDocument = default(List<CustomFormDataDocumentResponse>))
+        public CustomFormsDataFolderResponse(int pkiEzsignfolderID = default(int), string sEzsignfolderDescription = default(string), List<CustomFormDataDocumentResponse> aObjFormDataDocument = default(List<CustomFormDataDocumentResponse>))
         {
             // to ensure "pkiEzsignfolderID" is required (not null)
             if (pkiEzsignfolderID == null)
             {
-                throw new InvalidDataException("pkiEzsignfolderID is a required property for CustomFormDataFolderResponse and cannot be null");
+                throw new InvalidDataException("pkiEzsignfolderID is a required property for CustomFormsDataFolderResponse and cannot be null");
             }
             else
             {
@@ -56,7 +56,7 @@ namespace eZmaxApi.Model
             // to ensure "sEzsignfolderDescription" is required (not null)
             if (sEzsignfolderDescription == null)
             {
-                throw new InvalidDataException("sEzsignfolderDescription is a required property for CustomFormDataFolderResponse and cannot be null");
+                throw new InvalidDataException("sEzsignfolderDescription is a required property for CustomFormsDataFolderResponse and cannot be null");
             }
             else
             {
@@ -66,7 +66,7 @@ namespace eZmaxApi.Model
             // to ensure "aObjFormDataDocument" is required (not null)
             if (aObjFormDataDocument == null)
             {
-                throw new InvalidDataException("aObjFormDataDocument is a required property for CustomFormDataFolderResponse and cannot be null");
+                throw new InvalidDataException("aObjFormDataDocument is a required property for CustomFormsDataFolderResponse and cannot be null");
             }
             else
             {
@@ -102,7 +102,7 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CustomFormDataFolderResponse {\n");
+            sb.Append("class CustomFormsDataFolderResponse {\n");
             sb.Append("  PkiEzsignfolderID: ").Append(PkiEzsignfolderID).Append("\n");
             sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
             sb.Append("  AObjFormDataDocument: ").Append(AObjFormDataDocument).Append("\n");
@@ -126,15 +126,15 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CustomFormDataFolderResponse);
+            return this.Equals(input as CustomFormsDataFolderResponse);
         }
 
         /// <summary>
-        /// Returns true if CustomFormDataFolderResponse instances are equal
+        /// Returns true if CustomFormsDataFolderResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of CustomFormDataFolderResponse to be compared</param>
+        /// <param name="input">Instance of CustomFormsDataFolderResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CustomFormDataFolderResponse input)
+        public bool Equals(CustomFormsDataFolderResponse input)
         {
             if (input == null)
                 return false;

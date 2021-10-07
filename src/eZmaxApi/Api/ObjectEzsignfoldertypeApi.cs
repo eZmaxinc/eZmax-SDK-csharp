@@ -29,44 +29,64 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
         /// <returns>EzsignfoldertypeGetListV1Response</returns>
-        EzsignfoldertypeGetListV1Response EzsignfoldertypeGetListV1 ();
+        EzsignfoldertypeGetListV1Response EzsignfoldertypeGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
 
         /// <summary>
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of EzsignfoldertypeGetListV1Response</returns>
-        ApiResponse<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1WithHttpInfo ();
+        ApiResponse<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldertypeGetListV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1Async (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldertypeGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetListV1Response>> EzsignfoldertypeGetListV1WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetListV1Response>> EzsignfoldertypeGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -179,22 +199,32 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
         /// <returns>EzsignfoldertypeGetListV1Response</returns>
-        public EzsignfoldertypeGetListV1Response EzsignfoldertypeGetListV1 ()
+        public EzsignfoldertypeGetListV1Response EzsignfoldertypeGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
         {
-             ApiResponse<EzsignfoldertypeGetListV1Response> localVarResponse = EzsignfoldertypeGetListV1WithHttpInfo();
+             ApiResponse<EzsignfoldertypeGetListV1Response> localVarResponse = EzsignfoldertypeGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of EzsignfoldertypeGetListV1Response</returns>
-        public ApiResponse<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1WithHttpInfo ()
+        public ApiResponse<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
         {
 
             var localVarPath = "/1/object/ezsignfoldertype/getList";
@@ -212,12 +242,18 @@ namespace eZmaxApi.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (eOrderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eOrderBy", eOrderBy)); // query parameter
+            if (iRowMax != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowMax", iRowMax)); // query parameter
+            if (iRowOffset != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowOffset", iRowOffset)); // query parameter
+            if (sFilter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sFilter", sFilter)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -244,25 +280,35 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldertypeGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1Async (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<EzsignfoldertypeGetListV1Response> localVarResponse = await EzsignfoldertypeGetListV1WithHttpInfoAsync(cancellationToken);
+             ApiResponse<EzsignfoldertypeGetListV1Response> localVarResponse = await EzsignfoldertypeGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldertypeGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetListV1Response>> EzsignfoldertypeGetListV1WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetListV1Response>> EzsignfoldertypeGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/1/object/ezsignfoldertype/getList";
@@ -280,12 +326,18 @@ namespace eZmaxApi.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (eOrderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eOrderBy", eOrderBy)); // query parameter
+            if (iRowMax != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowMax", iRowMax)); // query parameter
+            if (iRowOffset != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowOffset", iRowOffset)); // query parameter
+            if (sFilter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sFilter", sFilter)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
