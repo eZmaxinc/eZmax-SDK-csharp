@@ -74,12 +74,28 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'PkiEzsignfoldertypeID'
         }
         /// <summary>
+        /// Test the property 'EEzsignfoldertypePrivacylevel'
+        /// </summary>
+        [Test]
+        public void EEzsignfoldertypePrivacylevelTest()
+        {
+            // TODO unit test for the property 'EEzsignfoldertypePrivacylevel'
+        }
+        /// <summary>
         /// Test the property 'SEzsignfoldertypeNameX'
         /// </summary>
         [Test]
         public void SEzsignfoldertypeNameXTest()
         {
             // TODO unit test for the property 'SEzsignfoldertypeNameX'
+        }
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeIsactive'
+        /// </summary>
+        [Test]
+        public void BEzsignfoldertypeIsactiveTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeIsactive'
         }
 
     }

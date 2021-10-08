@@ -27,8 +27,12 @@ docs/CommonGetAutocompleteV1ResponseMPayload.md
 docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
+docs/CommonResponseFilter.md
+docs/CommonResponseGetList.md
 docs/CommonResponseObjDebug.md
 docs/CommonResponseObjDebugPayload.md
+docs/CommonResponseObjDebugPayloadGetList.md
+docs/CommonResponseObjDebugPayloadGetListAllOf.md
 docs/CommonResponseObjSQLQuery.md
 docs/CommonWebhook.md
 docs/ContactRequest.md
@@ -129,6 +133,7 @@ docs/EzsignsignerRequestCompoundContact.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
+docs/FieldEEzsignfoldertypePrivacylevel.md
 docs/FieldEEzsignsignatureType.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
@@ -226,6 +231,10 @@ src/eZmaxApi.Test/Model/CommonGetAutocompleteV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/CommonGetAutocompleteV1ResponseTests.cs
 src/eZmaxApi.Test/Model/CommonGetListV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/CommonResponseErrorTests.cs
+src/eZmaxApi.Test/Model/CommonResponseFilterTests.cs
+src/eZmaxApi.Test/Model/CommonResponseGetListTests.cs
+src/eZmaxApi.Test/Model/CommonResponseObjDebugPayloadGetListAllOfTests.cs
+src/eZmaxApi.Test/Model/CommonResponseObjDebugPayloadGetListTests.cs
 src/eZmaxApi.Test/Model/CommonResponseObjDebugPayloadTests.cs
 src/eZmaxApi.Test/Model/CommonResponseObjDebugTests.cs
 src/eZmaxApi.Test/Model/CommonResponseObjSQLQueryTests.cs
@@ -329,6 +338,7 @@ src/eZmaxApi.Test/Model/EzsignsignerRequestTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsigndocumentStepTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsignfolderSendreminderfrequencyTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsignfolderStepTests.cs
+src/eZmaxApi.Test/Model/FieldEEzsignfoldertypePrivacylevelTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsignsignatureTypeTests.cs
 src/eZmaxApi.Test/Model/FieldEPhoneTypeTests.cs
 src/eZmaxApi.Test/Model/FieldEUserTypeSSPRTests.cs
@@ -421,8 +431,12 @@ src/eZmaxApi/Model/CommonGetAutocompleteV1ResponseMPayload.cs
 src/eZmaxApi/Model/CommonGetListV1ResponseMPayload.cs
 src/eZmaxApi/Model/CommonResponse.cs
 src/eZmaxApi/Model/CommonResponseError.cs
+src/eZmaxApi/Model/CommonResponseFilter.cs
+src/eZmaxApi/Model/CommonResponseGetList.cs
 src/eZmaxApi/Model/CommonResponseObjDebug.cs
 src/eZmaxApi/Model/CommonResponseObjDebugPayload.cs
+src/eZmaxApi/Model/CommonResponseObjDebugPayloadGetList.cs
+src/eZmaxApi/Model/CommonResponseObjDebugPayloadGetListAllOf.cs
 src/eZmaxApi/Model/CommonResponseObjSQLQuery.cs
 src/eZmaxApi/Model/CommonWebhook.cs
 src/eZmaxApi/Model/ContactRequest.cs
@@ -523,6 +537,7 @@ src/eZmaxApi/Model/EzsignsignerRequestCompoundContact.cs
 src/eZmaxApi/Model/FieldEEzsigndocumentStep.cs
 src/eZmaxApi/Model/FieldEEzsignfolderSendreminderfrequency.cs
 src/eZmaxApi/Model/FieldEEzsignfolderStep.cs
+src/eZmaxApi/Model/FieldEEzsignfoldertypePrivacylevel.cs
 src/eZmaxApi/Model/FieldEEzsignsignatureType.cs
 src/eZmaxApi/Model/FieldEPhoneType.cs
 src/eZmaxApi/Model/FieldEUserType.cs

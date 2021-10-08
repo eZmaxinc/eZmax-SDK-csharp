@@ -28,25 +28,27 @@ namespace eZmaxApi.Model
     /// This is a debug object containing debugging information on the actual function
     /// </summary>
     [DataContract]
-    public partial class CommonResponseObjDebugPayload :  IEquatable<CommonResponseObjDebugPayload>, IValidatableObject
+    public partial class CommonResponseObjDebugPayloadGetList :  IEquatable<CommonResponseObjDebugPayloadGetList>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayload" /> class.
+        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetList" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected CommonResponseObjDebugPayload() { }
+        protected CommonResponseObjDebugPayloadGetList() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayload" /> class.
+        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetList" /> class.
         /// </summary>
         /// <param name="iVersionMin">The minimum version of the function that can be called (required).</param>
         /// <param name="iVersionMax">The maximum version of the function that can be called (required).</param>
         /// <param name="aRequiredPermission">An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them. (required).</param>
-        public CommonResponseObjDebugPayload(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>))
+        /// <param name="aFilter">aFilter (required).</param>
+        /// <param name="aOrderBy">List of available values for *eOrderBy* (required).</param>
+        public CommonResponseObjDebugPayloadGetList(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), CommonResponseFilter aFilter = default(CommonResponseFilter), Dictionary<string, string> aOrderBy = default(Dictionary<string, string>))
         {
             // to ensure "iVersionMin" is required (not null)
             if (iVersionMin == null)
             {
-                throw new InvalidDataException("iVersionMin is a required property for CommonResponseObjDebugPayload and cannot be null");
+                throw new InvalidDataException("iVersionMin is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
             }
             else
             {
@@ -56,7 +58,7 @@ namespace eZmaxApi.Model
             // to ensure "iVersionMax" is required (not null)
             if (iVersionMax == null)
             {
-                throw new InvalidDataException("iVersionMax is a required property for CommonResponseObjDebugPayload and cannot be null");
+                throw new InvalidDataException("iVersionMax is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
             }
             else
             {
@@ -66,11 +68,31 @@ namespace eZmaxApi.Model
             // to ensure "aRequiredPermission" is required (not null)
             if (aRequiredPermission == null)
             {
-                throw new InvalidDataException("aRequiredPermission is a required property for CommonResponseObjDebugPayload and cannot be null");
+                throw new InvalidDataException("aRequiredPermission is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
             }
             else
             {
                 this.ARequiredPermission = aRequiredPermission;
+            }
+
+            // to ensure "aFilter" is required (not null)
+            if (aFilter == null)
+            {
+                throw new InvalidDataException("aFilter is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
+            }
+            else
+            {
+                this.AFilter = aFilter;
+            }
+
+            // to ensure "aOrderBy" is required (not null)
+            if (aOrderBy == null)
+            {
+                throw new InvalidDataException("aOrderBy is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
+            }
+            else
+            {
+                this.AOrderBy = aOrderBy;
             }
 
         }
@@ -97,16 +119,31 @@ namespace eZmaxApi.Model
         public List<int> ARequiredPermission { get; set; }
 
         /// <summary>
+        /// Gets or Sets AFilter
+        /// </summary>
+        [DataMember(Name="a_Filter", EmitDefaultValue=true)]
+        public CommonResponseFilter AFilter { get; set; }
+
+        /// <summary>
+        /// List of available values for *eOrderBy*
+        /// </summary>
+        /// <value>List of available values for *eOrderBy*</value>
+        [DataMember(Name="a_OrderBy", EmitDefaultValue=true)]
+        public Dictionary<string, string> AOrderBy { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CommonResponseObjDebugPayload {\n");
+            sb.Append("class CommonResponseObjDebugPayloadGetList {\n");
             sb.Append("  IVersionMin: ").Append(IVersionMin).Append("\n");
             sb.Append("  IVersionMax: ").Append(IVersionMax).Append("\n");
             sb.Append("  ARequiredPermission: ").Append(ARequiredPermission).Append("\n");
+            sb.Append("  AFilter: ").Append(AFilter).Append("\n");
+            sb.Append("  AOrderBy: ").Append(AOrderBy).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,15 +164,15 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CommonResponseObjDebugPayload);
+            return this.Equals(input as CommonResponseObjDebugPayloadGetList);
         }
 
         /// <summary>
-        /// Returns true if CommonResponseObjDebugPayload instances are equal
+        /// Returns true if CommonResponseObjDebugPayloadGetList instances are equal
         /// </summary>
-        /// <param name="input">Instance of CommonResponseObjDebugPayload to be compared</param>
+        /// <param name="input">Instance of CommonResponseObjDebugPayloadGetList to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CommonResponseObjDebugPayload input)
+        public bool Equals(CommonResponseObjDebugPayloadGetList input)
         {
             if (input == null)
                 return false;
@@ -156,6 +193,17 @@ namespace eZmaxApi.Model
                     this.ARequiredPermission != null &&
                     input.ARequiredPermission != null &&
                     this.ARequiredPermission.SequenceEqual(input.ARequiredPermission)
+                ) && 
+                (
+                    this.AFilter == input.AFilter ||
+                    (this.AFilter != null &&
+                    this.AFilter.Equals(input.AFilter))
+                ) && 
+                (
+                    this.AOrderBy == input.AOrderBy ||
+                    this.AOrderBy != null &&
+                    input.AOrderBy != null &&
+                    this.AOrderBy.SequenceEqual(input.AOrderBy)
                 );
         }
 
@@ -174,6 +222,10 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IVersionMax.GetHashCode();
                 if (this.ARequiredPermission != null)
                     hashCode = hashCode * 59 + this.ARequiredPermission.GetHashCode();
+                if (this.AFilter != null)
+                    hashCode = hashCode * 59 + this.AFilter.GetHashCode();
+                if (this.AOrderBy != null)
+                    hashCode = hashCode * 59 + this.AOrderBy.GetHashCode();
                 return hashCode;
             }
         }

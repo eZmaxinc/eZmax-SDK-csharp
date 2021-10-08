@@ -25,43 +25,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the /1/object/ezsignfoldertype/getList API Request
+    /// All API response will inherit this based Response
     /// </summary>
     [DataContract]
-    public partial class EzsignfoldertypeGetListV1Response :  IEquatable<EzsignfoldertypeGetListV1Response>, IValidatableObject
+    public partial class CommonResponseGetList :  IEquatable<CommonResponseGetList>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeGetListV1Response" /> class.
+        /// Initializes a new instance of the <see cref="CommonResponseGetList" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfoldertypeGetListV1Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeGetListV1Response" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         /// <param name="objDebugPayload">objDebugPayload.</param>
         /// <param name="objDebug">objDebug.</param>
-        public EzsignfoldertypeGetListV1Response(EzsignfoldertypeGetListV1ResponseMPayload mPayload = default(EzsignfoldertypeGetListV1ResponseMPayload), CommonResponseObjDebugPayloadGetList objDebugPayload = default(CommonResponseObjDebugPayloadGetList), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        public CommonResponseGetList(CommonResponseObjDebugPayloadGetList objDebugPayload = default(CommonResponseObjDebugPayloadGetList), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
-            // to ensure "mPayload" is required (not null)
-            if (mPayload == null)
-            {
-                throw new InvalidDataException("mPayload is a required property for EzsignfoldertypeGetListV1Response and cannot be null");
-            }
-            else
-            {
-                this.MPayload = mPayload;
-            }
-
             this.ObjDebugPayload = objDebugPayload;
             this.ObjDebug = objDebug;
         }
-
-        /// <summary>
-        /// Gets or Sets MPayload
-        /// </summary>
-        [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public EzsignfoldertypeGetListV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjDebugPayload
@@ -82,8 +60,7 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EzsignfoldertypeGetListV1Response {\n");
-            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
+            sb.Append("class CommonResponseGetList {\n");
             sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
             sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
             sb.Append("}\n");
@@ -106,25 +83,20 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as EzsignfoldertypeGetListV1Response);
+            return this.Equals(input as CommonResponseGetList);
         }
 
         /// <summary>
-        /// Returns true if EzsignfoldertypeGetListV1Response instances are equal
+        /// Returns true if CommonResponseGetList instances are equal
         /// </summary>
-        /// <param name="input">Instance of EzsignfoldertypeGetListV1Response to be compared</param>
+        /// <param name="input">Instance of CommonResponseGetList to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EzsignfoldertypeGetListV1Response input)
+        public bool Equals(CommonResponseGetList input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.MPayload == input.MPayload ||
-                    (this.MPayload != null &&
-                    this.MPayload.Equals(input.MPayload))
-                ) && 
                 (
                     this.ObjDebugPayload == input.ObjDebugPayload ||
                     (this.ObjDebugPayload != null &&
@@ -146,8 +118,6 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.MPayload != null)
-                    hashCode = hashCode * 59 + this.MPayload.GetHashCode();
                 if (this.ObjDebugPayload != null)
                     hashCode = hashCode * 59 + this.ObjDebugPayload.GetHashCode();
                 if (this.ObjDebug != null)

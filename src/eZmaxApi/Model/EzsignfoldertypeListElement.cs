@@ -39,8 +39,10 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignfoldertypeListElement" /> class.
         /// </summary>
         /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
         /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        public EzsignfoldertypeListElement(int pkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string))
+        /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
+        public EzsignfoldertypeListElement(int pkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), bool bEzsignfoldertypeIsactive = default(bool))
         {
             // to ensure "pkiEzsignfoldertypeID" is required (not null)
             if (pkiEzsignfoldertypeID == null)
@@ -50,6 +52,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
+            }
+
+            // to ensure "eEzsignfoldertypePrivacylevel" is required (not null)
+            if (eEzsignfoldertypePrivacylevel == null)
+            {
+                throw new InvalidDataException("eEzsignfoldertypePrivacylevel is a required property for EzsignfoldertypeListElement and cannot be null");
+            }
+            else
+            {
+                this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
             }
 
             // to ensure "sEzsignfoldertypeNameX" is required (not null)
@@ -62,6 +74,16 @@ namespace eZmaxApi.Model
                 this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             }
 
+            // to ensure "bEzsignfoldertypeIsactive" is required (not null)
+            if (bEzsignfoldertypeIsactive == null)
+            {
+                throw new InvalidDataException("bEzsignfoldertypeIsactive is a required property for EzsignfoldertypeListElement and cannot be null");
+            }
+            else
+            {
+                this.BEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
+            }
+
         }
 
         /// <summary>
@@ -72,11 +94,24 @@ namespace eZmaxApi.Model
         public int PkiEzsignfoldertypeID { get; set; }
 
         /// <summary>
+        /// Gets or Sets EEzsignfoldertypePrivacylevel
+        /// </summary>
+        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
+        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
+
+        /// <summary>
         /// The name of the Ezsignfoldertype in the language of the requester
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
         [DataMember(Name="sEzsignfoldertypeNameX", EmitDefaultValue=true)]
         public string SEzsignfoldertypeNameX { get; set; }
+
+        /// <summary>
+        /// Whether the Ezsignfoldertype is active or not
+        /// </summary>
+        /// <value>Whether the Ezsignfoldertype is active or not</value>
+        [DataMember(Name="bEzsignfoldertypeIsactive", EmitDefaultValue=true)]
+        public bool BEzsignfoldertypeIsactive { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -87,7 +122,9 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class EzsignfoldertypeListElement {\n");
             sb.Append("  PkiEzsignfoldertypeID: ").Append(PkiEzsignfoldertypeID).Append("\n");
+            sb.Append("  EEzsignfoldertypePrivacylevel: ").Append(EEzsignfoldertypePrivacylevel).Append("\n");
             sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
+            sb.Append("  BEzsignfoldertypeIsactive: ").Append(BEzsignfoldertypeIsactive).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,9 +165,19 @@ namespace eZmaxApi.Model
                     this.PkiEzsignfoldertypeID.Equals(input.PkiEzsignfoldertypeID))
                 ) && 
                 (
+                    this.EEzsignfoldertypePrivacylevel == input.EEzsignfoldertypePrivacylevel ||
+                    (this.EEzsignfoldertypePrivacylevel != null &&
+                    this.EEzsignfoldertypePrivacylevel.Equals(input.EEzsignfoldertypePrivacylevel))
+                ) && 
+                (
                     this.SEzsignfoldertypeNameX == input.SEzsignfoldertypeNameX ||
                     (this.SEzsignfoldertypeNameX != null &&
                     this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
+                ) && 
+                (
+                    this.BEzsignfoldertypeIsactive == input.BEzsignfoldertypeIsactive ||
+                    (this.BEzsignfoldertypeIsactive != null &&
+                    this.BEzsignfoldertypeIsactive.Equals(input.BEzsignfoldertypeIsactive))
                 );
         }
 
@@ -145,8 +192,12 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.PkiEzsignfoldertypeID != null)
                     hashCode = hashCode * 59 + this.PkiEzsignfoldertypeID.GetHashCode();
+                if (this.EEzsignfoldertypePrivacylevel != null)
+                    hashCode = hashCode * 59 + this.EEzsignfoldertypePrivacylevel.GetHashCode();
                 if (this.SEzsignfoldertypeNameX != null)
                     hashCode = hashCode * 59 + this.SEzsignfoldertypeNameX.GetHashCode();
+                if (this.BEzsignfoldertypeIsactive != null)
+                    hashCode = hashCode * 59 + this.BEzsignfoldertypeIsactive.GetHashCode();
                 return hashCode;
             }
         }
