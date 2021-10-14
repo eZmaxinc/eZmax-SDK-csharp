@@ -1,12 +1,12 @@
 
-# eZmaxApi.Model.CommonGetAutocompleteV1Response
+# eZmaxApi.Model.EzsignfolderGetListV1Response
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MPayload** | [**List&lt;CustomAutocompleteElementResponse&gt;**](CustomAutocompleteElementResponse.md) | Generic Autocomplete Response | 
-**ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
+**MPayload** | [**EzsignfolderGetListV1ResponseMPayload**](EzsignfolderGetListV1ResponseMPayload.md) |  | 
+**ObjDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  | [optional] 
 **ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)

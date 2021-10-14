@@ -184,7 +184,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s Form Data
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -195,7 +195,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s Form Data
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -226,7 +226,7 @@ namespace eZmaxApi.Api
         /// Retrieve positions X,Y of given words from a Ezsigndocument
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -238,7 +238,7 @@ namespace eZmaxApi.Api
         /// Retrieve positions X,Y of given words from a Ezsigndocument
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -420,7 +420,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s Form Data
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -432,7 +432,7 @@ namespace eZmaxApi.Api
         /// Retrieve an existing Ezsigndocument&#39;s Form Data
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -466,7 +466,7 @@ namespace eZmaxApi.Api
         /// Retrieve positions X,Y of given words from a Ezsigndocument
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -479,7 +479,7 @@ namespace eZmaxApi.Api
         /// Retrieve positions X,Y of given words from a Ezsigndocument
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1700,7 +1700,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve an existing Ezsigndocument&#39;s Form Data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1712,7 +1712,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve an existing Ezsigndocument&#39;s Form Data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1773,7 +1773,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve an existing Ezsigndocument&#39;s Form Data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1787,7 +1787,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve an existing Ezsigndocument&#39;s Form Data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1994,7 +1994,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve positions X,Y of given words from a Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve positions X,Y of given words from a Ezsigndocument 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2007,7 +2007,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve positions X,Y of given words from a Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve positions X,Y of given words from a Ezsigndocument 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2079,7 +2079,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve positions X,Y of given words from a Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve positions X,Y of given words from a Ezsigndocument 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2094,7 +2094,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve positions X,Y of given words from a Ezsigndocument ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+        /// Retrieve positions X,Y of given words from a Ezsigndocument 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>

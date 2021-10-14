@@ -38,10 +38,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonGetAutocompleteV1Response" /> class.
         /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
+        /// <param name="mPayload">Generic Autocomplete Response (required).</param>
         /// <param name="objDebugPayload">objDebugPayload.</param>
         /// <param name="objDebug">objDebug.</param>
-        public CommonGetAutocompleteV1Response(List<CommonGetAutocompleteV1ResponseMPayload> mPayload = default(List<CommonGetAutocompleteV1ResponseMPayload>), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        public CommonGetAutocompleteV1Response(List<CustomAutocompleteElementResponse> mPayload = default(List<CustomAutocompleteElementResponse>), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
@@ -58,10 +58,11 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets MPayload
+        /// Generic Autocomplete Response
         /// </summary>
+        /// <value>Generic Autocomplete Response</value>
         [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public List<CommonGetAutocompleteV1ResponseMPayload> MPayload { get; set; }
+        public List<CustomAutocompleteElementResponse> MPayload { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjDebugPayload

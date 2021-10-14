@@ -112,6 +112,22 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsignfolderGetListV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderGetListV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string eOrderBy = null;
+            //int? iRowMax = null;
+            //int? iRowOffset = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string sFilter = null;
+            //var response = instance.EzsignfolderGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+            //Assert.IsInstanceOf(typeof(EzsignfolderGetListV1Response), response, "response is EzsignfolderGetListV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsignfolderGetObjectV1
         /// </summary>
         [Test]

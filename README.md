@@ -137,6 +137,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfolderApi* | [**EzsignfolderDeleteObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 *ObjectEzsignfolderApi* | [**EzsignfolderGetChildrenV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetchildrenv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder's children IDs
 *ObjectEzsignfolderApi* | [**EzsignfolderGetFormsDataV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder's forms data
+*ObjectEzsignfolderApi* | [**EzsignfolderGetListV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 *ObjectEzsignfolderApi* | [**EzsignfolderGetObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 *ObjectEzsignfolderApi* | [**EzsignfolderSendV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 *ObjectEzsignfoldersignerassociationApi* | [**EzsignfoldersignerassociationCreateObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
@@ -144,6 +145,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfoldersignerassociationApi* | [**EzsignfoldersignerassociationGetChildrenV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetchildrenv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren | Retrieve an existing Ezsignfoldersignerassociation's children IDs
 *ObjectEzsignfoldersignerassociationApi* | [**EzsignfoldersignerassociationGetInPersonLoginUrlV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetinpersonloginurlv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 *ObjectEzsignfoldersignerassociationApi* | [**EzsignfoldersignerassociationGetObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
+*ObjectEzsignfoldertypeApi* | [**EzsignfoldertypeGetAutocompleteV1**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector}/ | Retrieve Ezsignfoldertypes and IDs
 *ObjectEzsignfoldertypeApi* | [**EzsignfoldertypeGetListV1**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 *ObjectEzsignsignatureApi* | [**EzsignsignatureCreateObjectV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *ObjectEzsignsignatureApi* | [**EzsignsignatureDeleteObjectV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
@@ -176,7 +178,6 @@ Class | Method | HTTP request | Description
  - [Model.CommonAudit](docs/CommonAudit.md)
  - [Model.CommonGetAutocompleteV1Response](docs/CommonGetAutocompleteV1Response.md)
  - [Model.CommonGetAutocompleteV1ResponseAllOf](docs/CommonGetAutocompleteV1ResponseAllOf.md)
- - [Model.CommonGetAutocompleteV1ResponseMPayload](docs/CommonGetAutocompleteV1ResponseMPayload.md)
  - [Model.CommonGetListV1ResponseMPayload](docs/CommonGetListV1ResponseMPayload.md)
  - [Model.CommonResponse](docs/CommonResponse.md)
  - [Model.CommonResponseError](docs/CommonResponseError.md)
@@ -194,6 +195,7 @@ Class | Method | HTTP request | Description
  - [Model.ContactinformationsRequest](docs/ContactinformationsRequest.md)
  - [Model.ContactinformationsRequestCompound](docs/ContactinformationsRequestCompound.md)
  - [Model.ContactinformationsRequestCompoundAllOf](docs/ContactinformationsRequestCompoundAllOf.md)
+ - [Model.CustomAutocompleteElementResponse](docs/CustomAutocompleteElementResponse.md)
  - [Model.CustomFormDataDocumentResponse](docs/CustomFormDataDocumentResponse.md)
  - [Model.CustomFormDataSignerResponse](docs/CustomFormDataSignerResponse.md)
  - [Model.CustomFormsDataFolderResponse](docs/CustomFormsDataFolderResponse.md)
@@ -236,9 +238,14 @@ Class | Method | HTTP request | Description
  - [Model.EzsignfolderGetFormsDataV1Response](docs/EzsignfolderGetFormsDataV1Response.md)
  - [Model.EzsignfolderGetFormsDataV1ResponseAllOf](docs/EzsignfolderGetFormsDataV1ResponseAllOf.md)
  - [Model.EzsignfolderGetFormsDataV1ResponseMPayload](docs/EzsignfolderGetFormsDataV1ResponseMPayload.md)
+ - [Model.EzsignfolderGetListV1Response](docs/EzsignfolderGetListV1Response.md)
+ - [Model.EzsignfolderGetListV1ResponseAllOf](docs/EzsignfolderGetListV1ResponseAllOf.md)
+ - [Model.EzsignfolderGetListV1ResponseMPayload](docs/EzsignfolderGetListV1ResponseMPayload.md)
+ - [Model.EzsignfolderGetListV1ResponseMPayloadAllOf](docs/EzsignfolderGetListV1ResponseMPayloadAllOf.md)
  - [Model.EzsignfolderGetObjectV1Response](docs/EzsignfolderGetObjectV1Response.md)
  - [Model.EzsignfolderGetObjectV1ResponseAllOf](docs/EzsignfolderGetObjectV1ResponseAllOf.md)
  - [Model.EzsignfolderGetObjectV1ResponseMPayload](docs/EzsignfolderGetObjectV1ResponseMPayload.md)
+ - [Model.EzsignfolderListElement](docs/EzsignfolderListElement.md)
  - [Model.EzsignfolderRequest](docs/EzsignfolderRequest.md)
  - [Model.EzsignfolderRequestCompound](docs/EzsignfolderRequestCompound.md)
  - [Model.EzsignfolderRequestCompoundAllOf](docs/EzsignfolderRequestCompoundAllOf.md)

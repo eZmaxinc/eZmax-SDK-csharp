@@ -33,7 +33,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Franchiseoffices to return</param>
-        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
         CommonGetAutocompleteV1Response FranchiseofficeGetAutocompleteV1 (string sSelector, string sQuery = default(string));
 
@@ -45,7 +45,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Franchiseoffices to return</param>
-        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
         ApiResponse<CommonGetAutocompleteV1Response> FranchiseofficeGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string));
         #endregion Synchronous Operations
@@ -58,7 +58,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Franchiseoffices to return</param>
-        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
         System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> FranchiseofficeGetAutocompleteV1Async (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -71,7 +71,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Franchiseoffices to return</param>
-        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> FranchiseofficeGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -191,7 +191,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Franchiseoffices to return</param>
-        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
         public CommonGetAutocompleteV1Response FranchiseofficeGetAutocompleteV1 (string sSelector, string sQuery = default(string))
         {
@@ -204,7 +204,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Franchiseoffices to return</param>
-        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
         public ApiResponse<CommonGetAutocompleteV1Response> FranchiseofficeGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string))
         {
@@ -265,7 +265,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Franchiseoffices to return</param>
-        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
         public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> FranchiseofficeGetAutocompleteV1Async (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -280,7 +280,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Franchiseoffices to return</param>
-        /// <param name="sQuery">Allow to filter on the option value (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> FranchiseofficeGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))

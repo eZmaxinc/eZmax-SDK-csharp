@@ -25,38 +25,38 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the /1/object/ezsignfoldertype/getList API Request
+    /// Payload for the /1/object/ezsignfolder/getList API Request
     /// </summary>
     [DataContract]
-    public partial class EzsignfoldertypeGetListV1ResponseMPayload :  IEquatable<EzsignfoldertypeGetListV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignfolderGetListV1ResponseMPayload :  IEquatable<EzsignfolderGetListV1ResponseMPayload>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeGetListV1ResponseMPayload" /> class.
+        /// Initializes a new instance of the <see cref="EzsignfolderGetListV1ResponseMPayload" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected EzsignfoldertypeGetListV1ResponseMPayload() { }
+        protected EzsignfolderGetListV1ResponseMPayload() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeGetListV1ResponseMPayload" /> class.
+        /// Initializes a new instance of the <see cref="EzsignfolderGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsignfoldertype">aObjEzsignfoldertype (required).</param>
+        /// <param name="aObjEzsignfolder">aObjEzsignfolder (required).</param>
         /// <param name="iRowReturned">The number of rows returned (required).</param>
         /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        public EzsignfoldertypeGetListV1ResponseMPayload(List<EzsignfoldertypeListElement> aObjEzsignfoldertype = default(List<EzsignfoldertypeListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
+        public EzsignfolderGetListV1ResponseMPayload(List<EzsignfolderListElement> aObjEzsignfolder = default(List<EzsignfolderListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
         {
-            // to ensure "aObjEzsignfoldertype" is required (not null)
-            if (aObjEzsignfoldertype == null)
+            // to ensure "aObjEzsignfolder" is required (not null)
+            if (aObjEzsignfolder == null)
             {
-                throw new InvalidDataException("aObjEzsignfoldertype is a required property for EzsignfoldertypeGetListV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("aObjEzsignfolder is a required property for EzsignfolderGetListV1ResponseMPayload and cannot be null");
             }
             else
             {
-                this.AObjEzsignfoldertype = aObjEzsignfoldertype;
+                this.AObjEzsignfolder = aObjEzsignfolder;
             }
 
             // to ensure "iRowReturned" is required (not null)
             if (iRowReturned == null)
             {
-                throw new InvalidDataException("iRowReturned is a required property for EzsignfoldertypeGetListV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("iRowReturned is a required property for EzsignfolderGetListV1ResponseMPayload and cannot be null");
             }
             else
             {
@@ -66,7 +66,7 @@ namespace eZmaxApi.Model
             // to ensure "iRowFiltered" is required (not null)
             if (iRowFiltered == null)
             {
-                throw new InvalidDataException("iRowFiltered is a required property for EzsignfoldertypeGetListV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("iRowFiltered is a required property for EzsignfolderGetListV1ResponseMPayload and cannot be null");
             }
             else
             {
@@ -76,10 +76,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets AObjEzsignfoldertype
+        /// Gets or Sets AObjEzsignfolder
         /// </summary>
-        [DataMember(Name="a_objEzsignfoldertype", EmitDefaultValue=true)]
-        public List<EzsignfoldertypeListElement> AObjEzsignfoldertype { get; set; }
+        [DataMember(Name="a_objEzsignfolder", EmitDefaultValue=true)]
+        public List<EzsignfolderListElement> AObjEzsignfolder { get; set; }
 
         /// <summary>
         /// The number of rows returned
@@ -102,8 +102,8 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EzsignfoldertypeGetListV1ResponseMPayload {\n");
-            sb.Append("  AObjEzsignfoldertype: ").Append(AObjEzsignfoldertype).Append("\n");
+            sb.Append("class EzsignfolderGetListV1ResponseMPayload {\n");
+            sb.Append("  AObjEzsignfolder: ").Append(AObjEzsignfolder).Append("\n");
             sb.Append("  IRowReturned: ").Append(IRowReturned).Append("\n");
             sb.Append("  IRowFiltered: ").Append(IRowFiltered).Append("\n");
             sb.Append("}\n");
@@ -126,25 +126,25 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as EzsignfoldertypeGetListV1ResponseMPayload);
+            return this.Equals(input as EzsignfolderGetListV1ResponseMPayload);
         }
 
         /// <summary>
-        /// Returns true if EzsignfoldertypeGetListV1ResponseMPayload instances are equal
+        /// Returns true if EzsignfolderGetListV1ResponseMPayload instances are equal
         /// </summary>
-        /// <param name="input">Instance of EzsignfoldertypeGetListV1ResponseMPayload to be compared</param>
+        /// <param name="input">Instance of EzsignfolderGetListV1ResponseMPayload to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EzsignfoldertypeGetListV1ResponseMPayload input)
+        public bool Equals(EzsignfolderGetListV1ResponseMPayload input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.AObjEzsignfoldertype == input.AObjEzsignfoldertype ||
-                    this.AObjEzsignfoldertype != null &&
-                    input.AObjEzsignfoldertype != null &&
-                    this.AObjEzsignfoldertype.SequenceEqual(input.AObjEzsignfoldertype)
+                    this.AObjEzsignfolder == input.AObjEzsignfolder ||
+                    this.AObjEzsignfolder != null &&
+                    input.AObjEzsignfolder != null &&
+                    this.AObjEzsignfolder.SequenceEqual(input.AObjEzsignfolder)
                 ) && 
                 (
                     this.IRowReturned == input.IRowReturned ||
@@ -167,8 +167,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AObjEzsignfoldertype != null)
-                    hashCode = hashCode * 59 + this.AObjEzsignfoldertype.GetHashCode();
+                if (this.AObjEzsignfolder != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignfolder.GetHashCode();
                 if (this.IRowReturned != null)
                     hashCode = hashCode * 59 + this.IRowReturned.GetHashCode();
                 if (this.IRowFiltered != null)

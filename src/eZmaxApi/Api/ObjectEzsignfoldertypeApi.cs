@@ -26,10 +26,35 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Retrieve Ezsignfoldertypes and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <returns>CommonGetAutocompleteV1Response</returns>
+        CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string));
+
+        /// <summary>
+        /// Retrieve Ezsignfoldertypes and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
+        ApiResponse<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1WithHttpInfo (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string));
+        /// <summary>
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -44,7 +69,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -57,10 +82,37 @@ namespace eZmaxApi.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Retrieve Ezsignfoldertypes and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of CommonGetAutocompleteV1Response</returns>
+        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1Async (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve Ezsignfoldertypes and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -76,7 +128,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -199,7 +251,164 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfoldertypes and IDs Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <returns>CommonGetAutocompleteV1Response</returns>
+        public CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string))
+        {
+             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = EzsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector, acceptLanguage, sQuery);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfoldertypes and IDs Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
+        public ApiResponse<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1WithHttpInfo (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string))
+        {
+            // verify the required parameter 'sSelector' is set
+            if (sSelector == null)
+                throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeGetAutocompleteV1");
+
+            var localVarPath = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
+            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfoldertypeGetAutocompleteV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfoldertypes and IDs Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of CommonGetAutocompleteV1Response</returns>
+        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1Async (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync(sSelector, acceptLanguage, sQuery, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfoldertypes and IDs Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'sSelector' is set
+            if (sSelector == null)
+                throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeGetAutocompleteV1");
+
+            var localVarPath = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
+            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfoldertypeGetAutocompleteV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -215,7 +424,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -280,7 +489,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -298,7 +507,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>

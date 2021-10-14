@@ -25,40 +25,39 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// CommonGetAutocompleteV1ResponseAllOf
+    /// EzsignfolderGetListV1ResponseMPayloadAllOf
     /// </summary>
     [DataContract]
-    public partial class CommonGetAutocompleteV1ResponseAllOf :  IEquatable<CommonGetAutocompleteV1ResponseAllOf>, IValidatableObject
+    public partial class EzsignfolderGetListV1ResponseMPayloadAllOf :  IEquatable<EzsignfolderGetListV1ResponseMPayloadAllOf>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommonGetAutocompleteV1ResponseAllOf" /> class.
+        /// Initializes a new instance of the <see cref="EzsignfolderGetListV1ResponseMPayloadAllOf" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected CommonGetAutocompleteV1ResponseAllOf() { }
+        protected EzsignfolderGetListV1ResponseMPayloadAllOf() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommonGetAutocompleteV1ResponseAllOf" /> class.
+        /// Initializes a new instance of the <see cref="EzsignfolderGetListV1ResponseMPayloadAllOf" /> class.
         /// </summary>
-        /// <param name="mPayload">Generic Autocomplete Response (required).</param>
-        public CommonGetAutocompleteV1ResponseAllOf(List<CustomAutocompleteElementResponse> mPayload = default(List<CustomAutocompleteElementResponse>))
+        /// <param name="aObjEzsignfolder">aObjEzsignfolder (required).</param>
+        public EzsignfolderGetListV1ResponseMPayloadAllOf(List<EzsignfolderListElement> aObjEzsignfolder = default(List<EzsignfolderListElement>))
         {
-            // to ensure "mPayload" is required (not null)
-            if (mPayload == null)
+            // to ensure "aObjEzsignfolder" is required (not null)
+            if (aObjEzsignfolder == null)
             {
-                throw new InvalidDataException("mPayload is a required property for CommonGetAutocompleteV1ResponseAllOf and cannot be null");
+                throw new InvalidDataException("aObjEzsignfolder is a required property for EzsignfolderGetListV1ResponseMPayloadAllOf and cannot be null");
             }
             else
             {
-                this.MPayload = mPayload;
+                this.AObjEzsignfolder = aObjEzsignfolder;
             }
 
         }
 
         /// <summary>
-        /// Generic Autocomplete Response
+        /// Gets or Sets AObjEzsignfolder
         /// </summary>
-        /// <value>Generic Autocomplete Response</value>
-        [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public List<CustomAutocompleteElementResponse> MPayload { get; set; }
+        [DataMember(Name="a_objEzsignfolder", EmitDefaultValue=true)]
+        public List<EzsignfolderListElement> AObjEzsignfolder { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,8 +66,8 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CommonGetAutocompleteV1ResponseAllOf {\n");
-            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
+            sb.Append("class EzsignfolderGetListV1ResponseMPayloadAllOf {\n");
+            sb.Append("  AObjEzsignfolder: ").Append(AObjEzsignfolder).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,25 +88,25 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CommonGetAutocompleteV1ResponseAllOf);
+            return this.Equals(input as EzsignfolderGetListV1ResponseMPayloadAllOf);
         }
 
         /// <summary>
-        /// Returns true if CommonGetAutocompleteV1ResponseAllOf instances are equal
+        /// Returns true if EzsignfolderGetListV1ResponseMPayloadAllOf instances are equal
         /// </summary>
-        /// <param name="input">Instance of CommonGetAutocompleteV1ResponseAllOf to be compared</param>
+        /// <param name="input">Instance of EzsignfolderGetListV1ResponseMPayloadAllOf to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CommonGetAutocompleteV1ResponseAllOf input)
+        public bool Equals(EzsignfolderGetListV1ResponseMPayloadAllOf input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.MPayload == input.MPayload ||
-                    this.MPayload != null &&
-                    input.MPayload != null &&
-                    this.MPayload.SequenceEqual(input.MPayload)
+                    this.AObjEzsignfolder == input.AObjEzsignfolder ||
+                    this.AObjEzsignfolder != null &&
+                    input.AObjEzsignfolder != null &&
+                    this.AObjEzsignfolder.SequenceEqual(input.AObjEzsignfolder)
                 );
         }
 
@@ -120,8 +119,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.MPayload != null)
-                    hashCode = hashCode * 59 + this.MPayload.GetHashCode();
+                if (this.AObjEzsignfolder != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignfolder.GetHashCode();
                 return hashCode;
             }
         }

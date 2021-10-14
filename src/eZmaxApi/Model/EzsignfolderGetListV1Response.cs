@@ -25,40 +25,55 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// CommonGetAutocompleteV1ResponseAllOf
+    /// Response for the /1/object/ezsignfolder/getList API Request
     /// </summary>
     [DataContract]
-    public partial class CommonGetAutocompleteV1ResponseAllOf :  IEquatable<CommonGetAutocompleteV1ResponseAllOf>, IValidatableObject
+    public partial class EzsignfolderGetListV1Response :  IEquatable<EzsignfolderGetListV1Response>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommonGetAutocompleteV1ResponseAllOf" /> class.
+        /// Initializes a new instance of the <see cref="EzsignfolderGetListV1Response" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected CommonGetAutocompleteV1ResponseAllOf() { }
+        protected EzsignfolderGetListV1Response() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommonGetAutocompleteV1ResponseAllOf" /> class.
+        /// Initializes a new instance of the <see cref="EzsignfolderGetListV1Response" /> class.
         /// </summary>
-        /// <param name="mPayload">Generic Autocomplete Response (required).</param>
-        public CommonGetAutocompleteV1ResponseAllOf(List<CustomAutocompleteElementResponse> mPayload = default(List<CustomAutocompleteElementResponse>))
+        /// <param name="mPayload">mPayload (required).</param>
+        /// <param name="objDebugPayload">objDebugPayload.</param>
+        /// <param name="objDebug">objDebug.</param>
+        public EzsignfolderGetListV1Response(EzsignfolderGetListV1ResponseMPayload mPayload = default(EzsignfolderGetListV1ResponseMPayload), CommonResponseObjDebugPayloadGetList objDebugPayload = default(CommonResponseObjDebugPayloadGetList), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
-                throw new InvalidDataException("mPayload is a required property for CommonGetAutocompleteV1ResponseAllOf and cannot be null");
+                throw new InvalidDataException("mPayload is a required property for EzsignfolderGetListV1Response and cannot be null");
             }
             else
             {
                 this.MPayload = mPayload;
             }
 
+            this.ObjDebugPayload = objDebugPayload;
+            this.ObjDebug = objDebug;
         }
 
         /// <summary>
-        /// Generic Autocomplete Response
+        /// Gets or Sets MPayload
         /// </summary>
-        /// <value>Generic Autocomplete Response</value>
         [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public List<CustomAutocompleteElementResponse> MPayload { get; set; }
+        public EzsignfolderGetListV1ResponseMPayload MPayload { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjDebugPayload
+        /// </summary>
+        [DataMember(Name="objDebugPayload", EmitDefaultValue=false)]
+        public CommonResponseObjDebugPayloadGetList ObjDebugPayload { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjDebug
+        /// </summary>
+        [DataMember(Name="objDebug", EmitDefaultValue=false)]
+        public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,8 +82,10 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CommonGetAutocompleteV1ResponseAllOf {\n");
+            sb.Append("class EzsignfolderGetListV1Response {\n");
             sb.Append("  MPayload: ").Append(MPayload).Append("\n");
+            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
+            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,15 +106,15 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CommonGetAutocompleteV1ResponseAllOf);
+            return this.Equals(input as EzsignfolderGetListV1Response);
         }
 
         /// <summary>
-        /// Returns true if CommonGetAutocompleteV1ResponseAllOf instances are equal
+        /// Returns true if EzsignfolderGetListV1Response instances are equal
         /// </summary>
-        /// <param name="input">Instance of CommonGetAutocompleteV1ResponseAllOf to be compared</param>
+        /// <param name="input">Instance of EzsignfolderGetListV1Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CommonGetAutocompleteV1ResponseAllOf input)
+        public bool Equals(EzsignfolderGetListV1Response input)
         {
             if (input == null)
                 return false;
@@ -105,9 +122,18 @@ namespace eZmaxApi.Model
             return 
                 (
                     this.MPayload == input.MPayload ||
-                    this.MPayload != null &&
-                    input.MPayload != null &&
-                    this.MPayload.SequenceEqual(input.MPayload)
+                    (this.MPayload != null &&
+                    this.MPayload.Equals(input.MPayload))
+                ) && 
+                (
+                    this.ObjDebugPayload == input.ObjDebugPayload ||
+                    (this.ObjDebugPayload != null &&
+                    this.ObjDebugPayload.Equals(input.ObjDebugPayload))
+                ) && 
+                (
+                    this.ObjDebug == input.ObjDebug ||
+                    (this.ObjDebug != null &&
+                    this.ObjDebug.Equals(input.ObjDebug))
                 );
         }
 
@@ -122,6 +148,10 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.MPayload != null)
                     hashCode = hashCode * 59 + this.MPayload.GetHashCode();
+                if (this.ObjDebugPayload != null)
+                    hashCode = hashCode * 59 + this.ObjDebugPayload.GetHashCode();
+                if (this.ObjDebug != null)
+                    hashCode = hashCode * 59 + this.ObjDebug.GetHashCode();
                 return hashCode;
             }
         }

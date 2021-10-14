@@ -25,26 +25,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// CommonGetAutocompleteV1ResponseAllOf
+    /// EzsignfolderGetListV1ResponseAllOf
     /// </summary>
     [DataContract]
-    public partial class CommonGetAutocompleteV1ResponseAllOf :  IEquatable<CommonGetAutocompleteV1ResponseAllOf>, IValidatableObject
+    public partial class EzsignfolderGetListV1ResponseAllOf :  IEquatable<EzsignfolderGetListV1ResponseAllOf>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommonGetAutocompleteV1ResponseAllOf" /> class.
+        /// Initializes a new instance of the <see cref="EzsignfolderGetListV1ResponseAllOf" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected CommonGetAutocompleteV1ResponseAllOf() { }
+        protected EzsignfolderGetListV1ResponseAllOf() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommonGetAutocompleteV1ResponseAllOf" /> class.
+        /// Initializes a new instance of the <see cref="EzsignfolderGetListV1ResponseAllOf" /> class.
         /// </summary>
-        /// <param name="mPayload">Generic Autocomplete Response (required).</param>
-        public CommonGetAutocompleteV1ResponseAllOf(List<CustomAutocompleteElementResponse> mPayload = default(List<CustomAutocompleteElementResponse>))
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzsignfolderGetListV1ResponseAllOf(EzsignfolderGetListV1ResponseMPayload mPayload = default(EzsignfolderGetListV1ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
-                throw new InvalidDataException("mPayload is a required property for CommonGetAutocompleteV1ResponseAllOf and cannot be null");
+                throw new InvalidDataException("mPayload is a required property for EzsignfolderGetListV1ResponseAllOf and cannot be null");
             }
             else
             {
@@ -54,11 +54,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Generic Autocomplete Response
+        /// Gets or Sets MPayload
         /// </summary>
-        /// <value>Generic Autocomplete Response</value>
         [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public List<CustomAutocompleteElementResponse> MPayload { get; set; }
+        public EzsignfolderGetListV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,7 +66,7 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CommonGetAutocompleteV1ResponseAllOf {\n");
+            sb.Append("class EzsignfolderGetListV1ResponseAllOf {\n");
             sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -89,15 +88,15 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CommonGetAutocompleteV1ResponseAllOf);
+            return this.Equals(input as EzsignfolderGetListV1ResponseAllOf);
         }
 
         /// <summary>
-        /// Returns true if CommonGetAutocompleteV1ResponseAllOf instances are equal
+        /// Returns true if EzsignfolderGetListV1ResponseAllOf instances are equal
         /// </summary>
-        /// <param name="input">Instance of CommonGetAutocompleteV1ResponseAllOf to be compared</param>
+        /// <param name="input">Instance of EzsignfolderGetListV1ResponseAllOf to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CommonGetAutocompleteV1ResponseAllOf input)
+        public bool Equals(EzsignfolderGetListV1ResponseAllOf input)
         {
             if (input == null)
                 return false;
@@ -105,9 +104,8 @@ namespace eZmaxApi.Model
             return 
                 (
                     this.MPayload == input.MPayload ||
-                    this.MPayload != null &&
-                    input.MPayload != null &&
-                    this.MPayload.SequenceEqual(input.MPayload)
+                    (this.MPayload != null &&
+                    this.MPayload.Equals(input.MPayload))
                 );
         }
 

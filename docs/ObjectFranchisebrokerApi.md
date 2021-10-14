@@ -39,7 +39,7 @@ namespace Example
 
             var apiInstance = new ObjectFranchisebrokerApi(Configuration.Default);
             var sSelector = sSelector_example;  // string | The type of Franchisebrokers to return
-            var sQuery = sQuery_example;  // string | Allow to filter on the option value (optional) 
+            var sQuery = sQuery_example;  // string | Allow to filter the returned results (optional) 
 
             try
             {
@@ -64,7 +64,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **string**| The type of Franchisebrokers to return | 
- **sQuery** | **string**| Allow to filter on the option value | [optional] 
+ **sQuery** | **string**| Allow to filter the returned results | [optional] 
 
 ### Return type
 

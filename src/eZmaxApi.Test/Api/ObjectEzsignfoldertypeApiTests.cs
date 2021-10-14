@@ -64,6 +64,20 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
+        /// Test EzsignfoldertypeGetAutocompleteV1
+        /// </summary>
+        [Test]
+        public void EzsignfoldertypeGetAutocompleteV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string sSelector = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string sQuery = null;
+            //var response = instance.EzsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery);
+            //Assert.IsInstanceOf(typeof(CommonGetAutocompleteV1Response), response, "response is CommonGetAutocompleteV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsignfoldertypeGetListV1
         /// </summary>
         [Test]
