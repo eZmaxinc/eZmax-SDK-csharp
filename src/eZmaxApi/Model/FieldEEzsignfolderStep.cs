@@ -58,22 +58,16 @@ namespace eZmaxApi.Model
         Expired = 4,
 
         /// <summary>
-        /// Enum Signed for value: Signed
-        /// </summary>
-        [EnumMember(Value = "Signed")]
-        Signed = 5,
-
-        /// <summary>
         /// Enum Completed for value: Completed
         /// </summary>
         [EnumMember(Value = "Completed")]
-        Completed = 6,
+        Completed = 5,
 
         /// <summary>
         /// Enum Archived for value: Archived
         /// </summary>
         [EnumMember(Value = "Archived")]
-        Archived = 7
+        Archived = 6
 
     }
 

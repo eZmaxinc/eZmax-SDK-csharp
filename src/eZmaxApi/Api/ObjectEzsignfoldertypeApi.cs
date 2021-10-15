@@ -278,7 +278,7 @@ namespace eZmaxApi.Api
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeGetAutocompleteV1");
 
-            var localVarPath = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/";
+            var localVarPath = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -358,7 +358,7 @@ namespace eZmaxApi.Api
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeGetAutocompleteV1");
 
-            var localVarPath = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/";
+            var localVarPath = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

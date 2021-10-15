@@ -113,7 +113,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -128,7 +128,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -280,7 +280,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -296,7 +296,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1063,7 +1063,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list 
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1079,7 +1079,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list 
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1144,7 +1144,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list 
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1162,7 +1162,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list 
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>

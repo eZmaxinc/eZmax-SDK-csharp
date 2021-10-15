@@ -74,12 +74,92 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'PkiEzsignfolderID'
         }
         /// <summary>
+        /// Test the property 'FkiEzsignfoldertypeID'
+        /// </summary>
+        [Test]
+        public void FkiEzsignfoldertypeIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsignfoldertypeID'
+        }
+        /// <summary>
+        /// Test the property 'SEzsignfoldertypeNameX'
+        /// </summary>
+        [Test]
+        public void SEzsignfoldertypeNameXTest()
+        {
+            // TODO unit test for the property 'SEzsignfoldertypeNameX'
+        }
+        /// <summary>
         /// Test the property 'SEzsignfolderDescription'
         /// </summary>
         [Test]
         public void SEzsignfolderDescriptionTest()
         {
             // TODO unit test for the property 'SEzsignfolderDescription'
+        }
+        /// <summary>
+        /// Test the property 'EEzsignfolderStep'
+        /// </summary>
+        [Test]
+        public void EEzsignfolderStepTest()
+        {
+            // TODO unit test for the property 'EEzsignfolderStep'
+        }
+        /// <summary>
+        /// Test the property 'DtCreatedDate'
+        /// </summary>
+        [Test]
+        public void DtCreatedDateTest()
+        {
+            // TODO unit test for the property 'DtCreatedDate'
+        }
+        /// <summary>
+        /// Test the property 'DtEzsignfolderSentdate'
+        /// </summary>
+        [Test]
+        public void DtEzsignfolderSentdateTest()
+        {
+            // TODO unit test for the property 'DtEzsignfolderSentdate'
+        }
+        /// <summary>
+        /// Test the property 'DtDueDate'
+        /// </summary>
+        [Test]
+        public void DtDueDateTest()
+        {
+            // TODO unit test for the property 'DtDueDate'
+        }
+        /// <summary>
+        /// Test the property 'ITotalDocument'
+        /// </summary>
+        [Test]
+        public void ITotalDocumentTest()
+        {
+            // TODO unit test for the property 'ITotalDocument'
+        }
+        /// <summary>
+        /// Test the property 'ITotalDocumentEdm'
+        /// </summary>
+        [Test]
+        public void ITotalDocumentEdmTest()
+        {
+            // TODO unit test for the property 'ITotalDocumentEdm'
+        }
+        /// <summary>
+        /// Test the property 'ITotalSignature'
+        /// </summary>
+        [Test]
+        public void ITotalSignatureTest()
+        {
+            // TODO unit test for the property 'ITotalSignature'
+        }
+        /// <summary>
+        /// Test the property 'ITotalSignatureSigned'
+        /// </summary>
+        [Test]
+        public void ITotalSignatureSignedTest()
+        {
+            // TODO unit test for the property 'ITotalSignatureSigned'
         }
 
     }

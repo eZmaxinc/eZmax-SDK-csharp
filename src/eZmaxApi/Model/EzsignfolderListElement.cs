@@ -39,8 +39,18 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignfolderListElement" /> class.
         /// </summary>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
         /// <param name="sEzsignfolderDescription">The description of the Ezsign Folder (required).</param>
-        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), string sEzsignfolderDescription = default(string))
+        /// <param name="eEzsignfolderStep">eEzsignfolderStep (required).</param>
+        /// <param name="dtCreatedDate">The date and time at which the object was created (required).</param>
+        /// <param name="dtEzsignfolderSentdate">dtEzsignfolderSentdate (required).</param>
+        /// <param name="dtDueDate">The date at which no more signature will be accepted on the folder (required).</param>
+        /// <param name="iTotalDocument">The total number of Ezsigndocument in the folder (required).</param>
+        /// <param name="iTotalDocumentEdm">The total number of Ezsigndocument in the folder that were saved in the edm system (required).</param>
+        /// <param name="iTotalSignature">The total number of signature blocks in all Ezsigndocuments in the folder (required).</param>
+        /// <param name="iTotalSignatureSigned">The total number of already signed signature blocks in all Ezsigndocuments in the folder (required).</param>
+        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), OneOfstringnull dtEzsignfolderSentdate = default(OneOfstringnull), OneOfstringnull dtDueDate = default(OneOfstringnull), int iTotalDocument = default(int), int iTotalDocumentEdm = default(int), int iTotalSignature = default(int), int iTotalSignatureSigned = default(int))
         {
             // to ensure "pkiEzsignfolderID" is required (not null)
             if (pkiEzsignfolderID == null)
@@ -50,6 +60,26 @@ namespace eZmaxApi.Model
             else
             {
                 this.PkiEzsignfolderID = pkiEzsignfolderID;
+            }
+
+            // to ensure "fkiEzsignfoldertypeID" is required (not null)
+            if (fkiEzsignfoldertypeID == null)
+            {
+                throw new InvalidDataException("fkiEzsignfoldertypeID is a required property for EzsignfolderListElement and cannot be null");
+            }
+            else
+            {
+                this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            }
+
+            // to ensure "sEzsignfoldertypeNameX" is required (not null)
+            if (sEzsignfoldertypeNameX == null)
+            {
+                throw new InvalidDataException("sEzsignfoldertypeNameX is a required property for EzsignfolderListElement and cannot be null");
+            }
+            else
+            {
+                this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             }
 
             // to ensure "sEzsignfolderDescription" is required (not null)
@@ -62,6 +92,88 @@ namespace eZmaxApi.Model
                 this.SEzsignfolderDescription = sEzsignfolderDescription;
             }
 
+            // to ensure "eEzsignfolderStep" is required (not null)
+            if (eEzsignfolderStep == null)
+            {
+                throw new InvalidDataException("eEzsignfolderStep is a required property for EzsignfolderListElement and cannot be null");
+            }
+            else
+            {
+                this.EEzsignfolderStep = eEzsignfolderStep;
+            }
+
+            // to ensure "dtCreatedDate" is required (not null)
+            if (dtCreatedDate == null)
+            {
+                throw new InvalidDataException("dtCreatedDate is a required property for EzsignfolderListElement and cannot be null");
+            }
+            else
+            {
+                this.DtCreatedDate = dtCreatedDate;
+            }
+
+            // to ensure "dtEzsignfolderSentdate" is required (not null)
+            if (dtEzsignfolderSentdate == null)
+            {
+                throw new InvalidDataException("dtEzsignfolderSentdate is a required property for EzsignfolderListElement and cannot be null");
+            }
+            else
+            {
+                this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
+            }
+
+            this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
+            // to ensure "dtDueDate" is required (not null)
+            if (dtDueDate == null)
+            {
+                throw new InvalidDataException("dtDueDate is a required property for EzsignfolderListElement and cannot be null");
+            }
+            else
+            {
+                this.DtDueDate = dtDueDate;
+            }
+
+            this.DtDueDate = dtDueDate;
+            // to ensure "iTotalDocument" is required (not null)
+            if (iTotalDocument == null)
+            {
+                throw new InvalidDataException("iTotalDocument is a required property for EzsignfolderListElement and cannot be null");
+            }
+            else
+            {
+                this.ITotalDocument = iTotalDocument;
+            }
+
+            // to ensure "iTotalDocumentEdm" is required (not null)
+            if (iTotalDocumentEdm == null)
+            {
+                throw new InvalidDataException("iTotalDocumentEdm is a required property for EzsignfolderListElement and cannot be null");
+            }
+            else
+            {
+                this.ITotalDocumentEdm = iTotalDocumentEdm;
+            }
+
+            // to ensure "iTotalSignature" is required (not null)
+            if (iTotalSignature == null)
+            {
+                throw new InvalidDataException("iTotalSignature is a required property for EzsignfolderListElement and cannot be null");
+            }
+            else
+            {
+                this.ITotalSignature = iTotalSignature;
+            }
+
+            // to ensure "iTotalSignatureSigned" is required (not null)
+            if (iTotalSignatureSigned == null)
+            {
+                throw new InvalidDataException("iTotalSignatureSigned is a required property for EzsignfolderListElement and cannot be null");
+            }
+            else
+            {
+                this.ITotalSignatureSigned = iTotalSignatureSigned;
+            }
+
         }
 
         /// <summary>
@@ -72,11 +184,79 @@ namespace eZmaxApi.Model
         public int PkiEzsignfolderID { get; set; }
 
         /// <summary>
+        /// The unique ID of the Ezsignfoldertype.
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfoldertype.</value>
+        [DataMember(Name="fkiEzsignfoldertypeID", EmitDefaultValue=true)]
+        public int FkiEzsignfoldertypeID { get; set; }
+
+        /// <summary>
+        /// The name of the Ezsignfoldertype in the language of the requester
+        /// </summary>
+        /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
+        [DataMember(Name="sEzsignfoldertypeNameX", EmitDefaultValue=true)]
+        public string SEzsignfoldertypeNameX { get; set; }
+
+        /// <summary>
         /// The description of the Ezsign Folder
         /// </summary>
         /// <value>The description of the Ezsign Folder</value>
         [DataMember(Name="sEzsignfolderDescription", EmitDefaultValue=true)]
         public string SEzsignfolderDescription { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignfolderStep
+        /// </summary>
+        [DataMember(Name="eEzsignfolderStep", EmitDefaultValue=true)]
+        public FieldEEzsignfolderStep EEzsignfolderStep { get; set; }
+
+        /// <summary>
+        /// The date and time at which the object was created
+        /// </summary>
+        /// <value>The date and time at which the object was created</value>
+        [DataMember(Name="dtCreatedDate", EmitDefaultValue=true)]
+        public string DtCreatedDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DtEzsignfolderSentdate
+        /// </summary>
+        [DataMember(Name="dtEzsignfolderSentdate", EmitDefaultValue=true)]
+        public OneOfstringnull DtEzsignfolderSentdate { get; set; }
+
+        /// <summary>
+        /// The date at which no more signature will be accepted on the folder
+        /// </summary>
+        /// <value>The date at which no more signature will be accepted on the folder</value>
+        [DataMember(Name="dtDueDate", EmitDefaultValue=true)]
+        public OneOfstringnull DtDueDate { get; set; }
+
+        /// <summary>
+        /// The total number of Ezsigndocument in the folder
+        /// </summary>
+        /// <value>The total number of Ezsigndocument in the folder</value>
+        [DataMember(Name="iTotalDocument", EmitDefaultValue=true)]
+        public int ITotalDocument { get; set; }
+
+        /// <summary>
+        /// The total number of Ezsigndocument in the folder that were saved in the edm system
+        /// </summary>
+        /// <value>The total number of Ezsigndocument in the folder that were saved in the edm system</value>
+        [DataMember(Name="iTotalDocumentEdm", EmitDefaultValue=true)]
+        public int ITotalDocumentEdm { get; set; }
+
+        /// <summary>
+        /// The total number of signature blocks in all Ezsigndocuments in the folder
+        /// </summary>
+        /// <value>The total number of signature blocks in all Ezsigndocuments in the folder</value>
+        [DataMember(Name="iTotalSignature", EmitDefaultValue=true)]
+        public int ITotalSignature { get; set; }
+
+        /// <summary>
+        /// The total number of already signed signature blocks in all Ezsigndocuments in the folder
+        /// </summary>
+        /// <value>The total number of already signed signature blocks in all Ezsigndocuments in the folder</value>
+        [DataMember(Name="iTotalSignatureSigned", EmitDefaultValue=true)]
+        public int ITotalSignatureSigned { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -87,7 +267,17 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class EzsignfolderListElement {\n");
             sb.Append("  PkiEzsignfolderID: ").Append(PkiEzsignfolderID).Append("\n");
+            sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
+            sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
             sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
+            sb.Append("  EEzsignfolderStep: ").Append(EEzsignfolderStep).Append("\n");
+            sb.Append("  DtCreatedDate: ").Append(DtCreatedDate).Append("\n");
+            sb.Append("  DtEzsignfolderSentdate: ").Append(DtEzsignfolderSentdate).Append("\n");
+            sb.Append("  DtDueDate: ").Append(DtDueDate).Append("\n");
+            sb.Append("  ITotalDocument: ").Append(ITotalDocument).Append("\n");
+            sb.Append("  ITotalDocumentEdm: ").Append(ITotalDocumentEdm).Append("\n");
+            sb.Append("  ITotalSignature: ").Append(ITotalSignature).Append("\n");
+            sb.Append("  ITotalSignatureSigned: ").Append(ITotalSignatureSigned).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,9 +318,59 @@ namespace eZmaxApi.Model
                     this.PkiEzsignfolderID.Equals(input.PkiEzsignfolderID))
                 ) && 
                 (
+                    this.FkiEzsignfoldertypeID == input.FkiEzsignfoldertypeID ||
+                    (this.FkiEzsignfoldertypeID != null &&
+                    this.FkiEzsignfoldertypeID.Equals(input.FkiEzsignfoldertypeID))
+                ) && 
+                (
+                    this.SEzsignfoldertypeNameX == input.SEzsignfoldertypeNameX ||
+                    (this.SEzsignfoldertypeNameX != null &&
+                    this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
+                ) && 
+                (
                     this.SEzsignfolderDescription == input.SEzsignfolderDescription ||
                     (this.SEzsignfolderDescription != null &&
                     this.SEzsignfolderDescription.Equals(input.SEzsignfolderDescription))
+                ) && 
+                (
+                    this.EEzsignfolderStep == input.EEzsignfolderStep ||
+                    (this.EEzsignfolderStep != null &&
+                    this.EEzsignfolderStep.Equals(input.EEzsignfolderStep))
+                ) && 
+                (
+                    this.DtCreatedDate == input.DtCreatedDate ||
+                    (this.DtCreatedDate != null &&
+                    this.DtCreatedDate.Equals(input.DtCreatedDate))
+                ) && 
+                (
+                    this.DtEzsignfolderSentdate == input.DtEzsignfolderSentdate ||
+                    (this.DtEzsignfolderSentdate != null &&
+                    this.DtEzsignfolderSentdate.Equals(input.DtEzsignfolderSentdate))
+                ) && 
+                (
+                    this.DtDueDate == input.DtDueDate ||
+                    (this.DtDueDate != null &&
+                    this.DtDueDate.Equals(input.DtDueDate))
+                ) && 
+                (
+                    this.ITotalDocument == input.ITotalDocument ||
+                    (this.ITotalDocument != null &&
+                    this.ITotalDocument.Equals(input.ITotalDocument))
+                ) && 
+                (
+                    this.ITotalDocumentEdm == input.ITotalDocumentEdm ||
+                    (this.ITotalDocumentEdm != null &&
+                    this.ITotalDocumentEdm.Equals(input.ITotalDocumentEdm))
+                ) && 
+                (
+                    this.ITotalSignature == input.ITotalSignature ||
+                    (this.ITotalSignature != null &&
+                    this.ITotalSignature.Equals(input.ITotalSignature))
+                ) && 
+                (
+                    this.ITotalSignatureSigned == input.ITotalSignatureSigned ||
+                    (this.ITotalSignatureSigned != null &&
+                    this.ITotalSignatureSigned.Equals(input.ITotalSignatureSigned))
                 );
         }
 
@@ -145,8 +385,28 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.PkiEzsignfolderID != null)
                     hashCode = hashCode * 59 + this.PkiEzsignfolderID.GetHashCode();
+                if (this.FkiEzsignfoldertypeID != null)
+                    hashCode = hashCode * 59 + this.FkiEzsignfoldertypeID.GetHashCode();
+                if (this.SEzsignfoldertypeNameX != null)
+                    hashCode = hashCode * 59 + this.SEzsignfoldertypeNameX.GetHashCode();
                 if (this.SEzsignfolderDescription != null)
                     hashCode = hashCode * 59 + this.SEzsignfolderDescription.GetHashCode();
+                if (this.EEzsignfolderStep != null)
+                    hashCode = hashCode * 59 + this.EEzsignfolderStep.GetHashCode();
+                if (this.DtCreatedDate != null)
+                    hashCode = hashCode * 59 + this.DtCreatedDate.GetHashCode();
+                if (this.DtEzsignfolderSentdate != null)
+                    hashCode = hashCode * 59 + this.DtEzsignfolderSentdate.GetHashCode();
+                if (this.DtDueDate != null)
+                    hashCode = hashCode * 59 + this.DtDueDate.GetHashCode();
+                if (this.ITotalDocument != null)
+                    hashCode = hashCode * 59 + this.ITotalDocument.GetHashCode();
+                if (this.ITotalDocumentEdm != null)
+                    hashCode = hashCode * 59 + this.ITotalDocumentEdm.GetHashCode();
+                if (this.ITotalSignature != null)
+                    hashCode = hashCode * 59 + this.ITotalSignature.GetHashCode();
+                if (this.ITotalSignatureSigned != null)
+                    hashCode = hashCode * 59 + this.ITotalSignatureSigned.GetHashCode();
                 return hashCode;
             }
         }
