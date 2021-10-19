@@ -71,9 +71,9 @@ namespace eZmaxApi.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string sSelector = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
             //string sQuery = null;
-            //var response = instance.EzsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery);
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //var response = instance.EzsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(CommonGetAutocompleteV1Response), response, "response is CommonGetAutocompleteV1Response");
         }
         

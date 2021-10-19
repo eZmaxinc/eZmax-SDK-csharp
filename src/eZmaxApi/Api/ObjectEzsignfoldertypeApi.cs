@@ -33,10 +33,10 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
-        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
-        CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string));
+        CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
 
         /// <summary>
         /// Retrieve Ezsignfoldertypes and IDs
@@ -46,10 +46,10 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
-        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
-        ApiResponse<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1WithHttpInfo (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string));
+        ApiResponse<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
         /// <summary>
         /// Retrieve Ezsignfoldertype list
         /// </summary>
@@ -89,11 +89,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
-        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
-        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1Async (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1Async (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsignfoldertypes and IDs
@@ -103,11 +103,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
-        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Ezsignfoldertype list
         /// </summary>
@@ -255,12 +255,12 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
-        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
-        public CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string))
+        public CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
-             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = EzsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector, acceptLanguage, sQuery);
+             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = EzsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector, sQuery, acceptLanguage);
              return localVarResponse.Data;
         }
 
@@ -269,10 +269,10 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
-        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
-        public ApiResponse<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1WithHttpInfo (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string))
+        public ApiResponse<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -332,13 +332,13 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
-        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
-        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1Async (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1Async (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync(sSelector, acceptLanguage, sQuery, cancellationToken);
+             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync(sSelector, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -348,11 +348,11 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Ezsignfoldertypes to return</param>
-        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync (string sSelector, HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)

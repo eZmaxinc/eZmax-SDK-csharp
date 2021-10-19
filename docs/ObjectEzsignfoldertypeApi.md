@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## EzsignfoldertypeGetAutocompleteV1
 
-> CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, HeaderAcceptLanguage? acceptLanguage = null, string sQuery = null)
+> CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
 
 Retrieve Ezsignfoldertypes and IDs
 
@@ -40,13 +40,13 @@ namespace Example
 
             var apiInstance = new ObjectEzsignfoldertypeApi(Configuration.Default);
             var sSelector = sSelector_example;  // string | The type of Ezsignfoldertypes to return
-            var acceptLanguage = ;  // HeaderAcceptLanguage? |  (optional) 
             var sQuery = sQuery_example;  // string | Allow to filter the returned results (optional) 
+            var acceptLanguage = ;  // HeaderAcceptLanguage? |  (optional) 
 
             try
             {
                 // Retrieve Ezsignfoldertypes and IDs
-                CommonGetAutocompleteV1Response result = apiInstance.EzsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery);
+                CommonGetAutocompleteV1Response result = apiInstance.EzsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -66,8 +66,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **string**| The type of Ezsignfoldertypes to return | 
- **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
  **sQuery** | **string**| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
 
 ### Return type
 

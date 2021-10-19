@@ -50,7 +50,7 @@ namespace eZmaxApi.Model
         /// <param name="iTotalDocumentEdm">The total number of Ezsigndocument in the folder that were saved in the edm system (required).</param>
         /// <param name="iTotalSignature">The total number of signature blocks in all Ezsigndocuments in the folder (required).</param>
         /// <param name="iTotalSignatureSigned">The total number of already signed signature blocks in all Ezsigndocuments in the folder (required).</param>
-        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), OneOfstringnull dtEzsignfolderSentdate = default(OneOfstringnull), OneOfstringnull dtDueDate = default(OneOfstringnull), int iTotalDocument = default(int), int iTotalDocumentEdm = default(int), int iTotalSignature = default(int), int iTotalSignatureSigned = default(int))
+        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), OneOfstringobject dtEzsignfolderSentdate = default(OneOfstringobject), OneOfstringobject dtDueDate = default(OneOfstringobject), int iTotalDocument = default(int), int iTotalDocumentEdm = default(int), int iTotalSignature = default(int), int iTotalSignatureSigned = default(int))
         {
             // to ensure "pkiEzsignfolderID" is required (not null)
             if (pkiEzsignfolderID == null)
@@ -221,14 +221,14 @@ namespace eZmaxApi.Model
         /// Gets or Sets DtEzsignfolderSentdate
         /// </summary>
         [DataMember(Name="dtEzsignfolderSentdate", EmitDefaultValue=true)]
-        public OneOfstringnull DtEzsignfolderSentdate { get; set; }
+        public OneOfstringobject DtEzsignfolderSentdate { get; set; }
 
         /// <summary>
         /// The date at which no more signature will be accepted on the folder
         /// </summary>
         /// <value>The date at which no more signature will be accepted on the folder</value>
         [DataMember(Name="dtDueDate", EmitDefaultValue=true)]
-        public OneOfstringnull DtDueDate { get; set; }
+        public OneOfstringobject DtDueDate { get; set; }
 
         /// <summary>
         /// The total number of Ezsigndocument in the folder
