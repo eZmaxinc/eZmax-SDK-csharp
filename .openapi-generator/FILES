@@ -98,6 +98,7 @@ docs/EzsignfolderResponse.md
 docs/EzsignfolderResponseCompound.md
 docs/EzsignfolderSendV1Request.md
 docs/EzsignfolderSendV1Response.md
+docs/EzsignfolderUnsendV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1Request.md
 docs/EzsignfoldersignerassociationCreateObjectV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1ResponseAllOf.md
@@ -153,7 +154,13 @@ docs/FranchisereferalincomeRequestCompoundAllOf.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
 docs/HeaderAcceptLanguage.md
+docs/ListSaveListpresentationV1Request.md
+docs/ListSaveListpresentationV1Response.md
+docs/ListSaveListpresentationV1ResponseAllOf.md
+docs/ListSaveListpresentationV1ResponseMPayload.md
+docs/ListpresentationRequest.md
 docs/ModuleAuthenticateApi.md
+docs/ModuleListApi.md
 docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
@@ -201,6 +208,7 @@ git_push.sh
 mono_nunit_test.sh
 src/eZmaxApi.Test/Api/GlobalCustomerApiTests.cs
 src/eZmaxApi.Test/Api/ModuleAuthenticateApiTests.cs
+src/eZmaxApi.Test/Api/ModuleListApiTests.cs
 src/eZmaxApi.Test/Api/ModuleSsprApiTests.cs
 src/eZmaxApi.Test/Api/ModuleUserApiTests.cs
 src/eZmaxApi.Test/Api/ObjectActivesessionApiTests.cs
@@ -308,6 +316,7 @@ src/eZmaxApi.Test/Model/EzsignfolderResponseCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderSendV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderSendV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsignfolderUnsendV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationCreateObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationCreateObjectV1ResponseMPayloadTests.cs
@@ -362,6 +371,11 @@ src/eZmaxApi.Test/Model/FranchisereferalincomeRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/FranchisereferalincomeRequestTests.cs
 src/eZmaxApi.Test/Model/GlobalCustomerGetEndpointV1ResponseTests.cs
 src/eZmaxApi.Test/Model/HeaderAcceptLanguageTests.cs
+src/eZmaxApi.Test/Model/ListSaveListpresentationV1RequestTests.cs
+src/eZmaxApi.Test/Model/ListSaveListpresentationV1ResponseAllOfTests.cs
+src/eZmaxApi.Test/Model/ListSaveListpresentationV1ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/ListSaveListpresentationV1ResponseTests.cs
+src/eZmaxApi.Test/Model/ListpresentationRequestTests.cs
 src/eZmaxApi.Test/Model/MultilingualApikeyDescriptionTests.cs
 src/eZmaxApi.Test/Model/PhoneRequestTests.cs
 src/eZmaxApi.Test/Model/SsprResetPasswordRequestV1RequestTests.cs
@@ -395,6 +409,7 @@ src/eZmaxApi.Test/eZmaxApi.Test.csproj
 src/eZmaxApi.Test/packages.config
 src/eZmaxApi/Api/GlobalCustomerApi.cs
 src/eZmaxApi/Api/ModuleAuthenticateApi.cs
+src/eZmaxApi/Api/ModuleListApi.cs
 src/eZmaxApi/Api/ModuleSsprApi.cs
 src/eZmaxApi/Api/ModuleUserApi.cs
 src/eZmaxApi/Api/ObjectActivesessionApi.cs
@@ -512,6 +527,7 @@ src/eZmaxApi/Model/EzsignfolderResponse.cs
 src/eZmaxApi/Model/EzsignfolderResponseCompound.cs
 src/eZmaxApi/Model/EzsignfolderSendV1Request.cs
 src/eZmaxApi/Model/EzsignfolderSendV1Response.cs
+src/eZmaxApi/Model/EzsignfolderUnsendV1Response.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationCreateObjectV1Request.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationCreateObjectV1Response.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationCreateObjectV1ResponseAllOf.cs
@@ -566,6 +582,11 @@ src/eZmaxApi/Model/FranchisereferalincomeRequestCompound.cs
 src/eZmaxApi/Model/FranchisereferalincomeRequestCompoundAllOf.cs
 src/eZmaxApi/Model/GlobalCustomerGetEndpointV1Response.cs
 src/eZmaxApi/Model/HeaderAcceptLanguage.cs
+src/eZmaxApi/Model/ListSaveListpresentationV1Request.cs
+src/eZmaxApi/Model/ListSaveListpresentationV1Response.cs
+src/eZmaxApi/Model/ListSaveListpresentationV1ResponseAllOf.cs
+src/eZmaxApi/Model/ListSaveListpresentationV1ResponseMPayload.cs
+src/eZmaxApi/Model/ListpresentationRequest.cs
 src/eZmaxApi/Model/MultilingualApikeyDescription.cs
 src/eZmaxApi/Model/PhoneRequest.cs
 src/eZmaxApi/Model/SsprResetPasswordRequestV1Request.cs
