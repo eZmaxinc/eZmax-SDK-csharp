@@ -1,10 +1,11 @@
 
-# eZmaxApi.Model.ListSaveListpresentationV1Response
+# eZmaxApi.Model.ListGetListpresentationV1Response
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**MPayload** | [**ListGetListpresentationV1ResponseMPayload**](ListGetListpresentationV1ResponseMPayload.md) |  | 
 **ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
 **ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 

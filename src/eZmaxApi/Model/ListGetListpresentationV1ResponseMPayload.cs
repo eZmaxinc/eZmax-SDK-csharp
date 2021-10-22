@@ -25,33 +25,39 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the POST /1/module/list/listpresentation/{sListName} API Request
+    /// Payload for the GET /1/module/list/listpresentation/{sListName} API Request
     /// </summary>
     [DataContract]
-    public partial class ListSaveListpresentationV1Response :  IEquatable<ListSaveListpresentationV1Response>, IValidatableObject
+    public partial class ListGetListpresentationV1ResponseMPayload :  IEquatable<ListGetListpresentationV1ResponseMPayload>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListSaveListpresentationV1Response" /> class.
+        /// Initializes a new instance of the <see cref="ListGetListpresentationV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
-        /// <param name="objDebug">objDebug.</param>
-        public ListSaveListpresentationV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        [JsonConstructorAttribute]
+        protected ListGetListpresentationV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ListGetListpresentationV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjListpresentation">aObjListpresentation (required).</param>
+        public ListGetListpresentationV1ResponseMPayload(List<ListpresentationRequest> aObjListpresentation = default(List<ListpresentationRequest>))
         {
-            this.ObjDebugPayload = objDebugPayload;
-            this.ObjDebug = objDebug;
+            // to ensure "aObjListpresentation" is required (not null)
+            if (aObjListpresentation == null)
+            {
+                throw new InvalidDataException("aObjListpresentation is a required property for ListGetListpresentationV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjListpresentation = aObjListpresentation;
+            }
+
         }
 
         /// <summary>
-        /// Gets or Sets ObjDebugPayload
+        /// Gets or Sets AObjListpresentation
         /// </summary>
-        [DataMember(Name="objDebugPayload", EmitDefaultValue=false)]
-        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjDebug
-        /// </summary>
-        [DataMember(Name="objDebug", EmitDefaultValue=false)]
-        public CommonResponseObjDebug ObjDebug { get; set; }
+        [DataMember(Name="a_objListpresentation", EmitDefaultValue=true)]
+        public List<ListpresentationRequest> AObjListpresentation { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,9 +66,8 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ListSaveListpresentationV1Response {\n");
-            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
-            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
+            sb.Append("class ListGetListpresentationV1ResponseMPayload {\n");
+            sb.Append("  AObjListpresentation: ").Append(AObjListpresentation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,29 +88,25 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ListSaveListpresentationV1Response);
+            return this.Equals(input as ListGetListpresentationV1ResponseMPayload);
         }
 
         /// <summary>
-        /// Returns true if ListSaveListpresentationV1Response instances are equal
+        /// Returns true if ListGetListpresentationV1ResponseMPayload instances are equal
         /// </summary>
-        /// <param name="input">Instance of ListSaveListpresentationV1Response to be compared</param>
+        /// <param name="input">Instance of ListGetListpresentationV1ResponseMPayload to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ListSaveListpresentationV1Response input)
+        public bool Equals(ListGetListpresentationV1ResponseMPayload input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.ObjDebugPayload == input.ObjDebugPayload ||
-                    (this.ObjDebugPayload != null &&
-                    this.ObjDebugPayload.Equals(input.ObjDebugPayload))
-                ) && 
-                (
-                    this.ObjDebug == input.ObjDebug ||
-                    (this.ObjDebug != null &&
-                    this.ObjDebug.Equals(input.ObjDebug))
+                    this.AObjListpresentation == input.AObjListpresentation ||
+                    this.AObjListpresentation != null &&
+                    input.AObjListpresentation != null &&
+                    this.AObjListpresentation.SequenceEqual(input.AObjListpresentation)
                 );
         }
 
@@ -118,10 +119,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ObjDebugPayload != null)
-                    hashCode = hashCode * 59 + this.ObjDebugPayload.GetHashCode();
-                if (this.ObjDebug != null)
-                    hashCode = hashCode * 59 + this.ObjDebug.GetHashCode();
+                if (this.AObjListpresentation != null)
+                    hashCode = hashCode * 59 + this.AObjListpresentation.GetHashCode();
                 return hashCode;
             }
         }

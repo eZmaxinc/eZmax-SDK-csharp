@@ -26,6 +26,27 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Get all Listpresentation for a specific list
+        /// </summary>
+        /// <remarks>
+        /// Retrive previously saved Listpresentation
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sListName">The list Name</param>
+        /// <returns>ListGetListpresentationV1Response</returns>
+        ListGetListpresentationV1Response ListGetListpresentationV1 (string sListName);
+
+        /// <summary>
+        /// Get all Listpresentation for a specific list
+        /// </summary>
+        /// <remarks>
+        /// Retrive previously saved Listpresentation
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sListName">The list Name</param>
+        /// <returns>ApiResponse of ListGetListpresentationV1Response</returns>
+        ApiResponse<ListGetListpresentationV1Response> ListGetListpresentationV1WithHttpInfo (string sListName);
+        /// <summary>
         /// Save all Listpresentation for a specific list
         /// </summary>
         /// <remarks>
@@ -35,7 +56,7 @@ namespace eZmaxApi.Api
         /// <param name="sListName">The list Name</param>
         /// <param name="listSaveListpresentationV1Request"></param>
         /// <returns>ListSaveListpresentationV1Response</returns>
-        ListSaveListpresentationV1Response ListListpresentationV1 (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request);
+        ListSaveListpresentationV1Response ListSaveListpresentationV1 (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request);
 
         /// <summary>
         /// Save all Listpresentation for a specific list
@@ -47,9 +68,32 @@ namespace eZmaxApi.Api
         /// <param name="sListName">The list Name</param>
         /// <param name="listSaveListpresentationV1Request"></param>
         /// <returns>ApiResponse of ListSaveListpresentationV1Response</returns>
-        ApiResponse<ListSaveListpresentationV1Response> ListListpresentationV1WithHttpInfo (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request);
+        ApiResponse<ListSaveListpresentationV1Response> ListSaveListpresentationV1WithHttpInfo (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Get all Listpresentation for a specific list
+        /// </summary>
+        /// <remarks>
+        /// Retrive previously saved Listpresentation
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sListName">The list Name</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ListGetListpresentationV1Response</returns>
+        System.Threading.Tasks.Task<ListGetListpresentationV1Response> ListGetListpresentationV1Async (string sListName, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get all Listpresentation for a specific list
+        /// </summary>
+        /// <remarks>
+        /// Retrive previously saved Listpresentation
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sListName">The list Name</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ListGetListpresentationV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListGetListpresentationV1Response>> ListGetListpresentationV1WithHttpInfoAsync (string sListName, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Save all Listpresentation for a specific list
         /// </summary>
@@ -61,7 +105,7 @@ namespace eZmaxApi.Api
         /// <param name="listSaveListpresentationV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ListSaveListpresentationV1Response</returns>
-        System.Threading.Tasks.Task<ListSaveListpresentationV1Response> ListListpresentationV1Async (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ListSaveListpresentationV1Response> ListSaveListpresentationV1Async (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Save all Listpresentation for a specific list
@@ -74,7 +118,7 @@ namespace eZmaxApi.Api
         /// <param name="listSaveListpresentationV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ListSaveListpresentationV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListSaveListpresentationV1Response>> ListListpresentationV1WithHttpInfoAsync (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListSaveListpresentationV1Response>> ListSaveListpresentationV1WithHttpInfoAsync (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -187,15 +231,160 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Get all Listpresentation for a specific list Retrive previously saved Listpresentation
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sListName">The list Name</param>
+        /// <returns>ListGetListpresentationV1Response</returns>
+        public ListGetListpresentationV1Response ListGetListpresentationV1 (string sListName)
+        {
+             ApiResponse<ListGetListpresentationV1Response> localVarResponse = ListGetListpresentationV1WithHttpInfo(sListName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all Listpresentation for a specific list Retrive previously saved Listpresentation
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sListName">The list Name</param>
+        /// <returns>ApiResponse of ListGetListpresentationV1Response</returns>
+        public ApiResponse<ListGetListpresentationV1Response> ListGetListpresentationV1WithHttpInfo (string sListName)
+        {
+            // verify the required parameter 'sListName' is set
+            if (sListName == null)
+                throw new ApiException(400, "Missing required parameter 'sListName' when calling ModuleListApi->ListGetListpresentationV1");
+
+            var localVarPath = "/1/module/list/listpresentation/{sListName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (sListName != null) localVarPathParams.Add("sListName", this.Configuration.ApiClient.ParameterToString(sListName)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListGetListpresentationV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ListGetListpresentationV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ListGetListpresentationV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListGetListpresentationV1Response)));
+        }
+
+        /// <summary>
+        /// Get all Listpresentation for a specific list Retrive previously saved Listpresentation
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sListName">The list Name</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ListGetListpresentationV1Response</returns>
+        public async System.Threading.Tasks.Task<ListGetListpresentationV1Response> ListGetListpresentationV1Async (string sListName, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<ListGetListpresentationV1Response> localVarResponse = await ListGetListpresentationV1WithHttpInfoAsync(sListName, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all Listpresentation for a specific list Retrive previously saved Listpresentation
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sListName">The list Name</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ListGetListpresentationV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ListGetListpresentationV1Response>> ListGetListpresentationV1WithHttpInfoAsync (string sListName, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'sListName' is set
+            if (sListName == null)
+                throw new ApiException(400, "Missing required parameter 'sListName' when calling ModuleListApi->ListGetListpresentationV1");
+
+            var localVarPath = "/1/module/list/listpresentation/{sListName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (sListName != null) localVarPathParams.Add("sListName", this.Configuration.ApiClient.ParameterToString(sListName)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListGetListpresentationV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ListGetListpresentationV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ListGetListpresentationV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListGetListpresentationV1Response)));
+        }
+
+        /// <summary>
         /// Save all Listpresentation for a specific list Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sListName">The list Name</param>
         /// <param name="listSaveListpresentationV1Request"></param>
         /// <returns>ListSaveListpresentationV1Response</returns>
-        public ListSaveListpresentationV1Response ListListpresentationV1 (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request)
+        public ListSaveListpresentationV1Response ListSaveListpresentationV1 (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request)
         {
-             ApiResponse<ListSaveListpresentationV1Response> localVarResponse = ListListpresentationV1WithHttpInfo(sListName, listSaveListpresentationV1Request);
+             ApiResponse<ListSaveListpresentationV1Response> localVarResponse = ListSaveListpresentationV1WithHttpInfo(sListName, listSaveListpresentationV1Request);
              return localVarResponse.Data;
         }
 
@@ -206,14 +395,14 @@ namespace eZmaxApi.Api
         /// <param name="sListName">The list Name</param>
         /// <param name="listSaveListpresentationV1Request"></param>
         /// <returns>ApiResponse of ListSaveListpresentationV1Response</returns>
-        public ApiResponse<ListSaveListpresentationV1Response> ListListpresentationV1WithHttpInfo (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request)
+        public ApiResponse<ListSaveListpresentationV1Response> ListSaveListpresentationV1WithHttpInfo (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request)
         {
             // verify the required parameter 'sListName' is set
             if (sListName == null)
-                throw new ApiException(400, "Missing required parameter 'sListName' when calling ModuleListApi->ListListpresentationV1");
+                throw new ApiException(400, "Missing required parameter 'sListName' when calling ModuleListApi->ListSaveListpresentationV1");
             // verify the required parameter 'listSaveListpresentationV1Request' is set
             if (listSaveListpresentationV1Request == null)
-                throw new ApiException(400, "Missing required parameter 'listSaveListpresentationV1Request' when calling ModuleListApi->ListListpresentationV1");
+                throw new ApiException(400, "Missing required parameter 'listSaveListpresentationV1Request' when calling ModuleListApi->ListSaveListpresentationV1");
 
             var localVarPath = "/1/module/list/listpresentation/{sListName}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -262,7 +451,7 @@ namespace eZmaxApi.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ListListpresentationV1", localVarResponse);
+                Exception exception = ExceptionFactory("ListSaveListpresentationV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -279,9 +468,9 @@ namespace eZmaxApi.Api
         /// <param name="listSaveListpresentationV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ListSaveListpresentationV1Response</returns>
-        public async System.Threading.Tasks.Task<ListSaveListpresentationV1Response> ListListpresentationV1Async (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ListSaveListpresentationV1Response> ListSaveListpresentationV1Async (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ListSaveListpresentationV1Response> localVarResponse = await ListListpresentationV1WithHttpInfoAsync(sListName, listSaveListpresentationV1Request, cancellationToken);
+             ApiResponse<ListSaveListpresentationV1Response> localVarResponse = await ListSaveListpresentationV1WithHttpInfoAsync(sListName, listSaveListpresentationV1Request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -294,14 +483,14 @@ namespace eZmaxApi.Api
         /// <param name="listSaveListpresentationV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ListSaveListpresentationV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListSaveListpresentationV1Response>> ListListpresentationV1WithHttpInfoAsync (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<ListSaveListpresentationV1Response>> ListSaveListpresentationV1WithHttpInfoAsync (string sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sListName' is set
             if (sListName == null)
-                throw new ApiException(400, "Missing required parameter 'sListName' when calling ModuleListApi->ListListpresentationV1");
+                throw new ApiException(400, "Missing required parameter 'sListName' when calling ModuleListApi->ListSaveListpresentationV1");
             // verify the required parameter 'listSaveListpresentationV1Request' is set
             if (listSaveListpresentationV1Request == null)
-                throw new ApiException(400, "Missing required parameter 'listSaveListpresentationV1Request' when calling ModuleListApi->ListListpresentationV1");
+                throw new ApiException(400, "Missing required parameter 'listSaveListpresentationV1Request' when calling ModuleListApi->ListSaveListpresentationV1");
 
             var localVarPath = "/1/module/list/listpresentation/{sListName}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -350,7 +539,7 @@ namespace eZmaxApi.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ListListpresentationV1", localVarResponse);
+                Exception exception = ExceptionFactory("ListSaveListpresentationV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 

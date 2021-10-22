@@ -25,39 +25,39 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the POST /1/module/list/listpresentation/{sListName} API Request
+    /// ListGetListpresentationV1ResponseAllOf
     /// </summary>
     [DataContract]
-    public partial class ListSaveListpresentationV1ResponseMPayload :  IEquatable<ListSaveListpresentationV1ResponseMPayload>, IValidatableObject
+    public partial class ListGetListpresentationV1ResponseAllOf :  IEquatable<ListGetListpresentationV1ResponseAllOf>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListSaveListpresentationV1ResponseMPayload" /> class.
+        /// Initializes a new instance of the <see cref="ListGetListpresentationV1ResponseAllOf" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected ListSaveListpresentationV1ResponseMPayload() { }
+        protected ListGetListpresentationV1ResponseAllOf() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListSaveListpresentationV1ResponseMPayload" /> class.
+        /// Initializes a new instance of the <see cref="ListGetListpresentationV1ResponseAllOf" /> class.
         /// </summary>
-        /// <param name="aObjListpresentation">aObjListpresentation (required).</param>
-        public ListSaveListpresentationV1ResponseMPayload(List<ListpresentationRequest> aObjListpresentation = default(List<ListpresentationRequest>))
+        /// <param name="mPayload">mPayload (required).</param>
+        public ListGetListpresentationV1ResponseAllOf(ListGetListpresentationV1ResponseMPayload mPayload = default(ListGetListpresentationV1ResponseMPayload))
         {
-            // to ensure "aObjListpresentation" is required (not null)
-            if (aObjListpresentation == null)
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
             {
-                throw new InvalidDataException("aObjListpresentation is a required property for ListSaveListpresentationV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("mPayload is a required property for ListGetListpresentationV1ResponseAllOf and cannot be null");
             }
             else
             {
-                this.AObjListpresentation = aObjListpresentation;
+                this.MPayload = mPayload;
             }
 
         }
 
         /// <summary>
-        /// Gets or Sets AObjListpresentation
+        /// Gets or Sets MPayload
         /// </summary>
-        [DataMember(Name="a_objListpresentation", EmitDefaultValue=true)]
-        public List<ListpresentationRequest> AObjListpresentation { get; set; }
+        [DataMember(Name="mPayload", EmitDefaultValue=true)]
+        public ListGetListpresentationV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,8 +66,8 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ListSaveListpresentationV1ResponseMPayload {\n");
-            sb.Append("  AObjListpresentation: ").Append(AObjListpresentation).Append("\n");
+            sb.Append("class ListGetListpresentationV1ResponseAllOf {\n");
+            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,25 +88,24 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ListSaveListpresentationV1ResponseMPayload);
+            return this.Equals(input as ListGetListpresentationV1ResponseAllOf);
         }
 
         /// <summary>
-        /// Returns true if ListSaveListpresentationV1ResponseMPayload instances are equal
+        /// Returns true if ListGetListpresentationV1ResponseAllOf instances are equal
         /// </summary>
-        /// <param name="input">Instance of ListSaveListpresentationV1ResponseMPayload to be compared</param>
+        /// <param name="input">Instance of ListGetListpresentationV1ResponseAllOf to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ListSaveListpresentationV1ResponseMPayload input)
+        public bool Equals(ListGetListpresentationV1ResponseAllOf input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.AObjListpresentation == input.AObjListpresentation ||
-                    this.AObjListpresentation != null &&
-                    input.AObjListpresentation != null &&
-                    this.AObjListpresentation.SequenceEqual(input.AObjListpresentation)
+                    this.MPayload == input.MPayload ||
+                    (this.MPayload != null &&
+                    this.MPayload.Equals(input.MPayload))
                 );
         }
 
@@ -119,8 +118,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AObjListpresentation != null)
-                    hashCode = hashCode * 59 + this.AObjListpresentation.GetHashCode();
+                if (this.MPayload != null)
+                    hashCode = hashCode * 59 + this.MPayload.GetHashCode();
                 return hashCode;
             }
         }

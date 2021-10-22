@@ -64,15 +64,27 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
-        /// Test ListListpresentationV1
+        /// Test ListGetListpresentationV1
         /// </summary>
         [Test]
-        public void ListListpresentationV1Test()
+        public void ListGetListpresentationV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string sListName = null;
+            //var response = instance.ListGetListpresentationV1(sListName);
+            //Assert.IsInstanceOf(typeof(ListGetListpresentationV1Response), response, "response is ListGetListpresentationV1Response");
+        }
+        
+        /// <summary>
+        /// Test ListSaveListpresentationV1
+        /// </summary>
+        [Test]
+        public void ListSaveListpresentationV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string sListName = null;
             //ListSaveListpresentationV1Request listSaveListpresentationV1Request = null;
-            //var response = instance.ListListpresentationV1(sListName, listSaveListpresentationV1Request);
+            //var response = instance.ListSaveListpresentationV1(sListName, listSaveListpresentationV1Request);
             //Assert.IsInstanceOf(typeof(ListSaveListpresentationV1Response), response, "response is ListSaveListpresentationV1Response");
         }
         

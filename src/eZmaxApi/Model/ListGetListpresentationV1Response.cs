@@ -25,39 +25,55 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// ListSaveListpresentationV1ResponseAllOf
+    /// Response for the GET /1/module/list/listpresentation/{sListName} API Request
     /// </summary>
     [DataContract]
-    public partial class ListSaveListpresentationV1ResponseAllOf :  IEquatable<ListSaveListpresentationV1ResponseAllOf>, IValidatableObject
+    public partial class ListGetListpresentationV1Response :  IEquatable<ListGetListpresentationV1Response>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListSaveListpresentationV1ResponseAllOf" /> class.
+        /// Initializes a new instance of the <see cref="ListGetListpresentationV1Response" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected ListSaveListpresentationV1ResponseAllOf() { }
+        protected ListGetListpresentationV1Response() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListSaveListpresentationV1ResponseAllOf" /> class.
+        /// Initializes a new instance of the <see cref="ListGetListpresentationV1Response" /> class.
         /// </summary>
         /// <param name="mPayload">mPayload (required).</param>
-        public ListSaveListpresentationV1ResponseAllOf(ListSaveListpresentationV1ResponseMPayload mPayload = default(ListSaveListpresentationV1ResponseMPayload))
+        /// <param name="objDebugPayload">objDebugPayload.</param>
+        /// <param name="objDebug">objDebug.</param>
+        public ListGetListpresentationV1Response(ListGetListpresentationV1ResponseMPayload mPayload = default(ListGetListpresentationV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
-                throw new InvalidDataException("mPayload is a required property for ListSaveListpresentationV1ResponseAllOf and cannot be null");
+                throw new InvalidDataException("mPayload is a required property for ListGetListpresentationV1Response and cannot be null");
             }
             else
             {
                 this.MPayload = mPayload;
             }
 
+            this.ObjDebugPayload = objDebugPayload;
+            this.ObjDebug = objDebug;
         }
 
         /// <summary>
         /// Gets or Sets MPayload
         /// </summary>
         [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public ListSaveListpresentationV1ResponseMPayload MPayload { get; set; }
+        public ListGetListpresentationV1ResponseMPayload MPayload { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjDebugPayload
+        /// </summary>
+        [DataMember(Name="objDebugPayload", EmitDefaultValue=false)]
+        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjDebug
+        /// </summary>
+        [DataMember(Name="objDebug", EmitDefaultValue=false)]
+        public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,8 +82,10 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ListSaveListpresentationV1ResponseAllOf {\n");
+            sb.Append("class ListGetListpresentationV1Response {\n");
             sb.Append("  MPayload: ").Append(MPayload).Append("\n");
+            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
+            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,15 +106,15 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ListSaveListpresentationV1ResponseAllOf);
+            return this.Equals(input as ListGetListpresentationV1Response);
         }
 
         /// <summary>
-        /// Returns true if ListSaveListpresentationV1ResponseAllOf instances are equal
+        /// Returns true if ListGetListpresentationV1Response instances are equal
         /// </summary>
-        /// <param name="input">Instance of ListSaveListpresentationV1ResponseAllOf to be compared</param>
+        /// <param name="input">Instance of ListGetListpresentationV1Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ListSaveListpresentationV1ResponseAllOf input)
+        public bool Equals(ListGetListpresentationV1Response input)
         {
             if (input == null)
                 return false;
@@ -106,6 +124,16 @@ namespace eZmaxApi.Model
                     this.MPayload == input.MPayload ||
                     (this.MPayload != null &&
                     this.MPayload.Equals(input.MPayload))
+                ) && 
+                (
+                    this.ObjDebugPayload == input.ObjDebugPayload ||
+                    (this.ObjDebugPayload != null &&
+                    this.ObjDebugPayload.Equals(input.ObjDebugPayload))
+                ) && 
+                (
+                    this.ObjDebug == input.ObjDebug ||
+                    (this.ObjDebug != null &&
+                    this.ObjDebug.Equals(input.ObjDebug))
                 );
         }
 
@@ -120,6 +148,10 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.MPayload != null)
                     hashCode = hashCode * 59 + this.MPayload.GetHashCode();
+                if (this.ObjDebugPayload != null)
+                    hashCode = hashCode * 59 + this.ObjDebugPayload.GetHashCode();
+                if (this.ObjDebug != null)
+                    hashCode = hashCode * 59 + this.ObjDebug.GetHashCode();
                 return hashCode;
             }
         }
