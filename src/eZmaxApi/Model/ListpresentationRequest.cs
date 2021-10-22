@@ -44,7 +44,8 @@ namespace eZmaxApi.Model
         /// <param name="aSColumnName">An array of column names that the user chose to bee visible (required).</param>
         /// <param name="iListpresentationRowMax">The maximum numbers of results to be returned (required).</param>
         /// <param name="iListpresentationRowOffset">The starting element from where to start retrieving the results. For example if you started at iRowOffset&#x3D;0 and asked for iRowMax&#x3D;100, to get the next 100 results, you could specify iRowOffset&#x3D;100&amp;iRowMax&#x3D;100, (required).</param>
-        public ListpresentationRequest(string sListpresentationDescription = default(string), string sListpresentationFilter = default(string), string sListpresentationOrderby = default(string), List<string> aSColumnName = default(List<string>), int iListpresentationRowMax = default(int), int iListpresentationRowOffset = default(int))
+        /// <param name="bListpresentationDefault">Set to true if the user chose this Listpresentation as the default one. A single element should be set to true (required).</param>
+        public ListpresentationRequest(string sListpresentationDescription = default(string), string sListpresentationFilter = default(string), string sListpresentationOrderby = default(string), List<string> aSColumnName = default(List<string>), int iListpresentationRowMax = default(int), int iListpresentationRowOffset = default(int), bool bListpresentationDefault = default(bool))
         {
             // to ensure "sListpresentationDescription" is required (not null)
             if (sListpresentationDescription == null)
@@ -106,6 +107,16 @@ namespace eZmaxApi.Model
                 this.IListpresentationRowOffset = iListpresentationRowOffset;
             }
 
+            // to ensure "bListpresentationDefault" is required (not null)
+            if (bListpresentationDefault == null)
+            {
+                throw new InvalidDataException("bListpresentationDefault is a required property for ListpresentationRequest and cannot be null");
+            }
+            else
+            {
+                this.BListpresentationDefault = bListpresentationDefault;
+            }
+
         }
 
         /// <summary>
@@ -151,6 +162,13 @@ namespace eZmaxApi.Model
         public int IListpresentationRowOffset { get; set; }
 
         /// <summary>
+        /// Set to true if the user chose this Listpresentation as the default one. A single element should be set to true
+        /// </summary>
+        /// <value>Set to true if the user chose this Listpresentation as the default one. A single element should be set to true</value>
+        [DataMember(Name="bListpresentationDefault", EmitDefaultValue=true)]
+        public bool BListpresentationDefault { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -164,6 +182,7 @@ namespace eZmaxApi.Model
             sb.Append("  ASColumnName: ").Append(ASColumnName).Append("\n");
             sb.Append("  IListpresentationRowMax: ").Append(IListpresentationRowMax).Append("\n");
             sb.Append("  IListpresentationRowOffset: ").Append(IListpresentationRowOffset).Append("\n");
+            sb.Append("  BListpresentationDefault: ").Append(BListpresentationDefault).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -228,6 +247,11 @@ namespace eZmaxApi.Model
                     this.IListpresentationRowOffset == input.IListpresentationRowOffset ||
                     (this.IListpresentationRowOffset != null &&
                     this.IListpresentationRowOffset.Equals(input.IListpresentationRowOffset))
+                ) && 
+                (
+                    this.BListpresentationDefault == input.BListpresentationDefault ||
+                    (this.BListpresentationDefault != null &&
+                    this.BListpresentationDefault.Equals(input.BListpresentationDefault))
                 );
         }
 
@@ -252,6 +276,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IListpresentationRowMax.GetHashCode();
                 if (this.IListpresentationRowOffset != null)
                     hashCode = hashCode * 59 + this.IListpresentationRowOffset.GetHashCode();
+                if (this.BListpresentationDefault != null)
+                    hashCode = hashCode * 59 + this.BListpresentationDefault.GetHashCode();
                 return hashCode;
             }
         }

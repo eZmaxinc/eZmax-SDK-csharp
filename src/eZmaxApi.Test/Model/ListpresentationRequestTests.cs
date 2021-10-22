@@ -113,6 +113,14 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'IListpresentationRowOffset'
         }
+        /// <summary>
+        /// Test the property 'BListpresentationDefault'
+        /// </summary>
+        [Test]
+        public void BListpresentationDefaultTest()
+        {
+            // TODO unit test for the property 'BListpresentationDefault'
+        }
 
     }
 
