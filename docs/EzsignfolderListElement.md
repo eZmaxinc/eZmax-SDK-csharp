@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
 **FkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | 
+**EEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  | 
 **SEzsignfoldertypeNameX** | **string** | The name of the Ezsignfoldertype in the language of the requester | 
 **SEzsignfolderDescription** | **string** | The description of the Ezsign Folder | 
 **EEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  | 
