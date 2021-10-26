@@ -26,6 +26,8 @@ docs/CommonGetAutocompleteV1ResponseAllOf.md
 docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
+docs/CommonResponseErrorSTemporaryFileUrl.md
+docs/CommonResponseErrorSTemporaryFileUrlAllOf.md
 docs/CommonResponseFilter.md
 docs/CommonResponseGetList.md
 docs/CommonResponseObjDebug.md
@@ -243,6 +245,8 @@ src/eZmaxApi.Test/Model/CommonAuditTests.cs
 src/eZmaxApi.Test/Model/CommonGetAutocompleteV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/CommonGetAutocompleteV1ResponseTests.cs
 src/eZmaxApi.Test/Model/CommonGetListV1ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/CommonResponseErrorSTemporaryFileUrlAllOfTests.cs
+src/eZmaxApi.Test/Model/CommonResponseErrorSTemporaryFileUrlTests.cs
 src/eZmaxApi.Test/Model/CommonResponseErrorTests.cs
 src/eZmaxApi.Test/Model/CommonResponseFilterTests.cs
 src/eZmaxApi.Test/Model/CommonResponseGetListTests.cs
@@ -457,6 +461,8 @@ src/eZmaxApi/Model/CommonGetAutocompleteV1ResponseAllOf.cs
 src/eZmaxApi/Model/CommonGetListV1ResponseMPayload.cs
 src/eZmaxApi/Model/CommonResponse.cs
 src/eZmaxApi/Model/CommonResponseError.cs
+src/eZmaxApi/Model/CommonResponseErrorSTemporaryFileUrl.cs
+src/eZmaxApi/Model/CommonResponseErrorSTemporaryFileUrlAllOf.cs
 src/eZmaxApi/Model/CommonResponseFilter.cs
 src/eZmaxApi/Model/CommonResponseGetList.cs
 src/eZmaxApi/Model/CommonResponseObjDebug.cs
