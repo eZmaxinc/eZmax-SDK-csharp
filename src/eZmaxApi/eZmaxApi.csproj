@@ -4,7 +4,7 @@ eZmax API Definition
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
-The version of the OpenAPI document: 1.1.2
+The version of the OpenAPI document: 1.1.3
 Contact: support-api@ezmax.ca
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -12,7 +12,7 @@ Contact: support-api@ezmax.ca
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{22A4254A-8936-4E00-B2CC-CAFBB743B978}</ProjectGuid>
+    <ProjectGuid>{963CA3BE-6400-45EC-91B8-18B63FEC3981}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>eZmaxApi</RootNamespace>

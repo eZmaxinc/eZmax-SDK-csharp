@@ -4,7 +4,7 @@ eZmax API Definition
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
-The version of the OpenAPI document: 1.1.2
+The version of the OpenAPI document: 1.1.3
 Contact: support-api@ezmax.ca
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -81,7 +81,7 @@ Contact: support-api@ezmax.ca
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\eZmaxApi\eZmaxApi.csproj">
-          <Project>{22A4254A-8936-4E00-B2CC-CAFBB743B978}</Project>
+          <Project>{963CA3BE-6400-45EC-91B8-18B63FEC3981}</Project>
           <Name>eZmaxApi</Name>
       </ProjectReference>
   </ItemGroup>
