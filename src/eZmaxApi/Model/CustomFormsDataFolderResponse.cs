@@ -39,7 +39,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CustomFormsDataFolderResponse" /> class.
         /// </summary>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="sEzsignfolderDescription">The description of the Ezsign Folder (required).</param>
+        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="aObjFormDataDocument">aObjFormDataDocument (required).</param>
         public CustomFormsDataFolderResponse(int pkiEzsignfolderID = default(int), string sEzsignfolderDescription = default(string), List<CustomFormDataDocumentResponse> aObjFormDataDocument = default(List<CustomFormDataDocumentResponse>))
         {
@@ -83,9 +83,9 @@ namespace eZmaxApi.Model
         public int PkiEzsignfolderID { get; set; }
 
         /// <summary>
-        /// The description of the Ezsign Folder
+        /// The description of the Ezsignfolder
         /// </summary>
-        /// <value>The description of the Ezsign Folder</value>
+        /// <value>The description of the Ezsignfolder</value>
         [DataMember(Name="sEzsignfolderDescription", EmitDefaultValue=true)]
         public string SEzsignfolderDescription { get; set; }
 

@@ -49,6 +49,11 @@ docs/CustomFormsDataFolderResponse.md
 docs/CustomWordPositionOccurenceResponse.md
 docs/CustomWordPositionWordResponse.md
 docs/EmailRequest.md
+docs/EzsignbulksendGetListV1Response.md
+docs/EzsignbulksendGetListV1ResponseAllOf.md
+docs/EzsignbulksendGetListV1ResponseMPayload.md
+docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
+docs/EzsignbulksendListElement.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
 docs/EzsigndocumentApplyEzsigntemplateV2Request.md
@@ -169,6 +174,7 @@ docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
 docs/ObjectApikeyApi.md
+docs/ObjectEzsignbulksendApi.md
 docs/ObjectEzsigndocumentApi.md
 docs/ObjectEzsignfolderApi.md
 docs/ObjectEzsignfoldersignerassociationApi.md
@@ -216,6 +222,7 @@ src/eZmaxApi.Test/Api/ModuleSsprApiTests.cs
 src/eZmaxApi.Test/Api/ModuleUserApiTests.cs
 src/eZmaxApi.Test/Api/ObjectActivesessionApiTests.cs
 src/eZmaxApi.Test/Api/ObjectApikeyApiTests.cs
+src/eZmaxApi.Test/Api/ObjectEzsignbulksendApiTests.cs
 src/eZmaxApi.Test/Api/ObjectEzsigndocumentApiTests.cs
 src/eZmaxApi.Test/Api/ObjectEzsignfolderApiTests.cs
 src/eZmaxApi.Test/Api/ObjectEzsignfoldersignerassociationApiTests.cs
@@ -270,6 +277,11 @@ src/eZmaxApi.Test/Model/CustomFormsDataFolderResponseTests.cs
 src/eZmaxApi.Test/Model/CustomWordPositionOccurenceResponseTests.cs
 src/eZmaxApi.Test/Model/CustomWordPositionWordResponseTests.cs
 src/eZmaxApi.Test/Model/EmailRequestTests.cs
+src/eZmaxApi.Test/Model/EzsignbulksendGetListV1ResponseAllOfTests.cs
+src/eZmaxApi.Test/Model/EzsignbulksendGetListV1ResponseMPayloadAllOfTests.cs
+src/eZmaxApi.Test/Model/EzsignbulksendGetListV1ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/EzsignbulksendGetListV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsignbulksendListElementTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentApplyEzsigntemplateV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentApplyEzsigntemplateV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentApplyEzsigntemplateV2RequestTests.cs
@@ -420,6 +432,7 @@ src/eZmaxApi/Api/ModuleSsprApi.cs
 src/eZmaxApi/Api/ModuleUserApi.cs
 src/eZmaxApi/Api/ObjectActivesessionApi.cs
 src/eZmaxApi/Api/ObjectApikeyApi.cs
+src/eZmaxApi/Api/ObjectEzsignbulksendApi.cs
 src/eZmaxApi/Api/ObjectEzsigndocumentApi.cs
 src/eZmaxApi/Api/ObjectEzsignfolderApi.cs
 src/eZmaxApi/Api/ObjectEzsignfoldersignerassociationApi.cs
@@ -484,6 +497,11 @@ src/eZmaxApi/Model/CustomFormsDataFolderResponse.cs
 src/eZmaxApi/Model/CustomWordPositionOccurenceResponse.cs
 src/eZmaxApi/Model/CustomWordPositionWordResponse.cs
 src/eZmaxApi/Model/EmailRequest.cs
+src/eZmaxApi/Model/EzsignbulksendGetListV1Response.cs
+src/eZmaxApi/Model/EzsignbulksendGetListV1ResponseAllOf.cs
+src/eZmaxApi/Model/EzsignbulksendGetListV1ResponseMPayload.cs
+src/eZmaxApi/Model/EzsignbulksendGetListV1ResponseMPayloadAllOf.cs
+src/eZmaxApi/Model/EzsignbulksendListElement.cs
 src/eZmaxApi/Model/EzsigndocumentApplyEzsigntemplateV1Request.cs
 src/eZmaxApi/Model/EzsigndocumentApplyEzsigntemplateV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentApplyEzsigntemplateV2Request.cs
