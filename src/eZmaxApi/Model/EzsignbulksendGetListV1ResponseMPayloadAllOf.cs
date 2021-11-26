@@ -33,17 +33,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendGetListV1ResponseMPayloadAllOf" /> class.
         /// </summary>
-        /// <param name="aObjEzsignfolder">aObjEzsignfolder.</param>
-        public EzsignbulksendGetListV1ResponseMPayloadAllOf(List<EzsignbulksendListElement> aObjEzsignfolder = default(List<EzsignbulksendListElement>))
+        [JsonConstructorAttribute]
+        protected EzsignbulksendGetListV1ResponseMPayloadAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjEzsignbulksend">aObjEzsignbulksend (required).</param>
+        public EzsignbulksendGetListV1ResponseMPayloadAllOf(List<EzsignbulksendListElement> aObjEzsignbulksend = default(List<EzsignbulksendListElement>))
         {
-            this.AObjEzsignfolder = aObjEzsignfolder;
+            // to ensure "aObjEzsignbulksend" is required (not null)
+            if (aObjEzsignbulksend == null)
+            {
+                throw new InvalidDataException("aObjEzsignbulksend is a required property for EzsignbulksendGetListV1ResponseMPayloadAllOf and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsignbulksend = aObjEzsignbulksend;
+            }
+
         }
 
         /// <summary>
-        /// Gets or Sets AObjEzsignfolder
+        /// Gets or Sets AObjEzsignbulksend
         /// </summary>
-        [DataMember(Name="a_objEzsignfolder", EmitDefaultValue=false)]
-        public List<EzsignbulksendListElement> AObjEzsignfolder { get; set; }
+        [DataMember(Name="a_objEzsignbulksend", EmitDefaultValue=true)]
+        public List<EzsignbulksendListElement> AObjEzsignbulksend { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,7 +67,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignbulksendGetListV1ResponseMPayloadAllOf {\n");
-            sb.Append("  AObjEzsignfolder: ").Append(AObjEzsignfolder).Append("\n");
+            sb.Append("  AObjEzsignbulksend: ").Append(AObjEzsignbulksend).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,10 +103,10 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.AObjEzsignfolder == input.AObjEzsignfolder ||
-                    this.AObjEzsignfolder != null &&
-                    input.AObjEzsignfolder != null &&
-                    this.AObjEzsignfolder.SequenceEqual(input.AObjEzsignfolder)
+                    this.AObjEzsignbulksend == input.AObjEzsignbulksend ||
+                    this.AObjEzsignbulksend != null &&
+                    input.AObjEzsignbulksend != null &&
+                    this.AObjEzsignbulksend.SequenceEqual(input.AObjEzsignbulksend)
                 );
         }
 
@@ -105,8 +119,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AObjEzsignfolder != null)
-                    hashCode = hashCode * 59 + this.AObjEzsignfolder.GetHashCode();
+                if (this.AObjEzsignbulksend != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignbulksend.GetHashCode();
                 return hashCode;
             }
         }

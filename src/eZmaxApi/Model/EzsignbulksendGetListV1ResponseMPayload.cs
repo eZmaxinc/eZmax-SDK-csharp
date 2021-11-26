@@ -38,11 +38,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsignfolder">aObjEzsignfolder.</param>
+        /// <param name="aObjEzsignbulksend">aObjEzsignbulksend (required).</param>
         /// <param name="iRowReturned">The number of rows returned (required).</param>
         /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        public EzsignbulksendGetListV1ResponseMPayload(List<EzsignbulksendListElement> aObjEzsignfolder = default(List<EzsignbulksendListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
+        public EzsignbulksendGetListV1ResponseMPayload(List<EzsignbulksendListElement> aObjEzsignbulksend = default(List<EzsignbulksendListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
         {
+            // to ensure "aObjEzsignbulksend" is required (not null)
+            if (aObjEzsignbulksend == null)
+            {
+                throw new InvalidDataException("aObjEzsignbulksend is a required property for EzsignbulksendGetListV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsignbulksend = aObjEzsignbulksend;
+            }
+
             // to ensure "iRowReturned" is required (not null)
             if (iRowReturned == null)
             {
@@ -63,14 +73,13 @@ namespace eZmaxApi.Model
                 this.IRowFiltered = iRowFiltered;
             }
 
-            this.AObjEzsignfolder = aObjEzsignfolder;
         }
 
         /// <summary>
-        /// Gets or Sets AObjEzsignfolder
+        /// Gets or Sets AObjEzsignbulksend
         /// </summary>
-        [DataMember(Name="a_objEzsignfolder", EmitDefaultValue=false)]
-        public List<EzsignbulksendListElement> AObjEzsignfolder { get; set; }
+        [DataMember(Name="a_objEzsignbulksend", EmitDefaultValue=true)]
+        public List<EzsignbulksendListElement> AObjEzsignbulksend { get; set; }
 
         /// <summary>
         /// The number of rows returned
@@ -94,7 +103,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignbulksendGetListV1ResponseMPayload {\n");
-            sb.Append("  AObjEzsignfolder: ").Append(AObjEzsignfolder).Append("\n");
+            sb.Append("  AObjEzsignbulksend: ").Append(AObjEzsignbulksend).Append("\n");
             sb.Append("  IRowReturned: ").Append(IRowReturned).Append("\n");
             sb.Append("  IRowFiltered: ").Append(IRowFiltered).Append("\n");
             sb.Append("}\n");
@@ -132,10 +141,10 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.AObjEzsignfolder == input.AObjEzsignfolder ||
-                    this.AObjEzsignfolder != null &&
-                    input.AObjEzsignfolder != null &&
-                    this.AObjEzsignfolder.SequenceEqual(input.AObjEzsignfolder)
+                    this.AObjEzsignbulksend == input.AObjEzsignbulksend ||
+                    this.AObjEzsignbulksend != null &&
+                    input.AObjEzsignbulksend != null &&
+                    this.AObjEzsignbulksend.SequenceEqual(input.AObjEzsignbulksend)
                 ) && 
                 (
                     this.IRowReturned == input.IRowReturned ||
@@ -158,8 +167,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AObjEzsignfolder != null)
-                    hashCode = hashCode * 59 + this.AObjEzsignfolder.GetHashCode();
+                if (this.AObjEzsignbulksend != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignbulksend.GetHashCode();
                 if (this.IRowReturned != null)
                     hashCode = hashCode * 59 + this.IRowReturned.GetHashCode();
                 if (this.IRowFiltered != null)

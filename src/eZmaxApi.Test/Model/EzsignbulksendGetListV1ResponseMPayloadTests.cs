@@ -66,12 +66,12 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'AObjEzsignfolder'
+        /// Test the property 'AObjEzsignbulksend'
         /// </summary>
         [Test]
-        public void AObjEzsignfolderTest()
+        public void AObjEzsignbulksendTest()
         {
-            // TODO unit test for the property 'AObjEzsignfolder'
+            // TODO unit test for the property 'AObjEzsignbulksend'
         }
         /// <summary>
         /// Test the property 'IRowReturned'

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjEzsignfolder** | [**List&lt;EzsignbulksendListElement&gt;**](EzsignbulksendListElement.md) |  | [optional] 
+**AObjEzsignbulksend** | [**List&lt;EzsignbulksendListElement&gt;**](EzsignbulksendListElement.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

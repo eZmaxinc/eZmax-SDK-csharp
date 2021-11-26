@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjEzsignfolder** | [**List&lt;EzsignbulksendListElement&gt;**](EzsignbulksendListElement.md) |  | [optional] 
+**AObjEzsignbulksend** | [**List&lt;EzsignbulksendListElement&gt;**](EzsignbulksendListElement.md) |  | 
 **IRowReturned** | **int** | The number of rows returned | 
 **IRowFiltered** | **int** | The number of rows matching your filters (if any) or the total number of rows | 
 
