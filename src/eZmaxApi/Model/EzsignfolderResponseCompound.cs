@@ -120,6 +120,7 @@ namespace eZmaxApi.Model
                 this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
             }
 
+            this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
             // to ensure "eEzsignfolderStep" is required (not null)
             if (eEzsignfolderStep == null)
             {

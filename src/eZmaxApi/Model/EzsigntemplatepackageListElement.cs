@@ -39,15 +39,15 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageListElement" /> class.
         /// </summary>
         /// <param name="pkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="fkiDepartmentID">fkiDepartmentID (required).</param>
-        /// <param name="fkiTeamID">fkiTeamID (required).</param>
-        /// <param name="fkiEzsignfoldertypeID">fkiEzsignfoldertypeID (required).</param>
+        /// <param name="fkiDepartmentID">The unique ID of the Department. (required).</param>
+        /// <param name="fkiTeamID">The unique ID of the Team (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="eEzsigntemplatepackageType">eEzsigntemplatepackageType (required).</param>
         /// <param name="sEzsigntemplatepackageDescription">The description of the Ezsigntemplatepackage (required).</param>
         /// <param name="bEzsigntemplatepackageIsactive">Whether the Ezsigntemplatepackage is active or not (required).</param>
         /// <param name="iEzsigntemplatepackagemembership">The total number of Ezsigntemplatepackagemembership in the Ezsigntemplatepackage (required).</param>
-        public EzsigntemplatepackageListElement(int pkiEzsigntemplatepackageID = default(int), OneOfintegerobject fkiDepartmentID = default(OneOfintegerobject), OneOfintegerobject fkiTeamID = default(OneOfintegerobject), OneOfintegerobject fkiEzsignfoldertypeID = default(OneOfintegerobject), int fkiLanguageID = default(int), FieldEEzsigntemplatepackageType eEzsigntemplatepackageType = default(FieldEEzsigntemplatepackageType), string sEzsigntemplatepackageDescription = default(string), bool bEzsigntemplatepackageIsactive = default(bool), int iEzsigntemplatepackagemembership = default(int))
+        public EzsigntemplatepackageListElement(int pkiEzsigntemplatepackageID = default(int), int? fkiDepartmentID = default(int?), int? fkiTeamID = default(int?), int? fkiEzsignfoldertypeID = default(int?), int fkiLanguageID = default(int), FieldEEzsigntemplatepackageType eEzsigntemplatepackageType = default(FieldEEzsigntemplatepackageType), string sEzsigntemplatepackageDescription = default(string), bool bEzsigntemplatepackageIsactive = default(bool), int iEzsigntemplatepackagemembership = default(int))
         {
             // to ensure "pkiEzsigntemplatepackageID" is required (not null)
             if (pkiEzsigntemplatepackageID == null)
@@ -152,22 +152,25 @@ namespace eZmaxApi.Model
         public int PkiEzsigntemplatepackageID { get; set; }
 
         /// <summary>
-        /// Gets or Sets FkiDepartmentID
+        /// The unique ID of the Department.
         /// </summary>
+        /// <value>The unique ID of the Department.</value>
         [DataMember(Name="fkiDepartmentID", EmitDefaultValue=true)]
-        public OneOfintegerobject FkiDepartmentID { get; set; }
+        public int? FkiDepartmentID { get; set; }
 
         /// <summary>
-        /// Gets or Sets FkiTeamID
+        /// The unique ID of the Team
         /// </summary>
+        /// <value>The unique ID of the Team</value>
         [DataMember(Name="fkiTeamID", EmitDefaultValue=true)]
-        public OneOfintegerobject FkiTeamID { get; set; }
+        public int? FkiTeamID { get; set; }
 
         /// <summary>
-        /// Gets or Sets FkiEzsignfoldertypeID
+        /// The unique ID of the Ezsignfoldertype.
         /// </summary>
+        /// <value>The unique ID of the Ezsignfoldertype.</value>
         [DataMember(Name="fkiEzsignfoldertypeID", EmitDefaultValue=true)]
-        public OneOfintegerobject FkiEzsignfoldertypeID { get; set; }
+        public int? FkiEzsignfoldertypeID { get; set; }
 
         /// <summary>
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|

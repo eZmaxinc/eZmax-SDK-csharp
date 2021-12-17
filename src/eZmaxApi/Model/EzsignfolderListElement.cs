@@ -45,13 +45,13 @@ namespace eZmaxApi.Model
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="eEzsignfolderStep">eEzsignfolderStep (required).</param>
         /// <param name="dtCreatedDate">The date and time at which the object was created (required).</param>
-        /// <param name="dtEzsignfolderSentdate">dtEzsignfolderSentdate (required).</param>
-        /// <param name="dtDueDate">The date at which no more signature will be accepted on the folder (required).</param>
+        /// <param name="dtEzsignfolderSentdate">The date and time at which the Ezsign folder was sent the last time. (required).</param>
+        /// <param name="dtDueDate">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
         /// <param name="iEzsigndocument">The total number of Ezsigndocument in the folder (required).</param>
         /// <param name="iEzsigndocumentEdm">The total number of Ezsigndocument in the folder that were saved in the edm system (required).</param>
         /// <param name="iEzsignsignature">The total number of signature blocks in all Ezsigndocuments in the folder (required).</param>
         /// <param name="iEzsignsignatureSigned">The total number of already signed signature blocks in all Ezsigndocuments in the folder (required).</param>
-        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), OneOfstringobject dtEzsignfolderSentdate = default(OneOfstringobject), OneOfstringobject dtDueDate = default(OneOfstringobject), int iEzsigndocument = default(int), int iEzsigndocumentEdm = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int))
+        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), string dtEzsignfolderSentdate = default(string), string dtDueDate = default(string), int iEzsigndocument = default(int), int iEzsigndocumentEdm = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int))
         {
             // to ensure "pkiEzsignfolderID" is required (not null)
             if (pkiEzsignfolderID == null)
@@ -235,17 +235,18 @@ namespace eZmaxApi.Model
         public string DtCreatedDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets DtEzsignfolderSentdate
+        /// The date and time at which the Ezsign folder was sent the last time.
         /// </summary>
+        /// <value>The date and time at which the Ezsign folder was sent the last time.</value>
         [DataMember(Name="dtEzsignfolderSentdate", EmitDefaultValue=true)]
-        public OneOfstringobject DtEzsignfolderSentdate { get; set; }
+        public string DtEzsignfolderSentdate { get; set; }
 
         /// <summary>
-        /// The date at which no more signature will be accepted on the folder
+        /// Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
         /// </summary>
-        /// <value>The date at which no more signature will be accepted on the folder</value>
+        /// <value>Represent a Date Time. The timezone is the one configured in the User&#39;s profile.</value>
         [DataMember(Name="dtDueDate", EmitDefaultValue=true)]
-        public OneOfstringobject DtDueDate { get; set; }
+        public string DtDueDate { get; set; }
 
         /// <summary>
         /// The total number of Ezsigndocument in the folder

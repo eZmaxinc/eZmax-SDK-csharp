@@ -41,7 +41,7 @@ namespace eZmaxApi.Model
         /// <param name="sCategory">The Category for the dropdown or an empty string if not categorized (required).</param>
         /// <param name="sLabel">The Description of the element (required).</param>
         /// <param name="mValue">The Unique ID of the element (required).</param>
-        public CustomAutocompleteElementResponse(string sCategory = default(string), string sLabel = default(string), OneOfintegerstring mValue = default(OneOfintegerstring))
+        public CustomAutocompleteElementResponse(string sCategory = default(string), string sLabel = default(string), string mValue = default(string))
         {
             // to ensure "sCategory" is required (not null)
             if (sCategory == null)
@@ -73,7 +73,6 @@ namespace eZmaxApi.Model
                 this.MValue = mValue;
             }
 
-            this.MValue = mValue;
         }
 
         /// <summary>
@@ -95,7 +94,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Unique ID of the element</value>
         [DataMember(Name="mValue", EmitDefaultValue=true)]
-        public OneOfintegerstring MValue { get; set; }
+        public string MValue { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
