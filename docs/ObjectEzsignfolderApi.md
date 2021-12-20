@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**EzsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**EzsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
-[**EzsignfolderGetChildrenV1**](ObjectEzsignfolderApi.md#ezsignfoldergetchildrenv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
+[**EzsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**EzsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**EzsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**EzsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -177,13 +177,11 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## EzsignfolderGetChildrenV1
+## EzsignfolderGetEzsigndocumentsV1
 
-> void EzsignfolderGetChildrenV1 (int pkiEzsignfolderID)
+> EzsignfolderGetEzsigndocumentsV1Response EzsignfolderGetEzsigndocumentsV1 (int pkiEzsignfolderID)
 
-Retrieve an existing Ezsignfolder's children IDs
-
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+Retrieve an existing Ezsignfolder's Ezsigndocuments
 
 ### Example
 
@@ -196,7 +194,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsignfolderGetChildrenV1Example
+    public class EzsignfolderGetEzsigndocumentsV1Example
     {
         public static void Main()
         {
@@ -211,12 +209,13 @@ namespace Example
 
             try
             {
-                // Retrieve an existing Ezsignfolder's children IDs
-                apiInstance.EzsignfolderGetChildrenV1(pkiEzsignfolderID);
+                // Retrieve an existing Ezsignfolder's Ezsigndocuments
+                EzsignfolderGetEzsigndocumentsV1Response result = apiInstance.EzsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID);
+                Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderGetChildrenV1: " + e.Message );
+                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderGetEzsigndocumentsV1: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -234,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**EzsignfolderGetEzsigndocumentsV1Response**](EzsignfolderGetEzsigndocumentsV1Response.md)
 
 ### Authorization
 
@@ -249,6 +248,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **200** | Successful response |  -  |
 | **404** | The element you are trying to work on does not exist |  -  |
 
 [[Back to top]](#)
@@ -434,8 +434,6 @@ Name | Type | Description  | Notes
 > EzsignfolderGetObjectV1Response EzsignfolderGetObjectV1 (int pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder
-
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 
 ### Example
 
