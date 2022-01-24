@@ -39,9 +39,9 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfoldertypeApi(Configuration.Default);
-            var sSelector = sSelector_example;  // string | The type of Ezsignfoldertypes to return
-            var sQuery = sQuery_example;  // string | Allow to filter the returned results (optional) 
-            var acceptLanguage = ;  // HeaderAcceptLanguage? |  (optional) 
+            var sSelector = "Active";  // string | The type of Ezsignfoldertypes to return
+            var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
+            var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
 
             try
             {
@@ -124,11 +124,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfoldertypeApi(Configuration.Default);
-            var eOrderBy = eOrderBy_example;  // string | Specify how you want the results to be sorted (optional) 
+            var eOrderBy = "pkiEzsignfoldertypeID_ASC";  // string | Specify how you want the results to be sorted (optional) 
             var iRowMax = 56;  // int? |  (optional) 
             var iRowOffset = 56;  // int? |  (optional) 
-            var acceptLanguage = ;  // HeaderAcceptLanguage? |  (optional) 
-            var sFilter = sFilter_example;  // string |  (optional) 
+            var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
+            var sFilter = "sFilter_example";  // string |  (optional) 
 
             try
             {

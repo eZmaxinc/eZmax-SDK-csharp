@@ -50,10 +50,12 @@ namespace eZmaxApi.Model
         /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency (required).</param>
         /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed. (required).</param>
         /// <param name="dtEzsignfolderSentdate">The date and time at which the Ezsign folder was sent the last time. (required).</param>
+        /// <param name="dtEzsignfolderScheduledarchive">The scheduled date and time at which the Ezsignfolder should be archived. (required).</param>
+        /// <param name="dtEzsignfolderScheduleddestruction">The scheduled date and time at which the Ezsignfolder should be Destroyed. (required).</param>
         /// <param name="eEzsignfolderStep">eEzsignfolderStep (required).</param>
         /// <param name="dtEzsignfolderClose">The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public EzsignfolderResponse(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtEzsignfolderClose = default(string), CommonAudit objAudit = default(CommonAudit))
+        public EzsignfolderResponse(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddestruction = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtEzsignfolderClose = default(string), CommonAudit objAudit = default(CommonAudit))
         {
             // to ensure "pkiEzsignfolderID" is required (not null)
             if (pkiEzsignfolderID == null)
@@ -176,6 +178,26 @@ namespace eZmaxApi.Model
             }
 
             this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
+            // to ensure "dtEzsignfolderScheduledarchive" is required (not null)
+            if (dtEzsignfolderScheduledarchive == null)
+            {
+                throw new InvalidDataException("dtEzsignfolderScheduledarchive is a required property for EzsignfolderResponse and cannot be null");
+            }
+            else
+            {
+                this.DtEzsignfolderScheduledarchive = dtEzsignfolderScheduledarchive;
+            }
+
+            // to ensure "dtEzsignfolderScheduleddestruction" is required (not null)
+            if (dtEzsignfolderScheduleddestruction == null)
+            {
+                throw new InvalidDataException("dtEzsignfolderScheduleddestruction is a required property for EzsignfolderResponse and cannot be null");
+            }
+            else
+            {
+                this.DtEzsignfolderScheduleddestruction = dtEzsignfolderScheduleddestruction;
+            }
+
             // to ensure "eEzsignfolderStep" is required (not null)
             if (eEzsignfolderStep == null)
             {
@@ -292,6 +314,20 @@ namespace eZmaxApi.Model
         public string DtEzsignfolderSentdate { get; set; }
 
         /// <summary>
+        /// The scheduled date and time at which the Ezsignfolder should be archived.
+        /// </summary>
+        /// <value>The scheduled date and time at which the Ezsignfolder should be archived.</value>
+        [DataMember(Name="dtEzsignfolderScheduledarchive", EmitDefaultValue=true)]
+        public string DtEzsignfolderScheduledarchive { get; set; }
+
+        /// <summary>
+        /// The scheduled date and time at which the Ezsignfolder should be Destroyed.
+        /// </summary>
+        /// <value>The scheduled date and time at which the Ezsignfolder should be Destroyed.</value>
+        [DataMember(Name="dtEzsignfolderScheduleddestruction", EmitDefaultValue=true)]
+        public string DtEzsignfolderScheduleddestruction { get; set; }
+
+        /// <summary>
         /// Gets or Sets EEzsignfolderStep
         /// </summary>
         [DataMember(Name="eEzsignfolderStep", EmitDefaultValue=true)]
@@ -330,6 +366,8 @@ namespace eZmaxApi.Model
             sb.Append("  EEzsignfolderSendreminderfrequency: ").Append(EEzsignfolderSendreminderfrequency).Append("\n");
             sb.Append("  DtEzsignfolderDuedate: ").Append(DtEzsignfolderDuedate).Append("\n");
             sb.Append("  DtEzsignfolderSentdate: ").Append(DtEzsignfolderSentdate).Append("\n");
+            sb.Append("  DtEzsignfolderScheduledarchive: ").Append(DtEzsignfolderScheduledarchive).Append("\n");
+            sb.Append("  DtEzsignfolderScheduleddestruction: ").Append(DtEzsignfolderScheduleddestruction).Append("\n");
             sb.Append("  EEzsignfolderStep: ").Append(EEzsignfolderStep).Append("\n");
             sb.Append("  DtEzsignfolderClose: ").Append(DtEzsignfolderClose).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
@@ -428,6 +466,16 @@ namespace eZmaxApi.Model
                     this.DtEzsignfolderSentdate.Equals(input.DtEzsignfolderSentdate))
                 ) && 
                 (
+                    this.DtEzsignfolderScheduledarchive == input.DtEzsignfolderScheduledarchive ||
+                    (this.DtEzsignfolderScheduledarchive != null &&
+                    this.DtEzsignfolderScheduledarchive.Equals(input.DtEzsignfolderScheduledarchive))
+                ) && 
+                (
+                    this.DtEzsignfolderScheduleddestruction == input.DtEzsignfolderScheduleddestruction ||
+                    (this.DtEzsignfolderScheduleddestruction != null &&
+                    this.DtEzsignfolderScheduleddestruction.Equals(input.DtEzsignfolderScheduleddestruction))
+                ) && 
+                (
                     this.EEzsignfolderStep == input.EEzsignfolderStep ||
                     (this.EEzsignfolderStep != null &&
                     this.EEzsignfolderStep.Equals(input.EEzsignfolderStep))
@@ -477,6 +525,10 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.DtEzsignfolderDuedate.GetHashCode();
                 if (this.DtEzsignfolderSentdate != null)
                     hashCode = hashCode * 59 + this.DtEzsignfolderSentdate.GetHashCode();
+                if (this.DtEzsignfolderScheduledarchive != null)
+                    hashCode = hashCode * 59 + this.DtEzsignfolderScheduledarchive.GetHashCode();
+                if (this.DtEzsignfolderScheduleddestruction != null)
+                    hashCode = hashCode * 59 + this.DtEzsignfolderScheduleddestruction.GetHashCode();
                 if (this.EEzsignfolderStep != null)
                     hashCode = hashCode * 59 + this.EEzsignfolderStep.GetHashCode();
                 if (this.DtEzsignfolderClose != null)

@@ -42,7 +42,7 @@ namespace eZmaxApi.Model
         /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
         /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
         /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
-        /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign. (required).</param>
+        /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign or fill form fields (required).</param>
         /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
         /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
         public EzsignsignatureRequest(int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int))
@@ -148,9 +148,9 @@ namespace eZmaxApi.Model
         public int IEzsignsignatureY { get; set; }
 
         /// <summary>
-        /// The step when the Ezsignsigner will be invited to sign.
+        /// The step when the Ezsignsigner will be invited to sign or fill form fields
         /// </summary>
-        /// <value>The step when the Ezsignsigner will be invited to sign.</value>
+        /// <value>The step when the Ezsignsigner will be invited to sign or fill form fields</value>
         [DataMember(Name="iEzsignsignatureStep", EmitDefaultValue=true)]
         public int IEzsignsignatureStep { get; set; }
 

@@ -85,8 +85,8 @@ namespace Example
             // Configuration.Default.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new GlobalCustomerApi(Configuration.Default);
-            var pksCustomerCode = pksCustomerCode_example;  // string | 
-            var sInfrastructureproductCode = sInfrastructureproductCode_example;  // string | The infrastructure product Code  If undefined, \"appcluster01\" is assumed (optional) 
+            var pksCustomerCode = "pksCustomerCode_example";  // string | 
+            var sInfrastructureproductCode = "appcluster01";  // string | The infrastructure product Code  If undefined, \"appcluster01\" is assumed (optional) 
 
             try
             {
@@ -138,6 +138,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfolderApi* | [**EzsignfolderCreateObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *ObjectEzsignfolderApi* | [**EzsignfolderDeleteObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 *ObjectEzsignfolderApi* | [**EzsignfolderGetEzsigndocumentsV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
+*ObjectEzsignfolderApi* | [**EzsignfolderGetEzsignfoldersignerassociationsV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
 *ObjectEzsignfolderApi* | [**EzsignfolderGetFormsDataV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder's forms data
 *ObjectEzsignfolderApi* | [**EzsignfolderGetListV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 *ObjectEzsignfolderApi* | [**EzsignfolderGetObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -200,6 +201,8 @@ Class | Method | HTTP request | Description
  - [Model.ContactinformationsRequestCompound](docs/ContactinformationsRequestCompound.md)
  - [Model.ContactinformationsRequestCompoundAllOf](docs/ContactinformationsRequestCompoundAllOf.md)
  - [Model.CustomAutocompleteElementResponse](docs/CustomAutocompleteElementResponse.md)
+ - [Model.CustomEzsignfoldersignerassociationstatusResponse](docs/CustomEzsignfoldersignerassociationstatusResponse.md)
+ - [Model.CustomEzsignsignaturestatusResponse](docs/CustomEzsignsignaturestatusResponse.md)
  - [Model.CustomFormDataDocumentResponse](docs/CustomFormDataDocumentResponse.md)
  - [Model.CustomFormDataSignerResponse](docs/CustomFormDataSignerResponse.md)
  - [Model.CustomFormsDataFolderResponse](docs/CustomFormsDataFolderResponse.md)
@@ -247,6 +250,9 @@ Class | Method | HTTP request | Description
  - [Model.EzsignfolderGetEzsigndocumentsV1Response](docs/EzsignfolderGetEzsigndocumentsV1Response.md)
  - [Model.EzsignfolderGetEzsigndocumentsV1ResponseAllOf](docs/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md)
  - [Model.EzsignfolderGetEzsigndocumentsV1ResponseMPayload](docs/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md)
+ - [Model.EzsignfolderGetEzsignfoldersignerassociationsV1Response](docs/EzsignfolderGetEzsignfoldersignerassociationsV1Response.md)
+ - [Model.EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf](docs/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.md)
+ - [Model.EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload](docs/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.md)
  - [Model.EzsignfolderGetFormsDataV1Response](docs/EzsignfolderGetFormsDataV1Response.md)
  - [Model.EzsignfolderGetFormsDataV1ResponseAllOf](docs/EzsignfolderGetFormsDataV1ResponseAllOf.md)
  - [Model.EzsignfolderGetFormsDataV1ResponseMPayload](docs/EzsignfolderGetFormsDataV1ResponseMPayload.md)
@@ -260,7 +266,6 @@ Class | Method | HTTP request | Description
  - [Model.EzsignfolderListElement](docs/EzsignfolderListElement.md)
  - [Model.EzsignfolderRequest](docs/EzsignfolderRequest.md)
  - [Model.EzsignfolderRequestCompound](docs/EzsignfolderRequestCompound.md)
- - [Model.EzsignfolderRequestCompoundAllOf](docs/EzsignfolderRequestCompoundAllOf.md)
  - [Model.EzsignfolderResponse](docs/EzsignfolderResponse.md)
  - [Model.EzsignfolderResponseCompound](docs/EzsignfolderResponseCompound.md)
  - [Model.EzsignfolderSendV1Request](docs/EzsignfolderSendV1Request.md)
@@ -306,6 +311,10 @@ Class | Method | HTTP request | Description
  - [Model.EzsignsignerRequestCompound](docs/EzsignsignerRequestCompound.md)
  - [Model.EzsignsignerRequestCompoundAllOf](docs/EzsignsignerRequestCompoundAllOf.md)
  - [Model.EzsignsignerRequestCompoundContact](docs/EzsignsignerRequestCompoundContact.md)
+ - [Model.EzsignsignerResponse](docs/EzsignsignerResponse.md)
+ - [Model.EzsignsignerResponseCompound](docs/EzsignsignerResponseCompound.md)
+ - [Model.EzsignsignerResponseCompoundAllOf](docs/EzsignsignerResponseCompoundAllOf.md)
+ - [Model.EzsignsignerResponseCompoundContact](docs/EzsignsignerResponseCompoundContact.md)
  - [Model.EzsigntemplatepackageGetListV1Response](docs/EzsigntemplatepackageGetListV1Response.md)
  - [Model.EzsigntemplatepackageGetListV1ResponseAllOf](docs/EzsigntemplatepackageGetListV1ResponseAllOf.md)
  - [Model.EzsigntemplatepackageGetListV1ResponseMPayload](docs/EzsigntemplatepackageGetListV1ResponseMPayload.md)

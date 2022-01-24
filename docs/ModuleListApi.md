@@ -39,7 +39,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ModuleListApi(Configuration.Default);
-            var sListName = sListName_example;  // string | The list Name
+            var sListName = "sListName_example";  // string | The list Name
 
             try
             {
@@ -121,7 +121,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ModuleListApi(Configuration.Default);
-            var sListName = sListName_example;  // string | The list Name
+            var sListName = "sListName_example";  // string | The list Name
             var listSaveListpresentationV1Request = new ListSaveListpresentationV1Request(); // ListSaveListpresentationV1Request | 
 
             try

@@ -38,8 +38,8 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectFranchisebrokerApi(Configuration.Default);
-            var sSelector = sSelector_example;  // string | The type of Franchisebrokers to return
-            var sQuery = sQuery_example;  // string | Allow to filter the returned results (optional) 
+            var sSelector = "Active";  // string | The type of Franchisebrokers to return
+            var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
 
             try
             {

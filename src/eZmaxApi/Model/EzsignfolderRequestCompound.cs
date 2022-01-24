@@ -38,24 +38,13 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderRequestCompound" /> class.
         /// </summary>
-        /// <param name="aEzsignfoldersignerassociation">An array of signers that will be invited to sign the Ezsigndocuments (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
         /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**| (required).</param>
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="tEzsignfolderNote">Somes extra notes about the eZsign Folder (required).</param>
         /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency (required).</param>
-        public EzsignfolderRequestCompound(List<EzsignfoldersignerassociationRequest> aEzsignfoldersignerassociation = default(List<EzsignfoldersignerassociationRequest>), int fkiEzsignfoldertypeID = default(int), int fkiEzsigntsarequirementID = default(int), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency))
+        public EzsignfolderRequestCompound(int fkiEzsignfoldertypeID = default(int), int fkiEzsigntsarequirementID = default(int), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency))
         {
-            // to ensure "aEzsignfoldersignerassociation" is required (not null)
-            if (aEzsignfoldersignerassociation == null)
-            {
-                throw new InvalidDataException("aEzsignfoldersignerassociation is a required property for EzsignfolderRequestCompound and cannot be null");
-            }
-            else
-            {
-                this.AEzsignfoldersignerassociation = aEzsignfoldersignerassociation;
-            }
-
             // to ensure "fkiEzsignfoldertypeID" is required (not null)
             if (fkiEzsignfoldertypeID == null)
             {
@@ -109,13 +98,6 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// An array of signers that will be invited to sign the Ezsigndocuments
-        /// </summary>
-        /// <value>An array of signers that will be invited to sign the Ezsigndocuments</value>
-        [DataMember(Name="a_Ezsignfoldersignerassociation", EmitDefaultValue=true)]
-        public List<EzsignfoldersignerassociationRequest> AEzsignfoldersignerassociation { get; set; }
-
-        /// <summary>
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
@@ -157,7 +139,6 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignfolderRequestCompound {\n");
-            sb.Append("  AEzsignfoldersignerassociation: ").Append(AEzsignfoldersignerassociation).Append("\n");
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
             sb.Append("  FkiEzsigntsarequirementID: ").Append(FkiEzsigntsarequirementID).Append("\n");
             sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
@@ -198,12 +179,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.AEzsignfoldersignerassociation == input.AEzsignfoldersignerassociation ||
-                    this.AEzsignfoldersignerassociation != null &&
-                    input.AEzsignfoldersignerassociation != null &&
-                    this.AEzsignfoldersignerassociation.SequenceEqual(input.AEzsignfoldersignerassociation)
-                ) && 
-                (
                     this.FkiEzsignfoldertypeID == input.FkiEzsignfoldertypeID ||
                     (this.FkiEzsignfoldertypeID != null &&
                     this.FkiEzsignfoldertypeID.Equals(input.FkiEzsignfoldertypeID))
@@ -239,8 +214,6 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AEzsignfoldersignerassociation != null)
-                    hashCode = hashCode * 59 + this.AEzsignfoldersignerassociation.GetHashCode();
                 if (this.FkiEzsignfoldertypeID != null)
                     hashCode = hashCode * 59 + this.FkiEzsignfoldertypeID.GetHashCode();
                 if (this.FkiEzsigntsarequirementID != null)

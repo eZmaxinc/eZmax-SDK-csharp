@@ -38,7 +38,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ModuleAuthenticateApi(Configuration.Default);
-            var eSessionType = eSessionType_example;  // string | 
+            var eSessionType = "ezsignuser";  // string | 
             var authenticateAuthenticateV2Request = new AuthenticateAuthenticateV2Request(); // AuthenticateAuthenticateV2Request | 
 
             try

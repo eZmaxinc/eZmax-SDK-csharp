@@ -43,6 +43,8 @@ docs/ContactinformationsRequest.md
 docs/ContactinformationsRequestCompound.md
 docs/ContactinformationsRequestCompoundAllOf.md
 docs/CustomAutocompleteElementResponse.md
+docs/CustomEzsignfoldersignerassociationstatusResponse.md
+docs/CustomEzsignsignaturestatusResponse.md
 docs/CustomFormDataDocumentResponse.md
 docs/CustomFormDataSignerResponse.md
 docs/CustomFormsDataFolderResponse.md
@@ -90,6 +92,9 @@ docs/EzsignfolderDeleteObjectV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md
+docs/EzsignfolderGetEzsignfoldersignerassociationsV1Response.md
+docs/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.md
+docs/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.md
 docs/EzsignfolderGetFormsDataV1Response.md
 docs/EzsignfolderGetFormsDataV1ResponseAllOf.md
 docs/EzsignfolderGetFormsDataV1ResponseMPayload.md
@@ -103,7 +108,6 @@ docs/EzsignfolderGetObjectV1ResponseMPayload.md
 docs/EzsignfolderListElement.md
 docs/EzsignfolderRequest.md
 docs/EzsignfolderRequestCompound.md
-docs/EzsignfolderRequestCompoundAllOf.md
 docs/EzsignfolderResponse.md
 docs/EzsignfolderResponseCompound.md
 docs/EzsignfolderSendV1Request.md
@@ -149,6 +153,10 @@ docs/EzsignsignerRequest.md
 docs/EzsignsignerRequestCompound.md
 docs/EzsignsignerRequestCompoundAllOf.md
 docs/EzsignsignerRequestCompoundContact.md
+docs/EzsignsignerResponse.md
+docs/EzsignsignerResponseCompound.md
+docs/EzsignsignerResponseCompoundAllOf.md
+docs/EzsignsignerResponseCompoundContact.md
 docs/EzsigntemplatepackageGetListV1Response.md
 docs/EzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayload.md
@@ -285,6 +293,8 @@ src/eZmaxApi.Test/Model/ContactinformationsRequestCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/ContactinformationsRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/ContactinformationsRequestTests.cs
 src/eZmaxApi.Test/Model/CustomAutocompleteElementResponseTests.cs
+src/eZmaxApi.Test/Model/CustomEzsignfoldersignerassociationstatusResponseTests.cs
+src/eZmaxApi.Test/Model/CustomEzsignsignaturestatusResponseTests.cs
 src/eZmaxApi.Test/Model/CustomFormDataDocumentResponseTests.cs
 src/eZmaxApi.Test/Model/CustomFormDataSignerResponseTests.cs
 src/eZmaxApi.Test/Model/CustomFormsDataFolderResponseTests.cs
@@ -332,6 +342,9 @@ src/eZmaxApi.Test/Model/EzsignfolderDeleteObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetEzsigndocumentsV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetEzsigndocumentsV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetEzsigndocumentsV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOfTests.cs
+src/eZmaxApi.Test/Model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetFormsDataV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetFormsDataV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetFormsDataV1ResponseTests.cs
@@ -343,7 +356,6 @@ src/eZmaxApi.Test/Model/EzsignfolderGetObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderListElementTests.cs
-src/eZmaxApi.Test/Model/EzsignfolderRequestCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderRequestTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderResponseCompoundTests.cs
@@ -391,6 +403,10 @@ src/eZmaxApi.Test/Model/EzsignsignerRequestCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignsignerRequestCompoundContactTests.cs
 src/eZmaxApi.Test/Model/EzsignsignerRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignsignerRequestTests.cs
+src/eZmaxApi.Test/Model/EzsignsignerResponseCompoundAllOfTests.cs
+src/eZmaxApi.Test/Model/EzsignsignerResponseCompoundContactTests.cs
+src/eZmaxApi.Test/Model/EzsignsignerResponseCompoundTests.cs
+src/eZmaxApi.Test/Model/EzsignsignerResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplatepackageGetListV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplatepackageGetListV1ResponseMPayloadAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplatepackageGetListV1ResponseMPayloadTests.cs
@@ -518,6 +534,8 @@ src/eZmaxApi/Model/ContactinformationsRequest.cs
 src/eZmaxApi/Model/ContactinformationsRequestCompound.cs
 src/eZmaxApi/Model/ContactinformationsRequestCompoundAllOf.cs
 src/eZmaxApi/Model/CustomAutocompleteElementResponse.cs
+src/eZmaxApi/Model/CustomEzsignfoldersignerassociationstatusResponse.cs
+src/eZmaxApi/Model/CustomEzsignsignaturestatusResponse.cs
 src/eZmaxApi/Model/CustomFormDataDocumentResponse.cs
 src/eZmaxApi/Model/CustomFormDataSignerResponse.cs
 src/eZmaxApi/Model/CustomFormsDataFolderResponse.cs
@@ -565,6 +583,9 @@ src/eZmaxApi/Model/EzsignfolderDeleteObjectV1Response.cs
 src/eZmaxApi/Model/EzsignfolderGetEzsigndocumentsV1Response.cs
 src/eZmaxApi/Model/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.cs
+src/eZmaxApi/Model/EzsignfolderGetEzsignfoldersignerassociationsV1Response.cs
+src/eZmaxApi/Model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.cs
+src/eZmaxApi/Model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsignfolderGetFormsDataV1Response.cs
 src/eZmaxApi/Model/EzsignfolderGetFormsDataV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignfolderGetFormsDataV1ResponseMPayload.cs
@@ -578,7 +599,6 @@ src/eZmaxApi/Model/EzsignfolderGetObjectV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsignfolderListElement.cs
 src/eZmaxApi/Model/EzsignfolderRequest.cs
 src/eZmaxApi/Model/EzsignfolderRequestCompound.cs
-src/eZmaxApi/Model/EzsignfolderRequestCompoundAllOf.cs
 src/eZmaxApi/Model/EzsignfolderResponse.cs
 src/eZmaxApi/Model/EzsignfolderResponseCompound.cs
 src/eZmaxApi/Model/EzsignfolderSendV1Request.cs
@@ -624,6 +644,10 @@ src/eZmaxApi/Model/EzsignsignerRequest.cs
 src/eZmaxApi/Model/EzsignsignerRequestCompound.cs
 src/eZmaxApi/Model/EzsignsignerRequestCompoundAllOf.cs
 src/eZmaxApi/Model/EzsignsignerRequestCompoundContact.cs
+src/eZmaxApi/Model/EzsignsignerResponse.cs
+src/eZmaxApi/Model/EzsignsignerResponseCompound.cs
+src/eZmaxApi/Model/EzsignsignerResponseCompoundAllOf.cs
+src/eZmaxApi/Model/EzsignsignerResponseCompoundContact.cs
 src/eZmaxApi/Model/EzsigntemplatepackageGetListV1Response.cs
 src/eZmaxApi/Model/EzsigntemplatepackageGetListV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsigntemplatepackageGetListV1ResponseMPayload.cs

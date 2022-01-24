@@ -381,7 +381,7 @@ namespace Example
 
             var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
             var pkiEzsigndocumentID = 56;  // int | 
-            var eDocumentType = eDocumentType_example;  // string | The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
+            var eDocumentType = "Initial";  // string | The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
 
             try
             {

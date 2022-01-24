@@ -38,8 +38,8 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectPeriodApi(Configuration.Default);
-            var sSelector = sSelector_example;  // string | The types of Periods to return
-            var sQuery = sQuery_example;  // string | Allow to filter the returned results (optional) 
+            var sSelector = "ActiveNormal";  // string | The types of Periods to return
+            var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
 
             try
             {

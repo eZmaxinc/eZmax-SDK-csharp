@@ -25,40 +25,39 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// EzsignfolderRequestCompoundAllOf
+    /// EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf
     /// </summary>
     [DataContract]
-    public partial class EzsignfolderRequestCompoundAllOf :  IEquatable<EzsignfolderRequestCompoundAllOf>, IValidatableObject
+    public partial class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf :  IEquatable<EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderRequestCompoundAllOf" /> class.
+        /// Initializes a new instance of the <see cref="EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected EzsignfolderRequestCompoundAllOf() { }
+        protected EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderRequestCompoundAllOf" /> class.
+        /// Initializes a new instance of the <see cref="EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf" /> class.
         /// </summary>
-        /// <param name="aEzsignfoldersignerassociation">An array of signers that will be invited to sign the Ezsigndocuments (required).</param>
-        public EzsignfolderRequestCompoundAllOf(List<EzsignfoldersignerassociationRequest> aEzsignfoldersignerassociation = default(List<EzsignfoldersignerassociationRequest>))
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf(EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload mPayload = default(EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload))
         {
-            // to ensure "aEzsignfoldersignerassociation" is required (not null)
-            if (aEzsignfoldersignerassociation == null)
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
             {
-                throw new InvalidDataException("aEzsignfoldersignerassociation is a required property for EzsignfolderRequestCompoundAllOf and cannot be null");
+                throw new InvalidDataException("mPayload is a required property for EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf and cannot be null");
             }
             else
             {
-                this.AEzsignfoldersignerassociation = aEzsignfoldersignerassociation;
+                this.MPayload = mPayload;
             }
 
         }
 
         /// <summary>
-        /// An array of signers that will be invited to sign the Ezsigndocuments
+        /// Gets or Sets MPayload
         /// </summary>
-        /// <value>An array of signers that will be invited to sign the Ezsigndocuments</value>
-        [DataMember(Name="a_Ezsignfoldersignerassociation", EmitDefaultValue=true)]
-        public List<EzsignfoldersignerassociationRequest> AEzsignfoldersignerassociation { get; set; }
+        [DataMember(Name="mPayload", EmitDefaultValue=true)]
+        public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,8 +66,8 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EzsignfolderRequestCompoundAllOf {\n");
-            sb.Append("  AEzsignfoldersignerassociation: ").Append(AEzsignfoldersignerassociation).Append("\n");
+            sb.Append("class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf {\n");
+            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,25 +88,24 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as EzsignfolderRequestCompoundAllOf);
+            return this.Equals(input as EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf);
         }
 
         /// <summary>
-        /// Returns true if EzsignfolderRequestCompoundAllOf instances are equal
+        /// Returns true if EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf instances are equal
         /// </summary>
-        /// <param name="input">Instance of EzsignfolderRequestCompoundAllOf to be compared</param>
+        /// <param name="input">Instance of EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EzsignfolderRequestCompoundAllOf input)
+        public bool Equals(EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.AEzsignfoldersignerassociation == input.AEzsignfoldersignerassociation ||
-                    this.AEzsignfoldersignerassociation != null &&
-                    input.AEzsignfoldersignerassociation != null &&
-                    this.AEzsignfoldersignerassociation.SequenceEqual(input.AEzsignfoldersignerassociation)
+                    this.MPayload == input.MPayload ||
+                    (this.MPayload != null &&
+                    this.MPayload.Equals(input.MPayload))
                 );
         }
 
@@ -120,8 +118,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AEzsignfoldersignerassociation != null)
-                    hashCode = hashCode * 59 + this.AEzsignfoldersignerassociation.GetHashCode();
+                if (this.MPayload != null)
+                    hashCode = hashCode * 59 + this.MPayload.GetHashCode();
                 return hashCode;
             }
         }

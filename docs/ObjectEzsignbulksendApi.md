@@ -38,11 +38,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignbulksendApi(Configuration.Default);
-            var eOrderBy = eOrderBy_example;  // string | Specify how you want the results to be sorted (optional) 
+            var eOrderBy = "pkiEzsignbulksendID_ASC";  // string | Specify how you want the results to be sorted (optional) 
             var iRowMax = 56;  // int? |  (optional) 
             var iRowOffset = 56;  // int? |  (optional) 
-            var acceptLanguage = ;  // HeaderAcceptLanguage? |  (optional) 
-            var sFilter = sFilter_example;  // string |  (optional) 
+            var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
+            var sFilter = "sFilter_example";  // string |  (optional) 
 
             try
             {

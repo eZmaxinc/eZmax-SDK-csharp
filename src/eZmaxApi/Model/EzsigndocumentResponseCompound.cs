@@ -38,6 +38,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentResponseCompound" /> class.
         /// </summary>
+        /// <param name="iEzsigndocumentStepformtotal">The total number of steps in the form filling phase (required).</param>
+        /// <param name="iEzsigndocumentStepformcurrent">The current step in the form filling phase (required).</param>
+        /// <param name="iEzsigndocumentStepsignaturetotal">The total number of steps in the signature filling phase (required).</param>
+        /// <param name="iEzsigndocumentStepsignatureCurrent">The current step in the signature phase (required).</param>
+        /// <param name="aObjEzsignfoldersignerassociationstatus">aObjEzsignfoldersignerassociationstatus (required).</param>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
@@ -53,8 +58,58 @@ namespace eZmaxApi.Model
         /// <param name="sEzsigndocumentMD5initial">MD5 Hash of the initial PDF Document before signatures were applied to it. (required).</param>
         /// <param name="sEzsigndocumentMD5signed">MD5 Hash of the final PDF Document after all signatures were applied to it. (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public EzsigndocumentResponseCompound(int fkiEzsignfolderID = default(int), string dtEzsigndocumentDuedate = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), int pkiEzsigndocumentID = default(int), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string sEzsigndocumentMD5signed = default(string), CommonAudit objAudit = default(CommonAudit))
+        public EzsigndocumentResponseCompound(int iEzsigndocumentStepformtotal = default(int), int iEzsigndocumentStepformcurrent = default(int), int iEzsigndocumentStepsignaturetotal = default(int), int iEzsigndocumentStepsignatureCurrent = default(int), List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = default(List<CustomEzsignfoldersignerassociationstatusResponse>), int fkiEzsignfolderID = default(int), string dtEzsigndocumentDuedate = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), int pkiEzsigndocumentID = default(int), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string sEzsigndocumentMD5signed = default(string), CommonAudit objAudit = default(CommonAudit))
         {
+            // to ensure "iEzsigndocumentStepformtotal" is required (not null)
+            if (iEzsigndocumentStepformtotal == null)
+            {
+                throw new InvalidDataException("iEzsigndocumentStepformtotal is a required property for EzsigndocumentResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.IEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
+            }
+
+            // to ensure "iEzsigndocumentStepformcurrent" is required (not null)
+            if (iEzsigndocumentStepformcurrent == null)
+            {
+                throw new InvalidDataException("iEzsigndocumentStepformcurrent is a required property for EzsigndocumentResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.IEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
+            }
+
+            // to ensure "iEzsigndocumentStepsignaturetotal" is required (not null)
+            if (iEzsigndocumentStepsignaturetotal == null)
+            {
+                throw new InvalidDataException("iEzsigndocumentStepsignaturetotal is a required property for EzsigndocumentResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.IEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
+            }
+
+            // to ensure "iEzsigndocumentStepsignatureCurrent" is required (not null)
+            if (iEzsigndocumentStepsignatureCurrent == null)
+            {
+                throw new InvalidDataException("iEzsigndocumentStepsignatureCurrent is a required property for EzsigndocumentResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.IEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
+            }
+
+            // to ensure "aObjEzsignfoldersignerassociationstatus" is required (not null)
+            if (aObjEzsignfoldersignerassociationstatus == null)
+            {
+                throw new InvalidDataException("aObjEzsignfoldersignerassociationstatus is a required property for EzsigndocumentResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
+            }
+
             // to ensure "fkiEzsignfolderID" is required (not null)
             if (fkiEzsignfolderID == null)
             {
@@ -208,6 +263,40 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
+        /// The total number of steps in the form filling phase
+        /// </summary>
+        /// <value>The total number of steps in the form filling phase</value>
+        [DataMember(Name="iEzsigndocumentStepformtotal", EmitDefaultValue=true)]
+        public int IEzsigndocumentStepformtotal { get; set; }
+
+        /// <summary>
+        /// The current step in the form filling phase
+        /// </summary>
+        /// <value>The current step in the form filling phase</value>
+        [DataMember(Name="iEzsigndocumentStepformcurrent", EmitDefaultValue=true)]
+        public int IEzsigndocumentStepformcurrent { get; set; }
+
+        /// <summary>
+        /// The total number of steps in the signature filling phase
+        /// </summary>
+        /// <value>The total number of steps in the signature filling phase</value>
+        [DataMember(Name="iEzsigndocumentStepsignaturetotal", EmitDefaultValue=true)]
+        public int IEzsigndocumentStepsignaturetotal { get; set; }
+
+        /// <summary>
+        /// The current step in the signature phase
+        /// </summary>
+        /// <value>The current step in the signature phase</value>
+        [DataMember(Name="iEzsigndocumentStepsignatureCurrent", EmitDefaultValue=true)]
+        public int IEzsigndocumentStepsignatureCurrent { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AObjEzsignfoldersignerassociationstatus
+        /// </summary>
+        [DataMember(Name="a_objEzsignfoldersignerassociationstatus", EmitDefaultValue=true)]
+        public List<CustomEzsignfoldersignerassociationstatusResponse> AObjEzsignfoldersignerassociationstatus { get; set; }
+
+        /// <summary>
         /// The unique ID of the Ezsignfolder
         /// </summary>
         /// <value>The unique ID of the Ezsignfolder</value>
@@ -318,6 +407,11 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsigndocumentResponseCompound {\n");
+            sb.Append("  IEzsigndocumentStepformtotal: ").Append(IEzsigndocumentStepformtotal).Append("\n");
+            sb.Append("  IEzsigndocumentStepformcurrent: ").Append(IEzsigndocumentStepformcurrent).Append("\n");
+            sb.Append("  IEzsigndocumentStepsignaturetotal: ").Append(IEzsigndocumentStepsignaturetotal).Append("\n");
+            sb.Append("  IEzsigndocumentStepsignatureCurrent: ").Append(IEzsigndocumentStepsignatureCurrent).Append("\n");
+            sb.Append("  AObjEzsignfoldersignerassociationstatus: ").Append(AObjEzsignfoldersignerassociationstatus).Append("\n");
             sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
             sb.Append("  DtEzsigndocumentDuedate: ").Append(DtEzsigndocumentDuedate).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
@@ -367,6 +461,32 @@ namespace eZmaxApi.Model
                 return false;
 
             return 
+                (
+                    this.IEzsigndocumentStepformtotal == input.IEzsigndocumentStepformtotal ||
+                    (this.IEzsigndocumentStepformtotal != null &&
+                    this.IEzsigndocumentStepformtotal.Equals(input.IEzsigndocumentStepformtotal))
+                ) && 
+                (
+                    this.IEzsigndocumentStepformcurrent == input.IEzsigndocumentStepformcurrent ||
+                    (this.IEzsigndocumentStepformcurrent != null &&
+                    this.IEzsigndocumentStepformcurrent.Equals(input.IEzsigndocumentStepformcurrent))
+                ) && 
+                (
+                    this.IEzsigndocumentStepsignaturetotal == input.IEzsigndocumentStepsignaturetotal ||
+                    (this.IEzsigndocumentStepsignaturetotal != null &&
+                    this.IEzsigndocumentStepsignaturetotal.Equals(input.IEzsigndocumentStepsignaturetotal))
+                ) && 
+                (
+                    this.IEzsigndocumentStepsignatureCurrent == input.IEzsigndocumentStepsignatureCurrent ||
+                    (this.IEzsigndocumentStepsignatureCurrent != null &&
+                    this.IEzsigndocumentStepsignatureCurrent.Equals(input.IEzsigndocumentStepsignatureCurrent))
+                ) && 
+                (
+                    this.AObjEzsignfoldersignerassociationstatus == input.AObjEzsignfoldersignerassociationstatus ||
+                    this.AObjEzsignfoldersignerassociationstatus != null &&
+                    input.AObjEzsignfoldersignerassociationstatus != null &&
+                    this.AObjEzsignfoldersignerassociationstatus.SequenceEqual(input.AObjEzsignfoldersignerassociationstatus)
+                ) && 
                 (
                     this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
                     (this.FkiEzsignfolderID != null &&
@@ -453,6 +573,16 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.IEzsigndocumentStepformtotal != null)
+                    hashCode = hashCode * 59 + this.IEzsigndocumentStepformtotal.GetHashCode();
+                if (this.IEzsigndocumentStepformcurrent != null)
+                    hashCode = hashCode * 59 + this.IEzsigndocumentStepformcurrent.GetHashCode();
+                if (this.IEzsigndocumentStepsignaturetotal != null)
+                    hashCode = hashCode * 59 + this.IEzsigndocumentStepsignaturetotal.GetHashCode();
+                if (this.IEzsigndocumentStepsignatureCurrent != null)
+                    hashCode = hashCode * 59 + this.IEzsigndocumentStepsignatureCurrent.GetHashCode();
+                if (this.AObjEzsignfoldersignerassociationstatus != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignfoldersignerassociationstatus.GetHashCode();
                 if (this.FkiEzsignfolderID != null)
                     hashCode = hashCode * 59 + this.FkiEzsignfolderID.GetHashCode();
                 if (this.DtEzsigndocumentDuedate != null)

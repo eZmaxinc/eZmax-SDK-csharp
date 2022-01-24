@@ -66,14 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'AEzsignfoldersignerassociation'
-        /// </summary>
-        [Test]
-        public void AEzsignfoldersignerassociationTest()
-        {
-            // TODO unit test for the property 'AEzsignfoldersignerassociation'
-        }
-        /// <summary>
         /// Test the property 'FkiEzsignfoldertypeID'
         /// </summary>
         [Test]

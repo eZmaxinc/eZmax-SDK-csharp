@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **IEzsignpagePagenumber** | **int** | The page number in the Ezsigndocument | 
 **IEzsignsignatureX** | **int** | The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. | 
 **IEzsignsignatureY** | **int** | The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. | 
-**IEzsignsignatureStep** | **int** | The step when the Ezsignsigner will be invited to sign. | 
+**IEzsignsignatureStep** | **int** | The step when the Ezsignsigner will be invited to sign or fill form fields | 
 **EEzsignsignatureType** | [**FieldEEzsignsignatureType**](FieldEEzsignsignatureType.md) |  | 
 **FkiEzsigndocumentID** | **int** | The unique ID of the Ezsigndocument | 
 

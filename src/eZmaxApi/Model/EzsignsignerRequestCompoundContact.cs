@@ -38,10 +38,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundContact" /> class.
         /// </summary>
-        /// <param name="sContactFirstname">The first name of the Contact (required).</param>
-        /// <param name="sContactLastname">The last name of the Contact (required).</param>
+        /// <param name="sContactFirstname">The First name of the contact (required).</param>
+        /// <param name="sContactLastname">The Last name of the contact (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sEmailAddress">The email address of the contact. Must be filled if email authentification was requested.</param>
+        /// <param name="sEmailAddress">The email address..</param>
         /// <param name="sPhoneNumber">The Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany..</param>
         /// <param name="sPhoneNumberCell">The Cell Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany..</param>
         public EzsignsignerRequestCompoundContact(string sContactFirstname = default(string), string sContactLastname = default(string), int fkiLanguageID = default(int), string sEmailAddress = default(string), string sPhoneNumber = default(string), string sPhoneNumberCell = default(string))
@@ -82,16 +82,16 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// The first name of the Contact
+        /// The First name of the contact
         /// </summary>
-        /// <value>The first name of the Contact</value>
+        /// <value>The First name of the contact</value>
         [DataMember(Name="sContactFirstname", EmitDefaultValue=true)]
         public string SContactFirstname { get; set; }
 
         /// <summary>
-        /// The last name of the Contact
+        /// The Last name of the contact
         /// </summary>
-        /// <value>The last name of the Contact</value>
+        /// <value>The Last name of the contact</value>
         [DataMember(Name="sContactLastname", EmitDefaultValue=true)]
         public string SContactLastname { get; set; }
 
@@ -103,9 +103,9 @@ namespace eZmaxApi.Model
         public int FkiLanguageID { get; set; }
 
         /// <summary>
-        /// The email address of the contact. Must be filled if email authentification was requested
+        /// The email address.
         /// </summary>
-        /// <value>The email address of the contact. Must be filled if email authentification was requested</value>
+        /// <value>The email address.</value>
         [DataMember(Name="sEmailAddress", EmitDefaultValue=false)]
         public string SEmailAddress { get; set; }
 

@@ -162,6 +162,22 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'DtEzsignfolderSentdate'
         }
         /// <summary>
+        /// Test the property 'DtEzsignfolderScheduledarchive'
+        /// </summary>
+        [Test]
+        public void DtEzsignfolderScheduledarchiveTest()
+        {
+            // TODO unit test for the property 'DtEzsignfolderScheduledarchive'
+        }
+        /// <summary>
+        /// Test the property 'DtEzsignfolderScheduleddestruction'
+        /// </summary>
+        [Test]
+        public void DtEzsignfolderScheduleddestructionTest()
+        {
+            // TODO unit test for the property 'DtEzsignfolderScheduleddestruction'
+        }
+        /// <summary>
         /// Test the property 'EEzsignfolderStep'
         /// </summary>
         [Test]

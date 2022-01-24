@@ -39,7 +39,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignfolderGetEzsigndocumentsV1ResponseMPayload" /> class.
         /// </summary>
         /// <param name="aObjEzsigndocument">aObjEzsigndocument (required).</param>
-        public EzsignfolderGetEzsigndocumentsV1ResponseMPayload(List<EzsigndocumentResponse> aObjEzsigndocument = default(List<EzsigndocumentResponse>))
+        public EzsignfolderGetEzsigndocumentsV1ResponseMPayload(List<EzsigndocumentResponseCompound> aObjEzsigndocument = default(List<EzsigndocumentResponseCompound>))
         {
             // to ensure "aObjEzsigndocument" is required (not null)
             if (aObjEzsigndocument == null)
@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjEzsigndocument
         /// </summary>
         [DataMember(Name="a_objEzsigndocument", EmitDefaultValue=true)]
-        public List<EzsigndocumentResponse> AObjEzsigndocument { get; set; }
+        public List<EzsigndocumentResponseCompound> AObjEzsigndocument { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
