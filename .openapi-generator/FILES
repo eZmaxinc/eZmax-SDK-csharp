@@ -149,6 +149,7 @@ docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
+docs/EzsignsignaturecustomdateRequest.md
 docs/EzsignsignerRequest.md
 docs/EzsignsignerRequestCompound.md
 docs/EzsignsignerRequestCompoundAllOf.md
@@ -399,6 +400,7 @@ src/eZmaxApi.Test/Model/EzsignsignatureGetObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureGetObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureRequestTests.cs
+src/eZmaxApi.Test/Model/EzsignsignaturecustomdateRequestTests.cs
 src/eZmaxApi.Test/Model/EzsignsignerRequestCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignsignerRequestCompoundContactTests.cs
 src/eZmaxApi.Test/Model/EzsignsignerRequestCompoundTests.cs
@@ -640,6 +642,7 @@ src/eZmaxApi/Model/EzsignsignatureGetObjectV1Response.cs
 src/eZmaxApi/Model/EzsignsignatureGetObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignsignatureRequest.cs
 src/eZmaxApi/Model/EzsignsignatureRequestCompound.cs
+src/eZmaxApi/Model/EzsignsignaturecustomdateRequest.cs
 src/eZmaxApi/Model/EzsignsignerRequest.cs
 src/eZmaxApi/Model/EzsignsignerRequestCompound.cs
 src/eZmaxApi/Model/EzsignsignerRequestCompoundAllOf.cs

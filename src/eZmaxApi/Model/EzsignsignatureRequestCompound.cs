@@ -38,6 +38,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureRequestCompound" /> class.
         /// </summary>
+        /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;).</param>
+        /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
         /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
         /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
         /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
@@ -45,7 +47,7 @@ namespace eZmaxApi.Model
         /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign or fill form fields (required).</param>
         /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
         /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        public EzsignsignatureRequestCompound(int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int))
+        public EzsignsignatureRequestCompound(bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequest>), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)
             if (fkiEzsignfoldersignerassociationID == null)
@@ -117,7 +119,23 @@ namespace eZmaxApi.Model
                 this.FkiEzsigndocumentID = fkiEzsigndocumentID;
             }
 
+            this.BEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
+            this.AObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
         }
+
+        /// <summary>
+        /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;)
+        /// </summary>
+        /// <value>Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;)</value>
+        [DataMember(Name="bEzsignsignatureCustomdate", EmitDefaultValue=false)]
+        public bool BEzsignsignatureCustomdate { get; set; }
+
+        /// <summary>
+        /// An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all.
+        /// </summary>
+        /// <value>An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all.</value>
+        [DataMember(Name="a_objEzsignsignaturecustomdate", EmitDefaultValue=false)]
+        public List<EzsignsignaturecustomdateRequest> AObjEzsignsignaturecustomdate { get; set; }
 
         /// <summary>
         /// The unique ID of the Ezsignfoldersignerassociation
@@ -175,6 +193,8 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignsignatureRequestCompound {\n");
+            sb.Append("  BEzsignsignatureCustomdate: ").Append(BEzsignsignatureCustomdate).Append("\n");
+            sb.Append("  AObjEzsignsignaturecustomdate: ").Append(AObjEzsignsignaturecustomdate).Append("\n");
             sb.Append("  FkiEzsignfoldersignerassociationID: ").Append(FkiEzsignfoldersignerassociationID).Append("\n");
             sb.Append("  IEzsignpagePagenumber: ").Append(IEzsignpagePagenumber).Append("\n");
             sb.Append("  IEzsignsignatureX: ").Append(IEzsignsignatureX).Append("\n");
@@ -216,6 +236,17 @@ namespace eZmaxApi.Model
                 return false;
 
             return 
+                (
+                    this.BEzsignsignatureCustomdate == input.BEzsignsignatureCustomdate ||
+                    (this.BEzsignsignatureCustomdate != null &&
+                    this.BEzsignsignatureCustomdate.Equals(input.BEzsignsignatureCustomdate))
+                ) && 
+                (
+                    this.AObjEzsignsignaturecustomdate == input.AObjEzsignsignaturecustomdate ||
+                    this.AObjEzsignsignaturecustomdate != null &&
+                    input.AObjEzsignsignaturecustomdate != null &&
+                    this.AObjEzsignsignaturecustomdate.SequenceEqual(input.AObjEzsignsignaturecustomdate)
+                ) && 
                 (
                     this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
                     (this.FkiEzsignfoldersignerassociationID != null &&
@@ -262,6 +293,10 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.BEzsignsignatureCustomdate != null)
+                    hashCode = hashCode * 59 + this.BEzsignsignatureCustomdate.GetHashCode();
+                if (this.AObjEzsignsignaturecustomdate != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignsignaturecustomdate.GetHashCode();
                 if (this.FkiEzsignfoldersignerassociationID != null)
                     hashCode = hashCode * 59 + this.FkiEzsignfoldersignerassociationID.GetHashCode();
                 if (this.IEzsignpagePagenumber != null)
