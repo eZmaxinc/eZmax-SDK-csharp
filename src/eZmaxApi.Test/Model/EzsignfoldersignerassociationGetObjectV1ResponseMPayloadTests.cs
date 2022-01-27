@@ -82,22 +82,6 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'FkiEzsignfolderID'
         }
         /// <summary>
-        /// Test the property 'FkiEzsignsignerID'
-        /// </summary>
-        [Test]
-        public void FkiEzsignsignerIDTest()
-        {
-            // TODO unit test for the property 'FkiEzsignsignerID'
-        }
-        /// <summary>
-        /// Test the property 'FkiUserID'
-        /// </summary>
-        [Test]
-        public void FkiUserIDTest()
-        {
-            // TODO unit test for the property 'FkiUserID'
-        }
-        /// <summary>
         /// Test the property 'BEzsignfoldersignerassociationReceivecopy'
         /// </summary>
         [Test]

@@ -31,51 +31,6 @@ namespace eZmaxApi.Model
     public partial class EzsignsignerResponseCompound :  IEquatable<EzsignsignerResponseCompound>, IValidatableObject
     {
         /// <summary>
-        /// The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
-        /// </summary>
-        /// <value>The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EEzsignsignerLogintypeEnum
-        {
-            /// <summary>
-            /// Enum Password for value: Password
-            /// </summary>
-            [EnumMember(Value = "Password")]
-            Password = 1,
-
-            /// <summary>
-            /// Enum PasswordPhone for value: PasswordPhone
-            /// </summary>
-            [EnumMember(Value = "PasswordPhone")]
-            PasswordPhone = 2,
-
-            /// <summary>
-            /// Enum PasswordQuestion for value: PasswordQuestion
-            /// </summary>
-            [EnumMember(Value = "PasswordQuestion")]
-            PasswordQuestion = 3,
-
-            /// <summary>
-            /// Enum InPersonPhone for value: InPersonPhone
-            /// </summary>
-            [EnumMember(Value = "InPersonPhone")]
-            InPersonPhone = 4,
-
-            /// <summary>
-            /// Enum InPerson for value: InPerson
-            /// </summary>
-            [EnumMember(Value = "InPerson")]
-            InPerson = 5
-
-        }
-
-        /// <summary>
-        /// The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
-        /// </summary>
-        /// <value>The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.</value>
-        [DataMember(Name="eEzsignsignerLogintype", EmitDefaultValue=true)]
-        public EEzsignsignerLogintypeEnum EEzsignsignerLogintype { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignerResponseCompound" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -84,11 +39,12 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignsignerResponseCompound" /> class.
         /// </summary>
         /// <param name="objContact">objContact (required).</param>
+        /// <param name="pkiEzsignsignerID">The unique ID of the Ezsignsigner (required).</param>
         /// <param name="fkiTaxassignmentID">The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| (required).</param>
         /// <param name="fkiSecretquestionID">The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)|.</param>
-        /// <param name="eEzsignsignerLogintype">The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type. (required).</param>
-        /// <param name="sEzsignsignerSecretanswer">The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate..</param>
-        public EzsignsignerResponseCompound(EzsignsignerResponseCompoundContact objContact = default(EzsignsignerResponseCompoundContact), int fkiTaxassignmentID = default(int), int fkiSecretquestionID = default(int), EEzsignsignerLogintypeEnum eEzsignsignerLogintype = default(EEzsignsignerLogintypeEnum), string sEzsignsignerSecretanswer = default(string))
+        /// <param name="fkiUserlogintypeID">The unique ID of the Userlogintype (required).</param>
+        /// <param name="sUserlogintypeDescriptionX">The description of the Userlogintype in the language of the requester (required).</param>
+        public EzsignsignerResponseCompound(EzsignsignerResponseCompoundContact objContact = default(EzsignsignerResponseCompoundContact), int pkiEzsignsignerID = default(int), int fkiTaxassignmentID = default(int), int fkiSecretquestionID = default(int), int fkiUserlogintypeID = default(int), string sUserlogintypeDescriptionX = default(string))
         {
             // to ensure "objContact" is required (not null)
             if (objContact == null)
@@ -98,6 +54,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.ObjContact = objContact;
+            }
+
+            // to ensure "pkiEzsignsignerID" is required (not null)
+            if (pkiEzsignsignerID == null)
+            {
+                throw new InvalidDataException("pkiEzsignsignerID is a required property for EzsignsignerResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.PkiEzsignsignerID = pkiEzsignsignerID;
             }
 
             // to ensure "fkiTaxassignmentID" is required (not null)
@@ -110,18 +76,27 @@ namespace eZmaxApi.Model
                 this.FkiTaxassignmentID = fkiTaxassignmentID;
             }
 
-            // to ensure "eEzsignsignerLogintype" is required (not null)
-            if (eEzsignsignerLogintype == null)
+            // to ensure "fkiUserlogintypeID" is required (not null)
+            if (fkiUserlogintypeID == null)
             {
-                throw new InvalidDataException("eEzsignsignerLogintype is a required property for EzsignsignerResponseCompound and cannot be null");
+                throw new InvalidDataException("fkiUserlogintypeID is a required property for EzsignsignerResponseCompound and cannot be null");
             }
             else
             {
-                this.EEzsignsignerLogintype = eEzsignsignerLogintype;
+                this.FkiUserlogintypeID = fkiUserlogintypeID;
+            }
+
+            // to ensure "sUserlogintypeDescriptionX" is required (not null)
+            if (sUserlogintypeDescriptionX == null)
+            {
+                throw new InvalidDataException("sUserlogintypeDescriptionX is a required property for EzsignsignerResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.SUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
             }
 
             this.FkiSecretquestionID = fkiSecretquestionID;
-            this.SEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
         }
 
         /// <summary>
@@ -129,6 +104,13 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name="objContact", EmitDefaultValue=true)]
         public EzsignsignerResponseCompoundContact ObjContact { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignsigner
+        /// </summary>
+        /// <value>The unique ID of the Ezsignsigner</value>
+        [DataMember(Name="pkiEzsignsignerID", EmitDefaultValue=true)]
+        public int PkiEzsignsignerID { get; set; }
 
         /// <summary>
         /// The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|
@@ -144,13 +126,19 @@ namespace eZmaxApi.Model
         [DataMember(Name="fkiSecretquestionID", EmitDefaultValue=false)]
         public int FkiSecretquestionID { get; set; }
 
+        /// <summary>
+        /// The unique ID of the Userlogintype
+        /// </summary>
+        /// <value>The unique ID of the Userlogintype</value>
+        [DataMember(Name="fkiUserlogintypeID", EmitDefaultValue=true)]
+        public int FkiUserlogintypeID { get; set; }
 
         /// <summary>
-        /// The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate.
+        /// The description of the Userlogintype in the language of the requester
         /// </summary>
-        /// <value>The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate.</value>
-        [DataMember(Name="sEzsignsignerSecretanswer", EmitDefaultValue=false)]
-        public string SEzsignsignerSecretanswer { get; set; }
+        /// <value>The description of the Userlogintype in the language of the requester</value>
+        [DataMember(Name="sUserlogintypeDescriptionX", EmitDefaultValue=true)]
+        public string SUserlogintypeDescriptionX { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -161,10 +149,11 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class EzsignsignerResponseCompound {\n");
             sb.Append("  ObjContact: ").Append(ObjContact).Append("\n");
+            sb.Append("  PkiEzsignsignerID: ").Append(PkiEzsignsignerID).Append("\n");
             sb.Append("  FkiTaxassignmentID: ").Append(FkiTaxassignmentID).Append("\n");
             sb.Append("  FkiSecretquestionID: ").Append(FkiSecretquestionID).Append("\n");
-            sb.Append("  EEzsignsignerLogintype: ").Append(EEzsignsignerLogintype).Append("\n");
-            sb.Append("  SEzsignsignerSecretanswer: ").Append(SEzsignsignerSecretanswer).Append("\n");
+            sb.Append("  FkiUserlogintypeID: ").Append(FkiUserlogintypeID).Append("\n");
+            sb.Append("  SUserlogintypeDescriptionX: ").Append(SUserlogintypeDescriptionX).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -205,6 +194,11 @@ namespace eZmaxApi.Model
                     this.ObjContact.Equals(input.ObjContact))
                 ) && 
                 (
+                    this.PkiEzsignsignerID == input.PkiEzsignsignerID ||
+                    (this.PkiEzsignsignerID != null &&
+                    this.PkiEzsignsignerID.Equals(input.PkiEzsignsignerID))
+                ) && 
+                (
                     this.FkiTaxassignmentID == input.FkiTaxassignmentID ||
                     (this.FkiTaxassignmentID != null &&
                     this.FkiTaxassignmentID.Equals(input.FkiTaxassignmentID))
@@ -215,14 +209,14 @@ namespace eZmaxApi.Model
                     this.FkiSecretquestionID.Equals(input.FkiSecretquestionID))
                 ) && 
                 (
-                    this.EEzsignsignerLogintype == input.EEzsignsignerLogintype ||
-                    (this.EEzsignsignerLogintype != null &&
-                    this.EEzsignsignerLogintype.Equals(input.EEzsignsignerLogintype))
+                    this.FkiUserlogintypeID == input.FkiUserlogintypeID ||
+                    (this.FkiUserlogintypeID != null &&
+                    this.FkiUserlogintypeID.Equals(input.FkiUserlogintypeID))
                 ) && 
                 (
-                    this.SEzsignsignerSecretanswer == input.SEzsignsignerSecretanswer ||
-                    (this.SEzsignsignerSecretanswer != null &&
-                    this.SEzsignsignerSecretanswer.Equals(input.SEzsignsignerSecretanswer))
+                    this.SUserlogintypeDescriptionX == input.SUserlogintypeDescriptionX ||
+                    (this.SUserlogintypeDescriptionX != null &&
+                    this.SUserlogintypeDescriptionX.Equals(input.SUserlogintypeDescriptionX))
                 );
         }
 
@@ -237,14 +231,16 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.ObjContact != null)
                     hashCode = hashCode * 59 + this.ObjContact.GetHashCode();
+                if (this.PkiEzsignsignerID != null)
+                    hashCode = hashCode * 59 + this.PkiEzsignsignerID.GetHashCode();
                 if (this.FkiTaxassignmentID != null)
                     hashCode = hashCode * 59 + this.FkiTaxassignmentID.GetHashCode();
                 if (this.FkiSecretquestionID != null)
                     hashCode = hashCode * 59 + this.FkiSecretquestionID.GetHashCode();
-                if (this.EEzsignsignerLogintype != null)
-                    hashCode = hashCode * 59 + this.EEzsignsignerLogintype.GetHashCode();
-                if (this.SEzsignsignerSecretanswer != null)
-                    hashCode = hashCode * 59 + this.SEzsignsignerSecretanswer.GetHashCode();
+                if (this.FkiUserlogintypeID != null)
+                    hashCode = hashCode * 59 + this.FkiUserlogintypeID.GetHashCode();
+                if (this.SUserlogintypeDescriptionX != null)
+                    hashCode = hashCode * 59 + this.SUserlogintypeDescriptionX.GetHashCode();
                 return hashCode;
             }
         }

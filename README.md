@@ -287,6 +287,7 @@ Class | Method | HTTP request | Description
  - [Model.EzsignfoldersignerassociationRequestCompoundAllOf](docs/EzsignfoldersignerassociationRequestCompoundAllOf.md)
  - [Model.EzsignfoldersignerassociationResponse](docs/EzsignfoldersignerassociationResponse.md)
  - [Model.EzsignfoldersignerassociationResponseCompound](docs/EzsignfoldersignerassociationResponseCompound.md)
+ - [Model.EzsignfoldersignerassociationResponseCompoundUser](docs/EzsignfoldersignerassociationResponseCompoundUser.md)
  - [Model.EzsignfoldertypeGetListV1Response](docs/EzsignfoldertypeGetListV1Response.md)
  - [Model.EzsignfoldertypeGetListV1ResponseAllOf](docs/EzsignfoldertypeGetListV1ResponseAllOf.md)
  - [Model.EzsignfoldertypeGetListV1ResponseMPayload](docs/EzsignfoldertypeGetListV1ResponseMPayload.md)

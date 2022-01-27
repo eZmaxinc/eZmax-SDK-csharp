@@ -39,7 +39,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload" /> class.
         /// </summary>
         /// <param name="aObjEzsignfoldersignerassociation">aObjEzsignfoldersignerassociation (required).</param>
-        public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload(List<EzsignfoldersignerassociationResponse> aObjEzsignfoldersignerassociation = default(List<EzsignfoldersignerassociationResponse>))
+        public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload(List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation = default(List<EzsignfoldersignerassociationResponseCompound>))
         {
             // to ensure "aObjEzsignfoldersignerassociation" is required (not null)
             if (aObjEzsignfoldersignerassociation == null)
@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjEzsignfoldersignerassociation
         /// </summary>
         [DataMember(Name="a_objEzsignfoldersignerassociation", EmitDefaultValue=true)]
-        public List<EzsignfoldersignerassociationResponse> AObjEzsignfoldersignerassociation { get; set; }
+        public List<EzsignfoldersignerassociationResponseCompound> AObjEzsignfoldersignerassociation { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -129,6 +129,7 @@ docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponse.md
 docs/EzsignfoldersignerassociationResponseCompound.md
+docs/EzsignfoldersignerassociationResponseCompoundUser.md
 docs/EzsignfoldertypeGetListV1Response.md
 docs/EzsignfoldertypeGetListV1ResponseAllOf.md
 docs/EzsignfoldertypeGetListV1ResponseMPayload.md
@@ -379,6 +380,7 @@ src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestCompoundAllOfTests.c
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationResponseCompoundTests.cs
+src/eZmaxApi.Test/Model/EzsignfoldersignerassociationResponseCompoundUserTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldertypeGetListV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldertypeGetListV1ResponseMPayloadAllOfTests.cs
@@ -622,6 +624,7 @@ src/eZmaxApi/Model/EzsignfoldersignerassociationRequestCompound.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequestCompoundAllOf.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationResponse.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationResponseCompound.cs
+src/eZmaxApi/Model/EzsignfoldersignerassociationResponseCompoundUser.cs
 src/eZmaxApi/Model/EzsignfoldertypeGetListV1Response.cs
 src/eZmaxApi/Model/EzsignfoldertypeGetListV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignfoldertypeGetListV1ResponseMPayload.cs

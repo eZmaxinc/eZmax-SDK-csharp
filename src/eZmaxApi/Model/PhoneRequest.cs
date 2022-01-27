@@ -43,7 +43,7 @@ namespace eZmaxApi.Model
         /// <param name="sPhoneRegion">The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123.</param>
         /// <param name="sPhoneExchange">The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123.</param>
         /// <param name="sPhoneNumber">The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123.</param>
-        /// <param name="sPhoneInternational">The international phone number. (For phone numbers outside of North)  Do not specify the \&quot;011\&quot; part of the phone number used to dial an international phone number from North America.  For example for this sample phone number \&quot;+442071838750\&quot;, you would send \&quot;442071838750\&quot; without the \&quot;+\&quot; sign..</param>
+        /// <param name="sPhoneInternational">A phone number in E.164 Format.</param>
         /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
         public PhoneRequest(int fkiPhonetypeID = default(int), FieldEPhoneType ePhoneType = default(FieldEPhoneType), string sPhoneRegion = default(string), string sPhoneExchange = default(string), string sPhoneNumber = default(string), string sPhoneInternational = default(string), string sPhoneExtension = default(string))
         {
@@ -109,9 +109,9 @@ namespace eZmaxApi.Model
         public string SPhoneNumber { get; set; }
 
         /// <summary>
-        /// The international phone number. (For phone numbers outside of North)  Do not specify the \&quot;011\&quot; part of the phone number used to dial an international phone number from North America.  For example for this sample phone number \&quot;+442071838750\&quot;, you would send \&quot;442071838750\&quot; without the \&quot;+\&quot; sign.
+        /// A phone number in E.164 Format
         /// </summary>
-        /// <value>The international phone number. (For phone numbers outside of North)  Do not specify the \&quot;011\&quot; part of the phone number used to dial an international phone number from North America.  For example for this sample phone number \&quot;+442071838750\&quot;, you would send \&quot;442071838750\&quot; without the \&quot;+\&quot; sign.</value>
+        /// <value>A phone number in E.164 Format</value>
         [DataMember(Name="sPhoneInternational", EmitDefaultValue=false)]
         public string SPhoneInternational { get; set; }
 

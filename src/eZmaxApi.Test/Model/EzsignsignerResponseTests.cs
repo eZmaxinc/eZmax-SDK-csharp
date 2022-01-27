@@ -66,6 +66,14 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
+        /// Test the property 'PkiEzsignsignerID'
+        /// </summary>
+        [Test]
+        public void PkiEzsignsignerIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsignsignerID'
+        }
+        /// <summary>
         /// Test the property 'FkiTaxassignmentID'
         /// </summary>
         [Test]
@@ -82,20 +90,20 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'FkiSecretquestionID'
         }
         /// <summary>
-        /// Test the property 'EEzsignsignerLogintype'
+        /// Test the property 'FkiUserlogintypeID'
         /// </summary>
         [Test]
-        public void EEzsignsignerLogintypeTest()
+        public void FkiUserlogintypeIDTest()
         {
-            // TODO unit test for the property 'EEzsignsignerLogintype'
+            // TODO unit test for the property 'FkiUserlogintypeID'
         }
         /// <summary>
-        /// Test the property 'SEzsignsignerSecretanswer'
+        /// Test the property 'SUserlogintypeDescriptionX'
         /// </summary>
         [Test]
-        public void SEzsignsignerSecretanswerTest()
+        public void SUserlogintypeDescriptionXTest()
         {
-            // TODO unit test for the property 'SEzsignsignerSecretanswer'
+            // TODO unit test for the property 'SUserlogintypeDescriptionX'
         }
 
     }

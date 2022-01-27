@@ -66,6 +66,22 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
+        /// Test the property 'ObjUser'
+        /// </summary>
+        [Test]
+        public void ObjUserTest()
+        {
+            // TODO unit test for the property 'ObjUser'
+        }
+        /// <summary>
+        /// Test the property 'ObjEzsignsigner'
+        /// </summary>
+        [Test]
+        public void ObjEzsignsignerTest()
+        {
+            // TODO unit test for the property 'ObjEzsignsigner'
+        }
+        /// <summary>
         /// Test the property 'PkiEzsignfoldersignerassociationID'
         /// </summary>
         [Test]
@@ -80,22 +96,6 @@ namespace eZmaxApi.Test
         public void FkiEzsignfolderIDTest()
         {
             // TODO unit test for the property 'FkiEzsignfolderID'
-        }
-        /// <summary>
-        /// Test the property 'FkiEzsignsignerID'
-        /// </summary>
-        [Test]
-        public void FkiEzsignsignerIDTest()
-        {
-            // TODO unit test for the property 'FkiEzsignsignerID'
-        }
-        /// <summary>
-        /// Test the property 'FkiUserID'
-        /// </summary>
-        [Test]
-        public void FkiUserIDTest()
-        {
-            // TODO unit test for the property 'FkiUserID'
         }
         /// <summary>
         /// Test the property 'BEzsignfoldersignerassociationReceivecopy'
