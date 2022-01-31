@@ -66,6 +66,14 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
+        /// Test the property 'PkiContactID'
+        /// </summary>
+        [Test]
+        public void PkiContactIDTest()
+        {
+            // TODO unit test for the property 'PkiContactID'
+        }
+        /// <summary>
         /// Test the property 'SContactFirstname'
         /// </summary>
         [Test]

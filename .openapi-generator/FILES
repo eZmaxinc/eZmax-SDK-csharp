@@ -235,6 +235,7 @@ docs/WebhookResponse.md
 docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
 docs/WebsiteRequest.md
+docs/Xxxx.md
 eZmaxApi.sln
 git_push.sh
 mono_nunit_test.sh
@@ -469,6 +470,7 @@ src/eZmaxApi.Test/Model/WebhookResponseTests.cs
 src/eZmaxApi.Test/Model/WebhookUserUserCreatedAllOfTests.cs
 src/eZmaxApi.Test/Model/WebhookUserUserCreatedTests.cs
 src/eZmaxApi.Test/Model/WebsiteRequestTests.cs
+src/eZmaxApi.Test/Model/XxxxTests.cs
 src/eZmaxApi.Test/eZmaxApi.Test.csproj
 src/eZmaxApi.Test/packages.config
 src/eZmaxApi/Api/GlobalCustomerApi.cs
@@ -712,6 +714,7 @@ src/eZmaxApi/Model/WebhookResponse.cs
 src/eZmaxApi/Model/WebhookUserUserCreated.cs
 src/eZmaxApi/Model/WebhookUserUserCreatedAllOf.cs
 src/eZmaxApi/Model/WebsiteRequest.cs
+src/eZmaxApi/Model/Xxxx.cs
 src/eZmaxApi/Properties/AssemblyInfo.cs
 src/eZmaxApi/eZmaxApi.csproj
 src/eZmaxApi/eZmaxApi.nuspec

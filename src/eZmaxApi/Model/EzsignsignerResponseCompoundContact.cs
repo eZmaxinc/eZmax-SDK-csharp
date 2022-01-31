@@ -38,14 +38,25 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignerResponseCompoundContact" /> class.
         /// </summary>
+        /// <param name="pkiContactID">The unique ID of the Contact (required).</param>
         /// <param name="sContactFirstname">The First name of the contact (required).</param>
         /// <param name="sContactLastname">The Last name of the contact (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sEmailAddress">The email address..</param>
         /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
         /// <param name="sPhoneE164Cell">A phone number in E.164 Format.</param>
-        public EzsignsignerResponseCompoundContact(string sContactFirstname = default(string), string sContactLastname = default(string), int fkiLanguageID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), string sPhoneE164Cell = default(string))
+        public EzsignsignerResponseCompoundContact(int pkiContactID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), int fkiLanguageID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), string sPhoneE164Cell = default(string))
         {
+            // to ensure "pkiContactID" is required (not null)
+            if (pkiContactID == null)
+            {
+                throw new InvalidDataException("pkiContactID is a required property for EzsignsignerResponseCompoundContact and cannot be null");
+            }
+            else
+            {
+                this.PkiContactID = pkiContactID;
+            }
+
             // to ensure "sContactFirstname" is required (not null)
             if (sContactFirstname == null)
             {
@@ -80,6 +91,13 @@ namespace eZmaxApi.Model
             this.SPhoneE164 = sPhoneE164;
             this.SPhoneE164Cell = sPhoneE164Cell;
         }
+
+        /// <summary>
+        /// The unique ID of the Contact
+        /// </summary>
+        /// <value>The unique ID of the Contact</value>
+        [DataMember(Name="pkiContactID", EmitDefaultValue=true)]
+        public int PkiContactID { get; set; }
 
         /// <summary>
         /// The First name of the contact
@@ -131,6 +149,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignsignerResponseCompoundContact {\n");
+            sb.Append("  PkiContactID: ").Append(PkiContactID).Append("\n");
             sb.Append("  SContactFirstname: ").Append(SContactFirstname).Append("\n");
             sb.Append("  SContactLastname: ").Append(SContactLastname).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
@@ -172,6 +191,11 @@ namespace eZmaxApi.Model
 
             return 
                 (
+                    this.PkiContactID == input.PkiContactID ||
+                    (this.PkiContactID != null &&
+                    this.PkiContactID.Equals(input.PkiContactID))
+                ) && 
+                (
                     this.SContactFirstname == input.SContactFirstname ||
                     (this.SContactFirstname != null &&
                     this.SContactFirstname.Equals(input.SContactFirstname))
@@ -212,6 +236,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PkiContactID != null)
+                    hashCode = hashCode * 59 + this.PkiContactID.GetHashCode();
                 if (this.SContactFirstname != null)
                     hashCode = hashCode * 59 + this.SContactFirstname.GetHashCode();
                 if (this.SContactLastname != null)
