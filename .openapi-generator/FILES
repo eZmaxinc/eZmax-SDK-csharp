@@ -84,6 +84,7 @@ docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
+docs/EzsigndocumentResponseCompoundAllOf.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
@@ -129,6 +130,7 @@ docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponse.md
 docs/EzsignfoldersignerassociationResponseCompound.md
+docs/EzsignfoldersignerassociationResponseCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponseCompoundUser.md
 docs/EzsignfoldertypeGetListV1Response.md
 docs/EzsignfoldertypeGetListV1ResponseAllOf.md
@@ -150,6 +152,7 @@ docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
+docs/EzsignsignatureRequestCompoundAllOf.md
 docs/EzsignsignaturecustomdateRequest.md
 docs/EzsignsignerRequest.md
 docs/EzsignsignerRequestCompound.md
@@ -164,6 +167,7 @@ docs/EzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayload.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplatepackageListElement.md
+docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
@@ -335,6 +339,7 @@ src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentRequestTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentResponseCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentResponseCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderCreateObjectV1RequestTests.cs
@@ -380,6 +385,7 @@ src/eZmaxApi.Test/Model/EzsignfoldersignerassociationGetObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestTests.cs
+src/eZmaxApi.Test/Model/EzsignfoldersignerassociationResponseCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationResponseCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationResponseCompoundUserTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationResponseTests.cs
@@ -401,6 +407,7 @@ src/eZmaxApi.Test/Model/EzsignsignatureCreateObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureDeleteObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureGetObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureGetObjectV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsignsignatureRequestCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureRequestTests.cs
 src/eZmaxApi.Test/Model/EzsignsignaturecustomdateRequestTests.cs
@@ -417,6 +424,7 @@ src/eZmaxApi.Test/Model/EzsigntemplatepackageGetListV1ResponseMPayloadAllOfTests
 src/eZmaxApi.Test/Model/EzsigntemplatepackageGetListV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplatepackageGetListV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplatepackageListElementTests.cs
+src/eZmaxApi.Test/Model/FieldEActivesessionWeekdaystartTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsigndocumentStepTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsignfolderSendreminderfrequencyTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsignfolderStepTests.cs
@@ -581,6 +589,7 @@ src/eZmaxApi/Model/EzsigndocumentRequest.cs
 src/eZmaxApi/Model/EzsigndocumentRequestCompound.cs
 src/eZmaxApi/Model/EzsigndocumentResponse.cs
 src/eZmaxApi/Model/EzsigndocumentResponseCompound.cs
+src/eZmaxApi/Model/EzsigndocumentResponseCompoundAllOf.cs
 src/eZmaxApi/Model/EzsignfolderCreateObjectV1Request.cs
 src/eZmaxApi/Model/EzsignfolderCreateObjectV1Response.cs
 src/eZmaxApi/Model/EzsignfolderCreateObjectV1ResponseAllOf.cs
@@ -626,6 +635,7 @@ src/eZmaxApi/Model/EzsignfoldersignerassociationRequestCompound.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequestCompoundAllOf.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationResponse.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationResponseCompound.cs
+src/eZmaxApi/Model/EzsignfoldersignerassociationResponseCompoundAllOf.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationResponseCompoundUser.cs
 src/eZmaxApi/Model/EzsignfoldertypeGetListV1Response.cs
 src/eZmaxApi/Model/EzsignfoldertypeGetListV1ResponseAllOf.cs
@@ -647,6 +657,7 @@ src/eZmaxApi/Model/EzsignsignatureGetObjectV1Response.cs
 src/eZmaxApi/Model/EzsignsignatureGetObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignsignatureRequest.cs
 src/eZmaxApi/Model/EzsignsignatureRequestCompound.cs
+src/eZmaxApi/Model/EzsignsignatureRequestCompoundAllOf.cs
 src/eZmaxApi/Model/EzsignsignaturecustomdateRequest.cs
 src/eZmaxApi/Model/EzsignsignerRequest.cs
 src/eZmaxApi/Model/EzsignsignerRequestCompound.cs
@@ -661,6 +672,7 @@ src/eZmaxApi/Model/EzsigntemplatepackageGetListV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsigntemplatepackageGetListV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.cs
 src/eZmaxApi/Model/EzsigntemplatepackageListElement.cs
+src/eZmaxApi/Model/FieldEActivesessionWeekdaystart.cs
 src/eZmaxApi/Model/FieldEEzsigndocumentStep.cs
 src/eZmaxApi/Model/FieldEEzsignfolderSendreminderfrequency.cs
 src/eZmaxApi/Model/FieldEEzsignfolderStep.cs

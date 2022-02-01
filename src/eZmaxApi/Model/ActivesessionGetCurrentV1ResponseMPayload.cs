@@ -61,6 +61,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="sCustomerCode">The customer code specific to the client in which the API request is being made (required).</param>
         /// <param name="eActivesessionSessiontype">The type of session used for the API request call (required).</param>
+        /// <param name="eActivesessionWeekdaystart">eActivesessionWeekdaystart (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sCompanyNameX">The name of the active Company in the current language (required).</param>
         /// <param name="sDepartmentNameX">The name of the active Department in the current language (required).</param>
@@ -68,7 +69,7 @@ namespace eZmaxApi.Model
         /// <param name="aPermissions">An array of permissions granted to the user or api key (required).</param>
         /// <param name="fkiUserID">The unique ID of the User (required).</param>
         /// <param name="fkiApikeyID">The unique ID of the Apikey (required).</param>
-        public ActivesessionGetCurrentV1ResponseMPayload(string sCustomerCode = default(string), EActivesessionSessiontypeEnum eActivesessionSessiontype = default(EActivesessionSessiontypeEnum), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), List<string> aRegisteredModules = default(List<string>), List<int> aPermissions = default(List<int>), int fkiUserID = default(int), int fkiApikeyID = default(int))
+        public ActivesessionGetCurrentV1ResponseMPayload(string sCustomerCode = default(string), EActivesessionSessiontypeEnum eActivesessionSessiontype = default(EActivesessionSessiontypeEnum), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), List<string> aRegisteredModules = default(List<string>), List<int> aPermissions = default(List<int>), int fkiUserID = default(int), int fkiApikeyID = default(int))
         {
             // to ensure "sCustomerCode" is required (not null)
             if (sCustomerCode == null)
@@ -88,6 +89,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.EActivesessionSessiontype = eActivesessionSessiontype;
+            }
+
+            // to ensure "eActivesessionWeekdaystart" is required (not null)
+            if (eActivesessionWeekdaystart == null)
+            {
+                throw new InvalidDataException("eActivesessionWeekdaystart is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.EActivesessionWeekdaystart = eActivesessionWeekdaystart;
             }
 
             // to ensure "fkiLanguageID" is required (not null)
@@ -171,6 +182,12 @@ namespace eZmaxApi.Model
 
 
         /// <summary>
+        /// Gets or Sets EActivesessionWeekdaystart
+        /// </summary>
+        [DataMember(Name="eActivesessionWeekdaystart", EmitDefaultValue=true)]
+        public FieldEActivesessionWeekdaystart EActivesessionWeekdaystart { get; set; }
+
+        /// <summary>
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
@@ -229,6 +246,7 @@ namespace eZmaxApi.Model
             sb.Append("class ActivesessionGetCurrentV1ResponseMPayload {\n");
             sb.Append("  SCustomerCode: ").Append(SCustomerCode).Append("\n");
             sb.Append("  EActivesessionSessiontype: ").Append(EActivesessionSessiontype).Append("\n");
+            sb.Append("  EActivesessionWeekdaystart: ").Append(EActivesessionWeekdaystart).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  SCompanyNameX: ").Append(SCompanyNameX).Append("\n");
             sb.Append("  SDepartmentNameX: ").Append(SDepartmentNameX).Append("\n");
@@ -279,6 +297,11 @@ namespace eZmaxApi.Model
                     this.EActivesessionSessiontype == input.EActivesessionSessiontype ||
                     (this.EActivesessionSessiontype != null &&
                     this.EActivesessionSessiontype.Equals(input.EActivesessionSessiontype))
+                ) && 
+                (
+                    this.EActivesessionWeekdaystart == input.EActivesessionWeekdaystart ||
+                    (this.EActivesessionWeekdaystart != null &&
+                    this.EActivesessionWeekdaystart.Equals(input.EActivesessionWeekdaystart))
                 ) && 
                 (
                     this.FkiLanguageID == input.FkiLanguageID ||
@@ -332,6 +355,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SCustomerCode.GetHashCode();
                 if (this.EActivesessionSessiontype != null)
                     hashCode = hashCode * 59 + this.EActivesessionSessiontype.GetHashCode();
+                if (this.EActivesessionWeekdaystart != null)
+                    hashCode = hashCode * 59 + this.EActivesessionWeekdaystart.GetHashCode();
                 if (this.FkiLanguageID != null)
                     hashCode = hashCode * 59 + this.FkiLanguageID.GetHashCode();
                 if (this.SCompanyNameX != null)

@@ -82,6 +82,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'EActivesessionSessiontype'
         }
         /// <summary>
+        /// Test the property 'EActivesessionWeekdaystart'
+        /// </summary>
+        [Test]
+        public void EActivesessionWeekdaystartTest()
+        {
+            // TODO unit test for the property 'EActivesessionWeekdaystart'
+        }
+        /// <summary>
         /// Test the property 'FkiLanguageID'
         /// </summary>
         [Test]
