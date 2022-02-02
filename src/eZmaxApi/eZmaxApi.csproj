@@ -12,7 +12,7 @@ Contact: support-api@ezmax.ca
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7EF4E7D8-57A2-4655-80AB-A4C13563A113}</ProjectGuid>
+    <ProjectGuid>{EDFF65F1-0048-495D-BFFE-BFEF614DA619}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>eZmaxApi</RootNamespace>

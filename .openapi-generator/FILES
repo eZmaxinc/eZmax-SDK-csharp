@@ -7,6 +7,11 @@ build.sh
 docs/ActivesessionGetCurrentV1Response.md
 docs/ActivesessionGetCurrentV1ResponseAllOf.md
 docs/ActivesessionGetCurrentV1ResponseMPayload.md
+docs/ActivesessionResponse.md
+docs/ActivesessionResponseCompound.md
+docs/ActivesessionResponseCompoundAllOf.md
+docs/ActivesessionResponseCompoundApikey.md
+docs/ActivesessionResponseCompoundUser.md
 docs/AddressRequest.md
 docs/ApikeyCreateObjectV1Request.md
 docs/ApikeyCreateObjectV1Response.md
@@ -167,6 +172,7 @@ docs/EzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayload.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplatepackageListElement.md
+docs/FieldEActivesessionSessiontype.md
 docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
@@ -239,7 +245,6 @@ docs/WebhookResponse.md
 docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
 docs/WebsiteRequest.md
-docs/Xxxx.md
 eZmaxApi.sln
 git_push.sh
 mono_nunit_test.sh
@@ -264,6 +269,11 @@ src/eZmaxApi.Test/Api/ObjectPeriodApiTests.cs
 src/eZmaxApi.Test/Model/ActivesessionGetCurrentV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/ActivesessionGetCurrentV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/ActivesessionGetCurrentV1ResponseTests.cs
+src/eZmaxApi.Test/Model/ActivesessionResponseCompoundAllOfTests.cs
+src/eZmaxApi.Test/Model/ActivesessionResponseCompoundApikeyTests.cs
+src/eZmaxApi.Test/Model/ActivesessionResponseCompoundTests.cs
+src/eZmaxApi.Test/Model/ActivesessionResponseCompoundUserTests.cs
+src/eZmaxApi.Test/Model/ActivesessionResponseTests.cs
 src/eZmaxApi.Test/Model/AddressRequestTests.cs
 src/eZmaxApi.Test/Model/ApikeyCreateObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/ApikeyCreateObjectV1ResponseAllOfTests.cs
@@ -424,6 +434,7 @@ src/eZmaxApi.Test/Model/EzsigntemplatepackageGetListV1ResponseMPayloadAllOfTests
 src/eZmaxApi.Test/Model/EzsigntemplatepackageGetListV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplatepackageGetListV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplatepackageListElementTests.cs
+src/eZmaxApi.Test/Model/FieldEActivesessionSessiontypeTests.cs
 src/eZmaxApi.Test/Model/FieldEActivesessionWeekdaystartTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsigndocumentStepTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsignfolderSendreminderfrequencyTests.cs
@@ -478,7 +489,6 @@ src/eZmaxApi.Test/Model/WebhookResponseTests.cs
 src/eZmaxApi.Test/Model/WebhookUserUserCreatedAllOfTests.cs
 src/eZmaxApi.Test/Model/WebhookUserUserCreatedTests.cs
 src/eZmaxApi.Test/Model/WebsiteRequestTests.cs
-src/eZmaxApi.Test/Model/XxxxTests.cs
 src/eZmaxApi.Test/eZmaxApi.Test.csproj
 src/eZmaxApi.Test/packages.config
 src/eZmaxApi/Api/GlobalCustomerApi.cs
@@ -512,6 +522,11 @@ src/eZmaxApi/Client/OpenAPIDateConverter.cs
 src/eZmaxApi/Model/ActivesessionGetCurrentV1Response.cs
 src/eZmaxApi/Model/ActivesessionGetCurrentV1ResponseAllOf.cs
 src/eZmaxApi/Model/ActivesessionGetCurrentV1ResponseMPayload.cs
+src/eZmaxApi/Model/ActivesessionResponse.cs
+src/eZmaxApi/Model/ActivesessionResponseCompound.cs
+src/eZmaxApi/Model/ActivesessionResponseCompoundAllOf.cs
+src/eZmaxApi/Model/ActivesessionResponseCompoundApikey.cs
+src/eZmaxApi/Model/ActivesessionResponseCompoundUser.cs
 src/eZmaxApi/Model/AddressRequest.cs
 src/eZmaxApi/Model/ApikeyCreateObjectV1Request.cs
 src/eZmaxApi/Model/ApikeyCreateObjectV1Response.cs
@@ -672,6 +687,7 @@ src/eZmaxApi/Model/EzsigntemplatepackageGetListV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsigntemplatepackageGetListV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.cs
 src/eZmaxApi/Model/EzsigntemplatepackageListElement.cs
+src/eZmaxApi/Model/FieldEActivesessionSessiontype.cs
 src/eZmaxApi/Model/FieldEActivesessionWeekdaystart.cs
 src/eZmaxApi/Model/FieldEEzsigndocumentStep.cs
 src/eZmaxApi/Model/FieldEEzsignfolderSendreminderfrequency.cs
@@ -726,7 +742,6 @@ src/eZmaxApi/Model/WebhookResponse.cs
 src/eZmaxApi/Model/WebhookUserUserCreated.cs
 src/eZmaxApi/Model/WebhookUserUserCreatedAllOf.cs
 src/eZmaxApi/Model/WebsiteRequest.cs
-src/eZmaxApi/Model/Xxxx.cs
 src/eZmaxApi/Properties/AssemblyInfo.cs
 src/eZmaxApi/eZmaxApi.csproj
 src/eZmaxApi/eZmaxApi.nuspec

@@ -28,15 +28,15 @@ namespace eZmaxApi.Model
     /// Payload for the /1/object/activesession/getCurrent API Request
     /// </summary>
     [DataContract]
-    public partial class ActivesessionGetCurrentV1ResponseMPayload :  IEquatable<ActivesessionGetCurrentV1ResponseMPayload>, IValidatableObject
+    public partial class ActivesessionResponseCompound :  IEquatable<ActivesessionResponseCompound>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionGetCurrentV1ResponseMPayload" /> class.
+        /// Initializes a new instance of the <see cref="ActivesessionResponseCompound" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected ActivesessionGetCurrentV1ResponseMPayload() { }
+        protected ActivesessionResponseCompound() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionGetCurrentV1ResponseMPayload" /> class.
+        /// Initializes a new instance of the <see cref="ActivesessionResponseCompound" /> class.
         /// </summary>
         /// <param name="aPkiPermissionID">An array of permissions granted to the user or api key (required).</param>
         /// <param name="objUserReal">objUserReal (required).</param>
@@ -50,12 +50,12 @@ namespace eZmaxApi.Model
         /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
         /// <param name="bActivesessionDebug">Whether the active session is in debug or not (required).</param>
         /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
-        public ActivesessionGetCurrentV1ResponseMPayload(List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>), FieldEActivesessionSessiontype eActivesessionSessiontype = default(FieldEActivesessionSessiontype), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), string pksCustomerCode = default(string))
+        public ActivesessionResponseCompound(List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>), FieldEActivesessionSessiontype eActivesessionSessiontype = default(FieldEActivesessionSessiontype), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), string pksCustomerCode = default(string))
         {
             // to ensure "aPkiPermissionID" is required (not null)
             if (aPkiPermissionID == null)
             {
-                throw new InvalidDataException("aPkiPermissionID is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("aPkiPermissionID is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
@@ -65,7 +65,7 @@ namespace eZmaxApi.Model
             // to ensure "objUserReal" is required (not null)
             if (objUserReal == null)
             {
-                throw new InvalidDataException("objUserReal is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("objUserReal is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
@@ -75,7 +75,7 @@ namespace eZmaxApi.Model
             // to ensure "aEModuleInternalname" is required (not null)
             if (aEModuleInternalname == null)
             {
-                throw new InvalidDataException("aEModuleInternalname is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("aEModuleInternalname is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
             // to ensure "eActivesessionSessiontype" is required (not null)
             if (eActivesessionSessiontype == null)
             {
-                throw new InvalidDataException("eActivesessionSessiontype is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("eActivesessionSessiontype is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
@@ -95,7 +95,7 @@ namespace eZmaxApi.Model
             // to ensure "eActivesessionWeekdaystart" is required (not null)
             if (eActivesessionWeekdaystart == null)
             {
-                throw new InvalidDataException("eActivesessionWeekdaystart is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("eActivesessionWeekdaystart is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
@@ -105,7 +105,7 @@ namespace eZmaxApi.Model
             // to ensure "fkiLanguageID" is required (not null)
             if (fkiLanguageID == null)
             {
-                throw new InvalidDataException("fkiLanguageID is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("fkiLanguageID is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
@@ -115,7 +115,7 @@ namespace eZmaxApi.Model
             // to ensure "sCompanyNameX" is required (not null)
             if (sCompanyNameX == null)
             {
-                throw new InvalidDataException("sCompanyNameX is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("sCompanyNameX is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
@@ -125,7 +125,7 @@ namespace eZmaxApi.Model
             // to ensure "sDepartmentNameX" is required (not null)
             if (sDepartmentNameX == null)
             {
-                throw new InvalidDataException("sDepartmentNameX is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("sDepartmentNameX is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
@@ -135,7 +135,7 @@ namespace eZmaxApi.Model
             // to ensure "bActivesessionDebug" is required (not null)
             if (bActivesessionDebug == null)
             {
-                throw new InvalidDataException("bActivesessionDebug is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("bActivesessionDebug is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
@@ -145,7 +145,7 @@ namespace eZmaxApi.Model
             // to ensure "pksCustomerCode" is required (not null)
             if (pksCustomerCode == null)
             {
-                throw new InvalidDataException("pksCustomerCode is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("pksCustomerCode is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
@@ -242,7 +242,7 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ActivesessionGetCurrentV1ResponseMPayload {\n");
+            sb.Append("class ActivesessionResponseCompound {\n");
             sb.Append("  APkiPermissionID: ").Append(APkiPermissionID).Append("\n");
             sb.Append("  ObjUserReal: ").Append(ObjUserReal).Append("\n");
             sb.Append("  ObjUserCloned: ").Append(ObjUserCloned).Append("\n");
@@ -275,15 +275,15 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ActivesessionGetCurrentV1ResponseMPayload);
+            return this.Equals(input as ActivesessionResponseCompound);
         }
 
         /// <summary>
-        /// Returns true if ActivesessionGetCurrentV1ResponseMPayload instances are equal
+        /// Returns true if ActivesessionResponseCompound instances are equal
         /// </summary>
-        /// <param name="input">Instance of ActivesessionGetCurrentV1ResponseMPayload to be compared</param>
+        /// <param name="input">Instance of ActivesessionResponseCompound to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ActivesessionGetCurrentV1ResponseMPayload input)
+        public bool Equals(ActivesessionResponseCompound input)
         {
             if (input == null)
                 return false;

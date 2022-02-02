@@ -1,5 +1,5 @@
 
-# eZmaxApi.Model.ActivesessionGetCurrentV1ResponseMPayload
+# eZmaxApi.Model.ActivesessionResponseCompound
 
 ## Properties
 

@@ -165,6 +165,11 @@ Class | Method | HTTP request | Description
  - [Model.ActivesessionGetCurrentV1Response](docs/ActivesessionGetCurrentV1Response.md)
  - [Model.ActivesessionGetCurrentV1ResponseAllOf](docs/ActivesessionGetCurrentV1ResponseAllOf.md)
  - [Model.ActivesessionGetCurrentV1ResponseMPayload](docs/ActivesessionGetCurrentV1ResponseMPayload.md)
+ - [Model.ActivesessionResponse](docs/ActivesessionResponse.md)
+ - [Model.ActivesessionResponseCompound](docs/ActivesessionResponseCompound.md)
+ - [Model.ActivesessionResponseCompoundAllOf](docs/ActivesessionResponseCompoundAllOf.md)
+ - [Model.ActivesessionResponseCompoundApikey](docs/ActivesessionResponseCompoundApikey.md)
+ - [Model.ActivesessionResponseCompoundUser](docs/ActivesessionResponseCompoundUser.md)
  - [Model.AddressRequest](docs/AddressRequest.md)
  - [Model.ApikeyCreateObjectV1Request](docs/ApikeyCreateObjectV1Request.md)
  - [Model.ApikeyCreateObjectV1Response](docs/ApikeyCreateObjectV1Response.md)
@@ -325,6 +330,7 @@ Class | Method | HTTP request | Description
  - [Model.EzsigntemplatepackageGetListV1ResponseMPayload](docs/EzsigntemplatepackageGetListV1ResponseMPayload.md)
  - [Model.EzsigntemplatepackageGetListV1ResponseMPayloadAllOf](docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md)
  - [Model.EzsigntemplatepackageListElement](docs/EzsigntemplatepackageListElement.md)
+ - [Model.FieldEActivesessionSessiontype](docs/FieldEActivesessionSessiontype.md)
  - [Model.FieldEActivesessionWeekdaystart](docs/FieldEActivesessionWeekdaystart.md)
  - [Model.FieldEEzsigndocumentStep](docs/FieldEEzsigndocumentStep.md)
  - [Model.FieldEEzsignfolderSendreminderfrequency](docs/FieldEEzsignfolderSendreminderfrequency.md)
@@ -379,7 +385,6 @@ Class | Method | HTTP request | Description
  - [Model.WebhookUserUserCreated](docs/WebhookUserUserCreated.md)
  - [Model.WebhookUserUserCreatedAllOf](docs/WebhookUserUserCreatedAllOf.md)
  - [Model.WebsiteRequest](docs/WebsiteRequest.md)
- - [Model.Xxxx](docs/Xxxx.md)
 
 
 ## Documentation for Authorization
