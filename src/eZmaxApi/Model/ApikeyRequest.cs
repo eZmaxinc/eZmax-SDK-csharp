@@ -38,9 +38,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyRequest" /> class.
         /// </summary>
+        /// <param name="pkiApikeyID">The unique ID of the Apikey.</param>
         /// <param name="fkiUserID">The unique ID of the User (required).</param>
         /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
-        public ApikeyRequest(int fkiUserID = default(int), MultilingualApikeyDescription objApikeyDescription = default(MultilingualApikeyDescription))
+        public ApikeyRequest(int pkiApikeyID = default(int), int fkiUserID = default(int), MultilingualApikeyDescription objApikeyDescription = default(MultilingualApikeyDescription))
         {
             // to ensure "fkiUserID" is required (not null)
             if (fkiUserID == null)
@@ -62,7 +63,15 @@ namespace eZmaxApi.Model
                 this.ObjApikeyDescription = objApikeyDescription;
             }
 
+            this.PkiApikeyID = pkiApikeyID;
         }
+
+        /// <summary>
+        /// The unique ID of the Apikey
+        /// </summary>
+        /// <value>The unique ID of the Apikey</value>
+        [DataMember(Name="pkiApikeyID", EmitDefaultValue=false)]
+        public int PkiApikeyID { get; set; }
 
         /// <summary>
         /// The unique ID of the User
@@ -85,6 +94,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ApikeyRequest {\n");
+            sb.Append("  PkiApikeyID: ").Append(PkiApikeyID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
             sb.Append("  ObjApikeyDescription: ").Append(ObjApikeyDescription).Append("\n");
             sb.Append("}\n");
@@ -122,6 +132,11 @@ namespace eZmaxApi.Model
 
             return 
                 (
+                    this.PkiApikeyID == input.PkiApikeyID ||
+                    (this.PkiApikeyID != null &&
+                    this.PkiApikeyID.Equals(input.PkiApikeyID))
+                ) && 
+                (
                     this.FkiUserID == input.FkiUserID ||
                     (this.FkiUserID != null &&
                     this.FkiUserID.Equals(input.FkiUserID))
@@ -142,6 +157,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PkiApikeyID != null)
+                    hashCode = hashCode * 59 + this.PkiApikeyID.GetHashCode();
                 if (this.FkiUserID != null)
                     hashCode = hashCode * 59 + this.FkiUserID.GetHashCode();
                 if (this.ObjApikeyDescription != null)

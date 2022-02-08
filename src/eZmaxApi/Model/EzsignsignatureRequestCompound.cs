@@ -40,6 +40,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;).</param>
         /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
+        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature.</param>
         /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
         /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
         /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
@@ -47,7 +48,7 @@ namespace eZmaxApi.Model
         /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign or fill form fields (required).</param>
         /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
         /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        public EzsignsignatureRequestCompound(bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequest>), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int))
+        public EzsignsignatureRequestCompound(bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequest>), int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)
             if (fkiEzsignfoldersignerassociationID == null)
@@ -121,6 +122,7 @@ namespace eZmaxApi.Model
 
             this.BEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
             this.AObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+            this.PkiEzsignsignatureID = pkiEzsignsignatureID;
         }
 
         /// <summary>
@@ -136,6 +138,13 @@ namespace eZmaxApi.Model
         /// <value>An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all.</value>
         [DataMember(Name="a_objEzsignsignaturecustomdate", EmitDefaultValue=false)]
         public List<EzsignsignaturecustomdateRequest> AObjEzsignsignaturecustomdate { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignsignature
+        /// </summary>
+        /// <value>The unique ID of the Ezsignsignature</value>
+        [DataMember(Name="pkiEzsignsignatureID", EmitDefaultValue=false)]
+        public int PkiEzsignsignatureID { get; set; }
 
         /// <summary>
         /// The unique ID of the Ezsignfoldersignerassociation
@@ -195,6 +204,7 @@ namespace eZmaxApi.Model
             sb.Append("class EzsignsignatureRequestCompound {\n");
             sb.Append("  BEzsignsignatureCustomdate: ").Append(BEzsignsignatureCustomdate).Append("\n");
             sb.Append("  AObjEzsignsignaturecustomdate: ").Append(AObjEzsignsignaturecustomdate).Append("\n");
+            sb.Append("  PkiEzsignsignatureID: ").Append(PkiEzsignsignatureID).Append("\n");
             sb.Append("  FkiEzsignfoldersignerassociationID: ").Append(FkiEzsignfoldersignerassociationID).Append("\n");
             sb.Append("  IEzsignpagePagenumber: ").Append(IEzsignpagePagenumber).Append("\n");
             sb.Append("  IEzsignsignatureX: ").Append(IEzsignsignatureX).Append("\n");
@@ -248,6 +258,11 @@ namespace eZmaxApi.Model
                     this.AObjEzsignsignaturecustomdate.SequenceEqual(input.AObjEzsignsignaturecustomdate)
                 ) && 
                 (
+                    this.PkiEzsignsignatureID == input.PkiEzsignsignatureID ||
+                    (this.PkiEzsignsignatureID != null &&
+                    this.PkiEzsignsignatureID.Equals(input.PkiEzsignsignatureID))
+                ) && 
+                (
                     this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
                     (this.FkiEzsignfoldersignerassociationID != null &&
                     this.FkiEzsignfoldersignerassociationID.Equals(input.FkiEzsignfoldersignerassociationID))
@@ -297,6 +312,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzsignsignatureCustomdate.GetHashCode();
                 if (this.AObjEzsignsignaturecustomdate != null)
                     hashCode = hashCode * 59 + this.AObjEzsignsignaturecustomdate.GetHashCode();
+                if (this.PkiEzsignsignatureID != null)
+                    hashCode = hashCode * 59 + this.PkiEzsignsignatureID.GetHashCode();
                 if (this.FkiEzsignfoldersignerassociationID != null)
                     hashCode = hashCode * 59 + this.FkiEzsignfoldersignerassociationID.GetHashCode();
                 if (this.IEzsignpagePagenumber != null)

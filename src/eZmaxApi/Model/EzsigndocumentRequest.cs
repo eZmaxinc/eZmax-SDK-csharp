@@ -86,6 +86,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentRequest" /> class.
         /// </summary>
+        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument.</param>
         /// <param name="eEzsigndocumentSource">Indicates where to look for the document binary content. (required).</param>
         /// <param name="eEzsigndocumentFormat">Indicates the format of the document. (required).</param>
         /// <param name="sEzsigndocumentBase64">The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64..</param>
@@ -96,7 +97,7 @@ namespace eZmaxApi.Model
         /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        public EzsigndocumentRequest(EEzsigndocumentSourceEnum eEzsigndocumentSource = default(EEzsigndocumentSourceEnum), EEzsigndocumentFormatEnum eEzsigndocumentFormat = default(EEzsigndocumentFormatEnum), byte[] sEzsigndocumentBase64 = default(byte[]), string sEzsigndocumentUrl = default(string), bool bEzsigndocumentForcerepair = true, string sEzsigndocumentPassword = "", int fkiEzsignfolderID = default(int), string dtEzsigndocumentDuedate = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string))
+        public EzsigndocumentRequest(int pkiEzsigndocumentID = default(int), EEzsigndocumentSourceEnum eEzsigndocumentSource = default(EEzsigndocumentSourceEnum), EEzsigndocumentFormatEnum eEzsigndocumentFormat = default(EEzsigndocumentFormatEnum), byte[] sEzsigndocumentBase64 = default(byte[]), string sEzsigndocumentUrl = default(string), bool bEzsigndocumentForcerepair = true, string sEzsigndocumentPassword = "", int fkiEzsignfolderID = default(int), string dtEzsigndocumentDuedate = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string))
         {
             // to ensure "eEzsigndocumentSource" is required (not null)
             if (eEzsigndocumentSource == null)
@@ -158,6 +159,7 @@ namespace eZmaxApi.Model
                 this.SEzsigndocumentName = sEzsigndocumentName;
             }
 
+            this.PkiEzsigndocumentID = pkiEzsigndocumentID;
             this.SEzsigndocumentBase64 = sEzsigndocumentBase64;
             this.SEzsigndocumentUrl = sEzsigndocumentUrl;
             // use default value if no "bEzsigndocumentForcerepair" provided
@@ -179,6 +181,13 @@ namespace eZmaxApi.Model
                 this.SEzsigndocumentPassword = sEzsigndocumentPassword;
             }
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsigndocument
+        /// </summary>
+        /// <value>The unique ID of the Ezsigndocument</value>
+        [DataMember(Name="pkiEzsigndocumentID", EmitDefaultValue=false)]
+        public int PkiEzsigndocumentID { get; set; }
 
 
 
@@ -246,6 +255,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsigndocumentRequest {\n");
+            sb.Append("  PkiEzsigndocumentID: ").Append(PkiEzsigndocumentID).Append("\n");
             sb.Append("  EEzsigndocumentSource: ").Append(EEzsigndocumentSource).Append("\n");
             sb.Append("  EEzsigndocumentFormat: ").Append(EEzsigndocumentFormat).Append("\n");
             sb.Append("  SEzsigndocumentBase64: ").Append(SEzsigndocumentBase64).Append("\n");
@@ -290,6 +300,11 @@ namespace eZmaxApi.Model
                 return false;
 
             return 
+                (
+                    this.PkiEzsigndocumentID == input.PkiEzsigndocumentID ||
+                    (this.PkiEzsigndocumentID != null &&
+                    this.PkiEzsigndocumentID.Equals(input.PkiEzsigndocumentID))
+                ) && 
                 (
                     this.EEzsigndocumentSource == input.EEzsigndocumentSource ||
                     (this.EEzsigndocumentSource != null &&
@@ -351,6 +366,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PkiEzsigndocumentID != null)
+                    hashCode = hashCode * 59 + this.PkiEzsigndocumentID.GetHashCode();
                 if (this.EEzsigndocumentSource != null)
                     hashCode = hashCode * 59 + this.EEzsigndocumentSource.GetHashCode();
                 if (this.EEzsigndocumentFormat != null)

@@ -66,6 +66,14 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
+        /// Test the property 'PkiEzsigndocumentID'
+        /// </summary>
+        [Test]
+        public void PkiEzsigndocumentIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsigndocumentID'
+        }
+        /// <summary>
         /// Test the property 'EEzsigndocumentSource'
         /// </summary>
         [Test]

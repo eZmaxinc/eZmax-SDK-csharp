@@ -38,6 +38,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureRequest" /> class.
         /// </summary>
+        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature.</param>
         /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
         /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
         /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
@@ -45,7 +46,7 @@ namespace eZmaxApi.Model
         /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign or fill form fields (required).</param>
         /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
         /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        public EzsignsignatureRequest(int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int))
+        public EzsignsignatureRequest(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)
             if (fkiEzsignfoldersignerassociationID == null)
@@ -117,7 +118,15 @@ namespace eZmaxApi.Model
                 this.FkiEzsigndocumentID = fkiEzsigndocumentID;
             }
 
+            this.PkiEzsignsignatureID = pkiEzsignsignatureID;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignsignature
+        /// </summary>
+        /// <value>The unique ID of the Ezsignsignature</value>
+        [DataMember(Name="pkiEzsignsignatureID", EmitDefaultValue=false)]
+        public int PkiEzsignsignatureID { get; set; }
 
         /// <summary>
         /// The unique ID of the Ezsignfoldersignerassociation
@@ -175,6 +184,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignsignatureRequest {\n");
+            sb.Append("  PkiEzsignsignatureID: ").Append(PkiEzsignsignatureID).Append("\n");
             sb.Append("  FkiEzsignfoldersignerassociationID: ").Append(FkiEzsignfoldersignerassociationID).Append("\n");
             sb.Append("  IEzsignpagePagenumber: ").Append(IEzsignpagePagenumber).Append("\n");
             sb.Append("  IEzsignsignatureX: ").Append(IEzsignsignatureX).Append("\n");
@@ -216,6 +226,11 @@ namespace eZmaxApi.Model
                 return false;
 
             return 
+                (
+                    this.PkiEzsignsignatureID == input.PkiEzsignsignatureID ||
+                    (this.PkiEzsignsignatureID != null &&
+                    this.PkiEzsignsignatureID.Equals(input.PkiEzsignsignatureID))
+                ) && 
                 (
                     this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
                     (this.FkiEzsignfoldersignerassociationID != null &&
@@ -262,6 +277,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PkiEzsignsignatureID != null)
+                    hashCode = hashCode * 59 + this.PkiEzsignsignatureID.GetHashCode();
                 if (this.FkiEzsignfoldersignerassociationID != null)
                     hashCode = hashCode * 59 + this.FkiEzsignfoldersignerassociationID.GetHashCode();
                 if (this.IEzsignpagePagenumber != null)

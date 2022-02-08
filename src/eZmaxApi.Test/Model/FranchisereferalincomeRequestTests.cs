@@ -66,6 +66,14 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
+        /// Test the property 'PkiFranchisereferalincomeID'
+        /// </summary>
+        [Test]
+        public void PkiFranchisereferalincomeIDTest()
+        {
+            // TODO unit test for the property 'PkiFranchisereferalincomeID'
+        }
+        /// <summary>
         /// Test the property 'FkiFranchisebrokerID'
         /// </summary>
         [Test]

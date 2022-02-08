@@ -38,12 +38,13 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderRequest" /> class.
         /// </summary>
+        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder.</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
         /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**| (required).</param>
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="tEzsignfolderNote">Somes extra notes about the eZsign Folder (required).</param>
         /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency (required).</param>
-        public EzsignfolderRequest(int fkiEzsignfoldertypeID = default(int), int fkiEzsigntsarequirementID = default(int), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency))
+        public EzsignfolderRequest(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiEzsigntsarequirementID = default(int), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency))
         {
             // to ensure "fkiEzsignfoldertypeID" is required (not null)
             if (fkiEzsignfoldertypeID == null)
@@ -95,7 +96,15 @@ namespace eZmaxApi.Model
                 this.EEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
             }
 
+            this.PkiEzsignfolderID = pkiEzsignfolderID;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfolder
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfolder</value>
+        [DataMember(Name="pkiEzsignfolderID", EmitDefaultValue=false)]
+        public int PkiEzsignfolderID { get; set; }
 
         /// <summary>
         /// The unique ID of the Ezsignfoldertype.
@@ -139,6 +148,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignfolderRequest {\n");
+            sb.Append("  PkiEzsignfolderID: ").Append(PkiEzsignfolderID).Append("\n");
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
             sb.Append("  FkiEzsigntsarequirementID: ").Append(FkiEzsigntsarequirementID).Append("\n");
             sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
@@ -179,6 +189,11 @@ namespace eZmaxApi.Model
 
             return 
                 (
+                    this.PkiEzsignfolderID == input.PkiEzsignfolderID ||
+                    (this.PkiEzsignfolderID != null &&
+                    this.PkiEzsignfolderID.Equals(input.PkiEzsignfolderID))
+                ) && 
+                (
                     this.FkiEzsignfoldertypeID == input.FkiEzsignfoldertypeID ||
                     (this.FkiEzsignfoldertypeID != null &&
                     this.FkiEzsignfoldertypeID.Equals(input.FkiEzsignfoldertypeID))
@@ -214,6 +229,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PkiEzsignfolderID != null)
+                    hashCode = hashCode * 59 + this.PkiEzsignfolderID.GetHashCode();
                 if (this.FkiEzsignfoldertypeID != null)
                     hashCode = hashCode * 59 + this.FkiEzsignfoldertypeID.GetHashCode();
                 if (this.FkiEzsigntsarequirementID != null)

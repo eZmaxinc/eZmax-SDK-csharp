@@ -39,10 +39,11 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompound" /> class.
         /// </summary>
         /// <param name="objEzsignsigner">objEzsignsigner.</param>
+        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
-        public EzsignfoldersignerassociationRequestCompound(EzsignsignerRequestCompound objEzsignsigner = default(EzsignsignerRequestCompound), int fkiUserID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool))
+        public EzsignfoldersignerassociationRequestCompound(EzsignsignerRequestCompound objEzsignsigner = default(EzsignsignerRequestCompound), int pkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)
             if (fkiEzsignfolderID == null)
@@ -55,6 +56,7 @@ namespace eZmaxApi.Model
             }
 
             this.ObjEzsignsigner = objEzsignsigner;
+            this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
             this.FkiUserID = fkiUserID;
             this.BEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
         }
@@ -64,6 +66,13 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name="objEzsignsigner", EmitDefaultValue=false)]
         public EzsignsignerRequestCompound ObjEzsignsigner { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfoldersignerassociation
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
+        [DataMember(Name="pkiEzsignfoldersignerassociationID", EmitDefaultValue=false)]
+        public int PkiEzsignfoldersignerassociationID { get; set; }
 
         /// <summary>
         /// The unique ID of the User
@@ -95,6 +104,7 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class EzsignfoldersignerassociationRequestCompound {\n");
             sb.Append("  ObjEzsignsigner: ").Append(ObjEzsignsigner).Append("\n");
+            sb.Append("  PkiEzsignfoldersignerassociationID: ").Append(PkiEzsignfoldersignerassociationID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
             sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
             sb.Append("  BEzsignfoldersignerassociationReceivecopy: ").Append(BEzsignfoldersignerassociationReceivecopy).Append("\n");
@@ -138,6 +148,11 @@ namespace eZmaxApi.Model
                     this.ObjEzsignsigner.Equals(input.ObjEzsignsigner))
                 ) && 
                 (
+                    this.PkiEzsignfoldersignerassociationID == input.PkiEzsignfoldersignerassociationID ||
+                    (this.PkiEzsignfoldersignerassociationID != null &&
+                    this.PkiEzsignfoldersignerassociationID.Equals(input.PkiEzsignfoldersignerassociationID))
+                ) && 
+                (
                     this.FkiUserID == input.FkiUserID ||
                     (this.FkiUserID != null &&
                     this.FkiUserID.Equals(input.FkiUserID))
@@ -165,6 +180,8 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.ObjEzsignsigner != null)
                     hashCode = hashCode * 59 + this.ObjEzsignsigner.GetHashCode();
+                if (this.PkiEzsignfoldersignerassociationID != null)
+                    hashCode = hashCode * 59 + this.PkiEzsignfoldersignerassociationID.GetHashCode();
                 if (this.FkiUserID != null)
                     hashCode = hashCode * 59 + this.FkiUserID.GetHashCode();
                 if (this.FkiEzsignfolderID != null)

@@ -95,6 +95,8 @@ docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
 docs/EzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
+docs/EzsignfolderEditObjectV1Request.md
+docs/EzsignfolderEditObjectV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md
@@ -357,6 +359,8 @@ src/eZmaxApi.Test/Model/EzsignfolderCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderCreateObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderCreateObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderDeleteObjectV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsignfolderEditObjectV1RequestTests.cs
+src/eZmaxApi.Test/Model/EzsignfolderEditObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetEzsigndocumentsV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetEzsigndocumentsV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderGetEzsigndocumentsV1ResponseTests.cs
@@ -610,6 +614,8 @@ src/eZmaxApi/Model/EzsignfolderCreateObjectV1Response.cs
 src/eZmaxApi/Model/EzsignfolderCreateObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignfolderCreateObjectV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsignfolderDeleteObjectV1Response.cs
+src/eZmaxApi/Model/EzsignfolderEditObjectV1Request.cs
+src/eZmaxApi/Model/EzsignfolderEditObjectV1Response.cs
 src/eZmaxApi/Model/EzsignfolderGetEzsigndocumentsV1Response.cs
 src/eZmaxApi/Model/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.cs

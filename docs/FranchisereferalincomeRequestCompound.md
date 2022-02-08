@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjAddress** | [**AddressRequest**](AddressRequest.md) |  | 
 **AObjContact** | [**List&lt;ContactRequestCompound&gt;**](ContactRequestCompound.md) |  | 
+**PkiFranchisereferalincomeID** | **int** | The unique ID of the Franchisereferalincome | [optional] 
 **FkiFranchisebrokerID** | **int** | The unique ID of the Franchisebroker | 
 **FkiFranchisereferalincomeprogramID** | **int** | The unique ID of the Franchisereferalincomeprogram | 
 **FkiPeriodID** | **int** | The unique ID of the Period | 

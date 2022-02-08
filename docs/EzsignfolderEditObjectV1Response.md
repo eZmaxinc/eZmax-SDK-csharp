@@ -1,13 +1,12 @@
 
-# eZmaxApi.Model.ApikeyRequestCompound
+# eZmaxApi.Model.EzsignfolderEditObjectV1Response
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PkiApikeyID** | **int** | The unique ID of the Apikey | [optional] 
-**FkiUserID** | **int** | The unique ID of the User | 
-**ObjApikeyDescription** | [**MultilingualApikeyDescription**](MultilingualApikeyDescription.md) |  | 
+**ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
+**ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**PkiApikeyID** | **int** | The unique ID of the Apikey | [optional] 
 **FkiUserID** | **int** | The unique ID of the User | 
 **ObjApikeyDescription** | [**MultilingualApikeyDescription**](MultilingualApikeyDescription.md) |  | 
 

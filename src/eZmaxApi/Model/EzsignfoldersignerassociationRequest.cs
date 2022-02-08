@@ -38,10 +38,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequest" /> class.
         /// </summary>
+        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
-        public EzsignfoldersignerassociationRequest(int fkiUserID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool))
+        public EzsignfoldersignerassociationRequest(int pkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)
             if (fkiEzsignfolderID == null)
@@ -53,9 +54,17 @@ namespace eZmaxApi.Model
                 this.FkiEzsignfolderID = fkiEzsignfolderID;
             }
 
+            this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
             this.FkiUserID = fkiUserID;
             this.BEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfoldersignerassociation
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
+        [DataMember(Name="pkiEzsignfoldersignerassociationID", EmitDefaultValue=false)]
+        public int PkiEzsignfoldersignerassociationID { get; set; }
 
         /// <summary>
         /// The unique ID of the User
@@ -86,6 +95,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignfoldersignerassociationRequest {\n");
+            sb.Append("  PkiEzsignfoldersignerassociationID: ").Append(PkiEzsignfoldersignerassociationID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
             sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
             sb.Append("  BEzsignfoldersignerassociationReceivecopy: ").Append(BEzsignfoldersignerassociationReceivecopy).Append("\n");
@@ -124,6 +134,11 @@ namespace eZmaxApi.Model
 
             return 
                 (
+                    this.PkiEzsignfoldersignerassociationID == input.PkiEzsignfoldersignerassociationID ||
+                    (this.PkiEzsignfoldersignerassociationID != null &&
+                    this.PkiEzsignfoldersignerassociationID.Equals(input.PkiEzsignfoldersignerassociationID))
+                ) && 
+                (
                     this.FkiUserID == input.FkiUserID ||
                     (this.FkiUserID != null &&
                     this.FkiUserID.Equals(input.FkiUserID))
@@ -149,6 +164,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PkiEzsignfoldersignerassociationID != null)
+                    hashCode = hashCode * 59 + this.PkiEzsignfoldersignerassociationID.GetHashCode();
                 if (this.FkiUserID != null)
                     hashCode = hashCode * 59 + this.FkiUserID.GetHashCode();
                 if (this.FkiEzsignfolderID != null)

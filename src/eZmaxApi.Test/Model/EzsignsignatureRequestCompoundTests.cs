@@ -82,6 +82,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'AObjEzsignsignaturecustomdate'
         }
         /// <summary>
+        /// Test the property 'PkiEzsignsignatureID'
+        /// </summary>
+        [Test]
+        public void PkiEzsignsignatureIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsignsignatureID'
+        }
+        /// <summary>
         /// Test the property 'FkiEzsignfoldersignerassociationID'
         /// </summary>
         [Test]

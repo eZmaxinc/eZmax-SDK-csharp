@@ -38,6 +38,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeRequest" /> class.
         /// </summary>
+        /// <param name="pkiFranchisereferalincomeID">The unique ID of the Franchisereferalincome.</param>
         /// <param name="fkiFranchisebrokerID">The unique ID of the Franchisebroker (required).</param>
         /// <param name="fkiFranchisereferalincomeprogramID">The unique ID of the Franchisereferalincomeprogram (required).</param>
         /// <param name="fkiPeriodID">The unique ID of the Period (required).</param>
@@ -49,7 +50,7 @@ namespace eZmaxApi.Model
         /// <param name="tFranchisereferalincomeComment">A comment about the transaction (required).</param>
         /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
         /// <param name="sFranchisereferalincomeRemoteid">sFranchisereferalincomeRemoteid (required).</param>
-        public FranchisereferalincomeRequest(int fkiFranchisebrokerID = default(int), int fkiFranchisereferalincomeprogramID = default(int), int fkiPeriodID = default(int), string dFranchisereferalincomeLoan = default(string), string dFranchisereferalincomeFranchiseamount = default(string), string dFranchisereferalincomeFranchisoramount = default(string), string dFranchisereferalincomeAgentamount = default(string), string dtFranchisereferalincomeDisbursed = default(string), string tFranchisereferalincomeComment = default(string), int fkiFranchiseofficeID = default(int), string sFranchisereferalincomeRemoteid = default(string))
+        public FranchisereferalincomeRequest(int pkiFranchisereferalincomeID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchisereferalincomeprogramID = default(int), int fkiPeriodID = default(int), string dFranchisereferalincomeLoan = default(string), string dFranchisereferalincomeFranchiseamount = default(string), string dFranchisereferalincomeFranchisoramount = default(string), string dFranchisereferalincomeAgentamount = default(string), string dtFranchisereferalincomeDisbursed = default(string), string tFranchisereferalincomeComment = default(string), int fkiFranchiseofficeID = default(int), string sFranchisereferalincomeRemoteid = default(string))
         {
             // to ensure "fkiFranchisebrokerID" is required (not null)
             if (fkiFranchisebrokerID == null)
@@ -161,7 +162,15 @@ namespace eZmaxApi.Model
                 this.SFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
             }
 
+            this.PkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
         }
+
+        /// <summary>
+        /// The unique ID of the Franchisereferalincome
+        /// </summary>
+        /// <value>The unique ID of the Franchisereferalincome</value>
+        [DataMember(Name="pkiFranchisereferalincomeID", EmitDefaultValue=false)]
+        public int PkiFranchisereferalincomeID { get; set; }
 
         /// <summary>
         /// The unique ID of the Franchisebroker
@@ -247,6 +256,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FranchisereferalincomeRequest {\n");
+            sb.Append("  PkiFranchisereferalincomeID: ").Append(PkiFranchisereferalincomeID).Append("\n");
             sb.Append("  FkiFranchisebrokerID: ").Append(FkiFranchisebrokerID).Append("\n");
             sb.Append("  FkiFranchisereferalincomeprogramID: ").Append(FkiFranchisereferalincomeprogramID).Append("\n");
             sb.Append("  FkiPeriodID: ").Append(FkiPeriodID).Append("\n");
@@ -292,6 +302,11 @@ namespace eZmaxApi.Model
                 return false;
 
             return 
+                (
+                    this.PkiFranchisereferalincomeID == input.PkiFranchisereferalincomeID ||
+                    (this.PkiFranchisereferalincomeID != null &&
+                    this.PkiFranchisereferalincomeID.Equals(input.PkiFranchisereferalincomeID))
+                ) && 
                 (
                     this.FkiFranchisebrokerID == input.FkiFranchisebrokerID ||
                     (this.FkiFranchisebrokerID != null &&
@@ -358,6 +373,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PkiFranchisereferalincomeID != null)
+                    hashCode = hashCode * 59 + this.PkiFranchisereferalincomeID.GetHashCode();
                 if (this.FkiFranchisebrokerID != null)
                     hashCode = hashCode * 59 + this.FkiFranchisebrokerID.GetHashCode();
                 if (this.FkiFranchisereferalincomeprogramID != null)

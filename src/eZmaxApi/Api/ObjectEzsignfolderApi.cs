@@ -68,6 +68,29 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsignfolderDeleteObjectV1Response</returns>
         ApiResponse<EzsignfolderDeleteObjectV1Response> EzsignfolderDeleteObjectV1WithHttpInfo (int pkiEzsignfolderID);
         /// <summary>
+        /// Edit an Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <returns>EzsignfolderEditObjectV1Response</returns>
+        EzsignfolderEditObjectV1Response EzsignfolderEditObjectV1 (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request);
+
+        /// <summary>
+        /// Edit an Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <returns>ApiResponse of EzsignfolderEditObjectV1Response</returns>
+        ApiResponse<EzsignfolderEditObjectV1Response> EzsignfolderEditObjectV1WithHttpInfo (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request);
+        /// <summary>
         /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
         /// </summary>
         /// <remarks>
@@ -274,6 +297,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfolderDeleteObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfolderDeleteObjectV1Response>> EzsignfolderDeleteObjectV1WithHttpInfoAsync (int pkiEzsignfolderID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Edit an Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfolderEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderEditObjectV1Response> EzsignfolderEditObjectV1Async (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Edit an Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfolderEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderEditObjectV1Response>> EzsignfolderEditObjectV1WithHttpInfoAsync (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
         /// </summary>
@@ -862,6 +910,179 @@ namespace eZmaxApi.Api
             return new ApiResponse<EzsignfolderDeleteObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignfolderDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderDeleteObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <returns>EzsignfolderEditObjectV1Response</returns>
+        public EzsignfolderEditObjectV1Response EzsignfolderEditObjectV1 (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request)
+        {
+             ApiResponse<EzsignfolderEditObjectV1Response> localVarResponse = EzsignfolderEditObjectV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit an Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <returns>ApiResponse of EzsignfolderEditObjectV1Response</returns>
+        public ApiResponse<EzsignfolderEditObjectV1Response> EzsignfolderEditObjectV1WithHttpInfo (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request)
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderEditObjectV1");
+            // verify the required parameter 'ezsignfolderEditObjectV1Request' is set
+            if (ezsignfolderEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfolderEditObjectV1Request' when calling ObjectEzsignfolderApi->EzsignfolderEditObjectV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+            if (ezsignfolderEditObjectV1Request != null && ezsignfolderEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfolderEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfolderEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfolderEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfolderEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderEditObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfolderEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderEditObjectV1Response> EzsignfolderEditObjectV1Async (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsignfolderEditObjectV1Response> localVarResponse = await EzsignfolderEditObjectV1WithHttpInfoAsync(pkiEzsignfolderID, ezsignfolderEditObjectV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Edit an Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfolderEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfolderEditObjectV1Response>> EzsignfolderEditObjectV1WithHttpInfoAsync (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderEditObjectV1");
+            // verify the required parameter 'ezsignfolderEditObjectV1Request' is set
+            if (ezsignfolderEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfolderEditObjectV1Request' when calling ObjectEzsignfolderApi->EzsignfolderEditObjectV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+            if (ezsignfolderEditObjectV1Request != null && ezsignfolderEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfolderEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfolderEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfolderEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfolderEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderEditObjectV1Response)));
         }
 
         /// <summary>

@@ -88,6 +88,19 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsignfolderEditObjectV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderEditObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request = null;
+            //var response = instance.EzsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
+            //Assert.IsInstanceOf(typeof(EzsignfolderEditObjectV1Response), response, "response is EzsignfolderEditObjectV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsignfolderGetEzsigndocumentsV1
         /// </summary>
         [Test]
