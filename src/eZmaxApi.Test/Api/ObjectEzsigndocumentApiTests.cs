@@ -175,6 +175,19 @@ namespace eZmaxApi.Test
             //Assert.IsInstanceOf(typeof(EzsigndocumentGetWordsPositionsV1Response), response, "response is EzsigndocumentGetWordsPositionsV1Response");
         }
         
+        /// <summary>
+        /// Test EzsigndocumentPatchObjectV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentPatchObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request = null;
+            //var response = instance.EzsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentPatchObjectV1Response), response, "response is EzsigndocumentPatchObjectV1Response");
+        }
+        
     }
 
 }

@@ -85,8 +85,11 @@ docs/EzsigndocumentGetObjectV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
+docs/EzsigndocumentPatchObjectV1Request.md
+docs/EzsigndocumentPatchObjectV1Response.md
 docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
+docs/EzsigndocumentRequestPatch.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsigndocumentResponseCompoundAllOf.md
@@ -349,7 +352,10 @@ src/eZmaxApi.Test/Model/EzsigndocumentGetObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentPatchObjectV1RequestTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentPatchObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentRequestCompoundTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentRequestPatchTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentRequestTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentResponseCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentResponseCompoundTests.cs
@@ -604,8 +610,11 @@ src/eZmaxApi/Model/EzsigndocumentGetObjectV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1Request.cs
 src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1ResponseAllOf.cs
+src/eZmaxApi/Model/EzsigndocumentPatchObjectV1Request.cs
+src/eZmaxApi/Model/EzsigndocumentPatchObjectV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentRequest.cs
 src/eZmaxApi/Model/EzsigndocumentRequestCompound.cs
+src/eZmaxApi/Model/EzsigndocumentRequestPatch.cs
 src/eZmaxApi/Model/EzsigndocumentResponse.cs
 src/eZmaxApi/Model/EzsigndocumentResponseCompound.cs
 src/eZmaxApi/Model/EzsigndocumentResponseCompoundAllOf.cs
