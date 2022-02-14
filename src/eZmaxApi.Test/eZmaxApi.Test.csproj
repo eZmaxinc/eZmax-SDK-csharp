@@ -81,7 +81,7 @@ Contact: support-api@ezmax.ca
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\eZmaxApi\eZmaxApi.csproj">
-          <Project>{B1260ED2-ABE9-46D6-82D3-92737F577E03}</Project>
+          <Project>{8BA36D92-4DFC-453C-9A95-591166E84EFC}</Project>
           <Name>eZmaxApi</Name>
       </ProjectReference>
   </ItemGroup>
