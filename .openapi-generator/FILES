@@ -158,6 +158,8 @@ docs/EzsignsignatureCreateObjectV1Response.md
 docs/EzsignsignatureCreateObjectV1ResponseAllOf.md
 docs/EzsignsignatureCreateObjectV1ResponseMPayload.md
 docs/EzsignsignatureDeleteObjectV1Response.md
+docs/EzsignsignatureEditObjectV1Request.md
+docs/EzsignsignatureEditObjectV1Response.md
 docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
@@ -425,6 +427,8 @@ src/eZmaxApi.Test/Model/EzsignsignatureCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureCreateObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureCreateObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureDeleteObjectV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsignsignatureEditObjectV1RequestTests.cs
+src/eZmaxApi.Test/Model/EzsignsignatureEditObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureGetObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureGetObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignsignatureRequestCompoundAllOfTests.cs
@@ -683,6 +687,8 @@ src/eZmaxApi/Model/EzsignsignatureCreateObjectV1Response.cs
 src/eZmaxApi/Model/EzsignsignatureCreateObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignsignatureCreateObjectV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsignsignatureDeleteObjectV1Response.cs
+src/eZmaxApi/Model/EzsignsignatureEditObjectV1Request.cs
+src/eZmaxApi/Model/EzsignsignatureEditObjectV1Response.cs
 src/eZmaxApi/Model/EzsignsignatureGetObjectV1Response.cs
 src/eZmaxApi/Model/EzsignsignatureGetObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignsignatureRequest.cs

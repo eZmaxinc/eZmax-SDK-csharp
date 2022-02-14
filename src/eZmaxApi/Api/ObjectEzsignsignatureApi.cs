@@ -68,6 +68,29 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsignsignatureDeleteObjectV1Response</returns>
         ApiResponse<EzsignsignatureDeleteObjectV1Response> EzsignsignatureDeleteObjectV1WithHttpInfo (int pkiEzsignsignatureID);
         /// <summary>
+        /// Edit an existing Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <returns>EzsignsignatureEditObjectV1Response</returns>
+        EzsignsignatureEditObjectV1Response EzsignsignatureEditObjectV1 (int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request);
+
+        /// <summary>
+        /// Edit an existing Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <returns>ApiResponse of EzsignsignatureEditObjectV1Response</returns>
+        ApiResponse<EzsignsignatureEditObjectV1Response> EzsignsignatureEditObjectV1WithHttpInfo (int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request);
+        /// <summary>
         /// Retrieve an existing Ezsignsignature
         /// </summary>
         /// <remarks>
@@ -136,6 +159,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignsignatureDeleteObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignsignatureDeleteObjectV1Response>> EzsignsignatureDeleteObjectV1WithHttpInfoAsync (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Edit an existing Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignsignatureEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsignsignatureEditObjectV1Response> EzsignsignatureEditObjectV1Async (int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Edit an existing Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignsignatureEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignsignatureEditObjectV1Response>> EzsignsignatureEditObjectV1WithHttpInfoAsync (int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignsignature
         /// </summary>
@@ -574,6 +622,179 @@ namespace eZmaxApi.Api
             return new ApiResponse<EzsignsignatureDeleteObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureDeleteObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsignsignature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <returns>EzsignsignatureEditObjectV1Response</returns>
+        public EzsignsignatureEditObjectV1Response EzsignsignatureEditObjectV1 (int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request)
+        {
+             ApiResponse<EzsignsignatureEditObjectV1Response> localVarResponse = EzsignsignatureEditObjectV1WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsignsignature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <returns>ApiResponse of EzsignsignatureEditObjectV1Response</returns>
+        public ApiResponse<EzsignsignatureEditObjectV1Response> EzsignsignatureEditObjectV1WithHttpInfo (int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request)
+        {
+            // verify the required parameter 'pkiEzsignsignatureID' is set
+            if (pkiEzsignsignatureID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignsignatureID' when calling ObjectEzsignsignatureApi->EzsignsignatureEditObjectV1");
+            // verify the required parameter 'ezsignsignatureEditObjectV1Request' is set
+            if (ezsignsignatureEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignsignatureEditObjectV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureEditObjectV1");
+
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignsignatureID != null) localVarPathParams.Add("pkiEzsignsignatureID", this.Configuration.ApiClient.ParameterToString(pkiEzsignsignatureID)); // path parameter
+            if (ezsignsignatureEditObjectV1Request != null && ezsignsignatureEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignsignatureEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignsignatureEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignsignatureEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignsignatureEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignsignatureEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureEditObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsignsignature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignsignatureEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignsignatureEditObjectV1Response> EzsignsignatureEditObjectV1Async (int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsignsignatureEditObjectV1Response> localVarResponse = await EzsignsignatureEditObjectV1WithHttpInfoAsync(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsignsignature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignsignatureEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignsignatureEditObjectV1Response>> EzsignsignatureEditObjectV1WithHttpInfoAsync (int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsignsignatureID' is set
+            if (pkiEzsignsignatureID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignsignatureID' when calling ObjectEzsignsignatureApi->EzsignsignatureEditObjectV1");
+            // verify the required parameter 'ezsignsignatureEditObjectV1Request' is set
+            if (ezsignsignatureEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignsignatureEditObjectV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureEditObjectV1");
+
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignsignatureID != null) localVarPathParams.Add("pkiEzsignsignatureID", this.Configuration.ApiClient.ParameterToString(pkiEzsignsignatureID)); // path parameter
+            if (ezsignsignatureEditObjectV1Request != null && ezsignsignatureEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignsignatureEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignsignatureEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignsignatureEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignsignatureEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignsignatureEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureEditObjectV1Response)));
         }
 
         /// <summary>

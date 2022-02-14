@@ -88,6 +88,19 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsignsignatureEditObjectV1
+        /// </summary>
+        [Test]
+        public void EzsignsignatureEditObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignsignatureID = null;
+            //EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request = null;
+            //var response = instance.EzsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request);
+            //Assert.IsInstanceOf(typeof(EzsignsignatureEditObjectV1Response), response, "response is EzsignsignatureEditObjectV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsignsignatureGetObjectV1
         /// </summary>
         [Test]
