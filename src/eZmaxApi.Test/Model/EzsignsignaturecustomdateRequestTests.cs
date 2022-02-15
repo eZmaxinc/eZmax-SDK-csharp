@@ -66,6 +66,14 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
+        /// Test the property 'PkiEzsignsignaturecustomdateID'
+        /// </summary>
+        [Test]
+        public void PkiEzsignsignaturecustomdateIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsignsignaturecustomdateID'
+        }
+        /// <summary>
         /// Test the property 'IEzsignsignaturecustomdateX'
         /// </summary>
         [Test]
