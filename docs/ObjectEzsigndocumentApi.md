@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ## EzsigndocumentEditEzsignsignaturesV1
 
-> EzsigndocumentEditEzsignsignaturesV1Response EzsigndocumentEditEzsignsignaturesV1 (int pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound)
+> EzsigndocumentEditEzsignsignaturesV1Response EzsigndocumentEditEzsignsignaturesV1 (int pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request)
 
 Edit multiple ezsignsignatures
 
@@ -382,12 +382,12 @@ namespace Example
 
             var apiInstance = new ObjectEzsigndocumentApi(Configuration.Default);
             var pkiEzsigndocumentID = 56;  // int | 
-            var ezsignsignatureRequestCompound = new List<EzsignsignatureRequestCompound>(); // List<EzsignsignatureRequestCompound> | 
+            var ezsigndocumentEditEzsignsignaturesV1Request = new EzsigndocumentEditEzsignsignaturesV1Request(); // EzsigndocumentEditEzsignsignaturesV1Request | 
 
             try
             {
                 // Edit multiple ezsignsignatures
-                EzsigndocumentEditEzsignsignaturesV1Response result = apiInstance.EzsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsignsignatureRequestCompound);
+                EzsigndocumentEditEzsignsignaturesV1Response result = apiInstance.EzsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -407,7 +407,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigndocumentID** | **int**|  | 
- **ezsignsignatureRequestCompound** | [**List&lt;EzsignsignatureRequestCompound&gt;**](EzsignsignatureRequestCompound.md)|  | 
+ **ezsigndocumentEditEzsignsignaturesV1Request** | [**EzsigndocumentEditEzsignsignaturesV1Request**](EzsigndocumentEditEzsignsignaturesV1Request.md)|  | 
 
 ### Return type
 
