@@ -70,6 +70,7 @@ docs/EzsigndocumentCreateObjectV1Response.md
 docs/EzsigndocumentCreateObjectV1ResponseAllOf.md
 docs/EzsigndocumentCreateObjectV1ResponseMPayload.md
 docs/EzsigndocumentDeleteObjectV1Response.md
+docs/EzsigndocumentEditEzsignsignaturesV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
@@ -339,6 +340,7 @@ src/eZmaxApi.Test/Model/EzsigndocumentCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentCreateObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentCreateObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentDeleteObjectV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentEditEzsignsignaturesV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetDownloadUrlV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetDownloadUrlV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetDownloadUrlV1ResponseTests.cs
@@ -599,6 +601,7 @@ src/eZmaxApi/Model/EzsigndocumentCreateObjectV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentCreateObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsigndocumentCreateObjectV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigndocumentDeleteObjectV1Response.cs
+src/eZmaxApi/Model/EzsigndocumentEditEzsignsignaturesV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetDownloadUrlV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetDownloadUrlV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.cs

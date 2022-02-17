@@ -68,7 +68,7 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsignfolderDeleteObjectV1Response</returns>
         ApiResponse<EzsignfolderDeleteObjectV1Response> EzsignfolderDeleteObjectV1WithHttpInfo (int pkiEzsignfolderID);
         /// <summary>
-        /// Modify an existing Ezsignfolder
+        /// Edit an existing Ezsignfolder
         /// </summary>
         /// <remarks>
         /// 
@@ -80,7 +80,7 @@ namespace eZmaxApi.Api
         EzsignfolderEditObjectV1Response EzsignfolderEditObjectV1 (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request);
 
         /// <summary>
-        /// Modify an existing Ezsignfolder
+        /// Edit an existing Ezsignfolder
         /// </summary>
         /// <remarks>
         /// 
@@ -298,7 +298,7 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsignfolderDeleteObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfolderDeleteObjectV1Response>> EzsignfolderDeleteObjectV1WithHttpInfoAsync (int pkiEzsignfolderID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Modify an existing Ezsignfolder
+        /// Edit an existing Ezsignfolder
         /// </summary>
         /// <remarks>
         /// 
@@ -311,7 +311,7 @@ namespace eZmaxApi.Api
         System.Threading.Tasks.Task<EzsignfolderEditObjectV1Response> EzsignfolderEditObjectV1Async (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Modify an existing Ezsignfolder
+        /// Edit an existing Ezsignfolder
         /// </summary>
         /// <remarks>
         /// 
@@ -913,7 +913,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Modify an existing Ezsignfolder 
+        /// Edit an existing Ezsignfolder 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -926,7 +926,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Modify an existing Ezsignfolder 
+        /// Edit an existing Ezsignfolder 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -998,7 +998,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Modify an existing Ezsignfolder 
+        /// Edit an existing Ezsignfolder 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1013,7 +1013,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Modify an existing Ezsignfolder 
+        /// Edit an existing Ezsignfolder 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
