@@ -25,33 +25,39 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the /1/object/ezsigndocument/editObject API Request
+    /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
     /// </summary>
     [DataContract]
-    public partial class UNUSEDEzsigndocumentEditObjectV1Response :  IEquatable<UNUSEDEzsigndocumentEditObjectV1Response>, IValidatableObject
+    public partial class EzsigndocumentGetTemporaryProofV1ResponseMPayload :  IEquatable<EzsigndocumentGetTemporaryProofV1ResponseMPayload>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UNUSEDEzsigndocumentEditObjectV1Response" /> class.
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetTemporaryProofV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
-        /// <param name="objDebug">objDebug.</param>
-        public UNUSEDEzsigndocumentEditObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        [JsonConstructorAttribute]
+        protected EzsigndocumentGetTemporaryProofV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetTemporaryProofV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEzsigndocumentlog">aObjEzsigndocumentlog (required).</param>
+        public EzsigndocumentGetTemporaryProofV1ResponseMPayload(EzsigndocumentlogResponse aObjEzsigndocumentlog = default(EzsigndocumentlogResponse))
         {
-            this.ObjDebugPayload = objDebugPayload;
-            this.ObjDebug = objDebug;
+            // to ensure "aObjEzsigndocumentlog" is required (not null)
+            if (aObjEzsigndocumentlog == null)
+            {
+                throw new InvalidDataException("aObjEzsigndocumentlog is a required property for EzsigndocumentGetTemporaryProofV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsigndocumentlog = aObjEzsigndocumentlog;
+            }
+
         }
 
         /// <summary>
-        /// Gets or Sets ObjDebugPayload
+        /// Gets or Sets AObjEzsigndocumentlog
         /// </summary>
-        [DataMember(Name="objDebugPayload", EmitDefaultValue=false)]
-        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjDebug
-        /// </summary>
-        [DataMember(Name="objDebug", EmitDefaultValue=false)]
-        public CommonResponseObjDebug ObjDebug { get; set; }
+        [DataMember(Name="a_objEzsigndocumentlog", EmitDefaultValue=true)]
+        public EzsigndocumentlogResponse AObjEzsigndocumentlog { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,9 +66,8 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UNUSEDEzsigndocumentEditObjectV1Response {\n");
-            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
-            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
+            sb.Append("class EzsigndocumentGetTemporaryProofV1ResponseMPayload {\n");
+            sb.Append("  AObjEzsigndocumentlog: ").Append(AObjEzsigndocumentlog).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,29 +88,24 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as UNUSEDEzsigndocumentEditObjectV1Response);
+            return this.Equals(input as EzsigndocumentGetTemporaryProofV1ResponseMPayload);
         }
 
         /// <summary>
-        /// Returns true if UNUSEDEzsigndocumentEditObjectV1Response instances are equal
+        /// Returns true if EzsigndocumentGetTemporaryProofV1ResponseMPayload instances are equal
         /// </summary>
-        /// <param name="input">Instance of UNUSEDEzsigndocumentEditObjectV1Response to be compared</param>
+        /// <param name="input">Instance of EzsigndocumentGetTemporaryProofV1ResponseMPayload to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UNUSEDEzsigndocumentEditObjectV1Response input)
+        public bool Equals(EzsigndocumentGetTemporaryProofV1ResponseMPayload input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.ObjDebugPayload == input.ObjDebugPayload ||
-                    (this.ObjDebugPayload != null &&
-                    this.ObjDebugPayload.Equals(input.ObjDebugPayload))
-                ) && 
-                (
-                    this.ObjDebug == input.ObjDebug ||
-                    (this.ObjDebug != null &&
-                    this.ObjDebug.Equals(input.ObjDebug))
+                    this.AObjEzsigndocumentlog == input.AObjEzsigndocumentlog ||
+                    (this.AObjEzsigndocumentlog != null &&
+                    this.AObjEzsigndocumentlog.Equals(input.AObjEzsigndocumentlog))
                 );
         }
 
@@ -118,10 +118,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ObjDebugPayload != null)
-                    hashCode = hashCode * 59 + this.ObjDebugPayload.GetHashCode();
-                if (this.ObjDebug != null)
-                    hashCode = hashCode * 59 + this.ObjDebug.GetHashCode();
+                if (this.AObjEzsigndocumentlog != null)
+                    hashCode = hashCode * 59 + this.AObjEzsigndocumentlog.GetHashCode();
                 return hashCode;
             }
         }

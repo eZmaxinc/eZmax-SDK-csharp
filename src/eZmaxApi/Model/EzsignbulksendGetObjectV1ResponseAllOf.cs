@@ -25,25 +25,39 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Request for the /1/object/ezsigndocument/editObject API Request
+    /// EzsignbulksendGetObjectV1ResponseAllOf
     /// </summary>
     [DataContract]
-    public partial class UNUSEDEzsigndocumentEditObjectV1Request :  IEquatable<UNUSEDEzsigndocumentEditObjectV1Request>, IValidatableObject
+    public partial class EzsignbulksendGetObjectV1ResponseAllOf :  IEquatable<EzsignbulksendGetObjectV1ResponseAllOf>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UNUSEDEzsigndocumentEditObjectV1Request" /> class.
+        /// Initializes a new instance of the <see cref="EzsignbulksendGetObjectV1ResponseAllOf" /> class.
         /// </summary>
-        /// <param name="objEzsigndocument">objEzsigndocument.</param>
-        public UNUSEDEzsigndocumentEditObjectV1Request(EzsigndocumentRequest objEzsigndocument = default(EzsigndocumentRequest))
+        [JsonConstructorAttribute]
+        protected EzsignbulksendGetObjectV1ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendGetObjectV1ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzsignbulksendGetObjectV1ResponseAllOf(EzsignbulksendGetObjectV1ResponseMPayload mPayload = default(EzsignbulksendGetObjectV1ResponseMPayload))
         {
-            this.ObjEzsigndocument = objEzsigndocument;
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
+            {
+                throw new InvalidDataException("mPayload is a required property for EzsignbulksendGetObjectV1ResponseAllOf and cannot be null");
+            }
+            else
+            {
+                this.MPayload = mPayload;
+            }
+
         }
 
         /// <summary>
-        /// Gets or Sets ObjEzsigndocument
+        /// Gets or Sets MPayload
         /// </summary>
-        [DataMember(Name="objEzsigndocument", EmitDefaultValue=false)]
-        public EzsigndocumentRequest ObjEzsigndocument { get; set; }
+        [DataMember(Name="mPayload", EmitDefaultValue=true)]
+        public EzsignbulksendGetObjectV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,8 +66,8 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UNUSEDEzsigndocumentEditObjectV1Request {\n");
-            sb.Append("  ObjEzsigndocument: ").Append(ObjEzsigndocument).Append("\n");
+            sb.Append("class EzsignbulksendGetObjectV1ResponseAllOf {\n");
+            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -74,24 +88,24 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as UNUSEDEzsigndocumentEditObjectV1Request);
+            return this.Equals(input as EzsignbulksendGetObjectV1ResponseAllOf);
         }
 
         /// <summary>
-        /// Returns true if UNUSEDEzsigndocumentEditObjectV1Request instances are equal
+        /// Returns true if EzsignbulksendGetObjectV1ResponseAllOf instances are equal
         /// </summary>
-        /// <param name="input">Instance of UNUSEDEzsigndocumentEditObjectV1Request to be compared</param>
+        /// <param name="input">Instance of EzsignbulksendGetObjectV1ResponseAllOf to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UNUSEDEzsigndocumentEditObjectV1Request input)
+        public bool Equals(EzsignbulksendGetObjectV1ResponseAllOf input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.ObjEzsigndocument == input.ObjEzsigndocument ||
-                    (this.ObjEzsigndocument != null &&
-                    this.ObjEzsigndocument.Equals(input.ObjEzsigndocument))
+                    this.MPayload == input.MPayload ||
+                    (this.MPayload != null &&
+                    this.MPayload.Equals(input.MPayload))
                 );
         }
 
@@ -104,8 +118,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ObjEzsigndocument != null)
-                    hashCode = hashCode * 59 + this.ObjEzsigndocument.GetHashCode();
+                if (this.MPayload != null)
+                    hashCode = hashCode * 59 + this.MPayload.GetHashCode();
                 return hashCode;
             }
         }

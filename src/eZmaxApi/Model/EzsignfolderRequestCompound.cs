@@ -42,7 +42,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
         /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**| (required).</param>
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
-        /// <param name="tEzsignfolderNote">Somes extra notes about the eZsign Folder (required).</param>
+        /// <param name="tEzsignfolderNote">Note about the Ezsignfolder (required).</param>
         /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency (required).</param>
         public EzsignfolderRequestCompound(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiEzsigntsarequirementID = default(int), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency))
         {
@@ -128,9 +128,9 @@ namespace eZmaxApi.Model
         public string SEzsignfolderDescription { get; set; }
 
         /// <summary>
-        /// Somes extra notes about the eZsign Folder
+        /// Note about the Ezsignfolder
         /// </summary>
-        /// <value>Somes extra notes about the eZsign Folder</value>
+        /// <value>Note about the Ezsignfolder</value>
         [DataMember(Name="tEzsignfolderNote", EmitDefaultValue=true)]
         public string TEzsignfolderNote { get; set; }
 

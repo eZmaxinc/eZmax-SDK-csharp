@@ -25,17 +25,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the /1/object/ezsignfolder/editObject API Request
+    /// Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/endPrematurely API Request
     /// </summary>
     [DataContract]
-    public partial class UNUSEDEzsignfolderEditObjectV1Response :  IEquatable<UNUSEDEzsignfolderEditObjectV1Response>, IValidatableObject
+    public partial class EzsigndocumentEndPrematurelyV1Response :  IEquatable<EzsigndocumentEndPrematurelyV1Response>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UNUSEDEzsignfolderEditObjectV1Response" /> class.
+        /// Initializes a new instance of the <see cref="EzsigndocumentEndPrematurelyV1Response" /> class.
         /// </summary>
         /// <param name="objDebugPayload">objDebugPayload.</param>
         /// <param name="objDebug">objDebug.</param>
-        public UNUSEDEzsignfolderEditObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        public EzsigndocumentEndPrematurelyV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             this.ObjDebugPayload = objDebugPayload;
             this.ObjDebug = objDebug;
@@ -60,7 +60,7 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UNUSEDEzsignfolderEditObjectV1Response {\n");
+            sb.Append("class EzsigndocumentEndPrematurelyV1Response {\n");
             sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
             sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
             sb.Append("}\n");
@@ -83,15 +83,15 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as UNUSEDEzsignfolderEditObjectV1Response);
+            return this.Equals(input as EzsigndocumentEndPrematurelyV1Response);
         }
 
         /// <summary>
-        /// Returns true if UNUSEDEzsignfolderEditObjectV1Response instances are equal
+        /// Returns true if EzsigndocumentEndPrematurelyV1Response instances are equal
         /// </summary>
-        /// <param name="input">Instance of UNUSEDEzsignfolderEditObjectV1Response to be compared</param>
+        /// <param name="input">Instance of EzsigndocumentEndPrematurelyV1Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UNUSEDEzsignfolderEditObjectV1Response input)
+        public bool Equals(EzsigndocumentEndPrematurelyV1Response input)
         {
             if (input == null)
                 return false;

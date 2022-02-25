@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **DFranchisereferalincomeFranchisoramount** | **string** | The amount that will be kept by the franchisor | 
 **DFranchisereferalincomeAgentamount** | **string** | The amount that will be given to the agent | 
 **DtFranchisereferalincomeDisbursed** | **string** | The date the amounts were disbursed | 
-**TFranchisereferalincomeComment** | **string** | A comment about the transaction | 
+**TFranchisereferalincomeComment** | **string** | Comment about the transaction | 
 **FkiFranchiseofficeID** | **int** | The unique ID of the Franchisereoffice | 
 **SFranchisereferalincomeRemoteid** | **string** |  | 
 

@@ -25,21 +25,43 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the /1/object/ezsignfoldersignerassociation/editObject API Request
+    /// Response for the /1/object/ezsignbulksend/getObject API Request
     /// </summary>
     [DataContract]
-    public partial class UNUSEDEzsignfoldersignerassociationEditObjectV1Response :  IEquatable<UNUSEDEzsignfoldersignerassociationEditObjectV1Response>, IValidatableObject
+    public partial class EzsignbulksendGetObjectV1Response :  IEquatable<EzsignbulksendGetObjectV1Response>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UNUSEDEzsignfoldersignerassociationEditObjectV1Response" /> class.
+        /// Initializes a new instance of the <see cref="EzsignbulksendGetObjectV1Response" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendGetObjectV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendGetObjectV1Response" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
         /// <param name="objDebugPayload">objDebugPayload.</param>
         /// <param name="objDebug">objDebug.</param>
-        public UNUSEDEzsignfoldersignerassociationEditObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        public EzsignbulksendGetObjectV1Response(EzsignbulksendGetObjectV1ResponseMPayload mPayload = default(EzsignbulksendGetObjectV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
+            {
+                throw new InvalidDataException("mPayload is a required property for EzsignbulksendGetObjectV1Response and cannot be null");
+            }
+            else
+            {
+                this.MPayload = mPayload;
+            }
+
             this.ObjDebugPayload = objDebugPayload;
             this.ObjDebug = objDebug;
         }
+
+        /// <summary>
+        /// Gets or Sets MPayload
+        /// </summary>
+        [DataMember(Name="mPayload", EmitDefaultValue=true)]
+        public EzsignbulksendGetObjectV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjDebugPayload
@@ -60,7 +82,8 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {\n");
+            sb.Append("class EzsignbulksendGetObjectV1Response {\n");
+            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
             sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
             sb.Append("}\n");
@@ -83,20 +106,25 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as UNUSEDEzsignfoldersignerassociationEditObjectV1Response);
+            return this.Equals(input as EzsignbulksendGetObjectV1Response);
         }
 
         /// <summary>
-        /// Returns true if UNUSEDEzsignfoldersignerassociationEditObjectV1Response instances are equal
+        /// Returns true if EzsignbulksendGetObjectV1Response instances are equal
         /// </summary>
-        /// <param name="input">Instance of UNUSEDEzsignfoldersignerassociationEditObjectV1Response to be compared</param>
+        /// <param name="input">Instance of EzsignbulksendGetObjectV1Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UNUSEDEzsignfoldersignerassociationEditObjectV1Response input)
+        public bool Equals(EzsignbulksendGetObjectV1Response input)
         {
             if (input == null)
                 return false;
 
             return 
+                (
+                    this.MPayload == input.MPayload ||
+                    (this.MPayload != null &&
+                    this.MPayload.Equals(input.MPayload))
+                ) && 
                 (
                     this.ObjDebugPayload == input.ObjDebugPayload ||
                     (this.ObjDebugPayload != null &&
@@ -118,6 +146,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.MPayload != null)
+                    hashCode = hashCode * 59 + this.MPayload.GetHashCode();
                 if (this.ObjDebugPayload != null)
                     hashCode = hashCode * 59 + this.ObjDebugPayload.GetHashCode();
                 if (this.ObjDebug != null)

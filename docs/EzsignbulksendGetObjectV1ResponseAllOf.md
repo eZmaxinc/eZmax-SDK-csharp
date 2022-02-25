@@ -1,11 +1,11 @@
 
-# eZmaxApi.Model.UNUSEDEzsignfolderEditObjectV1Request
+# eZmaxApi.Model.EzsignbulksendGetObjectV1ResponseAllOf
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjEzsignfolder** | [**EzsignfolderRequest**](EzsignfolderRequest.md) |  | [optional] 
+**MPayload** | [**EzsignbulksendGetObjectV1ResponseMPayload**](EzsignbulksendGetObjectV1ResponseMPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

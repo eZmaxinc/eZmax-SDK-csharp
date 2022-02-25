@@ -60,7 +60,12 @@ docs/EzsignbulksendGetListV1Response.md
 docs/EzsignbulksendGetListV1ResponseAllOf.md
 docs/EzsignbulksendGetListV1ResponseMPayload.md
 docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
+docs/EzsignbulksendGetObjectV1Response.md
+docs/EzsignbulksendGetObjectV1ResponseAllOf.md
+docs/EzsignbulksendGetObjectV1ResponseMPayload.md
 docs/EzsignbulksendListElement.md
+docs/EzsignbulksendResponse.md
+docs/EzsignbulksendResponseCompound.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
 docs/EzsigndocumentApplyEzsigntemplateV2Request.md
@@ -72,6 +77,7 @@ docs/EzsigndocumentCreateObjectV1ResponseMPayload.md
 docs/EzsigndocumentDeleteObjectV1Response.md
 docs/EzsigndocumentEditEzsignsignaturesV1Request.md
 docs/EzsigndocumentEditEzsignsignaturesV1Response.md
+docs/EzsigndocumentEndPrematurelyV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
@@ -84,6 +90,9 @@ docs/EzsigndocumentGetFormDataV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
 docs/EzsigndocumentGetObjectV1ResponseAllOf.md
 docs/EzsigndocumentGetObjectV1ResponseMPayload.md
+docs/EzsigndocumentGetTemporaryProofV1Response.md
+docs/EzsigndocumentGetTemporaryProofV1ResponseAllOf.md
+docs/EzsigndocumentGetTemporaryProofV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
@@ -95,6 +104,7 @@ docs/EzsigndocumentRequestPatch.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsigndocumentResponseCompoundAllOf.md
+docs/EzsigndocumentlogResponse.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
@@ -184,6 +194,7 @@ docs/EzsigntemplatepackageListElement.md
 docs/FieldEActivesessionSessiontype.md
 docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
+docs/FieldEEzsigndocumentlogType.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
 docs/FieldEEzsignfoldertypePrivacylevel.md
@@ -210,7 +221,6 @@ docs/ListSaveListpresentationV1Response.md
 docs/ListpresentationRequest.md
 docs/ModuleAuthenticateApi.md
 docs/ModuleListApi.md
-docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
@@ -233,14 +243,6 @@ docs/SsprSendUsernamesV1Request.md
 docs/SsprUnlockAccountRequestV1Request.md
 docs/SsprUnlockAccountV1Request.md
 docs/SsprValidateTokenV1Request.md
-docs/UNUSEDEzsigndocumentEditObjectV1Request.md
-docs/UNUSEDEzsigndocumentEditObjectV1Response.md
-docs/UNUSEDEzsignfolderEditObjectV1Request.md
-docs/UNUSEDEzsignfolderEditObjectV1Response.md
-docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.md
-docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.md
-docs/UNUSEDEzsignsignatureEditObjectV1Request.md
-docs/UNUSEDEzsignsignatureEditObjectV1Response.md
 docs/UserCreateEzsignuserV1Request.md
 docs/UserCreateEzsignuserV1Response.md
 docs/UserCreateEzsignuserV1ResponseAllOf.md
@@ -260,7 +262,6 @@ mono_nunit_test.sh
 src/eZmaxApi.Test/Api/GlobalCustomerApiTests.cs
 src/eZmaxApi.Test/Api/ModuleAuthenticateApiTests.cs
 src/eZmaxApi.Test/Api/ModuleListApiTests.cs
-src/eZmaxApi.Test/Api/ModuleSsprApiTests.cs
 src/eZmaxApi.Test/Api/ModuleUserApiTests.cs
 src/eZmaxApi.Test/Api/ObjectActivesessionApiTests.cs
 src/eZmaxApi.Test/Api/ObjectApikeyApiTests.cs
@@ -331,7 +332,12 @@ src/eZmaxApi.Test/Model/EzsignbulksendGetListV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignbulksendGetListV1ResponseMPayloadAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignbulksendGetListV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsignbulksendGetListV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsignbulksendGetObjectV1ResponseAllOfTests.cs
+src/eZmaxApi.Test/Model/EzsignbulksendGetObjectV1ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/EzsignbulksendGetObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignbulksendListElementTests.cs
+src/eZmaxApi.Test/Model/EzsignbulksendResponseCompoundTests.cs
+src/eZmaxApi.Test/Model/EzsignbulksendResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentApplyEzsigntemplateV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentApplyEzsigntemplateV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentApplyEzsigntemplateV2RequestTests.cs
@@ -343,6 +349,7 @@ src/eZmaxApi.Test/Model/EzsigndocumentCreateObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentDeleteObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentEditEzsignsignaturesV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentEditEzsignsignaturesV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentEndPrematurelyV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetDownloadUrlV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetDownloadUrlV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetDownloadUrlV1ResponseTests.cs
@@ -355,6 +362,9 @@ src/eZmaxApi.Test/Model/EzsigndocumentGetFormDataV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetObjectV1ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentGetTemporaryProofV1ResponseAllOfTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentGetTemporaryProofV1ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentGetTemporaryProofV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentGetWordsPositionsV1ResponseTests.cs
@@ -366,6 +376,7 @@ src/eZmaxApi.Test/Model/EzsigndocumentRequestTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentResponseCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentResponseCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsigndocumentResponseTests.cs
+src/eZmaxApi.Test/Model/EzsigndocumentlogResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderCreateObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderCreateObjectV1ResponseMPayloadTests.cs
@@ -455,6 +466,7 @@ src/eZmaxApi.Test/Model/EzsigntemplatepackageListElementTests.cs
 src/eZmaxApi.Test/Model/FieldEActivesessionSessiontypeTests.cs
 src/eZmaxApi.Test/Model/FieldEActivesessionWeekdaystartTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsigndocumentStepTests.cs
+src/eZmaxApi.Test/Model/FieldEEzsigndocumentlogTypeTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsignfolderSendreminderfrequencyTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsignfolderStepTests.cs
 src/eZmaxApi.Test/Model/FieldEEzsignfoldertypePrivacylevelTests.cs
@@ -486,14 +498,6 @@ src/eZmaxApi.Test/Model/SsprSendUsernamesV1RequestTests.cs
 src/eZmaxApi.Test/Model/SsprUnlockAccountRequestV1RequestTests.cs
 src/eZmaxApi.Test/Model/SsprUnlockAccountV1RequestTests.cs
 src/eZmaxApi.Test/Model/SsprValidateTokenV1RequestTests.cs
-src/eZmaxApi.Test/Model/UNUSEDEzsigndocumentEditObjectV1RequestTests.cs
-src/eZmaxApi.Test/Model/UNUSEDEzsigndocumentEditObjectV1ResponseTests.cs
-src/eZmaxApi.Test/Model/UNUSEDEzsignfolderEditObjectV1RequestTests.cs
-src/eZmaxApi.Test/Model/UNUSEDEzsignfolderEditObjectV1ResponseTests.cs
-src/eZmaxApi.Test/Model/UNUSEDEzsignfoldersignerassociationEditObjectV1RequestTests.cs
-src/eZmaxApi.Test/Model/UNUSEDEzsignfoldersignerassociationEditObjectV1ResponseTests.cs
-src/eZmaxApi.Test/Model/UNUSEDEzsignsignatureEditObjectV1RequestTests.cs
-src/eZmaxApi.Test/Model/UNUSEDEzsignsignatureEditObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/UserCreateEzsignuserV1RequestTests.cs
 src/eZmaxApi.Test/Model/UserCreateEzsignuserV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/UserCreateEzsignuserV1ResponseMPayloadTests.cs
@@ -512,7 +516,6 @@ src/eZmaxApi.Test/packages.config
 src/eZmaxApi/Api/GlobalCustomerApi.cs
 src/eZmaxApi/Api/ModuleAuthenticateApi.cs
 src/eZmaxApi/Api/ModuleListApi.cs
-src/eZmaxApi/Api/ModuleSsprApi.cs
 src/eZmaxApi/Api/ModuleUserApi.cs
 src/eZmaxApi/Api/ObjectActivesessionApi.cs
 src/eZmaxApi/Api/ObjectApikeyApi.cs
@@ -593,7 +596,12 @@ src/eZmaxApi/Model/EzsignbulksendGetListV1Response.cs
 src/eZmaxApi/Model/EzsignbulksendGetListV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignbulksendGetListV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsignbulksendGetListV1ResponseMPayloadAllOf.cs
+src/eZmaxApi/Model/EzsignbulksendGetObjectV1Response.cs
+src/eZmaxApi/Model/EzsignbulksendGetObjectV1ResponseAllOf.cs
+src/eZmaxApi/Model/EzsignbulksendGetObjectV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsignbulksendListElement.cs
+src/eZmaxApi/Model/EzsignbulksendResponse.cs
+src/eZmaxApi/Model/EzsignbulksendResponseCompound.cs
 src/eZmaxApi/Model/EzsigndocumentApplyEzsigntemplateV1Request.cs
 src/eZmaxApi/Model/EzsigndocumentApplyEzsigntemplateV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentApplyEzsigntemplateV2Request.cs
@@ -605,6 +613,7 @@ src/eZmaxApi/Model/EzsigndocumentCreateObjectV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigndocumentDeleteObjectV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentEditEzsignsignaturesV1Request.cs
 src/eZmaxApi/Model/EzsigndocumentEditEzsignsignaturesV1Response.cs
+src/eZmaxApi/Model/EzsigndocumentEndPrematurelyV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetDownloadUrlV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetDownloadUrlV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.cs
@@ -617,6 +626,9 @@ src/eZmaxApi/Model/EzsigndocumentGetFormDataV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigndocumentGetObjectV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/EzsigndocumentGetObjectV1ResponseMPayload.cs
+src/eZmaxApi/Model/EzsigndocumentGetTemporaryProofV1Response.cs
+src/eZmaxApi/Model/EzsigndocumentGetTemporaryProofV1ResponseAllOf.cs
+src/eZmaxApi/Model/EzsigndocumentGetTemporaryProofV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1Request.cs
 src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1Response.cs
 src/eZmaxApi/Model/EzsigndocumentGetWordsPositionsV1ResponseAllOf.cs
@@ -628,6 +640,7 @@ src/eZmaxApi/Model/EzsigndocumentRequestPatch.cs
 src/eZmaxApi/Model/EzsigndocumentResponse.cs
 src/eZmaxApi/Model/EzsigndocumentResponseCompound.cs
 src/eZmaxApi/Model/EzsigndocumentResponseCompoundAllOf.cs
+src/eZmaxApi/Model/EzsigndocumentlogResponse.cs
 src/eZmaxApi/Model/EzsignfolderCreateObjectV1Request.cs
 src/eZmaxApi/Model/EzsignfolderCreateObjectV1Response.cs
 src/eZmaxApi/Model/EzsignfolderCreateObjectV1ResponseAllOf.cs
@@ -717,6 +730,7 @@ src/eZmaxApi/Model/EzsigntemplatepackageListElement.cs
 src/eZmaxApi/Model/FieldEActivesessionSessiontype.cs
 src/eZmaxApi/Model/FieldEActivesessionWeekdaystart.cs
 src/eZmaxApi/Model/FieldEEzsigndocumentStep.cs
+src/eZmaxApi/Model/FieldEEzsigndocumentlogType.cs
 src/eZmaxApi/Model/FieldEEzsignfolderSendreminderfrequency.cs
 src/eZmaxApi/Model/FieldEEzsignfolderStep.cs
 src/eZmaxApi/Model/FieldEEzsignfoldertypePrivacylevel.cs
@@ -748,14 +762,6 @@ src/eZmaxApi/Model/SsprSendUsernamesV1Request.cs
 src/eZmaxApi/Model/SsprUnlockAccountRequestV1Request.cs
 src/eZmaxApi/Model/SsprUnlockAccountV1Request.cs
 src/eZmaxApi/Model/SsprValidateTokenV1Request.cs
-src/eZmaxApi/Model/UNUSEDEzsigndocumentEditObjectV1Request.cs
-src/eZmaxApi/Model/UNUSEDEzsigndocumentEditObjectV1Response.cs
-src/eZmaxApi/Model/UNUSEDEzsignfolderEditObjectV1Request.cs
-src/eZmaxApi/Model/UNUSEDEzsignfolderEditObjectV1Response.cs
-src/eZmaxApi/Model/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.cs
-src/eZmaxApi/Model/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.cs
-src/eZmaxApi/Model/UNUSEDEzsignsignatureEditObjectV1Request.cs
-src/eZmaxApi/Model/UNUSEDEzsignsignatureEditObjectV1Response.cs
 src/eZmaxApi/Model/UserCreateEzsignuserV1Request.cs
 src/eZmaxApi/Model/UserCreateEzsignuserV1Response.cs
 src/eZmaxApi/Model/UserCreateEzsignuserV1ResponseAllOf.cs

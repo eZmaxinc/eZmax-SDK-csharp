@@ -25,21 +25,43 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the /1/object/ezsignsignature/editObject API Request
+    /// Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
     /// </summary>
     [DataContract]
-    public partial class UNUSEDEzsignsignatureEditObjectV1Response :  IEquatable<UNUSEDEzsignsignatureEditObjectV1Response>, IValidatableObject
+    public partial class EzsigndocumentGetTemporaryProofV1Response :  IEquatable<EzsigndocumentGetTemporaryProofV1Response>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UNUSEDEzsignsignatureEditObjectV1Response" /> class.
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetTemporaryProofV1Response" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentGetTemporaryProofV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetTemporaryProofV1Response" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
         /// <param name="objDebugPayload">objDebugPayload.</param>
         /// <param name="objDebug">objDebug.</param>
-        public UNUSEDEzsignsignatureEditObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        public EzsigndocumentGetTemporaryProofV1Response(EzsigndocumentGetTemporaryProofV1ResponseMPayload mPayload = default(EzsigndocumentGetTemporaryProofV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
+            {
+                throw new InvalidDataException("mPayload is a required property for EzsigndocumentGetTemporaryProofV1Response and cannot be null");
+            }
+            else
+            {
+                this.MPayload = mPayload;
+            }
+
             this.ObjDebugPayload = objDebugPayload;
             this.ObjDebug = objDebug;
         }
+
+        /// <summary>
+        /// Gets or Sets MPayload
+        /// </summary>
+        [DataMember(Name="mPayload", EmitDefaultValue=true)]
+        public EzsigndocumentGetTemporaryProofV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjDebugPayload
@@ -60,7 +82,8 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UNUSEDEzsignsignatureEditObjectV1Response {\n");
+            sb.Append("class EzsigndocumentGetTemporaryProofV1Response {\n");
+            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
             sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
             sb.Append("}\n");
@@ -83,20 +106,25 @@ namespace eZmaxApi.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as UNUSEDEzsignsignatureEditObjectV1Response);
+            return this.Equals(input as EzsigndocumentGetTemporaryProofV1Response);
         }
 
         /// <summary>
-        /// Returns true if UNUSEDEzsignsignatureEditObjectV1Response instances are equal
+        /// Returns true if EzsigndocumentGetTemporaryProofV1Response instances are equal
         /// </summary>
-        /// <param name="input">Instance of UNUSEDEzsignsignatureEditObjectV1Response to be compared</param>
+        /// <param name="input">Instance of EzsigndocumentGetTemporaryProofV1Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UNUSEDEzsignsignatureEditObjectV1Response input)
+        public bool Equals(EzsigndocumentGetTemporaryProofV1Response input)
         {
             if (input == null)
                 return false;
 
             return 
+                (
+                    this.MPayload == input.MPayload ||
+                    (this.MPayload != null &&
+                    this.MPayload.Equals(input.MPayload))
+                ) && 
                 (
                     this.ObjDebugPayload == input.ObjDebugPayload ||
                     (this.ObjDebugPayload != null &&
@@ -118,6 +146,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.MPayload != null)
+                    hashCode = hashCode * 59 + this.MPayload.GetHashCode();
                 if (this.ObjDebugPayload != null)
                     hashCode = hashCode * 59 + this.ObjDebugPayload.GetHashCode();
                 if (this.ObjDebug != null)

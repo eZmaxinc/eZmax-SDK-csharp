@@ -38,13 +38,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompound" /> class.
         /// </summary>
-        /// <param name="objEzsignsigner">objEzsignsigner.</param>
+        /// <param name="objEzsignsigner">objEzsignsigner (required).</param>
         /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
         public EzsignfoldersignerassociationRequestCompound(EzsignsignerRequestCompound objEzsignsigner = default(EzsignsignerRequestCompound), int pkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool))
         {
+            // to ensure "objEzsignsigner" is required (not null)
+            if (objEzsignsigner == null)
+            {
+                throw new InvalidDataException("objEzsignsigner is a required property for EzsignfoldersignerassociationRequestCompound and cannot be null");
+            }
+            else
+            {
+                this.ObjEzsignsigner = objEzsignsigner;
+            }
+
             // to ensure "fkiEzsignfolderID" is required (not null)
             if (fkiEzsignfolderID == null)
             {
@@ -55,7 +65,6 @@ namespace eZmaxApi.Model
                 this.FkiEzsignfolderID = fkiEzsignfolderID;
             }
 
-            this.ObjEzsignsigner = objEzsignsigner;
             this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
             this.FkiUserID = fkiUserID;
             this.BEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
@@ -64,7 +73,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Gets or Sets ObjEzsignsigner
         /// </summary>
-        [DataMember(Name="objEzsignsigner", EmitDefaultValue=false)]
+        [DataMember(Name="objEzsignsigner", EmitDefaultValue=true)]
         public EzsignsignerRequestCompound ObjEzsignsigner { get; set; }
 
         /// <summary>

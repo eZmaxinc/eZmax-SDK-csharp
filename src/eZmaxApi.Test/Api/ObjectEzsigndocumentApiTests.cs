@@ -127,6 +127,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsigndocumentEndPrematurelyV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentEndPrematurelyV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentEndPrematurelyV1(pkiEzsigndocumentID);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentEndPrematurelyV1Response), response, "response is EzsigndocumentEndPrematurelyV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsigndocumentGetDownloadUrlV1
         /// </summary>
         [Test]
@@ -173,6 +185,18 @@ namespace eZmaxApi.Test
             //int pkiEzsigndocumentID = null;
             //var response = instance.EzsigndocumentGetObjectV1(pkiEzsigndocumentID);
             //Assert.IsInstanceOf(typeof(EzsigndocumentGetObjectV1Response), response, "response is EzsigndocumentGetObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsigndocumentGetTemporaryProofV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentGetTemporaryProofV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentGetTemporaryProofV1(pkiEzsigndocumentID);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentGetTemporaryProofV1Response), response, "response is EzsigndocumentGetTemporaryProofV1Response");
         }
         
         /// <summary>

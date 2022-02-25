@@ -185,7 +185,7 @@ namespace eZmaxApi.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsignfolderID = null;
-            //string body = null;
+            //Object body = null;
             //var response = instance.EzsignfolderUnsendV1(pkiEzsignfolderID, body);
             //Assert.IsInstanceOf(typeof(EzsignfolderUnsendV1Response), response, "response is EzsignfolderUnsendV1Response");
         }

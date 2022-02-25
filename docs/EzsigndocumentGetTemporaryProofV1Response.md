@@ -1,10 +1,11 @@
 
-# eZmaxApi.Model.UNUSEDEzsignfoldersignerassociationEditObjectV1Response
+# eZmaxApi.Model.EzsigndocumentGetTemporaryProofV1Response
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**MPayload** | [**EzsigndocumentGetTemporaryProofV1ResponseMPayload**](EzsigndocumentGetTemporaryProofV1ResponseMPayload.md) |  | 
 **ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
 **ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 

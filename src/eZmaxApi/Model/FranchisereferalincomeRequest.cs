@@ -47,7 +47,7 @@ namespace eZmaxApi.Model
         /// <param name="dFranchisereferalincomeFranchisoramount">The amount that will be kept by the franchisor (required).</param>
         /// <param name="dFranchisereferalincomeAgentamount">The amount that will be given to the agent (required).</param>
         /// <param name="dtFranchisereferalincomeDisbursed">The date the amounts were disbursed (required).</param>
-        /// <param name="tFranchisereferalincomeComment">A comment about the transaction (required).</param>
+        /// <param name="tFranchisereferalincomeComment">Comment about the transaction (required).</param>
         /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
         /// <param name="sFranchisereferalincomeRemoteid">sFranchisereferalincomeRemoteid (required).</param>
         public FranchisereferalincomeRequest(int pkiFranchisereferalincomeID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchisereferalincomeprogramID = default(int), int fkiPeriodID = default(int), string dFranchisereferalincomeLoan = default(string), string dFranchisereferalincomeFranchiseamount = default(string), string dFranchisereferalincomeFranchisoramount = default(string), string dFranchisereferalincomeAgentamount = default(string), string dtFranchisereferalincomeDisbursed = default(string), string tFranchisereferalincomeComment = default(string), int fkiFranchiseofficeID = default(int), string sFranchisereferalincomeRemoteid = default(string))
@@ -229,9 +229,9 @@ namespace eZmaxApi.Model
         public string DtFranchisereferalincomeDisbursed { get; set; }
 
         /// <summary>
-        /// A comment about the transaction
+        /// Comment about the transaction
         /// </summary>
-        /// <value>A comment about the transaction</value>
+        /// <value>Comment about the transaction</value>
         [DataMember(Name="tFranchisereferalincomeComment", EmitDefaultValue=true)]
         public string TFranchisereferalincomeComment { get; set; }
 

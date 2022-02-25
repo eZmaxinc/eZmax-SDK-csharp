@@ -759,7 +759,7 @@ Name | Type | Description  | Notes
 
 ## EzsignfolderUnsendV1
 
-> EzsignfolderUnsendV1Response EzsignfolderUnsendV1 (int pkiEzsignfolderID, string body)
+> EzsignfolderUnsendV1Response EzsignfolderUnsendV1 (int pkiEzsignfolderID, Object body)
 
 Unsend the Ezsignfolder
 
@@ -788,7 +788,7 @@ namespace Example
 
             var apiInstance = new ObjectEzsignfolderApi(Configuration.Default);
             var pkiEzsignfolderID = 56;  // int | 
-            var body = "body_example";  // string | 
+            var body = null;  // Object | 
 
             try
             {
@@ -813,7 +813,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfolderID** | **int**|  | 
- **body** | **string**|  | 
+ **body** | **Object**|  | 
 
 ### Return type
 

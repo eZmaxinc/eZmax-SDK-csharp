@@ -236,7 +236,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="body"></param>
         /// <returns>EzsignfolderUnsendV1Response</returns>
-        EzsignfolderUnsendV1Response EzsignfolderUnsendV1 (int pkiEzsignfolderID, string body);
+        EzsignfolderUnsendV1Response EzsignfolderUnsendV1 (int pkiEzsignfolderID, Object body);
 
         /// <summary>
         /// Unsend the Ezsignfolder
@@ -248,7 +248,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EzsignfolderUnsendV1Response</returns>
-        ApiResponse<EzsignfolderUnsendV1Response> EzsignfolderUnsendV1WithHttpInfo (int pkiEzsignfolderID, string body);
+        ApiResponse<EzsignfolderUnsendV1Response> EzsignfolderUnsendV1WithHttpInfo (int pkiEzsignfolderID, Object body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -481,7 +481,7 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfolderUnsendV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfolderUnsendV1Response> EzsignfolderUnsendV1Async (int pkiEzsignfolderID, string body, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<EzsignfolderUnsendV1Response> EzsignfolderUnsendV1Async (int pkiEzsignfolderID, Object body, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Unsend the Ezsignfolder
@@ -494,7 +494,7 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfolderUnsendV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfolderUnsendV1Response>> EzsignfolderUnsendV1WithHttpInfoAsync (int pkiEzsignfolderID, string body, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderUnsendV1Response>> EzsignfolderUnsendV1WithHttpInfoAsync (int pkiEzsignfolderID, Object body, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -2012,7 +2012,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="body"></param>
         /// <returns>EzsignfolderUnsendV1Response</returns>
-        public EzsignfolderUnsendV1Response EzsignfolderUnsendV1 (int pkiEzsignfolderID, string body)
+        public EzsignfolderUnsendV1Response EzsignfolderUnsendV1 (int pkiEzsignfolderID, Object body)
         {
              ApiResponse<EzsignfolderUnsendV1Response> localVarResponse = EzsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID, body);
              return localVarResponse.Data;
@@ -2025,7 +2025,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EzsignfolderUnsendV1Response</returns>
-        public ApiResponse<EzsignfolderUnsendV1Response> EzsignfolderUnsendV1WithHttpInfo (int pkiEzsignfolderID, string body)
+        public ApiResponse<EzsignfolderUnsendV1Response> EzsignfolderUnsendV1WithHttpInfo (int pkiEzsignfolderID, Object body)
         {
             // verify the required parameter 'pkiEzsignfolderID' is set
             if (pkiEzsignfolderID == null)
@@ -2098,7 +2098,7 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfolderUnsendV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfolderUnsendV1Response> EzsignfolderUnsendV1Async (int pkiEzsignfolderID, string body, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignfolderUnsendV1Response> EzsignfolderUnsendV1Async (int pkiEzsignfolderID, Object body, CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<EzsignfolderUnsendV1Response> localVarResponse = await EzsignfolderUnsendV1WithHttpInfoAsync(pkiEzsignfolderID, body, cancellationToken);
              return localVarResponse.Data;
@@ -2113,7 +2113,7 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfolderUnsendV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EzsignfolderUnsendV1Response>> EzsignfolderUnsendV1WithHttpInfoAsync (int pkiEzsignfolderID, string body, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfolderUnsendV1Response>> EzsignfolderUnsendV1WithHttpInfoAsync (int pkiEzsignfolderID, Object body, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'pkiEzsignfolderID' is set
             if (pkiEzsignfolderID == null)

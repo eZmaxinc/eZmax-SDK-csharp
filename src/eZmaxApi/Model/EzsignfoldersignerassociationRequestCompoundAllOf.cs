@@ -33,16 +33,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompoundAllOf" /> class.
         /// </summary>
-        /// <param name="objEzsignsigner">objEzsignsigner.</param>
+        [JsonConstructorAttribute]
+        protected EzsignfoldersignerassociationRequestCompoundAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="objEzsignsigner">objEzsignsigner (required).</param>
         public EzsignfoldersignerassociationRequestCompoundAllOf(EzsignsignerRequestCompound objEzsignsigner = default(EzsignsignerRequestCompound))
         {
-            this.ObjEzsignsigner = objEzsignsigner;
+            // to ensure "objEzsignsigner" is required (not null)
+            if (objEzsignsigner == null)
+            {
+                throw new InvalidDataException("objEzsignsigner is a required property for EzsignfoldersignerassociationRequestCompoundAllOf and cannot be null");
+            }
+            else
+            {
+                this.ObjEzsignsigner = objEzsignsigner;
+            }
+
         }
 
         /// <summary>
         /// Gets or Sets ObjEzsignsigner
         /// </summary>
-        [DataMember(Name="objEzsignsigner", EmitDefaultValue=false)]
+        [DataMember(Name="objEzsignsigner", EmitDefaultValue=true)]
         public EzsignsignerRequestCompound ObjEzsignsigner { get; set; }
 
         /// <summary>
