@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**EzsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
+[**EzsignfolderCreateObjectV2**](ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv2) | **POST** /2/object/ezsignfolder | Create a new Ezsignfolder
 [**EzsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**EzsignfolderEditObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**EzsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
@@ -76,6 +77,87 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderCreateObjectV1Response**](EzsignfolderCreateObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Successful response |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## EzsignfolderCreateObjectV2
+
+> EzsignfolderCreateObjectV2Response EzsignfolderCreateObjectV2 (EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request)
+
+Create a new Ezsignfolder
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfolderCreateObjectV2Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfolderApi(Configuration.Default);
+            var ezsignfolderCreateObjectV2Request = new EzsignfolderCreateObjectV2Request(); // EzsignfolderCreateObjectV2Request | 
+
+            try
+            {
+                // Create a new Ezsignfolder
+                EzsignfolderCreateObjectV2Response result = apiInstance.EzsignfolderCreateObjectV2(ezsignfolderCreateObjectV2Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderCreateObjectV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignfolderCreateObjectV2Request** | [**EzsignfolderCreateObjectV2Request**](EzsignfolderCreateObjectV2Request.md)|  | 
+
+### Return type
+
+[**EzsignfolderCreateObjectV2Response**](EzsignfolderCreateObjectV2Response.md)
 
 ### Authorization
 

@@ -34,6 +34,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apikeyCreateObjectV1Request"></param>
         /// <returns>ApikeyCreateObjectV1Response</returns>
+        [Obsolete]
         ApikeyCreateObjectV1Response ApikeyCreateObjectV1 (List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request);
 
         /// <summary>
@@ -45,7 +46,29 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apikeyCreateObjectV1Request"></param>
         /// <returns>ApiResponse of ApikeyCreateObjectV1Response</returns>
+        [Obsolete]
         ApiResponse<ApikeyCreateObjectV1Response> ApikeyCreateObjectV1WithHttpInfo (List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request);
+        /// <summary>
+        /// Create a new Apikey
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyCreateObjectV2Request"></param>
+        /// <returns>ApikeyCreateObjectV2Response</returns>
+        ApikeyCreateObjectV2Response ApikeyCreateObjectV2 (ApikeyCreateObjectV2Request apikeyCreateObjectV2Request);
+
+        /// <summary>
+        /// Create a new Apikey
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyCreateObjectV2Request"></param>
+        /// <returns>ApiResponse of ApikeyCreateObjectV2Response</returns>
+        ApiResponse<ApikeyCreateObjectV2Response> ApikeyCreateObjectV2WithHttpInfo (ApikeyCreateObjectV2Request apikeyCreateObjectV2Request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -58,6 +81,7 @@ namespace eZmaxApi.Api
         /// <param name="apikeyCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApikeyCreateObjectV1Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApikeyCreateObjectV1Response> ApikeyCreateObjectV1Async (List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
@@ -70,7 +94,31 @@ namespace eZmaxApi.Api
         /// <param name="apikeyCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApikeyCreateObjectV1Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ApikeyCreateObjectV1Response>> ApikeyCreateObjectV1WithHttpInfoAsync (List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Create a new Apikey
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApikeyCreateObjectV2Response</returns>
+        System.Threading.Tasks.Task<ApikeyCreateObjectV2Response> ApikeyCreateObjectV2Async (ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Create a new Apikey
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ApikeyCreateObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApikeyCreateObjectV2Response>> ApikeyCreateObjectV2WithHttpInfoAsync (ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -188,6 +236,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apikeyCreateObjectV1Request"></param>
         /// <returns>ApikeyCreateObjectV1Response</returns>
+        [Obsolete]
         public ApikeyCreateObjectV1Response ApikeyCreateObjectV1 (List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request)
         {
              ApiResponse<ApikeyCreateObjectV1Response> localVarResponse = ApikeyCreateObjectV1WithHttpInfo(apikeyCreateObjectV1Request);
@@ -200,6 +249,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apikeyCreateObjectV1Request"></param>
         /// <returns>ApiResponse of ApikeyCreateObjectV1Response</returns>
+        [Obsolete]
         public ApiResponse<ApikeyCreateObjectV1Response> ApikeyCreateObjectV1WithHttpInfo (List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request)
         {
             // verify the required parameter 'apikeyCreateObjectV1Request' is set
@@ -268,6 +318,7 @@ namespace eZmaxApi.Api
         /// <param name="apikeyCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApikeyCreateObjectV1Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApikeyCreateObjectV1Response> ApikeyCreateObjectV1Async (List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<ApikeyCreateObjectV1Response> localVarResponse = await ApikeyCreateObjectV1WithHttpInfoAsync(apikeyCreateObjectV1Request, cancellationToken);
@@ -282,6 +333,7 @@ namespace eZmaxApi.Api
         /// <param name="apikeyCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApikeyCreateObjectV1Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ApikeyCreateObjectV1Response>> ApikeyCreateObjectV1WithHttpInfoAsync (List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'apikeyCreateObjectV1Request' is set
@@ -341,6 +393,167 @@ namespace eZmaxApi.Api
             return new ApiResponse<ApikeyCreateObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyCreateObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Create a new Apikey The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyCreateObjectV2Request"></param>
+        /// <returns>ApikeyCreateObjectV2Response</returns>
+        public ApikeyCreateObjectV2Response ApikeyCreateObjectV2 (ApikeyCreateObjectV2Request apikeyCreateObjectV2Request)
+        {
+             ApiResponse<ApikeyCreateObjectV2Response> localVarResponse = ApikeyCreateObjectV2WithHttpInfo(apikeyCreateObjectV2Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Apikey The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyCreateObjectV2Request"></param>
+        /// <returns>ApiResponse of ApikeyCreateObjectV2Response</returns>
+        public ApiResponse<ApikeyCreateObjectV2Response> ApikeyCreateObjectV2WithHttpInfo (ApikeyCreateObjectV2Request apikeyCreateObjectV2Request)
+        {
+            // verify the required parameter 'apikeyCreateObjectV2Request' is set
+            if (apikeyCreateObjectV2Request == null)
+                throw new ApiException(400, "Missing required parameter 'apikeyCreateObjectV2Request' when calling ObjectApikeyApi->ApikeyCreateObjectV2");
+
+            var localVarPath = "/2/object/apikey";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (apikeyCreateObjectV2Request != null && apikeyCreateObjectV2Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(apikeyCreateObjectV2Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = apikeyCreateObjectV2Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ApikeyCreateObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApikeyCreateObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ApikeyCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyCreateObjectV2Response)));
+        }
+
+        /// <summary>
+        /// Create a new Apikey The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApikeyCreateObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<ApikeyCreateObjectV2Response> ApikeyCreateObjectV2Async (ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<ApikeyCreateObjectV2Response> localVarResponse = await ApikeyCreateObjectV2WithHttpInfoAsync(apikeyCreateObjectV2Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new Apikey The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ApikeyCreateObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApikeyCreateObjectV2Response>> ApikeyCreateObjectV2WithHttpInfoAsync (ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'apikeyCreateObjectV2Request' is set
+            if (apikeyCreateObjectV2Request == null)
+                throw new ApiException(400, "Missing required parameter 'apikeyCreateObjectV2Request' when calling ObjectApikeyApi->ApikeyCreateObjectV2");
+
+            var localVarPath = "/2/object/apikey";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (apikeyCreateObjectV2Request != null && apikeyCreateObjectV2Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(apikeyCreateObjectV2Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = apikeyCreateObjectV2Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ApikeyCreateObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApikeyCreateObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ApikeyCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyCreateObjectV2Response)));
         }
 
     }

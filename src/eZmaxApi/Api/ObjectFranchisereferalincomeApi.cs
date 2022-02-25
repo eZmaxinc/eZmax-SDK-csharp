@@ -34,6 +34,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
         /// <returns>FranchisereferalincomeCreateObjectV1Response</returns>
+        [Obsolete]
         FranchisereferalincomeCreateObjectV1Response FranchisereferalincomeCreateObjectV1 (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request);
 
         /// <summary>
@@ -45,7 +46,29 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
         /// <returns>ApiResponse of FranchisereferalincomeCreateObjectV1Response</returns>
+        [Obsolete]
         ApiResponse<FranchisereferalincomeCreateObjectV1Response> FranchisereferalincomeCreateObjectV1WithHttpInfo (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request);
+        /// <summary>
+        /// Create a new Franchisereferalincome
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="franchisereferalincomeCreateObjectV2Request"></param>
+        /// <returns>FranchisereferalincomeCreateObjectV2Response</returns>
+        FranchisereferalincomeCreateObjectV2Response FranchisereferalincomeCreateObjectV2 (FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request);
+
+        /// <summary>
+        /// Create a new Franchisereferalincome
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="franchisereferalincomeCreateObjectV2Request"></param>
+        /// <returns>ApiResponse of FranchisereferalincomeCreateObjectV2Response</returns>
+        ApiResponse<FranchisereferalincomeCreateObjectV2Response> FranchisereferalincomeCreateObjectV2WithHttpInfo (FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -58,6 +81,7 @@ namespace eZmaxApi.Api
         /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of FranchisereferalincomeCreateObjectV1Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<FranchisereferalincomeCreateObjectV1Response> FranchisereferalincomeCreateObjectV1Async (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
@@ -70,7 +94,31 @@ namespace eZmaxApi.Api
         /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (FranchisereferalincomeCreateObjectV1Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<FranchisereferalincomeCreateObjectV1Response>> FranchisereferalincomeCreateObjectV1WithHttpInfoAsync (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Create a new Franchisereferalincome
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="franchisereferalincomeCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of FranchisereferalincomeCreateObjectV2Response</returns>
+        System.Threading.Tasks.Task<FranchisereferalincomeCreateObjectV2Response> FranchisereferalincomeCreateObjectV2Async (FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Create a new Franchisereferalincome
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="franchisereferalincomeCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (FranchisereferalincomeCreateObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FranchisereferalincomeCreateObjectV2Response>> FranchisereferalincomeCreateObjectV2WithHttpInfoAsync (FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -188,6 +236,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
         /// <returns>FranchisereferalincomeCreateObjectV1Response</returns>
+        [Obsolete]
         public FranchisereferalincomeCreateObjectV1Response FranchisereferalincomeCreateObjectV1 (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request)
         {
              ApiResponse<FranchisereferalincomeCreateObjectV1Response> localVarResponse = FranchisereferalincomeCreateObjectV1WithHttpInfo(franchisereferalincomeCreateObjectV1Request);
@@ -200,6 +249,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
         /// <returns>ApiResponse of FranchisereferalincomeCreateObjectV1Response</returns>
+        [Obsolete]
         public ApiResponse<FranchisereferalincomeCreateObjectV1Response> FranchisereferalincomeCreateObjectV1WithHttpInfo (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request)
         {
             // verify the required parameter 'franchisereferalincomeCreateObjectV1Request' is set
@@ -268,6 +318,7 @@ namespace eZmaxApi.Api
         /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of FranchisereferalincomeCreateObjectV1Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<FranchisereferalincomeCreateObjectV1Response> FranchisereferalincomeCreateObjectV1Async (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<FranchisereferalincomeCreateObjectV1Response> localVarResponse = await FranchisereferalincomeCreateObjectV1WithHttpInfoAsync(franchisereferalincomeCreateObjectV1Request, cancellationToken);
@@ -282,6 +333,7 @@ namespace eZmaxApi.Api
         /// <param name="franchisereferalincomeCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (FranchisereferalincomeCreateObjectV1Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<FranchisereferalincomeCreateObjectV1Response>> FranchisereferalincomeCreateObjectV1WithHttpInfoAsync (List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'franchisereferalincomeCreateObjectV1Request' is set
@@ -341,6 +393,167 @@ namespace eZmaxApi.Api
             return new ApiResponse<FranchisereferalincomeCreateObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (FranchisereferalincomeCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FranchisereferalincomeCreateObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Create a new Franchisereferalincome The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="franchisereferalincomeCreateObjectV2Request"></param>
+        /// <returns>FranchisereferalincomeCreateObjectV2Response</returns>
+        public FranchisereferalincomeCreateObjectV2Response FranchisereferalincomeCreateObjectV2 (FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request)
+        {
+             ApiResponse<FranchisereferalincomeCreateObjectV2Response> localVarResponse = FranchisereferalincomeCreateObjectV2WithHttpInfo(franchisereferalincomeCreateObjectV2Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Franchisereferalincome The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="franchisereferalincomeCreateObjectV2Request"></param>
+        /// <returns>ApiResponse of FranchisereferalincomeCreateObjectV2Response</returns>
+        public ApiResponse<FranchisereferalincomeCreateObjectV2Response> FranchisereferalincomeCreateObjectV2WithHttpInfo (FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request)
+        {
+            // verify the required parameter 'franchisereferalincomeCreateObjectV2Request' is set
+            if (franchisereferalincomeCreateObjectV2Request == null)
+                throw new ApiException(400, "Missing required parameter 'franchisereferalincomeCreateObjectV2Request' when calling ObjectFranchisereferalincomeApi->FranchisereferalincomeCreateObjectV2");
+
+            var localVarPath = "/2/object/franchisereferalincome";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (franchisereferalincomeCreateObjectV2Request != null && franchisereferalincomeCreateObjectV2Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(franchisereferalincomeCreateObjectV2Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = franchisereferalincomeCreateObjectV2Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FranchisereferalincomeCreateObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FranchisereferalincomeCreateObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (FranchisereferalincomeCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FranchisereferalincomeCreateObjectV2Response)));
+        }
+
+        /// <summary>
+        /// Create a new Franchisereferalincome The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="franchisereferalincomeCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of FranchisereferalincomeCreateObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<FranchisereferalincomeCreateObjectV2Response> FranchisereferalincomeCreateObjectV2Async (FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<FranchisereferalincomeCreateObjectV2Response> localVarResponse = await FranchisereferalincomeCreateObjectV2WithHttpInfoAsync(franchisereferalincomeCreateObjectV2Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new Franchisereferalincome The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="franchisereferalincomeCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (FranchisereferalincomeCreateObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FranchisereferalincomeCreateObjectV2Response>> FranchisereferalincomeCreateObjectV2WithHttpInfoAsync (FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'franchisereferalincomeCreateObjectV2Request' is set
+            if (franchisereferalincomeCreateObjectV2Request == null)
+                throw new ApiException(400, "Missing required parameter 'franchisereferalincomeCreateObjectV2Request' when calling ObjectFranchisereferalincomeApi->FranchisereferalincomeCreateObjectV2");
+
+            var localVarPath = "/2/object/franchisereferalincome";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (franchisereferalincomeCreateObjectV2Request != null && franchisereferalincomeCreateObjectV2Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(franchisereferalincomeCreateObjectV2Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = franchisereferalincomeCreateObjectV2Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FranchisereferalincomeCreateObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FranchisereferalincomeCreateObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (FranchisereferalincomeCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FranchisereferalincomeCreateObjectV2Response)));
         }
 
     }

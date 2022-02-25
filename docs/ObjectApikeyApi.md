@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ApikeyCreateObjectV1**](ObjectApikeyApi.md#apikeycreateobjectv1) | **POST** /1/object/apikey | Create a new Apikey
+[**ApikeyCreateObjectV2**](ObjectApikeyApi.md#apikeycreateobjectv2) | **POST** /2/object/apikey | Create a new Apikey
 
 
 
@@ -67,6 +68,87 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApikeyCreateObjectV1Response**](ApikeyCreateObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Successful response |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ApikeyCreateObjectV2
+
+> ApikeyCreateObjectV2Response ApikeyCreateObjectV2 (ApikeyCreateObjectV2Request apikeyCreateObjectV2Request)
+
+Create a new Apikey
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class ApikeyCreateObjectV2Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectApikeyApi(Configuration.Default);
+            var apikeyCreateObjectV2Request = new ApikeyCreateObjectV2Request(); // ApikeyCreateObjectV2Request | 
+
+            try
+            {
+                // Create a new Apikey
+                ApikeyCreateObjectV2Response result = apiInstance.ApikeyCreateObjectV2(apikeyCreateObjectV2Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectApikeyApi.ApikeyCreateObjectV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apikeyCreateObjectV2Request** | [**ApikeyCreateObjectV2Request**](ApikeyCreateObjectV2Request.md)|  | 
+
+### Return type
+
+[**ApikeyCreateObjectV2Response**](ApikeyCreateObjectV2Response.md)
 
 ### Authorization
 

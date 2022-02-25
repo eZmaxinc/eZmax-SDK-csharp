@@ -75,6 +75,18 @@ namespace eZmaxApi.Test
             //Assert.IsInstanceOf(typeof(ApikeyCreateObjectV1Response), response, "response is ApikeyCreateObjectV1Response");
         }
         
+        /// <summary>
+        /// Test ApikeyCreateObjectV2
+        /// </summary>
+        [Test]
+        public void ApikeyCreateObjectV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ApikeyCreateObjectV2Request apikeyCreateObjectV2Request = null;
+            //var response = instance.ApikeyCreateObjectV2(apikeyCreateObjectV2Request);
+            //Assert.IsInstanceOf(typeof(ApikeyCreateObjectV2Response), response, "response is ApikeyCreateObjectV2Response");
+        }
+        
     }
 
 }

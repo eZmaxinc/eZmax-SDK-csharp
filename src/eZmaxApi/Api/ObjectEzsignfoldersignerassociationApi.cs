@@ -34,6 +34,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezsignfoldersignerassociationCreateObjectV1Request"></param>
         /// <returns>EzsignfoldersignerassociationCreateObjectV1Response</returns>
+        [Obsolete]
         EzsignfoldersignerassociationCreateObjectV1Response EzsignfoldersignerassociationCreateObjectV1 (List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request);
 
         /// <summary>
@@ -45,7 +46,29 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezsignfoldersignerassociationCreateObjectV1Request"></param>
         /// <returns>ApiResponse of EzsignfoldersignerassociationCreateObjectV1Response</returns>
+        [Obsolete]
         ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response> EzsignfoldersignerassociationCreateObjectV1WithHttpInfo (List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request);
+        /// <summary>
+        /// Create a new Ezsignfoldersignerassociation
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfoldersignerassociationCreateObjectV2Request"></param>
+        /// <returns>EzsignfoldersignerassociationCreateObjectV2Response</returns>
+        EzsignfoldersignerassociationCreateObjectV2Response EzsignfoldersignerassociationCreateObjectV2 (EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request);
+
+        /// <summary>
+        /// Create a new Ezsignfoldersignerassociation
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfoldersignerassociationCreateObjectV2Request"></param>
+        /// <returns>ApiResponse of EzsignfoldersignerassociationCreateObjectV2Response</returns>
+        ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response> EzsignfoldersignerassociationCreateObjectV2WithHttpInfo (EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request);
         /// <summary>
         /// Delete an existing Ezsignfoldersignerassociation
         /// </summary>
@@ -121,6 +144,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldersignerassociationCreateObjectV1Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV1Response> EzsignfoldersignerassociationCreateObjectV1Async (List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
@@ -133,7 +157,31 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateObjectV1Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response>> EzsignfoldersignerassociationCreateObjectV1WithHttpInfoAsync (List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Create a new Ezsignfoldersignerassociation
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfoldersignerassociationCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfoldersignerassociationCreateObjectV2Response</returns>
+        System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV2Response> EzsignfoldersignerassociationCreateObjectV2Async (EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Create a new Ezsignfoldersignerassociation
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfoldersignerassociationCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response>> EzsignfoldersignerassociationCreateObjectV2WithHttpInfoAsync (EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete an existing Ezsignfoldersignerassociation
         /// </summary>
@@ -320,6 +368,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezsignfoldersignerassociationCreateObjectV1Request"></param>
         /// <returns>EzsignfoldersignerassociationCreateObjectV1Response</returns>
+        [Obsolete]
         public EzsignfoldersignerassociationCreateObjectV1Response EzsignfoldersignerassociationCreateObjectV1 (List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request)
         {
              ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response> localVarResponse = EzsignfoldersignerassociationCreateObjectV1WithHttpInfo(ezsignfoldersignerassociationCreateObjectV1Request);
@@ -332,6 +381,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezsignfoldersignerassociationCreateObjectV1Request"></param>
         /// <returns>ApiResponse of EzsignfoldersignerassociationCreateObjectV1Response</returns>
+        [Obsolete]
         public ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response> EzsignfoldersignerassociationCreateObjectV1WithHttpInfo (List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request)
         {
             // verify the required parameter 'ezsignfoldersignerassociationCreateObjectV1Request' is set
@@ -400,6 +450,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldersignerassociationCreateObjectV1Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV1Response> EzsignfoldersignerassociationCreateObjectV1Async (List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response> localVarResponse = await EzsignfoldersignerassociationCreateObjectV1WithHttpInfoAsync(ezsignfoldersignerassociationCreateObjectV1Request, cancellationToken);
@@ -414,6 +465,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateObjectV1Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response>> EzsignfoldersignerassociationCreateObjectV1WithHttpInfoAsync (List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'ezsignfoldersignerassociationCreateObjectV1Request' is set
@@ -473,6 +525,167 @@ namespace eZmaxApi.Api
             return new ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignfoldersignerassociationCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldersignerassociationCreateObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Create a new Ezsignfoldersignerassociation The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfoldersignerassociationCreateObjectV2Request"></param>
+        /// <returns>EzsignfoldersignerassociationCreateObjectV2Response</returns>
+        public EzsignfoldersignerassociationCreateObjectV2Response EzsignfoldersignerassociationCreateObjectV2 (EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request)
+        {
+             ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response> localVarResponse = EzsignfoldersignerassociationCreateObjectV2WithHttpInfo(ezsignfoldersignerassociationCreateObjectV2Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Ezsignfoldersignerassociation The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfoldersignerassociationCreateObjectV2Request"></param>
+        /// <returns>ApiResponse of EzsignfoldersignerassociationCreateObjectV2Response</returns>
+        public ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response> EzsignfoldersignerassociationCreateObjectV2WithHttpInfo (EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request)
+        {
+            // verify the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' is set
+            if (ezsignfoldersignerassociationCreateObjectV2Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' when calling ObjectEzsignfoldersignerassociationApi->EzsignfoldersignerassociationCreateObjectV2");
+
+            var localVarPath = "/2/object/ezsignfoldersignerassociation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (ezsignfoldersignerassociationCreateObjectV2Request != null && ezsignfoldersignerassociationCreateObjectV2Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfoldersignerassociationCreateObjectV2Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfoldersignerassociationCreateObjectV2Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfoldersignerassociationCreateObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfoldersignerassociationCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldersignerassociationCreateObjectV2Response)));
+        }
+
+        /// <summary>
+        /// Create a new Ezsignfoldersignerassociation The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfoldersignerassociationCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfoldersignerassociationCreateObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV2Response> EzsignfoldersignerassociationCreateObjectV2Async (EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response> localVarResponse = await EzsignfoldersignerassociationCreateObjectV2WithHttpInfoAsync(ezsignfoldersignerassociationCreateObjectV2Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new Ezsignfoldersignerassociation The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfoldersignerassociationCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response>> EzsignfoldersignerassociationCreateObjectV2WithHttpInfoAsync (EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' is set
+            if (ezsignfoldersignerassociationCreateObjectV2Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' when calling ObjectEzsignfoldersignerassociationApi->EzsignfoldersignerassociationCreateObjectV2");
+
+            var localVarPath = "/2/object/ezsignfoldersignerassociation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (ezsignfoldersignerassociationCreateObjectV2Request != null && ezsignfoldersignerassociationCreateObjectV2Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfoldersignerassociationCreateObjectV2Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfoldersignerassociationCreateObjectV2Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfoldersignerassociationCreateObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfoldersignerassociationCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldersignerassociationCreateObjectV2Response)));
         }
 
         /// <summary>

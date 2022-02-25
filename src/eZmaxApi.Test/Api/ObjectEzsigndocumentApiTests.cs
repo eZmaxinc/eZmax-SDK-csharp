@@ -102,6 +102,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsigndocumentCreateObjectV2
+        /// </summary>
+        [Test]
+        public void EzsigndocumentCreateObjectV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request = null;
+            //var response = instance.EzsigndocumentCreateObjectV2(ezsigndocumentCreateObjectV2Request);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentCreateObjectV2Response), response, "response is EzsigndocumentCreateObjectV2Response");
+        }
+        
+        /// <summary>
         /// Test EzsigndocumentDeleteObjectV1
         /// </summary>
         [Test]

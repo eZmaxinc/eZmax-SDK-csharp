@@ -82,6 +82,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezsigndocumentCreateObjectV1Request"></param>
         /// <returns>EzsigndocumentCreateObjectV1Response</returns>
+        [Obsolete]
         EzsigndocumentCreateObjectV1Response EzsigndocumentCreateObjectV1 (List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request);
 
         /// <summary>
@@ -93,7 +94,29 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezsigndocumentCreateObjectV1Request"></param>
         /// <returns>ApiResponse of EzsigndocumentCreateObjectV1Response</returns>
+        [Obsolete]
         ApiResponse<EzsigndocumentCreateObjectV1Response> EzsigndocumentCreateObjectV1WithHttpInfo (List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request);
+        /// <summary>
+        /// Create a new Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigndocumentCreateObjectV2Request"></param>
+        /// <returns>EzsigndocumentCreateObjectV2Response</returns>
+        EzsigndocumentCreateObjectV2Response EzsigndocumentCreateObjectV2 (EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request);
+
+        /// <summary>
+        /// Create a new Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigndocumentCreateObjectV2Request"></param>
+        /// <returns>ApiResponse of EzsigndocumentCreateObjectV2Response</returns>
+        ApiResponse<EzsigndocumentCreateObjectV2Response> EzsigndocumentCreateObjectV2WithHttpInfo (EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request);
         /// <summary>
         /// Delete an existing Ezsigndocument
         /// </summary>
@@ -376,6 +399,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentCreateObjectV1Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<EzsigndocumentCreateObjectV1Response> EzsigndocumentCreateObjectV1Async (List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
@@ -388,7 +412,31 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentCreateObjectV1Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentCreateObjectV1Response>> EzsigndocumentCreateObjectV1WithHttpInfoAsync (List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Create a new Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigndocumentCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigndocumentCreateObjectV2Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentCreateObjectV2Response> EzsigndocumentCreateObjectV2Async (EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Create a new Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigndocumentCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigndocumentCreateObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentCreateObjectV2Response>> EzsigndocumentCreateObjectV2WithHttpInfoAsync (EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete an existing Ezsigndocument
         /// </summary>
@@ -1094,6 +1142,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezsigndocumentCreateObjectV1Request"></param>
         /// <returns>EzsigndocumentCreateObjectV1Response</returns>
+        [Obsolete]
         public EzsigndocumentCreateObjectV1Response EzsigndocumentCreateObjectV1 (List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request)
         {
              ApiResponse<EzsigndocumentCreateObjectV1Response> localVarResponse = EzsigndocumentCreateObjectV1WithHttpInfo(ezsigndocumentCreateObjectV1Request);
@@ -1106,6 +1155,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezsigndocumentCreateObjectV1Request"></param>
         /// <returns>ApiResponse of EzsigndocumentCreateObjectV1Response</returns>
+        [Obsolete]
         public ApiResponse<EzsigndocumentCreateObjectV1Response> EzsigndocumentCreateObjectV1WithHttpInfo (List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request)
         {
             // verify the required parameter 'ezsigndocumentCreateObjectV1Request' is set
@@ -1174,6 +1224,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigndocumentCreateObjectV1Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<EzsigndocumentCreateObjectV1Response> EzsigndocumentCreateObjectV1Async (List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<EzsigndocumentCreateObjectV1Response> localVarResponse = await EzsigndocumentCreateObjectV1WithHttpInfoAsync(ezsigndocumentCreateObjectV1Request, cancellationToken);
@@ -1188,6 +1239,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentCreateObjectV1Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<EzsigndocumentCreateObjectV1Response>> EzsigndocumentCreateObjectV1WithHttpInfoAsync (List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'ezsigndocumentCreateObjectV1Request' is set
@@ -1247,6 +1299,167 @@ namespace eZmaxApi.Api
             return new ApiResponse<EzsigndocumentCreateObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigndocumentCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigndocumentCreateObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Create a new Ezsigndocument The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigndocumentCreateObjectV2Request"></param>
+        /// <returns>EzsigndocumentCreateObjectV2Response</returns>
+        public EzsigndocumentCreateObjectV2Response EzsigndocumentCreateObjectV2 (EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request)
+        {
+             ApiResponse<EzsigndocumentCreateObjectV2Response> localVarResponse = EzsigndocumentCreateObjectV2WithHttpInfo(ezsigndocumentCreateObjectV2Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Ezsigndocument The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigndocumentCreateObjectV2Request"></param>
+        /// <returns>ApiResponse of EzsigndocumentCreateObjectV2Response</returns>
+        public ApiResponse<EzsigndocumentCreateObjectV2Response> EzsigndocumentCreateObjectV2WithHttpInfo (EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request)
+        {
+            // verify the required parameter 'ezsigndocumentCreateObjectV2Request' is set
+            if (ezsigndocumentCreateObjectV2Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsigndocumentCreateObjectV2Request' when calling ObjectEzsigndocumentApi->EzsigndocumentCreateObjectV2");
+
+            var localVarPath = "/2/object/ezsigndocument";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (ezsigndocumentCreateObjectV2Request != null && ezsigndocumentCreateObjectV2Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsigndocumentCreateObjectV2Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsigndocumentCreateObjectV2Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigndocumentCreateObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigndocumentCreateObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigndocumentCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigndocumentCreateObjectV2Response)));
+        }
+
+        /// <summary>
+        /// Create a new Ezsigndocument The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigndocumentCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigndocumentCreateObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentCreateObjectV2Response> EzsigndocumentCreateObjectV2Async (EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsigndocumentCreateObjectV2Response> localVarResponse = await EzsigndocumentCreateObjectV2WithHttpInfoAsync(ezsigndocumentCreateObjectV2Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new Ezsigndocument The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigndocumentCreateObjectV2Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigndocumentCreateObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigndocumentCreateObjectV2Response>> EzsigndocumentCreateObjectV2WithHttpInfoAsync (EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'ezsigndocumentCreateObjectV2Request' is set
+            if (ezsigndocumentCreateObjectV2Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsigndocumentCreateObjectV2Request' when calling ObjectEzsigndocumentApi->EzsigndocumentCreateObjectV2");
+
+            var localVarPath = "/2/object/ezsigndocument";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (ezsigndocumentCreateObjectV2Request != null && ezsigndocumentCreateObjectV2Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsigndocumentCreateObjectV2Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsigndocumentCreateObjectV2Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigndocumentCreateObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigndocumentCreateObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigndocumentCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigndocumentCreateObjectV2Response)));
         }
 
         /// <summary>

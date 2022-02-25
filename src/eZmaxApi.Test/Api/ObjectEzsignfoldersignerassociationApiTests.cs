@@ -76,6 +76,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsignfoldersignerassociationCreateObjectV2
+        /// </summary>
+        [Test]
+        public void EzsignfoldersignerassociationCreateObjectV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request = null;
+            //var response = instance.EzsignfoldersignerassociationCreateObjectV2(ezsignfoldersignerassociationCreateObjectV2Request);
+            //Assert.IsInstanceOf(typeof(EzsignfoldersignerassociationCreateObjectV2Response), response, "response is EzsignfoldersignerassociationCreateObjectV2Response");
+        }
+        
+        /// <summary>
         /// Test EzsignfoldersignerassociationDeleteObjectV1
         /// </summary>
         [Test]

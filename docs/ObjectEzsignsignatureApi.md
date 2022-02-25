@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**EzsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
+[**EzsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
 [**EzsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**EzsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 [**EzsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
@@ -70,6 +71,87 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignsignatureCreateObjectV1Response**](EzsignsignatureCreateObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Successful response |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## EzsignsignatureCreateObjectV2
+
+> EzsignsignatureCreateObjectV2Response EzsignsignatureCreateObjectV2 (EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request)
+
+Create a new Ezsignsignature
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignsignatureCreateObjectV2Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignsignatureApi(Configuration.Default);
+            var ezsignsignatureCreateObjectV2Request = new EzsignsignatureCreateObjectV2Request(); // EzsignsignatureCreateObjectV2Request | 
+
+            try
+            {
+                // Create a new Ezsignsignature
+                EzsignsignatureCreateObjectV2Response result = apiInstance.EzsignsignatureCreateObjectV2(ezsignsignatureCreateObjectV2Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureCreateObjectV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignsignatureCreateObjectV2Request** | [**EzsignsignatureCreateObjectV2Request**](EzsignsignatureCreateObjectV2Request.md)|  | 
+
+### Return type
+
+[**EzsignsignatureCreateObjectV2Response**](EzsignsignatureCreateObjectV2Response.md)
 
 ### Authorization
 

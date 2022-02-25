@@ -75,6 +75,18 @@ namespace eZmaxApi.Test
             //Assert.IsInstanceOf(typeof(FranchisereferalincomeCreateObjectV1Response), response, "response is FranchisereferalincomeCreateObjectV1Response");
         }
         
+        /// <summary>
+        /// Test FranchisereferalincomeCreateObjectV2
+        /// </summary>
+        [Test]
+        public void FranchisereferalincomeCreateObjectV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request = null;
+            //var response = instance.FranchisereferalincomeCreateObjectV2(franchisereferalincomeCreateObjectV2Request);
+            //Assert.IsInstanceOf(typeof(FranchisereferalincomeCreateObjectV2Response), response, "response is FranchisereferalincomeCreateObjectV2Response");
+        }
+        
     }
 
 }
