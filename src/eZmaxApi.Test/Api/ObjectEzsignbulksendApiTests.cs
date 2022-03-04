@@ -64,6 +64,18 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
+        /// Test EzsignbulksendGetEzsignbulksendtransmissionsV1
+        /// </summary>
+        [Test]
+        public void EzsignbulksendGetEzsignbulksendtransmissionsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignbulksendID = null;
+            //var response = instance.EzsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID);
+            //Assert.IsInstanceOf(typeof(EzsignbulksendGetEzsignbulksendtransmissionsV1Response), response, "response is EzsignbulksendGetEzsignbulksendtransmissionsV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsignbulksendGetListV1
         /// </summary>
         [Test]

@@ -126,6 +126,19 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsigndocumentEditEzsignformfieldgroupsV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentEditEzsignformfieldgroupsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //EzsigndocumentEditEzsignformfieldgroupsV1Request ezsigndocumentEditEzsignformfieldgroupsV1Request = null;
+            //var response = instance.EzsigndocumentEditEzsignformfieldgroupsV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV1Request);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentEditEzsignformfieldgroupsV1Response), response, "response is EzsigndocumentEditEzsignformfieldgroupsV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsigndocumentEditEzsignsignaturesV1
         /// </summary>
         [Test]
@@ -146,7 +159,8 @@ namespace eZmaxApi.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsigndocumentID = null;
-            //var response = instance.EzsigndocumentEndPrematurelyV1(pkiEzsigndocumentID);
+            //Object body = null;
+            //var response = instance.EzsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
             //Assert.IsInstanceOf(typeof(EzsigndocumentEndPrematurelyV1Response), response, "response is EzsigndocumentEndPrematurelyV1Response");
         }
         
@@ -164,6 +178,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsigndocumentGetEzsignformfieldgroupsV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentGetEzsignformfieldgroupsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentGetEzsignformfieldgroupsV1(pkiEzsigndocumentID);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentGetEzsignformfieldgroupsV1Response), response, "response is EzsigndocumentGetEzsignformfieldgroupsV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsigndocumentGetEzsignpagesV1
         /// </summary>
         [Test]
@@ -173,6 +199,18 @@ namespace eZmaxApi.Test
             //int pkiEzsigndocumentID = null;
             //var response = instance.EzsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID);
             //Assert.IsInstanceOf(typeof(EzsigndocumentGetEzsignpagesV1Response), response, "response is EzsigndocumentGetEzsignpagesV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsigndocumentGetEzsignsignaturesV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentGetEzsignsignaturesV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentGetEzsignsignaturesV1(pkiEzsigndocumentID);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentGetEzsignsignaturesV1Response), response, "response is EzsigndocumentGetEzsignsignaturesV1Response");
         }
         
         /// <summary>

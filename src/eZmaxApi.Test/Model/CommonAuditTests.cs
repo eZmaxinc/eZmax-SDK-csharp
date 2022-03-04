@@ -66,52 +66,20 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'FkiUserIDCreated'
+        /// Test the property 'ObjAuditdetailCreated'
         /// </summary>
         [Test]
-        public void FkiUserIDCreatedTest()
+        public void ObjAuditdetailCreatedTest()
         {
-            // TODO unit test for the property 'FkiUserIDCreated'
+            // TODO unit test for the property 'ObjAuditdetailCreated'
         }
         /// <summary>
-        /// Test the property 'FkiUserIDModified'
+        /// Test the property 'ObjAuditdetailModified'
         /// </summary>
         [Test]
-        public void FkiUserIDModifiedTest()
+        public void ObjAuditdetailModifiedTest()
         {
-            // TODO unit test for the property 'FkiUserIDModified'
-        }
-        /// <summary>
-        /// Test the property 'FkiApikeyIDCreated'
-        /// </summary>
-        [Test]
-        public void FkiApikeyIDCreatedTest()
-        {
-            // TODO unit test for the property 'FkiApikeyIDCreated'
-        }
-        /// <summary>
-        /// Test the property 'FkiApikeyIDModified'
-        /// </summary>
-        [Test]
-        public void FkiApikeyIDModifiedTest()
-        {
-            // TODO unit test for the property 'FkiApikeyIDModified'
-        }
-        /// <summary>
-        /// Test the property 'DtCreatedDate'
-        /// </summary>
-        [Test]
-        public void DtCreatedDateTest()
-        {
-            // TODO unit test for the property 'DtCreatedDate'
-        }
-        /// <summary>
-        /// Test the property 'DtModifiedDate'
-        /// </summary>
-        [Test]
-        public void DtModifiedDateTest()
-        {
-            // TODO unit test for the property 'DtModifiedDate'
+            // TODO unit test for the property 'ObjAuditdetailModified'
         }
 
     }

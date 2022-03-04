@@ -73,6 +73,22 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'AObjEzsignformfield'
         }
+        /// <summary>
+        /// Test the property 'AObjDropdownElement'
+        /// </summary>
+        [Test]
+        public void AObjDropdownElementTest()
+        {
+            // TODO unit test for the property 'AObjDropdownElement'
+        }
+        /// <summary>
+        /// Test the property 'AObjEzsignformfieldgroupsigner'
+        /// </summary>
+        [Test]
+        public void AObjEzsignformfieldgroupsignerTest()
+        {
+            // TODO unit test for the property 'AObjEzsignformfieldgroupsigner'
+        }
 
     }
 

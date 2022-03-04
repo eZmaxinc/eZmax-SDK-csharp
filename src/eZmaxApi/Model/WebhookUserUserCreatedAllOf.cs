@@ -39,7 +39,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="WebhookUserUserCreatedAllOf" /> class.
         /// </summary>
         /// <param name="objUser">objUser (required).</param>
-        public WebhookUserUserCreatedAllOf(UserResponse objUser = default(UserResponse))
+        public WebhookUserUserCreatedAllOf(UserResponseCompound objUser = default(UserResponseCompound))
         {
             // to ensure "objUser" is required (not null)
             if (objUser == null)
@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets ObjUser
         /// </summary>
         [DataMember(Name="objUser", EmitDefaultValue=true)]
-        public UserResponse ObjUser { get; set; }
+        public UserResponseCompound ObjUser { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

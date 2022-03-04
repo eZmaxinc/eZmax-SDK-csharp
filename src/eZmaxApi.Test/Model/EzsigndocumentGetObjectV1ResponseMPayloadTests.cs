@@ -66,46 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'IEzsigndocumentStepformtotal'
-        /// </summary>
-        [Test]
-        public void IEzsigndocumentStepformtotalTest()
-        {
-            // TODO unit test for the property 'IEzsigndocumentStepformtotal'
-        }
-        /// <summary>
-        /// Test the property 'IEzsigndocumentStepformcurrent'
-        /// </summary>
-        [Test]
-        public void IEzsigndocumentStepformcurrentTest()
-        {
-            // TODO unit test for the property 'IEzsigndocumentStepformcurrent'
-        }
-        /// <summary>
-        /// Test the property 'IEzsigndocumentStepsignaturetotal'
-        /// </summary>
-        [Test]
-        public void IEzsigndocumentStepsignaturetotalTest()
-        {
-            // TODO unit test for the property 'IEzsigndocumentStepsignaturetotal'
-        }
-        /// <summary>
-        /// Test the property 'IEzsigndocumentStepsignatureCurrent'
-        /// </summary>
-        [Test]
-        public void IEzsigndocumentStepsignatureCurrentTest()
-        {
-            // TODO unit test for the property 'IEzsigndocumentStepsignatureCurrent'
-        }
-        /// <summary>
-        /// Test the property 'AObjEzsignfoldersignerassociationstatus'
-        /// </summary>
-        [Test]
-        public void AObjEzsignfoldersignerassociationstatusTest()
-        {
-            // TODO unit test for the property 'AObjEzsignfoldersignerassociationstatus'
-        }
-        /// <summary>
         /// Test the property 'FkiEzsignfolderID'
         /// </summary>
         [Test]
@@ -224,6 +184,46 @@ namespace eZmaxApi.Test
         public void ObjAuditTest()
         {
             // TODO unit test for the property 'ObjAudit'
+        }
+        /// <summary>
+        /// Test the property 'IEzsigndocumentStepformtotal'
+        /// </summary>
+        [Test]
+        public void IEzsigndocumentStepformtotalTest()
+        {
+            // TODO unit test for the property 'IEzsigndocumentStepformtotal'
+        }
+        /// <summary>
+        /// Test the property 'IEzsigndocumentStepformcurrent'
+        /// </summary>
+        [Test]
+        public void IEzsigndocumentStepformcurrentTest()
+        {
+            // TODO unit test for the property 'IEzsigndocumentStepformcurrent'
+        }
+        /// <summary>
+        /// Test the property 'IEzsigndocumentStepsignaturetotal'
+        /// </summary>
+        [Test]
+        public void IEzsigndocumentStepsignaturetotalTest()
+        {
+            // TODO unit test for the property 'IEzsigndocumentStepsignaturetotal'
+        }
+        /// <summary>
+        /// Test the property 'IEzsigndocumentStepsignatureCurrent'
+        /// </summary>
+        [Test]
+        public void IEzsigndocumentStepsignatureCurrentTest()
+        {
+            // TODO unit test for the property 'IEzsigndocumentStepsignatureCurrent'
+        }
+        /// <summary>
+        /// Test the property 'AObjEzsignfoldersignerassociationstatus'
+        /// </summary>
+        [Test]
+        public void AObjEzsignfoldersignerassociationstatusTest()
+        {
+            // TODO unit test for the property 'AObjEzsignfoldersignerassociationstatus'
         }
 
     }

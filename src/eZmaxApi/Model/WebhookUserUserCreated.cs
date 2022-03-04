@@ -41,7 +41,7 @@ namespace eZmaxApi.Model
         /// <param name="objUser">objUser (required).</param>
         /// <param name="objWebhook">objWebhook (required).</param>
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        public WebhookUserUserCreated(UserResponse objUser = default(UserResponse), WebhookResponse objWebhook = default(WebhookResponse), List<AttemptResponse> aObjAttempt = default(List<AttemptResponse>))
+        public WebhookUserUserCreated(UserResponseCompound objUser = default(UserResponseCompound), WebhookResponse objWebhook = default(WebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>))
         {
             // to ensure "objUser" is required (not null)
             if (objUser == null)
@@ -79,7 +79,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets ObjUser
         /// </summary>
         [DataMember(Name="objUser", EmitDefaultValue=true)]
-        public UserResponse ObjUser { get; set; }
+        public UserResponseCompound ObjUser { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjWebhook
@@ -92,7 +92,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.</value>
         [DataMember(Name="a_objAttempt", EmitDefaultValue=true)]
-        public List<AttemptResponse> AObjAttempt { get; set; }
+        public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

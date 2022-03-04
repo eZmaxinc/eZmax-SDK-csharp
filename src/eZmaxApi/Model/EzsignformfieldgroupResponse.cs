@@ -38,9 +38,63 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldgroupResponse" /> class.
         /// </summary>
+        /// <param name="pkiEzsignformfieldgroupID">The unique ID of the Ezsignformfieldgroup (required).</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="eEzsignformfieldgroupType">eEzsignformfieldgroupType (required).</param>
+        /// <param name="eEzsignformfieldgroupSignerrequirement">eEzsignformfieldgroupSignerrequirement (required).</param>
         /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup (required).</param>
-        public EzsignformfieldgroupResponse(string sEzsignformfieldgroupLabel = default(string))
+        /// <param name="iEzsignformfieldgroupStep">The step when the Ezsignsigner will be invited to fill the form fields (required).</param>
+        /// <param name="sEzsignformfieldgroupDefaultvalue">The default value for the Ezsignformfieldgroup (required).</param>
+        /// <param name="iEzsignformfieldgroupFilledmin">The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup (required).</param>
+        /// <param name="iEzsignformfieldgroupFilledmax">The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup (required).</param>
+        /// <param name="bEzsignformfieldgroupReadonly">Whether the Ezsignformfieldgroup is read only or not. (required).</param>
+        /// <param name="iEzsignformfieldgroupMaxlength">The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="bEzsignformfieldgroupEncrypted">Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="sEzsignformfieldgroupRegexp">A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="tEzsignformfieldgroupTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup.</param>
+        /// <param name="eEzsignformfieldgroupTooltipposition">eEzsignformfieldgroupTooltipposition.</param>
+        public EzsignformfieldgroupResponse(int pkiEzsignformfieldgroupID = default(int), int fkiEzsigndocumentID = default(int), FieldEEzsignformfieldgroupType eEzsignformfieldgroupType = default(FieldEEzsignformfieldgroupType), FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement = default(FieldEEzsignformfieldgroupSignerrequirement), string sEzsignformfieldgroupLabel = default(string), int iEzsignformfieldgroupStep = default(int), string sEzsignformfieldgroupDefaultvalue = default(string), int iEzsignformfieldgroupFilledmin = default(int), int iEzsignformfieldgroupFilledmax = default(int), bool bEzsignformfieldgroupReadonly = default(bool), int iEzsignformfieldgroupMaxlength = default(int), bool bEzsignformfieldgroupEncrypted = default(bool), string sEzsignformfieldgroupRegexp = default(string), string tEzsignformfieldgroupTooltip = default(string), FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition = default(FieldEEzsignformfieldgroupTooltipposition))
         {
+            // to ensure "pkiEzsignformfieldgroupID" is required (not null)
+            if (pkiEzsignformfieldgroupID == null)
+            {
+                throw new InvalidDataException("pkiEzsignformfieldgroupID is a required property for EzsignformfieldgroupResponse and cannot be null");
+            }
+            else
+            {
+                this.PkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
+            }
+
+            // to ensure "fkiEzsigndocumentID" is required (not null)
+            if (fkiEzsigndocumentID == null)
+            {
+                throw new InvalidDataException("fkiEzsigndocumentID is a required property for EzsignformfieldgroupResponse and cannot be null");
+            }
+            else
+            {
+                this.FkiEzsigndocumentID = fkiEzsigndocumentID;
+            }
+
+            // to ensure "eEzsignformfieldgroupType" is required (not null)
+            if (eEzsignformfieldgroupType == null)
+            {
+                throw new InvalidDataException("eEzsignformfieldgroupType is a required property for EzsignformfieldgroupResponse and cannot be null");
+            }
+            else
+            {
+                this.EEzsignformfieldgroupType = eEzsignformfieldgroupType;
+            }
+
+            // to ensure "eEzsignformfieldgroupSignerrequirement" is required (not null)
+            if (eEzsignformfieldgroupSignerrequirement == null)
+            {
+                throw new InvalidDataException("eEzsignformfieldgroupSignerrequirement is a required property for EzsignformfieldgroupResponse and cannot be null");
+            }
+            else
+            {
+                this.EEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
+            }
+
             // to ensure "sEzsignformfieldgroupLabel" is required (not null)
             if (sEzsignformfieldgroupLabel == null)
             {
@@ -51,7 +105,88 @@ namespace eZmaxApi.Model
                 this.SEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
             }
 
+            // to ensure "iEzsignformfieldgroupStep" is required (not null)
+            if (iEzsignformfieldgroupStep == null)
+            {
+                throw new InvalidDataException("iEzsignformfieldgroupStep is a required property for EzsignformfieldgroupResponse and cannot be null");
+            }
+            else
+            {
+                this.IEzsignformfieldgroupStep = iEzsignformfieldgroupStep;
+            }
+
+            // to ensure "sEzsignformfieldgroupDefaultvalue" is required (not null)
+            if (sEzsignformfieldgroupDefaultvalue == null)
+            {
+                throw new InvalidDataException("sEzsignformfieldgroupDefaultvalue is a required property for EzsignformfieldgroupResponse and cannot be null");
+            }
+            else
+            {
+                this.SEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
+            }
+
+            // to ensure "iEzsignformfieldgroupFilledmin" is required (not null)
+            if (iEzsignformfieldgroupFilledmin == null)
+            {
+                throw new InvalidDataException("iEzsignformfieldgroupFilledmin is a required property for EzsignformfieldgroupResponse and cannot be null");
+            }
+            else
+            {
+                this.IEzsignformfieldgroupFilledmin = iEzsignformfieldgroupFilledmin;
+            }
+
+            // to ensure "iEzsignformfieldgroupFilledmax" is required (not null)
+            if (iEzsignformfieldgroupFilledmax == null)
+            {
+                throw new InvalidDataException("iEzsignformfieldgroupFilledmax is a required property for EzsignformfieldgroupResponse and cannot be null");
+            }
+            else
+            {
+                this.IEzsignformfieldgroupFilledmax = iEzsignformfieldgroupFilledmax;
+            }
+
+            // to ensure "bEzsignformfieldgroupReadonly" is required (not null)
+            if (bEzsignformfieldgroupReadonly == null)
+            {
+                throw new InvalidDataException("bEzsignformfieldgroupReadonly is a required property for EzsignformfieldgroupResponse and cannot be null");
+            }
+            else
+            {
+                this.BEzsignformfieldgroupReadonly = bEzsignformfieldgroupReadonly;
+            }
+
+            this.IEzsignformfieldgroupMaxlength = iEzsignformfieldgroupMaxlength;
+            this.BEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
+            this.SEzsignformfieldgroupRegexp = sEzsignformfieldgroupRegexp;
+            this.TEzsignformfieldgroupTooltip = tEzsignformfieldgroupTooltip;
+            this.EEzsignformfieldgroupTooltipposition = eEzsignformfieldgroupTooltipposition;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignformfieldgroup
+        /// </summary>
+        /// <value>The unique ID of the Ezsignformfieldgroup</value>
+        [DataMember(Name="pkiEzsignformfieldgroupID", EmitDefaultValue=true)]
+        public int PkiEzsignformfieldgroupID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsigndocument
+        /// </summary>
+        /// <value>The unique ID of the Ezsigndocument</value>
+        [DataMember(Name="fkiEzsigndocumentID", EmitDefaultValue=true)]
+        public int FkiEzsigndocumentID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignformfieldgroupType
+        /// </summary>
+        [DataMember(Name="eEzsignformfieldgroupType", EmitDefaultValue=true)]
+        public FieldEEzsignformfieldgroupType EEzsignformfieldgroupType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignformfieldgroupSignerrequirement
+        /// </summary>
+        [DataMember(Name="eEzsignformfieldgroupSignerrequirement", EmitDefaultValue=true)]
+        public FieldEEzsignformfieldgroupSignerrequirement EEzsignformfieldgroupSignerrequirement { get; set; }
 
         /// <summary>
         /// The Label for the Ezsignformfieldgroup
@@ -61,6 +196,75 @@ namespace eZmaxApi.Model
         public string SEzsignformfieldgroupLabel { get; set; }
 
         /// <summary>
+        /// The step when the Ezsignsigner will be invited to fill the form fields
+        /// </summary>
+        /// <value>The step when the Ezsignsigner will be invited to fill the form fields</value>
+        [DataMember(Name="iEzsignformfieldgroupStep", EmitDefaultValue=true)]
+        public int IEzsignformfieldgroupStep { get; set; }
+
+        /// <summary>
+        /// The default value for the Ezsignformfieldgroup
+        /// </summary>
+        /// <value>The default value for the Ezsignformfieldgroup</value>
+        [DataMember(Name="sEzsignformfieldgroupDefaultvalue", EmitDefaultValue=true)]
+        public string SEzsignformfieldgroupDefaultvalue { get; set; }
+
+        /// <summary>
+        /// The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
+        /// </summary>
+        /// <value>The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup</value>
+        [DataMember(Name="iEzsignformfieldgroupFilledmin", EmitDefaultValue=true)]
+        public int IEzsignformfieldgroupFilledmin { get; set; }
+
+        /// <summary>
+        /// The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
+        /// </summary>
+        /// <value>The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup</value>
+        [DataMember(Name="iEzsignformfieldgroupFilledmax", EmitDefaultValue=true)]
+        public int IEzsignformfieldgroupFilledmax { get; set; }
+
+        /// <summary>
+        /// Whether the Ezsignformfieldgroup is read only or not.
+        /// </summary>
+        /// <value>Whether the Ezsignformfieldgroup is read only or not.</value>
+        [DataMember(Name="bEzsignformfieldgroupReadonly", EmitDefaultValue=true)]
+        public bool BEzsignformfieldgroupReadonly { get; set; }
+
+        /// <summary>
+        /// The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+        /// </summary>
+        /// <value>The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**</value>
+        [DataMember(Name="iEzsignformfieldgroupMaxlength", EmitDefaultValue=false)]
+        public int IEzsignformfieldgroupMaxlength { get; set; }
+
+        /// <summary>
+        /// Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+        /// </summary>
+        /// <value>Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**</value>
+        [DataMember(Name="bEzsignformfieldgroupEncrypted", EmitDefaultValue=false)]
+        public bool BEzsignformfieldgroupEncrypted { get; set; }
+
+        /// <summary>
+        /// A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+        /// </summary>
+        /// <value>A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**</value>
+        [DataMember(Name="sEzsignformfieldgroupRegexp", EmitDefaultValue=false)]
+        public string SEzsignformfieldgroupRegexp { get; set; }
+
+        /// <summary>
+        /// A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
+        /// </summary>
+        /// <value>A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup</value>
+        [DataMember(Name="tEzsignformfieldgroupTooltip", EmitDefaultValue=false)]
+        public string TEzsignformfieldgroupTooltip { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignformfieldgroupTooltipposition
+        /// </summary>
+        [DataMember(Name="eEzsignformfieldgroupTooltipposition", EmitDefaultValue=false)]
+        public FieldEEzsignformfieldgroupTooltipposition EEzsignformfieldgroupTooltipposition { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -68,7 +272,21 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignformfieldgroupResponse {\n");
+            sb.Append("  PkiEzsignformfieldgroupID: ").Append(PkiEzsignformfieldgroupID).Append("\n");
+            sb.Append("  FkiEzsigndocumentID: ").Append(FkiEzsigndocumentID).Append("\n");
+            sb.Append("  EEzsignformfieldgroupType: ").Append(EEzsignformfieldgroupType).Append("\n");
+            sb.Append("  EEzsignformfieldgroupSignerrequirement: ").Append(EEzsignformfieldgroupSignerrequirement).Append("\n");
             sb.Append("  SEzsignformfieldgroupLabel: ").Append(SEzsignformfieldgroupLabel).Append("\n");
+            sb.Append("  IEzsignformfieldgroupStep: ").Append(IEzsignformfieldgroupStep).Append("\n");
+            sb.Append("  SEzsignformfieldgroupDefaultvalue: ").Append(SEzsignformfieldgroupDefaultvalue).Append("\n");
+            sb.Append("  IEzsignformfieldgroupFilledmin: ").Append(IEzsignformfieldgroupFilledmin).Append("\n");
+            sb.Append("  IEzsignformfieldgroupFilledmax: ").Append(IEzsignformfieldgroupFilledmax).Append("\n");
+            sb.Append("  BEzsignformfieldgroupReadonly: ").Append(BEzsignformfieldgroupReadonly).Append("\n");
+            sb.Append("  IEzsignformfieldgroupMaxlength: ").Append(IEzsignformfieldgroupMaxlength).Append("\n");
+            sb.Append("  BEzsignformfieldgroupEncrypted: ").Append(BEzsignformfieldgroupEncrypted).Append("\n");
+            sb.Append("  SEzsignformfieldgroupRegexp: ").Append(SEzsignformfieldgroupRegexp).Append("\n");
+            sb.Append("  TEzsignformfieldgroupTooltip: ").Append(TEzsignformfieldgroupTooltip).Append("\n");
+            sb.Append("  EEzsignformfieldgroupTooltipposition: ").Append(EEzsignformfieldgroupTooltipposition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,9 +322,79 @@ namespace eZmaxApi.Model
 
             return 
                 (
+                    this.PkiEzsignformfieldgroupID == input.PkiEzsignformfieldgroupID ||
+                    (this.PkiEzsignformfieldgroupID != null &&
+                    this.PkiEzsignformfieldgroupID.Equals(input.PkiEzsignformfieldgroupID))
+                ) && 
+                (
+                    this.FkiEzsigndocumentID == input.FkiEzsigndocumentID ||
+                    (this.FkiEzsigndocumentID != null &&
+                    this.FkiEzsigndocumentID.Equals(input.FkiEzsigndocumentID))
+                ) && 
+                (
+                    this.EEzsignformfieldgroupType == input.EEzsignformfieldgroupType ||
+                    (this.EEzsignformfieldgroupType != null &&
+                    this.EEzsignformfieldgroupType.Equals(input.EEzsignformfieldgroupType))
+                ) && 
+                (
+                    this.EEzsignformfieldgroupSignerrequirement == input.EEzsignformfieldgroupSignerrequirement ||
+                    (this.EEzsignformfieldgroupSignerrequirement != null &&
+                    this.EEzsignformfieldgroupSignerrequirement.Equals(input.EEzsignformfieldgroupSignerrequirement))
+                ) && 
+                (
                     this.SEzsignformfieldgroupLabel == input.SEzsignformfieldgroupLabel ||
                     (this.SEzsignformfieldgroupLabel != null &&
                     this.SEzsignformfieldgroupLabel.Equals(input.SEzsignformfieldgroupLabel))
+                ) && 
+                (
+                    this.IEzsignformfieldgroupStep == input.IEzsignformfieldgroupStep ||
+                    (this.IEzsignformfieldgroupStep != null &&
+                    this.IEzsignformfieldgroupStep.Equals(input.IEzsignformfieldgroupStep))
+                ) && 
+                (
+                    this.SEzsignformfieldgroupDefaultvalue == input.SEzsignformfieldgroupDefaultvalue ||
+                    (this.SEzsignformfieldgroupDefaultvalue != null &&
+                    this.SEzsignformfieldgroupDefaultvalue.Equals(input.SEzsignformfieldgroupDefaultvalue))
+                ) && 
+                (
+                    this.IEzsignformfieldgroupFilledmin == input.IEzsignformfieldgroupFilledmin ||
+                    (this.IEzsignformfieldgroupFilledmin != null &&
+                    this.IEzsignformfieldgroupFilledmin.Equals(input.IEzsignformfieldgroupFilledmin))
+                ) && 
+                (
+                    this.IEzsignformfieldgroupFilledmax == input.IEzsignformfieldgroupFilledmax ||
+                    (this.IEzsignformfieldgroupFilledmax != null &&
+                    this.IEzsignformfieldgroupFilledmax.Equals(input.IEzsignformfieldgroupFilledmax))
+                ) && 
+                (
+                    this.BEzsignformfieldgroupReadonly == input.BEzsignformfieldgroupReadonly ||
+                    (this.BEzsignformfieldgroupReadonly != null &&
+                    this.BEzsignformfieldgroupReadonly.Equals(input.BEzsignformfieldgroupReadonly))
+                ) && 
+                (
+                    this.IEzsignformfieldgroupMaxlength == input.IEzsignformfieldgroupMaxlength ||
+                    (this.IEzsignformfieldgroupMaxlength != null &&
+                    this.IEzsignformfieldgroupMaxlength.Equals(input.IEzsignformfieldgroupMaxlength))
+                ) && 
+                (
+                    this.BEzsignformfieldgroupEncrypted == input.BEzsignformfieldgroupEncrypted ||
+                    (this.BEzsignformfieldgroupEncrypted != null &&
+                    this.BEzsignformfieldgroupEncrypted.Equals(input.BEzsignformfieldgroupEncrypted))
+                ) && 
+                (
+                    this.SEzsignformfieldgroupRegexp == input.SEzsignformfieldgroupRegexp ||
+                    (this.SEzsignformfieldgroupRegexp != null &&
+                    this.SEzsignformfieldgroupRegexp.Equals(input.SEzsignformfieldgroupRegexp))
+                ) && 
+                (
+                    this.TEzsignformfieldgroupTooltip == input.TEzsignformfieldgroupTooltip ||
+                    (this.TEzsignformfieldgroupTooltip != null &&
+                    this.TEzsignformfieldgroupTooltip.Equals(input.TEzsignformfieldgroupTooltip))
+                ) && 
+                (
+                    this.EEzsignformfieldgroupTooltipposition == input.EEzsignformfieldgroupTooltipposition ||
+                    (this.EEzsignformfieldgroupTooltipposition != null &&
+                    this.EEzsignformfieldgroupTooltipposition.Equals(input.EEzsignformfieldgroupTooltipposition))
                 );
         }
 
@@ -119,8 +407,36 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PkiEzsignformfieldgroupID != null)
+                    hashCode = hashCode * 59 + this.PkiEzsignformfieldgroupID.GetHashCode();
+                if (this.FkiEzsigndocumentID != null)
+                    hashCode = hashCode * 59 + this.FkiEzsigndocumentID.GetHashCode();
+                if (this.EEzsignformfieldgroupType != null)
+                    hashCode = hashCode * 59 + this.EEzsignformfieldgroupType.GetHashCode();
+                if (this.EEzsignformfieldgroupSignerrequirement != null)
+                    hashCode = hashCode * 59 + this.EEzsignformfieldgroupSignerrequirement.GetHashCode();
                 if (this.SEzsignformfieldgroupLabel != null)
                     hashCode = hashCode * 59 + this.SEzsignformfieldgroupLabel.GetHashCode();
+                if (this.IEzsignformfieldgroupStep != null)
+                    hashCode = hashCode * 59 + this.IEzsignformfieldgroupStep.GetHashCode();
+                if (this.SEzsignformfieldgroupDefaultvalue != null)
+                    hashCode = hashCode * 59 + this.SEzsignformfieldgroupDefaultvalue.GetHashCode();
+                if (this.IEzsignformfieldgroupFilledmin != null)
+                    hashCode = hashCode * 59 + this.IEzsignformfieldgroupFilledmin.GetHashCode();
+                if (this.IEzsignformfieldgroupFilledmax != null)
+                    hashCode = hashCode * 59 + this.IEzsignformfieldgroupFilledmax.GetHashCode();
+                if (this.BEzsignformfieldgroupReadonly != null)
+                    hashCode = hashCode * 59 + this.BEzsignformfieldgroupReadonly.GetHashCode();
+                if (this.IEzsignformfieldgroupMaxlength != null)
+                    hashCode = hashCode * 59 + this.IEzsignformfieldgroupMaxlength.GetHashCode();
+                if (this.BEzsignformfieldgroupEncrypted != null)
+                    hashCode = hashCode * 59 + this.BEzsignformfieldgroupEncrypted.GetHashCode();
+                if (this.SEzsignformfieldgroupRegexp != null)
+                    hashCode = hashCode * 59 + this.SEzsignformfieldgroupRegexp.GetHashCode();
+                if (this.TEzsignformfieldgroupTooltip != null)
+                    hashCode = hashCode * 59 + this.TEzsignformfieldgroupTooltip.GetHashCode();
+                if (this.EEzsignformfieldgroupTooltipposition != null)
+                    hashCode = hashCode * 59 + this.EEzsignformfieldgroupTooltipposition.GetHashCode();
                 return hashCode;
             }
         }

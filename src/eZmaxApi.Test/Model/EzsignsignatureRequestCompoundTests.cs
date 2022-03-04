@@ -66,22 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'BEzsignsignatureCustomdate'
-        /// </summary>
-        [Test]
-        public void BEzsignsignatureCustomdateTest()
-        {
-            // TODO unit test for the property 'BEzsignsignatureCustomdate'
-        }
-        /// <summary>
-        /// Test the property 'AObjEzsignsignaturecustomdate'
-        /// </summary>
-        [Test]
-        public void AObjEzsignsignaturecustomdateTest()
-        {
-            // TODO unit test for the property 'AObjEzsignsignaturecustomdate'
-        }
-        /// <summary>
         /// Test the property 'PkiEzsignsignatureID'
         /// </summary>
         [Test]
@@ -144,6 +128,22 @@ namespace eZmaxApi.Test
         public void FkiEzsigndocumentIDTest()
         {
             // TODO unit test for the property 'FkiEzsigndocumentID'
+        }
+        /// <summary>
+        /// Test the property 'BEzsignsignatureCustomdate'
+        /// </summary>
+        [Test]
+        public void BEzsignsignatureCustomdateTest()
+        {
+            // TODO unit test for the property 'BEzsignsignatureCustomdate'
+        }
+        /// <summary>
+        /// Test the property 'AObjEzsignsignaturecustomdate'
+        /// </summary>
+        [Test]
+        public void AObjEzsignsignaturecustomdateTest()
+        {
+            // TODO unit test for the property 'AObjEzsignsignaturecustomdate'
         }
 
     }

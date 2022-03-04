@@ -38,56 +38,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactinformationsRequestCompound" /> class.
         /// </summary>
-        /// <param name="aObjAddress">aObjAddress (required).</param>
-        /// <param name="aObjPhone">aObjPhone (required).</param>
-        /// <param name="aObjEmail">aObjEmail (required).</param>
-        /// <param name="aObjWebsite">aObjWebsite (required).</param>
         /// <param name="iAddressDefault">The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
         /// <param name="iPhoneDefault">The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
         /// <param name="iEmailDefault">The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
         /// <param name="iWebsiteDefault">The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
-        public ContactinformationsRequestCompound(List<AddressRequest> aObjAddress = default(List<AddressRequest>), List<PhoneRequest> aObjPhone = default(List<PhoneRequest>), List<EmailRequest> aObjEmail = default(List<EmailRequest>), List<WebsiteRequest> aObjWebsite = default(List<WebsiteRequest>), int iAddressDefault = default(int), int iPhoneDefault = default(int), int iEmailDefault = default(int), int iWebsiteDefault = default(int))
+        /// <param name="aObjAddress">aObjAddress (required).</param>
+        /// <param name="aObjPhone">aObjPhone (required).</param>
+        /// <param name="aObjEmail">aObjEmail (required).</param>
+        /// <param name="aObjWebsite">aObjWebsite (required).</param>
+        public ContactinformationsRequestCompound(int iAddressDefault = default(int), int iPhoneDefault = default(int), int iEmailDefault = default(int), int iWebsiteDefault = default(int), List<AddressRequestCompound> aObjAddress = default(List<AddressRequestCompound>), List<PhoneRequestCompound> aObjPhone = default(List<PhoneRequestCompound>), List<EmailRequestCompound> aObjEmail = default(List<EmailRequestCompound>), List<WebsiteRequestCompound> aObjWebsite = default(List<WebsiteRequestCompound>))
         {
-            // to ensure "aObjAddress" is required (not null)
-            if (aObjAddress == null)
-            {
-                throw new InvalidDataException("aObjAddress is a required property for ContactinformationsRequestCompound and cannot be null");
-            }
-            else
-            {
-                this.AObjAddress = aObjAddress;
-            }
-
-            // to ensure "aObjPhone" is required (not null)
-            if (aObjPhone == null)
-            {
-                throw new InvalidDataException("aObjPhone is a required property for ContactinformationsRequestCompound and cannot be null");
-            }
-            else
-            {
-                this.AObjPhone = aObjPhone;
-            }
-
-            // to ensure "aObjEmail" is required (not null)
-            if (aObjEmail == null)
-            {
-                throw new InvalidDataException("aObjEmail is a required property for ContactinformationsRequestCompound and cannot be null");
-            }
-            else
-            {
-                this.AObjEmail = aObjEmail;
-            }
-
-            // to ensure "aObjWebsite" is required (not null)
-            if (aObjWebsite == null)
-            {
-                throw new InvalidDataException("aObjWebsite is a required property for ContactinformationsRequestCompound and cannot be null");
-            }
-            else
-            {
-                this.AObjWebsite = aObjWebsite;
-            }
-
             // to ensure "iAddressDefault" is required (not null)
             if (iAddressDefault == null)
             {
@@ -128,31 +88,47 @@ namespace eZmaxApi.Model
                 this.IWebsiteDefault = iWebsiteDefault;
             }
 
+            // to ensure "aObjAddress" is required (not null)
+            if (aObjAddress == null)
+            {
+                throw new InvalidDataException("aObjAddress is a required property for ContactinformationsRequestCompound and cannot be null");
+            }
+            else
+            {
+                this.AObjAddress = aObjAddress;
+            }
+
+            // to ensure "aObjPhone" is required (not null)
+            if (aObjPhone == null)
+            {
+                throw new InvalidDataException("aObjPhone is a required property for ContactinformationsRequestCompound and cannot be null");
+            }
+            else
+            {
+                this.AObjPhone = aObjPhone;
+            }
+
+            // to ensure "aObjEmail" is required (not null)
+            if (aObjEmail == null)
+            {
+                throw new InvalidDataException("aObjEmail is a required property for ContactinformationsRequestCompound and cannot be null");
+            }
+            else
+            {
+                this.AObjEmail = aObjEmail;
+            }
+
+            // to ensure "aObjWebsite" is required (not null)
+            if (aObjWebsite == null)
+            {
+                throw new InvalidDataException("aObjWebsite is a required property for ContactinformationsRequestCompound and cannot be null");
+            }
+            else
+            {
+                this.AObjWebsite = aObjWebsite;
+            }
+
         }
-
-        /// <summary>
-        /// Gets or Sets AObjAddress
-        /// </summary>
-        [DataMember(Name="a_objAddress", EmitDefaultValue=true)]
-        public List<AddressRequest> AObjAddress { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AObjPhone
-        /// </summary>
-        [DataMember(Name="a_objPhone", EmitDefaultValue=true)]
-        public List<PhoneRequest> AObjPhone { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AObjEmail
-        /// </summary>
-        [DataMember(Name="a_objEmail", EmitDefaultValue=true)]
-        public List<EmailRequest> AObjEmail { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AObjWebsite
-        /// </summary>
-        [DataMember(Name="a_objWebsite", EmitDefaultValue=true)]
-        public List<WebsiteRequest> AObjWebsite { get; set; }
 
         /// <summary>
         /// The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty.
@@ -183,6 +159,30 @@ namespace eZmaxApi.Model
         public int IWebsiteDefault { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjAddress
+        /// </summary>
+        [DataMember(Name="a_objAddress", EmitDefaultValue=true)]
+        public List<AddressRequestCompound> AObjAddress { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AObjPhone
+        /// </summary>
+        [DataMember(Name="a_objPhone", EmitDefaultValue=true)]
+        public List<PhoneRequestCompound> AObjPhone { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AObjEmail
+        /// </summary>
+        [DataMember(Name="a_objEmail", EmitDefaultValue=true)]
+        public List<EmailRequestCompound> AObjEmail { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AObjWebsite
+        /// </summary>
+        [DataMember(Name="a_objWebsite", EmitDefaultValue=true)]
+        public List<WebsiteRequestCompound> AObjWebsite { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -190,14 +190,14 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactinformationsRequestCompound {\n");
-            sb.Append("  AObjAddress: ").Append(AObjAddress).Append("\n");
-            sb.Append("  AObjPhone: ").Append(AObjPhone).Append("\n");
-            sb.Append("  AObjEmail: ").Append(AObjEmail).Append("\n");
-            sb.Append("  AObjWebsite: ").Append(AObjWebsite).Append("\n");
             sb.Append("  IAddressDefault: ").Append(IAddressDefault).Append("\n");
             sb.Append("  IPhoneDefault: ").Append(IPhoneDefault).Append("\n");
             sb.Append("  IEmailDefault: ").Append(IEmailDefault).Append("\n");
             sb.Append("  IWebsiteDefault: ").Append(IWebsiteDefault).Append("\n");
+            sb.Append("  AObjAddress: ").Append(AObjAddress).Append("\n");
+            sb.Append("  AObjPhone: ").Append(AObjPhone).Append("\n");
+            sb.Append("  AObjEmail: ").Append(AObjEmail).Append("\n");
+            sb.Append("  AObjWebsite: ").Append(AObjWebsite).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -233,6 +233,26 @@ namespace eZmaxApi.Model
 
             return 
                 (
+                    this.IAddressDefault == input.IAddressDefault ||
+                    (this.IAddressDefault != null &&
+                    this.IAddressDefault.Equals(input.IAddressDefault))
+                ) && 
+                (
+                    this.IPhoneDefault == input.IPhoneDefault ||
+                    (this.IPhoneDefault != null &&
+                    this.IPhoneDefault.Equals(input.IPhoneDefault))
+                ) && 
+                (
+                    this.IEmailDefault == input.IEmailDefault ||
+                    (this.IEmailDefault != null &&
+                    this.IEmailDefault.Equals(input.IEmailDefault))
+                ) && 
+                (
+                    this.IWebsiteDefault == input.IWebsiteDefault ||
+                    (this.IWebsiteDefault != null &&
+                    this.IWebsiteDefault.Equals(input.IWebsiteDefault))
+                ) && 
+                (
                     this.AObjAddress == input.AObjAddress ||
                     this.AObjAddress != null &&
                     input.AObjAddress != null &&
@@ -255,26 +275,6 @@ namespace eZmaxApi.Model
                     this.AObjWebsite != null &&
                     input.AObjWebsite != null &&
                     this.AObjWebsite.SequenceEqual(input.AObjWebsite)
-                ) && 
-                (
-                    this.IAddressDefault == input.IAddressDefault ||
-                    (this.IAddressDefault != null &&
-                    this.IAddressDefault.Equals(input.IAddressDefault))
-                ) && 
-                (
-                    this.IPhoneDefault == input.IPhoneDefault ||
-                    (this.IPhoneDefault != null &&
-                    this.IPhoneDefault.Equals(input.IPhoneDefault))
-                ) && 
-                (
-                    this.IEmailDefault == input.IEmailDefault ||
-                    (this.IEmailDefault != null &&
-                    this.IEmailDefault.Equals(input.IEmailDefault))
-                ) && 
-                (
-                    this.IWebsiteDefault == input.IWebsiteDefault ||
-                    (this.IWebsiteDefault != null &&
-                    this.IWebsiteDefault.Equals(input.IWebsiteDefault))
                 );
         }
 
@@ -287,14 +287,6 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AObjAddress != null)
-                    hashCode = hashCode * 59 + this.AObjAddress.GetHashCode();
-                if (this.AObjPhone != null)
-                    hashCode = hashCode * 59 + this.AObjPhone.GetHashCode();
-                if (this.AObjEmail != null)
-                    hashCode = hashCode * 59 + this.AObjEmail.GetHashCode();
-                if (this.AObjWebsite != null)
-                    hashCode = hashCode * 59 + this.AObjWebsite.GetHashCode();
                 if (this.IAddressDefault != null)
                     hashCode = hashCode * 59 + this.IAddressDefault.GetHashCode();
                 if (this.IPhoneDefault != null)
@@ -303,6 +295,14 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IEmailDefault.GetHashCode();
                 if (this.IWebsiteDefault != null)
                     hashCode = hashCode * 59 + this.IWebsiteDefault.GetHashCode();
+                if (this.AObjAddress != null)
+                    hashCode = hashCode * 59 + this.AObjAddress.GetHashCode();
+                if (this.AObjPhone != null)
+                    hashCode = hashCode * 59 + this.AObjPhone.GetHashCode();
+                if (this.AObjEmail != null)
+                    hashCode = hashCode * 59 + this.AObjEmail.GetHashCode();
+                if (this.AObjWebsite != null)
+                    hashCode = hashCode * 59 + this.AObjWebsite.GetHashCode();
                 return hashCode;
             }
         }

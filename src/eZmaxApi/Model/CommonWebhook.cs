@@ -40,7 +40,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objWebhook">objWebhook (required).</param>
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        public CommonWebhook(WebhookResponse objWebhook = default(WebhookResponse), List<AttemptResponse> aObjAttempt = default(List<AttemptResponse>))
+        public CommonWebhook(WebhookResponse objWebhook = default(WebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>))
         {
             // to ensure "objWebhook" is required (not null)
             if (objWebhook == null)
@@ -75,7 +75,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.</value>
         [DataMember(Name="a_objAttempt", EmitDefaultValue=true)]
-        public List<AttemptResponse> AObjAttempt { get; set; }
+        public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

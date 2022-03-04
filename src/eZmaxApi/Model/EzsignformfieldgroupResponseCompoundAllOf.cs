@@ -39,7 +39,9 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignformfieldgroupResponseCompoundAllOf" /> class.
         /// </summary>
         /// <param name="aObjEzsignformfield">aObjEzsignformfield (required).</param>
-        public EzsignformfieldgroupResponseCompoundAllOf(List<EzsignformfieldResponse> aObjEzsignformfield = default(List<EzsignformfieldResponse>))
+        /// <param name="aObjDropdownElement">aObjDropdownElement.</param>
+        /// <param name="aObjEzsignformfieldgroupsigner">aObjEzsignformfieldgroupsigner (required).</param>
+        public EzsignformfieldgroupResponseCompoundAllOf(List<EzsignformfieldResponseCompound> aObjEzsignformfield = default(List<EzsignformfieldResponseCompound>), List<CustomDropdownElementResponseCompound> aObjDropdownElement = default(List<CustomDropdownElementResponseCompound>), EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner = default(EzsignformfieldgroupsignerResponseCompound))
         {
             // to ensure "aObjEzsignformfield" is required (not null)
             if (aObjEzsignformfield == null)
@@ -51,13 +53,36 @@ namespace eZmaxApi.Model
                 this.AObjEzsignformfield = aObjEzsignformfield;
             }
 
+            // to ensure "aObjEzsignformfieldgroupsigner" is required (not null)
+            if (aObjEzsignformfieldgroupsigner == null)
+            {
+                throw new InvalidDataException("aObjEzsignformfieldgroupsigner is a required property for EzsignformfieldgroupResponseCompoundAllOf and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsignformfieldgroupsigner = aObjEzsignformfieldgroupsigner;
+            }
+
+            this.AObjDropdownElement = aObjDropdownElement;
         }
 
         /// <summary>
         /// Gets or Sets AObjEzsignformfield
         /// </summary>
         [DataMember(Name="a_objEzsignformfield", EmitDefaultValue=true)]
-        public List<EzsignformfieldResponse> AObjEzsignformfield { get; set; }
+        public List<EzsignformfieldResponseCompound> AObjEzsignformfield { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AObjDropdownElement
+        /// </summary>
+        [DataMember(Name="a_objDropdownElement", EmitDefaultValue=false)]
+        public List<CustomDropdownElementResponseCompound> AObjDropdownElement { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AObjEzsignformfieldgroupsigner
+        /// </summary>
+        [DataMember(Name="a_objEzsignformfieldgroupsigner", EmitDefaultValue=true)]
+        public EzsignformfieldgroupsignerResponseCompound AObjEzsignformfieldgroupsigner { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -68,6 +93,8 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class EzsignformfieldgroupResponseCompoundAllOf {\n");
             sb.Append("  AObjEzsignformfield: ").Append(AObjEzsignformfield).Append("\n");
+            sb.Append("  AObjDropdownElement: ").Append(AObjDropdownElement).Append("\n");
+            sb.Append("  AObjEzsignformfieldgroupsigner: ").Append(AObjEzsignformfieldgroupsigner).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,6 +134,17 @@ namespace eZmaxApi.Model
                     this.AObjEzsignformfield != null &&
                     input.AObjEzsignformfield != null &&
                     this.AObjEzsignformfield.SequenceEqual(input.AObjEzsignformfield)
+                ) && 
+                (
+                    this.AObjDropdownElement == input.AObjDropdownElement ||
+                    this.AObjDropdownElement != null &&
+                    input.AObjDropdownElement != null &&
+                    this.AObjDropdownElement.SequenceEqual(input.AObjDropdownElement)
+                ) && 
+                (
+                    this.AObjEzsignformfieldgroupsigner == input.AObjEzsignformfieldgroupsigner ||
+                    (this.AObjEzsignformfieldgroupsigner != null &&
+                    this.AObjEzsignformfieldgroupsigner.Equals(input.AObjEzsignformfieldgroupsigner))
                 );
         }
 
@@ -121,6 +159,10 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.AObjEzsignformfield != null)
                     hashCode = hashCode * 59 + this.AObjEzsignformfield.GetHashCode();
+                if (this.AObjDropdownElement != null)
+                    hashCode = hashCode * 59 + this.AObjDropdownElement.GetHashCode();
+                if (this.AObjEzsignformfieldgroupsigner != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignformfieldgroupsigner.GetHashCode();
                 return hashCode;
             }
         }

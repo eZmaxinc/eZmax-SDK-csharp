@@ -5,11 +5,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IEzsigndocumentStepformtotal** | **int** | The total number of steps in the form filling phase | 
-**IEzsigndocumentStepformcurrent** | **int** | The current step in the form filling phase | 
-**IEzsigndocumentStepsignaturetotal** | **int** | The total number of steps in the signature filling phase | 
-**IEzsigndocumentStepsignatureCurrent** | **int** | The current step in the signature phase | 
-**AObjEzsignfoldersignerassociationstatus** | [**List&lt;CustomEzsignfoldersignerassociationstatusResponse&gt;**](CustomEzsignfoldersignerassociationstatusResponse.md) |  | 
 **FkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
 **DtEzsigndocumentDuedate** | **string** | The maximum date and time at which the Ezsigndocument can be signed. | 
 **FkiLanguageID** | **int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
@@ -25,6 +20,11 @@ Name | Type | Description | Notes
 **SEzsigndocumentMD5initial** | **string** | MD5 Hash of the initial PDF Document before signatures were applied to it. | 
 **SEzsigndocumentMD5signed** | **string** | MD5 Hash of the final PDF Document after all signatures were applied to it. | 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | 
+**IEzsigndocumentStepformtotal** | **int** | The total number of steps in the form filling phase | 
+**IEzsigndocumentStepformcurrent** | **int** | The current step in the form filling phase | 
+**IEzsigndocumentStepsignaturetotal** | **int** | The total number of steps in the signature filling phase | 
+**IEzsigndocumentStepsignatureCurrent** | **int** | The current step in the signature phase | 
+**AObjEzsignfoldersignerassociationstatus** | [**List&lt;CustomEzsignfoldersignerassociationstatusResponse&gt;**](CustomEzsignfoldersignerassociationstatusResponse.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

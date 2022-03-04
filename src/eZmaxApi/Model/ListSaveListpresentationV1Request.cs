@@ -39,7 +39,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="ListSaveListpresentationV1Request" /> class.
         /// </summary>
         /// <param name="aObjListpresentation">aObjListpresentation (required).</param>
-        public ListSaveListpresentationV1Request(List<ListpresentationRequest> aObjListpresentation = default(List<ListpresentationRequest>))
+        public ListSaveListpresentationV1Request(List<ListpresentationRequestCompound> aObjListpresentation = default(List<ListpresentationRequestCompound>))
         {
             // to ensure "aObjListpresentation" is required (not null)
             if (aObjListpresentation == null)
@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjListpresentation
         /// </summary>
         [DataMember(Name="a_objListpresentation", EmitDefaultValue=true)]
-        public List<ListpresentationRequest> AObjListpresentation { get; set; }
+        public List<ListpresentationRequestCompound> AObjListpresentation { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

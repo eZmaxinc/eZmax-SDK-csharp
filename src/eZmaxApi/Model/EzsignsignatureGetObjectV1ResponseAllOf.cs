@@ -38,8 +38,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureGetObjectV1ResponseAllOf" /> class.
         /// </summary>
-        /// <param name="mPayload">Payload for the /1/object/ezsignsignature/getObject API Request (required).</param>
-        public EzsignsignatureGetObjectV1ResponseAllOf(Object mPayload = default(Object))
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzsignsignatureGetObjectV1ResponseAllOf(EzsignsignatureGetObjectV1ResponseMPayload mPayload = default(EzsignsignatureGetObjectV1ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
@@ -54,11 +54,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Payload for the /1/object/ezsignsignature/getObject API Request
+        /// Gets or Sets MPayload
         /// </summary>
-        /// <value>Payload for the /1/object/ezsignsignature/getObject API Request</value>
         [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public Object MPayload { get; set; }
+        public EzsignsignatureGetObjectV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

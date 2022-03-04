@@ -38,11 +38,6 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionGetCurrentV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiPermissionID">An array of permissions granted to the user or api key (required).</param>
-        /// <param name="objUserReal">objUserReal (required).</param>
-        /// <param name="objUserCloned">objUserCloned.</param>
-        /// <param name="objApikey">objApikey.</param>
-        /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
         /// <param name="eActivesessionSessiontype">eActivesessionSessiontype (required).</param>
         /// <param name="eActivesessionWeekdaystart">eActivesessionWeekdaystart (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
@@ -50,38 +45,13 @@ namespace eZmaxApi.Model
         /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
         /// <param name="bActivesessionDebug">Whether the active session is in debug or not (required).</param>
         /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
-        public ActivesessionGetCurrentV1ResponseMPayload(List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>), FieldEActivesessionSessiontype eActivesessionSessiontype = default(FieldEActivesessionSessiontype), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), string pksCustomerCode = default(string))
+        /// <param name="aPkiPermissionID">An array of permissions granted to the user or api key (required).</param>
+        /// <param name="objUserReal">objUserReal (required).</param>
+        /// <param name="objUserCloned">objUserCloned.</param>
+        /// <param name="objApikey">objApikey.</param>
+        /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
+        public ActivesessionGetCurrentV1ResponseMPayload(FieldEActivesessionSessiontype eActivesessionSessiontype = default(FieldEActivesessionSessiontype), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), string pksCustomerCode = default(string), List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>))
         {
-            // to ensure "aPkiPermissionID" is required (not null)
-            if (aPkiPermissionID == null)
-            {
-                throw new InvalidDataException("aPkiPermissionID is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.APkiPermissionID = aPkiPermissionID;
-            }
-
-            // to ensure "objUserReal" is required (not null)
-            if (objUserReal == null)
-            {
-                throw new InvalidDataException("objUserReal is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.ObjUserReal = objUserReal;
-            }
-
-            // to ensure "aEModuleInternalname" is required (not null)
-            if (aEModuleInternalname == null)
-            {
-                throw new InvalidDataException("aEModuleInternalname is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.AEModuleInternalname = aEModuleInternalname;
-            }
-
             // to ensure "eActivesessionSessiontype" is required (not null)
             if (eActivesessionSessiontype == null)
             {
@@ -152,41 +122,39 @@ namespace eZmaxApi.Model
                 this.PksCustomerCode = pksCustomerCode;
             }
 
+            // to ensure "aPkiPermissionID" is required (not null)
+            if (aPkiPermissionID == null)
+            {
+                throw new InvalidDataException("aPkiPermissionID is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.APkiPermissionID = aPkiPermissionID;
+            }
+
+            // to ensure "objUserReal" is required (not null)
+            if (objUserReal == null)
+            {
+                throw new InvalidDataException("objUserReal is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.ObjUserReal = objUserReal;
+            }
+
+            // to ensure "aEModuleInternalname" is required (not null)
+            if (aEModuleInternalname == null)
+            {
+                throw new InvalidDataException("aEModuleInternalname is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AEModuleInternalname = aEModuleInternalname;
+            }
+
             this.ObjUserCloned = objUserCloned;
             this.ObjApikey = objApikey;
         }
-
-        /// <summary>
-        /// An array of permissions granted to the user or api key
-        /// </summary>
-        /// <value>An array of permissions granted to the user or api key</value>
-        [DataMember(Name="a_pkiPermissionID", EmitDefaultValue=true)]
-        public List<int> APkiPermissionID { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjUserReal
-        /// </summary>
-        [DataMember(Name="objUserReal", EmitDefaultValue=true)]
-        public ActivesessionResponseCompoundUser ObjUserReal { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjUserCloned
-        /// </summary>
-        [DataMember(Name="objUserCloned", EmitDefaultValue=false)]
-        public ActivesessionResponseCompoundUser ObjUserCloned { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjApikey
-        /// </summary>
-        [DataMember(Name="objApikey", EmitDefaultValue=false)]
-        public ActivesessionResponseCompoundApikey ObjApikey { get; set; }
-
-        /// <summary>
-        /// An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
-        /// </summary>
-        /// <value>An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.</value>
-        [DataMember(Name="a_eModuleInternalname", EmitDefaultValue=true)]
-        public List<string> AEModuleInternalname { get; set; }
 
         /// <summary>
         /// Gets or Sets EActivesessionSessiontype
@@ -236,6 +204,38 @@ namespace eZmaxApi.Model
         public string PksCustomerCode { get; set; }
 
         /// <summary>
+        /// An array of permissions granted to the user or api key
+        /// </summary>
+        /// <value>An array of permissions granted to the user or api key</value>
+        [DataMember(Name="a_pkiPermissionID", EmitDefaultValue=true)]
+        public List<int> APkiPermissionID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjUserReal
+        /// </summary>
+        [DataMember(Name="objUserReal", EmitDefaultValue=true)]
+        public ActivesessionResponseCompoundUser ObjUserReal { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjUserCloned
+        /// </summary>
+        [DataMember(Name="objUserCloned", EmitDefaultValue=false)]
+        public ActivesessionResponseCompoundUser ObjUserCloned { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjApikey
+        /// </summary>
+        [DataMember(Name="objApikey", EmitDefaultValue=false)]
+        public ActivesessionResponseCompoundApikey ObjApikey { get; set; }
+
+        /// <summary>
+        /// An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
+        /// </summary>
+        /// <value>An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.</value>
+        [DataMember(Name="a_eModuleInternalname", EmitDefaultValue=true)]
+        public List<string> AEModuleInternalname { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -243,11 +243,6 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActivesessionGetCurrentV1ResponseMPayload {\n");
-            sb.Append("  APkiPermissionID: ").Append(APkiPermissionID).Append("\n");
-            sb.Append("  ObjUserReal: ").Append(ObjUserReal).Append("\n");
-            sb.Append("  ObjUserCloned: ").Append(ObjUserCloned).Append("\n");
-            sb.Append("  ObjApikey: ").Append(ObjApikey).Append("\n");
-            sb.Append("  AEModuleInternalname: ").Append(AEModuleInternalname).Append("\n");
             sb.Append("  EActivesessionSessiontype: ").Append(EActivesessionSessiontype).Append("\n");
             sb.Append("  EActivesessionWeekdaystart: ").Append(EActivesessionWeekdaystart).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
@@ -255,6 +250,11 @@ namespace eZmaxApi.Model
             sb.Append("  SDepartmentNameX: ").Append(SDepartmentNameX).Append("\n");
             sb.Append("  BActivesessionDebug: ").Append(BActivesessionDebug).Append("\n");
             sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
+            sb.Append("  APkiPermissionID: ").Append(APkiPermissionID).Append("\n");
+            sb.Append("  ObjUserReal: ").Append(ObjUserReal).Append("\n");
+            sb.Append("  ObjUserCloned: ").Append(ObjUserCloned).Append("\n");
+            sb.Append("  ObjApikey: ").Append(ObjApikey).Append("\n");
+            sb.Append("  AEModuleInternalname: ").Append(AEModuleInternalname).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -290,33 +290,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.APkiPermissionID == input.APkiPermissionID ||
-                    this.APkiPermissionID != null &&
-                    input.APkiPermissionID != null &&
-                    this.APkiPermissionID.SequenceEqual(input.APkiPermissionID)
-                ) && 
-                (
-                    this.ObjUserReal == input.ObjUserReal ||
-                    (this.ObjUserReal != null &&
-                    this.ObjUserReal.Equals(input.ObjUserReal))
-                ) && 
-                (
-                    this.ObjUserCloned == input.ObjUserCloned ||
-                    (this.ObjUserCloned != null &&
-                    this.ObjUserCloned.Equals(input.ObjUserCloned))
-                ) && 
-                (
-                    this.ObjApikey == input.ObjApikey ||
-                    (this.ObjApikey != null &&
-                    this.ObjApikey.Equals(input.ObjApikey))
-                ) && 
-                (
-                    this.AEModuleInternalname == input.AEModuleInternalname ||
-                    this.AEModuleInternalname != null &&
-                    input.AEModuleInternalname != null &&
-                    this.AEModuleInternalname.SequenceEqual(input.AEModuleInternalname)
-                ) && 
-                (
                     this.EActivesessionSessiontype == input.EActivesessionSessiontype ||
                     (this.EActivesessionSessiontype != null &&
                     this.EActivesessionSessiontype.Equals(input.EActivesessionSessiontype))
@@ -350,6 +323,33 @@ namespace eZmaxApi.Model
                     this.PksCustomerCode == input.PksCustomerCode ||
                     (this.PksCustomerCode != null &&
                     this.PksCustomerCode.Equals(input.PksCustomerCode))
+                ) && 
+                (
+                    this.APkiPermissionID == input.APkiPermissionID ||
+                    this.APkiPermissionID != null &&
+                    input.APkiPermissionID != null &&
+                    this.APkiPermissionID.SequenceEqual(input.APkiPermissionID)
+                ) && 
+                (
+                    this.ObjUserReal == input.ObjUserReal ||
+                    (this.ObjUserReal != null &&
+                    this.ObjUserReal.Equals(input.ObjUserReal))
+                ) && 
+                (
+                    this.ObjUserCloned == input.ObjUserCloned ||
+                    (this.ObjUserCloned != null &&
+                    this.ObjUserCloned.Equals(input.ObjUserCloned))
+                ) && 
+                (
+                    this.ObjApikey == input.ObjApikey ||
+                    (this.ObjApikey != null &&
+                    this.ObjApikey.Equals(input.ObjApikey))
+                ) && 
+                (
+                    this.AEModuleInternalname == input.AEModuleInternalname ||
+                    this.AEModuleInternalname != null &&
+                    input.AEModuleInternalname != null &&
+                    this.AEModuleInternalname.SequenceEqual(input.AEModuleInternalname)
                 );
         }
 
@@ -362,16 +362,6 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.APkiPermissionID != null)
-                    hashCode = hashCode * 59 + this.APkiPermissionID.GetHashCode();
-                if (this.ObjUserReal != null)
-                    hashCode = hashCode * 59 + this.ObjUserReal.GetHashCode();
-                if (this.ObjUserCloned != null)
-                    hashCode = hashCode * 59 + this.ObjUserCloned.GetHashCode();
-                if (this.ObjApikey != null)
-                    hashCode = hashCode * 59 + this.ObjApikey.GetHashCode();
-                if (this.AEModuleInternalname != null)
-                    hashCode = hashCode * 59 + this.AEModuleInternalname.GetHashCode();
                 if (this.EActivesessionSessiontype != null)
                     hashCode = hashCode * 59 + this.EActivesessionSessiontype.GetHashCode();
                 if (this.EActivesessionWeekdaystart != null)
@@ -386,6 +376,16 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BActivesessionDebug.GetHashCode();
                 if (this.PksCustomerCode != null)
                     hashCode = hashCode * 59 + this.PksCustomerCode.GetHashCode();
+                if (this.APkiPermissionID != null)
+                    hashCode = hashCode * 59 + this.APkiPermissionID.GetHashCode();
+                if (this.ObjUserReal != null)
+                    hashCode = hashCode * 59 + this.ObjUserReal.GetHashCode();
+                if (this.ObjUserCloned != null)
+                    hashCode = hashCode * 59 + this.ObjUserCloned.GetHashCode();
+                if (this.ObjApikey != null)
+                    hashCode = hashCode * 59 + this.ObjApikey.GetHashCode();
+                if (this.AEModuleInternalname != null)
+                    hashCode = hashCode * 59 + this.AEModuleInternalname.GetHashCode();
                 return hashCode;
             }
         }

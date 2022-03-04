@@ -38,10 +38,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureGetObjectV1Response" /> class.
         /// </summary>
-        /// <param name="mPayload">Payload for the /1/object/ezsignsignature/getObject API Request (required).</param>
+        /// <param name="mPayload">mPayload (required).</param>
         /// <param name="objDebugPayload">objDebugPayload.</param>
         /// <param name="objDebug">objDebug.</param>
-        public EzsignsignatureGetObjectV1Response(Object mPayload = default(Object), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        public EzsignsignatureGetObjectV1Response(EzsignsignatureGetObjectV1ResponseMPayload mPayload = default(EzsignsignatureGetObjectV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
@@ -58,11 +58,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Payload for the /1/object/ezsignsignature/getObject API Request
+        /// Gets or Sets MPayload
         /// </summary>
-        /// <value>Payload for the /1/object/ezsignsignature/getObject API Request</value>
         [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public Object MPayload { get; set; }
+        public EzsignsignatureGetObjectV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjDebugPayload

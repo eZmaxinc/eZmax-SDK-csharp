@@ -98,12 +98,12 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SContactLastname'
         }
         /// <summary>
-        /// Test the property 'AObjEzsignformfieldgroupCompound'
+        /// Test the property 'AObjEzsignformfieldgroup'
         /// </summary>
         [Test]
-        public void AObjEzsignformfieldgroupCompoundTest()
+        public void AObjEzsignformfieldgroupTest()
         {
-            // TODO unit test for the property 'AObjEzsignformfieldgroupCompound'
+            // TODO unit test for the property 'AObjEzsignformfieldgroup'
         }
 
     }

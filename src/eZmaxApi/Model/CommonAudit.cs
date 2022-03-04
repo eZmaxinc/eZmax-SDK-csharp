@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same.  Apikey details will only be provided if the changes were made by an API key.  
+    /// Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won&#39;t be returned. 
     /// </summary>
     [DataContract]
     public partial class CommonAudit :  IEquatable<CommonAudit>, IValidatableObject
@@ -38,99 +38,34 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonAudit" /> class.
         /// </summary>
-        /// <param name="fkiUserIDCreated">The unique ID of the User (required).</param>
-        /// <param name="fkiUserIDModified">The unique ID of the User (required).</param>
-        /// <param name="fkiApikeyIDCreated">The unique ID of the Apikey.</param>
-        /// <param name="fkiApikeyIDModified">The unique ID of the Apikey.</param>
-        /// <param name="dtCreatedDate">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
-        /// <param name="dtModifiedDate">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
-        public CommonAudit(int fkiUserIDCreated = default(int), int fkiUserIDModified = default(int), int fkiApikeyIDCreated = default(int), int fkiApikeyIDModified = default(int), string dtCreatedDate = default(string), string dtModifiedDate = default(string))
+        /// <param name="objAuditdetailCreated">objAuditdetailCreated (required).</param>
+        /// <param name="objAuditdetailModified">objAuditdetailModified.</param>
+        public CommonAudit(CommonAuditdetail objAuditdetailCreated = default(CommonAuditdetail), CommonAuditdetail objAuditdetailModified = default(CommonAuditdetail))
         {
-            // to ensure "fkiUserIDCreated" is required (not null)
-            if (fkiUserIDCreated == null)
+            // to ensure "objAuditdetailCreated" is required (not null)
+            if (objAuditdetailCreated == null)
             {
-                throw new InvalidDataException("fkiUserIDCreated is a required property for CommonAudit and cannot be null");
+                throw new InvalidDataException("objAuditdetailCreated is a required property for CommonAudit and cannot be null");
             }
             else
             {
-                this.FkiUserIDCreated = fkiUserIDCreated;
+                this.ObjAuditdetailCreated = objAuditdetailCreated;
             }
 
-            // to ensure "fkiUserIDModified" is required (not null)
-            if (fkiUserIDModified == null)
-            {
-                throw new InvalidDataException("fkiUserIDModified is a required property for CommonAudit and cannot be null");
-            }
-            else
-            {
-                this.FkiUserIDModified = fkiUserIDModified;
-            }
-
-            // to ensure "dtCreatedDate" is required (not null)
-            if (dtCreatedDate == null)
-            {
-                throw new InvalidDataException("dtCreatedDate is a required property for CommonAudit and cannot be null");
-            }
-            else
-            {
-                this.DtCreatedDate = dtCreatedDate;
-            }
-
-            // to ensure "dtModifiedDate" is required (not null)
-            if (dtModifiedDate == null)
-            {
-                throw new InvalidDataException("dtModifiedDate is a required property for CommonAudit and cannot be null");
-            }
-            else
-            {
-                this.DtModifiedDate = dtModifiedDate;
-            }
-
-            this.FkiApikeyIDCreated = fkiApikeyIDCreated;
-            this.FkiApikeyIDModified = fkiApikeyIDModified;
+            this.ObjAuditdetailModified = objAuditdetailModified;
         }
 
         /// <summary>
-        /// The unique ID of the User
+        /// Gets or Sets ObjAuditdetailCreated
         /// </summary>
-        /// <value>The unique ID of the User</value>
-        [DataMember(Name="fkiUserIDCreated", EmitDefaultValue=true)]
-        public int FkiUserIDCreated { get; set; }
+        [DataMember(Name="objAuditdetailCreated", EmitDefaultValue=true)]
+        public CommonAuditdetail ObjAuditdetailCreated { get; set; }
 
         /// <summary>
-        /// The unique ID of the User
+        /// Gets or Sets ObjAuditdetailModified
         /// </summary>
-        /// <value>The unique ID of the User</value>
-        [DataMember(Name="fkiUserIDModified", EmitDefaultValue=true)]
-        public int FkiUserIDModified { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Apikey
-        /// </summary>
-        /// <value>The unique ID of the Apikey</value>
-        [DataMember(Name="fkiApikeyIDCreated", EmitDefaultValue=false)]
-        public int FkiApikeyIDCreated { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Apikey
-        /// </summary>
-        /// <value>The unique ID of the Apikey</value>
-        [DataMember(Name="fkiApikeyIDModified", EmitDefaultValue=false)]
-        public int FkiApikeyIDModified { get; set; }
-
-        /// <summary>
-        /// Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
-        /// </summary>
-        /// <value>Represent a Date Time. The timezone is the one configured in the User&#39;s profile.</value>
-        [DataMember(Name="dtCreatedDate", EmitDefaultValue=true)]
-        public string DtCreatedDate { get; set; }
-
-        /// <summary>
-        /// Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
-        /// </summary>
-        /// <value>Represent a Date Time. The timezone is the one configured in the User&#39;s profile.</value>
-        [DataMember(Name="dtModifiedDate", EmitDefaultValue=true)]
-        public string DtModifiedDate { get; set; }
+        [DataMember(Name="objAuditdetailModified", EmitDefaultValue=false)]
+        public CommonAuditdetail ObjAuditdetailModified { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -140,12 +75,8 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CommonAudit {\n");
-            sb.Append("  FkiUserIDCreated: ").Append(FkiUserIDCreated).Append("\n");
-            sb.Append("  FkiUserIDModified: ").Append(FkiUserIDModified).Append("\n");
-            sb.Append("  FkiApikeyIDCreated: ").Append(FkiApikeyIDCreated).Append("\n");
-            sb.Append("  FkiApikeyIDModified: ").Append(FkiApikeyIDModified).Append("\n");
-            sb.Append("  DtCreatedDate: ").Append(DtCreatedDate).Append("\n");
-            sb.Append("  DtModifiedDate: ").Append(DtModifiedDate).Append("\n");
+            sb.Append("  ObjAuditdetailCreated: ").Append(ObjAuditdetailCreated).Append("\n");
+            sb.Append("  ObjAuditdetailModified: ").Append(ObjAuditdetailModified).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -181,34 +112,14 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.FkiUserIDCreated == input.FkiUserIDCreated ||
-                    (this.FkiUserIDCreated != null &&
-                    this.FkiUserIDCreated.Equals(input.FkiUserIDCreated))
+                    this.ObjAuditdetailCreated == input.ObjAuditdetailCreated ||
+                    (this.ObjAuditdetailCreated != null &&
+                    this.ObjAuditdetailCreated.Equals(input.ObjAuditdetailCreated))
                 ) && 
                 (
-                    this.FkiUserIDModified == input.FkiUserIDModified ||
-                    (this.FkiUserIDModified != null &&
-                    this.FkiUserIDModified.Equals(input.FkiUserIDModified))
-                ) && 
-                (
-                    this.FkiApikeyIDCreated == input.FkiApikeyIDCreated ||
-                    (this.FkiApikeyIDCreated != null &&
-                    this.FkiApikeyIDCreated.Equals(input.FkiApikeyIDCreated))
-                ) && 
-                (
-                    this.FkiApikeyIDModified == input.FkiApikeyIDModified ||
-                    (this.FkiApikeyIDModified != null &&
-                    this.FkiApikeyIDModified.Equals(input.FkiApikeyIDModified))
-                ) && 
-                (
-                    this.DtCreatedDate == input.DtCreatedDate ||
-                    (this.DtCreatedDate != null &&
-                    this.DtCreatedDate.Equals(input.DtCreatedDate))
-                ) && 
-                (
-                    this.DtModifiedDate == input.DtModifiedDate ||
-                    (this.DtModifiedDate != null &&
-                    this.DtModifiedDate.Equals(input.DtModifiedDate))
+                    this.ObjAuditdetailModified == input.ObjAuditdetailModified ||
+                    (this.ObjAuditdetailModified != null &&
+                    this.ObjAuditdetailModified.Equals(input.ObjAuditdetailModified))
                 );
         }
 
@@ -221,18 +132,10 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.FkiUserIDCreated != null)
-                    hashCode = hashCode * 59 + this.FkiUserIDCreated.GetHashCode();
-                if (this.FkiUserIDModified != null)
-                    hashCode = hashCode * 59 + this.FkiUserIDModified.GetHashCode();
-                if (this.FkiApikeyIDCreated != null)
-                    hashCode = hashCode * 59 + this.FkiApikeyIDCreated.GetHashCode();
-                if (this.FkiApikeyIDModified != null)
-                    hashCode = hashCode * 59 + this.FkiApikeyIDModified.GetHashCode();
-                if (this.DtCreatedDate != null)
-                    hashCode = hashCode * 59 + this.DtCreatedDate.GetHashCode();
-                if (this.DtModifiedDate != null)
-                    hashCode = hashCode * 59 + this.DtModifiedDate.GetHashCode();
+                if (this.ObjAuditdetailCreated != null)
+                    hashCode = hashCode * 59 + this.ObjAuditdetailCreated.GetHashCode();
+                if (this.ObjAuditdetailModified != null)
+                    hashCode = hashCode * 59 + this.ObjAuditdetailModified.GetHashCode();
                 return hashCode;
             }
         }

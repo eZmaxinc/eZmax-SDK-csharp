@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// A Contact Object
+    /// An Email Object
     /// </summary>
     [DataContract]
     public partial class EmailRequest :  IEquatable<EmailRequest>, IValidatableObject

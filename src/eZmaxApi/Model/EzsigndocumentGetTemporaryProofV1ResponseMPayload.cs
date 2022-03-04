@@ -39,7 +39,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigndocumentGetTemporaryProofV1ResponseMPayload" /> class.
         /// </summary>
         /// <param name="aObjEzsigndocumentlog">aObjEzsigndocumentlog (required).</param>
-        public EzsigndocumentGetTemporaryProofV1ResponseMPayload(EzsigndocumentlogResponse aObjEzsigndocumentlog = default(EzsigndocumentlogResponse))
+        public EzsigndocumentGetTemporaryProofV1ResponseMPayload(EzsigndocumentlogResponseCompound aObjEzsigndocumentlog = default(EzsigndocumentlogResponseCompound))
         {
             // to ensure "aObjEzsigndocumentlog" is required (not null)
             if (aObjEzsigndocumentlog == null)
@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjEzsigndocumentlog
         /// </summary>
         [DataMember(Name="a_objEzsigndocumentlog", EmitDefaultValue=true)]
-        public EzsigndocumentlogResponse AObjEzsigndocumentlog { get; set; }
+        public EzsigndocumentlogResponseCompound AObjEzsigndocumentlog { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

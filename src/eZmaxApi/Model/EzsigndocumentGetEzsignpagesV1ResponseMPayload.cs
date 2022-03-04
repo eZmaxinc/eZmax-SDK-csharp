@@ -39,7 +39,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignpagesV1ResponseMPayload" /> class.
         /// </summary>
         /// <param name="aObjEzsignpage">aObjEzsignpage (required).</param>
-        public EzsigndocumentGetEzsignpagesV1ResponseMPayload(List<EzsignpageResponse> aObjEzsignpage = default(List<EzsignpageResponse>))
+        public EzsigndocumentGetEzsignpagesV1ResponseMPayload(List<EzsignpageResponseCompound> aObjEzsignpage = default(List<EzsignpageResponseCompound>))
         {
             // to ensure "aObjEzsignpage" is required (not null)
             if (aObjEzsignpage == null)
@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjEzsignpage
         /// </summary>
         [DataMember(Name="a_objEzsignpage", EmitDefaultValue=true)]
-        public List<EzsignpageResponse> AObjEzsignpage { get; set; }
+        public List<EzsignpageResponseCompound> AObjEzsignpage { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

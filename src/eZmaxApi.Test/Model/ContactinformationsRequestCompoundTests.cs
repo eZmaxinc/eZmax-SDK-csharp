@@ -66,38 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'AObjAddress'
-        /// </summary>
-        [Test]
-        public void AObjAddressTest()
-        {
-            // TODO unit test for the property 'AObjAddress'
-        }
-        /// <summary>
-        /// Test the property 'AObjPhone'
-        /// </summary>
-        [Test]
-        public void AObjPhoneTest()
-        {
-            // TODO unit test for the property 'AObjPhone'
-        }
-        /// <summary>
-        /// Test the property 'AObjEmail'
-        /// </summary>
-        [Test]
-        public void AObjEmailTest()
-        {
-            // TODO unit test for the property 'AObjEmail'
-        }
-        /// <summary>
-        /// Test the property 'AObjWebsite'
-        /// </summary>
-        [Test]
-        public void AObjWebsiteTest()
-        {
-            // TODO unit test for the property 'AObjWebsite'
-        }
-        /// <summary>
         /// Test the property 'IAddressDefault'
         /// </summary>
         [Test]
@@ -128,6 +96,38 @@ namespace eZmaxApi.Test
         public void IWebsiteDefaultTest()
         {
             // TODO unit test for the property 'IWebsiteDefault'
+        }
+        /// <summary>
+        /// Test the property 'AObjAddress'
+        /// </summary>
+        [Test]
+        public void AObjAddressTest()
+        {
+            // TODO unit test for the property 'AObjAddress'
+        }
+        /// <summary>
+        /// Test the property 'AObjPhone'
+        /// </summary>
+        [Test]
+        public void AObjPhoneTest()
+        {
+            // TODO unit test for the property 'AObjPhone'
+        }
+        /// <summary>
+        /// Test the property 'AObjEmail'
+        /// </summary>
+        [Test]
+        public void AObjEmailTest()
+        {
+            // TODO unit test for the property 'AObjEmail'
+        }
+        /// <summary>
+        /// Test the property 'AObjWebsite'
+        /// </summary>
+        [Test]
+        public void AObjWebsiteTest()
+        {
+            // TODO unit test for the property 'AObjWebsite'
         }
 
     }

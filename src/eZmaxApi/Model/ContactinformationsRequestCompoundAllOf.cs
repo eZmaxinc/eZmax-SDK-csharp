@@ -42,7 +42,7 @@ namespace eZmaxApi.Model
         /// <param name="aObjPhone">aObjPhone (required).</param>
         /// <param name="aObjEmail">aObjEmail (required).</param>
         /// <param name="aObjWebsite">aObjWebsite (required).</param>
-        public ContactinformationsRequestCompoundAllOf(List<AddressRequest> aObjAddress = default(List<AddressRequest>), List<PhoneRequest> aObjPhone = default(List<PhoneRequest>), List<EmailRequest> aObjEmail = default(List<EmailRequest>), List<WebsiteRequest> aObjWebsite = default(List<WebsiteRequest>))
+        public ContactinformationsRequestCompoundAllOf(List<AddressRequestCompound> aObjAddress = default(List<AddressRequestCompound>), List<PhoneRequestCompound> aObjPhone = default(List<PhoneRequestCompound>), List<EmailRequestCompound> aObjEmail = default(List<EmailRequestCompound>), List<WebsiteRequestCompound> aObjWebsite = default(List<WebsiteRequestCompound>))
         {
             // to ensure "aObjAddress" is required (not null)
             if (aObjAddress == null)
@@ -90,25 +90,25 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjAddress
         /// </summary>
         [DataMember(Name="a_objAddress", EmitDefaultValue=true)]
-        public List<AddressRequest> AObjAddress { get; set; }
+        public List<AddressRequestCompound> AObjAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjPhone
         /// </summary>
         [DataMember(Name="a_objPhone", EmitDefaultValue=true)]
-        public List<PhoneRequest> AObjPhone { get; set; }
+        public List<PhoneRequestCompound> AObjPhone { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjEmail
         /// </summary>
         [DataMember(Name="a_objEmail", EmitDefaultValue=true)]
-        public List<EmailRequest> AObjEmail { get; set; }
+        public List<EmailRequestCompound> AObjEmail { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjWebsite
         /// </summary>
         [DataMember(Name="a_objWebsite", EmitDefaultValue=true)]
-        public List<WebsiteRequest> AObjWebsite { get; set; }
+        public List<WebsiteRequestCompound> AObjWebsite { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -66,14 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'ObjContact'
-        /// </summary>
-        [Test]
-        public void ObjContactTest()
-        {
-            // TODO unit test for the property 'ObjContact'
-        }
-        /// <summary>
         /// Test the property 'PkiEzsignsignerID'
         /// </summary>
         [Test]
@@ -112,6 +104,14 @@ namespace eZmaxApi.Test
         public void SUserlogintypeDescriptionXTest()
         {
             // TODO unit test for the property 'SUserlogintypeDescriptionX'
+        }
+        /// <summary>
+        /// Test the property 'ObjContact'
+        /// </summary>
+        [Test]
+        public void ObjContactTest()
+        {
+            // TODO unit test for the property 'ObjContact'
         }
 
     }

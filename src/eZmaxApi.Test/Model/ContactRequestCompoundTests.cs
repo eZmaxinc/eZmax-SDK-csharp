@@ -66,14 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'ObjContactinformations'
-        /// </summary>
-        [Test]
-        public void ObjContactinformationsTest()
-        {
-            // TODO unit test for the property 'ObjContactinformations'
-        }
-        /// <summary>
         /// Test the property 'FkiContacttitleID'
         /// </summary>
         [Test]
@@ -120,6 +112,14 @@ namespace eZmaxApi.Test
         public void DtContactBirthdateTest()
         {
             // TODO unit test for the property 'DtContactBirthdate'
+        }
+        /// <summary>
+        /// Test the property 'ObjContactinformations'
+        /// </summary>
+        [Test]
+        public void ObjContactinformationsTest()
+        {
+            // TODO unit test for the property 'ObjContactinformations'
         }
 
     }

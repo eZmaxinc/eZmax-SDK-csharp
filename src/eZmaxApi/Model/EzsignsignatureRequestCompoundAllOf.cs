@@ -35,7 +35,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;).</param>
         /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
-        public EzsignsignatureRequestCompoundAllOf(bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequest>))
+        public EzsignsignatureRequestCompoundAllOf(bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequestCompound>))
         {
             this.BEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
             this.AObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
@@ -53,7 +53,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all.</value>
         [DataMember(Name="a_objEzsignsignaturecustomdate", EmitDefaultValue=false)]
-        public List<EzsignsignaturecustomdateRequest> AObjEzsignsignaturecustomdate { get; set; }
+        public List<EzsignsignaturecustomdateRequestCompound> AObjEzsignsignaturecustomdate { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

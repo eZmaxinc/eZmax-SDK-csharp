@@ -66,6 +66,22 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
+        /// Test the property 'PkiEzsignformfieldID'
+        /// </summary>
+        [Test]
+        public void PkiEzsignformfieldIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsignformfieldID'
+        }
+        /// <summary>
+        /// Test the property 'IEzsignpagePagenumber'
+        /// </summary>
+        [Test]
+        public void IEzsignpagePagenumberTest()
+        {
+            // TODO unit test for the property 'IEzsignpagePagenumber'
+        }
+        /// <summary>
         /// Test the property 'SEzsignformfieldLabel'
         /// </summary>
         [Test]
@@ -80,6 +96,54 @@ namespace eZmaxApi.Test
         public void SEzsignformfieldValueTest()
         {
             // TODO unit test for the property 'SEzsignformfieldValue'
+        }
+        /// <summary>
+        /// Test the property 'IEzsignformfieldX'
+        /// </summary>
+        [Test]
+        public void IEzsignformfieldXTest()
+        {
+            // TODO unit test for the property 'IEzsignformfieldX'
+        }
+        /// <summary>
+        /// Test the property 'IEzsignformfieldY'
+        /// </summary>
+        [Test]
+        public void IEzsignformfieldYTest()
+        {
+            // TODO unit test for the property 'IEzsignformfieldY'
+        }
+        /// <summary>
+        /// Test the property 'IEzsignformfieldWidth'
+        /// </summary>
+        [Test]
+        public void IEzsignformfieldWidthTest()
+        {
+            // TODO unit test for the property 'IEzsignformfieldWidth'
+        }
+        /// <summary>
+        /// Test the property 'IEzsignformfieldHeight'
+        /// </summary>
+        [Test]
+        public void IEzsignformfieldHeightTest()
+        {
+            // TODO unit test for the property 'IEzsignformfieldHeight'
+        }
+        /// <summary>
+        /// Test the property 'BEzsignformfieldSelected'
+        /// </summary>
+        [Test]
+        public void BEzsignformfieldSelectedTest()
+        {
+            // TODO unit test for the property 'BEzsignformfieldSelected'
+        }
+        /// <summary>
+        /// Test the property 'SEzsignformfieldEnteredvalue'
+        /// </summary>
+        [Test]
+        public void SEzsignformfieldEnteredvalueTest()
+        {
+            // TODO unit test for the property 'SEzsignformfieldEnteredvalue'
         }
 
     }

@@ -38,25 +38,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactRequestCompound" /> class.
         /// </summary>
-        /// <param name="objContactinformations">objContactinformations (required).</param>
         /// <param name="fkiContacttitleID">The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sContactFirstname">The First name of the contact (required).</param>
         /// <param name="sContactLastname">The Last name of the contact (required).</param>
         /// <param name="sContactCompany">The Company name of the contact (required).</param>
         /// <param name="dtContactBirthdate">The Birth Date of the contact.</param>
-        public ContactRequestCompound(ContactinformationsRequestCompound objContactinformations = default(ContactinformationsRequestCompound), int fkiContacttitleID = default(int), int fkiLanguageID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), string sContactCompany = default(string), string dtContactBirthdate = default(string))
+        /// <param name="objContactinformations">objContactinformations (required).</param>
+        public ContactRequestCompound(int fkiContacttitleID = default(int), int fkiLanguageID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), string sContactCompany = default(string), string dtContactBirthdate = default(string), ContactinformationsRequestCompound objContactinformations = default(ContactinformationsRequestCompound))
         {
-            // to ensure "objContactinformations" is required (not null)
-            if (objContactinformations == null)
-            {
-                throw new InvalidDataException("objContactinformations is a required property for ContactRequestCompound and cannot be null");
-            }
-            else
-            {
-                this.ObjContactinformations = objContactinformations;
-            }
-
             // to ensure "fkiContacttitleID" is required (not null)
             if (fkiContacttitleID == null)
             {
@@ -107,14 +97,18 @@ namespace eZmaxApi.Model
                 this.SContactCompany = sContactCompany;
             }
 
+            // to ensure "objContactinformations" is required (not null)
+            if (objContactinformations == null)
+            {
+                throw new InvalidDataException("objContactinformations is a required property for ContactRequestCompound and cannot be null");
+            }
+            else
+            {
+                this.ObjContactinformations = objContactinformations;
+            }
+
             this.DtContactBirthdate = dtContactBirthdate;
         }
-
-        /// <summary>
-        /// Gets or Sets ObjContactinformations
-        /// </summary>
-        [DataMember(Name="objContactinformations", EmitDefaultValue=true)]
-        public ContactinformationsRequestCompound ObjContactinformations { get; set; }
 
         /// <summary>
         /// The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|
@@ -159,6 +153,12 @@ namespace eZmaxApi.Model
         public string DtContactBirthdate { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjContactinformations
+        /// </summary>
+        [DataMember(Name="objContactinformations", EmitDefaultValue=true)]
+        public ContactinformationsRequestCompound ObjContactinformations { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -166,13 +166,13 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactRequestCompound {\n");
-            sb.Append("  ObjContactinformations: ").Append(ObjContactinformations).Append("\n");
             sb.Append("  FkiContacttitleID: ").Append(FkiContacttitleID).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  SContactFirstname: ").Append(SContactFirstname).Append("\n");
             sb.Append("  SContactLastname: ").Append(SContactLastname).Append("\n");
             sb.Append("  SContactCompany: ").Append(SContactCompany).Append("\n");
             sb.Append("  DtContactBirthdate: ").Append(DtContactBirthdate).Append("\n");
+            sb.Append("  ObjContactinformations: ").Append(ObjContactinformations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -208,11 +208,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.ObjContactinformations == input.ObjContactinformations ||
-                    (this.ObjContactinformations != null &&
-                    this.ObjContactinformations.Equals(input.ObjContactinformations))
-                ) && 
-                (
                     this.FkiContacttitleID == input.FkiContacttitleID ||
                     (this.FkiContacttitleID != null &&
                     this.FkiContacttitleID.Equals(input.FkiContacttitleID))
@@ -241,6 +236,11 @@ namespace eZmaxApi.Model
                     this.DtContactBirthdate == input.DtContactBirthdate ||
                     (this.DtContactBirthdate != null &&
                     this.DtContactBirthdate.Equals(input.DtContactBirthdate))
+                ) && 
+                (
+                    this.ObjContactinformations == input.ObjContactinformations ||
+                    (this.ObjContactinformations != null &&
+                    this.ObjContactinformations.Equals(input.ObjContactinformations))
                 );
         }
 
@@ -253,8 +253,6 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ObjContactinformations != null)
-                    hashCode = hashCode * 59 + this.ObjContactinformations.GetHashCode();
                 if (this.FkiContacttitleID != null)
                     hashCode = hashCode * 59 + this.FkiContacttitleID.GetHashCode();
                 if (this.FkiLanguageID != null)
@@ -267,6 +265,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SContactCompany.GetHashCode();
                 if (this.DtContactBirthdate != null)
                     hashCode = hashCode * 59 + this.DtContactBirthdate.GetHashCode();
+                if (this.ObjContactinformations != null)
+                    hashCode = hashCode * 59 + this.ObjContactinformations.GetHashCode();
                 return hashCode;
             }
         }

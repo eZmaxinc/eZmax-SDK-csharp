@@ -39,7 +39,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="ListGetListpresentationV1ResponseMPayload" /> class.
         /// </summary>
         /// <param name="aObjListpresentation">aObjListpresentation (required).</param>
-        public ListGetListpresentationV1ResponseMPayload(List<ListpresentationRequest> aObjListpresentation = default(List<ListpresentationRequest>))
+        public ListGetListpresentationV1ResponseMPayload(List<ListpresentationResponseCompound> aObjListpresentation = default(List<ListpresentationResponseCompound>))
         {
             // to ensure "aObjListpresentation" is required (not null)
             if (aObjListpresentation == null)
@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjListpresentation
         /// </summary>
         [DataMember(Name="a_objListpresentation", EmitDefaultValue=true)]
-        public List<ListpresentationRequest> AObjListpresentation { get; set; }
+        public List<ListpresentationResponseCompound> AObjListpresentation { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

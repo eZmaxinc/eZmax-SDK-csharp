@@ -26,6 +26,27 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignbulksendID"></param>
+        /// <returns>EzsignbulksendGetEzsignbulksendtransmissionsV1Response</returns>
+        EzsignbulksendGetEzsignbulksendtransmissionsV1Response EzsignbulksendGetEzsignbulksendtransmissionsV1 (int pkiEzsignbulksendID);
+
+        /// <summary>
+        /// Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignbulksendID"></param>
+        /// <returns>ApiResponse of EzsignbulksendGetEzsignbulksendtransmissionsV1Response</returns>
+        ApiResponse<EzsignbulksendGetEzsignbulksendtransmissionsV1Response> EzsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfo (int pkiEzsignbulksendID);
+        /// <summary>
         /// Retrieve Ezsignbulksend list
         /// </summary>
         /// <remarks>
@@ -77,6 +98,29 @@ namespace eZmaxApi.Api
         ApiResponse<EzsignbulksendGetObjectV1Response> EzsignbulksendGetObjectV1WithHttpInfo (int pkiEzsignbulksendID);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignbulksendID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignbulksendGetEzsignbulksendtransmissionsV1Response</returns>
+        System.Threading.Tasks.Task<EzsignbulksendGetEzsignbulksendtransmissionsV1Response> EzsignbulksendGetEzsignbulksendtransmissionsV1Async (int pkiEzsignbulksendID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignbulksendID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignbulksendGetEzsignbulksendtransmissionsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignbulksendGetEzsignbulksendtransmissionsV1Response>> EzsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfoAsync (int pkiEzsignbulksendID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Ezsignbulksend list
         /// </summary>
@@ -240,6 +284,151 @@ namespace eZmaxApi.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignbulksendID"></param>
+        /// <returns>EzsignbulksendGetEzsignbulksendtransmissionsV1Response</returns>
+        public EzsignbulksendGetEzsignbulksendtransmissionsV1Response EzsignbulksendGetEzsignbulksendtransmissionsV1 (int pkiEzsignbulksendID)
+        {
+             ApiResponse<EzsignbulksendGetEzsignbulksendtransmissionsV1Response> localVarResponse = EzsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfo(pkiEzsignbulksendID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignbulksendID"></param>
+        /// <returns>ApiResponse of EzsignbulksendGetEzsignbulksendtransmissionsV1Response</returns>
+        public ApiResponse<EzsignbulksendGetEzsignbulksendtransmissionsV1Response> EzsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfo (int pkiEzsignbulksendID)
+        {
+            // verify the required parameter 'pkiEzsignbulksendID' is set
+            if (pkiEzsignbulksendID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendGetEzsignbulksendtransmissionsV1");
+
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignbulksendID != null) localVarPathParams.Add("pkiEzsignbulksendID", this.Configuration.ApiClient.ParameterToString(pkiEzsignbulksendID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignbulksendGetEzsignbulksendtransmissionsV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignbulksendGetEzsignbulksendtransmissionsV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignbulksendGetEzsignbulksendtransmissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetEzsignbulksendtransmissionsV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignbulksendID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignbulksendGetEzsignbulksendtransmissionsV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignbulksendGetEzsignbulksendtransmissionsV1Response> EzsignbulksendGetEzsignbulksendtransmissionsV1Async (int pkiEzsignbulksendID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsignbulksendGetEzsignbulksendtransmissionsV1Response> localVarResponse = await EzsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfoAsync(pkiEzsignbulksendID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignbulksendID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignbulksendGetEzsignbulksendtransmissionsV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignbulksendGetEzsignbulksendtransmissionsV1Response>> EzsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfoAsync (int pkiEzsignbulksendID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsignbulksendID' is set
+            if (pkiEzsignbulksendID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendGetEzsignbulksendtransmissionsV1");
+
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignbulksendID != null) localVarPathParams.Add("pkiEzsignbulksendID", this.Configuration.ApiClient.ParameterToString(pkiEzsignbulksendID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignbulksendGetEzsignbulksendtransmissionsV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignbulksendGetEzsignbulksendtransmissionsV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignbulksendGetEzsignbulksendtransmissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetEzsignbulksendtransmissionsV1Response)));
         }
 
         /// <summary>

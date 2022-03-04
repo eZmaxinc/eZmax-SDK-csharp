@@ -42,8 +42,8 @@ namespace eZmaxApi.Model
         /// <param name="fkiUserID">The unique ID of the User.</param>
         /// <param name="sContactFirstname">The First name of the contact (required).</param>
         /// <param name="sContactLastname">The Last name of the contact (required).</param>
-        /// <param name="aObjEzsignformfieldgroupCompound">aObjEzsignformfieldgroupCompound (required).</param>
-        public CustomFormDataSignerResponse(int fkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound = default(List<EzsignformfieldgroupResponseCompound>))
+        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup (required).</param>
+        public CustomFormDataSignerResponse(int fkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup = default(List<CustomFormDataEzsignformfieldgroupResponse>))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)
             if (fkiEzsignfoldersignerassociationID == null)
@@ -75,14 +75,14 @@ namespace eZmaxApi.Model
                 this.SContactLastname = sContactLastname;
             }
 
-            // to ensure "aObjEzsignformfieldgroupCompound" is required (not null)
-            if (aObjEzsignformfieldgroupCompound == null)
+            // to ensure "aObjEzsignformfieldgroup" is required (not null)
+            if (aObjEzsignformfieldgroup == null)
             {
-                throw new InvalidDataException("aObjEzsignformfieldgroupCompound is a required property for CustomFormDataSignerResponse and cannot be null");
+                throw new InvalidDataException("aObjEzsignformfieldgroup is a required property for CustomFormDataSignerResponse and cannot be null");
             }
             else
             {
-                this.AObjEzsignformfieldgroupCompound = aObjEzsignformfieldgroupCompound;
+                this.AObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
             }
 
             this.FkiUserID = fkiUserID;
@@ -117,10 +117,10 @@ namespace eZmaxApi.Model
         public string SContactLastname { get; set; }
 
         /// <summary>
-        /// Gets or Sets AObjEzsignformfieldgroupCompound
+        /// Gets or Sets AObjEzsignformfieldgroup
         /// </summary>
-        [DataMember(Name="a_objEzsignformfieldgroupCompound", EmitDefaultValue=true)]
-        public List<EzsignformfieldgroupResponseCompound> AObjEzsignformfieldgroupCompound { get; set; }
+        [DataMember(Name="a_objEzsignformfieldgroup", EmitDefaultValue=true)]
+        public List<CustomFormDataEzsignformfieldgroupResponse> AObjEzsignformfieldgroup { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -134,7 +134,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
             sb.Append("  SContactFirstname: ").Append(SContactFirstname).Append("\n");
             sb.Append("  SContactLastname: ").Append(SContactLastname).Append("\n");
-            sb.Append("  AObjEzsignformfieldgroupCompound: ").Append(AObjEzsignformfieldgroupCompound).Append("\n");
+            sb.Append("  AObjEzsignformfieldgroup: ").Append(AObjEzsignformfieldgroup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -190,10 +190,10 @@ namespace eZmaxApi.Model
                     this.SContactLastname.Equals(input.SContactLastname))
                 ) && 
                 (
-                    this.AObjEzsignformfieldgroupCompound == input.AObjEzsignformfieldgroupCompound ||
-                    this.AObjEzsignformfieldgroupCompound != null &&
-                    input.AObjEzsignformfieldgroupCompound != null &&
-                    this.AObjEzsignformfieldgroupCompound.SequenceEqual(input.AObjEzsignformfieldgroupCompound)
+                    this.AObjEzsignformfieldgroup == input.AObjEzsignformfieldgroup ||
+                    this.AObjEzsignformfieldgroup != null &&
+                    input.AObjEzsignformfieldgroup != null &&
+                    this.AObjEzsignformfieldgroup.SequenceEqual(input.AObjEzsignformfieldgroup)
                 );
         }
 
@@ -214,8 +214,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SContactFirstname.GetHashCode();
                 if (this.SContactLastname != null)
                     hashCode = hashCode * 59 + this.SContactLastname.GetHashCode();
-                if (this.AObjEzsignformfieldgroupCompound != null)
-                    hashCode = hashCode * 59 + this.AObjEzsignformfieldgroupCompound.GetHashCode();
+                if (this.AObjEzsignformfieldgroup != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignformfieldgroup.GetHashCode();
                 return hashCode;
             }
         }

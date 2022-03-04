@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Generic Autocomplete Response
+    /// Generic AutocompleteElement Response
     /// </summary>
     [DataContract]
     public partial class CustomAutocompleteElementResponse :  IEquatable<CustomAutocompleteElementResponse>, IValidatableObject

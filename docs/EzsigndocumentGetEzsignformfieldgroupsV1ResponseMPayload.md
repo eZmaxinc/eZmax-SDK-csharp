@@ -1,0 +1,13 @@
+
+# eZmaxApi.Model.EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**AObjEzsignformfieldgroup** | [**List&lt;EzsignformfieldgroupResponseCompound&gt;**](EzsignformfieldgroupResponseCompound.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
+

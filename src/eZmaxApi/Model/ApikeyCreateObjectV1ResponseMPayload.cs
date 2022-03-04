@@ -39,7 +39,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="ApikeyCreateObjectV1ResponseMPayload" /> class.
         /// </summary>
         /// <param name="aObjApikey">aObjApikey (required).</param>
-        public ApikeyCreateObjectV1ResponseMPayload(List<ApikeyResponse> aObjApikey = default(List<ApikeyResponse>))
+        public ApikeyCreateObjectV1ResponseMPayload(List<ApikeyResponseCompound> aObjApikey = default(List<ApikeyResponseCompound>))
         {
             // to ensure "aObjApikey" is required (not null)
             if (aObjApikey == null)
@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjApikey
         /// </summary>
         [DataMember(Name="a_objApikey", EmitDefaultValue=true)]
-        public List<ApikeyResponse> AObjApikey { get; set; }
+        public List<ApikeyResponseCompound> AObjApikey { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

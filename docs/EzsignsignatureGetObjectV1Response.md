@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MPayload** | **Object** | Payload for the /1/object/ezsignsignature/getObject API Request | 
+**MPayload** | [**EzsignsignatureGetObjectV1ResponseMPayload**](EzsignsignatureGetObjectV1ResponseMPayload.md) |  | 
 **ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
 **ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 

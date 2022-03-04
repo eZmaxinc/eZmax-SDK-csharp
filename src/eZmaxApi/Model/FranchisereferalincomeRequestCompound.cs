@@ -38,8 +38,6 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeRequestCompound" /> class.
         /// </summary>
-        /// <param name="objAddress">objAddress (required).</param>
-        /// <param name="aObjContact">aObjContact (required).</param>
         /// <param name="pkiFranchisereferalincomeID">The unique ID of the Franchisereferalincome.</param>
         /// <param name="fkiFranchisebrokerID">The unique ID of the Franchisebroker (required).</param>
         /// <param name="fkiFranchisereferalincomeprogramID">The unique ID of the Franchisereferalincomeprogram (required).</param>
@@ -52,28 +50,10 @@ namespace eZmaxApi.Model
         /// <param name="tFranchisereferalincomeComment">Comment about the transaction (required).</param>
         /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
         /// <param name="sFranchisereferalincomeRemoteid">sFranchisereferalincomeRemoteid (required).</param>
-        public FranchisereferalincomeRequestCompound(AddressRequest objAddress = default(AddressRequest), List<ContactRequestCompound> aObjContact = default(List<ContactRequestCompound>), int pkiFranchisereferalincomeID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchisereferalincomeprogramID = default(int), int fkiPeriodID = default(int), string dFranchisereferalincomeLoan = default(string), string dFranchisereferalincomeFranchiseamount = default(string), string dFranchisereferalincomeFranchisoramount = default(string), string dFranchisereferalincomeAgentamount = default(string), string dtFranchisereferalincomeDisbursed = default(string), string tFranchisereferalincomeComment = default(string), int fkiFranchiseofficeID = default(int), string sFranchisereferalincomeRemoteid = default(string))
+        /// <param name="objAddress">objAddress (required).</param>
+        /// <param name="aObjContact">aObjContact (required).</param>
+        public FranchisereferalincomeRequestCompound(int pkiFranchisereferalincomeID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchisereferalincomeprogramID = default(int), int fkiPeriodID = default(int), string dFranchisereferalincomeLoan = default(string), string dFranchisereferalincomeFranchiseamount = default(string), string dFranchisereferalincomeFranchisoramount = default(string), string dFranchisereferalincomeAgentamount = default(string), string dtFranchisereferalincomeDisbursed = default(string), string tFranchisereferalincomeComment = default(string), int fkiFranchiseofficeID = default(int), string sFranchisereferalincomeRemoteid = default(string), AddressRequest objAddress = default(AddressRequest), List<ContactRequestCompound> aObjContact = default(List<ContactRequestCompound>))
         {
-            // to ensure "objAddress" is required (not null)
-            if (objAddress == null)
-            {
-                throw new InvalidDataException("objAddress is a required property for FranchisereferalincomeRequestCompound and cannot be null");
-            }
-            else
-            {
-                this.ObjAddress = objAddress;
-            }
-
-            // to ensure "aObjContact" is required (not null)
-            if (aObjContact == null)
-            {
-                throw new InvalidDataException("aObjContact is a required property for FranchisereferalincomeRequestCompound and cannot be null");
-            }
-            else
-            {
-                this.AObjContact = aObjContact;
-            }
-
             // to ensure "fkiFranchisebrokerID" is required (not null)
             if (fkiFranchisebrokerID == null)
             {
@@ -184,20 +164,28 @@ namespace eZmaxApi.Model
                 this.SFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
             }
 
+            // to ensure "objAddress" is required (not null)
+            if (objAddress == null)
+            {
+                throw new InvalidDataException("objAddress is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+            }
+            else
+            {
+                this.ObjAddress = objAddress;
+            }
+
+            // to ensure "aObjContact" is required (not null)
+            if (aObjContact == null)
+            {
+                throw new InvalidDataException("aObjContact is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+            }
+            else
+            {
+                this.AObjContact = aObjContact;
+            }
+
             this.PkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
         }
-
-        /// <summary>
-        /// Gets or Sets ObjAddress
-        /// </summary>
-        [DataMember(Name="objAddress", EmitDefaultValue=true)]
-        public AddressRequest ObjAddress { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AObjContact
-        /// </summary>
-        [DataMember(Name="a_objContact", EmitDefaultValue=true)]
-        public List<ContactRequestCompound> AObjContact { get; set; }
 
         /// <summary>
         /// The unique ID of the Franchisereferalincome
@@ -283,6 +271,18 @@ namespace eZmaxApi.Model
         public string SFranchisereferalincomeRemoteid { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjAddress
+        /// </summary>
+        [DataMember(Name="objAddress", EmitDefaultValue=true)]
+        public AddressRequest ObjAddress { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AObjContact
+        /// </summary>
+        [DataMember(Name="a_objContact", EmitDefaultValue=true)]
+        public List<ContactRequestCompound> AObjContact { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -290,8 +290,6 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FranchisereferalincomeRequestCompound {\n");
-            sb.Append("  ObjAddress: ").Append(ObjAddress).Append("\n");
-            sb.Append("  AObjContact: ").Append(AObjContact).Append("\n");
             sb.Append("  PkiFranchisereferalincomeID: ").Append(PkiFranchisereferalincomeID).Append("\n");
             sb.Append("  FkiFranchisebrokerID: ").Append(FkiFranchisebrokerID).Append("\n");
             sb.Append("  FkiFranchisereferalincomeprogramID: ").Append(FkiFranchisereferalincomeprogramID).Append("\n");
@@ -304,6 +302,8 @@ namespace eZmaxApi.Model
             sb.Append("  TFranchisereferalincomeComment: ").Append(TFranchisereferalincomeComment).Append("\n");
             sb.Append("  FkiFranchiseofficeID: ").Append(FkiFranchiseofficeID).Append("\n");
             sb.Append("  SFranchisereferalincomeRemoteid: ").Append(SFranchisereferalincomeRemoteid).Append("\n");
+            sb.Append("  ObjAddress: ").Append(ObjAddress).Append("\n");
+            sb.Append("  AObjContact: ").Append(AObjContact).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -338,17 +338,6 @@ namespace eZmaxApi.Model
                 return false;
 
             return 
-                (
-                    this.ObjAddress == input.ObjAddress ||
-                    (this.ObjAddress != null &&
-                    this.ObjAddress.Equals(input.ObjAddress))
-                ) && 
-                (
-                    this.AObjContact == input.AObjContact ||
-                    this.AObjContact != null &&
-                    input.AObjContact != null &&
-                    this.AObjContact.SequenceEqual(input.AObjContact)
-                ) && 
                 (
                     this.PkiFranchisereferalincomeID == input.PkiFranchisereferalincomeID ||
                     (this.PkiFranchisereferalincomeID != null &&
@@ -408,6 +397,17 @@ namespace eZmaxApi.Model
                     this.SFranchisereferalincomeRemoteid == input.SFranchisereferalincomeRemoteid ||
                     (this.SFranchisereferalincomeRemoteid != null &&
                     this.SFranchisereferalincomeRemoteid.Equals(input.SFranchisereferalincomeRemoteid))
+                ) && 
+                (
+                    this.ObjAddress == input.ObjAddress ||
+                    (this.ObjAddress != null &&
+                    this.ObjAddress.Equals(input.ObjAddress))
+                ) && 
+                (
+                    this.AObjContact == input.AObjContact ||
+                    this.AObjContact != null &&
+                    input.AObjContact != null &&
+                    this.AObjContact.SequenceEqual(input.AObjContact)
                 );
         }
 
@@ -420,10 +420,6 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ObjAddress != null)
-                    hashCode = hashCode * 59 + this.ObjAddress.GetHashCode();
-                if (this.AObjContact != null)
-                    hashCode = hashCode * 59 + this.AObjContact.GetHashCode();
                 if (this.PkiFranchisereferalincomeID != null)
                     hashCode = hashCode * 59 + this.PkiFranchisereferalincomeID.GetHashCode();
                 if (this.FkiFranchisebrokerID != null)
@@ -448,6 +444,10 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.FkiFranchiseofficeID.GetHashCode();
                 if (this.SFranchisereferalincomeRemoteid != null)
                     hashCode = hashCode * 59 + this.SFranchisereferalincomeRemoteid.GetHashCode();
+                if (this.ObjAddress != null)
+                    hashCode = hashCode * 59 + this.ObjAddress.GetHashCode();
+                if (this.AObjContact != null)
+                    hashCode = hashCode * 59 + this.AObjContact.GetHashCode();
                 return hashCode;
             }
         }

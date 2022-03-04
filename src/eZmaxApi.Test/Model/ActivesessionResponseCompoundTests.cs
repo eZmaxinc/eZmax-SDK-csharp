@@ -66,46 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'APkiPermissionID'
-        /// </summary>
-        [Test]
-        public void APkiPermissionIDTest()
-        {
-            // TODO unit test for the property 'APkiPermissionID'
-        }
-        /// <summary>
-        /// Test the property 'ObjUserReal'
-        /// </summary>
-        [Test]
-        public void ObjUserRealTest()
-        {
-            // TODO unit test for the property 'ObjUserReal'
-        }
-        /// <summary>
-        /// Test the property 'ObjUserCloned'
-        /// </summary>
-        [Test]
-        public void ObjUserClonedTest()
-        {
-            // TODO unit test for the property 'ObjUserCloned'
-        }
-        /// <summary>
-        /// Test the property 'ObjApikey'
-        /// </summary>
-        [Test]
-        public void ObjApikeyTest()
-        {
-            // TODO unit test for the property 'ObjApikey'
-        }
-        /// <summary>
-        /// Test the property 'AEModuleInternalname'
-        /// </summary>
-        [Test]
-        public void AEModuleInternalnameTest()
-        {
-            // TODO unit test for the property 'AEModuleInternalname'
-        }
-        /// <summary>
         /// Test the property 'EActivesessionSessiontype'
         /// </summary>
         [Test]
@@ -160,6 +120,46 @@ namespace eZmaxApi.Test
         public void PksCustomerCodeTest()
         {
             // TODO unit test for the property 'PksCustomerCode'
+        }
+        /// <summary>
+        /// Test the property 'APkiPermissionID'
+        /// </summary>
+        [Test]
+        public void APkiPermissionIDTest()
+        {
+            // TODO unit test for the property 'APkiPermissionID'
+        }
+        /// <summary>
+        /// Test the property 'ObjUserReal'
+        /// </summary>
+        [Test]
+        public void ObjUserRealTest()
+        {
+            // TODO unit test for the property 'ObjUserReal'
+        }
+        /// <summary>
+        /// Test the property 'ObjUserCloned'
+        /// </summary>
+        [Test]
+        public void ObjUserClonedTest()
+        {
+            // TODO unit test for the property 'ObjUserCloned'
+        }
+        /// <summary>
+        /// Test the property 'ObjApikey'
+        /// </summary>
+        [Test]
+        public void ObjApikeyTest()
+        {
+            // TODO unit test for the property 'ObjApikey'
+        }
+        /// <summary>
+        /// Test the property 'AEModuleInternalname'
+        /// </summary>
+        [Test]
+        public void AEModuleInternalnameTest()
+        {
+            // TODO unit test for the property 'AEModuleInternalname'
         }
 
     }

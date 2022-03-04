@@ -66,22 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'ObjAddress'
-        /// </summary>
-        [Test]
-        public void ObjAddressTest()
-        {
-            // TODO unit test for the property 'ObjAddress'
-        }
-        /// <summary>
-        /// Test the property 'AObjContact'
-        /// </summary>
-        [Test]
-        public void AObjContactTest()
-        {
-            // TODO unit test for the property 'AObjContact'
-        }
-        /// <summary>
         /// Test the property 'PkiFranchisereferalincomeID'
         /// </summary>
         [Test]
@@ -176,6 +160,22 @@ namespace eZmaxApi.Test
         public void SFranchisereferalincomeRemoteidTest()
         {
             // TODO unit test for the property 'SFranchisereferalincomeRemoteid'
+        }
+        /// <summary>
+        /// Test the property 'ObjAddress'
+        /// </summary>
+        [Test]
+        public void ObjAddressTest()
+        {
+            // TODO unit test for the property 'ObjAddress'
+        }
+        /// <summary>
+        /// Test the property 'AObjContact'
+        /// </summary>
+        [Test]
+        public void AObjContactTest()
+        {
+            // TODO unit test for the property 'AObjContact'
         }
 
     }
