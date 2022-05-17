@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -97,6 +97,19 @@ namespace eZmaxApi.Test
             //int pkiEzsignfoldersignerassociationID = null;
             //var response = instance.EzsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
             //Assert.IsInstanceOf(typeof(EzsignfoldersignerassociationDeleteObjectV1Response), response, "response is EzsignfoldersignerassociationDeleteObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsignfoldersignerassociationEditObjectV1
+        /// </summary>
+        [Test]
+        public void EzsignfoldersignerassociationEditObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfoldersignerassociationID = null;
+            //EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request = null;
+            //var response = instance.EzsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
+            //Assert.IsInstanceOf(typeof(EzsignfoldersignerassociationEditObjectV1Response), response, "response is EzsignfoldersignerassociationEditObjectV1Response");
         }
         
         /// <summary>

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -38,23 +38,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponse" /> class.
         /// </summary>
-        /// <param name="eActivesessionSessiontype">eActivesessionSessiontype (required).</param>
+        /// <param name="eActivesessionUsertype">eActivesessionUsertype (required).</param>
         /// <param name="eActivesessionWeekdaystart">eActivesessionWeekdaystart (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
         /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
         /// <param name="bActivesessionDebug">Whether the active session is in debug or not (required).</param>
         /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
-        public ActivesessionResponse(FieldEActivesessionSessiontype eActivesessionSessiontype = default(FieldEActivesessionSessiontype), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), string pksCustomerCode = default(string))
+        public ActivesessionResponse(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), string pksCustomerCode = default(string))
         {
-            // to ensure "eActivesessionSessiontype" is required (not null)
-            if (eActivesessionSessiontype == null)
+            // to ensure "eActivesessionUsertype" is required (not null)
+            if (eActivesessionUsertype == null)
             {
-                throw new InvalidDataException("eActivesessionSessiontype is a required property for ActivesessionResponse and cannot be null");
+                throw new InvalidDataException("eActivesessionUsertype is a required property for ActivesessionResponse and cannot be null");
             }
             else
             {
-                this.EActivesessionSessiontype = eActivesessionSessiontype;
+                this.EActivesessionUsertype = eActivesessionUsertype;
             }
 
             // to ensure "eActivesessionWeekdaystart" is required (not null)
@@ -120,10 +120,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets EActivesessionSessiontype
+        /// Gets or Sets EActivesessionUsertype
         /// </summary>
-        [DataMember(Name="eActivesessionSessiontype", EmitDefaultValue=true)]
-        public FieldEActivesessionSessiontype EActivesessionSessiontype { get; set; }
+        [DataMember(Name="eActivesessionUsertype", EmitDefaultValue=true)]
+        public FieldEActivesessionUsertype EActivesessionUsertype { get; set; }
 
         /// <summary>
         /// Gets or Sets EActivesessionWeekdaystart
@@ -174,7 +174,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActivesessionResponse {\n");
-            sb.Append("  EActivesessionSessiontype: ").Append(EActivesessionSessiontype).Append("\n");
+            sb.Append("  EActivesessionUsertype: ").Append(EActivesessionUsertype).Append("\n");
             sb.Append("  EActivesessionWeekdaystart: ").Append(EActivesessionWeekdaystart).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  SCompanyNameX: ").Append(SCompanyNameX).Append("\n");
@@ -216,9 +216,9 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.EActivesessionSessiontype == input.EActivesessionSessiontype ||
-                    (this.EActivesessionSessiontype != null &&
-                    this.EActivesessionSessiontype.Equals(input.EActivesessionSessiontype))
+                    this.EActivesessionUsertype == input.EActivesessionUsertype ||
+                    (this.EActivesessionUsertype != null &&
+                    this.EActivesessionUsertype.Equals(input.EActivesessionUsertype))
                 ) && 
                 (
                     this.EActivesessionWeekdaystart == input.EActivesessionWeekdaystart ||
@@ -261,8 +261,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.EActivesessionSessiontype != null)
-                    hashCode = hashCode * 59 + this.EActivesessionSessiontype.GetHashCode();
+                if (this.EActivesessionUsertype != null)
+                    hashCode = hashCode * 59 + this.EActivesessionUsertype.GetHashCode();
                 if (this.EActivesessionWeekdaystart != null)
                     hashCode = hashCode * 59 + this.EActivesessionWeekdaystart.GetHashCode();
                 if (this.FkiLanguageID != null)

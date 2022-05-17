@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjEzsignsignature** | [**List&lt;EzsignsignatureResponseCompound&gt;**](EzsignsignatureResponseCompound.md) |  | [optional] 
+**AObjEzsignsignature** | [**List&lt;EzsignsignatureResponseCompound&gt;**](EzsignsignatureResponseCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

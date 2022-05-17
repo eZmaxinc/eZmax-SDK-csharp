@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -40,8 +40,9 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="sCategory">The Category for the dropdown or an empty string if not categorized (required).</param>
         /// <param name="sLabel">The Description of the element (required).</param>
-        /// <param name="mValue">The Unique ID of the element (required).</param>
-        public CustomAutocompleteElementResponse(string sCategory = default(string), string sLabel = default(string), string mValue = default(string))
+        /// <param name="sValue">The Unique ID of the element (required).</param>
+        /// <param name="mValue">The Unique ID of the element.</param>
+        public CustomAutocompleteElementResponse(string sCategory = default(string), string sLabel = default(string), string sValue = default(string), string mValue = default(string))
         {
             // to ensure "sCategory" is required (not null)
             if (sCategory == null)
@@ -63,16 +64,17 @@ namespace eZmaxApi.Model
                 this.SLabel = sLabel;
             }
 
-            // to ensure "mValue" is required (not null)
-            if (mValue == null)
+            // to ensure "sValue" is required (not null)
+            if (sValue == null)
             {
-                throw new InvalidDataException("mValue is a required property for CustomAutocompleteElementResponse and cannot be null");
+                throw new InvalidDataException("sValue is a required property for CustomAutocompleteElementResponse and cannot be null");
             }
             else
             {
-                this.MValue = mValue;
+                this.SValue = sValue;
             }
 
+            this.MValue = mValue;
         }
 
         /// <summary>
@@ -93,7 +95,15 @@ namespace eZmaxApi.Model
         /// The Unique ID of the element
         /// </summary>
         /// <value>The Unique ID of the element</value>
-        [DataMember(Name="mValue", EmitDefaultValue=true)]
+        [DataMember(Name="sValue", EmitDefaultValue=true)]
+        public string SValue { get; set; }
+
+        /// <summary>
+        /// The Unique ID of the element
+        /// </summary>
+        /// <value>The Unique ID of the element</value>
+        [DataMember(Name="mValue", EmitDefaultValue=false)]
+        [Obsolete]
         public string MValue { get; set; }
 
         /// <summary>
@@ -106,6 +116,7 @@ namespace eZmaxApi.Model
             sb.Append("class CustomAutocompleteElementResponse {\n");
             sb.Append("  SCategory: ").Append(SCategory).Append("\n");
             sb.Append("  SLabel: ").Append(SLabel).Append("\n");
+            sb.Append("  SValue: ").Append(SValue).Append("\n");
             sb.Append("  MValue: ").Append(MValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -152,6 +163,11 @@ namespace eZmaxApi.Model
                     this.SLabel.Equals(input.SLabel))
                 ) && 
                 (
+                    this.SValue == input.SValue ||
+                    (this.SValue != null &&
+                    this.SValue.Equals(input.SValue))
+                ) && 
+                (
                     this.MValue == input.MValue ||
                     (this.MValue != null &&
                     this.MValue.Equals(input.MValue))
@@ -171,6 +187,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SCategory.GetHashCode();
                 if (this.SLabel != null)
                     hashCode = hashCode * 59 + this.SLabel.GetHashCode();
+                if (this.SValue != null)
+                    hashCode = hashCode * 59 + this.SValue.GetHashCode();
                 if (this.MValue != null)
                     hashCode = hashCode * 59 + this.MValue.GetHashCode();
                 return hashCode;

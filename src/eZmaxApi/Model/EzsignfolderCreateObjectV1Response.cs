@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the /1/object/ezsignfolder/createObject API Request
+    /// Response for POST /1/object/ezsignfolder
     /// </summary>
     [DataContract]
     public partial class EzsignfolderCreateObjectV1Response :  IEquatable<EzsignfolderCreateObjectV1Response>, IValidatableObject

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -128,6 +128,30 @@ namespace eZmaxApi.Test
         public void FkiEzsigndocumentIDTest()
         {
             // TODO unit test for the property 'FkiEzsigndocumentID'
+        }
+        /// <summary>
+        /// Test the property 'TEzsignsignatureTooltip'
+        /// </summary>
+        [Test]
+        public void TEzsignsignatureTooltipTest()
+        {
+            // TODO unit test for the property 'TEzsignsignatureTooltip'
+        }
+        /// <summary>
+        /// Test the property 'EEzsignsignatureTooltipposition'
+        /// </summary>
+        [Test]
+        public void EEzsignsignatureTooltippositionTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureTooltipposition'
+        }
+        /// <summary>
+        /// Test the property 'EEzsignsignatureFont'
+        /// </summary>
+        [Test]
+        public void EEzsignsignatureFontTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureFont'
         }
 
     }

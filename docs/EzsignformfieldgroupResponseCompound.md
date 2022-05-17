@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **EEzsignformfieldgroupTooltipposition** | [**FieldEEzsignformfieldgroupTooltipposition**](FieldEEzsignformfieldgroupTooltipposition.md) |  | [optional] 
 **AObjEzsignformfield** | [**List&lt;EzsignformfieldResponseCompound&gt;**](EzsignformfieldResponseCompound.md) |  | 
 **AObjDropdownElement** | [**List&lt;CustomDropdownElementResponseCompound&gt;**](CustomDropdownElementResponseCompound.md) |  | [optional] 
-**AObjEzsignformfieldgroupsigner** | [**EzsignformfieldgroupsignerResponseCompound**](EzsignformfieldgroupsignerResponseCompound.md) |  | 
+**AObjEzsignformfieldgroupsigner** | [**List&lt;EzsignformfieldgroupsignerResponseCompound&gt;**](EzsignformfieldgroupsignerResponseCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups API Request
+    /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups
     /// </summary>
     [DataContract]
     public partial class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload :  IEquatable<EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload>, IValidatableObject
@@ -33,16 +33,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup.</param>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup (required).</param>
         public EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload(List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup = default(List<EzsignformfieldgroupResponseCompound>))
         {
-            this.AObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
+            // to ensure "aObjEzsignformfieldgroup" is required (not null)
+            if (aObjEzsignformfieldgroup == null)
+            {
+                throw new InvalidDataException("aObjEzsignformfieldgroup is a required property for EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
+            }
+
         }
 
         /// <summary>
         /// Gets or Sets AObjEzsignformfieldgroup
         /// </summary>
-        [DataMember(Name="a_objEzsignformfieldgroup", EmitDefaultValue=false)]
+        [DataMember(Name="a_objEzsignformfieldgroup", EmitDefaultValue=true)]
         public List<EzsignformfieldgroupResponseCompound> AObjEzsignformfieldgroup { get; set; }
 
         /// <summary>

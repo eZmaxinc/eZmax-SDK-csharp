@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the /1/object/ezsignformfieldgroup/deleteObject API Request
+    /// Response for DELETE /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
     /// </summary>
     [DataContract]
     public partial class EzsignformfieldgroupDeleteObjectV1Response :  IEquatable<EzsignformfieldgroupDeleteObjectV1Response>, IValidatableObject

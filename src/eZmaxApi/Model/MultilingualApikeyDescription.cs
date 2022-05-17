@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -33,8 +33,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualApikeyDescription" /> class.
         /// </summary>
-        /// <param name="sApikeyDescription1">Value in French.</param>
-        /// <param name="sApikeyDescription2">Value in English.</param>
+        /// <param name="sApikeyDescription1">The description of the Apikey in French.</param>
+        /// <param name="sApikeyDescription2">The description of the Apikey in English.</param>
         public MultilingualApikeyDescription(string sApikeyDescription1 = default(string), string sApikeyDescription2 = default(string))
         {
             this.SApikeyDescription1 = sApikeyDescription1;
@@ -42,16 +42,16 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Value in French
+        /// The description of the Apikey in French
         /// </summary>
-        /// <value>Value in French</value>
+        /// <value>The description of the Apikey in French</value>
         [DataMember(Name="sApikeyDescription1", EmitDefaultValue=false)]
         public string SApikeyDescription1 { get; set; }
 
         /// <summary>
-        /// Value in English
+        /// The description of the Apikey in English
         /// </summary>
-        /// <value>Value in English</value>
+        /// <value>The description of the Apikey in English</value>
         [DataMember(Name="sApikeyDescription2", EmitDefaultValue=false)]
         public string SApikeyDescription2 { get; set; }
 

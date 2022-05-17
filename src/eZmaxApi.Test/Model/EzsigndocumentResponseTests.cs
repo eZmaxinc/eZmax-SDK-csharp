@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -176,6 +176,14 @@ namespace eZmaxApi.Test
         public void SEzsigndocumentMD5signedTest()
         {
             // TODO unit test for the property 'SEzsigndocumentMD5signed'
+        }
+        /// <summary>
+        /// Test the property 'BEzsigndocumentEzsignform'
+        /// </summary>
+        [Test]
+        public void BEzsigndocumentEzsignformTest()
+        {
+            // TODO unit test for the property 'BEzsigndocumentEzsignform'
         }
         /// <summary>
         /// Test the property 'ObjAudit'

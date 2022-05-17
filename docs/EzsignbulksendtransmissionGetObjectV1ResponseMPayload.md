@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **SEzsignbulksendtransmissionDescription** | **string** | The description of the Ezsignbulksendtransmission | 
 **IEzsignbulksendtransmissionErrors** | **int** | The number of errors during the Ezsignbulksendtransmission | 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | 
+**AObjEzsignfoldertransmission** | [**List&lt;CustomEzsignfoldertransmissionResponse&gt;**](CustomEzsignfoldertransmissionResponse.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

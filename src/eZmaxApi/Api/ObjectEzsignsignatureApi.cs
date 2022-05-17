@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -134,6 +134,29 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignatureID"></param>
         /// <returns>ApiResponse of EzsignsignatureGetObjectV1Response</returns>
         ApiResponse<EzsignsignatureGetObjectV1Response> EzsignsignatureGetObjectV1WithHttpInfo (int pkiEzsignsignatureID);
+        /// <summary>
+        /// Sign the Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureSignV1Request"></param>
+        /// <returns>EzsignsignatureSignV1Response</returns>
+        EzsignsignatureSignV1Response EzsignsignatureSignV1 (int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request);
+
+        /// <summary>
+        /// Sign the Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureSignV1Request"></param>
+        /// <returns>ApiResponse of EzsignsignatureSignV1Response</returns>
+        ApiResponse<EzsignsignatureSignV1Response> EzsignsignatureSignV1WithHttpInfo (int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -255,6 +278,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignsignatureGetObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignsignatureGetObjectV1Response>> EzsignsignatureGetObjectV1WithHttpInfoAsync (int pkiEzsignsignatureID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Sign the Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureSignV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignsignatureSignV1Response</returns>
+        System.Threading.Tasks.Task<EzsignsignatureSignV1Response> EzsignsignatureSignV1Async (int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Sign the Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureSignV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignsignatureSignV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignsignatureSignV1Response>> EzsignsignatureSignV1WithHttpInfoAsync (int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1153,6 +1201,179 @@ namespace eZmaxApi.Api
             return new ApiResponse<EzsignsignatureGetObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureGetObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureGetObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Sign the Ezsignsignature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureSignV1Request"></param>
+        /// <returns>EzsignsignatureSignV1Response</returns>
+        public EzsignsignatureSignV1Response EzsignsignatureSignV1 (int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request)
+        {
+             ApiResponse<EzsignsignatureSignV1Response> localVarResponse = EzsignsignatureSignV1WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureSignV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Sign the Ezsignsignature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureSignV1Request"></param>
+        /// <returns>ApiResponse of EzsignsignatureSignV1Response</returns>
+        public ApiResponse<EzsignsignatureSignV1Response> EzsignsignatureSignV1WithHttpInfo (int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request)
+        {
+            // verify the required parameter 'pkiEzsignsignatureID' is set
+            if (pkiEzsignsignatureID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignsignatureID' when calling ObjectEzsignsignatureApi->EzsignsignatureSignV1");
+            // verify the required parameter 'ezsignsignatureSignV1Request' is set
+            if (ezsignsignatureSignV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignsignatureSignV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureSignV1");
+
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignsignatureID != null) localVarPathParams.Add("pkiEzsignsignatureID", this.Configuration.ApiClient.ParameterToString(pkiEzsignsignatureID)); // path parameter
+            if (ezsignsignatureSignV1Request != null && ezsignsignatureSignV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignsignatureSignV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignsignatureSignV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignsignatureSignV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignsignatureSignV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignsignatureSignV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureSignV1Response)));
+        }
+
+        /// <summary>
+        /// Sign the Ezsignsignature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureSignV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignsignatureSignV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignsignatureSignV1Response> EzsignsignatureSignV1Async (int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsignsignatureSignV1Response> localVarResponse = await EzsignsignatureSignV1WithHttpInfoAsync(pkiEzsignsignatureID, ezsignsignatureSignV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Sign the Ezsignsignature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignsignatureID"></param>
+        /// <param name="ezsignsignatureSignV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignsignatureSignV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignsignatureSignV1Response>> EzsignsignatureSignV1WithHttpInfoAsync (int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsignsignatureID' is set
+            if (pkiEzsignsignatureID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignsignatureID' when calling ObjectEzsignsignatureApi->EzsignsignatureSignV1");
+            // verify the required parameter 'ezsignsignatureSignV1Request' is set
+            if (ezsignsignatureSignV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignsignatureSignV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureSignV1");
+
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignsignatureID != null) localVarPathParams.Add("pkiEzsignsignatureID", this.Configuration.ApiClient.ParameterToString(pkiEzsignsignatureID)); // path parameter
+            if (ezsignsignatureSignV1Request != null && ezsignsignatureSignV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignsignatureSignV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignsignatureSignV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignsignatureSignV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignsignatureSignV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignsignatureSignV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureSignV1Response)));
         }
 
     }

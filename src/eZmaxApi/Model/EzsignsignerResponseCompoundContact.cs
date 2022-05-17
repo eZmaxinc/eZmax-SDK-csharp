@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -44,8 +44,9 @@ namespace eZmaxApi.Model
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sEmailAddress">The email address..</param>
         /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
+        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
         /// <param name="sPhoneE164Cell">A phone number in E.164 Format.</param>
-        public EzsignsignerResponseCompoundContact(int pkiContactID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), int fkiLanguageID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), string sPhoneE164Cell = default(string))
+        public EzsignsignerResponseCompoundContact(int pkiContactID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), int fkiLanguageID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), string sPhoneExtension = default(string), string sPhoneE164Cell = default(string))
         {
             // to ensure "pkiContactID" is required (not null)
             if (pkiContactID == null)
@@ -89,6 +90,7 @@ namespace eZmaxApi.Model
 
             this.SEmailAddress = sEmailAddress;
             this.SPhoneE164 = sPhoneE164;
+            this.SPhoneExtension = sPhoneExtension;
             this.SPhoneE164Cell = sPhoneE164Cell;
         }
 
@@ -135,6 +137,13 @@ namespace eZmaxApi.Model
         public string SPhoneE164 { get; set; }
 
         /// <summary>
+        /// The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+        /// </summary>
+        /// <value>The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers</value>
+        [DataMember(Name="sPhoneExtension", EmitDefaultValue=false)]
+        public string SPhoneExtension { get; set; }
+
+        /// <summary>
         /// A phone number in E.164 Format
         /// </summary>
         /// <value>A phone number in E.164 Format</value>
@@ -155,6 +164,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
             sb.Append("  SPhoneE164: ").Append(SPhoneE164).Append("\n");
+            sb.Append("  SPhoneExtension: ").Append(SPhoneExtension).Append("\n");
             sb.Append("  SPhoneE164Cell: ").Append(SPhoneE164Cell).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -221,6 +231,11 @@ namespace eZmaxApi.Model
                     this.SPhoneE164.Equals(input.SPhoneE164))
                 ) && 
                 (
+                    this.SPhoneExtension == input.SPhoneExtension ||
+                    (this.SPhoneExtension != null &&
+                    this.SPhoneExtension.Equals(input.SPhoneExtension))
+                ) && 
+                (
                     this.SPhoneE164Cell == input.SPhoneE164Cell ||
                     (this.SPhoneE164Cell != null &&
                     this.SPhoneE164Cell.Equals(input.SPhoneE164Cell))
@@ -248,6 +263,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEmailAddress.GetHashCode();
                 if (this.SPhoneE164 != null)
                     hashCode = hashCode * 59 + this.SPhoneE164.GetHashCode();
+                if (this.SPhoneExtension != null)
+                    hashCode = hashCode * 59 + this.SPhoneExtension.GetHashCode();
                 if (this.SPhoneE164Cell != null)
                     hashCode = hashCode * 59 + this.SPhoneE164Cell.GetHashCode();
                 return hashCode;
@@ -273,6 +290,24 @@ namespace eZmaxApi.Model
             if(this.FkiLanguageID < (int)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+
+
+            // SPhoneE164 (string) pattern
+            Regex regexSPhoneE164 = new Regex(@"^\\+[1-9]\\d{1,14}$", RegexOptions.CultureInvariant);
+            if (false == regexSPhoneE164.Match(this.SPhoneE164).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164, must match a pattern of " + regexSPhoneE164, new [] { "SPhoneE164" });
+            }
+
+
+
+            // SPhoneE164Cell (string) pattern
+            Regex regexSPhoneE164Cell = new Regex(@"^\\+[1-9]\\d{1,14}$", RegexOptions.CultureInvariant);
+            if (false == regexSPhoneE164Cell.Match(this.SPhoneE164Cell).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164Cell, must match a pattern of " + regexSPhoneE164Cell, new [] { "SPhoneE164Cell" });
             }
 
             yield break;

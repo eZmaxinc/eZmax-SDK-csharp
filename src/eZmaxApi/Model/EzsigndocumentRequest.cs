@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -44,10 +44,16 @@ namespace eZmaxApi.Model
             Base64 = 1,
 
             /// <summary>
+            /// Enum Ezsigntemplate for value: Ezsigntemplate
+            /// </summary>
+            [EnumMember(Value = "Ezsigntemplate")]
+            Ezsigntemplate = 2,
+
+            /// <summary>
             /// Enum Url for value: Url
             /// </summary>
             [EnumMember(Value = "Url")]
-            Url = 2
+            Url = 3
 
         }
 
@@ -76,8 +82,35 @@ namespace eZmaxApi.Model
         /// Indicates the format of the document.
         /// </summary>
         /// <value>Indicates the format of the document.</value>
-        [DataMember(Name="eEzsigndocumentFormat", EmitDefaultValue=true)]
-        public EEzsigndocumentFormatEnum EEzsigndocumentFormat { get; set; }
+        [DataMember(Name="eEzsigndocumentFormat", EmitDefaultValue=false)]
+        public EEzsigndocumentFormatEnum? EEzsigndocumentFormat { get; set; }
+        /// <summary>
+        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+        /// </summary>
+        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EEzsigndocumentFormEnum
+        {
+            /// <summary>
+            /// Enum Keep for value: Keep
+            /// </summary>
+            [EnumMember(Value = "Keep")]
+            Keep = 1,
+
+            /// <summary>
+            /// Enum Convert for value: Convert
+            /// </summary>
+            [EnumMember(Value = "Convert")]
+            Convert = 2
+
+        }
+
+        /// <summary>
+        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+        /// </summary>
+        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**</value>
+        [DataMember(Name="eEzsigndocumentForm", EmitDefaultValue=false)]
+        public EEzsigndocumentFormEnum? EEzsigndocumentForm { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentRequest" /> class.
         /// </summary>
@@ -87,38 +120,21 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigndocumentRequest" /> class.
         /// </summary>
         /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument.</param>
+        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
+        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="eEzsigndocumentSource">Indicates where to look for the document binary content. (required).</param>
-        /// <param name="eEzsigndocumentFormat">Indicates the format of the document. (required).</param>
+        /// <param name="eEzsigndocumentFormat">Indicates the format of the document..</param>
         /// <param name="sEzsigndocumentBase64">The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64..</param>
         /// <param name="sEzsigndocumentUrl">The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url..</param>
         /// <param name="bEzsigndocumentForcerepair">Try to repair the document or flatten it if it cannot be used for electronic signature.  (default to true).</param>
-        /// <param name="sEzsigndocumentPassword">If the source document is password protected, the password to open/modify it. (default to &quot;&quot;).</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="sEzsigndocumentPassword">If the source document is password protected, the password to open/modify it..</param>
+        /// <param name="eEzsigndocumentForm">If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**.</param>
         /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        public EzsigndocumentRequest(int pkiEzsigndocumentID = default(int), EEzsigndocumentSourceEnum eEzsigndocumentSource = default(EEzsigndocumentSourceEnum), EEzsigndocumentFormatEnum eEzsigndocumentFormat = default(EEzsigndocumentFormatEnum), byte[] sEzsigndocumentBase64 = default(byte[]), string sEzsigndocumentUrl = default(string), bool bEzsigndocumentForcerepair = true, string sEzsigndocumentPassword = "", int fkiEzsignfolderID = default(int), string dtEzsigndocumentDuedate = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string))
+        public EzsigndocumentRequest(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsigntemplateID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiLanguageID = default(int), EEzsigndocumentSourceEnum eEzsigndocumentSource = default(EEzsigndocumentSourceEnum), EEzsigndocumentFormatEnum? eEzsigndocumentFormat = default(EEzsigndocumentFormatEnum?), byte[] sEzsigndocumentBase64 = default(byte[]), string sEzsigndocumentUrl = default(string), bool bEzsigndocumentForcerepair = true, string sEzsigndocumentPassword = default(string), EEzsigndocumentFormEnum? eEzsigndocumentForm = default(EEzsigndocumentFormEnum?), string dtEzsigndocumentDuedate = default(string), string sEzsigndocumentName = default(string))
         {
-            // to ensure "eEzsigndocumentSource" is required (not null)
-            if (eEzsigndocumentSource == null)
-            {
-                throw new InvalidDataException("eEzsigndocumentSource is a required property for EzsigndocumentRequest and cannot be null");
-            }
-            else
-            {
-                this.EEzsigndocumentSource = eEzsigndocumentSource;
-            }
-
-            // to ensure "eEzsigndocumentFormat" is required (not null)
-            if (eEzsigndocumentFormat == null)
-            {
-                throw new InvalidDataException("eEzsigndocumentFormat is a required property for EzsigndocumentRequest and cannot be null");
-            }
-            else
-            {
-                this.EEzsigndocumentFormat = eEzsigndocumentFormat;
-            }
-
             // to ensure "fkiEzsignfolderID" is required (not null)
             if (fkiEzsignfolderID == null)
             {
@@ -129,16 +145,6 @@ namespace eZmaxApi.Model
                 this.FkiEzsignfolderID = fkiEzsignfolderID;
             }
 
-            // to ensure "dtEzsigndocumentDuedate" is required (not null)
-            if (dtEzsigndocumentDuedate == null)
-            {
-                throw new InvalidDataException("dtEzsigndocumentDuedate is a required property for EzsigndocumentRequest and cannot be null");
-            }
-            else
-            {
-                this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
-            }
-
             // to ensure "fkiLanguageID" is required (not null)
             if (fkiLanguageID == null)
             {
@@ -147,6 +153,26 @@ namespace eZmaxApi.Model
             else
             {
                 this.FkiLanguageID = fkiLanguageID;
+            }
+
+            // to ensure "eEzsigndocumentSource" is required (not null)
+            if (eEzsigndocumentSource == null)
+            {
+                throw new InvalidDataException("eEzsigndocumentSource is a required property for EzsigndocumentRequest and cannot be null");
+            }
+            else
+            {
+                this.EEzsigndocumentSource = eEzsigndocumentSource;
+            }
+
+            // to ensure "dtEzsigndocumentDuedate" is required (not null)
+            if (dtEzsigndocumentDuedate == null)
+            {
+                throw new InvalidDataException("dtEzsigndocumentDuedate is a required property for EzsigndocumentRequest and cannot be null");
+            }
+            else
+            {
+                this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
             }
 
             // to ensure "sEzsigndocumentName" is required (not null)
@@ -160,6 +186,9 @@ namespace eZmaxApi.Model
             }
 
             this.PkiEzsigndocumentID = pkiEzsigndocumentID;
+            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
+            this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+            this.EEzsigndocumentFormat = eEzsigndocumentFormat;
             this.SEzsigndocumentBase64 = sEzsigndocumentBase64;
             this.SEzsigndocumentUrl = sEzsigndocumentUrl;
             // use default value if no "bEzsigndocumentForcerepair" provided
@@ -171,15 +200,8 @@ namespace eZmaxApi.Model
             {
                 this.BEzsigndocumentForcerepair = bEzsigndocumentForcerepair;
             }
-            // use default value if no "sEzsigndocumentPassword" provided
-            if (sEzsigndocumentPassword == null)
-            {
-                this.SEzsigndocumentPassword = "";
-            }
-            else
-            {
-                this.SEzsigndocumentPassword = sEzsigndocumentPassword;
-            }
+            this.SEzsigndocumentPassword = sEzsigndocumentPassword;
+            this.EEzsigndocumentForm = eEzsigndocumentForm;
         }
 
         /// <summary>
@@ -188,6 +210,34 @@ namespace eZmaxApi.Model
         /// <value>The unique ID of the Ezsigndocument</value>
         [DataMember(Name="pkiEzsigndocumentID", EmitDefaultValue=false)]
         public int PkiEzsigndocumentID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfolder
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfolder</value>
+        [DataMember(Name="fkiEzsignfolderID", EmitDefaultValue=true)]
+        public int FkiEzsignfolderID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsigntemplate
+        /// </summary>
+        /// <value>The unique ID of the Ezsigntemplate</value>
+        [DataMember(Name="fkiEzsigntemplateID", EmitDefaultValue=false)]
+        public int FkiEzsigntemplateID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfoldersignerassociation
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
+        [DataMember(Name="fkiEzsignfoldersignerassociationID", EmitDefaultValue=false)]
+        public int FkiEzsignfoldersignerassociationID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+        /// </summary>
+        /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
+        [DataMember(Name="fkiLanguageID", EmitDefaultValue=true)]
+        public int FkiLanguageID { get; set; }
 
 
 
@@ -219,12 +269,6 @@ namespace eZmaxApi.Model
         [DataMember(Name="sEzsigndocumentPassword", EmitDefaultValue=false)]
         public string SEzsigndocumentPassword { get; set; }
 
-        /// <summary>
-        /// The unique ID of the Ezsignfolder
-        /// </summary>
-        /// <value>The unique ID of the Ezsignfolder</value>
-        [DataMember(Name="fkiEzsignfolderID", EmitDefaultValue=true)]
-        public int FkiEzsignfolderID { get; set; }
 
         /// <summary>
         /// The maximum date and time at which the Ezsigndocument can be signed.
@@ -232,13 +276,6 @@ namespace eZmaxApi.Model
         /// <value>The maximum date and time at which the Ezsigndocument can be signed.</value>
         [DataMember(Name="dtEzsigndocumentDuedate", EmitDefaultValue=true)]
         public string DtEzsigndocumentDuedate { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-        /// </summary>
-        /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        [DataMember(Name="fkiLanguageID", EmitDefaultValue=true)]
-        public int FkiLanguageID { get; set; }
 
         /// <summary>
         /// The name of the document that will be presented to Ezsignfoldersignerassociations
@@ -256,15 +293,18 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class EzsigndocumentRequest {\n");
             sb.Append("  PkiEzsigndocumentID: ").Append(PkiEzsigndocumentID).Append("\n");
+            sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
+            sb.Append("  FkiEzsigntemplateID: ").Append(FkiEzsigntemplateID).Append("\n");
+            sb.Append("  FkiEzsignfoldersignerassociationID: ").Append(FkiEzsignfoldersignerassociationID).Append("\n");
+            sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  EEzsigndocumentSource: ").Append(EEzsigndocumentSource).Append("\n");
             sb.Append("  EEzsigndocumentFormat: ").Append(EEzsigndocumentFormat).Append("\n");
             sb.Append("  SEzsigndocumentBase64: ").Append(SEzsigndocumentBase64).Append("\n");
             sb.Append("  SEzsigndocumentUrl: ").Append(SEzsigndocumentUrl).Append("\n");
             sb.Append("  BEzsigndocumentForcerepair: ").Append(BEzsigndocumentForcerepair).Append("\n");
             sb.Append("  SEzsigndocumentPassword: ").Append(SEzsigndocumentPassword).Append("\n");
-            sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
+            sb.Append("  EEzsigndocumentForm: ").Append(EEzsigndocumentForm).Append("\n");
             sb.Append("  DtEzsigndocumentDuedate: ").Append(DtEzsigndocumentDuedate).Append("\n");
-            sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  SEzsigndocumentName: ").Append(SEzsigndocumentName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -306,6 +346,26 @@ namespace eZmaxApi.Model
                     this.PkiEzsigndocumentID.Equals(input.PkiEzsigndocumentID))
                 ) && 
                 (
+                    this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
+                    (this.FkiEzsignfolderID != null &&
+                    this.FkiEzsignfolderID.Equals(input.FkiEzsignfolderID))
+                ) && 
+                (
+                    this.FkiEzsigntemplateID == input.FkiEzsigntemplateID ||
+                    (this.FkiEzsigntemplateID != null &&
+                    this.FkiEzsigntemplateID.Equals(input.FkiEzsigntemplateID))
+                ) && 
+                (
+                    this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
+                    (this.FkiEzsignfoldersignerassociationID != null &&
+                    this.FkiEzsignfoldersignerassociationID.Equals(input.FkiEzsignfoldersignerassociationID))
+                ) && 
+                (
+                    this.FkiLanguageID == input.FkiLanguageID ||
+                    (this.FkiLanguageID != null &&
+                    this.FkiLanguageID.Equals(input.FkiLanguageID))
+                ) && 
+                (
                     this.EEzsigndocumentSource == input.EEzsigndocumentSource ||
                     (this.EEzsigndocumentSource != null &&
                     this.EEzsigndocumentSource.Equals(input.EEzsigndocumentSource))
@@ -336,19 +396,14 @@ namespace eZmaxApi.Model
                     this.SEzsigndocumentPassword.Equals(input.SEzsigndocumentPassword))
                 ) && 
                 (
-                    this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
-                    (this.FkiEzsignfolderID != null &&
-                    this.FkiEzsignfolderID.Equals(input.FkiEzsignfolderID))
+                    this.EEzsigndocumentForm == input.EEzsigndocumentForm ||
+                    (this.EEzsigndocumentForm != null &&
+                    this.EEzsigndocumentForm.Equals(input.EEzsigndocumentForm))
                 ) && 
                 (
                     this.DtEzsigndocumentDuedate == input.DtEzsigndocumentDuedate ||
                     (this.DtEzsigndocumentDuedate != null &&
                     this.DtEzsigndocumentDuedate.Equals(input.DtEzsigndocumentDuedate))
-                ) && 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    (this.FkiLanguageID != null &&
-                    this.FkiLanguageID.Equals(input.FkiLanguageID))
                 ) && 
                 (
                     this.SEzsigndocumentName == input.SEzsigndocumentName ||
@@ -368,6 +423,14 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.PkiEzsigndocumentID != null)
                     hashCode = hashCode * 59 + this.PkiEzsigndocumentID.GetHashCode();
+                if (this.FkiEzsignfolderID != null)
+                    hashCode = hashCode * 59 + this.FkiEzsignfolderID.GetHashCode();
+                if (this.FkiEzsigntemplateID != null)
+                    hashCode = hashCode * 59 + this.FkiEzsigntemplateID.GetHashCode();
+                if (this.FkiEzsignfoldersignerassociationID != null)
+                    hashCode = hashCode * 59 + this.FkiEzsignfoldersignerassociationID.GetHashCode();
+                if (this.FkiLanguageID != null)
+                    hashCode = hashCode * 59 + this.FkiLanguageID.GetHashCode();
                 if (this.EEzsigndocumentSource != null)
                     hashCode = hashCode * 59 + this.EEzsigndocumentSource.GetHashCode();
                 if (this.EEzsigndocumentFormat != null)
@@ -380,12 +443,10 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzsigndocumentForcerepair.GetHashCode();
                 if (this.SEzsigndocumentPassword != null)
                     hashCode = hashCode * 59 + this.SEzsigndocumentPassword.GetHashCode();
-                if (this.FkiEzsignfolderID != null)
-                    hashCode = hashCode * 59 + this.FkiEzsignfolderID.GetHashCode();
+                if (this.EEzsigndocumentForm != null)
+                    hashCode = hashCode * 59 + this.EEzsigndocumentForm.GetHashCode();
                 if (this.DtEzsigndocumentDuedate != null)
                     hashCode = hashCode * 59 + this.DtEzsigndocumentDuedate.GetHashCode();
-                if (this.FkiLanguageID != null)
-                    hashCode = hashCode * 59 + this.FkiLanguageID.GetHashCode();
                 if (this.SEzsigndocumentName != null)
                     hashCode = hashCode * 59 + this.SEzsigndocumentName.GetHashCode();
                 return hashCode;

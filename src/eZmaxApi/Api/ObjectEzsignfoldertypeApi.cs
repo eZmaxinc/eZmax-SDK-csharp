@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -54,7 +54,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -69,7 +69,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -112,7 +112,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -128,7 +128,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfoldertype list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -408,7 +408,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -424,7 +424,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -489,7 +489,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -507,7 +507,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfoldertype list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>

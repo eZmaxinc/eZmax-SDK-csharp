@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -52,13 +52,14 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigndocumentSignaturetotal">The number of total signatures that were requested in the Ezsigndocument. (required).</param>
         /// <param name="sEzsigndocumentMD5initial">MD5 Hash of the initial PDF Document before signatures were applied to it. (required).</param>
         /// <param name="sEzsigndocumentMD5signed">MD5 Hash of the final PDF Document after all signatures were applied to it. (required).</param>
+        /// <param name="bEzsigndocumentEzsignform">If the Ezsigndocument contains an Ezsignform or not (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
         /// <param name="iEzsigndocumentStepformtotal">The total number of steps in the form filling phase (required).</param>
         /// <param name="iEzsigndocumentStepformcurrent">The current step in the form filling phase (required).</param>
         /// <param name="iEzsigndocumentStepsignaturetotal">The total number of steps in the signature filling phase (required).</param>
         /// <param name="iEzsigndocumentStepsignatureCurrent">The current step in the signature phase (required).</param>
         /// <param name="aObjEzsignfoldersignerassociationstatus">aObjEzsignfoldersignerassociationstatus (required).</param>
-        public EzsigndocumentResponseCompound(int fkiEzsignfolderID = default(int), string dtEzsigndocumentDuedate = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), int pkiEzsigndocumentID = default(int), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string sEzsigndocumentMD5signed = default(string), CommonAudit objAudit = default(CommonAudit), int iEzsigndocumentStepformtotal = default(int), int iEzsigndocumentStepformcurrent = default(int), int iEzsigndocumentStepsignaturetotal = default(int), int iEzsigndocumentStepsignatureCurrent = default(int), List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = default(List<CustomEzsignfoldersignerassociationstatusResponse>))
+        public EzsigndocumentResponseCompound(int fkiEzsignfolderID = default(int), string dtEzsigndocumentDuedate = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), int pkiEzsigndocumentID = default(int), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), CommonAudit objAudit = default(CommonAudit), int iEzsigndocumentStepformtotal = default(int), int iEzsigndocumentStepformcurrent = default(int), int iEzsigndocumentStepsignaturetotal = default(int), int iEzsigndocumentStepsignatureCurrent = default(int), List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = default(List<CustomEzsignfoldersignerassociationstatusResponse>))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)
             if (fkiEzsignfolderID == null)
@@ -198,6 +199,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.SEzsigndocumentMD5signed = sEzsigndocumentMD5signed;
+            }
+
+            // to ensure "bEzsigndocumentEzsignform" is required (not null)
+            if (bEzsigndocumentEzsignform == null)
+            {
+                throw new InvalidDataException("bEzsigndocumentEzsignform is a required property for EzsigndocumentResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.BEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
             }
 
             // to ensure "objAudit" is required (not null)
@@ -360,6 +371,13 @@ namespace eZmaxApi.Model
         public string SEzsigndocumentMD5signed { get; set; }
 
         /// <summary>
+        /// If the Ezsigndocument contains an Ezsignform or not
+        /// </summary>
+        /// <value>If the Ezsigndocument contains an Ezsignform or not</value>
+        [DataMember(Name="bEzsigndocumentEzsignform", EmitDefaultValue=true)]
+        public bool BEzsigndocumentEzsignform { get; set; }
+
+        /// <summary>
         /// Gets or Sets ObjAudit
         /// </summary>
         [DataMember(Name="objAudit", EmitDefaultValue=true)]
@@ -421,6 +439,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsigndocumentSignaturetotal: ").Append(IEzsigndocumentSignaturetotal).Append("\n");
             sb.Append("  SEzsigndocumentMD5initial: ").Append(SEzsigndocumentMD5initial).Append("\n");
             sb.Append("  SEzsigndocumentMD5signed: ").Append(SEzsigndocumentMD5signed).Append("\n");
+            sb.Append("  BEzsigndocumentEzsignform: ").Append(BEzsigndocumentEzsignform).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  IEzsigndocumentStepformtotal: ").Append(IEzsigndocumentStepformtotal).Append("\n");
             sb.Append("  IEzsigndocumentStepformcurrent: ").Append(IEzsigndocumentStepformcurrent).Append("\n");
@@ -532,6 +551,11 @@ namespace eZmaxApi.Model
                     this.SEzsigndocumentMD5signed.Equals(input.SEzsigndocumentMD5signed))
                 ) && 
                 (
+                    this.BEzsigndocumentEzsignform == input.BEzsigndocumentEzsignform ||
+                    (this.BEzsigndocumentEzsignform != null &&
+                    this.BEzsigndocumentEzsignform.Equals(input.BEzsigndocumentEzsignform))
+                ) && 
+                (
                     this.ObjAudit == input.ObjAudit ||
                     (this.ObjAudit != null &&
                     this.ObjAudit.Equals(input.ObjAudit))
@@ -601,6 +625,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzsigndocumentMD5initial.GetHashCode();
                 if (this.SEzsigndocumentMD5signed != null)
                     hashCode = hashCode * 59 + this.SEzsigndocumentMD5signed.GetHashCode();
+                if (this.BEzsigndocumentEzsignform != null)
+                    hashCode = hashCode * 59 + this.BEzsigndocumentEzsignform.GetHashCode();
                 if (this.ObjAudit != null)
                     hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
                 if (this.IEzsigndocumentStepformtotal != null)

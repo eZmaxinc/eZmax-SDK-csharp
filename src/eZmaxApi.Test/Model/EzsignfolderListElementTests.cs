@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -130,12 +130,12 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'DtEzsignfolderSentdate'
         }
         /// <summary>
-        /// Test the property 'DtDueDate'
+        /// Test the property 'DtEzsignfolderDuedate'
         /// </summary>
         [Test]
-        public void DtDueDateTest()
+        public void DtEzsignfolderDuedateTest()
         {
-            // TODO unit test for the property 'DtDueDate'
+            // TODO unit test for the property 'DtEzsignfolderDuedate'
         }
         /// <summary>
         /// Test the property 'IEzsigndocument'

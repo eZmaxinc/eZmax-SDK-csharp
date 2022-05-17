@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -96,6 +96,30 @@ namespace eZmaxApi.Test
         public void SEmailAddressTest()
         {
             // TODO unit test for the property 'SEmailAddress'
+        }
+        /// <summary>
+        /// Test the property 'SPhoneE164'
+        /// </summary>
+        [Test]
+        public void SPhoneE164Test()
+        {
+            // TODO unit test for the property 'SPhoneE164'
+        }
+        /// <summary>
+        /// Test the property 'SPhoneExtension'
+        /// </summary>
+        [Test]
+        public void SPhoneExtensionTest()
+        {
+            // TODO unit test for the property 'SPhoneExtension'
+        }
+        /// <summary>
+        /// Test the property 'SPhoneE164Cell'
+        /// </summary>
+        [Test]
+        public void SPhoneE164CellTest()
+        {
+            // TODO unit test for the property 'SPhoneE164Cell'
         }
         /// <summary>
         /// Test the property 'SPhoneNumber'

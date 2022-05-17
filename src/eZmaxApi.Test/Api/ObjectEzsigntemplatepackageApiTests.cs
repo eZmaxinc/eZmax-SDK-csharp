@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -64,6 +64,70 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
+        /// Test EzsigntemplatepackageCreateObjectV1
+        /// </summary>
+        [Test]
+        public void EzsigntemplatepackageCreateObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request = null;
+            //var response = instance.EzsigntemplatepackageCreateObjectV1(ezsigntemplatepackageCreateObjectV1Request);
+            //Assert.IsInstanceOf(typeof(EzsigntemplatepackageCreateObjectV1Response), response, "response is EzsigntemplatepackageCreateObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsigntemplatepackageDeleteObjectV1
+        /// </summary>
+        [Test]
+        public void EzsigntemplatepackageDeleteObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigntemplatepackageID = null;
+            //var response = instance.EzsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID);
+            //Assert.IsInstanceOf(typeof(EzsigntemplatepackageDeleteObjectV1Response), response, "response is EzsigntemplatepackageDeleteObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsigntemplatepackageEditEzsigntemplatepackagesignersV1
+        /// </summary>
+        [Test]
+        public void EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigntemplatepackageID = null;
+            //EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request = null;
+            //var response = instance.EzsigntemplatepackageEditEzsigntemplatepackagesignersV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request);
+            //Assert.IsInstanceOf(typeof(EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response), response, "response is EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsigntemplatepackageEditObjectV1
+        /// </summary>
+        [Test]
+        public void EzsigntemplatepackageEditObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigntemplatepackageID = null;
+            //EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request = null;
+            //var response = instance.EzsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
+            //Assert.IsInstanceOf(typeof(EzsigntemplatepackageEditObjectV1Response), response, "response is EzsigntemplatepackageEditObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsigntemplatepackageGetAutocompleteV1
+        /// </summary>
+        [Test]
+        public void EzsigntemplatepackageGetAutocompleteV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string sSelector = null;
+            //string sQuery = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //var response = instance.EzsigntemplatepackageGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+            //Assert.IsInstanceOf(typeof(CommonGetAutocompleteDisabledV1Response), response, "response is CommonGetAutocompleteDisabledV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsigntemplatepackageGetListV1
         /// </summary>
         [Test]
@@ -77,6 +141,18 @@ namespace eZmaxApi.Test
             //string sFilter = null;
             //var response = instance.EzsigntemplatepackageGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(EzsigntemplatepackageGetListV1Response), response, "response is EzsigntemplatepackageGetListV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsigntemplatepackageGetObjectV1
+        /// </summary>
+        [Test]
+        public void EzsigntemplatepackageGetObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigntemplatepackageID = null;
+            //var response = instance.EzsigntemplatepackageGetObjectV1(pkiEzsigntemplatepackageID);
+            //Assert.IsInstanceOf(typeof(EzsigntemplatepackageGetObjectV1Response), response, "response is EzsigntemplatepackageGetObjectV1Response");
         }
         
     }

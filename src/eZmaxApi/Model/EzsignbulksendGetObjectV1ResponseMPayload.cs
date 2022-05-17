@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getObject API Request
+    /// Payload for GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}
     /// </summary>
     [DataContract]
     public partial class EzsignbulksendGetObjectV1ResponseMPayload :  IEquatable<EzsignbulksendGetObjectV1ResponseMPayload>, IValidatableObject
@@ -41,11 +41,16 @@ namespace eZmaxApi.Model
         /// <param name="pkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
         /// <param name="sEzsignbulksendDescription">The description of the Ezsignbulksend (required).</param>
         /// <param name="tEzsignbulksendNote">Note about the Ezsignbulksend (required).</param>
+        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
         /// <param name="bEzsignbulksendIsactive">Whether the Ezsignbulksend is active or not (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public EzsignbulksendGetObjectV1ResponseMPayload(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsignbulksendDescription = default(string), string tEzsignbulksendNote = default(string), bool bEzsignbulksendIsactive = default(bool), CommonAudit objAudit = default(CommonAudit))
+        /// <param name="aObjEzsignbulksenddocumentmapping">aObjEzsignbulksenddocumentmapping (required).</param>
+        /// <param name="aObjEzsignbulksendsignermapping">aObjEzsignbulksendsignermapping (required).</param>
+        public EzsignbulksendGetObjectV1ResponseMPayload(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sLanguageNameX = default(string), string sEzsignfoldertypeNameX = default(string), string sEzsignbulksendDescription = default(string), string tEzsignbulksendNote = default(string), bool bEzsignbulksendNeedvalidation = default(bool), bool bEzsignbulksendIsactive = default(bool), CommonAudit objAudit = default(CommonAudit), List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping = default(List<EzsignbulksenddocumentmappingResponseCompound>), List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping = default(List<EzsignbulksendsignermappingResponse>))
         {
             // to ensure "pkiEzsignbulksendID" is required (not null)
             if (pkiEzsignbulksendID == null)
@@ -77,6 +82,26 @@ namespace eZmaxApi.Model
                 this.FkiLanguageID = fkiLanguageID;
             }
 
+            // to ensure "sLanguageNameX" is required (not null)
+            if (sLanguageNameX == null)
+            {
+                throw new InvalidDataException("sLanguageNameX is a required property for EzsignbulksendGetObjectV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.SLanguageNameX = sLanguageNameX;
+            }
+
+            // to ensure "sEzsignfoldertypeNameX" is required (not null)
+            if (sEzsignfoldertypeNameX == null)
+            {
+                throw new InvalidDataException("sEzsignfoldertypeNameX is a required property for EzsignbulksendGetObjectV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+            }
+
             // to ensure "sEzsignbulksendDescription" is required (not null)
             if (sEzsignbulksendDescription == null)
             {
@@ -97,6 +122,16 @@ namespace eZmaxApi.Model
                 this.TEzsignbulksendNote = tEzsignbulksendNote;
             }
 
+            // to ensure "bEzsignbulksendNeedvalidation" is required (not null)
+            if (bEzsignbulksendNeedvalidation == null)
+            {
+                throw new InvalidDataException("bEzsignbulksendNeedvalidation is a required property for EzsignbulksendGetObjectV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.BEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
+            }
+
             // to ensure "bEzsignbulksendIsactive" is required (not null)
             if (bEzsignbulksendIsactive == null)
             {
@@ -115,6 +150,26 @@ namespace eZmaxApi.Model
             else
             {
                 this.ObjAudit = objAudit;
+            }
+
+            // to ensure "aObjEzsignbulksenddocumentmapping" is required (not null)
+            if (aObjEzsignbulksenddocumentmapping == null)
+            {
+                throw new InvalidDataException("aObjEzsignbulksenddocumentmapping is a required property for EzsignbulksendGetObjectV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsignbulksenddocumentmapping = aObjEzsignbulksenddocumentmapping;
+            }
+
+            // to ensure "aObjEzsignbulksendsignermapping" is required (not null)
+            if (aObjEzsignbulksendsignermapping == null)
+            {
+                throw new InvalidDataException("aObjEzsignbulksendsignermapping is a required property for EzsignbulksendGetObjectV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsignbulksendsignermapping = aObjEzsignbulksendsignermapping;
             }
 
         }
@@ -141,6 +196,20 @@ namespace eZmaxApi.Model
         public int FkiLanguageID { get; set; }
 
         /// <summary>
+        /// The Name of the Language in the language of the requester
+        /// </summary>
+        /// <value>The Name of the Language in the language of the requester</value>
+        [DataMember(Name="sLanguageNameX", EmitDefaultValue=true)]
+        public string SLanguageNameX { get; set; }
+
+        /// <summary>
+        /// The name of the Ezsignfoldertype in the language of the requester
+        /// </summary>
+        /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
+        [DataMember(Name="sEzsignfoldertypeNameX", EmitDefaultValue=true)]
+        public string SEzsignfoldertypeNameX { get; set; }
+
+        /// <summary>
         /// The description of the Ezsignbulksend
         /// </summary>
         /// <value>The description of the Ezsignbulksend</value>
@@ -153,6 +222,13 @@ namespace eZmaxApi.Model
         /// <value>Note about the Ezsignbulksend</value>
         [DataMember(Name="tEzsignbulksendNote", EmitDefaultValue=true)]
         public string TEzsignbulksendNote { get; set; }
+
+        /// <summary>
+        /// Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+        /// </summary>
+        /// <value>Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation</value>
+        [DataMember(Name="bEzsignbulksendNeedvalidation", EmitDefaultValue=true)]
+        public bool BEzsignbulksendNeedvalidation { get; set; }
 
         /// <summary>
         /// Whether the Ezsignbulksend is active or not
@@ -168,6 +244,18 @@ namespace eZmaxApi.Model
         public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjEzsignbulksenddocumentmapping
+        /// </summary>
+        [DataMember(Name="a_objEzsignbulksenddocumentmapping", EmitDefaultValue=true)]
+        public List<EzsignbulksenddocumentmappingResponseCompound> AObjEzsignbulksenddocumentmapping { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AObjEzsignbulksendsignermapping
+        /// </summary>
+        [DataMember(Name="a_objEzsignbulksendsignermapping", EmitDefaultValue=true)]
+        public List<EzsignbulksendsignermappingResponse> AObjEzsignbulksendsignermapping { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -178,10 +266,15 @@ namespace eZmaxApi.Model
             sb.Append("  PkiEzsignbulksendID: ").Append(PkiEzsignbulksendID).Append("\n");
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
+            sb.Append("  SLanguageNameX: ").Append(SLanguageNameX).Append("\n");
+            sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
             sb.Append("  SEzsignbulksendDescription: ").Append(SEzsignbulksendDescription).Append("\n");
             sb.Append("  TEzsignbulksendNote: ").Append(TEzsignbulksendNote).Append("\n");
+            sb.Append("  BEzsignbulksendNeedvalidation: ").Append(BEzsignbulksendNeedvalidation).Append("\n");
             sb.Append("  BEzsignbulksendIsactive: ").Append(BEzsignbulksendIsactive).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
+            sb.Append("  AObjEzsignbulksenddocumentmapping: ").Append(AObjEzsignbulksenddocumentmapping).Append("\n");
+            sb.Append("  AObjEzsignbulksendsignermapping: ").Append(AObjEzsignbulksendsignermapping).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -232,6 +325,16 @@ namespace eZmaxApi.Model
                     this.FkiLanguageID.Equals(input.FkiLanguageID))
                 ) && 
                 (
+                    this.SLanguageNameX == input.SLanguageNameX ||
+                    (this.SLanguageNameX != null &&
+                    this.SLanguageNameX.Equals(input.SLanguageNameX))
+                ) && 
+                (
+                    this.SEzsignfoldertypeNameX == input.SEzsignfoldertypeNameX ||
+                    (this.SEzsignfoldertypeNameX != null &&
+                    this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
+                ) && 
+                (
                     this.SEzsignbulksendDescription == input.SEzsignbulksendDescription ||
                     (this.SEzsignbulksendDescription != null &&
                     this.SEzsignbulksendDescription.Equals(input.SEzsignbulksendDescription))
@@ -242,6 +345,11 @@ namespace eZmaxApi.Model
                     this.TEzsignbulksendNote.Equals(input.TEzsignbulksendNote))
                 ) && 
                 (
+                    this.BEzsignbulksendNeedvalidation == input.BEzsignbulksendNeedvalidation ||
+                    (this.BEzsignbulksendNeedvalidation != null &&
+                    this.BEzsignbulksendNeedvalidation.Equals(input.BEzsignbulksendNeedvalidation))
+                ) && 
+                (
                     this.BEzsignbulksendIsactive == input.BEzsignbulksendIsactive ||
                     (this.BEzsignbulksendIsactive != null &&
                     this.BEzsignbulksendIsactive.Equals(input.BEzsignbulksendIsactive))
@@ -250,6 +358,18 @@ namespace eZmaxApi.Model
                     this.ObjAudit == input.ObjAudit ||
                     (this.ObjAudit != null &&
                     this.ObjAudit.Equals(input.ObjAudit))
+                ) && 
+                (
+                    this.AObjEzsignbulksenddocumentmapping == input.AObjEzsignbulksenddocumentmapping ||
+                    this.AObjEzsignbulksenddocumentmapping != null &&
+                    input.AObjEzsignbulksenddocumentmapping != null &&
+                    this.AObjEzsignbulksenddocumentmapping.SequenceEqual(input.AObjEzsignbulksenddocumentmapping)
+                ) && 
+                (
+                    this.AObjEzsignbulksendsignermapping == input.AObjEzsignbulksendsignermapping ||
+                    this.AObjEzsignbulksendsignermapping != null &&
+                    input.AObjEzsignbulksendsignermapping != null &&
+                    this.AObjEzsignbulksendsignermapping.SequenceEqual(input.AObjEzsignbulksendsignermapping)
                 );
         }
 
@@ -268,14 +388,24 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.FkiEzsignfoldertypeID.GetHashCode();
                 if (this.FkiLanguageID != null)
                     hashCode = hashCode * 59 + this.FkiLanguageID.GetHashCode();
+                if (this.SLanguageNameX != null)
+                    hashCode = hashCode * 59 + this.SLanguageNameX.GetHashCode();
+                if (this.SEzsignfoldertypeNameX != null)
+                    hashCode = hashCode * 59 + this.SEzsignfoldertypeNameX.GetHashCode();
                 if (this.SEzsignbulksendDescription != null)
                     hashCode = hashCode * 59 + this.SEzsignbulksendDescription.GetHashCode();
                 if (this.TEzsignbulksendNote != null)
                     hashCode = hashCode * 59 + this.TEzsignbulksendNote.GetHashCode();
+                if (this.BEzsignbulksendNeedvalidation != null)
+                    hashCode = hashCode * 59 + this.BEzsignbulksendNeedvalidation.GetHashCode();
                 if (this.BEzsignbulksendIsactive != null)
                     hashCode = hashCode * 59 + this.BEzsignbulksendIsactive.GetHashCode();
                 if (this.ObjAudit != null)
                     hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
+                if (this.AObjEzsignbulksenddocumentmapping != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignbulksenddocumentmapping.GetHashCode();
+                if (this.AObjEzsignbulksendsignermapping != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignbulksendsignermapping.GetHashCode();
                 return hashCode;
             }
         }

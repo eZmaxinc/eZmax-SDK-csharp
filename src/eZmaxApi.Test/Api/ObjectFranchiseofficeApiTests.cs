@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -72,7 +72,8 @@ namespace eZmaxApi.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string sSelector = null;
             //string sQuery = null;
-            //var response = instance.FranchiseofficeGetAutocompleteV1(sSelector, sQuery);
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //var response = instance.FranchiseofficeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(CommonGetAutocompleteV1Response), response, "response is CommonGetAutocompleteV1Response");
         }
         

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the /1/object/ezsignformfieldgroup/getObject API Request
+    /// Payload for GET /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
     /// </summary>
     [DataContract]
     public partial class EzsignformfieldgroupGetObjectV1ResponseMPayload :  IEquatable<EzsignformfieldgroupGetObjectV1ResponseMPayload>, IValidatableObject
@@ -56,7 +56,7 @@ namespace eZmaxApi.Model
         /// <param name="aObjEzsignformfield">aObjEzsignformfield (required).</param>
         /// <param name="aObjDropdownElement">aObjDropdownElement.</param>
         /// <param name="aObjEzsignformfieldgroupsigner">aObjEzsignformfieldgroupsigner (required).</param>
-        public EzsignformfieldgroupGetObjectV1ResponseMPayload(int pkiEzsignformfieldgroupID = default(int), int fkiEzsigndocumentID = default(int), FieldEEzsignformfieldgroupType eEzsignformfieldgroupType = default(FieldEEzsignformfieldgroupType), FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement = default(FieldEEzsignformfieldgroupSignerrequirement), string sEzsignformfieldgroupLabel = default(string), int iEzsignformfieldgroupStep = default(int), string sEzsignformfieldgroupDefaultvalue = default(string), int iEzsignformfieldgroupFilledmin = default(int), int iEzsignformfieldgroupFilledmax = default(int), bool bEzsignformfieldgroupReadonly = default(bool), int iEzsignformfieldgroupMaxlength = default(int), bool bEzsignformfieldgroupEncrypted = default(bool), string sEzsignformfieldgroupRegexp = default(string), string tEzsignformfieldgroupTooltip = default(string), FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition = default(FieldEEzsignformfieldgroupTooltipposition), List<EzsignformfieldResponseCompound> aObjEzsignformfield = default(List<EzsignformfieldResponseCompound>), List<CustomDropdownElementResponseCompound> aObjDropdownElement = default(List<CustomDropdownElementResponseCompound>), EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner = default(EzsignformfieldgroupsignerResponseCompound))
+        public EzsignformfieldgroupGetObjectV1ResponseMPayload(int pkiEzsignformfieldgroupID = default(int), int fkiEzsigndocumentID = default(int), FieldEEzsignformfieldgroupType eEzsignformfieldgroupType = default(FieldEEzsignformfieldgroupType), FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement = default(FieldEEzsignformfieldgroupSignerrequirement), string sEzsignformfieldgroupLabel = default(string), int iEzsignformfieldgroupStep = default(int), string sEzsignformfieldgroupDefaultvalue = default(string), int iEzsignformfieldgroupFilledmin = default(int), int iEzsignformfieldgroupFilledmax = default(int), bool bEzsignformfieldgroupReadonly = default(bool), int iEzsignformfieldgroupMaxlength = default(int), bool bEzsignformfieldgroupEncrypted = default(bool), string sEzsignformfieldgroupRegexp = default(string), string tEzsignformfieldgroupTooltip = default(string), FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition = default(FieldEEzsignformfieldgroupTooltipposition), List<EzsignformfieldResponseCompound> aObjEzsignformfield = default(List<EzsignformfieldResponseCompound>), List<CustomDropdownElementResponseCompound> aObjDropdownElement = default(List<CustomDropdownElementResponseCompound>), List<EzsignformfieldgroupsignerResponseCompound> aObjEzsignformfieldgroupsigner = default(List<EzsignformfieldgroupsignerResponseCompound>))
         {
             // to ensure "pkiEzsignformfieldgroupID" is required (not null)
             if (pkiEzsignformfieldgroupID == null)
@@ -304,7 +304,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjEzsignformfieldgroupsigner
         /// </summary>
         [DataMember(Name="a_objEzsignformfieldgroupsigner", EmitDefaultValue=true)]
-        public EzsignformfieldgroupsignerResponseCompound AObjEzsignformfieldgroupsigner { get; set; }
+        public List<EzsignformfieldgroupsignerResponseCompound> AObjEzsignformfieldgroupsigner { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -455,8 +455,9 @@ namespace eZmaxApi.Model
                 ) && 
                 (
                     this.AObjEzsignformfieldgroupsigner == input.AObjEzsignformfieldgroupsigner ||
-                    (this.AObjEzsignformfieldgroupsigner != null &&
-                    this.AObjEzsignformfieldgroupsigner.Equals(input.AObjEzsignformfieldgroupsigner))
+                    this.AObjEzsignformfieldgroupsigner != null &&
+                    input.AObjEzsignformfieldgroupsigner != null &&
+                    this.AObjEzsignformfieldgroupsigner.SequenceEqual(input.AObjEzsignformfieldgroupsigner)
                 );
         }
 

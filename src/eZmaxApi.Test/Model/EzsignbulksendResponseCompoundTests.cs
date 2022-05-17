@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -90,6 +90,22 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'FkiLanguageID'
         }
         /// <summary>
+        /// Test the property 'SLanguageNameX'
+        /// </summary>
+        [Test]
+        public void SLanguageNameXTest()
+        {
+            // TODO unit test for the property 'SLanguageNameX'
+        }
+        /// <summary>
+        /// Test the property 'SEzsignfoldertypeNameX'
+        /// </summary>
+        [Test]
+        public void SEzsignfoldertypeNameXTest()
+        {
+            // TODO unit test for the property 'SEzsignfoldertypeNameX'
+        }
+        /// <summary>
         /// Test the property 'SEzsignbulksendDescription'
         /// </summary>
         [Test]
@@ -106,6 +122,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'TEzsignbulksendNote'
         }
         /// <summary>
+        /// Test the property 'BEzsignbulksendNeedvalidation'
+        /// </summary>
+        [Test]
+        public void BEzsignbulksendNeedvalidationTest()
+        {
+            // TODO unit test for the property 'BEzsignbulksendNeedvalidation'
+        }
+        /// <summary>
         /// Test the property 'BEzsignbulksendIsactive'
         /// </summary>
         [Test]
@@ -120,6 +144,22 @@ namespace eZmaxApi.Test
         public void ObjAuditTest()
         {
             // TODO unit test for the property 'ObjAudit'
+        }
+        /// <summary>
+        /// Test the property 'AObjEzsignbulksenddocumentmapping'
+        /// </summary>
+        [Test]
+        public void AObjEzsignbulksenddocumentmappingTest()
+        {
+            // TODO unit test for the property 'AObjEzsignbulksenddocumentmapping'
+        }
+        /// <summary>
+        /// Test the property 'AObjEzsignbulksendsignermapping'
+        /// </summary>
+        [Test]
+        public void AObjEzsignbulksendsignermappingTest()
+        {
+            // TODO unit test for the property 'AObjEzsignbulksendsignermapping'
         }
 
     }

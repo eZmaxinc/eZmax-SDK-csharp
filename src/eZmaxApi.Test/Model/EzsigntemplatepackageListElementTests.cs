@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -74,22 +74,6 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'PkiEzsigntemplatepackageID'
         }
         /// <summary>
-        /// Test the property 'FkiDepartmentID'
-        /// </summary>
-        [Test]
-        public void FkiDepartmentIDTest()
-        {
-            // TODO unit test for the property 'FkiDepartmentID'
-        }
-        /// <summary>
-        /// Test the property 'FkiTeamID'
-        /// </summary>
-        [Test]
-        public void FkiTeamIDTest()
-        {
-            // TODO unit test for the property 'FkiTeamID'
-        }
-        /// <summary>
         /// Test the property 'FkiEzsignfoldertypeID'
         /// </summary>
         [Test]
@@ -104,14 +88,6 @@ namespace eZmaxApi.Test
         public void FkiLanguageIDTest()
         {
             // TODO unit test for the property 'FkiLanguageID'
-        }
-        /// <summary>
-        /// Test the property 'EEzsigntemplatepackageType'
-        /// </summary>
-        [Test]
-        public void EEzsigntemplatepackageTypeTest()
-        {
-            // TODO unit test for the property 'EEzsigntemplatepackageType'
         }
         /// <summary>
         /// Test the property 'SEzsigntemplatepackageDescription'
@@ -130,12 +106,28 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'BEzsigntemplatepackageIsactive'
         }
         /// <summary>
+        /// Test the property 'BEzsigntemplatepackageNeedvalidation'
+        /// </summary>
+        [Test]
+        public void BEzsigntemplatepackageNeedvalidationTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplatepackageNeedvalidation'
+        }
+        /// <summary>
         /// Test the property 'IEzsigntemplatepackagemembership'
         /// </summary>
         [Test]
         public void IEzsigntemplatepackagemembershipTest()
         {
             // TODO unit test for the property 'IEzsigntemplatepackagemembership'
+        }
+        /// <summary>
+        /// Test the property 'SEzsignfoldertypeNameX'
+        /// </summary>
+        [Test]
+        public void SEzsignfoldertypeNameXTest()
+        {
+            // TODO unit test for the property 'SEzsignfoldertypeNameX'
         }
 
     }

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the /1/object/activesession/getCurrent API Request
+    /// Payload for GET /1/object/activesession/getCurrent
     /// </summary>
     [DataContract]
     public partial class ActivesessionResponseCompound :  IEquatable<ActivesessionResponseCompound>, IValidatableObject
@@ -38,7 +38,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponseCompound" /> class.
         /// </summary>
-        /// <param name="eActivesessionSessiontype">eActivesessionSessiontype (required).</param>
+        /// <param name="eActivesessionUsertype">eActivesessionUsertype (required).</param>
         /// <param name="eActivesessionWeekdaystart">eActivesessionWeekdaystart (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
@@ -50,16 +50,16 @@ namespace eZmaxApi.Model
         /// <param name="objUserCloned">objUserCloned.</param>
         /// <param name="objApikey">objApikey.</param>
         /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
-        public ActivesessionResponseCompound(FieldEActivesessionSessiontype eActivesessionSessiontype = default(FieldEActivesessionSessiontype), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), string pksCustomerCode = default(string), List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>))
+        public ActivesessionResponseCompound(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), string pksCustomerCode = default(string), List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>))
         {
-            // to ensure "eActivesessionSessiontype" is required (not null)
-            if (eActivesessionSessiontype == null)
+            // to ensure "eActivesessionUsertype" is required (not null)
+            if (eActivesessionUsertype == null)
             {
-                throw new InvalidDataException("eActivesessionSessiontype is a required property for ActivesessionResponseCompound and cannot be null");
+                throw new InvalidDataException("eActivesessionUsertype is a required property for ActivesessionResponseCompound and cannot be null");
             }
             else
             {
-                this.EActivesessionSessiontype = eActivesessionSessiontype;
+                this.EActivesessionUsertype = eActivesessionUsertype;
             }
 
             // to ensure "eActivesessionWeekdaystart" is required (not null)
@@ -157,10 +157,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets EActivesessionSessiontype
+        /// Gets or Sets EActivesessionUsertype
         /// </summary>
-        [DataMember(Name="eActivesessionSessiontype", EmitDefaultValue=true)]
-        public FieldEActivesessionSessiontype EActivesessionSessiontype { get; set; }
+        [DataMember(Name="eActivesessionUsertype", EmitDefaultValue=true)]
+        public FieldEActivesessionUsertype EActivesessionUsertype { get; set; }
 
         /// <summary>
         /// Gets or Sets EActivesessionWeekdaystart
@@ -243,7 +243,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActivesessionResponseCompound {\n");
-            sb.Append("  EActivesessionSessiontype: ").Append(EActivesessionSessiontype).Append("\n");
+            sb.Append("  EActivesessionUsertype: ").Append(EActivesessionUsertype).Append("\n");
             sb.Append("  EActivesessionWeekdaystart: ").Append(EActivesessionWeekdaystart).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  SCompanyNameX: ").Append(SCompanyNameX).Append("\n");
@@ -290,9 +290,9 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.EActivesessionSessiontype == input.EActivesessionSessiontype ||
-                    (this.EActivesessionSessiontype != null &&
-                    this.EActivesessionSessiontype.Equals(input.EActivesessionSessiontype))
+                    this.EActivesessionUsertype == input.EActivesessionUsertype ||
+                    (this.EActivesessionUsertype != null &&
+                    this.EActivesessionUsertype.Equals(input.EActivesessionUsertype))
                 ) && 
                 (
                     this.EActivesessionWeekdaystart == input.EActivesessionWeekdaystart ||
@@ -362,8 +362,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.EActivesessionSessiontype != null)
-                    hashCode = hashCode * 59 + this.EActivesessionSessiontype.GetHashCode();
+                if (this.EActivesessionUsertype != null)
+                    hashCode = hashCode * 59 + this.EActivesessionUsertype.GetHashCode();
                 if (this.EActivesessionWeekdaystart != null)
                     hashCode = hashCode * 59 + this.EActivesessionWeekdaystart.GetHashCode();
                 if (this.FkiLanguageID != null)

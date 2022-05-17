@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -62,6 +62,30 @@ namespace eZmaxApi.Test
             //Assert.IsInstanceOf(typeof(ObjectEzsignbulksendtransmissionApi), instance);
         }
 
+        
+        /// <summary>
+        /// Test EzsignbulksendtransmissionGetCsvErrorsV1
+        /// </summary>
+        [Test]
+        public void EzsignbulksendtransmissionGetCsvErrorsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignbulksendtransmissionID = null;
+            //var response = instance.EzsignbulksendtransmissionGetCsvErrorsV1(pkiEzsignbulksendtransmissionID);
+            //Assert.IsInstanceOf(typeof(string), response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test EzsignbulksendtransmissionGetFormsDataV1
+        /// </summary>
+        [Test]
+        public void EzsignbulksendtransmissionGetFormsDataV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignbulksendtransmissionID = null;
+            //var response = instance.EzsignbulksendtransmissionGetFormsDataV1(pkiEzsignbulksendtransmissionID);
+            //Assert.IsInstanceOf(typeof(EzsignbulksendtransmissionGetFormsDataV1Response), response, "response is EzsignbulksendtransmissionGetFormsDataV1Response");
+        }
         
         /// <summary>
         /// Test EzsignbulksendtransmissionGetObjectV1

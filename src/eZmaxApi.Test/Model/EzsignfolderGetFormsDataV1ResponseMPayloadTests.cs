@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -66,28 +66,12 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'PkiEzsignfolderID'
+        /// Test the property 'ObjFormsDataFolder'
         /// </summary>
         [Test]
-        public void PkiEzsignfolderIDTest()
+        public void ObjFormsDataFolderTest()
         {
-            // TODO unit test for the property 'PkiEzsignfolderID'
-        }
-        /// <summary>
-        /// Test the property 'SEzsignfolderDescription'
-        /// </summary>
-        [Test]
-        public void SEzsignfolderDescriptionTest()
-        {
-            // TODO unit test for the property 'SEzsignfolderDescription'
-        }
-        /// <summary>
-        /// Test the property 'AObjFormDataDocument'
-        /// </summary>
-        [Test]
-        public void AObjFormDataDocumentTest()
-        {
-            // TODO unit test for the property 'AObjFormDataDocument'
+            // TODO unit test for the property 'ObjFormsDataFolder'
         }
 
     }

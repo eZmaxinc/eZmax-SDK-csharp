@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -26,10 +26,123 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Create a new Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigntemplatepackageCreateObjectV1Request"></param>
+        /// <returns>EzsigntemplatepackageCreateObjectV1Response</returns>
+        EzsigntemplatepackageCreateObjectV1Response EzsigntemplatepackageCreateObjectV1 (EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request);
+
+        /// <summary>
+        /// Create a new Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigntemplatepackageCreateObjectV1Request"></param>
+        /// <returns>ApiResponse of EzsigntemplatepackageCreateObjectV1Response</returns>
+        ApiResponse<EzsigntemplatepackageCreateObjectV1Response> EzsigntemplatepackageCreateObjectV1WithHttpInfo (EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request);
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <returns>EzsigntemplatepackageDeleteObjectV1Response</returns>
+        EzsigntemplatepackageDeleteObjectV1Response EzsigntemplatepackageDeleteObjectV1 (int pkiEzsigntemplatepackageID);
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <returns>ApiResponse of EzsigntemplatepackageDeleteObjectV1Response</returns>
+        ApiResponse<EzsigntemplatepackageDeleteObjectV1Response> EzsigntemplatepackageDeleteObjectV1WithHttpInfo (int pkiEzsigntemplatepackageID);
+        /// <summary>
+        /// Edit multiple Ezsigntemplatepackagesigners
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request"></param>
+        /// <returns>EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response</returns>
+        EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response EzsigntemplatepackageEditEzsigntemplatepackagesignersV1 (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request);
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplatepackagesigners
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request"></param>
+        /// <returns>ApiResponse of EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response</returns>
+        ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response> EzsigntemplatepackageEditEzsigntemplatepackagesignersV1WithHttpInfo (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request);
+        /// <summary>
+        /// Edit an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditObjectV1Request"></param>
+        /// <returns>EzsigntemplatepackageEditObjectV1Response</returns>
+        EzsigntemplatepackageEditObjectV1Response EzsigntemplatepackageEditObjectV1 (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request);
+
+        /// <summary>
+        /// Edit an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditObjectV1Request"></param>
+        /// <returns>ApiResponse of EzsigntemplatepackageEditObjectV1Response</returns>
+        ApiResponse<EzsigntemplatepackageEditObjectV1Response> EzsigntemplatepackageEditObjectV1WithHttpInfo (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request);
+        /// <summary>
+        /// Retrieve Ezsigntemplatepackages and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsigntemplatepackages to return</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <returns>CommonGetAutocompleteDisabledV1Response</returns>
+        CommonGetAutocompleteDisabledV1Response EzsigntemplatepackageGetAutocompleteV1 (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+
+        /// <summary>
+        /// Retrieve Ezsigntemplatepackages and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsigntemplatepackages to return</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <returns>ApiResponse of CommonGetAutocompleteDisabledV1Response</returns>
+        ApiResponse<CommonGetAutocompleteDisabledV1Response> EzsigntemplatepackageGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        /// <summary>
         /// Retrieve Ezsigntemplatepackage list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company<br>Team<br>User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -44,7 +157,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsigntemplatepackage list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company<br>Team<br>User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -54,13 +167,157 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of EzsigntemplatepackageGetListV1Response</returns>
         ApiResponse<EzsigntemplatepackageGetListV1Response> EzsigntemplatepackageGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <returns>EzsigntemplatepackageGetObjectV1Response</returns>
+        EzsigntemplatepackageGetObjectV1Response EzsigntemplatepackageGetObjectV1 (int pkiEzsigntemplatepackageID);
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <returns>ApiResponse of EzsigntemplatepackageGetObjectV1Response</returns>
+        ApiResponse<EzsigntemplatepackageGetObjectV1Response> EzsigntemplatepackageGetObjectV1WithHttpInfo (int pkiEzsigntemplatepackageID);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Create a new Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigntemplatepackageCreateObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatepackageCreateObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplatepackageCreateObjectV1Response> EzsigntemplatepackageCreateObjectV1Async (EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Create a new Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigntemplatepackageCreateObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepackageCreateObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageCreateObjectV1Response>> EzsigntemplatepackageCreateObjectV1WithHttpInfoAsync (EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatepackageDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplatepackageDeleteObjectV1Response> EzsigntemplatepackageDeleteObjectV1Async (int pkiEzsigntemplatepackageID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepackageDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageDeleteObjectV1Response>> EzsigntemplatepackageDeleteObjectV1WithHttpInfoAsync (int pkiEzsigntemplatepackageID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Edit multiple Ezsigntemplatepackagesigners
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response> EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Async (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplatepackagesigners
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response>> EzsigntemplatepackageEditEzsigntemplatepackagesignersV1WithHttpInfoAsync (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Edit an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatepackageEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplatepackageEditObjectV1Response> EzsigntemplatepackageEditObjectV1Async (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Edit an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepackageEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageEditObjectV1Response>> EzsigntemplatepackageEditObjectV1WithHttpInfoAsync (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve Ezsigntemplatepackages and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsigntemplatepackages to return</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of CommonGetAutocompleteDisabledV1Response</returns>
+        System.Threading.Tasks.Task<CommonGetAutocompleteDisabledV1Response> EzsigntemplatepackageGetAutocompleteV1Async (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve Ezsigntemplatepackages and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsigntemplatepackages to return</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (CommonGetAutocompleteDisabledV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteDisabledV1Response>> EzsigntemplatepackageGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Ezsigntemplatepackage list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company<br>Team<br>User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -76,7 +333,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsigntemplatepackage list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company<br>Team<br>User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -87,6 +344,29 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigntemplatepackageGetListV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetListV1Response>> EzsigntemplatepackageGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatepackageGetObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplatepackageGetObjectV1Response> EzsigntemplatepackageGetObjectV1Async (int pkiEzsigntemplatepackageID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatepackage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepackageGetObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetObjectV1Response>> EzsigntemplatepackageGetObjectV1WithHttpInfoAsync (int pkiEzsigntemplatepackageID, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -199,7 +479,816 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsigntemplatepackage list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+        /// Create a new Ezsigntemplatepackage The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigntemplatepackageCreateObjectV1Request"></param>
+        /// <returns>EzsigntemplatepackageCreateObjectV1Response</returns>
+        public EzsigntemplatepackageCreateObjectV1Response EzsigntemplatepackageCreateObjectV1 (EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request)
+        {
+             ApiResponse<EzsigntemplatepackageCreateObjectV1Response> localVarResponse = EzsigntemplatepackageCreateObjectV1WithHttpInfo(ezsigntemplatepackageCreateObjectV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Ezsigntemplatepackage The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigntemplatepackageCreateObjectV1Request"></param>
+        /// <returns>ApiResponse of EzsigntemplatepackageCreateObjectV1Response</returns>
+        public ApiResponse<EzsigntemplatepackageCreateObjectV1Response> EzsigntemplatepackageCreateObjectV1WithHttpInfo (EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request)
+        {
+            // verify the required parameter 'ezsigntemplatepackageCreateObjectV1Request' is set
+            if (ezsigntemplatepackageCreateObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageCreateObjectV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageCreateObjectV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (ezsigntemplatepackageCreateObjectV1Request != null && ezsigntemplatepackageCreateObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsigntemplatepackageCreateObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsigntemplatepackageCreateObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageCreateObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatepackageCreateObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatepackageCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageCreateObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Create a new Ezsigntemplatepackage The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigntemplatepackageCreateObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatepackageCreateObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplatepackageCreateObjectV1Response> EzsigntemplatepackageCreateObjectV1Async (EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsigntemplatepackageCreateObjectV1Response> localVarResponse = await EzsigntemplatepackageCreateObjectV1WithHttpInfoAsync(ezsigntemplatepackageCreateObjectV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new Ezsigntemplatepackage The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsigntemplatepackageCreateObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepackageCreateObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageCreateObjectV1Response>> EzsigntemplatepackageCreateObjectV1WithHttpInfoAsync (EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'ezsigntemplatepackageCreateObjectV1Request' is set
+            if (ezsigntemplatepackageCreateObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageCreateObjectV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageCreateObjectV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (ezsigntemplatepackageCreateObjectV1Request != null && ezsigntemplatepackageCreateObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsigntemplatepackageCreateObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsigntemplatepackageCreateObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageCreateObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatepackageCreateObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatepackageCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageCreateObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <returns>EzsigntemplatepackageDeleteObjectV1Response</returns>
+        public EzsigntemplatepackageDeleteObjectV1Response EzsigntemplatepackageDeleteObjectV1 (int pkiEzsigntemplatepackageID)
+        {
+             ApiResponse<EzsigntemplatepackageDeleteObjectV1Response> localVarResponse = EzsigntemplatepackageDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackageID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <returns>ApiResponse of EzsigntemplatepackageDeleteObjectV1Response</returns>
+        public ApiResponse<EzsigntemplatepackageDeleteObjectV1Response> EzsigntemplatepackageDeleteObjectV1WithHttpInfo (int pkiEzsigntemplatepackageID)
+        {
+            // verify the required parameter 'pkiEzsigntemplatepackageID' is set
+            if (pkiEzsigntemplatepackageID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageDeleteObjectV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigntemplatepackageID != null) localVarPathParams.Add("pkiEzsigntemplatepackageID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatepackageID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageDeleteObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatepackageDeleteObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatepackageDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageDeleteObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatepackageDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplatepackageDeleteObjectV1Response> EzsigntemplatepackageDeleteObjectV1Async (int pkiEzsigntemplatepackageID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsigntemplatepackageDeleteObjectV1Response> localVarResponse = await EzsigntemplatepackageDeleteObjectV1WithHttpInfoAsync(pkiEzsigntemplatepackageID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepackageDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageDeleteObjectV1Response>> EzsigntemplatepackageDeleteObjectV1WithHttpInfoAsync (int pkiEzsigntemplatepackageID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsigntemplatepackageID' is set
+            if (pkiEzsigntemplatepackageID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageDeleteObjectV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigntemplatepackageID != null) localVarPathParams.Add("pkiEzsigntemplatepackageID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatepackageID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageDeleteObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatepackageDeleteObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatepackageDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageDeleteObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplatepackagesigners Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request"></param>
+        /// <returns>EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response</returns>
+        public EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response EzsigntemplatepackageEditEzsigntemplatepackagesignersV1 (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request)
+        {
+             ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response> localVarResponse = EzsigntemplatepackageEditEzsigntemplatepackagesignersV1WithHttpInfo(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplatepackagesigners Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request"></param>
+        /// <returns>ApiResponse of EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response</returns>
+        public ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response> EzsigntemplatepackageEditEzsigntemplatepackagesignersV1WithHttpInfo (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request)
+        {
+            // verify the required parameter 'pkiEzsigntemplatepackageID' is set
+            if (pkiEzsigntemplatepackageID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditEzsigntemplatepackagesignersV1");
+            // verify the required parameter 'ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request' is set
+            if (ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditEzsigntemplatepackagesignersV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigntemplatepackageID != null) localVarPathParams.Add("pkiEzsigntemplatepackageID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatepackageID)); // path parameter
+            if (ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request != null && ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageEditEzsigntemplatepackagesignersV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response)));
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplatepackagesigners Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response> EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Async (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response> localVarResponse = await EzsigntemplatepackageEditEzsigntemplatepackagesignersV1WithHttpInfoAsync(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplatepackagesigners Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response>> EzsigntemplatepackageEditEzsigntemplatepackagesignersV1WithHttpInfoAsync (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsigntemplatepackageID' is set
+            if (pkiEzsigntemplatepackageID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditEzsigntemplatepackagesignersV1");
+            // verify the required parameter 'ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request' is set
+            if (ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditEzsigntemplatepackagesignersV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigntemplatepackageID != null) localVarPathParams.Add("pkiEzsigntemplatepackageID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatepackageID)); // path parameter
+            if (ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request != null && ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageEditEzsigntemplatepackagesignersV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditObjectV1Request"></param>
+        /// <returns>EzsigntemplatepackageEditObjectV1Response</returns>
+        public EzsigntemplatepackageEditObjectV1Response EzsigntemplatepackageEditObjectV1 (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request)
+        {
+             ApiResponse<EzsigntemplatepackageEditObjectV1Response> localVarResponse = EzsigntemplatepackageEditObjectV1WithHttpInfo(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditObjectV1Request"></param>
+        /// <returns>ApiResponse of EzsigntemplatepackageEditObjectV1Response</returns>
+        public ApiResponse<EzsigntemplatepackageEditObjectV1Response> EzsigntemplatepackageEditObjectV1WithHttpInfo (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request)
+        {
+            // verify the required parameter 'pkiEzsigntemplatepackageID' is set
+            if (pkiEzsigntemplatepackageID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditObjectV1");
+            // verify the required parameter 'ezsigntemplatepackageEditObjectV1Request' is set
+            if (ezsigntemplatepackageEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageEditObjectV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditObjectV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigntemplatepackageID != null) localVarPathParams.Add("pkiEzsigntemplatepackageID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatepackageID)); // path parameter
+            if (ezsigntemplatepackageEditObjectV1Request != null && ezsigntemplatepackageEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsigntemplatepackageEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsigntemplatepackageEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatepackageEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatepackageEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageEditObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatepackageEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplatepackageEditObjectV1Response> EzsigntemplatepackageEditObjectV1Async (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsigntemplatepackageEditObjectV1Response> localVarResponse = await EzsigntemplatepackageEditObjectV1WithHttpInfoAsync(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="ezsigntemplatepackageEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepackageEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageEditObjectV1Response>> EzsigntemplatepackageEditObjectV1WithHttpInfoAsync (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsigntemplatepackageID' is set
+            if (pkiEzsigntemplatepackageID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditObjectV1");
+            // verify the required parameter 'ezsigntemplatepackageEditObjectV1Request' is set
+            if (ezsigntemplatepackageEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageEditObjectV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditObjectV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigntemplatepackageID != null) localVarPathParams.Add("pkiEzsigntemplatepackageID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatepackageID)); // path parameter
+            if (ezsigntemplatepackageEditObjectV1Request != null && ezsigntemplatepackageEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsigntemplatepackageEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsigntemplatepackageEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatepackageEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatepackageEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageEditObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Ezsigntemplatepackages and IDs Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsigntemplatepackages to return</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <returns>CommonGetAutocompleteDisabledV1Response</returns>
+        public CommonGetAutocompleteDisabledV1Response EzsigntemplatepackageGetAutocompleteV1 (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        {
+             ApiResponse<CommonGetAutocompleteDisabledV1Response> localVarResponse = EzsigntemplatepackageGetAutocompleteV1WithHttpInfo(sSelector, sQuery, acceptLanguage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsigntemplatepackages and IDs Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsigntemplatepackages to return</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <returns>ApiResponse of CommonGetAutocompleteDisabledV1Response</returns>
+        public ApiResponse<CommonGetAutocompleteDisabledV1Response> EzsigntemplatepackageGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        {
+            // verify the required parameter 'sSelector' is set
+            if (sSelector == null)
+                throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageGetAutocompleteV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
+            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageGetAutocompleteV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CommonGetAutocompleteDisabledV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (CommonGetAutocompleteDisabledV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteDisabledV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Ezsigntemplatepackages and IDs Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsigntemplatepackages to return</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of CommonGetAutocompleteDisabledV1Response</returns>
+        public async System.Threading.Tasks.Task<CommonGetAutocompleteDisabledV1Response> EzsigntemplatepackageGetAutocompleteV1Async (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<CommonGetAutocompleteDisabledV1Response> localVarResponse = await EzsigntemplatepackageGetAutocompleteV1WithHttpInfoAsync(sSelector, sQuery, acceptLanguage, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve Ezsigntemplatepackages and IDs Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Ezsigntemplatepackages to return</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (CommonGetAutocompleteDisabledV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteDisabledV1Response>> EzsigntemplatepackageGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'sSelector' is set
+            if (sSelector == null)
+                throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageGetAutocompleteV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
+            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageGetAutocompleteV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CommonGetAutocompleteDisabledV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (CommonGetAutocompleteDisabledV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteDisabledV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Ezsigntemplatepackage list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company<br>Team<br>User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -215,7 +1304,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsigntemplatepackage list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsigntemplatepackage list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company<br>Team<br>User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -280,7 +1369,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsigntemplatepackage list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsigntemplatepackage list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company<br>Team<br>User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -298,7 +1387,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsigntemplatepackage list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsigntemplatepackage list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company<br>Team<br>User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -361,6 +1450,151 @@ namespace eZmaxApi.Api
             return new ApiResponse<EzsigntemplatepackageGetListV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageGetListV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <returns>EzsigntemplatepackageGetObjectV1Response</returns>
+        public EzsigntemplatepackageGetObjectV1Response EzsigntemplatepackageGetObjectV1 (int pkiEzsigntemplatepackageID)
+        {
+             ApiResponse<EzsigntemplatepackageGetObjectV1Response> localVarResponse = EzsigntemplatepackageGetObjectV1WithHttpInfo(pkiEzsigntemplatepackageID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <returns>ApiResponse of EzsigntemplatepackageGetObjectV1Response</returns>
+        public ApiResponse<EzsigntemplatepackageGetObjectV1Response> EzsigntemplatepackageGetObjectV1WithHttpInfo (int pkiEzsigntemplatepackageID)
+        {
+            // verify the required parameter 'pkiEzsigntemplatepackageID' is set
+            if (pkiEzsigntemplatepackageID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageGetObjectV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigntemplatepackageID != null) localVarPathParams.Add("pkiEzsigntemplatepackageID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatepackageID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageGetObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatepackageGetObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatepackageGetObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageGetObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatepackageGetObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplatepackageGetObjectV1Response> EzsigntemplatepackageGetObjectV1Async (int pkiEzsigntemplatepackageID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsigntemplatepackageGetObjectV1Response> localVarResponse = await EzsigntemplatepackageGetObjectV1WithHttpInfoAsync(pkiEzsigntemplatepackageID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatepackage 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepackageID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepackageGetObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetObjectV1Response>> EzsigntemplatepackageGetObjectV1WithHttpInfoAsync (int pkiEzsigntemplatepackageID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsigntemplatepackageID' is set
+            if (pkiEzsigntemplatepackageID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageGetObjectV1");
+
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigntemplatepackageID != null) localVarPathParams.Add("pkiEzsigntemplatepackageID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatepackageID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatepackageGetObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatepackageGetObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatepackageGetObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageGetObjectV1Response)));
         }
 
     }

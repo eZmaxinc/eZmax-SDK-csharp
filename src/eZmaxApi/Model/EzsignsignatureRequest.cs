@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -42,11 +42,14 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
         /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
         /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
         /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign (required).</param>
         /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
         /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        public EzsignsignatureRequest(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int))
+        /// <param name="tEzsignsignatureTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignsignature.</param>
+        /// <param name="eEzsignsignatureTooltipposition">eEzsignsignatureTooltipposition.</param>
+        /// <param name="eEzsignsignatureFont">eEzsignsignatureFont.</param>
+        public EzsignsignatureRequest(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition), FieldEEzsignsignatureFont eEzsignsignatureFont = default(FieldEEzsignsignatureFont))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)
             if (fkiEzsignfoldersignerassociationID == null)
@@ -119,6 +122,9 @@ namespace eZmaxApi.Model
             }
 
             this.PkiEzsignsignatureID = pkiEzsignsignatureID;
+            this.TEzsignsignatureTooltip = tEzsignsignatureTooltip;
+            this.EEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
+            this.EEzsignsignatureFont = eEzsignsignatureFont;
         }
 
         /// <summary>
@@ -150,9 +156,9 @@ namespace eZmaxApi.Model
         public int IEzsignsignatureX { get; set; }
 
         /// <summary>
-        /// The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
+        /// The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
         /// </summary>
-        /// <value>The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
+        /// <value>The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
         [DataMember(Name="iEzsignsignatureY", EmitDefaultValue=true)]
         public int IEzsignsignatureY { get; set; }
 
@@ -177,6 +183,25 @@ namespace eZmaxApi.Model
         public int FkiEzsigndocumentID { get; set; }
 
         /// <summary>
+        /// A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
+        /// </summary>
+        /// <value>A tooltip that will be presented to Ezsignsigner about the Ezsignsignature</value>
+        [DataMember(Name="tEzsignsignatureTooltip", EmitDefaultValue=false)]
+        public string TEzsignsignatureTooltip { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureTooltipposition
+        /// </summary>
+        [DataMember(Name="eEzsignsignatureTooltipposition", EmitDefaultValue=false)]
+        public FieldEEzsignsignatureTooltipposition EEzsignsignatureTooltipposition { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureFont
+        /// </summary>
+        [DataMember(Name="eEzsignsignatureFont", EmitDefaultValue=false)]
+        public FieldEEzsignsignatureFont EEzsignsignatureFont { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -192,6 +217,9 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsignsignatureStep: ").Append(IEzsignsignatureStep).Append("\n");
             sb.Append("  EEzsignsignatureType: ").Append(EEzsignsignatureType).Append("\n");
             sb.Append("  FkiEzsigndocumentID: ").Append(FkiEzsigndocumentID).Append("\n");
+            sb.Append("  TEzsignsignatureTooltip: ").Append(TEzsignsignatureTooltip).Append("\n");
+            sb.Append("  EEzsignsignatureTooltipposition: ").Append(EEzsignsignatureTooltipposition).Append("\n");
+            sb.Append("  EEzsignsignatureFont: ").Append(EEzsignsignatureFont).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -265,6 +293,21 @@ namespace eZmaxApi.Model
                     this.FkiEzsigndocumentID == input.FkiEzsigndocumentID ||
                     (this.FkiEzsigndocumentID != null &&
                     this.FkiEzsigndocumentID.Equals(input.FkiEzsigndocumentID))
+                ) && 
+                (
+                    this.TEzsignsignatureTooltip == input.TEzsignsignatureTooltip ||
+                    (this.TEzsignsignatureTooltip != null &&
+                    this.TEzsignsignatureTooltip.Equals(input.TEzsignsignatureTooltip))
+                ) && 
+                (
+                    this.EEzsignsignatureTooltipposition == input.EEzsignsignatureTooltipposition ||
+                    (this.EEzsignsignatureTooltipposition != null &&
+                    this.EEzsignsignatureTooltipposition.Equals(input.EEzsignsignatureTooltipposition))
+                ) && 
+                (
+                    this.EEzsignsignatureFont == input.EEzsignsignatureFont ||
+                    (this.EEzsignsignatureFont != null &&
+                    this.EEzsignsignatureFont.Equals(input.EEzsignsignatureFont))
                 );
         }
 
@@ -293,6 +336,12 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.EEzsignsignatureType.GetHashCode();
                 if (this.FkiEzsigndocumentID != null)
                     hashCode = hashCode * 59 + this.FkiEzsigndocumentID.GetHashCode();
+                if (this.TEzsignsignatureTooltip != null)
+                    hashCode = hashCode * 59 + this.TEzsignsignatureTooltip.GetHashCode();
+                if (this.EEzsignsignatureTooltipposition != null)
+                    hashCode = hashCode * 59 + this.EEzsignsignatureTooltipposition.GetHashCode();
+                if (this.EEzsignsignatureFont != null)
+                    hashCode = hashCode * 59 + this.EEzsignsignatureFont.GetHashCode();
                 return hashCode;
             }
         }

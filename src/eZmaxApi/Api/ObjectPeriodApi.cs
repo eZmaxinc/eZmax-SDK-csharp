@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -34,8 +34,9 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The types of Periods to return</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
-        CommonGetAutocompleteV1Response PeriodGetAutocompleteV1 (string sSelector, string sQuery = default(string));
+        CommonGetAutocompleteV1Response PeriodGetAutocompleteV1 (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
 
         /// <summary>
         /// Retrieve Periods and IDs
@@ -46,8 +47,9 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The types of Periods to return</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
-        ApiResponse<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string));
+        ApiResponse<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -59,9 +61,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The types of Periods to return</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
-        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1Async (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1Async (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Periods and IDs
@@ -72,9 +75,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The types of Periods to return</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> PeriodGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> PeriodGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -192,10 +196,11 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The types of Periods to return</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
-        public CommonGetAutocompleteV1Response PeriodGetAutocompleteV1 (string sSelector, string sQuery = default(string))
+        public CommonGetAutocompleteV1Response PeriodGetAutocompleteV1 (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
-             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = PeriodGetAutocompleteV1WithHttpInfo(sSelector, sQuery);
+             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = PeriodGetAutocompleteV1WithHttpInfo(sSelector, sQuery, acceptLanguage);
              return localVarResponse.Data;
         }
 
@@ -205,8 +210,9 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The types of Periods to return</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
-        public ApiResponse<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string))
+        public ApiResponse<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1WithHttpInfo (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -235,6 +241,7 @@ namespace eZmaxApi.Api
 
             if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
             if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -266,11 +273,12 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The types of Periods to return</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
-        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1Async (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> PeriodGetAutocompleteV1Async (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await PeriodGetAutocompleteV1WithHttpInfoAsync(sSelector, sQuery, cancellationToken);
+             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await PeriodGetAutocompleteV1WithHttpInfoAsync(sSelector, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -281,9 +289,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The types of Periods to return</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> PeriodGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> PeriodGetAutocompleteV1WithHttpInfoAsync (string sSelector, string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -312,6 +321,7 @@ namespace eZmaxApi.Api
 
             if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
             if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

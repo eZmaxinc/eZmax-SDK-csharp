@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -39,16 +39,19 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignsignatureResponseCompound" /> class.
         /// </summary>
         /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature (required).</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
         /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
         /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
         /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
         /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign (required).</param>
         /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
-        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;).</param>
+        /// <param name="tEzsignsignatureTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignsignature.</param>
+        /// <param name="eEzsignsignatureTooltipposition">eEzsignsignatureTooltipposition.</param>
+        /// <param name="eEzsignsignatureFont">eEzsignsignatureFont.</param>
+        /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
         /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
-        public EzsignsignatureResponseCompound(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateResponseCompound>))
+        public EzsignsignatureResponseCompound(int pkiEzsignsignatureID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition), FieldEEzsignsignatureFont eEzsignsignatureFont = default(FieldEEzsignsignatureFont), bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateResponseCompound>))
         {
             // to ensure "pkiEzsignsignatureID" is required (not null)
             if (pkiEzsignsignatureID == null)
@@ -58,6 +61,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.PkiEzsignsignatureID = pkiEzsignsignatureID;
+            }
+
+            // to ensure "fkiEzsigndocumentID" is required (not null)
+            if (fkiEzsigndocumentID == null)
+            {
+                throw new InvalidDataException("fkiEzsigndocumentID is a required property for EzsignsignatureResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.FkiEzsigndocumentID = fkiEzsigndocumentID;
             }
 
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)
@@ -120,16 +133,9 @@ namespace eZmaxApi.Model
                 this.EEzsignsignatureType = eEzsignsignatureType;
             }
 
-            // to ensure "fkiEzsigndocumentID" is required (not null)
-            if (fkiEzsigndocumentID == null)
-            {
-                throw new InvalidDataException("fkiEzsigndocumentID is a required property for EzsignsignatureResponseCompound and cannot be null");
-            }
-            else
-            {
-                this.FkiEzsigndocumentID = fkiEzsigndocumentID;
-            }
-
+            this.TEzsignsignatureTooltip = tEzsignsignatureTooltip;
+            this.EEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
+            this.EEzsignsignatureFont = eEzsignsignatureFont;
             this.BEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
             this.AObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
         }
@@ -140,6 +146,13 @@ namespace eZmaxApi.Model
         /// <value>The unique ID of the Ezsignsignature</value>
         [DataMember(Name="pkiEzsignsignatureID", EmitDefaultValue=true)]
         public int PkiEzsignsignatureID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsigndocument
+        /// </summary>
+        /// <value>The unique ID of the Ezsigndocument</value>
+        [DataMember(Name="fkiEzsigndocumentID", EmitDefaultValue=true)]
+        public int FkiEzsigndocumentID { get; set; }
 
         /// <summary>
         /// The unique ID of the Ezsignfoldersignerassociation
@@ -163,9 +176,9 @@ namespace eZmaxApi.Model
         public int IEzsignsignatureX { get; set; }
 
         /// <summary>
-        /// The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
+        /// The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
         /// </summary>
-        /// <value>The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
+        /// <value>The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
         [DataMember(Name="iEzsignsignatureY", EmitDefaultValue=true)]
         public int IEzsignsignatureY { get; set; }
 
@@ -183,16 +196,28 @@ namespace eZmaxApi.Model
         public FieldEEzsignsignatureType EEzsignsignatureType { get; set; }
 
         /// <summary>
-        /// The unique ID of the Ezsigndocument
+        /// A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
         /// </summary>
-        /// <value>The unique ID of the Ezsigndocument</value>
-        [DataMember(Name="fkiEzsigndocumentID", EmitDefaultValue=true)]
-        public int FkiEzsigndocumentID { get; set; }
+        /// <value>A tooltip that will be presented to Ezsignsigner about the Ezsignsignature</value>
+        [DataMember(Name="tEzsignsignatureTooltip", EmitDefaultValue=false)]
+        public string TEzsignsignatureTooltip { get; set; }
 
         /// <summary>
-        /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;)
+        /// Gets or Sets EEzsignsignatureTooltipposition
         /// </summary>
-        /// <value>Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;)</value>
+        [DataMember(Name="eEzsignsignatureTooltipposition", EmitDefaultValue=false)]
+        public FieldEEzsignsignatureTooltipposition EEzsignsignatureTooltipposition { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureFont
+        /// </summary>
+        [DataMember(Name="eEzsignsignatureFont", EmitDefaultValue=false)]
+        public FieldEEzsignsignatureFont EEzsignsignatureFont { get; set; }
+
+        /// <summary>
+        /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
+        /// </summary>
+        /// <value>Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)</value>
         [DataMember(Name="bEzsignsignatureCustomdate", EmitDefaultValue=false)]
         public bool BEzsignsignatureCustomdate { get; set; }
 
@@ -212,13 +237,16 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class EzsignsignatureResponseCompound {\n");
             sb.Append("  PkiEzsignsignatureID: ").Append(PkiEzsignsignatureID).Append("\n");
+            sb.Append("  FkiEzsigndocumentID: ").Append(FkiEzsigndocumentID).Append("\n");
             sb.Append("  FkiEzsignfoldersignerassociationID: ").Append(FkiEzsignfoldersignerassociationID).Append("\n");
             sb.Append("  IEzsignpagePagenumber: ").Append(IEzsignpagePagenumber).Append("\n");
             sb.Append("  IEzsignsignatureX: ").Append(IEzsignsignatureX).Append("\n");
             sb.Append("  IEzsignsignatureY: ").Append(IEzsignsignatureY).Append("\n");
             sb.Append("  IEzsignsignatureStep: ").Append(IEzsignsignatureStep).Append("\n");
             sb.Append("  EEzsignsignatureType: ").Append(EEzsignsignatureType).Append("\n");
-            sb.Append("  FkiEzsigndocumentID: ").Append(FkiEzsigndocumentID).Append("\n");
+            sb.Append("  TEzsignsignatureTooltip: ").Append(TEzsignsignatureTooltip).Append("\n");
+            sb.Append("  EEzsignsignatureTooltipposition: ").Append(EEzsignsignatureTooltipposition).Append("\n");
+            sb.Append("  EEzsignsignatureFont: ").Append(EEzsignsignatureFont).Append("\n");
             sb.Append("  BEzsignsignatureCustomdate: ").Append(BEzsignsignatureCustomdate).Append("\n");
             sb.Append("  AObjEzsignsignaturecustomdate: ").Append(AObjEzsignsignaturecustomdate).Append("\n");
             sb.Append("}\n");
@@ -261,6 +289,11 @@ namespace eZmaxApi.Model
                     this.PkiEzsignsignatureID.Equals(input.PkiEzsignsignatureID))
                 ) && 
                 (
+                    this.FkiEzsigndocumentID == input.FkiEzsigndocumentID ||
+                    (this.FkiEzsigndocumentID != null &&
+                    this.FkiEzsigndocumentID.Equals(input.FkiEzsigndocumentID))
+                ) && 
+                (
                     this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
                     (this.FkiEzsignfoldersignerassociationID != null &&
                     this.FkiEzsignfoldersignerassociationID.Equals(input.FkiEzsignfoldersignerassociationID))
@@ -291,9 +324,19 @@ namespace eZmaxApi.Model
                     this.EEzsignsignatureType.Equals(input.EEzsignsignatureType))
                 ) && 
                 (
-                    this.FkiEzsigndocumentID == input.FkiEzsigndocumentID ||
-                    (this.FkiEzsigndocumentID != null &&
-                    this.FkiEzsigndocumentID.Equals(input.FkiEzsigndocumentID))
+                    this.TEzsignsignatureTooltip == input.TEzsignsignatureTooltip ||
+                    (this.TEzsignsignatureTooltip != null &&
+                    this.TEzsignsignatureTooltip.Equals(input.TEzsignsignatureTooltip))
+                ) && 
+                (
+                    this.EEzsignsignatureTooltipposition == input.EEzsignsignatureTooltipposition ||
+                    (this.EEzsignsignatureTooltipposition != null &&
+                    this.EEzsignsignatureTooltipposition.Equals(input.EEzsignsignatureTooltipposition))
+                ) && 
+                (
+                    this.EEzsignsignatureFont == input.EEzsignsignatureFont ||
+                    (this.EEzsignsignatureFont != null &&
+                    this.EEzsignsignatureFont.Equals(input.EEzsignsignatureFont))
                 ) && 
                 (
                     this.BEzsignsignatureCustomdate == input.BEzsignsignatureCustomdate ||
@@ -319,6 +362,8 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.PkiEzsignsignatureID != null)
                     hashCode = hashCode * 59 + this.PkiEzsignsignatureID.GetHashCode();
+                if (this.FkiEzsigndocumentID != null)
+                    hashCode = hashCode * 59 + this.FkiEzsigndocumentID.GetHashCode();
                 if (this.FkiEzsignfoldersignerassociationID != null)
                     hashCode = hashCode * 59 + this.FkiEzsignfoldersignerassociationID.GetHashCode();
                 if (this.IEzsignpagePagenumber != null)
@@ -331,8 +376,12 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IEzsignsignatureStep.GetHashCode();
                 if (this.EEzsignsignatureType != null)
                     hashCode = hashCode * 59 + this.EEzsignsignatureType.GetHashCode();
-                if (this.FkiEzsigndocumentID != null)
-                    hashCode = hashCode * 59 + this.FkiEzsigndocumentID.GetHashCode();
+                if (this.TEzsignsignatureTooltip != null)
+                    hashCode = hashCode * 59 + this.TEzsignsignatureTooltip.GetHashCode();
+                if (this.EEzsignsignatureTooltipposition != null)
+                    hashCode = hashCode * 59 + this.EEzsignsignatureTooltipposition.GetHashCode();
+                if (this.EEzsignsignatureFont != null)
+                    hashCode = hashCode * 59 + this.EEzsignsignatureFont.GetHashCode();
                 if (this.BEzsignsignatureCustomdate != null)
                     hashCode = hashCode * 59 + this.BEzsignsignatureCustomdate.GetHashCode();
                 if (this.AObjEzsignsignaturecustomdate != null)

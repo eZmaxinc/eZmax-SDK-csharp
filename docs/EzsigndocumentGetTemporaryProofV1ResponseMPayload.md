@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjEzsigndocumentlog** | [**EzsigndocumentlogResponseCompound**](EzsigndocumentlogResponseCompound.md) |  | 
+**AObjEzsigndocumentlog** | [**List&lt;EzsigndocumentlogResponseCompound&gt;**](EzsigndocumentlogResponseCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

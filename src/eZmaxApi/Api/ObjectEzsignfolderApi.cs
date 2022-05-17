@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,6 +25,52 @@ namespace eZmaxApi.Api
     public interface IObjectEzsignfolderApi : IApiAccessor
     {
         #region Synchronous Operations
+        /// <summary>
+        /// Archive the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="body"></param>
+        /// <returns>EzsignfolderArchiveV1Response</returns>
+        EzsignfolderArchiveV1Response EzsignfolderArchiveV1 (int pkiEzsignfolderID, Object body);
+
+        /// <summary>
+        /// Archive the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of EzsignfolderArchiveV1Response</returns>
+        ApiResponse<EzsignfolderArchiveV1Response> EzsignfolderArchiveV1WithHttpInfo (int pkiEzsignfolderID, Object body);
+        /// <summary>
+        /// Download multiples files from an Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderBatchDownloadV1Request"></param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream EzsignfolderBatchDownloadV1 (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request);
+
+        /// <summary>
+        /// Download multiples files from an Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderBatchDownloadV1Request"></param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> EzsignfolderBatchDownloadV1WithHttpInfo (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request);
         /// <summary>
         /// Create a new Ezsignfolder
         /// </summary>
@@ -114,7 +160,28 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsignfolderEditObjectV1Response</returns>
         ApiResponse<EzsignfolderEditObjectV1Response> EzsignfolderEditObjectV1WithHttpInfo (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request);
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
+        /// Retrieve actionable elements for the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <returns>EzsignfolderGetActionableElementsV1Response</returns>
+        EzsignfolderGetActionableElementsV1Response EzsignfolderGetActionableElementsV1 (int pkiEzsignfolderID);
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <returns>ApiResponse of EzsignfolderGetActionableElementsV1Response</returns>
+        ApiResponse<EzsignfolderGetActionableElementsV1Response> EzsignfolderGetActionableElementsV1WithHttpInfo (int pkiEzsignfolderID);
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder's Ezsigndocuments
         /// </summary>
         /// <remarks>
         /// 
@@ -125,7 +192,7 @@ namespace eZmaxApi.Api
         EzsignfolderGetEzsigndocumentsV1Response EzsignfolderGetEzsigndocumentsV1 (int pkiEzsignfolderID);
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
+        /// Retrieve an existing Ezsignfolder's Ezsigndocuments
         /// </summary>
         /// <remarks>
         /// 
@@ -135,7 +202,7 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsignfolderGetEzsigndocumentsV1Response</returns>
         ApiResponse<EzsignfolderGetEzsigndocumentsV1Response> EzsignfolderGetEzsigndocumentsV1WithHttpInfo (int pkiEzsignfolderID);
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+        /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
         /// </summary>
         /// <remarks>
         /// 
@@ -146,7 +213,7 @@ namespace eZmaxApi.Api
         EzsignfolderGetEzsignfoldersignerassociationsV1Response EzsignfolderGetEzsignfoldersignerassociationsV1 (int pkiEzsignfolderID);
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+        /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
         /// </summary>
         /// <remarks>
         /// 
@@ -156,7 +223,7 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsignfolderGetEzsignfoldersignerassociationsV1Response</returns>
         ApiResponse<EzsignfolderGetEzsignfoldersignerassociationsV1Response> EzsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfo (int pkiEzsignfolderID);
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s forms data
+        /// Retrieve an existing Ezsignfolder's forms data
         /// </summary>
         /// <remarks>
         /// 
@@ -167,7 +234,7 @@ namespace eZmaxApi.Api
         EzsignfolderGetFormsDataV1Response EzsignfolderGetFormsDataV1 (int pkiEzsignfolderID);
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s forms data
+        /// Retrieve an existing Ezsignfolder's forms data
         /// </summary>
         /// <remarks>
         /// 
@@ -180,7 +247,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -195,7 +262,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -227,6 +294,52 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsignfolderGetObjectV1Response</returns>
         ApiResponse<EzsignfolderGetObjectV1Response> EzsignfolderGetObjectV1WithHttpInfo (int pkiEzsignfolderID);
         /// <summary>
+        /// Import an Ezsigntemplatepackage in the Ezsignfolder.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderImportEzsigntemplatepackageV1Request"></param>
+        /// <returns>EzsignfolderImportEzsigntemplatepackageV1Response</returns>
+        EzsignfolderImportEzsigntemplatepackageV1Response EzsignfolderImportEzsigntemplatepackageV1 (int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request);
+
+        /// <summary>
+        /// Import an Ezsigntemplatepackage in the Ezsignfolder.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderImportEzsigntemplatepackageV1Request"></param>
+        /// <returns>ApiResponse of EzsignfolderImportEzsigntemplatepackageV1Response</returns>
+        ApiResponse<EzsignfolderImportEzsigntemplatepackageV1Response> EzsignfolderImportEzsigntemplatepackageV1WithHttpInfo (int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request);
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV1Request"></param>
+        /// <returns>EzsignfolderReorderV1Response</returns>
+        EzsignfolderReorderV1Response EzsignfolderReorderV1 (int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request);
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV1Request"></param>
+        /// <returns>ApiResponse of EzsignfolderReorderV1Response</returns>
+        ApiResponse<EzsignfolderReorderV1Response> EzsignfolderReorderV1WithHttpInfo (int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request);
+        /// <summary>
         /// Send the Ezsignfolder to the signatories for signature
         /// </summary>
         /// <remarks>
@@ -253,7 +366,7 @@ namespace eZmaxApi.Api
         /// Unsend the Ezsignfolder
         /// </summary>
         /// <remarks>
-        /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+        /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -265,7 +378,7 @@ namespace eZmaxApi.Api
         /// Unsend the Ezsignfolder
         /// </summary>
         /// <remarks>
-        /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+        /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -274,6 +387,56 @@ namespace eZmaxApi.Api
         ApiResponse<EzsignfolderUnsendV1Response> EzsignfolderUnsendV1WithHttpInfo (int pkiEzsignfolderID, Object body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Archive the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfolderArchiveV1Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderArchiveV1Response> EzsignfolderArchiveV1Async (int pkiEzsignfolderID, Object body, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Archive the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfolderArchiveV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderArchiveV1Response>> EzsignfolderArchiveV1WithHttpInfoAsync (int pkiEzsignfolderID, Object body, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Download multiples files from an Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderBatchDownloadV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> EzsignfolderBatchDownloadV1Async (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Download multiples files from an Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderBatchDownloadV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> EzsignfolderBatchDownloadV1WithHttpInfoAsync (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Create a new Ezsignfolder
         /// </summary>
@@ -371,7 +534,30 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsignfolderEditObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfolderEditObjectV1Response>> EzsignfolderEditObjectV1WithHttpInfoAsync (int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
+        /// Retrieve actionable elements for the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfolderGetActionableElementsV1Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderGetActionableElementsV1Response> EzsignfolderGetActionableElementsV1Async (int pkiEzsignfolderID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfolderGetActionableElementsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderGetActionableElementsV1Response>> EzsignfolderGetActionableElementsV1WithHttpInfoAsync (int pkiEzsignfolderID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder's Ezsigndocuments
         /// </summary>
         /// <remarks>
         /// 
@@ -394,7 +580,7 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsignfolderGetEzsigndocumentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfolderGetEzsigndocumentsV1Response>> EzsignfolderGetEzsigndocumentsV1WithHttpInfoAsync (int pkiEzsignfolderID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+        /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
         /// </summary>
         /// <remarks>
         /// 
@@ -417,7 +603,7 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsignfolderGetEzsignfoldersignerassociationsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfolderGetEzsignfoldersignerassociationsV1Response>> EzsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfoAsync (int pkiEzsignfolderID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s forms data
+        /// Retrieve an existing Ezsignfolder's forms data
         /// </summary>
         /// <remarks>
         /// 
@@ -443,7 +629,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -459,7 +645,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -494,6 +680,56 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsignfolderGetObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfolderGetObjectV1Response>> EzsignfolderGetObjectV1WithHttpInfoAsync (int pkiEzsignfolderID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
+        /// Import an Ezsigntemplatepackage in the Ezsignfolder.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderImportEzsigntemplatepackageV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfolderImportEzsigntemplatepackageV1Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderImportEzsigntemplatepackageV1Response> EzsignfolderImportEzsigntemplatepackageV1Async (int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Import an Ezsigntemplatepackage in the Ezsignfolder.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderImportEzsigntemplatepackageV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfolderImportEzsigntemplatepackageV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderImportEzsigntemplatepackageV1Response>> EzsignfolderImportEzsigntemplatepackageV1WithHttpInfoAsync (int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfolderReorderV1Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderReorderV1Response> EzsignfolderReorderV1Async (int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfolderReorderV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderReorderV1Response>> EzsignfolderReorderV1WithHttpInfoAsync (int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
         /// Send the Ezsignfolder to the signatories for signature
         /// </summary>
         /// <remarks>
@@ -522,7 +758,7 @@ namespace eZmaxApi.Api
         /// Unsend the Ezsignfolder
         /// </summary>
         /// <remarks>
-        /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+        /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -535,7 +771,7 @@ namespace eZmaxApi.Api
         /// Unsend the Ezsignfolder
         /// </summary>
         /// <remarks>
-        /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+        /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -652,6 +888,354 @@ namespace eZmaxApi.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Archive the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="body"></param>
+        /// <returns>EzsignfolderArchiveV1Response</returns>
+        public EzsignfolderArchiveV1Response EzsignfolderArchiveV1 (int pkiEzsignfolderID, Object body)
+        {
+             ApiResponse<EzsignfolderArchiveV1Response> localVarResponse = EzsignfolderArchiveV1WithHttpInfo(pkiEzsignfolderID, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Archive the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of EzsignfolderArchiveV1Response</returns>
+        public ApiResponse<EzsignfolderArchiveV1Response> EzsignfolderArchiveV1WithHttpInfo (int pkiEzsignfolderID, Object body)
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderArchiveV1");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ObjectEzsignfolderApi->EzsignfolderArchiveV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/archive";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderArchiveV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfolderArchiveV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfolderArchiveV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderArchiveV1Response)));
+        }
+
+        /// <summary>
+        /// Archive the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfolderArchiveV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderArchiveV1Response> EzsignfolderArchiveV1Async (int pkiEzsignfolderID, Object body, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsignfolderArchiveV1Response> localVarResponse = await EzsignfolderArchiveV1WithHttpInfoAsync(pkiEzsignfolderID, body, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Archive the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfolderArchiveV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfolderArchiveV1Response>> EzsignfolderArchiveV1WithHttpInfoAsync (int pkiEzsignfolderID, Object body, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderArchiveV1");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ObjectEzsignfolderApi->EzsignfolderArchiveV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/archive";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderArchiveV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfolderArchiveV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfolderArchiveV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderArchiveV1Response)));
+        }
+
+        /// <summary>
+        /// Download multiples files from an Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderBatchDownloadV1Request"></param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream EzsignfolderBatchDownloadV1 (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = EzsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples files from an Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderBatchDownloadV1Request"></param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse<System.IO.Stream> EzsignfolderBatchDownloadV1WithHttpInfo (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request)
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderBatchDownloadV1");
+            // verify the required parameter 'ezsignfolderBatchDownloadV1Request' is set
+            if (ezsignfolderBatchDownloadV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfolderBatchDownloadV1Request' when calling ObjectEzsignfolderApi->EzsignfolderBatchDownloadV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/zip",
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+            if (ezsignfolderBatchDownloadV1Request != null && ezsignfolderBatchDownloadV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfolderBatchDownloadV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfolderBatchDownloadV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderBatchDownloadV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Download multiples files from an Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderBatchDownloadV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> EzsignfolderBatchDownloadV1Async (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await EzsignfolderBatchDownloadV1WithHttpInfoAsync(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Download multiples files from an Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderBatchDownloadV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> EzsignfolderBatchDownloadV1WithHttpInfoAsync (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderBatchDownloadV1");
+            // verify the required parameter 'ezsignfolderBatchDownloadV1Request' is set
+            if (ezsignfolderBatchDownloadV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfolderBatchDownloadV1Request' when calling ObjectEzsignfolderApi->EzsignfolderBatchDownloadV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/zip",
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+            if (ezsignfolderBatchDownloadV1Request != null && ezsignfolderBatchDownloadV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfolderBatchDownloadV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfolderBatchDownloadV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderBatchDownloadV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
         }
 
         /// <summary>
@@ -1299,7 +1883,152 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments 
+        /// Retrieve actionable elements for the Ezsignfolder Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <returns>EzsignfolderGetActionableElementsV1Response</returns>
+        public EzsignfolderGetActionableElementsV1Response EzsignfolderGetActionableElementsV1 (int pkiEzsignfolderID)
+        {
+             ApiResponse<EzsignfolderGetActionableElementsV1Response> localVarResponse = EzsignfolderGetActionableElementsV1WithHttpInfo(pkiEzsignfolderID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsignfolder Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <returns>ApiResponse of EzsignfolderGetActionableElementsV1Response</returns>
+        public ApiResponse<EzsignfolderGetActionableElementsV1Response> EzsignfolderGetActionableElementsV1WithHttpInfo (int pkiEzsignfolderID)
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderGetActionableElementsV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderGetActionableElementsV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfolderGetActionableElementsV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfolderGetActionableElementsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderGetActionableElementsV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsignfolder Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfolderGetActionableElementsV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderGetActionableElementsV1Response> EzsignfolderGetActionableElementsV1Async (int pkiEzsignfolderID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsignfolderGetActionableElementsV1Response> localVarResponse = await EzsignfolderGetActionableElementsV1WithHttpInfoAsync(pkiEzsignfolderID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsignfolder Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfolderGetActionableElementsV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfolderGetActionableElementsV1Response>> EzsignfolderGetActionableElementsV1WithHttpInfoAsync (int pkiEzsignfolderID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderGetActionableElementsV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderGetActionableElementsV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfolderGetActionableElementsV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfolderGetActionableElementsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderGetActionableElementsV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder's Ezsigndocuments 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1311,7 +2040,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments 
+        /// Retrieve an existing Ezsignfolder's Ezsigndocuments 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1370,7 +2099,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments 
+        /// Retrieve an existing Ezsignfolder's Ezsigndocuments 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1384,7 +2113,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments 
+        /// Retrieve an existing Ezsignfolder's Ezsigndocuments 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1444,7 +2173,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations 
+        /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1456,7 +2185,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations 
+        /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1515,7 +2244,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations 
+        /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1529,7 +2258,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations 
+        /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1589,7 +2318,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s forms data 
+        /// Retrieve an existing Ezsignfolder's forms data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1601,7 +2330,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s forms data 
+        /// Retrieve an existing Ezsignfolder's forms data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1661,7 +2390,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s forms data 
+        /// Retrieve an existing Ezsignfolder's forms data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1675,7 +2404,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsignfolder&#39;s forms data 
+        /// Retrieve an existing Ezsignfolder's forms data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -1736,7 +2465,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1752,7 +2481,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1817,7 +2546,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1835,7 +2564,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -2046,6 +2775,352 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Import an Ezsigntemplatepackage in the Ezsignfolder. This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderImportEzsigntemplatepackageV1Request"></param>
+        /// <returns>EzsignfolderImportEzsigntemplatepackageV1Response</returns>
+        public EzsignfolderImportEzsigntemplatepackageV1Response EzsignfolderImportEzsigntemplatepackageV1 (int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request)
+        {
+             ApiResponse<EzsignfolderImportEzsigntemplatepackageV1Response> localVarResponse = EzsignfolderImportEzsigntemplatepackageV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Import an Ezsigntemplatepackage in the Ezsignfolder. This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderImportEzsigntemplatepackageV1Request"></param>
+        /// <returns>ApiResponse of EzsignfolderImportEzsigntemplatepackageV1Response</returns>
+        public ApiResponse<EzsignfolderImportEzsigntemplatepackageV1Response> EzsignfolderImportEzsigntemplatepackageV1WithHttpInfo (int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request)
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderImportEzsigntemplatepackageV1");
+            // verify the required parameter 'ezsignfolderImportEzsigntemplatepackageV1Request' is set
+            if (ezsignfolderImportEzsigntemplatepackageV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfolderImportEzsigntemplatepackageV1Request' when calling ObjectEzsignfolderApi->EzsignfolderImportEzsigntemplatepackageV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+            if (ezsignfolderImportEzsigntemplatepackageV1Request != null && ezsignfolderImportEzsigntemplatepackageV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfolderImportEzsigntemplatepackageV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfolderImportEzsigntemplatepackageV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderImportEzsigntemplatepackageV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfolderImportEzsigntemplatepackageV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfolderImportEzsigntemplatepackageV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderImportEzsigntemplatepackageV1Response)));
+        }
+
+        /// <summary>
+        /// Import an Ezsigntemplatepackage in the Ezsignfolder. This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderImportEzsigntemplatepackageV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfolderImportEzsigntemplatepackageV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderImportEzsigntemplatepackageV1Response> EzsignfolderImportEzsigntemplatepackageV1Async (int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsignfolderImportEzsigntemplatepackageV1Response> localVarResponse = await EzsignfolderImportEzsigntemplatepackageV1WithHttpInfoAsync(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Import an Ezsigntemplatepackage in the Ezsignfolder. This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderImportEzsigntemplatepackageV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfolderImportEzsigntemplatepackageV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfolderImportEzsigntemplatepackageV1Response>> EzsignfolderImportEzsigntemplatepackageV1WithHttpInfoAsync (int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderImportEzsigntemplatepackageV1");
+            // verify the required parameter 'ezsignfolderImportEzsigntemplatepackageV1Request' is set
+            if (ezsignfolderImportEzsigntemplatepackageV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfolderImportEzsigntemplatepackageV1Request' when calling ObjectEzsignfolderApi->EzsignfolderImportEzsigntemplatepackageV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+            if (ezsignfolderImportEzsigntemplatepackageV1Request != null && ezsignfolderImportEzsigntemplatepackageV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfolderImportEzsigntemplatepackageV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfolderImportEzsigntemplatepackageV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderImportEzsigntemplatepackageV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfolderImportEzsigntemplatepackageV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfolderImportEzsigntemplatepackageV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderImportEzsigntemplatepackageV1Response)));
+        }
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV1Request"></param>
+        /// <returns>EzsignfolderReorderV1Response</returns>
+        public EzsignfolderReorderV1Response EzsignfolderReorderV1 (int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request)
+        {
+             ApiResponse<EzsignfolderReorderV1Response> localVarResponse = EzsignfolderReorderV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV1Request"></param>
+        /// <returns>ApiResponse of EzsignfolderReorderV1Response</returns>
+        public ApiResponse<EzsignfolderReorderV1Response> EzsignfolderReorderV1WithHttpInfo (int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request)
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderReorderV1");
+            // verify the required parameter 'ezsignfolderReorderV1Request' is set
+            if (ezsignfolderReorderV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfolderReorderV1Request' when calling ObjectEzsignfolderApi->EzsignfolderReorderV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/reorder";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+            if (ezsignfolderReorderV1Request != null && ezsignfolderReorderV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfolderReorderV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfolderReorderV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderReorderV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfolderReorderV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfolderReorderV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderReorderV1Response)));
+        }
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfolderReorderV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderReorderV1Response> EzsignfolderReorderV1Async (int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsignfolderReorderV1Response> localVarResponse = await EzsignfolderReorderV1WithHttpInfoAsync(pkiEzsignfolderID, ezsignfolderReorderV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfolderReorderV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfolderReorderV1Response>> EzsignfolderReorderV1WithHttpInfoAsync (int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsignfolderID' is set
+            if (pkiEzsignfolderID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfolderID' when calling ObjectEzsignfolderApi->EzsignfolderReorderV1");
+            // verify the required parameter 'ezsignfolderReorderV1Request' is set
+            if (ezsignfolderReorderV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfolderReorderV1Request' when calling ObjectEzsignfolderApi->EzsignfolderReorderV1");
+
+            var localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/reorder";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfolderID != null) localVarPathParams.Add("pkiEzsignfolderID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfolderID)); // path parameter
+            if (ezsignfolderReorderV1Request != null && ezsignfolderReorderV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfolderReorderV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfolderReorderV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfolderReorderV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfolderReorderV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfolderReorderV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfolderReorderV1Response)));
+        }
+
+        /// <summary>
         /// Send the Ezsignfolder to the signatories for signature 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2219,7 +3294,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Unsend the Ezsignfolder Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+        /// Unsend the Ezsignfolder Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -2232,7 +3307,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Unsend the Ezsignfolder Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+        /// Unsend the Ezsignfolder Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -2304,7 +3379,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Unsend the Ezsignfolder Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+        /// Unsend the Ezsignfolder Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
@@ -2319,7 +3394,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Unsend the Ezsignfolder Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+        /// Unsend the Ezsignfolder Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>

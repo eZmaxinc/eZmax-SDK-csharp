@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -41,7 +41,7 @@ namespace eZmaxApi.Model
         /// <param name="aObjEzsignformfield">aObjEzsignformfield (required).</param>
         /// <param name="aObjDropdownElement">aObjDropdownElement.</param>
         /// <param name="aObjEzsignformfieldgroupsigner">aObjEzsignformfieldgroupsigner (required).</param>
-        public EzsignformfieldgroupResponseCompoundAllOf(List<EzsignformfieldResponseCompound> aObjEzsignformfield = default(List<EzsignformfieldResponseCompound>), List<CustomDropdownElementResponseCompound> aObjDropdownElement = default(List<CustomDropdownElementResponseCompound>), EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner = default(EzsignformfieldgroupsignerResponseCompound))
+        public EzsignformfieldgroupResponseCompoundAllOf(List<EzsignformfieldResponseCompound> aObjEzsignformfield = default(List<EzsignformfieldResponseCompound>), List<CustomDropdownElementResponseCompound> aObjDropdownElement = default(List<CustomDropdownElementResponseCompound>), List<EzsignformfieldgroupsignerResponseCompound> aObjEzsignformfieldgroupsigner = default(List<EzsignformfieldgroupsignerResponseCompound>))
         {
             // to ensure "aObjEzsignformfield" is required (not null)
             if (aObjEzsignformfield == null)
@@ -82,7 +82,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjEzsignformfieldgroupsigner
         /// </summary>
         [DataMember(Name="a_objEzsignformfieldgroupsigner", EmitDefaultValue=true)]
-        public EzsignformfieldgroupsignerResponseCompound AObjEzsignformfieldgroupsigner { get; set; }
+        public List<EzsignformfieldgroupsignerResponseCompound> AObjEzsignformfieldgroupsigner { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -143,8 +143,9 @@ namespace eZmaxApi.Model
                 ) && 
                 (
                     this.AObjEzsignformfieldgroupsigner == input.AObjEzsignformfieldgroupsigner ||
-                    (this.AObjEzsignformfieldgroupsigner != null &&
-                    this.AObjEzsignformfieldgroupsigner.Equals(input.AObjEzsignformfieldgroupsigner))
+                    this.AObjEzsignformfieldgroupsigner != null &&
+                    input.AObjEzsignformfieldgroupsigner != null &&
+                    this.AObjEzsignformfieldgroupsigner.SequenceEqual(input.AObjEzsignformfieldgroupsigner)
                 );
         }
 

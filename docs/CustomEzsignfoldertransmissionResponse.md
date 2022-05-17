@@ -1,0 +1,17 @@
+
+# eZmaxApi.Model.CustomEzsignfoldertransmissionResponse
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**PkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
+**EEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  | 
+**IEzsignfolderSignaturetotal** | **int** | The number of total signatures that were requested in the Ezsignfolder | 
+**IEzsignfolderSignaturesigned** | **int** | The number of signatures that were signed in the Ezsignfolder. | 
+**AObjEzsignfoldertransmissionSigner** | [**List&lt;CustomEzsignfoldertransmissionSignerResponse&gt;**](CustomEzsignfoldertransmissionSignerResponse.md) |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
+

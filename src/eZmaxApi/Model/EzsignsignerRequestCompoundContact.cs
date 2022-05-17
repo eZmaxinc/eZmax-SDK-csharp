@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -42,9 +42,12 @@ namespace eZmaxApi.Model
         /// <param name="sContactLastname">The Last name of the contact (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="sPhoneNumber">The Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany..</param>
-        /// <param name="sPhoneNumberCell">The Cell Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany..</param>
-        public EzsignsignerRequestCompoundContact(string sContactFirstname = default(string), string sContactLastname = default(string), int fkiLanguageID = default(int), string sEmailAddress = default(string), string sPhoneNumber = default(string), string sPhoneNumberCell = default(string))
+        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
+        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
+        /// <param name="sPhoneE164Cell">A phone number in E.164 Format.</param>
+        /// <param name="sPhoneNumber">sPhoneNumber.</param>
+        /// <param name="sPhoneNumberCell">sPhoneNumberCell.</param>
+        public EzsignsignerRequestCompoundContact(string sContactFirstname = default(string), string sContactLastname = default(string), int fkiLanguageID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), string sPhoneExtension = default(string), string sPhoneE164Cell = default(string), string sPhoneNumber = default(string), string sPhoneNumberCell = default(string))
         {
             // to ensure "sContactFirstname" is required (not null)
             if (sContactFirstname == null)
@@ -77,6 +80,9 @@ namespace eZmaxApi.Model
             }
 
             this.SEmailAddress = sEmailAddress;
+            this.SPhoneE164 = sPhoneE164;
+            this.SPhoneExtension = sPhoneExtension;
+            this.SPhoneE164Cell = sPhoneE164Cell;
             this.SPhoneNumber = sPhoneNumber;
             this.SPhoneNumberCell = sPhoneNumberCell;
         }
@@ -110,17 +116,38 @@ namespace eZmaxApi.Model
         public string SEmailAddress { get; set; }
 
         /// <summary>
-        /// The Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany.
+        /// A phone number in E.164 Format
         /// </summary>
-        /// <value>The Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany.</value>
+        /// <value>A phone number in E.164 Format</value>
+        [DataMember(Name="sPhoneE164", EmitDefaultValue=false)]
+        public string SPhoneE164 { get; set; }
+
+        /// <summary>
+        /// The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+        /// </summary>
+        /// <value>The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers</value>
+        [DataMember(Name="sPhoneExtension", EmitDefaultValue=false)]
+        public string SPhoneExtension { get; set; }
+
+        /// <summary>
+        /// A phone number in E.164 Format
+        /// </summary>
+        /// <value>A phone number in E.164 Format</value>
+        [DataMember(Name="sPhoneE164Cell", EmitDefaultValue=false)]
+        public string SPhoneE164Cell { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SPhoneNumber
+        /// </summary>
         [DataMember(Name="sPhoneNumber", EmitDefaultValue=false)]
+        [Obsolete]
         public string SPhoneNumber { get; set; }
 
         /// <summary>
-        /// The Cell Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany.
+        /// Gets or Sets SPhoneNumberCell
         /// </summary>
-        /// <value>The Cell Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany.</value>
         [DataMember(Name="sPhoneNumberCell", EmitDefaultValue=false)]
+        [Obsolete]
         public string SPhoneNumberCell { get; set; }
 
         /// <summary>
@@ -135,6 +162,9 @@ namespace eZmaxApi.Model
             sb.Append("  SContactLastname: ").Append(SContactLastname).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
+            sb.Append("  SPhoneE164: ").Append(SPhoneE164).Append("\n");
+            sb.Append("  SPhoneExtension: ").Append(SPhoneExtension).Append("\n");
+            sb.Append("  SPhoneE164Cell: ").Append(SPhoneE164Cell).Append("\n");
             sb.Append("  SPhoneNumber: ").Append(SPhoneNumber).Append("\n");
             sb.Append("  SPhoneNumberCell: ").Append(SPhoneNumberCell).Append("\n");
             sb.Append("}\n");
@@ -192,6 +222,21 @@ namespace eZmaxApi.Model
                     this.SEmailAddress.Equals(input.SEmailAddress))
                 ) && 
                 (
+                    this.SPhoneE164 == input.SPhoneE164 ||
+                    (this.SPhoneE164 != null &&
+                    this.SPhoneE164.Equals(input.SPhoneE164))
+                ) && 
+                (
+                    this.SPhoneExtension == input.SPhoneExtension ||
+                    (this.SPhoneExtension != null &&
+                    this.SPhoneExtension.Equals(input.SPhoneExtension))
+                ) && 
+                (
+                    this.SPhoneE164Cell == input.SPhoneE164Cell ||
+                    (this.SPhoneE164Cell != null &&
+                    this.SPhoneE164Cell.Equals(input.SPhoneE164Cell))
+                ) && 
+                (
                     this.SPhoneNumber == input.SPhoneNumber ||
                     (this.SPhoneNumber != null &&
                     this.SPhoneNumber.Equals(input.SPhoneNumber))
@@ -220,6 +265,12 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.FkiLanguageID.GetHashCode();
                 if (this.SEmailAddress != null)
                     hashCode = hashCode * 59 + this.SEmailAddress.GetHashCode();
+                if (this.SPhoneE164 != null)
+                    hashCode = hashCode * 59 + this.SPhoneE164.GetHashCode();
+                if (this.SPhoneExtension != null)
+                    hashCode = hashCode * 59 + this.SPhoneExtension.GetHashCode();
+                if (this.SPhoneE164Cell != null)
+                    hashCode = hashCode * 59 + this.SPhoneE164Cell.GetHashCode();
                 if (this.SPhoneNumber != null)
                     hashCode = hashCode * 59 + this.SPhoneNumber.GetHashCode();
                 if (this.SPhoneNumberCell != null)
@@ -247,6 +298,24 @@ namespace eZmaxApi.Model
             if(this.FkiLanguageID < (int)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+
+
+            // SPhoneE164 (string) pattern
+            Regex regexSPhoneE164 = new Regex(@"^\\+[1-9]\\d{1,14}$", RegexOptions.CultureInvariant);
+            if (false == regexSPhoneE164.Match(this.SPhoneE164).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164, must match a pattern of " + regexSPhoneE164, new [] { "SPhoneE164" });
+            }
+
+
+
+            // SPhoneE164Cell (string) pattern
+            Regex regexSPhoneE164Cell = new Regex(@"^\\+[1-9]\\d{1,14}$", RegexOptions.CultureInvariant);
+            if (false == regexSPhoneE164Cell.Match(this.SPhoneE164Cell).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164Cell, must match a pattern of " + regexSPhoneE164Cell, new [] { "SPhoneE164Cell" });
             }
 
             yield break;

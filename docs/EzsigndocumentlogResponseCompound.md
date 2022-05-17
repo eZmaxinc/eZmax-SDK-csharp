@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FkiUserID** | **int?** | The unique ID of the User | 
-**FkiEzsignsignerID** | **int?** | The unique ID of the Ezsignsigner | 
+**FkiUserID** | **int** | The unique ID of the User | [optional] 
+**FkiEzsignsignerID** | **int** | The unique ID of the Ezsignsigner | [optional] 
 **DtEzsigndocumentlogDatetime** | **string** | The date and time at which the event was logged | 
 **EEzsigndocumentlogType** | [**FieldEEzsigndocumentlogType**](FieldEEzsigndocumentlogType.md) |  | 
 **SEzsigndocumentlogDetail** | **string** | The detail of the Ezsigndocumentlog | 

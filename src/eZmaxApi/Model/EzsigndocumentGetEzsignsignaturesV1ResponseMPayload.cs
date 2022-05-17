@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignsignatures API Request
+    /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignsignatures
     /// </summary>
     [DataContract]
     public partial class EzsigndocumentGetEzsignsignaturesV1ResponseMPayload :  IEquatable<EzsigndocumentGetEzsignsignaturesV1ResponseMPayload>, IValidatableObject
@@ -33,16 +33,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignsignaturesV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsignsignature">aObjEzsignsignature.</param>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentGetEzsignsignaturesV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignsignaturesV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEzsignsignature">aObjEzsignsignature (required).</param>
         public EzsigndocumentGetEzsignsignaturesV1ResponseMPayload(List<EzsignsignatureResponseCompound> aObjEzsignsignature = default(List<EzsignsignatureResponseCompound>))
         {
-            this.AObjEzsignsignature = aObjEzsignsignature;
+            // to ensure "aObjEzsignsignature" is required (not null)
+            if (aObjEzsignsignature == null)
+            {
+                throw new InvalidDataException("aObjEzsignsignature is a required property for EzsigndocumentGetEzsignsignaturesV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsignsignature = aObjEzsignsignature;
+            }
+
         }
 
         /// <summary>
         /// Gets or Sets AObjEzsignsignature
         /// </summary>
-        [DataMember(Name="a_objEzsignsignature", EmitDefaultValue=false)]
+        [DataMember(Name="a_objEzsignsignature", EmitDefaultValue=true)]
         public List<EzsignsignatureResponseCompound> AObjEzsignsignature { get; set; }
 
         /// <summary>

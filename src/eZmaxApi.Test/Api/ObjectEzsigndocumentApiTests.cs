@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -165,6 +165,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsigndocumentGetActionableElementsV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentGetActionableElementsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentGetActionableElementsV1(pkiEzsigndocumentID);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentGetActionableElementsV1Response), response, "response is EzsigndocumentGetActionableElementsV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsigndocumentGetDownloadUrlV1
         /// </summary>
         [Test]
@@ -273,6 +285,19 @@ namespace eZmaxApi.Test
             //EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request = null;
             //var response = instance.EzsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
             //Assert.IsInstanceOf(typeof(EzsigndocumentPatchObjectV1Response), response, "response is EzsigndocumentPatchObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsigndocumentUnsendV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentUnsendV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //Object body = null;
+            //var response = instance.EzsigndocumentUnsendV1(pkiEzsigndocumentID, body);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentUnsendV1Response), response, "response is EzsigndocumentUnsendV1Response");
         }
         
     }

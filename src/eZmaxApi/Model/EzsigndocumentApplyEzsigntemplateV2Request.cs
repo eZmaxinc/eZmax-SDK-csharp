@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Request for the /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate API Request
+    /// Request for POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
     /// </summary>
     [DataContract]
     public partial class EzsigndocumentApplyEzsigntemplateV2Request :  IEquatable<EzsigndocumentApplyEzsigntemplateV2Request>, IValidatableObject
@@ -38,7 +38,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentApplyEzsigntemplateV2Request" /> class.
         /// </summary>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
         /// <param name="aSEzsigntemplatesigner">aSEzsigntemplatesigner (required).</param>
         /// <param name="aPkiEzsignfoldersignerassociationID">aPkiEzsignfoldersignerassociationID (required).</param>
         public EzsigndocumentApplyEzsigntemplateV2Request(int fkiEzsigntemplateID = default(int), List<string> aSEzsigntemplatesigner = default(List<string>), List<int> aPkiEzsignfoldersignerassociationID = default(List<int>))
@@ -76,9 +76,9 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// The unique ID of the Ezsigndocument
+        /// The unique ID of the Ezsigntemplate
         /// </summary>
-        /// <value>The unique ID of the Ezsigndocument</value>
+        /// <value>The unique ID of the Ezsigntemplate</value>
         [DataMember(Name="fkiEzsigntemplateID", EmitDefaultValue=true)]
         public int FkiEzsigntemplateID { get; set; }
 

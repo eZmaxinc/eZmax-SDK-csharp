@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData API Request
+    /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData
     /// </summary>
     [DataContract]
     public partial class EzsigndocumentGetFormDataV1ResponseMPayload :  IEquatable<EzsigndocumentGetFormDataV1ResponseMPayload>, IValidatableObject
@@ -38,98 +38,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetFormDataV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="dtModifiedDate">The date and time at which the object was last modified (required).</param>
-        /// <param name="aObjFormDataSigner">aObjFormDataSigner (required).</param>
-        public EzsigndocumentGetFormDataV1ResponseMPayload(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), string sEzsigndocumentName = default(string), string dtModifiedDate = default(string), List<CustomFormDataSignerResponse> aObjFormDataSigner = default(List<CustomFormDataSignerResponse>))
+        /// <param name="objFormDataDocument">objFormDataDocument (required).</param>
+        public EzsigndocumentGetFormDataV1ResponseMPayload(CustomFormDataDocumentResponse objFormDataDocument = default(CustomFormDataDocumentResponse))
         {
-            // to ensure "pkiEzsigndocumentID" is required (not null)
-            if (pkiEzsigndocumentID == null)
+            // to ensure "objFormDataDocument" is required (not null)
+            if (objFormDataDocument == null)
             {
-                throw new InvalidDataException("pkiEzsigndocumentID is a required property for EzsigndocumentGetFormDataV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("objFormDataDocument is a required property for EzsigndocumentGetFormDataV1ResponseMPayload and cannot be null");
             }
             else
             {
-                this.PkiEzsigndocumentID = pkiEzsigndocumentID;
-            }
-
-            // to ensure "fkiEzsignfolderID" is required (not null)
-            if (fkiEzsignfolderID == null)
-            {
-                throw new InvalidDataException("fkiEzsignfolderID is a required property for EzsigndocumentGetFormDataV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.FkiEzsignfolderID = fkiEzsignfolderID;
-            }
-
-            // to ensure "sEzsigndocumentName" is required (not null)
-            if (sEzsigndocumentName == null)
-            {
-                throw new InvalidDataException("sEzsigndocumentName is a required property for EzsigndocumentGetFormDataV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.SEzsigndocumentName = sEzsigndocumentName;
-            }
-
-            // to ensure "dtModifiedDate" is required (not null)
-            if (dtModifiedDate == null)
-            {
-                throw new InvalidDataException("dtModifiedDate is a required property for EzsigndocumentGetFormDataV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.DtModifiedDate = dtModifiedDate;
-            }
-
-            // to ensure "aObjFormDataSigner" is required (not null)
-            if (aObjFormDataSigner == null)
-            {
-                throw new InvalidDataException("aObjFormDataSigner is a required property for EzsigndocumentGetFormDataV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.AObjFormDataSigner = aObjFormDataSigner;
+                this.ObjFormDataDocument = objFormDataDocument;
             }
 
         }
 
         /// <summary>
-        /// The unique ID of the Ezsigndocument
+        /// Gets or Sets ObjFormDataDocument
         /// </summary>
-        /// <value>The unique ID of the Ezsigndocument</value>
-        [DataMember(Name="pkiEzsigndocumentID", EmitDefaultValue=true)]
-        public int PkiEzsigndocumentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsignfolder
-        /// </summary>
-        /// <value>The unique ID of the Ezsignfolder</value>
-        [DataMember(Name="fkiEzsignfolderID", EmitDefaultValue=true)]
-        public int FkiEzsignfolderID { get; set; }
-
-        /// <summary>
-        /// The name of the document that will be presented to Ezsignfoldersignerassociations
-        /// </summary>
-        /// <value>The name of the document that will be presented to Ezsignfoldersignerassociations</value>
-        [DataMember(Name="sEzsigndocumentName", EmitDefaultValue=true)]
-        public string SEzsigndocumentName { get; set; }
-
-        /// <summary>
-        /// The date and time at which the object was last modified
-        /// </summary>
-        /// <value>The date and time at which the object was last modified</value>
-        [DataMember(Name="dtModifiedDate", EmitDefaultValue=true)]
-        public string DtModifiedDate { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AObjFormDataSigner
-        /// </summary>
-        [DataMember(Name="a_objFormDataSigner", EmitDefaultValue=true)]
-        public List<CustomFormDataSignerResponse> AObjFormDataSigner { get; set; }
+        [DataMember(Name="objFormDataDocument", EmitDefaultValue=true)]
+        public CustomFormDataDocumentResponse ObjFormDataDocument { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -139,11 +67,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsigndocumentGetFormDataV1ResponseMPayload {\n");
-            sb.Append("  PkiEzsigndocumentID: ").Append(PkiEzsigndocumentID).Append("\n");
-            sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
-            sb.Append("  SEzsigndocumentName: ").Append(SEzsigndocumentName).Append("\n");
-            sb.Append("  DtModifiedDate: ").Append(DtModifiedDate).Append("\n");
-            sb.Append("  AObjFormDataSigner: ").Append(AObjFormDataSigner).Append("\n");
+            sb.Append("  ObjFormDataDocument: ").Append(ObjFormDataDocument).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -179,30 +103,9 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.PkiEzsigndocumentID == input.PkiEzsigndocumentID ||
-                    (this.PkiEzsigndocumentID != null &&
-                    this.PkiEzsigndocumentID.Equals(input.PkiEzsigndocumentID))
-                ) && 
-                (
-                    this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
-                    (this.FkiEzsignfolderID != null &&
-                    this.FkiEzsignfolderID.Equals(input.FkiEzsignfolderID))
-                ) && 
-                (
-                    this.SEzsigndocumentName == input.SEzsigndocumentName ||
-                    (this.SEzsigndocumentName != null &&
-                    this.SEzsigndocumentName.Equals(input.SEzsigndocumentName))
-                ) && 
-                (
-                    this.DtModifiedDate == input.DtModifiedDate ||
-                    (this.DtModifiedDate != null &&
-                    this.DtModifiedDate.Equals(input.DtModifiedDate))
-                ) && 
-                (
-                    this.AObjFormDataSigner == input.AObjFormDataSigner ||
-                    this.AObjFormDataSigner != null &&
-                    input.AObjFormDataSigner != null &&
-                    this.AObjFormDataSigner.SequenceEqual(input.AObjFormDataSigner)
+                    this.ObjFormDataDocument == input.ObjFormDataDocument ||
+                    (this.ObjFormDataDocument != null &&
+                    this.ObjFormDataDocument.Equals(input.ObjFormDataDocument))
                 );
         }
 
@@ -215,16 +118,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.PkiEzsigndocumentID != null)
-                    hashCode = hashCode * 59 + this.PkiEzsigndocumentID.GetHashCode();
-                if (this.FkiEzsignfolderID != null)
-                    hashCode = hashCode * 59 + this.FkiEzsignfolderID.GetHashCode();
-                if (this.SEzsigndocumentName != null)
-                    hashCode = hashCode * 59 + this.SEzsigndocumentName.GetHashCode();
-                if (this.DtModifiedDate != null)
-                    hashCode = hashCode * 59 + this.DtModifiedDate.GetHashCode();
-                if (this.AObjFormDataSigner != null)
-                    hashCode = hashCode * 59 + this.AObjFormDataSigner.GetHashCode();
+                if (this.ObjFormDataDocument != null)
+                    hashCode = hashCode * 59 + this.ObjFormDataDocument.GetHashCode();
                 return hashCode;
             }
         }
@@ -236,8 +131,6 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-
-
             yield break;
         }
     }

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -74,6 +74,38 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'PkiEzsigndocumentID'
         }
         /// <summary>
+        /// Test the property 'FkiEzsignfolderID'
+        /// </summary>
+        [Test]
+        public void FkiEzsignfolderIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsignfolderID'
+        }
+        /// <summary>
+        /// Test the property 'FkiEzsigntemplateID'
+        /// </summary>
+        [Test]
+        public void FkiEzsigntemplateIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigntemplateID'
+        }
+        /// <summary>
+        /// Test the property 'FkiEzsignfoldersignerassociationID'
+        /// </summary>
+        [Test]
+        public void FkiEzsignfoldersignerassociationIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsignfoldersignerassociationID'
+        }
+        /// <summary>
+        /// Test the property 'FkiLanguageID'
+        /// </summary>
+        [Test]
+        public void FkiLanguageIDTest()
+        {
+            // TODO unit test for the property 'FkiLanguageID'
+        }
+        /// <summary>
         /// Test the property 'EEzsigndocumentSource'
         /// </summary>
         [Test]
@@ -122,12 +154,12 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SEzsigndocumentPassword'
         }
         /// <summary>
-        /// Test the property 'FkiEzsignfolderID'
+        /// Test the property 'EEzsigndocumentForm'
         /// </summary>
         [Test]
-        public void FkiEzsignfolderIDTest()
+        public void EEzsigndocumentFormTest()
         {
-            // TODO unit test for the property 'FkiEzsignfolderID'
+            // TODO unit test for the property 'EEzsigndocumentForm'
         }
         /// <summary>
         /// Test the property 'DtEzsigndocumentDuedate'
@@ -136,14 +168,6 @@ namespace eZmaxApi.Test
         public void DtEzsigndocumentDuedateTest()
         {
             // TODO unit test for the property 'DtEzsigndocumentDuedate'
-        }
-        /// <summary>
-        /// Test the property 'FkiLanguageID'
-        /// </summary>
-        [Test]
-        public void FkiLanguageIDTest()
-        {
-            // TODO unit test for the property 'FkiLanguageID'
         }
         /// <summary>
         /// Test the property 'SEzsigndocumentName'

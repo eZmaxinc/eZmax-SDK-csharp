@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## PeriodGetAutocompleteV1
 
-> CommonGetAutocompleteV1Response PeriodGetAutocompleteV1 (string sSelector, string sQuery = null)
+> CommonGetAutocompleteV1Response PeriodGetAutocompleteV1 (string sSelector, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
 
 Retrieve Periods and IDs
 
@@ -40,11 +40,12 @@ namespace Example
             var apiInstance = new ObjectPeriodApi(Configuration.Default);
             var sSelector = "ActiveNormal";  // string | The types of Periods to return
             var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
+            var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
 
             try
             {
                 // Retrieve Periods and IDs
-                CommonGetAutocompleteV1Response result = apiInstance.PeriodGetAutocompleteV1(sSelector, sQuery);
+                CommonGetAutocompleteV1Response result = apiInstance.PeriodGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -65,6 +66,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **string**| The types of Periods to return | 
  **sQuery** | **string**| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
 
 ### Return type
 

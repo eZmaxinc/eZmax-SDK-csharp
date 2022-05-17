@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -67,7 +67,13 @@ namespace eZmaxApi.Model
         /// Enum Archived for value: Archived
         /// </summary>
         [EnumMember(Value = "Archived")]
-        Archived = 6
+        Archived = 6,
+
+        /// <summary>
+        /// Enum Disposed for value: Disposed
+        /// </summary>
+        [EnumMember(Value = "Disposed")]
+        Disposed = 7
 
     }
 

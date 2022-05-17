@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -98,12 +98,12 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SEzsignfoldertypeNameX'
         }
         /// <summary>
-        /// Test the property 'EEzsignfoldertypePrivacylevel'
+        /// Test the property 'BEzsignbulksendNeedvalidation'
         /// </summary>
         [Test]
-        public void EEzsignfoldertypePrivacylevelTest()
+        public void BEzsignbulksendNeedvalidationTest()
         {
-            // TODO unit test for the property 'EEzsignfoldertypePrivacylevel'
+            // TODO unit test for the property 'BEzsignbulksendNeedvalidation'
         }
         /// <summary>
         /// Test the property 'BEzsignbulksendIsactive'

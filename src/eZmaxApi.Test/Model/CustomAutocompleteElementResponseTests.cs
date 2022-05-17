@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -80,6 +80,14 @@ namespace eZmaxApi.Test
         public void SLabelTest()
         {
             // TODO unit test for the property 'SLabel'
+        }
+        /// <summary>
+        /// Test the property 'SValue'
+        /// </summary>
+        [Test]
+        public void SValueTest()
+        {
+            // TODO unit test for the property 'SValue'
         }
         /// <summary>
         /// Test the property 'MValue'

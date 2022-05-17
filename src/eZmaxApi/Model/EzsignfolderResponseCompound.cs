@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -48,8 +48,8 @@ namespace eZmaxApi.Model
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="tEzsignfolderNote">Note about the Ezsignfolder (required).</param>
         /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency (required).</param>
-        /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed. (required).</param>
-        /// <param name="dtEzsignfolderSentdate">The date and time at which the Ezsign folder was sent the last time. (required).</param>
+        /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed..</param>
+        /// <param name="dtEzsignfolderSentdate">The date and time at which the Ezsign folder was sent the last time..</param>
         /// <param name="dtEzsignfolderScheduledarchive">The scheduled date and time at which the Ezsignfolder should be archived. (required).</param>
         /// <param name="dtEzsignfolderScheduleddestruction">The scheduled date and time at which the Ezsignfolder should be Destroyed. (required).</param>
         /// <param name="eEzsignfolderStep">eEzsignfolderStep (required).</param>
@@ -157,27 +157,6 @@ namespace eZmaxApi.Model
                 this.EEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
             }
 
-            // to ensure "dtEzsignfolderDuedate" is required (not null)
-            if (dtEzsignfolderDuedate == null)
-            {
-                throw new InvalidDataException("dtEzsignfolderDuedate is a required property for EzsignfolderResponseCompound and cannot be null");
-            }
-            else
-            {
-                this.DtEzsignfolderDuedate = dtEzsignfolderDuedate;
-            }
-
-            // to ensure "dtEzsignfolderSentdate" is required (not null)
-            if (dtEzsignfolderSentdate == null)
-            {
-                throw new InvalidDataException("dtEzsignfolderSentdate is a required property for EzsignfolderResponseCompound and cannot be null");
-            }
-            else
-            {
-                this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
-            }
-
-            this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
             // to ensure "dtEzsignfolderScheduledarchive" is required (not null)
             if (dtEzsignfolderScheduledarchive == null)
             {
@@ -228,6 +207,8 @@ namespace eZmaxApi.Model
                 this.ObjAudit = objAudit;
             }
 
+            this.DtEzsignfolderDuedate = dtEzsignfolderDuedate;
+            this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
         }
 
         /// <summary>
@@ -303,14 +284,14 @@ namespace eZmaxApi.Model
         /// The maximum date and time at which the Ezsignfolder can be signed.
         /// </summary>
         /// <value>The maximum date and time at which the Ezsignfolder can be signed.</value>
-        [DataMember(Name="dtEzsignfolderDuedate", EmitDefaultValue=true)]
+        [DataMember(Name="dtEzsignfolderDuedate", EmitDefaultValue=false)]
         public string DtEzsignfolderDuedate { get; set; }
 
         /// <summary>
         /// The date and time at which the Ezsign folder was sent the last time.
         /// </summary>
         /// <value>The date and time at which the Ezsign folder was sent the last time.</value>
-        [DataMember(Name="dtEzsignfolderSentdate", EmitDefaultValue=true)]
+        [DataMember(Name="dtEzsignfolderSentdate", EmitDefaultValue=false)]
         public string DtEzsignfolderSentdate { get; set; }
 
         /// <summary>

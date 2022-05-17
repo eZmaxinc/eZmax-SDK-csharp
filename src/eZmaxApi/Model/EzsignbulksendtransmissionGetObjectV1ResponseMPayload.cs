@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getObject API Request
+    /// Payload for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}
     /// </summary>
     [DataContract]
     public partial class EzsignbulksendtransmissionGetObjectV1ResponseMPayload :  IEquatable<EzsignbulksendtransmissionGetObjectV1ResponseMPayload>, IValidatableObject
@@ -43,7 +43,8 @@ namespace eZmaxApi.Model
         /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
         /// <param name="iEzsignbulksendtransmissionErrors">The number of errors during the Ezsignbulksendtransmission (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public EzsignbulksendtransmissionGetObjectV1ResponseMPayload(int pkiEzsignbulksendtransmissionID = default(int), int fkiEzsignbulksendID = default(int), string sEzsignbulksendtransmissionDescription = default(string), int iEzsignbulksendtransmissionErrors = default(int), CommonAudit objAudit = default(CommonAudit))
+        /// <param name="aObjEzsignfoldertransmission">aObjEzsignfoldertransmission (required).</param>
+        public EzsignbulksendtransmissionGetObjectV1ResponseMPayload(int pkiEzsignbulksendtransmissionID = default(int), int fkiEzsignbulksendID = default(int), string sEzsignbulksendtransmissionDescription = default(string), int iEzsignbulksendtransmissionErrors = default(int), CommonAudit objAudit = default(CommonAudit), List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission = default(List<CustomEzsignfoldertransmissionResponse>))
         {
             // to ensure "pkiEzsignbulksendtransmissionID" is required (not null)
             if (pkiEzsignbulksendtransmissionID == null)
@@ -95,6 +96,16 @@ namespace eZmaxApi.Model
                 this.ObjAudit = objAudit;
             }
 
+            // to ensure "aObjEzsignfoldertransmission" is required (not null)
+            if (aObjEzsignfoldertransmission == null)
+            {
+                throw new InvalidDataException("aObjEzsignfoldertransmission is a required property for EzsignbulksendtransmissionGetObjectV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsignfoldertransmission = aObjEzsignfoldertransmission;
+            }
+
         }
 
         /// <summary>
@@ -132,6 +143,12 @@ namespace eZmaxApi.Model
         public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjEzsignfoldertransmission
+        /// </summary>
+        [DataMember(Name="a_objEzsignfoldertransmission", EmitDefaultValue=true)]
+        public List<CustomEzsignfoldertransmissionResponse> AObjEzsignfoldertransmission { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -144,6 +161,7 @@ namespace eZmaxApi.Model
             sb.Append("  SEzsignbulksendtransmissionDescription: ").Append(SEzsignbulksendtransmissionDescription).Append("\n");
             sb.Append("  IEzsignbulksendtransmissionErrors: ").Append(IEzsignbulksendtransmissionErrors).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
+            sb.Append("  AObjEzsignfoldertransmission: ").Append(AObjEzsignfoldertransmission).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -202,6 +220,12 @@ namespace eZmaxApi.Model
                     this.ObjAudit == input.ObjAudit ||
                     (this.ObjAudit != null &&
                     this.ObjAudit.Equals(input.ObjAudit))
+                ) && 
+                (
+                    this.AObjEzsignfoldertransmission == input.AObjEzsignfoldertransmission ||
+                    this.AObjEzsignfoldertransmission != null &&
+                    input.AObjEzsignfoldertransmission != null &&
+                    this.AObjEzsignfoldertransmission.SequenceEqual(input.AObjEzsignfoldertransmission)
                 );
         }
 
@@ -224,6 +248,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IEzsignbulksendtransmissionErrors.GetHashCode();
                 if (this.ObjAudit != null)
                     hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
+                if (this.AObjEzsignfoldertransmission != null)
+                    hashCode = hashCode * 59 + this.AObjEzsignfoldertransmission.GetHashCode();
                 return hashCode;
             }
         }

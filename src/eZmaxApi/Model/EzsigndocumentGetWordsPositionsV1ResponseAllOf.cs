@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -38,7 +38,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1ResponseAllOf" /> class.
         /// </summary>
-        /// <param name="mPayload">Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request (required).</param>
+        /// <param name="mPayload">Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions (required).</param>
         public EzsigndocumentGetWordsPositionsV1ResponseAllOf(List<CustomWordPositionWordResponse> mPayload = default(List<CustomWordPositionWordResponse>))
         {
             // to ensure "mPayload" is required (not null)
@@ -54,9 +54,9 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+        /// Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
         /// </summary>
-        /// <value>Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request</value>
+        /// <value>Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions</value>
         [DataMember(Name="mPayload", EmitDefaultValue=true)]
         public List<CustomWordPositionWordResponse> MPayload { get; set; }
 

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -38,38 +38,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentlogResponseCompound" /> class.
         /// </summary>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
         /// <param name="dtEzsigndocumentlogDatetime">The date and time at which the event was logged (required).</param>
         /// <param name="eEzsigndocumentlogType">eEzsigndocumentlogType (required).</param>
         /// <param name="sEzsigndocumentlogDetail">The detail of the Ezsigndocumentlog (required).</param>
         /// <param name="sEzsigndocumentlogLastname">The last name of the User or Ezsignsigner (required).</param>
         /// <param name="sEzsigndocumentlogFirstname">The first name of the User or Ezsignsigner (required).</param>
         /// <param name="sEzsigndocumentlogIP">Represent an IP address. (required).</param>
-        public EzsigndocumentlogResponseCompound(int? fkiUserID = default(int?), int? fkiEzsignsignerID = default(int?), string dtEzsigndocumentlogDatetime = default(string), FieldEEzsigndocumentlogType eEzsigndocumentlogType = default(FieldEEzsigndocumentlogType), string sEzsigndocumentlogDetail = default(string), string sEzsigndocumentlogLastname = default(string), string sEzsigndocumentlogFirstname = default(string), string sEzsigndocumentlogIP = default(string))
+        public EzsigndocumentlogResponseCompound(int fkiUserID = default(int), int fkiEzsignsignerID = default(int), string dtEzsigndocumentlogDatetime = default(string), FieldEEzsigndocumentlogType eEzsigndocumentlogType = default(FieldEEzsigndocumentlogType), string sEzsigndocumentlogDetail = default(string), string sEzsigndocumentlogLastname = default(string), string sEzsigndocumentlogFirstname = default(string), string sEzsigndocumentlogIP = default(string))
         {
-            // to ensure "fkiUserID" is required (not null)
-            if (fkiUserID == null)
-            {
-                throw new InvalidDataException("fkiUserID is a required property for EzsigndocumentlogResponseCompound and cannot be null");
-            }
-            else
-            {
-                this.FkiUserID = fkiUserID;
-            }
-
-            this.FkiUserID = fkiUserID;
-            // to ensure "fkiEzsignsignerID" is required (not null)
-            if (fkiEzsignsignerID == null)
-            {
-                throw new InvalidDataException("fkiEzsignsignerID is a required property for EzsigndocumentlogResponseCompound and cannot be null");
-            }
-            else
-            {
-                this.FkiEzsignsignerID = fkiEzsignsignerID;
-            }
-
-            this.FkiEzsignsignerID = fkiEzsignsignerID;
             // to ensure "dtEzsigndocumentlogDatetime" is required (not null)
             if (dtEzsigndocumentlogDatetime == null)
             {
@@ -130,21 +108,23 @@ namespace eZmaxApi.Model
                 this.SEzsigndocumentlogIP = sEzsigndocumentlogIP;
             }
 
+            this.FkiUserID = fkiUserID;
+            this.FkiEzsignsignerID = fkiEzsignsignerID;
         }
 
         /// <summary>
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        [DataMember(Name="fkiUserID", EmitDefaultValue=true)]
-        public int? FkiUserID { get; set; }
+        [DataMember(Name="fkiUserID", EmitDefaultValue=false)]
+        public int FkiUserID { get; set; }
 
         /// <summary>
         /// The unique ID of the Ezsignsigner
         /// </summary>
         /// <value>The unique ID of the Ezsignsigner</value>
-        [DataMember(Name="fkiEzsignsignerID", EmitDefaultValue=true)]
-        public int? FkiEzsignsignerID { get; set; }
+        [DataMember(Name="fkiEzsignsignerID", EmitDefaultValue=false)]
+        public int FkiEzsignsignerID { get; set; }
 
         /// <summary>
         /// The date and time at which the event was logged

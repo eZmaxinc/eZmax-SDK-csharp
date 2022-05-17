@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -65,6 +65,14 @@ namespace eZmaxApi.Test
         }
 
 
+        /// <summary>
+        /// Test the property 'MPayload'
+        /// </summary>
+        [Test]
+        public void MPayloadTest()
+        {
+            // TODO unit test for the property 'MPayload'
+        }
         /// <summary>
         /// Test the property 'ObjDebugPayload'
         /// </summary>

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -90,6 +90,29 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <returns>ApiResponse of EzsignfoldersignerassociationDeleteObjectV1Response</returns>
         ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo (int pkiEzsignfoldersignerassociationID);
+        /// <summary>
+        /// Edit an existing Ezsignfoldersignerassociation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
+        /// <returns>EzsignfoldersignerassociationEditObjectV1Response</returns>
+        EzsignfoldersignerassociationEditObjectV1Response EzsignfoldersignerassociationEditObjectV1 (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request);
+
+        /// <summary>
+        /// Edit an existing Ezsignfoldersignerassociation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
+        /// <returns>ApiResponse of EzsignfoldersignerassociationEditObjectV1Response</returns>
+        ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> EzsignfoldersignerassociationEditObjectV1WithHttpInfo (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request);
         /// <summary>
         /// Retrieve a Login Url to allow In-Person signing
         /// </summary>
@@ -205,6 +228,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationDeleteObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response>> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Edit an existing Ezsignfoldersignerassociation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfoldersignerassociationEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsignfoldersignerassociationEditObjectV1Response> EzsignfoldersignerassociationEditObjectV1Async (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Edit an existing Ezsignfoldersignerassociation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationEditObjectV1Response>> EzsignfoldersignerassociationEditObjectV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve a Login Url to allow In-Person signing
         /// </summary>
@@ -831,6 +879,179 @@ namespace eZmaxApi.Api
             return new ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignfoldersignerassociationDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldersignerassociationDeleteObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsignfoldersignerassociation 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
+        /// <returns>EzsignfoldersignerassociationEditObjectV1Response</returns>
+        public EzsignfoldersignerassociationEditObjectV1Response EzsignfoldersignerassociationEditObjectV1 (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request)
+        {
+             ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> localVarResponse = EzsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsignfoldersignerassociation 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
+        /// <returns>ApiResponse of EzsignfoldersignerassociationEditObjectV1Response</returns>
+        public ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> EzsignfoldersignerassociationEditObjectV1WithHttpInfo (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request)
+        {
+            // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+            if (pkiEzsignfoldersignerassociationID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfoldersignerassociationID' when calling ObjectEzsignfoldersignerassociationApi->EzsignfoldersignerassociationEditObjectV1");
+            // verify the required parameter 'ezsignfoldersignerassociationEditObjectV1Request' is set
+            if (ezsignfoldersignerassociationEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfoldersignerassociationEditObjectV1Request' when calling ObjectEzsignfoldersignerassociationApi->EzsignfoldersignerassociationEditObjectV1");
+
+            var localVarPath = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfoldersignerassociationID != null) localVarPathParams.Add("pkiEzsignfoldersignerassociationID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfoldersignerassociationID)); // path parameter
+            if (ezsignfoldersignerassociationEditObjectV1Request != null && ezsignfoldersignerassociationEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfoldersignerassociationEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfoldersignerassociationEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfoldersignerassociationEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfoldersignerassociationEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfoldersignerassociationEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldersignerassociationEditObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsignfoldersignerassociation 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsignfoldersignerassociationEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationEditObjectV1Response> EzsignfoldersignerassociationEditObjectV1Async (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> localVarResponse = await EzsignfoldersignerassociationEditObjectV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Edit an existing Ezsignfoldersignerassociation 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationEditObjectV1Response>> EzsignfoldersignerassociationEditObjectV1WithHttpInfoAsync (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+            if (pkiEzsignfoldersignerassociationID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsignfoldersignerassociationID' when calling ObjectEzsignfoldersignerassociationApi->EzsignfoldersignerassociationEditObjectV1");
+            // verify the required parameter 'ezsignfoldersignerassociationEditObjectV1Request' is set
+            if (ezsignfoldersignerassociationEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'ezsignfoldersignerassociationEditObjectV1Request' when calling ObjectEzsignfoldersignerassociationApi->EzsignfoldersignerassociationEditObjectV1");
+
+            var localVarPath = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsignfoldersignerassociationID != null) localVarPathParams.Add("pkiEzsignfoldersignerassociationID", this.Configuration.ApiClient.ParameterToString(pkiEzsignfoldersignerassociationID)); // path parameter
+            if (ezsignfoldersignerassociationEditObjectV1Request != null && ezsignfoldersignerassociationEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(ezsignfoldersignerassociationEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ezsignfoldersignerassociationEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsignfoldersignerassociationEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsignfoldersignerassociationEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsignfoldersignerassociationEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldersignerassociationEditObjectV1Response)));
         }
 
         /// <summary>

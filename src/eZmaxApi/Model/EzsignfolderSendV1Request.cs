@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request
+    /// Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
     /// </summary>
     [DataContract]
     public partial class EzsignfolderSendV1Request :  IEquatable<EzsignfolderSendV1Request>, IValidatableObject
@@ -38,7 +38,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderSendV1Request" /> class.
         /// </summary>
-        /// <param name="tExtraMessage">A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent. (required).</param>
+        /// <param name="tExtraMessage">A custom text message that will be added to the email sent. (required).</param>
         public EzsignfolderSendV1Request(string tExtraMessage = default(string))
         {
             // to ensure "tExtraMessage" is required (not null)
@@ -54,9 +54,9 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent.
+        /// A custom text message that will be added to the email sent.
         /// </summary>
-        /// <value>A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent.</value>
+        /// <value>A custom text message that will be added to the email sent.</value>
         [DataMember(Name="tExtraMessage", EmitDefaultValue=true)]
         public string TExtraMessage { get; set; }
 

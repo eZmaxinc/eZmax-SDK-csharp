@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## FranchisebrokerGetAutocompleteV1
 
-> CommonGetAutocompleteV1Response FranchisebrokerGetAutocompleteV1 (string sSelector, string sQuery = null)
+> CommonGetAutocompleteV1Response FranchisebrokerGetAutocompleteV1 (string sSelector, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
 
 Retrieve Franchisebrokers and IDs
 
@@ -40,11 +40,12 @@ namespace Example
             var apiInstance = new ObjectFranchisebrokerApi(Configuration.Default);
             var sSelector = "Active";  // string | The type of Franchisebrokers to return
             var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
+            var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
 
             try
             {
                 // Retrieve Franchisebrokers and IDs
-                CommonGetAutocompleteV1Response result = apiInstance.FranchisebrokerGetAutocompleteV1(sSelector, sQuery);
+                CommonGetAutocompleteV1Response result = apiInstance.FranchisebrokerGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -65,6 +66,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **string**| The type of Franchisebrokers to return | 
  **sQuery** | **string**| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
 
 ### Return type
 

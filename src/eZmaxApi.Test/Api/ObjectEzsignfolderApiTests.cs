@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -64,6 +64,32 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
+        /// Test EzsignfolderArchiveV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderArchiveV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //Object body = null;
+            //var response = instance.EzsignfolderArchiveV1(pkiEzsignfolderID, body);
+            //Assert.IsInstanceOf(typeof(EzsignfolderArchiveV1Response), response, "response is EzsignfolderArchiveV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsignfolderBatchDownloadV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderBatchDownloadV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request = null;
+            //var response = instance.EzsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
+            //Assert.IsInstanceOf(typeof(System.IO.Stream), response, "response is System.IO.Stream");
+        }
+        
+        /// <summary>
         /// Test EzsignfolderCreateObjectV1
         /// </summary>
         [Test]
@@ -110,6 +136,18 @@ namespace eZmaxApi.Test
             //EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request = null;
             //var response = instance.EzsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
             //Assert.IsInstanceOf(typeof(EzsignfolderEditObjectV1Response), response, "response is EzsignfolderEditObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsignfolderGetActionableElementsV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderGetActionableElementsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //var response = instance.EzsignfolderGetActionableElementsV1(pkiEzsignfolderID);
+            //Assert.IsInstanceOf(typeof(EzsignfolderGetActionableElementsV1Response), response, "response is EzsignfolderGetActionableElementsV1Response");
         }
         
         /// <summary>
@@ -174,6 +212,32 @@ namespace eZmaxApi.Test
             //int pkiEzsignfolderID = null;
             //var response = instance.EzsignfolderGetObjectV1(pkiEzsignfolderID);
             //Assert.IsInstanceOf(typeof(EzsignfolderGetObjectV1Response), response, "response is EzsignfolderGetObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsignfolderImportEzsigntemplatepackageV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderImportEzsigntemplatepackageV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request = null;
+            //var response = instance.EzsignfolderImportEzsigntemplatepackageV1(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV1Request);
+            //Assert.IsInstanceOf(typeof(EzsignfolderImportEzsigntemplatepackageV1Response), response, "response is EzsignfolderImportEzsigntemplatepackageV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsignfolderReorderV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderReorderV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //EzsignfolderReorderV1Request ezsignfolderReorderV1Request = null;
+            //var response = instance.EzsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request);
+            //Assert.IsInstanceOf(typeof(EzsignfolderReorderV1Response), response, "response is EzsignfolderReorderV1Response");
         }
         
         /// <summary>

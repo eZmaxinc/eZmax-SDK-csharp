@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
+    /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
     /// </summary>
     [DataContract]
     public partial class EzsigndocumentGetTemporaryProofV1ResponseMPayload :  IEquatable<EzsigndocumentGetTemporaryProofV1ResponseMPayload>, IValidatableObject
@@ -39,7 +39,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigndocumentGetTemporaryProofV1ResponseMPayload" /> class.
         /// </summary>
         /// <param name="aObjEzsigndocumentlog">aObjEzsigndocumentlog (required).</param>
-        public EzsigndocumentGetTemporaryProofV1ResponseMPayload(EzsigndocumentlogResponseCompound aObjEzsigndocumentlog = default(EzsigndocumentlogResponseCompound))
+        public EzsigndocumentGetTemporaryProofV1ResponseMPayload(List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog = default(List<EzsigndocumentlogResponseCompound>))
         {
             // to ensure "aObjEzsigndocumentlog" is required (not null)
             if (aObjEzsigndocumentlog == null)
@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjEzsigndocumentlog
         /// </summary>
         [DataMember(Name="a_objEzsigndocumentlog", EmitDefaultValue=true)]
-        public EzsigndocumentlogResponseCompound AObjEzsigndocumentlog { get; set; }
+        public List<EzsigndocumentlogResponseCompound> AObjEzsigndocumentlog { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -104,8 +104,9 @@ namespace eZmaxApi.Model
             return 
                 (
                     this.AObjEzsigndocumentlog == input.AObjEzsigndocumentlog ||
-                    (this.AObjEzsigndocumentlog != null &&
-                    this.AObjEzsigndocumentlog.Equals(input.AObjEzsigndocumentlog))
+                    this.AObjEzsigndocumentlog != null &&
+                    input.AObjEzsigndocumentlog != null &&
+                    this.AObjEzsigndocumentlog.SequenceEqual(input.AObjEzsigndocumentlog)
                 );
         }
 

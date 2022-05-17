@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -42,14 +42,14 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
         /// <param name="sEzsignbulksendDescription">The description of the Ezsignbulksend (required).</param>
         /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
+        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
         /// <param name="bEzsignbulksendIsactive">Whether the Ezsignbulksend is active or not (required).</param>
         /// <param name="iEzsignbulksendtransmission">The total number of Ezsignbulksendtransmissions in the Ezsignbulksend (required).</param>
         /// <param name="iEzsignfolder">The total number of Ezsignfolders in the Ezsignbulksend (required).</param>
         /// <param name="iEzsigndocument">The total number of Ezsigndocuments in the Ezsignbulksend (required).</param>
         /// <param name="iEzsignsignature">The total number of Ezsignsignature in the Ezsignbulksend (required).</param>
         /// <param name="iEzsignsignatureSigned">The total number of already signed Ezsignsignature blocks in the Ezsignbulksend (required).</param>
-        public EzsignbulksendListElement(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignbulksendDescription = default(string), string sEzsignfoldertypeNameX = default(string), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), bool bEzsignbulksendIsactive = default(bool), int iEzsignbulksendtransmission = default(int), int iEzsignfolder = default(int), int iEzsigndocument = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int))
+        public EzsignbulksendListElement(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignbulksendDescription = default(string), string sEzsignfoldertypeNameX = default(string), bool bEzsignbulksendNeedvalidation = default(bool), bool bEzsignbulksendIsactive = default(bool), int iEzsignbulksendtransmission = default(int), int iEzsignfolder = default(int), int iEzsigndocument = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int))
         {
             // to ensure "pkiEzsignbulksendID" is required (not null)
             if (pkiEzsignbulksendID == null)
@@ -91,14 +91,14 @@ namespace eZmaxApi.Model
                 this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             }
 
-            // to ensure "eEzsignfoldertypePrivacylevel" is required (not null)
-            if (eEzsignfoldertypePrivacylevel == null)
+            // to ensure "bEzsignbulksendNeedvalidation" is required (not null)
+            if (bEzsignbulksendNeedvalidation == null)
             {
-                throw new InvalidDataException("eEzsignfoldertypePrivacylevel is a required property for EzsignbulksendListElement and cannot be null");
+                throw new InvalidDataException("bEzsignbulksendNeedvalidation is a required property for EzsignbulksendListElement and cannot be null");
             }
             else
             {
-                this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
+                this.BEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
             }
 
             // to ensure "bEzsignbulksendIsactive" is required (not null)
@@ -192,10 +192,11 @@ namespace eZmaxApi.Model
         public string SEzsignfoldertypeNameX { get; set; }
 
         /// <summary>
-        /// Gets or Sets EEzsignfoldertypePrivacylevel
+        /// Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
         /// </summary>
-        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
-        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
+        /// <value>Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation</value>
+        [DataMember(Name="bEzsignbulksendNeedvalidation", EmitDefaultValue=true)]
+        public bool BEzsignbulksendNeedvalidation { get; set; }
 
         /// <summary>
         /// Whether the Ezsignbulksend is active or not
@@ -251,7 +252,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
             sb.Append("  SEzsignbulksendDescription: ").Append(SEzsignbulksendDescription).Append("\n");
             sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
-            sb.Append("  EEzsignfoldertypePrivacylevel: ").Append(EEzsignfoldertypePrivacylevel).Append("\n");
+            sb.Append("  BEzsignbulksendNeedvalidation: ").Append(BEzsignbulksendNeedvalidation).Append("\n");
             sb.Append("  BEzsignbulksendIsactive: ").Append(BEzsignbulksendIsactive).Append("\n");
             sb.Append("  IEzsignbulksendtransmission: ").Append(IEzsignbulksendtransmission).Append("\n");
             sb.Append("  IEzsignfolder: ").Append(IEzsignfolder).Append("\n");
@@ -313,9 +314,9 @@ namespace eZmaxApi.Model
                     this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
                 ) && 
                 (
-                    this.EEzsignfoldertypePrivacylevel == input.EEzsignfoldertypePrivacylevel ||
-                    (this.EEzsignfoldertypePrivacylevel != null &&
-                    this.EEzsignfoldertypePrivacylevel.Equals(input.EEzsignfoldertypePrivacylevel))
+                    this.BEzsignbulksendNeedvalidation == input.BEzsignbulksendNeedvalidation ||
+                    (this.BEzsignbulksendNeedvalidation != null &&
+                    this.BEzsignbulksendNeedvalidation.Equals(input.BEzsignbulksendNeedvalidation))
                 ) && 
                 (
                     this.BEzsignbulksendIsactive == input.BEzsignbulksendIsactive ||
@@ -366,8 +367,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzsignbulksendDescription.GetHashCode();
                 if (this.SEzsignfoldertypeNameX != null)
                     hashCode = hashCode * 59 + this.SEzsignfoldertypeNameX.GetHashCode();
-                if (this.EEzsignfoldertypePrivacylevel != null)
-                    hashCode = hashCode * 59 + this.EEzsignfoldertypePrivacylevel.GetHashCode();
+                if (this.BEzsignbulksendNeedvalidation != null)
+                    hashCode = hashCode * 59 + this.BEzsignbulksendNeedvalidation.GetHashCode();
                 if (this.BEzsignbulksendIsactive != null)
                     hashCode = hashCode * 59 + this.BEzsignbulksendIsactive.GetHashCode();
                 if (this.IEzsignbulksendtransmission != null)

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -113,15 +113,27 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookResponse" /> class.
         /// </summary>
+        /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
         /// <param name="pkiWebhookID">The Webhook ID. This value is visible in the admin interface. (required).</param>
         /// <param name="eWebhookModule">The Module generating the Event. (required).</param>
         /// <param name="eWebhookEzsignevent">This Ezsign Event. This property will be set only if the Module is \&quot;Ezsign\&quot;..</param>
-        /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
-        /// <param name="sWebhookUrl">The url being called (required).</param>
-        /// <param name="sWebhookEmailfailed">The email that will receive the webhook in case all attempts fail. (required).</param>
         /// <param name="eWebhookManagementevent">This Management Event. This property will be set only if the Module is \&quot;Management\&quot;..</param>
-        public WebhookResponse(int pkiWebhookID = default(int), EWebhookModuleEnum eWebhookModule = default(EWebhookModuleEnum), EWebhookEzsigneventEnum? eWebhookEzsignevent = default(EWebhookEzsigneventEnum?), string pksCustomerCode = default(string), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), EWebhookManagementeventEnum? eWebhookManagementevent = default(EWebhookManagementeventEnum?))
+        /// <param name="sWebhookUrl">The url being called (required).</param>
+        /// <param name="bWebhookTest">Wheter the webhook received is a manual test or a real event (required).</param>
+        /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended for production use. (required).</param>
+        /// <param name="sWebhookEmailfailed">The email that will receive the webhook in case all attempts fail. (required).</param>
+        public WebhookResponse(string pksCustomerCode = default(string), int pkiWebhookID = default(int), EWebhookModuleEnum eWebhookModule = default(EWebhookModuleEnum), EWebhookEzsigneventEnum? eWebhookEzsignevent = default(EWebhookEzsigneventEnum?), EWebhookManagementeventEnum? eWebhookManagementevent = default(EWebhookManagementeventEnum?), string sWebhookUrl = default(string), bool bWebhookTest = default(bool), bool bWebhookSkipsslvalidation = default(bool), string sWebhookEmailfailed = default(string))
         {
+            // to ensure "pksCustomerCode" is required (not null)
+            if (pksCustomerCode == null)
+            {
+                throw new InvalidDataException("pksCustomerCode is a required property for WebhookResponse and cannot be null");
+            }
+            else
+            {
+                this.PksCustomerCode = pksCustomerCode;
+            }
+
             // to ensure "pkiWebhookID" is required (not null)
             if (pkiWebhookID == null)
             {
@@ -142,16 +154,6 @@ namespace eZmaxApi.Model
                 this.EWebhookModule = eWebhookModule;
             }
 
-            // to ensure "pksCustomerCode" is required (not null)
-            if (pksCustomerCode == null)
-            {
-                throw new InvalidDataException("pksCustomerCode is a required property for WebhookResponse and cannot be null");
-            }
-            else
-            {
-                this.PksCustomerCode = pksCustomerCode;
-            }
-
             // to ensure "sWebhookUrl" is required (not null)
             if (sWebhookUrl == null)
             {
@@ -160,6 +162,26 @@ namespace eZmaxApi.Model
             else
             {
                 this.SWebhookUrl = sWebhookUrl;
+            }
+
+            // to ensure "bWebhookTest" is required (not null)
+            if (bWebhookTest == null)
+            {
+                throw new InvalidDataException("bWebhookTest is a required property for WebhookResponse and cannot be null");
+            }
+            else
+            {
+                this.BWebhookTest = bWebhookTest;
+            }
+
+            // to ensure "bWebhookSkipsslvalidation" is required (not null)
+            if (bWebhookSkipsslvalidation == null)
+            {
+                throw new InvalidDataException("bWebhookSkipsslvalidation is a required property for WebhookResponse and cannot be null");
+            }
+            else
+            {
+                this.BWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
             }
 
             // to ensure "sWebhookEmailfailed" is required (not null)
@@ -177,6 +199,13 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
+        /// The customer code assigned to your account
+        /// </summary>
+        /// <value>The customer code assigned to your account</value>
+        [DataMember(Name="pksCustomerCode", EmitDefaultValue=true)]
+        public string PksCustomerCode { get; set; }
+
+        /// <summary>
         /// The Webhook ID. This value is visible in the admin interface.
         /// </summary>
         /// <value>The Webhook ID. This value is visible in the admin interface.</value>
@@ -185,12 +214,6 @@ namespace eZmaxApi.Model
 
 
 
-        /// <summary>
-        /// The customer code assigned to your account
-        /// </summary>
-        /// <value>The customer code assigned to your account</value>
-        [DataMember(Name="pksCustomerCode", EmitDefaultValue=true)]
-        public string PksCustomerCode { get; set; }
 
         /// <summary>
         /// The url being called
@@ -200,12 +223,25 @@ namespace eZmaxApi.Model
         public string SWebhookUrl { get; set; }
 
         /// <summary>
+        /// Wheter the webhook received is a manual test or a real event
+        /// </summary>
+        /// <value>Wheter the webhook received is a manual test or a real event</value>
+        [DataMember(Name="bWebhookTest", EmitDefaultValue=true)]
+        public bool BWebhookTest { get; set; }
+
+        /// <summary>
+        /// Wheter the server&#39;s SSL certificate should be validated or not. Not recommended for production use.
+        /// </summary>
+        /// <value>Wheter the server&#39;s SSL certificate should be validated or not. Not recommended for production use.</value>
+        [DataMember(Name="bWebhookSkipsslvalidation", EmitDefaultValue=true)]
+        public bool BWebhookSkipsslvalidation { get; set; }
+
+        /// <summary>
         /// The email that will receive the webhook in case all attempts fail.
         /// </summary>
         /// <value>The email that will receive the webhook in case all attempts fail.</value>
         [DataMember(Name="sWebhookEmailfailed", EmitDefaultValue=true)]
         public string SWebhookEmailfailed { get; set; }
-
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -215,13 +251,15 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebhookResponse {\n");
+            sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
             sb.Append("  PkiWebhookID: ").Append(PkiWebhookID).Append("\n");
             sb.Append("  EWebhookModule: ").Append(EWebhookModule).Append("\n");
             sb.Append("  EWebhookEzsignevent: ").Append(EWebhookEzsignevent).Append("\n");
-            sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
-            sb.Append("  SWebhookUrl: ").Append(SWebhookUrl).Append("\n");
-            sb.Append("  SWebhookEmailfailed: ").Append(SWebhookEmailfailed).Append("\n");
             sb.Append("  EWebhookManagementevent: ").Append(EWebhookManagementevent).Append("\n");
+            sb.Append("  SWebhookUrl: ").Append(SWebhookUrl).Append("\n");
+            sb.Append("  BWebhookTest: ").Append(BWebhookTest).Append("\n");
+            sb.Append("  BWebhookSkipsslvalidation: ").Append(BWebhookSkipsslvalidation).Append("\n");
+            sb.Append("  SWebhookEmailfailed: ").Append(SWebhookEmailfailed).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -257,6 +295,11 @@ namespace eZmaxApi.Model
 
             return 
                 (
+                    this.PksCustomerCode == input.PksCustomerCode ||
+                    (this.PksCustomerCode != null &&
+                    this.PksCustomerCode.Equals(input.PksCustomerCode))
+                ) && 
+                (
                     this.PkiWebhookID == input.PkiWebhookID ||
                     (this.PkiWebhookID != null &&
                     this.PkiWebhookID.Equals(input.PkiWebhookID))
@@ -272,9 +315,9 @@ namespace eZmaxApi.Model
                     this.EWebhookEzsignevent.Equals(input.EWebhookEzsignevent))
                 ) && 
                 (
-                    this.PksCustomerCode == input.PksCustomerCode ||
-                    (this.PksCustomerCode != null &&
-                    this.PksCustomerCode.Equals(input.PksCustomerCode))
+                    this.EWebhookManagementevent == input.EWebhookManagementevent ||
+                    (this.EWebhookManagementevent != null &&
+                    this.EWebhookManagementevent.Equals(input.EWebhookManagementevent))
                 ) && 
                 (
                     this.SWebhookUrl == input.SWebhookUrl ||
@@ -282,14 +325,19 @@ namespace eZmaxApi.Model
                     this.SWebhookUrl.Equals(input.SWebhookUrl))
                 ) && 
                 (
+                    this.BWebhookTest == input.BWebhookTest ||
+                    (this.BWebhookTest != null &&
+                    this.BWebhookTest.Equals(input.BWebhookTest))
+                ) && 
+                (
+                    this.BWebhookSkipsslvalidation == input.BWebhookSkipsslvalidation ||
+                    (this.BWebhookSkipsslvalidation != null &&
+                    this.BWebhookSkipsslvalidation.Equals(input.BWebhookSkipsslvalidation))
+                ) && 
+                (
                     this.SWebhookEmailfailed == input.SWebhookEmailfailed ||
                     (this.SWebhookEmailfailed != null &&
                     this.SWebhookEmailfailed.Equals(input.SWebhookEmailfailed))
-                ) && 
-                (
-                    this.EWebhookManagementevent == input.EWebhookManagementevent ||
-                    (this.EWebhookManagementevent != null &&
-                    this.EWebhookManagementevent.Equals(input.EWebhookManagementevent))
                 );
         }
 
@@ -302,20 +350,24 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PksCustomerCode != null)
+                    hashCode = hashCode * 59 + this.PksCustomerCode.GetHashCode();
                 if (this.PkiWebhookID != null)
                     hashCode = hashCode * 59 + this.PkiWebhookID.GetHashCode();
                 if (this.EWebhookModule != null)
                     hashCode = hashCode * 59 + this.EWebhookModule.GetHashCode();
                 if (this.EWebhookEzsignevent != null)
                     hashCode = hashCode * 59 + this.EWebhookEzsignevent.GetHashCode();
-                if (this.PksCustomerCode != null)
-                    hashCode = hashCode * 59 + this.PksCustomerCode.GetHashCode();
-                if (this.SWebhookUrl != null)
-                    hashCode = hashCode * 59 + this.SWebhookUrl.GetHashCode();
-                if (this.SWebhookEmailfailed != null)
-                    hashCode = hashCode * 59 + this.SWebhookEmailfailed.GetHashCode();
                 if (this.EWebhookManagementevent != null)
                     hashCode = hashCode * 59 + this.EWebhookManagementevent.GetHashCode();
+                if (this.SWebhookUrl != null)
+                    hashCode = hashCode * 59 + this.SWebhookUrl.GetHashCode();
+                if (this.BWebhookTest != null)
+                    hashCode = hashCode * 59 + this.BWebhookTest.GetHashCode();
+                if (this.BWebhookSkipsslvalidation != null)
+                    hashCode = hashCode * 59 + this.BWebhookSkipsslvalidation.GetHashCode();
+                if (this.SWebhookEmailfailed != null)
+                    hashCode = hashCode * 59 + this.SWebhookEmailfailed.GetHashCode();
                 return hashCode;
             }
         }

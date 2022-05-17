@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -33,7 +33,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureRequestCompoundAllOf" /> class.
         /// </summary>
-        /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;).</param>
+        /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
         /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
         public EzsignsignatureRequestCompoundAllOf(bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequestCompound>))
         {
@@ -42,9 +42,9 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;)
+        /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
         /// </summary>
-        /// <value>Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;)</value>
+        /// <value>Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)</value>
         [DataMember(Name="bEzsignsignatureCustomdate", EmitDefaultValue=false)]
         public bool BEzsignsignatureCustomdate { get; set; }
 

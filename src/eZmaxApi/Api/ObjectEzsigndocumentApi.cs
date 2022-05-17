@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -26,10 +26,10 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument.
+        /// Apply an Ezsigntemplate to the Ezsigndocument.
         /// </summary>
         /// <remarks>
-        /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -39,10 +39,10 @@ namespace eZmaxApi.Api
         EzsigndocumentApplyEzsigntemplateV1Response EzsigndocumentApplyEzsigntemplateV1 (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request);
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument.
+        /// Apply an Ezsigntemplate to the Ezsigndocument.
         /// </summary>
         /// <remarks>
-        /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -51,7 +51,7 @@ namespace eZmaxApi.Api
         [Obsolete]
         ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> EzsigndocumentApplyEzsigntemplateV1WithHttpInfo (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request);
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument.
+        /// Apply an Ezsigntemplate to the Ezsigndocument.
         /// </summary>
         /// <remarks>
         /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
@@ -63,7 +63,7 @@ namespace eZmaxApi.Api
         EzsigndocumentApplyEzsigntemplateV2Response EzsigndocumentApplyEzsigntemplateV2 (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request);
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument.
+        /// Apply an Ezsigntemplate to the Ezsigndocument.
         /// </summary>
         /// <remarks>
         /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
@@ -208,6 +208,27 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigndocumentEndPrematurelyV1Response</returns>
         ApiResponse<EzsigndocumentEndPrematurelyV1Response> EzsigndocumentEndPrematurelyV1WithHttpInfo (int pkiEzsigndocumentID, Object body);
         /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <returns>EzsigndocumentGetActionableElementsV1Response</returns>
+        EzsigndocumentGetActionableElementsV1Response EzsigndocumentGetActionableElementsV1 (int pkiEzsigndocumentID);
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <returns>ApiResponse of EzsigndocumentGetActionableElementsV1Response</returns>
+        ApiResponse<EzsigndocumentGetActionableElementsV1Response> EzsigndocumentGetActionableElementsV1WithHttpInfo (int pkiEzsigndocumentID);
+        /// <summary>
         /// Retrieve a URL to download documents.
         /// </summary>
         /// <remarks>
@@ -231,7 +252,7 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigndocumentGetDownloadUrlV1Response</returns>
         ApiResponse<EzsigndocumentGetDownloadUrlV1Response> EzsigndocumentGetDownloadUrlV1WithHttpInfo (int pkiEzsigndocumentID, string eDocumentType);
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
+        /// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
         /// </summary>
         /// <remarks>
         /// 
@@ -242,7 +263,7 @@ namespace eZmaxApi.Api
         EzsigndocumentGetEzsignformfieldgroupsV1Response EzsigndocumentGetEzsignformfieldgroupsV1 (int pkiEzsigndocumentID);
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
+        /// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
         /// </summary>
         /// <remarks>
         /// 
@@ -252,7 +273,7 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigndocumentGetEzsignformfieldgroupsV1Response</returns>
         ApiResponse<EzsigndocumentGetEzsignformfieldgroupsV1Response> EzsigndocumentGetEzsignformfieldgroupsV1WithHttpInfo (int pkiEzsigndocumentID);
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+        /// Retrieve an existing Ezsigndocument's Ezsignpages
         /// </summary>
         /// <remarks>
         /// 
@@ -263,7 +284,7 @@ namespace eZmaxApi.Api
         EzsigndocumentGetEzsignpagesV1Response EzsigndocumentGetEzsignpagesV1 (int pkiEzsigndocumentID);
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+        /// Retrieve an existing Ezsigndocument's Ezsignpages
         /// </summary>
         /// <remarks>
         /// 
@@ -273,7 +294,7 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigndocumentGetEzsignpagesV1Response</returns>
         ApiResponse<EzsigndocumentGetEzsignpagesV1Response> EzsigndocumentGetEzsignpagesV1WithHttpInfo (int pkiEzsigndocumentID);
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures
+        /// Retrieve an existing Ezsigndocument's Ezsignsignatures
         /// </summary>
         /// <remarks>
         /// 
@@ -284,7 +305,7 @@ namespace eZmaxApi.Api
         EzsigndocumentGetEzsignsignaturesV1Response EzsigndocumentGetEzsignsignaturesV1 (int pkiEzsigndocumentID);
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures
+        /// Retrieve an existing Ezsigndocument's Ezsignsignatures
         /// </summary>
         /// <remarks>
         /// 
@@ -294,7 +315,7 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigndocumentGetEzsignsignaturesV1Response</returns>
         ApiResponse<EzsigndocumentGetEzsignsignaturesV1Response> EzsigndocumentGetEzsignsignaturesV1WithHttpInfo (int pkiEzsigndocumentID);
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data
+        /// Retrieve an existing Ezsigndocument's Form Data
         /// </summary>
         /// <remarks>
         /// 
@@ -305,7 +326,7 @@ namespace eZmaxApi.Api
         EzsigndocumentGetFormDataV1Response EzsigndocumentGetFormDataV1 (int pkiEzsigndocumentID);
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data
+        /// Retrieve an existing Ezsigndocument's Form Data
         /// </summary>
         /// <remarks>
         /// 
@@ -339,7 +360,7 @@ namespace eZmaxApi.Api
         /// Retrieve the temporary proof
         /// </summary>
         /// <remarks>
-        /// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
+        /// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -350,7 +371,7 @@ namespace eZmaxApi.Api
         /// Retrieve the temporary proof
         /// </summary>
         /// <remarks>
-        /// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
+        /// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -402,13 +423,36 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentPatchObjectV1Request"></param>
         /// <returns>ApiResponse of EzsigndocumentPatchObjectV1Response</returns>
         ApiResponse<EzsigndocumentPatchObjectV1Response> EzsigndocumentPatchObjectV1WithHttpInfo (int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request);
+        /// <summary>
+        /// Unsend the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="body"></param>
+        /// <returns>EzsigndocumentUnsendV1Response</returns>
+        EzsigndocumentUnsendV1Response EzsigndocumentUnsendV1 (int pkiEzsigndocumentID, Object body);
+
+        /// <summary>
+        /// Unsend the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of EzsigndocumentUnsendV1Response</returns>
+        ApiResponse<EzsigndocumentUnsendV1Response> EzsigndocumentUnsendV1WithHttpInfo (int pkiEzsigndocumentID, Object body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument.
+        /// Apply an Ezsigntemplate to the Ezsigndocument.
         /// </summary>
         /// <remarks>
-        /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -419,10 +463,10 @@ namespace eZmaxApi.Api
         System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateV1Response> EzsigndocumentApplyEzsigntemplateV1Async (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument.
+        /// Apply an Ezsigntemplate to the Ezsigndocument.
         /// </summary>
         /// <remarks>
-        /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -432,7 +476,7 @@ namespace eZmaxApi.Api
         [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response>> EzsigndocumentApplyEzsigntemplateV1WithHttpInfoAsync (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument.
+        /// Apply an Ezsigntemplate to the Ezsigndocument.
         /// </summary>
         /// <remarks>
         /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
@@ -445,7 +489,7 @@ namespace eZmaxApi.Api
         System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateV2Response> EzsigndocumentApplyEzsigntemplateV2Async (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument.
+        /// Apply an Ezsigntemplate to the Ezsigndocument.
         /// </summary>
         /// <remarks>
         /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
@@ -603,6 +647,29 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsigndocumentEndPrematurelyV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentEndPrematurelyV1Response>> EzsigndocumentEndPrematurelyV1WithHttpInfoAsync (int pkiEzsigndocumentID, Object body, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigndocumentGetActionableElementsV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentGetActionableElementsV1Response> EzsigndocumentGetActionableElementsV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigndocumentGetActionableElementsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetActionableElementsV1Response>> EzsigndocumentGetActionableElementsV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
         /// Retrieve a URL to download documents.
         /// </summary>
         /// <remarks>
@@ -628,7 +695,7 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsigndocumentGetDownloadUrlV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetDownloadUrlV1Response>> EzsigndocumentGetDownloadUrlV1WithHttpInfoAsync (int pkiEzsigndocumentID, string eDocumentType, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
+        /// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
         /// </summary>
         /// <remarks>
         /// 
@@ -651,7 +718,7 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsigndocumentGetEzsignformfieldgroupsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetEzsignformfieldgroupsV1Response>> EzsigndocumentGetEzsignformfieldgroupsV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+        /// Retrieve an existing Ezsigndocument's Ezsignpages
         /// </summary>
         /// <remarks>
         /// 
@@ -674,7 +741,7 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsigndocumentGetEzsignpagesV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetEzsignpagesV1Response>> EzsigndocumentGetEzsignpagesV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures
+        /// Retrieve an existing Ezsigndocument's Ezsignsignatures
         /// </summary>
         /// <remarks>
         /// 
@@ -697,7 +764,7 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsigndocumentGetEzsignsignaturesV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetEzsignsignaturesV1Response>> EzsigndocumentGetEzsignsignaturesV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data
+        /// Retrieve an existing Ezsigndocument's Form Data
         /// </summary>
         /// <remarks>
         /// 
@@ -746,7 +813,7 @@ namespace eZmaxApi.Api
         /// Retrieve the temporary proof
         /// </summary>
         /// <remarks>
-        /// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
+        /// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -758,7 +825,7 @@ namespace eZmaxApi.Api
         /// Retrieve the temporary proof
         /// </summary>
         /// <remarks>
-        /// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
+        /// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -815,6 +882,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigndocumentPatchObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentPatchObjectV1Response>> EzsigndocumentPatchObjectV1WithHttpInfoAsync (int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Unsend the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigndocumentUnsendV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentUnsendV1Response> EzsigndocumentUnsendV1Async (int pkiEzsigndocumentID, Object body, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Unsend the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigndocumentUnsendV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentUnsendV1Response>> EzsigndocumentUnsendV1WithHttpInfoAsync (int pkiEzsigndocumentID, Object body, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -927,7 +1019,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument. This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// Apply an Ezsigntemplate to the Ezsigndocument. This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -941,7 +1033,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument. This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// Apply an Ezsigntemplate to the Ezsigndocument. This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1014,7 +1106,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument. This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// Apply an Ezsigntemplate to the Ezsigndocument. This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1030,7 +1122,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument. This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// Apply an Ezsigntemplate to the Ezsigndocument. This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1104,7 +1196,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// Apply an Ezsigntemplate to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1117,7 +1209,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// Apply an Ezsigntemplate to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1189,7 +1281,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// Apply an Ezsigntemplate to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -1204,7 +1296,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Apply an Ezsign Template to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// Apply an Ezsigntemplate to the Ezsigndocument. This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2267,6 +2359,151 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <returns>EzsigndocumentGetActionableElementsV1Response</returns>
+        public EzsigndocumentGetActionableElementsV1Response EzsigndocumentGetActionableElementsV1 (int pkiEzsigndocumentID)
+        {
+             ApiResponse<EzsigndocumentGetActionableElementsV1Response> localVarResponse = EzsigndocumentGetActionableElementsV1WithHttpInfo(pkiEzsigndocumentID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <returns>ApiResponse of EzsigndocumentGetActionableElementsV1Response</returns>
+        public ApiResponse<EzsigndocumentGetActionableElementsV1Response> EzsigndocumentGetActionableElementsV1WithHttpInfo (int pkiEzsigndocumentID)
+        {
+            // verify the required parameter 'pkiEzsigndocumentID' is set
+            if (pkiEzsigndocumentID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigndocumentID' when calling ObjectEzsigndocumentApi->EzsigndocumentGetActionableElementsV1");
+
+            var localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigndocumentID != null) localVarPathParams.Add("pkiEzsigndocumentID", this.Configuration.ApiClient.ParameterToString(pkiEzsigndocumentID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigndocumentGetActionableElementsV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigndocumentGetActionableElementsV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigndocumentGetActionableElementsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigndocumentGetActionableElementsV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigndocumentGetActionableElementsV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentGetActionableElementsV1Response> EzsigndocumentGetActionableElementsV1Async (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsigndocumentGetActionableElementsV1Response> localVarResponse = await EzsigndocumentGetActionableElementsV1WithHttpInfoAsync(pkiEzsigndocumentID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigndocumentGetActionableElementsV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetActionableElementsV1Response>> EzsigndocumentGetActionableElementsV1WithHttpInfoAsync (int pkiEzsigndocumentID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsigndocumentID' is set
+            if (pkiEzsigndocumentID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigndocumentID' when calling ObjectEzsigndocumentApi->EzsigndocumentGetActionableElementsV1");
+
+            var localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigndocumentID != null) localVarPathParams.Add("pkiEzsigndocumentID", this.Configuration.ApiClient.ParameterToString(pkiEzsigndocumentID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigndocumentGetActionableElementsV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigndocumentGetActionableElementsV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigndocumentGetActionableElementsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigndocumentGetActionableElementsV1Response)));
+        }
+
+        /// <summary>
         /// Retrieve a URL to download documents. This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2424,7 +2661,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups 
+        /// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2436,7 +2673,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups 
+        /// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2495,7 +2732,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups 
+        /// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2509,7 +2746,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups 
+        /// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2569,7 +2806,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages 
+        /// Retrieve an existing Ezsigndocument's Ezsignpages 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2581,7 +2818,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages 
+        /// Retrieve an existing Ezsigndocument's Ezsignpages 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2640,7 +2877,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages 
+        /// Retrieve an existing Ezsigndocument's Ezsignpages 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2654,7 +2891,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignpages 
+        /// Retrieve an existing Ezsigndocument's Ezsignpages 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2714,7 +2951,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures 
+        /// Retrieve an existing Ezsigndocument's Ezsignsignatures 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2726,7 +2963,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures 
+        /// Retrieve an existing Ezsigndocument's Ezsignsignatures 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2785,7 +3022,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures 
+        /// Retrieve an existing Ezsigndocument's Ezsignsignatures 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2799,7 +3036,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures 
+        /// Retrieve an existing Ezsigndocument's Ezsignsignatures 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2859,7 +3096,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data 
+        /// Retrieve an existing Ezsigndocument's Form Data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2871,7 +3108,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data 
+        /// Retrieve an existing Ezsigndocument's Form Data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2932,7 +3169,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data 
+        /// Retrieve an existing Ezsigndocument's Form Data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -2946,7 +3183,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Ezsigndocument&#39;s Form Data 
+        /// Retrieve an existing Ezsigndocument's Form Data 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -3153,7 +3390,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve the temporary proof Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
+        /// Retrieve the temporary proof Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -3165,7 +3402,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve the temporary proof Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
+        /// Retrieve the temporary proof Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -3224,7 +3461,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve the temporary proof Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
+        /// Retrieve the temporary proof Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -3238,7 +3475,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve the temporary proof Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
+        /// Retrieve the temporary proof Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
@@ -3641,6 +3878,179 @@ namespace eZmaxApi.Api
             return new ApiResponse<EzsigndocumentPatchObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigndocumentPatchObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigndocumentPatchObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Unsend the Ezsigndocument Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="body"></param>
+        /// <returns>EzsigndocumentUnsendV1Response</returns>
+        public EzsigndocumentUnsendV1Response EzsigndocumentUnsendV1 (int pkiEzsigndocumentID, Object body)
+        {
+             ApiResponse<EzsigndocumentUnsendV1Response> localVarResponse = EzsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Unsend the Ezsigndocument Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of EzsigndocumentUnsendV1Response</returns>
+        public ApiResponse<EzsigndocumentUnsendV1Response> EzsigndocumentUnsendV1WithHttpInfo (int pkiEzsigndocumentID, Object body)
+        {
+            // verify the required parameter 'pkiEzsigndocumentID' is set
+            if (pkiEzsigndocumentID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigndocumentID' when calling ObjectEzsigndocumentApi->EzsigndocumentUnsendV1");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ObjectEzsigndocumentApi->EzsigndocumentUnsendV1");
+
+            var localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigndocumentID != null) localVarPathParams.Add("pkiEzsigndocumentID", this.Configuration.ApiClient.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigndocumentUnsendV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigndocumentUnsendV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigndocumentUnsendV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigndocumentUnsendV1Response)));
+        }
+
+        /// <summary>
+        /// Unsend the Ezsigndocument Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigndocumentUnsendV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentUnsendV1Response> EzsigndocumentUnsendV1Async (int pkiEzsigndocumentID, Object body, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsigndocumentUnsendV1Response> localVarResponse = await EzsigndocumentUnsendV1WithHttpInfoAsync(pkiEzsigndocumentID, body, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Unsend the Ezsigndocument Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigndocumentUnsendV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigndocumentUnsendV1Response>> EzsigndocumentUnsendV1WithHttpInfoAsync (int pkiEzsigndocumentID, Object body, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsigndocumentID' is set
+            if (pkiEzsigndocumentID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigndocumentID' when calling ObjectEzsigndocumentApi->EzsigndocumentUnsendV1");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ObjectEzsigndocumentApi->EzsigndocumentUnsendV1");
+
+            var localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigndocumentID != null) localVarPathParams.Add("pkiEzsigndocumentID", this.Configuration.ApiClient.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigndocumentUnsendV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigndocumentUnsendV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigndocumentUnsendV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigndocumentUnsendV1Response)));
         }
 
     }

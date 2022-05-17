@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for the /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData API Request
+    /// Payload for GET /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData
     /// </summary>
     [DataContract]
     public partial class EzsignfolderGetFormsDataV1ResponseMPayload :  IEquatable<EzsignfolderGetFormsDataV1ResponseMPayload>, IValidatableObject
@@ -38,62 +38,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetFormsDataV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
-        /// <param name="aObjFormDataDocument">aObjFormDataDocument (required).</param>
-        public EzsignfolderGetFormsDataV1ResponseMPayload(int pkiEzsignfolderID = default(int), string sEzsignfolderDescription = default(string), List<CustomFormDataDocumentResponse> aObjFormDataDocument = default(List<CustomFormDataDocumentResponse>))
+        /// <param name="objFormsDataFolder">objFormsDataFolder (required).</param>
+        public EzsignfolderGetFormsDataV1ResponseMPayload(CustomFormsDataFolderResponse objFormsDataFolder = default(CustomFormsDataFolderResponse))
         {
-            // to ensure "pkiEzsignfolderID" is required (not null)
-            if (pkiEzsignfolderID == null)
+            // to ensure "objFormsDataFolder" is required (not null)
+            if (objFormsDataFolder == null)
             {
-                throw new InvalidDataException("pkiEzsignfolderID is a required property for EzsignfolderGetFormsDataV1ResponseMPayload and cannot be null");
+                throw new InvalidDataException("objFormsDataFolder is a required property for EzsignfolderGetFormsDataV1ResponseMPayload and cannot be null");
             }
             else
             {
-                this.PkiEzsignfolderID = pkiEzsignfolderID;
-            }
-
-            // to ensure "sEzsignfolderDescription" is required (not null)
-            if (sEzsignfolderDescription == null)
-            {
-                throw new InvalidDataException("sEzsignfolderDescription is a required property for EzsignfolderGetFormsDataV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.SEzsignfolderDescription = sEzsignfolderDescription;
-            }
-
-            // to ensure "aObjFormDataDocument" is required (not null)
-            if (aObjFormDataDocument == null)
-            {
-                throw new InvalidDataException("aObjFormDataDocument is a required property for EzsignfolderGetFormsDataV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.AObjFormDataDocument = aObjFormDataDocument;
+                this.ObjFormsDataFolder = objFormsDataFolder;
             }
 
         }
 
         /// <summary>
-        /// The unique ID of the Ezsignfolder
+        /// Gets or Sets ObjFormsDataFolder
         /// </summary>
-        /// <value>The unique ID of the Ezsignfolder</value>
-        [DataMember(Name="pkiEzsignfolderID", EmitDefaultValue=true)]
-        public int PkiEzsignfolderID { get; set; }
-
-        /// <summary>
-        /// The description of the Ezsignfolder
-        /// </summary>
-        /// <value>The description of the Ezsignfolder</value>
-        [DataMember(Name="sEzsignfolderDescription", EmitDefaultValue=true)]
-        public string SEzsignfolderDescription { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AObjFormDataDocument
-        /// </summary>
-        [DataMember(Name="a_objFormDataDocument", EmitDefaultValue=true)]
-        public List<CustomFormDataDocumentResponse> AObjFormDataDocument { get; set; }
+        [DataMember(Name="objFormsDataFolder", EmitDefaultValue=true)]
+        public CustomFormsDataFolderResponse ObjFormsDataFolder { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -103,9 +67,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignfolderGetFormsDataV1ResponseMPayload {\n");
-            sb.Append("  PkiEzsignfolderID: ").Append(PkiEzsignfolderID).Append("\n");
-            sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
-            sb.Append("  AObjFormDataDocument: ").Append(AObjFormDataDocument).Append("\n");
+            sb.Append("  ObjFormsDataFolder: ").Append(ObjFormsDataFolder).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,20 +103,9 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.PkiEzsignfolderID == input.PkiEzsignfolderID ||
-                    (this.PkiEzsignfolderID != null &&
-                    this.PkiEzsignfolderID.Equals(input.PkiEzsignfolderID))
-                ) && 
-                (
-                    this.SEzsignfolderDescription == input.SEzsignfolderDescription ||
-                    (this.SEzsignfolderDescription != null &&
-                    this.SEzsignfolderDescription.Equals(input.SEzsignfolderDescription))
-                ) && 
-                (
-                    this.AObjFormDataDocument == input.AObjFormDataDocument ||
-                    this.AObjFormDataDocument != null &&
-                    input.AObjFormDataDocument != null &&
-                    this.AObjFormDataDocument.SequenceEqual(input.AObjFormDataDocument)
+                    this.ObjFormsDataFolder == input.ObjFormsDataFolder ||
+                    (this.ObjFormsDataFolder != null &&
+                    this.ObjFormsDataFolder.Equals(input.ObjFormsDataFolder))
                 );
         }
 
@@ -167,12 +118,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.PkiEzsignfolderID != null)
-                    hashCode = hashCode * 59 + this.PkiEzsignfolderID.GetHashCode();
-                if (this.SEzsignfolderDescription != null)
-                    hashCode = hashCode * 59 + this.SEzsignfolderDescription.GetHashCode();
-                if (this.AObjFormDataDocument != null)
-                    hashCode = hashCode * 59 + this.AObjFormDataDocument.GetHashCode();
+                if (this.ObjFormsDataFolder != null)
+                    hashCode = hashCode * 59 + this.ObjFormsDataFolder.GetHashCode();
                 return hashCode;
             }
         }

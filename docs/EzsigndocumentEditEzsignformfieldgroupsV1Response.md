@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**MPayload** | [**EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload**](EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload.md) |  | 
 **ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
 **ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 

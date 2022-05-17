@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the /2/object/apikey/createObject API Request
+    /// Response for POST /2/object/apikey
     /// </summary>
     [DataContract]
     public partial class ApikeyCreateObjectV2Response :  IEquatable<ApikeyCreateObjectV2Response>, IValidatableObject

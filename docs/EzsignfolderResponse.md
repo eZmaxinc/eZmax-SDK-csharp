@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **SEzsignfolderDescription** | **string** | The description of the Ezsignfolder | 
 **TEzsignfolderNote** | **string** | Note about the Ezsignfolder | 
 **EEzsignfolderSendreminderfrequency** | [**FieldEEzsignfolderSendreminderfrequency**](FieldEEzsignfolderSendreminderfrequency.md) |  | 
-**DtEzsignfolderDuedate** | **string** | The maximum date and time at which the Ezsignfolder can be signed. | 
-**DtEzsignfolderSentdate** | **string** | The date and time at which the Ezsign folder was sent the last time. | 
+**DtEzsignfolderDuedate** | **string** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 
+**DtEzsignfolderSentdate** | **string** | The date and time at which the Ezsign folder was sent the last time. | [optional] 
 **DtEzsignfolderScheduledarchive** | **string** | The scheduled date and time at which the Ezsignfolder should be archived. | 
 **DtEzsignfolderScheduleddestruction** | **string** | The scheduled date and time at which the Ezsignfolder should be Destroyed. | 
 **EEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  | 

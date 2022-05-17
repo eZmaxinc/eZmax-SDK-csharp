@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -66,6 +66,14 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
+        /// Test the property 'PksCustomerCode'
+        /// </summary>
+        [Test]
+        public void PksCustomerCodeTest()
+        {
+            // TODO unit test for the property 'PksCustomerCode'
+        }
+        /// <summary>
         /// Test the property 'PkiWebhookID'
         /// </summary>
         [Test]
@@ -90,12 +98,12 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'EWebhookEzsignevent'
         }
         /// <summary>
-        /// Test the property 'PksCustomerCode'
+        /// Test the property 'EWebhookManagementevent'
         /// </summary>
         [Test]
-        public void PksCustomerCodeTest()
+        public void EWebhookManagementeventTest()
         {
-            // TODO unit test for the property 'PksCustomerCode'
+            // TODO unit test for the property 'EWebhookManagementevent'
         }
         /// <summary>
         /// Test the property 'SWebhookUrl'
@@ -106,20 +114,28 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SWebhookUrl'
         }
         /// <summary>
+        /// Test the property 'BWebhookTest'
+        /// </summary>
+        [Test]
+        public void BWebhookTestTest()
+        {
+            // TODO unit test for the property 'BWebhookTest'
+        }
+        /// <summary>
+        /// Test the property 'BWebhookSkipsslvalidation'
+        /// </summary>
+        [Test]
+        public void BWebhookSkipsslvalidationTest()
+        {
+            // TODO unit test for the property 'BWebhookSkipsslvalidation'
+        }
+        /// <summary>
         /// Test the property 'SWebhookEmailfailed'
         /// </summary>
         [Test]
         public void SWebhookEmailfailedTest()
         {
             // TODO unit test for the property 'SWebhookEmailfailed'
-        }
-        /// <summary>
-        /// Test the property 'EWebhookManagementevent'
-        /// </summary>
-        [Test]
-        public void EWebhookManagementeventTest()
-        {
-            // TODO unit test for the property 'EWebhookManagementevent'
         }
 
     }

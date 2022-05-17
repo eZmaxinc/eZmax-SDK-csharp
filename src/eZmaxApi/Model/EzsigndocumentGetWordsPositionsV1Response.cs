@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+    /// Response for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
     /// </summary>
     [DataContract]
     public partial class EzsigndocumentGetWordsPositionsV1Response :  IEquatable<EzsigndocumentGetWordsPositionsV1Response>, IValidatableObject
@@ -38,7 +38,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Response" /> class.
         /// </summary>
-        /// <param name="mPayload">Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request (required).</param>
+        /// <param name="mPayload">Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions (required).</param>
         /// <param name="objDebugPayload">objDebugPayload.</param>
         /// <param name="objDebug">objDebug.</param>
         public EzsigndocumentGetWordsPositionsV1Response(List<CustomWordPositionWordResponse> mPayload = default(List<CustomWordPositionWordResponse>), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
@@ -58,9 +58,9 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+        /// Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
         /// </summary>
-        /// <value>Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request</value>
+        /// <value>Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions</value>
         [DataMember(Name="mPayload", EmitDefaultValue=true)]
         public List<CustomWordPositionWordResponse> MPayload { get; set; }
 

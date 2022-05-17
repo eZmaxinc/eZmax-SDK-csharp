@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -66,12 +66,12 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'EActivesessionSessiontype'
+        /// Test the property 'EActivesessionUsertype'
         /// </summary>
         [Test]
-        public void EActivesessionSessiontypeTest()
+        public void EActivesessionUsertypeTest()
         {
-            // TODO unit test for the property 'EActivesessionSessiontype'
+            // TODO unit test for the property 'EActivesessionUsertype'
         }
         /// <summary>
         /// Test the property 'EActivesessionWeekdaystart'

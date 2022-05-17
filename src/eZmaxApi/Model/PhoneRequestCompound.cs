@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -242,6 +242,15 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+
+
+            // SPhoneInternational (string) pattern
+            Regex regexSPhoneInternational = new Regex(@"^\\+[1-9]\\d{1,14}$", RegexOptions.CultureInvariant);
+            if (false == regexSPhoneInternational.Match(this.SPhoneInternational).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneInternational, must match a pattern of " + regexSPhoneInternational, new [] { "SPhoneInternational" });
+            }
+
             yield break;
         }
     }

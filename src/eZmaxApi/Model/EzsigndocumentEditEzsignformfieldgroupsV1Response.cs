@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups API Request
+    /// Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups
     /// </summary>
     [DataContract]
     public partial class EzsigndocumentEditEzsignformfieldgroupsV1Response :  IEquatable<EzsigndocumentEditEzsignformfieldgroupsV1Response>, IValidatableObject
@@ -33,13 +33,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignformfieldgroupsV1Response" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentEditEzsignformfieldgroupsV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignformfieldgroupsV1Response" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
         /// <param name="objDebugPayload">objDebugPayload.</param>
         /// <param name="objDebug">objDebug.</param>
-        public EzsigndocumentEditEzsignformfieldgroupsV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        public EzsigndocumentEditEzsignformfieldgroupsV1Response(EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload = default(EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
+            {
+                throw new InvalidDataException("mPayload is a required property for EzsigndocumentEditEzsignformfieldgroupsV1Response and cannot be null");
+            }
+            else
+            {
+                this.MPayload = mPayload;
+            }
+
             this.ObjDebugPayload = objDebugPayload;
             this.ObjDebug = objDebug;
         }
+
+        /// <summary>
+        /// Gets or Sets MPayload
+        /// </summary>
+        [DataMember(Name="mPayload", EmitDefaultValue=true)]
+        public EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjDebugPayload
@@ -61,6 +83,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsigndocumentEditEzsignformfieldgroupsV1Response {\n");
+            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
             sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
             sb.Append("}\n");
@@ -98,6 +121,11 @@ namespace eZmaxApi.Model
 
             return 
                 (
+                    this.MPayload == input.MPayload ||
+                    (this.MPayload != null &&
+                    this.MPayload.Equals(input.MPayload))
+                ) && 
+                (
                     this.ObjDebugPayload == input.ObjDebugPayload ||
                     (this.ObjDebugPayload != null &&
                     this.ObjDebugPayload.Equals(input.ObjDebugPayload))
@@ -118,6 +146,8 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.MPayload != null)
+                    hashCode = hashCode * 59 + this.MPayload.GetHashCode();
                 if (this.ObjDebugPayload != null)
                     hashCode = hashCode * 59 + this.ObjDebugPayload.GetHashCode();
                 if (this.ObjDebug != null)

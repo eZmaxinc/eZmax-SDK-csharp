@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FkiEzsigntemplateID** | **int** | The unique ID of the Ezsigndocument | 
+**FkiEzsigntemplateID** | **int** | The unique ID of the Ezsigntemplate | 
 **ASEzsigntemplatesigner** | **List&lt;string&gt;** |  | 
 **APkiEzsignfoldersignerassociationID** | **List&lt;int&gt;** |  | 
 

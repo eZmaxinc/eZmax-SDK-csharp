@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -122,6 +122,19 @@ namespace eZmaxApi.Test
             //int pkiEzsignsignatureID = null;
             //var response = instance.EzsignsignatureGetObjectV1(pkiEzsignsignatureID);
             //Assert.IsInstanceOf(typeof(EzsignsignatureGetObjectV1Response), response, "response is EzsignsignatureGetObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsignsignatureSignV1
+        /// </summary>
+        [Test]
+        public void EzsignsignatureSignV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignsignatureID = null;
+            //EzsignsignatureSignV1Request ezsignsignatureSignV1Request = null;
+            //var response = instance.EzsignsignatureSignV1(pkiEzsignsignatureID, ezsignsignatureSignV1Request);
+            //Assert.IsInstanceOf(typeof(EzsignsignatureSignV1Response), response, "response is EzsignsignatureSignV1Response");
         }
         
     }

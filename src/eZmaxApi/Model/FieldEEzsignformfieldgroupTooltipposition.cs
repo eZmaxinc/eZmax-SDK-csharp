@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -58,34 +58,28 @@ namespace eZmaxApi.Model
         MiddleLeft = 4,
 
         /// <summary>
-        /// Enum MiddleCenter for value: MiddleCenter
-        /// </summary>
-        [EnumMember(Value = "MiddleCenter")]
-        MiddleCenter = 5,
-
-        /// <summary>
         /// Enum MiddleRight for value: MiddleRight
         /// </summary>
         [EnumMember(Value = "MiddleRight")]
-        MiddleRight = 6,
+        MiddleRight = 5,
 
         /// <summary>
         /// Enum BottomLeft for value: BottomLeft
         /// </summary>
         [EnumMember(Value = "BottomLeft")]
-        BottomLeft = 7,
+        BottomLeft = 6,
 
         /// <summary>
         /// Enum BottomCenter for value: BottomCenter
         /// </summary>
         [EnumMember(Value = "BottomCenter")]
-        BottomCenter = 8,
+        BottomCenter = 7,
 
         /// <summary>
         /// Enum BottomRight for value: BottomRight
         /// </summary>
         [EnumMember(Value = "BottomRight")]
-        BottomRight = 9
+        BottomRight = 8
 
     }
 
