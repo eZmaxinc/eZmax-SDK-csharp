@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**EzsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**EzsignfolderCreateObjectV2**](ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv2) | **POST** /2/object/ezsignfolder | Create a new Ezsignfolder
 [**EzsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
+[**EzsignfolderDisposeEzsignfoldersV1**](ObjectEzsignfolderApi.md#ezsignfolderdisposeezsignfoldersv1) | **POST** /1/object/ezsignfolder/disposeEzsignfolders | Dispose Ezsignfolders
+[**EzsignfolderDisposeV1**](ObjectEzsignfolderApi.md#ezsignfolderdisposev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose | Dispose the Ezsignfolder
 [**EzsignfolderEditObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**EzsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**EzsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
@@ -417,6 +419,170 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The element you are trying to work on does not exist |  -  |
+| **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## EzsignfolderDisposeEzsignfoldersV1
+
+> EzsignfolderDisposeEzsignfoldersV1Response EzsignfolderDisposeEzsignfoldersV1 (EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request)
+
+Dispose Ezsignfolders
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfolderDisposeEzsignfoldersV1Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfolderApi(Configuration.Default);
+            var ezsignfolderDisposeEzsignfoldersV1Request = new EzsignfolderDisposeEzsignfoldersV1Request(); // EzsignfolderDisposeEzsignfoldersV1Request | 
+
+            try
+            {
+                // Dispose Ezsignfolders
+                EzsignfolderDisposeEzsignfoldersV1Response result = apiInstance.EzsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderDisposeEzsignfoldersV1: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignfolderDisposeEzsignfoldersV1Request** | [**EzsignfolderDisposeEzsignfoldersV1Request**](EzsignfolderDisposeEzsignfoldersV1Request.md)|  | 
+
+### Return type
+
+[**EzsignfolderDisposeEzsignfoldersV1Response**](EzsignfolderDisposeEzsignfoldersV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The element you are trying to work on does not exist |  -  |
+| **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## EzsignfolderDisposeV1
+
+> EzsignfolderDisposeV1Response EzsignfolderDisposeV1 (int pkiEzsignfolderID, Object body)
+
+Dispose the Ezsignfolder
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfolderDisposeV1Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfolderApi(Configuration.Default);
+            var pkiEzsignfolderID = 56;  // int | 
+            var body = null;  // Object | 
+
+            try
+            {
+                // Dispose the Ezsignfolder
+                EzsignfolderDisposeV1Response result = apiInstance.EzsignfolderDisposeV1(pkiEzsignfolderID, body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderDisposeV1: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **int**|  | 
+ **body** | **Object**|  | 
+
+### Return type
+
+[**EzsignfolderDisposeV1Response**](EzsignfolderDisposeV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
