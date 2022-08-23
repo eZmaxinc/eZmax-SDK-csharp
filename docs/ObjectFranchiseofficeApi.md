@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## FranchiseofficeGetAutocompleteV1
 
-> CommonGetAutocompleteV1Response FranchiseofficeGetAutocompleteV1 (string sSelector, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+> CommonGetAutocompleteV1Response FranchiseofficeGetAutocompleteV1 (string sSelector, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
 
 Retrieve Franchiseoffices and IDs
 
@@ -39,13 +39,14 @@ namespace Example
 
             var apiInstance = new ObjectFranchiseofficeApi(Configuration.Default);
             var sSelector = "Active";  // string | The type of Franchiseoffices to return
+            var eFilterActive = "All";  // string | Specify which results we want to display. (optional)  (default to Active)
             var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
             var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
 
             try
             {
                 // Retrieve Franchiseoffices and IDs
-                CommonGetAutocompleteV1Response result = apiInstance.FranchiseofficeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+                CommonGetAutocompleteV1Response result = apiInstance.FranchiseofficeGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -65,6 +66,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **string**| The type of Franchiseoffices to return | 
+ **eFilterActive** | **string**| Specify which results we want to display. | [optional] [default to Active]
  **sQuery** | **string**| Allow to filter the returned results | [optional] 
  **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
 

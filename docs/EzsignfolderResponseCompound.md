@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **DtEzsignfolderScheduleddispose** | **string** | The scheduled date at which the Ezsignfolder should be Disposed. | [optional] 
 **EEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  | 
 **DtEzsignfolderClose** | **string** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. | [optional] 
+**TEzsignfolderMessage** | **string** | A custom text message that will be added to the email sent. | 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

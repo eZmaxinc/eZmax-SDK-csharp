@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## EzsigntsarequirementGetAutocompleteV1
 
-> CommonGetAutocompleteDisabledV1Response EzsigntsarequirementGetAutocompleteV1 (string sSelector, int? fkiEzsignfoldertypeID = null, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+> CommonGetAutocompleteDisabledV1Response EzsigntsarequirementGetAutocompleteV1 (string sSelector, int? fkiEzsignfoldertypeID = null, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
 
 Retrieve Ezsigntsarequirements and IDs
 
@@ -40,13 +40,14 @@ namespace Example
             var apiInstance = new ObjectEzsigntsarequirementApi(Configuration.Default);
             var sSelector = "User";  // string | The type of Ezsigntsarequirements to return
             var fkiEzsignfoldertypeID = 56;  // int? |  (optional) 
+            var eFilterActive = "All";  // string | Specify which results we want to display. (optional)  (default to Active)
             var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
             var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
 
             try
             {
                 // Retrieve Ezsigntsarequirements and IDs
-                CommonGetAutocompleteDisabledV1Response result = apiInstance.EzsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, sQuery, acceptLanguage);
+                CommonGetAutocompleteDisabledV1Response result = apiInstance.EzsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -67,6 +68,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **string**| The type of Ezsigntsarequirements to return | 
  **fkiEzsignfoldertypeID** | **int?**|  | [optional] 
+ **eFilterActive** | **string**| Specify which results we want to display. | [optional] [default to Active]
  **sQuery** | **string**| Allow to filter the returned results | [optional] 
  **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
 
@@ -88,7 +90,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

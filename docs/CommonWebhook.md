@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjWebhook** | [**WebhookResponse**](WebhookResponse.md) |  | 
+**ObjWebhook** | [**CustomWebhookResponse**](CustomWebhookResponse.md) |  | 
 **AObjAttempt** | [**List&lt;AttemptResponseCompound&gt;**](AttemptResponseCompound.md) | An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

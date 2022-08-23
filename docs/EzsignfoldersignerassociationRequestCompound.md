@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **FkiUserID** | **int** | The unique ID of the User | [optional] 
 **FkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
 **BEzsignfoldersignerassociationReceivecopy** | **bool** | If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. | [optional] 
+**TEzsignfoldersignerassociationMessage** | **string** | A custom text message that will be added to the email sent. | [optional] 
 **ObjEzsignsigner** | [**EzsignsignerRequestCompound**](EzsignsignerRequestCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)

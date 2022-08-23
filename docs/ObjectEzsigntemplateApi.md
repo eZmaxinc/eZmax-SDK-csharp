@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The element you are trying to work on does not exist |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -248,8 +248,8 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The element you are trying to work on does not exist |  -  |
-| **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ## EzsigntemplateGetAutocompleteV1
 
-> CommonGetAutocompleteV1Response EzsigntemplateGetAutocompleteV1 (string sSelector, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+> CommonGetAutocompleteV1Response EzsigntemplateGetAutocompleteV1 (string sSelector, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
 
 Retrieve Ezsigntemplate and IDs
 
@@ -288,13 +288,14 @@ namespace Example
 
             var apiInstance = new ObjectEzsigntemplateApi(Configuration.Default);
             var sSelector = "All";  // string | The type of Ezsigntemplate to return
+            var eFilterActive = "All";  // string | Specify which results we want to display. (optional)  (default to Active)
             var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
             var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
 
             try
             {
                 // Retrieve Ezsigntemplate and IDs
-                CommonGetAutocompleteV1Response result = apiInstance.EzsigntemplateGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+                CommonGetAutocompleteV1Response result = apiInstance.EzsigntemplateGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -314,6 +315,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **string**| The type of Ezsigntemplate to return | 
+ **eFilterActive** | **string**| Specify which results we want to display. | [optional] [default to Active]
  **sQuery** | **string**| Allow to filter the returned results | [optional] 
  **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
 
@@ -424,7 +426,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **406** | One of the accept header is not defined or invalid. |  -  |
+| **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -504,7 +506,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The element you are trying to work on does not exist |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

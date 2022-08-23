@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjEzsignfoldersignerassociation** | [**List&lt;EzsignfoldersignerassociationResponseCompound&gt;**](EzsignfoldersignerassociationResponseCompound.md) |  | 
+**AObjEzsignfoldersignerassociation** | [**List&lt;CustomEzsignfoldersignerassociationActionableElementResponse&gt;**](CustomEzsignfoldersignerassociationActionableElementResponse.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

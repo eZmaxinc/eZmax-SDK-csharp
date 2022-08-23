@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **SLabel** | **string** | The Description of the element | 
 **SValue** | **string** | The Unique ID of the element | 
 **MValue** | **string** | The Unique ID of the element | [optional] 
+**BActive** | **bool** | Indicates if the element is active | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
