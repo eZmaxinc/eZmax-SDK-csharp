@@ -25,7 +25,7 @@ namespace eZmaxApi.Api
                                  dtDate;
 			
 			var sha256             = SHA256Managed.Create();
-			var bytesContentToHash = Encoding.Default.GetBytes(sContentToHash);
+			var bytesContentToHash = Encoding.UTF8.GetBytes(sContentToHash);
 			var bytesSha256        = sha256.ComputeHash(bytesContentToHash);
 			var fingerprintV1      = ToHexLowercaseWithBytes(bytesSha256);
 

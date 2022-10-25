@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**WebhookGetHistoryV1**](ObjectWebhookApi.md#webhookgethistoryv1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 [**WebhookGetListV1**](ObjectWebhookApi.md#webhookgetlistv1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 [**WebhookGetObjectV1**](ObjectWebhookApi.md#webhookgetobjectv1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
-[**WebhookTestUrlV1**](ObjectWebhookApi.md#webhooktesturlv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
+[**WebhookTestV1**](ObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
 
@@ -332,6 +332,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **429** | Too Many Requests |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -509,9 +510,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## WebhookTestUrlV1
+## WebhookTestV1
 
-> WebhookTestV1Response WebhookTestUrlV1 (int pkiWebhookID)
+> WebhookTestV1Response WebhookTestV1 (int pkiWebhookID, Object body)
 
 Test the Webhook by calling the Url
 
@@ -526,7 +527,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class WebhookTestUrlV1Example
+    public class WebhookTestV1Example
     {
         public static void Main()
         {
@@ -538,16 +539,17 @@ namespace Example
 
             var apiInstance = new ObjectWebhookApi(Configuration.Default);
             var pkiWebhookID = 56;  // int | 
+            var body = null;  // Object | 
 
             try
             {
                 // Test the Webhook by calling the Url
-                WebhookTestV1Response result = apiInstance.WebhookTestUrlV1(pkiWebhookID);
+                WebhookTestV1Response result = apiInstance.WebhookTestV1(pkiWebhookID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling ObjectWebhookApi.WebhookTestUrlV1: " + e.Message );
+                Debug.Print("Exception when calling ObjectWebhookApi.WebhookTestV1: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -562,6 +564,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiWebhookID** | **int**|  | 
+ **body** | **Object**|  | 
 
 ### Return type
 
@@ -573,7 +576,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
