@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **SEzsignfolderDescription** | **string** | The description of the Ezsignfolder | 
 **EEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  | 
 **DtCreatedDate** | **string** | The date and time at which the object was created | 
-**DtEzsignfolderSentdate** | **string** | The date and time at which the Ezsign folder was sent the last time. | [optional] 
+**DtEzsignfolderSentdate** | **string** | The date and time at which the Ezsignfolder was sent the last time. | [optional] 
 **DtEzsignfolderDuedate** | **string** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 
 **IEzsigndocument** | **int** | The total number of Ezsigndocument in the folder | 
 **IEzsigndocumentEdm** | **int** | The total number of Ezsigndocument in the folder that were saved in the edm system | 

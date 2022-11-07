@@ -375,6 +375,8 @@ docs/EzsignfolderSendV1Request.md
 docs/EzsignfolderSendV1Response.md
 docs/EzsignfolderSendV2Request.md
 docs/EzsignfolderSendV2Response.md
+docs/EzsignfolderSendV3Request.md
+docs/EzsignfolderSendV3Response.md
 docs/EzsignfolderUnsendV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1Request.md
 docs/EzsignfoldersignerassociationCreateObjectV1Response.md
@@ -397,9 +399,12 @@ docs/EzsignfoldersignerassociationGetObjectV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationGetObjectV2Response.md
 docs/EzsignfoldersignerassociationGetObjectV2ResponseAllOf.md
 docs/EzsignfoldersignerassociationGetObjectV2ResponseMPayload.md
+docs/EzsignfoldersignerassociationPatchObjectV1Request.md
+docs/EzsignfoldersignerassociationPatchObjectV1Response.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignfoldersignerassociationRequestPatch.md
 docs/EzsignfoldersignerassociationResponse.md
 docs/EzsignfoldersignerassociationResponseCompound.md
 docs/EzsignfoldersignerassociationResponseCompoundAllOf.md
@@ -1324,6 +1329,8 @@ src/eZmaxApi.Test/Model/EzsignfolderSendV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderSendV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderSendV2RequestTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderSendV2ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsignfolderSendV3RequestTests.cs
+src/eZmaxApi.Test/Model/EzsignfolderSendV3ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfolderUnsendV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationCreateObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationCreateObjectV1ResponseAllOfTests.cs
@@ -1346,8 +1353,11 @@ src/eZmaxApi.Test/Model/EzsignfoldersignerassociationGetObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationGetObjectV2ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationGetObjectV2ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationGetObjectV2ResponseTests.cs
+src/eZmaxApi.Test/Model/EzsignfoldersignerassociationPatchObjectV1RequestTests.cs
+src/eZmaxApi.Test/Model/EzsignfoldersignerassociationPatchObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestCompoundTests.cs
+src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestPatchTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationRequestTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationResponseCompoundAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsignfoldersignerassociationResponseCompoundTests.cs
@@ -2240,6 +2250,8 @@ src/eZmaxApi/Model/EzsignfolderSendV1Request.cs
 src/eZmaxApi/Model/EzsignfolderSendV1Response.cs
 src/eZmaxApi/Model/EzsignfolderSendV2Request.cs
 src/eZmaxApi/Model/EzsignfolderSendV2Response.cs
+src/eZmaxApi/Model/EzsignfolderSendV3Request.cs
+src/eZmaxApi/Model/EzsignfolderSendV3Response.cs
 src/eZmaxApi/Model/EzsignfolderUnsendV1Response.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationCreateObjectV1Request.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationCreateObjectV1Response.cs
@@ -2262,9 +2274,12 @@ src/eZmaxApi/Model/EzsignfoldersignerassociationGetObjectV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationGetObjectV2Response.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationGetObjectV2ResponseAllOf.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationGetObjectV2ResponseMPayload.cs
+src/eZmaxApi/Model/EzsignfoldersignerassociationPatchObjectV1Request.cs
+src/eZmaxApi/Model/EzsignfoldersignerassociationPatchObjectV1Response.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequest.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequestCompound.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationRequestCompoundAllOf.cs
+src/eZmaxApi/Model/EzsignfoldersignerassociationRequestPatch.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationResponse.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationResponseCompound.cs
 src/eZmaxApi/Model/EzsignfoldersignerassociationResponseCompoundAllOf.cs
