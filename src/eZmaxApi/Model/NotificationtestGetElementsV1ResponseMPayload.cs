@@ -42,7 +42,7 @@ namespace eZmaxApi.Model
         /// <param name="sNotificationtestFunction">The function name of the Notificationtest (required).</param>
         /// <param name="aSVariableobjectProperty">aSVariableobjectProperty.</param>
         /// <param name="aObjVariableobject">aObjVariableobject (required).</param>
-        public NotificationtestGetElementsV1ResponseMPayload(int pkiNotificationtestID = default(int), string sNotificationtestFunction = default(string), List<string> aSVariableobjectProperty = default(List<string>), List<Dictionary> aObjVariableobject = default(List<Dictionary>))
+        public NotificationtestGetElementsV1ResponseMPayload(int pkiNotificationtestID = default(int), string sNotificationtestFunction = default(string), List<string> aSVariableobjectProperty = default(List<string>), List<Dictionary<string, object>> aObjVariableobject = default(List<Dictionary<string, object>>))
         {
             // to ensure "pkiNotificationtestID" is required (not null)
             if (pkiNotificationtestID == null)
@@ -101,7 +101,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AObjVariableobject
         /// </summary>
         [DataMember(Name="a_objVariableobject", EmitDefaultValue=true)]
-        public List<Dictionary> AObjVariableobject { get; set; }
+        public List<Dictionary<string, object>> AObjVariableobject { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
