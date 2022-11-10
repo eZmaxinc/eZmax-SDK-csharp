@@ -502,6 +502,10 @@ docs/EzsignsignerResponseCompound.md
 docs/EzsignsignerResponseCompoundAllOf.md
 docs/EzsignsignerResponseCompoundContact.md
 docs/EzsigntemplateAutocompleteElementResponse.md
+docs/EzsigntemplateCopyV1Request.md
+docs/EzsigntemplateCopyV1Response.md
+docs/EzsigntemplateCopyV1ResponseAllOf.md
+docs/EzsigntemplateCopyV1ResponseMPayload.md
 docs/EzsigntemplateCreateObjectV1Request.md
 docs/EzsigntemplateCreateObjectV1Response.md
 docs/EzsigntemplateCreateObjectV1ResponseAllOf.md
@@ -1456,6 +1460,10 @@ src/eZmaxApi.Test/Model/EzsignsignerResponseCompoundContactTests.cs
 src/eZmaxApi.Test/Model/EzsignsignerResponseCompoundTests.cs
 src/eZmaxApi.Test/Model/EzsignsignerResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplateAutocompleteElementResponseTests.cs
+src/eZmaxApi.Test/Model/EzsigntemplateCopyV1RequestTests.cs
+src/eZmaxApi.Test/Model/EzsigntemplateCopyV1ResponseAllOfTests.cs
+src/eZmaxApi.Test/Model/EzsigntemplateCopyV1ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/EzsigntemplateCopyV1ResponseTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplateCreateObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplateCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/EzsigntemplateCreateObjectV1ResponseMPayloadTests.cs
@@ -2377,6 +2385,10 @@ src/eZmaxApi/Model/EzsignsignerResponseCompound.cs
 src/eZmaxApi/Model/EzsignsignerResponseCompoundAllOf.cs
 src/eZmaxApi/Model/EzsignsignerResponseCompoundContact.cs
 src/eZmaxApi/Model/EzsigntemplateAutocompleteElementResponse.cs
+src/eZmaxApi/Model/EzsigntemplateCopyV1Request.cs
+src/eZmaxApi/Model/EzsigntemplateCopyV1Response.cs
+src/eZmaxApi/Model/EzsigntemplateCopyV1ResponseAllOf.cs
+src/eZmaxApi/Model/EzsigntemplateCopyV1ResponseMPayload.cs
 src/eZmaxApi/Model/EzsigntemplateCreateObjectV1Request.cs
 src/eZmaxApi/Model/EzsigntemplateCreateObjectV1Response.cs
 src/eZmaxApi/Model/EzsigntemplateCreateObjectV1ResponseAllOf.cs
