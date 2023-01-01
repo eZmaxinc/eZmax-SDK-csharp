@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiEzmaxinvoicingcontractID** | **int** | The unique ID of the Ezmaxinvoicingcontract | 
-**EEzmaxinvoicingcontractPaymenttype** | [**FieldEEzmaxinvoicingcontractPaymenttype**](FieldEEzmaxinvoicingcontractPaymenttype.md) |  | 
+**EEzmaxinvoicingcontractPaymenttype** | **FieldEEzmaxinvoicingcontractPaymenttype** |  | 
 **IEzmaxinvoicingcontractLength** | **int** | The length in years of the Ezmaxinvoicingcontract | 
 **DtEzmaxinvoicingcontractStart** | **string** | The start date of the Ezmaxinvoicingcontract | 
 **DtEzmaxinvoicingcontractEnd** | **string** | The end date of the Ezmaxinvoicingcontract | 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **FkiLanguageID** | **int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **SEzsigndocumentName** | **string** | The name of the document that will be presented to Ezsignfoldersignerassociations | 
 **PkiEzsigndocumentID** | **int** | The unique ID of the Ezsigndocument | 
-**EEzsigndocumentStep** | [**FieldEEzsigndocumentStep**](FieldEEzsigndocumentStep.md) |  | 
+**EEzsigndocumentStep** | **FieldEEzsigndocumentStep** |  | 
 **DtEzsigndocumentFirstsend** | **string** | The date and time when the Ezsigndocument was first sent. | [optional] 
 **DtEzsigndocumentLastsend** | **string** | The date and time when the Ezsigndocument was sent the last time. | [optional] 
 **IEzsigndocumentOrder** | **int** | The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder. | 

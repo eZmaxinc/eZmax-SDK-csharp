@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ENotificationpreferenceStatus** | [**FieldENotificationpreferenceStatus**](FieldENotificationpreferenceStatus.md) |  | 
+**ENotificationpreferenceStatus** | **FieldENotificationpreferenceStatus** |  | 
 **INotificationtest** | **int** | The number of elements returned by the Notificationtest | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

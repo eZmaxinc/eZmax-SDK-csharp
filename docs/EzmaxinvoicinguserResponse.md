@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **IEzmaxinvoicinguserEzsigndocument** | **int** | The number of ezsign documents | 
 **BEzmaxinvoicinguserEzsignaccount** | **bool** | Whether there is an eZsign account | 
 **BEzmaxinvoicinguserBillableezsign** | **bool** | Whether it is billable for eZsign | 
-**EEzmaxinvoicinguserVariationezsign** | [**FieldEEzmaxinvoicinguserVariationezsign**](FieldEEzmaxinvoicinguserVariationezsign.md) |  | 
+**EEzmaxinvoicinguserVariationezsign** | **FieldEEzmaxinvoicinguserVariationezsign** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

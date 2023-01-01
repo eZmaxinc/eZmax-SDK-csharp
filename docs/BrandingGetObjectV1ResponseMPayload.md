@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **PkiBrandingID** | **int** | The unique ID of the Branding | 
 **ObjBrandingDescription** | [**MultilingualBrandingDescription**](MultilingualBrandingDescription.md) |  | 
 **SBrandingDescriptionX** | **string** | The Description of the Branding in the language of the requester | 
-**EBrandingLogo** | [**FieldEBrandingLogo**](FieldEBrandingLogo.md) |  | 
+**EBrandingLogo** | **FieldEBrandingLogo** |  | 
 **IBrandingColortext** | **int** | The color of the text. This is a RGB color converted into integer | 
 **IBrandingColortextlinkbox** | **int** | The color of the text in the link box. This is a RGB color converted into integer | 
 **IBrandingColortextbutton** | **int** | The color of the text in the button. This is a RGB color converted into integer | 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EUserType** | [**FieldEUserType**](FieldEUserType.md) |  | 
+**EUserType** | **FieldEUserType** |  | 
 **SUserName** | **string** | The description of the User in the language of the requester | 
 **PkiUserID** | **int** | The unique ID of the User | 
 **BUserIsactive** | **bool** | Whether the User is active or not | 

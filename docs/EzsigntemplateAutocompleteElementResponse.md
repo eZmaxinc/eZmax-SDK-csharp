@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  | 
+**EEzsignfoldertypePrivacylevel** | **FieldEEzsignfoldertypePrivacylevel** |  | 
 **SEzsigntemplateDescription** | **string** | The description of the Ezsigntemplate | 
 **PkiEzsigntemplateID** | **int** | The unique ID of the Ezsigntemplate | 
 **BEzsigntemplateIsactive** | **bool** | Whether the Ezsigntemplate is active or not | 

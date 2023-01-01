@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **SSystemconfigurationtypeDescriptionX** | **string** | The description of the Systemconfigurationtype in the language of the requester | 
 **YyyymmEzmaxinvoicing** | **string** | The YYYYMM period of the Ezmaxinvoicing | 
 **IEzmaxinvoicingDays** | **int** | The number of days invoiced | 
-**EEzmaxinvoicingPaymenttype** | [**FieldEEzmaxinvoicingPaymenttype**](FieldEEzmaxinvoicingPaymenttype.md) |  | 
+**EEzmaxinvoicingPaymenttype** | **FieldEEzmaxinvoicingPaymenttype** |  | 
 **DEzmaxinvoicingRebatepaymenttype** | **string** | The percentage of rebate depending of the payment type | 
 **IEzmaxinvoicingContractlength** | **int** | The length of the contract in years | 
 **DEzmaxinvoicingRebatecontractlength** | **string** | The percentage of rebate depending of the contract length | 

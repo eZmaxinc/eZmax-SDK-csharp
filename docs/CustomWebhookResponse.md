@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **SWebhookDescription** | **string** | The description of the Webhook | 
 **FkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | [optional] 
 **SEzsignfoldertypeNameX** | **string** | The name of the Ezsignfoldertype in the language of the requester | [optional] 
-**EWebhookModule** | [**FieldEWebhookModule**](FieldEWebhookModule.md) |  | 
-**EWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  | [optional] 
-**EWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  | [optional] 
+**EWebhookModule** | **FieldEWebhookModule** |  | 
+**EWebhookEzsignevent** | **FieldEWebhookEzsignevent** |  | [optional] 
+**EWebhookManagementevent** | **FieldEWebhookManagementevent** |  | [optional] 
 **SWebhookUrl** | **string** | The URL of the Webhook callback | 
 **SWebhookEmailfailed** | **string** | The email that will receive the Webhook in case all attempts fail | 
 **BWebhookIsactive** | **bool** | Whether the Webhook is active or not | [optional] 

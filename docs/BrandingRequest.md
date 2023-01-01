@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiBrandingID** | **int** | The unique ID of the Branding | [optional] 
 **ObjBrandingDescription** | [**MultilingualBrandingDescription**](MultilingualBrandingDescription.md) |  | 
-**EBrandingLogo** | [**FieldEBrandingLogo**](FieldEBrandingLogo.md) |  | 
+**EBrandingLogo** | **FieldEBrandingLogo** |  | 
 **SBrandingBase64** | **byte[]** | The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used. | [optional] 
 **IBrandingColortext** | **int** | The color of the text. This is a RGB color converted into integer | 
 **IBrandingColortextlinkbox** | **int** | The color of the text in the link box. This is a RGB color converted into integer | 

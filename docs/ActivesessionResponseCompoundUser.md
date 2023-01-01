@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **SUserFirstname** | **string** | The First name of the user | 
 **SUserLastname** | **string** | The Last name of the user | 
 **SEmailAddress** | **string** | The email address. | 
-**EUserEzsignsendreminderfrequency** | [**FieldEUserEzsignsendreminderfrequency**](FieldEUserEzsignsendreminderfrequency.md) |  | 
+**EUserEzsignsendreminderfrequency** | **FieldEUserEzsignsendreminderfrequency** |  | 
 **IUserInterfacecolor** | **int** | The int32 representation of the interface color. For example, RGB color #39435B would be 3752795 | 
 **BUserInterfacedark** | **bool** | Whether to use a dark mode interface | 
 **IUserListresult** | **int** | The number of rows to return by default in lists | 

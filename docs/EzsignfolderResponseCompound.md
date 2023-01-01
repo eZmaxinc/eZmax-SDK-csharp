@@ -15,13 +15,13 @@ Name | Type | Description | Notes
 **SEzsignfolderDescription** | **string** | The description of the Ezsignfolder | 
 **TEzsignfolderNote** | **string** | Note about the Ezsignfolder | 
 **BEzsignfolderIsdisposable** | **bool** | If the Ezsigndocument can be disposed | 
-**EEzsignfolderSendreminderfrequency** | [**FieldEEzsignfolderSendreminderfrequency**](FieldEEzsignfolderSendreminderfrequency.md) |  | 
+**EEzsignfolderSendreminderfrequency** | **FieldEEzsignfolderSendreminderfrequency** |  | 
 **DtEzsignfolderDelayedsenddate** | **string** | The date and time at which the Ezsignfolder will be sent in the future. | [optional] 
 **DtEzsignfolderDuedate** | **string** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 
 **DtEzsignfolderSentdate** | **string** | The date and time at which the Ezsignfolder was sent the last time. | [optional] 
 **DtEzsignfolderScheduledarchive** | **string** | The scheduled date and time at which the Ezsignfolder should be archived. | [optional] 
 **DtEzsignfolderScheduleddispose** | **string** | The scheduled date at which the Ezsignfolder should be Disposed. | [optional] 
-**EEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  | 
+**EEzsignfolderStep** | **FieldEEzsignfolderStep** |  | 
 **DtEzsignfolderClose** | **string** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. | [optional] 
 **TEzsignfolderMessage** | **string** | A custom text message that will be added to the email sent. | 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | 

@@ -22,9 +22,9 @@ Name | Type | Description | Notes
 **IEzmaxinvoicingagentEzsigndocument** | **int** | The number of ezsign documents | 
 **BEzmaxinvoicingagentEzsignaccount** | **bool** | Whether the agent has an eZsign account | 
 **BEzmaxinvoicingagentBillableezmax** | **bool** | Whether it is billable for eZmax | 
-**EEzmaxinvoicingagentVariationezmax** | [**FieldEEzmaxinvoicingagentVariationezmax**](FieldEEzmaxinvoicingagentVariationezmax.md) |  | 
+**EEzmaxinvoicingagentVariationezmax** | **FieldEEzmaxinvoicingagentVariationezmax** |  | 
 **BEzmaxinvoicingagentBillableezsign** | **bool** | Whether it is billable for eZsign | 
-**EEzmaxinvoicingagentVariationezsign** | [**FieldEEzmaxinvoicingagentVariationezsign**](FieldEEzmaxinvoicingagentVariationezsign.md) |  | 
+**EEzmaxinvoicingagentVariationezsign** | **FieldEEzmaxinvoicingagentVariationezsign** |  | 
 **ObjContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

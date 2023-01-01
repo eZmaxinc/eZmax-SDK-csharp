@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiEzsignformfieldgroupID** | **int** | The unique ID of the Ezsignformfieldgroup | 
 **FkiEzsigndocumentID** | **int** | The unique ID of the Ezsigndocument | 
-**EEzsignformfieldgroupType** | [**FieldEEzsignformfieldgroupType**](FieldEEzsignformfieldgroupType.md) |  | 
-**EEzsignformfieldgroupSignerrequirement** | [**FieldEEzsignformfieldgroupSignerrequirement**](FieldEEzsignformfieldgroupSignerrequirement.md) |  | 
+**EEzsignformfieldgroupType** | **FieldEEzsignformfieldgroupType** |  | 
+**EEzsignformfieldgroupSignerrequirement** | **FieldEEzsignformfieldgroupSignerrequirement** |  | 
 **SEzsignformfieldgroupLabel** | **string** | The Label for the Ezsignformfieldgroup | 
 **IEzsignformfieldgroupStep** | **int** | The step when the Ezsignsigner will be invited to fill the form fields | 
 **SEzsignformfieldgroupDefaultvalue** | **string** | The default value for the Ezsignformfieldgroup | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **BEzsignformfieldgroupEncrypted** | **bool** | Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** | [optional] 
 **SEzsignformfieldgroupRegexp** | **string** | A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** | [optional] 
 **TEzsignformfieldgroupTooltip** | **string** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup | [optional] 
-**EEzsignformfieldgroupTooltipposition** | [**FieldEEzsignformfieldgroupTooltipposition**](FieldEEzsignformfieldgroupTooltipposition.md) |  | [optional] 
+**EEzsignformfieldgroupTooltipposition** | **FieldEEzsignformfieldgroupTooltipposition** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

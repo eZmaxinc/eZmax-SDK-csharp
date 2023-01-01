@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **FkiModulesectionID** | **int** | The unique ID of the Modulesection | [optional] 
 **SModuleNameX** | **string** | The Name of the Module in the language of the requester | [optional] 
 **SModulesectionNameX** | **string** | The Name of the Modulesection in the language of the requester | [optional] 
-**EVersionhistoryUsertype** | [**FieldEVersionhistoryUsertype**](FieldEVersionhistoryUsertype.md) |  | [optional] 
+**EVersionhistoryUsertype** | **FieldEVersionhistoryUsertype** |  | [optional] 
 **ObjVersionhistoryDetail** | [**MultilingualVersionhistoryDetail**](MultilingualVersionhistoryDetail.md) |  | 
 **DtVersionhistoryDate** | **string** | The date  at which the Versionhistory was published or should be published | 
 **DtVersionhistoryDateend** | **string** | The date  at which the Versionhistory will no longer be visible | [optional] 
-**EVersionhistoryType** | [**FieldEVersionhistoryType**](FieldEVersionhistoryType.md) |  | 
+**EVersionhistoryType** | **FieldEVersionhistoryType** |  | 
 **BVersionhistoryDraft** | **bool** | Whether the Versionhistory is published or still a draft | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

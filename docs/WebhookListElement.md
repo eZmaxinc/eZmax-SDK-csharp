@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **SWebhookUrl** | **string** | The URL of the Webhook callback | 
 **SWebhookEvent** | **string** | The concatenated string to describe the Webhook event | 
 **SWebhookEmailfailed** | **string** | The email that will receive the Webhook in case all attempts fail | 
-**EWebhookModule** | [**FieldEWebhookModule**](FieldEWebhookModule.md) |  | 
-**EWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  | [optional] 
-**EWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  | [optional] 
+**EWebhookModule** | **FieldEWebhookModule** |  | 
+**EWebhookEzsignevent** | **FieldEWebhookEzsignevent** |  | [optional] 
+**EWebhookManagementevent** | **FieldEWebhookManagementevent** |  | [optional] 
 **BWebhookIsactive** | **bool** | Whether the Webhook is active or not | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

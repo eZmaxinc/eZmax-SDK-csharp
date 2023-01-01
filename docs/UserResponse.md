@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiUserID** | **int** | The unique ID of the User | 
 **FkiLanguageID** | **int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
-**EUserType** | [**FieldEUserType**](FieldEUserType.md) |  | 
+**EUserType** | **FieldEUserType** |  | 
 **SUserFirstname** | **string** | The First name of the user | 
 **SUserLastname** | **string** | The Last name of the user | 
 **SUserLoginname** | **string** | The Login name of the User. | 

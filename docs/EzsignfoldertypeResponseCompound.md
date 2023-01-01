@@ -19,10 +19,10 @@ Name | Type | Description | Notes
 **SEmailAddressSummary** | **string** | The email address. | [optional] 
 **SUsergroupNameX** | **string** | The Name of the Usergroup in the language of the requester | [optional] 
 **SUsergroupNameXRestricted** | **string** | The Name of the Usergroup in the language of the requester | [optional] 
-**EEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  | 
-**EEzsignfoldertypeSendreminderfrequency** | [**FieldEEzsignfoldertypeSendreminderfrequency**](FieldEEzsignfoldertypeSendreminderfrequency.md) |  | [optional] 
+**EEzsignfoldertypePrivacylevel** | **FieldEEzsignfoldertypePrivacylevel** |  | 
+**EEzsignfoldertypeSendreminderfrequency** | **FieldEEzsignfoldertypeSendreminderfrequency** |  | [optional] 
 **IEzsignfoldertypeArchivaldays** | **int** | The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype | 
-**EEzsignfoldertypeDisposal** | [**FieldEEzsignfoldertypeDisposal**](FieldEEzsignfoldertypeDisposal.md) |  | 
+**EEzsignfoldertypeDisposal** | **FieldEEzsignfoldertypeDisposal** |  | 
 **IEzsignfoldertypeDisposaldays** | **int** | The number of days after the archival before the disposal of the Ezsignfolder | [optional] 
 **IEzsignfoldertypeDeadlinedays** | **int** | The number of days to get all Ezsignsignatures | 
 **BEzsignfoldertypeSendattatchmentsigner** | **bool** | Whether we send the Ezsigndocument and the proof as attachment in the email | 

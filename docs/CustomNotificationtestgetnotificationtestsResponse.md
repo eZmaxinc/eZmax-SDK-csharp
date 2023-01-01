@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **FkiNotificationsubsectionID** | **int** | The unique ID of the Notificationsubsection | 
 **SNotificationtestFunction** | **string** | The function name of the Notificationtest | 
 **SNotificationtestNameX** | **string** | The name of the Notificationtest in the language of the requester | 
-**ENotificationpreferenceStatus** | [**FieldENotificationpreferenceStatus**](FieldENotificationpreferenceStatus.md) |  | 
+**ENotificationpreferenceStatus** | **FieldENotificationpreferenceStatus** |  | 
 **INotificationtest** | **int** | The number of elements returned by the Notificationtest | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

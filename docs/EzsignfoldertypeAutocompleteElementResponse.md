@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  | 
+**EEzsignfoldertypePrivacylevel** | **FieldEEzsignfoldertypePrivacylevel** |  | 
 **SEzsignfoldertypeNameX** | **string** | The name of the Ezsignfoldertype in the language of the requester | 
 **PkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | 
 **BEzsignfoldertypeIsactive** | **bool** | Whether the Ezsignfoldertype is active or not | 
