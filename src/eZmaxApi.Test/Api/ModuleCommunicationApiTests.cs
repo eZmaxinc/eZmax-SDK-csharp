@@ -70,23 +70,10 @@ namespace eZmaxApi.Test
         public void CommunicationGetCommunicationCountV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string eCommunicationModule = null;
+            //string eCommunicationObjecttype = null;
             //int? pkiEzsignfolderID = null;
-            //var response = instance.CommunicationGetCommunicationCountV1(eCommunicationModule, pkiEzsignfolderID);
+            //var response = instance.CommunicationGetCommunicationCountV1(eCommunicationObjecttype, pkiEzsignfolderID);
             //Assert.IsInstanceOf(typeof(CommunicationGetCountV1Response), response, "response is CommunicationGetCountV1Response");
-        }
-        
-        /// <summary>
-        /// Test CommunicationGetCommunicationListV1
-        /// </summary>
-        [Test]
-        public void CommunicationGetCommunicationListV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string eCommunicationModule = null;
-            //int? pkiEzsignfolderID = null;
-            //var response = instance.CommunicationGetCommunicationListV1(eCommunicationModule, pkiEzsignfolderID);
-            //Assert.IsInstanceOf(typeof(CommunicationGetListV1Response), response, "response is CommunicationGetListV1Response");
         }
         
     }

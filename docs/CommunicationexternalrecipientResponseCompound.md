@@ -6,10 +6,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiCommunicationexternalrecipientID** | **int** | The unique ID of the Communicationexternalrecipient | 
-**SEmailAddress** | **string** | The email address. | [optional] 
-**ObjPhoneSms** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  | [optional] 
 **ECommunicationexternalrecipientType** | **FieldECommunicationexternalrecipientType** |  | 
-**SCommunicationexternalrecipientName** | **string** | The Name of the Communicationexternalrecipient | 
+**ObjDescriptionstatic** | [**DescriptionstaticResponseCompound**](DescriptionstaticResponseCompound.md) |  | 
+**ObjEmailstatic** | [**EmailstaticResponseCompound**](EmailstaticResponseCompound.md) |  | [optional] 
+**ObjPhonestatic** | [**PhonestaticResponseCompound**](PhonestaticResponseCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

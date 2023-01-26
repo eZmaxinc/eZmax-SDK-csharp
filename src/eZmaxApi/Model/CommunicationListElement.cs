@@ -31,10 +31,15 @@ namespace eZmaxApi.Model
     public partial class CommunicationListElement :  IEquatable<CommunicationListElement>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets ECommunicationEmailimportance
+        /// Gets or Sets ECommunicationDirection
         /// </summary>
-        [DataMember(Name="eCommunicationEmailimportance", EmitDefaultValue=false)]
-        public FieldECommunicationEmailimportance? ECommunicationEmailimportance { get; set; }
+        [DataMember(Name="eCommunicationDirection", EmitDefaultValue=true)]
+        public ComputedECommunicationDirection ECommunicationDirection { get; set; }
+        /// <summary>
+        /// Gets or Sets ECommunicationImportance
+        /// </summary>
+        [DataMember(Name="eCommunicationImportance", EmitDefaultValue=true)]
+        public FieldECommunicationImportance ECommunicationImportance { get; set; }
         /// <summary>
         /// Gets or Sets ECommunicationType
         /// </summary>
@@ -49,12 +54,18 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CommunicationListElement" /> class.
         /// </summary>
         /// <param name="pkiCommunicationID">The unique ID of the Communication. (required).</param>
-        /// <param name="eCommunicationEmailimportance">eCommunicationEmailimportance.</param>
+        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder.</param>
+        /// <param name="fkiInscriptionID">The unique ID of the Inscription..</param>
+        /// <param name="fkiInscriptionnotauthenticatedID">The unique ID of the Inscriptionnotauthenticated..</param>
+        /// <param name="dtCreatedDate">The date and time at which the object was created (required).</param>
+        /// <param name="eCommunicationDirection">eCommunicationDirection (required).</param>
+        /// <param name="eCommunicationImportance">eCommunicationImportance (required).</param>
         /// <param name="eCommunicationType">eCommunicationType (required).</param>
-        /// <param name="sCommunicationSubject">The Subject of the Communication (required).</param>
-        /// <param name="dtCommunicationSentdate">The send date and time at which the Communication was sent. (required).</param>
-        /// <param name="objContactFrom">objContactFrom (required).</param>
-        public CommunicationListElement(int pkiCommunicationID = default(int), FieldECommunicationEmailimportance? eCommunicationEmailimportance = default(FieldECommunicationEmailimportance?), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), string sCommunicationSubject = default(string), string dtCommunicationSentdate = default(string), CustomContactNameResponse objContactFrom = default(CustomContactNameResponse))
+        /// <param name="iCommunicationrecipientCount">The count of Communicationrecipient (required).</param>
+        /// <param name="sCommunicationSubject">The subject of the Communication (required).</param>
+        /// <param name="sCommunicationSender">The sender name of the Communication (required).</param>
+        /// <param name="sCommunicationRecipient">The recipients&#39; name of the Communication (required).</param>
+        public CommunicationListElement(int pkiCommunicationID = default(int), int fkiEzsignfolderID = default(int), int fkiInscriptionID = default(int), int fkiInscriptionnotauthenticatedID = default(int), string dtCreatedDate = default(string), ComputedECommunicationDirection eCommunicationDirection = default(ComputedECommunicationDirection), FieldECommunicationImportance eCommunicationImportance = default(FieldECommunicationImportance), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), int iCommunicationrecipientCount = default(int), string sCommunicationSubject = default(string), string sCommunicationSender = default(string), string sCommunicationRecipient = default(string))
         {
             // to ensure "pkiCommunicationID" is required (not null)
             if (pkiCommunicationID == null)
@@ -64,6 +75,36 @@ namespace eZmaxApi.Model
             else
             {
                 this.PkiCommunicationID = pkiCommunicationID;
+            }
+
+            // to ensure "dtCreatedDate" is required (not null)
+            if (dtCreatedDate == null)
+            {
+                throw new InvalidDataException("dtCreatedDate is a required property for CommunicationListElement and cannot be null");
+            }
+            else
+            {
+                this.DtCreatedDate = dtCreatedDate;
+            }
+
+            // to ensure "eCommunicationDirection" is required (not null)
+            if (eCommunicationDirection == null)
+            {
+                throw new InvalidDataException("eCommunicationDirection is a required property for CommunicationListElement and cannot be null");
+            }
+            else
+            {
+                this.ECommunicationDirection = eCommunicationDirection;
+            }
+
+            // to ensure "eCommunicationImportance" is required (not null)
+            if (eCommunicationImportance == null)
+            {
+                throw new InvalidDataException("eCommunicationImportance is a required property for CommunicationListElement and cannot be null");
+            }
+            else
+            {
+                this.ECommunicationImportance = eCommunicationImportance;
             }
 
             // to ensure "eCommunicationType" is required (not null)
@@ -76,6 +117,16 @@ namespace eZmaxApi.Model
                 this.ECommunicationType = eCommunicationType;
             }
 
+            // to ensure "iCommunicationrecipientCount" is required (not null)
+            if (iCommunicationrecipientCount == null)
+            {
+                throw new InvalidDataException("iCommunicationrecipientCount is a required property for CommunicationListElement and cannot be null");
+            }
+            else
+            {
+                this.ICommunicationrecipientCount = iCommunicationrecipientCount;
+            }
+
             // to ensure "sCommunicationSubject" is required (not null)
             if (sCommunicationSubject == null)
             {
@@ -86,27 +137,29 @@ namespace eZmaxApi.Model
                 this.SCommunicationSubject = sCommunicationSubject;
             }
 
-            // to ensure "dtCommunicationSentdate" is required (not null)
-            if (dtCommunicationSentdate == null)
+            // to ensure "sCommunicationSender" is required (not null)
+            if (sCommunicationSender == null)
             {
-                throw new InvalidDataException("dtCommunicationSentdate is a required property for CommunicationListElement and cannot be null");
+                throw new InvalidDataException("sCommunicationSender is a required property for CommunicationListElement and cannot be null");
             }
             else
             {
-                this.DtCommunicationSentdate = dtCommunicationSentdate;
+                this.SCommunicationSender = sCommunicationSender;
             }
 
-            // to ensure "objContactFrom" is required (not null)
-            if (objContactFrom == null)
+            // to ensure "sCommunicationRecipient" is required (not null)
+            if (sCommunicationRecipient == null)
             {
-                throw new InvalidDataException("objContactFrom is a required property for CommunicationListElement and cannot be null");
+                throw new InvalidDataException("sCommunicationRecipient is a required property for CommunicationListElement and cannot be null");
             }
             else
             {
-                this.ObjContactFrom = objContactFrom;
+                this.SCommunicationRecipient = sCommunicationRecipient;
             }
 
-            this.ECommunicationEmailimportance = eCommunicationEmailimportance;
+            this.FkiEzsignfolderID = fkiEzsignfolderID;
+            this.FkiInscriptionID = fkiInscriptionID;
+            this.FkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
         }
 
         /// <summary>
@@ -116,27 +169,64 @@ namespace eZmaxApi.Model
         [DataMember(Name="pkiCommunicationID", EmitDefaultValue=true)]
         public int PkiCommunicationID { get; set; }
 
+        /// <summary>
+        /// The unique ID of the Ezsignfolder
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfolder</value>
+        [DataMember(Name="fkiEzsignfolderID", EmitDefaultValue=false)]
+        public int FkiEzsignfolderID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Inscription.
+        /// </summary>
+        /// <value>The unique ID of the Inscription.</value>
+        [DataMember(Name="fkiInscriptionID", EmitDefaultValue=false)]
+        public int FkiInscriptionID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Inscriptionnotauthenticated.
+        /// </summary>
+        /// <value>The unique ID of the Inscriptionnotauthenticated.</value>
+        [DataMember(Name="fkiInscriptionnotauthenticatedID", EmitDefaultValue=false)]
+        public int FkiInscriptionnotauthenticatedID { get; set; }
+
+        /// <summary>
+        /// The date and time at which the object was created
+        /// </summary>
+        /// <value>The date and time at which the object was created</value>
+        [DataMember(Name="dtCreatedDate", EmitDefaultValue=true)]
+        public string DtCreatedDate { get; set; }
+
+
 
 
         /// <summary>
-        /// The Subject of the Communication
+        /// The count of Communicationrecipient
         /// </summary>
-        /// <value>The Subject of the Communication</value>
+        /// <value>The count of Communicationrecipient</value>
+        [DataMember(Name="iCommunicationrecipientCount", EmitDefaultValue=true)]
+        public int ICommunicationrecipientCount { get; set; }
+
+        /// <summary>
+        /// The subject of the Communication
+        /// </summary>
+        /// <value>The subject of the Communication</value>
         [DataMember(Name="sCommunicationSubject", EmitDefaultValue=true)]
         public string SCommunicationSubject { get; set; }
 
         /// <summary>
-        /// The send date and time at which the Communication was sent.
+        /// The sender name of the Communication
         /// </summary>
-        /// <value>The send date and time at which the Communication was sent.</value>
-        [DataMember(Name="dtCommunicationSentdate", EmitDefaultValue=true)]
-        public string DtCommunicationSentdate { get; set; }
+        /// <value>The sender name of the Communication</value>
+        [DataMember(Name="sCommunicationSender", EmitDefaultValue=true)]
+        public string SCommunicationSender { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjContactFrom
+        /// The recipients&#39; name of the Communication
         /// </summary>
-        [DataMember(Name="objContactFrom", EmitDefaultValue=true)]
-        public CustomContactNameResponse ObjContactFrom { get; set; }
+        /// <value>The recipients&#39; name of the Communication</value>
+        [DataMember(Name="sCommunicationRecipient", EmitDefaultValue=true)]
+        public string SCommunicationRecipient { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -147,11 +237,17 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class CommunicationListElement {\n");
             sb.Append("  PkiCommunicationID: ").Append(PkiCommunicationID).Append("\n");
-            sb.Append("  ECommunicationEmailimportance: ").Append(ECommunicationEmailimportance).Append("\n");
+            sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
+            sb.Append("  FkiInscriptionID: ").Append(FkiInscriptionID).Append("\n");
+            sb.Append("  FkiInscriptionnotauthenticatedID: ").Append(FkiInscriptionnotauthenticatedID).Append("\n");
+            sb.Append("  DtCreatedDate: ").Append(DtCreatedDate).Append("\n");
+            sb.Append("  ECommunicationDirection: ").Append(ECommunicationDirection).Append("\n");
+            sb.Append("  ECommunicationImportance: ").Append(ECommunicationImportance).Append("\n");
             sb.Append("  ECommunicationType: ").Append(ECommunicationType).Append("\n");
+            sb.Append("  ICommunicationrecipientCount: ").Append(ICommunicationrecipientCount).Append("\n");
             sb.Append("  SCommunicationSubject: ").Append(SCommunicationSubject).Append("\n");
-            sb.Append("  DtCommunicationSentdate: ").Append(DtCommunicationSentdate).Append("\n");
-            sb.Append("  ObjContactFrom: ").Append(ObjContactFrom).Append("\n");
+            sb.Append("  SCommunicationSender: ").Append(SCommunicationSender).Append("\n");
+            sb.Append("  SCommunicationRecipient: ").Append(SCommunicationRecipient).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,9 +288,34 @@ namespace eZmaxApi.Model
                     this.PkiCommunicationID.Equals(input.PkiCommunicationID))
                 ) && 
                 (
-                    this.ECommunicationEmailimportance == input.ECommunicationEmailimportance ||
-                    (this.ECommunicationEmailimportance != null &&
-                    this.ECommunicationEmailimportance.Equals(input.ECommunicationEmailimportance))
+                    this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
+                    (this.FkiEzsignfolderID != null &&
+                    this.FkiEzsignfolderID.Equals(input.FkiEzsignfolderID))
+                ) && 
+                (
+                    this.FkiInscriptionID == input.FkiInscriptionID ||
+                    (this.FkiInscriptionID != null &&
+                    this.FkiInscriptionID.Equals(input.FkiInscriptionID))
+                ) && 
+                (
+                    this.FkiInscriptionnotauthenticatedID == input.FkiInscriptionnotauthenticatedID ||
+                    (this.FkiInscriptionnotauthenticatedID != null &&
+                    this.FkiInscriptionnotauthenticatedID.Equals(input.FkiInscriptionnotauthenticatedID))
+                ) && 
+                (
+                    this.DtCreatedDate == input.DtCreatedDate ||
+                    (this.DtCreatedDate != null &&
+                    this.DtCreatedDate.Equals(input.DtCreatedDate))
+                ) && 
+                (
+                    this.ECommunicationDirection == input.ECommunicationDirection ||
+                    (this.ECommunicationDirection != null &&
+                    this.ECommunicationDirection.Equals(input.ECommunicationDirection))
+                ) && 
+                (
+                    this.ECommunicationImportance == input.ECommunicationImportance ||
+                    (this.ECommunicationImportance != null &&
+                    this.ECommunicationImportance.Equals(input.ECommunicationImportance))
                 ) && 
                 (
                     this.ECommunicationType == input.ECommunicationType ||
@@ -202,19 +323,24 @@ namespace eZmaxApi.Model
                     this.ECommunicationType.Equals(input.ECommunicationType))
                 ) && 
                 (
+                    this.ICommunicationrecipientCount == input.ICommunicationrecipientCount ||
+                    (this.ICommunicationrecipientCount != null &&
+                    this.ICommunicationrecipientCount.Equals(input.ICommunicationrecipientCount))
+                ) && 
+                (
                     this.SCommunicationSubject == input.SCommunicationSubject ||
                     (this.SCommunicationSubject != null &&
                     this.SCommunicationSubject.Equals(input.SCommunicationSubject))
                 ) && 
                 (
-                    this.DtCommunicationSentdate == input.DtCommunicationSentdate ||
-                    (this.DtCommunicationSentdate != null &&
-                    this.DtCommunicationSentdate.Equals(input.DtCommunicationSentdate))
+                    this.SCommunicationSender == input.SCommunicationSender ||
+                    (this.SCommunicationSender != null &&
+                    this.SCommunicationSender.Equals(input.SCommunicationSender))
                 ) && 
                 (
-                    this.ObjContactFrom == input.ObjContactFrom ||
-                    (this.ObjContactFrom != null &&
-                    this.ObjContactFrom.Equals(input.ObjContactFrom))
+                    this.SCommunicationRecipient == input.SCommunicationRecipient ||
+                    (this.SCommunicationRecipient != null &&
+                    this.SCommunicationRecipient.Equals(input.SCommunicationRecipient))
                 );
         }
 
@@ -229,16 +355,28 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.PkiCommunicationID != null)
                     hashCode = hashCode * 59 + this.PkiCommunicationID.GetHashCode();
-                if (this.ECommunicationEmailimportance != null)
-                    hashCode = hashCode * 59 + this.ECommunicationEmailimportance.GetHashCode();
+                if (this.FkiEzsignfolderID != null)
+                    hashCode = hashCode * 59 + this.FkiEzsignfolderID.GetHashCode();
+                if (this.FkiInscriptionID != null)
+                    hashCode = hashCode * 59 + this.FkiInscriptionID.GetHashCode();
+                if (this.FkiInscriptionnotauthenticatedID != null)
+                    hashCode = hashCode * 59 + this.FkiInscriptionnotauthenticatedID.GetHashCode();
+                if (this.DtCreatedDate != null)
+                    hashCode = hashCode * 59 + this.DtCreatedDate.GetHashCode();
+                if (this.ECommunicationDirection != null)
+                    hashCode = hashCode * 59 + this.ECommunicationDirection.GetHashCode();
+                if (this.ECommunicationImportance != null)
+                    hashCode = hashCode * 59 + this.ECommunicationImportance.GetHashCode();
                 if (this.ECommunicationType != null)
                     hashCode = hashCode * 59 + this.ECommunicationType.GetHashCode();
+                if (this.ICommunicationrecipientCount != null)
+                    hashCode = hashCode * 59 + this.ICommunicationrecipientCount.GetHashCode();
                 if (this.SCommunicationSubject != null)
                     hashCode = hashCode * 59 + this.SCommunicationSubject.GetHashCode();
-                if (this.DtCommunicationSentdate != null)
-                    hashCode = hashCode * 59 + this.DtCommunicationSentdate.GetHashCode();
-                if (this.ObjContactFrom != null)
-                    hashCode = hashCode * 59 + this.ObjContactFrom.GetHashCode();
+                if (this.SCommunicationSender != null)
+                    hashCode = hashCode * 59 + this.SCommunicationSender.GetHashCode();
+                if (this.SCommunicationRecipient != null)
+                    hashCode = hashCode * 59 + this.SCommunicationRecipient.GetHashCode();
                 return hashCode;
             }
         }
@@ -256,6 +394,30 @@ namespace eZmaxApi.Model
             if(this.PkiCommunicationID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCommunicationID, must be a value greater than or equal to 0.", new [] { "PkiCommunicationID" });
+            }
+
+
+
+            // FkiEzsignfolderID (int) minimum
+            if(this.FkiEzsignfolderID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+            }
+
+
+
+            // FkiInscriptionID (int) minimum
+            if(this.FkiInscriptionID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionID" });
+            }
+
+
+
+            // FkiInscriptionnotauthenticatedID (int) minimum
+            if(this.FkiInscriptionnotauthenticatedID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionnotauthenticatedID" });
             }
 
             yield break;

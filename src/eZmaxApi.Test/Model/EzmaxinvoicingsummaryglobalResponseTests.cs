@@ -209,6 +209,14 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'BEzmaxinvoicingsummaryglobalAdjustment'
         }
+        /// <summary>
+        /// Test the property 'TEzmaxproductHelpX'
+        /// </summary>
+        [Test]
+        public void TEzmaxproductHelpXTest()
+        {
+            // TODO unit test for the property 'TEzmaxproductHelpX'
+        }
 
     }
 

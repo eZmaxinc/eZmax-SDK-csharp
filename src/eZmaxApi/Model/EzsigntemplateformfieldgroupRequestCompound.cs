@@ -524,6 +524,18 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentID" });
             }
 
+            // SEzsigntemplateformfieldgroupLabel (string) maxLength
+            if(this.SEzsigntemplateformfieldgroupLabel != null && this.SEzsigntemplateformfieldgroupLabel.Length > 50)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateformfieldgroupLabel, length must be less than 50.", new [] { "SEzsigntemplateformfieldgroupLabel" });
+            }
+
+            // SEzsigntemplateformfieldgroupLabel (string) minLength
+            if(this.SEzsigntemplateformfieldgroupLabel != null && this.SEzsigntemplateformfieldgroupLabel.Length < 1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateformfieldgroupLabel, length must be greater than 1.", new [] { "SEzsigntemplateformfieldgroupLabel" });
+            }
+
 
 
             // IEzsigntemplateformfieldgroupStep (int) minimum

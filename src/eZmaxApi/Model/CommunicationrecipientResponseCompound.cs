@@ -31,10 +31,15 @@ namespace eZmaxApi.Model
     public partial class CommunicationrecipientResponseCompound :  IEquatable<CommunicationrecipientResponseCompound>, IValidatableObject
     {
         /// <summary>
+        /// Gets or Sets ECommunicationrecipientObjecttype
+        /// </summary>
+        [DataMember(Name="eCommunicationrecipientObjecttype", EmitDefaultValue=false)]
+        public FieldECommunicationrecipientObjecttype? ECommunicationrecipientObjecttype { get; set; }
+        /// <summary>
         /// Gets or Sets ECommunicationrecipientType
         /// </summary>
-        [DataMember(Name="eCommunicationrecipientType", EmitDefaultValue=false)]
-        public FieldECommunicationrecipientType? ECommunicationrecipientType { get; set; }
+        [DataMember(Name="eCommunicationrecipientType", EmitDefaultValue=true)]
+        public FieldECommunicationrecipientType ECommunicationrecipientType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationrecipientResponseCompound" /> class.
         /// </summary>
@@ -44,6 +49,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CommunicationrecipientResponseCompound" /> class.
         /// </summary>
         /// <param name="pkiCommunicationrecipientID">The unique ID of the Communicationrecipient. (required).</param>
+        /// <param name="eCommunicationrecipientObjecttype">eCommunicationrecipientObjecttype.</param>
         /// <param name="fkiAgentID">The unique ID of the Agent..</param>
         /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
         /// <param name="fkiContactID">The unique ID of the Contact.</param>
@@ -52,8 +58,6 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
         /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice.</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="eCommunicationrecipientType">eCommunicationrecipientType.</param>
         /// <param name="fkiAgentincorporationID">The unique ID of the Agentincorporation..</param>
         /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
         /// <param name="fkiExternalbrokerID">The unique ID of the Externalbroker..</param>
@@ -61,8 +65,11 @@ namespace eZmaxApi.Model
         /// <param name="fkiNotaryID">The unique ID of the Notary..</param>
         /// <param name="fkiRewardmemberID">The unique ID of the Rewardmember..</param>
         /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
-        /// <param name="objPhoneSms">objPhoneSms.</param>
-        public CommunicationrecipientResponseCompound(int pkiCommunicationrecipientID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiContactID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiEzsignsignerID = default(int), int fkiFranchiseofficeID = default(int), int fkiUserID = default(int), string sEmailAddress = default(string), FieldECommunicationrecipientType? eCommunicationrecipientType = default(FieldECommunicationrecipientType?), int fkiAgentincorporationID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomagentID = default(int), int fkiNotaryID = default(int), int fkiRewardmemberID = default(int), int fkiSupplierID = default(int), PhoneResponseCompound objPhoneSms = default(PhoneResponseCompound))
+        /// <param name="eCommunicationrecipientType">eCommunicationrecipientType (required).</param>
+        /// <param name="objDescriptionstatic">objDescriptionstatic (required).</param>
+        /// <param name="objEmailstatic">objEmailstatic.</param>
+        /// <param name="objPhonestatic">objPhonestatic.</param>
+        public CommunicationrecipientResponseCompound(int pkiCommunicationrecipientID = default(int), FieldECommunicationrecipientObjecttype? eCommunicationrecipientObjecttype = default(FieldECommunicationrecipientObjecttype?), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiContactID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiEzsignsignerID = default(int), int fkiFranchiseofficeID = default(int), int fkiUserID = default(int), int fkiAgentincorporationID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomagentID = default(int), int fkiNotaryID = default(int), int fkiRewardmemberID = default(int), int fkiSupplierID = default(int), FieldECommunicationrecipientType eCommunicationrecipientType = default(FieldECommunicationrecipientType), DescriptionstaticResponseCompound objDescriptionstatic = default(DescriptionstaticResponseCompound), EmailstaticResponseCompound objEmailstatic = default(EmailstaticResponseCompound), PhonestaticResponseCompound objPhonestatic = default(PhonestaticResponseCompound))
         {
             // to ensure "pkiCommunicationrecipientID" is required (not null)
             if (pkiCommunicationrecipientID == null)
@@ -74,6 +81,27 @@ namespace eZmaxApi.Model
                 this.PkiCommunicationrecipientID = pkiCommunicationrecipientID;
             }
 
+            // to ensure "eCommunicationrecipientType" is required (not null)
+            if (eCommunicationrecipientType == null)
+            {
+                throw new InvalidDataException("eCommunicationrecipientType is a required property for CommunicationrecipientResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.ECommunicationrecipientType = eCommunicationrecipientType;
+            }
+
+            // to ensure "objDescriptionstatic" is required (not null)
+            if (objDescriptionstatic == null)
+            {
+                throw new InvalidDataException("objDescriptionstatic is a required property for CommunicationrecipientResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.ObjDescriptionstatic = objDescriptionstatic;
+            }
+
+            this.ECommunicationrecipientObjecttype = eCommunicationrecipientObjecttype;
             this.FkiAgentID = fkiAgentID;
             this.FkiBrokerID = fkiBrokerID;
             this.FkiContactID = fkiContactID;
@@ -82,8 +110,6 @@ namespace eZmaxApi.Model
             this.FkiEzsignsignerID = fkiEzsignsignerID;
             this.FkiFranchiseofficeID = fkiFranchiseofficeID;
             this.FkiUserID = fkiUserID;
-            this.SEmailAddress = sEmailAddress;
-            this.ECommunicationrecipientType = eCommunicationrecipientType;
             this.FkiAgentincorporationID = fkiAgentincorporationID;
             this.FkiAssistantID = fkiAssistantID;
             this.FkiExternalbrokerID = fkiExternalbrokerID;
@@ -91,7 +117,8 @@ namespace eZmaxApi.Model
             this.FkiNotaryID = fkiNotaryID;
             this.FkiRewardmemberID = fkiRewardmemberID;
             this.FkiSupplierID = fkiSupplierID;
-            this.ObjPhoneSms = objPhoneSms;
+            this.ObjEmailstatic = objEmailstatic;
+            this.ObjPhonestatic = objPhonestatic;
         }
 
         /// <summary>
@@ -100,6 +127,7 @@ namespace eZmaxApi.Model
         /// <value>The unique ID of the Communicationrecipient.</value>
         [DataMember(Name="pkiCommunicationrecipientID", EmitDefaultValue=true)]
         public int PkiCommunicationrecipientID { get; set; }
+
 
         /// <summary>
         /// The unique ID of the Agent.
@@ -158,14 +186,6 @@ namespace eZmaxApi.Model
         public int FkiUserID { get; set; }
 
         /// <summary>
-        /// The email address.
-        /// </summary>
-        /// <value>The email address.</value>
-        [DataMember(Name="sEmailAddress", EmitDefaultValue=false)]
-        public string SEmailAddress { get; set; }
-
-
-        /// <summary>
         /// The unique ID of the Agentincorporation.
         /// </summary>
         /// <value>The unique ID of the Agentincorporation.</value>
@@ -214,11 +234,24 @@ namespace eZmaxApi.Model
         [DataMember(Name="fkiSupplierID", EmitDefaultValue=false)]
         public int FkiSupplierID { get; set; }
 
+
         /// <summary>
-        /// Gets or Sets ObjPhoneSms
+        /// Gets or Sets ObjDescriptionstatic
         /// </summary>
-        [DataMember(Name="objPhoneSms", EmitDefaultValue=false)]
-        public PhoneResponseCompound ObjPhoneSms { get; set; }
+        [DataMember(Name="objDescriptionstatic", EmitDefaultValue=true)]
+        public DescriptionstaticResponseCompound ObjDescriptionstatic { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEmailstatic
+        /// </summary>
+        [DataMember(Name="objEmailstatic", EmitDefaultValue=false)]
+        public EmailstaticResponseCompound ObjEmailstatic { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjPhonestatic
+        /// </summary>
+        [DataMember(Name="objPhonestatic", EmitDefaultValue=false)]
+        public PhonestaticResponseCompound ObjPhonestatic { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -229,6 +262,7 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class CommunicationrecipientResponseCompound {\n");
             sb.Append("  PkiCommunicationrecipientID: ").Append(PkiCommunicationrecipientID).Append("\n");
+            sb.Append("  ECommunicationrecipientObjecttype: ").Append(ECommunicationrecipientObjecttype).Append("\n");
             sb.Append("  FkiAgentID: ").Append(FkiAgentID).Append("\n");
             sb.Append("  FkiBrokerID: ").Append(FkiBrokerID).Append("\n");
             sb.Append("  FkiContactID: ").Append(FkiContactID).Append("\n");
@@ -237,8 +271,6 @@ namespace eZmaxApi.Model
             sb.Append("  FkiEzsignsignerID: ").Append(FkiEzsignsignerID).Append("\n");
             sb.Append("  FkiFranchiseofficeID: ").Append(FkiFranchiseofficeID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
-            sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
-            sb.Append("  ECommunicationrecipientType: ").Append(ECommunicationrecipientType).Append("\n");
             sb.Append("  FkiAgentincorporationID: ").Append(FkiAgentincorporationID).Append("\n");
             sb.Append("  FkiAssistantID: ").Append(FkiAssistantID).Append("\n");
             sb.Append("  FkiExternalbrokerID: ").Append(FkiExternalbrokerID).Append("\n");
@@ -246,7 +278,10 @@ namespace eZmaxApi.Model
             sb.Append("  FkiNotaryID: ").Append(FkiNotaryID).Append("\n");
             sb.Append("  FkiRewardmemberID: ").Append(FkiRewardmemberID).Append("\n");
             sb.Append("  FkiSupplierID: ").Append(FkiSupplierID).Append("\n");
-            sb.Append("  ObjPhoneSms: ").Append(ObjPhoneSms).Append("\n");
+            sb.Append("  ECommunicationrecipientType: ").Append(ECommunicationrecipientType).Append("\n");
+            sb.Append("  ObjDescriptionstatic: ").Append(ObjDescriptionstatic).Append("\n");
+            sb.Append("  ObjEmailstatic: ").Append(ObjEmailstatic).Append("\n");
+            sb.Append("  ObjPhonestatic: ").Append(ObjPhonestatic).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -285,6 +320,11 @@ namespace eZmaxApi.Model
                     this.PkiCommunicationrecipientID == input.PkiCommunicationrecipientID ||
                     (this.PkiCommunicationrecipientID != null &&
                     this.PkiCommunicationrecipientID.Equals(input.PkiCommunicationrecipientID))
+                ) && 
+                (
+                    this.ECommunicationrecipientObjecttype == input.ECommunicationrecipientObjecttype ||
+                    (this.ECommunicationrecipientObjecttype != null &&
+                    this.ECommunicationrecipientObjecttype.Equals(input.ECommunicationrecipientObjecttype))
                 ) && 
                 (
                     this.FkiAgentID == input.FkiAgentID ||
@@ -327,16 +367,6 @@ namespace eZmaxApi.Model
                     this.FkiUserID.Equals(input.FkiUserID))
                 ) && 
                 (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                ) && 
-                (
-                    this.ECommunicationrecipientType == input.ECommunicationrecipientType ||
-                    (this.ECommunicationrecipientType != null &&
-                    this.ECommunicationrecipientType.Equals(input.ECommunicationrecipientType))
-                ) && 
-                (
                     this.FkiAgentincorporationID == input.FkiAgentincorporationID ||
                     (this.FkiAgentincorporationID != null &&
                     this.FkiAgentincorporationID.Equals(input.FkiAgentincorporationID))
@@ -372,9 +402,24 @@ namespace eZmaxApi.Model
                     this.FkiSupplierID.Equals(input.FkiSupplierID))
                 ) && 
                 (
-                    this.ObjPhoneSms == input.ObjPhoneSms ||
-                    (this.ObjPhoneSms != null &&
-                    this.ObjPhoneSms.Equals(input.ObjPhoneSms))
+                    this.ECommunicationrecipientType == input.ECommunicationrecipientType ||
+                    (this.ECommunicationrecipientType != null &&
+                    this.ECommunicationrecipientType.Equals(input.ECommunicationrecipientType))
+                ) && 
+                (
+                    this.ObjDescriptionstatic == input.ObjDescriptionstatic ||
+                    (this.ObjDescriptionstatic != null &&
+                    this.ObjDescriptionstatic.Equals(input.ObjDescriptionstatic))
+                ) && 
+                (
+                    this.ObjEmailstatic == input.ObjEmailstatic ||
+                    (this.ObjEmailstatic != null &&
+                    this.ObjEmailstatic.Equals(input.ObjEmailstatic))
+                ) && 
+                (
+                    this.ObjPhonestatic == input.ObjPhonestatic ||
+                    (this.ObjPhonestatic != null &&
+                    this.ObjPhonestatic.Equals(input.ObjPhonestatic))
                 );
         }
 
@@ -389,6 +434,8 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.PkiCommunicationrecipientID != null)
                     hashCode = hashCode * 59 + this.PkiCommunicationrecipientID.GetHashCode();
+                if (this.ECommunicationrecipientObjecttype != null)
+                    hashCode = hashCode * 59 + this.ECommunicationrecipientObjecttype.GetHashCode();
                 if (this.FkiAgentID != null)
                     hashCode = hashCode * 59 + this.FkiAgentID.GetHashCode();
                 if (this.FkiBrokerID != null)
@@ -405,10 +452,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.FkiFranchiseofficeID.GetHashCode();
                 if (this.FkiUserID != null)
                     hashCode = hashCode * 59 + this.FkiUserID.GetHashCode();
-                if (this.SEmailAddress != null)
-                    hashCode = hashCode * 59 + this.SEmailAddress.GetHashCode();
-                if (this.ECommunicationrecipientType != null)
-                    hashCode = hashCode * 59 + this.ECommunicationrecipientType.GetHashCode();
                 if (this.FkiAgentincorporationID != null)
                     hashCode = hashCode * 59 + this.FkiAgentincorporationID.GetHashCode();
                 if (this.FkiAssistantID != null)
@@ -423,8 +466,14 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.FkiRewardmemberID.GetHashCode();
                 if (this.FkiSupplierID != null)
                     hashCode = hashCode * 59 + this.FkiSupplierID.GetHashCode();
-                if (this.ObjPhoneSms != null)
-                    hashCode = hashCode * 59 + this.ObjPhoneSms.GetHashCode();
+                if (this.ECommunicationrecipientType != null)
+                    hashCode = hashCode * 59 + this.ECommunicationrecipientType.GetHashCode();
+                if (this.ObjDescriptionstatic != null)
+                    hashCode = hashCode * 59 + this.ObjDescriptionstatic.GetHashCode();
+                if (this.ObjEmailstatic != null)
+                    hashCode = hashCode * 59 + this.ObjEmailstatic.GetHashCode();
+                if (this.ObjPhonestatic != null)
+                    hashCode = hashCode * 59 + this.ObjPhonestatic.GetHashCode();
                 return hashCode;
             }
         }

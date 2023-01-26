@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for GET /1/module/communication/getCount
+    /// Response for GET /1/module/communication/getCommunicationCount
     /// </summary>
     [DataContract]
     public partial class CommunicationGetCountV1Response :  IEquatable<CommunicationGetCountV1Response>, IValidatableObject

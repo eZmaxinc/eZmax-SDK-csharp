@@ -25,9 +25,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The Type for the Communicationrecipient
+    /// The type for the Communicationrecipient
     /// </summary>
-    /// <value>The Type for the Communicationrecipient</value>
+    /// <value>The type for the Communicationrecipient</value>
     
     [JsonConverter(typeof(StringEnumConverter))]
     

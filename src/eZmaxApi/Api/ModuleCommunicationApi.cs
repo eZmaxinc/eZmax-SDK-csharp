@@ -26,103 +26,55 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get the number of communication
+        /// Retrieve Communication count
         /// </summary>
         /// <remarks>
-        /// Get the number of communication in specified module
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
+        /// <param name="eCommunicationObjecttype">The object type for the Communication</param>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
         /// <returns>CommunicationGetCountV1Response</returns>
-        CommunicationGetCountV1Response CommunicationGetCommunicationCountV1 (string eCommunicationModule, int? pkiEzsignfolderID = default(int?));
+        CommunicationGetCountV1Response CommunicationGetCommunicationCountV1 (string eCommunicationObjecttype, int? pkiEzsignfolderID = default(int?));
 
         /// <summary>
-        /// Get the number of communication
+        /// Retrieve Communication count
         /// </summary>
         /// <remarks>
-        /// Get the number of communication in specified module
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
+        /// <param name="eCommunicationObjecttype">The object type for the Communication</param>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
         /// <returns>ApiResponse of CommunicationGetCountV1Response</returns>
-        ApiResponse<CommunicationGetCountV1Response> CommunicationGetCommunicationCountV1WithHttpInfo (string eCommunicationModule, int? pkiEzsignfolderID = default(int?));
-        /// <summary>
-        /// Retrieve communication list
-        /// </summary>
-        /// <remarks>
-        /// Retrieve communication list
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
-        /// <returns>CommunicationGetListV1Response</returns>
-        CommunicationGetListV1Response CommunicationGetCommunicationListV1 (string eCommunicationModule, int? pkiEzsignfolderID = default(int?));
-
-        /// <summary>
-        /// Retrieve communication list
-        /// </summary>
-        /// <remarks>
-        /// Retrieve communication list
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
-        /// <returns>ApiResponse of CommunicationGetListV1Response</returns>
-        ApiResponse<CommunicationGetListV1Response> CommunicationGetCommunicationListV1WithHttpInfo (string eCommunicationModule, int? pkiEzsignfolderID = default(int?));
+        ApiResponse<CommunicationGetCountV1Response> CommunicationGetCommunicationCountV1WithHttpInfo (string eCommunicationObjecttype, int? pkiEzsignfolderID = default(int?));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get the number of communication
+        /// Retrieve Communication count
         /// </summary>
         /// <remarks>
-        /// Get the number of communication in specified module
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
+        /// <param name="eCommunicationObjecttype">The object type for the Communication</param>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommunicationGetCountV1Response</returns>
-        System.Threading.Tasks.Task<CommunicationGetCountV1Response> CommunicationGetCommunicationCountV1Async (string eCommunicationModule, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<CommunicationGetCountV1Response> CommunicationGetCommunicationCountV1Async (string eCommunicationObjecttype, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Get the number of communication
+        /// Retrieve Communication count
         /// </summary>
         /// <remarks>
-        /// Get the number of communication in specified module
+        /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
+        /// <param name="eCommunicationObjecttype">The object type for the Communication</param>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommunicationGetCountV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommunicationGetCountV1Response>> CommunicationGetCommunicationCountV1WithHttpInfoAsync (string eCommunicationModule, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Retrieve communication list
-        /// </summary>
-        /// <remarks>
-        /// Retrieve communication list
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of CommunicationGetListV1Response</returns>
-        System.Threading.Tasks.Task<CommunicationGetListV1Response> CommunicationGetCommunicationListV1Async (string eCommunicationModule, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Retrieve communication list
-        /// </summary>
-        /// <remarks>
-        /// Retrieve communication list
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (CommunicationGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommunicationGetListV1Response>> CommunicationGetCommunicationListV1WithHttpInfoAsync (string eCommunicationModule, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CommunicationGetCountV1Response>> CommunicationGetCommunicationCountV1WithHttpInfoAsync (string eCommunicationObjecttype, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -235,32 +187,32 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Get the number of communication Get the number of communication in specified module
+        /// Retrieve Communication count 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
+        /// <param name="eCommunicationObjecttype">The object type for the Communication</param>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
         /// <returns>CommunicationGetCountV1Response</returns>
-        public CommunicationGetCountV1Response CommunicationGetCommunicationCountV1 (string eCommunicationModule, int? pkiEzsignfolderID = default(int?))
+        public CommunicationGetCountV1Response CommunicationGetCommunicationCountV1 (string eCommunicationObjecttype, int? pkiEzsignfolderID = default(int?))
         {
-             ApiResponse<CommunicationGetCountV1Response> localVarResponse = CommunicationGetCommunicationCountV1WithHttpInfo(eCommunicationModule, pkiEzsignfolderID);
+             ApiResponse<CommunicationGetCountV1Response> localVarResponse = CommunicationGetCommunicationCountV1WithHttpInfo(eCommunicationObjecttype, pkiEzsignfolderID);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get the number of communication Get the number of communication in specified module
+        /// Retrieve Communication count 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
+        /// <param name="eCommunicationObjecttype">The object type for the Communication</param>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
         /// <returns>ApiResponse of CommunicationGetCountV1Response</returns>
-        public ApiResponse<CommunicationGetCountV1Response> CommunicationGetCommunicationCountV1WithHttpInfo (string eCommunicationModule, int? pkiEzsignfolderID = default(int?))
+        public ApiResponse<CommunicationGetCountV1Response> CommunicationGetCommunicationCountV1WithHttpInfo (string eCommunicationObjecttype, int? pkiEzsignfolderID = default(int?))
         {
-            // verify the required parameter 'eCommunicationModule' is set
-            if (eCommunicationModule == null)
-                throw new ApiException(400, "Missing required parameter 'eCommunicationModule' when calling ModuleCommunicationApi->CommunicationGetCommunicationCountV1");
+            // verify the required parameter 'eCommunicationObjecttype' is set
+            if (eCommunicationObjecttype == null)
+                throw new ApiException(400, "Missing required parameter 'eCommunicationObjecttype' when calling ModuleCommunicationApi->CommunicationGetCommunicationCountV1");
 
-            var localVarPath = "/1/module/communication/getCommunicationCount";
+            var localVarPath = "/1/module/communication/getCount";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -281,7 +233,7 @@ namespace eZmaxApi.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (eCommunicationModule != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eCommunicationModule", eCommunicationModule)); // query parameter
+            if (eCommunicationObjecttype != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eCommunicationObjecttype", eCommunicationObjecttype)); // query parameter
             if (pkiEzsignfolderID != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pkiEzsignfolderID", pkiEzsignfolderID)); // query parameter
 
             // authentication (Authorization) required
@@ -309,35 +261,35 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Get the number of communication Get the number of communication in specified module
+        /// Retrieve Communication count 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
+        /// <param name="eCommunicationObjecttype">The object type for the Communication</param>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommunicationGetCountV1Response</returns>
-        public async System.Threading.Tasks.Task<CommunicationGetCountV1Response> CommunicationGetCommunicationCountV1Async (string eCommunicationModule, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<CommunicationGetCountV1Response> CommunicationGetCommunicationCountV1Async (string eCommunicationObjecttype, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<CommunicationGetCountV1Response> localVarResponse = await CommunicationGetCommunicationCountV1WithHttpInfoAsync(eCommunicationModule, pkiEzsignfolderID, cancellationToken);
+             ApiResponse<CommunicationGetCountV1Response> localVarResponse = await CommunicationGetCommunicationCountV1WithHttpInfoAsync(eCommunicationObjecttype, pkiEzsignfolderID, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get the number of communication Get the number of communication in specified module
+        /// Retrieve Communication count 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
+        /// <param name="eCommunicationObjecttype">The object type for the Communication</param>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommunicationGetCountV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CommunicationGetCountV1Response>> CommunicationGetCommunicationCountV1WithHttpInfoAsync (string eCommunicationModule, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<CommunicationGetCountV1Response>> CommunicationGetCommunicationCountV1WithHttpInfoAsync (string eCommunicationObjecttype, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'eCommunicationModule' is set
-            if (eCommunicationModule == null)
-                throw new ApiException(400, "Missing required parameter 'eCommunicationModule' when calling ModuleCommunicationApi->CommunicationGetCommunicationCountV1");
+            // verify the required parameter 'eCommunicationObjecttype' is set
+            if (eCommunicationObjecttype == null)
+                throw new ApiException(400, "Missing required parameter 'eCommunicationObjecttype' when calling ModuleCommunicationApi->CommunicationGetCommunicationCountV1");
 
-            var localVarPath = "/1/module/communication/getCommunicationCount";
+            var localVarPath = "/1/module/communication/getCount";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -358,7 +310,7 @@ namespace eZmaxApi.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (eCommunicationModule != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eCommunicationModule", eCommunicationModule)); // query parameter
+            if (eCommunicationObjecttype != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eCommunicationObjecttype", eCommunicationObjecttype)); // query parameter
             if (pkiEzsignfolderID != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pkiEzsignfolderID", pkiEzsignfolderID)); // query parameter
 
             // authentication (Authorization) required
@@ -383,157 +335,6 @@ namespace eZmaxApi.Api
             return new ApiResponse<CommunicationGetCountV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (CommunicationGetCountV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommunicationGetCountV1Response)));
-        }
-
-        /// <summary>
-        /// Retrieve communication list Retrieve communication list
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
-        /// <returns>CommunicationGetListV1Response</returns>
-        public CommunicationGetListV1Response CommunicationGetCommunicationListV1 (string eCommunicationModule, int? pkiEzsignfolderID = default(int?))
-        {
-             ApiResponse<CommunicationGetListV1Response> localVarResponse = CommunicationGetCommunicationListV1WithHttpInfo(eCommunicationModule, pkiEzsignfolderID);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve communication list Retrieve communication list
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
-        /// <returns>ApiResponse of CommunicationGetListV1Response</returns>
-        public ApiResponse<CommunicationGetListV1Response> CommunicationGetCommunicationListV1WithHttpInfo (string eCommunicationModule, int? pkiEzsignfolderID = default(int?))
-        {
-            // verify the required parameter 'eCommunicationModule' is set
-            if (eCommunicationModule == null)
-                throw new ApiException(400, "Missing required parameter 'eCommunicationModule' when calling ModuleCommunicationApi->CommunicationGetCommunicationListV1");
-
-            var localVarPath = "/1/module/communication/getCommunicationList";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (eCommunicationModule != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eCommunicationModule", eCommunicationModule)); // query parameter
-            if (pkiEzsignfolderID != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pkiEzsignfolderID", pkiEzsignfolderID)); // query parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("CommunicationGetCommunicationListV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<CommunicationGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (CommunicationGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommunicationGetListV1Response)));
-        }
-
-        /// <summary>
-        /// Retrieve communication list Retrieve communication list
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of CommunicationGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<CommunicationGetListV1Response> CommunicationGetCommunicationListV1Async (string eCommunicationModule, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<CommunicationGetListV1Response> localVarResponse = await CommunicationGetCommunicationListV1WithHttpInfoAsync(eCommunicationModule, pkiEzsignfolderID, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Retrieve communication list Retrieve communication list
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eCommunicationModule">Specify the requested module</param>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (CommunicationGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CommunicationGetListV1Response>> CommunicationGetCommunicationListV1WithHttpInfoAsync (string eCommunicationModule, int? pkiEzsignfolderID = default(int?), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'eCommunicationModule' is set
-            if (eCommunicationModule == null)
-                throw new ApiException(400, "Missing required parameter 'eCommunicationModule' when calling ModuleCommunicationApi->CommunicationGetCommunicationListV1");
-
-            var localVarPath = "/1/module/communication/getCommunicationList";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (eCommunicationModule != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eCommunicationModule", eCommunicationModule)); // query parameter
-            if (pkiEzsignfolderID != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pkiEzsignfolderID", pkiEzsignfolderID)); // query parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("CommunicationGetCommunicationListV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<CommunicationGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (CommunicationGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommunicationGetListV1Response)));
         }
 
     }

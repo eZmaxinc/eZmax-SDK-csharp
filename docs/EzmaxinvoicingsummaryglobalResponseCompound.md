@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **DtEzmaxinvoicingsummaryglobalStart** | **string** | The start date for the Ezmaxinvoicingsummaryglobal | 
 **DtEzmaxinvoicingsummaryglobalEnd** | **string** | The end date for the Ezmaxinvoicingsummaryglobal | 
 **IEzmaxinvoicingsummaryglobalDays** | **int** | The number of days for the Ezmaxinvoicingsummaryglobal | 
-**DEzmaxinvoicingsummaryglobalCountreal** | **string** | The The count item calculated | 
-**DEzmaxinvoicingsummaryglobalCountbilled** | **string** | The The count item billed | 
+**DEzmaxinvoicingsummaryglobalCountreal** | **string** | The count item calculated | 
+**DEzmaxinvoicingsummaryglobalCountbilled** | **string** | The count item billed | 
 **DEzmaxinvoicingsummaryglobalSubtotal** | **string** | The Ezmaxinvoicingsummaryglobal subtotal | 
 **DEzmaxinvoicingsummaryglobalRebateamount** | **string** | The rebate amount for the Ezmaxinvoicingsummaryglobal | 
 **DEzmaxinvoicingsummaryglobalRebatepercent** | **string** | The rebate percentage of the Ezmaxinvoicingsummaryglobal | 
@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **DEzmaxinvoicingsummaryglobalPartner** | **string** | The amount of commission for the partner | [optional] 
 **DEzmaxinvoicingsummaryglobalNet** | **string** | The net amount of the Ezmaxinvoicingsummaryglobal | [optional] 
 **BEzmaxinvoicingsummaryglobalAdjustment** | **bool** | Whether it is adjustment for the Ezmaxinvoicingsummaryglobal | 
+**TEzmaxproductHelpX** | **string** | The help message of the Ezmaxproduct in the language of the requester | 
 **AObjEzmaxinvoicingcommission** | [**List&lt;EzmaxinvoicingcommissionResponseCompound&gt;**](EzmaxinvoicingcommissionResponseCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)

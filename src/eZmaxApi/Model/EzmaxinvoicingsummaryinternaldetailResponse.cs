@@ -49,7 +49,8 @@ namespace eZmaxApi.Model
         /// <param name="dEzmaxinvoicingsummaryinternaldetailRebate">The rebate for the product (required).</param>
         /// <param name="dEzmaxinvoicingsummaryinternaldetailTotal">The total invoiced for the product (required).</param>
         /// <param name="bEzmaxinvoicingsummaryinternaldetailAdjustment">Whether if it&#39;s an adjustment (required).</param>
-        public EzmaxinvoicingsummaryinternaldetailResponse(int pkiEzmaxinvoicingsummaryinternaldetailID = default(int), int fkiEzmaxinvoicingsummaryinternalID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string), string dEzmaxinvoicingsummaryinternaldetailCountreal = default(string), string dEzmaxinvoicingsummaryinternaldetailSubtotal = default(string), string dEzmaxinvoicingsummaryinternaldetailRebate = default(string), string dEzmaxinvoicingsummaryinternaldetailTotal = default(string), bool bEzmaxinvoicingsummaryinternaldetailAdjustment = default(bool))
+        /// <param name="tEzmaxproductHelpX">The help message of the Ezmaxproduct in the language of the requester (required).</param>
+        public EzmaxinvoicingsummaryinternaldetailResponse(int pkiEzmaxinvoicingsummaryinternaldetailID = default(int), int fkiEzmaxinvoicingsummaryinternalID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string), string dEzmaxinvoicingsummaryinternaldetailCountreal = default(string), string dEzmaxinvoicingsummaryinternaldetailSubtotal = default(string), string dEzmaxinvoicingsummaryinternaldetailRebate = default(string), string dEzmaxinvoicingsummaryinternaldetailTotal = default(string), bool bEzmaxinvoicingsummaryinternaldetailAdjustment = default(bool), string tEzmaxproductHelpX = default(string))
         {
             // to ensure "fkiEzmaxproductID" is required (not null)
             if (fkiEzmaxproductID == null)
@@ -141,6 +142,16 @@ namespace eZmaxApi.Model
                 this.BEzmaxinvoicingsummaryinternaldetailAdjustment = bEzmaxinvoicingsummaryinternaldetailAdjustment;
             }
 
+            // to ensure "tEzmaxproductHelpX" is required (not null)
+            if (tEzmaxproductHelpX == null)
+            {
+                throw new InvalidDataException("tEzmaxproductHelpX is a required property for EzmaxinvoicingsummaryinternaldetailResponse and cannot be null");
+            }
+            else
+            {
+                this.TEzmaxproductHelpX = tEzmaxproductHelpX;
+            }
+
             this.PkiEzmaxinvoicingsummaryinternaldetailID = pkiEzmaxinvoicingsummaryinternaldetailID;
             this.FkiEzmaxinvoicingsummaryinternalID = fkiEzmaxinvoicingsummaryinternalID;
         }
@@ -223,6 +234,13 @@ namespace eZmaxApi.Model
         public bool BEzmaxinvoicingsummaryinternaldetailAdjustment { get; set; }
 
         /// <summary>
+        /// The help message of the Ezmaxproduct in the language of the requester
+        /// </summary>
+        /// <value>The help message of the Ezmaxproduct in the language of the requester</value>
+        [DataMember(Name="tEzmaxproductHelpX", EmitDefaultValue=true)]
+        public string TEzmaxproductHelpX { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -241,6 +259,7 @@ namespace eZmaxApi.Model
             sb.Append("  DEzmaxinvoicingsummaryinternaldetailRebate: ").Append(DEzmaxinvoicingsummaryinternaldetailRebate).Append("\n");
             sb.Append("  DEzmaxinvoicingsummaryinternaldetailTotal: ").Append(DEzmaxinvoicingsummaryinternaldetailTotal).Append("\n");
             sb.Append("  BEzmaxinvoicingsummaryinternaldetailAdjustment: ").Append(BEzmaxinvoicingsummaryinternaldetailAdjustment).Append("\n");
+            sb.Append("  TEzmaxproductHelpX: ").Append(TEzmaxproductHelpX).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -329,6 +348,11 @@ namespace eZmaxApi.Model
                     this.BEzmaxinvoicingsummaryinternaldetailAdjustment == input.BEzmaxinvoicingsummaryinternaldetailAdjustment ||
                     (this.BEzmaxinvoicingsummaryinternaldetailAdjustment != null &&
                     this.BEzmaxinvoicingsummaryinternaldetailAdjustment.Equals(input.BEzmaxinvoicingsummaryinternaldetailAdjustment))
+                ) && 
+                (
+                    this.TEzmaxproductHelpX == input.TEzmaxproductHelpX ||
+                    (this.TEzmaxproductHelpX != null &&
+                    this.TEzmaxproductHelpX.Equals(input.TEzmaxproductHelpX))
                 );
         }
 
@@ -363,6 +387,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.DEzmaxinvoicingsummaryinternaldetailTotal.GetHashCode();
                 if (this.BEzmaxinvoicingsummaryinternaldetailAdjustment != null)
                     hashCode = hashCode * 59 + this.BEzmaxinvoicingsummaryinternaldetailAdjustment.GetHashCode();
+                if (this.TEzmaxproductHelpX != null)
+                    hashCode = hashCode * 59 + this.TEzmaxproductHelpX.GetHashCode();
                 return hashCode;
             }
         }

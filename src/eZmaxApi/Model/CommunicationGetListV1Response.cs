@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for GET /1/module/communication/getList
+    /// Response for GET /1/object/communication/getList
     /// </summary>
     [DataContract]
     public partial class CommunicationGetListV1Response :  IEquatable<CommunicationGetListV1Response>, IValidatableObject
@@ -41,7 +41,7 @@ namespace eZmaxApi.Model
         /// <param name="mPayload">mPayload (required).</param>
         /// <param name="objDebugPayload">objDebugPayload.</param>
         /// <param name="objDebug">objDebug.</param>
-        public CommunicationGetListV1Response(CommunicationGetListV1ResponseMPayload mPayload = default(CommunicationGetListV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        public CommunicationGetListV1Response(CommunicationGetListV1ResponseMPayload mPayload = default(CommunicationGetListV1ResponseMPayload), CommonResponseObjDebugPayloadGetList objDebugPayload = default(CommonResponseObjDebugPayloadGetList), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
@@ -67,7 +67,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets ObjDebugPayload
         /// </summary>
         [DataMember(Name="objDebugPayload", EmitDefaultValue=false)]
-        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
+        public CommonResponseObjDebugPayloadGetList ObjDebugPayload { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjDebug

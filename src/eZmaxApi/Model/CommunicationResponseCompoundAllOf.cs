@@ -41,9 +41,7 @@ namespace eZmaxApi.Model
         /// <param name="aObjCommunicationattachment">aObjCommunicationattachment (required).</param>
         /// <param name="aObjCommunicationrecipient">aObjCommunicationrecipient (required).</param>
         /// <param name="aObjCommunicationexternalrecipient">aObjCommunicationexternalrecipient (required).</param>
-        /// <param name="aObjCommunicationimage">aObjCommunicationimage (required).</param>
-        /// <param name="aObjCommunicationexternalimage">aObjCommunicationexternalimage (required).</param>
-        public CommunicationResponseCompoundAllOf(List<CommunicationattachmentResponseCompound> aObjCommunicationattachment = default(List<CommunicationattachmentResponseCompound>), List<CommunicationrecipientResponseCompound> aObjCommunicationrecipient = default(List<CommunicationrecipientResponseCompound>), List<CommunicationexternalrecipientResponseCompound> aObjCommunicationexternalrecipient = default(List<CommunicationexternalrecipientResponseCompound>), List<CommunicationimageResponseCompound> aObjCommunicationimage = default(List<CommunicationimageResponseCompound>), List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage = default(List<CommunicationexternalimageResponseCompound>))
+        public CommunicationResponseCompoundAllOf(List<CommunicationattachmentResponseCompound> aObjCommunicationattachment = default(List<CommunicationattachmentResponseCompound>), List<CommunicationrecipientResponseCompound> aObjCommunicationrecipient = default(List<CommunicationrecipientResponseCompound>), List<CommunicationexternalrecipientResponseCompound> aObjCommunicationexternalrecipient = default(List<CommunicationexternalrecipientResponseCompound>))
         {
             // to ensure "aObjCommunicationattachment" is required (not null)
             if (aObjCommunicationattachment == null)
@@ -75,26 +73,6 @@ namespace eZmaxApi.Model
                 this.AObjCommunicationexternalrecipient = aObjCommunicationexternalrecipient;
             }
 
-            // to ensure "aObjCommunicationimage" is required (not null)
-            if (aObjCommunicationimage == null)
-            {
-                throw new InvalidDataException("aObjCommunicationimage is a required property for CommunicationResponseCompoundAllOf and cannot be null");
-            }
-            else
-            {
-                this.AObjCommunicationimage = aObjCommunicationimage;
-            }
-
-            // to ensure "aObjCommunicationexternalimage" is required (not null)
-            if (aObjCommunicationexternalimage == null)
-            {
-                throw new InvalidDataException("aObjCommunicationexternalimage is a required property for CommunicationResponseCompoundAllOf and cannot be null");
-            }
-            else
-            {
-                this.AObjCommunicationexternalimage = aObjCommunicationexternalimage;
-            }
-
         }
 
         /// <summary>
@@ -116,18 +94,6 @@ namespace eZmaxApi.Model
         public List<CommunicationexternalrecipientResponseCompound> AObjCommunicationexternalrecipient { get; set; }
 
         /// <summary>
-        /// Gets or Sets AObjCommunicationimage
-        /// </summary>
-        [DataMember(Name="a_objCommunicationimage", EmitDefaultValue=true)]
-        public List<CommunicationimageResponseCompound> AObjCommunicationimage { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AObjCommunicationexternalimage
-        /// </summary>
-        [DataMember(Name="a_objCommunicationexternalimage", EmitDefaultValue=true)]
-        public List<CommunicationexternalimageResponseCompound> AObjCommunicationexternalimage { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -138,8 +104,6 @@ namespace eZmaxApi.Model
             sb.Append("  AObjCommunicationattachment: ").Append(AObjCommunicationattachment).Append("\n");
             sb.Append("  AObjCommunicationrecipient: ").Append(AObjCommunicationrecipient).Append("\n");
             sb.Append("  AObjCommunicationexternalrecipient: ").Append(AObjCommunicationexternalrecipient).Append("\n");
-            sb.Append("  AObjCommunicationimage: ").Append(AObjCommunicationimage).Append("\n");
-            sb.Append("  AObjCommunicationexternalimage: ").Append(AObjCommunicationexternalimage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -191,18 +155,6 @@ namespace eZmaxApi.Model
                     this.AObjCommunicationexternalrecipient != null &&
                     input.AObjCommunicationexternalrecipient != null &&
                     this.AObjCommunicationexternalrecipient.SequenceEqual(input.AObjCommunicationexternalrecipient)
-                ) && 
-                (
-                    this.AObjCommunicationimage == input.AObjCommunicationimage ||
-                    this.AObjCommunicationimage != null &&
-                    input.AObjCommunicationimage != null &&
-                    this.AObjCommunicationimage.SequenceEqual(input.AObjCommunicationimage)
-                ) && 
-                (
-                    this.AObjCommunicationexternalimage == input.AObjCommunicationexternalimage ||
-                    this.AObjCommunicationexternalimage != null &&
-                    input.AObjCommunicationexternalimage != null &&
-                    this.AObjCommunicationexternalimage.SequenceEqual(input.AObjCommunicationexternalimage)
                 );
         }
 
@@ -221,10 +173,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjCommunicationrecipient.GetHashCode();
                 if (this.AObjCommunicationexternalrecipient != null)
                     hashCode = hashCode * 59 + this.AObjCommunicationexternalrecipient.GetHashCode();
-                if (this.AObjCommunicationimage != null)
-                    hashCode = hashCode * 59 + this.AObjCommunicationimage.GetHashCode();
-                if (this.AObjCommunicationexternalimage != null)
-                    hashCode = hashCode * 59 + this.AObjCommunicationexternalimage.GetHashCode();
                 return hashCode;
             }
         }

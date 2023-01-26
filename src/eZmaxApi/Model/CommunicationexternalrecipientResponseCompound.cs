@@ -44,11 +44,11 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CommunicationexternalrecipientResponseCompound" /> class.
         /// </summary>
         /// <param name="pkiCommunicationexternalrecipientID">The unique ID of the Communicationexternalrecipient (required).</param>
-        /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="objPhoneSms">objPhoneSms.</param>
         /// <param name="eCommunicationexternalrecipientType">eCommunicationexternalrecipientType (required).</param>
-        /// <param name="sCommunicationexternalrecipientName">The Name of the Communicationexternalrecipient (required).</param>
-        public CommunicationexternalrecipientResponseCompound(int pkiCommunicationexternalrecipientID = default(int), string sEmailAddress = default(string), PhoneResponseCompound objPhoneSms = default(PhoneResponseCompound), FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType = default(FieldECommunicationexternalrecipientType), string sCommunicationexternalrecipientName = default(string))
+        /// <param name="objDescriptionstatic">objDescriptionstatic (required).</param>
+        /// <param name="objEmailstatic">objEmailstatic.</param>
+        /// <param name="objPhonestatic">objPhonestatic.</param>
+        public CommunicationexternalrecipientResponseCompound(int pkiCommunicationexternalrecipientID = default(int), FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType = default(FieldECommunicationexternalrecipientType), DescriptionstaticResponseCompound objDescriptionstatic = default(DescriptionstaticResponseCompound), EmailstaticResponseCompound objEmailstatic = default(EmailstaticResponseCompound), PhonestaticResponseCompound objPhonestatic = default(PhonestaticResponseCompound))
         {
             // to ensure "pkiCommunicationexternalrecipientID" is required (not null)
             if (pkiCommunicationexternalrecipientID == null)
@@ -70,18 +70,18 @@ namespace eZmaxApi.Model
                 this.ECommunicationexternalrecipientType = eCommunicationexternalrecipientType;
             }
 
-            // to ensure "sCommunicationexternalrecipientName" is required (not null)
-            if (sCommunicationexternalrecipientName == null)
+            // to ensure "objDescriptionstatic" is required (not null)
+            if (objDescriptionstatic == null)
             {
-                throw new InvalidDataException("sCommunicationexternalrecipientName is a required property for CommunicationexternalrecipientResponseCompound and cannot be null");
+                throw new InvalidDataException("objDescriptionstatic is a required property for CommunicationexternalrecipientResponseCompound and cannot be null");
             }
             else
             {
-                this.SCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
+                this.ObjDescriptionstatic = objDescriptionstatic;
             }
 
-            this.SEmailAddress = sEmailAddress;
-            this.ObjPhoneSms = objPhoneSms;
+            this.ObjEmailstatic = objEmailstatic;
+            this.ObjPhonestatic = objPhonestatic;
         }
 
         /// <summary>
@@ -91,26 +91,24 @@ namespace eZmaxApi.Model
         [DataMember(Name="pkiCommunicationexternalrecipientID", EmitDefaultValue=true)]
         public int PkiCommunicationexternalrecipientID { get; set; }
 
-        /// <summary>
-        /// The email address.
-        /// </summary>
-        /// <value>The email address.</value>
-        [DataMember(Name="sEmailAddress", EmitDefaultValue=false)]
-        public string SEmailAddress { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjPhoneSms
+        /// Gets or Sets ObjDescriptionstatic
         /// </summary>
-        [DataMember(Name="objPhoneSms", EmitDefaultValue=false)]
-        public PhoneResponseCompound ObjPhoneSms { get; set; }
-
+        [DataMember(Name="objDescriptionstatic", EmitDefaultValue=true)]
+        public DescriptionstaticResponseCompound ObjDescriptionstatic { get; set; }
 
         /// <summary>
-        /// The Name of the Communicationexternalrecipient
+        /// Gets or Sets ObjEmailstatic
         /// </summary>
-        /// <value>The Name of the Communicationexternalrecipient</value>
-        [DataMember(Name="sCommunicationexternalrecipientName", EmitDefaultValue=true)]
-        public string SCommunicationexternalrecipientName { get; set; }
+        [DataMember(Name="objEmailstatic", EmitDefaultValue=false)]
+        public EmailstaticResponseCompound ObjEmailstatic { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjPhonestatic
+        /// </summary>
+        [DataMember(Name="objPhonestatic", EmitDefaultValue=false)]
+        public PhonestaticResponseCompound ObjPhonestatic { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -121,10 +119,10 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class CommunicationexternalrecipientResponseCompound {\n");
             sb.Append("  PkiCommunicationexternalrecipientID: ").Append(PkiCommunicationexternalrecipientID).Append("\n");
-            sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
-            sb.Append("  ObjPhoneSms: ").Append(ObjPhoneSms).Append("\n");
             sb.Append("  ECommunicationexternalrecipientType: ").Append(ECommunicationexternalrecipientType).Append("\n");
-            sb.Append("  SCommunicationexternalrecipientName: ").Append(SCommunicationexternalrecipientName).Append("\n");
+            sb.Append("  ObjDescriptionstatic: ").Append(ObjDescriptionstatic).Append("\n");
+            sb.Append("  ObjEmailstatic: ").Append(ObjEmailstatic).Append("\n");
+            sb.Append("  ObjPhonestatic: ").Append(ObjPhonestatic).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -165,24 +163,24 @@ namespace eZmaxApi.Model
                     this.PkiCommunicationexternalrecipientID.Equals(input.PkiCommunicationexternalrecipientID))
                 ) && 
                 (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                ) && 
-                (
-                    this.ObjPhoneSms == input.ObjPhoneSms ||
-                    (this.ObjPhoneSms != null &&
-                    this.ObjPhoneSms.Equals(input.ObjPhoneSms))
-                ) && 
-                (
                     this.ECommunicationexternalrecipientType == input.ECommunicationexternalrecipientType ||
                     (this.ECommunicationexternalrecipientType != null &&
                     this.ECommunicationexternalrecipientType.Equals(input.ECommunicationexternalrecipientType))
                 ) && 
                 (
-                    this.SCommunicationexternalrecipientName == input.SCommunicationexternalrecipientName ||
-                    (this.SCommunicationexternalrecipientName != null &&
-                    this.SCommunicationexternalrecipientName.Equals(input.SCommunicationexternalrecipientName))
+                    this.ObjDescriptionstatic == input.ObjDescriptionstatic ||
+                    (this.ObjDescriptionstatic != null &&
+                    this.ObjDescriptionstatic.Equals(input.ObjDescriptionstatic))
+                ) && 
+                (
+                    this.ObjEmailstatic == input.ObjEmailstatic ||
+                    (this.ObjEmailstatic != null &&
+                    this.ObjEmailstatic.Equals(input.ObjEmailstatic))
+                ) && 
+                (
+                    this.ObjPhonestatic == input.ObjPhonestatic ||
+                    (this.ObjPhonestatic != null &&
+                    this.ObjPhonestatic.Equals(input.ObjPhonestatic))
                 );
         }
 
@@ -197,14 +195,14 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.PkiCommunicationexternalrecipientID != null)
                     hashCode = hashCode * 59 + this.PkiCommunicationexternalrecipientID.GetHashCode();
-                if (this.SEmailAddress != null)
-                    hashCode = hashCode * 59 + this.SEmailAddress.GetHashCode();
-                if (this.ObjPhoneSms != null)
-                    hashCode = hashCode * 59 + this.ObjPhoneSms.GetHashCode();
                 if (this.ECommunicationexternalrecipientType != null)
                     hashCode = hashCode * 59 + this.ECommunicationexternalrecipientType.GetHashCode();
-                if (this.SCommunicationexternalrecipientName != null)
-                    hashCode = hashCode * 59 + this.SCommunicationexternalrecipientName.GetHashCode();
+                if (this.ObjDescriptionstatic != null)
+                    hashCode = hashCode * 59 + this.ObjDescriptionstatic.GetHashCode();
+                if (this.ObjEmailstatic != null)
+                    hashCode = hashCode * 59 + this.ObjEmailstatic.GetHashCode();
+                if (this.ObjPhonestatic != null)
+                    hashCode = hashCode * 59 + this.ObjPhonestatic.GetHashCode();
                 return hashCode;
             }
         }

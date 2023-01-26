@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for GET /1/module/communication/getList
+    /// Payload for GET /1/object/communication/getList
     /// </summary>
     [DataContract]
     public partial class CommunicationGetListV1ResponseMPayload :  IEquatable<CommunicationGetListV1ResponseMPayload>, IValidatableObject
@@ -39,7 +39,9 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CommunicationGetListV1ResponseMPayload" /> class.
         /// </summary>
         /// <param name="aObjCommunication">aObjCommunication (required).</param>
-        public CommunicationGetListV1ResponseMPayload(List<CommunicationListElement> aObjCommunication = default(List<CommunicationListElement>))
+        /// <param name="iRowReturned">The number of rows returned (required).</param>
+        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        public CommunicationGetListV1ResponseMPayload(List<CommunicationListElement> aObjCommunication = default(List<CommunicationListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
         {
             // to ensure "aObjCommunication" is required (not null)
             if (aObjCommunication == null)
@@ -51,6 +53,26 @@ namespace eZmaxApi.Model
                 this.AObjCommunication = aObjCommunication;
             }
 
+            // to ensure "iRowReturned" is required (not null)
+            if (iRowReturned == null)
+            {
+                throw new InvalidDataException("iRowReturned is a required property for CommunicationGetListV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.IRowReturned = iRowReturned;
+            }
+
+            // to ensure "iRowFiltered" is required (not null)
+            if (iRowFiltered == null)
+            {
+                throw new InvalidDataException("iRowFiltered is a required property for CommunicationGetListV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.IRowFiltered = iRowFiltered;
+            }
+
         }
 
         /// <summary>
@@ -58,6 +80,20 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name="a_objCommunication", EmitDefaultValue=true)]
         public List<CommunicationListElement> AObjCommunication { get; set; }
+
+        /// <summary>
+        /// The number of rows returned
+        /// </summary>
+        /// <value>The number of rows returned</value>
+        [DataMember(Name="iRowReturned", EmitDefaultValue=true)]
+        public int IRowReturned { get; set; }
+
+        /// <summary>
+        /// The number of rows matching your filters (if any) or the total number of rows
+        /// </summary>
+        /// <value>The number of rows matching your filters (if any) or the total number of rows</value>
+        [DataMember(Name="iRowFiltered", EmitDefaultValue=true)]
+        public int IRowFiltered { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -68,6 +104,8 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class CommunicationGetListV1ResponseMPayload {\n");
             sb.Append("  AObjCommunication: ").Append(AObjCommunication).Append("\n");
+            sb.Append("  IRowReturned: ").Append(IRowReturned).Append("\n");
+            sb.Append("  IRowFiltered: ").Append(IRowFiltered).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,6 +145,16 @@ namespace eZmaxApi.Model
                     this.AObjCommunication != null &&
                     input.AObjCommunication != null &&
                     this.AObjCommunication.SequenceEqual(input.AObjCommunication)
+                ) && 
+                (
+                    this.IRowReturned == input.IRowReturned ||
+                    (this.IRowReturned != null &&
+                    this.IRowReturned.Equals(input.IRowReturned))
+                ) && 
+                (
+                    this.IRowFiltered == input.IRowFiltered ||
+                    (this.IRowFiltered != null &&
+                    this.IRowFiltered.Equals(input.IRowFiltered))
                 );
         }
 
@@ -121,6 +169,10 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.AObjCommunication != null)
                     hashCode = hashCode * 59 + this.AObjCommunication.GetHashCode();
+                if (this.IRowReturned != null)
+                    hashCode = hashCode * 59 + this.IRowReturned.GetHashCode();
+                if (this.IRowFiltered != null)
+                    hashCode = hashCode * 59 + this.IRowFiltered.GetHashCode();
                 return hashCode;
             }
         }

@@ -45,8 +45,8 @@ namespace eZmaxApi.Model
         /// <param name="dtEzmaxinvoicingsummaryglobalStart">The start date for the Ezmaxinvoicingsummaryglobal (required).</param>
         /// <param name="dtEzmaxinvoicingsummaryglobalEnd">The end date for the Ezmaxinvoicingsummaryglobal (required).</param>
         /// <param name="iEzmaxinvoicingsummaryglobalDays">The number of days for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalCountreal">The The count item calculated (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalCountbilled">The The count item billed (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalCountreal">The count item calculated (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalCountbilled">The count item billed (required).</param>
         /// <param name="dEzmaxinvoicingsummaryglobalSubtotal">The Ezmaxinvoicingsummaryglobal subtotal (required).</param>
         /// <param name="dEzmaxinvoicingsummaryglobalRebateamount">The rebate amount for the Ezmaxinvoicingsummaryglobal (required).</param>
         /// <param name="dEzmaxinvoicingsummaryglobalRebatepercent">The rebate percentage of the Ezmaxinvoicingsummaryglobal (required).</param>
@@ -56,7 +56,8 @@ namespace eZmaxApi.Model
         /// <param name="dEzmaxinvoicingsummaryglobalPartner">The amount of commission for the partner.</param>
         /// <param name="dEzmaxinvoicingsummaryglobalNet">The net amount of the Ezmaxinvoicingsummaryglobal.</param>
         /// <param name="bEzmaxinvoicingsummaryglobalAdjustment">Whether it is adjustment for the Ezmaxinvoicingsummaryglobal (required).</param>
-        public EzmaxinvoicingsummaryglobalResponse(int pkiEzmaxinvoicingsummaryglobalID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), string dtEzmaxinvoicingsummaryglobalStart = default(string), string dtEzmaxinvoicingsummaryglobalEnd = default(string), int iEzmaxinvoicingsummaryglobalDays = default(int), string dEzmaxinvoicingsummaryglobalCountreal = default(string), string dEzmaxinvoicingsummaryglobalCountbilled = default(string), string dEzmaxinvoicingsummaryglobalSubtotal = default(string), string dEzmaxinvoicingsummaryglobalRebateamount = default(string), string dEzmaxinvoicingsummaryglobalRebatepercent = default(string), string dEzmaxinvoicingsummaryglobalRebatetotal = default(string), string dEzmaxinvoicingsummaryglobalTotal = default(string), string dEzmaxinvoicingsummaryglobalRepresentative = default(string), string dEzmaxinvoicingsummaryglobalPartner = default(string), string dEzmaxinvoicingsummaryglobalNet = default(string), bool bEzmaxinvoicingsummaryglobalAdjustment = default(bool))
+        /// <param name="tEzmaxproductHelpX">The help message of the Ezmaxproduct in the language of the requester (required).</param>
+        public EzmaxinvoicingsummaryglobalResponse(int pkiEzmaxinvoicingsummaryglobalID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), string dtEzmaxinvoicingsummaryglobalStart = default(string), string dtEzmaxinvoicingsummaryglobalEnd = default(string), int iEzmaxinvoicingsummaryglobalDays = default(int), string dEzmaxinvoicingsummaryglobalCountreal = default(string), string dEzmaxinvoicingsummaryglobalCountbilled = default(string), string dEzmaxinvoicingsummaryglobalSubtotal = default(string), string dEzmaxinvoicingsummaryglobalRebateamount = default(string), string dEzmaxinvoicingsummaryglobalRebatepercent = default(string), string dEzmaxinvoicingsummaryglobalRebatetotal = default(string), string dEzmaxinvoicingsummaryglobalTotal = default(string), string dEzmaxinvoicingsummaryglobalRepresentative = default(string), string dEzmaxinvoicingsummaryglobalPartner = default(string), string dEzmaxinvoicingsummaryglobalNet = default(string), bool bEzmaxinvoicingsummaryglobalAdjustment = default(bool), string tEzmaxproductHelpX = default(string))
         {
             // to ensure "fkiEzmaxproductID" is required (not null)
             if (fkiEzmaxproductID == null)
@@ -188,6 +189,16 @@ namespace eZmaxApi.Model
                 this.BEzmaxinvoicingsummaryglobalAdjustment = bEzmaxinvoicingsummaryglobalAdjustment;
             }
 
+            // to ensure "tEzmaxproductHelpX" is required (not null)
+            if (tEzmaxproductHelpX == null)
+            {
+                throw new InvalidDataException("tEzmaxproductHelpX is a required property for EzmaxinvoicingsummaryglobalResponse and cannot be null");
+            }
+            else
+            {
+                this.TEzmaxproductHelpX = tEzmaxproductHelpX;
+            }
+
             this.PkiEzmaxinvoicingsummaryglobalID = pkiEzmaxinvoicingsummaryglobalID;
             this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
             this.DEzmaxinvoicingsummaryglobalRepresentative = dEzmaxinvoicingsummaryglobalRepresentative;
@@ -245,16 +256,16 @@ namespace eZmaxApi.Model
         public int IEzmaxinvoicingsummaryglobalDays { get; set; }
 
         /// <summary>
-        /// The The count item calculated
+        /// The count item calculated
         /// </summary>
-        /// <value>The The count item calculated</value>
+        /// <value>The count item calculated</value>
         [DataMember(Name="dEzmaxinvoicingsummaryglobalCountreal", EmitDefaultValue=true)]
         public string DEzmaxinvoicingsummaryglobalCountreal { get; set; }
 
         /// <summary>
-        /// The The count item billed
+        /// The count item billed
         /// </summary>
-        /// <value>The The count item billed</value>
+        /// <value>The count item billed</value>
         [DataMember(Name="dEzmaxinvoicingsummaryglobalCountbilled", EmitDefaultValue=true)]
         public string DEzmaxinvoicingsummaryglobalCountbilled { get; set; }
 
@@ -322,6 +333,13 @@ namespace eZmaxApi.Model
         public bool BEzmaxinvoicingsummaryglobalAdjustment { get; set; }
 
         /// <summary>
+        /// The help message of the Ezmaxproduct in the language of the requester
+        /// </summary>
+        /// <value>The help message of the Ezmaxproduct in the language of the requester</value>
+        [DataMember(Name="tEzmaxproductHelpX", EmitDefaultValue=true)]
+        public string TEzmaxproductHelpX { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -347,6 +365,7 @@ namespace eZmaxApi.Model
             sb.Append("  DEzmaxinvoicingsummaryglobalPartner: ").Append(DEzmaxinvoicingsummaryglobalPartner).Append("\n");
             sb.Append("  DEzmaxinvoicingsummaryglobalNet: ").Append(DEzmaxinvoicingsummaryglobalNet).Append("\n");
             sb.Append("  BEzmaxinvoicingsummaryglobalAdjustment: ").Append(BEzmaxinvoicingsummaryglobalAdjustment).Append("\n");
+            sb.Append("  TEzmaxproductHelpX: ").Append(TEzmaxproductHelpX).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -470,6 +489,11 @@ namespace eZmaxApi.Model
                     this.BEzmaxinvoicingsummaryglobalAdjustment == input.BEzmaxinvoicingsummaryglobalAdjustment ||
                     (this.BEzmaxinvoicingsummaryglobalAdjustment != null &&
                     this.BEzmaxinvoicingsummaryglobalAdjustment.Equals(input.BEzmaxinvoicingsummaryglobalAdjustment))
+                ) && 
+                (
+                    this.TEzmaxproductHelpX == input.TEzmaxproductHelpX ||
+                    (this.TEzmaxproductHelpX != null &&
+                    this.TEzmaxproductHelpX.Equals(input.TEzmaxproductHelpX))
                 );
         }
 
@@ -518,6 +542,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.DEzmaxinvoicingsummaryglobalNet.GetHashCode();
                 if (this.BEzmaxinvoicingsummaryglobalAdjustment != null)
                     hashCode = hashCode * 59 + this.BEzmaxinvoicingsummaryglobalAdjustment.GetHashCode();
+                if (this.TEzmaxproductHelpX != null)
+                    hashCode = hashCode * 59 + this.TEzmaxproductHelpX.GetHashCode();
                 return hashCode;
             }
         }

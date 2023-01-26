@@ -42,7 +42,7 @@ namespace eZmaxApi.Model
         /// <param name="sName">sName (required).</param>
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="bEzsignfolderAllowed">bEzsignfolderAllowed (required).</param>
+        /// <param name="bEzsignfolderAllowed">Whether you have access to the Ezsignfolder or not (required).</param>
         public CustomEzmaxinvoicingEzsigndocumentResponseAllOf(int fkiEzsignfolderID = default(int), string sName = default(string), string sEzsignfolderDescription = default(string), string sEzsigndocumentName = default(string), bool bEzsignfolderAllowed = default(bool))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)
@@ -125,8 +125,9 @@ namespace eZmaxApi.Model
         public string SEzsigndocumentName { get; set; }
 
         /// <summary>
-        /// Gets or Sets BEzsignfolderAllowed
+        /// Whether you have access to the Ezsignfolder or not
         /// </summary>
+        /// <value>Whether you have access to the Ezsignfolder or not</value>
         [DataMember(Name="bEzsignfolderAllowed", EmitDefaultValue=true)]
         public bool BEzsignfolderAllowed { get; set; }
 

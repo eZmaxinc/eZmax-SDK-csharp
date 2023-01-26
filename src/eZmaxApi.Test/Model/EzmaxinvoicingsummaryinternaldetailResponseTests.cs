@@ -153,6 +153,14 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'BEzmaxinvoicingsummaryinternaldetailAdjustment'
         }
+        /// <summary>
+        /// Test the property 'TEzmaxproductHelpX'
+        /// </summary>
+        [Test]
+        public void TEzmaxproductHelpXTest()
+        {
+            // TODO unit test for the property 'TEzmaxproductHelpX'
+        }
 
     }
 

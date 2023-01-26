@@ -74,12 +74,12 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'PkiCommunicationID'
         }
         /// <summary>
-        /// Test the property 'ECommunicationEmailimportance'
+        /// Test the property 'ECommunicationImportance'
         /// </summary>
         [Test]
-        public void ECommunicationEmailimportanceTest()
+        public void ECommunicationImportanceTest()
         {
-            // TODO unit test for the property 'ECommunicationEmailimportance'
+            // TODO unit test for the property 'ECommunicationImportance'
         }
         /// <summary>
         /// Test the property 'ECommunicationType'
@@ -98,12 +98,20 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SCommunicationSubject'
         }
         /// <summary>
-        /// Test the property 'DtCommunicationSentdate'
+        /// Test the property 'ECommunicationDirection'
         /// </summary>
         [Test]
-        public void DtCommunicationSentdateTest()
+        public void ECommunicationDirectionTest()
         {
-            // TODO unit test for the property 'DtCommunicationSentdate'
+            // TODO unit test for the property 'ECommunicationDirection'
+        }
+        /// <summary>
+        /// Test the property 'ICommunicationrecipientCount'
+        /// </summary>
+        [Test]
+        public void ICommunicationrecipientCountTest()
+        {
+            // TODO unit test for the property 'ICommunicationrecipientCount'
         }
         /// <summary>
         /// Test the property 'ObjContactFrom'
@@ -112,6 +120,14 @@ namespace eZmaxApi.Test
         public void ObjContactFromTest()
         {
             // TODO unit test for the property 'ObjContactFrom'
+        }
+        /// <summary>
+        /// Test the property 'ObjAudit'
+        /// </summary>
+        [Test]
+        public void ObjAuditTest()
+        {
+            // TODO unit test for the property 'ObjAudit'
         }
 
     }

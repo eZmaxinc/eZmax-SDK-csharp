@@ -73,6 +73,22 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'AObjCommunication'
         }
+        /// <summary>
+        /// Test the property 'IRowReturned'
+        /// </summary>
+        [Test]
+        public void IRowReturnedTest()
+        {
+            // TODO unit test for the property 'IRowReturned'
+        }
+        /// <summary>
+        /// Test the property 'IRowFiltered'
+        /// </summary>
+        [Test]
+        public void IRowFilteredTest()
+        {
+            // TODO unit test for the property 'IRowFiltered'
+        }
 
     }
 

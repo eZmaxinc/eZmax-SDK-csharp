@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **DEzmaxinvoicingsummaryexternaldetailRebate** | **string** | The rebate for the product | 
 **DEzmaxinvoicingsummaryexternaldetailTotal** | **string** | The total invoiced for the product | 
 **BEzmaxinvoicingsummaryexternaldetailAdjustment** | **bool** | Whether it&#39;s an adjustment | 
+**TEzmaxproductHelpX** | **string** | The help message of the Ezmaxproduct in the language of the requester | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

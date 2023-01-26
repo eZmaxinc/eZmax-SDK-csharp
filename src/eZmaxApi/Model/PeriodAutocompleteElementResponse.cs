@@ -38,7 +38,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PeriodAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sPeriodYYYYMM">The period YYYYMM (required).</param>
+        /// <param name="sPeriodYYYYMM">The YYYYMM of the Period (required).</param>
         /// <param name="pkiPeriodID">The unique ID of the Period (required).</param>
         /// <param name="bPeriodIsactive">Whether the Period is active or not (required).</param>
         public PeriodAutocompleteElementResponse(string sPeriodYYYYMM = default(string), int pkiPeriodID = default(int), bool bPeriodIsactive = default(bool))
@@ -76,9 +76,9 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// The period YYYYMM
+        /// The YYYYMM of the Period
         /// </summary>
-        /// <value>The period YYYYMM</value>
+        /// <value>The YYYYMM of the Period</value>
         [DataMember(Name="sPeriodYYYYMM", EmitDefaultValue=true)]
         public string SPeriodYYYYMM { get; set; }
 

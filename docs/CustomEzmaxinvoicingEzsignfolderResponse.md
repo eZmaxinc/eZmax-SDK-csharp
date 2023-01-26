@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **BEzsigntsarequirementBillable** | **bool** | Whether the TSA requirement is billable or not | 
 **BEzsignfolderMfaused** | **bool** | Whether the MFA was used or not for the Ezsignfolder | 
 **BEzsignfolderPaymentused** | **bool** | Whether there was a signature is of type payment | 
-**BEzsignfolderAllowed** | **bool** |  | 
+**BEzsignfolderAllowed** | **bool** | Whether you have access to the Ezsignfolder or not | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

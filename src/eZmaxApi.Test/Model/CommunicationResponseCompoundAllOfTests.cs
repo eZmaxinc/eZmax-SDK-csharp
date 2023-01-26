@@ -89,22 +89,6 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'AObjCommunicationexternalrecipient'
         }
-        /// <summary>
-        /// Test the property 'AObjCommunicationimage'
-        /// </summary>
-        [Test]
-        public void AObjCommunicationimageTest()
-        {
-            // TODO unit test for the property 'AObjCommunicationimage'
-        }
-        /// <summary>
-        /// Test the property 'AObjCommunicationexternalimage'
-        /// </summary>
-        [Test]
-        public void AObjCommunicationexternalimageTest()
-        {
-            // TODO unit test for the property 'AObjCommunicationexternalimage'
-        }
 
     }
 

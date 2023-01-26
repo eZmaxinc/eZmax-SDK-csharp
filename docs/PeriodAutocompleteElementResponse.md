@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SPeriodYYYYMM** | **string** | The period YYYYMM | 
+**SPeriodYYYYMM** | **string** | The YYYYMM of the Period | 
 **PkiPeriodID** | **int** | The unique ID of the Period | 
 **BPeriodIsactive** | **bool** | Whether the Period is active or not | 
 

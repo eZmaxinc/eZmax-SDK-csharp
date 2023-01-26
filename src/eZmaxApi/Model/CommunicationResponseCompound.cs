@@ -31,15 +31,20 @@ namespace eZmaxApi.Model
     public partial class CommunicationResponseCompound :  IEquatable<CommunicationResponseCompound>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets ECommunicationEmailimportance
+        /// Gets or Sets ECommunicationImportance
         /// </summary>
-        [DataMember(Name="eCommunicationEmailimportance", EmitDefaultValue=false)]
-        public FieldECommunicationEmailimportance? ECommunicationEmailimportance { get; set; }
+        [DataMember(Name="eCommunicationImportance", EmitDefaultValue=true)]
+        public FieldECommunicationImportance ECommunicationImportance { get; set; }
         /// <summary>
         /// Gets or Sets ECommunicationType
         /// </summary>
         [DataMember(Name="eCommunicationType", EmitDefaultValue=true)]
         public FieldECommunicationType ECommunicationType { get; set; }
+        /// <summary>
+        /// Gets or Sets ECommunicationDirection
+        /// </summary>
+        [DataMember(Name="eCommunicationDirection", EmitDefaultValue=true)]
+        public ComputedECommunicationDirection ECommunicationDirection { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationResponseCompound" /> class.
         /// </summary>
@@ -49,17 +54,17 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CommunicationResponseCompound" /> class.
         /// </summary>
         /// <param name="pkiCommunicationID">The unique ID of the Communication. (required).</param>
-        /// <param name="eCommunicationEmailimportance">eCommunicationEmailimportance.</param>
+        /// <param name="eCommunicationImportance">eCommunicationImportance (required).</param>
         /// <param name="eCommunicationType">eCommunicationType (required).</param>
-        /// <param name="sCommunicationSubject">The Subject of the Communication (required).</param>
-        /// <param name="dtCommunicationSentdate">The send date and time at which the Communication was sent. (required).</param>
+        /// <param name="sCommunicationSubject">The subject of the Communication (required).</param>
+        /// <param name="eCommunicationDirection">eCommunicationDirection (required).</param>
+        /// <param name="iCommunicationrecipientCount">The count of Communicationrecipient (required).</param>
         /// <param name="objContactFrom">objContactFrom (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
         /// <param name="aObjCommunicationattachment">aObjCommunicationattachment (required).</param>
         /// <param name="aObjCommunicationrecipient">aObjCommunicationrecipient (required).</param>
         /// <param name="aObjCommunicationexternalrecipient">aObjCommunicationexternalrecipient (required).</param>
-        /// <param name="aObjCommunicationimage">aObjCommunicationimage (required).</param>
-        /// <param name="aObjCommunicationexternalimage">aObjCommunicationexternalimage (required).</param>
-        public CommunicationResponseCompound(int pkiCommunicationID = default(int), FieldECommunicationEmailimportance? eCommunicationEmailimportance = default(FieldECommunicationEmailimportance?), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), string sCommunicationSubject = default(string), string dtCommunicationSentdate = default(string), CustomContactNameResponse objContactFrom = default(CustomContactNameResponse), List<CommunicationattachmentResponseCompound> aObjCommunicationattachment = default(List<CommunicationattachmentResponseCompound>), List<CommunicationrecipientResponseCompound> aObjCommunicationrecipient = default(List<CommunicationrecipientResponseCompound>), List<CommunicationexternalrecipientResponseCompound> aObjCommunicationexternalrecipient = default(List<CommunicationexternalrecipientResponseCompound>), List<CommunicationimageResponseCompound> aObjCommunicationimage = default(List<CommunicationimageResponseCompound>), List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage = default(List<CommunicationexternalimageResponseCompound>))
+        public CommunicationResponseCompound(int pkiCommunicationID = default(int), FieldECommunicationImportance eCommunicationImportance = default(FieldECommunicationImportance), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), string sCommunicationSubject = default(string), ComputedECommunicationDirection eCommunicationDirection = default(ComputedECommunicationDirection), int iCommunicationrecipientCount = default(int), CustomContactNameResponse objContactFrom = default(CustomContactNameResponse), CommonAudit objAudit = default(CommonAudit), List<CommunicationattachmentResponseCompound> aObjCommunicationattachment = default(List<CommunicationattachmentResponseCompound>), List<CommunicationrecipientResponseCompound> aObjCommunicationrecipient = default(List<CommunicationrecipientResponseCompound>), List<CommunicationexternalrecipientResponseCompound> aObjCommunicationexternalrecipient = default(List<CommunicationexternalrecipientResponseCompound>))
         {
             // to ensure "pkiCommunicationID" is required (not null)
             if (pkiCommunicationID == null)
@@ -69,6 +74,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.PkiCommunicationID = pkiCommunicationID;
+            }
+
+            // to ensure "eCommunicationImportance" is required (not null)
+            if (eCommunicationImportance == null)
+            {
+                throw new InvalidDataException("eCommunicationImportance is a required property for CommunicationResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.ECommunicationImportance = eCommunicationImportance;
             }
 
             // to ensure "eCommunicationType" is required (not null)
@@ -91,14 +106,24 @@ namespace eZmaxApi.Model
                 this.SCommunicationSubject = sCommunicationSubject;
             }
 
-            // to ensure "dtCommunicationSentdate" is required (not null)
-            if (dtCommunicationSentdate == null)
+            // to ensure "eCommunicationDirection" is required (not null)
+            if (eCommunicationDirection == null)
             {
-                throw new InvalidDataException("dtCommunicationSentdate is a required property for CommunicationResponseCompound and cannot be null");
+                throw new InvalidDataException("eCommunicationDirection is a required property for CommunicationResponseCompound and cannot be null");
             }
             else
             {
-                this.DtCommunicationSentdate = dtCommunicationSentdate;
+                this.ECommunicationDirection = eCommunicationDirection;
+            }
+
+            // to ensure "iCommunicationrecipientCount" is required (not null)
+            if (iCommunicationrecipientCount == null)
+            {
+                throw new InvalidDataException("iCommunicationrecipientCount is a required property for CommunicationResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.ICommunicationrecipientCount = iCommunicationrecipientCount;
             }
 
             // to ensure "objContactFrom" is required (not null)
@@ -109,6 +134,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.ObjContactFrom = objContactFrom;
+            }
+
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
+            {
+                throw new InvalidDataException("objAudit is a required property for CommunicationResponseCompound and cannot be null");
+            }
+            else
+            {
+                this.ObjAudit = objAudit;
             }
 
             // to ensure "aObjCommunicationattachment" is required (not null)
@@ -141,27 +176,6 @@ namespace eZmaxApi.Model
                 this.AObjCommunicationexternalrecipient = aObjCommunicationexternalrecipient;
             }
 
-            // to ensure "aObjCommunicationimage" is required (not null)
-            if (aObjCommunicationimage == null)
-            {
-                throw new InvalidDataException("aObjCommunicationimage is a required property for CommunicationResponseCompound and cannot be null");
-            }
-            else
-            {
-                this.AObjCommunicationimage = aObjCommunicationimage;
-            }
-
-            // to ensure "aObjCommunicationexternalimage" is required (not null)
-            if (aObjCommunicationexternalimage == null)
-            {
-                throw new InvalidDataException("aObjCommunicationexternalimage is a required property for CommunicationResponseCompound and cannot be null");
-            }
-            else
-            {
-                this.AObjCommunicationexternalimage = aObjCommunicationexternalimage;
-            }
-
-            this.ECommunicationEmailimportance = eCommunicationEmailimportance;
         }
 
         /// <summary>
@@ -174,24 +188,31 @@ namespace eZmaxApi.Model
 
 
         /// <summary>
-        /// The Subject of the Communication
+        /// The subject of the Communication
         /// </summary>
-        /// <value>The Subject of the Communication</value>
+        /// <value>The subject of the Communication</value>
         [DataMember(Name="sCommunicationSubject", EmitDefaultValue=true)]
         public string SCommunicationSubject { get; set; }
 
+
         /// <summary>
-        /// The send date and time at which the Communication was sent.
+        /// The count of Communicationrecipient
         /// </summary>
-        /// <value>The send date and time at which the Communication was sent.</value>
-        [DataMember(Name="dtCommunicationSentdate", EmitDefaultValue=true)]
-        public string DtCommunicationSentdate { get; set; }
+        /// <value>The count of Communicationrecipient</value>
+        [DataMember(Name="iCommunicationrecipientCount", EmitDefaultValue=true)]
+        public int ICommunicationrecipientCount { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjContactFrom
         /// </summary>
         [DataMember(Name="objContactFrom", EmitDefaultValue=true)]
         public CustomContactNameResponse ObjContactFrom { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjAudit
+        /// </summary>
+        [DataMember(Name="objAudit", EmitDefaultValue=true)]
+        public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjCommunicationattachment
@@ -212,18 +233,6 @@ namespace eZmaxApi.Model
         public List<CommunicationexternalrecipientResponseCompound> AObjCommunicationexternalrecipient { get; set; }
 
         /// <summary>
-        /// Gets or Sets AObjCommunicationimage
-        /// </summary>
-        [DataMember(Name="a_objCommunicationimage", EmitDefaultValue=true)]
-        public List<CommunicationimageResponseCompound> AObjCommunicationimage { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AObjCommunicationexternalimage
-        /// </summary>
-        [DataMember(Name="a_objCommunicationexternalimage", EmitDefaultValue=true)]
-        public List<CommunicationexternalimageResponseCompound> AObjCommunicationexternalimage { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -232,16 +241,16 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class CommunicationResponseCompound {\n");
             sb.Append("  PkiCommunicationID: ").Append(PkiCommunicationID).Append("\n");
-            sb.Append("  ECommunicationEmailimportance: ").Append(ECommunicationEmailimportance).Append("\n");
+            sb.Append("  ECommunicationImportance: ").Append(ECommunicationImportance).Append("\n");
             sb.Append("  ECommunicationType: ").Append(ECommunicationType).Append("\n");
             sb.Append("  SCommunicationSubject: ").Append(SCommunicationSubject).Append("\n");
-            sb.Append("  DtCommunicationSentdate: ").Append(DtCommunicationSentdate).Append("\n");
+            sb.Append("  ECommunicationDirection: ").Append(ECommunicationDirection).Append("\n");
+            sb.Append("  ICommunicationrecipientCount: ").Append(ICommunicationrecipientCount).Append("\n");
             sb.Append("  ObjContactFrom: ").Append(ObjContactFrom).Append("\n");
+            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  AObjCommunicationattachment: ").Append(AObjCommunicationattachment).Append("\n");
             sb.Append("  AObjCommunicationrecipient: ").Append(AObjCommunicationrecipient).Append("\n");
             sb.Append("  AObjCommunicationexternalrecipient: ").Append(AObjCommunicationexternalrecipient).Append("\n");
-            sb.Append("  AObjCommunicationimage: ").Append(AObjCommunicationimage).Append("\n");
-            sb.Append("  AObjCommunicationexternalimage: ").Append(AObjCommunicationexternalimage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -282,9 +291,9 @@ namespace eZmaxApi.Model
                     this.PkiCommunicationID.Equals(input.PkiCommunicationID))
                 ) && 
                 (
-                    this.ECommunicationEmailimportance == input.ECommunicationEmailimportance ||
-                    (this.ECommunicationEmailimportance != null &&
-                    this.ECommunicationEmailimportance.Equals(input.ECommunicationEmailimportance))
+                    this.ECommunicationImportance == input.ECommunicationImportance ||
+                    (this.ECommunicationImportance != null &&
+                    this.ECommunicationImportance.Equals(input.ECommunicationImportance))
                 ) && 
                 (
                     this.ECommunicationType == input.ECommunicationType ||
@@ -297,14 +306,24 @@ namespace eZmaxApi.Model
                     this.SCommunicationSubject.Equals(input.SCommunicationSubject))
                 ) && 
                 (
-                    this.DtCommunicationSentdate == input.DtCommunicationSentdate ||
-                    (this.DtCommunicationSentdate != null &&
-                    this.DtCommunicationSentdate.Equals(input.DtCommunicationSentdate))
+                    this.ECommunicationDirection == input.ECommunicationDirection ||
+                    (this.ECommunicationDirection != null &&
+                    this.ECommunicationDirection.Equals(input.ECommunicationDirection))
+                ) && 
+                (
+                    this.ICommunicationrecipientCount == input.ICommunicationrecipientCount ||
+                    (this.ICommunicationrecipientCount != null &&
+                    this.ICommunicationrecipientCount.Equals(input.ICommunicationrecipientCount))
                 ) && 
                 (
                     this.ObjContactFrom == input.ObjContactFrom ||
                     (this.ObjContactFrom != null &&
                     this.ObjContactFrom.Equals(input.ObjContactFrom))
+                ) && 
+                (
+                    this.ObjAudit == input.ObjAudit ||
+                    (this.ObjAudit != null &&
+                    this.ObjAudit.Equals(input.ObjAudit))
                 ) && 
                 (
                     this.AObjCommunicationattachment == input.AObjCommunicationattachment ||
@@ -323,18 +342,6 @@ namespace eZmaxApi.Model
                     this.AObjCommunicationexternalrecipient != null &&
                     input.AObjCommunicationexternalrecipient != null &&
                     this.AObjCommunicationexternalrecipient.SequenceEqual(input.AObjCommunicationexternalrecipient)
-                ) && 
-                (
-                    this.AObjCommunicationimage == input.AObjCommunicationimage ||
-                    this.AObjCommunicationimage != null &&
-                    input.AObjCommunicationimage != null &&
-                    this.AObjCommunicationimage.SequenceEqual(input.AObjCommunicationimage)
-                ) && 
-                (
-                    this.AObjCommunicationexternalimage == input.AObjCommunicationexternalimage ||
-                    this.AObjCommunicationexternalimage != null &&
-                    input.AObjCommunicationexternalimage != null &&
-                    this.AObjCommunicationexternalimage.SequenceEqual(input.AObjCommunicationexternalimage)
                 );
         }
 
@@ -349,26 +356,26 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.PkiCommunicationID != null)
                     hashCode = hashCode * 59 + this.PkiCommunicationID.GetHashCode();
-                if (this.ECommunicationEmailimportance != null)
-                    hashCode = hashCode * 59 + this.ECommunicationEmailimportance.GetHashCode();
+                if (this.ECommunicationImportance != null)
+                    hashCode = hashCode * 59 + this.ECommunicationImportance.GetHashCode();
                 if (this.ECommunicationType != null)
                     hashCode = hashCode * 59 + this.ECommunicationType.GetHashCode();
                 if (this.SCommunicationSubject != null)
                     hashCode = hashCode * 59 + this.SCommunicationSubject.GetHashCode();
-                if (this.DtCommunicationSentdate != null)
-                    hashCode = hashCode * 59 + this.DtCommunicationSentdate.GetHashCode();
+                if (this.ECommunicationDirection != null)
+                    hashCode = hashCode * 59 + this.ECommunicationDirection.GetHashCode();
+                if (this.ICommunicationrecipientCount != null)
+                    hashCode = hashCode * 59 + this.ICommunicationrecipientCount.GetHashCode();
                 if (this.ObjContactFrom != null)
                     hashCode = hashCode * 59 + this.ObjContactFrom.GetHashCode();
+                if (this.ObjAudit != null)
+                    hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
                 if (this.AObjCommunicationattachment != null)
                     hashCode = hashCode * 59 + this.AObjCommunicationattachment.GetHashCode();
                 if (this.AObjCommunicationrecipient != null)
                     hashCode = hashCode * 59 + this.AObjCommunicationrecipient.GetHashCode();
                 if (this.AObjCommunicationexternalrecipient != null)
                     hashCode = hashCode * 59 + this.AObjCommunicationexternalrecipient.GetHashCode();
-                if (this.AObjCommunicationimage != null)
-                    hashCode = hashCode * 59 + this.AObjCommunicationimage.GetHashCode();
-                if (this.AObjCommunicationexternalimage != null)
-                    hashCode = hashCode * 59 + this.AObjCommunicationexternalimage.GetHashCode();
                 return hashCode;
             }
         }

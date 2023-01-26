@@ -43,7 +43,7 @@ namespace eZmaxApi.Model
         /// <param name="bEzsigntsarequirementBillable">Whether the TSA requirement is billable or not (required).</param>
         /// <param name="bEzsignfolderMfaused">Whether the MFA was used or not for the Ezsignfolder (required).</param>
         /// <param name="bEzsignfolderPaymentused">Whether there was a signature is of type payment (required).</param>
-        /// <param name="bEzsignfolderAllowed">bEzsignfolderAllowed (required).</param>
+        /// <param name="bEzsignfolderAllowed">Whether you have access to the Ezsignfolder or not (required).</param>
         public CustomEzmaxinvoicingEzsignfolderResponseAllOf(int fkiEzsignfolderID = default(int), string sEzsignfolderDescription = default(string), bool bEzsigntsarequirementBillable = default(bool), bool bEzsignfolderMfaused = default(bool), bool bEzsignfolderPaymentused = default(bool), bool bEzsignfolderAllowed = default(bool))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)
@@ -144,8 +144,9 @@ namespace eZmaxApi.Model
         public bool BEzsignfolderPaymentused { get; set; }
 
         /// <summary>
-        /// Gets or Sets BEzsignfolderAllowed
+        /// Whether you have access to the Ezsignfolder or not
         /// </summary>
+        /// <value>Whether you have access to the Ezsignfolder or not</value>
         [DataMember(Name="bEzsignfolderAllowed", EmitDefaultValue=true)]
         public bool BEzsignfolderAllowed { get; set; }
 

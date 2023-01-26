@@ -25,7 +25,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for GET /1/module/communication/getCount
+    /// Payload for GET /1/module/communication/getCommunicationCount
     /// </summary>
     [DataContract]
     public partial class CommunicationGetCountV1ResponseMPayload :  IEquatable<CommunicationGetCountV1ResponseMPayload>, IValidatableObject
@@ -38,7 +38,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationGetCountV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iCommunicationCount">The number of total signatures in the Ezsigntemplate. (required).</param>
+        /// <param name="iCommunicationCount">The count of Communication. (required).</param>
         public CommunicationGetCountV1ResponseMPayload(int iCommunicationCount = default(int))
         {
             // to ensure "iCommunicationCount" is required (not null)
@@ -54,9 +54,9 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// The number of total signatures in the Ezsigntemplate.
+        /// The count of Communication.
         /// </summary>
-        /// <value>The number of total signatures in the Ezsigntemplate.</value>
+        /// <value>The count of Communication.</value>
         [DataMember(Name="iCommunicationCount", EmitDefaultValue=true)]
         public int ICommunicationCount { get; set; }
 

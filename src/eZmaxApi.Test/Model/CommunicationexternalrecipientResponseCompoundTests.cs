@@ -74,22 +74,6 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'PkiCommunicationexternalrecipientID'
         }
         /// <summary>
-        /// Test the property 'SEmailAddress'
-        /// </summary>
-        [Test]
-        public void SEmailAddressTest()
-        {
-            // TODO unit test for the property 'SEmailAddress'
-        }
-        /// <summary>
-        /// Test the property 'ObjPhoneSms'
-        /// </summary>
-        [Test]
-        public void ObjPhoneSmsTest()
-        {
-            // TODO unit test for the property 'ObjPhoneSms'
-        }
-        /// <summary>
         /// Test the property 'ECommunicationexternalrecipientType'
         /// </summary>
         [Test]
@@ -98,12 +82,28 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'ECommunicationexternalrecipientType'
         }
         /// <summary>
-        /// Test the property 'SCommunicationexternalrecipientName'
+        /// Test the property 'ObjDescriptionstatic'
         /// </summary>
         [Test]
-        public void SCommunicationexternalrecipientNameTest()
+        public void ObjDescriptionstaticTest()
         {
-            // TODO unit test for the property 'SCommunicationexternalrecipientName'
+            // TODO unit test for the property 'ObjDescriptionstatic'
+        }
+        /// <summary>
+        /// Test the property 'ObjEmailstatic'
+        /// </summary>
+        [Test]
+        public void ObjEmailstaticTest()
+        {
+            // TODO unit test for the property 'ObjEmailstatic'
+        }
+        /// <summary>
+        /// Test the property 'ObjPhonestatic'
+        /// </summary>
+        [Test]
+        public void ObjPhonestaticTest()
+        {
+            // TODO unit test for the property 'ObjPhonestatic'
         }
 
     }

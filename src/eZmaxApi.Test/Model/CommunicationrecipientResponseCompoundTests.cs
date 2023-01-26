@@ -74,6 +74,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'PkiCommunicationrecipientID'
         }
         /// <summary>
+        /// Test the property 'ECommunicationrecipientObjecttype'
+        /// </summary>
+        [Test]
+        public void ECommunicationrecipientObjecttypeTest()
+        {
+            // TODO unit test for the property 'ECommunicationrecipientObjecttype'
+        }
+        /// <summary>
         /// Test the property 'FkiAgentID'
         /// </summary>
         [Test]
@@ -138,22 +146,6 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'FkiUserID'
         }
         /// <summary>
-        /// Test the property 'SEmailAddress'
-        /// </summary>
-        [Test]
-        public void SEmailAddressTest()
-        {
-            // TODO unit test for the property 'SEmailAddress'
-        }
-        /// <summary>
-        /// Test the property 'ECommunicationrecipientType'
-        /// </summary>
-        [Test]
-        public void ECommunicationrecipientTypeTest()
-        {
-            // TODO unit test for the property 'ECommunicationrecipientType'
-        }
-        /// <summary>
         /// Test the property 'FkiAgentincorporationID'
         /// </summary>
         [Test]
@@ -210,12 +202,36 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'FkiSupplierID'
         }
         /// <summary>
-        /// Test the property 'ObjPhoneSms'
+        /// Test the property 'ECommunicationrecipientType'
         /// </summary>
         [Test]
-        public void ObjPhoneSmsTest()
+        public void ECommunicationrecipientTypeTest()
         {
-            // TODO unit test for the property 'ObjPhoneSms'
+            // TODO unit test for the property 'ECommunicationrecipientType'
+        }
+        /// <summary>
+        /// Test the property 'ObjDescriptionstatic'
+        /// </summary>
+        [Test]
+        public void ObjDescriptionstaticTest()
+        {
+            // TODO unit test for the property 'ObjDescriptionstatic'
+        }
+        /// <summary>
+        /// Test the property 'ObjEmailstatic'
+        /// </summary>
+        [Test]
+        public void ObjEmailstaticTest()
+        {
+            // TODO unit test for the property 'ObjEmailstatic'
+        }
+        /// <summary>
+        /// Test the property 'ObjPhonestatic'
+        /// </summary>
+        [Test]
+        public void ObjPhonestaticTest()
+        {
+            // TODO unit test for the property 'ObjPhonestatic'
         }
 
     }

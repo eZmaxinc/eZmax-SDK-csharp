@@ -74,12 +74,52 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'PkiCommunicationID'
         }
         /// <summary>
-        /// Test the property 'ECommunicationEmailimportance'
+        /// Test the property 'FkiEzsignfolderID'
         /// </summary>
         [Test]
-        public void ECommunicationEmailimportanceTest()
+        public void FkiEzsignfolderIDTest()
         {
-            // TODO unit test for the property 'ECommunicationEmailimportance'
+            // TODO unit test for the property 'FkiEzsignfolderID'
+        }
+        /// <summary>
+        /// Test the property 'FkiInscriptionID'
+        /// </summary>
+        [Test]
+        public void FkiInscriptionIDTest()
+        {
+            // TODO unit test for the property 'FkiInscriptionID'
+        }
+        /// <summary>
+        /// Test the property 'FkiInscriptionnotauthenticatedID'
+        /// </summary>
+        [Test]
+        public void FkiInscriptionnotauthenticatedIDTest()
+        {
+            // TODO unit test for the property 'FkiInscriptionnotauthenticatedID'
+        }
+        /// <summary>
+        /// Test the property 'DtCreatedDate'
+        /// </summary>
+        [Test]
+        public void DtCreatedDateTest()
+        {
+            // TODO unit test for the property 'DtCreatedDate'
+        }
+        /// <summary>
+        /// Test the property 'ECommunicationDirection'
+        /// </summary>
+        [Test]
+        public void ECommunicationDirectionTest()
+        {
+            // TODO unit test for the property 'ECommunicationDirection'
+        }
+        /// <summary>
+        /// Test the property 'ECommunicationImportance'
+        /// </summary>
+        [Test]
+        public void ECommunicationImportanceTest()
+        {
+            // TODO unit test for the property 'ECommunicationImportance'
         }
         /// <summary>
         /// Test the property 'ECommunicationType'
@@ -90,6 +130,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'ECommunicationType'
         }
         /// <summary>
+        /// Test the property 'ICommunicationrecipientCount'
+        /// </summary>
+        [Test]
+        public void ICommunicationrecipientCountTest()
+        {
+            // TODO unit test for the property 'ICommunicationrecipientCount'
+        }
+        /// <summary>
         /// Test the property 'SCommunicationSubject'
         /// </summary>
         [Test]
@@ -98,20 +146,20 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SCommunicationSubject'
         }
         /// <summary>
-        /// Test the property 'DtCommunicationSentdate'
+        /// Test the property 'SCommunicationSender'
         /// </summary>
         [Test]
-        public void DtCommunicationSentdateTest()
+        public void SCommunicationSenderTest()
         {
-            // TODO unit test for the property 'DtCommunicationSentdate'
+            // TODO unit test for the property 'SCommunicationSender'
         }
         /// <summary>
-        /// Test the property 'ObjContactFrom'
+        /// Test the property 'SCommunicationRecipient'
         /// </summary>
         [Test]
-        public void ObjContactFromTest()
+        public void SCommunicationRecipientTest()
         {
-            // TODO unit test for the property 'ObjContactFrom'
+            // TODO unit test for the property 'SCommunicationRecipient'
         }
 
     }
