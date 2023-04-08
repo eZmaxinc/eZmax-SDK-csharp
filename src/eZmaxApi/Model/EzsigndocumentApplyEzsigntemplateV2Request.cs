@@ -192,6 +192,10 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
             }
 
+
+
+
+
             yield break;
         }
     }

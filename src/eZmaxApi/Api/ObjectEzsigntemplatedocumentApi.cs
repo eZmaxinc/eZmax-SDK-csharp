@@ -116,6 +116,29 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigntemplatedocumentEditObjectV1Response</returns>
         ApiResponse<EzsigntemplatedocumentEditObjectV1Response> EzsigntemplatedocumentEditObjectV1WithHttpInfo (int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditObjectV1Request ezsigntemplatedocumentEditObjectV1Request);
         /// <summary>
+        /// Flatten
+        /// </summary>
+        /// <remarks>
+        /// Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="body"></param>
+        /// <returns>EzsigntemplatedocumentFlattenV1Response</returns>
+        EzsigntemplatedocumentFlattenV1Response EzsigntemplatedocumentFlattenV1 (int pkiEzsigntemplatedocumentID, Object body);
+
+        /// <summary>
+        /// Flatten
+        /// </summary>
+        /// <remarks>
+        /// Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of EzsigntemplatedocumentFlattenV1Response</returns>
+        ApiResponse<EzsigntemplatedocumentFlattenV1Response> EzsigntemplatedocumentFlattenV1WithHttpInfo (int pkiEzsigntemplatedocumentID, Object body);
+        /// <summary>
         /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpages
         /// </summary>
         /// <remarks>
@@ -178,29 +201,6 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatedocumentID"></param>
         /// <returns>ApiResponse of EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response</returns>
         ApiResponse<EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response> EzsigntemplatedocumentGetEzsigntemplatesignaturesV1WithHttpInfo (int pkiEzsigntemplatedocumentID);
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplatedocument
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplatedocumentID"></param>
-        /// <returns>EzsigntemplatedocumentGetObjectV1Response</returns>
-        [Obsolete]
-        EzsigntemplatedocumentGetObjectV1Response EzsigntemplatedocumentGetObjectV1 (int pkiEzsigntemplatedocumentID);
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplatedocument
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplatedocumentID"></param>
-        /// <returns>ApiResponse of EzsigntemplatedocumentGetObjectV1Response</returns>
-        [Obsolete]
-        ApiResponse<EzsigntemplatedocumentGetObjectV1Response> EzsigntemplatedocumentGetObjectV1WithHttpInfo (int pkiEzsigntemplatedocumentID);
         /// <summary>
         /// Retrieve an existing Ezsigntemplatedocument
         /// </summary>
@@ -369,6 +369,31 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsigntemplatedocumentEditObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentEditObjectV1Response>> EzsigntemplatedocumentEditObjectV1WithHttpInfoAsync (int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditObjectV1Request ezsigntemplatedocumentEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
+        /// Flatten
+        /// </summary>
+        /// <remarks>
+        /// Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatedocumentFlattenV1Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplatedocumentFlattenV1Response> EzsigntemplatedocumentFlattenV1Async (int pkiEzsigntemplatedocumentID, Object body, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Flatten
+        /// </summary>
+        /// <remarks>
+        /// Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatedocumentFlattenV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentFlattenV1Response>> EzsigntemplatedocumentFlattenV1WithHttpInfoAsync (int pkiEzsigntemplatedocumentID, Object body, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
         /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpages
         /// </summary>
         /// <remarks>
@@ -437,31 +462,6 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response>> EzsigntemplatedocumentGetEzsigntemplatesignaturesV1WithHttpInfoAsync (int pkiEzsigntemplatedocumentID, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplatedocument
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplatedocumentID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of EzsigntemplatedocumentGetObjectV1Response</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<EzsigntemplatedocumentGetObjectV1Response> EzsigntemplatedocumentGetObjectV1Async (int pkiEzsigntemplatedocumentID, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplatedocument
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplatedocumentID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (EzsigntemplatedocumentGetObjectV1Response)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentGetObjectV1Response>> EzsigntemplatedocumentGetObjectV1WithHttpInfoAsync (int pkiEzsigntemplatedocumentID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsigntemplatedocument
         /// </summary>
@@ -1327,6 +1327,179 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Flatten Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="body"></param>
+        /// <returns>EzsigntemplatedocumentFlattenV1Response</returns>
+        public EzsigntemplatedocumentFlattenV1Response EzsigntemplatedocumentFlattenV1 (int pkiEzsigntemplatedocumentID, Object body)
+        {
+             ApiResponse<EzsigntemplatedocumentFlattenV1Response> localVarResponse = EzsigntemplatedocumentFlattenV1WithHttpInfo(pkiEzsigntemplatedocumentID, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Flatten Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of EzsigntemplatedocumentFlattenV1Response</returns>
+        public ApiResponse<EzsigntemplatedocumentFlattenV1Response> EzsigntemplatedocumentFlattenV1WithHttpInfo (int pkiEzsigntemplatedocumentID, Object body)
+        {
+            // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
+            if (pkiEzsigntemplatedocumentID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatedocumentID' when calling ObjectEzsigntemplatedocumentApi->EzsigntemplatedocumentFlattenV1");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ObjectEzsigntemplatedocumentApi->EzsigntemplatedocumentFlattenV1");
+
+            var localVarPath = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigntemplatedocumentID != null) localVarPathParams.Add("pkiEzsigntemplatedocumentID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatedocumentID)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatedocumentFlattenV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatedocumentFlattenV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatedocumentFlattenV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatedocumentFlattenV1Response)));
+        }
+
+        /// <summary>
+        /// Flatten Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of EzsigntemplatedocumentFlattenV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplatedocumentFlattenV1Response> EzsigntemplatedocumentFlattenV1Async (int pkiEzsigntemplatedocumentID, Object body, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<EzsigntemplatedocumentFlattenV1Response> localVarResponse = await EzsigntemplatedocumentFlattenV1WithHttpInfoAsync(pkiEzsigntemplatedocumentID, body, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Flatten Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (EzsigntemplatedocumentFlattenV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentFlattenV1Response>> EzsigntemplatedocumentFlattenV1WithHttpInfoAsync (int pkiEzsigntemplatedocumentID, Object body, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
+            if (pkiEzsigntemplatedocumentID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatedocumentID' when calling ObjectEzsigntemplatedocumentApi->EzsigntemplatedocumentFlattenV1");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ObjectEzsigntemplatedocumentApi->EzsigntemplatedocumentFlattenV1");
+
+            var localVarPath = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiEzsigntemplatedocumentID != null) localVarPathParams.Add("pkiEzsigntemplatedocumentID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatedocumentID)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EzsigntemplatedocumentFlattenV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EzsigntemplatedocumentFlattenV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (EzsigntemplatedocumentFlattenV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatedocumentFlattenV1Response)));
+        }
+
+        /// <summary>
         /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpages 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1759,155 +1932,6 @@ namespace eZmaxApi.Api
             return new ApiResponse<EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response)));
-        }
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplatedocument 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplatedocumentID"></param>
-        /// <returns>EzsigntemplatedocumentGetObjectV1Response</returns>
-        [Obsolete]
-        public EzsigntemplatedocumentGetObjectV1Response EzsigntemplatedocumentGetObjectV1 (int pkiEzsigntemplatedocumentID)
-        {
-             ApiResponse<EzsigntemplatedocumentGetObjectV1Response> localVarResponse = EzsigntemplatedocumentGetObjectV1WithHttpInfo(pkiEzsigntemplatedocumentID);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplatedocument 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplatedocumentID"></param>
-        /// <returns>ApiResponse of EzsigntemplatedocumentGetObjectV1Response</returns>
-        [Obsolete]
-        public ApiResponse<EzsigntemplatedocumentGetObjectV1Response> EzsigntemplatedocumentGetObjectV1WithHttpInfo (int pkiEzsigntemplatedocumentID)
-        {
-            // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
-            if (pkiEzsigntemplatedocumentID == null)
-                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatedocumentID' when calling ObjectEzsigntemplatedocumentApi->EzsigntemplatedocumentGetObjectV1");
-
-            var localVarPath = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (pkiEzsigntemplatedocumentID != null) localVarPathParams.Add("pkiEzsigntemplatedocumentID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatedocumentID)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("EzsigntemplatedocumentGetObjectV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<EzsigntemplatedocumentGetObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EzsigntemplatedocumentGetObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatedocumentGetObjectV1Response)));
-        }
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplatedocument 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplatedocumentID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of EzsigntemplatedocumentGetObjectV1Response</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<EzsigntemplatedocumentGetObjectV1Response> EzsigntemplatedocumentGetObjectV1Async (int pkiEzsigntemplatedocumentID, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<EzsigntemplatedocumentGetObjectV1Response> localVarResponse = await EzsigntemplatedocumentGetObjectV1WithHttpInfoAsync(pkiEzsigntemplatedocumentID, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplatedocument 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplatedocumentID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (EzsigntemplatedocumentGetObjectV1Response)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentGetObjectV1Response>> EzsigntemplatedocumentGetObjectV1WithHttpInfoAsync (int pkiEzsigntemplatedocumentID, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
-            if (pkiEzsigntemplatedocumentID == null)
-                throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatedocumentID' when calling ObjectEzsigntemplatedocumentApi->EzsigntemplatedocumentGetObjectV1");
-
-            var localVarPath = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (pkiEzsigntemplatedocumentID != null) localVarPathParams.Add("pkiEzsigntemplatedocumentID", this.Configuration.ApiClient.ParameterToString(pkiEzsigntemplatedocumentID)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("EzsigntemplatedocumentGetObjectV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<EzsigntemplatedocumentGetObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EzsigntemplatedocumentGetObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatedocumentGetObjectV1Response)));
         }
 
         /// <summary>

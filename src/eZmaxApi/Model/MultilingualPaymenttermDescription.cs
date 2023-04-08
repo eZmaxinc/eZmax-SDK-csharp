@@ -135,19 +135,23 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // SPaymenttermDescription1 (string) maxLength
-            if(this.SPaymenttermDescription1 != null && this.SPaymenttermDescription1.Length > 40)
+
+
+            // SPaymenttermDescription1 (string) pattern
+            Regex regexSPaymenttermDescription1 = new Regex(@"^.{1,40}$", RegexOptions.CultureInvariant);
+            if (false == regexSPaymenttermDescription1.Match(this.SPaymenttermDescription1).Success)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermDescription1, length must be less than 40.", new [] { "SPaymenttermDescription1" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermDescription1, must match a pattern of " + regexSPaymenttermDescription1, new [] { "SPaymenttermDescription1" });
             }
 
 
-            // SPaymenttermDescription2 (string) maxLength
-            if(this.SPaymenttermDescription2 != null && this.SPaymenttermDescription2.Length > 40)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermDescription2, length must be less than 40.", new [] { "SPaymenttermDescription2" });
-            }
 
+            // SPaymenttermDescription2 (string) pattern
+            Regex regexSPaymenttermDescription2 = new Regex(@"^.{1,40}$", RegexOptions.CultureInvariant);
+            if (false == regexSPaymenttermDescription2.Match(this.SPaymenttermDescription2).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermDescription2, must match a pattern of " + regexSPaymenttermDescription2, new [] { "SPaymenttermDescription2" });
+            }
 
             yield break;
         }

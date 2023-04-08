@@ -94,18 +94,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test EzmaxinvoicingGetObjectV1
-        /// </summary>
-        [Test]
-        public void EzmaxinvoicingGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzmaxinvoicingID = null;
-            //var response = instance.EzmaxinvoicingGetObjectV1(pkiEzmaxinvoicingID);
-            //Assert.IsInstanceOf(typeof(EzmaxinvoicingGetObjectV1Response), response, "response is EzmaxinvoicingGetObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test EzmaxinvoicingGetObjectV2
         /// </summary>
         [Test]

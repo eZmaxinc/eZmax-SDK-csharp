@@ -113,15 +113,14 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test EzsignsignatureGetObjectV1
+        /// Test EzsignsignatureGetEzsignsignaturesAutomaticV1
         /// </summary>
         [Test]
-        public void EzsignsignatureGetObjectV1Test()
+        public void EzsignsignatureGetEzsignsignaturesAutomaticV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsignsignatureID = null;
-            //var response = instance.EzsignsignatureGetObjectV1(pkiEzsignsignatureID);
-            //Assert.IsInstanceOf(typeof(EzsignsignatureGetObjectV1Response), response, "response is EzsignsignatureGetObjectV1Response");
+            //var response = instance.EzsignsignatureGetEzsignsignaturesAutomaticV1();
+            //Assert.IsInstanceOf(typeof(EzsignsignatureGetEzsignsignaturesAutomaticV1Response), response, "response is EzsignsignatureGetEzsignsignaturesAutomaticV1Response");
         }
         
         /// <summary>

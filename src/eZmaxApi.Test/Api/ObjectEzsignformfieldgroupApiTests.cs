@@ -101,18 +101,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test EzsignformfieldgroupGetObjectV1
-        /// </summary>
-        [Test]
-        public void EzsignformfieldgroupGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsignformfieldgroupID = null;
-            //var response = instance.EzsignformfieldgroupGetObjectV1(pkiEzsignformfieldgroupID);
-            //Assert.IsInstanceOf(typeof(EzsignformfieldgroupGetObjectV1Response), response, "response is EzsignformfieldgroupGetObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test EzsignformfieldgroupGetObjectV2
         /// </summary>
         [Test]

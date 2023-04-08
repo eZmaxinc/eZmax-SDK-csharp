@@ -105,6 +105,14 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'IEzsigntemplatedocumentSignaturetotal'
         }
+        /// <summary>
+        /// Test the property 'BEzsigntemplatedocumentHassignedsignatures'
+        /// </summary>
+        [Test]
+        public void BEzsigntemplatedocumentHassignedsignaturesTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplatedocumentHassignedsignatures'
+        }
 
     }
 

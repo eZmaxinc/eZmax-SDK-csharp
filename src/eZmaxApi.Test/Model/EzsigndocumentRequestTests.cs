@@ -177,6 +177,14 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'SEzsigndocumentName'
         }
+        /// <summary>
+        /// Test the property 'SEzsigndocumentExternalid'
+        /// </summary>
+        [Test]
+        public void SEzsigndocumentExternalidTest()
+        {
+            // TODO unit test for the property 'SEzsigndocumentExternalid'
+        }
 
     }
 

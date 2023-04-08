@@ -74,7 +74,43 @@ namespace eZmaxApi.Model
             /// Enum Pdf for value: Pdf
             /// </summary>
             [EnumMember(Value = "Pdf")]
-            Pdf = 1
+            Pdf = 1,
+
+            /// <summary>
+            /// Enum Doc for value: Doc
+            /// </summary>
+            [EnumMember(Value = "Doc")]
+            Doc = 2,
+
+            /// <summary>
+            /// Enum Docx for value: Docx
+            /// </summary>
+            [EnumMember(Value = "Docx")]
+            Docx = 3,
+
+            /// <summary>
+            /// Enum Xls for value: Xls
+            /// </summary>
+            [EnumMember(Value = "Xls")]
+            Xls = 4,
+
+            /// <summary>
+            /// Enum Xlsx for value: Xlsx
+            /// </summary>
+            [EnumMember(Value = "Xlsx")]
+            Xlsx = 5,
+
+            /// <summary>
+            /// Enum Ppt for value: Ppt
+            /// </summary>
+            [EnumMember(Value = "Ppt")]
+            Ppt = 6,
+
+            /// <summary>
+            /// Enum Pptx for value: Pptx
+            /// </summary>
+            [EnumMember(Value = "Pptx")]
+            Pptx = 7
 
         }
 
@@ -133,7 +169,8 @@ namespace eZmaxApi.Model
         /// <param name="eEzsigndocumentForm">If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**.</param>
         /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
         /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        public EzsigndocumentRequest(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsigntemplateID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiLanguageID = default(int), EEzsigndocumentSourceEnum eEzsigndocumentSource = default(EEzsigndocumentSourceEnum), EEzsigndocumentFormatEnum? eEzsigndocumentFormat = default(EEzsigndocumentFormatEnum?), byte[] sEzsigndocumentBase64 = default(byte[]), string sEzsigndocumentUrl = default(string), bool bEzsigndocumentForcerepair = true, string sEzsigndocumentPassword = default(string), EEzsigndocumentFormEnum? eEzsigndocumentForm = default(EEzsigndocumentFormEnum?), string dtEzsigndocumentDuedate = default(string), string sEzsigndocumentName = default(string))
+        /// <param name="sEzsigndocumentExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
+        public EzsigndocumentRequest(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsigntemplateID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiLanguageID = default(int), EEzsigndocumentSourceEnum eEzsigndocumentSource = default(EEzsigndocumentSourceEnum), EEzsigndocumentFormatEnum? eEzsigndocumentFormat = default(EEzsigndocumentFormatEnum?), byte[] sEzsigndocumentBase64 = default(byte[]), string sEzsigndocumentUrl = default(string), bool bEzsigndocumentForcerepair = true, string sEzsigndocumentPassword = default(string), EEzsigndocumentFormEnum? eEzsigndocumentForm = default(EEzsigndocumentFormEnum?), string dtEzsigndocumentDuedate = default(string), string sEzsigndocumentName = default(string), string sEzsigndocumentExternalid = default(string))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)
             if (fkiEzsignfolderID == null)
@@ -202,6 +239,7 @@ namespace eZmaxApi.Model
             }
             this.SEzsigndocumentPassword = sEzsigndocumentPassword;
             this.EEzsigndocumentForm = eEzsigndocumentForm;
+            this.SEzsigndocumentExternalid = sEzsigndocumentExternalid;
         }
 
         /// <summary>
@@ -285,6 +323,13 @@ namespace eZmaxApi.Model
         public string SEzsigndocumentName { get; set; }
 
         /// <summary>
+        /// This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+        /// </summary>
+        /// <value>This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. </value>
+        [DataMember(Name="sEzsigndocumentExternalid", EmitDefaultValue=false)]
+        public string SEzsigndocumentExternalid { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -306,6 +351,7 @@ namespace eZmaxApi.Model
             sb.Append("  EEzsigndocumentForm: ").Append(EEzsigndocumentForm).Append("\n");
             sb.Append("  DtEzsigndocumentDuedate: ").Append(DtEzsigndocumentDuedate).Append("\n");
             sb.Append("  SEzsigndocumentName: ").Append(SEzsigndocumentName).Append("\n");
+            sb.Append("  SEzsigndocumentExternalid: ").Append(SEzsigndocumentExternalid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -409,6 +455,11 @@ namespace eZmaxApi.Model
                     this.SEzsigndocumentName == input.SEzsigndocumentName ||
                     (this.SEzsigndocumentName != null &&
                     this.SEzsigndocumentName.Equals(input.SEzsigndocumentName))
+                ) && 
+                (
+                    this.SEzsigndocumentExternalid == input.SEzsigndocumentExternalid ||
+                    (this.SEzsigndocumentExternalid != null &&
+                    this.SEzsigndocumentExternalid.Equals(input.SEzsigndocumentExternalid))
                 );
         }
 
@@ -449,6 +500,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.DtEzsigndocumentDuedate.GetHashCode();
                 if (this.SEzsigndocumentName != null)
                     hashCode = hashCode * 59 + this.SEzsigndocumentName.GetHashCode();
+                if (this.SEzsigndocumentExternalid != null)
+                    hashCode = hashCode * 59 + this.SEzsigndocumentExternalid.GetHashCode();
                 return hashCode;
             }
         }
@@ -504,6 +557,15 @@ namespace eZmaxApi.Model
             if(this.FkiLanguageID < (int)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+
+
+            // SEzsigndocumentExternalid (string) pattern
+            Regex regexSEzsigndocumentExternalid = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
+            if (false == regexSEzsigndocumentExternalid.Match(this.SEzsigndocumentExternalid).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigndocumentExternalid, must match a pattern of " + regexSEzsigndocumentExternalid, new [] { "SEzsigndocumentExternalid" });
             }
 
             yield break;

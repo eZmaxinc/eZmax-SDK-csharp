@@ -46,9 +46,10 @@ namespace eZmaxApi.Model
         /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
         /// <param name="bEzsigntemplateAdminonly">Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
         /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
         /// <param name="objEzsigntemplatedocument">objEzsigntemplatedocument.</param>
         /// <param name="aObjEzsigntemplatesigner">aObjEzsigntemplatesigner (required).</param>
-        public EzsigntemplateGetObjectV1ResponseMPayload(int pkiEzsigntemplateID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sLanguageNameX = default(string), string sEzsigntemplateDescription = default(string), bool bEzsigntemplateAdminonly = default(bool), string sEzsignfoldertypeNameX = default(string), EzsigntemplatedocumentResponse objEzsigntemplatedocument = default(EzsigntemplatedocumentResponse), List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner = default(List<EzsigntemplatesignerResponseCompound>))
+        public EzsigntemplateGetObjectV1ResponseMPayload(int pkiEzsigntemplateID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sLanguageNameX = default(string), string sEzsigntemplateDescription = default(string), bool bEzsigntemplateAdminonly = default(bool), string sEzsignfoldertypeNameX = default(string), CommonAudit objAudit = default(CommonAudit), EzsigntemplatedocumentResponse objEzsigntemplatedocument = default(EzsigntemplatedocumentResponse), List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner = default(List<EzsigntemplatesignerResponseCompound>))
         {
             // to ensure "pkiEzsigntemplateID" is required (not null)
             if (pkiEzsigntemplateID == null)
@@ -118,6 +119,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+            }
+
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
+            {
+                throw new InvalidDataException("objAudit is a required property for EzsigntemplateGetObjectV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.ObjAudit = objAudit;
             }
 
             // to ensure "aObjEzsigntemplatesigner" is required (not null)
@@ -191,6 +202,12 @@ namespace eZmaxApi.Model
         public string SEzsignfoldertypeNameX { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjAudit
+        /// </summary>
+        [DataMember(Name="objAudit", EmitDefaultValue=true)]
+        public CommonAudit ObjAudit { get; set; }
+
+        /// <summary>
         /// Gets or Sets ObjEzsigntemplatedocument
         /// </summary>
         [DataMember(Name="objEzsigntemplatedocument", EmitDefaultValue=false)]
@@ -218,6 +235,7 @@ namespace eZmaxApi.Model
             sb.Append("  SEzsigntemplateDescription: ").Append(SEzsigntemplateDescription).Append("\n");
             sb.Append("  BEzsigntemplateAdminonly: ").Append(BEzsigntemplateAdminonly).Append("\n");
             sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
+            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  ObjEzsigntemplatedocument: ").Append(ObjEzsigntemplatedocument).Append("\n");
             sb.Append("  AObjEzsigntemplatesigner: ").Append(AObjEzsigntemplatesigner).Append("\n");
             sb.Append("}\n");
@@ -295,6 +313,11 @@ namespace eZmaxApi.Model
                     this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
                 ) && 
                 (
+                    this.ObjAudit == input.ObjAudit ||
+                    (this.ObjAudit != null &&
+                    this.ObjAudit.Equals(input.ObjAudit))
+                ) && 
+                (
                     this.ObjEzsigntemplatedocument == input.ObjEzsigntemplatedocument ||
                     (this.ObjEzsigntemplatedocument != null &&
                     this.ObjEzsigntemplatedocument.Equals(input.ObjEzsigntemplatedocument))
@@ -332,6 +355,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzsigntemplateAdminonly.GetHashCode();
                 if (this.SEzsignfoldertypeNameX != null)
                     hashCode = hashCode * 59 + this.SEzsignfoldertypeNameX.GetHashCode();
+                if (this.ObjAudit != null)
+                    hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
                 if (this.ObjEzsigntemplatedocument != null)
                     hashCode = hashCode * 59 + this.ObjEzsigntemplatedocument.GetHashCode();
                 if (this.AObjEzsigntemplatesigner != null)

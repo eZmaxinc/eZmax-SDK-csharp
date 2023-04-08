@@ -135,18 +135,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test EzsignfoldertypeGetObjectV1
-        /// </summary>
-        [Test]
-        public void EzsignfoldertypeGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsignfoldertypeID = null;
-            //var response = instance.EzsignfoldertypeGetObjectV1(pkiEzsignfoldertypeID);
-            //Assert.IsInstanceOf(typeof(EzsignfoldertypeGetObjectV1Response), response, "response is EzsignfoldertypeGetObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test EzsignfoldertypeGetObjectV2
         /// </summary>
         [Test]

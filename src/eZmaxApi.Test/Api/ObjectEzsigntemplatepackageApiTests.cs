@@ -114,21 +114,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test EzsigntemplatepackageGetAutocompleteV1
-        /// </summary>
-        [Test]
-        public void EzsigntemplatepackageGetAutocompleteV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string sSelector = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.EzsigntemplatepackageGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-            //Assert.IsInstanceOf(typeof(CommonGetAutocompleteDisabledV1Response), response, "response is CommonGetAutocompleteDisabledV1Response");
-        }
-        
-        /// <summary>
         /// Test EzsigntemplatepackageGetAutocompleteV2
         /// </summary>
         [Test]
@@ -157,18 +142,6 @@ namespace eZmaxApi.Test
             //string sFilter = null;
             //var response = instance.EzsigntemplatepackageGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(EzsigntemplatepackageGetListV1Response), response, "response is EzsigntemplatepackageGetListV1Response");
-        }
-        
-        /// <summary>
-        /// Test EzsigntemplatepackageGetObjectV1
-        /// </summary>
-        [Test]
-        public void EzsigntemplatepackageGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsigntemplatepackageID = null;
-            //var response = instance.EzsigntemplatepackageGetObjectV1(pkiEzsigntemplatepackageID);
-            //Assert.IsInstanceOf(typeof(EzsigntemplatepackageGetObjectV1Response), response, "response is EzsigntemplatepackageGetObjectV1Response");
         }
         
         /// <summary>

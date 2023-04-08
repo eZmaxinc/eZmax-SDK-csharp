@@ -176,6 +176,30 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsignfolderGetCommunicationCountV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderGetCommunicationCountV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //var response = instance.EzsignfolderGetCommunicationCountV1(pkiEzsignfolderID);
+            //Assert.IsInstanceOf(typeof(EzsignfolderGetCommunicationCountV1Response), response, "response is EzsignfolderGetCommunicationCountV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsignfolderGetCommunicationListV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderGetCommunicationListV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //var response = instance.EzsignfolderGetCommunicationListV1(pkiEzsignfolderID);
+            //Assert.IsInstanceOf(typeof(EzsignfolderGetCommunicationListV1Response), response, "response is EzsignfolderGetCommunicationListV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsignfolderGetEzsigndocumentsV1
         /// </summary>
         [Test]
@@ -197,6 +221,18 @@ namespace eZmaxApi.Test
             //int pkiEzsignfolderID = null;
             //var response = instance.EzsignfolderGetEzsignfoldersignerassociationsV1(pkiEzsignfolderID);
             //Assert.IsInstanceOf(typeof(EzsignfolderGetEzsignfoldersignerassociationsV1Response), response, "response is EzsignfolderGetEzsignfoldersignerassociationsV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsignfolderGetEzsignsignaturesAutomaticV1
+        /// </summary>
+        [Test]
+        public void EzsignfolderGetEzsignsignaturesAutomaticV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //var response = instance.EzsignfolderGetEzsignsignaturesAutomaticV1(pkiEzsignfolderID);
+            //Assert.IsInstanceOf(typeof(EzsignfolderGetEzsignsignaturesAutomaticV1Response), response, "response is EzsignfolderGetEzsignsignaturesAutomaticV1Response");
         }
         
         /// <summary>

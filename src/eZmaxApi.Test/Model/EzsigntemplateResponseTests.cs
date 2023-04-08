@@ -129,6 +129,14 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'SEzsignfoldertypeNameX'
         }
+        /// <summary>
+        /// Test the property 'ObjAudit'
+        /// </summary>
+        [Test]
+        public void ObjAuditTest()
+        {
+            // TODO unit test for the property 'ObjAudit'
+        }
 
     }
 

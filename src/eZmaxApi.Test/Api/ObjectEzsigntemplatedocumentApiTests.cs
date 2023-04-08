@@ -115,6 +115,19 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsigntemplatedocumentFlattenV1
+        /// </summary>
+        [Test]
+        public void EzsigntemplatedocumentFlattenV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigntemplatedocumentID = null;
+            //Object body = null;
+            //var response = instance.EzsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body);
+            //Assert.IsInstanceOf(typeof(EzsigntemplatedocumentFlattenV1Response), response, "response is EzsigntemplatedocumentFlattenV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1
         /// </summary>
         [Test]
@@ -148,18 +161,6 @@ namespace eZmaxApi.Test
             //int pkiEzsigntemplatedocumentID = null;
             //var response = instance.EzsigntemplatedocumentGetEzsigntemplatesignaturesV1(pkiEzsigntemplatedocumentID);
             //Assert.IsInstanceOf(typeof(EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response), response, "response is EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response");
-        }
-        
-        /// <summary>
-        /// Test EzsigntemplatedocumentGetObjectV1
-        /// </summary>
-        [Test]
-        public void EzsigntemplatedocumentGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsigntemplatedocumentID = null;
-            //var response = instance.EzsigntemplatedocumentGetObjectV1(pkiEzsigntemplatedocumentID);
-            //Assert.IsInstanceOf(typeof(EzsigntemplatedocumentGetObjectV1Response), response, "response is EzsigntemplatedocumentGetObjectV1Response");
         }
         
         /// <summary>

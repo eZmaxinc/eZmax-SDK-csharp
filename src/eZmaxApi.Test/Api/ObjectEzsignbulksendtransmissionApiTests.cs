@@ -76,6 +76,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1
+        /// </summary>
+        [Test]
+        public void EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignbulksendtransmissionID = null;
+            //var response = instance.EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendtransmissionID);
+            //Assert.IsInstanceOf(typeof(EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response), response, "response is EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsignbulksendtransmissionGetFormsDataV1
         /// </summary>
         [Test]
@@ -85,18 +97,6 @@ namespace eZmaxApi.Test
             //int pkiEzsignbulksendtransmissionID = null;
             //var response = instance.EzsignbulksendtransmissionGetFormsDataV1(pkiEzsignbulksendtransmissionID);
             //Assert.IsInstanceOf(typeof(EzsignbulksendtransmissionGetFormsDataV1Response), response, "response is EzsignbulksendtransmissionGetFormsDataV1Response");
-        }
-        
-        /// <summary>
-        /// Test EzsignbulksendtransmissionGetObjectV1
-        /// </summary>
-        [Test]
-        public void EzsignbulksendtransmissionGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsignbulksendtransmissionID = null;
-            //var response = instance.EzsignbulksendtransmissionGetObjectV1(pkiEzsignbulksendtransmissionID);
-            //Assert.IsInstanceOf(typeof(EzsignbulksendtransmissionGetObjectV1Response), response, "response is EzsignbulksendtransmissionGetObjectV1Response");
         }
         
         /// <summary>

@@ -64,22 +64,6 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
-        /// Test EzsigntsarequirementGetAutocompleteV1
-        /// </summary>
-        [Test]
-        public void EzsigntsarequirementGetAutocompleteV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string sSelector = null;
-            //int? fkiEzsignfoldertypeID = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.EzsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
-            //Assert.IsInstanceOf(typeof(CommonGetAutocompleteDisabledV1Response), response, "response is CommonGetAutocompleteDisabledV1Response");
-        }
-        
-        /// <summary>
         /// Test EzsigntsarequirementGetAutocompleteV2
         /// </summary>
         [Test]

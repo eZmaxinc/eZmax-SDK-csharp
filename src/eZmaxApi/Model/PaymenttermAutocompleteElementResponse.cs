@@ -184,6 +184,15 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+
+
+            // SPaymenttermDescriptionX (string) pattern
+            Regex regexSPaymenttermDescriptionX = new Regex(@"^.{1,40}$", RegexOptions.CultureInvariant);
+            if (false == regexSPaymenttermDescriptionX.Match(this.SPaymenttermDescriptionX).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermDescriptionX, must match a pattern of " + regexSPaymenttermDescriptionX, new [] { "SPaymenttermDescriptionX" });
+            }
+
             yield break;
         }
     }

@@ -61,8 +61,10 @@ namespace eZmaxApi.Model
         /// <param name="tEzsigndocumentDeclinedtosignreason">A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign.</param>
         /// <param name="sEzsigndocumentMD5signed">MD5 Hash of the final PDF Document after all signatures were applied to it. (required).</param>
         /// <param name="bEzsigndocumentEzsignform">If the Ezsigndocument contains an Ezsignform or not (required).</param>
+        /// <param name="bEzsigndocumentHassignedsignatures">If the Ezsigndocument contains signed signatures (From internal or external sources) (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public EzsigndocumentResponse(int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), int pkiEzsigndocumentID = default(int), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), CommonAudit objAudit = default(CommonAudit))
+        /// <param name="sEzsigndocumentExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  (required).</param>
+        public EzsigndocumentResponse(int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), int pkiEzsigndocumentID = default(int), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), bool bEzsigndocumentHassignedsignatures = default(bool), CommonAudit objAudit = default(CommonAudit), string sEzsigndocumentExternalid = default(string))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)
             if (fkiEzsignfolderID == null)
@@ -194,6 +196,16 @@ namespace eZmaxApi.Model
                 this.BEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
             }
 
+            // to ensure "bEzsigndocumentHassignedsignatures" is required (not null)
+            if (bEzsigndocumentHassignedsignatures == null)
+            {
+                throw new InvalidDataException("bEzsigndocumentHassignedsignatures is a required property for EzsigndocumentResponse and cannot be null");
+            }
+            else
+            {
+                this.BEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
+            }
+
             // to ensure "objAudit" is required (not null)
             if (objAudit == null)
             {
@@ -202,6 +214,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.ObjAudit = objAudit;
+            }
+
+            // to ensure "sEzsigndocumentExternalid" is required (not null)
+            if (sEzsigndocumentExternalid == null)
+            {
+                throw new InvalidDataException("sEzsigndocumentExternalid is a required property for EzsigndocumentResponse and cannot be null");
+            }
+            else
+            {
+                this.SEzsigndocumentExternalid = sEzsigndocumentExternalid;
             }
 
             this.FkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
@@ -332,10 +354,24 @@ namespace eZmaxApi.Model
         public bool BEzsigndocumentEzsignform { get; set; }
 
         /// <summary>
+        /// If the Ezsigndocument contains signed signatures (From internal or external sources)
+        /// </summary>
+        /// <value>If the Ezsigndocument contains signed signatures (From internal or external sources)</value>
+        [DataMember(Name="bEzsigndocumentHassignedsignatures", EmitDefaultValue=true)]
+        public bool BEzsigndocumentHassignedsignatures { get; set; }
+
+        /// <summary>
         /// Gets or Sets ObjAudit
         /// </summary>
         [DataMember(Name="objAudit", EmitDefaultValue=true)]
         public CommonAudit ObjAudit { get; set; }
+
+        /// <summary>
+        /// This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+        /// </summary>
+        /// <value>This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. </value>
+        [DataMember(Name="sEzsigndocumentExternalid", EmitDefaultValue=true)]
+        public string SEzsigndocumentExternalid { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -363,7 +399,9 @@ namespace eZmaxApi.Model
             sb.Append("  TEzsigndocumentDeclinedtosignreason: ").Append(TEzsigndocumentDeclinedtosignreason).Append("\n");
             sb.Append("  SEzsigndocumentMD5signed: ").Append(SEzsigndocumentMD5signed).Append("\n");
             sb.Append("  BEzsigndocumentEzsignform: ").Append(BEzsigndocumentEzsignform).Append("\n");
+            sb.Append("  BEzsigndocumentHassignedsignatures: ").Append(BEzsigndocumentHassignedsignatures).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
+            sb.Append("  SEzsigndocumentExternalid: ").Append(SEzsigndocumentExternalid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -489,9 +527,19 @@ namespace eZmaxApi.Model
                     this.BEzsigndocumentEzsignform.Equals(input.BEzsigndocumentEzsignform))
                 ) && 
                 (
+                    this.BEzsigndocumentHassignedsignatures == input.BEzsigndocumentHassignedsignatures ||
+                    (this.BEzsigndocumentHassignedsignatures != null &&
+                    this.BEzsigndocumentHassignedsignatures.Equals(input.BEzsigndocumentHassignedsignatures))
+                ) && 
+                (
                     this.ObjAudit == input.ObjAudit ||
                     (this.ObjAudit != null &&
                     this.ObjAudit.Equals(input.ObjAudit))
+                ) && 
+                (
+                    this.SEzsigndocumentExternalid == input.SEzsigndocumentExternalid ||
+                    (this.SEzsigndocumentExternalid != null &&
+                    this.SEzsigndocumentExternalid.Equals(input.SEzsigndocumentExternalid))
                 );
         }
 
@@ -540,8 +588,12 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzsigndocumentMD5signed.GetHashCode();
                 if (this.BEzsigndocumentEzsignform != null)
                     hashCode = hashCode * 59 + this.BEzsigndocumentEzsignform.GetHashCode();
+                if (this.BEzsigndocumentHassignedsignatures != null)
+                    hashCode = hashCode * 59 + this.BEzsigndocumentHassignedsignatures.GetHashCode();
                 if (this.ObjAudit != null)
                     hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
+                if (this.SEzsigndocumentExternalid != null)
+                    hashCode = hashCode * 59 + this.SEzsigndocumentExternalid.GetHashCode();
                 return hashCode;
             }
         }
@@ -621,6 +673,15 @@ namespace eZmaxApi.Model
             if(this.IEzsigndocumentSignaturetotal < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentSignaturetotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturetotal" });
+            }
+
+
+
+            // SEzsigndocumentExternalid (string) pattern
+            Regex regexSEzsigndocumentExternalid = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
+            if (false == regexSEzsigndocumentExternalid.Match(this.SEzsigndocumentExternalid).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigndocumentExternalid, must match a pattern of " + regexSEzsigndocumentExternalid, new [] { "SEzsigndocumentExternalid" });
             }
 
             yield break;

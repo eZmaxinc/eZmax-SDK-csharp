@@ -44,11 +44,12 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CustomEzsignfoldertransmissionResponse" /> class.
         /// </summary>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="eEzsignfolderStep">eEzsignfolderStep (required).</param>
         /// <param name="iEzsignfolderSignaturetotal">The number of total signatures that were requested in the Ezsignfolder (required).</param>
         /// <param name="iEzsignfolderSignaturesigned">The number of signatures that were signed in the Ezsignfolder. (required).</param>
         /// <param name="aObjEzsignfoldertransmissionSigner">aObjEzsignfoldertransmissionSigner (required).</param>
-        public CustomEzsignfoldertransmissionResponse(int pkiEzsignfolderID = default(int), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), int iEzsignfolderSignaturetotal = default(int), int iEzsignfolderSignaturesigned = default(int), List<CustomEzsignfoldertransmissionSignerResponse> aObjEzsignfoldertransmissionSigner = default(List<CustomEzsignfoldertransmissionSignerResponse>))
+        public CustomEzsignfoldertransmissionResponse(int pkiEzsignfolderID = default(int), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), int iEzsignfolderSignaturetotal = default(int), int iEzsignfolderSignaturesigned = default(int), List<CustomEzsignfoldertransmissionSignerResponse> aObjEzsignfoldertransmissionSigner = default(List<CustomEzsignfoldertransmissionSignerResponse>))
         {
             // to ensure "pkiEzsignfolderID" is required (not null)
             if (pkiEzsignfolderID == null)
@@ -58,6 +59,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.PkiEzsignfolderID = pkiEzsignfolderID;
+            }
+
+            // to ensure "sEzsignfolderDescription" is required (not null)
+            if (sEzsignfolderDescription == null)
+            {
+                throw new InvalidDataException("sEzsignfolderDescription is a required property for CustomEzsignfoldertransmissionResponse and cannot be null");
+            }
+            else
+            {
+                this.SEzsignfolderDescription = sEzsignfolderDescription;
             }
 
             // to ensure "eEzsignfolderStep" is required (not null)
@@ -109,6 +120,13 @@ namespace eZmaxApi.Model
         [DataMember(Name="pkiEzsignfolderID", EmitDefaultValue=true)]
         public int PkiEzsignfolderID { get; set; }
 
+        /// <summary>
+        /// The description of the Ezsignfolder
+        /// </summary>
+        /// <value>The description of the Ezsignfolder</value>
+        [DataMember(Name="sEzsignfolderDescription", EmitDefaultValue=true)]
+        public string SEzsignfolderDescription { get; set; }
+
 
         /// <summary>
         /// The number of total signatures that were requested in the Ezsignfolder
@@ -139,6 +157,7 @@ namespace eZmaxApi.Model
             var sb = new StringBuilder();
             sb.Append("class CustomEzsignfoldertransmissionResponse {\n");
             sb.Append("  PkiEzsignfolderID: ").Append(PkiEzsignfolderID).Append("\n");
+            sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
             sb.Append("  EEzsignfolderStep: ").Append(EEzsignfolderStep).Append("\n");
             sb.Append("  IEzsignfolderSignaturetotal: ").Append(IEzsignfolderSignaturetotal).Append("\n");
             sb.Append("  IEzsignfolderSignaturesigned: ").Append(IEzsignfolderSignaturesigned).Append("\n");
@@ -183,6 +202,11 @@ namespace eZmaxApi.Model
                     this.PkiEzsignfolderID.Equals(input.PkiEzsignfolderID))
                 ) && 
                 (
+                    this.SEzsignfolderDescription == input.SEzsignfolderDescription ||
+                    (this.SEzsignfolderDescription != null &&
+                    this.SEzsignfolderDescription.Equals(input.SEzsignfolderDescription))
+                ) && 
+                (
                     this.EEzsignfolderStep == input.EEzsignfolderStep ||
                     (this.EEzsignfolderStep != null &&
                     this.EEzsignfolderStep.Equals(input.EEzsignfolderStep))
@@ -216,6 +240,8 @@ namespace eZmaxApi.Model
                 int hashCode = 41;
                 if (this.PkiEzsignfolderID != null)
                     hashCode = hashCode * 59 + this.PkiEzsignfolderID.GetHashCode();
+                if (this.SEzsignfolderDescription != null)
+                    hashCode = hashCode * 59 + this.SEzsignfolderDescription.GetHashCode();
                 if (this.EEzsignfolderStep != null)
                     hashCode = hashCode * 59 + this.EEzsignfolderStep.GetHashCode();
                 if (this.IEzsignfolderSignaturetotal != null)

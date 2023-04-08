@@ -74,7 +74,43 @@ namespace eZmaxApi.Model
             /// Enum Pdf for value: Pdf
             /// </summary>
             [EnumMember(Value = "Pdf")]
-            Pdf = 1
+            Pdf = 1,
+
+            /// <summary>
+            /// Enum Doc for value: Doc
+            /// </summary>
+            [EnumMember(Value = "Doc")]
+            Doc = 2,
+
+            /// <summary>
+            /// Enum Docx for value: Docx
+            /// </summary>
+            [EnumMember(Value = "Docx")]
+            Docx = 3,
+
+            /// <summary>
+            /// Enum Xls for value: Xls
+            /// </summary>
+            [EnumMember(Value = "Xls")]
+            Xls = 4,
+
+            /// <summary>
+            /// Enum Xlsx for value: Xlsx
+            /// </summary>
+            [EnumMember(Value = "Xlsx")]
+            Xlsx = 5,
+
+            /// <summary>
+            /// Enum Ppt for value: Ppt
+            /// </summary>
+            [EnumMember(Value = "Ppt")]
+            Ppt = 6,
+
+            /// <summary>
+            /// Enum Pptx for value: Pptx
+            /// </summary>
+            [EnumMember(Value = "Pptx")]
+            Pptx = 7
 
         }
 

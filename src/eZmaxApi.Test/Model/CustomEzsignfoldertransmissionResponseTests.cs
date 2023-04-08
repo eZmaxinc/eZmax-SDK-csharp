@@ -74,6 +74,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'PkiEzsignfolderID'
         }
         /// <summary>
+        /// Test the property 'SEzsignfolderDescription'
+        /// </summary>
+        [Test]
+        public void SEzsignfolderDescriptionTest()
+        {
+            // TODO unit test for the property 'SEzsignfolderDescription'
+        }
+        /// <summary>
         /// Test the property 'EEzsignfolderStep'
         /// </summary>
         [Test]

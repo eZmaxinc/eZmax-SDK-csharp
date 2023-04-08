@@ -101,18 +101,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test EzsigntemplatesignerGetObjectV1
-        /// </summary>
-        [Test]
-        public void EzsigntemplatesignerGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsigntemplatesignerID = null;
-            //var response = instance.EzsigntemplatesignerGetObjectV1(pkiEzsigntemplatesignerID);
-            //Assert.IsInstanceOf(typeof(EzsigntemplatesignerGetObjectV1Response), response, "response is EzsigntemplatesignerGetObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test EzsigntemplatesignerGetObjectV2
         /// </summary>
         [Test]

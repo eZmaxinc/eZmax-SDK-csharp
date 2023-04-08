@@ -8,10 +8,8 @@ Method | HTTP request | Description
 [**EzsigntemplatepackageDeleteObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagedeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Delete an existing Ezsigntemplatepackage
 [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditezsigntemplatepackagesignersv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners
 [**EzsigntemplatepackageEditObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditobjectv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Edit an existing Ezsigntemplatepackage
-[**EzsigntemplatepackageGetAutocompleteV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetautocompletev1) | **GET** /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 [**EzsigntemplatepackageGetAutocompleteV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetautocompletev2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 [**EzsigntemplatepackageGetListV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetlistv1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
-[**EzsigntemplatepackageGetObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetobjectv1) | **GET** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 [**EzsigntemplatepackageGetObjectV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetobjectv2) | **GET** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 
 
@@ -345,93 +343,6 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## EzsigntemplatepackageGetAutocompleteV1
-
-> CommonGetAutocompleteDisabledV1Response EzsigntemplatepackageGetAutocompleteV1 (string sSelector, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
-
-Retrieve Ezsigntemplatepackages and IDs
-
-Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class EzsigntemplatepackageGetAutocompleteV1Example
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectEzsigntemplatepackageApi(Configuration.Default);
-            var sSelector = "All";  // string | The type of Ezsigntemplatepackages to return
-            var eFilterActive = "All";  // string | Specify which results we want to display. (optional)  (default to Active)
-            var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
-            var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
-
-            try
-            {
-                // Retrieve Ezsigntemplatepackages and IDs
-                CommonGetAutocompleteDisabledV1Response result = apiInstance.EzsigntemplatepackageGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling ObjectEzsigntemplatepackageApi.EzsigntemplatepackageGetAutocompleteV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **string**| The type of Ezsigntemplatepackages to return | 
- **eFilterActive** | **string**| Specify which results we want to display. | [optional] [default to Active]
- **sQuery** | **string**| Allow to filter the returned results | [optional] 
- **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
-
-### Return type
-
-[**CommonGetAutocompleteDisabledV1Response**](CommonGetAutocompleteDisabledV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## EzsigntemplatepackageGetAutocompleteV2
 
 > EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2 (string sSelector, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
@@ -602,86 +513,6 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## EzsigntemplatepackageGetObjectV1
-
-> EzsigntemplatepackageGetObjectV1Response EzsigntemplatepackageGetObjectV1 (int pkiEzsigntemplatepackageID)
-
-Retrieve an existing Ezsigntemplatepackage
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class EzsigntemplatepackageGetObjectV1Example
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectEzsigntemplatepackageApi(Configuration.Default);
-            var pkiEzsigntemplatepackageID = 56;  // int | 
-
-            try
-            {
-                // Retrieve an existing Ezsigntemplatepackage
-                EzsigntemplatepackageGetObjectV1Response result = apiInstance.EzsigntemplatepackageGetObjectV1(pkiEzsigntemplatepackageID);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling ObjectEzsigntemplatepackageApi.EzsigntemplatepackageGetObjectV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplatepackageID** | **int**|  | 
-
-### Return type
-
-[**EzsigntemplatepackageGetObjectV1Response**](EzsigntemplatepackageGetObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

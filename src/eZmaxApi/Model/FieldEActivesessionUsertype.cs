@@ -46,16 +46,22 @@ namespace eZmaxApi.Model
         Assistant = 2,
 
         /// <summary>
+        /// Enum EzsignSigner for value: EzsignSigner
+        /// </summary>
+        [EnumMember(Value = "EzsignSigner")]
+        EzsignSigner = 3,
+
+        /// <summary>
         /// Enum EzsignUser for value: EzsignUser
         /// </summary>
         [EnumMember(Value = "EzsignUser")]
-        EzsignUser = 3,
+        EzsignUser = 4,
 
         /// <summary>
         /// Enum Normal for value: Normal
         /// </summary>
         [EnumMember(Value = "Normal")]
-        Normal = 4
+        Normal = 5
 
     }
 

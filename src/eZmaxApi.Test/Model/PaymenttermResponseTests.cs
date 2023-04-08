@@ -82,6 +82,22 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SPaymenttermCode'
         }
         /// <summary>
+        /// Test the property 'EPaymenttermType'
+        /// </summary>
+        [Test]
+        public void EPaymenttermTypeTest()
+        {
+            // TODO unit test for the property 'EPaymenttermType'
+        }
+        /// <summary>
+        /// Test the property 'IPaymenttermDay'
+        /// </summary>
+        [Test]
+        public void IPaymenttermDayTest()
+        {
+            // TODO unit test for the property 'IPaymenttermDay'
+        }
+        /// <summary>
         /// Test the property 'ObjPaymenttermDescription'
         /// </summary>
         [Test]

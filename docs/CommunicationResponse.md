@@ -9,9 +9,12 @@ Name | Type | Description | Notes
 **ECommunicationImportance** | **FieldECommunicationImportance** |  | 
 **ECommunicationType** | **FieldECommunicationType** |  | 
 **SCommunicationSubject** | **string** | The subject of the Communication | 
+**SCommunicationBodyurl** | **string** | The url of the body used as body in the Communication | [optional] 
 **ECommunicationDirection** | **ComputedECommunicationDirection** |  | 
 **ICommunicationrecipientCount** | **int** | The count of Communicationrecipient | 
-**ObjContactFrom** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
+**ObjDescriptionstaticSender** | [**DescriptionstaticResponse**](DescriptionstaticResponse.md) |  | [optional] 
+**ObjEmailstaticSender** | [**EmailstaticResponse**](EmailstaticResponse.md) |  | [optional] 
+**ObjPhonestaticSender** | [**PhonestaticResponse**](PhonestaticResponse.md) |  | [optional] 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

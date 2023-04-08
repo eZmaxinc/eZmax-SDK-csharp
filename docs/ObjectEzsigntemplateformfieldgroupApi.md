@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**EzsigntemplateformfieldgroupCreateObjectV1**](ObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupcreateobjectv1) | **POST** /1/object/ezsigntemplateformfieldgroup | Create a new Ezsigntemplateformfieldgroup
 [**EzsigntemplateformfieldgroupDeleteObjectV1**](ObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupdeleteobjectv1) | **DELETE** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Delete an existing Ezsigntemplateformfieldgroup
 [**EzsigntemplateformfieldgroupEditObjectV1**](ObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupeditobjectv1) | **PUT** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Edit an existing Ezsigntemplateformfieldgroup
-[**EzsigntemplateformfieldgroupGetObjectV1**](ObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupgetobjectv1) | **GET** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Retrieve an existing Ezsigntemplateformfieldgroup
 [**EzsigntemplateformfieldgroupGetObjectV2**](ObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupgetobjectv2) | **GET** /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Retrieve an existing Ezsigntemplateformfieldgroup
 
 
@@ -249,86 +248,6 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## EzsigntemplateformfieldgroupGetObjectV1
-
-> EzsigntemplateformfieldgroupGetObjectV1Response EzsigntemplateformfieldgroupGetObjectV1 (int pkiEzsigntemplateformfieldgroupID)
-
-Retrieve an existing Ezsigntemplateformfieldgroup
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class EzsigntemplateformfieldgroupGetObjectV1Example
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectEzsigntemplateformfieldgroupApi(Configuration.Default);
-            var pkiEzsigntemplateformfieldgroupID = 56;  // int | 
-
-            try
-            {
-                // Retrieve an existing Ezsigntemplateformfieldgroup
-                EzsigntemplateformfieldgroupGetObjectV1Response result = apiInstance.EzsigntemplateformfieldgroupGetObjectV1(pkiEzsigntemplateformfieldgroupID);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling ObjectEzsigntemplateformfieldgroupApi.EzsigntemplateformfieldgroupGetObjectV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateformfieldgroupID** | **int**|  | 
-
-### Return type
-
-[**EzsigntemplateformfieldgroupGetObjectV1Response**](EzsigntemplateformfieldgroupGetObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

@@ -57,11 +57,14 @@ namespace eZmaxApi.Model
         /// <param name="eCommunicationImportance">eCommunicationImportance (required).</param>
         /// <param name="eCommunicationType">eCommunicationType (required).</param>
         /// <param name="sCommunicationSubject">The subject of the Communication (required).</param>
+        /// <param name="sCommunicationBodyurl">The url of the body used as body in the Communication.</param>
         /// <param name="eCommunicationDirection">eCommunicationDirection (required).</param>
         /// <param name="iCommunicationrecipientCount">The count of Communicationrecipient (required).</param>
-        /// <param name="objContactFrom">objContactFrom (required).</param>
+        /// <param name="objDescriptionstaticSender">objDescriptionstaticSender.</param>
+        /// <param name="objEmailstaticSender">objEmailstaticSender.</param>
+        /// <param name="objPhonestaticSender">objPhonestaticSender.</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public CommunicationResponse(int pkiCommunicationID = default(int), FieldECommunicationImportance eCommunicationImportance = default(FieldECommunicationImportance), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), string sCommunicationSubject = default(string), ComputedECommunicationDirection eCommunicationDirection = default(ComputedECommunicationDirection), int iCommunicationrecipientCount = default(int), CustomContactNameResponse objContactFrom = default(CustomContactNameResponse), CommonAudit objAudit = default(CommonAudit))
+        public CommunicationResponse(int pkiCommunicationID = default(int), FieldECommunicationImportance eCommunicationImportance = default(FieldECommunicationImportance), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), string sCommunicationSubject = default(string), string sCommunicationBodyurl = default(string), ComputedECommunicationDirection eCommunicationDirection = default(ComputedECommunicationDirection), int iCommunicationrecipientCount = default(int), DescriptionstaticResponse objDescriptionstaticSender = default(DescriptionstaticResponse), EmailstaticResponse objEmailstaticSender = default(EmailstaticResponse), PhonestaticResponse objPhonestaticSender = default(PhonestaticResponse), CommonAudit objAudit = default(CommonAudit))
         {
             // to ensure "pkiCommunicationID" is required (not null)
             if (pkiCommunicationID == null)
@@ -123,16 +126,6 @@ namespace eZmaxApi.Model
                 this.ICommunicationrecipientCount = iCommunicationrecipientCount;
             }
 
-            // to ensure "objContactFrom" is required (not null)
-            if (objContactFrom == null)
-            {
-                throw new InvalidDataException("objContactFrom is a required property for CommunicationResponse and cannot be null");
-            }
-            else
-            {
-                this.ObjContactFrom = objContactFrom;
-            }
-
             // to ensure "objAudit" is required (not null)
             if (objAudit == null)
             {
@@ -143,6 +136,10 @@ namespace eZmaxApi.Model
                 this.ObjAudit = objAudit;
             }
 
+            this.SCommunicationBodyurl = sCommunicationBodyurl;
+            this.ObjDescriptionstaticSender = objDescriptionstaticSender;
+            this.ObjEmailstaticSender = objEmailstaticSender;
+            this.ObjPhonestaticSender = objPhonestaticSender;
         }
 
         /// <summary>
@@ -161,6 +158,13 @@ namespace eZmaxApi.Model
         [DataMember(Name="sCommunicationSubject", EmitDefaultValue=true)]
         public string SCommunicationSubject { get; set; }
 
+        /// <summary>
+        /// The url of the body used as body in the Communication
+        /// </summary>
+        /// <value>The url of the body used as body in the Communication</value>
+        [DataMember(Name="sCommunicationBodyurl", EmitDefaultValue=false)]
+        public string SCommunicationBodyurl { get; set; }
+
 
         /// <summary>
         /// The count of Communicationrecipient
@@ -170,10 +174,22 @@ namespace eZmaxApi.Model
         public int ICommunicationrecipientCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjContactFrom
+        /// Gets or Sets ObjDescriptionstaticSender
         /// </summary>
-        [DataMember(Name="objContactFrom", EmitDefaultValue=true)]
-        public CustomContactNameResponse ObjContactFrom { get; set; }
+        [DataMember(Name="objDescriptionstaticSender", EmitDefaultValue=false)]
+        public DescriptionstaticResponse ObjDescriptionstaticSender { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEmailstaticSender
+        /// </summary>
+        [DataMember(Name="objEmailstaticSender", EmitDefaultValue=false)]
+        public EmailstaticResponse ObjEmailstaticSender { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjPhonestaticSender
+        /// </summary>
+        [DataMember(Name="objPhonestaticSender", EmitDefaultValue=false)]
+        public PhonestaticResponse ObjPhonestaticSender { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjAudit
@@ -193,9 +209,12 @@ namespace eZmaxApi.Model
             sb.Append("  ECommunicationImportance: ").Append(ECommunicationImportance).Append("\n");
             sb.Append("  ECommunicationType: ").Append(ECommunicationType).Append("\n");
             sb.Append("  SCommunicationSubject: ").Append(SCommunicationSubject).Append("\n");
+            sb.Append("  SCommunicationBodyurl: ").Append(SCommunicationBodyurl).Append("\n");
             sb.Append("  ECommunicationDirection: ").Append(ECommunicationDirection).Append("\n");
             sb.Append("  ICommunicationrecipientCount: ").Append(ICommunicationrecipientCount).Append("\n");
-            sb.Append("  ObjContactFrom: ").Append(ObjContactFrom).Append("\n");
+            sb.Append("  ObjDescriptionstaticSender: ").Append(ObjDescriptionstaticSender).Append("\n");
+            sb.Append("  ObjEmailstaticSender: ").Append(ObjEmailstaticSender).Append("\n");
+            sb.Append("  ObjPhonestaticSender: ").Append(ObjPhonestaticSender).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -252,6 +271,11 @@ namespace eZmaxApi.Model
                     this.SCommunicationSubject.Equals(input.SCommunicationSubject))
                 ) && 
                 (
+                    this.SCommunicationBodyurl == input.SCommunicationBodyurl ||
+                    (this.SCommunicationBodyurl != null &&
+                    this.SCommunicationBodyurl.Equals(input.SCommunicationBodyurl))
+                ) && 
+                (
                     this.ECommunicationDirection == input.ECommunicationDirection ||
                     (this.ECommunicationDirection != null &&
                     this.ECommunicationDirection.Equals(input.ECommunicationDirection))
@@ -262,9 +286,19 @@ namespace eZmaxApi.Model
                     this.ICommunicationrecipientCount.Equals(input.ICommunicationrecipientCount))
                 ) && 
                 (
-                    this.ObjContactFrom == input.ObjContactFrom ||
-                    (this.ObjContactFrom != null &&
-                    this.ObjContactFrom.Equals(input.ObjContactFrom))
+                    this.ObjDescriptionstaticSender == input.ObjDescriptionstaticSender ||
+                    (this.ObjDescriptionstaticSender != null &&
+                    this.ObjDescriptionstaticSender.Equals(input.ObjDescriptionstaticSender))
+                ) && 
+                (
+                    this.ObjEmailstaticSender == input.ObjEmailstaticSender ||
+                    (this.ObjEmailstaticSender != null &&
+                    this.ObjEmailstaticSender.Equals(input.ObjEmailstaticSender))
+                ) && 
+                (
+                    this.ObjPhonestaticSender == input.ObjPhonestaticSender ||
+                    (this.ObjPhonestaticSender != null &&
+                    this.ObjPhonestaticSender.Equals(input.ObjPhonestaticSender))
                 ) && 
                 (
                     this.ObjAudit == input.ObjAudit ||
@@ -290,12 +324,18 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ECommunicationType.GetHashCode();
                 if (this.SCommunicationSubject != null)
                     hashCode = hashCode * 59 + this.SCommunicationSubject.GetHashCode();
+                if (this.SCommunicationBodyurl != null)
+                    hashCode = hashCode * 59 + this.SCommunicationBodyurl.GetHashCode();
                 if (this.ECommunicationDirection != null)
                     hashCode = hashCode * 59 + this.ECommunicationDirection.GetHashCode();
                 if (this.ICommunicationrecipientCount != null)
                     hashCode = hashCode * 59 + this.ICommunicationrecipientCount.GetHashCode();
-                if (this.ObjContactFrom != null)
-                    hashCode = hashCode * 59 + this.ObjContactFrom.GetHashCode();
+                if (this.ObjDescriptionstaticSender != null)
+                    hashCode = hashCode * 59 + this.ObjDescriptionstaticSender.GetHashCode();
+                if (this.ObjEmailstaticSender != null)
+                    hashCode = hashCode * 59 + this.ObjEmailstaticSender.GetHashCode();
+                if (this.ObjPhonestaticSender != null)
+                    hashCode = hashCode * 59 + this.ObjPhonestaticSender.GetHashCode();
                 if (this.ObjAudit != null)
                     hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
                 return hashCode;

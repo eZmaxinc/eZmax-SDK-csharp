@@ -31,6 +31,11 @@ namespace eZmaxApi.Model
     public partial class PaymenttermResponse :  IEquatable<PaymenttermResponse>, IValidatableObject
     {
         /// <summary>
+        /// Gets or Sets EPaymenttermType
+        /// </summary>
+        [DataMember(Name="ePaymenttermType", EmitDefaultValue=true)]
+        public FieldEPaymenttermType EPaymenttermType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -40,10 +45,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiPaymenttermID">The unique ID of the Paymentterm (required).</param>
         /// <param name="sPaymenttermCode">The code of the Paymentterm (required).</param>
+        /// <param name="ePaymenttermType">ePaymenttermType (required).</param>
+        /// <param name="iPaymenttermDay">The day of the Paymentterm (required).</param>
         /// <param name="objPaymenttermDescription">objPaymenttermDescription (required).</param>
         /// <param name="bPaymenttermIsactive">Whether the Paymentterm is active or not (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public PaymenttermResponse(int pkiPaymenttermID = default(int), string sPaymenttermCode = default(string), MultilingualPaymenttermDescription objPaymenttermDescription = default(MultilingualPaymenttermDescription), bool bPaymenttermIsactive = default(bool), CommonAudit objAudit = default(CommonAudit))
+        public PaymenttermResponse(int pkiPaymenttermID = default(int), string sPaymenttermCode = default(string), FieldEPaymenttermType ePaymenttermType = default(FieldEPaymenttermType), int iPaymenttermDay = default(int), MultilingualPaymenttermDescription objPaymenttermDescription = default(MultilingualPaymenttermDescription), bool bPaymenttermIsactive = default(bool), CommonAudit objAudit = default(CommonAudit))
         {
             // to ensure "pkiPaymenttermID" is required (not null)
             if (pkiPaymenttermID == null)
@@ -63,6 +70,26 @@ namespace eZmaxApi.Model
             else
             {
                 this.SPaymenttermCode = sPaymenttermCode;
+            }
+
+            // to ensure "ePaymenttermType" is required (not null)
+            if (ePaymenttermType == null)
+            {
+                throw new InvalidDataException("ePaymenttermType is a required property for PaymenttermResponse and cannot be null");
+            }
+            else
+            {
+                this.EPaymenttermType = ePaymenttermType;
+            }
+
+            // to ensure "iPaymenttermDay" is required (not null)
+            if (iPaymenttermDay == null)
+            {
+                throw new InvalidDataException("iPaymenttermDay is a required property for PaymenttermResponse and cannot be null");
+            }
+            else
+            {
+                this.IPaymenttermDay = iPaymenttermDay;
             }
 
             // to ensure "objPaymenttermDescription" is required (not null)
@@ -111,6 +138,14 @@ namespace eZmaxApi.Model
         [DataMember(Name="sPaymenttermCode", EmitDefaultValue=true)]
         public string SPaymenttermCode { get; set; }
 
+
+        /// <summary>
+        /// The day of the Paymentterm
+        /// </summary>
+        /// <value>The day of the Paymentterm</value>
+        [DataMember(Name="iPaymenttermDay", EmitDefaultValue=true)]
+        public int IPaymenttermDay { get; set; }
+
         /// <summary>
         /// Gets or Sets ObjPaymenttermDescription
         /// </summary>
@@ -140,6 +175,8 @@ namespace eZmaxApi.Model
             sb.Append("class PaymenttermResponse {\n");
             sb.Append("  PkiPaymenttermID: ").Append(PkiPaymenttermID).Append("\n");
             sb.Append("  SPaymenttermCode: ").Append(SPaymenttermCode).Append("\n");
+            sb.Append("  EPaymenttermType: ").Append(EPaymenttermType).Append("\n");
+            sb.Append("  IPaymenttermDay: ").Append(IPaymenttermDay).Append("\n");
             sb.Append("  ObjPaymenttermDescription: ").Append(ObjPaymenttermDescription).Append("\n");
             sb.Append("  BPaymenttermIsactive: ").Append(BPaymenttermIsactive).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
@@ -188,6 +225,16 @@ namespace eZmaxApi.Model
                     this.SPaymenttermCode.Equals(input.SPaymenttermCode))
                 ) && 
                 (
+                    this.EPaymenttermType == input.EPaymenttermType ||
+                    (this.EPaymenttermType != null &&
+                    this.EPaymenttermType.Equals(input.EPaymenttermType))
+                ) && 
+                (
+                    this.IPaymenttermDay == input.IPaymenttermDay ||
+                    (this.IPaymenttermDay != null &&
+                    this.IPaymenttermDay.Equals(input.IPaymenttermDay))
+                ) && 
+                (
                     this.ObjPaymenttermDescription == input.ObjPaymenttermDescription ||
                     (this.ObjPaymenttermDescription != null &&
                     this.ObjPaymenttermDescription.Equals(input.ObjPaymenttermDescription))
@@ -217,6 +264,10 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.PkiPaymenttermID.GetHashCode();
                 if (this.SPaymenttermCode != null)
                     hashCode = hashCode * 59 + this.SPaymenttermCode.GetHashCode();
+                if (this.EPaymenttermType != null)
+                    hashCode = hashCode * 59 + this.EPaymenttermType.GetHashCode();
+                if (this.IPaymenttermDay != null)
+                    hashCode = hashCode * 59 + this.IPaymenttermDay.GetHashCode();
                 if (this.ObjPaymenttermDescription != null)
                     hashCode = hashCode * 59 + this.ObjPaymenttermDescription.GetHashCode();
                 if (this.BPaymenttermIsactive != null)
@@ -234,12 +285,28 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // SPaymenttermCode (string) maxLength
-            if(this.SPaymenttermCode != null && this.SPaymenttermCode.Length > 4)
+
+
+            // SPaymenttermCode (string) pattern
+            Regex regexSPaymenttermCode = new Regex(@"^[A-Z0-9]{1,4}$", RegexOptions.CultureInvariant);
+            if (false == regexSPaymenttermCode.Match(this.SPaymenttermCode).Success)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermCode, length must be less than 4.", new [] { "SPaymenttermCode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermCode, must match a pattern of " + regexSPaymenttermCode, new [] { "SPaymenttermCode" });
             }
 
+
+
+            // IPaymenttermDay (int) maximum
+            if(this.IPaymenttermDay > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IPaymenttermDay, must be a value less than or equal to 255.", new [] { "IPaymenttermDay" });
+            }
+
+            // IPaymenttermDay (int) minimum
+            if(this.IPaymenttermDay < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IPaymenttermDay, must be a value greater than or equal to 0.", new [] { "IPaymenttermDay" });
+            }
 
             yield break;
         }

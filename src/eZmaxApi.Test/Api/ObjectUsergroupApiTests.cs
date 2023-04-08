@@ -64,18 +64,40 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
-        /// Test UsergroupGetAutocompleteV1
+        /// Test UsergroupCreateObjectV1
         /// </summary>
         [Test]
-        public void UsergroupGetAutocompleteV1Test()
+        public void UsergroupCreateObjectV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string sSelector = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.UsergroupGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-            //Assert.IsInstanceOf(typeof(CommonGetAutocompleteV1Response), response, "response is CommonGetAutocompleteV1Response");
+            //UsergroupCreateObjectV1Request usergroupCreateObjectV1Request = null;
+            //var response = instance.UsergroupCreateObjectV1(usergroupCreateObjectV1Request);
+            //Assert.IsInstanceOf(typeof(UsergroupCreateObjectV1Response), response, "response is UsergroupCreateObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test UsergroupDeleteObjectV1
+        /// </summary>
+        [Test]
+        public void UsergroupDeleteObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUsergroupID = null;
+            //var response = instance.UsergroupDeleteObjectV1(pkiUsergroupID);
+            //Assert.IsInstanceOf(typeof(UsergroupDeleteObjectV1Response), response, "response is UsergroupDeleteObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test UsergroupEditObjectV1
+        /// </summary>
+        [Test]
+        public void UsergroupEditObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUsergroupID = null;
+            //UsergroupEditObjectV1Request usergroupEditObjectV1Request = null;
+            //var response = instance.UsergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
+            //Assert.IsInstanceOf(typeof(UsergroupEditObjectV1Response), response, "response is UsergroupEditObjectV1Response");
         }
         
         /// <summary>
@@ -91,6 +113,46 @@ namespace eZmaxApi.Test
             //HeaderAcceptLanguage? acceptLanguage = null;
             //var response = instance.UsergroupGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(UsergroupGetAutocompleteV2Response), response, "response is UsergroupGetAutocompleteV2Response");
+        }
+        
+        /// <summary>
+        /// Test UsergroupGetListV1
+        /// </summary>
+        [Test]
+        public void UsergroupGetListV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string eOrderBy = null;
+            //int? iRowMax = null;
+            //int? iRowOffset = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string sFilter = null;
+            //var response = instance.UsergroupGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+            //Assert.IsInstanceOf(typeof(UsergroupGetListV1Response), response, "response is UsergroupGetListV1Response");
+        }
+        
+        /// <summary>
+        /// Test UsergroupGetMembersV1
+        /// </summary>
+        [Test]
+        public void UsergroupGetMembersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUsergroupID = null;
+            //var response = instance.UsergroupGetMembersV1(pkiUsergroupID);
+            //Assert.IsInstanceOf(typeof(UsergroupGetMembersV1Response), response, "response is UsergroupGetMembersV1Response");
+        }
+        
+        /// <summary>
+        /// Test UsergroupGetObjectV2
+        /// </summary>
+        [Test]
+        public void UsergroupGetObjectV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUsergroupID = null;
+            //var response = instance.UsergroupGetObjectV2(pkiUsergroupID);
+            //Assert.IsInstanceOf(typeof(UsergroupGetObjectV2Response), response, "response is UsergroupGetObjectV2Response");
         }
         
     }

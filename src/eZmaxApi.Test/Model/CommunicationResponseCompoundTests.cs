@@ -98,6 +98,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SCommunicationSubject'
         }
         /// <summary>
+        /// Test the property 'SCommunicationBodyurl'
+        /// </summary>
+        [Test]
+        public void SCommunicationBodyurlTest()
+        {
+            // TODO unit test for the property 'SCommunicationBodyurl'
+        }
+        /// <summary>
         /// Test the property 'ECommunicationDirection'
         /// </summary>
         [Test]
@@ -114,12 +122,28 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'ICommunicationrecipientCount'
         }
         /// <summary>
-        /// Test the property 'ObjContactFrom'
+        /// Test the property 'ObjDescriptionstaticSender'
         /// </summary>
         [Test]
-        public void ObjContactFromTest()
+        public void ObjDescriptionstaticSenderTest()
         {
-            // TODO unit test for the property 'ObjContactFrom'
+            // TODO unit test for the property 'ObjDescriptionstaticSender'
+        }
+        /// <summary>
+        /// Test the property 'ObjEmailstaticSender'
+        /// </summary>
+        [Test]
+        public void ObjEmailstaticSenderTest()
+        {
+            // TODO unit test for the property 'ObjEmailstaticSender'
+        }
+        /// <summary>
+        /// Test the property 'ObjPhonestaticSender'
+        /// </summary>
+        [Test]
+        public void ObjPhonestaticSenderTest()
+        {
+            // TODO unit test for the property 'ObjPhonestaticSender'
         }
         /// <summary>
         /// Test the property 'ObjAudit'

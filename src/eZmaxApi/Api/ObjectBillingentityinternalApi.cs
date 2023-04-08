@@ -26,34 +26,70 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Retrieve Billingentityinternals and IDs
+        /// Create a new Billingentityinternal
         /// </summary>
         /// <remarks>
-        /// Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+        /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Billingentityinternals to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <returns>CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        CommonGetAutocompleteV1Response BillingentityinternalGetAutocompleteV1 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        /// <param name="billingentityinternalCreateObjectV1Request"></param>
+        /// <returns>BillingentityinternalCreateObjectV1Response</returns>
+        BillingentityinternalCreateObjectV1Response BillingentityinternalCreateObjectV1 (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request);
 
         /// <summary>
-        /// Retrieve Billingentityinternals and IDs
+        /// Create a new Billingentityinternal
         /// </summary>
         /// <remarks>
-        /// Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+        /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Billingentityinternals to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        ApiResponse<CommonGetAutocompleteV1Response> BillingentityinternalGetAutocompleteV1WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        /// <param name="billingentityinternalCreateObjectV1Request"></param>
+        /// <returns>ApiResponse of BillingentityinternalCreateObjectV1Response</returns>
+        ApiResponse<BillingentityinternalCreateObjectV1Response> BillingentityinternalCreateObjectV1WithHttpInfo (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request);
+        /// <summary>
+        /// Delete an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <returns>BillingentityinternalDeleteObjectV1Response</returns>
+        BillingentityinternalDeleteObjectV1Response BillingentityinternalDeleteObjectV1 (int pkiBillingentityinternalID);
+
+        /// <summary>
+        /// Delete an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <returns>ApiResponse of BillingentityinternalDeleteObjectV1Response</returns>
+        ApiResponse<BillingentityinternalDeleteObjectV1Response> BillingentityinternalDeleteObjectV1WithHttpInfo (int pkiBillingentityinternalID);
+        /// <summary>
+        /// Edit an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="billingentityinternalEditObjectV1Request"></param>
+        /// <returns>BillingentityinternalEditObjectV1Response</returns>
+        BillingentityinternalEditObjectV1Response BillingentityinternalEditObjectV1 (int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request);
+
+        /// <summary>
+        /// Edit an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="billingentityinternalEditObjectV1Request"></param>
+        /// <returns>ApiResponse of BillingentityinternalEditObjectV1Response</returns>
+        ApiResponse<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1WithHttpInfo (int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request);
         /// <summary>
         /// Retrieve Billingentityinternals and IDs
         /// </summary>
@@ -81,39 +117,129 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of BillingentityinternalGetAutocompleteV2Response</returns>
         ApiResponse<BillingentityinternalGetAutocompleteV2Response> BillingentityinternalGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        /// <summary>
+        /// Retrieve Billingentityinternal list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>BillingentityinternalGetListV1Response</returns>
+        BillingentityinternalGetListV1Response BillingentityinternalGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+
+        /// <summary>
+        /// Retrieve Billingentityinternal list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ApiResponse of BillingentityinternalGetListV1Response</returns>
+        ApiResponse<BillingentityinternalGetListV1Response> BillingentityinternalGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+        /// <summary>
+        /// Retrieve an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <returns>BillingentityinternalGetObjectV2Response</returns>
+        BillingentityinternalGetObjectV2Response BillingentityinternalGetObjectV2 (int pkiBillingentityinternalID);
+
+        /// <summary>
+        /// Retrieve an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <returns>ApiResponse of BillingentityinternalGetObjectV2Response</returns>
+        ApiResponse<BillingentityinternalGetObjectV2Response> BillingentityinternalGetObjectV2WithHttpInfo (int pkiBillingentityinternalID);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Retrieve Billingentityinternals and IDs
+        /// Create a new Billingentityinternal
         /// </summary>
         /// <remarks>
-        /// Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+        /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Billingentityinternals to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="billingentityinternalCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> BillingentityinternalGetAutocompleteV1Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of BillingentityinternalCreateObjectV1Response</returns>
+        System.Threading.Tasks.Task<BillingentityinternalCreateObjectV1Response> BillingentityinternalCreateObjectV1Async (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Retrieve Billingentityinternals and IDs
+        /// Create a new Billingentityinternal
         /// </summary>
         /// <remarks>
-        /// Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+        /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Billingentityinternals to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="billingentityinternalCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> BillingentityinternalGetAutocompleteV1WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (BillingentityinternalCreateObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalCreateObjectV1Response>> BillingentityinternalCreateObjectV1WithHttpInfoAsync (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Delete an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of BillingentityinternalDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<BillingentityinternalDeleteObjectV1Response> BillingentityinternalDeleteObjectV1Async (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Delete an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (BillingentityinternalDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalDeleteObjectV1Response>> BillingentityinternalDeleteObjectV1WithHttpInfoAsync (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Edit an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="billingentityinternalEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of BillingentityinternalEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1Async (int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Edit an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="billingentityinternalEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (BillingentityinternalEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalEditObjectV1Response>> BillingentityinternalEditObjectV1WithHttpInfoAsync (int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Billingentityinternals and IDs
         /// </summary>
@@ -143,6 +269,60 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (BillingentityinternalGetAutocompleteV2Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetAutocompleteV2Response>> BillingentityinternalGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve Billingentityinternal list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of BillingentityinternalGetListV1Response</returns>
+        System.Threading.Tasks.Task<BillingentityinternalGetListV1Response> BillingentityinternalGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve Billingentityinternal list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (BillingentityinternalGetListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetListV1Response>> BillingentityinternalGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of BillingentityinternalGetObjectV2Response</returns>
+        System.Threading.Tasks.Task<BillingentityinternalGetObjectV2Response> BillingentityinternalGetObjectV2Async (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Billingentityinternal
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (BillingentityinternalGetObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetObjectV2Response>> BillingentityinternalGetObjectV2WithHttpInfoAsync (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -255,38 +435,30 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Billingentityinternals and IDs Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+        /// Create a new Billingentityinternal The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Billingentityinternals to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <returns>CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        public CommonGetAutocompleteV1Response BillingentityinternalGetAutocompleteV1 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        /// <param name="billingentityinternalCreateObjectV1Request"></param>
+        /// <returns>BillingentityinternalCreateObjectV1Response</returns>
+        public BillingentityinternalCreateObjectV1Response BillingentityinternalCreateObjectV1 (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request)
         {
-             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = BillingentityinternalGetAutocompleteV1WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+             ApiResponse<BillingentityinternalCreateObjectV1Response> localVarResponse = BillingentityinternalCreateObjectV1WithHttpInfo(billingentityinternalCreateObjectV1Request);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Retrieve Billingentityinternals and IDs Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+        /// Create a new Billingentityinternal The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Billingentityinternals to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        public ApiResponse<CommonGetAutocompleteV1Response> BillingentityinternalGetAutocompleteV1WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        /// <param name="billingentityinternalCreateObjectV1Request"></param>
+        /// <returns>ApiResponse of BillingentityinternalCreateObjectV1Response</returns>
+        public ApiResponse<BillingentityinternalCreateObjectV1Response> BillingentityinternalCreateObjectV1WithHttpInfo (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request)
         {
-            // verify the required parameter 'sSelector' is set
-            if (sSelector == null)
-                throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectBillingentityinternalApi->BillingentityinternalGetAutocompleteV1");
+            // verify the required parameter 'billingentityinternalCreateObjectV1Request' is set
+            if (billingentityinternalCreateObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'billingentityinternalCreateObjectV1Request' when calling ObjectBillingentityinternalApi->BillingentityinternalCreateObjectV1");
 
-            var localVarPath = "/1/object/billingentityinternal/getAutocomplete/{sSelector}";
+            var localVarPath = "/1/object/billingentityinternal";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -296,6 +468,7 @@ namespace eZmaxApi.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -307,10 +480,14 @@ namespace eZmaxApi.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
-            if (eFilterActive != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eFilterActive", eFilterActive)); // query parameter
-            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
-            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+            if (billingentityinternalCreateObjectV1Request != null && billingentityinternalCreateObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(billingentityinternalCreateObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = billingentityinternalCreateObjectV1Request; // byte array
+            }
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -320,58 +497,129 @@ namespace eZmaxApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("BillingentityinternalGetAutocompleteV1", localVarResponse);
+                Exception exception = ExceptionFactory("BillingentityinternalCreateObjectV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
+            return new ApiResponse<BillingentityinternalCreateObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
+                (BillingentityinternalCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalCreateObjectV1Response)));
         }
 
         /// <summary>
-        /// Retrieve Billingentityinternals and IDs Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+        /// Create a new Billingentityinternal The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Billingentityinternals to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="billingentityinternalCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> BillingentityinternalGetAutocompleteV1Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of BillingentityinternalCreateObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<BillingentityinternalCreateObjectV1Response> BillingentityinternalCreateObjectV1Async (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await BillingentityinternalGetAutocompleteV1WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
+             ApiResponse<BillingentityinternalCreateObjectV1Response> localVarResponse = await BillingentityinternalCreateObjectV1WithHttpInfoAsync(billingentityinternalCreateObjectV1Request, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Retrieve Billingentityinternals and IDs Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+        /// Create a new Billingentityinternal The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Billingentityinternals to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="billingentityinternalCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> BillingentityinternalGetAutocompleteV1WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (BillingentityinternalCreateObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BillingentityinternalCreateObjectV1Response>> BillingentityinternalCreateObjectV1WithHttpInfoAsync (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'sSelector' is set
-            if (sSelector == null)
-                throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectBillingentityinternalApi->BillingentityinternalGetAutocompleteV1");
+            // verify the required parameter 'billingentityinternalCreateObjectV1Request' is set
+            if (billingentityinternalCreateObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'billingentityinternalCreateObjectV1Request' when calling ObjectBillingentityinternalApi->BillingentityinternalCreateObjectV1");
 
-            var localVarPath = "/1/object/billingentityinternal/getAutocomplete/{sSelector}";
+            var localVarPath = "/1/object/billingentityinternal";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (billingentityinternalCreateObjectV1Request != null && billingentityinternalCreateObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(billingentityinternalCreateObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = billingentityinternalCreateObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BillingentityinternalCreateObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BillingentityinternalCreateObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (BillingentityinternalCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalCreateObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Delete an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <returns>BillingentityinternalDeleteObjectV1Response</returns>
+        public BillingentityinternalDeleteObjectV1Response BillingentityinternalDeleteObjectV1 (int pkiBillingentityinternalID)
+        {
+             ApiResponse<BillingentityinternalDeleteObjectV1Response> localVarResponse = BillingentityinternalDeleteObjectV1WithHttpInfo(pkiBillingentityinternalID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <returns>ApiResponse of BillingentityinternalDeleteObjectV1Response</returns>
+        public ApiResponse<BillingentityinternalDeleteObjectV1Response> BillingentityinternalDeleteObjectV1WithHttpInfo (int pkiBillingentityinternalID)
+        {
+            // verify the required parameter 'pkiBillingentityinternalID' is set
+            if (pkiBillingentityinternalID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiBillingentityinternalID' when calling ObjectBillingentityinternalApi->BillingentityinternalDeleteObjectV1");
+
+            var localVarPath = "/1/object/billingentityinternal/{pkiBillingentityinternalID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -392,10 +640,81 @@ namespace eZmaxApi.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
-            if (eFilterActive != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eFilterActive", eFilterActive)); // query parameter
-            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
-            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+            if (pkiBillingentityinternalID != null) localVarPathParams.Add("pkiBillingentityinternalID", this.Configuration.ApiClient.ParameterToString(pkiBillingentityinternalID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BillingentityinternalDeleteObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BillingentityinternalDeleteObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (BillingentityinternalDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalDeleteObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Delete an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of BillingentityinternalDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<BillingentityinternalDeleteObjectV1Response> BillingentityinternalDeleteObjectV1Async (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<BillingentityinternalDeleteObjectV1Response> localVarResponse = await BillingentityinternalDeleteObjectV1WithHttpInfoAsync(pkiBillingentityinternalID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (BillingentityinternalDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BillingentityinternalDeleteObjectV1Response>> BillingentityinternalDeleteObjectV1WithHttpInfoAsync (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiBillingentityinternalID' is set
+            if (pkiBillingentityinternalID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiBillingentityinternalID' when calling ObjectBillingentityinternalApi->BillingentityinternalDeleteObjectV1");
+
+            var localVarPath = "/1/object/billingentityinternal/{pkiBillingentityinternalID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiBillingentityinternalID != null) localVarPathParams.Add("pkiBillingentityinternalID", this.Configuration.ApiClient.ParameterToString(pkiBillingentityinternalID)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -405,20 +724,193 @@ namespace eZmaxApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("BillingentityinternalGetAutocompleteV1", localVarResponse);
+                Exception exception = ExceptionFactory("BillingentityinternalDeleteObjectV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
+            return new ApiResponse<BillingentityinternalDeleteObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
+                (BillingentityinternalDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalDeleteObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="billingentityinternalEditObjectV1Request"></param>
+        /// <returns>BillingentityinternalEditObjectV1Response</returns>
+        public BillingentityinternalEditObjectV1Response BillingentityinternalEditObjectV1 (int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request)
+        {
+             ApiResponse<BillingentityinternalEditObjectV1Response> localVarResponse = BillingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="billingentityinternalEditObjectV1Request"></param>
+        /// <returns>ApiResponse of BillingentityinternalEditObjectV1Response</returns>
+        public ApiResponse<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1WithHttpInfo (int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request)
+        {
+            // verify the required parameter 'pkiBillingentityinternalID' is set
+            if (pkiBillingentityinternalID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiBillingentityinternalID' when calling ObjectBillingentityinternalApi->BillingentityinternalEditObjectV1");
+            // verify the required parameter 'billingentityinternalEditObjectV1Request' is set
+            if (billingentityinternalEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'billingentityinternalEditObjectV1Request' when calling ObjectBillingentityinternalApi->BillingentityinternalEditObjectV1");
+
+            var localVarPath = "/1/object/billingentityinternal/{pkiBillingentityinternalID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiBillingentityinternalID != null) localVarPathParams.Add("pkiBillingentityinternalID", this.Configuration.ApiClient.ParameterToString(pkiBillingentityinternalID)); // path parameter
+            if (billingentityinternalEditObjectV1Request != null && billingentityinternalEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(billingentityinternalEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = billingentityinternalEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BillingentityinternalEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BillingentityinternalEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (BillingentityinternalEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalEditObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="billingentityinternalEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of BillingentityinternalEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1Async (int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<BillingentityinternalEditObjectV1Response> localVarResponse = await BillingentityinternalEditObjectV1WithHttpInfoAsync(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Edit an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="billingentityinternalEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (BillingentityinternalEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BillingentityinternalEditObjectV1Response>> BillingentityinternalEditObjectV1WithHttpInfoAsync (int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiBillingentityinternalID' is set
+            if (pkiBillingentityinternalID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiBillingentityinternalID' when calling ObjectBillingentityinternalApi->BillingentityinternalEditObjectV1");
+            // verify the required parameter 'billingentityinternalEditObjectV1Request' is set
+            if (billingentityinternalEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'billingentityinternalEditObjectV1Request' when calling ObjectBillingentityinternalApi->BillingentityinternalEditObjectV1");
+
+            var localVarPath = "/1/object/billingentityinternal/{pkiBillingentityinternalID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiBillingentityinternalID != null) localVarPathParams.Add("pkiBillingentityinternalID", this.Configuration.ApiClient.ParameterToString(pkiBillingentityinternalID)); // path parameter
+            if (billingentityinternalEditObjectV1Request != null && billingentityinternalEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(billingentityinternalEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = billingentityinternalEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BillingentityinternalEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BillingentityinternalEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (BillingentityinternalEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalEditObjectV1Response)));
         }
 
         /// <summary>
@@ -582,6 +1074,316 @@ namespace eZmaxApi.Api
             return new ApiResponse<BillingentityinternalGetAutocompleteV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (BillingentityinternalGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalGetAutocompleteV2Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Billingentityinternal list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>BillingentityinternalGetListV1Response</returns>
+        public BillingentityinternalGetListV1Response BillingentityinternalGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        {
+             ApiResponse<BillingentityinternalGetListV1Response> localVarResponse = BillingentityinternalGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Billingentityinternal list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ApiResponse of BillingentityinternalGetListV1Response</returns>
+        public ApiResponse<BillingentityinternalGetListV1Response> BillingentityinternalGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        {
+
+            var localVarPath = "/1/object/billingentityinternal/getList";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (eOrderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eOrderBy", eOrderBy)); // query parameter
+            if (iRowMax != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowMax", iRowMax)); // query parameter
+            if (iRowOffset != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowOffset", iRowOffset)); // query parameter
+            if (sFilter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sFilter", sFilter)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BillingentityinternalGetListV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BillingentityinternalGetListV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (BillingentityinternalGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalGetListV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Billingentityinternal list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of BillingentityinternalGetListV1Response</returns>
+        public async System.Threading.Tasks.Task<BillingentityinternalGetListV1Response> BillingentityinternalGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<BillingentityinternalGetListV1Response> localVarResponse = await BillingentityinternalGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve Billingentityinternal list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (BillingentityinternalGetListV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetListV1Response>> BillingentityinternalGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/1/object/billingentityinternal/getList";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (eOrderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eOrderBy", eOrderBy)); // query parameter
+            if (iRowMax != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowMax", iRowMax)); // query parameter
+            if (iRowOffset != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowOffset", iRowOffset)); // query parameter
+            if (sFilter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sFilter", sFilter)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BillingentityinternalGetListV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BillingentityinternalGetListV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (BillingentityinternalGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalGetListV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <returns>BillingentityinternalGetObjectV2Response</returns>
+        public BillingentityinternalGetObjectV2Response BillingentityinternalGetObjectV2 (int pkiBillingentityinternalID)
+        {
+             ApiResponse<BillingentityinternalGetObjectV2Response> localVarResponse = BillingentityinternalGetObjectV2WithHttpInfo(pkiBillingentityinternalID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <returns>ApiResponse of BillingentityinternalGetObjectV2Response</returns>
+        public ApiResponse<BillingentityinternalGetObjectV2Response> BillingentityinternalGetObjectV2WithHttpInfo (int pkiBillingentityinternalID)
+        {
+            // verify the required parameter 'pkiBillingentityinternalID' is set
+            if (pkiBillingentityinternalID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiBillingentityinternalID' when calling ObjectBillingentityinternalApi->BillingentityinternalGetObjectV2");
+
+            var localVarPath = "/2/object/billingentityinternal/{pkiBillingentityinternalID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiBillingentityinternalID != null) localVarPathParams.Add("pkiBillingentityinternalID", this.Configuration.ApiClient.ParameterToString(pkiBillingentityinternalID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BillingentityinternalGetObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BillingentityinternalGetObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (BillingentityinternalGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalGetObjectV2Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of BillingentityinternalGetObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<BillingentityinternalGetObjectV2Response> BillingentityinternalGetObjectV2Async (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<BillingentityinternalGetObjectV2Response> localVarResponse = await BillingentityinternalGetObjectV2WithHttpInfoAsync(pkiBillingentityinternalID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve an existing Billingentityinternal 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (BillingentityinternalGetObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetObjectV2Response>> BillingentityinternalGetObjectV2WithHttpInfoAsync (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiBillingentityinternalID' is set
+            if (pkiBillingentityinternalID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiBillingentityinternalID' when calling ObjectBillingentityinternalApi->BillingentityinternalGetObjectV2");
+
+            var localVarPath = "/2/object/billingentityinternal/{pkiBillingentityinternalID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiBillingentityinternalID != null) localVarPathParams.Add("pkiBillingentityinternalID", this.Configuration.ApiClient.ParameterToString(pkiBillingentityinternalID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BillingentityinternalGetObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BillingentityinternalGetObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (BillingentityinternalGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalGetObjectV2Response)));
         }
 
     }

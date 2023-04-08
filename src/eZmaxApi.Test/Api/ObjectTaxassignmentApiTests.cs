@@ -64,21 +64,6 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
-        /// Test TaxassignmentGetAutocompleteV1
-        /// </summary>
-        [Test]
-        public void TaxassignmentGetAutocompleteV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string sSelector = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.TaxassignmentGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-            //Assert.IsInstanceOf(typeof(CommonGetAutocompleteV1Response), response, "response is CommonGetAutocompleteV1Response");
-        }
-        
-        /// <summary>
         /// Test TaxassignmentGetAutocompleteV2
         /// </summary>
         [Test]

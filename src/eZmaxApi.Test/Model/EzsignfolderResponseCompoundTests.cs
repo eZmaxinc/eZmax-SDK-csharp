@@ -225,6 +225,14 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'ObjAudit'
         }
+        /// <summary>
+        /// Test the property 'SEzsignfolderExternalid'
+        /// </summary>
+        [Test]
+        public void SEzsignfolderExternalidTest()
+        {
+            // TODO unit test for the property 'SEzsignfolderExternalid'
+        }
 
     }
 

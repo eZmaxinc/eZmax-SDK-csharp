@@ -43,7 +43,8 @@ namespace eZmaxApi.Model
         /// <param name="sEzsigntemplatedocumentName">The name of the Ezsigntemplatedocument. (required).</param>
         /// <param name="iEzsigntemplatedocumentPagetotal">The number of pages in the Ezsigntemplatedocument. (required).</param>
         /// <param name="iEzsigntemplatedocumentSignaturetotal">The number of total signatures in the Ezsigntemplate. (required).</param>
-        public EzsigntemplatedocumentResponse(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), string sEzsigntemplatedocumentName = default(string), int iEzsigntemplatedocumentPagetotal = default(int), int iEzsigntemplatedocumentSignaturetotal = default(int))
+        /// <param name="bEzsigntemplatedocumentHassignedsignatures">If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) (required).</param>
+        public EzsigntemplatedocumentResponse(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), string sEzsigntemplatedocumentName = default(string), int iEzsigntemplatedocumentPagetotal = default(int), int iEzsigntemplatedocumentSignaturetotal = default(int), bool bEzsigntemplatedocumentHassignedsignatures = default(bool))
         {
             // to ensure "pkiEzsigntemplatedocumentID" is required (not null)
             if (pkiEzsigntemplatedocumentID == null)
@@ -95,6 +96,16 @@ namespace eZmaxApi.Model
                 this.IEzsigntemplatedocumentSignaturetotal = iEzsigntemplatedocumentSignaturetotal;
             }
 
+            // to ensure "bEzsigntemplatedocumentHassignedsignatures" is required (not null)
+            if (bEzsigntemplatedocumentHassignedsignatures == null)
+            {
+                throw new InvalidDataException("bEzsigntemplatedocumentHassignedsignatures is a required property for EzsigntemplatedocumentResponse and cannot be null");
+            }
+            else
+            {
+                this.BEzsigntemplatedocumentHassignedsignatures = bEzsigntemplatedocumentHassignedsignatures;
+            }
+
         }
 
         /// <summary>
@@ -133,6 +144,13 @@ namespace eZmaxApi.Model
         public int IEzsigntemplatedocumentSignaturetotal { get; set; }
 
         /// <summary>
+        /// If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
+        /// </summary>
+        /// <value>If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)</value>
+        [DataMember(Name="bEzsigntemplatedocumentHassignedsignatures", EmitDefaultValue=true)]
+        public bool BEzsigntemplatedocumentHassignedsignatures { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -145,6 +163,7 @@ namespace eZmaxApi.Model
             sb.Append("  SEzsigntemplatedocumentName: ").Append(SEzsigntemplatedocumentName).Append("\n");
             sb.Append("  IEzsigntemplatedocumentPagetotal: ").Append(IEzsigntemplatedocumentPagetotal).Append("\n");
             sb.Append("  IEzsigntemplatedocumentSignaturetotal: ").Append(IEzsigntemplatedocumentSignaturetotal).Append("\n");
+            sb.Append("  BEzsigntemplatedocumentHassignedsignatures: ").Append(BEzsigntemplatedocumentHassignedsignatures).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -203,6 +222,11 @@ namespace eZmaxApi.Model
                     this.IEzsigntemplatedocumentSignaturetotal == input.IEzsigntemplatedocumentSignaturetotal ||
                     (this.IEzsigntemplatedocumentSignaturetotal != null &&
                     this.IEzsigntemplatedocumentSignaturetotal.Equals(input.IEzsigntemplatedocumentSignaturetotal))
+                ) && 
+                (
+                    this.BEzsigntemplatedocumentHassignedsignatures == input.BEzsigntemplatedocumentHassignedsignatures ||
+                    (this.BEzsigntemplatedocumentHassignedsignatures != null &&
+                    this.BEzsigntemplatedocumentHassignedsignatures.Equals(input.BEzsigntemplatedocumentHassignedsignatures))
                 );
         }
 
@@ -225,6 +249,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IEzsigntemplatedocumentPagetotal.GetHashCode();
                 if (this.IEzsigntemplatedocumentSignaturetotal != null)
                     hashCode = hashCode * 59 + this.IEzsigntemplatedocumentSignaturetotal.GetHashCode();
+                if (this.BEzsigntemplatedocumentHassignedsignatures != null)
+                    hashCode = hashCode * 59 + this.BEzsigntemplatedocumentHassignedsignatures.GetHashCode();
                 return hashCode;
             }
         }

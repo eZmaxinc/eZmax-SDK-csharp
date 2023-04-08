@@ -88,18 +88,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test EzsignbulksenddocumentmappingGetObjectV1
-        /// </summary>
-        [Test]
-        public void EzsignbulksenddocumentmappingGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsignbulksenddocumentmappingID = null;
-            //var response = instance.EzsignbulksenddocumentmappingGetObjectV1(pkiEzsignbulksenddocumentmappingID);
-            //Assert.IsInstanceOf(typeof(EzsignbulksenddocumentmappingGetObjectV1Response), response, "response is EzsignbulksenddocumentmappingGetObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test EzsignbulksenddocumentmappingGetObjectV2
         /// </summary>
         [Test]

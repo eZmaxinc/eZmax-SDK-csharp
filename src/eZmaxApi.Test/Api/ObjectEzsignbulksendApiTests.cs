@@ -139,6 +139,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsignbulksendGetEzsignsignaturesAutomaticV1
+        /// </summary>
+        [Test]
+        public void EzsignbulksendGetEzsignsignaturesAutomaticV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignbulksendID = null;
+            //var response = instance.EzsignbulksendGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendID);
+            //Assert.IsInstanceOf(typeof(EzsignbulksendGetEzsignsignaturesAutomaticV1Response), response, "response is EzsignbulksendGetEzsignsignaturesAutomaticV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsignbulksendGetFormsDataV1
         /// </summary>
         [Test]
@@ -164,18 +176,6 @@ namespace eZmaxApi.Test
             //string sFilter = null;
             //var response = instance.EzsignbulksendGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(EzsignbulksendGetListV1Response), response, "response is EzsignbulksendGetListV1Response");
-        }
-        
-        /// <summary>
-        /// Test EzsignbulksendGetObjectV1
-        /// </summary>
-        [Test]
-        public void EzsignbulksendGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsignbulksendID = null;
-            //var response = instance.EzsignbulksendGetObjectV1(pkiEzsignbulksendID);
-            //Assert.IsInstanceOf(typeof(EzsignbulksendGetObjectV1Response), response, "response is EzsignbulksendGetObjectV1Response");
         }
         
         /// <summary>

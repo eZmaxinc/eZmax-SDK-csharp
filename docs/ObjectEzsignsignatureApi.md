@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**EzsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
 [**EzsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**EzsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
-[**EzsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+[**EzsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
 [**EzsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**EzsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignaturesignv1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 
@@ -340,11 +340,13 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## EzsignsignatureGetObjectV1
+## EzsignsignatureGetEzsignsignaturesAutomaticV1
 
-> EzsignsignatureGetObjectV1Response EzsignsignatureGetObjectV1 (int pkiEzsignsignatureID)
+> EzsignsignatureGetEzsignsignaturesAutomaticV1Response EzsignsignatureGetEzsignsignaturesAutomaticV1 ()
 
-Retrieve an existing Ezsignsignature
+Retrieve all automatic Ezsignsignatures
+
+Return all the Ezsignsignatures that can be signed by the current user
 
 ### Example
 
@@ -357,7 +359,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsignsignatureGetObjectV1Example
+    public class EzsignsignatureGetEzsignsignaturesAutomaticV1Example
     {
         public static void Main()
         {
@@ -368,17 +370,16 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignsignatureApi(Configuration.Default);
-            var pkiEzsignsignatureID = 56;  // int | 
 
             try
             {
-                // Retrieve an existing Ezsignsignature
-                EzsignsignatureGetObjectV1Response result = apiInstance.EzsignsignatureGetObjectV1(pkiEzsignsignatureID);
+                // Retrieve all automatic Ezsignsignatures
+                EzsignsignatureGetEzsignsignaturesAutomaticV1Response result = apiInstance.EzsignsignatureGetEzsignsignaturesAutomaticV1();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureGetObjectV1: " + e.Message );
+                Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureGetEzsignsignaturesAutomaticV1: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -389,14 +390,11 @@ namespace Example
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **int**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**EzsignsignatureGetObjectV1Response**](EzsignsignatureGetObjectV1Response.md)
+[**EzsignsignatureGetEzsignsignaturesAutomaticV1Response**](EzsignsignatureGetEzsignsignaturesAutomaticV1Response.md)
 
 ### Authorization
 
@@ -412,7 +410,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

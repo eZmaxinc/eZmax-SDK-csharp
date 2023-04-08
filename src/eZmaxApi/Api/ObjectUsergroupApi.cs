@@ -26,34 +26,70 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Retrieve Usergroups and IDs
+        /// Create a new Usergroup
         /// </summary>
         /// <remarks>
-        /// Get the list of Usergroup to be used in a dropdown or autocomplete control.
+        /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Usergroups to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <returns>CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        CommonGetAutocompleteV1Response UsergroupGetAutocompleteV1 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        /// <param name="usergroupCreateObjectV1Request"></param>
+        /// <returns>UsergroupCreateObjectV1Response</returns>
+        UsergroupCreateObjectV1Response UsergroupCreateObjectV1 (UsergroupCreateObjectV1Request usergroupCreateObjectV1Request);
 
         /// <summary>
-        /// Retrieve Usergroups and IDs
+        /// Create a new Usergroup
         /// </summary>
         /// <remarks>
-        /// Get the list of Usergroup to be used in a dropdown or autocomplete control.
+        /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Usergroups to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        ApiResponse<CommonGetAutocompleteV1Response> UsergroupGetAutocompleteV1WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        /// <param name="usergroupCreateObjectV1Request"></param>
+        /// <returns>ApiResponse of UsergroupCreateObjectV1Response</returns>
+        ApiResponse<UsergroupCreateObjectV1Response> UsergroupCreateObjectV1WithHttpInfo (UsergroupCreateObjectV1Request usergroupCreateObjectV1Request);
+        /// <summary>
+        /// Delete an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>UsergroupDeleteObjectV1Response</returns>
+        UsergroupDeleteObjectV1Response UsergroupDeleteObjectV1 (int pkiUsergroupID);
+
+        /// <summary>
+        /// Delete an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>ApiResponse of UsergroupDeleteObjectV1Response</returns>
+        ApiResponse<UsergroupDeleteObjectV1Response> UsergroupDeleteObjectV1WithHttpInfo (int pkiUsergroupID);
+        /// <summary>
+        /// Edit an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="usergroupEditObjectV1Request"></param>
+        /// <returns>UsergroupEditObjectV1Response</returns>
+        UsergroupEditObjectV1Response UsergroupEditObjectV1 (int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request);
+
+        /// <summary>
+        /// Edit an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="usergroupEditObjectV1Request"></param>
+        /// <returns>ApiResponse of UsergroupEditObjectV1Response</returns>
+        ApiResponse<UsergroupEditObjectV1Response> UsergroupEditObjectV1WithHttpInfo (int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request);
         /// <summary>
         /// Retrieve Usergroups and IDs
         /// </summary>
@@ -81,39 +117,150 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of UsergroupGetAutocompleteV2Response</returns>
         ApiResponse<UsergroupGetAutocompleteV2Response> UsergroupGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        /// <summary>
+        /// Retrieve Usergroup list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>UsergroupGetListV1Response</returns>
+        UsergroupGetListV1Response UsergroupGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+
+        /// <summary>
+        /// Retrieve Usergroup list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ApiResponse of UsergroupGetListV1Response</returns>
+        ApiResponse<UsergroupGetListV1Response> UsergroupGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+        /// <summary>
+        /// Retrieve an existing Usergroup's members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>UsergroupGetMembersV1Response</returns>
+        UsergroupGetMembersV1Response UsergroupGetMembersV1 (int pkiUsergroupID);
+
+        /// <summary>
+        /// Retrieve an existing Usergroup's members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>ApiResponse of UsergroupGetMembersV1Response</returns>
+        ApiResponse<UsergroupGetMembersV1Response> UsergroupGetMembersV1WithHttpInfo (int pkiUsergroupID);
+        /// <summary>
+        /// Retrieve an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>UsergroupGetObjectV2Response</returns>
+        UsergroupGetObjectV2Response UsergroupGetObjectV2 (int pkiUsergroupID);
+
+        /// <summary>
+        /// Retrieve an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>ApiResponse of UsergroupGetObjectV2Response</returns>
+        ApiResponse<UsergroupGetObjectV2Response> UsergroupGetObjectV2WithHttpInfo (int pkiUsergroupID);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Retrieve Usergroups and IDs
+        /// Create a new Usergroup
         /// </summary>
         /// <remarks>
-        /// Get the list of Usergroup to be used in a dropdown or autocomplete control.
+        /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Usergroups to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="usergroupCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> UsergroupGetAutocompleteV1Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of UsergroupCreateObjectV1Response</returns>
+        System.Threading.Tasks.Task<UsergroupCreateObjectV1Response> UsergroupCreateObjectV1Async (UsergroupCreateObjectV1Request usergroupCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Retrieve Usergroups and IDs
+        /// Create a new Usergroup
         /// </summary>
         /// <remarks>
-        /// Get the list of Usergroup to be used in a dropdown or autocomplete control.
+        /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Usergroups to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="usergroupCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> UsergroupGetAutocompleteV1WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (UsergroupCreateObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsergroupCreateObjectV1Response>> UsergroupCreateObjectV1WithHttpInfoAsync (UsergroupCreateObjectV1Request usergroupCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Delete an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of UsergroupDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<UsergroupDeleteObjectV1Response> UsergroupDeleteObjectV1Async (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Delete an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (UsergroupDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsergroupDeleteObjectV1Response>> UsergroupDeleteObjectV1WithHttpInfoAsync (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Edit an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="usergroupEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of UsergroupEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<UsergroupEditObjectV1Response> UsergroupEditObjectV1Async (int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Edit an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="usergroupEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (UsergroupEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsergroupEditObjectV1Response>> UsergroupEditObjectV1WithHttpInfoAsync (int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Usergroups and IDs
         /// </summary>
@@ -143,6 +290,83 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (UsergroupGetAutocompleteV2Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsergroupGetAutocompleteV2Response>> UsergroupGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve Usergroup list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of UsergroupGetListV1Response</returns>
+        System.Threading.Tasks.Task<UsergroupGetListV1Response> UsergroupGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve Usergroup list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (UsergroupGetListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsergroupGetListV1Response>> UsergroupGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve an existing Usergroup's members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of UsergroupGetMembersV1Response</returns>
+        System.Threading.Tasks.Task<UsergroupGetMembersV1Response> UsergroupGetMembersV1Async (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Usergroup&#39;s members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (UsergroupGetMembersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsergroupGetMembersV1Response>> UsergroupGetMembersV1WithHttpInfoAsync (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of UsergroupGetObjectV2Response</returns>
+        System.Threading.Tasks.Task<UsergroupGetObjectV2Response> UsergroupGetObjectV2Async (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Usergroup
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (UsergroupGetObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsergroupGetObjectV2Response>> UsergroupGetObjectV2WithHttpInfoAsync (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -255,38 +479,30 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Usergroups and IDs Get the list of Usergroup to be used in a dropdown or autocomplete control.
+        /// Create a new Usergroup The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Usergroups to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <returns>CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        public CommonGetAutocompleteV1Response UsergroupGetAutocompleteV1 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        /// <param name="usergroupCreateObjectV1Request"></param>
+        /// <returns>UsergroupCreateObjectV1Response</returns>
+        public UsergroupCreateObjectV1Response UsergroupCreateObjectV1 (UsergroupCreateObjectV1Request usergroupCreateObjectV1Request)
         {
-             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = UsergroupGetAutocompleteV1WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+             ApiResponse<UsergroupCreateObjectV1Response> localVarResponse = UsergroupCreateObjectV1WithHttpInfo(usergroupCreateObjectV1Request);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Retrieve Usergroups and IDs Get the list of Usergroup to be used in a dropdown or autocomplete control.
+        /// Create a new Usergroup The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Usergroups to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        public ApiResponse<CommonGetAutocompleteV1Response> UsergroupGetAutocompleteV1WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        /// <param name="usergroupCreateObjectV1Request"></param>
+        /// <returns>ApiResponse of UsergroupCreateObjectV1Response</returns>
+        public ApiResponse<UsergroupCreateObjectV1Response> UsergroupCreateObjectV1WithHttpInfo (UsergroupCreateObjectV1Request usergroupCreateObjectV1Request)
         {
-            // verify the required parameter 'sSelector' is set
-            if (sSelector == null)
-                throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectUsergroupApi->UsergroupGetAutocompleteV1");
+            // verify the required parameter 'usergroupCreateObjectV1Request' is set
+            if (usergroupCreateObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'usergroupCreateObjectV1Request' when calling ObjectUsergroupApi->UsergroupCreateObjectV1");
 
-            var localVarPath = "/1/object/usergroup/getAutocomplete/{sSelector}";
+            var localVarPath = "/1/object/usergroup";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -296,6 +512,7 @@ namespace eZmaxApi.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -307,10 +524,14 @@ namespace eZmaxApi.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
-            if (eFilterActive != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eFilterActive", eFilterActive)); // query parameter
-            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
-            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+            if (usergroupCreateObjectV1Request != null && usergroupCreateObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(usergroupCreateObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = usergroupCreateObjectV1Request; // byte array
+            }
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -320,58 +541,129 @@ namespace eZmaxApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UsergroupGetAutocompleteV1", localVarResponse);
+                Exception exception = ExceptionFactory("UsergroupCreateObjectV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
+            return new ApiResponse<UsergroupCreateObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
+                (UsergroupCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupCreateObjectV1Response)));
         }
 
         /// <summary>
-        /// Retrieve Usergroups and IDs Get the list of Usergroup to be used in a dropdown or autocomplete control.
+        /// Create a new Usergroup The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Usergroups to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="usergroupCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of CommonGetAutocompleteV1Response</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> UsergroupGetAutocompleteV1Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of UsergroupCreateObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<UsergroupCreateObjectV1Response> UsergroupCreateObjectV1Async (UsergroupCreateObjectV1Request usergroupCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await UsergroupGetAutocompleteV1WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
+             ApiResponse<UsergroupCreateObjectV1Response> localVarResponse = await UsergroupCreateObjectV1WithHttpInfoAsync(usergroupCreateObjectV1Request, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Retrieve Usergroups and IDs Get the list of Usergroup to be used in a dropdown or autocomplete control.
+        /// Create a new Usergroup The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sSelector">The type of Usergroups to return</param>
-        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
-        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="usergroupCreateObjectV1Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> UsergroupGetAutocompleteV1WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (UsergroupCreateObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UsergroupCreateObjectV1Response>> UsergroupCreateObjectV1WithHttpInfoAsync (UsergroupCreateObjectV1Request usergroupCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'sSelector' is set
-            if (sSelector == null)
-                throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectUsergroupApi->UsergroupGetAutocompleteV1");
+            // verify the required parameter 'usergroupCreateObjectV1Request' is set
+            if (usergroupCreateObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'usergroupCreateObjectV1Request' when calling ObjectUsergroupApi->UsergroupCreateObjectV1");
 
-            var localVarPath = "/1/object/usergroup/getAutocomplete/{sSelector}";
+            var localVarPath = "/1/object/usergroup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (usergroupCreateObjectV1Request != null && usergroupCreateObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(usergroupCreateObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = usergroupCreateObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsergroupCreateObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UsergroupCreateObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (UsergroupCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupCreateObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Delete an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>UsergroupDeleteObjectV1Response</returns>
+        public UsergroupDeleteObjectV1Response UsergroupDeleteObjectV1 (int pkiUsergroupID)
+        {
+             ApiResponse<UsergroupDeleteObjectV1Response> localVarResponse = UsergroupDeleteObjectV1WithHttpInfo(pkiUsergroupID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>ApiResponse of UsergroupDeleteObjectV1Response</returns>
+        public ApiResponse<UsergroupDeleteObjectV1Response> UsergroupDeleteObjectV1WithHttpInfo (int pkiUsergroupID)
+        {
+            // verify the required parameter 'pkiUsergroupID' is set
+            if (pkiUsergroupID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupDeleteObjectV1");
+
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -392,10 +684,81 @@ namespace eZmaxApi.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (sSelector != null) localVarPathParams.Add("sSelector", this.Configuration.ApiClient.ParameterToString(sSelector)); // path parameter
-            if (eFilterActive != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eFilterActive", eFilterActive)); // query parameter
-            if (sQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sQuery", sQuery)); // query parameter
-            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+            if (pkiUsergroupID != null) localVarPathParams.Add("pkiUsergroupID", this.Configuration.ApiClient.ParameterToString(pkiUsergroupID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsergroupDeleteObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UsergroupDeleteObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (UsergroupDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupDeleteObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Delete an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of UsergroupDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<UsergroupDeleteObjectV1Response> UsergroupDeleteObjectV1Async (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<UsergroupDeleteObjectV1Response> localVarResponse = await UsergroupDeleteObjectV1WithHttpInfoAsync(pkiUsergroupID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (UsergroupDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UsergroupDeleteObjectV1Response>> UsergroupDeleteObjectV1WithHttpInfoAsync (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiUsergroupID' is set
+            if (pkiUsergroupID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupDeleteObjectV1");
+
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiUsergroupID != null) localVarPathParams.Add("pkiUsergroupID", this.Configuration.ApiClient.ParameterToString(pkiUsergroupID)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -405,20 +768,193 @@ namespace eZmaxApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UsergroupGetAutocompleteV1", localVarResponse);
+                Exception exception = ExceptionFactory("UsergroupDeleteObjectV1", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
+            return new ApiResponse<UsergroupDeleteObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
+                (UsergroupDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupDeleteObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="usergroupEditObjectV1Request"></param>
+        /// <returns>UsergroupEditObjectV1Response</returns>
+        public UsergroupEditObjectV1Response UsergroupEditObjectV1 (int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request)
+        {
+             ApiResponse<UsergroupEditObjectV1Response> localVarResponse = UsergroupEditObjectV1WithHttpInfo(pkiUsergroupID, usergroupEditObjectV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="usergroupEditObjectV1Request"></param>
+        /// <returns>ApiResponse of UsergroupEditObjectV1Response</returns>
+        public ApiResponse<UsergroupEditObjectV1Response> UsergroupEditObjectV1WithHttpInfo (int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request)
+        {
+            // verify the required parameter 'pkiUsergroupID' is set
+            if (pkiUsergroupID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupEditObjectV1");
+            // verify the required parameter 'usergroupEditObjectV1Request' is set
+            if (usergroupEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'usergroupEditObjectV1Request' when calling ObjectUsergroupApi->UsergroupEditObjectV1");
+
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiUsergroupID != null) localVarPathParams.Add("pkiUsergroupID", this.Configuration.ApiClient.ParameterToString(pkiUsergroupID)); // path parameter
+            if (usergroupEditObjectV1Request != null && usergroupEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(usergroupEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = usergroupEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsergroupEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UsergroupEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (UsergroupEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupEditObjectV1Response)));
+        }
+
+        /// <summary>
+        /// Edit an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="usergroupEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of UsergroupEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<UsergroupEditObjectV1Response> UsergroupEditObjectV1Async (int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<UsergroupEditObjectV1Response> localVarResponse = await UsergroupEditObjectV1WithHttpInfoAsync(pkiUsergroupID, usergroupEditObjectV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Edit an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="usergroupEditObjectV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (UsergroupEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UsergroupEditObjectV1Response>> UsergroupEditObjectV1WithHttpInfoAsync (int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiUsergroupID' is set
+            if (pkiUsergroupID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupEditObjectV1");
+            // verify the required parameter 'usergroupEditObjectV1Request' is set
+            if (usergroupEditObjectV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'usergroupEditObjectV1Request' when calling ObjectUsergroupApi->UsergroupEditObjectV1");
+
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiUsergroupID != null) localVarPathParams.Add("pkiUsergroupID", this.Configuration.ApiClient.ParameterToString(pkiUsergroupID)); // path parameter
+            if (usergroupEditObjectV1Request != null && usergroupEditObjectV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(usergroupEditObjectV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = usergroupEditObjectV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsergroupEditObjectV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UsergroupEditObjectV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (UsergroupEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupEditObjectV1Response)));
         }
 
         /// <summary>
@@ -582,6 +1118,461 @@ namespace eZmaxApi.Api
             return new ApiResponse<UsergroupGetAutocompleteV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetAutocompleteV2Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Usergroup list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>UsergroupGetListV1Response</returns>
+        public UsergroupGetListV1Response UsergroupGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        {
+             ApiResponse<UsergroupGetListV1Response> localVarResponse = UsergroupGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Usergroup list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ApiResponse of UsergroupGetListV1Response</returns>
+        public ApiResponse<UsergroupGetListV1Response> UsergroupGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        {
+
+            var localVarPath = "/1/object/usergroup/getList";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (eOrderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eOrderBy", eOrderBy)); // query parameter
+            if (iRowMax != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowMax", iRowMax)); // query parameter
+            if (iRowOffset != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowOffset", iRowOffset)); // query parameter
+            if (sFilter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sFilter", sFilter)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsergroupGetListV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UsergroupGetListV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (UsergroupGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetListV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Usergroup list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of UsergroupGetListV1Response</returns>
+        public async System.Threading.Tasks.Task<UsergroupGetListV1Response> UsergroupGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<UsergroupGetListV1Response> localVarResponse = await UsergroupGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve Usergroup list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (UsergroupGetListV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UsergroupGetListV1Response>> UsergroupGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/1/object/usergroup/getList";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (eOrderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eOrderBy", eOrderBy)); // query parameter
+            if (iRowMax != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowMax", iRowMax)); // query parameter
+            if (iRowOffset != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowOffset", iRowOffset)); // query parameter
+            if (sFilter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sFilter", sFilter)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsergroupGetListV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UsergroupGetListV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (UsergroupGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetListV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Usergroup's members 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>UsergroupGetMembersV1Response</returns>
+        public UsergroupGetMembersV1Response UsergroupGetMembersV1 (int pkiUsergroupID)
+        {
+             ApiResponse<UsergroupGetMembersV1Response> localVarResponse = UsergroupGetMembersV1WithHttpInfo(pkiUsergroupID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Usergroup's members 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>ApiResponse of UsergroupGetMembersV1Response</returns>
+        public ApiResponse<UsergroupGetMembersV1Response> UsergroupGetMembersV1WithHttpInfo (int pkiUsergroupID)
+        {
+            // verify the required parameter 'pkiUsergroupID' is set
+            if (pkiUsergroupID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetMembersV1");
+
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/getMembers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiUsergroupID != null) localVarPathParams.Add("pkiUsergroupID", this.Configuration.ApiClient.ParameterToString(pkiUsergroupID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsergroupGetMembersV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UsergroupGetMembersV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (UsergroupGetMembersV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetMembersV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Usergroup's members 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of UsergroupGetMembersV1Response</returns>
+        public async System.Threading.Tasks.Task<UsergroupGetMembersV1Response> UsergroupGetMembersV1Async (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<UsergroupGetMembersV1Response> localVarResponse = await UsergroupGetMembersV1WithHttpInfoAsync(pkiUsergroupID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve an existing Usergroup's members 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (UsergroupGetMembersV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UsergroupGetMembersV1Response>> UsergroupGetMembersV1WithHttpInfoAsync (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiUsergroupID' is set
+            if (pkiUsergroupID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetMembersV1");
+
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/getMembers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiUsergroupID != null) localVarPathParams.Add("pkiUsergroupID", this.Configuration.ApiClient.ParameterToString(pkiUsergroupID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsergroupGetMembersV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UsergroupGetMembersV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (UsergroupGetMembersV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetMembersV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>UsergroupGetObjectV2Response</returns>
+        public UsergroupGetObjectV2Response UsergroupGetObjectV2 (int pkiUsergroupID)
+        {
+             ApiResponse<UsergroupGetObjectV2Response> localVarResponse = UsergroupGetObjectV2WithHttpInfo(pkiUsergroupID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <returns>ApiResponse of UsergroupGetObjectV2Response</returns>
+        public ApiResponse<UsergroupGetObjectV2Response> UsergroupGetObjectV2WithHttpInfo (int pkiUsergroupID)
+        {
+            // verify the required parameter 'pkiUsergroupID' is set
+            if (pkiUsergroupID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetObjectV2");
+
+            var localVarPath = "/2/object/usergroup/{pkiUsergroupID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiUsergroupID != null) localVarPathParams.Add("pkiUsergroupID", this.Configuration.ApiClient.ParameterToString(pkiUsergroupID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsergroupGetObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UsergroupGetObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (UsergroupGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetObjectV2Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of UsergroupGetObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<UsergroupGetObjectV2Response> UsergroupGetObjectV2Async (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<UsergroupGetObjectV2Response> localVarResponse = await UsergroupGetObjectV2WithHttpInfoAsync(pkiUsergroupID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve an existing Usergroup 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (UsergroupGetObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UsergroupGetObjectV2Response>> UsergroupGetObjectV2WithHttpInfoAsync (int pkiUsergroupID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiUsergroupID' is set
+            if (pkiUsergroupID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetObjectV2");
+
+            var localVarPath = "/2/object/usergroup/{pkiUsergroupID}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiUsergroupID != null) localVarPathParams.Add("pkiUsergroupID", this.Configuration.ApiClient.ParameterToString(pkiUsergroupID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsergroupGetObjectV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UsergroupGetObjectV2Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (UsergroupGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetObjectV2Response)));
         }
 
     }

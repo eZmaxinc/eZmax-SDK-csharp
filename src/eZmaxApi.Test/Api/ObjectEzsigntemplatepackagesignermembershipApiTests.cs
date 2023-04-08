@@ -88,18 +88,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test EzsigntemplatepackagesignermembershipGetObjectV1
-        /// </summary>
-        [Test]
-        public void EzsigntemplatepackagesignermembershipGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsigntemplatepackagesignermembershipID = null;
-            //var response = instance.EzsigntemplatepackagesignermembershipGetObjectV1(pkiEzsigntemplatepackagesignermembershipID);
-            //Assert.IsInstanceOf(typeof(EzsigntemplatepackagesignermembershipGetObjectV1Response), response, "response is EzsigntemplatepackagesignermembershipGetObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test EzsigntemplatepackagesignermembershipGetObjectV2
         /// </summary>
         [Test]

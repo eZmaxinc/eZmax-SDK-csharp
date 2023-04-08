@@ -165,6 +165,19 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsigndocumentFlattenV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentFlattenV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //Object body = null;
+            //var response = instance.EzsigndocumentFlattenV1(pkiEzsigndocumentID, body);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentFlattenV1Response), response, "response is EzsigndocumentFlattenV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsigndocumentGetActionableElementsV1
         /// </summary>
         [Test]
@@ -190,6 +203,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsigndocumentGetEzsignannotationsV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentGetEzsignannotationsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentGetEzsignannotationsV1(pkiEzsigndocumentID);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentGetEzsignannotationsV1Response), response, "response is EzsigndocumentGetEzsignannotationsV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsigndocumentGetEzsignformfieldgroupsV1
         /// </summary>
         [Test]
@@ -211,6 +236,18 @@ namespace eZmaxApi.Test
             //int pkiEzsigndocumentID = null;
             //var response = instance.EzsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID);
             //Assert.IsInstanceOf(typeof(EzsigndocumentGetEzsignpagesV1Response), response, "response is EzsigndocumentGetEzsignpagesV1Response");
+        }
+        
+        /// <summary>
+        /// Test EzsigndocumentGetEzsignsignaturesAutomaticV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentGetEzsignsignaturesAutomaticV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentGetEzsignsignaturesAutomaticV1(pkiEzsigndocumentID);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentGetEzsignsignaturesAutomaticV1Response), response, "response is EzsigndocumentGetEzsignsignaturesAutomaticV1Response");
         }
         
         /// <summary>

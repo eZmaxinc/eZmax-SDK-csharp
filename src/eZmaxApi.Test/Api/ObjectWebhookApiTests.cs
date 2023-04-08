@@ -130,18 +130,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test WebhookGetObjectV1
-        /// </summary>
-        [Test]
-        public void WebhookGetObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiWebhookID = null;
-            //var response = instance.WebhookGetObjectV1(pkiWebhookID);
-            //Assert.IsInstanceOf(typeof(WebhookGetObjectV1Response), response, "response is WebhookGetObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test WebhookGetObjectV2
         /// </summary>
         [Test]

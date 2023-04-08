@@ -44,6 +44,35 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ActivesessionGetCurrentV1Response</returns>
         ApiResponse<ActivesessionGetCurrentV1Response> ActivesessionGetCurrentV1WithHttpInfo ();
+        /// <summary>
+        /// Retrieve Activesession list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ActivesessionGetListV1Response</returns>
+        ActivesessionGetListV1Response ActivesessionGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+
+        /// <summary>
+        /// Retrieve Activesession list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ApiResponse of ActivesessionGetListV1Response</returns>
+        ApiResponse<ActivesessionGetListV1Response> ActivesessionGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -67,6 +96,37 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ActivesessionGetCurrentV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<ActivesessionGetCurrentV1Response>> ActivesessionGetCurrentV1WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve Activesession list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ActivesessionGetListV1Response</returns>
+        System.Threading.Tasks.Task<ActivesessionGetListV1Response> ActivesessionGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve Activesession list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ActivesessionGetListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ActivesessionGetListV1Response>> ActivesessionGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -309,6 +369,171 @@ namespace eZmaxApi.Api
             return new ApiResponse<ActivesessionGetCurrentV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ActivesessionGetCurrentV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivesessionGetCurrentV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Activesession list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ActivesessionGetListV1Response</returns>
+        public ActivesessionGetListV1Response ActivesessionGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        {
+             ApiResponse<ActivesessionGetListV1Response> localVarResponse = ActivesessionGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Activesession list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ApiResponse of ActivesessionGetListV1Response</returns>
+        public ApiResponse<ActivesessionGetListV1Response> ActivesessionGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        {
+
+            var localVarPath = "/1/object/activesession/getList";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (eOrderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eOrderBy", eOrderBy)); // query parameter
+            if (iRowMax != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowMax", iRowMax)); // query parameter
+            if (iRowOffset != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowOffset", iRowOffset)); // query parameter
+            if (sFilter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sFilter", sFilter)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ActivesessionGetListV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ActivesessionGetListV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ActivesessionGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivesessionGetListV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Activesession list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ActivesessionGetListV1Response</returns>
+        public async System.Threading.Tasks.Task<ActivesessionGetListV1Response> ActivesessionGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<ActivesessionGetListV1Response> localVarResponse = await ActivesessionGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve Activesession list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ActivesessionGetListV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ActivesessionGetListV1Response>> ActivesessionGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/1/object/activesession/getList";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (eOrderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eOrderBy", eOrderBy)); // query parameter
+            if (iRowMax != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowMax", iRowMax)); // query parameter
+            if (iRowOffset != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowOffset", iRowOffset)); // query parameter
+            if (sFilter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sFilter", sFilter)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ActivesessionGetListV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ActivesessionGetListV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ActivesessionGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivesessionGetListV1Response)));
         }
 
     }

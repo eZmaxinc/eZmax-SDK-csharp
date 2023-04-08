@@ -64,22 +64,6 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
-        /// Test CommunicationGetListV1
-        /// </summary>
-        [Test]
-        public void CommunicationGetListV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string eOrderBy = null;
-            //int? iRowMax = null;
-            //int? iRowOffset = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //string sFilter = null;
-            //var response = instance.CommunicationGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-            //Assert.IsInstanceOf(typeof(CommunicationGetListV1Response), response, "response is CommunicationGetListV1Response");
-        }
-        
-        /// <summary>
         /// Test CommunicationGetObjectV2
         /// </summary>
         [Test]

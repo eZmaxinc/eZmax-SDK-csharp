@@ -64,21 +64,6 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
-        /// Test DepartmentGetAutocompleteV1
-        /// </summary>
-        [Test]
-        public void DepartmentGetAutocompleteV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string sSelector = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.DepartmentGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-            //Assert.IsInstanceOf(typeof(CommonGetAutocompleteV1Response), response, "response is CommonGetAutocompleteV1Response");
-        }
-        
-        /// <summary>
         /// Test DepartmentGetAutocompleteV2
         /// </summary>
         [Test]

@@ -210,12 +210,28 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'BEzsigndocumentEzsignform'
         }
         /// <summary>
+        /// Test the property 'BEzsigndocumentHassignedsignatures'
+        /// </summary>
+        [Test]
+        public void BEzsigndocumentHassignedsignaturesTest()
+        {
+            // TODO unit test for the property 'BEzsigndocumentHassignedsignatures'
+        }
+        /// <summary>
         /// Test the property 'ObjAudit'
         /// </summary>
         [Test]
         public void ObjAuditTest()
         {
             // TODO unit test for the property 'ObjAudit'
+        }
+        /// <summary>
+        /// Test the property 'SEzsigndocumentExternalid'
+        /// </summary>
+        [Test]
+        public void SEzsigndocumentExternalidTest()
+        {
+            // TODO unit test for the property 'SEzsigndocumentExternalid'
         }
 
     }

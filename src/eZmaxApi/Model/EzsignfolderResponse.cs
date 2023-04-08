@@ -68,7 +68,8 @@ namespace eZmaxApi.Model
         /// <param name="dtEzsignfolderClose">The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely..</param>
         /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent. (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public EzsignfolderResponse(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), bool bEzsignfolderIsdisposable = default(bool), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddispose = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtEzsignfolderClose = default(string), string tEzsignfolderMessage = default(string), CommonAudit objAudit = default(CommonAudit))
+        /// <param name="sEzsignfolderExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  (required).</param>
+        public EzsignfolderResponse(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), bool bEzsignfolderIsdisposable = default(bool), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddispose = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtEzsignfolderClose = default(string), string tEzsignfolderMessage = default(string), CommonAudit objAudit = default(CommonAudit), string sEzsignfolderExternalid = default(string))
         {
             // to ensure "pkiEzsignfolderID" is required (not null)
             if (pkiEzsignfolderID == null)
@@ -210,6 +211,16 @@ namespace eZmaxApi.Model
                 this.ObjAudit = objAudit;
             }
 
+            // to ensure "sEzsignfolderExternalid" is required (not null)
+            if (sEzsignfolderExternalid == null)
+            {
+                throw new InvalidDataException("sEzsignfolderExternalid is a required property for EzsignfolderResponse and cannot be null");
+            }
+            else
+            {
+                this.SEzsignfolderExternalid = sEzsignfolderExternalid;
+            }
+
             this.DtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
             this.DtEzsignfolderDuedate = dtEzsignfolderDuedate;
             this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
@@ -346,6 +357,13 @@ namespace eZmaxApi.Model
         public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
+        /// This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+        /// </summary>
+        /// <value>This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. </value>
+        [DataMember(Name="sEzsignfolderExternalid", EmitDefaultValue=true)]
+        public string SEzsignfolderExternalid { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -373,6 +391,7 @@ namespace eZmaxApi.Model
             sb.Append("  DtEzsignfolderClose: ").Append(DtEzsignfolderClose).Append("\n");
             sb.Append("  TEzsignfolderMessage: ").Append(TEzsignfolderMessage).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
+            sb.Append("  SEzsignfolderExternalid: ").Append(SEzsignfolderExternalid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -506,6 +525,11 @@ namespace eZmaxApi.Model
                     this.ObjAudit == input.ObjAudit ||
                     (this.ObjAudit != null &&
                     this.ObjAudit.Equals(input.ObjAudit))
+                ) && 
+                (
+                    this.SEzsignfolderExternalid == input.SEzsignfolderExternalid ||
+                    (this.SEzsignfolderExternalid != null &&
+                    this.SEzsignfolderExternalid.Equals(input.SEzsignfolderExternalid))
                 );
         }
 
@@ -558,6 +582,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.TEzsignfolderMessage.GetHashCode();
                 if (this.ObjAudit != null)
                     hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
+                if (this.SEzsignfolderExternalid != null)
+                    hashCode = hashCode * 59 + this.SEzsignfolderExternalid.GetHashCode();
                 return hashCode;
             }
         }
@@ -605,6 +631,15 @@ namespace eZmaxApi.Model
             if(this.FkiEzsigntsarequirementID < (int)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
+            }
+
+
+
+            // SEzsignfolderExternalid (string) pattern
+            Regex regexSEzsignfolderExternalid = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
+            if (false == regexSEzsignfolderExternalid.Match(this.SEzsignfolderExternalid).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignfolderExternalid, must match a pattern of " + regexSEzsignfolderExternalid, new [] { "SEzsignfolderExternalid" });
             }
 
             yield break;

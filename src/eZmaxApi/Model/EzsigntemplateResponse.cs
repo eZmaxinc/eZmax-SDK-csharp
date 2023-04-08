@@ -46,7 +46,8 @@ namespace eZmaxApi.Model
         /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
         /// <param name="bEzsigntemplateAdminonly">Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
         /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        public EzsigntemplateResponse(int pkiEzsigntemplateID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sLanguageNameX = default(string), string sEzsigntemplateDescription = default(string), bool bEzsigntemplateAdminonly = default(bool), string sEzsignfoldertypeNameX = default(string))
+        /// <param name="objAudit">objAudit (required).</param>
+        public EzsigntemplateResponse(int pkiEzsigntemplateID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sLanguageNameX = default(string), string sEzsigntemplateDescription = default(string), bool bEzsigntemplateAdminonly = default(bool), string sEzsignfoldertypeNameX = default(string), CommonAudit objAudit = default(CommonAudit))
         {
             // to ensure "pkiEzsigntemplateID" is required (not null)
             if (pkiEzsigntemplateID == null)
@@ -118,6 +119,16 @@ namespace eZmaxApi.Model
                 this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             }
 
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
+            {
+                throw new InvalidDataException("objAudit is a required property for EzsigntemplateResponse and cannot be null");
+            }
+            else
+            {
+                this.ObjAudit = objAudit;
+            }
+
             this.FkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
         }
 
@@ -178,6 +189,12 @@ namespace eZmaxApi.Model
         public string SEzsignfoldertypeNameX { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjAudit
+        /// </summary>
+        [DataMember(Name="objAudit", EmitDefaultValue=true)]
+        public CommonAudit ObjAudit { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -193,6 +210,7 @@ namespace eZmaxApi.Model
             sb.Append("  SEzsigntemplateDescription: ").Append(SEzsigntemplateDescription).Append("\n");
             sb.Append("  BEzsigntemplateAdminonly: ").Append(BEzsigntemplateAdminonly).Append("\n");
             sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
+            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -266,6 +284,11 @@ namespace eZmaxApi.Model
                     this.SEzsignfoldertypeNameX == input.SEzsignfoldertypeNameX ||
                     (this.SEzsignfoldertypeNameX != null &&
                     this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
+                ) && 
+                (
+                    this.ObjAudit == input.ObjAudit ||
+                    (this.ObjAudit != null &&
+                    this.ObjAudit.Equals(input.ObjAudit))
                 );
         }
 
@@ -294,6 +317,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzsigntemplateAdminonly.GetHashCode();
                 if (this.SEzsignfoldertypeNameX != null)
                     hashCode = hashCode * 59 + this.SEzsignfoldertypeNameX.GetHashCode();
+                if (this.ObjAudit != null)
+                    hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
                 return hashCode;
             }
         }

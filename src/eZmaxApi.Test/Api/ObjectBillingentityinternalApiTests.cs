@@ -64,18 +64,40 @@ namespace eZmaxApi.Test
 
         
         /// <summary>
-        /// Test BillingentityinternalGetAutocompleteV1
+        /// Test BillingentityinternalCreateObjectV1
         /// </summary>
         [Test]
-        public void BillingentityinternalGetAutocompleteV1Test()
+        public void BillingentityinternalCreateObjectV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string sSelector = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.BillingentityinternalGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-            //Assert.IsInstanceOf(typeof(CommonGetAutocompleteV1Response), response, "response is CommonGetAutocompleteV1Response");
+            //BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request = null;
+            //var response = instance.BillingentityinternalCreateObjectV1(billingentityinternalCreateObjectV1Request);
+            //Assert.IsInstanceOf(typeof(BillingentityinternalCreateObjectV1Response), response, "response is BillingentityinternalCreateObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test BillingentityinternalDeleteObjectV1
+        /// </summary>
+        [Test]
+        public void BillingentityinternalDeleteObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiBillingentityinternalID = null;
+            //var response = instance.BillingentityinternalDeleteObjectV1(pkiBillingentityinternalID);
+            //Assert.IsInstanceOf(typeof(BillingentityinternalDeleteObjectV1Response), response, "response is BillingentityinternalDeleteObjectV1Response");
+        }
+        
+        /// <summary>
+        /// Test BillingentityinternalEditObjectV1
+        /// </summary>
+        [Test]
+        public void BillingentityinternalEditObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiBillingentityinternalID = null;
+            //BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request = null;
+            //var response = instance.BillingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+            //Assert.IsInstanceOf(typeof(BillingentityinternalEditObjectV1Response), response, "response is BillingentityinternalEditObjectV1Response");
         }
         
         /// <summary>
@@ -91,6 +113,34 @@ namespace eZmaxApi.Test
             //HeaderAcceptLanguage? acceptLanguage = null;
             //var response = instance.BillingentityinternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(BillingentityinternalGetAutocompleteV2Response), response, "response is BillingentityinternalGetAutocompleteV2Response");
+        }
+        
+        /// <summary>
+        /// Test BillingentityinternalGetListV1
+        /// </summary>
+        [Test]
+        public void BillingentityinternalGetListV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string eOrderBy = null;
+            //int? iRowMax = null;
+            //int? iRowOffset = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string sFilter = null;
+            //var response = instance.BillingentityinternalGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+            //Assert.IsInstanceOf(typeof(BillingentityinternalGetListV1Response), response, "response is BillingentityinternalGetListV1Response");
+        }
+        
+        /// <summary>
+        /// Test BillingentityinternalGetObjectV2
+        /// </summary>
+        [Test]
+        public void BillingentityinternalGetObjectV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiBillingentityinternalID = null;
+            //var response = instance.BillingentityinternalGetObjectV2(pkiBillingentityinternalID);
+            //Assert.IsInstanceOf(typeof(BillingentityinternalGetObjectV2Response), response, "response is BillingentityinternalGetObjectV2Response");
         }
         
     }
