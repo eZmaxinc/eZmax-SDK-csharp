@@ -159,10 +159,16 @@ namespace eZmaxApi.Model
         {
 
 
-            // PkiUsergroupID (int) minimum
-            if(this.PkiUsergroupID < (int)0)
+            // PkiUsergroupID (int) maximum
+            if(this.PkiUsergroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 255.", new [] { "PkiUsergroupID" });
+            }
+
+            // PkiUsergroupID (int) minimum
+            if(this.PkiUsergroupID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 1.", new [] { "PkiUsergroupID" });
             }
 
             yield break;

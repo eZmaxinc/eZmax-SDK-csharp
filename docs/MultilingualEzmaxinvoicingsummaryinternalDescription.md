@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SEzmaxinvoicingsummaryinternalDescription1** | **string** | The Ezmaxinvoicingsummaryinternal description in french | [optional] 
-**SEzmaxinvoicingsummaryinternalDescription2** | **string** | The Ezmaxinvoicingsummaryinternal description in english | [optional] 
+**SEzmaxinvoicingsummaryinternalDescription1** | **string** | The Ezmaxinvoicingsummaryinternal description in French | [optional] 
+**SEzmaxinvoicingsummaryinternalDescription2** | **string** | The Ezmaxinvoicingsummaryinternal description in English | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

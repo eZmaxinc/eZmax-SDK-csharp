@@ -33,8 +33,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualPaymenttermDescription" /> class.
         /// </summary>
-        /// <param name="sPaymenttermDescription1">The description of the Paymentterm in french.</param>
-        /// <param name="sPaymenttermDescription2">The description of the Paymentterm in english.</param>
+        /// <param name="sPaymenttermDescription1">The description of the Paymentterm in French.</param>
+        /// <param name="sPaymenttermDescription2">The description of the Paymentterm in English.</param>
         public MultilingualPaymenttermDescription(string sPaymenttermDescription1 = default(string), string sPaymenttermDescription2 = default(string))
         {
             this.SPaymenttermDescription1 = sPaymenttermDescription1;
@@ -42,16 +42,16 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// The description of the Paymentterm in french
+        /// The description of the Paymentterm in French
         /// </summary>
-        /// <value>The description of the Paymentterm in french</value>
+        /// <value>The description of the Paymentterm in French</value>
         [DataMember(Name="sPaymenttermDescription1", EmitDefaultValue=false)]
         public string SPaymenttermDescription1 { get; set; }
 
         /// <summary>
-        /// The description of the Paymentterm in english
+        /// The description of the Paymentterm in English
         /// </summary>
-        /// <value>The description of the Paymentterm in english</value>
+        /// <value>The description of the Paymentterm in English</value>
         [DataMember(Name="sPaymenttermDescription2", EmitDefaultValue=false)]
         public string SPaymenttermDescription2 { get; set; }
 

@@ -902,18 +902,30 @@ namespace eZmaxApi.Model
 
 
 
-            // FkiUsergroupID (int) minimum
-            if(this.FkiUsergroupID < (int)0)
+            // FkiUsergroupID (int) maximum
+            if(this.FkiUsergroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
+            }
+
+            // FkiUsergroupID (int) minimum
+            if(this.FkiUsergroupID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 1.", new [] { "FkiUsergroupID" });
             }
 
 
 
-            // FkiUsergroupIDRestricted (int) minimum
-            if(this.FkiUsergroupIDRestricted < (int)0)
+            // FkiUsergroupIDRestricted (int) maximum
+            if(this.FkiUsergroupIDRestricted > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupIDRestricted, must be a value greater than or equal to 0.", new [] { "FkiUsergroupIDRestricted" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupIDRestricted, must be a value less than or equal to 255.", new [] { "FkiUsergroupIDRestricted" });
+            }
+
+            // FkiUsergroupIDRestricted (int) minimum
+            if(this.FkiUsergroupIDRestricted < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupIDRestricted, must be a value greater than or equal to 1.", new [] { "FkiUsergroupIDRestricted" });
             }
 
 
@@ -928,6 +940,24 @@ namespace eZmaxApi.Model
             if(this.FkiEzsigntsarequirementID < (int)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
+            }
+
+
+
+            // SUsergroupNameX (string) pattern
+            Regex regexSUsergroupNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+            if (false == regexSUsergroupNameX.Match(this.SUsergroupNameX).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameX, must match a pattern of " + regexSUsergroupNameX, new [] { "SUsergroupNameX" });
+            }
+
+
+
+            // SUsergroupNameXRestricted (string) pattern
+            Regex regexSUsergroupNameXRestricted = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+            if (false == regexSUsergroupNameXRestricted.Match(this.SUsergroupNameXRestricted).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameXRestricted, must match a pattern of " + regexSUsergroupNameXRestricted, new [] { "SUsergroupNameXRestricted" });
             }
 
 

@@ -33,8 +33,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzmaxinvoicingsummaryinternalDescription" /> class.
         /// </summary>
-        /// <param name="sEzmaxinvoicingsummaryinternalDescription1">The Ezmaxinvoicingsummaryinternal description in french.</param>
-        /// <param name="sEzmaxinvoicingsummaryinternalDescription2">The Ezmaxinvoicingsummaryinternal description in english.</param>
+        /// <param name="sEzmaxinvoicingsummaryinternalDescription1">The Ezmaxinvoicingsummaryinternal description in French.</param>
+        /// <param name="sEzmaxinvoicingsummaryinternalDescription2">The Ezmaxinvoicingsummaryinternal description in English.</param>
         public MultilingualEzmaxinvoicingsummaryinternalDescription(string sEzmaxinvoicingsummaryinternalDescription1 = default(string), string sEzmaxinvoicingsummaryinternalDescription2 = default(string))
         {
             this.SEzmaxinvoicingsummaryinternalDescription1 = sEzmaxinvoicingsummaryinternalDescription1;
@@ -42,16 +42,16 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// The Ezmaxinvoicingsummaryinternal description in french
+        /// The Ezmaxinvoicingsummaryinternal description in French
         /// </summary>
-        /// <value>The Ezmaxinvoicingsummaryinternal description in french</value>
+        /// <value>The Ezmaxinvoicingsummaryinternal description in French</value>
         [DataMember(Name="sEzmaxinvoicingsummaryinternalDescription1", EmitDefaultValue=false)]
         public string SEzmaxinvoicingsummaryinternalDescription1 { get; set; }
 
         /// <summary>
-        /// The Ezmaxinvoicingsummaryinternal description in english
+        /// The Ezmaxinvoicingsummaryinternal description in English
         /// </summary>
-        /// <value>The Ezmaxinvoicingsummaryinternal description in english</value>
+        /// <value>The Ezmaxinvoicingsummaryinternal description in English</value>
         [DataMember(Name="sEzmaxinvoicingsummaryinternalDescription2", EmitDefaultValue=false)]
         public string SEzmaxinvoicingsummaryinternalDescription2 { get; set; }
 
