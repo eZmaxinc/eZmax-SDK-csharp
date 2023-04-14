@@ -47,27 +47,6 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of VariableexpenseCreateObjectV1Response</returns>
         ApiResponse<VariableexpenseCreateObjectV1Response> VariableexpenseCreateObjectV1WithHttpInfo (VariableexpenseCreateObjectV1Request variableexpenseCreateObjectV1Request);
         /// <summary>
-        /// Delete an existing Variableexpense
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense</param>
-        /// <returns>VariableexpenseDeleteObjectV1Response</returns>
-        VariableexpenseDeleteObjectV1Response VariableexpenseDeleteObjectV1 (int pkiVariableexpenseID);
-
-        /// <summary>
-        /// Delete an existing Variableexpense
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense</param>
-        /// <returns>ApiResponse of VariableexpenseDeleteObjectV1Response</returns>
-        ApiResponse<VariableexpenseDeleteObjectV1Response> VariableexpenseDeleteObjectV1WithHttpInfo (int pkiVariableexpenseID);
-        /// <summary>
         /// Edit an existing Variableexpense
         /// </summary>
         /// <remarks>
@@ -192,29 +171,6 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VariableexpenseCreateObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<VariableexpenseCreateObjectV1Response>> VariableexpenseCreateObjectV1WithHttpInfoAsync (VariableexpenseCreateObjectV1Request variableexpenseCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Delete an existing Variableexpense
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of VariableexpenseDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<VariableexpenseDeleteObjectV1Response> VariableexpenseDeleteObjectV1Async (int pkiVariableexpenseID, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Delete an existing Variableexpense
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (VariableexpenseDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VariableexpenseDeleteObjectV1Response>> VariableexpenseDeleteObjectV1WithHttpInfoAsync (int pkiVariableexpenseID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Edit an existing Variableexpense
         /// </summary>
@@ -593,151 +549,6 @@ namespace eZmaxApi.Api
             return new ApiResponse<VariableexpenseCreateObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseCreateObjectV1Response)));
-        }
-
-        /// <summary>
-        /// Delete an existing Variableexpense 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense</param>
-        /// <returns>VariableexpenseDeleteObjectV1Response</returns>
-        public VariableexpenseDeleteObjectV1Response VariableexpenseDeleteObjectV1 (int pkiVariableexpenseID)
-        {
-             ApiResponse<VariableexpenseDeleteObjectV1Response> localVarResponse = VariableexpenseDeleteObjectV1WithHttpInfo(pkiVariableexpenseID);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Variableexpense 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense</param>
-        /// <returns>ApiResponse of VariableexpenseDeleteObjectV1Response</returns>
-        public ApiResponse<VariableexpenseDeleteObjectV1Response> VariableexpenseDeleteObjectV1WithHttpInfo (int pkiVariableexpenseID)
-        {
-            // verify the required parameter 'pkiVariableexpenseID' is set
-            if (pkiVariableexpenseID == null)
-                throw new ApiException(400, "Missing required parameter 'pkiVariableexpenseID' when calling ObjectVariableexpenseApi->VariableexpenseDeleteObjectV1");
-
-            var localVarPath = "/1/object/variableexpense/{pkiVariableexpenseID}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (pkiVariableexpenseID != null) localVarPathParams.Add("pkiVariableexpenseID", this.Configuration.ApiClient.ParameterToString(pkiVariableexpenseID)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("VariableexpenseDeleteObjectV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<VariableexpenseDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (VariableexpenseDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseDeleteObjectV1Response)));
-        }
-
-        /// <summary>
-        /// Delete an existing Variableexpense 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of VariableexpenseDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<VariableexpenseDeleteObjectV1Response> VariableexpenseDeleteObjectV1Async (int pkiVariableexpenseID, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<VariableexpenseDeleteObjectV1Response> localVarResponse = await VariableexpenseDeleteObjectV1WithHttpInfoAsync(pkiVariableexpenseID, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Delete an existing Variableexpense 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (VariableexpenseDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VariableexpenseDeleteObjectV1Response>> VariableexpenseDeleteObjectV1WithHttpInfoAsync (int pkiVariableexpenseID, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'pkiVariableexpenseID' is set
-            if (pkiVariableexpenseID == null)
-                throw new ApiException(400, "Missing required parameter 'pkiVariableexpenseID' when calling ObjectVariableexpenseApi->VariableexpenseDeleteObjectV1");
-
-            var localVarPath = "/1/object/variableexpense/{pkiVariableexpenseID}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (pkiVariableexpenseID != null) localVarPathParams.Add("pkiVariableexpenseID", this.Configuration.ApiClient.ParameterToString(pkiVariableexpenseID)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("VariableexpenseDeleteObjectV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<VariableexpenseDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (VariableexpenseDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseDeleteObjectV1Response)));
         }
 
         /// <summary>

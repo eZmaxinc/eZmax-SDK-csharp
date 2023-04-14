@@ -76,18 +76,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test UsergroupDeleteObjectV1
-        /// </summary>
-        [Test]
-        public void UsergroupDeleteObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiUsergroupID = null;
-            //var response = instance.UsergroupDeleteObjectV1(pkiUsergroupID);
-            //Assert.IsInstanceOf(typeof(UsergroupDeleteObjectV1Response), response, "response is UsergroupDeleteObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test UsergroupEditObjectV1
         /// </summary>
         [Test]
@@ -129,18 +117,6 @@ namespace eZmaxApi.Test
             //string sFilter = null;
             //var response = instance.UsergroupGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(UsergroupGetListV1Response), response, "response is UsergroupGetListV1Response");
-        }
-        
-        /// <summary>
-        /// Test UsergroupGetMembersV1
-        /// </summary>
-        [Test]
-        public void UsergroupGetMembersV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiUsergroupID = null;
-            //var response = instance.UsergroupGetMembersV1(pkiUsergroupID);
-            //Assert.IsInstanceOf(typeof(UsergroupGetMembersV1Response), response, "response is UsergroupGetMembersV1Response");
         }
         
         /// <summary>

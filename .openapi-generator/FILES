@@ -38,7 +38,6 @@ docs/BillingentityinternalCreateObjectV1Request.md
 docs/BillingentityinternalCreateObjectV1Response.md
 docs/BillingentityinternalCreateObjectV1ResponseAllOf.md
 docs/BillingentityinternalCreateObjectV1ResponseMPayload.md
-docs/BillingentityinternalDeleteObjectV1Response.md
 docs/BillingentityinternalEditObjectV1Request.md
 docs/BillingentityinternalEditObjectV1Response.md
 docs/BillingentityinternalGetAutocompleteV2Response.md
@@ -161,9 +160,6 @@ docs/DepartmentAutocompleteElementResponse.md
 docs/DepartmentGetAutocompleteV2Response.md
 docs/DepartmentGetAutocompleteV2ResponseAllOf.md
 docs/DepartmentGetAutocompleteV2ResponseMPayload.md
-docs/DepartmentGetMembersV1Response.md
-docs/DepartmentGetMembersV1ResponseAllOf.md
-docs/DepartmentGetMembersV1ResponseMPayload.md
 docs/DescriptionstaticResponse.md
 docs/DescriptionstaticResponseCompound.md
 docs/EmailRequest.md
@@ -900,7 +896,6 @@ docs/PaymenttermCreateObjectV1Request.md
 docs/PaymenttermCreateObjectV1Response.md
 docs/PaymenttermCreateObjectV1ResponseAllOf.md
 docs/PaymenttermCreateObjectV1ResponseMPayload.md
-docs/PaymenttermDeleteObjectV1Response.md
 docs/PaymenttermEditObjectV1Request.md
 docs/PaymenttermEditObjectV1Response.md
 docs/PaymenttermGetAutocompleteV2Response.md
@@ -955,7 +950,6 @@ docs/UsergroupCreateObjectV1Request.md
 docs/UsergroupCreateObjectV1Response.md
 docs/UsergroupCreateObjectV1ResponseAllOf.md
 docs/UsergroupCreateObjectV1ResponseMPayload.md
-docs/UsergroupDeleteObjectV1Response.md
 docs/UsergroupEditObjectV1Request.md
 docs/UsergroupEditObjectV1Response.md
 docs/UsergroupGetAutocompleteV2Response.md
@@ -965,9 +959,6 @@ docs/UsergroupGetListV1Response.md
 docs/UsergroupGetListV1ResponseAllOf.md
 docs/UsergroupGetListV1ResponseMPayload.md
 docs/UsergroupGetListV1ResponseMPayloadAllOf.md
-docs/UsergroupGetMembersV1Response.md
-docs/UsergroupGetMembersV1ResponseAllOf.md
-docs/UsergroupGetMembersV1ResponseMPayload.md
 docs/UsergroupGetObjectV2Response.md
 docs/UsergroupGetObjectV2ResponseAllOf.md
 docs/UsergroupGetObjectV2ResponseMPayload.md
@@ -981,7 +972,6 @@ docs/VariableexpenseCreateObjectV1Request.md
 docs/VariableexpenseCreateObjectV1Response.md
 docs/VariableexpenseCreateObjectV1ResponseAllOf.md
 docs/VariableexpenseCreateObjectV1ResponseMPayload.md
-docs/VariableexpenseDeleteObjectV1Response.md
 docs/VariableexpenseEditObjectV1Request.md
 docs/VariableexpenseEditObjectV1Response.md
 docs/VariableexpenseGetAutocompleteV2Response.md
@@ -1123,7 +1113,6 @@ src/eZmaxApi.Test/Model/BillingentityinternalCreateObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/BillingentityinternalCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/BillingentityinternalCreateObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/BillingentityinternalCreateObjectV1ResponseTests.cs
-src/eZmaxApi.Test/Model/BillingentityinternalDeleteObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/BillingentityinternalEditObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/BillingentityinternalEditObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/BillingentityinternalGetAutocompleteV2ResponseAllOfTests.cs
@@ -1246,9 +1235,6 @@ src/eZmaxApi.Test/Model/DepartmentAutocompleteElementResponseTests.cs
 src/eZmaxApi.Test/Model/DepartmentGetAutocompleteV2ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/DepartmentGetAutocompleteV2ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/DepartmentGetAutocompleteV2ResponseTests.cs
-src/eZmaxApi.Test/Model/DepartmentGetMembersV1ResponseAllOfTests.cs
-src/eZmaxApi.Test/Model/DepartmentGetMembersV1ResponseMPayloadTests.cs
-src/eZmaxApi.Test/Model/DepartmentGetMembersV1ResponseTests.cs
 src/eZmaxApi.Test/Model/DescriptionstaticResponseCompoundTests.cs
 src/eZmaxApi.Test/Model/DescriptionstaticResponseTests.cs
 src/eZmaxApi.Test/Model/EmailRequestCompoundTests.cs
@@ -1936,7 +1922,6 @@ src/eZmaxApi.Test/Model/PaymenttermCreateObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/PaymenttermCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/PaymenttermCreateObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/PaymenttermCreateObjectV1ResponseTests.cs
-src/eZmaxApi.Test/Model/PaymenttermDeleteObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/PaymenttermEditObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/PaymenttermEditObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/PaymenttermGetAutocompleteV2ResponseAllOfTests.cs
@@ -1991,7 +1976,6 @@ src/eZmaxApi.Test/Model/UsergroupCreateObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/UsergroupCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/UsergroupCreateObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/UsergroupCreateObjectV1ResponseTests.cs
-src/eZmaxApi.Test/Model/UsergroupDeleteObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/UsergroupEditObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/UsergroupEditObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/UsergroupGetAutocompleteV2ResponseAllOfTests.cs
@@ -2001,9 +1985,6 @@ src/eZmaxApi.Test/Model/UsergroupGetListV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/UsergroupGetListV1ResponseMPayloadAllOfTests.cs
 src/eZmaxApi.Test/Model/UsergroupGetListV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/UsergroupGetListV1ResponseTests.cs
-src/eZmaxApi.Test/Model/UsergroupGetMembersV1ResponseAllOfTests.cs
-src/eZmaxApi.Test/Model/UsergroupGetMembersV1ResponseMPayloadTests.cs
-src/eZmaxApi.Test/Model/UsergroupGetMembersV1ResponseTests.cs
 src/eZmaxApi.Test/Model/UsergroupGetObjectV2ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/UsergroupGetObjectV2ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/UsergroupGetObjectV2ResponseTests.cs
@@ -2017,7 +1998,6 @@ src/eZmaxApi.Test/Model/VariableexpenseCreateObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/VariableexpenseCreateObjectV1ResponseAllOfTests.cs
 src/eZmaxApi.Test/Model/VariableexpenseCreateObjectV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/VariableexpenseCreateObjectV1ResponseTests.cs
-src/eZmaxApi.Test/Model/VariableexpenseDeleteObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/VariableexpenseEditObjectV1RequestTests.cs
 src/eZmaxApi.Test/Model/VariableexpenseEditObjectV1ResponseTests.cs
 src/eZmaxApi.Test/Model/VariableexpenseGetAutocompleteV2ResponseAllOfTests.cs
@@ -2168,7 +2148,6 @@ src/eZmaxApi/Model/BillingentityinternalCreateObjectV1Request.cs
 src/eZmaxApi/Model/BillingentityinternalCreateObjectV1Response.cs
 src/eZmaxApi/Model/BillingentityinternalCreateObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/BillingentityinternalCreateObjectV1ResponseMPayload.cs
-src/eZmaxApi/Model/BillingentityinternalDeleteObjectV1Response.cs
 src/eZmaxApi/Model/BillingentityinternalEditObjectV1Request.cs
 src/eZmaxApi/Model/BillingentityinternalEditObjectV1Response.cs
 src/eZmaxApi/Model/BillingentityinternalGetAutocompleteV2Response.cs
@@ -2291,9 +2270,6 @@ src/eZmaxApi/Model/DepartmentAutocompleteElementResponse.cs
 src/eZmaxApi/Model/DepartmentGetAutocompleteV2Response.cs
 src/eZmaxApi/Model/DepartmentGetAutocompleteV2ResponseAllOf.cs
 src/eZmaxApi/Model/DepartmentGetAutocompleteV2ResponseMPayload.cs
-src/eZmaxApi/Model/DepartmentGetMembersV1Response.cs
-src/eZmaxApi/Model/DepartmentGetMembersV1ResponseAllOf.cs
-src/eZmaxApi/Model/DepartmentGetMembersV1ResponseMPayload.cs
 src/eZmaxApi/Model/DescriptionstaticResponse.cs
 src/eZmaxApi/Model/DescriptionstaticResponseCompound.cs
 src/eZmaxApi/Model/EmailRequest.cs
@@ -2981,7 +2957,6 @@ src/eZmaxApi/Model/PaymenttermCreateObjectV1Request.cs
 src/eZmaxApi/Model/PaymenttermCreateObjectV1Response.cs
 src/eZmaxApi/Model/PaymenttermCreateObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/PaymenttermCreateObjectV1ResponseMPayload.cs
-src/eZmaxApi/Model/PaymenttermDeleteObjectV1Response.cs
 src/eZmaxApi/Model/PaymenttermEditObjectV1Request.cs
 src/eZmaxApi/Model/PaymenttermEditObjectV1Response.cs
 src/eZmaxApi/Model/PaymenttermGetAutocompleteV2Response.cs
@@ -3036,7 +3011,6 @@ src/eZmaxApi/Model/UsergroupCreateObjectV1Request.cs
 src/eZmaxApi/Model/UsergroupCreateObjectV1Response.cs
 src/eZmaxApi/Model/UsergroupCreateObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/UsergroupCreateObjectV1ResponseMPayload.cs
-src/eZmaxApi/Model/UsergroupDeleteObjectV1Response.cs
 src/eZmaxApi/Model/UsergroupEditObjectV1Request.cs
 src/eZmaxApi/Model/UsergroupEditObjectV1Response.cs
 src/eZmaxApi/Model/UsergroupGetAutocompleteV2Response.cs
@@ -3046,9 +3020,6 @@ src/eZmaxApi/Model/UsergroupGetListV1Response.cs
 src/eZmaxApi/Model/UsergroupGetListV1ResponseAllOf.cs
 src/eZmaxApi/Model/UsergroupGetListV1ResponseMPayload.cs
 src/eZmaxApi/Model/UsergroupGetListV1ResponseMPayloadAllOf.cs
-src/eZmaxApi/Model/UsergroupGetMembersV1Response.cs
-src/eZmaxApi/Model/UsergroupGetMembersV1ResponseAllOf.cs
-src/eZmaxApi/Model/UsergroupGetMembersV1ResponseMPayload.cs
 src/eZmaxApi/Model/UsergroupGetObjectV2Response.cs
 src/eZmaxApi/Model/UsergroupGetObjectV2ResponseAllOf.cs
 src/eZmaxApi/Model/UsergroupGetObjectV2ResponseMPayload.cs
@@ -3062,7 +3033,6 @@ src/eZmaxApi/Model/VariableexpenseCreateObjectV1Request.cs
 src/eZmaxApi/Model/VariableexpenseCreateObjectV1Response.cs
 src/eZmaxApi/Model/VariableexpenseCreateObjectV1ResponseAllOf.cs
 src/eZmaxApi/Model/VariableexpenseCreateObjectV1ResponseMPayload.cs
-src/eZmaxApi/Model/VariableexpenseDeleteObjectV1Response.cs
 src/eZmaxApi/Model/VariableexpenseEditObjectV1Request.cs
 src/eZmaxApi/Model/VariableexpenseEditObjectV1Response.cs
 src/eZmaxApi/Model/VariableexpenseGetAutocompleteV2Response.cs

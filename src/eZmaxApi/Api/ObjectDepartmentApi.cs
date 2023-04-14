@@ -52,27 +52,6 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of DepartmentGetAutocompleteV2Response</returns>
         ApiResponse<DepartmentGetAutocompleteV2Response> DepartmentGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
-        /// <summary>
-        /// Retrieve an existing Department's members
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDepartmentID"></param>
-        /// <returns>DepartmentGetMembersV1Response</returns>
-        DepartmentGetMembersV1Response DepartmentGetMembersV1 (int pkiDepartmentID);
-
-        /// <summary>
-        /// Retrieve an existing Department's members
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDepartmentID"></param>
-        /// <returns>ApiResponse of DepartmentGetMembersV1Response</returns>
-        ApiResponse<DepartmentGetMembersV1Response> DepartmentGetMembersV1WithHttpInfo (int pkiDepartmentID);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -104,29 +83,6 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (DepartmentGetAutocompleteV2Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<DepartmentGetAutocompleteV2Response>> DepartmentGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Retrieve an existing Department's members
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDepartmentID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of DepartmentGetMembersV1Response</returns>
-        System.Threading.Tasks.Task<DepartmentGetMembersV1Response> DepartmentGetMembersV1Async (int pkiDepartmentID, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Retrieve an existing Department&#39;s members
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDepartmentID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (DepartmentGetMembersV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DepartmentGetMembersV1Response>> DepartmentGetMembersV1WithHttpInfoAsync (int pkiDepartmentID, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -399,151 +355,6 @@ namespace eZmaxApi.Api
             return new ApiResponse<DepartmentGetAutocompleteV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (DepartmentGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DepartmentGetAutocompleteV2Response)));
-        }
-
-        /// <summary>
-        /// Retrieve an existing Department's members 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDepartmentID"></param>
-        /// <returns>DepartmentGetMembersV1Response</returns>
-        public DepartmentGetMembersV1Response DepartmentGetMembersV1 (int pkiDepartmentID)
-        {
-             ApiResponse<DepartmentGetMembersV1Response> localVarResponse = DepartmentGetMembersV1WithHttpInfo(pkiDepartmentID);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve an existing Department's members 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDepartmentID"></param>
-        /// <returns>ApiResponse of DepartmentGetMembersV1Response</returns>
-        public ApiResponse<DepartmentGetMembersV1Response> DepartmentGetMembersV1WithHttpInfo (int pkiDepartmentID)
-        {
-            // verify the required parameter 'pkiDepartmentID' is set
-            if (pkiDepartmentID == null)
-                throw new ApiException(400, "Missing required parameter 'pkiDepartmentID' when calling ObjectDepartmentApi->DepartmentGetMembersV1");
-
-            var localVarPath = "/1/object/department/{pkiDepartmentID}/getMembers";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (pkiDepartmentID != null) localVarPathParams.Add("pkiDepartmentID", this.Configuration.ApiClient.ParameterToString(pkiDepartmentID)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DepartmentGetMembersV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<DepartmentGetMembersV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (DepartmentGetMembersV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DepartmentGetMembersV1Response)));
-        }
-
-        /// <summary>
-        /// Retrieve an existing Department's members 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDepartmentID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of DepartmentGetMembersV1Response</returns>
-        public async System.Threading.Tasks.Task<DepartmentGetMembersV1Response> DepartmentGetMembersV1Async (int pkiDepartmentID, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<DepartmentGetMembersV1Response> localVarResponse = await DepartmentGetMembersV1WithHttpInfoAsync(pkiDepartmentID, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Retrieve an existing Department's members 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDepartmentID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (DepartmentGetMembersV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DepartmentGetMembersV1Response>> DepartmentGetMembersV1WithHttpInfoAsync (int pkiDepartmentID, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'pkiDepartmentID' is set
-            if (pkiDepartmentID == null)
-                throw new ApiException(400, "Missing required parameter 'pkiDepartmentID' when calling ObjectDepartmentApi->DepartmentGetMembersV1");
-
-            var localVarPath = "/1/object/department/{pkiDepartmentID}/getMembers";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (pkiDepartmentID != null) localVarPathParams.Add("pkiDepartmentID", this.Configuration.ApiClient.ParameterToString(pkiDepartmentID)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DepartmentGetMembersV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<DepartmentGetMembersV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (DepartmentGetMembersV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DepartmentGetMembersV1Response)));
         }
 
     }

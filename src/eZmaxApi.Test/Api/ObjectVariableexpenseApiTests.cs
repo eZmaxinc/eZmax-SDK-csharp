@@ -76,18 +76,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test VariableexpenseDeleteObjectV1
-        /// </summary>
-        [Test]
-        public void VariableexpenseDeleteObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiVariableexpenseID = null;
-            //var response = instance.VariableexpenseDeleteObjectV1(pkiVariableexpenseID);
-            //Assert.IsInstanceOf(typeof(VariableexpenseDeleteObjectV1Response), response, "response is VariableexpenseDeleteObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test VariableexpenseEditObjectV1
         /// </summary>
         [Test]

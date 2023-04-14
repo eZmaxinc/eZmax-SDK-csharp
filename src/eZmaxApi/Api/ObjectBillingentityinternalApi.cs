@@ -47,27 +47,6 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of BillingentityinternalCreateObjectV1Response</returns>
         ApiResponse<BillingentityinternalCreateObjectV1Response> BillingentityinternalCreateObjectV1WithHttpInfo (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request);
         /// <summary>
-        /// Delete an existing Billingentityinternal
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
-        /// <returns>BillingentityinternalDeleteObjectV1Response</returns>
-        BillingentityinternalDeleteObjectV1Response BillingentityinternalDeleteObjectV1 (int pkiBillingentityinternalID);
-
-        /// <summary>
-        /// Delete an existing Billingentityinternal
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
-        /// <returns>ApiResponse of BillingentityinternalDeleteObjectV1Response</returns>
-        ApiResponse<BillingentityinternalDeleteObjectV1Response> BillingentityinternalDeleteObjectV1WithHttpInfo (int pkiBillingentityinternalID);
-        /// <summary>
         /// Edit an existing Billingentityinternal
         /// </summary>
         /// <remarks>
@@ -192,29 +171,6 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (BillingentityinternalCreateObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<BillingentityinternalCreateObjectV1Response>> BillingentityinternalCreateObjectV1WithHttpInfoAsync (BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Delete an existing Billingentityinternal
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of BillingentityinternalDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<BillingentityinternalDeleteObjectV1Response> BillingentityinternalDeleteObjectV1Async (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Delete an existing Billingentityinternal
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (BillingentityinternalDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalDeleteObjectV1Response>> BillingentityinternalDeleteObjectV1WithHttpInfoAsync (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Edit an existing Billingentityinternal
         /// </summary>
@@ -593,151 +549,6 @@ namespace eZmaxApi.Api
             return new ApiResponse<BillingentityinternalCreateObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (BillingentityinternalCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalCreateObjectV1Response)));
-        }
-
-        /// <summary>
-        /// Delete an existing Billingentityinternal 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
-        /// <returns>BillingentityinternalDeleteObjectV1Response</returns>
-        public BillingentityinternalDeleteObjectV1Response BillingentityinternalDeleteObjectV1 (int pkiBillingentityinternalID)
-        {
-             ApiResponse<BillingentityinternalDeleteObjectV1Response> localVarResponse = BillingentityinternalDeleteObjectV1WithHttpInfo(pkiBillingentityinternalID);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Billingentityinternal 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
-        /// <returns>ApiResponse of BillingentityinternalDeleteObjectV1Response</returns>
-        public ApiResponse<BillingentityinternalDeleteObjectV1Response> BillingentityinternalDeleteObjectV1WithHttpInfo (int pkiBillingentityinternalID)
-        {
-            // verify the required parameter 'pkiBillingentityinternalID' is set
-            if (pkiBillingentityinternalID == null)
-                throw new ApiException(400, "Missing required parameter 'pkiBillingentityinternalID' when calling ObjectBillingentityinternalApi->BillingentityinternalDeleteObjectV1");
-
-            var localVarPath = "/1/object/billingentityinternal/{pkiBillingentityinternalID}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (pkiBillingentityinternalID != null) localVarPathParams.Add("pkiBillingentityinternalID", this.Configuration.ApiClient.ParameterToString(pkiBillingentityinternalID)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("BillingentityinternalDeleteObjectV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<BillingentityinternalDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (BillingentityinternalDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalDeleteObjectV1Response)));
-        }
-
-        /// <summary>
-        /// Delete an existing Billingentityinternal 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of BillingentityinternalDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<BillingentityinternalDeleteObjectV1Response> BillingentityinternalDeleteObjectV1Async (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<BillingentityinternalDeleteObjectV1Response> localVarResponse = await BillingentityinternalDeleteObjectV1WithHttpInfoAsync(pkiBillingentityinternalID, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Delete an existing Billingentityinternal 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (BillingentityinternalDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BillingentityinternalDeleteObjectV1Response>> BillingentityinternalDeleteObjectV1WithHttpInfoAsync (int pkiBillingentityinternalID, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'pkiBillingentityinternalID' is set
-            if (pkiBillingentityinternalID == null)
-                throw new ApiException(400, "Missing required parameter 'pkiBillingentityinternalID' when calling ObjectBillingentityinternalApi->BillingentityinternalDeleteObjectV1");
-
-            var localVarPath = "/1/object/billingentityinternal/{pkiBillingentityinternalID}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (pkiBillingentityinternalID != null) localVarPathParams.Add("pkiBillingentityinternalID", this.Configuration.ApiClient.ParameterToString(pkiBillingentityinternalID)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("BillingentityinternalDeleteObjectV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<BillingentityinternalDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (BillingentityinternalDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingentityinternalDeleteObjectV1Response)));
         }
 
         /// <summary>

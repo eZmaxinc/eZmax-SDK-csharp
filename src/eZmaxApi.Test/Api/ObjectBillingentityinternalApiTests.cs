@@ -76,18 +76,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test BillingentityinternalDeleteObjectV1
-        /// </summary>
-        [Test]
-        public void BillingentityinternalDeleteObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiBillingentityinternalID = null;
-            //var response = instance.BillingentityinternalDeleteObjectV1(pkiBillingentityinternalID);
-            //Assert.IsInstanceOf(typeof(BillingentityinternalDeleteObjectV1Response), response, "response is BillingentityinternalDeleteObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test BillingentityinternalEditObjectV1
         /// </summary>
         [Test]

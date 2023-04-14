@@ -78,18 +78,6 @@ namespace eZmaxApi.Test
             //Assert.IsInstanceOf(typeof(DepartmentGetAutocompleteV2Response), response, "response is DepartmentGetAutocompleteV2Response");
         }
         
-        /// <summary>
-        /// Test DepartmentGetMembersV1
-        /// </summary>
-        [Test]
-        public void DepartmentGetMembersV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiDepartmentID = null;
-            //var response = instance.DepartmentGetMembersV1(pkiDepartmentID);
-            //Assert.IsInstanceOf(typeof(DepartmentGetMembersV1Response), response, "response is DepartmentGetMembersV1Response");
-        }
-        
     }
 
 }

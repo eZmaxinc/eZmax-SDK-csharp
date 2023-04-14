@@ -76,18 +76,6 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
-        /// Test PaymenttermDeleteObjectV1
-        /// </summary>
-        [Test]
-        public void PaymenttermDeleteObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiPaymenttermID = null;
-            //var response = instance.PaymenttermDeleteObjectV1(pkiPaymenttermID);
-            //Assert.IsInstanceOf(typeof(PaymenttermDeleteObjectV1Response), response, "response is PaymenttermDeleteObjectV1Response");
-        }
-        
-        /// <summary>
         /// Test PaymenttermEditObjectV1
         /// </summary>
         [Test]

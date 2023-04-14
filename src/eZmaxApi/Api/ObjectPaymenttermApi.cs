@@ -47,27 +47,6 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of PaymenttermCreateObjectV1Response</returns>
         ApiResponse<PaymenttermCreateObjectV1Response> PaymenttermCreateObjectV1WithHttpInfo (PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request);
         /// <summary>
-        /// Delete an existing Paymentterm
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiPaymenttermID"></param>
-        /// <returns>PaymenttermDeleteObjectV1Response</returns>
-        PaymenttermDeleteObjectV1Response PaymenttermDeleteObjectV1 (int pkiPaymenttermID);
-
-        /// <summary>
-        /// Delete an existing Paymentterm
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiPaymenttermID"></param>
-        /// <returns>ApiResponse of PaymenttermDeleteObjectV1Response</returns>
-        ApiResponse<PaymenttermDeleteObjectV1Response> PaymenttermDeleteObjectV1WithHttpInfo (int pkiPaymenttermID);
-        /// <summary>
         /// Edit an existing Paymentterm
         /// </summary>
         /// <remarks>
@@ -192,29 +171,6 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (PaymenttermCreateObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<PaymenttermCreateObjectV1Response>> PaymenttermCreateObjectV1WithHttpInfoAsync (PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Delete an existing Paymentterm
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiPaymenttermID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of PaymenttermDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<PaymenttermDeleteObjectV1Response> PaymenttermDeleteObjectV1Async (int pkiPaymenttermID, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Delete an existing Paymentterm
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiPaymenttermID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (PaymenttermDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymenttermDeleteObjectV1Response>> PaymenttermDeleteObjectV1WithHttpInfoAsync (int pkiPaymenttermID, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Edit an existing Paymentterm
         /// </summary>
@@ -593,151 +549,6 @@ namespace eZmaxApi.Api
             return new ApiResponse<PaymenttermCreateObjectV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermCreateObjectV1Response)));
-        }
-
-        /// <summary>
-        /// Delete an existing Paymentterm 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiPaymenttermID"></param>
-        /// <returns>PaymenttermDeleteObjectV1Response</returns>
-        public PaymenttermDeleteObjectV1Response PaymenttermDeleteObjectV1 (int pkiPaymenttermID)
-        {
-             ApiResponse<PaymenttermDeleteObjectV1Response> localVarResponse = PaymenttermDeleteObjectV1WithHttpInfo(pkiPaymenttermID);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Paymentterm 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiPaymenttermID"></param>
-        /// <returns>ApiResponse of PaymenttermDeleteObjectV1Response</returns>
-        public ApiResponse<PaymenttermDeleteObjectV1Response> PaymenttermDeleteObjectV1WithHttpInfo (int pkiPaymenttermID)
-        {
-            // verify the required parameter 'pkiPaymenttermID' is set
-            if (pkiPaymenttermID == null)
-                throw new ApiException(400, "Missing required parameter 'pkiPaymenttermID' when calling ObjectPaymenttermApi->PaymenttermDeleteObjectV1");
-
-            var localVarPath = "/1/object/paymentterm/{pkiPaymenttermID}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (pkiPaymenttermID != null) localVarPathParams.Add("pkiPaymenttermID", this.Configuration.ApiClient.ParameterToString(pkiPaymenttermID)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("PaymenttermDeleteObjectV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<PaymenttermDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (PaymenttermDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermDeleteObjectV1Response)));
-        }
-
-        /// <summary>
-        /// Delete an existing Paymentterm 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiPaymenttermID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of PaymenttermDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<PaymenttermDeleteObjectV1Response> PaymenttermDeleteObjectV1Async (int pkiPaymenttermID, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<PaymenttermDeleteObjectV1Response> localVarResponse = await PaymenttermDeleteObjectV1WithHttpInfoAsync(pkiPaymenttermID, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Delete an existing Paymentterm 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiPaymenttermID"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (PaymenttermDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PaymenttermDeleteObjectV1Response>> PaymenttermDeleteObjectV1WithHttpInfoAsync (int pkiPaymenttermID, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'pkiPaymenttermID' is set
-            if (pkiPaymenttermID == null)
-                throw new ApiException(400, "Missing required parameter 'pkiPaymenttermID' when calling ObjectPaymenttermApi->PaymenttermDeleteObjectV1");
-
-            var localVarPath = "/1/object/paymentterm/{pkiPaymenttermID}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (pkiPaymenttermID != null) localVarPathParams.Add("pkiPaymenttermID", this.Configuration.ApiClient.ParameterToString(pkiPaymenttermID)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("PaymenttermDeleteObjectV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<PaymenttermDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (PaymenttermDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermDeleteObjectV1Response)));
         }
 
         /// <summary>
