@@ -332,9 +332,9 @@ namespace eZmaxApi.Model
 
 
             // PkiSessionhistoryID (int) maximum
-            if(this.PkiSessionhistoryID > (int)4294967295)
+            if(this.PkiSessionhistoryID > (int)2147483647)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSessionhistoryID, must be a value less than or equal to 4294967295.", new [] { "PkiSessionhistoryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSessionhistoryID, must be a value less than or equal to 2147483647.", new [] { "PkiSessionhistoryID" });
             }
 
             // PkiSessionhistoryID (int) minimum
