@@ -357,7 +357,7 @@ namespace eZmaxApi.Model
 
 
             // DEzmaxinvoicingcontractLicense (string) pattern
-            Regex regexDEzmaxinvoicingcontractLicense = new Regex(@"^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$", RegexOptions.CultureInvariant);
+            Regex regexDEzmaxinvoicingcontractLicense = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
             if (false == regexDEzmaxinvoicingcontractLicense.Match(this.DEzmaxinvoicingcontractLicense).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingcontractLicense, must match a pattern of " + regexDEzmaxinvoicingcontractLicense, new [] { "DEzmaxinvoicingcontractLicense" });
@@ -366,7 +366,7 @@ namespace eZmaxApi.Model
 
 
             // DEzmaxinvoicingcontract121qa (string) pattern
-            Regex regexDEzmaxinvoicingcontract121qa = new Regex(@"^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$", RegexOptions.CultureInvariant);
+            Regex regexDEzmaxinvoicingcontract121qa = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
             if (false == regexDEzmaxinvoicingcontract121qa.Match(this.DEzmaxinvoicingcontract121qa).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingcontract121qa, must match a pattern of " + regexDEzmaxinvoicingcontract121qa, new [] { "DEzmaxinvoicingcontract121qa" });

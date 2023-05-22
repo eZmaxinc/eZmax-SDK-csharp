@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **EEzsignsignatureAttachmentnamesource** | **FieldEEzsignsignatureAttachmentnamesource** |  | [optional] 
 **BEzsignsignatureRequired** | **bool** | Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments. | [optional] 
 **FkiEzsignfoldersignerassociationIDValidation** | **int** | The unique ID of the Ezsignfoldersignerassociation | [optional] 
+**DtEzsignsignatureDate** | **string** | The date the Ezsignsignature was signed | [optional] 
+**ObjContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

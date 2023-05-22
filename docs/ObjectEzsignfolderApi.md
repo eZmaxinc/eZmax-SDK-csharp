@@ -1287,8 +1287,8 @@ namespace Example
 
             var apiInstance = new ObjectEzsignfolderApi(Configuration.Default);
             var eOrderBy = "pkiEzsignfolderID_ASC";  // string | Specify how you want the results to be sorted (optional) 
-            var iRowMax = 56;  // int? |  (optional) 
-            var iRowOffset = 56;  // int? |  (optional) 
+            var iRowMax = 10000;  // int? |  (optional)  (default to 10000)
+            var iRowOffset = 0;  // int? |  (optional)  (default to 0)
             var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
             var sFilter = "sFilter_example";  // string |  (optional) 
 
@@ -1315,8 +1315,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **string**| Specify how you want the results to be sorted | [optional] 
- **iRowMax** | **int?**|  | [optional] 
- **iRowOffset** | **int?**|  | [optional] 
+ **iRowMax** | **int?**|  | [optional] [default to 10000]
+ **iRowOffset** | **int?**|  | [optional] [default to 0]
  **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
  **sFilter** | **string**|  | [optional] 
 

@@ -35,6 +35,7 @@ namespace eZmaxApi.Api
         /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>GlobalCustomerGetEndpointV1Response</returns>
+        [Obsolete]
         GlobalCustomerGetEndpointV1Response GlobalCustomerGetEndpointV1 (string pksCustomerCode, string sInfrastructureproductCode = default(string));
 
         /// <summary>
@@ -47,6 +48,7 @@ namespace eZmaxApi.Api
         /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>ApiResponse of GlobalCustomerGetEndpointV1Response</returns>
+        [Obsolete]
         ApiResponse<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1WithHttpInfo (string pksCustomerCode, string sInfrastructureproductCode = default(string));
         #endregion Synchronous Operations
         #region Asynchronous Operations
@@ -61,6 +63,7 @@ namespace eZmaxApi.Api
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of GlobalCustomerGetEndpointV1Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1Async (string pksCustomerCode, string sInfrastructureproductCode = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
@@ -74,6 +77,7 @@ namespace eZmaxApi.Api
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (GlobalCustomerGetEndpointV1Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<GlobalCustomerGetEndpointV1Response>> GlobalCustomerGetEndpointV1WithHttpInfoAsync (string pksCustomerCode, string sInfrastructureproductCode = default(string), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
@@ -193,6 +197,7 @@ namespace eZmaxApi.Api
         /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>GlobalCustomerGetEndpointV1Response</returns>
+        [Obsolete]
         public GlobalCustomerGetEndpointV1Response GlobalCustomerGetEndpointV1 (string pksCustomerCode, string sInfrastructureproductCode = default(string))
         {
              ApiResponse<GlobalCustomerGetEndpointV1Response> localVarResponse = GlobalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode, sInfrastructureproductCode);
@@ -206,6 +211,7 @@ namespace eZmaxApi.Api
         /// <param name="pksCustomerCode"></param>
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>ApiResponse of GlobalCustomerGetEndpointV1Response</returns>
+        [Obsolete]
         public ApiResponse<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1WithHttpInfo (string pksCustomerCode, string sInfrastructureproductCode = default(string))
         {
             // verify the required parameter 'pksCustomerCode' is set
@@ -268,6 +274,7 @@ namespace eZmaxApi.Api
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of GlobalCustomerGetEndpointV1Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1Async (string pksCustomerCode, string sInfrastructureproductCode = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<GlobalCustomerGetEndpointV1Response> localVarResponse = await GlobalCustomerGetEndpointV1WithHttpInfoAsync(pksCustomerCode, sInfrastructureproductCode, cancellationToken);
@@ -283,6 +290,7 @@ namespace eZmaxApi.Api
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (GlobalCustomerGetEndpointV1Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<GlobalCustomerGetEndpointV1Response>> GlobalCustomerGetEndpointV1WithHttpInfoAsync (string pksCustomerCode, string sInfrastructureproductCode = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'pksCustomerCode' is set

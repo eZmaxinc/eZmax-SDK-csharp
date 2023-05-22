@@ -35,10 +35,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
         /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
-        public EzsignsignatureResponseCompoundAllOf(bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateResponseCompound>))
+        /// <param name="objCreditcardtransaction">objCreditcardtransaction.</param>
+        public EzsignsignatureResponseCompoundAllOf(bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateResponseCompound>), CustomCreditcardtransactionResponse objCreditcardtransaction = default(CustomCreditcardtransactionResponse))
         {
             this.BEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
             this.AObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+            this.ObjCreditcardtransaction = objCreditcardtransaction;
         }
 
         /// <summary>
@@ -56,6 +58,12 @@ namespace eZmaxApi.Model
         public List<EzsignsignaturecustomdateResponseCompound> AObjEzsignsignaturecustomdate { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjCreditcardtransaction
+        /// </summary>
+        [DataMember(Name="objCreditcardtransaction", EmitDefaultValue=false)]
+        public CustomCreditcardtransactionResponse ObjCreditcardtransaction { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +73,7 @@ namespace eZmaxApi.Model
             sb.Append("class EzsignsignatureResponseCompoundAllOf {\n");
             sb.Append("  BEzsignsignatureCustomdate: ").Append(BEzsignsignatureCustomdate).Append("\n");
             sb.Append("  AObjEzsignsignaturecustomdate: ").Append(AObjEzsignsignaturecustomdate).Append("\n");
+            sb.Append("  ObjCreditcardtransaction: ").Append(ObjCreditcardtransaction).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +118,11 @@ namespace eZmaxApi.Model
                     this.AObjEzsignsignaturecustomdate != null &&
                     input.AObjEzsignsignaturecustomdate != null &&
                     this.AObjEzsignsignaturecustomdate.SequenceEqual(input.AObjEzsignsignaturecustomdate)
+                ) && 
+                (
+                    this.ObjCreditcardtransaction == input.ObjCreditcardtransaction ||
+                    (this.ObjCreditcardtransaction != null &&
+                    this.ObjCreditcardtransaction.Equals(input.ObjCreditcardtransaction))
                 );
         }
 
@@ -125,6 +139,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzsignsignatureCustomdate.GetHashCode();
                 if (this.AObjEzsignsignaturecustomdate != null)
                     hashCode = hashCode * 59 + this.AObjEzsignsignaturecustomdate.GetHashCode();
+                if (this.ObjCreditcardtransaction != null)
+                    hashCode = hashCode * 59 + this.ObjCreditcardtransaction.GetHashCode();
                 return hashCode;
             }
         }

@@ -66,20 +66,20 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'SBillingentityinternalDescriptionX'
-        /// </summary>
-        [Test]
-        public void SBillingentityinternalDescriptionXTest()
-        {
-            // TODO unit test for the property 'SBillingentityinternalDescriptionX'
-        }
-        /// <summary>
         /// Test the property 'PkiBillingentityinternalID'
         /// </summary>
         [Test]
         public void PkiBillingentityinternalIDTest()
         {
             // TODO unit test for the property 'PkiBillingentityinternalID'
+        }
+        /// <summary>
+        /// Test the property 'SBillingentityinternalDescriptionX'
+        /// </summary>
+        [Test]
+        public void SBillingentityinternalDescriptionXTest()
+        {
+            // TODO unit test for the property 'SBillingentityinternalDescriptionX'
         }
         /// <summary>
         /// Test the property 'BBillingentityinternalIsactive'

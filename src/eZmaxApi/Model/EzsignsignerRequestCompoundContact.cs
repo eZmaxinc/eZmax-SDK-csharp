@@ -303,7 +303,7 @@ namespace eZmaxApi.Model
 
 
             // SPhoneE164 (string) pattern
-            Regex regexSPhoneE164 = new Regex(@"^\\+[1-9]\\d{1,14}$", RegexOptions.CultureInvariant);
+            Regex regexSPhoneE164 = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);
             if (false == regexSPhoneE164.Match(this.SPhoneE164).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164, must match a pattern of " + regexSPhoneE164, new [] { "SPhoneE164" });
@@ -312,7 +312,7 @@ namespace eZmaxApi.Model
 
 
             // SPhoneE164Cell (string) pattern
-            Regex regexSPhoneE164Cell = new Regex(@"^\\+[1-9]\\d{1,14}$", RegexOptions.CultureInvariant);
+            Regex regexSPhoneE164Cell = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);
             if (false == regexSPhoneE164Cell.Match(this.SPhoneE164Cell).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164Cell, must match a pattern of " + regexSPhoneE164Cell, new [] { "SPhoneE164Cell" });

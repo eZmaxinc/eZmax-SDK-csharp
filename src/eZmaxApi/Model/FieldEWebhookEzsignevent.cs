@@ -40,10 +40,22 @@ namespace eZmaxApi.Model
         DocumentCompleted = 1,
 
         /// <summary>
+        /// Enum EzsignsignerAcceptclause for value: EzsignsignerAcceptclause
+        /// </summary>
+        [EnumMember(Value = "EzsignsignerAcceptclause")]
+        EzsignsignerAcceptclause = 2,
+
+        /// <summary>
+        /// Enum EzsignsignerConnect for value: EzsignsignerConnect
+        /// </summary>
+        [EnumMember(Value = "EzsignsignerConnect")]
+        EzsignsignerConnect = 3,
+
+        /// <summary>
         /// Enum FolderCompleted for value: FolderCompleted
         /// </summary>
         [EnumMember(Value = "FolderCompleted")]
-        FolderCompleted = 2
+        FolderCompleted = 4
 
     }
 

@@ -81,6 +81,14 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'AObjEzsignsignaturecustomdate'
         }
+        /// <summary>
+        /// Test the property 'ObjCreditcardtransaction'
+        /// </summary>
+        [Test]
+        public void ObjCreditcardtransactionTest()
+        {
+            // TODO unit test for the property 'ObjCreditcardtransaction'
+        }
 
     }
 

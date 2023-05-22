@@ -253,7 +253,7 @@ namespace eZmaxApi.Model
 
 
             // SPhoneInternational (string) pattern
-            Regex regexSPhoneInternational = new Regex(@"^\\+[1-9]\\d{1,14}$", RegexOptions.CultureInvariant);
+            Regex regexSPhoneInternational = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);
             if (false == regexSPhoneInternational.Match(this.SPhoneInternational).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneInternational, must match a pattern of " + regexSPhoneInternational, new [] { "SPhoneInternational" });

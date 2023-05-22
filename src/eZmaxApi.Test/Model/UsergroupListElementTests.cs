@@ -81,6 +81,14 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'SUsergroupNameX'
         }
+        /// <summary>
+        /// Test the property 'ICountUser'
+        /// </summary>
+        [Test]
+        public void ICountUserTest()
+        {
+            // TODO unit test for the property 'ICountUser'
+        }
 
     }
 

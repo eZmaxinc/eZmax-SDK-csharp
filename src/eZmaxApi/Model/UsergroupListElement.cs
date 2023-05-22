@@ -40,7 +40,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiUsergroupID">The unique ID of the Usergroup (required).</param>
         /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
-        public UsergroupListElement(int pkiUsergroupID = default(int), string sUsergroupNameX = default(string))
+        /// <param name="iCountUser">Numer of user in group (required).</param>
+        public UsergroupListElement(int pkiUsergroupID = default(int), string sUsergroupNameX = default(string), int iCountUser = default(int))
         {
             // to ensure "pkiUsergroupID" is required (not null)
             if (pkiUsergroupID == null)
@@ -62,6 +63,16 @@ namespace eZmaxApi.Model
                 this.SUsergroupNameX = sUsergroupNameX;
             }
 
+            // to ensure "iCountUser" is required (not null)
+            if (iCountUser == null)
+            {
+                throw new InvalidDataException("iCountUser is a required property for UsergroupListElement and cannot be null");
+            }
+            else
+            {
+                this.ICountUser = iCountUser;
+            }
+
         }
 
         /// <summary>
@@ -79,6 +90,13 @@ namespace eZmaxApi.Model
         public string SUsergroupNameX { get; set; }
 
         /// <summary>
+        /// Numer of user in group
+        /// </summary>
+        /// <value>Numer of user in group</value>
+        [DataMember(Name="iCountUser", EmitDefaultValue=true)]
+        public int ICountUser { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -88,6 +106,7 @@ namespace eZmaxApi.Model
             sb.Append("class UsergroupListElement {\n");
             sb.Append("  PkiUsergroupID: ").Append(PkiUsergroupID).Append("\n");
             sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
+            sb.Append("  ICountUser: ").Append(ICountUser).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -131,6 +150,11 @@ namespace eZmaxApi.Model
                     this.SUsergroupNameX == input.SUsergroupNameX ||
                     (this.SUsergroupNameX != null &&
                     this.SUsergroupNameX.Equals(input.SUsergroupNameX))
+                ) && 
+                (
+                    this.ICountUser == input.ICountUser ||
+                    (this.ICountUser != null &&
+                    this.ICountUser.Equals(input.ICountUser))
                 );
         }
 
@@ -147,6 +171,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.PkiUsergroupID.GetHashCode();
                 if (this.SUsergroupNameX != null)
                     hashCode = hashCode * 59 + this.SUsergroupNameX.GetHashCode();
+                if (this.ICountUser != null)
+                    hashCode = hashCode * 59 + this.ICountUser.GetHashCode();
                 return hashCode;
             }
         }
@@ -179,6 +205,20 @@ namespace eZmaxApi.Model
             if (false == regexSUsergroupNameX.Match(this.SUsergroupNameX).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameX, must match a pattern of " + regexSUsergroupNameX, new [] { "SUsergroupNameX" });
+            }
+
+
+
+            // ICountUser (int) maximum
+            if(this.ICountUser > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICountUser, must be a value less than or equal to 16777215.", new [] { "ICountUser" });
+            }
+
+            // ICountUser (int) minimum
+            if(this.ICountUser < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICountUser, must be a value greater than or equal to 0.", new [] { "ICountUser" });
             }
 
             yield break;

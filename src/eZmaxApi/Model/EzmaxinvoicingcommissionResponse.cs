@@ -313,7 +313,7 @@ namespace eZmaxApi.Model
 
 
             // DEzmaxinvoicingcommissionAmount (string) pattern
-            Regex regexDEzmaxinvoicingcommissionAmount = new Regex(@"^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$", RegexOptions.CultureInvariant);
+            Regex regexDEzmaxinvoicingcommissionAmount = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
             if (false == regexDEzmaxinvoicingcommissionAmount.Match(this.DEzmaxinvoicingcommissionAmount).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingcommissionAmount, must match a pattern of " + regexDEzmaxinvoicingcommissionAmount, new [] { "DEzmaxinvoicingcommissionAmount" });

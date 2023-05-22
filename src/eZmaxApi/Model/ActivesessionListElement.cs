@@ -483,7 +483,7 @@ namespace eZmaxApi.Model
 
 
             // DtActivesessionFirsthit (string) pattern
-            Regex regexDtActivesessionFirsthit = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (0[1-9]|1[0-9]|2[0-4]):(0[1-9]|[1-5][0-9]|6[0]):(0[1-9]|[1-5][0-9]|6[0])$", RegexOptions.CultureInvariant);
+            Regex regexDtActivesessionFirsthit = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
             if (false == regexDtActivesessionFirsthit.Match(this.DtActivesessionFirsthit).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtActivesessionFirsthit, must match a pattern of " + regexDtActivesessionFirsthit, new [] { "DtActivesessionFirsthit" });
@@ -492,7 +492,7 @@ namespace eZmaxApi.Model
 
 
             // DtActivesessionLasthit (string) pattern
-            Regex regexDtActivesessionLasthit = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (0[1-9]|1[0-9]|2[0-4]):(0[1-9]|[1-5][0-9]|6[0]):(0[1-9]|[1-5][0-9]|6[0])$", RegexOptions.CultureInvariant);
+            Regex regexDtActivesessionLasthit = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
             if (false == regexDtActivesessionLasthit.Match(this.DtActivesessionLasthit).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtActivesessionLasthit, must match a pattern of " + regexDtActivesessionLasthit, new [] { "DtActivesessionLasthit" });

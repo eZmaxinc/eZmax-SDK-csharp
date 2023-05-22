@@ -74,6 +74,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'EActivesessionUsertype'
         }
         /// <summary>
+        /// Test the property 'EActivesessionOrigin'
+        /// </summary>
+        [Test]
+        public void EActivesessionOriginTest()
+        {
+            // TODO unit test for the property 'EActivesessionOrigin'
+        }
+        /// <summary>
         /// Test the property 'EActivesessionWeekdaystart'
         /// </summary>
         [Test]

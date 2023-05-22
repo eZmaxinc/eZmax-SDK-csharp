@@ -38,21 +38,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
         /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
         /// <param name="bBillingentityinternalIsactive">Whether the Billingentityinternal is active or not (required).</param>
-        public BillingentityinternalAutocompleteElementResponse(string sBillingentityinternalDescriptionX = default(string), int pkiBillingentityinternalID = default(int), bool bBillingentityinternalIsactive = default(bool))
+        public BillingentityinternalAutocompleteElementResponse(int pkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), bool bBillingentityinternalIsactive = default(bool))
         {
-            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
-            if (sBillingentityinternalDescriptionX == null)
-            {
-                throw new InvalidDataException("sBillingentityinternalDescriptionX is a required property for BillingentityinternalAutocompleteElementResponse and cannot be null");
-            }
-            else
-            {
-                this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-            }
-
             // to ensure "pkiBillingentityinternalID" is required (not null)
             if (pkiBillingentityinternalID == null)
             {
@@ -61,6 +51,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.PkiBillingentityinternalID = pkiBillingentityinternalID;
+            }
+
+            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
+            if (sBillingentityinternalDescriptionX == null)
+            {
+                throw new InvalidDataException("sBillingentityinternalDescriptionX is a required property for BillingentityinternalAutocompleteElementResponse and cannot be null");
+            }
+            else
+            {
+                this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
             }
 
             // to ensure "bBillingentityinternalIsactive" is required (not null)
@@ -76,18 +76,18 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// The description of the Billingentityinternal in the language of the requester
-        /// </summary>
-        /// <value>The description of the Billingentityinternal in the language of the requester</value>
-        [DataMember(Name="sBillingentityinternalDescriptionX", EmitDefaultValue=true)]
-        public string SBillingentityinternalDescriptionX { get; set; }
-
-        /// <summary>
         /// The unique ID of the Billingentityinternal.
         /// </summary>
         /// <value>The unique ID of the Billingentityinternal.</value>
         [DataMember(Name="pkiBillingentityinternalID", EmitDefaultValue=true)]
         public int PkiBillingentityinternalID { get; set; }
+
+        /// <summary>
+        /// The description of the Billingentityinternal in the language of the requester
+        /// </summary>
+        /// <value>The description of the Billingentityinternal in the language of the requester</value>
+        [DataMember(Name="sBillingentityinternalDescriptionX", EmitDefaultValue=true)]
+        public string SBillingentityinternalDescriptionX { get; set; }
 
         /// <summary>
         /// Whether the Billingentityinternal is active or not
@@ -104,8 +104,8 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BillingentityinternalAutocompleteElementResponse {\n");
-            sb.Append("  SBillingentityinternalDescriptionX: ").Append(SBillingentityinternalDescriptionX).Append("\n");
             sb.Append("  PkiBillingentityinternalID: ").Append(PkiBillingentityinternalID).Append("\n");
+            sb.Append("  SBillingentityinternalDescriptionX: ").Append(SBillingentityinternalDescriptionX).Append("\n");
             sb.Append("  BBillingentityinternalIsactive: ").Append(BBillingentityinternalIsactive).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -142,14 +142,14 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.SBillingentityinternalDescriptionX == input.SBillingentityinternalDescriptionX ||
-                    (this.SBillingentityinternalDescriptionX != null &&
-                    this.SBillingentityinternalDescriptionX.Equals(input.SBillingentityinternalDescriptionX))
-                ) && 
-                (
                     this.PkiBillingentityinternalID == input.PkiBillingentityinternalID ||
                     (this.PkiBillingentityinternalID != null &&
                     this.PkiBillingentityinternalID.Equals(input.PkiBillingentityinternalID))
+                ) && 
+                (
+                    this.SBillingentityinternalDescriptionX == input.SBillingentityinternalDescriptionX ||
+                    (this.SBillingentityinternalDescriptionX != null &&
+                    this.SBillingentityinternalDescriptionX.Equals(input.SBillingentityinternalDescriptionX))
                 ) && 
                 (
                     this.BBillingentityinternalIsactive == input.BBillingentityinternalIsactive ||
@@ -167,10 +167,10 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.SBillingentityinternalDescriptionX != null)
-                    hashCode = hashCode * 59 + this.SBillingentityinternalDescriptionX.GetHashCode();
                 if (this.PkiBillingentityinternalID != null)
                     hashCode = hashCode * 59 + this.PkiBillingentityinternalID.GetHashCode();
+                if (this.SBillingentityinternalDescriptionX != null)
+                    hashCode = hashCode * 59 + this.SBillingentityinternalDescriptionX.GetHashCode();
                 if (this.BBillingentityinternalIsactive != null)
                     hashCode = hashCode * 59 + this.BBillingentityinternalIsactive.GetHashCode();
                 return hashCode;

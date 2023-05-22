@@ -193,6 +193,22 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'FkiEzsignfoldersignerassociationIDValidation'
         }
+        /// <summary>
+        /// Test the property 'DtEzsignsignatureDate'
+        /// </summary>
+        [Test]
+        public void DtEzsignsignatureDateTest()
+        {
+            // TODO unit test for the property 'DtEzsignsignatureDate'
+        }
+        /// <summary>
+        /// Test the property 'ObjContactName'
+        /// </summary>
+        [Test]
+        public void ObjContactNameTest()
+        {
+            // TODO unit test for the property 'ObjContactName'
+        }
 
     }
 

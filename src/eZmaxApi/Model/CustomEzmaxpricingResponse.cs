@@ -212,7 +212,7 @@ namespace eZmaxApi.Model
 
 
             // DEzmaxpricingRebateezsignallagents (string) pattern
-            Regex regexDEzmaxpricingRebateezsignallagents = new Regex(@"^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$", RegexOptions.CultureInvariant);
+            Regex regexDEzmaxpricingRebateezsignallagents = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
             if (false == regexDEzmaxpricingRebateezsignallagents.Match(this.DEzmaxpricingRebateezsignallagents).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxpricingRebateezsignallagents, must match a pattern of " + regexDEzmaxpricingRebateezsignallagents, new [] { "DEzmaxpricingRebateezsignallagents" });

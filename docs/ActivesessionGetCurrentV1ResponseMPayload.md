@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EActivesessionUsertype** | **FieldEActivesessionUsertype** |  | 
+**EActivesessionOrigin** | **FieldEActivesessionOrigin** |  | 
 **EActivesessionWeekdaystart** | **FieldEActivesessionWeekdaystart** |  | 
 **FkiLanguageID** | **int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **SCompanyNameX** | **string** | The Name of the Company in the language of the requester | 

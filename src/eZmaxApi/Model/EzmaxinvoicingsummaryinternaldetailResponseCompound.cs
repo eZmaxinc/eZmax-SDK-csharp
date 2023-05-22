@@ -435,7 +435,7 @@ namespace eZmaxApi.Model
 
 
             // DEzmaxinvoicingsummaryinternaldetailCountreal (string) pattern
-            Regex regexDEzmaxinvoicingsummaryinternaldetailCountreal = new Regex(@"^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$", RegexOptions.CultureInvariant);
+            Regex regexDEzmaxinvoicingsummaryinternaldetailCountreal = new Regex(@"^-{0,1}[\d]{1,6}?\.[\d]{2}$", RegexOptions.CultureInvariant);
             if (false == regexDEzmaxinvoicingsummaryinternaldetailCountreal.Match(this.DEzmaxinvoicingsummaryinternaldetailCountreal).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryinternaldetailCountreal, must match a pattern of " + regexDEzmaxinvoicingsummaryinternaldetailCountreal, new [] { "DEzmaxinvoicingsummaryinternaldetailCountreal" });
@@ -444,7 +444,7 @@ namespace eZmaxApi.Model
 
 
             // DEzmaxinvoicingsummaryinternaldetailSubtotal (string) pattern
-            Regex regexDEzmaxinvoicingsummaryinternaldetailSubtotal = new Regex(@"^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$", RegexOptions.CultureInvariant);
+            Regex regexDEzmaxinvoicingsummaryinternaldetailSubtotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
             if (false == regexDEzmaxinvoicingsummaryinternaldetailSubtotal.Match(this.DEzmaxinvoicingsummaryinternaldetailSubtotal).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryinternaldetailSubtotal, must match a pattern of " + regexDEzmaxinvoicingsummaryinternaldetailSubtotal, new [] { "DEzmaxinvoicingsummaryinternaldetailSubtotal" });
@@ -453,7 +453,7 @@ namespace eZmaxApi.Model
 
 
             // DEzmaxinvoicingsummaryinternaldetailRebate (string) pattern
-            Regex regexDEzmaxinvoicingsummaryinternaldetailRebate = new Regex(@"^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$", RegexOptions.CultureInvariant);
+            Regex regexDEzmaxinvoicingsummaryinternaldetailRebate = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
             if (false == regexDEzmaxinvoicingsummaryinternaldetailRebate.Match(this.DEzmaxinvoicingsummaryinternaldetailRebate).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryinternaldetailRebate, must match a pattern of " + regexDEzmaxinvoicingsummaryinternaldetailRebate, new [] { "DEzmaxinvoicingsummaryinternaldetailRebate" });
@@ -462,7 +462,7 @@ namespace eZmaxApi.Model
 
 
             // DEzmaxinvoicingsummaryinternaldetailTotal (string) pattern
-            Regex regexDEzmaxinvoicingsummaryinternaldetailTotal = new Regex(@"^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$", RegexOptions.CultureInvariant);
+            Regex regexDEzmaxinvoicingsummaryinternaldetailTotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
             if (false == regexDEzmaxinvoicingsummaryinternaldetailTotal.Match(this.DEzmaxinvoicingsummaryinternaldetailTotal).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryinternaldetailTotal, must match a pattern of " + regexDEzmaxinvoicingsummaryinternaldetailTotal, new [] { "DEzmaxinvoicingsummaryinternaldetailTotal" });

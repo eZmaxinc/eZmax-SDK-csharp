@@ -474,7 +474,7 @@ namespace eZmaxApi.Model
 
 
             // DEzmaxinvoicingRebatepaymenttype (string) pattern
-            Regex regexDEzmaxinvoicingRebatepaymenttype = new Regex(@"^-{0,1}[\\d]{1,3}?\\.[\\d]{2}$", RegexOptions.CultureInvariant);
+            Regex regexDEzmaxinvoicingRebatepaymenttype = new Regex(@"^-{0,1}[\d]{1,3}?\.[\d]{2}$", RegexOptions.CultureInvariant);
             if (false == regexDEzmaxinvoicingRebatepaymenttype.Match(this.DEzmaxinvoicingRebatepaymenttype).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingRebatepaymenttype, must match a pattern of " + regexDEzmaxinvoicingRebatepaymenttype, new [] { "DEzmaxinvoicingRebatepaymenttype" });
@@ -491,7 +491,7 @@ namespace eZmaxApi.Model
 
 
             // DEzmaxinvoicingRebatecontractlength (string) pattern
-            Regex regexDEzmaxinvoicingRebatecontractlength = new Regex(@"^-{0,1}[\\d]{1,3}?\\.[\\d]{2}$", RegexOptions.CultureInvariant);
+            Regex regexDEzmaxinvoicingRebatecontractlength = new Regex(@"^-{0,1}[\d]{1,3}?\.[\d]{2}$", RegexOptions.CultureInvariant);
             if (false == regexDEzmaxinvoicingRebatecontractlength.Match(this.DEzmaxinvoicingRebatecontractlength).Success)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingRebatecontractlength, must match a pattern of " + regexDEzmaxinvoicingRebatecontractlength, new [] { "DEzmaxinvoicingRebatecontractlength" });

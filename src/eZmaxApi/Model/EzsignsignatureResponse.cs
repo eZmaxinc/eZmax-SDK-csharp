@@ -74,7 +74,9 @@ namespace eZmaxApi.Model
         /// <param name="eEzsignsignatureAttachmentnamesource">eEzsignsignatureAttachmentnamesource.</param>
         /// <param name="bEzsignsignatureRequired">Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments..</param>
         /// <param name="fkiEzsignfoldersignerassociationIDValidation">The unique ID of the Ezsignfoldersignerassociation.</param>
-        public EzsignsignatureResponse(int pkiEzsignsignatureID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int iEzsignsignatureValidationstep = default(int), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), bool bEzsignsignatureRequired = default(bool), int fkiEzsignfoldersignerassociationIDValidation = default(int))
+        /// <param name="dtEzsignsignatureDate">The date the Ezsignsignature was signed.</param>
+        /// <param name="objContactName">objContactName (required).</param>
+        public EzsignsignatureResponse(int pkiEzsignsignatureID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int iEzsignsignatureValidationstep = default(int), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), bool bEzsignsignatureRequired = default(bool), int fkiEzsignfoldersignerassociationIDValidation = default(int), string dtEzsignsignatureDate = default(string), CustomContactNameResponse objContactName = default(CustomContactNameResponse))
         {
             // to ensure "pkiEzsignsignatureID" is required (not null)
             if (pkiEzsignsignatureID == null)
@@ -156,6 +158,16 @@ namespace eZmaxApi.Model
                 this.EEzsignsignatureType = eEzsignsignatureType;
             }
 
+            // to ensure "objContactName" is required (not null)
+            if (objContactName == null)
+            {
+                throw new InvalidDataException("objContactName is a required property for EzsignsignatureResponse and cannot be null");
+            }
+            else
+            {
+                this.ObjContactName = objContactName;
+            }
+
             this.TEzsignsignatureTooltip = tEzsignsignatureTooltip;
             this.EEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
             this.EEzsignsignatureFont = eEzsignsignatureFont;
@@ -164,6 +176,7 @@ namespace eZmaxApi.Model
             this.EEzsignsignatureAttachmentnamesource = eEzsignsignatureAttachmentnamesource;
             this.BEzsignsignatureRequired = bEzsignsignatureRequired;
             this.FkiEzsignfoldersignerassociationIDValidation = fkiEzsignfoldersignerassociationIDValidation;
+            this.DtEzsignsignatureDate = dtEzsignsignatureDate;
         }
 
         /// <summary>
@@ -255,6 +268,19 @@ namespace eZmaxApi.Model
         public int FkiEzsignfoldersignerassociationIDValidation { get; set; }
 
         /// <summary>
+        /// The date the Ezsignsignature was signed
+        /// </summary>
+        /// <value>The date the Ezsignsignature was signed</value>
+        [DataMember(Name="dtEzsignsignatureDate", EmitDefaultValue=false)]
+        public string DtEzsignsignatureDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjContactName
+        /// </summary>
+        [DataMember(Name="objContactName", EmitDefaultValue=true)]
+        public CustomContactNameResponse ObjContactName { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -278,6 +304,8 @@ namespace eZmaxApi.Model
             sb.Append("  EEzsignsignatureAttachmentnamesource: ").Append(EEzsignsignatureAttachmentnamesource).Append("\n");
             sb.Append("  BEzsignsignatureRequired: ").Append(BEzsignsignatureRequired).Append("\n");
             sb.Append("  FkiEzsignfoldersignerassociationIDValidation: ").Append(FkiEzsignfoldersignerassociationIDValidation).Append("\n");
+            sb.Append("  DtEzsignsignatureDate: ").Append(DtEzsignsignatureDate).Append("\n");
+            sb.Append("  ObjContactName: ").Append(ObjContactName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -391,6 +419,16 @@ namespace eZmaxApi.Model
                     this.FkiEzsignfoldersignerassociationIDValidation == input.FkiEzsignfoldersignerassociationIDValidation ||
                     (this.FkiEzsignfoldersignerassociationIDValidation != null &&
                     this.FkiEzsignfoldersignerassociationIDValidation.Equals(input.FkiEzsignfoldersignerassociationIDValidation))
+                ) && 
+                (
+                    this.DtEzsignsignatureDate == input.DtEzsignsignatureDate ||
+                    (this.DtEzsignsignatureDate != null &&
+                    this.DtEzsignsignatureDate.Equals(input.DtEzsignsignatureDate))
+                ) && 
+                (
+                    this.ObjContactName == input.ObjContactName ||
+                    (this.ObjContactName != null &&
+                    this.ObjContactName.Equals(input.ObjContactName))
                 );
         }
 
@@ -435,6 +473,10 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzsignsignatureRequired.GetHashCode();
                 if (this.FkiEzsignfoldersignerassociationIDValidation != null)
                     hashCode = hashCode * 59 + this.FkiEzsignfoldersignerassociationIDValidation.GetHashCode();
+                if (this.DtEzsignsignatureDate != null)
+                    hashCode = hashCode * 59 + this.DtEzsignsignatureDate.GetHashCode();
+                if (this.ObjContactName != null)
+                    hashCode = hashCode * 59 + this.ObjContactName.GetHashCode();
                 return hashCode;
             }
         }
@@ -500,6 +542,15 @@ namespace eZmaxApi.Model
             if(this.FkiEzsignfoldersignerassociationIDValidation < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationIDValidation" });
+            }
+
+
+
+            // DtEzsignsignatureDate (string) pattern
+            Regex regexDtEzsignsignatureDate = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
+            if (false == regexDtEzsignsignatureDate.Match(this.DtEzsignsignatureDate).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtEzsignsignatureDate, must match a pattern of " + regexDtEzsignsignatureDate, new [] { "DtEzsignsignatureDate" });
             }
 
             yield break;

@@ -190,6 +190,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test EzsigndocumentGetCompletedElementsV1
+        /// </summary>
+        [Test]
+        public void EzsigndocumentGetCompletedElementsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentGetCompletedElementsV1(pkiEzsigndocumentID);
+            //Assert.IsInstanceOf(typeof(EzsigndocumentGetCompletedElementsV1Response), response, "response is EzsigndocumentGetCompletedElementsV1Response");
+        }
+        
+        /// <summary>
         /// Test EzsigndocumentGetDownloadUrlV1
         /// </summary>
         [Test]
