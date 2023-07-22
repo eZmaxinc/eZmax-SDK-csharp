@@ -44,7 +44,7 @@ namespace eZmaxApi.Model
         /// <param name="objSubnetDescription">objSubnetDescription (required).</param>
         /// <param name="iSubnetNetwork">The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064 (required).</param>
         /// <param name="iSubnetMask">The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040 (required).</param>
-        public SubnetResponseCompound(int pkiSubnetID = default(int), int fkiUserID = default(int), int fkiApikeyID = default(int), MultilingualSubnetDescription objSubnetDescription = default(MultilingualSubnetDescription), int iSubnetNetwork = default(int), int iSubnetMask = default(int))
+        public SubnetResponseCompound(int pkiSubnetID = default(int), int fkiUserID = default(int), int fkiApikeyID = default(int), MultilingualSubnetDescription objSubnetDescription = default(MultilingualSubnetDescription), long iSubnetNetwork = default(long), long iSubnetMask = default(long))
         {
             // to ensure "pkiSubnetID" is required (not null)
             if (pkiSubnetID == null)
@@ -122,14 +122,14 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064</value>
         [DataMember(Name="iSubnetNetwork", EmitDefaultValue=true)]
-        public int ISubnetNetwork { get; set; }
+        public long ISubnetNetwork { get; set; }
 
         /// <summary>
         /// The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040
         /// </summary>
         /// <value>The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040</value>
         [DataMember(Name="iSubnetMask", EmitDefaultValue=true)]
-        public int ISubnetMask { get; set; }
+        public long ISubnetMask { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -275,28 +275,28 @@ namespace eZmaxApi.Model
 
 
 
-            // ISubnetNetwork (int) maximum
-            if(this.ISubnetNetwork > (int)4294967295)
+            // ISubnetNetwork (long) maximum
+            if(this.ISubnetNetwork > (long)4294967295)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISubnetNetwork, must be a value less than or equal to 4294967295.", new [] { "ISubnetNetwork" });
             }
 
-            // ISubnetNetwork (int) minimum
-            if(this.ISubnetNetwork < (int)0)
+            // ISubnetNetwork (long) minimum
+            if(this.ISubnetNetwork < (long)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISubnetNetwork, must be a value greater than or equal to 0.", new [] { "ISubnetNetwork" });
             }
 
 
 
-            // ISubnetMask (int) maximum
-            if(this.ISubnetMask > (int)4294967295)
+            // ISubnetMask (long) maximum
+            if(this.ISubnetMask > (long)4294967295)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISubnetMask, must be a value less than or equal to 4294967295.", new [] { "ISubnetMask" });
             }
 
-            // ISubnetMask (int) minimum
-            if(this.ISubnetMask < (int)0)
+            // ISubnetMask (long) minimum
+            if(this.ISubnetMask < (long)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISubnetMask, must be a value greater than or equal to 0.", new [] { "ISubnetMask" });
             }
