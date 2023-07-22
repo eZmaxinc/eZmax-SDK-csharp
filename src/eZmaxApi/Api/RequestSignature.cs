@@ -16,14 +16,20 @@ namespace eZmaxApi.Api
                                                string dtDate, 
                                                string sMethod, 
                                                string sURL, 
-                                               string sBody) {
+                                               string sBody,
+                                                 int? iExpiration) {
 		
 			var sContentToHash = sMethod        + "\n" + 
                                  sURL           + "\n" +
                                  sBody          + "\n" +
                                  sAuthorization + "\n" +
                                  dtDate;
-			
+
+            if (iExpiration != null) {
+
+                sContentToHash += "\n" + iExpiration.ToString();
+            }
+                                
 			var sha256             = SHA256Managed.Create();
 			var bytesContentToHash = Encoding.UTF8.GetBytes(sContentToHash);
 			var bytesSha256        = sha256.ComputeHash(bytesContentToHash);
@@ -58,7 +64,8 @@ namespace eZmaxApi.Api
                                                                string sSecret,
                                                                string sMethod,
                                                                string sURL, 
-                                                               string sBody) {
+                                                               string sBody,
+                                                                 int? iExpiration) {
 	    
 			var dtDate = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ");
 
@@ -67,7 +74,8 @@ namespace eZmaxApi.Api
                                                                  dtDate, 
                                                                  sMethod, 
                                                                  sURL, 
-                                                                 sBody);
+                                                                 sBody,
+                                                                 iExpiration);
 	
 			var sSignature = RequestSignature.GetSignatureV1(sAuthorization,
                                                              dtDate, 
@@ -78,6 +86,11 @@ namespace eZmaxApi.Api
 			headersV1.Add("Ezmax-Date",        dtDate);
             headersV1.Add("Ezmax-Fingerprint", sFingerprint);
             headersV1.Add("Ezmax-Signature",   sSignature);
+
+            if (iExpiration != null) {
+                
+                headersV1.Add("Ezmax-Expiration",  iExpiration.ToString());
+            }
 
 			return headersV1;
 		}
@@ -163,7 +176,8 @@ namespace eZmaxApi.Api
 	                                                                 sSecret: sSecret, 
 	                                                                 sMethod: sMethod, 
 	                                                                    sURL: sURL, 
-	                                                                   sBody: sBody);
+	                                                                   sBody: sBody,
+                                                                 iExpiration: null);
 
 	            //Inject the new headers in the headers
 	            ///////////////////////////////////////

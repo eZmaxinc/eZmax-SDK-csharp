@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **SComputerDescription** | **string** | The description of the Computer | [optional] 
 **SSessionhistoryDuration** | **string** | The duration of the session | 
 **SSessionhistoryIP** | **string** | Represent an IP address. | 
-**SUserLoginname** | **string** | The Login name of the User. | [optional] 
+**SUserLoginname** | **string** | The login name of the User. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**STimezoneName** | **string** | The description of the Timezone in the language of the requester | 
+**STimezoneName** | **string** | The description of the Timezone | 
 **PkiTimezoneID** | **int** | The unique ID of the Timezone | 
 **BTimezoneIsactive** | **bool** | Whether the Timezone is active or not | 
 

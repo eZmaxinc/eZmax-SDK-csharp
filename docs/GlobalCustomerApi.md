@@ -32,11 +32,6 @@ namespace Example
         public static void Main()
         {
             Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
-
             var apiInstance = new GlobalCustomerApi(Configuration.Default);
             var pksCustomerCode = "pksCustomerCode_example";  // string | 
             var sInfrastructureproductCode = "appcluster01";  // string | The infrastructure product Code  If undefined, \"appcluster01\" is assumed (optional) 
@@ -72,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 

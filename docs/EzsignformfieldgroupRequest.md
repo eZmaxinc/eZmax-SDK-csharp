@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **SEzsignformfieldgroupRegexp** | **string** | A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** | [optional] 
 **TEzsignformfieldgroupTooltip** | **string** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup | [optional] 
 **EEzsignformfieldgroupTooltipposition** | **FieldEEzsignformfieldgroupTooltipposition** |  | [optional] 
+**EEzsignformfieldgroupTextvalidation** | **EnumTextvalidation** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

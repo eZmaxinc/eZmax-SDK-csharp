@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**PkiEmailID** | **int** | The unique ID of the Email | [optional] 
 **FkiEmailtypeID** | **int** | The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| | 
 **SEmailAddress** | **string** | The email address. | 
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SErrorMessage** | **string** | More detail about the error | 
-**EErrorCode** | **string** | The error code. See documentation for valid values | 
+**SErrorMessage** | **string** | The message giving details about the error | 
+**EErrorCode** | **FieldEErrorCode** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

@@ -121,7 +121,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectBillingentityinternalApi(Configuration.Default);
-            var pkiBillingentityinternalID = 56;  // int | The unique ID of the Billingentityinternal
+            var pkiBillingentityinternalID = 56;  // int | 
             var billingentityinternalEditObjectV1Request = new BillingentityinternalEditObjectV1Request(); // BillingentityinternalEditObjectV1Request | 
 
             try
@@ -146,7 +146,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **int**| The unique ID of the Billingentityinternal | 
+ **pkiBillingentityinternalID** | **int**|  | 
  **billingentityinternalEditObjectV1Request** | [**BillingentityinternalEditObjectV1Request**](BillingentityinternalEditObjectV1Request.md)|  | 
 
 ### Return type
@@ -379,7 +379,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectBillingentityinternalApi(Configuration.Default);
-            var pkiBillingentityinternalID = 56;  // int | The unique ID of the Billingentityinternal
+            var pkiBillingentityinternalID = 56;  // int | 
 
             try
             {
@@ -403,7 +403,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **int**| The unique ID of the Billingentityinternal | 
+ **pkiBillingentityinternalID** | **int**|  | 
 
 ### Return type
 

@@ -10,7 +10,9 @@ Name | Type | Description | Notes
 **BEzsignfoldersignerassociationDelayedsend** | **bool** | If this flag is true the signatory is part of a delayed send. | 
 **BEzsignfoldersignerassociationReceivecopy** | **bool** | If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. | 
 **TEzsignfoldersignerassociationMessage** | **string** | A custom text message that will be added to the email sent. | 
+**ObjEzsignsignergroup** | [**EzsignsignergroupResponseCompound**](EzsignsignergroupResponseCompound.md) |  | [optional] 
 **ObjUser** | [**EzsignfoldersignerassociationResponseCompoundUser**](EzsignfoldersignerassociationResponseCompoundUser.md) |  | [optional] 
+**ObjUsergroup** | [**UsergroupResponseCompound**](UsergroupResponseCompound.md) |  | [optional] 
 **ObjEzsignsigner** | [**EzsignsignerResponseCompound**](EzsignsignerResponseCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)

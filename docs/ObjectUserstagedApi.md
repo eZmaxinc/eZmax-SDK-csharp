@@ -4,11 +4,96 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**UserstagedCreateUserV1**](ObjectUserstagedApi.md#userstagedcreateuserv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/createUser | Create a User from a Userstaged and then map it
 [**UserstagedDeleteObjectV1**](ObjectUserstagedApi.md#userstageddeleteobjectv1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
 [**UserstagedGetListV1**](ObjectUserstagedApi.md#userstagedgetlistv1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
 [**UserstagedGetObjectV2**](ObjectUserstagedApi.md#userstagedgetobjectv2) | **GET** /2/object/userstaged/{pkiUserstagedID} | Retrieve an existing Userstaged
 [**UserstagedMapV1**](ObjectUserstagedApi.md#userstagedmapv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/map | Map the Userstaged to an existing user
 
+
+
+## UserstagedCreateUserV1
+
+> UserstagedCreateUserV1Response UserstagedCreateUserV1 (int pkiUserstagedID, Object body)
+
+Create a User from a Userstaged and then map it
+
+Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class UserstagedCreateUserV1Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectUserstagedApi(Configuration.Default);
+            var pkiUserstagedID = 56;  // int | 
+            var body = null;  // Object | 
+
+            try
+            {
+                // Create a User from a Userstaged and then map it
+                UserstagedCreateUserV1Response result = apiInstance.UserstagedCreateUserV1(pkiUserstagedID, body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedCreateUserV1: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserstagedID** | **int**|  | 
+ **body** | **Object**|  | 
+
+### Return type
+
+[**UserstagedCreateUserV1Response**](UserstagedCreateUserV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## UserstagedDeleteObjectV1
@@ -39,7 +124,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectUserstagedApi(Configuration.Default);
-            var pkiUserstagedID = 56;  // int | The unique ID of the Userstaged
+            var pkiUserstagedID = 56;  // int | 
 
             try
             {
@@ -63,7 +148,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **int**| The unique ID of the Userstaged | 
+ **pkiUserstagedID** | **int**|  | 
 
 ### Return type
 
@@ -207,7 +292,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectUserstagedApi(Configuration.Default);
-            var pkiUserstagedID = 56;  // int | The unique ID of the Userstaged
+            var pkiUserstagedID = 56;  // int | 
 
             try
             {
@@ -231,7 +316,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **int**| The unique ID of the Userstaged | 
+ **pkiUserstagedID** | **int**|  | 
 
 ### Return type
 
@@ -287,7 +372,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectUserstagedApi(Configuration.Default);
-            var pkiUserstagedID = 56;  // int | The unique ID of the Userstaged
+            var pkiUserstagedID = 56;  // int | 
             var userstagedMapV1Request = new UserstagedMapV1Request(); // UserstagedMapV1Request | 
 
             try
@@ -312,7 +397,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **int**| The unique ID of the Userstaged | 
+ **pkiUserstagedID** | **int**|  | 
  **userstagedMapV1Request** | [**UserstagedMapV1Request**](UserstagedMapV1Request.md)|  | 
 
 ### Return type

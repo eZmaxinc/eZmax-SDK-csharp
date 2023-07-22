@@ -121,7 +121,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectVariableexpenseApi(Configuration.Default);
-            var pkiVariableexpenseID = 56;  // int | The unique ID of the Variableexpense
+            var pkiVariableexpenseID = 56;  // int | 
             var variableexpenseEditObjectV1Request = new VariableexpenseEditObjectV1Request(); // VariableexpenseEditObjectV1Request | 
 
             try
@@ -146,7 +146,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **int**| The unique ID of the Variableexpense | 
+ **pkiVariableexpenseID** | **int**|  | 
  **variableexpenseEditObjectV1Request** | [**VariableexpenseEditObjectV1Request**](VariableexpenseEditObjectV1Request.md)|  | 
 
 ### Return type
@@ -381,7 +381,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectVariableexpenseApi(Configuration.Default);
-            var pkiVariableexpenseID = 56;  // int | The unique ID of the Variableexpense
+            var pkiVariableexpenseID = 56;  // int | 
 
             try
             {
@@ -405,7 +405,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **int**| The unique ID of the Variableexpense | 
+ **pkiVariableexpenseID** | **int**|  | 
 
 ### Return type
 

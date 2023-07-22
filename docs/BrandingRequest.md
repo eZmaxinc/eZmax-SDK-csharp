@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **IBrandingColorbackground** | **int** | The color of the background. This is a RGB color converted into integer | 
 **IBrandingColorbackgroundbutton** | **int** | The color of the background of the button. This is a RGB color converted into integer | 
 **IBrandingColorbackgroundsmallbox** | **int** | The color of the background of the small box. This is a RGB color converted into integer | 
+**SBrandingName** | **string** | The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty | [optional] 
+**SEmailAddress** | **string** | The email address. | [optional] 
 **BBrandingIsactive** | **bool** | Whether the Branding is active or not | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

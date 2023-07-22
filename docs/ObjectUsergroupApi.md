@@ -6,9 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**UsergroupCreateObjectV1**](ObjectUsergroupApi.md#usergroupcreateobjectv1) | **POST** /1/object/usergroup | Create a new Usergroup
 [**UsergroupEditObjectV1**](ObjectUsergroupApi.md#usergroupeditobjectv1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
+[**UsergroupEditPermissionsV1**](ObjectUsergroupApi.md#usergroupeditpermissionsv1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editPermissions | Edit multiple Permissions
+[**UsergroupEditUsergroupmembershipsV1**](ObjectUsergroupApi.md#usergroupeditusergroupmembershipsv1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships | Edit multiple Usergroupmemberships
 [**UsergroupGetAutocompleteV2**](ObjectUsergroupApi.md#usergroupgetautocompletev2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 [**UsergroupGetListV1**](ObjectUsergroupApi.md#usergroupgetlistv1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
 [**UsergroupGetObjectV2**](ObjectUsergroupApi.md#usergroupgetobjectv2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+[**UsergroupGetPermissionsV1**](ObjectUsergroupApi.md#usergroupgetpermissionsv1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getPermissions | Retrieve an existing Usergroup&#39;s Permissions
+[**UsergroupGetUsergroupmembershipsV1**](ObjectUsergroupApi.md#usergroupgetusergroupmembershipsv1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships | Retrieve an existing Usergroup&#39;s Usergroupmemberships
 
 
 
@@ -121,7 +125,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectUsergroupApi(Configuration.Default);
-            var pkiUsergroupID = 56;  // int | The unique ID of the Usergroup
+            var pkiUsergroupID = 56;  // int | 
             var usergroupEditObjectV1Request = new UsergroupEditObjectV1Request(); // UsergroupEditObjectV1Request | 
 
             try
@@ -146,12 +150,182 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **int**| The unique ID of the Usergroup | 
+ **pkiUsergroupID** | **int**|  | 
  **usergroupEditObjectV1Request** | [**UsergroupEditObjectV1Request**](UsergroupEditObjectV1Request.md)|  | 
 
 ### Return type
 
 [**UsergroupEditObjectV1Response**](UsergroupEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UsergroupEditPermissionsV1
+
+> UsergroupEditPermissionsV1Response UsergroupEditPermissionsV1 (int pkiUsergroupID, UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request)
+
+Edit multiple Permissions
+
+Using this endpoint, you can edit multiple Permissions at the same time.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class UsergroupEditPermissionsV1Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectUsergroupApi(Configuration.Default);
+            var pkiUsergroupID = 56;  // int | 
+            var usergroupEditPermissionsV1Request = new UsergroupEditPermissionsV1Request(); // UsergroupEditPermissionsV1Request | 
+
+            try
+            {
+                // Edit multiple Permissions
+                UsergroupEditPermissionsV1Response result = apiInstance.UsergroupEditPermissionsV1(pkiUsergroupID, usergroupEditPermissionsV1Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectUsergroupApi.UsergroupEditPermissionsV1: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **int**|  | 
+ **usergroupEditPermissionsV1Request** | [**UsergroupEditPermissionsV1Request**](UsergroupEditPermissionsV1Request.md)|  | 
+
+### Return type
+
+[**UsergroupEditPermissionsV1Response**](UsergroupEditPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UsergroupEditUsergroupmembershipsV1
+
+> UsergroupEditUsergroupmembershipsV1Response UsergroupEditUsergroupmembershipsV1 (int pkiUsergroupID, UsergroupEditUsergroupmembershipsV1Request usergroupEditUsergroupmembershipsV1Request)
+
+Edit multiple Usergroupmemberships
+
+Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class UsergroupEditUsergroupmembershipsV1Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectUsergroupApi(Configuration.Default);
+            var pkiUsergroupID = 56;  // int | 
+            var usergroupEditUsergroupmembershipsV1Request = new UsergroupEditUsergroupmembershipsV1Request(); // UsergroupEditUsergroupmembershipsV1Request | 
+
+            try
+            {
+                // Edit multiple Usergroupmemberships
+                UsergroupEditUsergroupmembershipsV1Response result = apiInstance.UsergroupEditUsergroupmembershipsV1(pkiUsergroupID, usergroupEditUsergroupmembershipsV1Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectUsergroupApi.UsergroupEditUsergroupmembershipsV1: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **int**|  | 
+ **usergroupEditUsergroupmembershipsV1Request** | [**UsergroupEditUsergroupmembershipsV1Request**](UsergroupEditUsergroupmembershipsV1Request.md)|  | 
+
+### Return type
+
+[**UsergroupEditUsergroupmembershipsV1Response**](UsergroupEditUsergroupmembershipsV1Response.md)
 
 ### Authorization
 
@@ -379,7 +553,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectUsergroupApi(Configuration.Default);
-            var pkiUsergroupID = 56;  // int | The unique ID of the Usergroup
+            var pkiUsergroupID = 56;  // int | 
 
             try
             {
@@ -403,11 +577,171 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **int**| The unique ID of the Usergroup | 
+ **pkiUsergroupID** | **int**|  | 
 
 ### Return type
 
 [**UsergroupGetObjectV2Response**](UsergroupGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UsergroupGetPermissionsV1
+
+> UsergroupGetPermissionsV1Response UsergroupGetPermissionsV1 (int pkiUsergroupID)
+
+Retrieve an existing Usergroup's Permissions
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class UsergroupGetPermissionsV1Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectUsergroupApi(Configuration.Default);
+            var pkiUsergroupID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Usergroup's Permissions
+                UsergroupGetPermissionsV1Response result = apiInstance.UsergroupGetPermissionsV1(pkiUsergroupID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectUsergroupApi.UsergroupGetPermissionsV1: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **int**|  | 
+
+### Return type
+
+[**UsergroupGetPermissionsV1Response**](UsergroupGetPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UsergroupGetUsergroupmembershipsV1
+
+> UsergroupGetUsergroupmembershipsV1Response UsergroupGetUsergroupmembershipsV1 (int pkiUsergroupID)
+
+Retrieve an existing Usergroup's Usergroupmemberships
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class UsergroupGetUsergroupmembershipsV1Example
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectUsergroupApi(Configuration.Default);
+            var pkiUsergroupID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Usergroup's Usergroupmemberships
+                UsergroupGetUsergroupmembershipsV1Response result = apiInstance.UsergroupGetUsergroupmembershipsV1(pkiUsergroupID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling ObjectUsergroupApi.UsergroupGetUsergroupmembershipsV1: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **int**|  | 
+
+### Return type
+
+[**UsergroupGetUsergroupmembershipsV1Response**](UsergroupGetUsergroupmembershipsV1Response.md)
 
 ### Authorization
 

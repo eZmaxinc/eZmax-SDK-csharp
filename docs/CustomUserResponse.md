@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiUserID** | **int** | The unique ID of the User | 
-**SUserLastname** | **string** | The Last name of the user | 
-**SUserFirstname** | **string** | The First name of the user | 
+**SUserLastname** | **string** | The last name of the user | 
+**SUserFirstname** | **string** | The first name of the user | 
 **SEmailAddress** | **string** | The email address. | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiUserstagedID** | **int** | The unique ID of the Userstaged | 
 **FkiEmailID** | **int** | The unique ID of the Email | 
+**SEmailAddress** | **string** | The email address. | 
 **SUserstagedFirstname** | **string** | The firstname of the Userstaged | 
 **SUserstagedLastname** | **string** | The lastname of the Userstaged | 
 **SUserstagedExternalid** | **string** | The externalid of the Userstaged | 

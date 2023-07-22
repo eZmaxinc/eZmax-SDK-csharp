@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **PkiUserID** | **int** | The unique ID of the User | 
 **FkiTimezoneID** | **int** | The unique ID of the Timezone | 
 **SAvatarUrl** | **string** | The url of the picture used as avatar | 
-**SUserFirstname** | **string** | The First name of the user | 
-**SUserLastname** | **string** | The Last name of the user | 
+**SUserFirstname** | **string** | The first name of the user | 
+**SUserLastname** | **string** | The last name of the user | 
 **SEmailAddress** | **string** | The email address. | 
 **EUserEzsignsendreminderfrequency** | **FieldEUserEzsignsendreminderfrequency** |  | 
 **IUserInterfacecolor** | **int** | The int32 representation of the interface color. For example, RGB color #39435B would be 3752795 | 

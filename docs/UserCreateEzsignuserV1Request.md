@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **FkiLanguageID** | **int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
-**SUserFirstname** | **string** | The First name of the user | 
-**SUserLastname** | **string** | The Last name of the user | 
+**SUserFirstname** | **string** | The first name of the user | 
+**SUserLastname** | **string** | The last name of the user | 
 **SEmailAddress** | **string** | The email address. | 
 **SPhoneRegion** | **string** | The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123 | 
 **SPhoneExchange** | **string** | The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123 | 
