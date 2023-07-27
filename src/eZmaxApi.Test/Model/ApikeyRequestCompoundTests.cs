@@ -97,6 +97,14 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'BApikeyIsactive'
         }
+        /// <summary>
+        /// Test the property 'BApikeyIssigned'
+        /// </summary>
+        [Test]
+        public void BApikeyIssignedTest()
+        {
+            // TODO unit test for the property 'BApikeyIssigned'
+        }
 
     }
 

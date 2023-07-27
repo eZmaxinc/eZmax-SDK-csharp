@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **TEzsignfoldersignerassociationMessage** | **string** | A custom text message that will be added to the email sent. | 
 **ObjEzsignsignergroup** | [**EzsignsignergroupResponseCompound**](EzsignsignergroupResponseCompound.md) |  | [optional] 
 **ObjUser** | [**EzsignfoldersignerassociationResponseCompoundUser**](EzsignfoldersignerassociationResponseCompoundUser.md) |  | [optional] 
-**ObjUsergroup** | [**UsergroupResponseCompound**](UsergroupResponseCompound.md) |  | [optional] 
 **ObjEzsignsigner** | [**EzsignsignerResponseCompound**](EzsignsignerResponseCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)

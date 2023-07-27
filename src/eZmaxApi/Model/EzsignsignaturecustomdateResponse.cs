@@ -24,6 +24,250 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+
+// TEST_IGNORE_ME
+/* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
+openApiType                         : 
+baseName                            : 
+complexType                         : 
+getter                              : 
+setter                              : 
+dataType                            : Object
+datatypeWithEnum                    : 
+name                                : ezsignsignaturecustomdate-Response
+defaultValue                        : 
+defaultValueWithParam               : 
+baseType                            : 
+example                             : 
+jsonSchema                          : 
+exclusiveMinimum                    : false
+exclusiveMaximum                    : false
+required                            : 
+deprecated                          : 
+hasMoreNonReadOnly                  : 
+vars                                : [CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;pkiEzsignsignaturecustomdateID&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getPkiEzsignsignaturecustomdateID&#39;, setter&#x3D;&#39;setPkiEzsignsignaturecustomdateID&#39;, description&#x3D;&#39;The unique ID of the Ezsignsignaturecustomdate&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;PkiEzsignsignaturecustomdateID&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.pkiEzsignsignaturecustomdateID;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The unique ID of the Ezsignsignaturecustomdate&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;27&#39;, jsonSchema&#x3D;&#39;{
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The unique ID of the Ezsignsignaturecustomdate&quot;,
+  &quot;example&quot; : 27
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;true, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;null, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{x-csharp-value-type&#x3D;true, x-emit-default-value&#x3D;false, x-is-value-type&#x3D;true}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;PkiEzsignsignaturecustomdateID&#39;, nameInSnakeCase&#x3D;&#39;PKI_EZSIGNSIGNATURECUSTOMDATE_I_D&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;iEzsignsignaturecustomdateX&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getIEzsignsignaturecustomdateX&#39;, setter&#x3D;&#39;setIEzsignsignaturecustomdateX&#39;, description&#x3D;&#39;The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;IEzsignsignaturecustomdateX&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.iEzsignsignaturecustomdateX;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate on the page.
+
+Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 2 inches from the left border of the page, you would use &quot;200&quot; for the X coordinate.&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;200&#39;, jsonSchema&#x3D;&#39;{
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.&quot;,
+  &quot;example&quot; : 200
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;true, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;false, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{x-csharp-value-type&#x3D;true, x-emit-default-value&#x3D;false, x-is-value-type&#x3D;true}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;IEzsignsignaturecustomdateX&#39;, nameInSnakeCase&#x3D;&#39;I_EZSIGNSIGNATURECUSTOMDATE_X&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;iEzsignsignaturecustomdateY&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getIEzsignsignaturecustomdateY&#39;, setter&#x3D;&#39;setIEzsignsignaturecustomdateY&#39;, description&#x3D;&#39;The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;IEzsignsignaturecustomdateY&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.iEzsignsignaturecustomdateY;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.
+
+Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top border of the page, you would use &quot;300&quot; for the Y coordinate.&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;300&#39;, jsonSchema&#x3D;&#39;{
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.&quot;,
+  &quot;example&quot; : 300
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;true, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;false, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{x-csharp-value-type&#x3D;true, x-emit-default-value&#x3D;false, x-is-value-type&#x3D;true}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;IEzsignsignaturecustomdateY&#39;, nameInSnakeCase&#x3D;&#39;I_EZSIGNSIGNATURECUSTOMDATE_Y&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;string&#39;, baseName&#x3D;&#39;sEzsignsignaturecustomdateFormat&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getSEzsignsignaturecustomdateFormat&#39;, setter&#x3D;&#39;setSEzsignsignaturecustomdateFormat&#39;, description&#x3D;&#39;The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | &#39;, dataType&#x3D;&#39;string&#39;, datatypeWithEnum&#x3D;&#39;string&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;SEzsignsignaturecustomdateFormat&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.sEzsignsignaturecustomdateFormat;&#39;, baseType&#x3D;&#39;string&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The custom date format to use
+
+You can use the codes below and they will be replaced at signature time.
+Text values like month and day names will be rendered in the proper language.
+Other text will be left as-is.
+
+The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST
+
+For example, the format &quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}&quot; would become &quot;Signature date: 01/06/2022 08:07&quot;
+
+**Year**
+
+| Code | Example |
+| - | - |
+| {YYYY} | 2022 |
+| {YY} | 22 |
+
+**Month**
+
+| Code | Example |
+| - | - |
+| {MonthCapitalize} | Janvier |
+| {Month} | janvier |
+| {MM} | 01 |
+| {M} | 1 |
+
+**Day**
+
+| Code | Example |
+| - | - |
+| {DayCapitalize} | Jeudi |
+| {Day} | jeudi |
+| {DD} | 06 |
+| {D} | 6 |
+
+**Hour**
+
+| Code | Example |
+| - | - |
+| {hh} | 08 |
+
+**Minute**
+
+| Code | Example |
+| - | - |
+| {mm} | 07 |
+
+**Second**
+
+| Code | Example |
+| - | - |
+| {ss} | 09 |      
+
+**Timezone**
+
+| Code | Example |
+| - | - |
+| {Z} | EST |     
+
+**Time**
+
+| Code | Example |
+| - | - |
+| {Time} | 08:07:09 |  
+| {TimeZ} | 08:07:09 EST |
+   
+**Date**
+
+| Code | Example |
+| - | - |
+| {Date} | 2022-01-06 |  
+| {DateText} | 1er Janvier 2022 |
+
+**Full**
+
+| Code | Example |
+| - | - |
+| {DateTime} | 2022-01-06 08:07:09 |  
+| {DateTimeZ} | 2022-01-06 08:07:09 EST |
+&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;&quot;Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss} {Z}&quot;&#39;, jsonSchema&#x3D;&#39;{
+  &quot;type&quot; : &quot;string&quot;,
+  &quot;description&quot; : &quot;The custom date format to use\n\nYou can use the codes below and they will be replaced at signature time.\nText values like month and day names will be rendered in the proper language.\nOther text will be left as-is.\n\nThe codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST\n\nFor example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;\n\n**Year**\n\n| Code | Example |\n| - | - |\n| {YYYY} | 2022 |\n| {YY} | 22 |\n\n**Month**\n\n| Code | Example |\n| - | - |\n| {MonthCapitalize} | Janvier |\n| {Month} | janvier |\n| {MM} | 01 |\n| {M} | 1 |\n\n**Day**\n\n| Code | Example |\n| - | - |\n| {DayCapitalize} | Jeudi |\n| {Day} | jeudi |\n| {DD} | 06 |\n| {D} | 6 |\n\n**Hour**\n\n| Code | Example |\n| - | - |\n| {hh} | 08 |\n\n**Minute**\n\n| Code | Example |\n| - | - |\n| {mm} | 07 |\n\n**Second**\n\n| Code | Example |\n| - | - |\n| {ss} | 09 |      \n\n**Timezone**\n\n| Code | Example |\n| - | - |\n| {Z} | EST |     \n\n**Time**\n\n| Code | Example |\n| - | - |\n| {Time} | 08:07:09 |  \n| {TimeZ} | 08:07:09 EST |\n   \n**Date**\n\n| Code | Example |\n| - | - |\n| {Date} | 2022-01-06 |  \n| {DateText} | 1er Janvier 2022 |\n\n**Full**\n\n| Code | Example |\n| - | - |\n| {DateTime} | 2022-01-06 08:07:09 |  \n| {DateTimeZ} | 2022-01-06 08:07:09 EST |\n&quot;,
+  &quot;example&quot; : &quot;Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss} {Z}&quot;
+}&#39;, minimum&#x3D;&#39;null&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;true, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;true, isNumeric&#x3D;false, isInteger&#x3D;false, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;false, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;false, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{x-emit-default-value&#x3D;false, x-is-value-type&#x3D;false}, hasValidation&#x3D;false, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;SEzsignsignaturecustomdateFormat&#39;, nameInSnakeCase&#x3D;&#39;S_EZSIGNSIGNATURECUSTOMDATE_FORMAT&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}]
+requiredVars                        : [CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;pkiEzsignsignaturecustomdateID&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getPkiEzsignsignaturecustomdateID&#39;, setter&#x3D;&#39;setPkiEzsignsignaturecustomdateID&#39;, description&#x3D;&#39;The unique ID of the Ezsignsignaturecustomdate&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;PkiEzsignsignaturecustomdateID&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.pkiEzsignsignaturecustomdateID;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The unique ID of the Ezsignsignaturecustomdate&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;27&#39;, jsonSchema&#x3D;&#39;{
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The unique ID of the Ezsignsignaturecustomdate&quot;,
+  &quot;example&quot; : 27
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;true, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;null, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;PkiEzsignsignaturecustomdateID&#39;, nameInSnakeCase&#x3D;&#39;PKI_EZSIGNSIGNATURECUSTOMDATE_I_D&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;iEzsignsignaturecustomdateX&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getIEzsignsignaturecustomdateX&#39;, setter&#x3D;&#39;setIEzsignsignaturecustomdateX&#39;, description&#x3D;&#39;The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;IEzsignsignaturecustomdateX&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.iEzsignsignaturecustomdateX;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate on the page.
+
+Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 2 inches from the left border of the page, you would use &quot;200&quot; for the X coordinate.&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;200&#39;, jsonSchema&#x3D;&#39;{
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.&quot;,
+  &quot;example&quot; : 200
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;true, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;false, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;IEzsignsignaturecustomdateX&#39;, nameInSnakeCase&#x3D;&#39;I_EZSIGNSIGNATURECUSTOMDATE_X&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;iEzsignsignaturecustomdateY&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getIEzsignsignaturecustomdateY&#39;, setter&#x3D;&#39;setIEzsignsignaturecustomdateY&#39;, description&#x3D;&#39;The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;IEzsignsignaturecustomdateY&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.iEzsignsignaturecustomdateY;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.
+
+Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top border of the page, you would use &quot;300&quot; for the Y coordinate.&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;300&#39;, jsonSchema&#x3D;&#39;{
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.&quot;,
+  &quot;example&quot; : 300
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;true, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;false, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;IEzsignsignaturecustomdateY&#39;, nameInSnakeCase&#x3D;&#39;I_EZSIGNSIGNATURECUSTOMDATE_Y&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;string&#39;, baseName&#x3D;&#39;sEzsignsignaturecustomdateFormat&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getSEzsignsignaturecustomdateFormat&#39;, setter&#x3D;&#39;setSEzsignsignaturecustomdateFormat&#39;, description&#x3D;&#39;The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | &#39;, dataType&#x3D;&#39;string&#39;, datatypeWithEnum&#x3D;&#39;string&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;SEzsignsignaturecustomdateFormat&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.sEzsignsignaturecustomdateFormat;&#39;, baseType&#x3D;&#39;string&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The custom date format to use
+
+You can use the codes below and they will be replaced at signature time.
+Text values like month and day names will be rendered in the proper language.
+Other text will be left as-is.
+
+The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST
+
+For example, the format &quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}&quot; would become &quot;Signature date: 01/06/2022 08:07&quot;
+
+**Year**
+
+| Code | Example |
+| - | - |
+| {YYYY} | 2022 |
+| {YY} | 22 |
+
+**Month**
+
+| Code | Example |
+| - | - |
+| {MonthCapitalize} | Janvier |
+| {Month} | janvier |
+| {MM} | 01 |
+| {M} | 1 |
+
+**Day**
+
+| Code | Example |
+| - | - |
+| {DayCapitalize} | Jeudi |
+| {Day} | jeudi |
+| {DD} | 06 |
+| {D} | 6 |
+
+**Hour**
+
+| Code | Example |
+| - | - |
+| {hh} | 08 |
+
+**Minute**
+
+| Code | Example |
+| - | - |
+| {mm} | 07 |
+
+**Second**
+
+| Code | Example |
+| - | - |
+| {ss} | 09 |      
+
+**Timezone**
+
+| Code | Example |
+| - | - |
+| {Z} | EST |     
+
+**Time**
+
+| Code | Example |
+| - | - |
+| {Time} | 08:07:09 |  
+| {TimeZ} | 08:07:09 EST |
+   
+**Date**
+
+| Code | Example |
+| - | - |
+| {Date} | 2022-01-06 |  
+| {DateText} | 1er Janvier 2022 |
+
+**Full**
+
+| Code | Example |
+| - | - |
+| {DateTime} | 2022-01-06 08:07:09 |  
+| {DateTimeZ} | 2022-01-06 08:07:09 EST |
+&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;&quot;Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss} {Z}&quot;&#39;, jsonSchema&#x3D;&#39;{
+  &quot;type&quot; : &quot;string&quot;,
+  &quot;description&quot; : &quot;The custom date format to use\n\nYou can use the codes below and they will be replaced at signature time.\nText values like month and day names will be rendered in the proper language.\nOther text will be left as-is.\n\nThe codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST\n\nFor example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;\n\n**Year**\n\n| Code | Example |\n| - | - |\n| {YYYY} | 2022 |\n| {YY} | 22 |\n\n**Month**\n\n| Code | Example |\n| - | - |\n| {MonthCapitalize} | Janvier |\n| {Month} | janvier |\n| {MM} | 01 |\n| {M} | 1 |\n\n**Day**\n\n| Code | Example |\n| - | - |\n| {DayCapitalize} | Jeudi |\n| {Day} | jeudi |\n| {DD} | 06 |\n| {D} | 6 |\n\n**Hour**\n\n| Code | Example |\n| - | - |\n| {hh} | 08 |\n\n**Minute**\n\n| Code | Example |\n| - | - |\n| {mm} | 07 |\n\n**Second**\n\n| Code | Example |\n| - | - |\n| {ss} | 09 |      \n\n**Timezone**\n\n| Code | Example |\n| - | - |\n| {Z} | EST |     \n\n**Time**\n\n| Code | Example |\n| - | - |\n| {Time} | 08:07:09 |  \n| {TimeZ} | 08:07:09 EST |\n   \n**Date**\n\n| Code | Example |\n| - | - |\n| {Date} | 2022-01-06 |  \n| {DateText} | 1er Janvier 2022 |\n\n**Full**\n\n| Code | Example |\n| - | - |\n| {DateTime} | 2022-01-06 08:07:09 |  \n| {DateTimeZ} | 2022-01-06 08:07:09 EST |\n&quot;,
+  &quot;example&quot; : &quot;Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss} {Z}&quot;
+}&#39;, minimum&#x3D;&#39;null&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;true, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;true, isNumeric&#x3D;false, isInteger&#x3D;false, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;false, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;false, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{}, hasValidation&#x3D;false, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;SEzsignsignaturecustomdateFormat&#39;, nameInSnakeCase&#x3D;&#39;S_EZSIGNSIGNATURECUSTOMDATE_FORMAT&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}]
+vendorExtensions                    : {}
+hasValidation                       : false
+nameInCamelCase                     : 
+nameInSnakeCase                     : 
+uniqueItems                         : false
+items :
+    
+additionalPropertiesIsAnyType       : false
+hasVars                             : true
+hasRequired                         : true
+hasDiscriminatorWithNonEmptyMapping : false
+hasMultipleTypes                    : false
+hasItems                            : false
+iexclusiveMaximum                   : 
+datatype                            : 
+*/
+
     /// <summary>
     /// An Ezsignsignaturecustomdate Object
     /// </summary>

@@ -122,14 +122,6 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'ObjUser'
         }
         /// <summary>
-        /// Test the property 'ObjUsergroup'
-        /// </summary>
-        [Test]
-        public void ObjUsergroupTest()
-        {
-            // TODO unit test for the property 'ObjUsergroup'
-        }
-        /// <summary>
         /// Test the property 'ObjEzsignsigner'
         /// </summary>
         [Test]

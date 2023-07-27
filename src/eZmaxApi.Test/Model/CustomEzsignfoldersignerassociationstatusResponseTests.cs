@@ -90,6 +90,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SEzsignfoldersignerassociationstatusFirstname'
         }
         /// <summary>
+        /// Test the property 'SEzsignfoldersignerassociationstatusDescriptionX'
+        /// </summary>
+        [Test]
+        public void SEzsignfoldersignerassociationstatusDescriptionXTest()
+        {
+            // TODO unit test for the property 'SEzsignfoldersignerassociationstatusDescriptionX'
+        }
+        /// <summary>
         /// Test the property 'AObjEzsignsignaturestatus'
         /// </summary>
         [Test]

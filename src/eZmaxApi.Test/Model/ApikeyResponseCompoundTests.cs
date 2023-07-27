@@ -90,12 +90,28 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'ObjApikeyDescription'
         }
         /// <summary>
-        /// Test the property 'SComputedToken'
+        /// Test the property 'ObjContactName'
         /// </summary>
         [Test]
-        public void SComputedTokenTest()
+        public void ObjContactNameTest()
         {
-            // TODO unit test for the property 'SComputedToken'
+            // TODO unit test for the property 'ObjContactName'
+        }
+        /// <summary>
+        /// Test the property 'SApikeyApikey'
+        /// </summary>
+        [Test]
+        public void SApikeyApikeyTest()
+        {
+            // TODO unit test for the property 'SApikeyApikey'
+        }
+        /// <summary>
+        /// Test the property 'SApikeySecret'
+        /// </summary>
+        [Test]
+        public void SApikeySecretTest()
+        {
+            // TODO unit test for the property 'SApikeySecret'
         }
         /// <summary>
         /// Test the property 'BApikeyIsactive'
@@ -104,6 +120,14 @@ namespace eZmaxApi.Test
         public void BApikeyIsactiveTest()
         {
             // TODO unit test for the property 'BApikeyIsactive'
+        }
+        /// <summary>
+        /// Test the property 'BApikeyIssigned'
+        /// </summary>
+        [Test]
+        public void BApikeyIssignedTest()
+        {
+            // TODO unit test for the property 'BApikeyIssigned'
         }
         /// <summary>
         /// Test the property 'ObjAudit'

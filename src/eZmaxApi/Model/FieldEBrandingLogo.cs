@@ -24,6 +24,46 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+
+// TEST_IGNORE_ME
+/* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:true isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:false isEnum:true isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
+openApiType                         : 
+baseName                            : 
+complexType                         : 
+getter                              : 
+setter                              : 
+dataType                            : string
+datatypeWithEnum                    : 
+name                                : Field-eBrandingLogo
+defaultValue                        : 
+defaultValueWithParam               : 
+baseType                            : 
+example                             : 
+jsonSchema                          : 
+exclusiveMinimum                    : false
+exclusiveMaximum                    : false
+required                            : 
+deprecated                          : 
+hasMoreNonReadOnly                  : 
+vars                                : []
+requiredVars                        : []
+vendorExtensions                    : {}
+hasValidation                       : false
+nameInCamelCase                     : 
+nameInSnakeCase                     : 
+uniqueItems                         : false
+items :
+    
+additionalPropertiesIsAnyType       : false
+hasVars                             : false
+hasRequired                         : false
+hasDiscriminatorWithNonEmptyMapping : false
+hasMultipleTypes                    : false
+hasItems                            : false
+iexclusiveMaximum                   : 
+datatype                            : 
+*/
+
     /// <summary>
     /// The logo for the Branding. Select the value &#39;Default&#39; if you want to use the default logo and delete the custom one if you used one
     /// </summary>

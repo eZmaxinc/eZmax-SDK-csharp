@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **FkiEzsignfoldersignerassociationID** | **int** | The unique ID of the Ezsignfoldersignerassociation | 
 **SEzsignfoldersignerassociationstatusLastname** | **string** | The last name of the Ezsignsigner | [optional] 
 **SEzsignfoldersignerassociationstatusFirstname** | **string** | The first name of the Ezsignsigner | [optional] 
+**SEzsignfoldersignerassociationstatusDescriptionX** | **string** | The description of the Ezsignsigner | [optional] 
 **AObjEzsignsignaturestatus** | [**List&lt;CustomEzsignsignaturestatusResponse&gt;**](CustomEzsignsignaturestatusResponse.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)

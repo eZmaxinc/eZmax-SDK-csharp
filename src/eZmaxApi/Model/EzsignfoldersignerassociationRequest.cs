@@ -24,6 +24,87 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+
+// TEST_IGNORE_ME
+/* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
+openApiType                         : 
+baseName                            : 
+complexType                         : 
+getter                              : 
+setter                              : 
+dataType                            : Object
+datatypeWithEnum                    : 
+name                                : ezsignfoldersignerassociation-Request
+defaultValue                        : 
+defaultValueWithParam               : 
+baseType                            : 
+example                             : 
+jsonSchema                          : 
+exclusiveMinimum                    : false
+exclusiveMaximum                    : false
+required                            : 
+deprecated                          : 
+hasMoreNonReadOnly                  : 
+vars                                : [CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;pkiEzsignfoldersignerassociationID&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getPkiEzsignfoldersignerassociationID&#39;, setter&#x3D;&#39;setPkiEzsignfoldersignerassociationID&#39;, description&#x3D;&#39;The unique ID of the Ezsignfoldersignerassociation&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;PkiEzsignfoldersignerassociationID&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.pkiEzsignfoldersignerassociationID;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The unique ID of the Ezsignfoldersignerassociation&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;20&#39;, jsonSchema&#x3D;&#39;{
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The unique ID of the Ezsignfoldersignerassociation&quot;,
+  &quot;example&quot; : 20
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;false, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;null, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{x-csharp-value-type&#x3D;true, x-emit-default-value&#x3D;false, x-is-value-type&#x3D;true}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;PkiEzsignfoldersignerassociationID&#39;, nameInSnakeCase&#x3D;&#39;PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;fkiUserID&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getFkiUserID&#39;, setter&#x3D;&#39;setFkiUserID&#39;, description&#x3D;&#39;The unique ID of the User&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;FkiUserID&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.fkiUserID;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The unique ID of the User&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;70&#39;, jsonSchema&#x3D;&#39;{
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The unique ID of the User&quot;,
+  &quot;example&quot; : 70
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;false, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;false, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{x-csharp-value-type&#x3D;true, x-emit-default-value&#x3D;false, x-is-value-type&#x3D;true}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;FkiUserID&#39;, nameInSnakeCase&#x3D;&#39;FKI_USER_I_D&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;fkiEzsignsignergroupID&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getFkiEzsignsignergroupID&#39;, setter&#x3D;&#39;setFkiEzsignsignergroupID&#39;, description&#x3D;&#39;The unique ID of the Ezsignsignergroup&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;FkiEzsignsignergroupID&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.fkiEzsignsignergroupID;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The unique ID of the Ezsignsignergroup&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;27&#39;, jsonSchema&#x3D;&#39;{
+  &quot;maximum&quot; : 65535,
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The unique ID of the Ezsignsignergroup&quot;,
+  &quot;example&quot; : 27
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;65535&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;false, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;null, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{x-csharp-value-type&#x3D;true, x-emit-default-value&#x3D;false, x-is-value-type&#x3D;true}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;FkiEzsignsignergroupID&#39;, nameInSnakeCase&#x3D;&#39;FKI_EZSIGNSIGNERGROUP_I_D&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;fkiEzsignfolderID&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getFkiEzsignfolderID&#39;, setter&#x3D;&#39;setFkiEzsignfolderID&#39;, description&#x3D;&#39;The unique ID of the Ezsignfolder&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;FkiEzsignfolderID&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.fkiEzsignfolderID;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The unique ID of the Ezsignfolder&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;33&#39;, jsonSchema&#x3D;&#39;{
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The unique ID of the Ezsignfolder&quot;,
+  &quot;example&quot; : 33
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;true, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;false, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{x-csharp-value-type&#x3D;true, x-emit-default-value&#x3D;false, x-is-value-type&#x3D;true}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;FkiEzsignfolderID&#39;, nameInSnakeCase&#x3D;&#39;FKI_EZSIGNFOLDER_I_D&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;boolean&#39;, baseName&#x3D;&#39;bEzsignfoldersignerassociationReceivecopy&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getBEzsignfoldersignerassociationReceivecopy&#39;, setter&#x3D;&#39;setBEzsignfoldersignerassociationReceivecopy&#39;, description&#x3D;&#39;If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.&#39;, dataType&#x3D;&#39;bool&#39;, datatypeWithEnum&#x3D;&#39;bool&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;BEzsignfoldersignerassociationReceivecopy&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.bEzsignfoldersignerassociationReceivecopy;&#39;, baseType&#x3D;&#39;bool&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;null&#39;, jsonSchema&#x3D;&#39;{
+  &quot;type&quot; : &quot;boolean&quot;,
+  &quot;description&quot; : &quot;If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.&quot;
+}&#39;, minimum&#x3D;&#39;null&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;false, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;false, isInteger&#x3D;false, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;false, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;true, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;null, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{x-csharp-value-type&#x3D;true, x-emit-default-value&#x3D;false, x-is-value-type&#x3D;true}, hasValidation&#x3D;false, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;BEzsignfoldersignerassociationReceivecopy&#39;, nameInSnakeCase&#x3D;&#39;B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}, CodegenProperty{openApiType&#x3D;&#39;string&#39;, baseName&#x3D;&#39;tEzsignfoldersignerassociationMessage&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getTEzsignfoldersignerassociationMessage&#39;, setter&#x3D;&#39;setTEzsignfoldersignerassociationMessage&#39;, description&#x3D;&#39;A custom text message that will be added to the email sent.&#39;, dataType&#x3D;&#39;string&#39;, datatypeWithEnum&#x3D;&#39;string&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;TEzsignfoldersignerassociationMessage&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.tEzsignfoldersignerassociationMessage;&#39;, baseType&#x3D;&#39;string&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;A custom text message that will be added to the email sent.&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;&quot;Hi John,
+
+This is the document I need you to review.
+
+Could you sign it before Monday please.
+
+Best Regards.
+
+Mary&quot;&#39;, jsonSchema&#x3D;&#39;{
+  &quot;type&quot; : &quot;string&quot;,
+  &quot;description&quot; : &quot;A custom text message that will be added to the email sent.&quot;,
+  &quot;example&quot; : &quot;Hi John,\n\nThis is the document I need you to review.\n\nCould you sign it before Monday please.\n\nBest Regards.\n\nMary&quot;
+}&#39;, minimum&#x3D;&#39;null&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;false, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;true, isNumeric&#x3D;false, isInteger&#x3D;false, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;false, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;null, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{x-emit-default-value&#x3D;false, x-is-value-type&#x3D;false}, hasValidation&#x3D;false, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;TEzsignfoldersignerassociationMessage&#39;, nameInSnakeCase&#x3D;&#39;T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}]
+requiredVars                        : [CodegenProperty{openApiType&#x3D;&#39;integer&#39;, baseName&#x3D;&#39;fkiEzsignfolderID&#39;, complexType&#x3D;&#39;null&#39;, getter&#x3D;&#39;getFkiEzsignfolderID&#39;, setter&#x3D;&#39;setFkiEzsignfolderID&#39;, description&#x3D;&#39;The unique ID of the Ezsignfolder&#39;, dataType&#x3D;&#39;int&#39;, datatypeWithEnum&#x3D;&#39;int&#39;, dataFormat&#x3D;&#39;null&#39;, name&#x3D;&#39;FkiEzsignfolderID&#39;, min&#x3D;&#39;null&#39;, max&#x3D;&#39;null&#39;, defaultValue&#x3D;&#39;null&#39;, defaultValueWithParam&#x3D;&#39; &#x3D; data.fkiEzsignfolderID;&#39;, baseType&#x3D;&#39;int&#39;, containerType&#x3D;&#39;null&#39;, title&#x3D;&#39;null&#39;, unescapedDescription&#x3D;&#39;The unique ID of the Ezsignfolder&#39;, maxLength&#x3D;null, minLength&#x3D;null, pattern&#x3D;&#39;null&#39;, example&#x3D;&#39;33&#39;, jsonSchema&#x3D;&#39;{
+  &quot;minimum&quot; : 0,
+  &quot;type&quot; : &quot;integer&quot;,
+  &quot;description&quot; : &quot;The unique ID of the Ezsignfolder&quot;,
+  &quot;example&quot; : 33
+}&#39;, minimum&#x3D;&#39;0&#39;, maximum&#x3D;&#39;null&#39;, exclusiveMinimum&#x3D;false, exclusiveMaximum&#x3D;false, required&#x3D;true, deprecated&#x3D;false, hasMoreNonReadOnly&#x3D;false, isPrimitiveType&#x3D;true, isModel&#x3D;false, isContainer&#x3D;false, isString&#x3D;false, isNumeric&#x3D;true, isInteger&#x3D;true, isShort&#x3D;false, isLong&#x3D;false, isUnboundedInteger&#x3D;true, isNumber&#x3D;false, isFloat&#x3D;false, isDouble&#x3D;false, isDecimal&#x3D;false, isByteArray&#x3D;false, isBinary&#x3D;false, isFile&#x3D;false, isBoolean&#x3D;false, isDate&#x3D;false, isDateTime&#x3D;false, isUuid&#x3D;false, isUri&#x3D;false, isEmail&#x3D;false, isPassword&#x3D;false, isFreeFormObject&#x3D;false, isArray&#x3D;false, isMap&#x3D;false, isEnum&#x3D;false, isInnerEnum&#x3D;false, isEnumRef&#x3D;false, isAnyType&#x3D;false, isReadOnly&#x3D;false, isWriteOnly&#x3D;false, isNullable&#x3D;false, isSelfReference&#x3D;false, isCircularReference&#x3D;false, isDiscriminator&#x3D;false, isNew&#x3D;false, isOverridden&#x3D;false, _enum&#x3D;null, allowableValues&#x3D;null, items&#x3D;null, additionalProperties&#x3D;null, vars&#x3D;[], requiredVars&#x3D;[], mostInnerItems&#x3D;null, vendorExtensions&#x3D;{}, hasValidation&#x3D;true, isInherited&#x3D;false, discriminatorValue&#x3D;&#39;null&#39;, nameInCamelCase&#x3D;&#39;FkiEzsignfolderID&#39;, nameInSnakeCase&#x3D;&#39;FKI_EZSIGNFOLDER_I_D&#39;, enumName&#x3D;&#39;null&#39;, maxItems&#x3D;null, minItems&#x3D;null, maxProperties&#x3D;null, minProperties&#x3D;null, uniqueItems&#x3D;false, uniqueItemsBoolean&#x3D;null, multipleOf&#x3D;null, isXmlAttribute&#x3D;false, xmlPrefix&#x3D;&#39;null&#39;, xmlName&#x3D;&#39;null&#39;, xmlNamespace&#x3D;&#39;null&#39;, isXmlWrapped&#x3D;false, isNull&#x3D;false, isVoid&#x3D;false, getAdditionalPropertiesIsAnyType&#x3D;false, getHasVars&#x3D;false, getHasRequired&#x3D;false, getHasDiscriminatorWithNonEmptyMapping&#x3D;false, composedSchemas&#x3D;null, hasMultipleTypes&#x3D;false, requiredVarsMap&#x3D;null, ref&#x3D;null, schemaIsFromAdditionalProperties&#x3D;false, isBooleanSchemaTrue&#x3D;false, isBooleanSchemaFalse&#x3D;false, format&#x3D;null, dependentRequired&#x3D;null, contains&#x3D;null}]
+vendorExtensions                    : {}
+hasValidation                       : false
+nameInCamelCase                     : 
+nameInSnakeCase                     : 
+uniqueItems                         : false
+items :
+    
+additionalPropertiesIsAnyType       : false
+hasVars                             : true
+hasRequired                         : true
+hasDiscriminatorWithNonEmptyMapping : false
+hasMultipleTypes                    : false
+hasItems                            : false
+iexclusiveMaximum                   : 
+datatype                            : 
+*/
+
     /// <summary>
     /// An Ezsignfoldersignerassociation Object
     /// </summary>
@@ -40,12 +121,11 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
         /// <param name="fkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup.</param>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
         /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent..</param>
-        public EzsignfoldersignerassociationRequest(int pkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int), int fkiEzsignsignergroupID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string))
+        public EzsignfoldersignerassociationRequest(int pkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), int fkiEzsignsignergroupID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)
             if (fkiEzsignfolderID == null)
@@ -59,7 +139,6 @@ namespace eZmaxApi.Model
 
             this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
             this.FkiUserID = fkiUserID;
-            this.FkiUsergroupID = fkiUsergroupID;
             this.FkiEzsignsignergroupID = fkiEzsignsignergroupID;
             this.BEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
             this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
@@ -78,13 +157,6 @@ namespace eZmaxApi.Model
         /// <value>The unique ID of the User</value>
         [DataMember(Name="fkiUserID", EmitDefaultValue=false)]
         public int FkiUserID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Usergroup
-        /// </summary>
-        /// <value>The unique ID of the Usergroup</value>
-        [DataMember(Name="fkiUsergroupID", EmitDefaultValue=false)]
-        public int FkiUsergroupID { get; set; }
 
         /// <summary>
         /// The unique ID of the Ezsignsignergroup
@@ -124,7 +196,6 @@ namespace eZmaxApi.Model
             sb.Append("class EzsignfoldersignerassociationRequest {\n");
             sb.Append("  PkiEzsignfoldersignerassociationID: ").Append(PkiEzsignfoldersignerassociationID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
-            sb.Append("  FkiUsergroupID: ").Append(FkiUsergroupID).Append("\n");
             sb.Append("  FkiEzsignsignergroupID: ").Append(FkiEzsignsignergroupID).Append("\n");
             sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
             sb.Append("  BEzsignfoldersignerassociationReceivecopy: ").Append(BEzsignfoldersignerassociationReceivecopy).Append("\n");
@@ -174,11 +245,6 @@ namespace eZmaxApi.Model
                     this.FkiUserID.Equals(input.FkiUserID))
                 ) && 
                 (
-                    this.FkiUsergroupID == input.FkiUsergroupID ||
-                    (this.FkiUsergroupID != null &&
-                    this.FkiUsergroupID.Equals(input.FkiUsergroupID))
-                ) && 
-                (
                     this.FkiEzsignsignergroupID == input.FkiEzsignsignergroupID ||
                     (this.FkiEzsignsignergroupID != null &&
                     this.FkiEzsignsignergroupID.Equals(input.FkiEzsignsignergroupID))
@@ -213,8 +279,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.PkiEzsignfoldersignerassociationID.GetHashCode();
                 if (this.FkiUserID != null)
                     hashCode = hashCode * 59 + this.FkiUserID.GetHashCode();
-                if (this.FkiUsergroupID != null)
-                    hashCode = hashCode * 59 + this.FkiUsergroupID.GetHashCode();
                 if (this.FkiEzsignsignergroupID != null)
                     hashCode = hashCode * 59 + this.FkiEzsignsignergroupID.GetHashCode();
                 if (this.FkiEzsignfolderID != null)
@@ -248,20 +312,6 @@ namespace eZmaxApi.Model
             if(this.FkiUserID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
-            }
-
-
-
-            // FkiUsergroupID (int) maximum
-            if(this.FkiUsergroupID > (int)255)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
-            }
-
-            // FkiUsergroupID (int) minimum
-            if(this.FkiUsergroupID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
             }
 
 

@@ -102,6 +102,34 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test ApikeyGetCorsV1
+        /// </summary>
+        [Test]
+        public void ApikeyGetCorsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiApikeyID = null;
+            //var response = instance.ApikeyGetCorsV1(pkiApikeyID);
+            //Assert.IsInstanceOf(typeof(ApikeyGetCorsV1Response), response, "response is ApikeyGetCorsV1Response");
+        }
+        
+        /// <summary>
+        /// Test ApikeyGetListV1
+        /// </summary>
+        [Test]
+        public void ApikeyGetListV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string eOrderBy = null;
+            //int? iRowMax = null;
+            //int? iRowOffset = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string sFilter = null;
+            //var response = instance.ApikeyGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+            //Assert.IsInstanceOf(typeof(ApikeyGetListV1Response), response, "response is ApikeyGetListV1Response");
+        }
+        
+        /// <summary>
         /// Test ApikeyGetObjectV2
         /// </summary>
         [Test]
@@ -135,6 +163,19 @@ namespace eZmaxApi.Test
             //int pkiApikeyID = null;
             //var response = instance.ApikeyGetSubnetsV1(pkiApikeyID);
             //Assert.IsInstanceOf(typeof(ApikeyGetSubnetsV1Response), response, "response is ApikeyGetSubnetsV1Response");
+        }
+        
+        /// <summary>
+        /// Test ApikeyRegenerateV1
+        /// </summary>
+        [Test]
+        public void ApikeyRegenerateV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiApikeyID = null;
+            //ApikeyRegenerateV1Request apikeyRegenerateV1Request = null;
+            //var response = instance.ApikeyRegenerateV1(pkiApikeyID, apikeyRegenerateV1Request);
+            //Assert.IsInstanceOf(typeof(ApikeyRegenerateV1Response), response, "response is ApikeyRegenerateV1Response");
         }
         
     }

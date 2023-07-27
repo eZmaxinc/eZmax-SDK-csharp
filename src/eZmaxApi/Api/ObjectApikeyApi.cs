@@ -93,6 +93,56 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of ApikeyEditPermissionsV1Response</returns>
         ApiResponse<ApikeyEditPermissionsV1Response> ApikeyEditPermissionsV1WithHttpInfo (int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request);
         /// <summary>
+        /// Retrieve an existing Apikey's cors
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <returns>ApikeyGetCorsV1Response</returns>
+        ApikeyGetCorsV1Response ApikeyGetCorsV1 (int pkiApikeyID);
+
+        /// <summary>
+        /// Retrieve an existing Apikey's cors
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <returns>ApiResponse of ApikeyGetCorsV1Response</returns>
+        ApiResponse<ApikeyGetCorsV1Response> ApikeyGetCorsV1WithHttpInfo (int pkiApikeyID);
+        /// <summary>
+        /// Retrieve Apikey list
+        /// </summary>
+        /// <remarks>
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --|
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ApikeyGetListV1Response</returns>
+        ApikeyGetListV1Response ApikeyGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+
+        /// <summary>
+        /// Retrieve Apikey list
+        /// </summary>
+        /// <remarks>
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --|
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ApiResponse of ApikeyGetListV1Response</returns>
+        ApiResponse<ApikeyGetListV1Response> ApikeyGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+        /// <summary>
         /// Retrieve an existing Apikey
         /// </summary>
         /// <remarks>
@@ -155,6 +205,29 @@ namespace eZmaxApi.Api
         /// <param name="pkiApikeyID"></param>
         /// <returns>ApiResponse of ApikeyGetSubnetsV1Response</returns>
         ApiResponse<ApikeyGetSubnetsV1Response> ApikeyGetSubnetsV1WithHttpInfo (int pkiApikeyID);
+        /// <summary>
+        /// Regenerate the Apikey
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="apikeyRegenerateV1Request"></param>
+        /// <returns>ApikeyRegenerateV1Response</returns>
+        ApikeyRegenerateV1Response ApikeyRegenerateV1 (int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request);
+
+        /// <summary>
+        /// Regenerate the Apikey
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="apikeyRegenerateV1Request"></param>
+        /// <returns>ApiResponse of ApikeyRegenerateV1Response</returns>
+        ApiResponse<ApikeyRegenerateV1Response> ApikeyRegenerateV1WithHttpInfo (int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -231,6 +304,60 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (ApikeyEditPermissionsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApikeyEditPermissionsV1Response>> ApikeyEditPermissionsV1WithHttpInfoAsync (int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
+        /// Retrieve an existing Apikey's cors
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApikeyGetCorsV1Response</returns>
+        System.Threading.Tasks.Task<ApikeyGetCorsV1Response> ApikeyGetCorsV1Async (int pkiApikeyID, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Apikey&#39;s cors
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ApikeyGetCorsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApikeyGetCorsV1Response>> ApikeyGetCorsV1WithHttpInfoAsync (int pkiApikeyID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Retrieve Apikey list
+        /// </summary>
+        /// <remarks>
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --|
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApikeyGetListV1Response</returns>
+        System.Threading.Tasks.Task<ApikeyGetListV1Response> ApikeyGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve Apikey list
+        /// </summary>
+        /// <remarks>
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --|
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ApikeyGetListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApikeyGetListV1Response>> ApikeyGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
         /// Retrieve an existing Apikey
         /// </summary>
         /// <remarks>
@@ -299,6 +426,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApikeyGetSubnetsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApikeyGetSubnetsV1Response>> ApikeyGetSubnetsV1WithHttpInfoAsync (int pkiApikeyID, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Regenerate the Apikey
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="apikeyRegenerateV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApikeyRegenerateV1Response</returns>
+        System.Threading.Tasks.Task<ApikeyRegenerateV1Response> ApikeyRegenerateV1Async (int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Regenerate the Apikey
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="apikeyRegenerateV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ApikeyRegenerateV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApikeyRegenerateV1Response>> ApikeyRegenerateV1WithHttpInfoAsync (int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -918,6 +1070,316 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve an existing Apikey's cors 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <returns>ApikeyGetCorsV1Response</returns>
+        public ApikeyGetCorsV1Response ApikeyGetCorsV1 (int pkiApikeyID)
+        {
+             ApiResponse<ApikeyGetCorsV1Response> localVarResponse = ApikeyGetCorsV1WithHttpInfo(pkiApikeyID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Apikey's cors 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <returns>ApiResponse of ApikeyGetCorsV1Response</returns>
+        public ApiResponse<ApikeyGetCorsV1Response> ApikeyGetCorsV1WithHttpInfo (int pkiApikeyID)
+        {
+            // verify the required parameter 'pkiApikeyID' is set
+            if (pkiApikeyID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyGetCorsV1");
+
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/getCors";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiApikeyID != null) localVarPathParams.Add("pkiApikeyID", this.Configuration.ApiClient.ParameterToString(pkiApikeyID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ApikeyGetCorsV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApikeyGetCorsV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ApikeyGetCorsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetCorsV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve an existing Apikey's cors 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApikeyGetCorsV1Response</returns>
+        public async System.Threading.Tasks.Task<ApikeyGetCorsV1Response> ApikeyGetCorsV1Async (int pkiApikeyID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<ApikeyGetCorsV1Response> localVarResponse = await ApikeyGetCorsV1WithHttpInfoAsync(pkiApikeyID, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve an existing Apikey's cors 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ApikeyGetCorsV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApikeyGetCorsV1Response>> ApikeyGetCorsV1WithHttpInfoAsync (int pkiApikeyID, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiApikeyID' is set
+            if (pkiApikeyID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyGetCorsV1");
+
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/getCors";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiApikeyID != null) localVarPathParams.Add("pkiApikeyID", this.Configuration.ApiClient.ParameterToString(pkiApikeyID)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ApikeyGetCorsV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApikeyGetCorsV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ApikeyGetCorsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetCorsV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Apikey list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --|
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ApikeyGetListV1Response</returns>
+        public ApikeyGetListV1Response ApikeyGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        {
+             ApiResponse<ApikeyGetListV1Response> localVarResponse = ApikeyGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Apikey list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --|
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <returns>ApiResponse of ApikeyGetListV1Response</returns>
+        public ApiResponse<ApikeyGetListV1Response> ApikeyGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        {
+
+            var localVarPath = "/1/object/apikey/getList";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (eOrderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eOrderBy", eOrderBy)); // query parameter
+            if (iRowMax != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowMax", iRowMax)); // query parameter
+            if (iRowOffset != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowOffset", iRowOffset)); // query parameter
+            if (sFilter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sFilter", sFilter)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ApikeyGetListV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApikeyGetListV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ApikeyGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetListV1Response)));
+        }
+
+        /// <summary>
+        /// Retrieve Apikey list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --|
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApikeyGetListV1Response</returns>
+        public async System.Threading.Tasks.Task<ApikeyGetListV1Response> ApikeyGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<ApikeyGetListV1Response> localVarResponse = await ApikeyGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve Apikey list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --|
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ApikeyGetListV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApikeyGetListV1Response>> ApikeyGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/1/object/apikey/getList";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (eOrderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "eOrderBy", eOrderBy)); // query parameter
+            if (iRowMax != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowMax", iRowMax)); // query parameter
+            if (iRowOffset != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "iRowOffset", iRowOffset)); // query parameter
+            if (sFilter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sFilter", sFilter)); // query parameter
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ApikeyGetListV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApikeyGetListV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ApikeyGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetListV1Response)));
+        }
+
+        /// <summary>
         /// Retrieve an existing Apikey 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1350,6 +1812,179 @@ namespace eZmaxApi.Api
             return new ApiResponse<ApikeyGetSubnetsV1Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetSubnetsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetSubnetsV1Response)));
+        }
+
+        /// <summary>
+        /// Regenerate the Apikey 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="apikeyRegenerateV1Request"></param>
+        /// <returns>ApikeyRegenerateV1Response</returns>
+        public ApikeyRegenerateV1Response ApikeyRegenerateV1 (int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request)
+        {
+             ApiResponse<ApikeyRegenerateV1Response> localVarResponse = ApikeyRegenerateV1WithHttpInfo(pkiApikeyID, apikeyRegenerateV1Request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Regenerate the Apikey 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="apikeyRegenerateV1Request"></param>
+        /// <returns>ApiResponse of ApikeyRegenerateV1Response</returns>
+        public ApiResponse<ApikeyRegenerateV1Response> ApikeyRegenerateV1WithHttpInfo (int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request)
+        {
+            // verify the required parameter 'pkiApikeyID' is set
+            if (pkiApikeyID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyRegenerateV1");
+            // verify the required parameter 'apikeyRegenerateV1Request' is set
+            if (apikeyRegenerateV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'apikeyRegenerateV1Request' when calling ObjectApikeyApi->ApikeyRegenerateV1");
+
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/regenerate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiApikeyID != null) localVarPathParams.Add("pkiApikeyID", this.Configuration.ApiClient.ParameterToString(pkiApikeyID)); // path parameter
+            if (apikeyRegenerateV1Request != null && apikeyRegenerateV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(apikeyRegenerateV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = apikeyRegenerateV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ApikeyRegenerateV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApikeyRegenerateV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ApikeyRegenerateV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyRegenerateV1Response)));
+        }
+
+        /// <summary>
+        /// Regenerate the Apikey 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="apikeyRegenerateV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApikeyRegenerateV1Response</returns>
+        public async System.Threading.Tasks.Task<ApikeyRegenerateV1Response> ApikeyRegenerateV1Async (int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<ApikeyRegenerateV1Response> localVarResponse = await ApikeyRegenerateV1WithHttpInfoAsync(pkiApikeyID, apikeyRegenerateV1Request, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Regenerate the Apikey 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiApikeyID"></param>
+        /// <param name="apikeyRegenerateV1Request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (ApikeyRegenerateV1Response)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApikeyRegenerateV1Response>> ApikeyRegenerateV1WithHttpInfoAsync (int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pkiApikeyID' is set
+            if (pkiApikeyID == null)
+                throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyRegenerateV1");
+            // verify the required parameter 'apikeyRegenerateV1Request' is set
+            if (apikeyRegenerateV1Request == null)
+                throw new ApiException(400, "Missing required parameter 'apikeyRegenerateV1Request' when calling ObjectApikeyApi->ApikeyRegenerateV1");
+
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/regenerate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pkiApikeyID != null) localVarPathParams.Add("pkiApikeyID", this.Configuration.ApiClient.ParameterToString(pkiApikeyID)); // path parameter
+            if (apikeyRegenerateV1Request != null && apikeyRegenerateV1Request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(apikeyRegenerateV1Request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = apikeyRegenerateV1Request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ApikeyRegenerateV1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApikeyRegenerateV1Response>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ApikeyRegenerateV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyRegenerateV1Response)));
         }
 
     }

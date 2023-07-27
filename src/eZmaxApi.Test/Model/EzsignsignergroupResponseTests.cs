@@ -73,6 +73,22 @@ namespace eZmaxApi.Test
         {
             // TODO unit test for the property 'PkiEzsignsignergroupID'
         }
+        /// <summary>
+        /// Test the property 'ObjEzsignsignergroupDescription'
+        /// </summary>
+        [Test]
+        public void ObjEzsignsignergroupDescriptionTest()
+        {
+            // TODO unit test for the property 'ObjEzsignsignergroupDescription'
+        }
+        /// <summary>
+        /// Test the property 'SEzsignsignergroupDescriptionX'
+        /// </summary>
+        [Test]
+        public void SEzsignsignergroupDescriptionXTest()
+        {
+            // TODO unit test for the property 'SEzsignsignergroupDescriptionX'
+        }
 
     }
 

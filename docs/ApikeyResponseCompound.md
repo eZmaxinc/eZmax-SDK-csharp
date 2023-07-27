@@ -8,8 +8,11 @@ Name | Type | Description | Notes
 **PkiApikeyID** | **int** | The unique ID of the Apikey | 
 **FkiUserID** | **int** | The unique ID of the User | 
 **ObjApikeyDescription** | [**MultilingualApikeyDescription**](MultilingualApikeyDescription.md) |  | 
-**SComputedToken** | **string** | The secret token for the API key.  This will be returned only on creation. | [optional] 
+**ObjContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
+**SApikeyApikey** | **string** | The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey. | [optional] 
+**SApikeySecret** | **string** | The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey. | [optional] 
 **BApikeyIsactive** | **bool** | Whether the apikey is active or not | 
+**BApikeyIssigned** | **bool** | Whether the apikey is signed or not | [optional] 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
