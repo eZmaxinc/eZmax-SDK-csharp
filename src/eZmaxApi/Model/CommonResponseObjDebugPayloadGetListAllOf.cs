@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// CommonResponseObjDebugPayloadGetListAllOf
+    /// </summary>
+    [DataContract]
+    public partial class CommonResponseObjDebugPayloadGetListAllOf :  IEquatable<CommonResponseObjDebugPayloadGetListAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetListAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonResponseObjDebugPayloadGetListAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetListAllOf" /> class.
+        /// </summary>
+        /// <param name="aFilter">aFilter (required).</param>
+        /// <param name="aOrderBy">List of available values for *eOrderBy* (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -99,23 +114,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// CommonResponseObjDebugPayloadGetListAllOf
-    /// </summary>
-    [DataContract]
-    public partial class CommonResponseObjDebugPayloadGetListAllOf :  IEquatable<CommonResponseObjDebugPayloadGetListAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetListAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonResponseObjDebugPayloadGetListAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetListAllOf" /> class.
-        /// </summary>
-        /// <param name="aFilter">aFilter (required).</param>
-        /// <param name="aOrderBy">List of available values for *eOrderBy* (required).</param>
         public CommonResponseObjDebugPayloadGetListAllOf(CommonResponseFilter aFilter = default(CommonResponseFilter), Dictionary<string, string> aOrderBy = default(Dictionary<string, string>))
         {
             // to ensure "aFilter" is required (not null)

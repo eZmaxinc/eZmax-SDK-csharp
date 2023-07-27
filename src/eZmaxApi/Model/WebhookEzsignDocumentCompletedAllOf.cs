@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// WebhookEzsignDocumentCompletedAllOf
+    /// </summary>
+    [DataContract]
+    public partial class WebhookEzsignDocumentCompletedAllOf :  IEquatable<WebhookEzsignDocumentCompletedAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookEzsignDocumentCompletedAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebhookEzsignDocumentCompletedAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookEzsignDocumentCompletedAllOf" /> class.
+        /// </summary>
+        /// <param name="objEzsigndocument">objEzsigndocument (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// WebhookEzsignDocumentCompletedAllOf
-    /// </summary>
-    [DataContract]
-    public partial class WebhookEzsignDocumentCompletedAllOf :  IEquatable<WebhookEzsignDocumentCompletedAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookEzsignDocumentCompletedAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WebhookEzsignDocumentCompletedAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookEzsignDocumentCompletedAllOf" /> class.
-        /// </summary>
-        /// <param name="objEzsigndocument">objEzsigndocument (required).</param>
         public WebhookEzsignDocumentCompletedAllOf(EzsigndocumentResponse objEzsigndocument = default(EzsigndocumentResponse))
         {
             // to ensure "objEzsigndocument" is required (not null)

@@ -24,7 +24,19 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// ScimGroupMember
+    /// </summary>
+    [DataContract]
+    public partial class ScimGroupMember :  IEquatable<ScimGroupMember>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimGroupMember" /> class.
+        /// </summary>
+        /// <param name="value">value.</param>
+        /// <param name="display">display.</param>
+        /// <param name="type">type.</param>
+        /// <param name="_ref">_ref.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,20 +83,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// ScimGroupMember
-    /// </summary>
-    [DataContract]
-    public partial class ScimGroupMember :  IEquatable<ScimGroupMember>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimGroupMember" /> class.
-        /// </summary>
-        /// <param name="value">value.</param>
-        /// <param name="display">display.</param>
-        /// <param name="type">type.</param>
-        /// <param name="_ref">_ref.</param>
         public ScimGroupMember(string value = default(string), string display = default(string), string type = default(string), string _ref = default(string))
         {
             this.Value = value;

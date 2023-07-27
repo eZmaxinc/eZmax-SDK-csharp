@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Email Object
+    /// </summary>
+    [DataContract]
+    public partial class EmailRequest :  IEquatable<EmailRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmailRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EmailRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmailRequest" /> class.
+        /// </summary>
+        /// <param name="pkiEmailID">The unique ID of the Email.</param>
+        /// <param name="fkiEmailtypeID">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
+        /// <param name="sEmailAddress">The email address. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -101,24 +117,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Email Object
-    /// </summary>
-    [DataContract]
-    public partial class EmailRequest :  IEquatable<EmailRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EmailRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EmailRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EmailRequest" /> class.
-        /// </summary>
-        /// <param name="pkiEmailID">The unique ID of the Email.</param>
-        /// <param name="fkiEmailtypeID">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
-        /// <param name="sEmailAddress">The email address. (required).</param>
         public EmailRequest(int pkiEmailID = default(int), int fkiEmailtypeID = default(int), string sEmailAddress = default(string))
         {
             // to ensure "fkiEmailtypeID" is required (not null)

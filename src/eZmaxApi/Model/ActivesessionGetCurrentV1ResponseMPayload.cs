@@ -24,7 +24,51 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for GET /1/object/activesession/getCurrent
+    /// </summary>
+    [DataContract]
+    public partial class ActivesessionGetCurrentV1ResponseMPayload :  IEquatable<ActivesessionGetCurrentV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EActivesessionUsertype
+        /// </summary>
+        [DataMember(Name="eActivesessionUsertype", EmitDefaultValue=true)]
+        public FieldEActivesessionUsertype EActivesessionUsertype { get; set; }
+        /// <summary>
+        /// Gets or Sets EActivesessionOrigin
+        /// </summary>
+        [DataMember(Name="eActivesessionOrigin", EmitDefaultValue=true)]
+        public FieldEActivesessionOrigin EActivesessionOrigin { get; set; }
+        /// <summary>
+        /// Gets or Sets EActivesessionWeekdaystart
+        /// </summary>
+        [DataMember(Name="eActivesessionWeekdaystart", EmitDefaultValue=true)]
+        public FieldEActivesessionWeekdaystart EActivesessionWeekdaystart { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivesessionGetCurrentV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ActivesessionGetCurrentV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivesessionGetCurrentV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="eActivesessionUsertype">eActivesessionUsertype (required).</param>
+        /// <param name="eActivesessionOrigin">eActivesessionOrigin (required).</param>
+        /// <param name="eActivesessionWeekdaystart">eActivesessionWeekdaystart (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
+        /// <param name="bActivesessionDebug">Whether the active session is in debug or not (required).</param>
+        /// <param name="bActivesessionIssuperadmin">Whether the active session is superadmin or not (required).</param>
+        /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
+        /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype.</param>
+        /// <param name="fkiSignatureID">The unique ID of the Signature.</param>
+        /// <param name="aPkiPermissionID">An array of permissions granted to the user or api key (required).</param>
+        /// <param name="objUserReal">objUserReal (required).</param>
+        /// <param name="objUserCloned">objUserCloned.</param>
+        /// <param name="objApikey">objApikey.</param>
+        /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -236,52 +280,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for GET /1/object/activesession/getCurrent
-    /// </summary>
-    [DataContract]
-    public partial class ActivesessionGetCurrentV1ResponseMPayload :  IEquatable<ActivesessionGetCurrentV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EActivesessionUsertype
-        /// </summary>
-        [DataMember(Name="eActivesessionUsertype", EmitDefaultValue=true)]
-        public FieldEActivesessionUsertype EActivesessionUsertype { get; set; }
-        /// <summary>
-        /// Gets or Sets EActivesessionOrigin
-        /// </summary>
-        [DataMember(Name="eActivesessionOrigin", EmitDefaultValue=true)]
-        public FieldEActivesessionOrigin EActivesessionOrigin { get; set; }
-        /// <summary>
-        /// Gets or Sets EActivesessionWeekdaystart
-        /// </summary>
-        [DataMember(Name="eActivesessionWeekdaystart", EmitDefaultValue=true)]
-        public FieldEActivesessionWeekdaystart EActivesessionWeekdaystart { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionGetCurrentV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ActivesessionGetCurrentV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionGetCurrentV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="eActivesessionUsertype">eActivesessionUsertype (required).</param>
-        /// <param name="eActivesessionOrigin">eActivesessionOrigin (required).</param>
-        /// <param name="eActivesessionWeekdaystart">eActivesessionWeekdaystart (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
-        /// <param name="bActivesessionDebug">Whether the active session is in debug or not (required).</param>
-        /// <param name="bActivesessionIssuperadmin">Whether the active session is superadmin or not (required).</param>
-        /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
-        /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype.</param>
-        /// <param name="fkiSignatureID">The unique ID of the Signature.</param>
-        /// <param name="aPkiPermissionID">An array of permissions granted to the user or api key (required).</param>
-        /// <param name="objUserReal">objUserReal (required).</param>
-        /// <param name="objUserCloned">objUserCloned.</param>
-        /// <param name="objApikey">objApikey.</param>
-        /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
         public ActivesessionGetCurrentV1ResponseMPayload(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin eActivesessionOrigin = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), bool bActivesessionIssuperadmin = default(bool), string pksCustomerCode = default(string), int fkiSystemconfigurationtypeID = default(int), int fkiSignatureID = default(int), List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>))
         {
             // to ensure "eActivesessionUsertype" is required (not null)

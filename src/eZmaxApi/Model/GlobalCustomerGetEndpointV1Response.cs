@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for GET /1/customer/{pksCustomerCode}/endpoint
+    /// </summary>
+    [DataContract]
+    public partial class GlobalCustomerGetEndpointV1Response :  IEquatable<GlobalCustomerGetEndpointV1Response>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GlobalCustomerGetEndpointV1Response" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected GlobalCustomerGetEndpointV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GlobalCustomerGetEndpointV1Response" /> class.
+        /// </summary>
+        /// <param name="sEndpointURL">The endpoint&#39;s URL (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -69,22 +83,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for GET /1/customer/{pksCustomerCode}/endpoint
-    /// </summary>
-    [DataContract]
-    public partial class GlobalCustomerGetEndpointV1Response :  IEquatable<GlobalCustomerGetEndpointV1Response>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GlobalCustomerGetEndpointV1Response" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected GlobalCustomerGetEndpointV1Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GlobalCustomerGetEndpointV1Response" /> class.
-        /// </summary>
-        /// <param name="sEndpointURL">The endpoint&#39;s URL (required).</param>
         public GlobalCustomerGetEndpointV1Response(string sEndpointURL = default(string))
         {
             // to ensure "sEndpointURL" is required (not null)

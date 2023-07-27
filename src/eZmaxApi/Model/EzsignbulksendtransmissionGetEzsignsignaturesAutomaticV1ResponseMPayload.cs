@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload :  IEquatable<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aEEzsignsignatureType">All eEzsignsignatureType contained in the response (required).</param>
+        /// <param name="aObjEzsignfolder">aObjEzsignfolder (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -103,23 +118,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload :  IEquatable<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aEEzsignsignatureType">All eEzsignsignatureType contained in the response (required).</param>
-        /// <param name="aObjEzsignfolder">aObjEzsignfolder (required).</param>
         public EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload(List<FieldEEzsignsignatureType> aEEzsignsignatureType = default(List<FieldEEzsignsignatureType>), List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder = default(List<CustomEzsignfolderEzsignsignaturesAutomaticResponse>))
         {
             // to ensure "aEEzsignsignatureType" is required (not null)

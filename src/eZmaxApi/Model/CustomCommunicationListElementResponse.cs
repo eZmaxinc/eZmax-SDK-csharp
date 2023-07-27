@@ -24,7 +24,44 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Communication List Element
+    /// </summary>
+    [DataContract]
+    public partial class CustomCommunicationListElementResponse :  IEquatable<CustomCommunicationListElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets ECommunicationDirection
+        /// </summary>
+        [DataMember(Name="eCommunicationDirection", EmitDefaultValue=true)]
+        public ComputedECommunicationDirection ECommunicationDirection { get; set; }
+        /// <summary>
+        /// Gets or Sets ECommunicationImportance
+        /// </summary>
+        [DataMember(Name="eCommunicationImportance", EmitDefaultValue=true)]
+        public FieldECommunicationImportance ECommunicationImportance { get; set; }
+        /// <summary>
+        /// Gets or Sets ECommunicationType
+        /// </summary>
+        [DataMember(Name="eCommunicationType", EmitDefaultValue=true)]
+        public FieldECommunicationType ECommunicationType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomCommunicationListElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomCommunicationListElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomCommunicationListElementResponse" /> class.
+        /// </summary>
+        /// <param name="pkiCommunicationID">The unique ID of the Communication. (required).</param>
+        /// <param name="dtCreatedDate">The date and time at which the object was created (required).</param>
+        /// <param name="eCommunicationDirection">eCommunicationDirection (required).</param>
+        /// <param name="eCommunicationImportance">eCommunicationImportance (required).</param>
+        /// <param name="eCommunicationType">eCommunicationType (required).</param>
+        /// <param name="iCommunicationrecipientCount">The count of Communicationrecipient (required).</param>
+        /// <param name="sCommunicationSubject">The subject of the Communication (required).</param>
+        /// <param name="sCommunicationSender">The sender name of the Communication (required).</param>
+        /// <param name="sCommunicationRecipient">The recipients&#39; name of the Communication (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -125,45 +162,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Communication List Element
-    /// </summary>
-    [DataContract]
-    public partial class CustomCommunicationListElementResponse :  IEquatable<CustomCommunicationListElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets ECommunicationDirection
-        /// </summary>
-        [DataMember(Name="eCommunicationDirection", EmitDefaultValue=true)]
-        public ComputedECommunicationDirection ECommunicationDirection { get; set; }
-        /// <summary>
-        /// Gets or Sets ECommunicationImportance
-        /// </summary>
-        [DataMember(Name="eCommunicationImportance", EmitDefaultValue=true)]
-        public FieldECommunicationImportance ECommunicationImportance { get; set; }
-        /// <summary>
-        /// Gets or Sets ECommunicationType
-        /// </summary>
-        [DataMember(Name="eCommunicationType", EmitDefaultValue=true)]
-        public FieldECommunicationType ECommunicationType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomCommunicationListElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomCommunicationListElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomCommunicationListElementResponse" /> class.
-        /// </summary>
-        /// <param name="pkiCommunicationID">The unique ID of the Communication. (required).</param>
-        /// <param name="dtCreatedDate">The date and time at which the object was created (required).</param>
-        /// <param name="eCommunicationDirection">eCommunicationDirection (required).</param>
-        /// <param name="eCommunicationImportance">eCommunicationImportance (required).</param>
-        /// <param name="eCommunicationType">eCommunicationType (required).</param>
-        /// <param name="iCommunicationrecipientCount">The count of Communicationrecipient (required).</param>
-        /// <param name="sCommunicationSubject">The subject of the Communication (required).</param>
-        /// <param name="sCommunicationSender">The sender name of the Communication (required).</param>
-        /// <param name="sCommunicationRecipient">The recipients&#39; name of the Communication (required).</param>
         public CustomCommunicationListElementResponse(int pkiCommunicationID = default(int), string dtCreatedDate = default(string), ComputedECommunicationDirection eCommunicationDirection = default(ComputedECommunicationDirection), FieldECommunicationImportance eCommunicationImportance = default(FieldECommunicationImportance), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), int iCommunicationrecipientCount = default(int), string sCommunicationSubject = default(string), string sCommunicationSender = default(string), string sCommunicationRecipient = default(string))
         {
             // to ensure "pkiCommunicationID" is required (not null)

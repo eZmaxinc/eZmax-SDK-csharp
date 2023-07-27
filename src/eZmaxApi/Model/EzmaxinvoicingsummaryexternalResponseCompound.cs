@@ -24,7 +24,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezmaxinvoicingsummaryexternal Object
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingsummaryexternalResponseCompound :  IEquatable<EzmaxinvoicingsummaryexternalResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingsummaryexternalResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxinvoicingsummaryexternalID">The unique ID of the Ezmaxinvoicingsummaryexternal.</param>
+        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
+        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
+        /// <param name="sEzmaxinvoicingsummaryexternalDescription">The description of the Ezmaxinvoicingsummaryexternal (required).</param>
+        /// <param name="aObjEzmaxinvoicingsummaryexternaldetail">aObjEzmaxinvoicingsummaryexternaldetail (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -119,27 +138,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezmaxinvoicingsummaryexternal Object
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingsummaryexternalResponseCompound :  IEquatable<EzmaxinvoicingsummaryexternalResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingsummaryexternalResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxinvoicingsummaryexternalID">The unique ID of the Ezmaxinvoicingsummaryexternal.</param>
-        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
-        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
-        /// <param name="sEzmaxinvoicingsummaryexternalDescription">The description of the Ezmaxinvoicingsummaryexternal (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryexternaldetail">aObjEzmaxinvoicingsummaryexternaldetail (required).</param>
         public EzmaxinvoicingsummaryexternalResponseCompound(int pkiEzmaxinvoicingsummaryexternalID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string), string sEzmaxinvoicingsummaryexternalDescription = default(string), List<EzmaxinvoicingsummaryexternaldetailResponseCompound> aObjEzmaxinvoicingsummaryexternaldetail = default(List<EzmaxinvoicingsummaryexternaldetailResponseCompound>))
         {
             // to ensure "fkiBillingentityexternalID" is required (not null)

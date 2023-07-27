@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Emailstatic Object
+    /// </summary>
+    [DataContract]
+    public partial class EmailstaticResponse :  IEquatable<EmailstaticResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmailstaticResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EmailstaticResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmailstaticResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEmailstaticID">The unique ID of the Emailstatic (required).</param>
+        /// <param name="sEmailstaticAddress">The email address. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,23 +96,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Emailstatic Object
-    /// </summary>
-    [DataContract]
-    public partial class EmailstaticResponse :  IEquatable<EmailstaticResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EmailstaticResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EmailstaticResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EmailstaticResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEmailstaticID">The unique ID of the Emailstatic (required).</param>
-        /// <param name="sEmailstaticAddress">The email address. (required).</param>
         public EmailstaticResponse(int pkiEmailstaticID = default(int), string sEmailstaticAddress = default(string))
         {
             // to ensure "pkiEmailstaticID" is required (not null)

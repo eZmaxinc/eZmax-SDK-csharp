@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for POST /1/object/variableexpense
+    /// </summary>
+    [DataContract]
+    public partial class VariableexpenseCreateObjectV1ResponseMPayload :  IEquatable<VariableexpenseCreateObjectV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected VariableexpenseCreateObjectV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aPkiVariableexpenseID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -103,22 +117,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for POST /1/object/variableexpense
-    /// </summary>
-    [DataContract]
-    public partial class VariableexpenseCreateObjectV1ResponseMPayload :  IEquatable<VariableexpenseCreateObjectV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected VariableexpenseCreateObjectV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aPkiVariableexpenseID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
         public VariableexpenseCreateObjectV1ResponseMPayload(List<int> aPkiVariableexpenseID = default(List<int>))
         {
             // to ensure "aPkiVariableexpenseID" is required (not null)

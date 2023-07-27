@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignbulksendtransmission Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksendtransmissionResponse :  IEquatable<EzsignbulksendtransmissionResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendtransmissionResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignbulksendtransmissionID">The unique ID of the Ezsignbulksendtransmission (required).</param>
+        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
+        /// <param name="iEzsignbulksendtransmissionErrors">The number of errors during the Ezsignbulksendtransmission (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -105,26 +123,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignbulksendtransmission Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksendtransmissionResponse :  IEquatable<EzsignbulksendtransmissionResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksendtransmissionResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignbulksendtransmissionID">The unique ID of the Ezsignbulksendtransmission (required).</param>
-        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
-        /// <param name="iEzsignbulksendtransmissionErrors">The number of errors during the Ezsignbulksendtransmission (required).</param>
-        /// <param name="objAudit">objAudit (required).</param>
         public EzsignbulksendtransmissionResponse(int pkiEzsignbulksendtransmissionID = default(int), int fkiEzsignbulksendID = default(int), string sEzsignbulksendtransmissionDescription = default(string), int iEzsignbulksendtransmissionErrors = default(int), CommonAudit objAudit = default(CommonAudit))
         {
             // to ensure "pkiEzsignbulksendtransmissionID" is required (not null)

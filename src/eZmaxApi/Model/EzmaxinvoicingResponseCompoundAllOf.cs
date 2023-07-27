@@ -24,7 +24,29 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzmaxinvoicingResponseCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingResponseCompoundAllOf :  IEquatable<EzmaxinvoicingResponseCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingResponseCompoundAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingResponseCompoundAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingResponseCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="objEzmaxinvoicingcontract">objEzmaxinvoicingcontract (required).</param>
+        /// <param name="objEzmaxpricing">objEzmaxpricing (required).</param>
+        /// <param name="aObjEzmaxinvoicingsummaryglobal">aObjEzmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="aObjEzmaxinvoicingsummaryexternal">aObjEzmaxinvoicingsummaryexternal (required).</param>
+        /// <param name="aObjEzmaxinvoicingsummaryinternal">aObjEzmaxinvoicingsummaryinternal (required).</param>
+        /// <param name="aObjEzmaxinvoicingagent">aObjEzmaxinvoicingagent (required).</param>
+        /// <param name="aObjEzmaxinvoicinguser">aObjEzmaxinvoicinguser (required).</param>
+        /// <param name="aObjEzmaxinvoicingezsignfolder">aObjEzmaxinvoicingezsignfolder (required).</param>
+        /// <param name="aObjEzmaxinvoicingezsigndocument">aObjEzmaxinvoicingezsigndocument (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -197,30 +219,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzmaxinvoicingResponseCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingResponseCompoundAllOf :  IEquatable<EzmaxinvoicingResponseCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingResponseCompoundAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingResponseCompoundAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingResponseCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="objEzmaxinvoicingcontract">objEzmaxinvoicingcontract (required).</param>
-        /// <param name="objEzmaxpricing">objEzmaxpricing (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryglobal">aObjEzmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryexternal">aObjEzmaxinvoicingsummaryexternal (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryinternal">aObjEzmaxinvoicingsummaryinternal (required).</param>
-        /// <param name="aObjEzmaxinvoicingagent">aObjEzmaxinvoicingagent (required).</param>
-        /// <param name="aObjEzmaxinvoicinguser">aObjEzmaxinvoicinguser (required).</param>
-        /// <param name="aObjEzmaxinvoicingezsignfolder">aObjEzmaxinvoicingezsignfolder (required).</param>
-        /// <param name="aObjEzmaxinvoicingezsigndocument">aObjEzmaxinvoicingezsigndocument (required).</param>
         public EzmaxinvoicingResponseCompoundAllOf(EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract = default(EzmaxinvoicingcontractResponseCompound), CustomEzmaxpricingResponse objEzmaxpricing = default(CustomEzmaxpricingResponse), List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal = default(List<EzmaxinvoicingsummaryglobalResponseCompound>), List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal = default(List<EzmaxinvoicingsummaryexternalResponseCompound>), List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal = default(List<EzmaxinvoicingsummaryinternalResponseCompound>), List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent = default(List<EzmaxinvoicingagentResponseCompound>), List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser = default(List<EzmaxinvoicinguserResponseCompound>), List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder = default(List<CustomEzmaxinvoicingEzsignfolderResponse>), List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument = default(List<CustomEzmaxinvoicingEzsigndocumentResponse>))
         {
             // to ensure "objEzmaxinvoicingcontract" is required (not null)

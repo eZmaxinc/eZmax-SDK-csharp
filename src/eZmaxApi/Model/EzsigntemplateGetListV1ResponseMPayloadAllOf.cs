@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsigntemplateGetListV1ResponseMPayloadAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplateGetListV1ResponseMPayloadAllOf :  IEquatable<EzsigntemplateGetListV1ResponseMPayloadAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplateGetListV1ResponseMPayloadAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjEzsigntemplate">aObjEzsigntemplate (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsigntemplateGetListV1ResponseMPayloadAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplateGetListV1ResponseMPayloadAllOf :  IEquatable<EzsigntemplateGetListV1ResponseMPayloadAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateGetListV1ResponseMPayloadAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        /// <param name="aObjEzsigntemplate">aObjEzsigntemplate (required).</param>
         public EzsigntemplateGetListV1ResponseMPayloadAllOf(List<EzsigntemplateListElement> aObjEzsigntemplate = default(List<EzsigntemplateListElement>))
         {
             // to ensure "aObjEzsigntemplate" is required (not null)

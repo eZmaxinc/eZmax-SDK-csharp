@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// CustomEzmaxinvoicingEzsigndocumentResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzmaxinvoicingEzsigndocumentResponseAllOf :  IEquatable<CustomEzmaxinvoicingEzsigndocumentResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzmaxinvoicingEzsigndocumentResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzmaxinvoicingEzsigndocumentResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzmaxinvoicingEzsigndocumentResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="sName">sName (required).</param>
+        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
+        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
+        /// <param name="bEzsignfolderAllowed">Whether you have access to the Ezsignfolder or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -99,26 +117,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// CustomEzmaxinvoicingEzsigndocumentResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzmaxinvoicingEzsigndocumentResponseAllOf :  IEquatable<CustomEzmaxinvoicingEzsigndocumentResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzmaxinvoicingEzsigndocumentResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzmaxinvoicingEzsigndocumentResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzmaxinvoicingEzsigndocumentResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="sName">sName (required).</param>
-        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
-        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="bEzsignfolderAllowed">Whether you have access to the Ezsignfolder or not (required).</param>
         public CustomEzmaxinvoicingEzsigndocumentResponseAllOf(int fkiEzsignfolderID = default(int), string sName = default(string), string sEzsignfolderDescription = default(string), string sEzsigndocumentName = default(string), bool bEzsignfolderAllowed = default(bool))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)

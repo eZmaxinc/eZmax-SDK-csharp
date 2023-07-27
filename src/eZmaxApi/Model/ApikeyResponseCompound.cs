@@ -24,7 +24,29 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Apikey Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class ApikeyResponseCompound :  IEquatable<ApikeyResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ApikeyResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
+        /// <param name="objContactName">objContactName (required).</param>
+        /// <param name="sApikeyApikey">The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
+        /// <param name="sApikeySecret">The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
+        /// <param name="bApikeyIsactive">Whether the apikey is active or not (required).</param>
+        /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
+        /// <param name="objAudit">objAudit (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -117,30 +139,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Apikey Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class ApikeyResponseCompound :  IEquatable<ApikeyResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ApikeyResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
-        /// <param name="objContactName">objContactName (required).</param>
-        /// <param name="sApikeyApikey">The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
-        /// <param name="sApikeySecret">The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
-        /// <param name="bApikeyIsactive">Whether the apikey is active or not (required).</param>
-        /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
-        /// <param name="objAudit">objAudit (required).</param>
         public ApikeyResponseCompound(int pkiApikeyID = default(int), int fkiUserID = default(int), MultilingualApikeyDescription objApikeyDescription = default(MultilingualApikeyDescription), CustomContactNameResponse objContactName = default(CustomContactNameResponse), string sApikeyApikey = default(string), string sApikeySecret = default(string), bool bApikeyIsactive = default(bool), bool bApikeyIssigned = default(bool), CommonAudit objAudit = default(CommonAudit))
         {
             // to ensure "pkiApikeyID" is required (not null)

@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// PhonetypeGetAutocompleteV2ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class PhonetypeGetAutocompleteV2ResponseAllOf :  IEquatable<PhonetypeGetAutocompleteV2ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PhonetypeGetAutocompleteV2ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PhonetypeGetAutocompleteV2ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PhonetypeGetAutocompleteV2ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// PhonetypeGetAutocompleteV2ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class PhonetypeGetAutocompleteV2ResponseAllOf :  IEquatable<PhonetypeGetAutocompleteV2ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PhonetypeGetAutocompleteV2ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PhonetypeGetAutocompleteV2ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PhonetypeGetAutocompleteV2ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public PhonetypeGetAutocompleteV2ResponseAllOf(PhonetypeGetAutocompleteV2ResponseMPayload mPayload = default(PhonetypeGetAutocompleteV2ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

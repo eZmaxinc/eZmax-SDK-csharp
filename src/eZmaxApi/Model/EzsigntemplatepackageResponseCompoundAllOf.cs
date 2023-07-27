@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsigntemplatepackageResponseCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatepackageResponseCompoundAllOf :  IEquatable<EzsigntemplatepackageResponseCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackageResponseCompoundAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatepackageResponseCompoundAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackageResponseCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjEzsigntemplatepackagesigner">aObjEzsigntemplatepackagesigner (required).</param>
+        /// <param name="aObjEzsigntemplatepackagemembership">aObjEzsigntemplatepackagemembership (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -99,23 +114,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsigntemplatepackageResponseCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatepackageResponseCompoundAllOf :  IEquatable<EzsigntemplatepackageResponseCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackageResponseCompoundAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatepackageResponseCompoundAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackageResponseCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="aObjEzsigntemplatepackagesigner">aObjEzsigntemplatepackagesigner (required).</param>
-        /// <param name="aObjEzsigntemplatepackagemembership">aObjEzsigntemplatepackagemembership (required).</param>
         public EzsigntemplatepackageResponseCompoundAllOf(List<EzsigntemplatepackagesignerResponseCompound> aObjEzsigntemplatepackagesigner = default(List<EzsigntemplatepackagesignerResponseCompound>), List<EzsigntemplatepackagemembershipResponseCompound> aObjEzsigntemplatepackagemembership = default(List<EzsigntemplatepackagemembershipResponseCompound>))
         {
             // to ensure "aObjEzsigntemplatepackagesigner" is required (not null)

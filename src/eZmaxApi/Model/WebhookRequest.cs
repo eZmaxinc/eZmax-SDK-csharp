@@ -24,7 +24,45 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Webhook Object
+    /// </summary>
+    [DataContract]
+    public partial class WebhookRequest :  IEquatable<WebhookRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EWebhookModule
+        /// </summary>
+        [DataMember(Name="eWebhookModule", EmitDefaultValue=true)]
+        public FieldEWebhookModule EWebhookModule { get; set; }
+        /// <summary>
+        /// Gets or Sets EWebhookEzsignevent
+        /// </summary>
+        [DataMember(Name="eWebhookEzsignevent", EmitDefaultValue=false)]
+        public FieldEWebhookEzsignevent? EWebhookEzsignevent { get; set; }
+        /// <summary>
+        /// Gets or Sets EWebhookManagementevent
+        /// </summary>
+        [DataMember(Name="eWebhookManagementevent", EmitDefaultValue=false)]
+        public FieldEWebhookManagementevent? EWebhookManagementevent { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebhookRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookRequest" /> class.
+        /// </summary>
+        /// <param name="pkiWebhookID">The unique ID of the Webhook.</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
+        /// <param name="sWebhookDescription">The description of the Webhook (required).</param>
+        /// <param name="eWebhookModule">eWebhookModule (required).</param>
+        /// <param name="eWebhookEzsignevent">eWebhookEzsignevent.</param>
+        /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
+        /// <param name="sWebhookUrl">The URL of the Webhook callback (required).</param>
+        /// <param name="sWebhookEmailfailed">The email that will receive the Webhook in case all attempts fail (required).</param>
+        /// <param name="bWebhookIsactive">Whether the Webhook is active or not (required).</param>
+        /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -120,46 +158,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Webhook Object
-    /// </summary>
-    [DataContract]
-    public partial class WebhookRequest :  IEquatable<WebhookRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EWebhookModule
-        /// </summary>
-        [DataMember(Name="eWebhookModule", EmitDefaultValue=true)]
-        public FieldEWebhookModule EWebhookModule { get; set; }
-        /// <summary>
-        /// Gets or Sets EWebhookEzsignevent
-        /// </summary>
-        [DataMember(Name="eWebhookEzsignevent", EmitDefaultValue=false)]
-        public FieldEWebhookEzsignevent? EWebhookEzsignevent { get; set; }
-        /// <summary>
-        /// Gets or Sets EWebhookManagementevent
-        /// </summary>
-        [DataMember(Name="eWebhookManagementevent", EmitDefaultValue=false)]
-        public FieldEWebhookManagementevent? EWebhookManagementevent { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WebhookRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookRequest" /> class.
-        /// </summary>
-        /// <param name="pkiWebhookID">The unique ID of the Webhook.</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
-        /// <param name="sWebhookDescription">The description of the Webhook (required).</param>
-        /// <param name="eWebhookModule">eWebhookModule (required).</param>
-        /// <param name="eWebhookEzsignevent">eWebhookEzsignevent.</param>
-        /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
-        /// <param name="sWebhookUrl">The URL of the Webhook callback (required).</param>
-        /// <param name="sWebhookEmailfailed">The email that will receive the Webhook in case all attempts fail (required).</param>
-        /// <param name="bWebhookIsactive">Whether the Webhook is active or not (required).</param>
-        /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
         public WebhookRequest(int pkiWebhookID = default(int), int fkiEzsignfoldertypeID = default(int), string sWebhookDescription = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), bool bWebhookIsactive = default(bool), bool bWebhookSkipsslvalidation = default(bool))
         {
             // to ensure "sWebhookDescription" is required (not null)

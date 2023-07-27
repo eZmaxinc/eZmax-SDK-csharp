@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsignbulksend Object and children
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksendRequestCompound :  IEquatable<EzsignbulksendRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignbulksendID">The unique ID of the Ezsignbulksend.</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sEzsignbulksendDescription">The description of the Ezsignbulksend (required).</param>
+        /// <param name="tEzsignbulksendNote">Note about the Ezsignbulksend (required).</param>
+        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
+        /// <param name="bEzsignbulksendIsactive">Whether the Ezsignbulksend is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -134,28 +154,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignbulksend Object and children
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksendRequestCompound :  IEquatable<EzsignbulksendRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksendRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignbulksendID">The unique ID of the Ezsignbulksend.</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sEzsignbulksendDescription">The description of the Ezsignbulksend (required).</param>
-        /// <param name="tEzsignbulksendNote">Note about the Ezsignbulksend (required).</param>
-        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
-        /// <param name="bEzsignbulksendIsactive">Whether the Ezsignbulksend is active or not (required).</param>
         public EzsignbulksendRequestCompound(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsignbulksendDescription = default(string), string tEzsignbulksendNote = default(string), bool bEzsignbulksendNeedvalidation = default(bool), bool bEzsignbulksendIsactive = default(bool))
         {
             // to ensure "fkiEzsignfoldertypeID" is required (not null)

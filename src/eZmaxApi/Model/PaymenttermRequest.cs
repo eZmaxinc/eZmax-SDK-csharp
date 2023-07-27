@@ -24,7 +24,31 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Paymentterm Object
+    /// </summary>
+    [DataContract]
+    public partial class PaymenttermRequest :  IEquatable<PaymenttermRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EPaymenttermType
+        /// </summary>
+        [DataMember(Name="ePaymenttermType", EmitDefaultValue=true)]
+        public FieldEPaymenttermType EPaymenttermType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymenttermRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PaymenttermRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymenttermRequest" /> class.
+        /// </summary>
+        /// <param name="pkiPaymenttermID">The unique ID of the Paymentterm.</param>
+        /// <param name="sPaymenttermCode">The code of the Paymentterm (required).</param>
+        /// <param name="ePaymenttermType">ePaymenttermType (required).</param>
+        /// <param name="iPaymenttermDay">The day of the Paymentterm (required).</param>
+        /// <param name="objPaymenttermDescription">objPaymenttermDescription (required).</param>
+        /// <param name="bPaymenttermIsactive">Whether the Paymentterm is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -105,32 +129,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Paymentterm Object
-    /// </summary>
-    [DataContract]
-    public partial class PaymenttermRequest :  IEquatable<PaymenttermRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EPaymenttermType
-        /// </summary>
-        [DataMember(Name="ePaymenttermType", EmitDefaultValue=true)]
-        public FieldEPaymenttermType EPaymenttermType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PaymenttermRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PaymenttermRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PaymenttermRequest" /> class.
-        /// </summary>
-        /// <param name="pkiPaymenttermID">The unique ID of the Paymentterm.</param>
-        /// <param name="sPaymenttermCode">The code of the Paymentterm (required).</param>
-        /// <param name="ePaymenttermType">ePaymenttermType (required).</param>
-        /// <param name="iPaymenttermDay">The day of the Paymentterm (required).</param>
-        /// <param name="objPaymenttermDescription">objPaymenttermDescription (required).</param>
-        /// <param name="bPaymenttermIsactive">Whether the Paymentterm is active or not (required).</param>
         public PaymenttermRequest(int pkiPaymenttermID = default(int), string sPaymenttermCode = default(string), FieldEPaymenttermType ePaymenttermType = default(FieldEPaymenttermType), int iPaymenttermDay = default(int), MultilingualPaymenttermDescription objPaymenttermDescription = default(MultilingualPaymenttermDescription), bool bPaymenttermIsactive = default(bool))
         {
             // to ensure "sPaymenttermCode" is required (not null)

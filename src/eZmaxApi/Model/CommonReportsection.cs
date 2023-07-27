@@ -24,7 +24,30 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
+    /// </summary>
+    [DataContract]
+    public partial class CommonReportsection :  IEquatable<CommonReportsection>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EReportsectionHorizontalalignment
+        /// </summary>
+        [DataMember(Name="eReportsectionHorizontalalignment", EmitDefaultValue=true)]
+        public EnumHorizontalalignment EReportsectionHorizontalalignment { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonReportsection" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonReportsection() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonReportsection" /> class.
+        /// </summary>
+        /// <param name="aObjReportsubsection">aObjReportsubsection (required).</param>
+        /// <param name="aObjReportcolumn">aObjReportcolumn (required).</param>
+        /// <param name="eReportsectionHorizontalalignment">eReportsectionHorizontalalignment (required).</param>
+        /// <param name="iReportsectionColumncount">The number of Reportcolumns in the Reportsection (required).</param>
+        /// <param name="iReportsectionWidth">The combined width of all the Reportcolumns in the Reportsection (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -119,31 +142,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
-    /// </summary>
-    [DataContract]
-    public partial class CommonReportsection :  IEquatable<CommonReportsection>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EReportsectionHorizontalalignment
-        /// </summary>
-        [DataMember(Name="eReportsectionHorizontalalignment", EmitDefaultValue=true)]
-        public EnumHorizontalalignment EReportsectionHorizontalalignment { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonReportsection" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonReportsection() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonReportsection" /> class.
-        /// </summary>
-        /// <param name="aObjReportsubsection">aObjReportsubsection (required).</param>
-        /// <param name="aObjReportcolumn">aObjReportcolumn (required).</param>
-        /// <param name="eReportsectionHorizontalalignment">eReportsectionHorizontalalignment (required).</param>
-        /// <param name="iReportsectionColumncount">The number of Reportcolumns in the Reportsection (required).</param>
-        /// <param name="iReportsectionWidth">The combined width of all the Reportcolumns in the Reportsection (required).</param>
         public CommonReportsection(List<CommonReportsubsection> aObjReportsubsection = default(List<CommonReportsubsection>), List<CommonReportcolumn> aObjReportcolumn = default(List<CommonReportcolumn>), EnumHorizontalalignment eReportsectionHorizontalalignment = default(EnumHorizontalalignment), int iReportsectionColumncount = default(int), int iReportsectionWidth = default(int))
         {
             // to ensure "aObjReportsubsection" is required (not null)

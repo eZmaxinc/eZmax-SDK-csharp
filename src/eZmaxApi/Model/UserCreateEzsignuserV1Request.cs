@@ -24,7 +24,28 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /1/module/user/createEzsignuser
+    /// </summary>
+    [DataContract]
+    public partial class UserCreateEzsignuserV1Request :  IEquatable<UserCreateEzsignuserV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserCreateEzsignuserV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1Request" /> class.
+        /// </summary>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sEmailAddress">The email address. (required).</param>
+        /// <param name="sPhoneRegion">The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
+        /// <param name="sPhoneExchange">The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
+        /// <param name="sPhoneNumber">The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
+        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -163,29 +184,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/module/user/createEzsignuser
-    /// </summary>
-    [DataContract]
-    public partial class UserCreateEzsignuserV1Request :  IEquatable<UserCreateEzsignuserV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserCreateEzsignuserV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1Request" /> class.
-        /// </summary>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sEmailAddress">The email address. (required).</param>
-        /// <param name="sPhoneRegion">The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
-        /// <param name="sPhoneExchange">The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
-        /// <param name="sPhoneNumber">The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
-        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
         public UserCreateEzsignuserV1Request(int fkiLanguageID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sEmailAddress = default(string), string sPhoneRegion = default(string), string sPhoneExchange = default(string), string sPhoneNumber = default(string), string sPhoneExtension = default(string))
         {
             // to ensure "fkiLanguageID" is required (not null)

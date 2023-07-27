@@ -24,7 +24,53 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+    /// <summary>
+    /// Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
+    /// </summary>
+    [DataContract]
+    public partial class EzsignsignatureSignV1Request :  IEquatable<EzsignsignatureSignV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
+        /// </summary>
+        /// <value>Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EAttachmentsConfirmationDecisionEnum
+        {
+            /// <summary>
+            /// Enum Accepted for value: Accepted
+            /// </summary>
+            [EnumMember(Value = "Accepted")]
+            Accepted = 1,
 
+            /// <summary>
+            /// Enum Refused for value: Refused
+            /// </summary>
+            [EnumMember(Value = "Refused")]
+            Refused = 2
+
+        }
+
+        /// <summary>
+        /// Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
+        /// </summary>
+        /// <value>Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**</value>
+        [DataMember(Name="eAttachmentsConfirmationDecision", EmitDefaultValue=false)]
+        public EAttachmentsConfirmationDecisionEnum? EAttachmentsConfirmationDecision { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignatureSignV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignsignatureSignV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignatureSignV1Request" /> class.
+        /// </summary>
+        /// <param name="sValue">The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**.</param>
+        /// <param name="eAttachmentsConfirmationDecision">Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
+        /// <param name="sAttachmentsRefusalReason">The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
+        /// <param name="sSvg">The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false.</param>
+        /// <param name="aObjFile">aObjFile.</param>
+        /// <param name="bIsAutomatic">Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**.  (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -105,54 +151,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
-    /// </summary>
-    [DataContract]
-    public partial class EzsignsignatureSignV1Request :  IEquatable<EzsignsignatureSignV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
-        /// </summary>
-        /// <value>Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EAttachmentsConfirmationDecisionEnum
-        {
-            /// <summary>
-            /// Enum Accepted for value: Accepted
-            /// </summary>
-            [EnumMember(Value = "Accepted")]
-            Accepted = 1,
-
-            /// <summary>
-            /// Enum Refused for value: Refused
-            /// </summary>
-            [EnumMember(Value = "Refused")]
-            Refused = 2
-
-        }
-
-        /// <summary>
-        /// Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
-        /// </summary>
-        /// <value>Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**</value>
-        [DataMember(Name="eAttachmentsConfirmationDecision", EmitDefaultValue=false)]
-        public EAttachmentsConfirmationDecisionEnum? EAttachmentsConfirmationDecision { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignatureSignV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignsignatureSignV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignatureSignV1Request" /> class.
-        /// </summary>
-        /// <param name="sValue">The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**.</param>
-        /// <param name="eAttachmentsConfirmationDecision">Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
-        /// <param name="sAttachmentsRefusalReason">The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
-        /// <param name="sSvg">The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false.</param>
-        /// <param name="aObjFile">aObjFile.</param>
-        /// <param name="bIsAutomatic">Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**.  (required).</param>
         public EzsignsignatureSignV1Request(string sValue = default(string), EAttachmentsConfirmationDecisionEnum? eAttachmentsConfirmationDecision = default(EAttachmentsConfirmationDecisionEnum?), string sAttachmentsRefusalReason = default(string), string sSvg = default(string), List<CommonFile> aObjFile = default(List<CommonFile>), bool bIsAutomatic = default(bool))
         {
             // to ensure "bIsAutomatic" is required (not null)

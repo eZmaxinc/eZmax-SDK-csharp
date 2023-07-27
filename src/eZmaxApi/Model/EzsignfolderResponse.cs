@@ -24,7 +24,51 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignfolder Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfolderResponse :  IEquatable<EzsignfolderResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignfolderSendreminderfrequency
+        /// </summary>
+        [DataMember(Name="eEzsignfolderSendreminderfrequency", EmitDefaultValue=false)]
+        public FieldEEzsignfolderSendreminderfrequency? EEzsignfolderSendreminderfrequency { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignfolderStep
+        /// </summary>
+        [DataMember(Name="eEzsignfolderStep", EmitDefaultValue=false)]
+        public FieldEEzsignfolderStep? EEzsignfolderStep { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfolderResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester.</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester.</param>
+        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
+        /// <param name="sEzsigntsarequirementDescriptionX">The description of the Ezsigntsarequirement in the language of the requester.</param>
+        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
+        /// <param name="tEzsignfolderNote">Note about the Ezsignfolder.</param>
+        /// <param name="bEzsignfolderIsdisposable">If the Ezsigndocument can be disposed.</param>
+        /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency.</param>
+        /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
+        /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed..</param>
+        /// <param name="dtEzsignfolderSentdate">The date and time at which the Ezsignfolder was sent the last time..</param>
+        /// <param name="dtEzsignfolderScheduledarchive">The scheduled date and time at which the Ezsignfolder should be archived..</param>
+        /// <param name="dtEzsignfolderScheduleddispose">The scheduled date at which the Ezsignfolder should be Disposed..</param>
+        /// <param name="eEzsignfolderStep">eEzsignfolderStep.</param>
+        /// <param name="dtEzsignfolderClose">The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely..</param>
+        /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent..</param>
+        /// <param name="objAudit">objAudit.</param>
+        /// <param name="sEzsignfolderExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -179,52 +223,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignfolder Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfolderResponse :  IEquatable<EzsignfolderResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignfolderSendreminderfrequency
-        /// </summary>
-        [DataMember(Name="eEzsignfolderSendreminderfrequency", EmitDefaultValue=false)]
-        public FieldEEzsignfolderSendreminderfrequency? EEzsignfolderSendreminderfrequency { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignfolderStep
-        /// </summary>
-        [DataMember(Name="eEzsignfolderStep", EmitDefaultValue=false)]
-        public FieldEEzsignfolderStep? EEzsignfolderStep { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfolderResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester.</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester.</param>
-        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
-        /// <param name="sEzsigntsarequirementDescriptionX">The description of the Ezsigntsarequirement in the language of the requester.</param>
-        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
-        /// <param name="tEzsignfolderNote">Note about the Ezsignfolder.</param>
-        /// <param name="bEzsignfolderIsdisposable">If the Ezsigndocument can be disposed.</param>
-        /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency.</param>
-        /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
-        /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed..</param>
-        /// <param name="dtEzsignfolderSentdate">The date and time at which the Ezsignfolder was sent the last time..</param>
-        /// <param name="dtEzsignfolderScheduledarchive">The scheduled date and time at which the Ezsignfolder should be archived..</param>
-        /// <param name="dtEzsignfolderScheduleddispose">The scheduled date at which the Ezsignfolder should be Disposed..</param>
-        /// <param name="eEzsignfolderStep">eEzsignfolderStep.</param>
-        /// <param name="dtEzsignfolderClose">The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely..</param>
-        /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent..</param>
-        /// <param name="objAudit">objAudit.</param>
-        /// <param name="sEzsignfolderExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
         public EzsignfolderResponse(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), bool bEzsignfolderIsdisposable = default(bool), FieldEEzsignfolderSendreminderfrequency? eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency?), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddispose = default(string), FieldEEzsignfolderStep? eEzsignfolderStep = default(FieldEEzsignfolderStep?), string dtEzsignfolderClose = default(string), string tEzsignfolderMessage = default(string), CommonAudit objAudit = default(CommonAudit), string sEzsignfolderExternalid = default(string))
         {
             // to ensure "pkiEzsignfolderID" is required (not null)

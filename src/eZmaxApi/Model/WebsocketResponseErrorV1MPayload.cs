@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for Websocket Error V1
+    /// </summary>
+    [DataContract]
+    public partial class WebsocketResponseErrorV1MPayload :  IEquatable<WebsocketResponseErrorV1MPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EErrorCode
+        /// </summary>
+        [DataMember(Name="eErrorCode", EmitDefaultValue=true)]
+        public FieldEErrorCode EErrorCode { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebsocketResponseErrorV1MPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebsocketResponseErrorV1MPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebsocketResponseErrorV1MPayload" /> class.
+        /// </summary>
+        /// <param name="sErrorMessage">The message giving details about the error (required).</param>
+        /// <param name="eErrorCode">eErrorCode (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -77,28 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for Websocket Error V1
-    /// </summary>
-    [DataContract]
-    public partial class WebsocketResponseErrorV1MPayload :  IEquatable<WebsocketResponseErrorV1MPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EErrorCode
-        /// </summary>
-        [DataMember(Name="eErrorCode", EmitDefaultValue=true)]
-        public FieldEErrorCode EErrorCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebsocketResponseErrorV1MPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WebsocketResponseErrorV1MPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebsocketResponseErrorV1MPayload" /> class.
-        /// </summary>
-        /// <param name="sErrorMessage">The message giving details about the error (required).</param>
-        /// <param name="eErrorCode">eErrorCode (required).</param>
         public WebsocketResponseErrorV1MPayload(string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode))
         {
             // to ensure "sErrorMessage" is required (not null)

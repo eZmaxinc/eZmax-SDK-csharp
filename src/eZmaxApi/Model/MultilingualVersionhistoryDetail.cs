@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Detail of the Versionhistory
+    /// </summary>
+    [DataContract]
+    public partial class MultilingualVersionhistoryDetail :  IEquatable<MultilingualVersionhistoryDetail>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MultilingualVersionhistoryDetail" /> class.
+        /// </summary>
+        /// <param name="tVersionhistoryDetail1">Detail of the Versionhistory in French.</param>
+        /// <param name="tVersionhistoryDetail2">Detail of the Versionhistory in English.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,18 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Detail of the Versionhistory
-    /// </summary>
-    [DataContract]
-    public partial class MultilingualVersionhistoryDetail :  IEquatable<MultilingualVersionhistoryDetail>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MultilingualVersionhistoryDetail" /> class.
-        /// </summary>
-        /// <param name="tVersionhistoryDetail1">Detail of the Versionhistory in French.</param>
-        /// <param name="tVersionhistoryDetail2">Detail of the Versionhistory in English.</param>
         public MultilingualVersionhistoryDetail(string tVersionhistoryDetail1 = default(string), string tVersionhistoryDetail2 = default(string))
         {
             this.TVersionhistoryDetail1 = tVersionhistoryDetail1;

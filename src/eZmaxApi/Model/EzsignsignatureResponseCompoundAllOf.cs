@@ -24,7 +24,18 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsignsignatureResponseCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsignsignatureResponseCompoundAllOf :  IEquatable<EzsignsignatureResponseCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignatureResponseCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
+        /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
+        /// <param name="objCreditcardtransaction">objCreditcardtransaction.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -82,19 +93,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsignsignatureResponseCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsignsignatureResponseCompoundAllOf :  IEquatable<EzsignsignatureResponseCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignatureResponseCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
-        /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
-        /// <param name="objCreditcardtransaction">objCreditcardtransaction.</param>
         public EzsignsignatureResponseCompoundAllOf(bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateResponseCompound>), CustomCreditcardtransactionResponse objCreditcardtransaction = default(CustomCreditcardtransactionResponse))
         {
             this.BEzsignsignatureCustomdate = bEzsignsignatureCustomdate;

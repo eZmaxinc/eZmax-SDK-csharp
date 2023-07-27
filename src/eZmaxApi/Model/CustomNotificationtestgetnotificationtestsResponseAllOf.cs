@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// CustomNotificationtestgetnotificationtestsResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class CustomNotificationtestgetnotificationtestsResponseAllOf :  IEquatable<CustomNotificationtestgetnotificationtestsResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets ENotificationpreferenceStatus
+        /// </summary>
+        [DataMember(Name="eNotificationpreferenceStatus", EmitDefaultValue=true)]
+        public FieldENotificationpreferenceStatus ENotificationpreferenceStatus { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomNotificationtestgetnotificationtestsResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomNotificationtestgetnotificationtestsResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomNotificationtestgetnotificationtestsResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="eNotificationpreferenceStatus">eNotificationpreferenceStatus (required).</param>
+        /// <param name="iNotificationtest">The number of elements returned by the Notificationtest (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -75,28 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// CustomNotificationtestgetnotificationtestsResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class CustomNotificationtestgetnotificationtestsResponseAllOf :  IEquatable<CustomNotificationtestgetnotificationtestsResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets ENotificationpreferenceStatus
-        /// </summary>
-        [DataMember(Name="eNotificationpreferenceStatus", EmitDefaultValue=true)]
-        public FieldENotificationpreferenceStatus ENotificationpreferenceStatus { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomNotificationtestgetnotificationtestsResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomNotificationtestgetnotificationtestsResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomNotificationtestgetnotificationtestsResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="eNotificationpreferenceStatus">eNotificationpreferenceStatus (required).</param>
-        /// <param name="iNotificationtest">The number of elements returned by the Notificationtest (required).</param>
         public CustomNotificationtestgetnotificationtestsResponseAllOf(FieldENotificationpreferenceStatus eNotificationpreferenceStatus = default(FieldENotificationpreferenceStatus), int iNotificationtest = default(int))
         {
             // to ensure "eNotificationpreferenceStatus" is required (not null)

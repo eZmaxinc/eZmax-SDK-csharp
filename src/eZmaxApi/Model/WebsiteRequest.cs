@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Website Object
+    /// </summary>
+    [DataContract]
+    public partial class WebsiteRequest :  IEquatable<WebsiteRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebsiteRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebsiteRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebsiteRequest" /> class.
+        /// </summary>
+        /// <param name="fkiWebsitetypeID">The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey| (required).</param>
+        /// <param name="sWebsiteAddress">The URL of the website. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -99,23 +114,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Website Object
-    /// </summary>
-    [DataContract]
-    public partial class WebsiteRequest :  IEquatable<WebsiteRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebsiteRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WebsiteRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebsiteRequest" /> class.
-        /// </summary>
-        /// <param name="fkiWebsitetypeID">The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey| (required).</param>
-        /// <param name="sWebsiteAddress">The URL of the website. (required).</param>
         public WebsiteRequest(int fkiWebsitetypeID = default(int), string sWebsiteAddress = default(string))
         {
             // to ensure "fkiWebsitetypeID" is required (not null)

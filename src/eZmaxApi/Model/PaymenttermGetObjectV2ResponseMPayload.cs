@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for GET /2/object/paymentterm/{pkiPaymenttermID}
+    /// </summary>
+    [DataContract]
+    public partial class PaymenttermGetObjectV2ResponseMPayload :  IEquatable<PaymenttermGetObjectV2ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymenttermGetObjectV2ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PaymenttermGetObjectV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymenttermGetObjectV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="objPaymentterm">objPaymentterm (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for GET /2/object/paymentterm/{pkiPaymenttermID}
-    /// </summary>
-    [DataContract]
-    public partial class PaymenttermGetObjectV2ResponseMPayload :  IEquatable<PaymenttermGetObjectV2ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PaymenttermGetObjectV2ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PaymenttermGetObjectV2ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PaymenttermGetObjectV2ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="objPaymentterm">objPaymentterm (required).</param>
         public PaymenttermGetObjectV2ResponseMPayload(PaymenttermResponseCompound objPaymentterm = default(PaymenttermResponseCompound))
         {
             // to ensure "objPaymentterm" is required (not null)

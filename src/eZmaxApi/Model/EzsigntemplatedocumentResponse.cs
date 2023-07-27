@@ -24,7 +24,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplatedocument Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatedocumentResponse :  IEquatable<EzsigntemplatedocumentResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatedocumentResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="sEzsigntemplatedocumentName">The name of the Ezsigntemplatedocument. (required).</param>
+        /// <param name="iEzsigntemplatedocumentPagetotal">The number of pages in the Ezsigntemplatedocument. (required).</param>
+        /// <param name="iEzsigntemplatedocumentSignaturetotal">The number of total signatures in the Ezsigntemplate. (required).</param>
+        /// <param name="bEzsigntemplatedocumentHassignedsignatures">If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -117,27 +136,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplatedocument Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatedocumentResponse :  IEquatable<EzsigntemplatedocumentResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatedocumentResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="sEzsigntemplatedocumentName">The name of the Ezsigntemplatedocument. (required).</param>
-        /// <param name="iEzsigntemplatedocumentPagetotal">The number of pages in the Ezsigntemplatedocument. (required).</param>
-        /// <param name="iEzsigntemplatedocumentSignaturetotal">The number of total signatures in the Ezsigntemplate. (required).</param>
-        /// <param name="bEzsigntemplatedocumentHassignedsignatures">If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) (required).</param>
         public EzsigntemplatedocumentResponse(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), string sEzsigntemplatedocumentName = default(string), int iEzsigntemplatedocumentPagetotal = default(int), int iEzsigntemplatedocumentSignaturetotal = default(int), bool bEzsigntemplatedocumentHassignedsignatures = default(bool))
         {
             // to ensure "pkiEzsigntemplatedocumentID" is required (not null)

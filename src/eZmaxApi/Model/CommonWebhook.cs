@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// This is the base Webhook object
+    /// </summary>
+    [DataContract]
+    public partial class CommonWebhook :  IEquatable<CommonWebhook>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonWebhook" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonWebhook() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonWebhook" /> class.
+        /// </summary>
+        /// <param name="objWebhook">objWebhook (required).</param>
+        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,23 +104,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// This is the base Webhook object
-    /// </summary>
-    [DataContract]
-    public partial class CommonWebhook :  IEquatable<CommonWebhook>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonWebhook" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonWebhook() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonWebhook" /> class.
-        /// </summary>
-        /// <param name="objWebhook">objWebhook (required).</param>
-        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
         public CommonWebhook(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>))
         {
             // to ensure "objWebhook" is required (not null)

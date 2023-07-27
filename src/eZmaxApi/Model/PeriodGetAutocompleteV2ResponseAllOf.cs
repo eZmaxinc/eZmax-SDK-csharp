@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// PeriodGetAutocompleteV2ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class PeriodGetAutocompleteV2ResponseAllOf :  IEquatable<PeriodGetAutocompleteV2ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PeriodGetAutocompleteV2ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// PeriodGetAutocompleteV2ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class PeriodGetAutocompleteV2ResponseAllOf :  IEquatable<PeriodGetAutocompleteV2ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PeriodGetAutocompleteV2ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public PeriodGetAutocompleteV2ResponseAllOf(PeriodGetAutocompleteV2ResponseMPayload mPayload = default(PeriodGetAutocompleteV2ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// ApikeyGetListV1ResponseMPayloadAllOf
+    /// </summary>
+    [DataContract]
+    public partial class ApikeyGetListV1ResponseMPayloadAllOf :  IEquatable<ApikeyGetListV1ResponseMPayloadAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ApikeyGetListV1ResponseMPayloadAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjApikey">aObjApikey (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// ApikeyGetListV1ResponseMPayloadAllOf
-    /// </summary>
-    [DataContract]
-    public partial class ApikeyGetListV1ResponseMPayloadAllOf :  IEquatable<ApikeyGetListV1ResponseMPayloadAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ApikeyGetListV1ResponseMPayloadAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        /// <param name="aObjApikey">aObjApikey (required).</param>
         public ApikeyGetListV1ResponseMPayloadAllOf(List<ApikeyListElement> aObjApikey = default(List<ApikeyListElement>))
         {
             // to ensure "aObjApikey" is required (not null)

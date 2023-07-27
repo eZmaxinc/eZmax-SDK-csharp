@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A form Data Signer Object
+    /// </summary>
+    [DataContract]
+    public partial class CustomFormDataSignerResponse :  IEquatable<CustomFormDataSignerResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomFormDataSignerResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomFormDataSignerResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomFormDataSignerResponse" /> class.
+        /// </summary>
+        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="sContactFirstname">The First name of the contact (required).</param>
+        /// <param name="sContactLastname">The Last name of the contact (required).</param>
+        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -114,26 +132,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A form Data Signer Object
-    /// </summary>
-    [DataContract]
-    public partial class CustomFormDataSignerResponse :  IEquatable<CustomFormDataSignerResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomFormDataSignerResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomFormDataSignerResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomFormDataSignerResponse" /> class.
-        /// </summary>
-        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="sContactFirstname">The First name of the contact (required).</param>
-        /// <param name="sContactLastname">The Last name of the contact (required).</param>
-        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup (required).</param>
         public CustomFormDataSignerResponse(int fkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup = default(List<CustomFormDataEzsignformfieldgroupResponse>))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)

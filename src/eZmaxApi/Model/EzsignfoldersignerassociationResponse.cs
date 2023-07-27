@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignfoldersignerassociation Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfoldersignerassociationResponse :  IEquatable<EzsignfoldersignerassociationResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfoldersignerassociationResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="bEzsignfoldersignerassociationDelayedsend">If this flag is true the signatory is part of a delayed send. (required).</param>
+        /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. (required).</param>
+        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -119,26 +137,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignfoldersignerassociation Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfoldersignerassociationResponse :  IEquatable<EzsignfoldersignerassociationResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfoldersignerassociationResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="bEzsignfoldersignerassociationDelayedsend">If this flag is true the signatory is part of a delayed send. (required).</param>
-        /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. (required).</param>
-        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent. (required).</param>
         public EzsignfoldersignerassociationResponse(int pkiEzsignfoldersignerassociationID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationDelayedsend = default(bool), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string))
         {
             // to ensure "pkiEzsignfoldersignerassociationID" is required (not null)

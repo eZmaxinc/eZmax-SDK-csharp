@@ -24,7 +24,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Userstaged Object
+    /// </summary>
+    [DataContract]
+    public partial class UserstagedResponse :  IEquatable<UserstagedResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserstagedResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserstagedResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserstagedResponse" /> class.
+        /// </summary>
+        /// <param name="pkiUserstagedID">The unique ID of the Userstaged (required).</param>
+        /// <param name="fkiEmailID">The unique ID of the Email (required).</param>
+        /// <param name="sEmailAddress">The email address. (required).</param>
+        /// <param name="sUserstagedFirstname">The firstname of the Userstaged (required).</param>
+        /// <param name="sUserstagedLastname">The lastname of the Userstaged (required).</param>
+        /// <param name="sUserstagedExternalid">The externalid of the Userstaged (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -125,27 +144,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Userstaged Object
-    /// </summary>
-    [DataContract]
-    public partial class UserstagedResponse :  IEquatable<UserstagedResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserstagedResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserstagedResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserstagedResponse" /> class.
-        /// </summary>
-        /// <param name="pkiUserstagedID">The unique ID of the Userstaged (required).</param>
-        /// <param name="fkiEmailID">The unique ID of the Email (required).</param>
-        /// <param name="sEmailAddress">The email address. (required).</param>
-        /// <param name="sUserstagedFirstname">The firstname of the Userstaged (required).</param>
-        /// <param name="sUserstagedLastname">The lastname of the Userstaged (required).</param>
-        /// <param name="sUserstagedExternalid">The externalid of the Userstaged (required).</param>
         public UserstagedResponse(int pkiUserstagedID = default(int), int fkiEmailID = default(int), string sEmailAddress = default(string), string sUserstagedFirstname = default(string), string sUserstagedLastname = default(string), string sUserstagedExternalid = default(string))
         {
             // to ensure "pkiUserstagedID" is required (not null)

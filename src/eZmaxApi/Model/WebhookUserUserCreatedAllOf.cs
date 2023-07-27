@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// WebhookUserUserCreatedAllOf
+    /// </summary>
+    [DataContract]
+    public partial class WebhookUserUserCreatedAllOf :  IEquatable<WebhookUserUserCreatedAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookUserUserCreatedAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebhookUserUserCreatedAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookUserUserCreatedAllOf" /> class.
+        /// </summary>
+        /// <param name="objUser">objUser (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// WebhookUserUserCreatedAllOf
-    /// </summary>
-    [DataContract]
-    public partial class WebhookUserUserCreatedAllOf :  IEquatable<WebhookUserUserCreatedAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookUserUserCreatedAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WebhookUserUserCreatedAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookUserUserCreatedAllOf" /> class.
-        /// </summary>
-        /// <param name="objUser">objUser (required).</param>
         public WebhookUserUserCreatedAllOf(UserResponseCompound objUser = default(UserResponseCompound))
         {
             // to ensure "objUser" is required (not null)

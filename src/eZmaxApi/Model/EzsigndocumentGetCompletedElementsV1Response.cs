@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentGetCompletedElementsV1Response :  IEquatable<EzsigndocumentGetCompletedElementsV1Response>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetCompletedElementsV1Response" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentGetCompletedElementsV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetCompletedElementsV1Response" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
+        /// <param name="objDebugPayload">objDebugPayload.</param>
+        /// <param name="objDebug">objDebug.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,24 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentGetCompletedElementsV1Response :  IEquatable<EzsigndocumentGetCompletedElementsV1Response>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentGetCompletedElementsV1Response" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentGetCompletedElementsV1Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentGetCompletedElementsV1Response" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
-        /// <param name="objDebug">objDebug.</param>
         public EzsigndocumentGetCompletedElementsV1Response(EzsigndocumentGetCompletedElementsV1ResponseMPayload mPayload = default(EzsigndocumentGetCompletedElementsV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)

@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Phonestatic Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class PhonestaticResponseCompound :  IEquatable<PhonestaticResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PhonestaticResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PhonestaticResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PhonestaticResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiPhonestaticID">The unique ID of the Phone. (required).</param>
+        /// <param name="sPhonestaticE164">A phone number in E.164 Format.</param>
+        /// <param name="sPhonestaticExtension">The extension of the phone number..</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,24 +99,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Phonestatic Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class PhonestaticResponseCompound :  IEquatable<PhonestaticResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PhonestaticResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PhonestaticResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PhonestaticResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiPhonestaticID">The unique ID of the Phone. (required).</param>
-        /// <param name="sPhonestaticE164">A phone number in E.164 Format.</param>
-        /// <param name="sPhonestaticExtension">The extension of the phone number..</param>
         public PhonestaticResponseCompound(int pkiPhonestaticID = default(int), string sPhonestaticE164 = default(string), string sPhonestaticExtension = default(string))
         {
             // to ensure "pkiPhonestaticID" is required (not null)

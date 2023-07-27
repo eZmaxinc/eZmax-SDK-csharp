@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /1/object/usergroupmembership
+    /// </summary>
+    [DataContract]
+    public partial class UsergroupmembershipCreateObjectV1Request :  IEquatable<UsergroupmembershipCreateObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupmembershipCreateObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UsergroupmembershipCreateObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupmembershipCreateObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="aObjUsergroupmembership">aObjUsergroupmembership (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,22 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/usergroupmembership
-    /// </summary>
-    [DataContract]
-    public partial class UsergroupmembershipCreateObjectV1Request :  IEquatable<UsergroupmembershipCreateObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupmembershipCreateObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UsergroupmembershipCreateObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupmembershipCreateObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="aObjUsergroupmembership">aObjUsergroupmembership (required).</param>
         public UsergroupmembershipCreateObjectV1Request(List<UsergroupmembershipRequestCompound> aObjUsergroupmembership = default(List<UsergroupmembershipRequestCompound>))
         {
             // to ensure "aObjUsergroupmembership" is required (not null)

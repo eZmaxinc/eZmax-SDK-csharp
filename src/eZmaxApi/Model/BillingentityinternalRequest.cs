@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Billingentityinternal Object
+    /// </summary>
+    [DataContract]
+    public partial class BillingentityinternalRequest :  IEquatable<BillingentityinternalRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BillingentityinternalRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalRequest" /> class.
+        /// </summary>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
+        /// <param name="objBillingentityinternalDescription">objBillingentityinternalDescription (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -72,23 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Billingentityinternal Object
-    /// </summary>
-    [DataContract]
-    public partial class BillingentityinternalRequest :  IEquatable<BillingentityinternalRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BillingentityinternalRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalRequest" /> class.
-        /// </summary>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
-        /// <param name="objBillingentityinternalDescription">objBillingentityinternalDescription (required).</param>
         public BillingentityinternalRequest(int pkiBillingentityinternalID = default(int), MultilingualBillingentityinternalDescription objBillingentityinternalDescription = default(MultilingualBillingentityinternalDescription))
         {
             // to ensure "objBillingentityinternalDescription" is required (not null)

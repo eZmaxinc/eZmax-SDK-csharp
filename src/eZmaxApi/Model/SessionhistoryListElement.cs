@@ -24,7 +24,35 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Sessionhistory List Element
+    /// </summary>
+    [DataContract]
+    public partial class SessionhistoryListElement :  IEquatable<SessionhistoryListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets ESessionhistoryEndby
+        /// </summary>
+        [DataMember(Name="eSessionhistoryEndby", EmitDefaultValue=true)]
+        public FieldESessionhistoryEndby ESessionhistoryEndby { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SessionhistoryListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected SessionhistoryListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SessionhistoryListElement" /> class.
+        /// </summary>
+        /// <param name="pkiSessionhistoryID">The unique ID of the Sessionhistory (required).</param>
+        /// <param name="fkiComputerID">The unique ID of the Computer.</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="dtSessionhistoryFirsthit">The first hit of the Sessionhistory (required).</param>
+        /// <param name="dtSessionhistoryLasthit">The last hit of the Sessionhistory (required).</param>
+        /// <param name="eSessionhistoryEndby">eSessionhistoryEndby (required).</param>
+        /// <param name="sComputerDescription">The description of the Computer.</param>
+        /// <param name="sSessionhistoryDuration">The duration of the session (required).</param>
+        /// <param name="sSessionhistoryIP">Represent an IP address. (required).</param>
+        /// <param name="sUserLoginname">The login name of the User..</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -138,36 +166,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Sessionhistory List Element
-    /// </summary>
-    [DataContract]
-    public partial class SessionhistoryListElement :  IEquatable<SessionhistoryListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets ESessionhistoryEndby
-        /// </summary>
-        [DataMember(Name="eSessionhistoryEndby", EmitDefaultValue=true)]
-        public FieldESessionhistoryEndby ESessionhistoryEndby { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SessionhistoryListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected SessionhistoryListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SessionhistoryListElement" /> class.
-        /// </summary>
-        /// <param name="pkiSessionhistoryID">The unique ID of the Sessionhistory (required).</param>
-        /// <param name="fkiComputerID">The unique ID of the Computer.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="dtSessionhistoryFirsthit">The first hit of the Sessionhistory (required).</param>
-        /// <param name="dtSessionhistoryLasthit">The last hit of the Sessionhistory (required).</param>
-        /// <param name="eSessionhistoryEndby">eSessionhistoryEndby (required).</param>
-        /// <param name="sComputerDescription">The description of the Computer.</param>
-        /// <param name="sSessionhistoryDuration">The duration of the session (required).</param>
-        /// <param name="sSessionhistoryIP">Represent an IP address. (required).</param>
-        /// <param name="sUserLoginname">The login name of the User..</param>
         public SessionhistoryListElement(int pkiSessionhistoryID = default(int), int fkiComputerID = default(int), int fkiUserID = default(int), string dtSessionhistoryFirsthit = default(string), string dtSessionhistoryLasthit = default(string), FieldESessionhistoryEndby eSessionhistoryEndby = default(FieldESessionhistoryEndby), string sComputerDescription = default(string), string sSessionhistoryDuration = default(string), string sSessionhistoryIP = default(string), string sUserLoginname = default(string))
         {
             // to ensure "pkiSessionhistoryID" is required (not null)

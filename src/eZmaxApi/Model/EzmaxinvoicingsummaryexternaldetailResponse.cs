@@ -24,7 +24,30 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezmaxinvoicingsummaryexternaldetail Object
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingsummaryexternaldetailResponse :  IEquatable<EzmaxinvoicingsummaryexternaldetailResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternaldetailResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingsummaryexternaldetailResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternaldetailResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxinvoicingsummaryexternaldetailID">The unique ID of the Ezmaxinvoicingsummaryexternaldetail.</param>
+        /// <param name="fkiEzmaxinvoicingsummaryexternalID">The unique ID of the Ezmaxinvoicingsummaryexternal.</param>
+        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryexternaldetailCountreal">The count item invoiced for the product (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryexternaldetailSubtotal">The subtotal invoiced for the product (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryexternaldetailRebate">The rebate for the product (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryexternaldetailTotal">The total invoiced for the product (required).</param>
+        /// <param name="bEzmaxinvoicingsummaryexternaldetailAdjustment">Whether it&#39;s an adjustment (required).</param>
+        /// <param name="tEzmaxproductHelpX">The help message of the Ezmaxproduct in the language of the requester (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -147,31 +170,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezmaxinvoicingsummaryexternaldetail Object
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingsummaryexternaldetailResponse :  IEquatable<EzmaxinvoicingsummaryexternaldetailResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternaldetailResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingsummaryexternaldetailResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternaldetailResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxinvoicingsummaryexternaldetailID">The unique ID of the Ezmaxinvoicingsummaryexternaldetail.</param>
-        /// <param name="fkiEzmaxinvoicingsummaryexternalID">The unique ID of the Ezmaxinvoicingsummaryexternal.</param>
-        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryexternaldetailCountreal">The count item invoiced for the product (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryexternaldetailSubtotal">The subtotal invoiced for the product (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryexternaldetailRebate">The rebate for the product (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryexternaldetailTotal">The total invoiced for the product (required).</param>
-        /// <param name="bEzmaxinvoicingsummaryexternaldetailAdjustment">Whether it&#39;s an adjustment (required).</param>
-        /// <param name="tEzmaxproductHelpX">The help message of the Ezmaxproduct in the language of the requester (required).</param>
         public EzmaxinvoicingsummaryexternaldetailResponse(int pkiEzmaxinvoicingsummaryexternaldetailID = default(int), int fkiEzmaxinvoicingsummaryexternalID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), string dEzmaxinvoicingsummaryexternaldetailCountreal = default(string), string dEzmaxinvoicingsummaryexternaldetailSubtotal = default(string), string dEzmaxinvoicingsummaryexternaldetailRebate = default(string), string dEzmaxinvoicingsummaryexternaldetailTotal = default(string), bool bEzmaxinvoicingsummaryexternaldetailAdjustment = default(bool), string tEzmaxproductHelpX = default(string))
         {
             // to ensure "fkiEzmaxproductID" is required (not null)

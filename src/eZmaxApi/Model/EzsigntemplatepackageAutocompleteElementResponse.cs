@@ -24,7 +24,30 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplatepackage AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatepackageAutocompleteElementResponse :  IEquatable<EzsigntemplatepackageAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignfoldertypePrivacylevel
+        /// </summary>
+        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
+        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackageAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatepackageAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackageAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
+        /// <param name="sEzsigntemplatepackageDescription">The description of the Ezsigntemplatepackage (required).</param>
+        /// <param name="pkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="bEzsigntemplatepackageIsactive">Whether the Ezsigntemplatepackage is active or not (required).</param>
+        /// <param name="bDisabled">Indicates if the element is disabled in the context (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -99,31 +122,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplatepackage AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatepackageAutocompleteElementResponse :  IEquatable<EzsigntemplatepackageAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignfoldertypePrivacylevel
-        /// </summary>
-        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
-        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackageAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatepackageAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackageAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="sEzsigntemplatepackageDescription">The description of the Ezsigntemplatepackage (required).</param>
-        /// <param name="pkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="bEzsigntemplatepackageIsactive">Whether the Ezsigntemplatepackage is active or not (required).</param>
-        /// <param name="bDisabled">Indicates if the element is disabled in the context (required).</param>
         public EzsigntemplatepackageAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsigntemplatepackageDescription = default(string), int pkiEzsigntemplatepackageID = default(int), bool bEzsigntemplatepackageIsactive = default(bool), bool bDisabled = default(bool))
         {
             // to ensure "eEzsignfoldertypePrivacylevel" is required (not null)

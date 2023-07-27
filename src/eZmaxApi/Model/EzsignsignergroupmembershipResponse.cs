@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsignsignergroupmembership Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignsignergroupmembershipResponse :  IEquatable<EzsignsignergroupmembershipResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignergroupmembershipResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignsignergroupmembershipResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignergroupmembershipResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignsignergroupmembershipID">The unique ID of the Ezsignsignergroupmembership (required).</param>
+        /// <param name="fkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup (required).</param>
+        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -119,26 +137,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignsignergroupmembership Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignsignergroupmembershipResponse :  IEquatable<EzsignsignergroupmembershipResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignergroupmembershipResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignsignergroupmembershipResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignergroupmembershipResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignsignergroupmembershipID">The unique ID of the Ezsignsignergroupmembership (required).</param>
-        /// <param name="fkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup (required).</param>
-        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
         public EzsignsignergroupmembershipResponse(int pkiEzsignsignergroupmembershipID = default(int), int fkiEzsignsignergroupID = default(int), int fkiEzsignsignerID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int))
         {
             // to ensure "pkiEzsignsignergroupmembershipID" is required (not null)

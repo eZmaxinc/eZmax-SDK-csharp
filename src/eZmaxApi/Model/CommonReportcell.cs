@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A cell in a Reportrow 
+    /// </summary>
+    [DataContract]
+    public partial class CommonReportcell :  IEquatable<CommonReportcell>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonReportcell" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonReportcell() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonReportcell" /> class.
+        /// </summary>
+        /// <param name="iReportcellColumnspan">The number of Reportcolumns the Reportcell spans (required).</param>
+        /// <param name="iReportcellRowspan">The number of Reportrows the Reportcell spans (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -79,23 +94,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A cell in a Reportrow 
-    /// </summary>
-    [DataContract]
-    public partial class CommonReportcell :  IEquatable<CommonReportcell>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonReportcell" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonReportcell() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonReportcell" /> class.
-        /// </summary>
-        /// <param name="iReportcellColumnspan">The number of Reportcolumns the Reportcell spans (required).</param>
-        /// <param name="iReportcellRowspan">The number of Reportrows the Reportcell spans (required).</param>
         public CommonReportcell(int iReportcellColumnspan = default(int), int iReportcellRowspan = default(int))
         {
             // to ensure "iReportcellColumnspan" is required (not null)

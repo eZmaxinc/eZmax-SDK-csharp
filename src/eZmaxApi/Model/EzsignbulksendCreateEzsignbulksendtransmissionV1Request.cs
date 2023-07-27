@@ -24,7 +24,32 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksendCreateEzsignbulksendtransmissionV1Request :  IEquatable<EzsignbulksendCreateEzsignbulksendtransmissionV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignfolderSendreminderfrequency
+        /// </summary>
+        [DataMember(Name="eEzsignfolderSendreminderfrequency", EmitDefaultValue=true)]
+        public FieldEEzsignfolderSendreminderfrequency EEzsignfolderSendreminderfrequency { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendCreateEzsignbulksendtransmissionV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendCreateEzsignbulksendtransmissionV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendCreateEzsignbulksendtransmissionV1Request" /> class.
+        /// </summary>
+        /// <param name="fkiUserlogintypeID">The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**| (required).</param>
+        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
+        /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
+        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
+        /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency (required).</param>
+        /// <param name="tExtraMessage">A custom text message that will be added to the email sent. (required).</param>
+        /// <param name="sCsvBase64">The Base64 encoded binary content of the CSV file. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -160,33 +185,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksendCreateEzsignbulksendtransmissionV1Request :  IEquatable<EzsignbulksendCreateEzsignbulksendtransmissionV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignfolderSendreminderfrequency
-        /// </summary>
-        [DataMember(Name="eEzsignfolderSendreminderfrequency", EmitDefaultValue=true)]
-        public FieldEEzsignfolderSendreminderfrequency EEzsignfolderSendreminderfrequency { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendCreateEzsignbulksendtransmissionV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksendCreateEzsignbulksendtransmissionV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendCreateEzsignbulksendtransmissionV1Request" /> class.
-        /// </summary>
-        /// <param name="fkiUserlogintypeID">The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**| (required).</param>
-        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
-        /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
-        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
-        /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency (required).</param>
-        /// <param name="tExtraMessage">A custom text message that will be added to the email sent. (required).</param>
-        /// <param name="sCsvBase64">The Base64 encoded binary content of the CSV file. (required).</param>
         public EzsignbulksendCreateEzsignbulksendtransmissionV1Request(int fkiUserlogintypeID = default(int), int fkiEzsigntsarequirementID = default(int), string sEzsignbulksendtransmissionDescription = default(string), string dtEzsigndocumentDuedate = default(string), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency), string tExtraMessage = default(string), byte[] sCsvBase64 = default(byte[]))
         {
             // to ensure "fkiUserlogintypeID" is required (not null)

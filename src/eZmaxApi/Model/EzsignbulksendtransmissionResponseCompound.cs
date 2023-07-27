@@ -24,7 +24,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignbulksendtransmission Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksendtransmissionResponseCompound :  IEquatable<EzsignbulksendtransmissionResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendtransmissionResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignbulksendtransmissionID">The unique ID of the Ezsignbulksendtransmission (required).</param>
+        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
+        /// <param name="iEzsignbulksendtransmissionErrors">The number of errors during the Ezsignbulksendtransmission (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
+        /// <param name="aObjEzsignfoldertransmission">aObjEzsignfoldertransmission (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -123,27 +142,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignbulksendtransmission Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksendtransmissionResponseCompound :  IEquatable<EzsignbulksendtransmissionResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksendtransmissionResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignbulksendtransmissionID">The unique ID of the Ezsignbulksendtransmission (required).</param>
-        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
-        /// <param name="iEzsignbulksendtransmissionErrors">The number of errors during the Ezsignbulksendtransmission (required).</param>
-        /// <param name="objAudit">objAudit (required).</param>
-        /// <param name="aObjEzsignfoldertransmission">aObjEzsignfoldertransmission (required).</param>
         public EzsignbulksendtransmissionResponseCompound(int pkiEzsignbulksendtransmissionID = default(int), int fkiEzsignbulksendID = default(int), string sEzsignbulksendtransmissionDescription = default(string), int iEzsignbulksendtransmissionErrors = default(int), CommonAudit objAudit = default(CommonAudit), List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission = default(List<CustomEzsignfoldertransmissionResponse>))
         {
             // to ensure "pkiEzsignbulksendtransmissionID" is required (not null)

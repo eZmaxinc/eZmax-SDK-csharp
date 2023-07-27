@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignsignatureattachment Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignsignatureattachmentResponse :  IEquatable<EzsignsignatureattachmentResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignatureattachmentResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignsignatureattachmentResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignatureattachmentResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignsignatureattachmentID">The unique ID of the Ezsignsignatureattachment (required).</param>
+        /// <param name="fkiEzsignsignatureID">The unique ID of the Ezsignsignature (required).</param>
+        /// <param name="binEzsignsignatureattachmentMD5">The md5 of the Ezsignsignatureattachment (required).</param>
+        /// <param name="sEzsignsignatureattachmentName">The name of the Ezsignsignatureattachment (required).</param>
+        /// <param name="sDownloadUrl">The Url to the requested document.  Url will expire after 3 hours. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -115,26 +133,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignsignatureattachment Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignsignatureattachmentResponse :  IEquatable<EzsignsignatureattachmentResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignatureattachmentResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignsignatureattachmentResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignatureattachmentResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignsignatureattachmentID">The unique ID of the Ezsignsignatureattachment (required).</param>
-        /// <param name="fkiEzsignsignatureID">The unique ID of the Ezsignsignature (required).</param>
-        /// <param name="binEzsignsignatureattachmentMD5">The md5 of the Ezsignsignatureattachment (required).</param>
-        /// <param name="sEzsignsignatureattachmentName">The name of the Ezsignsignatureattachment (required).</param>
-        /// <param name="sDownloadUrl">The Url to the requested document.  Url will expire after 3 hours. (required).</param>
         public EzsignsignatureattachmentResponse(int pkiEzsignsignatureattachmentID = default(int), int fkiEzsignsignatureID = default(int), string binEzsignsignatureattachmentMD5 = default(string), string sEzsignsignatureattachmentName = default(string), string sDownloadUrl = default(string))
         {
             // to ensure "pkiEzsignsignatureattachmentID" is required (not null)

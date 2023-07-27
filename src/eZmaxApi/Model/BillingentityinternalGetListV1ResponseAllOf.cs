@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// BillingentityinternalGetListV1ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class BillingentityinternalGetListV1ResponseAllOf :  IEquatable<BillingentityinternalGetListV1ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalGetListV1ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BillingentityinternalGetListV1ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalGetListV1ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// BillingentityinternalGetListV1ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class BillingentityinternalGetListV1ResponseAllOf :  IEquatable<BillingentityinternalGetListV1ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalGetListV1ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BillingentityinternalGetListV1ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalGetListV1ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public BillingentityinternalGetListV1ResponseAllOf(BillingentityinternalGetListV1ResponseMPayload mPayload = default(BillingentityinternalGetListV1ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

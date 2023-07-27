@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// CustomEzsignformfielderrorResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzsignformfielderrorResponseAllOf :  IEquatable<CustomEzsignformfielderrorResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignformfielderrorResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzsignformfielderrorResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignformfielderrorResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield (required).</param>
+        /// <param name="aObjEzsignformfielderrortest">aObjEzsignformfielderrortest (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -91,23 +106,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// CustomEzsignformfielderrorResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzsignformfielderrorResponseAllOf :  IEquatable<CustomEzsignformfielderrorResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignformfielderrorResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzsignformfielderrorResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignformfielderrorResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield (required).</param>
-        /// <param name="aObjEzsignformfielderrortest">aObjEzsignformfielderrortest (required).</param>
         public CustomEzsignformfielderrorResponseAllOf(string sEzsignformfieldLabel = default(string), List<CustomEzsignformfielderrortestResponse> aObjEzsignformfielderrortest = default(List<CustomEzsignformfielderrortestResponse>))
         {
             // to ensure "sEzsignformfieldLabel" is required (not null)

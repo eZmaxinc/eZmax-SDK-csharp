@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentSubmitEzsignformV1Request :  IEquatable<EzsigndocumentSubmitEzsignformV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentSubmitEzsignformV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentSubmitEzsignformV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentSubmitEzsignformV1Request" /> class.
+        /// </summary>
+        /// <param name="bEzsignformIsdraft">Whether the Ezsignform submitted is a draft or not. (required).</param>
+        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,23 +104,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentSubmitEzsignformV1Request :  IEquatable<EzsigndocumentSubmitEzsignformV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentSubmitEzsignformV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentSubmitEzsignformV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentSubmitEzsignformV1Request" /> class.
-        /// </summary>
-        /// <param name="bEzsignformIsdraft">Whether the Ezsignform submitted is a draft or not. (required).</param>
-        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup (required).</param>
         public EzsigndocumentSubmitEzsignformV1Request(bool bEzsignformIsdraft = default(bool), List<CustomEzsignformfieldgroupRequest> aObjEzsignformfieldgroup = default(List<CustomEzsignformfieldgroupRequest>))
         {
             // to ensure "bEzsignformIsdraft" is required (not null)

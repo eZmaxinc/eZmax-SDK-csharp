@@ -24,7 +24,31 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignbulksend List Element
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksendListElement :  IEquatable<EzsignbulksendListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendListElement" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="sEzsignbulksendDescription">The description of the Ezsignbulksend (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
+        /// <param name="iEzsignbulksendtransmission">The total number of Ezsignbulksendtransmissions in the Ezsignbulksend (required).</param>
+        /// <param name="iEzsignfolder">The total number of Ezsignfolders in the Ezsignbulksend (required).</param>
+        /// <param name="iEzsigndocument">The total number of Ezsigndocuments in the Ezsignbulksend (required).</param>
+        /// <param name="iEzsignsignature">The total number of Ezsignsignature in the Ezsignbulksend (required).</param>
+        /// <param name="iEzsignsignatureSigned">The total number of already signed Ezsignsignature blocks in the Ezsignbulksend (required).</param>
+        /// <param name="bEzsignbulksendIsactive">Whether the Ezsignbulksend is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -143,32 +167,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignbulksend List Element
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksendListElement :  IEquatable<EzsignbulksendListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksendListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendListElement" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="sEzsignbulksendDescription">The description of the Ezsignbulksend (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
-        /// <param name="iEzsignbulksendtransmission">The total number of Ezsignbulksendtransmissions in the Ezsignbulksend (required).</param>
-        /// <param name="iEzsignfolder">The total number of Ezsignfolders in the Ezsignbulksend (required).</param>
-        /// <param name="iEzsigndocument">The total number of Ezsigndocuments in the Ezsignbulksend (required).</param>
-        /// <param name="iEzsignsignature">The total number of Ezsignsignature in the Ezsignbulksend (required).</param>
-        /// <param name="iEzsignsignatureSigned">The total number of already signed Ezsignsignature blocks in the Ezsignbulksend (required).</param>
-        /// <param name="bEzsignbulksendIsactive">Whether the Ezsignbulksend is active or not (required).</param>
         public EzsignbulksendListElement(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignbulksendDescription = default(string), string sEzsignfoldertypeNameX = default(string), bool bEzsignbulksendNeedvalidation = default(bool), int iEzsignbulksendtransmission = default(int), int iEzsignfolder = default(int), int iEzsigndocument = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int), bool bEzsignbulksendIsactive = default(bool))
         {
             // to ensure "pkiEzsignbulksendID" is required (not null)

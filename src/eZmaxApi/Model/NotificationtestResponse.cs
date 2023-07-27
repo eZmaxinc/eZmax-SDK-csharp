@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Notificationtest Object
+    /// </summary>
+    [DataContract]
+    public partial class NotificationtestResponse :  IEquatable<NotificationtestResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NotificationtestResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected NotificationtestResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NotificationtestResponse" /> class.
+        /// </summary>
+        /// <param name="pkiNotificationtestID">The unique ID of the Notificationtest (required).</param>
+        /// <param name="objNotificationtestName">objNotificationtestName (required).</param>
+        /// <param name="fkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
+        /// <param name="sNotificationtestFunction">The function name of the Notificationtest (required).</param>
+        /// <param name="sNotificationtestNameX">The name of the Notificationtest in the language of the requester (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -103,26 +121,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Notificationtest Object
-    /// </summary>
-    [DataContract]
-    public partial class NotificationtestResponse :  IEquatable<NotificationtestResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="NotificationtestResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected NotificationtestResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="NotificationtestResponse" /> class.
-        /// </summary>
-        /// <param name="pkiNotificationtestID">The unique ID of the Notificationtest (required).</param>
-        /// <param name="objNotificationtestName">objNotificationtestName (required).</param>
-        /// <param name="fkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
-        /// <param name="sNotificationtestFunction">The function name of the Notificationtest (required).</param>
-        /// <param name="sNotificationtestNameX">The name of the Notificationtest in the language of the requester (required).</param>
         public NotificationtestResponse(int pkiNotificationtestID = default(int), MultilingualNotificationtestName objNotificationtestName = default(MultilingualNotificationtestName), int fkiNotificationsubsectionID = default(int), string sNotificationtestFunction = default(string), string sNotificationtestNameX = default(string))
         {
             // to ensure "pkiNotificationtestID" is required (not null)

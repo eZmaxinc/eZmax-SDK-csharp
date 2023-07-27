@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Custom Ezsignformfielderrortest Object to contain the detail of the test error
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzsignformfielderrortestResponse :  IEquatable<CustomEzsignformfielderrortestResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignformfielderrortestResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzsignformfielderrortestResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignformfielderrortestResponse" /> class.
+        /// </summary>
+        /// <param name="sEzsignformfielderrortestName">The name of the test (required).</param>
+        /// <param name="sEzsignformfielderrortestDetail">The detail why the test failed (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -79,23 +94,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Custom Ezsignformfielderrortest Object to contain the detail of the test error
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzsignformfielderrortestResponse :  IEquatable<CustomEzsignformfielderrortestResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignformfielderrortestResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzsignformfielderrortestResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignformfielderrortestResponse" /> class.
-        /// </summary>
-        /// <param name="sEzsignformfielderrortestName">The name of the test (required).</param>
-        /// <param name="sEzsignformfielderrortestDetail">The detail why the test failed (required).</param>
         public CustomEzsignformfielderrortestResponse(string sEzsignformfielderrortestName = default(string), string sEzsignformfielderrortestDetail = default(string))
         {
             // to ensure "sEzsignformfielderrortestName" is required (not null)

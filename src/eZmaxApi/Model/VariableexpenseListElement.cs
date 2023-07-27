@@ -24,7 +24,30 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Variableexpense List Element
+    /// </summary>
+    [DataContract]
+    public partial class VariableexpenseListElement :  IEquatable<VariableexpenseListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EVariableexpenseTaxable
+        /// </summary>
+        [DataMember(Name="eVariableexpenseTaxable", EmitDefaultValue=false)]
+        public FieldEVariableexpenseTaxable? EVariableexpenseTaxable { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected VariableexpenseListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseListElement" /> class.
+        /// </summary>
+        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense (required).</param>
+        /// <param name="sVariableexpenseCode">The code of the Variableexpense.</param>
+        /// <param name="sVariableexpenseDescriptionX">The description of the Variableexpense in the language of the requester.</param>
+        /// <param name="eVariableexpenseTaxable">eVariableexpenseTaxable.</param>
+        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -91,31 +114,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Variableexpense List Element
-    /// </summary>
-    [DataContract]
-    public partial class VariableexpenseListElement :  IEquatable<VariableexpenseListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EVariableexpenseTaxable
-        /// </summary>
-        [DataMember(Name="eVariableexpenseTaxable", EmitDefaultValue=false)]
-        public FieldEVariableexpenseTaxable? EVariableexpenseTaxable { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected VariableexpenseListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseListElement" /> class.
-        /// </summary>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense (required).</param>
-        /// <param name="sVariableexpenseCode">The code of the Variableexpense.</param>
-        /// <param name="sVariableexpenseDescriptionX">The description of the Variableexpense in the language of the requester.</param>
-        /// <param name="eVariableexpenseTaxable">eVariableexpenseTaxable.</param>
-        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not.</param>
         public VariableexpenseListElement(int pkiVariableexpenseID = default(int), string sVariableexpenseCode = default(string), string sVariableexpenseDescriptionX = default(string), FieldEVariableexpenseTaxable? eVariableexpenseTaxable = default(FieldEVariableexpenseTaxable?), bool bVariableexpenseIsactive = default(bool))
         {
             // to ensure "pkiVariableexpenseID" is required (not null)

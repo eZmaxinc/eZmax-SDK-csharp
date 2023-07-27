@@ -24,7 +24,28 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsigntemplatepackage List Element
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatepackageListElement :  IEquatable<EzsigntemplatepackageListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackageListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatepackageListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackageListElement" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sEzsigntemplatepackageDescription">The description of the Ezsigntemplatepackage (required).</param>
+        /// <param name="bEzsigntemplatepackageNeedvalidation">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
+        /// <param name="iEzsigntemplatepackagemembership">The total number of Ezsigntemplatepackagemembership in the Ezsigntemplatepackage (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="bEzsigntemplatepackageIsactive">Whether the Ezsigntemplatepackage is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -145,29 +166,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsigntemplatepackage List Element
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatepackageListElement :  IEquatable<EzsigntemplatepackageListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackageListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatepackageListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackageListElement" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sEzsigntemplatepackageDescription">The description of the Ezsigntemplatepackage (required).</param>
-        /// <param name="bEzsigntemplatepackageNeedvalidation">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
-        /// <param name="iEzsigntemplatepackagemembership">The total number of Ezsigntemplatepackagemembership in the Ezsigntemplatepackage (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="bEzsigntemplatepackageIsactive">Whether the Ezsigntemplatepackage is active or not (required).</param>
         public EzsigntemplatepackageListElement(int pkiEzsigntemplatepackageID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsigntemplatepackageDescription = default(string), bool bEzsigntemplatepackageNeedvalidation = default(bool), int iEzsigntemplatepackagemembership = default(int), string sEzsignfoldertypeNameX = default(string), bool bEzsigntemplatepackageIsactive = default(bool))
         {
             // to ensure "pkiEzsigntemplatepackageID" is required (not null)

@@ -24,7 +24,24 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntsarequirement AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntsarequirementAutocompleteElementResponse :  IEquatable<EzsigntsarequirementAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntsarequirementAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntsarequirementAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntsarequirementAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="sEzsigntsarequirementDescriptionX">The description of the Ezsigntsarequirement in the language of the requester (required).</param>
+        /// <param name="pkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**| (required).</param>
+        /// <param name="bEzsigntsarequirementIsactive">Whether the Ezsigntsarequirement is active or not (required).</param>
+        /// <param name="bDisabled">Indicates if the element is disabled in the context (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -115,25 +132,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntsarequirement AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntsarequirementAutocompleteElementResponse :  IEquatable<EzsigntsarequirementAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntsarequirementAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntsarequirementAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntsarequirementAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="sEzsigntsarequirementDescriptionX">The description of the Ezsigntsarequirement in the language of the requester (required).</param>
-        /// <param name="pkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**| (required).</param>
-        /// <param name="bEzsigntsarequirementIsactive">Whether the Ezsigntsarequirement is active or not (required).</param>
-        /// <param name="bDisabled">Indicates if the element is disabled in the context (required).</param>
         public EzsigntsarequirementAutocompleteElementResponse(string sEzsigntsarequirementDescriptionX = default(string), int pkiEzsigntsarequirementID = default(int), bool bEzsigntsarequirementIsactive = default(bool), bool bDisabled = default(bool))
         {
             // to ensure "sEzsigntsarequirementDescriptionX" is required (not null)

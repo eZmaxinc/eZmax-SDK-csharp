@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Franchiseoffice AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class FranchiseofficeAutocompleteElementResponse :  IEquatable<FranchiseofficeAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FranchiseofficeAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected FranchiseofficeAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FranchiseofficeAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="sFranchiseofficeDescription">The description of the Franchiseoffice in the language of the requester (required).</param>
+        /// <param name="pkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
+        /// <param name="bFranchiseofficeIsactive">Whether the Franchiseoffice is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,24 +105,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Franchiseoffice AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class FranchiseofficeAutocompleteElementResponse :  IEquatable<FranchiseofficeAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FranchiseofficeAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected FranchiseofficeAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FranchiseofficeAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="sFranchiseofficeDescription">The description of the Franchiseoffice in the language of the requester (required).</param>
-        /// <param name="pkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
-        /// <param name="bFranchiseofficeIsactive">Whether the Franchiseoffice is active or not (required).</param>
         public FranchiseofficeAutocompleteElementResponse(string sFranchiseofficeDescription = default(string), int pkiFranchiseofficeID = default(int), bool bFranchiseofficeIsactive = default(bool))
         {
             // to ensure "sFranchiseofficeDescription" is required (not null)

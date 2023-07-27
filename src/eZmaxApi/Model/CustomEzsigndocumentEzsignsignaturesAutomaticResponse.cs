@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsigndocument Object in the context of an EzsignsignaturesAutomatic path
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzsigndocumentEzsignsignaturesAutomaticResponse :  IEquatable<CustomEzsigndocumentEzsignsignaturesAutomaticResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsigndocumentEzsignsignaturesAutomaticResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzsigndocumentEzsignsignaturesAutomaticResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsigndocumentEzsignsignaturesAutomaticResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
+        /// <param name="aObjEzsignsignature">aObjEzsignsignature (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -99,24 +115,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsigndocument Object in the context of an EzsignsignaturesAutomatic path
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzsigndocumentEzsignsignaturesAutomaticResponse :  IEquatable<CustomEzsigndocumentEzsignsignaturesAutomaticResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsigndocumentEzsignsignaturesAutomaticResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzsigndocumentEzsignsignaturesAutomaticResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsigndocumentEzsignsignaturesAutomaticResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="aObjEzsignsignature">aObjEzsignsignature (required).</param>
         public CustomEzsigndocumentEzsignsignaturesAutomaticResponse(int pkiEzsigndocumentID = default(int), string sEzsigndocumentName = default(string), List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse> aObjEzsignsignature = default(List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>))
         {
             // to ensure "pkiEzsigndocumentID" is required (not null)

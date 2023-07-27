@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Apikey Object
+    /// </summary>
+    [DataContract]
+    public partial class ApikeyRequest :  IEquatable<ApikeyRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ApikeyRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyRequest" /> class.
+        /// </summary>
+        /// <param name="pkiApikeyID">The unique ID of the Apikey.</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
+        /// <param name="bApikeyIsactive">Whether the apikey is active or not.</param>
+        /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -90,26 +108,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Apikey Object
-    /// </summary>
-    [DataContract]
-    public partial class ApikeyRequest :  IEquatable<ApikeyRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ApikeyRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyRequest" /> class.
-        /// </summary>
-        /// <param name="pkiApikeyID">The unique ID of the Apikey.</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
-        /// <param name="bApikeyIsactive">Whether the apikey is active or not.</param>
-        /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
         public ApikeyRequest(int pkiApikeyID = default(int), int fkiUserID = default(int), MultilingualApikeyDescription objApikeyDescription = default(MultilingualApikeyDescription), bool bApikeyIsactive = default(bool), bool bApikeyIssigned = default(bool))
         {
             // to ensure "fkiUserID" is required (not null)

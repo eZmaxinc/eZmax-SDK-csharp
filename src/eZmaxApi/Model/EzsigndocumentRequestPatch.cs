@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsigndocument Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentRequestPatch :  IEquatable<EzsigndocumentRequestPatch>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentRequestPatch" /> class.
+        /// </summary>
+        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed..</param>
+        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,18 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsigndocument Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentRequestPatch :  IEquatable<EzsigndocumentRequestPatch>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentRequestPatch" /> class.
-        /// </summary>
-        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed..</param>
-        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations.</param>
         public EzsigndocumentRequestPatch(string dtEzsigndocumentDuedate = default(string), string sEzsigndocumentName = default(string))
         {
             this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;

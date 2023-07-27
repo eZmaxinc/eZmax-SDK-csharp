@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// PaymenttermGetListV1ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class PaymenttermGetListV1ResponseAllOf :  IEquatable<PaymenttermGetListV1ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymenttermGetListV1ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PaymenttermGetListV1ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymenttermGetListV1ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// PaymenttermGetListV1ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class PaymenttermGetListV1ResponseAllOf :  IEquatable<PaymenttermGetListV1ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PaymenttermGetListV1ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PaymenttermGetListV1ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PaymenttermGetListV1ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public PaymenttermGetListV1ResponseAllOf(PaymenttermGetListV1ResponseMPayload mPayload = default(PaymenttermGetListV1ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

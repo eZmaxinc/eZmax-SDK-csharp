@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// ActivesessionResponseCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class ActivesessionResponseCompoundAllOf :  IEquatable<ActivesessionResponseCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ActivesessionResponseCompoundAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="aPkiPermissionID">An array of permissions granted to the user or api key (required).</param>
+        /// <param name="objUserReal">objUserReal (required).</param>
+        /// <param name="objUserCloned">objUserCloned.</param>
+        /// <param name="objApikey">objApikey.</param>
+        /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -143,26 +161,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// ActivesessionResponseCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class ActivesessionResponseCompoundAllOf :  IEquatable<ActivesessionResponseCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ActivesessionResponseCompoundAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="aPkiPermissionID">An array of permissions granted to the user or api key (required).</param>
-        /// <param name="objUserReal">objUserReal (required).</param>
-        /// <param name="objUserCloned">objUserCloned.</param>
-        /// <param name="objApikey">objApikey.</param>
-        /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
         public ActivesessionResponseCompoundAllOf(List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>))
         {
             // to ensure "aPkiPermissionID" is required (not null)

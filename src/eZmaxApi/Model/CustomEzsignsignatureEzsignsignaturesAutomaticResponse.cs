@@ -24,7 +24,28 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignsignature Object in the context of an EzsignsignaturesAutomatic path
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzsignsignatureEzsignsignaturesAutomaticResponse :  IEquatable<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureType
+        /// </summary>
+        [DataMember(Name="eEzsignsignatureType", EmitDefaultValue=true)]
+        public FieldEEzsignsignatureType EEzsignsignatureType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignsignatureEzsignsignaturesAutomaticResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzsignsignatureEzsignsignaturesAutomaticResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignsignatureEzsignsignaturesAutomaticResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature (required).</param>
+        /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
+        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -87,29 +108,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignsignature Object in the context of an EzsignsignaturesAutomatic path
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzsignsignatureEzsignsignaturesAutomaticResponse :  IEquatable<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignsignatureType
-        /// </summary>
-        [DataMember(Name="eEzsignsignatureType", EmitDefaultValue=true)]
-        public FieldEEzsignsignatureType EEzsignsignatureType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignsignatureEzsignsignaturesAutomaticResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzsignsignatureEzsignsignaturesAutomaticResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignsignatureEzsignsignaturesAutomaticResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature (required).</param>
-        /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
-        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
         public CustomEzsignsignatureEzsignsignaturesAutomaticResponse(int pkiEzsignsignatureID = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int iEzsignpagePagenumber = default(int))
         {
             // to ensure "pkiEzsignsignatureID" is required (not null)

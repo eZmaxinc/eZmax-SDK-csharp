@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload :  IEquatable<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aPkiEzsigntemplatepackagesignerID">aPkiEzsigntemplatepackagesignerID (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -93,22 +107,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload :  IEquatable<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aPkiEzsigntemplatepackagesignerID">aPkiEzsigntemplatepackagesignerID (required).</param>
         public EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload(List<int> aPkiEzsigntemplatepackagesignerID = default(List<int>))
         {
             // to ensure "aPkiEzsigntemplatepackagesignerID" is required (not null)

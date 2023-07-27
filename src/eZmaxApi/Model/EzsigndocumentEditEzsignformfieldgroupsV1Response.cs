@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentEditEzsignformfieldgroupsV1Response :  IEquatable<EzsigndocumentEditEzsignformfieldgroupsV1Response>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignformfieldgroupsV1Response" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentEditEzsignformfieldgroupsV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignformfieldgroupsV1Response" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
+        /// <param name="objDebugPayload">objDebugPayload.</param>
+        /// <param name="objDebug">objDebug.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,24 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentEditEzsignformfieldgroupsV1Response :  IEquatable<EzsigndocumentEditEzsignformfieldgroupsV1Response>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignformfieldgroupsV1Response" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentEditEzsignformfieldgroupsV1Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignformfieldgroupsV1Response" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
-        /// <param name="objDebug">objDebug.</param>
         public EzsigndocumentEditEzsignformfieldgroupsV1Response(EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload = default(EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)

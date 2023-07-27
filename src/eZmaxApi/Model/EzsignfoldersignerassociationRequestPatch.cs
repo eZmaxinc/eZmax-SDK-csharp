@@ -24,7 +24,16 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignfoldersignerassociation Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfoldersignerassociationRequestPatch :  IEquatable<EzsignfoldersignerassociationRequestPatch>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestPatch" /> class.
+        /// </summary>
+        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent..</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -75,17 +84,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignfoldersignerassociation Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfoldersignerassociationRequestPatch :  IEquatable<EzsignfoldersignerassociationRequestPatch>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestPatch" /> class.
-        /// </summary>
-        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent..</param>
         public EzsignfoldersignerassociationRequestPatch(string tEzsignfoldersignerassociationMessage = default(string))
         {
             this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;

@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplate Object and children
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplateRequestCompound :  IEquatable<EzsigntemplateRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplateRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
+        /// <param name="bEzsigntemplateAdminonly">Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -118,26 +136,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplate Object and children
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplateRequestCompound :  IEquatable<EzsigntemplateRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
-        /// <param name="bEzsigntemplateAdminonly">Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
         public EzsigntemplateRequestCompound(int pkiEzsigntemplateID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsigntemplateDescription = default(string), bool bEzsigntemplateAdminonly = default(bool))
         {
             // to ensure "fkiEzsignfoldertypeID" is required (not null)

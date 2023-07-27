@@ -24,7 +24,20 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// ScimUserList
+    /// </summary>
+    [DataContract]
+    public partial class ScimUserList :  IEquatable<ScimUserList>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimUserList" /> class.
+        /// </summary>
+        /// <param name="totalResults">totalResults.</param>
+        /// <param name="itemsPerPage">itemsPerPage.</param>
+        /// <param name="startIndex">startIndex.</param>
+        /// <param name="schemas">schemas.</param>
+        /// <param name="resources">resources.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -87,21 +100,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// ScimUserList
-    /// </summary>
-    [DataContract]
-    public partial class ScimUserList :  IEquatable<ScimUserList>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimUserList" /> class.
-        /// </summary>
-        /// <param name="totalResults">totalResults.</param>
-        /// <param name="itemsPerPage">itemsPerPage.</param>
-        /// <param name="startIndex">startIndex.</param>
-        /// <param name="schemas">schemas.</param>
-        /// <param name="resources">resources.</param>
         public ScimUserList(int totalResults = default(int), int itemsPerPage = default(int), int startIndex = default(int), List<string> schemas = default(List<string>), List<ScimUser> resources = default(List<ScimUser>))
         {
             this.TotalResults = totalResults;

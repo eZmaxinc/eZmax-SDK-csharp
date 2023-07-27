@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsignfoldertypeGetListV1ResponseMPayloadAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfoldertypeGetListV1ResponseMPayloadAllOf :  IEquatable<EzsignfoldertypeGetListV1ResponseMPayloadAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldertypeGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfoldertypeGetListV1ResponseMPayloadAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldertypeGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjEzsignfoldertype">aObjEzsignfoldertype (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,22 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsignfoldertypeGetListV1ResponseMPayloadAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfoldertypeGetListV1ResponseMPayloadAllOf :  IEquatable<EzsignfoldertypeGetListV1ResponseMPayloadAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfoldertypeGetListV1ResponseMPayloadAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        /// <param name="aObjEzsignfoldertype">aObjEzsignfoldertype (required).</param>
         public EzsignfoldertypeGetListV1ResponseMPayloadAllOf(List<EzsignfoldertypeListElement> aObjEzsignfoldertype = default(List<EzsignfoldertypeListElement>))
         {
             // to ensure "aObjEzsignfoldertype" is required (not null)

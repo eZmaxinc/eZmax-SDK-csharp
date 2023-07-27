@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Permission Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class PermissionResponseCompound :  IEquatable<PermissionResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PermissionResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PermissionResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PermissionResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiPermissionID">The unique ID of the Permission (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
+        /// <param name="fkiCompanyID">The unique ID of the Company.</param>
+        /// <param name="fkiModulesectionID">The unique ID of the Modulesection (required).</param>
+        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -111,28 +131,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Permission Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class PermissionResponseCompound :  IEquatable<PermissionResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PermissionResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PermissionResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PermissionResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiPermissionID">The unique ID of the Permission (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
-        /// <param name="fkiCompanyID">The unique ID of the Company.</param>
-        /// <param name="fkiModulesectionID">The unique ID of the Modulesection (required).</param>
-        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester.</param>
         public PermissionResponseCompound(int pkiPermissionID = default(int), int fkiUserID = default(int), int fkiApikeyID = default(int), int fkiUsergroupID = default(int), int fkiCompanyID = default(int), int fkiModulesectionID = default(int), string sCompanyNameX = default(string))
         {
             // to ensure "pkiPermissionID" is required (not null)

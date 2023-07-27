@@ -24,7 +24,47 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezmaxinvoicing Object
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingResponseCompound :  IEquatable<EzmaxinvoicingResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzmaxinvoicingPaymenttype
+        /// </summary>
+        [DataMember(Name="eEzmaxinvoicingPaymenttype", EmitDefaultValue=true)]
+        public FieldEEzmaxinvoicingPaymenttype EEzmaxinvoicingPaymenttype { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="fkiEzmaxinvoicingcontractID">The unique ID of the Ezmaxinvoicingcontract (required).</param>
+        /// <param name="fkiEzmaxpricingID">The unique ID of the Ezmaxpricing (required).</param>
+        /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
+        /// <param name="sSystemconfigurationtypeDescriptionX">The description of the Systemconfigurationtype in the language of the requester (required).</param>
+        /// <param name="yyyymmEzmaxinvoicing">The YYYYMM period of the Ezmaxinvoicing (required).</param>
+        /// <param name="iEzmaxinvoicingDays">The number of days invoiced (required).</param>
+        /// <param name="eEzmaxinvoicingPaymenttype">eEzmaxinvoicingPaymenttype (required).</param>
+        /// <param name="dEzmaxinvoicingRebatepaymenttype">The percentage of rebate depending of the payment type (required).</param>
+        /// <param name="iEzmaxinvoicingContractlength">The length of the contract in years (required).</param>
+        /// <param name="dEzmaxinvoicingRebatecontractlength">The percentage of rebate depending of the contract length (required).</param>
+        /// <param name="bEzmaxinvoicingRebateEzsignallagents">Whether the rebate for eZsign is for all agents (required).</param>
+        /// <param name="objAudit">objAudit.</param>
+        /// <param name="objEzmaxinvoicingcontract">objEzmaxinvoicingcontract (required).</param>
+        /// <param name="objEzmaxpricing">objEzmaxpricing (required).</param>
+        /// <param name="aObjEzmaxinvoicingsummaryglobal">aObjEzmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="aObjEzmaxinvoicingsummaryexternal">aObjEzmaxinvoicingsummaryexternal (required).</param>
+        /// <param name="aObjEzmaxinvoicingsummaryinternal">aObjEzmaxinvoicingsummaryinternal (required).</param>
+        /// <param name="aObjEzmaxinvoicingagent">aObjEzmaxinvoicingagent (required).</param>
+        /// <param name="aObjEzmaxinvoicinguser">aObjEzmaxinvoicinguser (required).</param>
+        /// <param name="aObjEzmaxinvoicingezsignfolder">aObjEzmaxinvoicingezsignfolder (required).</param>
+        /// <param name="aObjEzmaxinvoicingezsigndocument">aObjEzmaxinvoicingezsigndocument (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -304,48 +344,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezmaxinvoicing Object
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingResponseCompound :  IEquatable<EzmaxinvoicingResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzmaxinvoicingPaymenttype
-        /// </summary>
-        [DataMember(Name="eEzmaxinvoicingPaymenttype", EmitDefaultValue=true)]
-        public FieldEEzmaxinvoicingPaymenttype EEzmaxinvoicingPaymenttype { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiEzmaxinvoicingcontractID">The unique ID of the Ezmaxinvoicingcontract (required).</param>
-        /// <param name="fkiEzmaxpricingID">The unique ID of the Ezmaxpricing (required).</param>
-        /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
-        /// <param name="sSystemconfigurationtypeDescriptionX">The description of the Systemconfigurationtype in the language of the requester (required).</param>
-        /// <param name="yyyymmEzmaxinvoicing">The YYYYMM period of the Ezmaxinvoicing (required).</param>
-        /// <param name="iEzmaxinvoicingDays">The number of days invoiced (required).</param>
-        /// <param name="eEzmaxinvoicingPaymenttype">eEzmaxinvoicingPaymenttype (required).</param>
-        /// <param name="dEzmaxinvoicingRebatepaymenttype">The percentage of rebate depending of the payment type (required).</param>
-        /// <param name="iEzmaxinvoicingContractlength">The length of the contract in years (required).</param>
-        /// <param name="dEzmaxinvoicingRebatecontractlength">The percentage of rebate depending of the contract length (required).</param>
-        /// <param name="bEzmaxinvoicingRebateEzsignallagents">Whether the rebate for eZsign is for all agents (required).</param>
-        /// <param name="objAudit">objAudit.</param>
-        /// <param name="objEzmaxinvoicingcontract">objEzmaxinvoicingcontract (required).</param>
-        /// <param name="objEzmaxpricing">objEzmaxpricing (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryglobal">aObjEzmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryexternal">aObjEzmaxinvoicingsummaryexternal (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryinternal">aObjEzmaxinvoicingsummaryinternal (required).</param>
-        /// <param name="aObjEzmaxinvoicingagent">aObjEzmaxinvoicingagent (required).</param>
-        /// <param name="aObjEzmaxinvoicinguser">aObjEzmaxinvoicinguser (required).</param>
-        /// <param name="aObjEzmaxinvoicingezsignfolder">aObjEzmaxinvoicingezsignfolder (required).</param>
-        /// <param name="aObjEzmaxinvoicingezsigndocument">aObjEzmaxinvoicingezsigndocument (required).</param>
         public EzmaxinvoicingResponseCompound(int pkiEzmaxinvoicingID = default(int), int fkiEzmaxinvoicingcontractID = default(int), int fkiEzmaxpricingID = default(int), int fkiSystemconfigurationtypeID = default(int), string sSystemconfigurationtypeDescriptionX = default(string), string yyyymmEzmaxinvoicing = default(string), int iEzmaxinvoicingDays = default(int), FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype = default(FieldEEzmaxinvoicingPaymenttype), string dEzmaxinvoicingRebatepaymenttype = default(string), int iEzmaxinvoicingContractlength = default(int), string dEzmaxinvoicingRebatecontractlength = default(string), bool bEzmaxinvoicingRebateEzsignallagents = default(bool), CommonAudit objAudit = default(CommonAudit), EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract = default(EzmaxinvoicingcontractResponseCompound), CustomEzmaxpricingResponse objEzmaxpricing = default(CustomEzmaxpricingResponse), List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal = default(List<EzmaxinvoicingsummaryglobalResponseCompound>), List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal = default(List<EzmaxinvoicingsummaryexternalResponseCompound>), List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal = default(List<EzmaxinvoicingsummaryinternalResponseCompound>), List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent = default(List<EzmaxinvoicingagentResponseCompound>), List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser = default(List<EzmaxinvoicinguserResponseCompound>), List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder = default(List<CustomEzmaxinvoicingEzsignfolderResponse>), List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument = default(List<CustomEzmaxinvoicingEzsigndocumentResponse>))
         {
             // to ensure "fkiEzmaxinvoicingcontractID" is required (not null)

@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for GET /1/object/ezsignbulksend/{pkiEzsignbulksend}/getEzsignbulksendtransmissions
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload :  IEquatable<EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEzsignbulksendtransmission">aObjEzsignbulksendtransmission (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for GET /1/object/ezsignbulksend/{pkiEzsignbulksend}/getEzsignbulksendtransmissions
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload :  IEquatable<EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aObjEzsignbulksendtransmission">aObjEzsignbulksendtransmission (required).</param>
         public EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload(List<EzsignbulksendtransmissionResponseCompound> aObjEzsignbulksendtransmission = default(List<EzsignbulksendtransmissionResponseCompound>))
         {
             // to ensure "aObjEzsignbulksendtransmission" is required (not null)

@@ -24,7 +24,55 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+    /// <summary>
+    /// A part in the Reportsubsection 
+    /// </summary>
+    [DataContract]
+    public partial class CommonReportsubsectionpart :  IEquatable<CommonReportsubsectionpart>, IValidatableObject
+    {
+        /// <summary>
+        /// The type of the Reportsubsectionpart
+        /// </summary>
+        /// <value>The type of the Reportsubsectionpart</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EReportsubsectionpartTypeEnum
+        {
+            /// <summary>
+            /// Enum Header for value: Header
+            /// </summary>
+            [EnumMember(Value = "Header")]
+            Header = 1,
 
+            /// <summary>
+            /// Enum Body for value: Body
+            /// </summary>
+            [EnumMember(Value = "Body")]
+            Body = 2,
+
+            /// <summary>
+            /// Enum Footer for value: Footer
+            /// </summary>
+            [EnumMember(Value = "Footer")]
+            Footer = 3
+
+        }
+
+        /// <summary>
+        /// The type of the Reportsubsectionpart
+        /// </summary>
+        /// <value>The type of the Reportsubsectionpart</value>
+        [DataMember(Name="eReportsubsectionpartType", EmitDefaultValue=true)]
+        public EReportsubsectionpartTypeEnum EReportsubsectionpartType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonReportsubsectionpart" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonReportsubsectionpart() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonReportsubsectionpart" /> class.
+        /// </summary>
+        /// <param name="eReportsubsectionpartType">The type of the Reportsubsectionpart (required).</param>
+        /// <param name="aObjReportrow">aObjReportrow (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,56 +137,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A part in the Reportsubsection 
-    /// </summary>
-    [DataContract]
-    public partial class CommonReportsubsectionpart :  IEquatable<CommonReportsubsectionpart>, IValidatableObject
-    {
-        /// <summary>
-        /// The type of the Reportsubsectionpart
-        /// </summary>
-        /// <value>The type of the Reportsubsectionpart</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EReportsubsectionpartTypeEnum
-        {
-            /// <summary>
-            /// Enum Header for value: Header
-            /// </summary>
-            [EnumMember(Value = "Header")]
-            Header = 1,
-
-            /// <summary>
-            /// Enum Body for value: Body
-            /// </summary>
-            [EnumMember(Value = "Body")]
-            Body = 2,
-
-            /// <summary>
-            /// Enum Footer for value: Footer
-            /// </summary>
-            [EnumMember(Value = "Footer")]
-            Footer = 3
-
-        }
-
-        /// <summary>
-        /// The type of the Reportsubsectionpart
-        /// </summary>
-        /// <value>The type of the Reportsubsectionpart</value>
-        [DataMember(Name="eReportsubsectionpartType", EmitDefaultValue=true)]
-        public EReportsubsectionpartTypeEnum EReportsubsectionpartType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonReportsubsectionpart" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonReportsubsectionpart() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonReportsubsectionpart" /> class.
-        /// </summary>
-        /// <param name="eReportsubsectionpartType">The type of the Reportsubsectionpart (required).</param>
-        /// <param name="aObjReportrow">aObjReportrow (required).</param>
         public CommonReportsubsectionpart(EReportsubsectionpartTypeEnum eReportsubsectionpartType = default(EReportsubsectionpartTypeEnum), List<CommonReportrow> aObjReportrow = default(List<CommonReportrow>))
         {
             // to ensure "eReportsubsectionpartType" is required (not null)

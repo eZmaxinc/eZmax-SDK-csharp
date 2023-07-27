@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A custom Webhooklog object
+    /// </summary>
+    [DataContract]
+    public partial class CustomWebhooklogResponse :  IEquatable<CustomWebhooklogResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomWebhooklogResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomWebhooklogResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomWebhooklogResponse" /> class.
+        /// </summary>
+        /// <param name="dtWebhooklogDate">The date and time at which the Webhooklog happened. (required).</param>
+        /// <param name="tWebhooklogJson">The Json containing the Webhook call and return (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -79,23 +94,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A custom Webhooklog object
-    /// </summary>
-    [DataContract]
-    public partial class CustomWebhooklogResponse :  IEquatable<CustomWebhooklogResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomWebhooklogResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomWebhooklogResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomWebhooklogResponse" /> class.
-        /// </summary>
-        /// <param name="dtWebhooklogDate">The date and time at which the Webhooklog happened. (required).</param>
-        /// <param name="tWebhooklogJson">The Json containing the Webhook call and return (required).</param>
         public CustomWebhooklogResponse(string dtWebhooklogDate = default(string), string tWebhooklogJson = default(string))
         {
             // to ensure "dtWebhooklogDate" is required (not null)

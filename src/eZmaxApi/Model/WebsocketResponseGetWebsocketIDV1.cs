@@ -24,7 +24,43 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+    /// <summary>
+    /// Response for Websocket GetWebsocketID V1
+    /// </summary>
+    [DataContract]
+    public partial class WebsocketResponseGetWebsocketIDV1 :  IEquatable<WebsocketResponseGetWebsocketIDV1>, IValidatableObject
+    {
+        /// <summary>
+        /// The Type of message
+        /// </summary>
+        /// <value>The Type of message</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EWebsocketMessagetypeEnum
+        {
+            /// <summary>
+            /// Enum ResponseGetWebsocketIDV1 for value: Response-GetWebsocketID-V1
+            /// </summary>
+            [EnumMember(Value = "Response-GetWebsocketID-V1")]
+            ResponseGetWebsocketIDV1 = 1
 
+        }
+
+        /// <summary>
+        /// The Type of message
+        /// </summary>
+        /// <value>The Type of message</value>
+        [DataMember(Name="eWebsocketMessagetype", EmitDefaultValue=true)]
+        public EWebsocketMessagetypeEnum EWebsocketMessagetype { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebsocketResponseGetWebsocketIDV1() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1" /> class.
+        /// </summary>
+        /// <param name="eWebsocketMessagetype">The Type of message (required).</param>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -75,44 +111,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for Websocket GetWebsocketID V1
-    /// </summary>
-    [DataContract]
-    public partial class WebsocketResponseGetWebsocketIDV1 :  IEquatable<WebsocketResponseGetWebsocketIDV1>, IValidatableObject
-    {
-        /// <summary>
-        /// The Type of message
-        /// </summary>
-        /// <value>The Type of message</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EWebsocketMessagetypeEnum
-        {
-            /// <summary>
-            /// Enum ResponseGetWebsocketIDV1 for value: Response-GetWebsocketID-V1
-            /// </summary>
-            [EnumMember(Value = "Response-GetWebsocketID-V1")]
-            ResponseGetWebsocketIDV1 = 1
-
-        }
-
-        /// <summary>
-        /// The Type of message
-        /// </summary>
-        /// <value>The Type of message</value>
-        [DataMember(Name="eWebsocketMessagetype", EmitDefaultValue=true)]
-        public EWebsocketMessagetypeEnum EWebsocketMessagetype { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WebsocketResponseGetWebsocketIDV1() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1" /> class.
-        /// </summary>
-        /// <param name="eWebsocketMessagetype">The Type of message (required).</param>
-        /// <param name="mPayload">mPayload (required).</param>
         public WebsocketResponseGetWebsocketIDV1(EWebsocketMessagetypeEnum eWebsocketMessagetype = default(EWebsocketMessagetypeEnum), WebsocketResponseGetWebsocketIDV1MPayload mPayload = default(WebsocketResponseGetWebsocketIDV1MPayload))
         {
             // to ensure "eWebsocketMessagetype" is required (not null)

@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// VariableexpenseGetListV1ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class VariableexpenseGetListV1ResponseAllOf :  IEquatable<VariableexpenseGetListV1ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseGetListV1ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected VariableexpenseGetListV1ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseGetListV1ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// VariableexpenseGetListV1ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class VariableexpenseGetListV1ResponseAllOf :  IEquatable<VariableexpenseGetListV1ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseGetListV1ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected VariableexpenseGetListV1ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseGetListV1ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public VariableexpenseGetListV1ResponseAllOf(VariableexpenseGetListV1ResponseMPayload mPayload = default(VariableexpenseGetListV1ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

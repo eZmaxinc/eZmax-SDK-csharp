@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Modulegroup Object
+    /// </summary>
+    [DataContract]
+    public partial class ModulegroupResponseCompound :  IEquatable<ModulegroupResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ModulegroupResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ModulegroupResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ModulegroupResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiModulegroupID">The unique ID of the Modulegroup (required).</param>
+        /// <param name="sModulegroupNameX">The name of the Modulegroup in the language of the requester (required).</param>
+        /// <param name="aObjModule">aObjModule (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -103,24 +119,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Modulegroup Object
-    /// </summary>
-    [DataContract]
-    public partial class ModulegroupResponseCompound :  IEquatable<ModulegroupResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ModulegroupResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ModulegroupResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ModulegroupResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiModulegroupID">The unique ID of the Modulegroup (required).</param>
-        /// <param name="sModulegroupNameX">The name of the Modulegroup in the language of the requester (required).</param>
-        /// <param name="aObjModule">aObjModule (required).</param>
         public ModulegroupResponseCompound(int pkiModulegroupID = default(int), string sModulegroupNameX = default(string), List<ModuleResponseCompound> aObjModule = default(List<ModuleResponseCompound>))
         {
             // to ensure "pkiModulegroupID" is required (not null)

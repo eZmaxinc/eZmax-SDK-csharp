@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Period AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class PeriodAutocompleteElementResponse :  IEquatable<PeriodAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PeriodAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PeriodAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PeriodAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="sPeriodYYYYMM">The YYYYMM of the Period (required).</param>
+        /// <param name="pkiPeriodID">The unique ID of the Period (required).</param>
+        /// <param name="bPeriodIsactive">Whether the Period is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,24 +105,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Period AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class PeriodAutocompleteElementResponse :  IEquatable<PeriodAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PeriodAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PeriodAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PeriodAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="sPeriodYYYYMM">The YYYYMM of the Period (required).</param>
-        /// <param name="pkiPeriodID">The unique ID of the Period (required).</param>
-        /// <param name="bPeriodIsactive">Whether the Period is active or not (required).</param>
         public PeriodAutocompleteElementResponse(string sPeriodYYYYMM = default(string), int pkiPeriodID = default(int), bool bPeriodIsactive = default(bool))
         {
             // to ensure "sPeriodYYYYMM" is required (not null)

@@ -24,7 +24,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Contact Object
+    /// </summary>
+    [DataContract]
+    public partial class ContactRequest :  IEquatable<ContactRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContactRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ContactRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContactRequest" /> class.
+        /// </summary>
+        /// <param name="fkiContacttitleID">The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sContactFirstname">The First name of the contact (required).</param>
+        /// <param name="sContactLastname">The Last name of the contact (required).</param>
+        /// <param name="sContactCompany">The Company name of the contact (required).</param>
+        /// <param name="dtContactBirthdate">The Birth Date of the contact.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -145,27 +164,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Contact Object
-    /// </summary>
-    [DataContract]
-    public partial class ContactRequest :  IEquatable<ContactRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ContactRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ContactRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ContactRequest" /> class.
-        /// </summary>
-        /// <param name="fkiContacttitleID">The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sContactFirstname">The First name of the contact (required).</param>
-        /// <param name="sContactLastname">The Last name of the contact (required).</param>
-        /// <param name="sContactCompany">The Company name of the contact (required).</param>
-        /// <param name="dtContactBirthdate">The Birth Date of the contact.</param>
         public ContactRequest(int fkiContacttitleID = default(int), int fkiLanguageID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), string sContactCompany = default(string), string dtContactBirthdate = default(string))
         {
             // to ensure "fkiContacttitleID" is required (not null)

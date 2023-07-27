@@ -24,7 +24,19 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Custom Ezsignformfield Object to fill an Ezsignform using submitForm
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzsignformfieldRequest :  IEquatable<CustomEzsignformfieldRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignformfieldRequest" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignformfieldID">The unique ID of the Ezsignformfield.</param>
+        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield.</param>
+        /// <param name="bEzsignformfieldSelected">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
+        /// <param name="sEzsignformfieldEnteredvalue">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,20 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Custom Ezsignformfield Object to fill an Ezsignform using submitForm
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzsignformfieldRequest :  IEquatable<CustomEzsignformfieldRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignformfieldRequest" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignformfieldID">The unique ID of the Ezsignformfield.</param>
-        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield.</param>
-        /// <param name="bEzsignformfieldSelected">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
-        /// <param name="sEzsignformfieldEnteredvalue">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
         public CustomEzsignformfieldRequest(int pkiEzsignformfieldID = default(int), string sEzsignformfieldLabel = default(string), bool bEzsignformfieldSelected = default(bool), string sEzsignformfieldEnteredvalue = default(string))
         {
             this.PkiEzsignformfieldID = pkiEzsignformfieldID;

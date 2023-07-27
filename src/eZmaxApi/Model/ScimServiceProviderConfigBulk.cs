@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A complex type that specifies bulk configuration options.
+    /// </summary>
+    [DataContract]
+    public partial class ScimServiceProviderConfigBulk :  IEquatable<ScimServiceProviderConfigBulk>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigBulk" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ScimServiceProviderConfigBulk() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigBulk" /> class.
+        /// </summary>
+        /// <param name="supported">A Boolean value specifying whether or not the operation is supported. (required).</param>
+        /// <param name="maxOperations">An integer value specifying the maximum number of operations. (required).</param>
+        /// <param name="maxPayloadSize">An integer value specifying the maximum payload size in bytes. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -87,24 +103,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A complex type that specifies bulk configuration options.
-    /// </summary>
-    [DataContract]
-    public partial class ScimServiceProviderConfigBulk :  IEquatable<ScimServiceProviderConfigBulk>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigBulk" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ScimServiceProviderConfigBulk() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigBulk" /> class.
-        /// </summary>
-        /// <param name="supported">A Boolean value specifying whether or not the operation is supported. (required).</param>
-        /// <param name="maxOperations">An integer value specifying the maximum number of operations. (required).</param>
-        /// <param name="maxPayloadSize">An integer value specifying the maximum payload size in bytes. (required).</param>
         public ScimServiceProviderConfigBulk(bool supported = default(bool), int maxOperations = default(int), int maxPayloadSize = default(int))
         {
             // to ensure "supported" is required (not null)

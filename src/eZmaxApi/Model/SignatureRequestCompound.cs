@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Signature Object and children
+    /// </summary>
+    [DataContract]
+    public partial class SignatureRequestCompound :  IEquatable<SignatureRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SignatureRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected SignatureRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SignatureRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiSignatureID">The unique ID of the Signature.</param>
+        /// <param name="tSignatureSvg">The svg of the Signature (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -79,23 +94,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Signature Object and children
-    /// </summary>
-    [DataContract]
-    public partial class SignatureRequestCompound :  IEquatable<SignatureRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SignatureRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected SignatureRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SignatureRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiSignatureID">The unique ID of the Signature.</param>
-        /// <param name="tSignatureSvg">The svg of the Signature (required).</param>
         public SignatureRequestCompound(int pkiSignatureID = default(int), string tSignatureSvg = default(string))
         {
             // to ensure "tSignatureSvg" is required (not null)

@@ -24,7 +24,28 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Contactinformations Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class ContactinformationsRequestCompound :  IEquatable<ContactinformationsRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContactinformationsRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ContactinformationsRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContactinformationsRequestCompound" /> class.
+        /// </summary>
+        /// <param name="iAddressDefault">The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
+        /// <param name="iPhoneDefault">The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
+        /// <param name="iEmailDefault">The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
+        /// <param name="iWebsiteDefault">The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
+        /// <param name="aObjAddress">aObjAddress (required).</param>
+        /// <param name="aObjPhone">aObjPhone (required).</param>
+        /// <param name="aObjEmail">aObjEmail (required).</param>
+        /// <param name="aObjWebsite">aObjWebsite (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -175,29 +196,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Contactinformations Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class ContactinformationsRequestCompound :  IEquatable<ContactinformationsRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ContactinformationsRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ContactinformationsRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ContactinformationsRequestCompound" /> class.
-        /// </summary>
-        /// <param name="iAddressDefault">The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
-        /// <param name="iPhoneDefault">The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
-        /// <param name="iEmailDefault">The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
-        /// <param name="iWebsiteDefault">The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
-        /// <param name="aObjAddress">aObjAddress (required).</param>
-        /// <param name="aObjPhone">aObjPhone (required).</param>
-        /// <param name="aObjEmail">aObjEmail (required).</param>
-        /// <param name="aObjWebsite">aObjWebsite (required).</param>
         public ContactinformationsRequestCompound(int iAddressDefault = default(int), int iPhoneDefault = default(int), int iEmailDefault = default(int), int iWebsiteDefault = default(int), List<AddressRequestCompound> aObjAddress = default(List<AddressRequestCompound>), List<PhoneRequestCompound> aObjPhone = default(List<PhoneRequestCompound>), List<EmailRequestCompound> aObjEmail = default(List<EmailRequestCompound>), List<WebsiteRequestCompound> aObjWebsite = default(List<WebsiteRequestCompound>))
         {
             // to ensure "iAddressDefault" is required (not null)

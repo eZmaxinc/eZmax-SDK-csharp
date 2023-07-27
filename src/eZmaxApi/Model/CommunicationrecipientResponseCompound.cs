@@ -24,7 +24,51 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Communicationreciient Object
+    /// </summary>
+    [DataContract]
+    public partial class CommunicationrecipientResponseCompound :  IEquatable<CommunicationrecipientResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets ECommunicationrecipientObjecttype
+        /// </summary>
+        [DataMember(Name="eCommunicationrecipientObjecttype", EmitDefaultValue=false)]
+        public FieldECommunicationrecipientObjecttype? ECommunicationrecipientObjecttype { get; set; }
+        /// <summary>
+        /// Gets or Sets ECommunicationrecipientType
+        /// </summary>
+        [DataMember(Name="eCommunicationrecipientType", EmitDefaultValue=true)]
+        public FieldECommunicationrecipientType ECommunicationrecipientType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommunicationrecipientResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommunicationrecipientResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommunicationrecipientResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiCommunicationrecipientID">The unique ID of the Communicationrecipient. (required).</param>
+        /// <param name="eCommunicationrecipientObjecttype">eCommunicationrecipientObjecttype.</param>
+        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
+        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
+        /// <param name="fkiContactID">The unique ID of the Contact.</param>
+        /// <param name="fkiCustomerID">The unique ID of the Customer..</param>
+        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
+        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
+        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice.</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiAgentincorporationID">The unique ID of the Agentincorporation..</param>
+        /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
+        /// <param name="fkiExternalbrokerID">The unique ID of the Externalbroker..</param>
+        /// <param name="fkiEzcomagentID">The unique ID of the Ezcomagent..</param>
+        /// <param name="fkiNotaryID">The unique ID of the Notary..</param>
+        /// <param name="fkiRewardmemberID">The unique ID of the Rewardmember..</param>
+        /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
+        /// <param name="eCommunicationrecipientType">eCommunicationrecipientType (required).</param>
+        /// <param name="objDescriptionstatic">objDescriptionstatic (required).</param>
+        /// <param name="objEmailstatic">objEmailstatic.</param>
+        /// <param name="objPhonestatic">objPhonestatic.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -162,52 +206,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Communicationreciient Object
-    /// </summary>
-    [DataContract]
-    public partial class CommunicationrecipientResponseCompound :  IEquatable<CommunicationrecipientResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets ECommunicationrecipientObjecttype
-        /// </summary>
-        [DataMember(Name="eCommunicationrecipientObjecttype", EmitDefaultValue=false)]
-        public FieldECommunicationrecipientObjecttype? ECommunicationrecipientObjecttype { get; set; }
-        /// <summary>
-        /// Gets or Sets ECommunicationrecipientType
-        /// </summary>
-        [DataMember(Name="eCommunicationrecipientType", EmitDefaultValue=true)]
-        public FieldECommunicationrecipientType ECommunicationrecipientType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommunicationrecipientResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommunicationrecipientResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommunicationrecipientResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiCommunicationrecipientID">The unique ID of the Communicationrecipient. (required).</param>
-        /// <param name="eCommunicationrecipientObjecttype">eCommunicationrecipientObjecttype.</param>
-        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
-        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
-        /// <param name="fkiContactID">The unique ID of the Contact.</param>
-        /// <param name="fkiCustomerID">The unique ID of the Customer..</param>
-        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
-        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
-        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiAgentincorporationID">The unique ID of the Agentincorporation..</param>
-        /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
-        /// <param name="fkiExternalbrokerID">The unique ID of the Externalbroker..</param>
-        /// <param name="fkiEzcomagentID">The unique ID of the Ezcomagent..</param>
-        /// <param name="fkiNotaryID">The unique ID of the Notary..</param>
-        /// <param name="fkiRewardmemberID">The unique ID of the Rewardmember..</param>
-        /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
-        /// <param name="eCommunicationrecipientType">eCommunicationrecipientType (required).</param>
-        /// <param name="objDescriptionstatic">objDescriptionstatic (required).</param>
-        /// <param name="objEmailstatic">objEmailstatic.</param>
-        /// <param name="objPhonestatic">objPhonestatic.</param>
         public CommunicationrecipientResponseCompound(int pkiCommunicationrecipientID = default(int), FieldECommunicationrecipientObjecttype? eCommunicationrecipientObjecttype = default(FieldECommunicationrecipientObjecttype?), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiContactID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiEzsignsignerID = default(int), int fkiFranchiseofficeID = default(int), int fkiUserID = default(int), int fkiAgentincorporationID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomagentID = default(int), int fkiNotaryID = default(int), int fkiRewardmemberID = default(int), int fkiSupplierID = default(int), FieldECommunicationrecipientType eCommunicationrecipientType = default(FieldECommunicationrecipientType), DescriptionstaticResponseCompound objDescriptionstatic = default(DescriptionstaticResponseCompound), EmailstaticResponseCompound objEmailstatic = default(EmailstaticResponseCompound), PhonestaticResponseCompound objPhonestatic = default(PhonestaticResponseCompound))
         {
             // to ensure "pkiCommunicationrecipientID" is required (not null)

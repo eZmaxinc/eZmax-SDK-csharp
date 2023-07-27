@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A form Data Document Object 
+    /// </summary>
+    [DataContract]
+    public partial class CustomFormDataDocumentResponse :  IEquatable<CustomFormDataDocumentResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomFormDataDocumentResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomFormDataDocumentResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomFormDataDocumentResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
+        /// <param name="dtModifiedDate">The date and time at which the object was last modified (required).</param>
+        /// <param name="aObjFormDataSigner">aObjFormDataSigner (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -119,26 +137,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A form Data Document Object 
-    /// </summary>
-    [DataContract]
-    public partial class CustomFormDataDocumentResponse :  IEquatable<CustomFormDataDocumentResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomFormDataDocumentResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomFormDataDocumentResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomFormDataDocumentResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="dtModifiedDate">The date and time at which the object was last modified (required).</param>
-        /// <param name="aObjFormDataSigner">aObjFormDataSigner (required).</param>
         public CustomFormDataDocumentResponse(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), string sEzsigndocumentName = default(string), string dtModifiedDate = default(string), List<CustomFormDataSignerResponse> aObjFormDataSigner = default(List<CustomFormDataSignerResponse>))
         {
             // to ensure "pkiEzsigndocumentID" is required (not null)

@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsignfoldersignerassociation-&gt;User Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfoldersignerassociationResponseCompoundUser :  IEquatable<EzsignfoldersignerassociationResponseCompoundUser>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponseCompoundUser" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfoldersignerassociationResponseCompoundUser() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponseCompoundUser" /> class.
+        /// </summary>
+        /// <param name="pkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sEmailAddress">The email address. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -123,26 +141,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignfoldersignerassociation-&gt;User Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfoldersignerassociationResponseCompoundUser :  IEquatable<EzsignfoldersignerassociationResponseCompoundUser>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponseCompoundUser" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfoldersignerassociationResponseCompoundUser() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponseCompoundUser" /> class.
-        /// </summary>
-        /// <param name="pkiUserID">The unique ID of the User (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sEmailAddress">The email address. (required).</param>
         public EzsignfoldersignerassociationResponseCompoundUser(int pkiUserID = default(int), int fkiLanguageID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sEmailAddress = default(string))
         {
             // to ensure "pkiUserID" is required (not null)

@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /1/object/billingentityinternal
+    /// </summary>
+    [DataContract]
+    public partial class BillingentityinternalCreateObjectV1Request :  IEquatable<BillingentityinternalCreateObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BillingentityinternalCreateObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="aObjBillingentityinternal">aObjBillingentityinternal (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,22 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/billingentityinternal
-    /// </summary>
-    [DataContract]
-    public partial class BillingentityinternalCreateObjectV1Request :  IEquatable<BillingentityinternalCreateObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BillingentityinternalCreateObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="aObjBillingentityinternal">aObjBillingentityinternal (required).</param>
         public BillingentityinternalCreateObjectV1Request(List<BillingentityinternalRequestCompound> aObjBillingentityinternal = default(List<BillingentityinternalRequestCompound>))
         {
             // to ensure "aObjBillingentityinternal" is required (not null)

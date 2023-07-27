@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /1/object/ezsignbulksenddocumentmapping
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksenddocumentmappingCreateObjectV1Request :  IEquatable<EzsignbulksenddocumentmappingCreateObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingCreateObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksenddocumentmappingCreateObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingCreateObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="aObjEzsignbulksenddocumentmapping">aObjEzsignbulksenddocumentmapping (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,22 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/ezsignbulksenddocumentmapping
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksenddocumentmappingCreateObjectV1Request :  IEquatable<EzsignbulksenddocumentmappingCreateObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingCreateObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksenddocumentmappingCreateObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingCreateObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="aObjEzsignbulksenddocumentmapping">aObjEzsignbulksenddocumentmapping (required).</param>
         public EzsignbulksenddocumentmappingCreateObjectV1Request(List<EzsignbulksenddocumentmappingRequestCompound> aObjEzsignbulksenddocumentmapping = default(List<EzsignbulksenddocumentmappingRequestCompound>))
         {
             // to ensure "aObjEzsignbulksenddocumentmapping" is required (not null)

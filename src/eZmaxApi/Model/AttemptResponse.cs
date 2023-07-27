@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Attempt object
+    /// </summary>
+    [DataContract]
+    public partial class AttemptResponse :  IEquatable<AttemptResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AttemptResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected AttemptResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AttemptResponse" /> class.
+        /// </summary>
+        /// <param name="dtAttemptStart">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
+        /// <param name="sAttemptResult">The Success or Failure message of the attempt when we tried to call the URL to deliver the webhook event. (required).</param>
+        /// <param name="iAttemptDuration">The number of second it took to process the webhook or get an error (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -85,24 +101,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Attempt object
-    /// </summary>
-    [DataContract]
-    public partial class AttemptResponse :  IEquatable<AttemptResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AttemptResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected AttemptResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AttemptResponse" /> class.
-        /// </summary>
-        /// <param name="dtAttemptStart">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
-        /// <param name="sAttemptResult">The Success or Failure message of the attempt when we tried to call the URL to deliver the webhook event. (required).</param>
-        /// <param name="iAttemptDuration">The number of second it took to process the webhook or get an error (required).</param>
         public AttemptResponse(string dtAttemptStart = default(string), string sAttemptResult = default(string), int iAttemptDuration = default(int))
         {
             // to ensure "dtAttemptStart" is required (not null)

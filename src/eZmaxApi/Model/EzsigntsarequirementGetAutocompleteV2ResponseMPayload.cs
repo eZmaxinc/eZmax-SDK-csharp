@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for POST /2/object/ezsigntsarequirement/getAutocomplete
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntsarequirementGetAutocompleteV2ResponseMPayload :  IEquatable<EzsigntsarequirementGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntsarequirementGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntsarequirementGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntsarequirementGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEzsigntsarequirement">An array of Ezsigntsarequirement autocomplete element response. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,22 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for POST /2/object/ezsigntsarequirement/getAutocomplete
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntsarequirementGetAutocompleteV2ResponseMPayload :  IEquatable<EzsigntsarequirementGetAutocompleteV2ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntsarequirementGetAutocompleteV2ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntsarequirementGetAutocompleteV2ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntsarequirementGetAutocompleteV2ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aObjEzsigntsarequirement">An array of Ezsigntsarequirement autocomplete element response. (required).</param>
         public EzsigntsarequirementGetAutocompleteV2ResponseMPayload(List<EzsigntsarequirementAutocompleteElementResponse> aObjEzsigntsarequirement = default(List<EzsigntsarequirementAutocompleteElementResponse>))
         {
             // to ensure "aObjEzsigntsarequirement" is required (not null)

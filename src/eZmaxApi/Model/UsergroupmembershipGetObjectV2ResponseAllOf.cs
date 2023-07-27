@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// UsergroupmembershipGetObjectV2ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class UsergroupmembershipGetObjectV2ResponseAllOf :  IEquatable<UsergroupmembershipGetObjectV2ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupmembershipGetObjectV2ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UsergroupmembershipGetObjectV2ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupmembershipGetObjectV2ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// UsergroupmembershipGetObjectV2ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class UsergroupmembershipGetObjectV2ResponseAllOf :  IEquatable<UsergroupmembershipGetObjectV2ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupmembershipGetObjectV2ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UsergroupmembershipGetObjectV2ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupmembershipGetObjectV2ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public UsergroupmembershipGetObjectV2ResponseAllOf(UsergroupmembershipGetObjectV2ResponseMPayload mPayload = default(UsergroupmembershipGetObjectV2ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

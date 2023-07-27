@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// This is a debug object containing debugging information on the actual function
+    /// </summary>
+    [DataContract]
+    public partial class CommonResponseObjDebugPayloadGetList :  IEquatable<CommonResponseObjDebugPayloadGetList>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetList" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonResponseObjDebugPayloadGetList() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetList" /> class.
+        /// </summary>
+        /// <param name="iVersionMin">The minimum version of the function that can be called (required).</param>
+        /// <param name="iVersionMax">The maximum version of the function that can be called (required).</param>
+        /// <param name="aRequiredPermission">An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them. (required).</param>
+        /// <param name="aFilter">aFilter (required).</param>
+        /// <param name="aOrderBy">List of available values for *eOrderBy* (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -149,26 +167,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// This is a debug object containing debugging information on the actual function
-    /// </summary>
-    [DataContract]
-    public partial class CommonResponseObjDebugPayloadGetList :  IEquatable<CommonResponseObjDebugPayloadGetList>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetList" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonResponseObjDebugPayloadGetList() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetList" /> class.
-        /// </summary>
-        /// <param name="iVersionMin">The minimum version of the function that can be called (required).</param>
-        /// <param name="iVersionMax">The maximum version of the function that can be called (required).</param>
-        /// <param name="aRequiredPermission">An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them. (required).</param>
-        /// <param name="aFilter">aFilter (required).</param>
-        /// <param name="aOrderBy">List of available values for *eOrderBy* (required).</param>
         public CommonResponseObjDebugPayloadGetList(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), CommonResponseFilter aFilter = default(CommonResponseFilter), Dictionary<string, string> aOrderBy = default(Dictionary<string, string>))
         {
             // to ensure "iVersionMin" is required (not null)

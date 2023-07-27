@@ -24,7 +24,50 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignformfieldgroup Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignformfieldgroupResponse :  IEquatable<EzsignformfieldgroupResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignformfieldgroupType
+        /// </summary>
+        [DataMember(Name="eEzsignformfieldgroupType", EmitDefaultValue=true)]
+        public FieldEEzsignformfieldgroupType EEzsignformfieldgroupType { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignformfieldgroupSignerrequirement
+        /// </summary>
+        [DataMember(Name="eEzsignformfieldgroupSignerrequirement", EmitDefaultValue=true)]
+        public FieldEEzsignformfieldgroupSignerrequirement EEzsignformfieldgroupSignerrequirement { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignformfieldgroupTooltipposition
+        /// </summary>
+        [DataMember(Name="eEzsignformfieldgroupTooltipposition", EmitDefaultValue=false)]
+        public FieldEEzsignformfieldgroupTooltipposition? EEzsignformfieldgroupTooltipposition { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignformfieldgroupResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignformfieldgroupResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignformfieldgroupResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignformfieldgroupID">The unique ID of the Ezsignformfieldgroup (required).</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="eEzsignformfieldgroupType">eEzsignformfieldgroupType (required).</param>
+        /// <param name="eEzsignformfieldgroupSignerrequirement">eEzsignformfieldgroupSignerrequirement (required).</param>
+        /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup (required).</param>
+        /// <param name="iEzsignformfieldgroupStep">The step when the Ezsignsigner will be invited to fill the form fields (required).</param>
+        /// <param name="sEzsignformfieldgroupDefaultvalue">The default value for the Ezsignformfieldgroup.</param>
+        /// <param name="iEzsignformfieldgroupFilledmin">The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup (required).</param>
+        /// <param name="iEzsignformfieldgroupFilledmax">The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup (required).</param>
+        /// <param name="bEzsignformfieldgroupReadonly">Whether the Ezsignformfieldgroup is read only or not. (required).</param>
+        /// <param name="iEzsignformfieldgroupMaxlength">The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="bEzsignformfieldgroupEncrypted">Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="sEzsignformfieldgroupRegexp">A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="tEzsignformfieldgroupTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup.</param>
+        /// <param name="eEzsignformfieldgroupTooltipposition">eEzsignformfieldgroupTooltipposition.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -166,51 +209,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignformfieldgroup Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignformfieldgroupResponse :  IEquatable<EzsignformfieldgroupResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignformfieldgroupType
-        /// </summary>
-        [DataMember(Name="eEzsignformfieldgroupType", EmitDefaultValue=true)]
-        public FieldEEzsignformfieldgroupType EEzsignformfieldgroupType { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignformfieldgroupSignerrequirement
-        /// </summary>
-        [DataMember(Name="eEzsignformfieldgroupSignerrequirement", EmitDefaultValue=true)]
-        public FieldEEzsignformfieldgroupSignerrequirement EEzsignformfieldgroupSignerrequirement { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignformfieldgroupTooltipposition
-        /// </summary>
-        [DataMember(Name="eEzsignformfieldgroupTooltipposition", EmitDefaultValue=false)]
-        public FieldEEzsignformfieldgroupTooltipposition? EEzsignformfieldgroupTooltipposition { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignformfieldgroupResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignformfieldgroupResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignformfieldgroupResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignformfieldgroupID">The unique ID of the Ezsignformfieldgroup (required).</param>
-        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="eEzsignformfieldgroupType">eEzsignformfieldgroupType (required).</param>
-        /// <param name="eEzsignformfieldgroupSignerrequirement">eEzsignformfieldgroupSignerrequirement (required).</param>
-        /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup (required).</param>
-        /// <param name="iEzsignformfieldgroupStep">The step when the Ezsignsigner will be invited to fill the form fields (required).</param>
-        /// <param name="sEzsignformfieldgroupDefaultvalue">The default value for the Ezsignformfieldgroup.</param>
-        /// <param name="iEzsignformfieldgroupFilledmin">The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup (required).</param>
-        /// <param name="iEzsignformfieldgroupFilledmax">The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup (required).</param>
-        /// <param name="bEzsignformfieldgroupReadonly">Whether the Ezsignformfieldgroup is read only or not. (required).</param>
-        /// <param name="iEzsignformfieldgroupMaxlength">The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**.</param>
-        /// <param name="bEzsignformfieldgroupEncrypted">Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**.</param>
-        /// <param name="sEzsignformfieldgroupRegexp">A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**.</param>
-        /// <param name="tEzsignformfieldgroupTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup.</param>
-        /// <param name="eEzsignformfieldgroupTooltipposition">eEzsignformfieldgroupTooltipposition.</param>
         public EzsignformfieldgroupResponse(int pkiEzsignformfieldgroupID = default(int), int fkiEzsigndocumentID = default(int), FieldEEzsignformfieldgroupType eEzsignformfieldgroupType = default(FieldEEzsignformfieldgroupType), FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement = default(FieldEEzsignformfieldgroupSignerrequirement), string sEzsignformfieldgroupLabel = default(string), int iEzsignformfieldgroupStep = default(int), string sEzsignformfieldgroupDefaultvalue = default(string), int iEzsignformfieldgroupFilledmin = default(int), int iEzsignformfieldgroupFilledmax = default(int), bool bEzsignformfieldgroupReadonly = default(bool), int iEzsignformfieldgroupMaxlength = default(int), bool bEzsignformfieldgroupEncrypted = default(bool), string sEzsignformfieldgroupRegexp = default(string), string tEzsignformfieldgroupTooltip = default(string), FieldEEzsignformfieldgroupTooltipposition? eEzsignformfieldgroupTooltipposition = default(FieldEEzsignformfieldgroupTooltipposition?))
         {
             // to ensure "pkiEzsignformfieldgroupID" is required (not null)

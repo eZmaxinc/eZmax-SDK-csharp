@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for Websocket GetWebsocketID V1
+    /// </summary>
+    [DataContract]
+    public partial class WebsocketResponseGetWebsocketIDV1MPayload :  IEquatable<WebsocketResponseGetWebsocketIDV1MPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1MPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebsocketResponseGetWebsocketIDV1MPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1MPayload" /> class.
+        /// </summary>
+        /// <param name="sWebsocketID">The Unique ID of the Websocket Connection (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -73,22 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for Websocket GetWebsocketID V1
-    /// </summary>
-    [DataContract]
-    public partial class WebsocketResponseGetWebsocketIDV1MPayload :  IEquatable<WebsocketResponseGetWebsocketIDV1MPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1MPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WebsocketResponseGetWebsocketIDV1MPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1MPayload" /> class.
-        /// </summary>
-        /// <param name="sWebsocketID">The Unique ID of the Websocket Connection (required).</param>
         public WebsocketResponseGetWebsocketIDV1MPayload(string sWebsocketID = default(string))
         {
             // to ensure "sWebsocketID" is required (not null)

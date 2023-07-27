@@ -24,7 +24,24 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// This is the base Webhook object
+    /// </summary>
+    [DataContract]
+    public partial class WebhookEzsignEzsignsignerAcceptclause :  IEquatable<WebhookEzsignEzsignsignerAcceptclause>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookEzsignEzsignsignerAcceptclause" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebhookEzsignEzsignsignerAcceptclause() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookEzsignEzsignsignerAcceptclause" /> class.
+        /// </summary>
+        /// <param name="objEzsignfolder">objEzsignfolder.</param>
+        /// <param name="objEzsignfoldersignerassociation">objEzsignfoldersignerassociation (required).</param>
+        /// <param name="objWebhook">objWebhook (required).</param>
+        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -95,25 +112,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// This is the base Webhook object
-    /// </summary>
-    [DataContract]
-    public partial class WebhookEzsignEzsignsignerAcceptclause :  IEquatable<WebhookEzsignEzsignsignerAcceptclause>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookEzsignEzsignsignerAcceptclause" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WebhookEzsignEzsignsignerAcceptclause() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookEzsignEzsignsignerAcceptclause" /> class.
-        /// </summary>
-        /// <param name="objEzsignfolder">objEzsignfolder.</param>
-        /// <param name="objEzsignfoldersignerassociation">objEzsignfoldersignerassociation (required).</param>
-        /// <param name="objWebhook">objWebhook (required).</param>
-        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
         public WebhookEzsignEzsignsignerAcceptclause(EzsignfolderResponse objEzsignfolder = default(EzsignfolderResponse), EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation = default(EzsignfoldersignerassociationResponseCompound), CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>))
         {
             // to ensure "objEzsignfoldersignerassociation" is required (not null)

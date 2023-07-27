@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for POST /2/object/ezsigntemplate/getAutocomplete
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplateGetAutocompleteV2ResponseMPayload :  IEquatable<EzsigntemplateGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplateGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEzsigntemplate">An array of Ezsigntemplate autocomplete element response. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,22 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for POST /2/object/ezsigntemplate/getAutocomplete
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplateGetAutocompleteV2ResponseMPayload :  IEquatable<EzsigntemplateGetAutocompleteV2ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateGetAutocompleteV2ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateGetAutocompleteV2ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateGetAutocompleteV2ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aObjEzsigntemplate">An array of Ezsigntemplate autocomplete element response. (required).</param>
         public EzsigntemplateGetAutocompleteV2ResponseMPayload(List<EzsigntemplateAutocompleteElementResponse> aObjEzsigntemplate = default(List<EzsigntemplateAutocompleteElementResponse>))
         {
             // to ensure "aObjEzsigntemplate" is required (not null)

@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// The description of the Variableexpense
+    /// </summary>
+    [DataContract]
+    public partial class MultilingualVariableexpenseDescription :  IEquatable<MultilingualVariableexpenseDescription>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MultilingualVariableexpenseDescription" /> class.
+        /// </summary>
+        /// <param name="sVariableexpenseDescription1">The description of the Variableexpense in French.</param>
+        /// <param name="sVariableexpenseDescription2">The description of the Variableexpense in English.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -73,18 +83,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// The description of the Variableexpense
-    /// </summary>
-    [DataContract]
-    public partial class MultilingualVariableexpenseDescription :  IEquatable<MultilingualVariableexpenseDescription>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MultilingualVariableexpenseDescription" /> class.
-        /// </summary>
-        /// <param name="sVariableexpenseDescription1">The description of the Variableexpense in French.</param>
-        /// <param name="sVariableexpenseDescription2">The description of the Variableexpense in English.</param>
         public MultilingualVariableexpenseDescription(string sVariableexpenseDescription1 = default(string), string sVariableexpenseDescription2 = default(string))
         {
             this.SVariableexpenseDescription1 = sVariableexpenseDescription1;

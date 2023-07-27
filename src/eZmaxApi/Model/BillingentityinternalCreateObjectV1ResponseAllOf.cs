@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// BillingentityinternalCreateObjectV1ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class BillingentityinternalCreateObjectV1ResponseAllOf :  IEquatable<BillingentityinternalCreateObjectV1ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BillingentityinternalCreateObjectV1ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// BillingentityinternalCreateObjectV1ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class BillingentityinternalCreateObjectV1ResponseAllOf :  IEquatable<BillingentityinternalCreateObjectV1ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BillingentityinternalCreateObjectV1ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public BillingentityinternalCreateObjectV1ResponseAllOf(BillingentityinternalCreateObjectV1ResponseMPayload mPayload = default(BillingentityinternalCreateObjectV1ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

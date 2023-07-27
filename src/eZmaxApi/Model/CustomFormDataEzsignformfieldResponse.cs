@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignformfield Object
+    /// </summary>
+    [DataContract]
+    public partial class CustomFormDataEzsignformfieldResponse :  IEquatable<CustomFormDataEzsignformfieldResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomFormDataEzsignformfieldResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomFormDataEzsignformfieldResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomFormDataEzsignformfieldResponse" /> class.
+        /// </summary>
+        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield (required).</param>
+        /// <param name="sEzsignformfieldValue">The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,23 +98,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignformfield Object
-    /// </summary>
-    [DataContract]
-    public partial class CustomFormDataEzsignformfieldResponse :  IEquatable<CustomFormDataEzsignformfieldResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomFormDataEzsignformfieldResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomFormDataEzsignformfieldResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomFormDataEzsignformfieldResponse" /> class.
-        /// </summary>
-        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield (required).</param>
-        /// <param name="sEzsignformfieldValue">The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio (required).</param>
         public CustomFormDataEzsignformfieldResponse(string sEzsignformfieldLabel = default(string), string sEzsignformfieldValue = default(string))
         {
             // to ensure "sEzsignformfieldLabel" is required (not null)

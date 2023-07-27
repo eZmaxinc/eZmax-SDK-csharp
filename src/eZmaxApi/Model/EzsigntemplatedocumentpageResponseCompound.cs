@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsigntemplatedocumentpage Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatedocumentpageResponseCompound :  IEquatable<EzsigntemplatedocumentpageResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentpageResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatedocumentpageResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentpageResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplatedocumentpageID">The unique ID of the Ezsigntemplatedocumentpage (required).</param>
+        /// <param name="iEzsigntemplatedocumentpageWidthimage">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="iEzsigntemplatedocumentpageHeightimage">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="iEzsigntemplatedocumentpageWidthpdf">The Width of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="iEzsigntemplatedocumentpageHeightpdf">The Height of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="iEzsigntemplatedocumentpagePagenumber">The page number in the Ezsigntemplatedocument (required).</param>
+        /// <param name="sComputedImageurl">The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -133,28 +153,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsigntemplatedocumentpage Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatedocumentpageResponseCompound :  IEquatable<EzsigntemplatedocumentpageResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentpageResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatedocumentpageResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentpageResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplatedocumentpageID">The unique ID of the Ezsigntemplatedocumentpage (required).</param>
-        /// <param name="iEzsigntemplatedocumentpageWidthimage">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="iEzsigntemplatedocumentpageHeightimage">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="iEzsigntemplatedocumentpageWidthpdf">The Width of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="iEzsigntemplatedocumentpageHeightpdf">The Height of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="iEzsigntemplatedocumentpagePagenumber">The page number in the Ezsigntemplatedocument (required).</param>
-        /// <param name="sComputedImageurl">The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
         public EzsigntemplatedocumentpageResponseCompound(int pkiEzsigntemplatedocumentpageID = default(int), int iEzsigntemplatedocumentpageWidthimage = default(int), int iEzsigntemplatedocumentpageHeightimage = default(int), int iEzsigntemplatedocumentpageWidthpdf = default(int), int iEzsigntemplatedocumentpageHeightpdf = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), string sComputedImageurl = default(string))
         {
             // to ensure "pkiEzsigntemplatedocumentpageID" is required (not null)

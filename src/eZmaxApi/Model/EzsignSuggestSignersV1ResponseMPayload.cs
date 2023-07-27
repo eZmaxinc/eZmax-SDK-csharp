@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for GET /1/module/ezsign/suggestSigners
+    /// </summary>
+    [DataContract]
+    public partial class EzsignSuggestSignersV1ResponseMPayload :  IEquatable<EzsignSuggestSignersV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignSuggestSignersV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignSuggestSignersV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignSuggestSignersV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEzsignfoldersignerassociation">aObjEzsignfoldersignerassociation (required).</param>
+        /// <param name="aObjUserTeam">aObjUserTeam (required).</param>
+        /// <param name="aObjUser">aObjUser (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -117,24 +133,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for GET /1/module/ezsign/suggestSigners
-    /// </summary>
-    [DataContract]
-    public partial class EzsignSuggestSignersV1ResponseMPayload :  IEquatable<EzsignSuggestSignersV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignSuggestSignersV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignSuggestSignersV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignSuggestSignersV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aObjEzsignfoldersignerassociation">aObjEzsignfoldersignerassociation (required).</param>
-        /// <param name="aObjUserTeam">aObjUserTeam (required).</param>
-        /// <param name="aObjUser">aObjUser (required).</param>
         public EzsignSuggestSignersV1ResponseMPayload(List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation = default(List<EzsignfoldersignerassociationResponseCompound>), List<CustomUserResponse> aObjUserTeam = default(List<CustomUserResponse>), List<CustomUserResponse> aObjUser = default(List<CustomUserResponse>))
         {
             // to ensure "aObjEzsignfoldersignerassociation" is required (not null)

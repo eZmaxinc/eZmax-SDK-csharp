@@ -24,7 +24,34 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Franchisereferalincome Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class FranchisereferalincomeRequestCompound :  IEquatable<FranchisereferalincomeRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FranchisereferalincomeRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected FranchisereferalincomeRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FranchisereferalincomeRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiFranchisereferalincomeID">The unique ID of the Franchisereferalincome.</param>
+        /// <param name="fkiFranchisebrokerID">The unique ID of the Franchisebroker (required).</param>
+        /// <param name="fkiFranchisereferalincomeprogramID">The unique ID of the Franchisereferalincomeprogram (required).</param>
+        /// <param name="fkiPeriodID">The unique ID of the Period (required).</param>
+        /// <param name="dFranchisereferalincomeLoan">The loan amount (required).</param>
+        /// <param name="dFranchisereferalincomeFranchiseamount">The amount that will be given to the franchise (required).</param>
+        /// <param name="dFranchisereferalincomeFranchisoramount">The amount that will be kept by the franchisor (required).</param>
+        /// <param name="dFranchisereferalincomeAgentamount">The amount that will be given to the agent (required).</param>
+        /// <param name="dtFranchisereferalincomeDisbursed">The date the amounts were disbursed (required).</param>
+        /// <param name="tFranchisereferalincomeComment">Comment about the transaction (required).</param>
+        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
+        /// <param name="sFranchisereferalincomeRemoteid">sFranchisereferalincomeRemoteid (required).</param>
+        /// <param name="objAddress">objAddress (required).</param>
+        /// <param name="aObjContact">aObjContact (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -184,35 +211,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Franchisereferalincome Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class FranchisereferalincomeRequestCompound :  IEquatable<FranchisereferalincomeRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FranchisereferalincomeRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected FranchisereferalincomeRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FranchisereferalincomeRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiFranchisereferalincomeID">The unique ID of the Franchisereferalincome.</param>
-        /// <param name="fkiFranchisebrokerID">The unique ID of the Franchisebroker (required).</param>
-        /// <param name="fkiFranchisereferalincomeprogramID">The unique ID of the Franchisereferalincomeprogram (required).</param>
-        /// <param name="fkiPeriodID">The unique ID of the Period (required).</param>
-        /// <param name="dFranchisereferalincomeLoan">The loan amount (required).</param>
-        /// <param name="dFranchisereferalincomeFranchiseamount">The amount that will be given to the franchise (required).</param>
-        /// <param name="dFranchisereferalincomeFranchisoramount">The amount that will be kept by the franchisor (required).</param>
-        /// <param name="dFranchisereferalincomeAgentamount">The amount that will be given to the agent (required).</param>
-        /// <param name="dtFranchisereferalincomeDisbursed">The date the amounts were disbursed (required).</param>
-        /// <param name="tFranchisereferalincomeComment">Comment about the transaction (required).</param>
-        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
-        /// <param name="sFranchisereferalincomeRemoteid">sFranchisereferalincomeRemoteid (required).</param>
-        /// <param name="objAddress">objAddress (required).</param>
-        /// <param name="aObjContact">aObjContact (required).</param>
         public FranchisereferalincomeRequestCompound(int pkiFranchisereferalincomeID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchisereferalincomeprogramID = default(int), int fkiPeriodID = default(int), string dFranchisereferalincomeLoan = default(string), string dFranchisereferalincomeFranchiseamount = default(string), string dFranchisereferalincomeFranchisoramount = default(string), string dFranchisereferalincomeAgentamount = default(string), string dtFranchisereferalincomeDisbursed = default(string), string tFranchisereferalincomeComment = default(string), int fkiFranchiseofficeID = default(int), string sFranchisereferalincomeRemoteid = default(string), AddressRequest objAddress = default(AddressRequest), List<ContactRequestCompound> aObjContact = default(List<ContactRequestCompound>))
         {
             // to ensure "fkiFranchisebrokerID" is required (not null)

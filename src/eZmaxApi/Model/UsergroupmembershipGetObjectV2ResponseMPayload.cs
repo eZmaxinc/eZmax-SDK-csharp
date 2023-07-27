@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for GET /2/object/usergroupmembership/{pkiUsergroupmembershipID}
+    /// </summary>
+    [DataContract]
+    public partial class UsergroupmembershipGetObjectV2ResponseMPayload :  IEquatable<UsergroupmembershipGetObjectV2ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupmembershipGetObjectV2ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UsergroupmembershipGetObjectV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupmembershipGetObjectV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="objUsergroupmembership">objUsergroupmembership (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for GET /2/object/usergroupmembership/{pkiUsergroupmembershipID}
-    /// </summary>
-    [DataContract]
-    public partial class UsergroupmembershipGetObjectV2ResponseMPayload :  IEquatable<UsergroupmembershipGetObjectV2ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupmembershipGetObjectV2ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UsergroupmembershipGetObjectV2ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupmembershipGetObjectV2ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="objUsergroupmembership">objUsergroupmembership (required).</param>
         public UsergroupmembershipGetObjectV2ResponseMPayload(UsergroupmembershipResponseCompound objUsergroupmembership = default(UsergroupmembershipResponseCompound))
         {
             // to ensure "objUsergroupmembership" is required (not null)

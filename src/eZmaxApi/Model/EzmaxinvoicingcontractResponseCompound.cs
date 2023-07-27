@@ -24,7 +24,34 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezmaxinvoicingcontract Object
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingcontractResponseCompound :  IEquatable<EzmaxinvoicingcontractResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzmaxinvoicingcontractPaymenttype
+        /// </summary>
+        [DataMember(Name="eEzmaxinvoicingcontractPaymenttype", EmitDefaultValue=true)]
+        public FieldEEzmaxinvoicingcontractPaymenttype EEzmaxinvoicingcontractPaymenttype { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingcontractResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingcontractResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingcontractResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxinvoicingcontractID">The unique ID of the Ezmaxinvoicingcontract (required).</param>
+        /// <param name="eEzmaxinvoicingcontractPaymenttype">eEzmaxinvoicingcontractPaymenttype (required).</param>
+        /// <param name="iEzmaxinvoicingcontractLength">The length in years of the Ezmaxinvoicingcontract (required).</param>
+        /// <param name="dtEzmaxinvoicingcontractStart">The start date of the Ezmaxinvoicingcontract (required).</param>
+        /// <param name="dtEzmaxinvoicingcontractEnd">The end date of the Ezmaxinvoicingcontract (required).</param>
+        /// <param name="dEzmaxinvoicingcontractLicense">The price of the license (required).</param>
+        /// <param name="dEzmaxinvoicingcontract121qa">The price for 121QA (required).</param>
+        /// <param name="bEzmaxinvoicingcontractEzsignallagents">Whether eZsign is for all agents (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -135,35 +162,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezmaxinvoicingcontract Object
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingcontractResponseCompound :  IEquatable<EzmaxinvoicingcontractResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzmaxinvoicingcontractPaymenttype
-        /// </summary>
-        [DataMember(Name="eEzmaxinvoicingcontractPaymenttype", EmitDefaultValue=true)]
-        public FieldEEzmaxinvoicingcontractPaymenttype EEzmaxinvoicingcontractPaymenttype { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingcontractResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingcontractResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingcontractResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxinvoicingcontractID">The unique ID of the Ezmaxinvoicingcontract (required).</param>
-        /// <param name="eEzmaxinvoicingcontractPaymenttype">eEzmaxinvoicingcontractPaymenttype (required).</param>
-        /// <param name="iEzmaxinvoicingcontractLength">The length in years of the Ezmaxinvoicingcontract (required).</param>
-        /// <param name="dtEzmaxinvoicingcontractStart">The start date of the Ezmaxinvoicingcontract (required).</param>
-        /// <param name="dtEzmaxinvoicingcontractEnd">The end date of the Ezmaxinvoicingcontract (required).</param>
-        /// <param name="dEzmaxinvoicingcontractLicense">The price of the license (required).</param>
-        /// <param name="dEzmaxinvoicingcontract121qa">The price for 121QA (required).</param>
-        /// <param name="bEzmaxinvoicingcontractEzsignallagents">Whether eZsign is for all agents (required).</param>
-        /// <param name="objAudit">objAudit (required).</param>
         public EzmaxinvoicingcontractResponseCompound(int pkiEzmaxinvoicingcontractID = default(int), FieldEEzmaxinvoicingcontractPaymenttype eEzmaxinvoicingcontractPaymenttype = default(FieldEEzmaxinvoicingcontractPaymenttype), int iEzmaxinvoicingcontractLength = default(int), string dtEzmaxinvoicingcontractStart = default(string), string dtEzmaxinvoicingcontractEnd = default(string), string dEzmaxinvoicingcontractLicense = default(string), string dEzmaxinvoicingcontract121qa = default(string), bool bEzmaxinvoicingcontractEzsignallagents = default(bool), CommonAudit objAudit = default(CommonAudit))
         {
             // to ensure "pkiEzmaxinvoicingcontractID" is required (not null)

@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezmaxinvoicingsummaryinternal Object
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingsummaryinternalResponseCompound :  IEquatable<EzmaxinvoicingsummaryinternalResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryinternalResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingsummaryinternalResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryinternalResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxinvoicingsummaryinternalID">The unique ID of the Ezmaxinvoicingsummaryinternal.</param>
+        /// <param name="objEzmaxinvoicingsummaryinternalDescription">objEzmaxinvoicingsummaryinternalDescription (required).</param>
+        /// <param name="sEzmaxinvoicingsummaryinternalDescriptionX">The Ezmaxinvoicingsummaryinternal description in the language of the requester (required).</param>
+        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="aObjEzmaxinvoicingsummaryinternaldetail">aObjEzmaxinvoicingsummaryinternaldetail (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -125,28 +145,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezmaxinvoicingsummaryinternal Object
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingsummaryinternalResponseCompound :  IEquatable<EzmaxinvoicingsummaryinternalResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryinternalResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingsummaryinternalResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryinternalResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxinvoicingsummaryinternalID">The unique ID of the Ezmaxinvoicingsummaryinternal.</param>
-        /// <param name="objEzmaxinvoicingsummaryinternalDescription">objEzmaxinvoicingsummaryinternalDescription (required).</param>
-        /// <param name="sEzmaxinvoicingsummaryinternalDescriptionX">The Ezmaxinvoicingsummaryinternal description in the language of the requester (required).</param>
-        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryinternaldetail">aObjEzmaxinvoicingsummaryinternaldetail (required).</param>
         public EzmaxinvoicingsummaryinternalResponseCompound(int pkiEzmaxinvoicingsummaryinternalID = default(int), MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription = default(MultilingualEzmaxinvoicingsummaryinternalDescription), string sEzmaxinvoicingsummaryinternalDescriptionX = default(string), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), List<EzmaxinvoicingsummaryinternaldetailResponseCompound> aObjEzmaxinvoicingsummaryinternaldetail = default(List<EzmaxinvoicingsummaryinternaldetailResponseCompound>))
         {
             // to ensure "objEzmaxinvoicingsummaryinternalDescription" is required (not null)

@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplatepackagemembership Object and children
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatepackagemembershipRequestCompound :  IEquatable<EzsigntemplatepackagemembershipRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatepackagemembershipRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership.</param>
+        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -88,24 +104,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplatepackagemembership Object and children
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatepackagemembershipRequestCompound :  IEquatable<EzsigntemplatepackagemembershipRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatepackagemembershipRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership.</param>
-        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
         public EzsigntemplatepackagemembershipRequestCompound(int pkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int))
         {
             // to ensure "fkiEzsigntemplatepackageID" is required (not null)

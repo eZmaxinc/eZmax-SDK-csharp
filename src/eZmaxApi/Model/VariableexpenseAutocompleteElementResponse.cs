@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Variableexpense AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class VariableexpenseAutocompleteElementResponse :  IEquatable<VariableexpenseAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected VariableexpenseAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="sVariableexpenseDescriptionX">The description of the Variableexpense in the language of the requester (required).</param>
+        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense (required).</param>
+        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -93,24 +109,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Variableexpense AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class VariableexpenseAutocompleteElementResponse :  IEquatable<VariableexpenseAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected VariableexpenseAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="sVariableexpenseDescriptionX">The description of the Variableexpense in the language of the requester (required).</param>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense (required).</param>
-        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not (required).</param>
         public VariableexpenseAutocompleteElementResponse(string sVariableexpenseDescriptionX = default(string), int pkiVariableexpenseID = default(int), bool bVariableexpenseIsactive = default(bool))
         {
             // to ensure "sVariableexpenseDescriptionX" is required (not null)

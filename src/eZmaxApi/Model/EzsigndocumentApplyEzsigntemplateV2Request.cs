@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentApplyEzsigntemplateV2Request :  IEquatable<EzsigndocumentApplyEzsigntemplateV2Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentApplyEzsigntemplateV2Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentApplyEzsigntemplateV2Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentApplyEzsigntemplateV2Request" /> class.
+        /// </summary>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="aSEzsigntemplatesigner">aSEzsigntemplatesigner (required).</param>
+        /// <param name="aPkiEzsignfoldersignerassociationID">aPkiEzsignfoldersignerassociationID (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -133,24 +149,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentApplyEzsigntemplateV2Request :  IEquatable<EzsigndocumentApplyEzsigntemplateV2Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentApplyEzsigntemplateV2Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentApplyEzsigntemplateV2Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentApplyEzsigntemplateV2Request" /> class.
-        /// </summary>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="aSEzsigntemplatesigner">aSEzsigntemplatesigner (required).</param>
-        /// <param name="aPkiEzsignfoldersignerassociationID">aPkiEzsignfoldersignerassociationID (required).</param>
         public EzsigndocumentApplyEzsigntemplateV2Request(int fkiEzsigntemplateID = default(int), List<string> aSEzsigntemplatesigner = default(List<string>), List<int> aPkiEzsignfoldersignerassociationID = default(List<int>))
         {
             // to ensure "fkiEzsigntemplateID" is required (not null)

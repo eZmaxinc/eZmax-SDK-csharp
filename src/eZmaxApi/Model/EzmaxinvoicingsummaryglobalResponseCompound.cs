@@ -24,7 +24,40 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezmaxinvoicingsummaryglobal Object
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingsummaryglobalResponseCompound :  IEquatable<EzmaxinvoicingsummaryglobalResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryglobalResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingsummaryglobalResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryglobalResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxinvoicingsummaryglobalID">The unique ID of the Ezmaxinvoicingsummaryglobal.</param>
+        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="dtEzmaxinvoicingsummaryglobalStart">The start date for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="dtEzmaxinvoicingsummaryglobalEnd">The end date for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="iEzmaxinvoicingsummaryglobalDays">The number of days for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalCountreal">The count item calculated (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalCountbilled">The count item billed (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalSubtotal">The Ezmaxinvoicingsummaryglobal subtotal (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalRebateamount">The rebate amount for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalRebatepercent">The rebate percentage of the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalRebatetotal">The rebate amount total for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalTotal">The Ezmaxinvoicingsummaryglobal total (required).</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalRepresentative">The amount of commission for the representative.</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalPartner">The amount of commission for the partner.</param>
+        /// <param name="dEzmaxinvoicingsummaryglobalNet">The net amount of the Ezmaxinvoicingsummaryglobal.</param>
+        /// <param name="bEzmaxinvoicingsummaryglobalAdjustment">Whether it is adjustment for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="tEzmaxproductHelpX">The help message of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="aObjEzmaxinvoicingcommission">aObjEzmaxinvoicingcommission.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -227,41 +260,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezmaxinvoicingsummaryglobal Object
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingsummaryglobalResponseCompound :  IEquatable<EzmaxinvoicingsummaryglobalResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryglobalResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingsummaryglobalResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryglobalResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxinvoicingsummaryglobalID">The unique ID of the Ezmaxinvoicingsummaryglobal.</param>
-        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="dtEzmaxinvoicingsummaryglobalStart">The start date for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dtEzmaxinvoicingsummaryglobalEnd">The end date for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="iEzmaxinvoicingsummaryglobalDays">The number of days for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalCountreal">The count item calculated (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalCountbilled">The count item billed (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalSubtotal">The Ezmaxinvoicingsummaryglobal subtotal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalRebateamount">The rebate amount for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalRebatepercent">The rebate percentage of the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalRebatetotal">The rebate amount total for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalTotal">The Ezmaxinvoicingsummaryglobal total (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalRepresentative">The amount of commission for the representative.</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalPartner">The amount of commission for the partner.</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalNet">The net amount of the Ezmaxinvoicingsummaryglobal.</param>
-        /// <param name="bEzmaxinvoicingsummaryglobalAdjustment">Whether it is adjustment for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="tEzmaxproductHelpX">The help message of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="aObjEzmaxinvoicingcommission">aObjEzmaxinvoicingcommission.</param>
         public EzmaxinvoicingsummaryglobalResponseCompound(int pkiEzmaxinvoicingsummaryglobalID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), string dtEzmaxinvoicingsummaryglobalStart = default(string), string dtEzmaxinvoicingsummaryglobalEnd = default(string), int iEzmaxinvoicingsummaryglobalDays = default(int), string dEzmaxinvoicingsummaryglobalCountreal = default(string), string dEzmaxinvoicingsummaryglobalCountbilled = default(string), string dEzmaxinvoicingsummaryglobalSubtotal = default(string), string dEzmaxinvoicingsummaryglobalRebateamount = default(string), string dEzmaxinvoicingsummaryglobalRebatepercent = default(string), string dEzmaxinvoicingsummaryglobalRebatetotal = default(string), string dEzmaxinvoicingsummaryglobalTotal = default(string), string dEzmaxinvoicingsummaryglobalRepresentative = default(string), string dEzmaxinvoicingsummaryglobalPartner = default(string), string dEzmaxinvoicingsummaryglobalNet = default(string), bool bEzmaxinvoicingsummaryglobalAdjustment = default(bool), string tEzmaxproductHelpX = default(string), List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission = default(List<EzmaxinvoicingcommissionResponseCompound>))
         {
             // to ensure "fkiEzmaxproductID" is required (not null)

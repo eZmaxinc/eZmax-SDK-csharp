@@ -24,7 +24,29 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A custom Creditcardtransaction Object
+    /// </summary>
+    [DataContract]
+    public partial class CustomCreditcardtransactionResponse :  IEquatable<CustomCreditcardtransactionResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets ECreditcardtypeCodename
+        /// </summary>
+        [DataMember(Name="eCreditcardtypeCodename", EmitDefaultValue=false)]
+        public FieldECreditcardtypeCodename? ECreditcardtypeCodename { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomCreditcardtransactionResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomCreditcardtransactionResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomCreditcardtransactionResponse" /> class.
+        /// </summary>
+        /// <param name="eCreditcardtypeCodename">eCreditcardtypeCodename.</param>
+        /// <param name="dCreditcardtransactionAmount">The amount of the Creditcardtransaction (required).</param>
+        /// <param name="sCreditcardtransactionPartiallydecryptednumber">The partially decrypted credit card number used in the Creditcardtransaction (required).</param>
+        /// <param name="sCreditcardtransactionReferencenumber">The reference number on the creditcard service for the Creditcardtransaction (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -95,30 +117,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A custom Creditcardtransaction Object
-    /// </summary>
-    [DataContract]
-    public partial class CustomCreditcardtransactionResponse :  IEquatable<CustomCreditcardtransactionResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets ECreditcardtypeCodename
-        /// </summary>
-        [DataMember(Name="eCreditcardtypeCodename", EmitDefaultValue=false)]
-        public FieldECreditcardtypeCodename? ECreditcardtypeCodename { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomCreditcardtransactionResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomCreditcardtransactionResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomCreditcardtransactionResponse" /> class.
-        /// </summary>
-        /// <param name="eCreditcardtypeCodename">eCreditcardtypeCodename.</param>
-        /// <param name="dCreditcardtransactionAmount">The amount of the Creditcardtransaction (required).</param>
-        /// <param name="sCreditcardtransactionPartiallydecryptednumber">The partially decrypted credit card number used in the Creditcardtransaction (required).</param>
-        /// <param name="sCreditcardtransactionReferencenumber">The reference number on the creditcard service for the Creditcardtransaction (required).</param>
         public CustomCreditcardtransactionResponse(FieldECreditcardtypeCodename? eCreditcardtypeCodename = default(FieldECreditcardtypeCodename?), string dCreditcardtransactionAmount = default(string), string sCreditcardtransactionPartiallydecryptednumber = default(string), string sCreditcardtransactionReferencenumber = default(string))
         {
             // to ensure "dCreditcardtransactionAmount" is required (not null)

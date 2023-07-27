@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for PUT /1/object/cors/{pkiCorsID}
+    /// </summary>
+    [DataContract]
+    public partial class CorsEditObjectV1Request :  IEquatable<CorsEditObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CorsEditObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CorsEditObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CorsEditObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="objCors">objCors (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for PUT /1/object/cors/{pkiCorsID}
-    /// </summary>
-    [DataContract]
-    public partial class CorsEditObjectV1Request :  IEquatable<CorsEditObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CorsEditObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CorsEditObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CorsEditObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="objCors">objCors (required).</param>
         public CorsEditObjectV1Request(CorsRequestCompound objCors = default(CorsRequestCompound))
         {
             // to ensure "objCors" is required (not null)

@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for PUT /1/object/signature/{pkiSignatureID}
+    /// </summary>
+    [DataContract]
+    public partial class SignatureEditObjectV1Request :  IEquatable<SignatureEditObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SignatureEditObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected SignatureEditObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SignatureEditObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="objSignature">objSignature (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for PUT /1/object/signature/{pkiSignatureID}
-    /// </summary>
-    [DataContract]
-    public partial class SignatureEditObjectV1Request :  IEquatable<SignatureEditObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SignatureEditObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected SignatureEditObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SignatureEditObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="objSignature">objSignature (required).</param>
         public SignatureEditObjectV1Request(SignatureRequestCompound objSignature = default(SignatureRequestCompound))
         {
             // to ensure "objSignature" is required (not null)

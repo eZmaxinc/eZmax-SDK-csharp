@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for PUT /1/object/user/{pkiUserID}/editPermissions
+    /// </summary>
+    [DataContract]
+    public partial class UserEditPermissionsV1ResponseMPayload :  IEquatable<UserEditPermissionsV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserEditPermissionsV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserEditPermissionsV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserEditPermissionsV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aPkiPermissionID">aPkiPermissionID (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -97,22 +111,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for PUT /1/object/user/{pkiUserID}/editPermissions
-    /// </summary>
-    [DataContract]
-    public partial class UserEditPermissionsV1ResponseMPayload :  IEquatable<UserEditPermissionsV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserEditPermissionsV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserEditPermissionsV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserEditPermissionsV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aPkiPermissionID">aPkiPermissionID (required).</param>
         public UserEditPermissionsV1ResponseMPayload(List<int> aPkiPermissionID = default(List<int>))
         {
             // to ensure "aPkiPermissionID" is required (not null)

@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for GET /1/object/ezsigntemplate/getList
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplateGetListV1ResponseMPayload :  IEquatable<EzsigntemplateGetListV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateGetListV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplateGetListV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateGetListV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEzsigntemplate">aObjEzsigntemplate (required).</param>
+        /// <param name="iRowReturned">The number of rows returned (required).</param>
+        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -97,24 +113,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for GET /1/object/ezsigntemplate/getList
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplateGetListV1ResponseMPayload :  IEquatable<EzsigntemplateGetListV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateGetListV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateGetListV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateGetListV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aObjEzsigntemplate">aObjEzsigntemplate (required).</param>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
         public EzsigntemplateGetListV1ResponseMPayload(List<EzsigntemplateListElement> aObjEzsigntemplate = default(List<EzsigntemplateListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
         {
             // to ensure "aObjEzsigntemplate" is required (not null)

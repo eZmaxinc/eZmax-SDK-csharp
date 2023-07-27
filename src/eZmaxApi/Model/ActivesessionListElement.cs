@@ -24,7 +24,32 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Activesession List Element
+    /// </summary>
+    [DataContract]
+    public partial class ActivesessionListElement :  IEquatable<ActivesessionListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivesessionListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ActivesessionListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivesessionListElement" /> class.
+        /// </summary>
+        /// <param name="pkiActivesessionID">The unique ID of the Activesession (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiComputerID">The unique ID of the Computer (required).</param>
+        /// <param name="fkiCompanyID">The unique ID of the Company (required).</param>
+        /// <param name="fkiDepartmentID">The unique ID of the Department (required).</param>
+        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
+        /// <param name="sActivesessionLoginname">The loginname of the Activesession (required).</param>
+        /// <param name="sComputerDescription">The description of the Computer (required).</param>
+        /// <param name="dtActivesessionFirsthit">The first hit of the Activesession (required).</param>
+        /// <param name="dtActivesessionLasthit">The last hit of the Activesession (required).</param>
+        /// <param name="sActivesessionIP">Represent an IP address. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -179,33 +204,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Activesession List Element
-    /// </summary>
-    [DataContract]
-    public partial class ActivesessionListElement :  IEquatable<ActivesessionListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ActivesessionListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionListElement" /> class.
-        /// </summary>
-        /// <param name="pkiActivesessionID">The unique ID of the Activesession (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="fkiComputerID">The unique ID of the Computer (required).</param>
-        /// <param name="fkiCompanyID">The unique ID of the Company (required).</param>
-        /// <param name="fkiDepartmentID">The unique ID of the Department (required).</param>
-        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
-        /// <param name="sActivesessionLoginname">The loginname of the Activesession (required).</param>
-        /// <param name="sComputerDescription">The description of the Computer (required).</param>
-        /// <param name="dtActivesessionFirsthit">The first hit of the Activesession (required).</param>
-        /// <param name="dtActivesessionLasthit">The last hit of the Activesession (required).</param>
-        /// <param name="sActivesessionIP">Represent an IP address. (required).</param>
         public ActivesessionListElement(int pkiActivesessionID = default(int), int fkiUserID = default(int), int fkiComputerID = default(int), int fkiCompanyID = default(int), int fkiDepartmentID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), string sActivesessionLoginname = default(string), string sComputerDescription = default(string), string dtActivesessionFirsthit = default(string), string dtActivesessionLasthit = default(string), string sActivesessionIP = default(string))
         {
             // to ensure "pkiActivesessionID" is required (not null)

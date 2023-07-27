@@ -24,7 +24,67 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignsignature Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class EzsignsignatureRequestCompound :  IEquatable<EzsignsignatureRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureType
+        /// </summary>
+        [DataMember(Name="eEzsignsignatureType", EmitDefaultValue=true)]
+        public FieldEEzsignsignatureType EEzsignsignatureType { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureTooltipposition
+        /// </summary>
+        [DataMember(Name="eEzsignsignatureTooltipposition", EmitDefaultValue=false)]
+        public FieldEEzsignsignatureTooltipposition? EEzsignsignatureTooltipposition { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureFont
+        /// </summary>
+        [DataMember(Name="eEzsignsignatureFont", EmitDefaultValue=false)]
+        public FieldEEzsignsignatureFont? EEzsignsignatureFont { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureAttachmentnamesource
+        /// </summary>
+        [DataMember(Name="eEzsignsignatureAttachmentnamesource", EmitDefaultValue=false)]
+        public FieldEEzsignsignatureAttachmentnamesource? EEzsignsignatureAttachmentnamesource { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureTextvalidation
+        /// </summary>
+        [DataMember(Name="eEzsignsignatureTextvalidation", EmitDefaultValue=false)]
+        public EnumTextvalidation? EEzsignsignatureTextvalidation { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignatureRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignsignatureRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignatureRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature.</param>
+        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
+        /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
+        /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="iEzsignsignatureWidth">The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth..</param>
+        /// <param name="iEzsignsignatureHeight">The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight..</param>
+        /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign (required).</param>
+        /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="tEzsignsignatureTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignsignature.</param>
+        /// <param name="eEzsignsignatureTooltipposition">eEzsignsignatureTooltipposition.</param>
+        /// <param name="eEzsignsignatureFont">eEzsignsignatureFont.</param>
+        /// <param name="fkiEzsignfoldersignerassociationIDValidation">The unique ID of the Ezsignfoldersignerassociation.</param>
+        /// <param name="bEzsignsignatureRequired">Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments..</param>
+        /// <param name="eEzsignsignatureAttachmentnamesource">eEzsignsignatureAttachmentnamesource.</param>
+        /// <param name="sEzsignsignatureAttachmentdescription">The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments.</param>
+        /// <param name="iEzsignsignatureValidationstep">The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments.</param>
+        /// <param name="eEzsignsignatureTextvalidation">eEzsignsignatureTextvalidation.</param>
+        /// <param name="sEzsignsignatureRegexp">A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**.</param>
+        /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
+        /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -203,68 +263,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignsignature Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class EzsignsignatureRequestCompound :  IEquatable<EzsignsignatureRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignsignatureType
-        /// </summary>
-        [DataMember(Name="eEzsignsignatureType", EmitDefaultValue=true)]
-        public FieldEEzsignsignatureType EEzsignsignatureType { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignsignatureTooltipposition
-        /// </summary>
-        [DataMember(Name="eEzsignsignatureTooltipposition", EmitDefaultValue=false)]
-        public FieldEEzsignsignatureTooltipposition? EEzsignsignatureTooltipposition { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignsignatureFont
-        /// </summary>
-        [DataMember(Name="eEzsignsignatureFont", EmitDefaultValue=false)]
-        public FieldEEzsignsignatureFont? EEzsignsignatureFont { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignsignatureAttachmentnamesource
-        /// </summary>
-        [DataMember(Name="eEzsignsignatureAttachmentnamesource", EmitDefaultValue=false)]
-        public FieldEEzsignsignatureAttachmentnamesource? EEzsignsignatureAttachmentnamesource { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignsignatureTextvalidation
-        /// </summary>
-        [DataMember(Name="eEzsignsignatureTextvalidation", EmitDefaultValue=false)]
-        public EnumTextvalidation? EEzsignsignatureTextvalidation { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignatureRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignsignatureRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignatureRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature.</param>
-        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
-        /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
-        /// <param name="iEzsignsignatureWidth">The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth..</param>
-        /// <param name="iEzsignsignatureHeight">The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight..</param>
-        /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign (required).</param>
-        /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
-        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="tEzsignsignatureTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignsignature.</param>
-        /// <param name="eEzsignsignatureTooltipposition">eEzsignsignatureTooltipposition.</param>
-        /// <param name="eEzsignsignatureFont">eEzsignsignatureFont.</param>
-        /// <param name="fkiEzsignfoldersignerassociationIDValidation">The unique ID of the Ezsignfoldersignerassociation.</param>
-        /// <param name="bEzsignsignatureRequired">Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments..</param>
-        /// <param name="eEzsignsignatureAttachmentnamesource">eEzsignsignatureAttachmentnamesource.</param>
-        /// <param name="sEzsignsignatureAttachmentdescription">The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments.</param>
-        /// <param name="iEzsignsignatureValidationstep">The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments.</param>
-        /// <param name="eEzsignsignatureTextvalidation">eEzsignsignatureTextvalidation.</param>
-        /// <param name="sEzsignsignatureRegexp">A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**.</param>
-        /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
-        /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
         public EzsignsignatureRequestCompound(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int fkiEzsignfoldersignerassociationIDValidation = default(int), bool bEzsignsignatureRequired = default(bool), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), string sEzsignsignatureAttachmentdescription = default(string), int iEzsignsignatureValidationstep = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureRegexp = default(string), bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequestCompound>))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)

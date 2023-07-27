@@ -24,7 +24,16 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for POST /2/object/paymentterm/getAutocomplete
+    /// </summary>
+    [DataContract]
+    public partial class PaymenttermGetAutocompleteV2ResponseMPayload :  IEquatable<PaymenttermGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymenttermGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjPaymentterm">An array of Paymentterm autocomplete element response..</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -73,17 +82,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for POST /2/object/paymentterm/getAutocomplete
-    /// </summary>
-    [DataContract]
-    public partial class PaymenttermGetAutocompleteV2ResponseMPayload :  IEquatable<PaymenttermGetAutocompleteV2ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PaymenttermGetAutocompleteV2ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aObjPaymentterm">An array of Paymentterm autocomplete element response..</param>
         public PaymenttermGetAutocompleteV2ResponseMPayload(List<PaymenttermAutocompleteElementResponse> aObjPaymentterm = default(List<PaymenttermAutocompleteElementResponse>))
         {
             this.AObjPaymentterm = aObjPaymentterm;

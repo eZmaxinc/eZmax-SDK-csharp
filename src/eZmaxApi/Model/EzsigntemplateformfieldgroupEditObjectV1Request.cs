@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for PUT /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplateformfieldgroupEditObjectV1Request :  IEquatable<EzsigntemplateformfieldgroupEditObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupEditObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplateformfieldgroupEditObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupEditObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="objEzsigntemplateformfieldgroup">objEzsigntemplateformfieldgroup (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for PUT /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplateformfieldgroupEditObjectV1Request :  IEquatable<EzsigntemplateformfieldgroupEditObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupEditObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateformfieldgroupEditObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupEditObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="objEzsigntemplateformfieldgroup">objEzsigntemplateformfieldgroup (required).</param>
         public EzsigntemplateformfieldgroupEditObjectV1Request(EzsigntemplateformfieldgroupRequestCompound objEzsigntemplateformfieldgroup = default(EzsigntemplateformfieldgroupRequestCompound))
         {
             // to ensure "objEzsigntemplateformfieldgroup" is required (not null)

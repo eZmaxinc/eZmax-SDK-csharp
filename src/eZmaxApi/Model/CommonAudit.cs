@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won&#39;t be returned. 
+    /// </summary>
+    [DataContract]
+    public partial class CommonAudit :  IEquatable<CommonAudit>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonAudit" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonAudit() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonAudit" /> class.
+        /// </summary>
+        /// <param name="objAuditdetailCreated">objAuditdetailCreated (required).</param>
+        /// <param name="objAuditdetailModified">objAuditdetailModified.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -69,23 +84,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won&#39;t be returned. 
-    /// </summary>
-    [DataContract]
-    public partial class CommonAudit :  IEquatable<CommonAudit>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonAudit" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonAudit() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonAudit" /> class.
-        /// </summary>
-        /// <param name="objAuditdetailCreated">objAuditdetailCreated (required).</param>
-        /// <param name="objAuditdetailModified">objAuditdetailModified.</param>
         public CommonAudit(CommonAuditdetail objAuditdetailCreated = default(CommonAuditdetail), CommonAuditdetail objAuditdetailModified = default(CommonAuditdetail))
         {
             // to ensure "objAuditdetailCreated" is required (not null)

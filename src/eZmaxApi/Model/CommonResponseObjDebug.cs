@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// This is a generic debug object that is returned by all API requests
+    /// </summary>
+    [DataContract]
+    public partial class CommonResponseObjDebug :  IEquatable<CommonResponseObjDebug>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonResponseObjDebug" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonResponseObjDebug() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonResponseObjDebug" /> class.
+        /// </summary>
+        /// <param name="sMemoryUsage">The peak memory allocated during the API request execution. Formatted as a human readable string (required).</param>
+        /// <param name="sRunTime">The total server execution time of the API request execution. Formatted as a human readable string (required).</param>
+        /// <param name="iSQLSelects">The number of SQL SELECT queries that were sent to the database server during the API request execution (required).</param>
+        /// <param name="iSQLQueries">The number of SQL INSERT/UPDATE/DELETE queries that were sent to the database server during the API request execution (required).</param>
+        /// <param name="aObjSQLQuery">An array of the SQL Queries that were executed during the API request execution (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -107,26 +125,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// This is a generic debug object that is returned by all API requests
-    /// </summary>
-    [DataContract]
-    public partial class CommonResponseObjDebug :  IEquatable<CommonResponseObjDebug>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseObjDebug" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonResponseObjDebug() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseObjDebug" /> class.
-        /// </summary>
-        /// <param name="sMemoryUsage">The peak memory allocated during the API request execution. Formatted as a human readable string (required).</param>
-        /// <param name="sRunTime">The total server execution time of the API request execution. Formatted as a human readable string (required).</param>
-        /// <param name="iSQLSelects">The number of SQL SELECT queries that were sent to the database server during the API request execution (required).</param>
-        /// <param name="iSQLQueries">The number of SQL INSERT/UPDATE/DELETE queries that were sent to the database server during the API request execution (required).</param>
-        /// <param name="aObjSQLQuery">An array of the SQL Queries that were executed during the API request execution (required).</param>
         public CommonResponseObjDebug(string sMemoryUsage = default(string), string sRunTime = default(string), int iSQLSelects = default(int), int iSQLQueries = default(int), List<CommonResponseObjSQLQuery> aObjSQLQuery = default(List<CommonResponseObjSQLQuery>))
         {
             // to ensure "sMemoryUsage" is required (not null)

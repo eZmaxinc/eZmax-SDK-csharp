@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfolderGetCommunicationCountV1ResponseMPayload :  IEquatable<EzsignfolderGetCommunicationCountV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationCountV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfolderGetCommunicationCountV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationCountV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="iCommunicationCount">The count of Communication. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,22 +85,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfolderGetCommunicationCountV1ResponseMPayload :  IEquatable<EzsignfolderGetCommunicationCountV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationCountV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfolderGetCommunicationCountV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationCountV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="iCommunicationCount">The count of Communication. (required).</param>
         public EzsignfolderGetCommunicationCountV1ResponseMPayload(int iCommunicationCount = default(int))
         {
             // to ensure "iCommunicationCount" is required (not null)

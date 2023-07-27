@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignpage Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class EzsignpageResponseCompound :  IEquatable<EzsignpageResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignpageResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignpageResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignpageResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignpageID">The unique ID of the Ezsignpage (required).</param>
+        /// <param name="iEzsignpageWidthimage">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="iEzsignpageHeightimage">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="iEzsignpageWidthpdf">The Width of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="iEzsignpageHeightpdf">The Height of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
+        /// <param name="sComputedImageurl">The Url to the Ezsignpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -133,28 +153,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignpage Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class EzsignpageResponseCompound :  IEquatable<EzsignpageResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignpageResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignpageResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignpageResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignpageID">The unique ID of the Ezsignpage (required).</param>
-        /// <param name="iEzsignpageWidthimage">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="iEzsignpageHeightimage">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="iEzsignpageWidthpdf">The Width of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="iEzsignpageHeightpdf">The Height of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
-        /// <param name="sComputedImageurl">The Url to the Ezsignpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
         public EzsignpageResponseCompound(int pkiEzsignpageID = default(int), int iEzsignpageWidthimage = default(int), int iEzsignpageHeightimage = default(int), int iEzsignpageWidthpdf = default(int), int iEzsignpageHeightpdf = default(int), int iEzsignpagePagenumber = default(int), string sComputedImageurl = default(string))
         {
             // to ensure "pkiEzsignpageID" is required (not null)

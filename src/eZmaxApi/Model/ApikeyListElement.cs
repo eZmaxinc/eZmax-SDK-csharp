@@ -24,7 +24,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Branding List Element
+    /// </summary>
+    [DataContract]
+    public partial class ApikeyListElement :  IEquatable<ApikeyListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ApikeyListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyListElement" /> class.
+        /// </summary>
+        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
+        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="bApikeyIsactive">Whether the apikey is active or not (required).</param>
+        /// <param name="bApikeyIssigned">Whether the apikey is signed or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -113,27 +132,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Branding List Element
-    /// </summary>
-    [DataContract]
-    public partial class ApikeyListElement :  IEquatable<ApikeyListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ApikeyListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyListElement" /> class.
-        /// </summary>
-        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
-        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="bApikeyIsactive">Whether the apikey is active or not (required).</param>
-        /// <param name="bApikeyIssigned">Whether the apikey is signed or not (required).</param>
         public ApikeyListElement(int pkiApikeyID = default(int), string sApikeyDescriptionX = default(string), string sUserFirstname = default(string), string sUserLastname = default(string), bool bApikeyIsactive = default(bool), bool bApikeyIssigned = default(bool))
         {
             // to ensure "pkiApikeyID" is required (not null)

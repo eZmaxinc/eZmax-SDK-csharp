@@ -24,7 +24,29 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsignsigner-&gt;Contact Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class EzsignsignerRequestCompoundContact :  IEquatable<EzsignsignerRequestCompoundContact>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundContact" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignsignerRequestCompoundContact() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundContact" /> class.
+        /// </summary>
+        /// <param name="sContactFirstname">The First name of the contact (required).</param>
+        /// <param name="sContactLastname">The Last name of the contact (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sEmailAddress">The email address..</param>
+        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
+        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
+        /// <param name="sPhoneE164Cell">A phone number in E.164 Format.</param>
+        /// <param name="sPhoneNumber">sPhoneNumber.</param>
+        /// <param name="sPhoneNumberCell">sPhoneNumberCell.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -133,30 +155,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignsigner-&gt;Contact Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class EzsignsignerRequestCompoundContact :  IEquatable<EzsignsignerRequestCompoundContact>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundContact" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignsignerRequestCompoundContact() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundContact" /> class.
-        /// </summary>
-        /// <param name="sContactFirstname">The First name of the contact (required).</param>
-        /// <param name="sContactLastname">The Last name of the contact (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
-        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
-        /// <param name="sPhoneE164Cell">A phone number in E.164 Format.</param>
-        /// <param name="sPhoneNumber">sPhoneNumber.</param>
-        /// <param name="sPhoneNumberCell">sPhoneNumberCell.</param>
         public EzsignsignerRequestCompoundContact(string sContactFirstname = default(string), string sContactLastname = default(string), int fkiLanguageID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), string sPhoneExtension = default(string), string sPhoneE164Cell = default(string), string sPhoneNumber = default(string), string sPhoneNumberCell = default(string))
         {
             // to ensure "sContactFirstname" is required (not null)

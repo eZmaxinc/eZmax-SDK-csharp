@@ -24,7 +24,68 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+    /// <summary>
+    /// ScimAuthenticationScheme
+    /// </summary>
+    [DataContract]
+    public partial class ScimAuthenticationScheme :  IEquatable<ScimAuthenticationScheme>, IValidatableObject
+    {
+        /// <summary>
+        /// The authentication scheme.
+        /// </summary>
+        /// <value>The authentication scheme.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Enum Oauth for value: oauth
+            /// </summary>
+            [EnumMember(Value = "oauth")]
+            Oauth = 1,
 
+            /// <summary>
+            /// Enum Oauth2 for value: oauth2
+            /// </summary>
+            [EnumMember(Value = "oauth2")]
+            Oauth2 = 2,
+
+            /// <summary>
+            /// Enum Oauthbearertoken for value: oauthbearertoken
+            /// </summary>
+            [EnumMember(Value = "oauthbearertoken")]
+            Oauthbearertoken = 3,
+
+            /// <summary>
+            /// Enum Httpbasic for value: httpbasic
+            /// </summary>
+            [EnumMember(Value = "httpbasic")]
+            Httpbasic = 4,
+
+            /// <summary>
+            /// Enum Httpdigest for value: httpdigest
+            /// </summary>
+            [EnumMember(Value = "httpdigest")]
+            Httpdigest = 5
+
+        }
+
+        /// <summary>
+        /// The authentication scheme.
+        /// </summary>
+        /// <value>The authentication scheme.</value>
+        [DataMember(Name="type", EmitDefaultValue=true)]
+        public TypeEnum Type { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimAuthenticationScheme" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ScimAuthenticationScheme() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimAuthenticationScheme" /> class.
+        /// </summary>
+        /// <param name="description">A description of the authentication scheme. (required).</param>
+        /// <param name="name">The common authentication scheme name (required).</param>
+        /// <param name="type">The authentication scheme. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,69 +150,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// ScimAuthenticationScheme
-    /// </summary>
-    [DataContract]
-    public partial class ScimAuthenticationScheme :  IEquatable<ScimAuthenticationScheme>, IValidatableObject
-    {
-        /// <summary>
-        /// The authentication scheme.
-        /// </summary>
-        /// <value>The authentication scheme.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum
-        {
-            /// <summary>
-            /// Enum Oauth for value: oauth
-            /// </summary>
-            [EnumMember(Value = "oauth")]
-            Oauth = 1,
-
-            /// <summary>
-            /// Enum Oauth2 for value: oauth2
-            /// </summary>
-            [EnumMember(Value = "oauth2")]
-            Oauth2 = 2,
-
-            /// <summary>
-            /// Enum Oauthbearertoken for value: oauthbearertoken
-            /// </summary>
-            [EnumMember(Value = "oauthbearertoken")]
-            Oauthbearertoken = 3,
-
-            /// <summary>
-            /// Enum Httpbasic for value: httpbasic
-            /// </summary>
-            [EnumMember(Value = "httpbasic")]
-            Httpbasic = 4,
-
-            /// <summary>
-            /// Enum Httpdigest for value: httpdigest
-            /// </summary>
-            [EnumMember(Value = "httpdigest")]
-            Httpdigest = 5
-
-        }
-
-        /// <summary>
-        /// The authentication scheme.
-        /// </summary>
-        /// <value>The authentication scheme.</value>
-        [DataMember(Name="type", EmitDefaultValue=true)]
-        public TypeEnum Type { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimAuthenticationScheme" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ScimAuthenticationScheme() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimAuthenticationScheme" /> class.
-        /// </summary>
-        /// <param name="description">A description of the authentication scheme. (required).</param>
-        /// <param name="name">The common authentication scheme name (required).</param>
-        /// <param name="type">The authentication scheme. (required).</param>
         public ScimAuthenticationScheme(string description = default(string), string name = default(string), TypeEnum type = default(TypeEnum))
         {
             // to ensure "description" is required (not null)

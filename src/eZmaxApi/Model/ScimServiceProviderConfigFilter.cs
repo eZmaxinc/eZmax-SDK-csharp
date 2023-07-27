@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A complex type that specifies FILTER options.
+    /// </summary>
+    [DataContract]
+    public partial class ScimServiceProviderConfigFilter :  IEquatable<ScimServiceProviderConfigFilter>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigFilter" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ScimServiceProviderConfigFilter() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigFilter" /> class.
+        /// </summary>
+        /// <param name="supported">A Boolean value specifying whether or not the operation is supported. (required).</param>
+        /// <param name="maxResults">An integer value specifying the maximum number of resources returned in a response. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -79,23 +94,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A complex type that specifies FILTER options.
-    /// </summary>
-    [DataContract]
-    public partial class ScimServiceProviderConfigFilter :  IEquatable<ScimServiceProviderConfigFilter>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigFilter" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ScimServiceProviderConfigFilter() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigFilter" /> class.
-        /// </summary>
-        /// <param name="supported">A Boolean value specifying whether or not the operation is supported. (required).</param>
-        /// <param name="maxResults">An integer value specifying the maximum number of resources returned in a response. (required).</param>
         public ScimServiceProviderConfigFilter(bool supported = default(bool), int maxResults = default(int))
         {
             // to ensure "supported" is required (not null)

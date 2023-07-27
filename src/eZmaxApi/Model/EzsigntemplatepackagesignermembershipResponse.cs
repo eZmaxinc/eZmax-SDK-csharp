@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplatepackagesignermembership Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatepackagesignermembershipResponse :  IEquatable<EzsigntemplatepackagesignermembershipResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatepackagesignermembershipResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplatepackagesignermembershipID">The unique ID of the Ezsigntemplatepackagesignermembership (required).</param>
+        /// <param name="fkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership (required).</param>
+        /// <param name="fkiEzsigntemplatepackagesignerID">The unique ID of the Ezsigntemplatepackagesigner (required).</param>
+        /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
+        /// <param name="iEzsigntemplatepackagesignermembershipCopy">The Copy number in case of multiple copies..</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -108,26 +126,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplatepackagesignermembership Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatepackagesignermembershipResponse :  IEquatable<EzsigntemplatepackagesignermembershipResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatepackagesignermembershipResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplatepackagesignermembershipID">The unique ID of the Ezsigntemplatepackagesignermembership (required).</param>
-        /// <param name="fkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership (required).</param>
-        /// <param name="fkiEzsigntemplatepackagesignerID">The unique ID of the Ezsigntemplatepackagesigner (required).</param>
-        /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
-        /// <param name="iEzsigntemplatepackagesignermembershipCopy">The Copy number in case of multiple copies..</param>
         public EzsigntemplatepackagesignermembershipResponse(int pkiEzsigntemplatepackagesignermembershipID = default(int), int fkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackagesignerID = default(int), int fkiEzsigntemplatesignerID = default(int), int iEzsigntemplatepackagesignermembershipCopy = default(int))
         {
             // to ensure "pkiEzsigntemplatepackagesignermembershipID" is required (not null)

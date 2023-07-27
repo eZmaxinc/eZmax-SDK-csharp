@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// UserGetPermissionsV1ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class UserGetPermissionsV1ResponseAllOf :  IEquatable<UserGetPermissionsV1ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserGetPermissionsV1ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserGetPermissionsV1ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserGetPermissionsV1ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// UserGetPermissionsV1ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class UserGetPermissionsV1ResponseAllOf :  IEquatable<UserGetPermissionsV1ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserGetPermissionsV1ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserGetPermissionsV1ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserGetPermissionsV1ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public UserGetPermissionsV1ResponseAllOf(UserGetPermissionsV1ResponseMPayload mPayload = default(UserGetPermissionsV1ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

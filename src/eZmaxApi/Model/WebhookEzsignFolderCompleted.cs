@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// This is the base Webhook object
+    /// </summary>
+    [DataContract]
+    public partial class WebhookEzsignFolderCompleted :  IEquatable<WebhookEzsignFolderCompleted>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookEzsignFolderCompleted" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebhookEzsignFolderCompleted() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookEzsignFolderCompleted" /> class.
+        /// </summary>
+        /// <param name="objEzsignfolder">objEzsignfolder (required).</param>
+        /// <param name="objWebhook">objWebhook (required).</param>
+        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -93,24 +109,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// This is the base Webhook object
-    /// </summary>
-    [DataContract]
-    public partial class WebhookEzsignFolderCompleted :  IEquatable<WebhookEzsignFolderCompleted>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookEzsignFolderCompleted" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WebhookEzsignFolderCompleted() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookEzsignFolderCompleted" /> class.
-        /// </summary>
-        /// <param name="objEzsignfolder">objEzsignfolder (required).</param>
-        /// <param name="objWebhook">objWebhook (required).</param>
-        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
         public WebhookEzsignFolderCompleted(EzsignfolderResponse objEzsignfolder = default(EzsignfolderResponse), CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>))
         {
             // to ensure "objEzsignfolder" is required (not null)

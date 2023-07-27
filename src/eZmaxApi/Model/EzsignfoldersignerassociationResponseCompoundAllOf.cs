@@ -24,7 +24,18 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsignfoldersignerassociationResponseCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfoldersignerassociationResponseCompoundAllOf :  IEquatable<EzsignfoldersignerassociationResponseCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponseCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="objEzsignsignergroup">objEzsignsignergroup.</param>
+        /// <param name="objUser">objUser.</param>
+        /// <param name="objEzsignsigner">objEzsignsigner.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -69,19 +80,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsignfoldersignerassociationResponseCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfoldersignerassociationResponseCompoundAllOf :  IEquatable<EzsignfoldersignerassociationResponseCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponseCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="objEzsignsignergroup">objEzsignsignergroup.</param>
-        /// <param name="objUser">objUser.</param>
-        /// <param name="objEzsignsigner">objEzsignsigner.</param>
         public EzsignfoldersignerassociationResponseCompoundAllOf(EzsignsignergroupResponseCompound objEzsignsignergroup = default(EzsignsignergroupResponseCompound), EzsignfoldersignerassociationResponseCompoundUser objUser = default(EzsignfoldersignerassociationResponseCompoundUser), EzsignsignerResponseCompound objEzsignsigner = default(EzsignsignerResponseCompound))
         {
             this.ObjEzsignsignergroup = objEzsignsignergroup;

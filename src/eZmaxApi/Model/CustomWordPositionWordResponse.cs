@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Word Position Object
+    /// </summary>
+    [DataContract]
+    public partial class CustomWordPositionWordResponse :  IEquatable<CustomWordPositionWordResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomWordPositionWordResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomWordPositionWordResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomWordPositionWordResponse" /> class.
+        /// </summary>
+        /// <param name="sWord">The searched word (required).</param>
+        /// <param name="aObjWordPositionOccurence">The found occurences for the seached word (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,23 +104,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Word Position Object
-    /// </summary>
-    [DataContract]
-    public partial class CustomWordPositionWordResponse :  IEquatable<CustomWordPositionWordResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomWordPositionWordResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomWordPositionWordResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomWordPositionWordResponse" /> class.
-        /// </summary>
-        /// <param name="sWord">The searched word (required).</param>
-        /// <param name="aObjWordPositionOccurence">The found occurences for the seached word (required).</param>
         public CustomWordPositionWordResponse(string sWord = default(string), List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence = default(List<CustomWordPositionOccurenceResponse>))
         {
             // to ensure "sWord" is required (not null)

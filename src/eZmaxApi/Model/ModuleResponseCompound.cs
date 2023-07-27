@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Module Object
+    /// </summary>
+    [DataContract]
+    public partial class ModuleResponseCompound :  IEquatable<ModuleResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ModuleResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ModuleResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ModuleResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiModuleID">The unique ID of the Module (required).</param>
+        /// <param name="fkiModulegroupID">The unique ID of the Modulegroup (required).</param>
+        /// <param name="eModuleInternalname">The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all. (required).</param>
+        /// <param name="sModuleNameX">The Name of the Module in the language of the requester (required).</param>
+        /// <param name="bModuleRegistered">Whether the Module is registered or not (required).</param>
+        /// <param name="bModuleRegisteredapi">Whether the Module is registered or not for api use (required).</param>
+        /// <param name="aObjModulesection">aObjModulesection (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -139,28 +159,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Module Object
-    /// </summary>
-    [DataContract]
-    public partial class ModuleResponseCompound :  IEquatable<ModuleResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ModuleResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ModuleResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ModuleResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiModuleID">The unique ID of the Module (required).</param>
-        /// <param name="fkiModulegroupID">The unique ID of the Modulegroup (required).</param>
-        /// <param name="eModuleInternalname">The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all. (required).</param>
-        /// <param name="sModuleNameX">The Name of the Module in the language of the requester (required).</param>
-        /// <param name="bModuleRegistered">Whether the Module is registered or not (required).</param>
-        /// <param name="bModuleRegisteredapi">Whether the Module is registered or not for api use (required).</param>
-        /// <param name="aObjModulesection">aObjModulesection (required).</param>
         public ModuleResponseCompound(int pkiModuleID = default(int), int fkiModulegroupID = default(int), string eModuleInternalname = default(string), string sModuleNameX = default(string), bool bModuleRegistered = default(bool), bool bModuleRegisteredapi = default(bool), List<ModulesectionResponseCompound> aObjModulesection = default(List<ModulesectionResponseCompound>))
         {
             // to ensure "pkiModuleID" is required (not null)

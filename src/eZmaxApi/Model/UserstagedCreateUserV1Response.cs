@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for POST /1/object/userstaged/{pkiUserstagedID}/createUser
+    /// </summary>
+    [DataContract]
+    public partial class UserstagedCreateUserV1Response :  IEquatable<UserstagedCreateUserV1Response>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserstagedCreateUserV1Response" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserstagedCreateUserV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserstagedCreateUserV1Response" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
+        /// <param name="objDebugPayload">objDebugPayload.</param>
+        /// <param name="objDebug">objDebug.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,24 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for POST /1/object/userstaged/{pkiUserstagedID}/createUser
-    /// </summary>
-    [DataContract]
-    public partial class UserstagedCreateUserV1Response :  IEquatable<UserstagedCreateUserV1Response>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserstagedCreateUserV1Response" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserstagedCreateUserV1Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserstagedCreateUserV1Response" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
-        /// <param name="objDebug">objDebug.</param>
         public UserstagedCreateUserV1Response(UserstagedCreateUserV1ResponseMPayload mPayload = default(UserstagedCreateUserV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)

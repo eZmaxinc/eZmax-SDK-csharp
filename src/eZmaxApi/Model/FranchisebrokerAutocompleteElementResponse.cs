@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Franchisebroker AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class FranchisebrokerAutocompleteElementResponse :  IEquatable<FranchisebrokerAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FranchisebrokerAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected FranchisebrokerAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FranchisebrokerAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="sFranchisebrokerName">The name of the Franchisebroker in the language of the requester (required).</param>
+        /// <param name="pkiFranchisebrokerID">The unique ID of the Franchisebroker (required).</param>
+        /// <param name="bFranchisebrokerIsactive">Whether the Franchisebroker is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,24 +105,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Franchisebroker AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class FranchisebrokerAutocompleteElementResponse :  IEquatable<FranchisebrokerAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FranchisebrokerAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected FranchisebrokerAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FranchisebrokerAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="sFranchisebrokerName">The name of the Franchisebroker in the language of the requester (required).</param>
-        /// <param name="pkiFranchisebrokerID">The unique ID of the Franchisebroker (required).</param>
-        /// <param name="bFranchisebrokerIsactive">Whether the Franchisebroker is active or not (required).</param>
         public FranchisebrokerAutocompleteElementResponse(string sFranchisebrokerName = default(string), int pkiFranchisebrokerID = default(int), bool bFranchisebrokerIsactive = default(bool))
         {
             // to ensure "sFranchisebrokerName" is required (not null)

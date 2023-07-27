@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for POST /1/object/userstaged/{pkiUserstagedID}/createUser
+    /// </summary>
+    [DataContract]
+    public partial class UserstagedCreateUserV1ResponseMPayload :  IEquatable<UserstagedCreateUserV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserstagedCreateUserV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserstagedCreateUserV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserstagedCreateUserV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="pkiUserID">The unique ID of the User (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -73,22 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for POST /1/object/userstaged/{pkiUserstagedID}/createUser
-    /// </summary>
-    [DataContract]
-    public partial class UserstagedCreateUserV1ResponseMPayload :  IEquatable<UserstagedCreateUserV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserstagedCreateUserV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserstagedCreateUserV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserstagedCreateUserV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="pkiUserID">The unique ID of the User (required).</param>
         public UserstagedCreateUserV1ResponseMPayload(int pkiUserID = default(int))
         {
             // to ensure "pkiUserID" is required (not null)

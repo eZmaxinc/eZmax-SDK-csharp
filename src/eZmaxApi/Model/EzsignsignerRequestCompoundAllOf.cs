@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsignsignerRequestCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsignsignerRequestCompoundAllOf :  IEquatable<EzsignsignerRequestCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignsignerRequestCompoundAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="objContact">objContact (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsignsignerRequestCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsignsignerRequestCompoundAllOf :  IEquatable<EzsignsignerRequestCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignsignerRequestCompoundAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="objContact">objContact (required).</param>
         public EzsignsignerRequestCompoundAllOf(EzsignsignerRequestCompoundContact objContact = default(EzsignsignerRequestCompoundContact))
         {
             // to ensure "objContact" is required (not null)

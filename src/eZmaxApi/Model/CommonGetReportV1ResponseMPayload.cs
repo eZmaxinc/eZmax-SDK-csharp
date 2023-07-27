@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for POST /1/report/xxx/xxx and and /1/module/report/getReportFromCache
+    /// </summary>
+    [DataContract]
+    public partial class CommonGetReportV1ResponseMPayload :  IEquatable<CommonGetReportV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonGetReportV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonGetReportV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonGetReportV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="objReportgroup">objReportgroup (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for POST /1/report/xxx/xxx and and /1/module/report/getReportFromCache
-    /// </summary>
-    [DataContract]
-    public partial class CommonGetReportV1ResponseMPayload :  IEquatable<CommonGetReportV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonGetReportV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonGetReportV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonGetReportV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="objReportgroup">objReportgroup (required).</param>
         public CommonGetReportV1ResponseMPayload(CommonReportgroup objReportgroup = default(CommonReportgroup))
         {
             // to ensure "objReportgroup" is required (not null)

@@ -24,7 +24,16 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzmaxinvoicingcommissionResponseCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingcommissionResponseCompoundAllOf :  IEquatable<EzmaxinvoicingcommissionResponseCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingcommissionResponseCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="objContactName">objContactName.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -65,17 +74,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzmaxinvoicingcommissionResponseCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingcommissionResponseCompoundAllOf :  IEquatable<EzmaxinvoicingcommissionResponseCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingcommissionResponseCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="objContactName">objContactName.</param>
         public EzmaxinvoicingcommissionResponseCompoundAllOf(CustomContactNameResponse objContactName = default(CustomContactNameResponse))
         {
             this.ObjContactName = objContactName;

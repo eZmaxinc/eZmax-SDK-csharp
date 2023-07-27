@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload :  IEquatable<EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aPkiEzsigntemplatesignatureID">aPkiEzsigntemplatesignatureID (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -93,22 +107,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload :  IEquatable<EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aPkiEzsigntemplatesignatureID">aPkiEzsigntemplatesignatureID (required).</param>
         public EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload(List<int> aPkiEzsigntemplatesignatureID = default(List<int>))
         {
             // to ensure "aPkiEzsigntemplatesignatureID" is required (not null)

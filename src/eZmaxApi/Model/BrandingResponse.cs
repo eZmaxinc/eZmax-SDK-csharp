@@ -24,7 +24,39 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Branding Object
+    /// </summary>
+    [DataContract]
+    public partial class BrandingResponse :  IEquatable<BrandingResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EBrandingLogo
+        /// </summary>
+        [DataMember(Name="eBrandingLogo", EmitDefaultValue=true)]
+        public FieldEBrandingLogo EBrandingLogo { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BrandingResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BrandingResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BrandingResponse" /> class.
+        /// </summary>
+        /// <param name="pkiBrandingID">The unique ID of the Branding (required).</param>
+        /// <param name="fkiEmailID">The unique ID of the Email.</param>
+        /// <param name="objBrandingDescription">objBrandingDescription (required).</param>
+        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
+        /// <param name="sBrandingName">The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty.</param>
+        /// <param name="sEmailAddress">The email address..</param>
+        /// <param name="eBrandingLogo">eBrandingLogo (required).</param>
+        /// <param name="iBrandingColortext">The color of the text. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColortextlinkbox">The color of the text in the link box. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColortextbutton">The color of the text in the button. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColorbackground">The color of the background. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColorbackgroundbutton">The color of the background of the button. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColorbackgroundsmallbox">The color of the background of the small box. This is a RGB color converted into integer (required).</param>
+        /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -186,40 +218,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Branding Object
-    /// </summary>
-    [DataContract]
-    public partial class BrandingResponse :  IEquatable<BrandingResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EBrandingLogo
-        /// </summary>
-        [DataMember(Name="eBrandingLogo", EmitDefaultValue=true)]
-        public FieldEBrandingLogo EBrandingLogo { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BrandingResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BrandingResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BrandingResponse" /> class.
-        /// </summary>
-        /// <param name="pkiBrandingID">The unique ID of the Branding (required).</param>
-        /// <param name="fkiEmailID">The unique ID of the Email.</param>
-        /// <param name="objBrandingDescription">objBrandingDescription (required).</param>
-        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
-        /// <param name="sBrandingName">The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty.</param>
-        /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="eBrandingLogo">eBrandingLogo (required).</param>
-        /// <param name="iBrandingColortext">The color of the text. This is a RGB color converted into integer (required).</param>
-        /// <param name="iBrandingColortextlinkbox">The color of the text in the link box. This is a RGB color converted into integer (required).</param>
-        /// <param name="iBrandingColortextbutton">The color of the text in the button. This is a RGB color converted into integer (required).</param>
-        /// <param name="iBrandingColorbackground">The color of the background. This is a RGB color converted into integer (required).</param>
-        /// <param name="iBrandingColorbackgroundbutton">The color of the background of the button. This is a RGB color converted into integer (required).</param>
-        /// <param name="iBrandingColorbackgroundsmallbox">The color of the background of the small box. This is a RGB color converted into integer (required).</param>
-        /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
         public BrandingResponse(int pkiBrandingID = default(int), int fkiEmailID = default(int), MultilingualBrandingDescription objBrandingDescription = default(MultilingualBrandingDescription), string sBrandingDescriptionX = default(string), string sBrandingName = default(string), string sEmailAddress = default(string), FieldEBrandingLogo eBrandingLogo = default(FieldEBrandingLogo), int iBrandingColortext = default(int), int iBrandingColortextlinkbox = default(int), int iBrandingColortextbutton = default(int), int iBrandingColorbackground = default(int), int iBrandingColorbackgroundbutton = default(int), int iBrandingColorbackgroundsmallbox = default(int), bool bBrandingIsactive = default(bool))
         {
             // to ensure "pkiBrandingID" is required (not null)

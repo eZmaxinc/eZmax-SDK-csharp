@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsignfolderGetObjectV2ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfolderGetObjectV2ResponseAllOf :  IEquatable<EzsignfolderGetObjectV2ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderGetObjectV2ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfolderGetObjectV2ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderGetObjectV2ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsignfolderGetObjectV2ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfolderGetObjectV2ResponseAllOf :  IEquatable<EzsignfolderGetObjectV2ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderGetObjectV2ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfolderGetObjectV2ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderGetObjectV2ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public EzsignfolderGetObjectV2ResponseAllOf(EzsignfolderGetObjectV2ResponseMPayload mPayload = default(EzsignfolderGetObjectV2ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

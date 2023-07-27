@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /1/object/user
+    /// </summary>
+    [DataContract]
+    public partial class UserCreateObjectV1Request :  IEquatable<UserCreateObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserCreateObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserCreateObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserCreateObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="aObjUser">aObjUser (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,22 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/user
-    /// </summary>
-    [DataContract]
-    public partial class UserCreateObjectV1Request :  IEquatable<UserCreateObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserCreateObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserCreateObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserCreateObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="aObjUser">aObjUser (required).</param>
         public UserCreateObjectV1Request(List<UserRequestCompound> aObjUser = default(List<UserRequestCompound>))
         {
             // to ensure "aObjUser" is required (not null)

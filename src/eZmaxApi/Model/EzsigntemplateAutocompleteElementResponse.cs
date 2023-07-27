@@ -24,7 +24,29 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplate AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplateAutocompleteElementResponse :  IEquatable<EzsigntemplateAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignfoldertypePrivacylevel
+        /// </summary>
+        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
+        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplateAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
+        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
+        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="bEzsigntemplateIsactive">Whether the Ezsigntemplate is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -93,30 +115,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplate AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplateAutocompleteElementResponse :  IEquatable<EzsigntemplateAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignfoldertypePrivacylevel
-        /// </summary>
-        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
-        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
-        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="bEzsigntemplateIsactive">Whether the Ezsigntemplate is active or not (required).</param>
         public EzsigntemplateAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsigntemplateDescription = default(string), int pkiEzsigntemplateID = default(int), bool bEzsigntemplateIsactive = default(bool))
         {
             // to ensure "eEzsignfoldertypePrivacylevel" is required (not null)

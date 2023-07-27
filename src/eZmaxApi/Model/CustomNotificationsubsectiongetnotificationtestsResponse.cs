@@ -24,7 +24,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Notificationsubsection Object in the context of getNotificationtests
+    /// </summary>
+    [DataContract]
+    public partial class CustomNotificationsubsectiongetnotificationtestsResponse :  IEquatable<CustomNotificationsubsectiongetnotificationtestsResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomNotificationsubsectiongetnotificationtestsResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomNotificationsubsectiongetnotificationtestsResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomNotificationsubsectiongetnotificationtestsResponse" /> class.
+        /// </summary>
+        /// <param name="pkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
+        /// <param name="fkiNotificationsectionID">The unique ID of the Notificationsection (required).</param>
+        /// <param name="objNotificationsubsectionName">objNotificationsubsectionName.</param>
+        /// <param name="sNotificationsectionNameX">The name of the Notificationsection in the language of the requester.</param>
+        /// <param name="sNotificationsubsectionNameX">The name of the Notificationsubsection in the language of the requester (required).</param>
+        /// <param name="aObjNotificationtest">aObjNotificationtest (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -115,27 +134,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Notificationsubsection Object in the context of getNotificationtests
-    /// </summary>
-    [DataContract]
-    public partial class CustomNotificationsubsectiongetnotificationtestsResponse :  IEquatable<CustomNotificationsubsectiongetnotificationtestsResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomNotificationsubsectiongetnotificationtestsResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomNotificationsubsectiongetnotificationtestsResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomNotificationsubsectiongetnotificationtestsResponse" /> class.
-        /// </summary>
-        /// <param name="pkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
-        /// <param name="fkiNotificationsectionID">The unique ID of the Notificationsection (required).</param>
-        /// <param name="objNotificationsubsectionName">objNotificationsubsectionName.</param>
-        /// <param name="sNotificationsectionNameX">The name of the Notificationsection in the language of the requester.</param>
-        /// <param name="sNotificationsubsectionNameX">The name of the Notificationsubsection in the language of the requester (required).</param>
-        /// <param name="aObjNotificationtest">aObjNotificationtest (required).</param>
         public CustomNotificationsubsectiongetnotificationtestsResponse(int pkiNotificationsubsectionID = default(int), int fkiNotificationsectionID = default(int), MultilingualNotificationsubsectionName objNotificationsubsectionName = default(MultilingualNotificationsubsectionName), string sNotificationsectionNameX = default(string), string sNotificationsubsectionNameX = default(string), List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest = default(List<CustomNotificationtestgetnotificationtestsResponse>))
         {
             // to ensure "pkiNotificationsubsectionID" is required (not null)

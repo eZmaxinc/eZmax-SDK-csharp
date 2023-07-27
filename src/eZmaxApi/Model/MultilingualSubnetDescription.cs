@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// The description of the Subnet
+    /// </summary>
+    [DataContract]
+    public partial class MultilingualSubnetDescription :  IEquatable<MultilingualSubnetDescription>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MultilingualSubnetDescription" /> class.
+        /// </summary>
+        /// <param name="sSubnetDescription1">The description of the Subnet in French.</param>
+        /// <param name="sSubnetDescription2">The description of the Subnet in English.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -73,18 +83,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// The description of the Subnet
-    /// </summary>
-    [DataContract]
-    public partial class MultilingualSubnetDescription :  IEquatable<MultilingualSubnetDescription>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MultilingualSubnetDescription" /> class.
-        /// </summary>
-        /// <param name="sSubnetDescription1">The description of the Subnet in French.</param>
-        /// <param name="sSubnetDescription2">The description of the Subnet in English.</param>
         public MultilingualSubnetDescription(string sSubnetDescription1 = default(string), string sSubnetDescription2 = default(string))
         {
             this.SSubnetDescription1 = sSubnetDescription1;

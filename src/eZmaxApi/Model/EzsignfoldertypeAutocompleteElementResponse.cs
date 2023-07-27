@@ -24,7 +24,29 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsignfoldertype AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfoldertypeAutocompleteElementResponse :  IEquatable<EzsignfoldertypeAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignfoldertypePrivacylevel
+        /// </summary>
+        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
+        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldertypeAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfoldertypeAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldertypeAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -93,30 +115,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignfoldertype AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfoldertypeAutocompleteElementResponse :  IEquatable<EzsignfoldertypeAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignfoldertypePrivacylevel
-        /// </summary>
-        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
-        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfoldertypeAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
         public EzsignfoldertypeAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), int pkiEzsignfoldertypeID = default(int), bool bEzsignfoldertypeIsactive = default(bool))
         {
             // to ensure "eEzsignfoldertypePrivacylevel" is required (not null)

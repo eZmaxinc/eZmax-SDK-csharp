@@ -24,7 +24,31 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Clonehistory List Element
+    /// </summary>
+    [DataContract]
+    public partial class ClonehistoryListElement :  IEquatable<ClonehistoryListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ClonehistoryListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ClonehistoryListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ClonehistoryListElement" /> class.
+        /// </summary>
+        /// <param name="pkiClonehistoryID">The unique ID of the Clonehistory (required).</param>
+        /// <param name="fkiUserIDCloning">The unique ID of the User (required).</param>
+        /// <param name="fkiUserIDCloned">The unique ID of the User (required).</param>
+        /// <param name="dtClonehistoryFirsthit">The firsthit of the Clonehistory (required).</param>
+        /// <param name="dtClonehistoryLasthit">The lasthit of the Clonehistory.</param>
+        /// <param name="sUserLoginnameCloning">The login name of the User. (required).</param>
+        /// <param name="sUserFirstnameCloning">The first name of the user (required).</param>
+        /// <param name="sUserLastnameCloning">The last name of the user (required).</param>
+        /// <param name="sUserLoginnameCloned">The login name of the User. (required).</param>
+        /// <param name="sUserFirstnameCloned">The first name of the user (required).</param>
+        /// <param name="sUserLastnameCloned">The last name of the user (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -162,32 +186,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Clonehistory List Element
-    /// </summary>
-    [DataContract]
-    public partial class ClonehistoryListElement :  IEquatable<ClonehistoryListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ClonehistoryListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ClonehistoryListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ClonehistoryListElement" /> class.
-        /// </summary>
-        /// <param name="pkiClonehistoryID">The unique ID of the Clonehistory (required).</param>
-        /// <param name="fkiUserIDCloning">The unique ID of the User (required).</param>
-        /// <param name="fkiUserIDCloned">The unique ID of the User (required).</param>
-        /// <param name="dtClonehistoryFirsthit">The firsthit of the Clonehistory (required).</param>
-        /// <param name="dtClonehistoryLasthit">The lasthit of the Clonehistory.</param>
-        /// <param name="sUserLoginnameCloning">The login name of the User. (required).</param>
-        /// <param name="sUserFirstnameCloning">The first name of the user (required).</param>
-        /// <param name="sUserLastnameCloning">The last name of the user (required).</param>
-        /// <param name="sUserLoginnameCloned">The login name of the User. (required).</param>
-        /// <param name="sUserFirstnameCloned">The first name of the user (required).</param>
-        /// <param name="sUserLastnameCloned">The last name of the user (required).</param>
         public ClonehistoryListElement(int pkiClonehistoryID = default(int), int fkiUserIDCloning = default(int), int fkiUserIDCloned = default(int), string dtClonehistoryFirsthit = default(string), string dtClonehistoryLasthit = default(string), string sUserLoginnameCloning = default(string), string sUserFirstnameCloning = default(string), string sUserLastnameCloning = default(string), string sUserLoginnameCloned = default(string), string sUserFirstnameCloned = default(string), string sUserLastnameCloned = default(string))
         {
             // to ensure "pkiClonehistoryID" is required (not null)

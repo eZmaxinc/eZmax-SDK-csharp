@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Description of the API Key
+    /// </summary>
+    [DataContract]
+    public partial class MultilingualApikeyDescription :  IEquatable<MultilingualApikeyDescription>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MultilingualApikeyDescription" /> class.
+        /// </summary>
+        /// <param name="sApikeyDescription1">The description of the Apikey in French.</param>
+        /// <param name="sApikeyDescription2">The description of the Apikey in English.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,18 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Description of the API Key
-    /// </summary>
-    [DataContract]
-    public partial class MultilingualApikeyDescription :  IEquatable<MultilingualApikeyDescription>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MultilingualApikeyDescription" /> class.
-        /// </summary>
-        /// <param name="sApikeyDescription1">The description of the Apikey in French.</param>
-        /// <param name="sApikeyDescription2">The description of the Apikey in English.</param>
         public MultilingualApikeyDescription(string sApikeyDescription1 = default(string), string sApikeyDescription2 = default(string))
         {
             this.SApikeyDescription1 = sApikeyDescription1;

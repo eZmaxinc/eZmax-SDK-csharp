@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsignbulksendsignermappingGetObjectV2ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksendsignermappingGetObjectV2ResponseAllOf :  IEquatable<EzsignbulksendsignermappingGetObjectV2ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingGetObjectV2ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendsignermappingGetObjectV2ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingGetObjectV2ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsignbulksendsignermappingGetObjectV2ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksendsignermappingGetObjectV2ResponseAllOf :  IEquatable<EzsignbulksendsignermappingGetObjectV2ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingGetObjectV2ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksendsignermappingGetObjectV2ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingGetObjectV2ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public EzsignbulksendsignermappingGetObjectV2ResponseAllOf(EzsignbulksendsignermappingGetObjectV2ResponseMPayload mPayload = default(EzsignbulksendsignermappingGetObjectV2ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

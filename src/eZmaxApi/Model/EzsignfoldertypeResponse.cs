@@ -24,7 +24,69 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsignfoldertype Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfoldertypeResponse :  IEquatable<EzsignfoldertypeResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignfoldertypePrivacylevel
+        /// </summary>
+        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
+        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignfoldertypeSendreminderfrequency
+        /// </summary>
+        [DataMember(Name="eEzsignfoldertypeSendreminderfrequency", EmitDefaultValue=false)]
+        public FieldEEzsignfoldertypeSendreminderfrequency? EEzsignfoldertypeSendreminderfrequency { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignfoldertypeDisposal
+        /// </summary>
+        [DataMember(Name="eEzsignfoldertypeDisposal", EmitDefaultValue=true)]
+        public FieldEEzsignfoldertypeDisposal EEzsignfoldertypeDisposal { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldertypeResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfoldertypeResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldertypeResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="objEzsignfoldertypeName">objEzsignfoldertypeName (required).</param>
+        /// <param name="fkiBrandingID">The unique ID of the Branding (required).</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
+        /// <param name="fkiUsergroupIDRestricted">The unique ID of the Usergroup.</param>
+        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
+        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester.</param>
+        /// <param name="sEzsigntsarequirementDescriptionX">The description of the Ezsigntsarequirement in the language of the requester.</param>
+        /// <param name="sEmailAddressSigned">The email address..</param>
+        /// <param name="sEmailAddressSummary">The email address..</param>
+        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester.</param>
+        /// <param name="sUsergroupNameXRestricted">The Name of the Usergroup in the language of the requester.</param>
+        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
+        /// <param name="eEzsignfoldertypeSendreminderfrequency">eEzsignfoldertypeSendreminderfrequency.</param>
+        /// <param name="iEzsignfoldertypeArchivaldays">The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype (required).</param>
+        /// <param name="eEzsignfoldertypeDisposal">eEzsignfoldertypeDisposal (required).</param>
+        /// <param name="iEzsignfoldertypeDisposaldays">The number of days after the archival before the disposal of the Ezsignfolder.</param>
+        /// <param name="iEzsignfoldertypeDeadlinedays">The number of days to get all Ezsignsignatures (required).</param>
+        /// <param name="bEzsignfoldertypeSendattatchmentsigner">Whether we send the Ezsigndocument and the proof as attachment in the email (required).</param>
+        /// <param name="bEzsignfoldertypeSendsignedtodocumentowner">Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner (required).</param>
+        /// <param name="bEzsignfoldertypeSendsignedtofolderowner">Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner (required).</param>
+        /// <param name="bEzsignfoldertypeSendsignedtofullgroup">Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders.</param>
+        /// <param name="bEzsignfoldertypeSendsignedtolimitedgroup">Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders.</param>
+        /// <param name="bEzsignfoldertypeSendsignedtocolleague">Whether we send the signed Ezsigndocument to the colleagues (required).</param>
+        /// <param name="bEzsignfoldertypeSendsummarytodocumentowner">Whether we send the summary to the Ezsigndocument&#39;s owner (required).</param>
+        /// <param name="bEzsignfoldertypeSendsummarytofolderowner">Whether we send the summary to the Ezsignfolder&#39;s owner (required).</param>
+        /// <param name="bEzsignfoldertypeSendsummarytofullgroup">Whether we send the summary to the Usergroup that has acces to all Ezsignfolders.</param>
+        /// <param name="bEzsignfoldertypeSendsummarytolimitedgroup">Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders.</param>
+        /// <param name="bEzsignfoldertypeSendsummarytocolleague">Whether we send the summary to the colleagues (required).</param>
+        /// <param name="bEzsignfoldertypeIncludeproofsigner">Whether we include the proof with the signed Ezsigndocument for Ezsignsigners (required).</param>
+        /// <param name="bEzsignfoldertypeIncludeproofuser">Whether we include the proof with the signed Ezsigndocument for users (required).</param>
+        /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -289,70 +351,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignfoldertype Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfoldertypeResponse :  IEquatable<EzsignfoldertypeResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignfoldertypePrivacylevel
-        /// </summary>
-        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
-        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignfoldertypeSendreminderfrequency
-        /// </summary>
-        [DataMember(Name="eEzsignfoldertypeSendreminderfrequency", EmitDefaultValue=false)]
-        public FieldEEzsignfoldertypeSendreminderfrequency? EEzsignfoldertypeSendreminderfrequency { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignfoldertypeDisposal
-        /// </summary>
-        [DataMember(Name="eEzsignfoldertypeDisposal", EmitDefaultValue=true)]
-        public FieldEEzsignfoldertypeDisposal EEzsignfoldertypeDisposal { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfoldertypeResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="objEzsignfoldertypeName">objEzsignfoldertypeName (required).</param>
-        /// <param name="fkiBrandingID">The unique ID of the Branding (required).</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
-        /// <param name="fkiUsergroupIDRestricted">The unique ID of the Usergroup.</param>
-        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
-        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester.</param>
-        /// <param name="sEzsigntsarequirementDescriptionX">The description of the Ezsigntsarequirement in the language of the requester.</param>
-        /// <param name="sEmailAddressSigned">The email address..</param>
-        /// <param name="sEmailAddressSummary">The email address..</param>
-        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester.</param>
-        /// <param name="sUsergroupNameXRestricted">The Name of the Usergroup in the language of the requester.</param>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="eEzsignfoldertypeSendreminderfrequency">eEzsignfoldertypeSendreminderfrequency.</param>
-        /// <param name="iEzsignfoldertypeArchivaldays">The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype (required).</param>
-        /// <param name="eEzsignfoldertypeDisposal">eEzsignfoldertypeDisposal (required).</param>
-        /// <param name="iEzsignfoldertypeDisposaldays">The number of days after the archival before the disposal of the Ezsignfolder.</param>
-        /// <param name="iEzsignfoldertypeDeadlinedays">The number of days to get all Ezsignsignatures (required).</param>
-        /// <param name="bEzsignfoldertypeSendattatchmentsigner">Whether we send the Ezsigndocument and the proof as attachment in the email (required).</param>
-        /// <param name="bEzsignfoldertypeSendsignedtodocumentowner">Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner (required).</param>
-        /// <param name="bEzsignfoldertypeSendsignedtofolderowner">Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner (required).</param>
-        /// <param name="bEzsignfoldertypeSendsignedtofullgroup">Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders.</param>
-        /// <param name="bEzsignfoldertypeSendsignedtolimitedgroup">Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders.</param>
-        /// <param name="bEzsignfoldertypeSendsignedtocolleague">Whether we send the signed Ezsigndocument to the colleagues (required).</param>
-        /// <param name="bEzsignfoldertypeSendsummarytodocumentowner">Whether we send the summary to the Ezsigndocument&#39;s owner (required).</param>
-        /// <param name="bEzsignfoldertypeSendsummarytofolderowner">Whether we send the summary to the Ezsignfolder&#39;s owner (required).</param>
-        /// <param name="bEzsignfoldertypeSendsummarytofullgroup">Whether we send the summary to the Usergroup that has acces to all Ezsignfolders.</param>
-        /// <param name="bEzsignfoldertypeSendsummarytolimitedgroup">Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders.</param>
-        /// <param name="bEzsignfoldertypeSendsummarytocolleague">Whether we send the summary to the colleagues (required).</param>
-        /// <param name="bEzsignfoldertypeIncludeproofsigner">Whether we include the proof with the signed Ezsigndocument for Ezsignsigners (required).</param>
-        /// <param name="bEzsignfoldertypeIncludeproofuser">Whether we include the proof with the signed Ezsigndocument for users (required).</param>
-        /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
         public EzsignfoldertypeResponse(int pkiEzsignfoldertypeID = default(int), MultilingualEzsignfoldertypeName objEzsignfoldertypeName = default(MultilingualEzsignfoldertypeName), int fkiBrandingID = default(int), int fkiBillingentityinternalID = default(int), int fkiUsergroupID = default(int), int fkiUsergroupIDRestricted = default(int), int fkiEzsigntsarequirementID = default(int), string sBrandingDescriptionX = default(string), string sBillingentityinternalDescriptionX = default(string), string sEzsigntsarequirementDescriptionX = default(string), string sEmailAddressSigned = default(string), string sEmailAddressSummary = default(string), string sUsergroupNameX = default(string), string sUsergroupNameXRestricted = default(string), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), FieldEEzsignfoldertypeSendreminderfrequency? eEzsignfoldertypeSendreminderfrequency = default(FieldEEzsignfoldertypeSendreminderfrequency?), int iEzsignfoldertypeArchivaldays = default(int), FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal = default(FieldEEzsignfoldertypeDisposal), int iEzsignfoldertypeDisposaldays = default(int), int iEzsignfoldertypeDeadlinedays = default(int), bool bEzsignfoldertypeSendattatchmentsigner = default(bool), bool bEzsignfoldertypeSendsignedtodocumentowner = default(bool), bool bEzsignfoldertypeSendsignedtofolderowner = default(bool), bool bEzsignfoldertypeSendsignedtofullgroup = default(bool), bool bEzsignfoldertypeSendsignedtolimitedgroup = default(bool), bool bEzsignfoldertypeSendsignedtocolleague = default(bool), bool bEzsignfoldertypeSendsummarytodocumentowner = default(bool), bool bEzsignfoldertypeSendsummarytofolderowner = default(bool), bool bEzsignfoldertypeSendsummarytofullgroup = default(bool), bool bEzsignfoldertypeSendsummarytolimitedgroup = default(bool), bool bEzsignfoldertypeSendsummarytocolleague = default(bool), bool bEzsignfoldertypeIncludeproofsigner = default(bool), bool bEzsignfoldertypeIncludeproofuser = default(bool), bool bEzsignfoldertypeIsactive = default(bool))
         {
             // to ensure "pkiEzsignfoldertypeID" is required (not null)

@@ -24,7 +24,30 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Communicationexternalrecipient Object
+    /// </summary>
+    [DataContract]
+    public partial class CommunicationexternalrecipientResponseCompound :  IEquatable<CommunicationexternalrecipientResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets ECommunicationexternalrecipientType
+        /// </summary>
+        [DataMember(Name="eCommunicationexternalrecipientType", EmitDefaultValue=true)]
+        public FieldECommunicationexternalrecipientType ECommunicationexternalrecipientType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommunicationexternalrecipientResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommunicationexternalrecipientResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommunicationexternalrecipientResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiCommunicationexternalrecipientID">The unique ID of the Communicationexternalrecipient (required).</param>
+        /// <param name="eCommunicationexternalrecipientType">eCommunicationexternalrecipientType (required).</param>
+        /// <param name="objDescriptionstatic">objDescriptionstatic (required).</param>
+        /// <param name="objEmailstatic">objEmailstatic.</param>
+        /// <param name="objPhonestatic">objPhonestatic.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,31 +106,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Communicationexternalrecipient Object
-    /// </summary>
-    [DataContract]
-    public partial class CommunicationexternalrecipientResponseCompound :  IEquatable<CommunicationexternalrecipientResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets ECommunicationexternalrecipientType
-        /// </summary>
-        [DataMember(Name="eCommunicationexternalrecipientType", EmitDefaultValue=true)]
-        public FieldECommunicationexternalrecipientType ECommunicationexternalrecipientType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommunicationexternalrecipientResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommunicationexternalrecipientResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommunicationexternalrecipientResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiCommunicationexternalrecipientID">The unique ID of the Communicationexternalrecipient (required).</param>
-        /// <param name="eCommunicationexternalrecipientType">eCommunicationexternalrecipientType (required).</param>
-        /// <param name="objDescriptionstatic">objDescriptionstatic (required).</param>
-        /// <param name="objEmailstatic">objEmailstatic.</param>
-        /// <param name="objPhonestatic">objPhonestatic.</param>
         public CommunicationexternalrecipientResponseCompound(int pkiCommunicationexternalrecipientID = default(int), FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType = default(FieldECommunicationexternalrecipientType), DescriptionstaticResponseCompound objDescriptionstatic = default(DescriptionstaticResponseCompound), EmailstaticResponseCompound objEmailstatic = default(EmailstaticResponseCompound), PhonestaticResponseCompound objPhonestatic = default(PhonestaticResponseCompound))
         {
             // to ensure "pkiCommunicationexternalrecipientID" is required (not null)

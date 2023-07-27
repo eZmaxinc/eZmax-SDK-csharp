@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// UsergroupGetListV1ResponseMPayloadAllOf
+    /// </summary>
+    [DataContract]
+    public partial class UsergroupGetListV1ResponseMPayloadAllOf :  IEquatable<UsergroupGetListV1ResponseMPayloadAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UsergroupGetListV1ResponseMPayloadAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjUsergroup">aObjUsergroup (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// UsergroupGetListV1ResponseMPayloadAllOf
-    /// </summary>
-    [DataContract]
-    public partial class UsergroupGetListV1ResponseMPayloadAllOf :  IEquatable<UsergroupGetListV1ResponseMPayloadAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UsergroupGetListV1ResponseMPayloadAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        /// <param name="aObjUsergroup">aObjUsergroup (required).</param>
         public UsergroupGetListV1ResponseMPayloadAllOf(List<UsergroupListElement> aObjUsergroup = default(List<UsergroupListElement>))
         {
             // to ensure "aObjUsergroup" is required (not null)

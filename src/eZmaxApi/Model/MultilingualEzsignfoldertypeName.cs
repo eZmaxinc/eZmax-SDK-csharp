@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Name of the Ezsignfoldertype
+    /// </summary>
+    [DataContract]
+    public partial class MultilingualEzsignfoldertypeName :  IEquatable<MultilingualEzsignfoldertypeName>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MultilingualEzsignfoldertypeName" /> class.
+        /// </summary>
+        /// <param name="sEzsignfoldertypeName1">The name of the Ezsignfoldertype in French.</param>
+        /// <param name="sEzsignfoldertypeName2">The name of the Ezsignfoldertype in English.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,18 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Name of the Ezsignfoldertype
-    /// </summary>
-    [DataContract]
-    public partial class MultilingualEzsignfoldertypeName :  IEquatable<MultilingualEzsignfoldertypeName>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MultilingualEzsignfoldertypeName" /> class.
-        /// </summary>
-        /// <param name="sEzsignfoldertypeName1">The name of the Ezsignfoldertype in French.</param>
-        /// <param name="sEzsignfoldertypeName2">The name of the Ezsignfoldertype in English.</param>
         public MultilingualEzsignfoldertypeName(string sEzsignfoldertypeName1 = default(string), string sEzsignfoldertypeName2 = default(string))
         {
             this.SEzsignfoldertypeName1 = sEzsignfoldertypeName1;

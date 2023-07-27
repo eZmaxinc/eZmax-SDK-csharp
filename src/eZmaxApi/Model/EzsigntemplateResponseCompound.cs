@@ -24,7 +24,31 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplate Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplateResponseCompound :  IEquatable<EzsigntemplateResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplateResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument.</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
+        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
+        /// <param name="bEzsigntemplateAdminonly">Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
+        /// <param name="objEzsigntemplatedocument">objEzsigntemplatedocument.</param>
+        /// <param name="aObjEzsigntemplatesigner">aObjEzsigntemplatesigner (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -168,32 +192,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplate Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplateResponseCompound :  IEquatable<EzsigntemplateResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument.</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
-        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
-        /// <param name="bEzsigntemplateAdminonly">Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="objAudit">objAudit (required).</param>
-        /// <param name="objEzsigntemplatedocument">objEzsigntemplatedocument.</param>
-        /// <param name="aObjEzsigntemplatesigner">aObjEzsigntemplatesigner (required).</param>
         public EzsigntemplateResponseCompound(int pkiEzsigntemplateID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sLanguageNameX = default(string), string sEzsigntemplateDescription = default(string), bool bEzsigntemplateAdminonly = default(bool), string sEzsignfoldertypeNameX = default(string), CommonAudit objAudit = default(CommonAudit), EzsigntemplatedocumentResponse objEzsigntemplatedocument = default(EzsigntemplatedocumentResponse), List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner = default(List<EzsigntemplatesignerResponseCompound>))
         {
             // to ensure "pkiEzsigntemplateID" is required (not null)

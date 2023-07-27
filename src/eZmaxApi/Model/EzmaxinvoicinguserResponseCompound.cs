@@ -24,7 +24,35 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezmaxinvoicinguser Object
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicinguserResponseCompound :  IEquatable<EzmaxinvoicinguserResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzmaxinvoicinguserVariationezsign
+        /// </summary>
+        [DataMember(Name="eEzmaxinvoicinguserVariationezsign", EmitDefaultValue=true)]
+        public FieldEEzmaxinvoicinguserVariationezsign EEzmaxinvoicinguserVariationezsign { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicinguserResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicinguserResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicinguserResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxinvoicinguserID">The unique ID of the Ezmaxinvoicinguser.</param>
+        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="iEzmaxinvoicinguserEzsigndocument">The number of ezsign documents (required).</param>
+        /// <param name="bEzmaxinvoicinguserEzsignaccount">Whether there is an eZsign account (required).</param>
+        /// <param name="bEzmaxinvoicinguserBillableezsign">Whether it is billable for eZsign (required).</param>
+        /// <param name="eEzmaxinvoicinguserVariationezsign">eEzmaxinvoicinguserVariationezsign (required).</param>
+        /// <param name="objContactName">objContactName (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -135,36 +163,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezmaxinvoicinguser Object
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicinguserResponseCompound :  IEquatable<EzmaxinvoicinguserResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzmaxinvoicinguserVariationezsign
-        /// </summary>
-        [DataMember(Name="eEzmaxinvoicinguserVariationezsign", EmitDefaultValue=true)]
-        public FieldEEzmaxinvoicinguserVariationezsign EEzmaxinvoicinguserVariationezsign { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicinguserResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicinguserResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicinguserResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxinvoicinguserID">The unique ID of the Ezmaxinvoicinguser.</param>
-        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="iEzmaxinvoicinguserEzsigndocument">The number of ezsign documents (required).</param>
-        /// <param name="bEzmaxinvoicinguserEzsignaccount">Whether there is an eZsign account (required).</param>
-        /// <param name="bEzmaxinvoicinguserBillableezsign">Whether it is billable for eZsign (required).</param>
-        /// <param name="eEzmaxinvoicinguserVariationezsign">eEzmaxinvoicinguserVariationezsign (required).</param>
-        /// <param name="objContactName">objContactName (required).</param>
         public EzmaxinvoicinguserResponseCompound(int pkiEzmaxinvoicinguserID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiUserID = default(int), int iEzmaxinvoicinguserEzsigndocument = default(int), bool bEzmaxinvoicinguserEzsignaccount = default(bool), bool bEzmaxinvoicinguserBillableezsign = default(bool), FieldEEzmaxinvoicinguserVariationezsign eEzmaxinvoicinguserVariationezsign = default(FieldEEzmaxinvoicinguserVariationezsign), CustomContactNameResponse objContactName = default(CustomContactNameResponse))
         {
             // to ensure "fkiBillingentityinternalID" is required (not null)

@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for GET /1/object/userstaged/getList
+    /// </summary>
+    [DataContract]
+    public partial class UserstagedGetListV1ResponseMPayload :  IEquatable<UserstagedGetListV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserstagedGetListV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserstagedGetListV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserstagedGetListV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjUserstaged">aObjUserstaged (required).</param>
+        /// <param name="iRowReturned">The number of rows returned (required).</param>
+        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -97,24 +113,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for GET /1/object/userstaged/getList
-    /// </summary>
-    [DataContract]
-    public partial class UserstagedGetListV1ResponseMPayload :  IEquatable<UserstagedGetListV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserstagedGetListV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserstagedGetListV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserstagedGetListV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aObjUserstaged">aObjUserstaged (required).</param>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
         public UserstagedGetListV1ResponseMPayload(List<UserstagedListElement> aObjUserstaged = default(List<UserstagedListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
         {
             // to ensure "aObjUserstaged" is required (not null)

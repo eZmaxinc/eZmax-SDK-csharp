@@ -24,7 +24,50 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+    /// <summary>
+    /// Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentGetWordsPositionsV1Request :  IEquatable<EzsigndocumentGetWordsPositionsV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
+        /// </summary>
+        /// <value>Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EGetEnum
+        {
+            /// <summary>
+            /// Enum All for value: All
+            /// </summary>
+            [EnumMember(Value = "All")]
+            All = 1,
 
+            /// <summary>
+            /// Enum Words for value: Words
+            /// </summary>
+            [EnumMember(Value = "Words")]
+            Words = 2
+
+        }
+
+        /// <summary>
+        /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
+        /// </summary>
+        /// <value>Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.</value>
+        [DataMember(Name="eGet", EmitDefaultValue=true)]
+        public EGetEnum EGet { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentGetWordsPositionsV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Request" /> class.
+        /// </summary>
+        /// <param name="eGet">Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*. (required).</param>
+        /// <param name="bWordCaseSensitive">IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive. (required).</param>
+        /// <param name="aSWord">Array of words to find in the document.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,51 +132,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentGetWordsPositionsV1Request :  IEquatable<EzsigndocumentGetWordsPositionsV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
-        /// </summary>
-        /// <value>Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EGetEnum
-        {
-            /// <summary>
-            /// Enum All for value: All
-            /// </summary>
-            [EnumMember(Value = "All")]
-            All = 1,
-
-            /// <summary>
-            /// Enum Words for value: Words
-            /// </summary>
-            [EnumMember(Value = "Words")]
-            Words = 2
-
-        }
-
-        /// <summary>
-        /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
-        /// </summary>
-        /// <value>Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.</value>
-        [DataMember(Name="eGet", EmitDefaultValue=true)]
-        public EGetEnum EGet { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentGetWordsPositionsV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentGetWordsPositionsV1Request" /> class.
-        /// </summary>
-        /// <param name="eGet">Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*. (required).</param>
-        /// <param name="bWordCaseSensitive">IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive. (required).</param>
-        /// <param name="aSWord">Array of words to find in the document.</param>
         public EzsigndocumentGetWordsPositionsV1Request(EGetEnum eGet = default(EGetEnum), bool bWordCaseSensitive = default(bool), List<string> aSWord = default(List<string>))
         {
             // to ensure "eGet" is required (not null)

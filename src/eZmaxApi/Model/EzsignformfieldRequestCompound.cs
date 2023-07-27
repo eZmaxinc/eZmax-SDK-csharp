@@ -24,7 +24,30 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignformfield Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class EzsignformfieldRequestCompound :  IEquatable<EzsignformfieldRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignformfieldRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignformfieldRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignformfieldRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignformfieldID">The unique ID of the Ezsignformfield.</param>
+        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
+        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield (required).</param>
+        /// <param name="sEzsignformfieldValue">The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio.</param>
+        /// <param name="iEzsignformfieldX">The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
+        /// <param name="iEzsignformfieldY">The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="iEzsignformfieldWidth">The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | (required).</param>
+        /// <param name="iEzsignformfieldHeight">The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  (required).</param>
+        /// <param name="bEzsignformfieldSelected">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
+        /// <param name="sEzsignformfieldEnteredvalue">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -193,31 +216,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignformfield Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class EzsignformfieldRequestCompound :  IEquatable<EzsignformfieldRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignformfieldRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignformfieldRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignformfieldRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignformfieldID">The unique ID of the Ezsignformfield.</param>
-        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
-        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield (required).</param>
-        /// <param name="sEzsignformfieldValue">The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio.</param>
-        /// <param name="iEzsignformfieldX">The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="iEzsignformfieldY">The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
-        /// <param name="iEzsignformfieldWidth">The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | (required).</param>
-        /// <param name="iEzsignformfieldHeight">The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  (required).</param>
-        /// <param name="bEzsignformfieldSelected">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
-        /// <param name="sEzsignformfieldEnteredvalue">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
         public EzsignformfieldRequestCompound(int pkiEzsignformfieldID = default(int), int iEzsignpagePagenumber = default(int), string sEzsignformfieldLabel = default(string), string sEzsignformfieldValue = default(string), int iEzsignformfieldX = default(int), int iEzsignformfieldY = default(int), int iEzsignformfieldWidth = default(int), int iEzsignformfieldHeight = default(int), bool bEzsignformfieldSelected = default(bool), string sEzsignformfieldEnteredvalue = default(string))
         {
             // to ensure "iEzsignpagePagenumber" is required (not null)

@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Taxassignment AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class TaxassignmentAutocompleteElementResponse :  IEquatable<TaxassignmentAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TaxassignmentAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected TaxassignmentAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TaxassignmentAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="sTaxassignmentDescriptionX">The description of the Taxassignment  in the language of the requester (required).</param>
+        /// <param name="pkiTaxassignmentID">The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| (required).</param>
+        /// <param name="bTaxassignmentIsactive">Whether the Taxassignment is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -131,24 +147,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Taxassignment AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class TaxassignmentAutocompleteElementResponse :  IEquatable<TaxassignmentAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TaxassignmentAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected TaxassignmentAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TaxassignmentAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="sTaxassignmentDescriptionX">The description of the Taxassignment  in the language of the requester (required).</param>
-        /// <param name="pkiTaxassignmentID">The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| (required).</param>
-        /// <param name="bTaxassignmentIsactive">Whether the Taxassignment is active or not (required).</param>
         public TaxassignmentAutocompleteElementResponse(string sTaxassignmentDescriptionX = default(string), int pkiTaxassignmentID = default(int), bool bTaxassignmentIsactive = default(bool))
         {
             // to ensure "sTaxassignmentDescriptionX" is required (not null)

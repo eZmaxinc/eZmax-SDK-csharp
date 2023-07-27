@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Generic AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class CustomAutocompleteElementResponse :  IEquatable<CustomAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="sCategory">The Category for the dropdown or an empty string if not categorized (required).</param>
+        /// <param name="sLabel">The Description of the element (required).</param>
+        /// <param name="sValue">The Unique ID of the element (required).</param>
+        /// <param name="mValue">The Unique ID of the element.</param>
+        /// <param name="bActive">Indicates if the element is active (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -91,26 +109,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Generic AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class CustomAutocompleteElementResponse :  IEquatable<CustomAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="sCategory">The Category for the dropdown or an empty string if not categorized (required).</param>
-        /// <param name="sLabel">The Description of the element (required).</param>
-        /// <param name="sValue">The Unique ID of the element (required).</param>
-        /// <param name="mValue">The Unique ID of the element.</param>
-        /// <param name="bActive">Indicates if the element is active (required).</param>
         public CustomAutocompleteElementResponse(string sCategory = default(string), string sLabel = default(string), string sValue = default(string), string mValue = default(string), bool bActive = default(bool))
         {
             // to ensure "sCategory" is required (not null)

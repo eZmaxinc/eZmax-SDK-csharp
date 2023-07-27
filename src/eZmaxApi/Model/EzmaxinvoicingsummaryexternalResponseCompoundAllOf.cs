@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzmaxinvoicingsummaryexternalResponseCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingsummaryexternalResponseCompoundAllOf :  IEquatable<EzmaxinvoicingsummaryexternalResponseCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponseCompoundAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingsummaryexternalResponseCompoundAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponseCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjEzmaxinvoicingsummaryexternaldetail">aObjEzmaxinvoicingsummaryexternaldetail (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzmaxinvoicingsummaryexternalResponseCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingsummaryexternalResponseCompoundAllOf :  IEquatable<EzmaxinvoicingsummaryexternalResponseCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponseCompoundAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingsummaryexternalResponseCompoundAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponseCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="aObjEzmaxinvoicingsummaryexternaldetail">aObjEzmaxinvoicingsummaryexternaldetail (required).</param>
         public EzmaxinvoicingsummaryexternalResponseCompoundAllOf(List<EzmaxinvoicingsummaryexternaldetailResponseCompound> aObjEzmaxinvoicingsummaryexternaldetail = default(List<EzmaxinvoicingsummaryexternaldetailResponseCompound>))
         {
             // to ensure "aObjEzmaxinvoicingsummaryexternaldetail" is required (not null)

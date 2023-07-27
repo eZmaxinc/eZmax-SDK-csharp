@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A row in a Reportsubsectionpart 
+    /// </summary>
+    [DataContract]
+    public partial class CommonReportrow :  IEquatable<CommonReportrow>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonReportrow" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonReportrow() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonReportrow" /> class.
+        /// </summary>
+        /// <param name="aObjReportcell">aObjReportcell (required).</param>
+        /// <param name="iReportrowHeight">The reportrow height in pixels (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,23 +104,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A row in a Reportsubsectionpart 
-    /// </summary>
-    [DataContract]
-    public partial class CommonReportrow :  IEquatable<CommonReportrow>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonReportrow" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonReportrow() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonReportrow" /> class.
-        /// </summary>
-        /// <param name="aObjReportcell">aObjReportcell (required).</param>
-        /// <param name="iReportrowHeight">The reportrow height in pixels (required).</param>
         public CommonReportrow(List<CommonReportcell> aObjReportcell = default(List<CommonReportcell>), int iReportrowHeight = default(int))
         {
             // to ensure "aObjReportcell" is required (not null)

@@ -24,7 +24,16 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
+    /// </summary>
+    [DataContract]
+    public partial class EzsignsignergroupEditObjectV1Request :  IEquatable<EzsignsignergroupEditObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignergroupEditObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="objBranding">objBranding.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -65,17 +74,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
-    /// </summary>
-    [DataContract]
-    public partial class EzsignsignergroupEditObjectV1Request :  IEquatable<EzsignsignergroupEditObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignergroupEditObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="objBranding">objBranding.</param>
         public EzsignsignergroupEditObjectV1Request(EzsignsignergroupRequestCompound objBranding = default(EzsignsignergroupRequestCompound))
         {
             this.ObjBranding = objBranding;

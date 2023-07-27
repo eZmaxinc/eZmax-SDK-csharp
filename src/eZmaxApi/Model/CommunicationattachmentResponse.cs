@@ -24,7 +24,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Communicationattachment Object
+    /// </summary>
+    [DataContract]
+    public partial class CommunicationattachmentResponse :  IEquatable<CommunicationattachmentResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommunicationattachmentResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommunicationattachmentResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommunicationattachmentResponse" /> class.
+        /// </summary>
+        /// <param name="pkiCommunicationattachmentID">The unique ID of the Communicationattachment (required).</param>
+        /// <param name="fkiAttachmentID">The unique ID of the Attachment..</param>
+        /// <param name="fkiInvoiceID">The unique ID of the Invoice..</param>
+        /// <param name="fkiSalarypreparationID">The unique ID of the Salarypreparation..</param>
+        /// <param name="sCommunicationattachmentName">The name of the Communicationattachment (required).</param>
+        /// <param name="sDownloadUrl">The Url to the requested document.  Url will expire after 3 hours..</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -99,27 +118,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Communicationattachment Object
-    /// </summary>
-    [DataContract]
-    public partial class CommunicationattachmentResponse :  IEquatable<CommunicationattachmentResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommunicationattachmentResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommunicationattachmentResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommunicationattachmentResponse" /> class.
-        /// </summary>
-        /// <param name="pkiCommunicationattachmentID">The unique ID of the Communicationattachment (required).</param>
-        /// <param name="fkiAttachmentID">The unique ID of the Attachment..</param>
-        /// <param name="fkiInvoiceID">The unique ID of the Invoice..</param>
-        /// <param name="fkiSalarypreparationID">The unique ID of the Salarypreparation..</param>
-        /// <param name="sCommunicationattachmentName">The name of the Communicationattachment (required).</param>
-        /// <param name="sDownloadUrl">The Url to the requested document.  Url will expire after 3 hours..</param>
         public CommunicationattachmentResponse(int pkiCommunicationattachmentID = default(int), int fkiAttachmentID = default(int), int fkiInvoiceID = default(int), int fkiSalarypreparationID = default(int), string sCommunicationattachmentName = default(string), string sDownloadUrl = default(string))
         {
             // to ensure "pkiCommunicationattachmentID" is required (not null)

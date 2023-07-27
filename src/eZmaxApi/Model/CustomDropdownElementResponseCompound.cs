@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Generic DropdownElement Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class CustomDropdownElementResponseCompound :  IEquatable<CustomDropdownElementResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomDropdownElementResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomDropdownElementResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomDropdownElementResponseCompound" /> class.
+        /// </summary>
+        /// <param name="sLabel">The Description of the element (required).</param>
+        /// <param name="sValue">The Value of the element (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -75,23 +90,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Generic DropdownElement Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class CustomDropdownElementResponseCompound :  IEquatable<CustomDropdownElementResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomDropdownElementResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomDropdownElementResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomDropdownElementResponseCompound" /> class.
-        /// </summary>
-        /// <param name="sLabel">The Description of the element (required).</param>
-        /// <param name="sValue">The Value of the element (required).</param>
         public CustomDropdownElementResponseCompound(string sLabel = default(string), string sValue = default(string))
         {
             // to ensure "sLabel" is required (not null)

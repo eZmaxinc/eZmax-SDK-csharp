@@ -24,7 +24,28 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// ScimServiceProviderConfig
+    /// </summary>
+    [DataContract]
+    public partial class ScimServiceProviderConfig :  IEquatable<ScimServiceProviderConfig>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimServiceProviderConfig" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ScimServiceProviderConfig() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimServiceProviderConfig" /> class.
+        /// </summary>
+        /// <param name="authenticationSchemes">A multi-valued complex type that specifies supported authentication scheme properties. (required).</param>
+        /// <param name="bulk">bulk (required).</param>
+        /// <param name="changePassword">changePassword (required).</param>
+        /// <param name="documentationUri">An HTTP-addressable URL pointing to the service provider&#39;s human-consumable help documentation (required).</param>
+        /// <param name="etag">etag (required).</param>
+        /// <param name="filter">filter (required).</param>
+        /// <param name="patch">patch (required).</param>
+        /// <param name="sort">sort (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -115,29 +136,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// ScimServiceProviderConfig
-    /// </summary>
-    [DataContract]
-    public partial class ScimServiceProviderConfig :  IEquatable<ScimServiceProviderConfig>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimServiceProviderConfig" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ScimServiceProviderConfig() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimServiceProviderConfig" /> class.
-        /// </summary>
-        /// <param name="authenticationSchemes">A multi-valued complex type that specifies supported authentication scheme properties. (required).</param>
-        /// <param name="bulk">bulk (required).</param>
-        /// <param name="changePassword">changePassword (required).</param>
-        /// <param name="documentationUri">An HTTP-addressable URL pointing to the service provider&#39;s human-consumable help documentation (required).</param>
-        /// <param name="etag">etag (required).</param>
-        /// <param name="filter">filter (required).</param>
-        /// <param name="patch">patch (required).</param>
-        /// <param name="sort">sort (required).</param>
         public ScimServiceProviderConfig(List<ScimAuthenticationScheme> authenticationSchemes = default(List<ScimAuthenticationScheme>), ScimServiceProviderConfigBulk bulk = default(ScimServiceProviderConfigBulk), ScimServiceProviderConfigChangePassword changePassword = default(ScimServiceProviderConfigChangePassword), string documentationUri = default(string), ScimServiceProviderConfigEtag etag = default(ScimServiceProviderConfigEtag), ScimServiceProviderConfigFilter filter = default(ScimServiceProviderConfigFilter), ScimServiceProviderConfigPatch patch = default(ScimServiceProviderConfigPatch), ScimServiceProviderConfigSort sort = default(ScimServiceProviderConfigSort))
         {
             // to ensure "authenticationSchemes" is required (not null)

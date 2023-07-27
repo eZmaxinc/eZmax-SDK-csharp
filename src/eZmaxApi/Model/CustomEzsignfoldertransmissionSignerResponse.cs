@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A form Signer Object in the context of an Ezsignfoldertransmissions
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzsignfoldertransmissionSignerResponse :  IEquatable<CustomEzsignfoldertransmissionSignerResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignfoldertransmissionSignerResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzsignfoldertransmissionSignerResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignfoldertransmissionSignerResponse" /> class.
+        /// </summary>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="sContactFirstname">The First name of the contact (required).</param>
+        /// <param name="sContactLastname">The Last name of the contact (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -84,24 +100,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A form Signer Object in the context of an Ezsignfoldertransmissions
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzsignfoldertransmissionSignerResponse :  IEquatable<CustomEzsignfoldertransmissionSignerResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignfoldertransmissionSignerResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzsignfoldertransmissionSignerResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignfoldertransmissionSignerResponse" /> class.
-        /// </summary>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="sContactFirstname">The First name of the contact (required).</param>
-        /// <param name="sContactLastname">The Last name of the contact (required).</param>
         public CustomEzsignfoldertransmissionSignerResponse(int fkiUserID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string))
         {
             // to ensure "sContactFirstname" is required (not null)

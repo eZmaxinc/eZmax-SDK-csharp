@@ -24,7 +24,30 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Variableexpense Object and children
+    /// </summary>
+    [DataContract]
+    public partial class VariableexpenseRequestCompound :  IEquatable<VariableexpenseRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EVariableexpenseTaxable
+        /// </summary>
+        [DataMember(Name="eVariableexpenseTaxable", EmitDefaultValue=true)]
+        public FieldEVariableexpenseTaxable EVariableexpenseTaxable { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected VariableexpenseRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense.</param>
+        /// <param name="sVariableexpenseCode">The code of the Variableexpense (required).</param>
+        /// <param name="objVariableexpenseDescription">objVariableexpenseDescription (required).</param>
+        /// <param name="eVariableexpenseTaxable">eVariableexpenseTaxable (required).</param>
+        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -95,31 +118,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Variableexpense Object and children
-    /// </summary>
-    [DataContract]
-    public partial class VariableexpenseRequestCompound :  IEquatable<VariableexpenseRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EVariableexpenseTaxable
-        /// </summary>
-        [DataMember(Name="eVariableexpenseTaxable", EmitDefaultValue=true)]
-        public FieldEVariableexpenseTaxable EVariableexpenseTaxable { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected VariableexpenseRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense.</param>
-        /// <param name="sVariableexpenseCode">The code of the Variableexpense (required).</param>
-        /// <param name="objVariableexpenseDescription">objVariableexpenseDescription (required).</param>
-        /// <param name="eVariableexpenseTaxable">eVariableexpenseTaxable (required).</param>
-        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not (required).</param>
         public VariableexpenseRequestCompound(int pkiVariableexpenseID = default(int), string sVariableexpenseCode = default(string), MultilingualVariableexpenseDescription objVariableexpenseDescription = default(MultilingualVariableexpenseDescription), FieldEVariableexpenseTaxable eVariableexpenseTaxable = default(FieldEVariableexpenseTaxable), bool bVariableexpenseIsactive = default(bool))
         {
             // to ensure "sVariableexpenseCode" is required (not null)

@@ -24,7 +24,53 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplateformfieldgroup Object and children
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplateformfieldgroupRequestCompound :  IEquatable<EzsigntemplateformfieldgroupRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsigntemplateformfieldgroupType
+        /// </summary>
+        [DataMember(Name="eEzsigntemplateformfieldgroupType", EmitDefaultValue=true)]
+        public FieldEEzsigntemplateformfieldgroupType EEzsigntemplateformfieldgroupType { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsigntemplateformfieldgroupSignerrequirement
+        /// </summary>
+        [DataMember(Name="eEzsigntemplateformfieldgroupSignerrequirement", EmitDefaultValue=true)]
+        public FieldEEzsigntemplateformfieldgroupSignerrequirement EEzsigntemplateformfieldgroupSignerrequirement { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsigntemplateformfieldgroupTooltipposition
+        /// </summary>
+        [DataMember(Name="eEzsigntemplateformfieldgroupTooltipposition", EmitDefaultValue=false)]
+        public FieldEEzsigntemplateformfieldgroupTooltipposition? EEzsigntemplateformfieldgroupTooltipposition { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplateformfieldgroupRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplateformfieldgroupID">The unique ID of the Ezsigntemplateformfieldgroup.</param>
+        /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
+        /// <param name="eEzsigntemplateformfieldgroupType">eEzsigntemplateformfieldgroupType (required).</param>
+        /// <param name="eEzsigntemplateformfieldgroupSignerrequirement">eEzsigntemplateformfieldgroupSignerrequirement (required).</param>
+        /// <param name="sEzsigntemplateformfieldgroupLabel">The Label for the Ezsigntemplateformfieldgroup (required).</param>
+        /// <param name="iEzsigntemplateformfieldgroupStep">The step when the Ezsigntemplatesigner will be invited to fill the form fields (required).</param>
+        /// <param name="sEzsigntemplateformfieldgroupDefaultvalue">The default value for the Ezsigntemplateformfieldgroup (required).</param>
+        /// <param name="iEzsigntemplateformfieldgroupFilledmin">The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup (required).</param>
+        /// <param name="iEzsigntemplateformfieldgroupFilledmax">The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup (required).</param>
+        /// <param name="bEzsigntemplateformfieldgroupReadonly">Whether the Ezsigntemplateformfieldgroup is read only or not. (required).</param>
+        /// <param name="iEzsigntemplateformfieldgroupMaxlength">The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="bEzsigntemplateformfieldgroupEncrypted">Whether the Ezsigntemplateformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="sEzsigntemplateformfieldgroupRegexp">A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="tEzsigntemplateformfieldgroupTooltip">A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup.</param>
+        /// <param name="eEzsigntemplateformfieldgroupTooltipposition">eEzsigntemplateformfieldgroupTooltipposition.</param>
+        /// <param name="aObjEzsigntemplateformfieldgroupsigner">aObjEzsigntemplateformfieldgroupsigner (required).</param>
+        /// <param name="aObjDropdownElement">aObjDropdownElement.</param>
+        /// <param name="aObjEzsigntemplateformfield">aObjEzsigntemplateformfield (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -210,54 +256,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplateformfieldgroup Object and children
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplateformfieldgroupRequestCompound :  IEquatable<EzsigntemplateformfieldgroupRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsigntemplateformfieldgroupType
-        /// </summary>
-        [DataMember(Name="eEzsigntemplateformfieldgroupType", EmitDefaultValue=true)]
-        public FieldEEzsigntemplateformfieldgroupType EEzsigntemplateformfieldgroupType { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsigntemplateformfieldgroupSignerrequirement
-        /// </summary>
-        [DataMember(Name="eEzsigntemplateformfieldgroupSignerrequirement", EmitDefaultValue=true)]
-        public FieldEEzsigntemplateformfieldgroupSignerrequirement EEzsigntemplateformfieldgroupSignerrequirement { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsigntemplateformfieldgroupTooltipposition
-        /// </summary>
-        [DataMember(Name="eEzsigntemplateformfieldgroupTooltipposition", EmitDefaultValue=false)]
-        public FieldEEzsigntemplateformfieldgroupTooltipposition? EEzsigntemplateformfieldgroupTooltipposition { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateformfieldgroupRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplateformfieldgroupID">The unique ID of the Ezsigntemplateformfieldgroup.</param>
-        /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
-        /// <param name="eEzsigntemplateformfieldgroupType">eEzsigntemplateformfieldgroupType (required).</param>
-        /// <param name="eEzsigntemplateformfieldgroupSignerrequirement">eEzsigntemplateformfieldgroupSignerrequirement (required).</param>
-        /// <param name="sEzsigntemplateformfieldgroupLabel">The Label for the Ezsigntemplateformfieldgroup (required).</param>
-        /// <param name="iEzsigntemplateformfieldgroupStep">The step when the Ezsigntemplatesigner will be invited to fill the form fields (required).</param>
-        /// <param name="sEzsigntemplateformfieldgroupDefaultvalue">The default value for the Ezsigntemplateformfieldgroup (required).</param>
-        /// <param name="iEzsigntemplateformfieldgroupFilledmin">The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup (required).</param>
-        /// <param name="iEzsigntemplateformfieldgroupFilledmax">The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup (required).</param>
-        /// <param name="bEzsigntemplateformfieldgroupReadonly">Whether the Ezsigntemplateformfieldgroup is read only or not. (required).</param>
-        /// <param name="iEzsigntemplateformfieldgroupMaxlength">The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
-        /// <param name="bEzsigntemplateformfieldgroupEncrypted">Whether the Ezsigntemplateformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
-        /// <param name="sEzsigntemplateformfieldgroupRegexp">A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
-        /// <param name="tEzsigntemplateformfieldgroupTooltip">A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup.</param>
-        /// <param name="eEzsigntemplateformfieldgroupTooltipposition">eEzsigntemplateformfieldgroupTooltipposition.</param>
-        /// <param name="aObjEzsigntemplateformfieldgroupsigner">aObjEzsigntemplateformfieldgroupsigner (required).</param>
-        /// <param name="aObjDropdownElement">aObjDropdownElement.</param>
-        /// <param name="aObjEzsigntemplateformfield">aObjEzsigntemplateformfield (required).</param>
         public EzsigntemplateformfieldgroupRequestCompound(int pkiEzsigntemplateformfieldgroupID = default(int), int fkiEzsigntemplatedocumentID = default(int), FieldEEzsigntemplateformfieldgroupType eEzsigntemplateformfieldgroupType = default(FieldEEzsigntemplateformfieldgroupType), FieldEEzsigntemplateformfieldgroupSignerrequirement eEzsigntemplateformfieldgroupSignerrequirement = default(FieldEEzsigntemplateformfieldgroupSignerrequirement), string sEzsigntemplateformfieldgroupLabel = default(string), int iEzsigntemplateformfieldgroupStep = default(int), string sEzsigntemplateformfieldgroupDefaultvalue = default(string), int iEzsigntemplateformfieldgroupFilledmin = default(int), int iEzsigntemplateformfieldgroupFilledmax = default(int), bool bEzsigntemplateformfieldgroupReadonly = default(bool), int iEzsigntemplateformfieldgroupMaxlength = default(int), bool bEzsigntemplateformfieldgroupEncrypted = default(bool), string sEzsigntemplateformfieldgroupRegexp = default(string), string tEzsigntemplateformfieldgroupTooltip = default(string), FieldEEzsigntemplateformfieldgroupTooltipposition? eEzsigntemplateformfieldgroupTooltipposition = default(FieldEEzsigntemplateformfieldgroupTooltipposition?), List<EzsigntemplateformfieldgroupsignerRequestCompound> aObjEzsigntemplateformfieldgroupsigner = default(List<EzsigntemplateformfieldgroupsignerRequestCompound>), List<CustomDropdownElementRequestCompound> aObjDropdownElement = default(List<CustomDropdownElementRequestCompound>), List<EzsigntemplateformfieldRequestCompound> aObjEzsigntemplateformfield = default(List<EzsigntemplateformfieldRequestCompound>))
         {
             // to ensure "fkiEzsigntemplatedocumentID" is required (not null)

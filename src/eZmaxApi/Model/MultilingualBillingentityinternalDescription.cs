@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// The description of the Billingentityinternal
+    /// </summary>
+    [DataContract]
+    public partial class MultilingualBillingentityinternalDescription :  IEquatable<MultilingualBillingentityinternalDescription>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MultilingualBillingentityinternalDescription" /> class.
+        /// </summary>
+        /// <param name="sBillingentityinternalDescription1">The description of the Billingentityinternal in French.</param>
+        /// <param name="sBillingentityinternalDescription2">The description of the Billingentityinternal in English.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -73,18 +83,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// The description of the Billingentityinternal
-    /// </summary>
-    [DataContract]
-    public partial class MultilingualBillingentityinternalDescription :  IEquatable<MultilingualBillingentityinternalDescription>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MultilingualBillingentityinternalDescription" /> class.
-        /// </summary>
-        /// <param name="sBillingentityinternalDescription1">The description of the Billingentityinternal in French.</param>
-        /// <param name="sBillingentityinternalDescription2">The description of the Billingentityinternal in English.</param>
         public MultilingualBillingentityinternalDescription(string sBillingentityinternalDescription1 = default(string), string sBillingentityinternalDescription2 = default(string))
         {
             this.SBillingentityinternalDescription1 = sBillingentityinternalDescription1;

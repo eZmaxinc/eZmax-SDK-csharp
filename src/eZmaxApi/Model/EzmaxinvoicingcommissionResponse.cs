@@ -24,7 +24,28 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezmaxinvoicingcommission Object
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingcommissionResponse :  IEquatable<EzmaxinvoicingcommissionResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingcommissionResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingcommissionResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingcommissionResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxinvoicingcommissionID">The unique ID of the Ezmaxinvoicingcommission.</param>
+        /// <param name="fkiEzmaxinvoicingsummaryglobalID">The unique ID of the Ezmaxinvoicingsummaryglobal.</param>
+        /// <param name="fkiEzmaxpartnerID">The unique ID of the Ezmaxpartner.</param>
+        /// <param name="fkiEzmaxrepresentativeID">The unique ID of the Ezmaxrepresentative.</param>
+        /// <param name="dtEzmaxinvoicingcommissionStart">The start date for the Ezmaxinvoicingcommission (required).</param>
+        /// <param name="dtEzmaxinvoicingcommissionEnd">The end date for the Ezmaxinvoicingcommission (required).</param>
+        /// <param name="iEzmaxinvoicingcommissionDays">This is the number of days during the month on which the Ezmaxinvoigcommission applies (required).</param>
+        /// <param name="dEzmaxinvoicingcommissionAmount">The amount of Ezmaxinvoicingcommission (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -118,29 +139,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezmaxinvoicingcommission Object
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingcommissionResponse :  IEquatable<EzmaxinvoicingcommissionResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingcommissionResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingcommissionResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingcommissionResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxinvoicingcommissionID">The unique ID of the Ezmaxinvoicingcommission.</param>
-        /// <param name="fkiEzmaxinvoicingsummaryglobalID">The unique ID of the Ezmaxinvoicingsummaryglobal.</param>
-        /// <param name="fkiEzmaxpartnerID">The unique ID of the Ezmaxpartner.</param>
-        /// <param name="fkiEzmaxrepresentativeID">The unique ID of the Ezmaxrepresentative.</param>
-        /// <param name="dtEzmaxinvoicingcommissionStart">The start date for the Ezmaxinvoicingcommission (required).</param>
-        /// <param name="dtEzmaxinvoicingcommissionEnd">The end date for the Ezmaxinvoicingcommission (required).</param>
-        /// <param name="iEzmaxinvoicingcommissionDays">This is the number of days during the month on which the Ezmaxinvoigcommission applies (required).</param>
-        /// <param name="dEzmaxinvoicingcommissionAmount">The amount of Ezmaxinvoicingcommission (required).</param>
         public EzmaxinvoicingcommissionResponse(int pkiEzmaxinvoicingcommissionID = default(int), int fkiEzmaxinvoicingsummaryglobalID = default(int), int fkiEzmaxpartnerID = default(int), int fkiEzmaxrepresentativeID = default(int), string dtEzmaxinvoicingcommissionStart = default(string), string dtEzmaxinvoicingcommissionEnd = default(string), int iEzmaxinvoicingcommissionDays = default(int), string dEzmaxinvoicingcommissionAmount = default(string))
         {
             // to ensure "dtEzmaxinvoicingcommissionStart" is required (not null)

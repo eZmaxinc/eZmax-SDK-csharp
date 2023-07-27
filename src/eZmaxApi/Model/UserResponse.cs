@@ -24,7 +24,77 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A User Object
+    /// </summary>
+    [DataContract]
+    public partial class UserResponse :  IEquatable<UserResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EUserOrigin
+        /// </summary>
+        [DataMember(Name="eUserOrigin", EmitDefaultValue=true)]
+        public FieldEUserOrigin EUserOrigin { get; set; }
+        /// <summary>
+        /// Gets or Sets EUserType
+        /// </summary>
+        [DataMember(Name="eUserType", EmitDefaultValue=true)]
+        public FieldEUserType EUserType { get; set; }
+        /// <summary>
+        /// Gets or Sets EUserLogintype
+        /// </summary>
+        [DataMember(Name="eUserLogintype", EmitDefaultValue=true)]
+        public FieldEUserLogintype EUserLogintype { get; set; }
+        /// <summary>
+        /// Gets or Sets EUserEzsignaccess
+        /// </summary>
+        [DataMember(Name="eUserEzsignaccess", EmitDefaultValue=true)]
+        public FieldEUserEzsignaccess EUserEzsignaccess { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserResponse" /> class.
+        /// </summary>
+        /// <param name="pkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
+        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
+        /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
+        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
+        /// <param name="fkiCompanyIDDefault">The unique ID of the Company (required).</param>
+        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="fkiDepartmentIDDefault">The unique ID of the Department (required).</param>
+        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
+        /// <param name="fkiTimezoneID">The unique ID of the Timezone (required).</param>
+        /// <param name="sTimezoneName">The description of the Timezone (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
+        /// <param name="objEmail">objEmail (required).</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="objPhoneHome">objPhoneHome.</param>
+        /// <param name="objPhoneSMS">objPhoneSMS.</param>
+        /// <param name="fkiSecretquestionID">The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)|.</param>
+        /// <param name="fkiModuleIDForm">The unique ID of the Module.</param>
+        /// <param name="sModuleNameX">The Name of the Module in the language of the requester.</param>
+        /// <param name="eUserOrigin">eUserOrigin (required).</param>
+        /// <param name="eUserType">eUserType (required).</param>
+        /// <param name="eUserLogintype">eUserLogintype (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
+        /// <param name="dtUserLastlogondate">The last logon date of the User.</param>
+        /// <param name="dtUserPasswordchanged">The date at which the User&#39;s password was last changed.</param>
+        /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
+        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
+        /// <param name="bUserValidatebyadministration">Whether if the transactions in which the User is implicated must be validated by administrative personnel or not.</param>
+        /// <param name="bUserValidatebydirector">Whether if the transactions in which the User is implicated must be validated by a director or not.</param>
+        /// <param name="bUserAttachmentautoverified">Whether if Attachments uploaded by the User must be validated or not.</param>
+        /// <param name="bUserChangepassword">Whether if the User is forced to change its password (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -339,78 +409,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A User Object
-    /// </summary>
-    [DataContract]
-    public partial class UserResponse :  IEquatable<UserResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EUserOrigin
-        /// </summary>
-        [DataMember(Name="eUserOrigin", EmitDefaultValue=true)]
-        public FieldEUserOrigin EUserOrigin { get; set; }
-        /// <summary>
-        /// Gets or Sets EUserType
-        /// </summary>
-        [DataMember(Name="eUserType", EmitDefaultValue=true)]
-        public FieldEUserType EUserType { get; set; }
-        /// <summary>
-        /// Gets or Sets EUserLogintype
-        /// </summary>
-        [DataMember(Name="eUserLogintype", EmitDefaultValue=true)]
-        public FieldEUserLogintype EUserLogintype { get; set; }
-        /// <summary>
-        /// Gets or Sets EUserEzsignaccess
-        /// </summary>
-        [DataMember(Name="eUserEzsignaccess", EmitDefaultValue=true)]
-        public FieldEUserEzsignaccess EUserEzsignaccess { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserResponse" /> class.
-        /// </summary>
-        /// <param name="pkiUserID">The unique ID of the User (required).</param>
-        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
-        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
-        /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
-        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
-        /// <param name="fkiCompanyIDDefault">The unique ID of the Company (required).</param>
-        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="fkiDepartmentIDDefault">The unique ID of the Department (required).</param>
-        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
-        /// <param name="fkiTimezoneID">The unique ID of the Timezone (required).</param>
-        /// <param name="sTimezoneName">The description of the Timezone (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
-        /// <param name="objEmail">objEmail (required).</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="objPhoneHome">objPhoneHome.</param>
-        /// <param name="objPhoneSMS">objPhoneSMS.</param>
-        /// <param name="fkiSecretquestionID">The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)|.</param>
-        /// <param name="fkiModuleIDForm">The unique ID of the Module.</param>
-        /// <param name="sModuleNameX">The Name of the Module in the language of the requester.</param>
-        /// <param name="eUserOrigin">eUserOrigin (required).</param>
-        /// <param name="eUserType">eUserType (required).</param>
-        /// <param name="eUserLogintype">eUserLogintype (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sUserLoginname">The login name of the User. (required).</param>
-        /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
-        /// <param name="dtUserLastlogondate">The last logon date of the User.</param>
-        /// <param name="dtUserPasswordchanged">The date at which the User&#39;s password was last changed.</param>
-        /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
-        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
-        /// <param name="bUserValidatebyadministration">Whether if the transactions in which the User is implicated must be validated by administrative personnel or not.</param>
-        /// <param name="bUserValidatebydirector">Whether if the transactions in which the User is implicated must be validated by a director or not.</param>
-        /// <param name="bUserAttachmentautoverified">Whether if Attachments uploaded by the User must be validated or not.</param>
-        /// <param name="bUserChangepassword">Whether if the User is forced to change its password (required).</param>
-        /// <param name="objAudit">objAudit (required).</param>
         public UserResponse(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), string sCompanyNameX = default(string), int fkiDepartmentIDDefault = default(int), string sDepartmentNameX = default(string), int fkiTimezoneID = default(int), string sTimezoneName = default(string), int fkiLanguageID = default(int), string sLanguageNameX = default(string), EmailResponseCompound objEmail = default(EmailResponseCompound), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), PhoneResponseCompound objPhoneHome = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound), int fkiSecretquestionID = default(int), int fkiModuleIDForm = default(int), string sModuleNameX = default(string), FieldEUserOrigin eUserOrigin = default(FieldEUserOrigin), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), string dtUserLastlogondate = default(string), string dtUserPasswordchanged = default(string), string dtUserEzsignprepaidexpiration = default(string), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool), CommonAudit objAudit = default(CommonAudit))
         {
             // to ensure "pkiUserID" is required (not null)

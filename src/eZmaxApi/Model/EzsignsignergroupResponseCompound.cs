@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignsignergroup Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignsignergroupResponseCompound :  IEquatable<EzsignsignergroupResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignergroupResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignsignergroupResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignergroupResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup (required).</param>
+        /// <param name="objEzsignsignergroupDescription">objEzsignsignergroupDescription (required).</param>
+        /// <param name="sEzsignsignergroupDescriptionX">The Description of the Ezsignsignergroup in the language of the requester.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,24 +99,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignsignergroup Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignsignergroupResponseCompound :  IEquatable<EzsignsignergroupResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignergroupResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignsignergroupResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignsignergroupResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup (required).</param>
-        /// <param name="objEzsignsignergroupDescription">objEzsignsignergroupDescription (required).</param>
-        /// <param name="sEzsignsignergroupDescriptionX">The Description of the Ezsignsignergroup in the language of the requester.</param>
         public EzsignsignergroupResponseCompound(int pkiEzsignsignergroupID = default(int), MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription = default(MultilingualEzsignsignergroupDescription), string sEzsignsignergroupDescriptionX = default(string))
         {
             // to ensure "pkiEzsignsignergroupID" is required (not null)

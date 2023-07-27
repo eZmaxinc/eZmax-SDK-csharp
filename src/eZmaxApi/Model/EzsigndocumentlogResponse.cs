@@ -24,7 +24,33 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsigndocumentlog Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentlogResponse :  IEquatable<EzsigndocumentlogResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsigndocumentlogType
+        /// </summary>
+        [DataMember(Name="eEzsigndocumentlogType", EmitDefaultValue=true)]
+        public FieldEEzsigndocumentlogType EEzsigndocumentlogType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentlogResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentlogResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentlogResponse" /> class.
+        /// </summary>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
+        /// <param name="dtEzsigndocumentlogDatetime">The date and time at which the event was logged (required).</param>
+        /// <param name="eEzsigndocumentlogType">eEzsigndocumentlogType (required).</param>
+        /// <param name="sEzsigndocumentlogDetail">The detail of the Ezsigndocumentlog (required).</param>
+        /// <param name="sEzsigndocumentlogLastname">The last name of the User or Ezsignsigner (required).</param>
+        /// <param name="sEzsigndocumentlogFirstname">The first name of the User or Ezsignsigner (required).</param>
+        /// <param name="sEzsigndocumentlogIP">Represent an IP address. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -117,34 +143,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsigndocumentlog Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentlogResponse :  IEquatable<EzsigndocumentlogResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsigndocumentlogType
-        /// </summary>
-        [DataMember(Name="eEzsigndocumentlogType", EmitDefaultValue=true)]
-        public FieldEEzsigndocumentlogType EEzsigndocumentlogType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentlogResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentlogResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentlogResponse" /> class.
-        /// </summary>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
-        /// <param name="dtEzsigndocumentlogDatetime">The date and time at which the event was logged (required).</param>
-        /// <param name="eEzsigndocumentlogType">eEzsigndocumentlogType (required).</param>
-        /// <param name="sEzsigndocumentlogDetail">The detail of the Ezsigndocumentlog (required).</param>
-        /// <param name="sEzsigndocumentlogLastname">The last name of the User or Ezsignsigner (required).</param>
-        /// <param name="sEzsigndocumentlogFirstname">The first name of the User or Ezsignsigner (required).</param>
-        /// <param name="sEzsigndocumentlogIP">Represent an IP address. (required).</param>
         public EzsigndocumentlogResponse(int fkiUserID = default(int), int fkiEzsignsignerID = default(int), string dtEzsigndocumentlogDatetime = default(string), FieldEEzsigndocumentlogType eEzsigndocumentlogType = default(FieldEEzsigndocumentlogType), string sEzsigndocumentlogDetail = default(string), string sEzsigndocumentlogLastname = default(string), string sEzsigndocumentlogFirstname = default(string), string sEzsigndocumentlogIP = default(string))
         {
             // to ensure "dtEzsigndocumentlogDatetime" is required (not null)

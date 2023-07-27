@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzsignfoldersignerassociationstatusResponse :  IEquatable<CustomEzsignfoldersignerassociationstatusResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationstatusResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzsignfoldersignerassociationstatusResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationstatusResponse" /> class.
+        /// </summary>
+        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="sEzsignfoldersignerassociationstatusLastname">The last name of the Ezsignsigner.</param>
+        /// <param name="sEzsignfoldersignerassociationstatusFirstname">The first name of the Ezsignsigner.</param>
+        /// <param name="sEzsignfoldersignerassociationstatusDescriptionX">The description of the Ezsignsigner.</param>
+        /// <param name="aObjEzsignsignaturestatus">aObjEzsignsignaturestatus (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -105,26 +123,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzsignfoldersignerassociationstatusResponse :  IEquatable<CustomEzsignfoldersignerassociationstatusResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationstatusResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzsignfoldersignerassociationstatusResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationstatusResponse" /> class.
-        /// </summary>
-        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="sEzsignfoldersignerassociationstatusLastname">The last name of the Ezsignsigner.</param>
-        /// <param name="sEzsignfoldersignerassociationstatusFirstname">The first name of the Ezsignsigner.</param>
-        /// <param name="sEzsignfoldersignerassociationstatusDescriptionX">The description of the Ezsignsigner.</param>
-        /// <param name="aObjEzsignsignaturestatus">aObjEzsignsignaturestatus (required).</param>
         public CustomEzsignfoldersignerassociationstatusResponse(int fkiEzsignfoldersignerassociationID = default(int), string sEzsignfoldersignerassociationstatusLastname = default(string), string sEzsignfoldersignerassociationstatusFirstname = default(string), string sEzsignfoldersignerassociationstatusDescriptionX = default(string), List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus = default(List<CustomEzsignsignaturestatusResponse>))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)

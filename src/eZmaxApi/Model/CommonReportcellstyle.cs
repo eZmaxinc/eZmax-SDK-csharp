@@ -24,7 +24,48 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Styles applied to a Reportcell 
+    /// </summary>
+    [DataContract]
+    public partial class CommonReportcellstyle :  IEquatable<CommonReportcellstyle>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EReportcellHorizontalalignment
+        /// </summary>
+        [DataMember(Name="eReportcellHorizontalalignment", EmitDefaultValue=true)]
+        public EnumHorizontalalignment EReportcellHorizontalalignment { get; set; }
+        /// <summary>
+        /// Gets or Sets EReportcellVerticalalignment
+        /// </summary>
+        [DataMember(Name="eReportcellVerticalalignment", EmitDefaultValue=true)]
+        public EnumVerticalalignment EReportcellVerticalalignment { get; set; }
+        /// <summary>
+        /// Gets or Sets EReportcellFontweight
+        /// </summary>
+        [DataMember(Name="eReportcellFontweight", EmitDefaultValue=true)]
+        public EnumFontweight EReportcellFontweight { get; set; }
+        /// <summary>
+        /// Gets or Sets EReportcellFontunderline
+        /// </summary>
+        [DataMember(Name="eReportcellFontunderline", EmitDefaultValue=true)]
+        public EnumFontunderline EReportcellFontunderline { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonReportcellstyle" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonReportcellstyle() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonReportcellstyle" /> class.
+        /// </summary>
+        /// <param name="bReportcellstyleBordertop">Whether there is a border at the top of the Reportcell (required).</param>
+        /// <param name="bReportcellstyleBorderbottom">Whether there is a border at the bottom of the Reportcell (required).</param>
+        /// <param name="bReportcellstyleBorderleft">Whether there is a border at the left of the Reportcell (required).</param>
+        /// <param name="bReportcellstyleBorderright">Whether there is a border at the right of the Reportcell (required).</param>
+        /// <param name="eReportcellHorizontalalignment">eReportcellHorizontalalignment (required).</param>
+        /// <param name="eReportcellVerticalalignment">eReportcellVerticalalignment (required).</param>
+        /// <param name="eReportcellFontweight">eReportcellFontweight (required).</param>
+        /// <param name="eReportcellFontunderline">eReportcellFontunderline (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -111,49 +152,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Styles applied to a Reportcell 
-    /// </summary>
-    [DataContract]
-    public partial class CommonReportcellstyle :  IEquatable<CommonReportcellstyle>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EReportcellHorizontalalignment
-        /// </summary>
-        [DataMember(Name="eReportcellHorizontalalignment", EmitDefaultValue=true)]
-        public EnumHorizontalalignment EReportcellHorizontalalignment { get; set; }
-        /// <summary>
-        /// Gets or Sets EReportcellVerticalalignment
-        /// </summary>
-        [DataMember(Name="eReportcellVerticalalignment", EmitDefaultValue=true)]
-        public EnumVerticalalignment EReportcellVerticalalignment { get; set; }
-        /// <summary>
-        /// Gets or Sets EReportcellFontweight
-        /// </summary>
-        [DataMember(Name="eReportcellFontweight", EmitDefaultValue=true)]
-        public EnumFontweight EReportcellFontweight { get; set; }
-        /// <summary>
-        /// Gets or Sets EReportcellFontunderline
-        /// </summary>
-        [DataMember(Name="eReportcellFontunderline", EmitDefaultValue=true)]
-        public EnumFontunderline EReportcellFontunderline { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonReportcellstyle" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonReportcellstyle() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonReportcellstyle" /> class.
-        /// </summary>
-        /// <param name="bReportcellstyleBordertop">Whether there is a border at the top of the Reportcell (required).</param>
-        /// <param name="bReportcellstyleBorderbottom">Whether there is a border at the bottom of the Reportcell (required).</param>
-        /// <param name="bReportcellstyleBorderleft">Whether there is a border at the left of the Reportcell (required).</param>
-        /// <param name="bReportcellstyleBorderright">Whether there is a border at the right of the Reportcell (required).</param>
-        /// <param name="eReportcellHorizontalalignment">eReportcellHorizontalalignment (required).</param>
-        /// <param name="eReportcellVerticalalignment">eReportcellVerticalalignment (required).</param>
-        /// <param name="eReportcellFontweight">eReportcellFontweight (required).</param>
-        /// <param name="eReportcellFontunderline">eReportcellFontunderline (required).</param>
         public CommonReportcellstyle(bool bReportcellstyleBordertop = default(bool), bool bReportcellstyleBorderbottom = default(bool), bool bReportcellstyleBorderleft = default(bool), bool bReportcellstyleBorderright = default(bool), EnumHorizontalalignment eReportcellHorizontalalignment = default(EnumHorizontalalignment), EnumVerticalalignment eReportcellVerticalalignment = default(EnumVerticalalignment), EnumFontweight eReportcellFontweight = default(EnumFontweight), EnumFontunderline eReportcellFontunderline = default(EnumFontunderline))
         {
             // to ensure "bReportcellstyleBordertop" is required (not null)

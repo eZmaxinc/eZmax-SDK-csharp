@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksendtransmissionGetFormsDataV1Response :  IEquatable<EzsignbulksendtransmissionGetFormsDataV1Response>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetFormsDataV1Response" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendtransmissionGetFormsDataV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetFormsDataV1Response" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
+        /// <param name="objDebugPayload">objDebugPayload.</param>
+        /// <param name="objDebug">objDebug.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,24 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksendtransmissionGetFormsDataV1Response :  IEquatable<EzsignbulksendtransmissionGetFormsDataV1Response>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetFormsDataV1Response" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksendtransmissionGetFormsDataV1Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetFormsDataV1Response" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
-        /// <param name="objDebug">objDebug.</param>
         public EzsignbulksendtransmissionGetFormsDataV1Response(EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload mPayload = default(EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)

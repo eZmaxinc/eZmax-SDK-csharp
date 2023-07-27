@@ -24,7 +24,29 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Branding List Element
+    /// </summary>
+    [DataContract]
+    public partial class BrandingListElement :  IEquatable<BrandingListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BrandingListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BrandingListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BrandingListElement" /> class.
+        /// </summary>
+        /// <param name="pkiBrandingID">The unique ID of the Branding (required).</param>
+        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
+        /// <param name="iBrandingColortext">The color of the text. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColortextlinkbox">The color of the text in the link box. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColortextbutton">The color of the text in the button. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColorbackground">The color of the background. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColorbackgroundbutton">The color of the background of the button. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColorbackgroundsmallbox">The color of the background of the small box. This is a RGB color converted into integer (required).</param>
+        /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -161,30 +183,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Branding List Element
-    /// </summary>
-    [DataContract]
-    public partial class BrandingListElement :  IEquatable<BrandingListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BrandingListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BrandingListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BrandingListElement" /> class.
-        /// </summary>
-        /// <param name="pkiBrandingID">The unique ID of the Branding (required).</param>
-        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
-        /// <param name="iBrandingColortext">The color of the text. This is a RGB color converted into integer (required).</param>
-        /// <param name="iBrandingColortextlinkbox">The color of the text in the link box. This is a RGB color converted into integer (required).</param>
-        /// <param name="iBrandingColortextbutton">The color of the text in the button. This is a RGB color converted into integer (required).</param>
-        /// <param name="iBrandingColorbackground">The color of the background. This is a RGB color converted into integer (required).</param>
-        /// <param name="iBrandingColorbackgroundbutton">The color of the background of the button. This is a RGB color converted into integer (required).</param>
-        /// <param name="iBrandingColorbackgroundsmallbox">The color of the background of the small box. This is a RGB color converted into integer (required).</param>
-        /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
         public BrandingListElement(int pkiBrandingID = default(int), string sBrandingDescriptionX = default(string), int iBrandingColortext = default(int), int iBrandingColortextlinkbox = default(int), int iBrandingColortextbutton = default(int), int iBrandingColorbackground = default(int), int iBrandingColorbackgroundbutton = default(int), int iBrandingColorbackgroundsmallbox = default(int), bool bBrandingIsactive = default(bool))
         {
             // to ensure "pkiBrandingID" is required (not null)

@@ -24,7 +24,28 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Textstylestatic Object
+    /// </summary>
+    [DataContract]
+    public partial class TextstylestaticResponseCompound :  IEquatable<TextstylestaticResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextstylestaticResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected TextstylestaticResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextstylestaticResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiTextstylestaticID">The unique ID of the Textstylestatic.</param>
+        /// <param name="fkiFontID">The unique ID of the Font (required).</param>
+        /// <param name="bTextstylestaticBold">Whether the Textstylestatic is Bold or not (required).</param>
+        /// <param name="bTextstylestaticUnderline">Whether the Textstylestatic is Underline or not (required).</param>
+        /// <param name="bTextstylestaticItalic">Whether the Textstylestatic is Italic or not (required).</param>
+        /// <param name="bTextstylestaticStrikethrough">Whether the Textstylestatic is Strikethrough or not (required).</param>
+        /// <param name="iTextstylestaticFontcolor">The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795 (required).</param>
+        /// <param name="iTextstylestaticSize">The Size for the Font of the Textstylestatic (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -134,29 +155,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Textstylestatic Object
-    /// </summary>
-    [DataContract]
-    public partial class TextstylestaticResponseCompound :  IEquatable<TextstylestaticResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TextstylestaticResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected TextstylestaticResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TextstylestaticResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiTextstylestaticID">The unique ID of the Textstylestatic.</param>
-        /// <param name="fkiFontID">The unique ID of the Font (required).</param>
-        /// <param name="bTextstylestaticBold">Whether the Textstylestatic is Bold or not (required).</param>
-        /// <param name="bTextstylestaticUnderline">Whether the Textstylestatic is Underline or not (required).</param>
-        /// <param name="bTextstylestaticItalic">Whether the Textstylestatic is Italic or not (required).</param>
-        /// <param name="bTextstylestaticStrikethrough">Whether the Textstylestatic is Strikethrough or not (required).</param>
-        /// <param name="iTextstylestaticFontcolor">The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795 (required).</param>
-        /// <param name="iTextstylestaticSize">The Size for the Font of the Textstylestatic (required).</param>
         public TextstylestaticResponseCompound(int pkiTextstylestaticID = default(int), int fkiFontID = default(int), bool bTextstylestaticBold = default(bool), bool bTextstylestaticUnderline = default(bool), bool bTextstylestaticItalic = default(bool), bool bTextstylestaticStrikethrough = default(bool), int iTextstylestaticFontcolor = default(int), int iTextstylestaticSize = default(int))
         {
             // to ensure "fkiFontID" is required (not null)

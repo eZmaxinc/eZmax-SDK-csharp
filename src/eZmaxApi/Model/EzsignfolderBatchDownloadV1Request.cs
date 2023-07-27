@@ -24,7 +24,48 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+    /// <summary>
+    /// Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfolderBatchDownloadV1Request :  IEquatable<EzsignfolderBatchDownloadV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Defines AEDocumentType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AEDocumentTypeEnum
+        {
+            /// <summary>
+            /// Enum Signed for value: Signed
+            /// </summary>
+            [EnumMember(Value = "Signed")]
+            Signed = 1,
 
+            /// <summary>
+            /// Enum Proof for value: Proof
+            /// </summary>
+            [EnumMember(Value = "Proof")]
+            Proof = 2,
+
+            /// <summary>
+            /// Enum Proofdocument for value: Proofdocument
+            /// </summary>
+            [EnumMember(Value = "Proofdocument")]
+            Proofdocument = 3
+
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderBatchDownloadV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfolderBatchDownloadV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderBatchDownloadV1Request" /> class.
+        /// </summary>
+        /// <param name="aPkiEzsigndocumentID">aPkiEzsigndocumentID (required).</param>
+        /// <param name="aEDocumentType">The type of document to retrieve.  1. **Signed** Is the final document once all signatures were applied. 2. **Proofdocument** Is the evidence report. 3. **Proof** Is the complete evidence archive including all of the above and more. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -129,49 +170,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfolderBatchDownloadV1Request :  IEquatable<EzsignfolderBatchDownloadV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Defines AEDocumentType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum AEDocumentTypeEnum
-        {
-            /// <summary>
-            /// Enum Signed for value: Signed
-            /// </summary>
-            [EnumMember(Value = "Signed")]
-            Signed = 1,
-
-            /// <summary>
-            /// Enum Proof for value: Proof
-            /// </summary>
-            [EnumMember(Value = "Proof")]
-            Proof = 2,
-
-            /// <summary>
-            /// Enum Proofdocument for value: Proofdocument
-            /// </summary>
-            [EnumMember(Value = "Proofdocument")]
-            Proofdocument = 3
-
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderBatchDownloadV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfolderBatchDownloadV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderBatchDownloadV1Request" /> class.
-        /// </summary>
-        /// <param name="aPkiEzsigndocumentID">aPkiEzsigndocumentID (required).</param>
-        /// <param name="aEDocumentType">The type of document to retrieve.  1. **Signed** Is the final document once all signatures were applied. 2. **Proofdocument** Is the evidence report. 3. **Proof** Is the complete evidence archive including all of the above and more. (required).</param>
         public EzsignfolderBatchDownloadV1Request(List<int> aPkiEzsigndocumentID = default(List<int>), List<AEDocumentTypeEnum> aEDocumentType = default(List<AEDocumentTypeEnum>))
         {
             // to ensure "aPkiEzsigndocumentID" is required (not null)

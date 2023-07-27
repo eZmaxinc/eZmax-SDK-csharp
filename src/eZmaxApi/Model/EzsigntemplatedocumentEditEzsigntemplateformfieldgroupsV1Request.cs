@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request :  IEquatable<EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request" /> class.
+        /// </summary>
+        /// <param name="aObjEzsigntemplateformfieldgroup">aObjEzsigntemplateformfieldgroup (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request :  IEquatable<EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request" /> class.
-        /// </summary>
-        /// <param name="aObjEzsigntemplateformfieldgroup">aObjEzsigntemplateformfieldgroup (required).</param>
         public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request(List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup = default(List<EzsigntemplateformfieldgroupRequestCompound>))
         {
             // to ensure "aObjEzsigntemplateformfieldgroup" is required (not null)

@@ -24,7 +24,43 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignfolder List Element
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfolderListElement :  IEquatable<EzsignfolderListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignfoldertypePrivacylevel
+        /// </summary>
+        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
+        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignfolderStep
+        /// </summary>
+        [DataMember(Name="eEzsignfolderStep", EmitDefaultValue=true)]
+        public FieldEEzsignfolderStep EEzsignfolderStep { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfolderListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderListElement" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
+        /// <param name="eEzsignfolderStep">eEzsignfolderStep (required).</param>
+        /// <param name="dtCreatedDate">The date and time at which the object was created (required).</param>
+        /// <param name="dtEzsignfolderSentdate">The date and time at which the Ezsignfolder was sent the last time..</param>
+        /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed..</param>
+        /// <param name="iEzsigndocument">The total number of Ezsigndocument in the folder (required).</param>
+        /// <param name="iEzsigndocumentEdm">The total number of Ezsigndocument in the folder that were saved in the edm system (required).</param>
+        /// <param name="iEzsignsignature">The total number of signature blocks in all Ezsigndocuments in the folder (required).</param>
+        /// <param name="iEzsignsignatureSigned">The total number of already signed signature blocks in all Ezsigndocuments in the folder (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -147,44 +183,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignfolder List Element
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfolderListElement :  IEquatable<EzsignfolderListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignfoldertypePrivacylevel
-        /// </summary>
-        [DataMember(Name="eEzsignfoldertypePrivacylevel", EmitDefaultValue=true)]
-        public FieldEEzsignfoldertypePrivacylevel EEzsignfoldertypePrivacylevel { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignfolderStep
-        /// </summary>
-        [DataMember(Name="eEzsignfolderStep", EmitDefaultValue=true)]
-        public FieldEEzsignfolderStep EEzsignfolderStep { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfolderListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderListElement" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
-        /// <param name="eEzsignfolderStep">eEzsignfolderStep (required).</param>
-        /// <param name="dtCreatedDate">The date and time at which the object was created (required).</param>
-        /// <param name="dtEzsignfolderSentdate">The date and time at which the Ezsignfolder was sent the last time..</param>
-        /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed..</param>
-        /// <param name="iEzsigndocument">The total number of Ezsigndocument in the folder (required).</param>
-        /// <param name="iEzsigndocumentEdm">The total number of Ezsigndocument in the folder that were saved in the edm system (required).</param>
-        /// <param name="iEzsignsignature">The total number of signature blocks in all Ezsigndocuments in the folder (required).</param>
-        /// <param name="iEzsignsignatureSigned">The total number of already signed signature blocks in all Ezsigndocuments in the folder (required).</param>
         public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderDuedate = default(string), int iEzsigndocument = default(int), int iEzsigndocumentEdm = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int))
         {
             // to ensure "pkiEzsignfolderID" is required (not null)

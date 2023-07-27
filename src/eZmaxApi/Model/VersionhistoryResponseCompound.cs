@@ -24,7 +24,41 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Versionhistory Object
+    /// </summary>
+    [DataContract]
+    public partial class VersionhistoryResponseCompound :  IEquatable<VersionhistoryResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EVersionhistoryUsertype
+        /// </summary>
+        [DataMember(Name="eVersionhistoryUsertype", EmitDefaultValue=false)]
+        public FieldEVersionhistoryUsertype? EVersionhistoryUsertype { get; set; }
+        /// <summary>
+        /// Gets or Sets EVersionhistoryType
+        /// </summary>
+        [DataMember(Name="eVersionhistoryType", EmitDefaultValue=true)]
+        public FieldEVersionhistoryType EVersionhistoryType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VersionhistoryResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected VersionhistoryResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VersionhistoryResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiVersionhistoryID">The unique ID of the Versionhistory (required).</param>
+        /// <param name="fkiModuleID">The unique ID of the Module.</param>
+        /// <param name="fkiModulesectionID">The unique ID of the Modulesection.</param>
+        /// <param name="sModuleNameX">The Name of the Module in the language of the requester.</param>
+        /// <param name="sModulesectionNameX">The Name of the Modulesection in the language of the requester.</param>
+        /// <param name="eVersionhistoryUsertype">eVersionhistoryUsertype.</param>
+        /// <param name="objVersionhistoryDetail">objVersionhistoryDetail (required).</param>
+        /// <param name="dtVersionhistoryDate">The date  at which the Versionhistory was published or should be published (required).</param>
+        /// <param name="dtVersionhistoryDateend">The date  at which the Versionhistory will no longer be visible.</param>
+        /// <param name="eVersionhistoryType">eVersionhistoryType (required).</param>
+        /// <param name="bVersionhistoryDraft">Whether the Versionhistory is published or still a draft (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -119,42 +153,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Versionhistory Object
-    /// </summary>
-    [DataContract]
-    public partial class VersionhistoryResponseCompound :  IEquatable<VersionhistoryResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EVersionhistoryUsertype
-        /// </summary>
-        [DataMember(Name="eVersionhistoryUsertype", EmitDefaultValue=false)]
-        public FieldEVersionhistoryUsertype? EVersionhistoryUsertype { get; set; }
-        /// <summary>
-        /// Gets or Sets EVersionhistoryType
-        /// </summary>
-        [DataMember(Name="eVersionhistoryType", EmitDefaultValue=true)]
-        public FieldEVersionhistoryType EVersionhistoryType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VersionhistoryResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected VersionhistoryResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VersionhistoryResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiVersionhistoryID">The unique ID of the Versionhistory (required).</param>
-        /// <param name="fkiModuleID">The unique ID of the Module.</param>
-        /// <param name="fkiModulesectionID">The unique ID of the Modulesection.</param>
-        /// <param name="sModuleNameX">The Name of the Module in the language of the requester.</param>
-        /// <param name="sModulesectionNameX">The Name of the Modulesection in the language of the requester.</param>
-        /// <param name="eVersionhistoryUsertype">eVersionhistoryUsertype.</param>
-        /// <param name="objVersionhistoryDetail">objVersionhistoryDetail (required).</param>
-        /// <param name="dtVersionhistoryDate">The date  at which the Versionhistory was published or should be published (required).</param>
-        /// <param name="dtVersionhistoryDateend">The date  at which the Versionhistory will no longer be visible.</param>
-        /// <param name="eVersionhistoryType">eVersionhistoryType (required).</param>
-        /// <param name="bVersionhistoryDraft">Whether the Versionhistory is published or still a draft (required).</param>
         public VersionhistoryResponseCompound(int pkiVersionhistoryID = default(int), int fkiModuleID = default(int), int fkiModulesectionID = default(int), string sModuleNameX = default(string), string sModulesectionNameX = default(string), FieldEVersionhistoryUsertype? eVersionhistoryUsertype = default(FieldEVersionhistoryUsertype?), MultilingualVersionhistoryDetail objVersionhistoryDetail = default(MultilingualVersionhistoryDetail), string dtVersionhistoryDate = default(string), string dtVersionhistoryDateend = default(string), FieldEVersionhistoryType eVersionhistoryType = default(FieldEVersionhistoryType), bool bVersionhistoryDraft = default(bool))
         {
             // to ensure "pkiVersionhistoryID" is required (not null)

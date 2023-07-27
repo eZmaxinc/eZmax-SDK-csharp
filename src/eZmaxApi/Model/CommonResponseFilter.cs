@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Definition of Filters for getList
+    /// </summary>
+    [DataContract]
+    public partial class CommonResponseFilter :  IEquatable<CommonResponseFilter>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonResponseFilter" /> class.
+        /// </summary>
+        /// <param name="aAutoType">List of filters that can be used in *sFilter* (Automatic types).</param>
+        /// <param name="aEnum">List of filters that can be used in *sFilter* (Enum types).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -125,18 +135,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Definition of Filters for getList
-    /// </summary>
-    [DataContract]
-    public partial class CommonResponseFilter :  IEquatable<CommonResponseFilter>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseFilter" /> class.
-        /// </summary>
-        /// <param name="aAutoType">List of filters that can be used in *sFilter* (Automatic types).</param>
-        /// <param name="aEnum">List of filters that can be used in *sFilter* (Enum types).</param>
         public CommonResponseFilter(Dictionary<string, string> aAutoType = default(Dictionary<string, string>), Dictionary<string, Dictionary<string, string>> aEnum = default(Dictionary<string, Dictionary<string, string>>))
         {
             this.AAutoType = aAutoType;

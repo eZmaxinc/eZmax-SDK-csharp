@@ -24,7 +24,28 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Usergroupmembership Object
+    /// </summary>
+    [DataContract]
+    public partial class UsergroupmembershipResponse :  IEquatable<UsergroupmembershipResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupmembershipResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UsergroupmembershipResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupmembershipResponse" /> class.
+        /// </summary>
+        /// <param name="pkiUsergroupmembershipID">The unique ID of the Usergroupmembership (required).</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="sEmailAddress">The email address..</param>
+        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -137,29 +158,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Usergroupmembership Object
-    /// </summary>
-    [DataContract]
-    public partial class UsergroupmembershipResponse :  IEquatable<UsergroupmembershipResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupmembershipResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UsergroupmembershipResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupmembershipResponse" /> class.
-        /// </summary>
-        /// <param name="pkiUsergroupmembershipID">The unique ID of the Usergroupmembership (required).</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sUserLoginname">The login name of the User. (required).</param>
-        /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
         public UsergroupmembershipResponse(int pkiUsergroupmembershipID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sEmailAddress = default(string), string sUsergroupNameX = default(string))
         {
             // to ensure "pkiUsergroupmembershipID" is required (not null)

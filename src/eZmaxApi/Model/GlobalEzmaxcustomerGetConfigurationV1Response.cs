@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
+    /// </summary>
+    [DataContract]
+    public partial class GlobalEzmaxcustomerGetConfigurationV1Response :  IEquatable<GlobalEzmaxcustomerGetConfigurationV1Response>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GlobalEzmaxcustomerGetConfigurationV1Response" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected GlobalEzmaxcustomerGetConfigurationV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GlobalEzmaxcustomerGetConfigurationV1Response" /> class.
+        /// </summary>
+        /// <param name="sInfrastructureregionCode">The region code (required).</param>
+        /// <param name="sInfrastructureregionCodeWeb">The region code (required).</param>
+        /// <param name="sInfrastructureenvironmenttypeDescription">The environment type Description (required).</param>
+        /// <param name="sCognitoClientIDExternal">The ID of the client in Cognito.</param>
+        /// <param name="sCognitoClientIDEzmaxpublic">The ID of the client in Cognito (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -99,26 +117,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
-    /// </summary>
-    [DataContract]
-    public partial class GlobalEzmaxcustomerGetConfigurationV1Response :  IEquatable<GlobalEzmaxcustomerGetConfigurationV1Response>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GlobalEzmaxcustomerGetConfigurationV1Response" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected GlobalEzmaxcustomerGetConfigurationV1Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GlobalEzmaxcustomerGetConfigurationV1Response" /> class.
-        /// </summary>
-        /// <param name="sInfrastructureregionCode">The region code (required).</param>
-        /// <param name="sInfrastructureregionCodeWeb">The region code (required).</param>
-        /// <param name="sInfrastructureenvironmenttypeDescription">The environment type Description (required).</param>
-        /// <param name="sCognitoClientIDExternal">The ID of the client in Cognito.</param>
-        /// <param name="sCognitoClientIDEzmaxpublic">The ID of the client in Cognito (required).</param>
         public GlobalEzmaxcustomerGetConfigurationV1Response(string sInfrastructureregionCode = default(string), string sInfrastructureregionCodeWeb = default(string), string sInfrastructureenvironmenttypeDescription = default(string), string sCognitoClientIDExternal = default(string), string sCognitoClientIDEzmaxpublic = default(string))
         {
             // to ensure "sInfrastructureregionCode" is required (not null)

@@ -24,7 +24,51 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezmaxinvoicingagent Object
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingagentResponseCompound :  IEquatable<EzmaxinvoicingagentResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzmaxinvoicingagentVariationezmax
+        /// </summary>
+        [DataMember(Name="eEzmaxinvoicingagentVariationezmax", EmitDefaultValue=true)]
+        public FieldEEzmaxinvoicingagentVariationezmax EEzmaxinvoicingagentVariationezmax { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzmaxinvoicingagentVariationezsign
+        /// </summary>
+        [DataMember(Name="eEzmaxinvoicingagentVariationezsign", EmitDefaultValue=true)]
+        public FieldEEzmaxinvoicingagentVariationezsign EEzmaxinvoicingagentVariationezsign { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingagentResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingagentResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingagentResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxinvoicingagentID">The unique ID of the Ezmaxinvoicingagent.</param>
+        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
+        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
+        /// <param name="iEzmaxinvoicingagentSession">The number of sessions (required).</param>
+        /// <param name="iEzmaxinvoicingagentCloned">The number of times this user was cloned (required).</param>
+        /// <param name="iEzmaxinvoicingagentInvoice">The number of invoices (required).</param>
+        /// <param name="iEzmaxinvoicingagentInscription">The number of inscriptions (required).</param>
+        /// <param name="iEzmaxinvoicingagentInscriptionactive">The number of active inscriptions (required).</param>
+        /// <param name="iEzmaxinvoicingagentSale">The number of sales (required).</param>
+        /// <param name="iEzmaxinvoicingagentOtherincome">The number of otherincomes (required).</param>
+        /// <param name="iEzmaxinvoicingagentCommissioncalculation">The number of commission calculations (required).</param>
+        /// <param name="iEzmaxinvoicingagentEzsigndocument">The number of ezsign documents (required).</param>
+        /// <param name="bEzmaxinvoicingagentEzsignaccount">Whether the agent has an eZsign account (required).</param>
+        /// <param name="bEzmaxinvoicingagentBillableezmax">Whether it is billable for eZmax (required).</param>
+        /// <param name="eEzmaxinvoicingagentVariationezmax">eEzmaxinvoicingagentVariationezmax (required).</param>
+        /// <param name="bEzmaxinvoicingagentBillableezsign">Whether it is billable for eZsign (required).</param>
+        /// <param name="eEzmaxinvoicingagentVariationezsign">eEzmaxinvoicingagentVariationezsign (required).</param>
+        /// <param name="objContactName">objContactName (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -227,52 +271,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezmaxinvoicingagent Object
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingagentResponseCompound :  IEquatable<EzmaxinvoicingagentResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzmaxinvoicingagentVariationezmax
-        /// </summary>
-        [DataMember(Name="eEzmaxinvoicingagentVariationezmax", EmitDefaultValue=true)]
-        public FieldEEzmaxinvoicingagentVariationezmax EEzmaxinvoicingagentVariationezmax { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzmaxinvoicingagentVariationezsign
-        /// </summary>
-        [DataMember(Name="eEzmaxinvoicingagentVariationezsign", EmitDefaultValue=true)]
-        public FieldEEzmaxinvoicingagentVariationezsign EEzmaxinvoicingagentVariationezsign { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingagentResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingagentResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingagentResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxinvoicingagentID">The unique ID of the Ezmaxinvoicingagent.</param>
-        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
-        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
-        /// <param name="iEzmaxinvoicingagentSession">The number of sessions (required).</param>
-        /// <param name="iEzmaxinvoicingagentCloned">The number of times this user was cloned (required).</param>
-        /// <param name="iEzmaxinvoicingagentInvoice">The number of invoices (required).</param>
-        /// <param name="iEzmaxinvoicingagentInscription">The number of inscriptions (required).</param>
-        /// <param name="iEzmaxinvoicingagentInscriptionactive">The number of active inscriptions (required).</param>
-        /// <param name="iEzmaxinvoicingagentSale">The number of sales (required).</param>
-        /// <param name="iEzmaxinvoicingagentOtherincome">The number of otherincomes (required).</param>
-        /// <param name="iEzmaxinvoicingagentCommissioncalculation">The number of commission calculations (required).</param>
-        /// <param name="iEzmaxinvoicingagentEzsigndocument">The number of ezsign documents (required).</param>
-        /// <param name="bEzmaxinvoicingagentEzsignaccount">Whether the agent has an eZsign account (required).</param>
-        /// <param name="bEzmaxinvoicingagentBillableezmax">Whether it is billable for eZmax (required).</param>
-        /// <param name="eEzmaxinvoicingagentVariationezmax">eEzmaxinvoicingagentVariationezmax (required).</param>
-        /// <param name="bEzmaxinvoicingagentBillableezsign">Whether it is billable for eZsign (required).</param>
-        /// <param name="eEzmaxinvoicingagentVariationezsign">eEzmaxinvoicingagentVariationezsign (required).</param>
-        /// <param name="objContactName">objContactName (required).</param>
         public EzmaxinvoicingagentResponseCompound(int pkiEzmaxinvoicingagentID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiAgentID = default(int), int fkiBrokerID = default(int), int iEzmaxinvoicingagentSession = default(int), int iEzmaxinvoicingagentCloned = default(int), int iEzmaxinvoicingagentInvoice = default(int), int iEzmaxinvoicingagentInscription = default(int), int iEzmaxinvoicingagentInscriptionactive = default(int), int iEzmaxinvoicingagentSale = default(int), int iEzmaxinvoicingagentOtherincome = default(int), int iEzmaxinvoicingagentCommissioncalculation = default(int), int iEzmaxinvoicingagentEzsigndocument = default(int), bool bEzmaxinvoicingagentEzsignaccount = default(bool), bool bEzmaxinvoicingagentBillableezmax = default(bool), FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax = default(FieldEEzmaxinvoicingagentVariationezmax), bool bEzmaxinvoicingagentBillableezsign = default(bool), FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign = default(FieldEEzmaxinvoicingagentVariationezsign), CustomContactNameResponse objContactName = default(CustomContactNameResponse))
         {
             // to ensure "fkiBillingentityinternalID" is required (not null)

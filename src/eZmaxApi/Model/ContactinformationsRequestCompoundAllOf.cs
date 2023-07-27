@@ -24,7 +24,24 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// ContactinformationsRequestCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class ContactinformationsRequestCompoundAllOf :  IEquatable<ContactinformationsRequestCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContactinformationsRequestCompoundAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ContactinformationsRequestCompoundAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContactinformationsRequestCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjAddress">aObjAddress (required).</param>
+        /// <param name="aObjPhone">aObjPhone (required).</param>
+        /// <param name="aObjEmail">aObjEmail (required).</param>
+        /// <param name="aObjWebsite">aObjWebsite (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -135,25 +152,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// ContactinformationsRequestCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class ContactinformationsRequestCompoundAllOf :  IEquatable<ContactinformationsRequestCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ContactinformationsRequestCompoundAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ContactinformationsRequestCompoundAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ContactinformationsRequestCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="aObjAddress">aObjAddress (required).</param>
-        /// <param name="aObjPhone">aObjPhone (required).</param>
-        /// <param name="aObjEmail">aObjEmail (required).</param>
-        /// <param name="aObjWebsite">aObjWebsite (required).</param>
         public ContactinformationsRequestCompoundAllOf(List<AddressRequestCompound> aObjAddress = default(List<AddressRequestCompound>), List<PhoneRequestCompound> aObjPhone = default(List<PhoneRequestCompound>), List<EmailRequestCompound> aObjEmail = default(List<EmailRequestCompound>), List<WebsiteRequestCompound> aObjWebsite = default(List<WebsiteRequestCompound>))
         {
             // to ensure "aObjAddress" is required (not null)

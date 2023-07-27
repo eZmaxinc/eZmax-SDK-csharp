@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsignbulksenddocumentmapping Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksenddocumentmappingResponse :  IEquatable<EzsignbulksenddocumentmappingResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksenddocumentmappingResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignbulksenddocumentmappingID">The unique ID of the Ezsignbulksenddocumentmapping. (required).</param>
+        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage.</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
+        /// <param name="iEzsignbulksenddocumentmappingOrder">The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -103,26 +121,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignbulksenddocumentmapping Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksenddocumentmappingResponse :  IEquatable<EzsignbulksenddocumentmappingResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksenddocumentmappingResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignbulksenddocumentmappingID">The unique ID of the Ezsignbulksenddocumentmapping. (required).</param>
-        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage.</param>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
-        /// <param name="iEzsignbulksenddocumentmappingOrder">The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. (required).</param>
         public EzsignbulksenddocumentmappingResponse(int pkiEzsignbulksenddocumentmappingID = default(int), int fkiEzsignbulksendID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int), int iEzsignbulksenddocumentmappingOrder = default(int))
         {
             // to ensure "pkiEzsignbulksenddocumentmappingID" is required (not null)

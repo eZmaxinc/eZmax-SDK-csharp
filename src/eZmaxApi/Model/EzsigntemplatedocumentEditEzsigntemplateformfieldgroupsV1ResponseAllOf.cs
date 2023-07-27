@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf :  IEquatable<EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf :  IEquatable<EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf(EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload mPayload = default(EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

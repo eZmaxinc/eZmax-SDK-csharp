@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for PUT /1/object/ezsignformfieldgroup/{pkiEzsignfoldersignerassociationID}
+    /// </summary>
+    [DataContract]
+    public partial class EzsignformfieldgroupEditObjectV1Request :  IEquatable<EzsignformfieldgroupEditObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignformfieldgroupEditObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignformfieldgroupEditObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignformfieldgroupEditObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="objEzsignformfieldgroup">objEzsignformfieldgroup (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for PUT /1/object/ezsignformfieldgroup/{pkiEzsignfoldersignerassociationID}
-    /// </summary>
-    [DataContract]
-    public partial class EzsignformfieldgroupEditObjectV1Request :  IEquatable<EzsignformfieldgroupEditObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignformfieldgroupEditObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignformfieldgroupEditObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignformfieldgroupEditObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="objEzsignformfieldgroup">objEzsignformfieldgroup (required).</param>
         public EzsignformfieldgroupEditObjectV1Request(EzsignformfieldgroupRequestCompound objEzsignformfieldgroup = default(EzsignformfieldgroupRequestCompound))
         {
             // to ensure "objEzsignformfieldgroup" is required (not null)

@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Custom Ezsignformfieldgroup Object to fill an Ezsignform using submitForm
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzsignformfieldgroupRequest :  IEquatable<CustomEzsignformfieldgroupRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignformfieldgroupRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzsignformfieldgroupRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignformfieldgroupRequest" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignformfieldgroupID">The unique ID of the Ezsignformfieldgroup.</param>
+        /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup.</param>
+        /// <param name="aObjEzsignformfield">An array containing all the values to fill the Ezsignform. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -96,24 +112,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Custom Ezsignformfieldgroup Object to fill an Ezsignform using submitForm
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzsignformfieldgroupRequest :  IEquatable<CustomEzsignformfieldgroupRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignformfieldgroupRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzsignformfieldgroupRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignformfieldgroupRequest" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignformfieldgroupID">The unique ID of the Ezsignformfieldgroup.</param>
-        /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup.</param>
-        /// <param name="aObjEzsignformfield">An array containing all the values to fill the Ezsignform. (required).</param>
         public CustomEzsignformfieldgroupRequest(int pkiEzsignformfieldgroupID = default(int), string sEzsignformfieldgroupLabel = default(string), List<CustomEzsignformfieldRequest> aObjEzsignformfield = default(List<CustomEzsignformfieldRequest>))
         {
             // to ensure "aObjEzsignformfield" is required (not null)

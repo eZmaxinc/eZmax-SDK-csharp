@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /1/object/variableexpense
+    /// </summary>
+    [DataContract]
+    public partial class VariableexpenseCreateObjectV1Request :  IEquatable<VariableexpenseCreateObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected VariableexpenseCreateObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="aObjVariableexpense">aObjVariableexpense (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,22 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/variableexpense
-    /// </summary>
-    [DataContract]
-    public partial class VariableexpenseCreateObjectV1Request :  IEquatable<VariableexpenseCreateObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected VariableexpenseCreateObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="aObjVariableexpense">aObjVariableexpense (required).</param>
         public VariableexpenseCreateObjectV1Request(List<VariableexpenseRequestCompound> aObjVariableexpense = default(List<VariableexpenseRequestCompound>))
         {
             // to ensure "aObjVariableexpense" is required (not null)

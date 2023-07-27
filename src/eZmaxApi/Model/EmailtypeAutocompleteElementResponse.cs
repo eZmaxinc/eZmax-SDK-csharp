@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Emailtype AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class EmailtypeAutocompleteElementResponse :  IEquatable<EmailtypeAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmailtypeAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EmailtypeAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmailtypeAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEmailtypeID">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
+        /// <param name="sEmailtypeNameX">The name of the Emailtype in the language of the requester (required).</param>
+        /// <param name="bEmailtypeIsactive">Whether the Emailtype is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -105,24 +121,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Emailtype AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class EmailtypeAutocompleteElementResponse :  IEquatable<EmailtypeAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EmailtypeAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EmailtypeAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EmailtypeAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEmailtypeID">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
-        /// <param name="sEmailtypeNameX">The name of the Emailtype in the language of the requester (required).</param>
-        /// <param name="bEmailtypeIsactive">Whether the Emailtype is active or not (required).</param>
         public EmailtypeAutocompleteElementResponse(int pkiEmailtypeID = default(int), string sEmailtypeNameX = default(string), bool bEmailtypeIsactive = default(bool))
         {
             // to ensure "pkiEmailtypeID" is required (not null)

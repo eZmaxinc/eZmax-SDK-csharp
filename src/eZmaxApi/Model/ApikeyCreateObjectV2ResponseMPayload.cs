@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for POST /2/object/apikey
+    /// </summary>
+    [DataContract]
+    public partial class ApikeyCreateObjectV2ResponseMPayload :  IEquatable<ApikeyCreateObjectV2ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyCreateObjectV2ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ApikeyCreateObjectV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyCreateObjectV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjApikey">aObjApikey (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,22 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for POST /2/object/apikey
-    /// </summary>
-    [DataContract]
-    public partial class ApikeyCreateObjectV2ResponseMPayload :  IEquatable<ApikeyCreateObjectV2ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyCreateObjectV2ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ApikeyCreateObjectV2ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyCreateObjectV2ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aObjApikey">aObjApikey (required).</param>
         public ApikeyCreateObjectV2ResponseMPayload(List<ApikeyResponseCompound> aObjApikey = default(List<ApikeyResponseCompound>))
         {
             // to ensure "aObjApikey" is required (not null)

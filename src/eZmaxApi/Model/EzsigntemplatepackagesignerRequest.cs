@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplatepackagesigner Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatepackagesignerRequest :  IEquatable<EzsigntemplatepackagesignerRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatepackagesignerRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerRequest" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplatepackagesignerID">The unique ID of the Ezsigntemplatepackagesigner.</param>
+        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="sEzsigntemplatepackagesignerDescription">The description of the Ezsigntemplatepackagesigner (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -86,24 +102,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplatepackagesigner Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatepackagesignerRequest :  IEquatable<EzsigntemplatepackagesignerRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatepackagesignerRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerRequest" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplatepackagesignerID">The unique ID of the Ezsigntemplatepackagesigner.</param>
-        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="sEzsigntemplatepackagesignerDescription">The description of the Ezsigntemplatepackagesigner (required).</param>
         public EzsigntemplatepackagesignerRequest(int pkiEzsigntemplatepackagesignerID = default(int), int fkiEzsigntemplatepackageID = default(int), string sEzsigntemplatepackagesignerDescription = default(string))
         {
             // to ensure "fkiEzsigntemplatepackageID" is required (not null)

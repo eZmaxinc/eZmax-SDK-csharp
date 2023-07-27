@@ -24,7 +24,51 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+    /// <summary>
+    /// A Ezsignsignaturestatus Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzsignsignaturestatusResponse :  IEquatable<CustomEzsignsignaturestatusResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Type of step
+        /// </summary>
+        /// <value>Type of step</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EEzsignsignaturestatusSteptypeEnum
+        {
+            /// <summary>
+            /// Enum Form for value: Form
+            /// </summary>
+            [EnumMember(Value = "Form")]
+            Form = 1,
 
+            /// <summary>
+            /// Enum Signature for value: Signature
+            /// </summary>
+            [EnumMember(Value = "Signature")]
+            Signature = 2
+
+        }
+
+        /// <summary>
+        /// Type of step
+        /// </summary>
+        /// <value>Type of step</value>
+        [DataMember(Name="eEzsignsignaturestatusSteptype", EmitDefaultValue=true)]
+        public EEzsignsignaturestatusSteptypeEnum EEzsignsignaturestatusSteptype { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignsignaturestatusResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzsignsignaturestatusResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignsignaturestatusResponse" /> class.
+        /// </summary>
+        /// <param name="eEzsignsignaturestatusSteptype">Type of step (required).</param>
+        /// <param name="iEzsignsignaturestatusStep">The step at which the Ezsignsigner will be invited to sign or fill the form fields (required).</param>
+        /// <param name="iEzsignsignaturestatusTotal">The total number of signature or form fields the Ezsignsigner must process at the current step (required).</param>
+        /// <param name="iEzsignsignaturestatusSigned">The number of signature or form fields the Ezsignsigner has already processed at the current step (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -95,52 +139,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignsignaturestatus Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzsignsignaturestatusResponse :  IEquatable<CustomEzsignsignaturestatusResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Type of step
-        /// </summary>
-        /// <value>Type of step</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EEzsignsignaturestatusSteptypeEnum
-        {
-            /// <summary>
-            /// Enum Form for value: Form
-            /// </summary>
-            [EnumMember(Value = "Form")]
-            Form = 1,
-
-            /// <summary>
-            /// Enum Signature for value: Signature
-            /// </summary>
-            [EnumMember(Value = "Signature")]
-            Signature = 2
-
-        }
-
-        /// <summary>
-        /// Type of step
-        /// </summary>
-        /// <value>Type of step</value>
-        [DataMember(Name="eEzsignsignaturestatusSteptype", EmitDefaultValue=true)]
-        public EEzsignsignaturestatusSteptypeEnum EEzsignsignaturestatusSteptype { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignsignaturestatusResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzsignsignaturestatusResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignsignaturestatusResponse" /> class.
-        /// </summary>
-        /// <param name="eEzsignsignaturestatusSteptype">Type of step (required).</param>
-        /// <param name="iEzsignsignaturestatusStep">The step at which the Ezsignsigner will be invited to sign or fill the form fields (required).</param>
-        /// <param name="iEzsignsignaturestatusTotal">The total number of signature or form fields the Ezsignsigner must process at the current step (required).</param>
-        /// <param name="iEzsignsignaturestatusSigned">The number of signature or form fields the Ezsignsigner has already processed at the current step (required).</param>
         public CustomEzsignsignaturestatusResponse(EEzsignsignaturestatusSteptypeEnum eEzsignsignaturestatusSteptype = default(EEzsignsignaturestatusSteptypeEnum), int iEzsignsignaturestatusStep = default(int), int iEzsignsignaturestatusTotal = default(int), int iEzsignsignaturestatusSigned = default(int))
         {
             // to ensure "eEzsignsignaturestatusSteptype" is required (not null)

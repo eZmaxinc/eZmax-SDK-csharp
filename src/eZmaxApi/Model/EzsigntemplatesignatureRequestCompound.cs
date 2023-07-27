@@ -24,7 +24,58 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplatesignature Object and children
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatesignatureRequestCompound :  IEquatable<EzsigntemplatesignatureRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsigntemplatesignatureType
+        /// </summary>
+        [DataMember(Name="eEzsigntemplatesignatureType", EmitDefaultValue=true)]
+        public FieldEEzsigntemplatesignatureType EEzsigntemplatesignatureType { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsigntemplatesignatureTooltipposition
+        /// </summary>
+        [DataMember(Name="eEzsigntemplatesignatureTooltipposition", EmitDefaultValue=false)]
+        public FieldEEzsigntemplatesignatureTooltipposition? EEzsigntemplatesignatureTooltipposition { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsigntemplatesignatureFont
+        /// </summary>
+        [DataMember(Name="eEzsigntemplatesignatureFont", EmitDefaultValue=false)]
+        public FieldEEzsigntemplatesignatureFont? EEzsigntemplatesignatureFont { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsigntemplatesignatureAttachmentnamesource
+        /// </summary>
+        [DataMember(Name="eEzsigntemplatesignatureAttachmentnamesource", EmitDefaultValue=false)]
+        public FieldEEzsigntemplatesignatureAttachmentnamesource? EEzsigntemplatesignatureAttachmentnamesource { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatesignatureRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatesignatureRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatesignatureRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplatesignatureID">The unique ID of the Ezsigntemplatesignature.</param>
+        /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
+        /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
+        /// <param name="fkiEzsigntemplatesignerIDValidation">The unique ID of the Ezsigntemplatesigner.</param>
+        /// <param name="iEzsigntemplatedocumentpagePagenumber">The page number in the Ezsigntemplatedocument (required).</param>
+        /// <param name="iEzsigntemplatesignatureX">The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
+        /// <param name="iEzsigntemplatesignatureY">The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="iEzsigntemplatesignatureStep">The step when the Ezsigntemplatesigner will be invited to sign (required).</param>
+        /// <param name="eEzsigntemplatesignatureType">eEzsigntemplatesignatureType (required).</param>
+        /// <param name="tEzsigntemplatesignatureTooltip">A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature.</param>
+        /// <param name="eEzsigntemplatesignatureTooltipposition">eEzsigntemplatesignatureTooltipposition.</param>
+        /// <param name="eEzsigntemplatesignatureFont">eEzsigntemplatesignatureFont.</param>
+        /// <param name="bEzsigntemplatesignatureRequired">Whether the Ezsigntemplatesignature is required or not. This field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType &#x3D; Attachments..</param>
+        /// <param name="eEzsigntemplatesignatureAttachmentnamesource">eEzsigntemplatesignatureAttachmentnamesource.</param>
+        /// <param name="sEzsigntemplatesignatureAttachmentdescription">The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments.</param>
+        /// <param name="iEzsigntemplatesignatureValidationstep">The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments.</param>
+        /// <param name="bEzsigntemplatesignatureCustomdate">Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**).</param>
+        /// <param name="aObjEzsigntemplatesignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -183,59 +234,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplatesignature Object and children
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatesignatureRequestCompound :  IEquatable<EzsigntemplatesignatureRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureType
-        /// </summary>
-        [DataMember(Name="eEzsigntemplatesignatureType", EmitDefaultValue=true)]
-        public FieldEEzsigntemplatesignatureType EEzsigntemplatesignatureType { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureTooltipposition
-        /// </summary>
-        [DataMember(Name="eEzsigntemplatesignatureTooltipposition", EmitDefaultValue=false)]
-        public FieldEEzsigntemplatesignatureTooltipposition? EEzsigntemplatesignatureTooltipposition { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureFont
-        /// </summary>
-        [DataMember(Name="eEzsigntemplatesignatureFont", EmitDefaultValue=false)]
-        public FieldEEzsigntemplatesignatureFont? EEzsigntemplatesignatureFont { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureAttachmentnamesource
-        /// </summary>
-        [DataMember(Name="eEzsigntemplatesignatureAttachmentnamesource", EmitDefaultValue=false)]
-        public FieldEEzsigntemplatesignatureAttachmentnamesource? EEzsigntemplatesignatureAttachmentnamesource { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatesignatureRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatesignatureRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatesignatureRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplatesignatureID">The unique ID of the Ezsigntemplatesignature.</param>
-        /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
-        /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
-        /// <param name="fkiEzsigntemplatesignerIDValidation">The unique ID of the Ezsigntemplatesigner.</param>
-        /// <param name="iEzsigntemplatedocumentpagePagenumber">The page number in the Ezsigntemplatedocument (required).</param>
-        /// <param name="iEzsigntemplatesignatureX">The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="iEzsigntemplatesignatureY">The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
-        /// <param name="iEzsigntemplatesignatureStep">The step when the Ezsigntemplatesigner will be invited to sign (required).</param>
-        /// <param name="eEzsigntemplatesignatureType">eEzsigntemplatesignatureType (required).</param>
-        /// <param name="tEzsigntemplatesignatureTooltip">A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature.</param>
-        /// <param name="eEzsigntemplatesignatureTooltipposition">eEzsigntemplatesignatureTooltipposition.</param>
-        /// <param name="eEzsigntemplatesignatureFont">eEzsigntemplatesignatureFont.</param>
-        /// <param name="bEzsigntemplatesignatureRequired">Whether the Ezsigntemplatesignature is required or not. This field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType &#x3D; Attachments..</param>
-        /// <param name="eEzsigntemplatesignatureAttachmentnamesource">eEzsigntemplatesignatureAttachmentnamesource.</param>
-        /// <param name="sEzsigntemplatesignatureAttachmentdescription">The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments.</param>
-        /// <param name="iEzsigntemplatesignatureValidationstep">The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments.</param>
-        /// <param name="bEzsigntemplatesignatureCustomdate">Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**).</param>
-        /// <param name="aObjEzsigntemplatesignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
         public EzsigntemplatesignatureRequestCompound(int pkiEzsigntemplatesignatureID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), int fkiEzsigntemplatesignerIDValidation = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), int iEzsigntemplatesignatureX = default(int), int iEzsigntemplatesignatureY = default(int), int iEzsigntemplatesignatureStep = default(int), FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType = default(FieldEEzsigntemplatesignatureType), string tEzsigntemplatesignatureTooltip = default(string), FieldEEzsigntemplatesignatureTooltipposition? eEzsigntemplatesignatureTooltipposition = default(FieldEEzsigntemplatesignatureTooltipposition?), FieldEEzsigntemplatesignatureFont? eEzsigntemplatesignatureFont = default(FieldEEzsigntemplatesignatureFont?), bool bEzsigntemplatesignatureRequired = default(bool), FieldEEzsigntemplatesignatureAttachmentnamesource? eEzsigntemplatesignatureAttachmentnamesource = default(FieldEEzsigntemplatesignatureAttachmentnamesource?), string sEzsigntemplatesignatureAttachmentdescription = default(string), int iEzsigntemplatesignatureValidationstep = default(int), bool bEzsigntemplatesignatureCustomdate = default(bool), List<EzsigntemplatesignaturecustomdateRequestCompound> aObjEzsigntemplatesignaturecustomdate = default(List<EzsigntemplatesignaturecustomdateRequestCompound>))
         {
             // to ensure "fkiEzsigntemplatedocumentID" is required (not null)

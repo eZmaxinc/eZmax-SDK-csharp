@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for GET /2/object/period/getAutocomplete
+    /// </summary>
+    [DataContract]
+    public partial class PeriodGetAutocompleteV2Response :  IEquatable<PeriodGetAutocompleteV2Response>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2Response" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PeriodGetAutocompleteV2Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2Response" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
+        /// <param name="objDebugPayload">objDebugPayload.</param>
+        /// <param name="objDebug">objDebug.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,24 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for GET /2/object/period/getAutocomplete
-    /// </summary>
-    [DataContract]
-    public partial class PeriodGetAutocompleteV2Response :  IEquatable<PeriodGetAutocompleteV2Response>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2Response" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PeriodGetAutocompleteV2Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2Response" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
-        /// <param name="objDebug">objDebug.</param>
         public PeriodGetAutocompleteV2Response(PeriodGetAutocompleteV2ResponseMPayload mPayload = default(PeriodGetAutocompleteV2ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)

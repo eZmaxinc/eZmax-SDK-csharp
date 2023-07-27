@@ -24,7 +24,24 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Custom Ezmaxpricing Object
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzmaxpricingResponse :  IEquatable<CustomEzmaxpricingResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzmaxpricingResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzmaxpricingResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzmaxpricingResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxpricingID">The unique ID of the Ezmaxpricing (required).</param>
+        /// <param name="dEzmaxpricingRebateezsignallagents">The rebate offered when eZsign is taken for all agents (required).</param>
+        /// <param name="dtEzmaxpricingStart">The start date of the Ezmaxpricing (required).</param>
+        /// <param name="dtEzmaxpricingEnd">The end date of the Ezmaxpricing.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -95,25 +112,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Custom Ezmaxpricing Object
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzmaxpricingResponse :  IEquatable<CustomEzmaxpricingResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzmaxpricingResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzmaxpricingResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzmaxpricingResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxpricingID">The unique ID of the Ezmaxpricing (required).</param>
-        /// <param name="dEzmaxpricingRebateezsignallagents">The rebate offered when eZsign is taken for all agents (required).</param>
-        /// <param name="dtEzmaxpricingStart">The start date of the Ezmaxpricing (required).</param>
-        /// <param name="dtEzmaxpricingEnd">The end date of the Ezmaxpricing.</param>
         public CustomEzmaxpricingResponse(int pkiEzmaxpricingID = default(int), string dEzmaxpricingRebateezsignallagents = default(string), string dtEzmaxpricingStart = default(string), string dtEzmaxpricingEnd = default(string))
         {
             // to ensure "pkiEzmaxpricingID" is required (not null)

@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Generic List Response
+    /// </summary>
+    [DataContract]
+    public partial class CommonGetListV1ResponseMPayload :  IEquatable<CommonGetListV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonGetListV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonGetListV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonGetListV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="iRowReturned">The number of rows returned (required).</param>
+        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -79,23 +94,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Generic List Response
-    /// </summary>
-    [DataContract]
-    public partial class CommonGetListV1ResponseMPayload :  IEquatable<CommonGetListV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonGetListV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonGetListV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonGetListV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
         public CommonGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int))
         {
             // to ensure "iRowReturned" is required (not null)

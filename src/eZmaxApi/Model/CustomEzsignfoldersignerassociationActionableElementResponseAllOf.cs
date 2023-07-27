@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// CustomEzsignfoldersignerassociationActionableElementResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class CustomEzsignfoldersignerassociationActionableElementResponseAllOf :  IEquatable<CustomEzsignfoldersignerassociationActionableElementResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationActionableElementResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomEzsignfoldersignerassociationActionableElementResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationActionableElementResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="bEzsignfoldersignerassociationHasactionableelementsCurrent">Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step (required).</param>
+        /// <param name="bEzsignfoldersignerassociationHasactionableelementsFuture">Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -72,23 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// CustomEzsignfoldersignerassociationActionableElementResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class CustomEzsignfoldersignerassociationActionableElementResponseAllOf :  IEquatable<CustomEzsignfoldersignerassociationActionableElementResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationActionableElementResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomEzsignfoldersignerassociationActionableElementResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationActionableElementResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="bEzsignfoldersignerassociationHasactionableelementsCurrent">Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step (required).</param>
-        /// <param name="bEzsignfoldersignerassociationHasactionableelementsFuture">Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step.</param>
         public CustomEzsignfoldersignerassociationActionableElementResponseAllOf(bool bEzsignfoldersignerassociationHasactionableelementsCurrent = default(bool), bool bEzsignfoldersignerassociationHasactionableelementsFuture = default(bool))
         {
             // to ensure "bEzsignfoldersignerassociationHasactionableelementsCurrent" is required (not null)

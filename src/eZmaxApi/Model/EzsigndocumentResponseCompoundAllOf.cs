@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsigndocumentResponseCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentResponseCompoundAllOf :  IEquatable<EzsigndocumentResponseCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentResponseCompoundAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentResponseCompoundAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentResponseCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="iEzsigndocumentStepformtotal">The total number of steps in the form filling phase (required).</param>
+        /// <param name="iEzsigndocumentStepformcurrent">The current step in the form filling phase (required).</param>
+        /// <param name="iEzsigndocumentStepsignaturetotal">The total number of steps in the signature filling phase (required).</param>
+        /// <param name="iEzsigndocumentStepsignatureCurrent">The current step in the signature phase (required).</param>
+        /// <param name="aObjEzsignfoldersignerassociationstatus">aObjEzsignfoldersignerassociationstatus (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -113,26 +131,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsigndocumentResponseCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentResponseCompoundAllOf :  IEquatable<EzsigndocumentResponseCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentResponseCompoundAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentResponseCompoundAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentResponseCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="iEzsigndocumentStepformtotal">The total number of steps in the form filling phase (required).</param>
-        /// <param name="iEzsigndocumentStepformcurrent">The current step in the form filling phase (required).</param>
-        /// <param name="iEzsigndocumentStepsignaturetotal">The total number of steps in the signature filling phase (required).</param>
-        /// <param name="iEzsigndocumentStepsignatureCurrent">The current step in the signature phase (required).</param>
-        /// <param name="aObjEzsignfoldersignerassociationstatus">aObjEzsignfoldersignerassociationstatus (required).</param>
         public EzsigndocumentResponseCompoundAllOf(int iEzsigndocumentStepformtotal = default(int), int iEzsigndocumentStepformcurrent = default(int), int iEzsigndocumentStepsignaturetotal = default(int), int iEzsigndocumentStepsignatureCurrent = default(int), List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = default(List<CustomEzsignfoldersignerassociationstatusResponse>))
         {
             // to ensure "iEzsigndocumentStepformtotal" is required (not null)

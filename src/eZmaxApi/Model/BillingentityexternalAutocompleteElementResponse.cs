@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Billingentityexternal AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class BillingentityexternalAutocompleteElementResponse :  IEquatable<BillingentityexternalAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityexternalAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BillingentityexternalAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityexternalAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="pkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
+        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
+        /// <param name="bBillingentityexternalIsactive">Whether the Billingentityexternal is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,24 +105,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Billingentityexternal AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class BillingentityexternalAutocompleteElementResponse :  IEquatable<BillingentityexternalAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityexternalAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BillingentityexternalAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityexternalAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="pkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
-        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
-        /// <param name="bBillingentityexternalIsactive">Whether the Billingentityexternal is active or not (required).</param>
         public BillingentityexternalAutocompleteElementResponse(int pkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string), bool bBillingentityexternalIsactive = default(bool))
         {
             // to ensure "pkiBillingentityexternalID" is required (not null)

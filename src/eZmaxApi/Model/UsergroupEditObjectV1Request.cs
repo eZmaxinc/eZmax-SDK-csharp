@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for PUT /1/object/usergroup/{pkiUsergroupID}
+    /// </summary>
+    [DataContract]
+    public partial class UsergroupEditObjectV1Request :  IEquatable<UsergroupEditObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupEditObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UsergroupEditObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupEditObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="objUsergroup">objUsergroup (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for PUT /1/object/usergroup/{pkiUsergroupID}
-    /// </summary>
-    [DataContract]
-    public partial class UsergroupEditObjectV1Request :  IEquatable<UsergroupEditObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupEditObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UsergroupEditObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupEditObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="objUsergroup">objUsergroup (required).</param>
         public UsergroupEditObjectV1Request(UsergroupRequestCompound objUsergroup = default(UsergroupRequestCompound))
         {
             // to ensure "objUsergroup" is required (not null)

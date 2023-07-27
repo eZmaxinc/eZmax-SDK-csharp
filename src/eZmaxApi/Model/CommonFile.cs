@@ -24,7 +24,51 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+    /// <summary>
+    /// Object representing a file used in a request or response context 
+    /// </summary>
+    [DataContract]
+    public partial class CommonFile :  IEquatable<CommonFile>, IValidatableObject
+    {
+        /// <summary>
+        /// The source of the File
+        /// </summary>
+        /// <value>The source of the File</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EFileSourceEnum
+        {
+            /// <summary>
+            /// Enum Base64 for value: Base64
+            /// </summary>
+            [EnumMember(Value = "Base64")]
+            Base64 = 1,
 
+            /// <summary>
+            /// Enum Url for value: Url
+            /// </summary>
+            [EnumMember(Value = "Url")]
+            Url = 2
+
+        }
+
+        /// <summary>
+        /// The source of the File
+        /// </summary>
+        /// <value>The source of the File</value>
+        [DataMember(Name="eFileSource", EmitDefaultValue=true)]
+        public EFileSourceEnum EFileSource { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonFile" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonFile() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonFile" /> class.
+        /// </summary>
+        /// <param name="sFileName">The name of the file (required).</param>
+        /// <param name="sFileUrl">The URL used to reach the File.</param>
+        /// <param name="sFileBase64">The Base64 encoded binary content of the File.</param>
+        /// <param name="eFileSource">The source of the File (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -88,52 +132,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Object representing a file used in a request or response context 
-    /// </summary>
-    [DataContract]
-    public partial class CommonFile :  IEquatable<CommonFile>, IValidatableObject
-    {
-        /// <summary>
-        /// The source of the File
-        /// </summary>
-        /// <value>The source of the File</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EFileSourceEnum
-        {
-            /// <summary>
-            /// Enum Base64 for value: Base64
-            /// </summary>
-            [EnumMember(Value = "Base64")]
-            Base64 = 1,
-
-            /// <summary>
-            /// Enum Url for value: Url
-            /// </summary>
-            [EnumMember(Value = "Url")]
-            Url = 2
-
-        }
-
-        /// <summary>
-        /// The source of the File
-        /// </summary>
-        /// <value>The source of the File</value>
-        [DataMember(Name="eFileSource", EmitDefaultValue=true)]
-        public EFileSourceEnum EFileSource { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonFile" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonFile() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonFile" /> class.
-        /// </summary>
-        /// <param name="sFileName">The name of the file (required).</param>
-        /// <param name="sFileUrl">The URL used to reach the File.</param>
-        /// <param name="sFileBase64">The Base64 encoded binary content of the File.</param>
-        /// <param name="eFileSource">The source of the File (required).</param>
         public CommonFile(string sFileName = default(string), string sFileUrl = default(string), byte[] sFileBase64 = default(byte[]), EFileSourceEnum eFileSource = default(EFileSourceEnum))
         {
             // to ensure "sFileName" is required (not null)

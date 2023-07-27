@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Description of the Branding
+    /// </summary>
+    [DataContract]
+    public partial class MultilingualBrandingDescription :  IEquatable<MultilingualBrandingDescription>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MultilingualBrandingDescription" /> class.
+        /// </summary>
+        /// <param name="sBrandingDescription1">The description of the Branding in French.</param>
+        /// <param name="sBrandingDescription2">The description of the Branding in English.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,18 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Description of the Branding
-    /// </summary>
-    [DataContract]
-    public partial class MultilingualBrandingDescription :  IEquatable<MultilingualBrandingDescription>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MultilingualBrandingDescription" /> class.
-        /// </summary>
-        /// <param name="sBrandingDescription1">The description of the Branding in French.</param>
-        /// <param name="sBrandingDescription2">The description of the Branding in English.</param>
         public MultilingualBrandingDescription(string sBrandingDescription1 = default(string), string sBrandingDescription2 = default(string))
         {
             this.SBrandingDescription1 = sBrandingDescription1;

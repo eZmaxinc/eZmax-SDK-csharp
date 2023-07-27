@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A complex type that specifies Sort configuration options.
+    /// </summary>
+    [DataContract]
+    public partial class ScimServiceProviderConfigSort :  IEquatable<ScimServiceProviderConfigSort>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigSort" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ScimServiceProviderConfigSort() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigSort" /> class.
+        /// </summary>
+        /// <param name="supported">A Boolean value specifying whether or not sorting is supported. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,22 +85,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A complex type that specifies Sort configuration options.
-    /// </summary>
-    [DataContract]
-    public partial class ScimServiceProviderConfigSort :  IEquatable<ScimServiceProviderConfigSort>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigSort" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ScimServiceProviderConfigSort() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimServiceProviderConfigSort" /> class.
-        /// </summary>
-        /// <param name="supported">A Boolean value specifying whether or not sorting is supported. (required).</param>
         public ScimServiceProviderConfigSort(bool supported = default(bool))
         {
             // to ensure "supported" is required (not null)

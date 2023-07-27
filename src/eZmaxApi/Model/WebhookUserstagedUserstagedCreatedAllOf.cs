@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// WebhookUserstagedUserstagedCreatedAllOf
+    /// </summary>
+    [DataContract]
+    public partial class WebhookUserstagedUserstagedCreatedAllOf :  IEquatable<WebhookUserstagedUserstagedCreatedAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookUserstagedUserstagedCreatedAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected WebhookUserstagedUserstagedCreatedAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookUserstagedUserstagedCreatedAllOf" /> class.
+        /// </summary>
+        /// <param name="objUserstaged">objUserstaged (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// WebhookUserstagedUserstagedCreatedAllOf
-    /// </summary>
-    [DataContract]
-    public partial class WebhookUserstagedUserstagedCreatedAllOf :  IEquatable<WebhookUserstagedUserstagedCreatedAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookUserstagedUserstagedCreatedAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WebhookUserstagedUserstagedCreatedAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookUserstagedUserstagedCreatedAllOf" /> class.
-        /// </summary>
-        /// <param name="objUserstaged">objUserstaged (required).</param>
         public WebhookUserstagedUserstagedCreatedAllOf(UserstagedResponseCompound objUserstaged = default(UserstagedResponseCompound))
         {
             // to ensure "objUserstaged" is required (not null)

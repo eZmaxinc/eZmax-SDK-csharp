@@ -24,7 +24,49 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Systemconfiguration Object and children
+    /// </summary>
+    [DataContract]
+    public partial class SystemconfigurationRequestCompound :  IEquatable<SystemconfigurationRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets ESystemconfigurationNewexternaluseraction
+        /// </summary>
+        [DataMember(Name="eSystemconfigurationNewexternaluseraction", EmitDefaultValue=true)]
+        public FieldESystemconfigurationNewexternaluseraction ESystemconfigurationNewexternaluseraction { get; set; }
+        /// <summary>
+        /// Gets or Sets ESystemconfigurationLanguage1
+        /// </summary>
+        [DataMember(Name="eSystemconfigurationLanguage1", EmitDefaultValue=true)]
+        public FieldESystemconfigurationLanguage1 ESystemconfigurationLanguage1 { get; set; }
+        /// <summary>
+        /// Gets or Sets ESystemconfigurationLanguage2
+        /// </summary>
+        [DataMember(Name="eSystemconfigurationLanguage2", EmitDefaultValue=true)]
+        public FieldESystemconfigurationLanguage2 ESystemconfigurationLanguage2 { get; set; }
+        /// <summary>
+        /// Gets or Sets ESystemconfigurationEzsign
+        /// </summary>
+        [DataMember(Name="eSystemconfigurationEzsign", EmitDefaultValue=false)]
+        public FieldESystemconfigurationEzsign? ESystemconfigurationEzsign { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SystemconfigurationRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected SystemconfigurationRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SystemconfigurationRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration.</param>
+        /// <param name="eSystemconfigurationNewexternaluseraction">eSystemconfigurationNewexternaluseraction (required).</param>
+        /// <param name="eSystemconfigurationLanguage1">eSystemconfigurationLanguage1 (required).</param>
+        /// <param name="eSystemconfigurationLanguage2">eSystemconfigurationLanguage2 (required).</param>
+        /// <param name="eSystemconfigurationEzsign">eSystemconfigurationEzsign.</param>
+        /// <param name="bSystemconfigurationEzsignpersonnal">Whether if we allow the creation of personal files in eZsign (required).</param>
+        /// <param name="bSystemconfigurationSspr">Whether if we allow SSPR (required).</param>
+        /// <param name="dtSystemconfigurationReadonlyexpirationstart">The start date where the system will be in read only.</param>
+        /// <param name="dtSystemconfigurationReadonlyexpirationend">The end date where the system will be in read only.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -109,50 +151,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Systemconfiguration Object and children
-    /// </summary>
-    [DataContract]
-    public partial class SystemconfigurationRequestCompound :  IEquatable<SystemconfigurationRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets ESystemconfigurationNewexternaluseraction
-        /// </summary>
-        [DataMember(Name="eSystemconfigurationNewexternaluseraction", EmitDefaultValue=true)]
-        public FieldESystemconfigurationNewexternaluseraction ESystemconfigurationNewexternaluseraction { get; set; }
-        /// <summary>
-        /// Gets or Sets ESystemconfigurationLanguage1
-        /// </summary>
-        [DataMember(Name="eSystemconfigurationLanguage1", EmitDefaultValue=true)]
-        public FieldESystemconfigurationLanguage1 ESystemconfigurationLanguage1 { get; set; }
-        /// <summary>
-        /// Gets or Sets ESystemconfigurationLanguage2
-        /// </summary>
-        [DataMember(Name="eSystemconfigurationLanguage2", EmitDefaultValue=true)]
-        public FieldESystemconfigurationLanguage2 ESystemconfigurationLanguage2 { get; set; }
-        /// <summary>
-        /// Gets or Sets ESystemconfigurationEzsign
-        /// </summary>
-        [DataMember(Name="eSystemconfigurationEzsign", EmitDefaultValue=false)]
-        public FieldESystemconfigurationEzsign? ESystemconfigurationEzsign { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SystemconfigurationRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected SystemconfigurationRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SystemconfigurationRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration.</param>
-        /// <param name="eSystemconfigurationNewexternaluseraction">eSystemconfigurationNewexternaluseraction (required).</param>
-        /// <param name="eSystemconfigurationLanguage1">eSystemconfigurationLanguage1 (required).</param>
-        /// <param name="eSystemconfigurationLanguage2">eSystemconfigurationLanguage2 (required).</param>
-        /// <param name="eSystemconfigurationEzsign">eSystemconfigurationEzsign.</param>
-        /// <param name="bSystemconfigurationEzsignpersonnal">Whether if we allow the creation of personal files in eZsign (required).</param>
-        /// <param name="bSystemconfigurationSspr">Whether if we allow SSPR (required).</param>
-        /// <param name="dtSystemconfigurationReadonlyexpirationstart">The start date where the system will be in read only.</param>
-        /// <param name="dtSystemconfigurationReadonlyexpirationend">The end date where the system will be in read only.</param>
         public SystemconfigurationRequestCompound(int pkiSystemconfigurationID = default(int), FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default(FieldESystemconfigurationEzsign?), bool bSystemconfigurationEzsignpersonnal = default(bool), bool bSystemconfigurationSspr = default(bool), string dtSystemconfigurationReadonlyexpirationstart = default(string), string dtSystemconfigurationReadonlyexpirationend = default(string))
         {
             // to ensure "eSystemconfigurationNewexternaluseraction" is required (not null)

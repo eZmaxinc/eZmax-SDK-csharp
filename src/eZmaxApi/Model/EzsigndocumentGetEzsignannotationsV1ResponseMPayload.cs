@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignannotations
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentGetEzsignannotationsV1ResponseMPayload :  IEquatable<EzsigndocumentGetEzsignannotationsV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignannotationsV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentGetEzsignannotationsV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignannotationsV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEzsignannotation">aObjEzsignannotation (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignannotations
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentGetEzsignannotationsV1ResponseMPayload :  IEquatable<EzsigndocumentGetEzsignannotationsV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignannotationsV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentGetEzsignannotationsV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignannotationsV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aObjEzsignannotation">aObjEzsignannotation (required).</param>
         public EzsigndocumentGetEzsignannotationsV1ResponseMPayload(List<EzsignannotationResponseCompound> aObjEzsignannotation = default(List<EzsignannotationResponseCompound>))
         {
             // to ensure "aObjEzsignannotation" is required (not null)

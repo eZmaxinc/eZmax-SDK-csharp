@@ -24,7 +24,47 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsignannotation Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignannotationResponseCompound :  IEquatable<EzsignannotationResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EEzsignannotationHorizontalalignment
+        /// </summary>
+        [DataMember(Name="eEzsignannotationHorizontalalignment", EmitDefaultValue=false)]
+        public EnumHorizontalalignment? EEzsignannotationHorizontalalignment { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignannotationVerticalalignment
+        /// </summary>
+        [DataMember(Name="eEzsignannotationVerticalalignment", EmitDefaultValue=false)]
+        public EnumVerticalalignment? EEzsignannotationVerticalalignment { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsignannotationType
+        /// </summary>
+        [DataMember(Name="eEzsignannotationType", EmitDefaultValue=true)]
+        public FieldEEzsignannotationType EEzsignannotationType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignannotationResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignannotationResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignannotationResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignannotationID">The unique ID of the Ezsignannotation (required).</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="eEzsignannotationHorizontalalignment">eEzsignannotationHorizontalalignment.</param>
+        /// <param name="eEzsignannotationVerticalalignment">eEzsignannotationVerticalalignment.</param>
+        /// <param name="eEzsignannotationType">eEzsignannotationType (required).</param>
+        /// <param name="iEzsignannotationX">The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
+        /// <param name="iEzsignannotationY">The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="iEzsignannotationWidth">The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \&quot;300\&quot; for the Width..</param>
+        /// <param name="iEzsignannotationHeight">The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**.</param>
+        /// <param name="sEzsignannotationText">The Text of the Ezsignannotation.</param>
+        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
+        /// <param name="objTextstylestatic">objTextstylestatic.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -149,48 +189,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignannotation Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignannotationResponseCompound :  IEquatable<EzsignannotationResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EEzsignannotationHorizontalalignment
-        /// </summary>
-        [DataMember(Name="eEzsignannotationHorizontalalignment", EmitDefaultValue=false)]
-        public EnumHorizontalalignment? EEzsignannotationHorizontalalignment { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignannotationVerticalalignment
-        /// </summary>
-        [DataMember(Name="eEzsignannotationVerticalalignment", EmitDefaultValue=false)]
-        public EnumVerticalalignment? EEzsignannotationVerticalalignment { get; set; }
-        /// <summary>
-        /// Gets or Sets EEzsignannotationType
-        /// </summary>
-        [DataMember(Name="eEzsignannotationType", EmitDefaultValue=true)]
-        public FieldEEzsignannotationType EEzsignannotationType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignannotationResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignannotationResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignannotationResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignannotationID">The unique ID of the Ezsignannotation (required).</param>
-        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="eEzsignannotationHorizontalalignment">eEzsignannotationHorizontalalignment.</param>
-        /// <param name="eEzsignannotationVerticalalignment">eEzsignannotationVerticalalignment.</param>
-        /// <param name="eEzsignannotationType">eEzsignannotationType (required).</param>
-        /// <param name="iEzsignannotationX">The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="iEzsignannotationY">The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
-        /// <param name="iEzsignannotationWidth">The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \&quot;300\&quot; for the Width..</param>
-        /// <param name="iEzsignannotationHeight">The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**.</param>
-        /// <param name="sEzsignannotationText">The Text of the Ezsignannotation.</param>
-        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
-        /// <param name="objTextstylestatic">objTextstylestatic.</param>
         public EzsignannotationResponseCompound(int pkiEzsignannotationID = default(int), int fkiEzsigndocumentID = default(int), EnumHorizontalalignment? eEzsignannotationHorizontalalignment = default(EnumHorizontalalignment?), EnumVerticalalignment? eEzsignannotationVerticalalignment = default(EnumVerticalalignment?), FieldEEzsignannotationType eEzsignannotationType = default(FieldEEzsignannotationType), int iEzsignannotationX = default(int), int iEzsignannotationY = default(int), int iEzsignannotationWidth = default(int), int iEzsignannotationHeight = default(int), string sEzsignannotationText = default(string), int iEzsignpagePagenumber = default(int), TextstylestaticResponseCompound objTextstylestatic = default(TextstylestaticResponseCompound))
         {
             // to ensure "pkiEzsignannotationID" is required (not null)

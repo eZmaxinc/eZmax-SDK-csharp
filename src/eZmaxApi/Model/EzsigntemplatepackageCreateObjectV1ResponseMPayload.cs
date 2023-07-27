@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for POST /1/object/ezsigntemplatepackage
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatepackageCreateObjectV1ResponseMPayload :  IEquatable<EzsigntemplatepackageCreateObjectV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackageCreateObjectV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatepackageCreateObjectV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackageCreateObjectV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aPkiEzsigntemplatepackageID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -101,22 +115,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for POST /1/object/ezsigntemplatepackage
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatepackageCreateObjectV1ResponseMPayload :  IEquatable<EzsigntemplatepackageCreateObjectV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackageCreateObjectV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatepackageCreateObjectV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackageCreateObjectV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aPkiEzsigntemplatepackageID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
         public EzsigntemplatepackageCreateObjectV1ResponseMPayload(List<int> aPkiEzsigntemplatepackageID = default(List<int>))
         {
             // to ensure "aPkiEzsigntemplatepackageID" is required (not null)

@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /1/object/ezsigntemplatepackagesigner
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatepackagesignerCreateObjectV1Request :  IEquatable<EzsigntemplatepackagesignerCreateObjectV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerCreateObjectV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatepackagesignerCreateObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerCreateObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="aObjEzsigntemplatepackagesigner">aObjEzsigntemplatepackagesigner (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -83,22 +97,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /1/object/ezsigntemplatepackagesigner
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatepackagesignerCreateObjectV1Request :  IEquatable<EzsigntemplatepackagesignerCreateObjectV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerCreateObjectV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatepackagesignerCreateObjectV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerCreateObjectV1Request" /> class.
-        /// </summary>
-        /// <param name="aObjEzsigntemplatepackagesigner">aObjEzsigntemplatepackagesigner (required).</param>
         public EzsigntemplatepackagesignerCreateObjectV1Request(List<EzsigntemplatepackagesignerRequestCompound> aObjEzsigntemplatepackagesigner = default(List<EzsigntemplatepackagesignerRequestCompound>))
         {
             // to ensure "aObjEzsigntemplatepackagesigner" is required (not null)

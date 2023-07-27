@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Ezsignfoldersignerassociation Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfoldersignerassociationRequestCompound :  IEquatable<EzsignfoldersignerassociationRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfoldersignerassociationRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup.</param>
+        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
+        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent..</param>
+        /// <param name="objEzsignsigner">objEzsignsigner.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -106,28 +126,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsignfoldersignerassociation Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfoldersignerassociationRequestCompound :  IEquatable<EzsignfoldersignerassociationRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfoldersignerassociationRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup.</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
-        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent..</param>
-        /// <param name="objEzsignsigner">objEzsignsigner.</param>
         public EzsignfoldersignerassociationRequestCompound(int pkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), int fkiEzsignsignergroupID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string), EzsignsignerRequestCompound objEzsignsigner = default(EzsignsignerRequestCompound))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)

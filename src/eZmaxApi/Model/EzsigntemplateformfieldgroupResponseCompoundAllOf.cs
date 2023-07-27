@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsigntemplateformfieldgroupResponseCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplateformfieldgroupResponseCompoundAllOf :  IEquatable<EzsigntemplateformfieldgroupResponseCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupResponseCompoundAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplateformfieldgroupResponseCompoundAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupResponseCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjEzsigntemplateformfieldgroupsigner">aObjEzsigntemplateformfieldgroupsigner (required).</param>
+        /// <param name="aObjDropdownElement">aObjDropdownElement.</param>
+        /// <param name="aObjEzsigntemplateformfield">aObjEzsigntemplateformfield (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -108,24 +124,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsigntemplateformfieldgroupResponseCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplateformfieldgroupResponseCompoundAllOf :  IEquatable<EzsigntemplateformfieldgroupResponseCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupResponseCompoundAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateformfieldgroupResponseCompoundAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupResponseCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="aObjEzsigntemplateformfieldgroupsigner">aObjEzsigntemplateformfieldgroupsigner (required).</param>
-        /// <param name="aObjDropdownElement">aObjDropdownElement.</param>
-        /// <param name="aObjEzsigntemplateformfield">aObjEzsigntemplateformfield (required).</param>
         public EzsigntemplateformfieldgroupResponseCompoundAllOf(List<EzsigntemplateformfieldgroupsignerResponseCompound> aObjEzsigntemplateformfieldgroupsigner = default(List<EzsigntemplateformfieldgroupsignerResponseCompound>), List<CustomDropdownElementResponseCompound> aObjDropdownElement = default(List<CustomDropdownElementResponseCompound>), List<EzsigntemplateformfieldResponseCompound> aObjEzsigntemplateformfield = default(List<EzsigntemplateformfieldResponseCompound>))
         {
             // to ensure "aObjEzsigntemplateformfieldgroupsigner" is required (not null)

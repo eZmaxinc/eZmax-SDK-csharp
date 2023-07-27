@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// VariableexpenseGetListV1ResponseMPayloadAllOf
+    /// </summary>
+    [DataContract]
+    public partial class VariableexpenseGetListV1ResponseMPayloadAllOf :  IEquatable<VariableexpenseGetListV1ResponseMPayloadAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected VariableexpenseGetListV1ResponseMPayloadAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VariableexpenseGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjVariableexpense">aObjVariableexpense (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// VariableexpenseGetListV1ResponseMPayloadAllOf
-    /// </summary>
-    [DataContract]
-    public partial class VariableexpenseGetListV1ResponseMPayloadAllOf :  IEquatable<VariableexpenseGetListV1ResponseMPayloadAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected VariableexpenseGetListV1ResponseMPayloadAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VariableexpenseGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        /// <param name="aObjVariableexpense">aObjVariableexpense (required).</param>
         public VariableexpenseGetListV1ResponseMPayloadAllOf(List<VariableexpenseListElement> aObjVariableexpense = default(List<VariableexpenseListElement>))
         {
             // to ensure "aObjVariableexpense" is required (not null)

@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Cors Object
+    /// </summary>
+    [DataContract]
+    public partial class CorsRequest :  IEquatable<CorsRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CorsRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CorsRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CorsRequest" /> class.
+        /// </summary>
+        /// <param name="pkiCorsID">The unique ID of the Cors.</param>
+        /// <param name="fkiApikeyID">The unique ID of the Apikey (required).</param>
+        /// <param name="sCorsEntryurl">The entryurl of the Cors (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,24 +105,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Cors Object
-    /// </summary>
-    [DataContract]
-    public partial class CorsRequest :  IEquatable<CorsRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CorsRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CorsRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CorsRequest" /> class.
-        /// </summary>
-        /// <param name="pkiCorsID">The unique ID of the Cors.</param>
-        /// <param name="fkiApikeyID">The unique ID of the Apikey (required).</param>
-        /// <param name="sCorsEntryurl">The entryurl of the Cors (required).</param>
         public CorsRequest(int pkiCorsID = default(int), int fkiApikeyID = default(int), string sCorsEntryurl = default(string))
         {
             // to ensure "fkiApikeyID" is required (not null)

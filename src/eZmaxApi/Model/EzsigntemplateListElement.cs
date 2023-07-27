@@ -24,7 +24,29 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsigntemplate List Element
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplateListElement :  IEquatable<EzsigntemplateListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplateListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplateListElement" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
+        /// <param name="iEzsigntemplatedocumentPagetotal">The number of pages in the Ezsigntemplatedocument..</param>
+        /// <param name="iEzsigntemplateSignaturetotal">The number of total signatures in the Ezsigntemplate..</param>
+        /// <param name="iEzsigntemplateFormfieldtotal">The number of total form fields in the Ezsigntemplate..</param>
+        /// <param name="bEzsigntemplateIncomplete">Indicate the Ezsigntemplate is incomplete and cannot be used (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -146,30 +168,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsigntemplate List Element
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplateListElement :  IEquatable<EzsigntemplateListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateListElement" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
-        /// <param name="iEzsigntemplatedocumentPagetotal">The number of pages in the Ezsigntemplatedocument..</param>
-        /// <param name="iEzsigntemplateSignaturetotal">The number of total signatures in the Ezsigntemplate..</param>
-        /// <param name="iEzsigntemplateFormfieldtotal">The number of total form fields in the Ezsigntemplate..</param>
-        /// <param name="bEzsigntemplateIncomplete">Indicate the Ezsigntemplate is incomplete and cannot be used (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
         public EzsigntemplateListElement(int pkiEzsigntemplateID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsigntemplateDescription = default(string), int iEzsigntemplatedocumentPagetotal = default(int), int iEzsigntemplateSignaturetotal = default(int), int iEzsigntemplateFormfieldtotal = default(int), bool bEzsigntemplateIncomplete = default(bool), string sEzsignfoldertypeNameX = default(string))
         {
             // to ensure "pkiEzsigntemplateID" is required (not null)

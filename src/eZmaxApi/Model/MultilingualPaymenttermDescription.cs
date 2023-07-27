@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Description of the Paymentterm
+    /// </summary>
+    [DataContract]
+    public partial class MultilingualPaymenttermDescription :  IEquatable<MultilingualPaymenttermDescription>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MultilingualPaymenttermDescription" /> class.
+        /// </summary>
+        /// <param name="sPaymenttermDescription1">The description of the Paymentterm in French.</param>
+        /// <param name="sPaymenttermDescription2">The description of the Paymentterm in English.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -73,18 +83,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Description of the Paymentterm
-    /// </summary>
-    [DataContract]
-    public partial class MultilingualPaymenttermDescription :  IEquatable<MultilingualPaymenttermDescription>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MultilingualPaymenttermDescription" /> class.
-        /// </summary>
-        /// <param name="sPaymenttermDescription1">The description of the Paymentterm in French.</param>
-        /// <param name="sPaymenttermDescription2">The description of the Paymentterm in English.</param>
         public MultilingualPaymenttermDescription(string sPaymenttermDescription1 = default(string), string sPaymenttermDescription2 = default(string))
         {
             this.SPaymenttermDescription1 = sPaymenttermDescription1;

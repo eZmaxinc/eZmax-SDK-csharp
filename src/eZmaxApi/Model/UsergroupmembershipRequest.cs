@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Usergroupmembership Object
+    /// </summary>
+    [DataContract]
+    public partial class UsergroupmembershipRequest :  IEquatable<UsergroupmembershipRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupmembershipRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UsergroupmembershipRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupmembershipRequest" /> class.
+        /// </summary>
+        /// <param name="pkiUsergroupmembershipID">The unique ID of the Usergroupmembership.</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -91,24 +107,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Usergroupmembership Object
-    /// </summary>
-    [DataContract]
-    public partial class UsergroupmembershipRequest :  IEquatable<UsergroupmembershipRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupmembershipRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UsergroupmembershipRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupmembershipRequest" /> class.
-        /// </summary>
-        /// <param name="pkiUsergroupmembershipID">The unique ID of the Usergroupmembership.</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
         public UsergroupmembershipRequest(int pkiUsergroupmembershipID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int))
         {
             // to ensure "fkiUsergroupID" is required (not null)

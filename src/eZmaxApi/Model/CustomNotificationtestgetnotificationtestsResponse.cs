@@ -24,7 +24,32 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Notificationtest Object in the context of getNotificationtests
+    /// </summary>
+    [DataContract]
+    public partial class CustomNotificationtestgetnotificationtestsResponse :  IEquatable<CustomNotificationtestgetnotificationtestsResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets ENotificationpreferenceStatus
+        /// </summary>
+        [DataMember(Name="eNotificationpreferenceStatus", EmitDefaultValue=true)]
+        public FieldENotificationpreferenceStatus ENotificationpreferenceStatus { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomNotificationtestgetnotificationtestsResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomNotificationtestgetnotificationtestsResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomNotificationtestgetnotificationtestsResponse" /> class.
+        /// </summary>
+        /// <param name="pkiNotificationtestID">The unique ID of the Notificationtest (required).</param>
+        /// <param name="objNotificationtestName">objNotificationtestName (required).</param>
+        /// <param name="fkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
+        /// <param name="sNotificationtestFunction">The function name of the Notificationtest (required).</param>
+        /// <param name="sNotificationtestNameX">The name of the Notificationtest in the language of the requester (required).</param>
+        /// <param name="eNotificationpreferenceStatus">eNotificationpreferenceStatus (required).</param>
+        /// <param name="iNotificationtest">The number of elements returned by the Notificationtest (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -115,33 +140,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Notificationtest Object in the context of getNotificationtests
-    /// </summary>
-    [DataContract]
-    public partial class CustomNotificationtestgetnotificationtestsResponse :  IEquatable<CustomNotificationtestgetnotificationtestsResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets ENotificationpreferenceStatus
-        /// </summary>
-        [DataMember(Name="eNotificationpreferenceStatus", EmitDefaultValue=true)]
-        public FieldENotificationpreferenceStatus ENotificationpreferenceStatus { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomNotificationtestgetnotificationtestsResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomNotificationtestgetnotificationtestsResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomNotificationtestgetnotificationtestsResponse" /> class.
-        /// </summary>
-        /// <param name="pkiNotificationtestID">The unique ID of the Notificationtest (required).</param>
-        /// <param name="objNotificationtestName">objNotificationtestName (required).</param>
-        /// <param name="fkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
-        /// <param name="sNotificationtestFunction">The function name of the Notificationtest (required).</param>
-        /// <param name="sNotificationtestNameX">The name of the Notificationtest in the language of the requester (required).</param>
-        /// <param name="eNotificationpreferenceStatus">eNotificationpreferenceStatus (required).</param>
-        /// <param name="iNotificationtest">The number of elements returned by the Notificationtest (required).</param>
         public CustomNotificationtestgetnotificationtestsResponse(int pkiNotificationtestID = default(int), MultilingualNotificationtestName objNotificationtestName = default(MultilingualNotificationtestName), int fkiNotificationsubsectionID = default(int), string sNotificationtestFunction = default(string), string sNotificationtestNameX = default(string), FieldENotificationpreferenceStatus eNotificationpreferenceStatus = default(FieldENotificationpreferenceStatus), int iNotificationtest = default(int))
         {
             // to ensure "pkiNotificationtestID" is required (not null)

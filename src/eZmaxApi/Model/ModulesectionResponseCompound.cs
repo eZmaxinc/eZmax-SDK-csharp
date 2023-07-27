@@ -24,7 +24,25 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Modulesection Object
+    /// </summary>
+    [DataContract]
+    public partial class ModulesectionResponseCompound :  IEquatable<ModulesectionResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ModulesectionResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ModulesectionResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ModulesectionResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiModulesectionID">The unique ID of the Modulesection (required).</param>
+        /// <param name="fkiModuleID">The unique ID of the Module (required).</param>
+        /// <param name="sModulesectionInternalname">The Internal name of the Module section. (required).</param>
+        /// <param name="sModulesectionNameX">The Name of the Modulesection in the language of the requester (required).</param>
+        /// <param name="aObjPermission">aObjPermission (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -117,26 +135,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Modulesection Object
-    /// </summary>
-    [DataContract]
-    public partial class ModulesectionResponseCompound :  IEquatable<ModulesectionResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ModulesectionResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ModulesectionResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ModulesectionResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiModulesectionID">The unique ID of the Modulesection (required).</param>
-        /// <param name="fkiModuleID">The unique ID of the Module (required).</param>
-        /// <param name="sModulesectionInternalname">The Internal name of the Module section. (required).</param>
-        /// <param name="sModulesectionNameX">The Name of the Modulesection in the language of the requester (required).</param>
-        /// <param name="aObjPermission">aObjPermission (required).</param>
         public ModulesectionResponseCompound(int pkiModulesectionID = default(int), int fkiModuleID = default(int), string sModulesectionInternalname = default(string), string sModulesectionNameX = default(string), List<PermissionResponseCompound> aObjPermission = default(List<PermissionResponseCompound>))
         {
             // to ensure "pkiModulesectionID" is required (not null)

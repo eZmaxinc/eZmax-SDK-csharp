@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezmaxproduct AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxproductAutocompleteElementResponse :  IEquatable<EzmaxproductAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxproductAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxproductAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxproductAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="bEzmaxproductIsactive">Whether the Ezmaxproduct is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,24 +105,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezmaxproduct AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxproductAutocompleteElementResponse :  IEquatable<EzmaxproductAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxproductAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxproductAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxproductAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="bEzmaxproductIsactive">Whether the Ezmaxproduct is active or not (required).</param>
         public EzmaxproductAutocompleteElementResponse(int pkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), bool bEzmaxproductIsactive = default(bool))
         {
             // to ensure "pkiEzmaxproductID" is required (not null)

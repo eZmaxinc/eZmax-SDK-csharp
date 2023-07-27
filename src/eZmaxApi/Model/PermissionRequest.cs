@@ -24,7 +24,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Permission Object
+    /// </summary>
+    [DataContract]
+    public partial class PermissionRequest :  IEquatable<PermissionRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PermissionRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PermissionRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PermissionRequest" /> class.
+        /// </summary>
+        /// <param name="pkiPermissionID">The unique ID of the Permission.</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
+        /// <param name="fkiCompanyID">The unique ID of the Company.</param>
+        /// <param name="fkiModulesectionID">The unique ID of the Modulesection (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -101,27 +120,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Permission Object
-    /// </summary>
-    [DataContract]
-    public partial class PermissionRequest :  IEquatable<PermissionRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PermissionRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PermissionRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PermissionRequest" /> class.
-        /// </summary>
-        /// <param name="pkiPermissionID">The unique ID of the Permission.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
-        /// <param name="fkiCompanyID">The unique ID of the Company.</param>
-        /// <param name="fkiModulesectionID">The unique ID of the Modulesection (required).</param>
         public PermissionRequest(int pkiPermissionID = default(int), int fkiUserID = default(int), int fkiApikeyID = default(int), int fkiUsergroupID = default(int), int fkiCompanyID = default(int), int fkiModulesectionID = default(int))
         {
             // to ensure "fkiModulesectionID" is required (not null)

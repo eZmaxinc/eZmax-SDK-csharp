@@ -24,7 +24,31 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Phone Object
+    /// </summary>
+    [DataContract]
+    public partial class PhoneResponse :  IEquatable<PhoneResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EPhoneType
+        /// </summary>
+        [DataMember(Name="ePhoneType", EmitDefaultValue=false)]
+        [Obsolete]
+        public FieldEPhoneType? EPhoneType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PhoneResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PhoneResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PhoneResponse" /> class.
+        /// </summary>
+        /// <param name="pkiPhoneID">The unique ID of the Phone. (required).</param>
+        /// <param name="fkiPhonetypeID">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
+        /// <param name="ePhoneType">ePhoneType.</param>
+        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
+        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -120,32 +144,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Phone Object
-    /// </summary>
-    [DataContract]
-    public partial class PhoneResponse :  IEquatable<PhoneResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EPhoneType
-        /// </summary>
-        [DataMember(Name="ePhoneType", EmitDefaultValue=false)]
-        [Obsolete]
-        public FieldEPhoneType? EPhoneType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PhoneResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PhoneResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PhoneResponse" /> class.
-        /// </summary>
-        /// <param name="pkiPhoneID">The unique ID of the Phone. (required).</param>
-        /// <param name="fkiPhonetypeID">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
-        /// <param name="ePhoneType">ePhoneType.</param>
-        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
-        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
         public PhoneResponse(int pkiPhoneID = default(int), int fkiPhonetypeID = default(int), FieldEPhoneType? ePhoneType = default(FieldEPhoneType?), string sPhoneE164 = default(string), string sPhoneExtension = default(string))
         {
             // to ensure "pkiPhoneID" is required (not null)

@@ -24,7 +24,24 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Department AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class DepartmentAutocompleteElementResponse :  IEquatable<DepartmentAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DepartmentAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected DepartmentAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DepartmentAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
+        /// <param name="pkiDepartmentID">The unique ID of the Department (required).</param>
+        /// <param name="bDepartmentIsactive">Whether the Department is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -97,25 +114,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Department AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class DepartmentAutocompleteElementResponse :  IEquatable<DepartmentAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DepartmentAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected DepartmentAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DepartmentAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
-        /// <param name="pkiDepartmentID">The unique ID of the Department (required).</param>
-        /// <param name="bDepartmentIsactive">Whether the Department is active or not (required).</param>
         public DepartmentAutocompleteElementResponse(string sCompanyNameX = default(string), string sDepartmentNameX = default(string), int pkiDepartmentID = default(int), bool bDepartmentIsactive = default(bool))
         {
             // to ensure "sCompanyNameX" is required (not null)

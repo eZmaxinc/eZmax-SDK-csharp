@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Billingentityinternalproduct Object and children
+    /// </summary>
+    [DataContract]
+    public partial class BillingentityinternalproductRequestCompound :  IEquatable<BillingentityinternalproductRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalproductRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BillingentityinternalproductRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalproductRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiBillingentityinternalproductID">The unique ID of the Billingentityinternalproduct.</param>
+        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,24 +105,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Billingentityinternalproduct Object and children
-    /// </summary>
-    [DataContract]
-    public partial class BillingentityinternalproductRequestCompound :  IEquatable<BillingentityinternalproductRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalproductRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BillingentityinternalproductRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalproductRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiBillingentityinternalproductID">The unique ID of the Billingentityinternalproduct.</param>
-        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
         public BillingentityinternalproductRequestCompound(int pkiBillingentityinternalproductID = default(int), int fkiEzmaxproductID = default(int), int fkiBillingentityexternalID = default(int))
         {
             // to ensure "fkiEzmaxproductID" is required (not null)

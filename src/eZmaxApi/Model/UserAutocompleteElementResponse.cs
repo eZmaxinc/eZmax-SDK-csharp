@@ -24,7 +24,29 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A User AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class UserAutocompleteElementResponse :  IEquatable<UserAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EUserType
+        /// </summary>
+        [DataMember(Name="eUserType", EmitDefaultValue=true)]
+        public FieldEUserType EUserType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="eUserType">eUserType (required).</param>
+        /// <param name="sUserName">The description of the User in the language of the requester (required).</param>
+        /// <param name="pkiUserID">The unique ID of the User (required).</param>
+        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -93,30 +115,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A User AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class UserAutocompleteElementResponse :  IEquatable<UserAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EUserType
-        /// </summary>
-        [DataMember(Name="eUserType", EmitDefaultValue=true)]
-        public FieldEUserType EUserType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="eUserType">eUserType (required).</param>
-        /// <param name="sUserName">The description of the User in the language of the requester (required).</param>
-        /// <param name="pkiUserID">The unique ID of the User (required).</param>
-        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
         public UserAutocompleteElementResponse(FieldEUserType eUserType = default(FieldEUserType), string sUserName = default(string), int pkiUserID = default(int), bool bUserIsactive = default(bool))
         {
             // to ensure "eUserType" is required (not null)

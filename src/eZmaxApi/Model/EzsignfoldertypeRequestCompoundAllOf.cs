@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsignfoldertypeRequestCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfoldertypeRequestCompoundAllOf :  IEquatable<EzsignfoldertypeRequestCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfoldertypeRequestCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="aFkiUserIDSigned">aFkiUserIDSigned.</param>
+        /// <param name="aFkiUserIDSummary">aFkiUserIDSummary.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -93,18 +103,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsignfoldertypeRequestCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfoldertypeRequestCompoundAllOf :  IEquatable<EzsignfoldertypeRequestCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfoldertypeRequestCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="aFkiUserIDSigned">aFkiUserIDSigned.</param>
-        /// <param name="aFkiUserIDSummary">aFkiUserIDSummary.</param>
         public EzsignfoldertypeRequestCompoundAllOf(List<int> aFkiUserIDSigned = default(List<int>), List<int> aFkiUserIDSummary = default(List<int>))
         {
             this.AFkiUserIDSigned = aFkiUserIDSigned;

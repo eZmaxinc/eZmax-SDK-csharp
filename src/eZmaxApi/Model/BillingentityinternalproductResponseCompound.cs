@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Billingentityinternalproduct Object
+    /// </summary>
+    [DataContract]
+    public partial class BillingentityinternalproductResponseCompound :  IEquatable<BillingentityinternalproductResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalproductResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BillingentityinternalproductResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalproductResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiBillingentityinternalproductID">The unique ID of the Billingentityinternalproduct (required).</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
+        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -129,28 +149,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Billingentityinternalproduct Object
-    /// </summary>
-    [DataContract]
-    public partial class BillingentityinternalproductResponseCompound :  IEquatable<BillingentityinternalproductResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalproductResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BillingentityinternalproductResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalproductResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiBillingentityinternalproductID">The unique ID of the Billingentityinternalproduct (required).</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
-        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
         public BillingentityinternalproductResponseCompound(int pkiBillingentityinternalproductID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string))
         {
             // to ensure "pkiBillingentityinternalproductID" is required (not null)

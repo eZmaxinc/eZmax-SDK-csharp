@@ -24,7 +24,16 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// WebhookResponseCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class WebhookResponseCompoundAllOf :  IEquatable<WebhookResponseCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookResponseCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,17 +76,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// WebhookResponseCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class WebhookResponseCompoundAllOf :  IEquatable<WebhookResponseCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookResponseCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
         public WebhookResponseCompoundAllOf(string sWebhookEvent = default(string))
         {
             this.SWebhookEvent = sWebhookEvent;

@@ -24,7 +24,152 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
+    /// <summary>
+    /// An Ezsigndocument Object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentRequestCompound :  IEquatable<EzsigndocumentRequestCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Indicates where to look for the document binary content.
+        /// </summary>
+        /// <value>Indicates where to look for the document binary content.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EEzsigndocumentSourceEnum
+        {
+            /// <summary>
+            /// Enum Base64 for value: Base64
+            /// </summary>
+            [EnumMember(Value = "Base64")]
+            Base64 = 1,
 
+            /// <summary>
+            /// Enum Ezsigntemplate for value: Ezsigntemplate
+            /// </summary>
+            [EnumMember(Value = "Ezsigntemplate")]
+            Ezsigntemplate = 2,
+
+            /// <summary>
+            /// Enum Url for value: Url
+            /// </summary>
+            [EnumMember(Value = "Url")]
+            Url = 3
+
+        }
+
+        /// <summary>
+        /// Indicates where to look for the document binary content.
+        /// </summary>
+        /// <value>Indicates where to look for the document binary content.</value>
+        [DataMember(Name="eEzsigndocumentSource", EmitDefaultValue=true)]
+        public EEzsigndocumentSourceEnum EEzsigndocumentSource { get; set; }
+        /// <summary>
+        /// Indicates the format of the document.
+        /// </summary>
+        /// <value>Indicates the format of the document.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EEzsigndocumentFormatEnum
+        {
+            /// <summary>
+            /// Enum Pdf for value: Pdf
+            /// </summary>
+            [EnumMember(Value = "Pdf")]
+            Pdf = 1,
+
+            /// <summary>
+            /// Enum Doc for value: Doc
+            /// </summary>
+            [EnumMember(Value = "Doc")]
+            Doc = 2,
+
+            /// <summary>
+            /// Enum Docx for value: Docx
+            /// </summary>
+            [EnumMember(Value = "Docx")]
+            Docx = 3,
+
+            /// <summary>
+            /// Enum Xls for value: Xls
+            /// </summary>
+            [EnumMember(Value = "Xls")]
+            Xls = 4,
+
+            /// <summary>
+            /// Enum Xlsx for value: Xlsx
+            /// </summary>
+            [EnumMember(Value = "Xlsx")]
+            Xlsx = 5,
+
+            /// <summary>
+            /// Enum Ppt for value: Ppt
+            /// </summary>
+            [EnumMember(Value = "Ppt")]
+            Ppt = 6,
+
+            /// <summary>
+            /// Enum Pptx for value: Pptx
+            /// </summary>
+            [EnumMember(Value = "Pptx")]
+            Pptx = 7
+
+        }
+
+        /// <summary>
+        /// Indicates the format of the document.
+        /// </summary>
+        /// <value>Indicates the format of the document.</value>
+        [DataMember(Name="eEzsigndocumentFormat", EmitDefaultValue=false)]
+        public EEzsigndocumentFormatEnum? EEzsigndocumentFormat { get; set; }
+        /// <summary>
+        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+        /// </summary>
+        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EEzsigndocumentFormEnum
+        {
+            /// <summary>
+            /// Enum Keep for value: Keep
+            /// </summary>
+            [EnumMember(Value = "Keep")]
+            Keep = 1,
+
+            /// <summary>
+            /// Enum Convert for value: Convert
+            /// </summary>
+            [EnumMember(Value = "Convert")]
+            Convert = 2
+
+        }
+
+        /// <summary>
+        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+        /// </summary>
+        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**</value>
+        [DataMember(Name="eEzsigndocumentForm", EmitDefaultValue=false)]
+        public EEzsigndocumentFormEnum? EEzsigndocumentForm { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentRequestCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentRequestCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentRequestCompound" /> class.
+        /// </summary>
+        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument.</param>
+        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
+        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="eEzsigndocumentSource">Indicates where to look for the document binary content. (required).</param>
+        /// <param name="eEzsigndocumentFormat">Indicates the format of the document..</param>
+        /// <param name="sEzsigndocumentBase64">The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64..</param>
+        /// <param name="sEzsigndocumentUrl">The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url..</param>
+        /// <param name="bEzsigndocumentForcerepair">Try to repair the document or flatten it if it cannot be used for electronic signature.  (default to true).</param>
+        /// <param name="sEzsigndocumentPassword">If the source document is password protected, the password to open/modify it..</param>
+        /// <param name="eEzsigndocumentForm">If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**.</param>
+        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
+        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
+        /// <param name="sEzsigndocumentExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -180,153 +325,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Ezsigndocument Object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentRequestCompound :  IEquatable<EzsigndocumentRequestCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Indicates where to look for the document binary content.
-        /// </summary>
-        /// <value>Indicates where to look for the document binary content.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EEzsigndocumentSourceEnum
-        {
-            /// <summary>
-            /// Enum Base64 for value: Base64
-            /// </summary>
-            [EnumMember(Value = "Base64")]
-            Base64 = 1,
-
-            /// <summary>
-            /// Enum Ezsigntemplate for value: Ezsigntemplate
-            /// </summary>
-            [EnumMember(Value = "Ezsigntemplate")]
-            Ezsigntemplate = 2,
-
-            /// <summary>
-            /// Enum Url for value: Url
-            /// </summary>
-            [EnumMember(Value = "Url")]
-            Url = 3
-
-        }
-
-        /// <summary>
-        /// Indicates where to look for the document binary content.
-        /// </summary>
-        /// <value>Indicates where to look for the document binary content.</value>
-        [DataMember(Name="eEzsigndocumentSource", EmitDefaultValue=true)]
-        public EEzsigndocumentSourceEnum EEzsigndocumentSource { get; set; }
-        /// <summary>
-        /// Indicates the format of the document.
-        /// </summary>
-        /// <value>Indicates the format of the document.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EEzsigndocumentFormatEnum
-        {
-            /// <summary>
-            /// Enum Pdf for value: Pdf
-            /// </summary>
-            [EnumMember(Value = "Pdf")]
-            Pdf = 1,
-
-            /// <summary>
-            /// Enum Doc for value: Doc
-            /// </summary>
-            [EnumMember(Value = "Doc")]
-            Doc = 2,
-
-            /// <summary>
-            /// Enum Docx for value: Docx
-            /// </summary>
-            [EnumMember(Value = "Docx")]
-            Docx = 3,
-
-            /// <summary>
-            /// Enum Xls for value: Xls
-            /// </summary>
-            [EnumMember(Value = "Xls")]
-            Xls = 4,
-
-            /// <summary>
-            /// Enum Xlsx for value: Xlsx
-            /// </summary>
-            [EnumMember(Value = "Xlsx")]
-            Xlsx = 5,
-
-            /// <summary>
-            /// Enum Ppt for value: Ppt
-            /// </summary>
-            [EnumMember(Value = "Ppt")]
-            Ppt = 6,
-
-            /// <summary>
-            /// Enum Pptx for value: Pptx
-            /// </summary>
-            [EnumMember(Value = "Pptx")]
-            Pptx = 7
-
-        }
-
-        /// <summary>
-        /// Indicates the format of the document.
-        /// </summary>
-        /// <value>Indicates the format of the document.</value>
-        [DataMember(Name="eEzsigndocumentFormat", EmitDefaultValue=false)]
-        public EEzsigndocumentFormatEnum? EEzsigndocumentFormat { get; set; }
-        /// <summary>
-        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
-        /// </summary>
-        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EEzsigndocumentFormEnum
-        {
-            /// <summary>
-            /// Enum Keep for value: Keep
-            /// </summary>
-            [EnumMember(Value = "Keep")]
-            Keep = 1,
-
-            /// <summary>
-            /// Enum Convert for value: Convert
-            /// </summary>
-            [EnumMember(Value = "Convert")]
-            Convert = 2
-
-        }
-
-        /// <summary>
-        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
-        /// </summary>
-        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**</value>
-        [DataMember(Name="eEzsigndocumentForm", EmitDefaultValue=false)]
-        public EEzsigndocumentFormEnum? EEzsigndocumentForm { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentRequestCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentRequestCompound" /> class.
-        /// </summary>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument.</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
-        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="eEzsigndocumentSource">Indicates where to look for the document binary content. (required).</param>
-        /// <param name="eEzsigndocumentFormat">Indicates the format of the document..</param>
-        /// <param name="sEzsigndocumentBase64">The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64..</param>
-        /// <param name="sEzsigndocumentUrl">The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url..</param>
-        /// <param name="bEzsigndocumentForcerepair">Try to repair the document or flatten it if it cannot be used for electronic signature.  (default to true).</param>
-        /// <param name="sEzsigndocumentPassword">If the source document is password protected, the password to open/modify it..</param>
-        /// <param name="eEzsigndocumentForm">If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**.</param>
-        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
-        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="sEzsigndocumentExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
         public EzsigndocumentRequestCompound(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsigntemplateID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiLanguageID = default(int), EEzsigndocumentSourceEnum eEzsigndocumentSource = default(EEzsigndocumentSourceEnum), EEzsigndocumentFormatEnum? eEzsigndocumentFormat = default(EEzsigndocumentFormatEnum?), byte[] sEzsigndocumentBase64 = default(byte[]), string sEzsigndocumentUrl = default(string), bool bEzsigndocumentForcerepair = true, string sEzsigndocumentPassword = default(string), EEzsigndocumentFormEnum? eEzsigndocumentForm = default(EEzsigndocumentFormEnum?), string dtEzsigndocumentDuedate = default(string), string sEzsigndocumentName = default(string), string sEzsigndocumentExternalid = default(string))
         {
             // to ensure "fkiEzsignfolderID" is required (not null)

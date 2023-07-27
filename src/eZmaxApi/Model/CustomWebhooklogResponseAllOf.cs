@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// CustomWebhooklogResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class CustomWebhooklogResponseAllOf :  IEquatable<CustomWebhooklogResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomWebhooklogResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomWebhooklogResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomWebhooklogResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="dtWebhooklogDate">The date and time at which the Webhooklog happened. (required).</param>
+        /// <param name="tWebhooklogJson">The Json containing the Webhook call and return (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -79,23 +94,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// CustomWebhooklogResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class CustomWebhooklogResponseAllOf :  IEquatable<CustomWebhooklogResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomWebhooklogResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomWebhooklogResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomWebhooklogResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="dtWebhooklogDate">The date and time at which the Webhooklog happened. (required).</param>
-        /// <param name="tWebhooklogJson">The Json containing the Webhook call and return (required).</param>
         public CustomWebhooklogResponseAllOf(string dtWebhooklogDate = default(string), string tWebhooklogJson = default(string))
         {
             // to ensure "dtWebhooklogDate" is required (not null)

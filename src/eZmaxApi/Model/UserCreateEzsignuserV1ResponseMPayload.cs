@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for POST /1/module/user/createEzsignuser
+    /// </summary>
+    [DataContract]
+    public partial class UserCreateEzsignuserV1ResponseMPayload :  IEquatable<UserCreateEzsignuserV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserCreateEzsignuserV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aSEmailAddressSuccess">An array of email addresses that succeeded. (required).</param>
+        /// <param name="aSEmailAddressFailure">An array of email addresses that failed. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -103,23 +118,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for POST /1/module/user/createEzsignuser
-    /// </summary>
-    [DataContract]
-    public partial class UserCreateEzsignuserV1ResponseMPayload :  IEquatable<UserCreateEzsignuserV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserCreateEzsignuserV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aSEmailAddressSuccess">An array of email addresses that succeeded. (required).</param>
-        /// <param name="aSEmailAddressFailure">An array of email addresses that failed. (required).</param>
         public UserCreateEzsignuserV1ResponseMPayload(List<string> aSEmailAddressSuccess = default(List<string>), List<string> aSEmailAddressFailure = default(List<string>))
         {
             // to ensure "aSEmailAddressSuccess" is required (not null)

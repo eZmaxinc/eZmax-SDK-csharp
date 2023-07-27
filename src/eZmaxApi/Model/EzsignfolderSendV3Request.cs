@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfolderSendV3Request :  IEquatable<EzsignfolderSendV3Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderSendV3Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfolderSendV3Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderSendV3Request" /> class.
+        /// </summary>
+        /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent. (required).</param>
+        /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
+        /// <param name="aFkiEzsignfoldersignerassociationID">aFkiEzsignfoldersignerassociationID (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -121,24 +137,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfolderSendV3Request :  IEquatable<EzsignfolderSendV3Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderSendV3Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfolderSendV3Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderSendV3Request" /> class.
-        /// </summary>
-        /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent. (required).</param>
-        /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
-        /// <param name="aFkiEzsignfoldersignerassociationID">aFkiEzsignfoldersignerassociationID (required).</param>
         public EzsignfolderSendV3Request(string tEzsignfolderMessage = default(string), string dtEzsignfolderDelayedsenddate = default(string), List<int> aFkiEzsignfoldersignerassociationID = default(List<int>))
         {
             // to ensure "tEzsignfolderMessage" is required (not null)

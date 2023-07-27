@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList
+    /// </summary>
+    [DataContract]
+    public partial class EzsignfolderGetCommunicationListV1ResponseMPayload :  IEquatable<EzsignfolderGetCommunicationListV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationListV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignfolderGetCommunicationListV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationListV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjCommunication">aObjCommunication (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList
-    /// </summary>
-    [DataContract]
-    public partial class EzsignfolderGetCommunicationListV1ResponseMPayload :  IEquatable<EzsignfolderGetCommunicationListV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationListV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignfolderGetCommunicationListV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationListV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="aObjCommunication">aObjCommunication (required).</param>
         public EzsignfolderGetCommunicationListV1ResponseMPayload(List<CustomCommunicationListElementResponse> aObjCommunication = default(List<CustomCommunicationListElementResponse>))
         {
             // to ensure "aObjCommunication" is required (not null)

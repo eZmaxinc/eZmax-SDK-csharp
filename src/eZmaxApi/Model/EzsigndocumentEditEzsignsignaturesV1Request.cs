@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Request for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentEditEzsignsignaturesV1Request :  IEquatable<EzsigndocumentEditEzsignsignaturesV1Request>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignsignaturesV1Request" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentEditEzsignsignaturesV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignsignaturesV1Request" /> class.
+        /// </summary>
+        /// <param name="aObjEzsignsignature">aObjEzsignsignature (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Request for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentEditEzsignsignaturesV1Request :  IEquatable<EzsigndocumentEditEzsignsignaturesV1Request>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignsignaturesV1Request" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentEditEzsignsignaturesV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignsignaturesV1Request" /> class.
-        /// </summary>
-        /// <param name="aObjEzsignsignature">aObjEzsignsignature (required).</param>
         public EzsigndocumentEditEzsignsignaturesV1Request(List<EzsignsignatureRequestCompound> aObjEzsignsignature = default(List<EzsignsignatureRequestCompound>))
         {
             // to ensure "aObjEzsignsignature" is required (not null)

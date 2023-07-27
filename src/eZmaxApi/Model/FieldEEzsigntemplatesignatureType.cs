@@ -24,46 +24,6 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
-// TEST_IGNORE_ME
-/* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:true isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:false isEnum:true isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
-openApiType                         : 
-baseName                            : 
-complexType                         : 
-getter                              : 
-setter                              : 
-dataType                            : string
-datatypeWithEnum                    : 
-name                                : Field-eEzsigntemplatesignatureType
-defaultValue                        : 
-defaultValueWithParam               : 
-baseType                            : 
-example                             : 
-jsonSchema                          : 
-exclusiveMinimum                    : false
-exclusiveMaximum                    : false
-required                            : 
-deprecated                          : 
-hasMoreNonReadOnly                  : 
-vars                                : []
-requiredVars                        : []
-vendorExtensions                    : {}
-hasValidation                       : false
-nameInCamelCase                     : 
-nameInSnakeCase                     : 
-uniqueItems                         : false
-items :
-    
-additionalPropertiesIsAnyType       : false
-hasVars                             : false
-hasRequired                         : false
-hasDiscriminatorWithNonEmptyMapping : false
-hasMultipleTypes                    : false
-hasItems                            : false
-iexclusiveMaximum                   : 
-datatype                            : 
-*/
-
     /// <summary>
     /// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. 4. **Initials** is a simple \&quot;click to add initials\&quot; block. 5. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. 6. **Attachments** is to ask for files as attachment that may be validate in another step.    
     /// </summary>

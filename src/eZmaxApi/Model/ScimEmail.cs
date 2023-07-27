@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// ScimEmail
+    /// </summary>
+    [DataContract]
+    public partial class ScimEmail :  IEquatable<ScimEmail>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScimEmail" /> class.
+        /// </summary>
+        /// <param name="value">The email address..</param>
+        /// <param name="primary">primary.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -69,18 +79,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// ScimEmail
-    /// </summary>
-    [DataContract]
-    public partial class ScimEmail :  IEquatable<ScimEmail>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScimEmail" /> class.
-        /// </summary>
-        /// <param name="value">The email address..</param>
-        /// <param name="primary">primary.</param>
         public ScimEmail(string value = default(string), bool primary = default(bool))
         {
             this.Value = value;

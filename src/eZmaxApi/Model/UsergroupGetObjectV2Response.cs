@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for GET /2/object/usergroup/{pkiUsergroupID}
+    /// </summary>
+    [DataContract]
+    public partial class UsergroupGetObjectV2Response :  IEquatable<UsergroupGetObjectV2Response>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupGetObjectV2Response" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UsergroupGetObjectV2Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupGetObjectV2Response" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
+        /// <param name="objDebugPayload">objDebugPayload.</param>
+        /// <param name="objDebug">objDebug.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,24 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for GET /2/object/usergroup/{pkiUsergroupID}
-    /// </summary>
-    [DataContract]
-    public partial class UsergroupGetObjectV2Response :  IEquatable<UsergroupGetObjectV2Response>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupGetObjectV2Response" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UsergroupGetObjectV2Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupGetObjectV2Response" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
-        /// <param name="objDebug">objDebug.</param>
         public UsergroupGetObjectV2Response(UsergroupGetObjectV2ResponseMPayload mPayload = default(UsergroupGetObjectV2ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)

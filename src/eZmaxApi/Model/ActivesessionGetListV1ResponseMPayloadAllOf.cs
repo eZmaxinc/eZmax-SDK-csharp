@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// ActivesessionGetListV1ResponseMPayloadAllOf
+    /// </summary>
+    [DataContract]
+    public partial class ActivesessionGetListV1ResponseMPayloadAllOf :  IEquatable<ActivesessionGetListV1ResponseMPayloadAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivesessionGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ActivesessionGetListV1ResponseMPayloadAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivesessionGetListV1ResponseMPayloadAllOf" /> class.
+        /// </summary>
+        /// <param name="aObjActivesession">aObjActivesession (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,22 +95,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// ActivesessionGetListV1ResponseMPayloadAllOf
-    /// </summary>
-    [DataContract]
-    public partial class ActivesessionGetListV1ResponseMPayloadAllOf :  IEquatable<ActivesessionGetListV1ResponseMPayloadAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ActivesessionGetListV1ResponseMPayloadAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionGetListV1ResponseMPayloadAllOf" /> class.
-        /// </summary>
-        /// <param name="aObjActivesession">aObjActivesession (required).</param>
         public ActivesessionGetListV1ResponseMPayloadAllOf(List<ActivesessionListElement> aObjActivesession = default(List<ActivesessionListElement>))
         {
             // to ensure "aObjActivesession" is required (not null)

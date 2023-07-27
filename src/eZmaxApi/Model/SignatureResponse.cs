@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Signature Object
+    /// </summary>
+    [DataContract]
+    public partial class SignatureResponse :  IEquatable<SignatureResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SignatureResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected SignatureResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SignatureResponse" /> class.
+        /// </summary>
+        /// <param name="pkiSignatureID">The unique ID of the Signature (required).</param>
+        /// <param name="sSignatureUrl">The URL of the SVG file for the Signature (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -85,23 +100,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Signature Object
-    /// </summary>
-    [DataContract]
-    public partial class SignatureResponse :  IEquatable<SignatureResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SignatureResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected SignatureResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SignatureResponse" /> class.
-        /// </summary>
-        /// <param name="pkiSignatureID">The unique ID of the Signature (required).</param>
-        /// <param name="sSignatureUrl">The URL of the SVG file for the Signature (required).</param>
         public SignatureResponse(int pkiSignatureID = default(int), string sSignatureUrl = default(string))
         {
             // to ensure "pkiSignatureID" is required (not null)

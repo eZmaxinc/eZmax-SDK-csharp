@@ -24,7 +24,27 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Gives informations about the user that created the object or the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same. 
+    /// </summary>
+    [DataContract]
+    public partial class CommonAuditdetail :  IEquatable<CommonAuditdetail>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonAuditdetail" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonAuditdetail() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonAuditdetail" /> class.
+        /// </summary>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
+        /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester.</param>
+        /// <param name="dtAuditdetailDate">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -118,28 +138,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Gives informations about the user that created the object or the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same. 
-    /// </summary>
-    [DataContract]
-    public partial class CommonAuditdetail :  IEquatable<CommonAuditdetail>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonAuditdetail" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonAuditdetail() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonAuditdetail" /> class.
-        /// </summary>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
-        /// <param name="sUserLoginname">The login name of the User. (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester.</param>
-        /// <param name="dtAuditdetailDate">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
         public CommonAuditdetail(int fkiUserID = default(int), int fkiApikeyID = default(int), string sUserLoginname = default(string), string sUserLastname = default(string), string sUserFirstname = default(string), string sApikeyDescriptionX = default(string), string dtAuditdetailDate = default(string))
         {
             // to ensure "fkiUserID" is required (not null)

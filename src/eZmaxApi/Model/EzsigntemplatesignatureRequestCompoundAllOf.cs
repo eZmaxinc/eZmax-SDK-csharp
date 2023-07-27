@@ -24,7 +24,17 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsigntemplatesignatureRequestCompoundAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatesignatureRequestCompoundAllOf :  IEquatable<EzsigntemplatesignatureRequestCompoundAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatesignatureRequestCompoundAllOf" /> class.
+        /// </summary>
+        /// <param name="bEzsigntemplatesignatureCustomdate">Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**).</param>
+        /// <param name="aObjEzsigntemplatesignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:false hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -80,18 +90,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsigntemplatesignatureRequestCompoundAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatesignatureRequestCompoundAllOf :  IEquatable<EzsigntemplatesignatureRequestCompoundAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatesignatureRequestCompoundAllOf" /> class.
-        /// </summary>
-        /// <param name="bEzsigntemplatesignatureCustomdate">Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**).</param>
-        /// <param name="aObjEzsigntemplatesignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
         public EzsigntemplatesignatureRequestCompoundAllOf(bool bEzsigntemplatesignatureCustomdate = default(bool), List<EzsigntemplatesignaturecustomdateRequestCompound> aObjEzsigntemplatesignaturecustomdate = default(List<EzsigntemplatesignaturecustomdateRequestCompound>))
         {
             this.BEzsigntemplatesignatureCustomdate = bEzsigntemplatesignatureCustomdate;

@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf :  IEquatable<EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf :  IEquatable<EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         public EzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf(EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload mPayload = default(EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload))
         {
             // to ensure "mPayload" is required (not null)

@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// An Activesession-&gt;Apikey object and children to create a complete structure
+    /// </summary>
+    [DataContract]
+    public partial class ActivesessionResponseCompoundApikey :  IEquatable<ActivesessionResponseCompoundApikey>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundApikey" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ActivesessionResponseCompoundApikey() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundApikey" /> class.
+        /// </summary>
+        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
+        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,23 +96,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// An Activesession-&gt;Apikey object and children to create a complete structure
-    /// </summary>
-    [DataContract]
-    public partial class ActivesessionResponseCompoundApikey :  IEquatable<ActivesessionResponseCompoundApikey>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundApikey" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ActivesessionResponseCompoundApikey() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundApikey" /> class.
-        /// </summary>
-        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
-        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester (required).</param>
         public ActivesessionResponseCompoundApikey(int pkiApikeyID = default(int), string sApikeyDescriptionX = default(string))
         {
             // to ensure "pkiApikeyID" is required (not null)

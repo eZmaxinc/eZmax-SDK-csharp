@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
+    /// </summary>
+    [DataContract]
+    public partial class EzsigndocumentEditEzsignsignaturesV1Response :  IEquatable<EzsigndocumentEditEzsignsignaturesV1Response>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignsignaturesV1Response" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentEditEzsignsignaturesV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignsignaturesV1Response" /> class.
+        /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
+        /// <param name="objDebugPayload">objDebugPayload.</param>
+        /// <param name="objDebug">objDebug.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -71,24 +87,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
-    /// </summary>
-    [DataContract]
-    public partial class EzsigndocumentEditEzsignsignaturesV1Response :  IEquatable<EzsigndocumentEditEzsignsignaturesV1Response>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignsignaturesV1Response" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigndocumentEditEzsignsignaturesV1Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignsignaturesV1Response" /> class.
-        /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
-        /// <param name="objDebug">objDebug.</param>
         public EzsigndocumentEditEzsignsignaturesV1Response(EzsigndocumentEditEzsignsignaturesV1ResponseMPayload mPayload = default(EzsigndocumentEditEzsignsignaturesV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
             // to ensure "mPayload" is required (not null)

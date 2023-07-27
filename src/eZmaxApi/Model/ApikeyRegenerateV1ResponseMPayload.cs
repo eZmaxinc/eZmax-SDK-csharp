@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for GET /1/object/apikey/{pkiApikeyID}/regenerate
+    /// </summary>
+    [DataContract]
+    public partial class ApikeyRegenerateV1ResponseMPayload :  IEquatable<ApikeyRegenerateV1ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyRegenerateV1ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ApikeyRegenerateV1ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApikeyRegenerateV1ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="objApikey">objApikey (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for GET /1/object/apikey/{pkiApikeyID}/regenerate
-    /// </summary>
-    [DataContract]
-    public partial class ApikeyRegenerateV1ResponseMPayload :  IEquatable<ApikeyRegenerateV1ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyRegenerateV1ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ApikeyRegenerateV1ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApikeyRegenerateV1ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="objApikey">objApikey (required).</param>
         public ApikeyRegenerateV1ResponseMPayload(ApikeyResponseCompound objApikey = default(ApikeyResponseCompound))
         {
             // to ensure "objApikey" is required (not null)

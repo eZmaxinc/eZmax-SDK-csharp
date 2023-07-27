@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// The object used in /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage Request
+    /// </summary>
+    [DataContract]
+    public partial class CustomImportEzsigntemplatepackageRelationRequest :  IEquatable<CustomImportEzsigntemplatepackageRelationRequest>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomImportEzsigntemplatepackageRelationRequest" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomImportEzsigntemplatepackageRelationRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomImportEzsigntemplatepackageRelationRequest" /> class.
+        /// </summary>
+        /// <param name="fkiEzsigntemplatepackagesignerID">The unique ID of the Ezsigntemplatepackagesigner.</param>
+        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="sEzsigntemplatepackagesignerDescription">The description of the Ezsigntemplatepackagesigner.</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -82,24 +98,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// The object used in /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage Request
-    /// </summary>
-    [DataContract]
-    public partial class CustomImportEzsigntemplatepackageRelationRequest :  IEquatable<CustomImportEzsigntemplatepackageRelationRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomImportEzsigntemplatepackageRelationRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomImportEzsigntemplatepackageRelationRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomImportEzsigntemplatepackageRelationRequest" /> class.
-        /// </summary>
-        /// <param name="fkiEzsigntemplatepackagesignerID">The unique ID of the Ezsigntemplatepackagesigner.</param>
-        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="sEzsigntemplatepackagesignerDescription">The description of the Ezsigntemplatepackagesigner.</param>
         public CustomImportEzsigntemplatepackageRelationRequest(int fkiEzsigntemplatepackagesignerID = default(int), int fkiEzsignfoldersignerassociationID = default(int), string sEzsigntemplatepackagesignerDescription = default(string))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)

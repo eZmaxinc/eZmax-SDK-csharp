@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Usergroup Object
+    /// </summary>
+    [DataContract]
+    public partial class UsergroupResponse :  IEquatable<UsergroupResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UsergroupResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsergroupResponse" /> class.
+        /// </summary>
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup (required).</param>
+        /// <param name="objUsergroupName">objUsergroupName (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -79,23 +94,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Usergroup Object
-    /// </summary>
-    [DataContract]
-    public partial class UsergroupResponse :  IEquatable<UsergroupResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UsergroupResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsergroupResponse" /> class.
-        /// </summary>
-        /// <param name="pkiUsergroupID">The unique ID of the Usergroup (required).</param>
-        /// <param name="objUsergroupName">objUsergroupName (required).</param>
         public UsergroupResponse(int pkiUsergroupID = default(int), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName))
         {
             // to ensure "pkiUsergroupID" is required (not null)

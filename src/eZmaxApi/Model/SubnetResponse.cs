@@ -24,7 +24,26 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Subnet Object
+    /// </summary>
+    [DataContract]
+    public partial class SubnetResponse :  IEquatable<SubnetResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SubnetResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected SubnetResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SubnetResponse" /> class.
+        /// </summary>
+        /// <param name="pkiSubnetID">The unique ID of the Subnet (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
+        /// <param name="objSubnetDescription">objSubnetDescription (required).</param>
+        /// <param name="iSubnetNetwork">The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064 (required).</param>
+        /// <param name="iSubnetMask">The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040 (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -117,27 +136,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Subnet Object
-    /// </summary>
-    [DataContract]
-    public partial class SubnetResponse :  IEquatable<SubnetResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SubnetResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected SubnetResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SubnetResponse" /> class.
-        /// </summary>
-        /// <param name="pkiSubnetID">The unique ID of the Subnet (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
-        /// <param name="objSubnetDescription">objSubnetDescription (required).</param>
-        /// <param name="iSubnetNetwork">The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064 (required).</param>
-        /// <param name="iSubnetMask">The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040 (required).</param>
         public SubnetResponse(int pkiSubnetID = default(int), int fkiUserID = default(int), int fkiApikeyID = default(int), MultilingualSubnetDescription objSubnetDescription = default(MultilingualSubnetDescription), long iSubnetNetwork = default(long), long iSubnetMask = default(long))
         {
             // to ensure "pkiSubnetID" is required (not null)

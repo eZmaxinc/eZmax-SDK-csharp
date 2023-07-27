@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Definition of objSQLQuery Object
+    /// </summary>
+    [DataContract]
+    public partial class CommonResponseObjSQLQuery :  IEquatable<CommonResponseObjSQLQuery>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonResponseObjSQLQuery" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommonResponseObjSQLQuery() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommonResponseObjSQLQuery" /> class.
+        /// </summary>
+        /// <param name="sQuery">The SQL Query (required).</param>
+        /// <param name="fDuration">Execution time of the SQL Query in seconds (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -77,23 +92,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Definition of objSQLQuery Object
-    /// </summary>
-    [DataContract]
-    public partial class CommonResponseObjSQLQuery :  IEquatable<CommonResponseObjSQLQuery>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseObjSQLQuery" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommonResponseObjSQLQuery() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommonResponseObjSQLQuery" /> class.
-        /// </summary>
-        /// <param name="sQuery">The SQL Query (required).</param>
-        /// <param name="fDuration">Execution time of the SQL Query in seconds (required).</param>
         public CommonResponseObjSQLQuery(string sQuery = default(string), float fDuration = default(float))
         {
             // to ensure "sQuery" is required (not null)

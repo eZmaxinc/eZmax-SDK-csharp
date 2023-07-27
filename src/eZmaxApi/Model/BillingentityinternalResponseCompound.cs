@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Billingentityinternal Object
+    /// </summary>
+    [DataContract]
+    public partial class BillingentityinternalResponseCompound :  IEquatable<BillingentityinternalResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BillingentityinternalResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityinternalResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="objBillingentityinternalDescription">objBillingentityinternalDescription (required).</param>
+        /// <param name="aObjBillingentityinternalproduct">aObjBillingentityinternalproduct (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -95,24 +111,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Billingentityinternal Object
-    /// </summary>
-    [DataContract]
-    public partial class BillingentityinternalResponseCompound :  IEquatable<BillingentityinternalResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BillingentityinternalResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BillingentityinternalResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="objBillingentityinternalDescription">objBillingentityinternalDescription (required).</param>
-        /// <param name="aObjBillingentityinternalproduct">aObjBillingentityinternalproduct (required).</param>
         public BillingentityinternalResponseCompound(int pkiBillingentityinternalID = default(int), MultilingualBillingentityinternalDescription objBillingentityinternalDescription = default(MultilingualBillingentityinternalDescription), List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct = default(List<BillingentityinternalproductResponseCompound>))
         {
             // to ensure "pkiBillingentityinternalID" is required (not null)

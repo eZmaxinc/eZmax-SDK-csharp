@@ -24,7 +24,45 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A User List Element
+    /// </summary>
+    [DataContract]
+    public partial class UserListElement :  IEquatable<UserListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EUserType
+        /// </summary>
+        [DataMember(Name="eUserType", EmitDefaultValue=true)]
+        public FieldEUserType EUserType { get; set; }
+        /// <summary>
+        /// Gets or Sets EUserOrigin
+        /// </summary>
+        [DataMember(Name="eUserOrigin", EmitDefaultValue=true)]
+        public FieldEUserOrigin EUserOrigin { get; set; }
+        /// <summary>
+        /// Gets or Sets EUserEzsignaccess
+        /// </summary>
+        [DataMember(Name="eUserEzsignaccess", EmitDefaultValue=true)]
+        public FieldEUserEzsignaccess EUserEzsignaccess { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserListElement" /> class.
+        /// </summary>
+        /// <param name="pkiUserID">The unique ID of the User (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
+        /// <param name="eUserType">eUserType (required).</param>
+        /// <param name="eUserOrigin">eUserOrigin (required).</param>
+        /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
+        /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
+        /// <param name="sEmailAddress">The email address. (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -132,46 +170,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A User List Element
-    /// </summary>
-    [DataContract]
-    public partial class UserListElement :  IEquatable<UserListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EUserType
-        /// </summary>
-        [DataMember(Name="eUserType", EmitDefaultValue=true)]
-        public FieldEUserType EUserType { get; set; }
-        /// <summary>
-        /// Gets or Sets EUserOrigin
-        /// </summary>
-        [DataMember(Name="eUserOrigin", EmitDefaultValue=true)]
-        public FieldEUserOrigin EUserOrigin { get; set; }
-        /// <summary>
-        /// Gets or Sets EUserEzsignaccess
-        /// </summary>
-        [DataMember(Name="eUserEzsignaccess", EmitDefaultValue=true)]
-        public FieldEUserEzsignaccess EUserEzsignaccess { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected UserListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserListElement" /> class.
-        /// </summary>
-        /// <param name="pkiUserID">The unique ID of the User (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sUserLoginname">The login name of the User. (required).</param>
-        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
-        /// <param name="eUserType">eUserType (required).</param>
-        /// <param name="eUserOrigin">eUserOrigin (required).</param>
-        /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
-        /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
-        /// <param name="sEmailAddress">The email address. (required).</param>
         public UserListElement(int pkiUserID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), bool bUserIsactive = default(bool), FieldEUserType eUserType = default(FieldEUserType), FieldEUserOrigin eUserOrigin = default(FieldEUserOrigin), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), string dtUserEzsignprepaidexpiration = default(string), string sEmailAddress = default(string))
         {
             // to ensure "pkiUserID" is required (not null)

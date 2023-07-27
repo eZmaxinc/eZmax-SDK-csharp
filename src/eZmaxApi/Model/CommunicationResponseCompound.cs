@@ -24,7 +24,50 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Communication Object
+    /// </summary>
+    [DataContract]
+    public partial class CommunicationResponseCompound :  IEquatable<CommunicationResponseCompound>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets ECommunicationImportance
+        /// </summary>
+        [DataMember(Name="eCommunicationImportance", EmitDefaultValue=true)]
+        public FieldECommunicationImportance ECommunicationImportance { get; set; }
+        /// <summary>
+        /// Gets or Sets ECommunicationType
+        /// </summary>
+        [DataMember(Name="eCommunicationType", EmitDefaultValue=true)]
+        public FieldECommunicationType ECommunicationType { get; set; }
+        /// <summary>
+        /// Gets or Sets ECommunicationDirection
+        /// </summary>
+        [DataMember(Name="eCommunicationDirection", EmitDefaultValue=true)]
+        public ComputedECommunicationDirection ECommunicationDirection { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommunicationResponseCompound" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CommunicationResponseCompound() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommunicationResponseCompound" /> class.
+        /// </summary>
+        /// <param name="pkiCommunicationID">The unique ID of the Communication. (required).</param>
+        /// <param name="eCommunicationImportance">eCommunicationImportance (required).</param>
+        /// <param name="eCommunicationType">eCommunicationType (required).</param>
+        /// <param name="sCommunicationSubject">The subject of the Communication (required).</param>
+        /// <param name="sCommunicationBodyurl">The url of the body used as body in the Communication.</param>
+        /// <param name="eCommunicationDirection">eCommunicationDirection (required).</param>
+        /// <param name="iCommunicationrecipientCount">The count of Communicationrecipient (required).</param>
+        /// <param name="bCommunicationPrivate">Whether the Communication is private or not (required).</param>
+        /// <param name="objDescriptionstaticSender">objDescriptionstaticSender.</param>
+        /// <param name="objEmailstaticSender">objEmailstaticSender.</param>
+        /// <param name="objPhonestaticSender">objPhonestaticSender.</param>
+        /// <param name="objAudit">objAudit (required).</param>
+        /// <param name="aObjCommunicationattachment">aObjCommunicationattachment (required).</param>
+        /// <param name="aObjCommunicationrecipient">aObjCommunicationrecipient (required).</param>
+        /// <param name="aObjCommunicationexternalrecipient">aObjCommunicationexternalrecipient (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:false isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -177,51 +220,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Communication Object
-    /// </summary>
-    [DataContract]
-    public partial class CommunicationResponseCompound :  IEquatable<CommunicationResponseCompound>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets ECommunicationImportance
-        /// </summary>
-        [DataMember(Name="eCommunicationImportance", EmitDefaultValue=true)]
-        public FieldECommunicationImportance ECommunicationImportance { get; set; }
-        /// <summary>
-        /// Gets or Sets ECommunicationType
-        /// </summary>
-        [DataMember(Name="eCommunicationType", EmitDefaultValue=true)]
-        public FieldECommunicationType ECommunicationType { get; set; }
-        /// <summary>
-        /// Gets or Sets ECommunicationDirection
-        /// </summary>
-        [DataMember(Name="eCommunicationDirection", EmitDefaultValue=true)]
-        public ComputedECommunicationDirection ECommunicationDirection { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommunicationResponseCompound" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CommunicationResponseCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommunicationResponseCompound" /> class.
-        /// </summary>
-        /// <param name="pkiCommunicationID">The unique ID of the Communication. (required).</param>
-        /// <param name="eCommunicationImportance">eCommunicationImportance (required).</param>
-        /// <param name="eCommunicationType">eCommunicationType (required).</param>
-        /// <param name="sCommunicationSubject">The subject of the Communication (required).</param>
-        /// <param name="sCommunicationBodyurl">The url of the body used as body in the Communication.</param>
-        /// <param name="eCommunicationDirection">eCommunicationDirection (required).</param>
-        /// <param name="iCommunicationrecipientCount">The count of Communicationrecipient (required).</param>
-        /// <param name="bCommunicationPrivate">Whether the Communication is private or not (required).</param>
-        /// <param name="objDescriptionstaticSender">objDescriptionstaticSender.</param>
-        /// <param name="objEmailstaticSender">objEmailstaticSender.</param>
-        /// <param name="objPhonestaticSender">objPhonestaticSender.</param>
-        /// <param name="objAudit">objAudit (required).</param>
-        /// <param name="aObjCommunicationattachment">aObjCommunicationattachment (required).</param>
-        /// <param name="aObjCommunicationrecipient">aObjCommunicationrecipient (required).</param>
-        /// <param name="aObjCommunicationexternalrecipient">aObjCommunicationexternalrecipient (required).</param>
         public CommunicationResponseCompound(int pkiCommunicationID = default(int), FieldECommunicationImportance eCommunicationImportance = default(FieldECommunicationImportance), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), string sCommunicationSubject = default(string), string sCommunicationBodyurl = default(string), ComputedECommunicationDirection eCommunicationDirection = default(ComputedECommunicationDirection), int iCommunicationrecipientCount = default(int), bool bCommunicationPrivate = default(bool), DescriptionstaticResponse objDescriptionstaticSender = default(DescriptionstaticResponse), EmailstaticResponse objEmailstaticSender = default(EmailstaticResponse), PhonestaticResponse objPhonestaticSender = default(PhonestaticResponse), CommonAudit objAudit = default(CommonAudit), List<CommunicationattachmentResponseCompound> aObjCommunicationattachment = default(List<CommunicationattachmentResponseCompound>), List<CommunicationrecipientResponseCompound> aObjCommunicationrecipient = default(List<CommunicationrecipientResponseCompound>), List<CommunicationexternalrecipientResponseCompound> aObjCommunicationexternalrecipient = default(List<CommunicationexternalrecipientResponseCompound>))
         {
             // to ensure "pkiCommunicationID" is required (not null)

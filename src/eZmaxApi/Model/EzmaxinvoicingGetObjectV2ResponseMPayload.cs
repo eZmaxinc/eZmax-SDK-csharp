@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Payload for GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}
+    /// </summary>
+    [DataContract]
+    public partial class EzmaxinvoicingGetObjectV2ResponseMPayload :  IEquatable<EzmaxinvoicingGetObjectV2ResponseMPayload>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingGetObjectV2ResponseMPayload" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzmaxinvoicingGetObjectV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxinvoicingGetObjectV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="objEzmaxinvoicing">objEzmaxinvoicing (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -67,22 +81,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Payload for GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}
-    /// </summary>
-    [DataContract]
-    public partial class EzmaxinvoicingGetObjectV2ResponseMPayload :  IEquatable<EzmaxinvoicingGetObjectV2ResponseMPayload>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingGetObjectV2ResponseMPayload" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzmaxinvoicingGetObjectV2ResponseMPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzmaxinvoicingGetObjectV2ResponseMPayload" /> class.
-        /// </summary>
-        /// <param name="objEzmaxinvoicing">objEzmaxinvoicing (required).</param>
         public EzmaxinvoicingGetObjectV2ResponseMPayload(EzmaxinvoicingResponseCompound objEzmaxinvoicing = default(EzmaxinvoicingResponseCompound))
         {
             // to ensure "objEzmaxinvoicing" is required (not null)

@@ -24,7 +24,24 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Ezsignbulksendsignermapping Object
+    /// </summary>
+    [DataContract]
+    public partial class EzsignbulksendsignermappingResponse :  IEquatable<EzsignbulksendsignermappingResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected EzsignbulksendsignermappingResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingResponse" /> class.
+        /// </summary>
+        /// <param name="pkiEzsignbulksendsignermappingID">The unique ID of the Ezsignbulksendsignermapping (required).</param>
+        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="sEzsignbulksendsignermappingDescription">The description of the Ezsignbulksendsignermapping (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -96,25 +113,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Ezsignbulksendsignermapping Object
-    /// </summary>
-    [DataContract]
-    public partial class EzsignbulksendsignermappingResponse :  IEquatable<EzsignbulksendsignermappingResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsignbulksendsignermappingResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingResponse" /> class.
-        /// </summary>
-        /// <param name="pkiEzsignbulksendsignermappingID">The unique ID of the Ezsignbulksendsignermapping (required).</param>
-        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="sEzsignbulksendsignermappingDescription">The description of the Ezsignbulksendsignermapping (required).</param>
         public EzsignbulksendsignermappingResponse(int pkiEzsignbulksendsignermappingID = default(int), int fkiEzsignbulksendID = default(int), int fkiUserID = default(int), string sEzsignbulksendsignermappingDescription = default(string))
         {
             // to ensure "pkiEzsignbulksendsignermappingID" is required (not null)

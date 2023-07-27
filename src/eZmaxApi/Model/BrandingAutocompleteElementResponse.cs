@@ -24,7 +24,23 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Branding AutocompleteElement Response
+    /// </summary>
+    [DataContract]
+    public partial class BrandingAutocompleteElementResponse :  IEquatable<BrandingAutocompleteElementResponse>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BrandingAutocompleteElementResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BrandingAutocompleteElementResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BrandingAutocompleteElementResponse" /> class.
+        /// </summary>
+        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
+        /// <param name="pkiBrandingID">The unique ID of the Branding (required).</param>
+        /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -89,24 +105,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Branding AutocompleteElement Response
-    /// </summary>
-    [DataContract]
-    public partial class BrandingAutocompleteElementResponse :  IEquatable<BrandingAutocompleteElementResponse>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BrandingAutocompleteElementResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected BrandingAutocompleteElementResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BrandingAutocompleteElementResponse" /> class.
-        /// </summary>
-        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
-        /// <param name="pkiBrandingID">The unique ID of the Branding (required).</param>
-        /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
         public BrandingAutocompleteElementResponse(string sBrandingDescriptionX = default(string), int pkiBrandingID = default(int), bool bBrandingIsactive = default(bool))
         {
             // to ensure "sBrandingDescriptionX" is required (not null)

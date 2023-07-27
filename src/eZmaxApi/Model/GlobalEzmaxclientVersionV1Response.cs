@@ -24,7 +24,21 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// Response for GET /1/ezmaxclient/{pksEzmaxclientOs}/version
+    /// </summary>
+    [DataContract]
+    public partial class GlobalEzmaxclientVersionV1Response :  IEquatable<GlobalEzmaxclientVersionV1Response>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GlobalEzmaxclientVersionV1Response" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected GlobalEzmaxclientVersionV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GlobalEzmaxclientVersionV1Response" /> class.
+        /// </summary>
+        /// <param name="sEzmaxclientVersion">The version on the store (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -69,22 +83,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// Response for GET /1/ezmaxclient/{pksEzmaxclientOs}/version
-    /// </summary>
-    [DataContract]
-    public partial class GlobalEzmaxclientVersionV1Response :  IEquatable<GlobalEzmaxclientVersionV1Response>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GlobalEzmaxclientVersionV1Response" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected GlobalEzmaxclientVersionV1Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GlobalEzmaxclientVersionV1Response" /> class.
-        /// </summary>
-        /// <param name="sEzmaxclientVersion">The version on the store (required).</param>
         public GlobalEzmaxclientVersionV1Response(string sEzmaxclientVersion = default(string))
         {
             // to ensure "sEzmaxclientVersion" is required (not null)

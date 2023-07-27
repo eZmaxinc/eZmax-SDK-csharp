@@ -24,7 +24,22 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// CustomWebhookResponseAllOf
+    /// </summary>
+    [DataContract]
+    public partial class CustomWebhookResponseAllOf :  IEquatable<CustomWebhookResponseAllOf>, IValidatableObject
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomWebhookResponseAllOf" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CustomWebhookResponseAllOf() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomWebhookResponseAllOf" /> class.
+        /// </summary>
+        /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
+        /// <param name="bWebhookTest">Wheter the webhook received is a manual test or a real event (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -81,23 +96,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// CustomWebhookResponseAllOf
-    /// </summary>
-    [DataContract]
-    public partial class CustomWebhookResponseAllOf :  IEquatable<CustomWebhookResponseAllOf>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomWebhookResponseAllOf" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected CustomWebhookResponseAllOf() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CustomWebhookResponseAllOf" /> class.
-        /// </summary>
-        /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
-        /// <param name="bWebhookTest">Wheter the webhook received is a manual test or a real event (required).</param>
         public CustomWebhookResponseAllOf(string pksCustomerCode = default(string), bool bWebhookTest = default(bool))
         {
             // to ensure "pksCustomerCode" is required (not null)

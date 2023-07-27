@@ -24,7 +24,31 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
 {
-
+    /// <summary>
+    /// A Paymentterm List Element
+    /// </summary>
+    [DataContract]
+    public partial class PaymenttermListElement :  IEquatable<PaymenttermListElement>, IValidatableObject
+    {
+        /// <summary>
+        /// Gets or Sets EPaymenttermType
+        /// </summary>
+        [DataMember(Name="ePaymenttermType", EmitDefaultValue=true)]
+        public FieldEPaymenttermType EPaymenttermType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymenttermListElement" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected PaymenttermListElement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymenttermListElement" /> class.
+        /// </summary>
+        /// <param name="pkiPaymenttermID">The unique ID of the Paymentterm (required).</param>
+        /// <param name="sPaymenttermCode">The code of the Paymentterm (required).</param>
+        /// <param name="ePaymenttermType">ePaymenttermType (required).</param>
+        /// <param name="iPaymenttermDay">The day of the Paymentterm (required).</param>
+        /// <param name="sPaymenttermDescriptionX">The description of the Paymentterm in the language of the requester (required).</param>
+        /// <param name="bPaymenttermIsactive">Whether the Paymentterm is active or not (required).</param>
 // TEST_IGNORE_ME
 /* hasMoreNonReadOnly: isPrimitiveType:false isModel:true isContainer: isString:false isNumeric:false isInteger:false isShort:false isLong:false isUnboundedInteger:false isNumber:false isFloat:false isDouble:false isDecimal:false isByteArray: isBinary: isFile: isBoolean:false isDate:false isDateTime:false isUuid:false isUri: isEmail: isNull:false isFreeFormObject: isAnyType:false isArray:false isMap:true isEnum:false isReadOnly: isWriteOnly: isNullable:false isSelfReference: isCircularReference: isDiscriminator: hasValidation:false isInherited: hasRequired:true hasMultipleTypes:false hasItems:false
 openApiType                         : 
@@ -115,32 +139,6 @@ hasItems                            : false
 iexclusiveMaximum                   : 
 datatype                            : 
 */
-
-    /// <summary>
-    /// A Paymentterm List Element
-    /// </summary>
-    [DataContract]
-    public partial class PaymenttermListElement :  IEquatable<PaymenttermListElement>, IValidatableObject
-    {
-        /// <summary>
-        /// Gets or Sets EPaymenttermType
-        /// </summary>
-        [DataMember(Name="ePaymenttermType", EmitDefaultValue=true)]
-        public FieldEPaymenttermType EPaymenttermType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PaymenttermListElement" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PaymenttermListElement() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PaymenttermListElement" /> class.
-        /// </summary>
-        /// <param name="pkiPaymenttermID">The unique ID of the Paymentterm (required).</param>
-        /// <param name="sPaymenttermCode">The code of the Paymentterm (required).</param>
-        /// <param name="ePaymenttermType">ePaymenttermType (required).</param>
-        /// <param name="iPaymenttermDay">The day of the Paymentterm (required).</param>
-        /// <param name="sPaymenttermDescriptionX">The description of the Paymentterm in the language of the requester (required).</param>
-        /// <param name="bPaymenttermIsactive">Whether the Paymentterm is active or not (required).</param>
         public PaymenttermListElement(int pkiPaymenttermID = default(int), string sPaymenttermCode = default(string), FieldEPaymenttermType ePaymenttermType = default(FieldEPaymenttermType), int iPaymenttermDay = default(int), string sPaymenttermDescriptionX = default(string), bool bPaymenttermIsactive = default(bool))
         {
             // to ensure "pkiPaymenttermID" is required (not null)
