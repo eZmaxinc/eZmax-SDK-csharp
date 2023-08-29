@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// Generic Error Message
     /// </summary>
     [DataContract]
-    public partial class CommonResponseErrorSTemporaryFileUrl :  IEquatable<CommonResponseErrorSTemporaryFileUrl>, IValidatableObject
+    public partial class CommonResponseErrorSTemporaryFileUrl :  IEquatable<CommonResponseErrorSTemporaryFileUrl>
     {
         /// <summary>
         /// Gets or Sets EErrorCode
@@ -43,10 +41,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseErrorSTemporaryFileUrl" /> class.
         /// </summary>
-        /// <param name="sTemporaryFileUrl">The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again..</param>
         /// <param name="sErrorMessage">The message giving details about the error (required).</param>
         /// <param name="eErrorCode">eErrorCode (required).</param>
-        public CommonResponseErrorSTemporaryFileUrl(string sTemporaryFileUrl = default(string), string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode))
+        /// <param name="sTemporaryFileUrl">The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again..</param>
+        public CommonResponseErrorSTemporaryFileUrl(string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode), string sTemporaryFileUrl = default(string))
         {
             // to ensure "sErrorMessage" is required (not null)
             if (sErrorMessage == null)
@@ -72,19 +70,19 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
-        /// </summary>
-        /// <value>The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.</value>
-        [DataMember(Name="sTemporaryFileUrl", EmitDefaultValue=false)]
-        public string STemporaryFileUrl { get; set; }
-
-        /// <summary>
         /// The message giving details about the error
         /// </summary>
         /// <value>The message giving details about the error</value>
         [DataMember(Name="sErrorMessage", EmitDefaultValue=true)]
         public string SErrorMessage { get; set; }
 
+
+        /// <summary>
+        /// The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
+        /// </summary>
+        /// <value>The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.</value>
+        [DataMember(Name="sTemporaryFileUrl", EmitDefaultValue=false)]
+        public string STemporaryFileUrl { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -94,9 +92,9 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CommonResponseErrorSTemporaryFileUrl {\n");
-            sb.Append("  STemporaryFileUrl: ").Append(STemporaryFileUrl).Append("\n");
             sb.Append("  SErrorMessage: ").Append(SErrorMessage).Append("\n");
             sb.Append("  EErrorCode: ").Append(EErrorCode).Append("\n");
+            sb.Append("  STemporaryFileUrl: ").Append(STemporaryFileUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,11 +130,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.STemporaryFileUrl == input.STemporaryFileUrl ||
-                    (this.STemporaryFileUrl != null &&
-                    this.STemporaryFileUrl.Equals(input.STemporaryFileUrl))
-                ) && 
-                (
                     this.SErrorMessage == input.SErrorMessage ||
                     (this.SErrorMessage != null &&
                     this.SErrorMessage.Equals(input.SErrorMessage))
@@ -145,6 +138,11 @@ namespace eZmaxApi.Model
                     this.EErrorCode == input.EErrorCode ||
                     (this.EErrorCode != null &&
                     this.EErrorCode.Equals(input.EErrorCode))
+                ) && 
+                (
+                    this.STemporaryFileUrl == input.STemporaryFileUrl ||
+                    (this.STemporaryFileUrl != null &&
+                    this.STemporaryFileUrl.Equals(input.STemporaryFileUrl))
                 );
         }
 
@@ -157,33 +155,14 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.STemporaryFileUrl != null)
-                    hashCode = hashCode * 59 + this.STemporaryFileUrl.GetHashCode();
                 if (this.SErrorMessage != null)
                     hashCode = hashCode * 59 + this.SErrorMessage.GetHashCode();
                 if (this.EErrorCode != null)
                     hashCode = hashCode * 59 + this.EErrorCode.GetHashCode();
+                if (this.STemporaryFileUrl != null)
+                    hashCode = hashCode * 59 + this.STemporaryFileUrl.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // SErrorMessage (string) pattern
-            Regex regexSErrorMessage = new Regex(@"^.{0,500}$", RegexOptions.CultureInvariant);
-            if (false == regexSErrorMessage.Match(this.SErrorMessage).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SErrorMessage, must match a pattern of " + regexSErrorMessage, new [] { "SErrorMessage" });
-            }
-
-            yield break;
         }
     }
 

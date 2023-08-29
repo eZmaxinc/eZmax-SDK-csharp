@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -82,7 +82,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
 
         /// <summary>
         /// Retrieve Ezsignfoldertypes and IDs
@@ -97,7 +97,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        ApiResponse<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        ApiResponse<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
         /// <summary>
         /// Retrieve Ezsignfoldertypes and IDs
         /// </summary>
@@ -110,7 +110,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>EzsignfoldertypeGetAutocompleteV2Response</returns>
-        EzsignfoldertypeGetAutocompleteV2Response EzsignfoldertypeGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        EzsignfoldertypeGetAutocompleteV2Response EzsignfoldertypeGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
 
         /// <summary>
         /// Retrieve Ezsignfoldertypes and IDs
@@ -124,7 +124,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of EzsignfoldertypeGetAutocompleteV2Response</returns>
-        ApiResponse<EzsignfoldertypeGetAutocompleteV2Response> EzsignfoldertypeGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        ApiResponse<EzsignfoldertypeGetAutocompleteV2Response> EzsignfoldertypeGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
         /// <summary>
         /// Retrieve Ezsignfoldertype list
         /// </summary>
@@ -138,7 +138,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>EzsignfoldertypeGetListV1Response</returns>
-        EzsignfoldertypeGetListV1Response EzsignfoldertypeGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+        EzsignfoldertypeGetListV1Response EzsignfoldertypeGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
 
         /// <summary>
         /// Retrieve Ezsignfoldertype list
@@ -153,7 +153,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of EzsignfoldertypeGetListV1Response</returns>
-        ApiResponse<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+        ApiResponse<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
         /// <summary>
         /// Retrieve an existing Ezsignfoldertype
         /// </summary>
@@ -239,7 +239,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsignfoldertypes and IDs
@@ -255,7 +255,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Ezsignfoldertypes and IDs
         /// </summary>
@@ -269,7 +269,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldertypeGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldertypeGetAutocompleteV2Response> EzsignfoldertypeGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<EzsignfoldertypeGetAutocompleteV2Response> EzsignfoldertypeGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsignfoldertypes and IDs
@@ -284,7 +284,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldertypeGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetAutocompleteV2Response>> EzsignfoldertypeGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetAutocompleteV2Response>> EzsignfoldertypeGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Ezsignfoldertype list
         /// </summary>
@@ -299,7 +299,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldertypeGetListV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsignfoldertype list
@@ -315,7 +315,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldertypeGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetListV1Response>> EzsignfoldertypeGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetListV1Response>> EzsignfoldertypeGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignfoldertype
         /// </summary>
@@ -474,7 +474,7 @@ namespace eZmaxApi.Api
             if (ezsignfoldertypeCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignfoldertypeCreateObjectV1Request' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeCreateObjectV1");
 
-            var localVarPath = "/1/object/ezsignfoldertype";
+            var localVarPath = "./1/object/ezsignfoldertype";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -525,7 +525,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignfoldertypeCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignfoldertypeCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldertypeCreateObjectV1Response)));
         }
 
@@ -556,7 +556,7 @@ namespace eZmaxApi.Api
             if (ezsignfoldertypeCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignfoldertypeCreateObjectV1Request' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeCreateObjectV1");
 
-            var localVarPath = "/1/object/ezsignfoldertype";
+            var localVarPath = "./1/object/ezsignfoldertype";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -607,7 +607,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignfoldertypeCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignfoldertypeCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldertypeCreateObjectV1Response)));
         }
 
@@ -640,7 +640,7 @@ namespace eZmaxApi.Api
             if (ezsignfoldertypeEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignfoldertypeEditObjectV1Request' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeEditObjectV1");
 
-            var localVarPath = "/1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}";
+            var localVarPath = "./1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -692,7 +692,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignfoldertypeEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignfoldertypeEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldertypeEditObjectV1Response)));
         }
 
@@ -728,7 +728,7 @@ namespace eZmaxApi.Api
             if (ezsignfoldertypeEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignfoldertypeEditObjectV1Request' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeEditObjectV1");
 
-            var localVarPath = "/1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}";
+            var localVarPath = "./1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -780,7 +780,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignfoldertypeEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignfoldertypeEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldertypeEditObjectV1Response)));
         }
 
@@ -794,7 +794,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        public CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        public CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
         {
              ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = EzsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -810,13 +810,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        public ApiResponse<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        public ApiResponse<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeGetAutocompleteV1");
 
-            var localVarPath = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}";
+            var localVarPath = "./1/object/ezsignfoldertype/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -862,7 +862,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
         }
 
@@ -877,7 +877,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzsignfoldertypeGetAutocompleteV1Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -895,13 +895,13 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzsignfoldertypeGetAutocompleteV1WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeGetAutocompleteV1");
 
-            var localVarPath = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}";
+            var localVarPath = "./1/object/ezsignfoldertype/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -947,7 +947,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
         }
 
@@ -960,7 +960,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>EzsignfoldertypeGetAutocompleteV2Response</returns>
-        public EzsignfoldertypeGetAutocompleteV2Response EzsignfoldertypeGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        public EzsignfoldertypeGetAutocompleteV2Response EzsignfoldertypeGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
         {
              ApiResponse<EzsignfoldertypeGetAutocompleteV2Response> localVarResponse = EzsignfoldertypeGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -975,13 +975,13 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of EzsignfoldertypeGetAutocompleteV2Response</returns>
-        public ApiResponse<EzsignfoldertypeGetAutocompleteV2Response> EzsignfoldertypeGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        public ApiResponse<EzsignfoldertypeGetAutocompleteV2Response> EzsignfoldertypeGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeGetAutocompleteV2");
 
-            var localVarPath = "/2/object/ezsignfoldertype/getAutocomplete/{sSelector}";
+            var localVarPath = "./2/object/ezsignfoldertype/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1027,7 +1027,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignfoldertypeGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignfoldertypeGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldertypeGetAutocompleteV2Response)));
         }
 
@@ -1041,7 +1041,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldertypeGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldertypeGetAutocompleteV2Response> EzsignfoldertypeGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignfoldertypeGetAutocompleteV2Response> EzsignfoldertypeGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<EzsignfoldertypeGetAutocompleteV2Response> localVarResponse = await EzsignfoldertypeGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -1058,13 +1058,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldertypeGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetAutocompleteV2Response>> EzsignfoldertypeGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetAutocompleteV2Response>> EzsignfoldertypeGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeGetAutocompleteV2");
 
-            var localVarPath = "/2/object/ezsignfoldertype/getAutocomplete/{sSelector}";
+            var localVarPath = "./2/object/ezsignfoldertype/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1110,7 +1110,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignfoldertypeGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignfoldertypeGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldertypeGetAutocompleteV2Response)));
         }
 
@@ -1124,7 +1124,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>EzsignfoldertypeGetListV1Response</returns>
-        public EzsignfoldertypeGetListV1Response EzsignfoldertypeGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        public EzsignfoldertypeGetListV1Response EzsignfoldertypeGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
         {
              ApiResponse<EzsignfoldertypeGetListV1Response> localVarResponse = EzsignfoldertypeGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -1140,10 +1140,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of EzsignfoldertypeGetListV1Response</returns>
-        public ApiResponse<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        public ApiResponse<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
         {
 
-            var localVarPath = "/1/object/ezsignfoldertype/getList";
+            var localVarPath = "./1/object/ezsignfoldertype/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1191,7 +1191,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignfoldertypeGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignfoldertypeGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldertypeGetListV1Response)));
         }
 
@@ -1206,7 +1206,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignfoldertypeGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignfoldertypeGetListV1Response> EzsignfoldertypeGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<EzsignfoldertypeGetListV1Response> localVarResponse = await EzsignfoldertypeGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -1224,10 +1224,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignfoldertypeGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetListV1Response>> EzsignfoldertypeGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignfoldertypeGetListV1Response>> EzsignfoldertypeGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/1/object/ezsignfoldertype/getList";
+            var localVarPath = "./1/object/ezsignfoldertype/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1275,7 +1275,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignfoldertypeGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignfoldertypeGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldertypeGetListV1Response)));
         }
 
@@ -1303,7 +1303,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignfoldertypeID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignfoldertypeID' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeGetObjectV2");
 
-            var localVarPath = "/2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}";
+            var localVarPath = "./2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1346,7 +1346,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignfoldertypeGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignfoldertypeGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldertypeGetObjectV2Response)));
         }
 
@@ -1377,7 +1377,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignfoldertypeID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignfoldertypeID' when calling ObjectEzsignfoldertypeApi->EzsignfoldertypeGetObjectV2");
 
-            var localVarPath = "/2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}";
+            var localVarPath = "./2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1420,7 +1420,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignfoldertypeGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignfoldertypeGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignfoldertypeGetObjectV2Response)));
         }
 

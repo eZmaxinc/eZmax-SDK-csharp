@@ -66,14 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'AObjApikey'
-        /// </summary>
-        [Test]
-        public void AObjApikeyTest()
-        {
-            // TODO unit test for the property 'AObjApikey'
-        }
-        /// <summary>
         /// Test the property 'IRowReturned'
         /// </summary>
         [Test]
@@ -88,6 +80,14 @@ namespace eZmaxApi.Test
         public void IRowFilteredTest()
         {
             // TODO unit test for the property 'IRowFiltered'
+        }
+        /// <summary>
+        /// Test the property 'AObjApikey'
+        /// </summary>
+        [Test]
+        public void AObjApikeyTest()
+        {
+            // TODO unit test for the property 'AObjApikey'
         }
 
     }

@@ -102,6 +102,18 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test UserGetApikeysV1
+        /// </summary>
+        [Test]
+        public void UserGetApikeysV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUserID = null;
+            //var response = instance.UserGetApikeysV1(pkiUserID);
+            //Assert.IsInstanceOf(typeof(UserGetApikeysV1Response), response, "response is UserGetApikeysV1Response");
+        }
+        
+        /// <summary>
         /// Test UserGetAutocompleteV2
         /// </summary>
         [Test]
@@ -111,7 +123,7 @@ namespace eZmaxApi.Test
             //string sSelector = null;
             //string eFilterActive = null;
             //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //var response = instance.UserGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(UserGetAutocompleteV2Response), response, "response is UserGetAutocompleteV2Response");
         }
@@ -138,7 +150,7 @@ namespace eZmaxApi.Test
             //string eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //string sFilter = null;
             //var response = instance.UserGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(UserGetListV1Response), response, "response is UserGetListV1Response");
@@ -178,6 +190,19 @@ namespace eZmaxApi.Test
             //int pkiUserID = null;
             //var response = instance.UserGetSubnetsV1(pkiUserID);
             //Assert.IsInstanceOf(typeof(UserGetSubnetsV1Response), response, "response is UserGetSubnetsV1Response");
+        }
+        
+        /// <summary>
+        /// Test UserSendPasswordResetV1
+        /// </summary>
+        [Test]
+        public void UserSendPasswordResetV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUserID = null;
+            //Object body = null;
+            //var response = instance.UserSendPasswordResetV1(pkiUserID, body);
+            //Assert.IsInstanceOf(typeof(UserSendPasswordResetV1Response), response, "response is UserSendPasswordResetV1Response");
         }
         
     }

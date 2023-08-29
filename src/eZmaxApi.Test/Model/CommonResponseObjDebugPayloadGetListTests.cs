@@ -90,6 +90,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'ARequiredPermission'
         }
         /// <summary>
+        /// Test the property 'BVersionDeprecated'
+        /// </summary>
+        [Test]
+        public void BVersionDeprecatedTest()
+        {
+            // TODO unit test for the property 'BVersionDeprecated'
+        }
+        /// <summary>
         /// Test the property 'AFilter'
         /// </summary>
         [Test]

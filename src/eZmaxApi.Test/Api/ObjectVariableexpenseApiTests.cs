@@ -98,7 +98,7 @@ namespace eZmaxApi.Test
             //string sSelector = null;
             //string eFilterActive = null;
             //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //var response = instance.VariableexpenseGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(VariableexpenseGetAutocompleteV2Response), response, "response is VariableexpenseGetAutocompleteV2Response");
         }
@@ -113,7 +113,7 @@ namespace eZmaxApi.Test
             //string eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //string sFilter = null;
             //var response = instance.VariableexpenseGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(VariableexpenseGetListV1Response), response, "response is VariableexpenseGetListV1Response");

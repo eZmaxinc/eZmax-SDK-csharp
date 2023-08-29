@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingsummaryglobal Object
     /// </summary>
     [DataContract]
-    public partial class EzmaxinvoicingsummaryglobalResponseCompound :  IEquatable<EzmaxinvoicingsummaryglobalResponseCompound>, IValidatableObject
+    public partial class EzmaxinvoicingsummaryglobalResponseCompound :  IEquatable<EzmaxinvoicingsummaryglobalResponseCompound>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryglobalResponseCompound" /> class.
@@ -563,138 +561,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjEzmaxinvoicingcommission.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzmaxinvoicingsummaryglobalID (int) minimum
-            if(this.PkiEzmaxinvoicingsummaryglobalID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryglobalID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryglobalID" });
-            }
-
-
-
-            // FkiEzmaxinvoicingID (int) minimum
-            if(this.FkiEzmaxinvoicingID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
-            }
-
-
-
-            // FkiEzmaxproductID (int) minimum
-            if(this.FkiEzmaxproductID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
-            }
-
-
-
-            // IEzmaxinvoicingsummaryglobalDays (int) minimum
-            if(this.IEzmaxinvoicingsummaryglobalDays < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingsummaryglobalDays, must be a value greater than or equal to 1.", new [] { "IEzmaxinvoicingsummaryglobalDays" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryglobalCountreal (string) pattern
-            Regex regexDEzmaxinvoicingsummaryglobalCountreal = new Regex(@"^-{0,1}[\d]{1,6}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryglobalCountreal.Match(this.DEzmaxinvoicingsummaryglobalCountreal).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalCountreal, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalCountreal, new [] { "DEzmaxinvoicingsummaryglobalCountreal" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryglobalCountbilled (string) pattern
-            Regex regexDEzmaxinvoicingsummaryglobalCountbilled = new Regex(@"^-{0,1}[\d]{1,6}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryglobalCountbilled.Match(this.DEzmaxinvoicingsummaryglobalCountbilled).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalCountbilled, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalCountbilled, new [] { "DEzmaxinvoicingsummaryglobalCountbilled" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryglobalSubtotal (string) pattern
-            Regex regexDEzmaxinvoicingsummaryglobalSubtotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryglobalSubtotal.Match(this.DEzmaxinvoicingsummaryglobalSubtotal).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalSubtotal, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalSubtotal, new [] { "DEzmaxinvoicingsummaryglobalSubtotal" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryglobalRebateamount (string) pattern
-            Regex regexDEzmaxinvoicingsummaryglobalRebateamount = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryglobalRebateamount.Match(this.DEzmaxinvoicingsummaryglobalRebateamount).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalRebateamount, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalRebateamount, new [] { "DEzmaxinvoicingsummaryglobalRebateamount" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryglobalRebatepercent (string) pattern
-            Regex regexDEzmaxinvoicingsummaryglobalRebatepercent = new Regex(@"^-{0,1}[\d]{1,3}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryglobalRebatepercent.Match(this.DEzmaxinvoicingsummaryglobalRebatepercent).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalRebatepercent, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalRebatepercent, new [] { "DEzmaxinvoicingsummaryglobalRebatepercent" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryglobalRebatetotal (string) pattern
-            Regex regexDEzmaxinvoicingsummaryglobalRebatetotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryglobalRebatetotal.Match(this.DEzmaxinvoicingsummaryglobalRebatetotal).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalRebatetotal, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalRebatetotal, new [] { "DEzmaxinvoicingsummaryglobalRebatetotal" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryglobalTotal (string) pattern
-            Regex regexDEzmaxinvoicingsummaryglobalTotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryglobalTotal.Match(this.DEzmaxinvoicingsummaryglobalTotal).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalTotal, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalTotal, new [] { "DEzmaxinvoicingsummaryglobalTotal" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryglobalRepresentative (string) pattern
-            Regex regexDEzmaxinvoicingsummaryglobalRepresentative = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryglobalRepresentative.Match(this.DEzmaxinvoicingsummaryglobalRepresentative).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalRepresentative, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalRepresentative, new [] { "DEzmaxinvoicingsummaryglobalRepresentative" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryglobalPartner (string) pattern
-            Regex regexDEzmaxinvoicingsummaryglobalPartner = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryglobalPartner.Match(this.DEzmaxinvoicingsummaryglobalPartner).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalPartner, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalPartner, new [] { "DEzmaxinvoicingsummaryglobalPartner" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryglobalNet (string) pattern
-            Regex regexDEzmaxinvoicingsummaryglobalNet = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryglobalNet.Match(this.DEzmaxinvoicingsummaryglobalNet).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalNet, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalNet, new [] { "DEzmaxinvoicingsummaryglobalNet" });
-            }
-
-            yield break;
         }
     }
 

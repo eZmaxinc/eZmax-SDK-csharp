@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A custom Webhook object
     /// </summary>
     [DataContract]
-    public partial class CustomWebhookResponse :  IEquatable<CustomWebhookResponse>, IValidatableObject
+    public partial class CustomWebhookResponse :  IEquatable<CustomWebhookResponse>
     {
         /// <summary>
         /// Gets or Sets EWebhookModule
@@ -53,8 +51,6 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomWebhookResponse" /> class.
         /// </summary>
-        /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
-        /// <param name="bWebhookTest">Wheter the webhook received is a manual test or a real event (required).</param>
         /// <param name="pkiWebhookID">The unique ID of the Webhook (required).</param>
         /// <param name="sWebhookDescription">The description of the Webhook (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
@@ -66,28 +62,10 @@ namespace eZmaxApi.Model
         /// <param name="sWebhookEmailfailed">The email that will receive the Webhook in case all attempts fail (required).</param>
         /// <param name="bWebhookIsactive">Whether the Webhook is active or not.</param>
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
-        public CustomWebhookResponse(string pksCustomerCode = default(string), bool bWebhookTest = default(bool), int pkiWebhookID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), bool bWebhookIsactive = default(bool), bool bWebhookSkipsslvalidation = default(bool))
+        /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
+        /// <param name="bWebhookTest">Wheter the webhook received is a manual test or a real event (required).</param>
+        public CustomWebhookResponse(int pkiWebhookID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), bool bWebhookIsactive = default(bool), bool bWebhookSkipsslvalidation = default(bool), string pksCustomerCode = default(string), bool bWebhookTest = default(bool))
         {
-            // to ensure "pksCustomerCode" is required (not null)
-            if (pksCustomerCode == null)
-            {
-                throw new InvalidDataException("pksCustomerCode is a required property for CustomWebhookResponse and cannot be null");
-            }
-            else
-            {
-                this.PksCustomerCode = pksCustomerCode;
-            }
-
-            // to ensure "bWebhookTest" is required (not null)
-            if (bWebhookTest == null)
-            {
-                throw new InvalidDataException("bWebhookTest is a required property for CustomWebhookResponse and cannot be null");
-            }
-            else
-            {
-                this.BWebhookTest = bWebhookTest;
-            }
-
             // to ensure "pkiWebhookID" is required (not null)
             if (pkiWebhookID == null)
             {
@@ -148,26 +126,32 @@ namespace eZmaxApi.Model
                 this.BWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
             }
 
+            // to ensure "pksCustomerCode" is required (not null)
+            if (pksCustomerCode == null)
+            {
+                throw new InvalidDataException("pksCustomerCode is a required property for CustomWebhookResponse and cannot be null");
+            }
+            else
+            {
+                this.PksCustomerCode = pksCustomerCode;
+            }
+
+            // to ensure "bWebhookTest" is required (not null)
+            if (bWebhookTest == null)
+            {
+                throw new InvalidDataException("bWebhookTest is a required property for CustomWebhookResponse and cannot be null");
+            }
+            else
+            {
+                this.BWebhookTest = bWebhookTest;
+            }
+
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             this.EWebhookEzsignevent = eWebhookEzsignevent;
             this.EWebhookManagementevent = eWebhookManagementevent;
             this.BWebhookIsactive = bWebhookIsactive;
         }
-
-        /// <summary>
-        /// The customer code assigned to your account
-        /// </summary>
-        /// <value>The customer code assigned to your account</value>
-        [DataMember(Name="pksCustomerCode", EmitDefaultValue=true)]
-        public string PksCustomerCode { get; set; }
-
-        /// <summary>
-        /// Wheter the webhook received is a manual test or a real event
-        /// </summary>
-        /// <value>Wheter the webhook received is a manual test or a real event</value>
-        [DataMember(Name="bWebhookTest", EmitDefaultValue=true)]
-        public bool BWebhookTest { get; set; }
 
         /// <summary>
         /// The unique ID of the Webhook
@@ -229,6 +213,20 @@ namespace eZmaxApi.Model
         public bool BWebhookSkipsslvalidation { get; set; }
 
         /// <summary>
+        /// The customer code assigned to your account
+        /// </summary>
+        /// <value>The customer code assigned to your account</value>
+        [DataMember(Name="pksCustomerCode", EmitDefaultValue=true)]
+        public string PksCustomerCode { get; set; }
+
+        /// <summary>
+        /// Wheter the webhook received is a manual test or a real event
+        /// </summary>
+        /// <value>Wheter the webhook received is a manual test or a real event</value>
+        [DataMember(Name="bWebhookTest", EmitDefaultValue=true)]
+        public bool BWebhookTest { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -236,8 +234,6 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CustomWebhookResponse {\n");
-            sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
-            sb.Append("  BWebhookTest: ").Append(BWebhookTest).Append("\n");
             sb.Append("  PkiWebhookID: ").Append(PkiWebhookID).Append("\n");
             sb.Append("  SWebhookDescription: ").Append(SWebhookDescription).Append("\n");
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
@@ -249,6 +245,8 @@ namespace eZmaxApi.Model
             sb.Append("  SWebhookEmailfailed: ").Append(SWebhookEmailfailed).Append("\n");
             sb.Append("  BWebhookIsactive: ").Append(BWebhookIsactive).Append("\n");
             sb.Append("  BWebhookSkipsslvalidation: ").Append(BWebhookSkipsslvalidation).Append("\n");
+            sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
+            sb.Append("  BWebhookTest: ").Append(BWebhookTest).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -283,16 +281,6 @@ namespace eZmaxApi.Model
                 return false;
 
             return 
-                (
-                    this.PksCustomerCode == input.PksCustomerCode ||
-                    (this.PksCustomerCode != null &&
-                    this.PksCustomerCode.Equals(input.PksCustomerCode))
-                ) && 
-                (
-                    this.BWebhookTest == input.BWebhookTest ||
-                    (this.BWebhookTest != null &&
-                    this.BWebhookTest.Equals(input.BWebhookTest))
-                ) && 
                 (
                     this.PkiWebhookID == input.PkiWebhookID ||
                     (this.PkiWebhookID != null &&
@@ -347,6 +335,16 @@ namespace eZmaxApi.Model
                     this.BWebhookSkipsslvalidation == input.BWebhookSkipsslvalidation ||
                     (this.BWebhookSkipsslvalidation != null &&
                     this.BWebhookSkipsslvalidation.Equals(input.BWebhookSkipsslvalidation))
+                ) && 
+                (
+                    this.PksCustomerCode == input.PksCustomerCode ||
+                    (this.PksCustomerCode != null &&
+                    this.PksCustomerCode.Equals(input.PksCustomerCode))
+                ) && 
+                (
+                    this.BWebhookTest == input.BWebhookTest ||
+                    (this.BWebhookTest != null &&
+                    this.BWebhookTest.Equals(input.BWebhookTest))
                 );
         }
 
@@ -359,10 +357,6 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.PksCustomerCode != null)
-                    hashCode = hashCode * 59 + this.PksCustomerCode.GetHashCode();
-                if (this.BWebhookTest != null)
-                    hashCode = hashCode * 59 + this.BWebhookTest.GetHashCode();
                 if (this.PkiWebhookID != null)
                     hashCode = hashCode * 59 + this.PkiWebhookID.GetHashCode();
                 if (this.SWebhookDescription != null)
@@ -385,38 +379,12 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BWebhookIsactive.GetHashCode();
                 if (this.BWebhookSkipsslvalidation != null)
                     hashCode = hashCode * 59 + this.BWebhookSkipsslvalidation.GetHashCode();
+                if (this.PksCustomerCode != null)
+                    hashCode = hashCode * 59 + this.PksCustomerCode.GetHashCode();
+                if (this.BWebhookTest != null)
+                    hashCode = hashCode * 59 + this.BWebhookTest.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            // PksCustomerCode (string) maxLength
-            if(this.PksCustomerCode != null && this.PksCustomerCode.Length > 6)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksCustomerCode, length must be less than 6.", new [] { "PksCustomerCode" });
-            }
-
-            // PksCustomerCode (string) minLength
-            if(this.PksCustomerCode != null && this.PksCustomerCode.Length < 2)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksCustomerCode, length must be greater than 2.", new [] { "PksCustomerCode" });
-            }
-
-
-
-            // FkiEzsignfoldertypeID (int) minimum
-            if(this.FkiEzsignfoldertypeID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
-            }
-
-            yield break;
         }
     }
 

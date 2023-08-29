@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Phonetype AutocompleteElement Response
     /// </summary>
     [DataContract]
-    public partial class PhonetypeAutocompleteElementResponse :  IEquatable<PhonetypeAutocompleteElementResponse>, IValidatableObject
+    public partial class PhonetypeAutocompleteElementResponse :  IEquatable<PhonetypeAutocompleteElementResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PhonetypeAutocompleteElementResponse" /> class.
@@ -175,33 +173,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BPhonetypeIsactive.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiPhonetypeID (int) minimum
-            if(this.PkiPhonetypeID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "PkiPhonetypeID" });
-            }
-
-
-
-            // SPhonetypeNameX (string) pattern
-            Regex regexSPhonetypeNameX = new Regex(@"^.{0,20}$", RegexOptions.CultureInvariant);
-            if (false == regexSPhonetypeNameX.Match(this.SPhonetypeNameX).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhonetypeNameX, must match a pattern of " + regexSPhonetypeNameX, new [] { "SPhonetypeNameX" });
-            }
-
-            yield break;
         }
     }
 

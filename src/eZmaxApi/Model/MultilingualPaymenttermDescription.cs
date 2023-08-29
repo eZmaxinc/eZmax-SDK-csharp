@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// Description of the Paymentterm
     /// </summary>
     [DataContract]
-    public partial class MultilingualPaymenttermDescription :  IEquatable<MultilingualPaymenttermDescription>, IValidatableObject
+    public partial class MultilingualPaymenttermDescription :  IEquatable<MultilingualPaymenttermDescription>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualPaymenttermDescription" /> class.
@@ -126,34 +124,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SPaymenttermDescription2.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // SPaymenttermDescription1 (string) pattern
-            Regex regexSPaymenttermDescription1 = new Regex(@"^.{1,40}$", RegexOptions.CultureInvariant);
-            if (false == regexSPaymenttermDescription1.Match(this.SPaymenttermDescription1).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermDescription1, must match a pattern of " + regexSPaymenttermDescription1, new [] { "SPaymenttermDescription1" });
-            }
-
-
-
-            // SPaymenttermDescription2 (string) pattern
-            Regex regexSPaymenttermDescription2 = new Regex(@"^.{1,40}$", RegexOptions.CultureInvariant);
-            if (false == regexSPaymenttermDescription2.Match(this.SPaymenttermDescription2).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermDescription2, must match a pattern of " + regexSPaymenttermDescription2, new [] { "SPaymenttermDescription2" });
-            }
-
-            yield break;
         }
     }
 

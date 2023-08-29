@@ -73,7 +73,7 @@ namespace eZmaxApi.Test
             //string eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //string sFilter = null;
             //var response = instance.ClonehistoryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(ClonehistoryGetListV1Response), response, "response is ClonehistoryGetListV1Response");

@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Franchisereferalincome Object and children to create a complete structure
     /// </summary>
     [DataContract]
-    public partial class FranchisereferalincomeRequestCompound :  IEquatable<FranchisereferalincomeRequestCompound>, IValidatableObject
+    public partial class FranchisereferalincomeRequestCompound :  IEquatable<FranchisereferalincomeRequestCompound>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeRequestCompound" /> class.
@@ -450,56 +448,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjContact.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiFranchisereferalincomeID (int) minimum
-            if(this.PkiFranchisereferalincomeID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiFranchisereferalincomeID, must be a value greater than or equal to 0.", new [] { "PkiFranchisereferalincomeID" });
-            }
-
-
-
-            // FkiFranchisebrokerID (int) minimum
-            if(this.FkiFranchisebrokerID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchisebrokerID, must be a value greater than or equal to 0.", new [] { "FkiFranchisebrokerID" });
-            }
-
-
-
-            // FkiFranchisereferalincomeprogramID (int) minimum
-            if(this.FkiFranchisereferalincomeprogramID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchisereferalincomeprogramID, must be a value greater than or equal to 0.", new [] { "FkiFranchisereferalincomeprogramID" });
-            }
-
-
-
-            // FkiPeriodID (int) minimum
-            if(this.FkiPeriodID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
-            }
-
-
-
-            // FkiFranchiseofficeID (int) minimum
-            if(this.FkiFranchiseofficeID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
-            }
-
-            yield break;
         }
     }
 

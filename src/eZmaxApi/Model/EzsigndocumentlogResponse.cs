@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// An Ezsigndocumentlog Object
     /// </summary>
     [DataContract]
-    public partial class EzsigndocumentlogResponse :  IEquatable<EzsigndocumentlogResponse>, IValidatableObject
+    public partial class EzsigndocumentlogResponse :  IEquatable<EzsigndocumentlogResponse>
     {
         /// <summary>
         /// Gets or Sets EEzsigndocumentlogType
@@ -286,32 +284,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzsigndocumentlogIP.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // FkiUserID (int) minimum
-            if(this.FkiUserID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
-            }
-
-
-
-            // FkiEzsignsignerID (int) minimum
-            if(this.FkiEzsignsignerID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignerID" });
-            }
-
-            yield break;
         }
     }
 

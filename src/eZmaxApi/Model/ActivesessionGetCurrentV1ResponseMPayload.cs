@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/activesession/getCurrent
     /// </summary>
     [DataContract]
-    public partial class ActivesessionGetCurrentV1ResponseMPayload :  IEquatable<ActivesessionGetCurrentV1ResponseMPayload>, IValidatableObject
+    public partial class ActivesessionGetCurrentV1ResponseMPayload :  IEquatable<ActivesessionGetCurrentV1ResponseMPayload>
     {
         /// <summary>
         /// Gets or Sets EActivesessionUsertype
@@ -473,64 +471,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AEModuleInternalname.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // FkiLanguageID (int) maximum
-            if(this.FkiLanguageID > (int)2)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
-            }
-
-            // FkiLanguageID (int) minimum
-            if(this.FkiLanguageID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
-            }
-
-            // PksCustomerCode (string) maxLength
-            if(this.PksCustomerCode != null && this.PksCustomerCode.Length > 6)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksCustomerCode, length must be less than 6.", new [] { "PksCustomerCode" });
-            }
-
-            // PksCustomerCode (string) minLength
-            if(this.PksCustomerCode != null && this.PksCustomerCode.Length < 2)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksCustomerCode, length must be greater than 2.", new [] { "PksCustomerCode" });
-            }
-
-
-
-            // FkiSystemconfigurationtypeID (int) minimum
-            if(this.FkiSystemconfigurationtypeID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
-            }
-
-
-
-            // FkiSignatureID (int) maximum
-            if(this.FkiSignatureID > (int)16777215)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSignatureID, must be a value less than or equal to 16777215.", new [] { "FkiSignatureID" });
-            }
-
-            // FkiSignatureID (int) minimum
-            if(this.FkiSignatureID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSignatureID, must be a value greater than or equal to 0.", new [] { "FkiSignatureID" });
-            }
-
-            yield break;
         }
     }
 

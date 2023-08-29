@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -294,7 +294,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksendsignermappingCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksendsignermappingCreateObjectV1Request' when calling ObjectEzsignbulksendsignermappingApi->EzsignbulksendsignermappingCreateObjectV1");
 
-            var localVarPath = "/1/object/ezsignbulksendsignermapping";
+            var localVarPath = "./1/object/ezsignbulksendsignermapping";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -345,7 +345,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendsignermappingCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignbulksendsignermappingCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendsignermappingCreateObjectV1Response)));
         }
 
@@ -376,7 +376,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksendsignermappingCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksendsignermappingCreateObjectV1Request' when calling ObjectEzsignbulksendsignermappingApi->EzsignbulksendsignermappingCreateObjectV1");
 
-            var localVarPath = "/1/object/ezsignbulksendsignermapping";
+            var localVarPath = "./1/object/ezsignbulksendsignermapping";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendsignermappingCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignbulksendsignermappingCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendsignermappingCreateObjectV1Response)));
         }
 
@@ -455,7 +455,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendsignermappingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendsignermappingID' when calling ObjectEzsignbulksendsignermappingApi->EzsignbulksendsignermappingDeleteObjectV1");
 
-            var localVarPath = "/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}";
+            var localVarPath = "./1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -498,7 +498,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignbulksendsignermappingDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendsignermappingDeleteObjectV1Response)));
         }
 
@@ -529,7 +529,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendsignermappingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendsignermappingID' when calling ObjectEzsignbulksendsignermappingApi->EzsignbulksendsignermappingDeleteObjectV1");
 
-            var localVarPath = "/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}";
+            var localVarPath = "./1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -572,7 +572,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignbulksendsignermappingDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendsignermappingDeleteObjectV1Response)));
         }
 
@@ -600,7 +600,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendsignermappingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendsignermappingID' when calling ObjectEzsignbulksendsignermappingApi->EzsignbulksendsignermappingGetObjectV2");
 
-            var localVarPath = "/2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}";
+            var localVarPath = "./2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -643,7 +643,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendsignermappingGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignbulksendsignermappingGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendsignermappingGetObjectV2Response)));
         }
 
@@ -674,7 +674,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendsignermappingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendsignermappingID' when calling ObjectEzsignbulksendsignermappingApi->EzsignbulksendsignermappingGetObjectV2");
 
-            var localVarPath = "/2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}";
+            var localVarPath = "./2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -717,7 +717,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendsignermappingGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsignbulksendsignermappingGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendsignermappingGetObjectV2Response)));
         }
 

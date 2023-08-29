@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -206,7 +206,7 @@ namespace eZmaxApi.Api
             if (eContext == null)
                 throw new ApiException(400, "Missing required parameter 'eContext' when calling ObjectModulegroupApi->ModulegroupGetAllV1");
 
-            var localVarPath = "/1/object/modulegroup/getAll/{eContext}";
+            var localVarPath = "./1/object/modulegroup/getAll/{eContext}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -249,7 +249,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ModulegroupGetAllV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (ModulegroupGetAllV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModulegroupGetAllV1Response)));
         }
 
@@ -280,7 +280,7 @@ namespace eZmaxApi.Api
             if (eContext == null)
                 throw new ApiException(400, "Missing required parameter 'eContext' when calling ObjectModulegroupApi->ModulegroupGetAllV1");
 
-            var localVarPath = "/1/object/modulegroup/getAll/{eContext}";
+            var localVarPath = "./1/object/modulegroup/getAll/{eContext}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -323,7 +323,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ModulegroupGetAllV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (ModulegroupGetAllV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModulegroupGetAllV1Response)));
         }
 

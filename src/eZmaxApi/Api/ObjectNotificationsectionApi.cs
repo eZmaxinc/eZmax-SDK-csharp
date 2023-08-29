@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -215,7 +215,7 @@ namespace eZmaxApi.Api
             if (bShowHidden == null)
                 throw new ApiException(400, "Missing required parameter 'bShowHidden' when calling ObjectNotificationsectionApi->NotificationsectionGetNotificationtestsV1");
 
-            var localVarPath = "/1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests";
+            var localVarPath = "./1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -259,7 +259,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<NotificationsectionGetNotificationtestsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (NotificationsectionGetNotificationtestsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificationsectionGetNotificationtestsV1Response)));
         }
 
@@ -295,7 +295,7 @@ namespace eZmaxApi.Api
             if (bShowHidden == null)
                 throw new ApiException(400, "Missing required parameter 'bShowHidden' when calling ObjectNotificationsectionApi->NotificationsectionGetNotificationtestsV1");
 
-            var localVarPath = "/1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests";
+            var localVarPath = "./1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -339,7 +339,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<NotificationsectionGetNotificationtestsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (NotificationsectionGetNotificationtestsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificationsectionGetNotificationtestsV1Response)));
         }
 

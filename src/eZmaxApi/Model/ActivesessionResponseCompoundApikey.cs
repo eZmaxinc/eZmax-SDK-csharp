@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// An Activesession-&gt;Apikey object and children to create a complete structure
     /// </summary>
     [DataContract]
-    public partial class ActivesessionResponseCompoundApikey :  IEquatable<ActivesessionResponseCompoundApikey>, IValidatableObject
+    public partial class ActivesessionResponseCompoundApikey :  IEquatable<ActivesessionResponseCompoundApikey>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundApikey" /> class.
@@ -149,24 +147,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SApikeyDescriptionX.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiApikeyID (int) minimum
-            if(this.PkiApikeyID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiApikeyID, must be a value greater than or equal to 0.", new [] { "PkiApikeyID" });
-            }
-
-            yield break;
         }
     }
 

@@ -170,6 +170,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SEzsigntemplateformfieldgroupRegexp'
         }
         /// <summary>
+        /// Test the property 'EEzsigntemplateformfieldgroupTextvalidation'
+        /// </summary>
+        [Test]
+        public void EEzsigntemplateformfieldgroupTextvalidationTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplateformfieldgroupTextvalidation'
+        }
+        /// <summary>
         /// Test the property 'TEzsigntemplateformfieldgroupTooltip'
         /// </summary>
         [Test]

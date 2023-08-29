@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A User Object
     /// </summary>
     [DataContract]
-    public partial class UserRequest :  IEquatable<UserRequest>, IValidatableObject
+    public partial class UserRequest :  IEquatable<UserRequest>
     {
         /// <summary>
         /// Gets or Sets EUserType
@@ -667,133 +665,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BUserChangepassword.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiUserID (int) minimum
-            if(this.PkiUserID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
-            }
-
-
-
-            // FkiAgentID (int) minimum
-            if(this.FkiAgentID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
-            }
-
-
-
-            // FkiBrokerID (int) minimum
-            if(this.FkiBrokerID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
-            }
-
-
-
-            // FkiAssistantID (int) minimum
-            if(this.FkiAssistantID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAssistantID, must be a value greater than or equal to 0.", new [] { "FkiAssistantID" });
-            }
-
-
-
-            // FkiEmployeeID (int) minimum
-            if(this.FkiEmployeeID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
-            }
-
-
-
-            // FkiCompanyIDDefault (int) maximum
-            if(this.FkiCompanyIDDefault > (int)255)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCompanyIDDefault, must be a value less than or equal to 255.", new [] { "FkiCompanyIDDefault" });
-            }
-
-            // FkiCompanyIDDefault (int) minimum
-            if(this.FkiCompanyIDDefault < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCompanyIDDefault, must be a value greater than or equal to 1.", new [] { "FkiCompanyIDDefault" });
-            }
-
-
-
-            // FkiDepartmentIDDefault (int) minimum
-            if(this.FkiDepartmentIDDefault < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepartmentIDDefault, must be a value greater than or equal to 0.", new [] { "FkiDepartmentIDDefault" });
-            }
-
-
-
-            // FkiTimezoneID (int) minimum
-            if(this.FkiTimezoneID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
-            }
-
-
-
-            // FkiLanguageID (int) maximum
-            if(this.FkiLanguageID > (int)2)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
-            }
-
-            // FkiLanguageID (int) minimum
-            if(this.FkiLanguageID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
-            }
-
-
-
-            // FkiBillingentityinternalID (int) minimum
-            if(this.FkiBillingentityinternalID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
-            }
-
-
-
-            // FkiSecretquestionID (int) minimum
-            if(this.FkiSecretquestionID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSecretquestionID, must be a value greater than or equal to 0.", new [] { "FkiSecretquestionID" });
-            }
-
-
-
-            // FkiModuleIDForm (int) minimum
-            if(this.FkiModuleIDForm < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiModuleIDForm, must be a value greater than or equal to 0.", new [] { "FkiModuleIDForm" });
-            }
-
-
-
-            // SUserLoginname (string) pattern
-            Regex regexSUserLoginname = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,4})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
-            if (false == regexSUserLoginname.Match(this.SUserLoginname).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
-            }
-
-            yield break;
         }
     }
 

@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// Payload for Websocket Error V1
     /// </summary>
     [DataContract]
-    public partial class WebsocketResponseErrorV1MPayload :  IEquatable<WebsocketResponseErrorV1MPayload>, IValidatableObject
+    public partial class WebsocketResponseErrorV1MPayload :  IEquatable<WebsocketResponseErrorV1MPayload>
     {
         /// <summary>
         /// Gets or Sets EErrorCode
@@ -148,25 +146,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.EErrorCode.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // SErrorMessage (string) pattern
-            Regex regexSErrorMessage = new Regex(@"^.{0,500}$", RegexOptions.CultureInvariant);
-            if (false == regexSErrorMessage.Match(this.SErrorMessage).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SErrorMessage, must match a pattern of " + regexSErrorMessage, new [] { "SErrorMessage" });
-            }
-
-            yield break;
         }
     }
 

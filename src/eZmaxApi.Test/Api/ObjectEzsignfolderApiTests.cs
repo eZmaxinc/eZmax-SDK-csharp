@@ -269,7 +269,7 @@ namespace eZmaxApi.Test
             //string eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //string sFilter = null;
             //var response = instance.EzsignfolderGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(EzsignfolderGetListV1Response), response, "response is EzsignfolderGetListV1Response");

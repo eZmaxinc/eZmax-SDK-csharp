@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Sessionhistory List Element
     /// </summary>
     [DataContract]
-    public partial class SessionhistoryListElement :  IEquatable<SessionhistoryListElement>, IValidatableObject
+    public partial class SessionhistoryListElement :  IEquatable<SessionhistoryListElement>
     {
         /// <summary>
         /// Gets or Sets ESessionhistoryEndby
@@ -320,97 +318,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SUserLoginname.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiSessionhistoryID (int) maximum
-            if(this.PkiSessionhistoryID > (int)2147483647)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSessionhistoryID, must be a value less than or equal to 2147483647.", new [] { "PkiSessionhistoryID" });
-            }
-
-            // PkiSessionhistoryID (int) minimum
-            if(this.PkiSessionhistoryID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSessionhistoryID, must be a value greater than or equal to 1.", new [] { "PkiSessionhistoryID" });
-            }
-
-
-
-            // FkiComputerID (int) maximum
-            if(this.FkiComputerID > (int)65535)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiComputerID, must be a value less than or equal to 65535.", new [] { "FkiComputerID" });
-            }
-
-            // FkiComputerID (int) minimum
-            if(this.FkiComputerID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiComputerID, must be a value greater than or equal to 1.", new [] { "FkiComputerID" });
-            }
-
-
-
-            // FkiUserID (int) minimum
-            if(this.FkiUserID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
-            }
-
-
-
-            // DtSessionhistoryFirsthit (string) pattern
-            Regex regexDtSessionhistoryFirsthit = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
-            if (false == regexDtSessionhistoryFirsthit.Match(this.DtSessionhistoryFirsthit).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtSessionhistoryFirsthit, must match a pattern of " + regexDtSessionhistoryFirsthit, new [] { "DtSessionhistoryFirsthit" });
-            }
-
-
-
-            // DtSessionhistoryLasthit (string) pattern
-            Regex regexDtSessionhistoryLasthit = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
-            if (false == regexDtSessionhistoryLasthit.Match(this.DtSessionhistoryLasthit).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtSessionhistoryLasthit, must match a pattern of " + regexDtSessionhistoryLasthit, new [] { "DtSessionhistoryLasthit" });
-            }
-
-
-
-            // SComputerDescription (string) pattern
-            Regex regexSComputerDescription = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-            if (false == regexSComputerDescription.Match(this.SComputerDescription).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SComputerDescription, must match a pattern of " + regexSComputerDescription, new [] { "SComputerDescription" });
-            }
-
-
-
-            // SSessionhistoryDuration (string) pattern
-            Regex regexSSessionhistoryDuration = new Regex(@"^(0[0-9]{1}|\d{2,}):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
-            if (false == regexSSessionhistoryDuration.Match(this.SSessionhistoryDuration).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SSessionhistoryDuration, must match a pattern of " + regexSSessionhistoryDuration, new [] { "SSessionhistoryDuration" });
-            }
-
-
-
-            // SUserLoginname (string) pattern
-            Regex regexSUserLoginname = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,4})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
-            if (false == regexSUserLoginname.Match(this.SUserLoginname).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
-            }
-
-            yield break;
         }
     }
 

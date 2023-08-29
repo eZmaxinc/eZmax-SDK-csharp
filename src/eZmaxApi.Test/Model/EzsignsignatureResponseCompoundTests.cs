@@ -234,6 +234,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SEzsignsignatureDescription'
         }
         /// <summary>
+        /// Test the property 'IEzsignsignatureMaxlength'
+        /// </summary>
+        [Test]
+        public void IEzsignsignatureMaxlengthTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureMaxlength'
+        }
+        /// <summary>
         /// Test the property 'EEzsignsignatureTextvalidation'
         /// </summary>
         [Test]

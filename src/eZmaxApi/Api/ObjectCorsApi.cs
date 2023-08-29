@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -342,7 +342,7 @@ namespace eZmaxApi.Api
             if (corsCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'corsCreateObjectV1Request' when calling ObjectCorsApi->CorsCreateObjectV1");
 
-            var localVarPath = "/1/object/cors";
+            var localVarPath = "./1/object/cors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -393,7 +393,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CorsCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (CorsCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CorsCreateObjectV1Response)));
         }
 
@@ -424,7 +424,7 @@ namespace eZmaxApi.Api
             if (corsCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'corsCreateObjectV1Request' when calling ObjectCorsApi->CorsCreateObjectV1");
 
-            var localVarPath = "/1/object/cors";
+            var localVarPath = "./1/object/cors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -475,7 +475,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CorsCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (CorsCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CorsCreateObjectV1Response)));
         }
 
@@ -503,7 +503,7 @@ namespace eZmaxApi.Api
             if (pkiCorsID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiCorsID' when calling ObjectCorsApi->CorsDeleteObjectV1");
 
-            var localVarPath = "/1/object/cors/{pkiCorsID}";
+            var localVarPath = "./1/object/cors/{pkiCorsID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -546,7 +546,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CorsDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (CorsDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CorsDeleteObjectV1Response)));
         }
 
@@ -577,7 +577,7 @@ namespace eZmaxApi.Api
             if (pkiCorsID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiCorsID' when calling ObjectCorsApi->CorsDeleteObjectV1");
 
-            var localVarPath = "/1/object/cors/{pkiCorsID}";
+            var localVarPath = "./1/object/cors/{pkiCorsID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -620,7 +620,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CorsDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (CorsDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CorsDeleteObjectV1Response)));
         }
 
@@ -653,7 +653,7 @@ namespace eZmaxApi.Api
             if (corsEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'corsEditObjectV1Request' when calling ObjectCorsApi->CorsEditObjectV1");
 
-            var localVarPath = "/1/object/cors/{pkiCorsID}";
+            var localVarPath = "./1/object/cors/{pkiCorsID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -705,7 +705,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CorsEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (CorsEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CorsEditObjectV1Response)));
         }
 
@@ -741,7 +741,7 @@ namespace eZmaxApi.Api
             if (corsEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'corsEditObjectV1Request' when calling ObjectCorsApi->CorsEditObjectV1");
 
-            var localVarPath = "/1/object/cors/{pkiCorsID}";
+            var localVarPath = "./1/object/cors/{pkiCorsID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -793,7 +793,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CorsEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (CorsEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CorsEditObjectV1Response)));
         }
 
@@ -821,7 +821,7 @@ namespace eZmaxApi.Api
             if (pkiCorsID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiCorsID' when calling ObjectCorsApi->CorsGetObjectV2");
 
-            var localVarPath = "/2/object/cors/{pkiCorsID}";
+            var localVarPath = "./2/object/cors/{pkiCorsID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -864,7 +864,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CorsGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (CorsGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CorsGetObjectV2Response)));
         }
 
@@ -895,7 +895,7 @@ namespace eZmaxApi.Api
             if (pkiCorsID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiCorsID' when calling ObjectCorsApi->CorsGetObjectV2");
 
-            var localVarPath = "/2/object/cors/{pkiCorsID}";
+            var localVarPath = "./2/object/cors/{pkiCorsID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -938,7 +938,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CorsGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (CorsGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CorsGetObjectV2Response)));
         }
 

@@ -98,7 +98,7 @@ namespace eZmaxApi.Test
             //string sSelector = null;
             //string eFilterActive = null;
             //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //var response = instance.EzsignfoldertypeGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(CommonGetAutocompleteV1Response), response, "response is CommonGetAutocompleteV1Response");
         }
@@ -113,7 +113,7 @@ namespace eZmaxApi.Test
             //string sSelector = null;
             //string eFilterActive = null;
             //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //var response = instance.EzsignfoldertypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(EzsignfoldertypeGetAutocompleteV2Response), response, "response is EzsignfoldertypeGetAutocompleteV2Response");
         }
@@ -128,7 +128,7 @@ namespace eZmaxApi.Test
             //string eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //string sFilter = null;
             //var response = instance.EzsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(EzsignfoldertypeGetListV1Response), response, "response is EzsignfoldertypeGetListV1Response");

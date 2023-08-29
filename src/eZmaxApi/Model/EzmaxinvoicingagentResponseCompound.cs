@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingagent Object
     /// </summary>
     [DataContract]
-    public partial class EzmaxinvoicingagentResponseCompound :  IEquatable<EzmaxinvoicingagentResponseCompound>, IValidatableObject
+    public partial class EzmaxinvoicingagentResponseCompound :  IEquatable<EzmaxinvoicingagentResponseCompound>
     {
         /// <summary>
         /// Gets or Sets EEzmaxinvoicingagentVariationezmax
@@ -604,128 +602,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ObjContactName.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzmaxinvoicingagentID (int) minimum
-            if(this.PkiEzmaxinvoicingagentID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingagentID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingagentID" });
-            }
-
-
-
-            // FkiEzmaxinvoicingID (int) minimum
-            if(this.FkiEzmaxinvoicingID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
-            }
-
-
-
-            // FkiBillingentityinternalID (int) minimum
-            if(this.FkiBillingentityinternalID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
-            }
-
-
-
-            // FkiAgentID (int) minimum
-            if(this.FkiAgentID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
-            }
-
-
-
-            // FkiBrokerID (int) minimum
-            if(this.FkiBrokerID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
-            }
-
-
-
-            // IEzmaxinvoicingagentSession (int) minimum
-            if(this.IEzmaxinvoicingagentSession < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingagentSession, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentSession" });
-            }
-
-
-
-            // IEzmaxinvoicingagentCloned (int) minimum
-            if(this.IEzmaxinvoicingagentCloned < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingagentCloned, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentCloned" });
-            }
-
-
-
-            // IEzmaxinvoicingagentInvoice (int) minimum
-            if(this.IEzmaxinvoicingagentInvoice < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingagentInvoice, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentInvoice" });
-            }
-
-
-
-            // IEzmaxinvoicingagentInscription (int) minimum
-            if(this.IEzmaxinvoicingagentInscription < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingagentInscription, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentInscription" });
-            }
-
-
-
-            // IEzmaxinvoicingagentInscriptionactive (int) minimum
-            if(this.IEzmaxinvoicingagentInscriptionactive < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingagentInscriptionactive, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentInscriptionactive" });
-            }
-
-
-
-            // IEzmaxinvoicingagentSale (int) minimum
-            if(this.IEzmaxinvoicingagentSale < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingagentSale, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentSale" });
-            }
-
-
-
-            // IEzmaxinvoicingagentOtherincome (int) minimum
-            if(this.IEzmaxinvoicingagentOtherincome < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingagentOtherincome, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentOtherincome" });
-            }
-
-
-
-            // IEzmaxinvoicingagentCommissioncalculation (int) minimum
-            if(this.IEzmaxinvoicingagentCommissioncalculation < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingagentCommissioncalculation, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentCommissioncalculation" });
-            }
-
-
-
-            // IEzmaxinvoicingagentEzsigndocument (int) minimum
-            if(this.IEzmaxinvoicingagentEzsigndocument < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingagentEzsigndocument, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentEzsigndocument" });
-            }
-
-            yield break;
         }
     }
 

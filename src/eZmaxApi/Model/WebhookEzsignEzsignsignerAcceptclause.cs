@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// This is the base Webhook object
     /// </summary>
     [DataContract]
-    public partial class WebhookEzsignEzsignsignerAcceptclause :  IEquatable<WebhookEzsignEzsignsignerAcceptclause>, IValidatableObject
+    public partial class WebhookEzsignEzsignsignerAcceptclause :  IEquatable<WebhookEzsignEzsignsignerAcceptclause>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEzsignEzsignsignerAcceptclause" /> class.
@@ -38,22 +36,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEzsignEzsignsignerAcceptclause" /> class.
         /// </summary>
-        /// <param name="objEzsignfolder">objEzsignfolder.</param>
-        /// <param name="objEzsignfoldersignerassociation">objEzsignfoldersignerassociation (required).</param>
         /// <param name="objWebhook">objWebhook (required).</param>
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        public WebhookEzsignEzsignsignerAcceptclause(EzsignfolderResponse objEzsignfolder = default(EzsignfolderResponse), EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation = default(EzsignfoldersignerassociationResponseCompound), CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>))
+        /// <param name="objEzsignfolder">objEzsignfolder.</param>
+        /// <param name="objEzsignfoldersignerassociation">objEzsignfoldersignerassociation (required).</param>
+        public WebhookEzsignEzsignsignerAcceptclause(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), EzsignfolderResponse objEzsignfolder = default(EzsignfolderResponse), EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation = default(EzsignfoldersignerassociationResponseCompound))
         {
-            // to ensure "objEzsignfoldersignerassociation" is required (not null)
-            if (objEzsignfoldersignerassociation == null)
-            {
-                throw new InvalidDataException("objEzsignfoldersignerassociation is a required property for WebhookEzsignEzsignsignerAcceptclause and cannot be null");
-            }
-            else
-            {
-                this.ObjEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
-            }
-
             // to ensure "objWebhook" is required (not null)
             if (objWebhook == null)
             {
@@ -74,20 +62,18 @@ namespace eZmaxApi.Model
                 this.AObjAttempt = aObjAttempt;
             }
 
+            // to ensure "objEzsignfoldersignerassociation" is required (not null)
+            if (objEzsignfoldersignerassociation == null)
+            {
+                throw new InvalidDataException("objEzsignfoldersignerassociation is a required property for WebhookEzsignEzsignsignerAcceptclause and cannot be null");
+            }
+            else
+            {
+                this.ObjEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
+            }
+
             this.ObjEzsignfolder = objEzsignfolder;
         }
-
-        /// <summary>
-        /// Gets or Sets ObjEzsignfolder
-        /// </summary>
-        [DataMember(Name="objEzsignfolder", EmitDefaultValue=false)]
-        public EzsignfolderResponse ObjEzsignfolder { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjEzsignfoldersignerassociation
-        /// </summary>
-        [DataMember(Name="objEzsignfoldersignerassociation", EmitDefaultValue=true)]
-        public EzsignfoldersignerassociationResponseCompound ObjEzsignfoldersignerassociation { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjWebhook
@@ -103,6 +89,18 @@ namespace eZmaxApi.Model
         public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjEzsignfolder
+        /// </summary>
+        [DataMember(Name="objEzsignfolder", EmitDefaultValue=false)]
+        public EzsignfolderResponse ObjEzsignfolder { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEzsignfoldersignerassociation
+        /// </summary>
+        [DataMember(Name="objEzsignfoldersignerassociation", EmitDefaultValue=true)]
+        public EzsignfoldersignerassociationResponseCompound ObjEzsignfoldersignerassociation { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -110,10 +108,10 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebhookEzsignEzsignsignerAcceptclause {\n");
-            sb.Append("  ObjEzsignfolder: ").Append(ObjEzsignfolder).Append("\n");
-            sb.Append("  ObjEzsignfoldersignerassociation: ").Append(ObjEzsignfoldersignerassociation).Append("\n");
             sb.Append("  ObjWebhook: ").Append(ObjWebhook).Append("\n");
             sb.Append("  AObjAttempt: ").Append(AObjAttempt).Append("\n");
+            sb.Append("  ObjEzsignfolder: ").Append(ObjEzsignfolder).Append("\n");
+            sb.Append("  ObjEzsignfoldersignerassociation: ").Append(ObjEzsignfoldersignerassociation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,16 +147,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.ObjEzsignfolder == input.ObjEzsignfolder ||
-                    (this.ObjEzsignfolder != null &&
-                    this.ObjEzsignfolder.Equals(input.ObjEzsignfolder))
-                ) && 
-                (
-                    this.ObjEzsignfoldersignerassociation == input.ObjEzsignfoldersignerassociation ||
-                    (this.ObjEzsignfoldersignerassociation != null &&
-                    this.ObjEzsignfoldersignerassociation.Equals(input.ObjEzsignfoldersignerassociation))
-                ) && 
-                (
                     this.ObjWebhook == input.ObjWebhook ||
                     (this.ObjWebhook != null &&
                     this.ObjWebhook.Equals(input.ObjWebhook))
@@ -168,6 +156,16 @@ namespace eZmaxApi.Model
                     this.AObjAttempt != null &&
                     input.AObjAttempt != null &&
                     this.AObjAttempt.SequenceEqual(input.AObjAttempt)
+                ) && 
+                (
+                    this.ObjEzsignfolder == input.ObjEzsignfolder ||
+                    (this.ObjEzsignfolder != null &&
+                    this.ObjEzsignfolder.Equals(input.ObjEzsignfolder))
+                ) && 
+                (
+                    this.ObjEzsignfoldersignerassociation == input.ObjEzsignfoldersignerassociation ||
+                    (this.ObjEzsignfoldersignerassociation != null &&
+                    this.ObjEzsignfoldersignerassociation.Equals(input.ObjEzsignfoldersignerassociation))
                 );
         }
 
@@ -180,26 +178,16 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ObjEzsignfolder != null)
-                    hashCode = hashCode * 59 + this.ObjEzsignfolder.GetHashCode();
-                if (this.ObjEzsignfoldersignerassociation != null)
-                    hashCode = hashCode * 59 + this.ObjEzsignfoldersignerassociation.GetHashCode();
                 if (this.ObjWebhook != null)
                     hashCode = hashCode * 59 + this.ObjWebhook.GetHashCode();
                 if (this.AObjAttempt != null)
                     hashCode = hashCode * 59 + this.AObjAttempt.GetHashCode();
+                if (this.ObjEzsignfolder != null)
+                    hashCode = hashCode * 59 + this.ObjEzsignfolder.GetHashCode();
+                if (this.ObjEzsignfoldersignerassociation != null)
+                    hashCode = hashCode * 59 + this.ObjEzsignfoldersignerassociation.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

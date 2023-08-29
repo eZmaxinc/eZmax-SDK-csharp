@@ -15,12 +15,12 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Threading;
-using System.Web;
 using System.Linq;
 using System.Net;
 using System.Text;
 using Newtonsoft.Json;
-using RestSharp;
+using RestSharp.Portable;
+using RestSharp.Portable.HttpClient;
 using eZmaxApi.Api;
 
 namespace eZmaxApi.Client
@@ -56,6 +56,7 @@ namespace eZmaxApi.Client
         {
             Configuration = eZmaxApi.Client.Configuration.Default;
             RestClient = new RestClient("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+            RestClient.IgnoreResponseStatusCode = true;
         }
 
         /// <summary>
@@ -68,6 +69,7 @@ namespace eZmaxApi.Client
             Configuration = config ?? eZmaxApi.Client.Configuration.Default;
 
             RestClient = new RestClient(Configuration.BasePath);
+            RestClient.IgnoreResponseStatusCode = true;
         }
 
         /// <summary>
@@ -81,6 +83,7 @@ namespace eZmaxApi.Client
                 throw new ArgumentException("basePath cannot be empty");
 
             RestClient = new RestClient(basePath);
+            RestClient.IgnoreResponseStatusCode = true;
             Configuration = Client.Configuration.Default;
         }
 
@@ -110,12 +113,14 @@ namespace eZmaxApi.Client
 
         // Creates and sets up a RestRequest prior to a call.
         private RestRequest PrepareRequest(
-            String path, RestSharp.Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
+            String path, Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
             Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType)
         {
             var request = new RestRequest(path, method);
+            // disable ResetSharp.Portable built-in serialization
+            request.Serializer = null;
 
             // add path parameter, if any
             foreach(var param in pathParams)
@@ -136,12 +141,12 @@ namespace eZmaxApi.Client
             // add file parameter, if any
             foreach(var param in fileParams)
             {
-                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentLength, param.Value.ContentType);
+                request.AddFile(param.Value);
             }
 
             if (postBody != null) // http body (model or byte[]) parameter
             {
-                request.AddParameter(contentType, postBody, ParameterType.RequestBody);
+                request.AddParameter(new Parameter { Value = postBody, Type = ParameterType.RequestBody, ContentType = contentType });
             }
 
             return request;
@@ -161,7 +166,7 @@ namespace eZmaxApi.Client
         /// <param name="contentType">Content Type of the request</param>
         /// <returns>Object</returns>
         public Object CallApi(
-            String path, RestSharp.Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
+            String path, Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
             Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType)
@@ -178,13 +183,13 @@ namespace eZmaxApi.Client
                 pathParams, contentType);
 
             // set timeout
+            RestClient.Timeout = TimeSpan.FromMilliseconds(Configuration.Timeout);
             
-            RestClient.Timeout = Configuration.Timeout;
             // set user agent
             RestClient.UserAgent = Configuration.UserAgent;
 
             InterceptRequest(request);
-            var response = RestClient.Execute(request);
+            var response = RestClient.Execute(request).Result;
             InterceptResponse(request, response);
 
             return (Object) response;
@@ -204,7 +209,7 @@ namespace eZmaxApi.Client
         /// <param name="cancellationToken">Cancellation Token.</param>
         /// <returns>The Task instance.</returns>
         public async System.Threading.Tasks.Task<Object> CallApiAsync(
-            String path, RestSharp.Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
+            String path, Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
             Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType, CancellationToken cancellationToken)
@@ -214,7 +219,7 @@ namespace eZmaxApi.Client
                 pathParams, contentType);
             RestClient.UserAgent = Configuration.UserAgent;
             InterceptRequest(request);
-            var response = await RestClient.ExecuteTaskAsync(request, cancellationToken);
+            var response = await RestClient.Execute(request, cancellationToken);
             InterceptResponse(request, response);
             return (Object)response;
         }
@@ -289,7 +294,7 @@ namespace eZmaxApi.Client
         /// <returns>Object representation of the JSON string.</returns>
         public object Deserialize(IRestResponse response, Type type)
         {
-            IList<Parameter> headers = response.Headers;
+            IHttpHeaders headers = response.Headers;
             if (type == typeof(byte[])) // return byte array
             {
                 return response.RawBytes;

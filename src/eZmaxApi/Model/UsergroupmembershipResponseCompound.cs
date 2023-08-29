@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Usergroupmembership Object
     /// </summary>
     [DataContract]
-    public partial class UsergroupmembershipResponseCompound :  IEquatable<UsergroupmembershipResponseCompound>, IValidatableObject
+    public partial class UsergroupmembershipResponseCompound :  IEquatable<UsergroupmembershipResponseCompound>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupmembershipResponseCompound" /> class.
@@ -296,70 +294,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SUsergroupNameX.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiUsergroupmembershipID (int) maximum
-            if(this.PkiUsergroupmembershipID > (int)65535)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupmembershipID" });
-            }
-
-            // PkiUsergroupmembershipID (int) minimum
-            if(this.PkiUsergroupmembershipID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupmembershipID" });
-            }
-
-
-
-            // FkiUsergroupID (int) maximum
-            if(this.FkiUsergroupID > (int)255)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
-            }
-
-            // FkiUsergroupID (int) minimum
-            if(this.FkiUsergroupID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
-            }
-
-
-
-            // FkiUserID (int) minimum
-            if(this.FkiUserID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
-            }
-
-
-
-            // SUserLoginname (string) pattern
-            Regex regexSUserLoginname = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,4})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
-            if (false == regexSUserLoginname.Match(this.SUserLoginname).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
-            }
-
-
-
-            // SUsergroupNameX (string) pattern
-            Regex regexSUsergroupNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-            if (false == regexSUsergroupNameX.Match(this.SUsergroupNameX).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameX, must match a pattern of " + regexSUsergroupNameX, new [] { "SUsergroupNameX" });
-            }
-
-            yield break;
         }
     }
 

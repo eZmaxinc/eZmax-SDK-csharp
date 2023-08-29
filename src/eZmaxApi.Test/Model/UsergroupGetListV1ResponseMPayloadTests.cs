@@ -66,14 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'AObjUsergroup'
-        /// </summary>
-        [Test]
-        public void AObjUsergroupTest()
-        {
-            // TODO unit test for the property 'AObjUsergroup'
-        }
-        /// <summary>
         /// Test the property 'IRowReturned'
         /// </summary>
         [Test]
@@ -88,6 +80,14 @@ namespace eZmaxApi.Test
         public void IRowFilteredTest()
         {
             // TODO unit test for the property 'IRowFiltered'
+        }
+        /// <summary>
+        /// Test the property 'AObjUsergroup'
+        /// </summary>
+        [Test]
+        public void AObjUsergroupTest()
+        {
+            // TODO unit test for the property 'AObjUsergroup'
         }
 
     }

@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/webhook/getList
     /// </summary>
     [DataContract]
-    public partial class WebhookGetListV1ResponseMPayload :  IEquatable<WebhookGetListV1ResponseMPayload>, IValidatableObject
+    public partial class WebhookGetListV1ResponseMPayload :  IEquatable<WebhookGetListV1ResponseMPayload>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookGetListV1ResponseMPayload" /> class.
@@ -38,21 +36,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjWebhook">aObjWebhook (required).</param>
         /// <param name="iRowReturned">The number of rows returned (required).</param>
         /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        public WebhookGetListV1ResponseMPayload(List<WebhookListElement> aObjWebhook = default(List<WebhookListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
+        /// <param name="aObjWebhook">aObjWebhook (required).</param>
+        public WebhookGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<WebhookListElement> aObjWebhook = default(List<WebhookListElement>))
         {
-            // to ensure "aObjWebhook" is required (not null)
-            if (aObjWebhook == null)
-            {
-                throw new InvalidDataException("aObjWebhook is a required property for WebhookGetListV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.AObjWebhook = aObjWebhook;
-            }
-
             // to ensure "iRowReturned" is required (not null)
             if (iRowReturned == null)
             {
@@ -73,13 +61,17 @@ namespace eZmaxApi.Model
                 this.IRowFiltered = iRowFiltered;
             }
 
-        }
+            // to ensure "aObjWebhook" is required (not null)
+            if (aObjWebhook == null)
+            {
+                throw new InvalidDataException("aObjWebhook is a required property for WebhookGetListV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjWebhook = aObjWebhook;
+            }
 
-        /// <summary>
-        /// Gets or Sets AObjWebhook
-        /// </summary>
-        [DataMember(Name="a_objWebhook", EmitDefaultValue=true)]
-        public List<WebhookListElement> AObjWebhook { get; set; }
+        }
 
         /// <summary>
         /// The number of rows returned
@@ -96,6 +88,12 @@ namespace eZmaxApi.Model
         public int IRowFiltered { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjWebhook
+        /// </summary>
+        [DataMember(Name="a_objWebhook", EmitDefaultValue=true)]
+        public List<WebhookListElement> AObjWebhook { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -103,9 +101,9 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebhookGetListV1ResponseMPayload {\n");
-            sb.Append("  AObjWebhook: ").Append(AObjWebhook).Append("\n");
             sb.Append("  IRowReturned: ").Append(IRowReturned).Append("\n");
             sb.Append("  IRowFiltered: ").Append(IRowFiltered).Append("\n");
+            sb.Append("  AObjWebhook: ").Append(AObjWebhook).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,12 +139,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.AObjWebhook == input.AObjWebhook ||
-                    this.AObjWebhook != null &&
-                    input.AObjWebhook != null &&
-                    this.AObjWebhook.SequenceEqual(input.AObjWebhook)
-                ) && 
-                (
                     this.IRowReturned == input.IRowReturned ||
                     (this.IRowReturned != null &&
                     this.IRowReturned.Equals(input.IRowReturned))
@@ -155,6 +147,12 @@ namespace eZmaxApi.Model
                     this.IRowFiltered == input.IRowFiltered ||
                     (this.IRowFiltered != null &&
                     this.IRowFiltered.Equals(input.IRowFiltered))
+                ) && 
+                (
+                    this.AObjWebhook == input.AObjWebhook ||
+                    this.AObjWebhook != null &&
+                    input.AObjWebhook != null &&
+                    this.AObjWebhook.SequenceEqual(input.AObjWebhook)
                 );
         }
 
@@ -167,24 +165,14 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AObjWebhook != null)
-                    hashCode = hashCode * 59 + this.AObjWebhook.GetHashCode();
                 if (this.IRowReturned != null)
                     hashCode = hashCode * 59 + this.IRowReturned.GetHashCode();
                 if (this.IRowFiltered != null)
                     hashCode = hashCode * 59 + this.IRowFiltered.GetHashCode();
+                if (this.AObjWebhook != null)
+                    hashCode = hashCode * 59 + this.AObjWebhook.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Modulegroup Object
     /// </summary>
     [DataContract]
-    public partial class ModulegroupResponseCompound :  IEquatable<ModulegroupResponseCompound>, IValidatableObject
+    public partial class ModulegroupResponseCompound :  IEquatable<ModulegroupResponseCompound>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulegroupResponseCompound" /> class.
@@ -175,39 +173,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjModule.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiModulegroupID (int) maximum
-            if(this.PkiModulegroupID > (int)255)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiModulegroupID, must be a value less than or equal to 255.", new [] { "PkiModulegroupID" });
-            }
-
-            // PkiModulegroupID (int) minimum
-            if(this.PkiModulegroupID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiModulegroupID, must be a value greater than or equal to 1.", new [] { "PkiModulegroupID" });
-            }
-
-
-
-            // SModulegroupNameX (string) pattern
-            Regex regexSModulegroupNameX = new Regex(@"^.{0,25}$", RegexOptions.CultureInvariant);
-            if (false == regexSModulegroupNameX.Match(this.SModulegroupNameX).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SModulegroupNameX, must match a pattern of " + regexSModulegroupNameX, new [] { "SModulegroupNameX" });
-            }
-
-            yield break;
         }
     }
 

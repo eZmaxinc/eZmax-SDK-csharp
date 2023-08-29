@@ -73,7 +73,7 @@ namespace eZmaxApi.Test
             //string sSelector = null;
             //string eFilterActive = null;
             //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //var response = instance.PeriodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(CommonGetAutocompleteV1Response), response, "response is CommonGetAutocompleteV1Response");
         }
@@ -88,7 +88,7 @@ namespace eZmaxApi.Test
             //string sSelector = null;
             //string eFilterActive = null;
             //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //var response = instance.PeriodGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(PeriodGetAutocompleteV2Response), response, "response is PeriodGetAutocompleteV2Response");
         }

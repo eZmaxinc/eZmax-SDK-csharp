@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Clonehistory List Element
     /// </summary>
     [DataContract]
-    public partial class ClonehistoryListElement :  IEquatable<ClonehistoryListElement>, IValidatableObject
+    public partial class ClonehistoryListElement :  IEquatable<ClonehistoryListElement>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ClonehistoryListElement" /> class.
@@ -374,82 +372,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SUserLastnameCloned.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiClonehistoryID (int) maximum
-            if(this.PkiClonehistoryID > (int)16777215)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiClonehistoryID, must be a value less than or equal to 16777215.", new [] { "PkiClonehistoryID" });
-            }
-
-            // PkiClonehistoryID (int) minimum
-            if(this.PkiClonehistoryID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiClonehistoryID, must be a value greater than or equal to 1.", new [] { "PkiClonehistoryID" });
-            }
-
-
-
-            // FkiUserIDCloning (int) minimum
-            if(this.FkiUserIDCloning < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDCloning, must be a value greater than or equal to 0.", new [] { "FkiUserIDCloning" });
-            }
-
-
-
-            // FkiUserIDCloned (int) minimum
-            if(this.FkiUserIDCloned < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDCloned, must be a value greater than or equal to 0.", new [] { "FkiUserIDCloned" });
-            }
-
-
-
-            // DtClonehistoryFirsthit (string) pattern
-            Regex regexDtClonehistoryFirsthit = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
-            if (false == regexDtClonehistoryFirsthit.Match(this.DtClonehistoryFirsthit).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtClonehistoryFirsthit, must match a pattern of " + regexDtClonehistoryFirsthit, new [] { "DtClonehistoryFirsthit" });
-            }
-
-
-
-            // DtClonehistoryLasthit (string) pattern
-            Regex regexDtClonehistoryLasthit = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
-            if (false == regexDtClonehistoryLasthit.Match(this.DtClonehistoryLasthit).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtClonehistoryLasthit, must match a pattern of " + regexDtClonehistoryLasthit, new [] { "DtClonehistoryLasthit" });
-            }
-
-
-
-            // SUserLoginnameCloning (string) pattern
-            Regex regexSUserLoginnameCloning = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,4})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
-            if (false == regexSUserLoginnameCloning.Match(this.SUserLoginnameCloning).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginnameCloning, must match a pattern of " + regexSUserLoginnameCloning, new [] { "SUserLoginnameCloning" });
-            }
-
-
-
-            // SUserLoginnameCloned (string) pattern
-            Regex regexSUserLoginnameCloned = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,4})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
-            if (false == regexSUserLoginnameCloned.Match(this.SUserLoginnameCloned).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginnameCloned, must match a pattern of " + regexSUserLoginnameCloned, new [] { "SUserLoginnameCloned" });
-            }
-
-            yield break;
         }
     }
 

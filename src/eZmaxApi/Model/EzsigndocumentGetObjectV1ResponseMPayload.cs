@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,13 +26,18 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
     /// </summary>
     [DataContract]
-    public partial class EzsigndocumentGetObjectV1ResponseMPayload :  IEquatable<EzsigndocumentGetObjectV1ResponseMPayload>, IValidatableObject
+    public partial class EzsigndocumentGetObjectV1ResponseMPayload :  IEquatable<EzsigndocumentGetObjectV1ResponseMPayload>
     {
         /// <summary>
         /// Gets or Sets EEzsigndocumentStep
         /// </summary>
         [DataMember(Name="eEzsigndocumentStep", EmitDefaultValue=true)]
         public FieldEEzsigndocumentStep EEzsigndocumentStep { get; set; }
+        /// <summary>
+        /// Gets or Sets EEzsigndocumentSteptype
+        /// </summary>
+        [DataMember(Name="eEzsigndocumentSteptype", EmitDefaultValue=true)]
+        public ComputedEEzsigndocumentSteptype EEzsigndocumentSteptype { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetObjectV1ResponseMPayload" /> class.
         /// </summary>
@@ -64,12 +67,13 @@ namespace eZmaxApi.Model
         /// <param name="bEzsigndocumentHassignedsignatures">If the Ezsigndocument contains signed signatures (From internal or external sources).</param>
         /// <param name="objAudit">objAudit.</param>
         /// <param name="sEzsigndocumentExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
+        /// <param name="eEzsigndocumentSteptype">eEzsigndocumentSteptype (required).</param>
         /// <param name="iEzsigndocumentStepformtotal">The total number of steps in the form filling phase (required).</param>
         /// <param name="iEzsigndocumentStepformcurrent">The current step in the form filling phase (required).</param>
         /// <param name="iEzsigndocumentStepsignaturetotal">The total number of steps in the signature filling phase (required).</param>
         /// <param name="iEzsigndocumentStepsignatureCurrent">The current step in the signature phase (required).</param>
         /// <param name="aObjEzsignfoldersignerassociationstatus">aObjEzsignfoldersignerassociationstatus (required).</param>
-        public EzsigndocumentGetObjectV1ResponseMPayload(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), bool bEzsigndocumentHassignedsignatures = default(bool), CommonAudit objAudit = default(CommonAudit), string sEzsigndocumentExternalid = default(string), int iEzsigndocumentStepformtotal = default(int), int iEzsigndocumentStepformcurrent = default(int), int iEzsigndocumentStepsignaturetotal = default(int), int iEzsigndocumentStepsignatureCurrent = default(int), List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = default(List<CustomEzsignfoldersignerassociationstatusResponse>))
+        public EzsigndocumentGetObjectV1ResponseMPayload(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), bool bEzsigndocumentHassignedsignatures = default(bool), CommonAudit objAudit = default(CommonAudit), string sEzsigndocumentExternalid = default(string), ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype = default(ComputedEEzsigndocumentSteptype), int iEzsigndocumentStepformtotal = default(int), int iEzsigndocumentStepformcurrent = default(int), int iEzsigndocumentStepsignaturetotal = default(int), int iEzsigndocumentStepsignatureCurrent = default(int), List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = default(List<CustomEzsignfoldersignerassociationstatusResponse>))
         {
             // to ensure "pkiEzsigndocumentID" is required (not null)
             if (pkiEzsigndocumentID == null)
@@ -159,6 +163,16 @@ namespace eZmaxApi.Model
             else
             {
                 this.IEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
+            }
+
+            // to ensure "eEzsigndocumentSteptype" is required (not null)
+            if (eEzsigndocumentSteptype == null)
+            {
+                throw new InvalidDataException("eEzsigndocumentSteptype is a required property for EzsigndocumentGetObjectV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.EEzsigndocumentSteptype = eEzsigndocumentSteptype;
             }
 
             // to ensure "iEzsigndocumentStepformtotal" is required (not null)
@@ -365,6 +379,7 @@ namespace eZmaxApi.Model
         [DataMember(Name="sEzsigndocumentExternalid", EmitDefaultValue=false)]
         public string SEzsigndocumentExternalid { get; set; }
 
+
         /// <summary>
         /// The total number of steps in the form filling phase
         /// </summary>
@@ -428,6 +443,7 @@ namespace eZmaxApi.Model
             sb.Append("  BEzsigndocumentHassignedsignatures: ").Append(BEzsigndocumentHassignedsignatures).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  SEzsigndocumentExternalid: ").Append(SEzsigndocumentExternalid).Append("\n");
+            sb.Append("  EEzsigndocumentSteptype: ").Append(EEzsigndocumentSteptype).Append("\n");
             sb.Append("  IEzsigndocumentStepformtotal: ").Append(IEzsigndocumentStepformtotal).Append("\n");
             sb.Append("  IEzsigndocumentStepformcurrent: ").Append(IEzsigndocumentStepformcurrent).Append("\n");
             sb.Append("  IEzsigndocumentStepsignaturetotal: ").Append(IEzsigndocumentStepsignaturetotal).Append("\n");
@@ -573,6 +589,11 @@ namespace eZmaxApi.Model
                     this.SEzsigndocumentExternalid.Equals(input.SEzsigndocumentExternalid))
                 ) && 
                 (
+                    this.EEzsigndocumentSteptype == input.EEzsigndocumentSteptype ||
+                    (this.EEzsigndocumentSteptype != null &&
+                    this.EEzsigndocumentSteptype.Equals(input.EEzsigndocumentSteptype))
+                ) && 
+                (
                     this.IEzsigndocumentStepformtotal == input.IEzsigndocumentStepformtotal ||
                     (this.IEzsigndocumentStepformtotal != null &&
                     this.IEzsigndocumentStepformtotal.Equals(input.IEzsigndocumentStepformtotal))
@@ -651,6 +672,8 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
                 if (this.SEzsigndocumentExternalid != null)
                     hashCode = hashCode * 59 + this.SEzsigndocumentExternalid.GetHashCode();
+                if (this.EEzsigndocumentSteptype != null)
+                    hashCode = hashCode * 59 + this.EEzsigndocumentSteptype.GetHashCode();
                 if (this.IEzsigndocumentStepformtotal != null)
                     hashCode = hashCode * 59 + this.IEzsigndocumentStepformtotal.GetHashCode();
                 if (this.IEzsigndocumentStepformcurrent != null)
@@ -663,95 +686,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjEzsignfoldersignerassociationstatus.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzsigndocumentID (int) minimum
-            if(this.PkiEzsigndocumentID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentID" });
-            }
-
-
-
-            // FkiEzsignfolderID (int) minimum
-            if(this.FkiEzsignfolderID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
-            }
-
-
-
-            // FkiEzsignfoldersignerassociationIDDeclinedtosign (int) minimum
-            if(this.FkiEzsignfoldersignerassociationIDDeclinedtosign < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationIDDeclinedtosign, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationIDDeclinedtosign" });
-            }
-
-
-
-            // FkiLanguageID (int) maximum
-            if(this.FkiLanguageID > (int)2)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
-            }
-
-            // FkiLanguageID (int) minimum
-            if(this.FkiLanguageID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
-            }
-
-
-
-            // IEzsigndocumentOrder (int) minimum
-            if(this.IEzsigndocumentOrder < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentOrder, must be a value greater than or equal to 1.", new [] { "IEzsigndocumentOrder" });
-            }
-
-
-
-            // IEzsigndocumentPagetotal (int) minimum
-            if(this.IEzsigndocumentPagetotal < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigndocumentPagetotal" });
-            }
-
-
-
-            // IEzsigndocumentSignaturesigned (int) minimum
-            if(this.IEzsigndocumentSignaturesigned < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentSignaturesigned, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturesigned" });
-            }
-
-
-
-            // IEzsigndocumentSignaturetotal (int) minimum
-            if(this.IEzsigndocumentSignaturetotal < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentSignaturetotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturetotal" });
-            }
-
-
-
-            // SEzsigndocumentExternalid (string) pattern
-            Regex regexSEzsigndocumentExternalid = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
-            if (false == regexSEzsigndocumentExternalid.Match(this.SEzsigndocumentExternalid).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigndocumentExternalid, must match a pattern of " + regexSEzsigndocumentExternalid, new [] { "SEzsigndocumentExternalid" });
-            }
-
-            yield break;
         }
     }
 

@@ -33,7 +33,7 @@ namespace Example
         {
             Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             var apiInstance = new GlobalEzmaxclientApi(Configuration.Default);
-            var pksEzmaxclientOs = (FieldPksEzmaxclientOs) "iOS";  // FieldPksEzmaxclientOs | 
+            var pksEzmaxclientOs = new FieldPksEzmaxclientOs(); // FieldPksEzmaxclientOs | 
 
             try
             {
@@ -57,7 +57,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pksEzmaxclientOs** | **FieldPksEzmaxclientOs**|  | 
+ **pksEzmaxclientOs** | [**FieldPksEzmaxclientOs**](FieldPksEzmaxclientOs.md)|  | 
 
 ### Return type
 

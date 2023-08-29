@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingsummaryexternaldetail Object
     /// </summary>
     [DataContract]
-    public partial class EzmaxinvoicingsummaryexternaldetailResponseCompound :  IEquatable<EzmaxinvoicingsummaryexternaldetailResponseCompound>, IValidatableObject
+    public partial class EzmaxinvoicingsummaryexternaldetailResponseCompound :  IEquatable<EzmaxinvoicingsummaryexternaldetailResponseCompound>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternaldetailResponseCompound" /> class.
@@ -339,76 +337,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.TEzmaxproductHelpX.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzmaxinvoicingsummaryexternaldetailID (int) minimum
-            if(this.PkiEzmaxinvoicingsummaryexternaldetailID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryexternaldetailID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryexternaldetailID" });
-            }
-
-
-
-            // FkiEzmaxinvoicingsummaryexternalID (int) minimum
-            if(this.FkiEzmaxinvoicingsummaryexternalID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingsummaryexternalID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingsummaryexternalID" });
-            }
-
-
-
-            // FkiEzmaxproductID (int) minimum
-            if(this.FkiEzmaxproductID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryexternaldetailCountreal (string) pattern
-            Regex regexDEzmaxinvoicingsummaryexternaldetailCountreal = new Regex(@"^-{0,1}[\d]{1,6}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryexternaldetailCountreal.Match(this.DEzmaxinvoicingsummaryexternaldetailCountreal).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryexternaldetailCountreal, must match a pattern of " + regexDEzmaxinvoicingsummaryexternaldetailCountreal, new [] { "DEzmaxinvoicingsummaryexternaldetailCountreal" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryexternaldetailSubtotal (string) pattern
-            Regex regexDEzmaxinvoicingsummaryexternaldetailSubtotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryexternaldetailSubtotal.Match(this.DEzmaxinvoicingsummaryexternaldetailSubtotal).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryexternaldetailSubtotal, must match a pattern of " + regexDEzmaxinvoicingsummaryexternaldetailSubtotal, new [] { "DEzmaxinvoicingsummaryexternaldetailSubtotal" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryexternaldetailRebate (string) pattern
-            Regex regexDEzmaxinvoicingsummaryexternaldetailRebate = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryexternaldetailRebate.Match(this.DEzmaxinvoicingsummaryexternaldetailRebate).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryexternaldetailRebate, must match a pattern of " + regexDEzmaxinvoicingsummaryexternaldetailRebate, new [] { "DEzmaxinvoicingsummaryexternaldetailRebate" });
-            }
-
-
-
-            // DEzmaxinvoicingsummaryexternaldetailTotal (string) pattern
-            Regex regexDEzmaxinvoicingsummaryexternaldetailTotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingsummaryexternaldetailTotal.Match(this.DEzmaxinvoicingsummaryexternaldetailTotal).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryexternaldetailTotal, must match a pattern of " + regexDEzmaxinvoicingsummaryexternaldetailTotal, new [] { "DEzmaxinvoicingsummaryexternaldetailTotal" });
-            }
-
-            yield break;
         }
     }
 

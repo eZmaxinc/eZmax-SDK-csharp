@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// An Ezsigntemplatesignaturecustomdate Object
     /// </summary>
     [DataContract]
-    public partial class EzsigntemplatesignaturecustomdateRequest :  IEquatable<EzsigntemplatesignaturecustomdateRequest>, IValidatableObject
+    public partial class EzsigntemplatesignaturecustomdateRequest :  IEquatable<EzsigntemplatesignaturecustomdateRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignaturecustomdateRequest" /> class.
@@ -192,40 +190,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzsigntemplatesignaturecustomdateFormat.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzsigntemplatesignaturecustomdateID (int) minimum
-            if(this.PkiEzsigntemplatesignaturecustomdateID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatesignaturecustomdateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignaturecustomdateID" });
-            }
-
-
-
-            // IEzsigntemplatesignaturecustomdateX (int) minimum
-            if(this.IEzsigntemplatesignaturecustomdateX < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateX" });
-            }
-
-
-
-            // IEzsigntemplatesignaturecustomdateY (int) minimum
-            if(this.IEzsigntemplatesignaturecustomdateY < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateY" });
-            }
-
-            yield break;
         }
     }
 

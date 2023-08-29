@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjBillingentityinternal** | [**List&lt;BillingentityinternalListElement&gt;**](BillingentityinternalListElement.md) |  | 
 **IRowReturned** | **int** | The number of rows returned | 
 **IRowFiltered** | **int** | The number of rows matching your filters (if any) or the total number of rows | 
+**AObjBillingentityinternal** | [**List&lt;BillingentityinternalListElement&gt;**](BillingentityinternalListElement.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

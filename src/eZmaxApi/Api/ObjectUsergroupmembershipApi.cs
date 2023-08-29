@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -342,7 +342,7 @@ namespace eZmaxApi.Api
             if (usergroupmembershipCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupmembershipCreateObjectV1Request' when calling ObjectUsergroupmembershipApi->UsergroupmembershipCreateObjectV1");
 
-            var localVarPath = "/1/object/usergroupmembership";
+            var localVarPath = "./1/object/usergroupmembership";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -393,7 +393,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupmembershipCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UsergroupmembershipCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupmembershipCreateObjectV1Response)));
         }
 
@@ -424,7 +424,7 @@ namespace eZmaxApi.Api
             if (usergroupmembershipCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupmembershipCreateObjectV1Request' when calling ObjectUsergroupmembershipApi->UsergroupmembershipCreateObjectV1");
 
-            var localVarPath = "/1/object/usergroupmembership";
+            var localVarPath = "./1/object/usergroupmembership";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -475,7 +475,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupmembershipCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UsergroupmembershipCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupmembershipCreateObjectV1Response)));
         }
 
@@ -503,7 +503,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupmembershipID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupmembershipID' when calling ObjectUsergroupmembershipApi->UsergroupmembershipDeleteObjectV1");
 
-            var localVarPath = "/1/object/usergroupmembership/{pkiUsergroupmembershipID}";
+            var localVarPath = "./1/object/usergroupmembership/{pkiUsergroupmembershipID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -546,7 +546,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupmembershipDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UsergroupmembershipDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupmembershipDeleteObjectV1Response)));
         }
 
@@ -577,7 +577,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupmembershipID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupmembershipID' when calling ObjectUsergroupmembershipApi->UsergroupmembershipDeleteObjectV1");
 
-            var localVarPath = "/1/object/usergroupmembership/{pkiUsergroupmembershipID}";
+            var localVarPath = "./1/object/usergroupmembership/{pkiUsergroupmembershipID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -620,7 +620,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupmembershipDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UsergroupmembershipDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupmembershipDeleteObjectV1Response)));
         }
 
@@ -653,7 +653,7 @@ namespace eZmaxApi.Api
             if (usergroupmembershipEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupmembershipEditObjectV1Request' when calling ObjectUsergroupmembershipApi->UsergroupmembershipEditObjectV1");
 
-            var localVarPath = "/1/object/usergroupmembership/{pkiUsergroupmembershipID}";
+            var localVarPath = "./1/object/usergroupmembership/{pkiUsergroupmembershipID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -705,7 +705,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupmembershipEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UsergroupmembershipEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupmembershipEditObjectV1Response)));
         }
 
@@ -741,7 +741,7 @@ namespace eZmaxApi.Api
             if (usergroupmembershipEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupmembershipEditObjectV1Request' when calling ObjectUsergroupmembershipApi->UsergroupmembershipEditObjectV1");
 
-            var localVarPath = "/1/object/usergroupmembership/{pkiUsergroupmembershipID}";
+            var localVarPath = "./1/object/usergroupmembership/{pkiUsergroupmembershipID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -793,7 +793,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupmembershipEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UsergroupmembershipEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupmembershipEditObjectV1Response)));
         }
 
@@ -821,7 +821,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupmembershipID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupmembershipID' when calling ObjectUsergroupmembershipApi->UsergroupmembershipGetObjectV2");
 
-            var localVarPath = "/2/object/usergroupmembership/{pkiUsergroupmembershipID}";
+            var localVarPath = "./2/object/usergroupmembership/{pkiUsergroupmembershipID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -864,7 +864,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupmembershipGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UsergroupmembershipGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupmembershipGetObjectV2Response)));
         }
 
@@ -895,7 +895,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupmembershipID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupmembershipID' when calling ObjectUsergroupmembershipApi->UsergroupmembershipGetObjectV2");
 
-            var localVarPath = "/2/object/usergroupmembership/{pkiUsergroupmembershipID}";
+            var localVarPath = "./2/object/usergroupmembership/{pkiUsergroupmembershipID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -938,7 +938,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupmembershipGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UsergroupmembershipGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupmembershipGetObjectV2Response)));
         }
 

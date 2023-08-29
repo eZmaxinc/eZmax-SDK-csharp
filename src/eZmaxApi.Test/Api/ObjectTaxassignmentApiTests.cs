@@ -73,7 +73,7 @@ namespace eZmaxApi.Test
             //string sSelector = null;
             //string eFilterActive = null;
             //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //var response = instance.TaxassignmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(TaxassignmentGetAutocompleteV2Response), response, "response is TaxassignmentGetAutocompleteV2Response");
         }

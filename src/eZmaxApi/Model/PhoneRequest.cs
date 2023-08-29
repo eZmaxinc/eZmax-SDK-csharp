@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Phone Object
     /// </summary>
     [DataContract]
-    public partial class PhoneRequest :  IEquatable<PhoneRequest>, IValidatableObject
+    public partial class PhoneRequest :  IEquatable<PhoneRequest>
     {
         /// <summary>
         /// Gets or Sets EPhoneType
@@ -263,41 +261,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SPhoneE164.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiPhoneID (int) minimum
-            if(this.PkiPhoneID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPhoneID, must be a value greater than or equal to 0.", new [] { "PkiPhoneID" });
-            }
-
-
-
-            // FkiPhonetypeID (int) minimum
-            if(this.FkiPhonetypeID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "FkiPhonetypeID" });
-            }
-
-
-
-            // SPhoneE164 (string) pattern
-            Regex regexSPhoneE164 = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);
-            if (false == regexSPhoneE164.Match(this.SPhoneE164).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164, must match a pattern of " + regexSPhoneE164, new [] { "SPhoneE164" });
-            }
-
-            yield break;
         }
     }
 

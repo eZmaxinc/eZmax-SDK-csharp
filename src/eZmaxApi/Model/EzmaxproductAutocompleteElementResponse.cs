@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxproduct AutocompleteElement Response
     /// </summary>
     [DataContract]
-    public partial class EzmaxproductAutocompleteElementResponse :  IEquatable<EzmaxproductAutocompleteElementResponse>, IValidatableObject
+    public partial class EzmaxproductAutocompleteElementResponse :  IEquatable<EzmaxproductAutocompleteElementResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxproductAutocompleteElementResponse" /> class.
@@ -175,24 +173,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzmaxproductIsactive.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzmaxproductID (int) minimum
-            if(this.PkiEzmaxproductID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "PkiEzmaxproductID" });
-            }
-
-            yield break;
         }
     }
 

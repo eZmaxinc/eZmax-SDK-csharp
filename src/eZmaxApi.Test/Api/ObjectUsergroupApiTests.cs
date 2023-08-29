@@ -102,6 +102,19 @@ namespace eZmaxApi.Test
         }
         
         /// <summary>
+        /// Test UsergroupEditUsergroupdelegationsV1
+        /// </summary>
+        [Test]
+        public void UsergroupEditUsergroupdelegationsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUsergroupID = null;
+            //UsergroupEditUsergroupdelegationsV1Request usergroupEditUsergroupdelegationsV1Request = null;
+            //var response = instance.UsergroupEditUsergroupdelegationsV1(pkiUsergroupID, usergroupEditUsergroupdelegationsV1Request);
+            //Assert.IsInstanceOf(typeof(UsergroupEditUsergroupdelegationsV1Response), response, "response is UsergroupEditUsergroupdelegationsV1Response");
+        }
+        
+        /// <summary>
         /// Test UsergroupEditUsergroupmembershipsV1
         /// </summary>
         [Test]
@@ -124,7 +137,7 @@ namespace eZmaxApi.Test
             //string sSelector = null;
             //string eFilterActive = null;
             //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //var response = instance.UsergroupGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(UsergroupGetAutocompleteV2Response), response, "response is UsergroupGetAutocompleteV2Response");
         }
@@ -139,7 +152,7 @@ namespace eZmaxApi.Test
             //string eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //string sFilter = null;
             //var response = instance.UsergroupGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(UsergroupGetListV1Response), response, "response is UsergroupGetListV1Response");
@@ -167,6 +180,18 @@ namespace eZmaxApi.Test
             //int pkiUsergroupID = null;
             //var response = instance.UsergroupGetPermissionsV1(pkiUsergroupID);
             //Assert.IsInstanceOf(typeof(UsergroupGetPermissionsV1Response), response, "response is UsergroupGetPermissionsV1Response");
+        }
+        
+        /// <summary>
+        /// Test UsergroupGetUsergroupdelegationsV1
+        /// </summary>
+        [Test]
+        public void UsergroupGetUsergroupdelegationsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUsergroupID = null;
+            //var response = instance.UsergroupGetUsergroupdelegationsV1(pkiUsergroupID);
+            //Assert.IsInstanceOf(typeof(UsergroupGetUsergroupdelegationsV1Response), response, "response is UsergroupGetUsergroupdelegationsV1Response");
         }
         
         /// <summary>

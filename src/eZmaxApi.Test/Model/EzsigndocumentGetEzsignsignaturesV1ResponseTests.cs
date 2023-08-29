@@ -66,14 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'MPayload'
-        /// </summary>
-        [Test]
-        public void MPayloadTest()
-        {
-            // TODO unit test for the property 'MPayload'
-        }
-        /// <summary>
         /// Test the property 'ObjDebugPayload'
         /// </summary>
         [Test]
@@ -88,6 +80,14 @@ namespace eZmaxApi.Test
         public void ObjDebugTest()
         {
             // TODO unit test for the property 'ObjDebug'
+        }
+        /// <summary>
+        /// Test the property 'MPayload'
+        /// </summary>
+        [Test]
+        public void MPayloadTest()
+        {
+            // TODO unit test for the property 'MPayload'
         }
 
     }

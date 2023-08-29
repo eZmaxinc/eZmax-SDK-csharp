@@ -66,14 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'STemporaryFileUrl'
-        /// </summary>
-        [Test]
-        public void STemporaryFileUrlTest()
-        {
-            // TODO unit test for the property 'STemporaryFileUrl'
-        }
-        /// <summary>
         /// Test the property 'SErrorMessage'
         /// </summary>
         [Test]
@@ -88,6 +80,14 @@ namespace eZmaxApi.Test
         public void EErrorCodeTest()
         {
             // TODO unit test for the property 'EErrorCode'
+        }
+        /// <summary>
+        /// Test the property 'STemporaryFileUrl'
+        /// </summary>
+        [Test]
+        public void STemporaryFileUrlTest()
+        {
+            // TODO unit test for the property 'STemporaryFileUrl'
         }
 
     }

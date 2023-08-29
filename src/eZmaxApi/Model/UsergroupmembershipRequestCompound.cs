@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Usergroupmembership Object and children
     /// </summary>
     [DataContract]
-    public partial class UsergroupmembershipRequestCompound :  IEquatable<UsergroupmembershipRequestCompound>, IValidatableObject
+    public partial class UsergroupmembershipRequestCompound :  IEquatable<UsergroupmembershipRequestCompound>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupmembershipRequestCompound" /> class.
@@ -166,52 +164,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.FkiUserID.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiUsergroupmembershipID (int) maximum
-            if(this.PkiUsergroupmembershipID > (int)65535)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupmembershipID" });
-            }
-
-            // PkiUsergroupmembershipID (int) minimum
-            if(this.PkiUsergroupmembershipID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupmembershipID" });
-            }
-
-
-
-            // FkiUsergroupID (int) maximum
-            if(this.FkiUsergroupID > (int)255)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
-            }
-
-            // FkiUsergroupID (int) minimum
-            if(this.FkiUsergroupID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
-            }
-
-
-
-            // FkiUserID (int) minimum
-            if(this.FkiUserID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
-            }
-
-            yield break;
         }
     }
 

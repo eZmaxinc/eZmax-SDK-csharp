@@ -162,6 +162,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'BEzsignformfieldgroupEncrypted'
         }
         /// <summary>
+        /// Test the property 'EEzsignformfieldgroupTextvalidation'
+        /// </summary>
+        [Test]
+        public void EEzsignformfieldgroupTextvalidationTest()
+        {
+            // TODO unit test for the property 'EEzsignformfieldgroupTextvalidation'
+        }
+        /// <summary>
         /// Test the property 'SEzsignformfieldgroupRegexp'
         /// </summary>
         [Test]

@@ -122,6 +122,22 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'IEzsigntemplatesignatureY'
         }
         /// <summary>
+        /// Test the property 'IEzsigntemplatesignatureWidth'
+        /// </summary>
+        [Test]
+        public void IEzsigntemplatesignatureWidthTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatesignatureWidth'
+        }
+        /// <summary>
+        /// Test the property 'IEzsigntemplatesignatureHeight'
+        /// </summary>
+        [Test]
+        public void IEzsigntemplatesignatureHeightTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatesignatureHeight'
+        }
+        /// <summary>
         /// Test the property 'IEzsigntemplatesignatureStep'
         /// </summary>
         [Test]
@@ -192,6 +208,30 @@ namespace eZmaxApi.Test
         public void IEzsigntemplatesignatureValidationstepTest()
         {
             // TODO unit test for the property 'IEzsigntemplatesignatureValidationstep'
+        }
+        /// <summary>
+        /// Test the property 'IEzsigntemplatesignatureMaxlength'
+        /// </summary>
+        [Test]
+        public void IEzsigntemplatesignatureMaxlengthTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatesignatureMaxlength'
+        }
+        /// <summary>
+        /// Test the property 'SEzsigntemplatesignatureRegexp'
+        /// </summary>
+        [Test]
+        public void SEzsigntemplatesignatureRegexpTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplatesignatureRegexp'
+        }
+        /// <summary>
+        /// Test the property 'EEzsigntemplatesignatureTextvalidation'
+        /// </summary>
+        [Test]
+        public void EEzsigntemplatesignatureTextvalidationTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatesignatureTextvalidation'
         }
 
     }

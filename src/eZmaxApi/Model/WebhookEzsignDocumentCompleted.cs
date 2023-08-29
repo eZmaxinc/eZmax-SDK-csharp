@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// This is the base Webhook object
     /// </summary>
     [DataContract]
-    public partial class WebhookEzsignDocumentCompleted :  IEquatable<WebhookEzsignDocumentCompleted>, IValidatableObject
+    public partial class WebhookEzsignDocumentCompleted :  IEquatable<WebhookEzsignDocumentCompleted>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEzsignDocumentCompleted" /> class.
@@ -38,21 +36,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEzsignDocumentCompleted" /> class.
         /// </summary>
-        /// <param name="objEzsigndocument">objEzsigndocument (required).</param>
         /// <param name="objWebhook">objWebhook (required).</param>
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        public WebhookEzsignDocumentCompleted(EzsigndocumentResponse objEzsigndocument = default(EzsigndocumentResponse), CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>))
+        /// <param name="objEzsigndocument">objEzsigndocument (required).</param>
+        public WebhookEzsignDocumentCompleted(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), EzsigndocumentResponse objEzsigndocument = default(EzsigndocumentResponse))
         {
-            // to ensure "objEzsigndocument" is required (not null)
-            if (objEzsigndocument == null)
-            {
-                throw new InvalidDataException("objEzsigndocument is a required property for WebhookEzsignDocumentCompleted and cannot be null");
-            }
-            else
-            {
-                this.ObjEzsigndocument = objEzsigndocument;
-            }
-
             // to ensure "objWebhook" is required (not null)
             if (objWebhook == null)
             {
@@ -73,13 +61,17 @@ namespace eZmaxApi.Model
                 this.AObjAttempt = aObjAttempt;
             }
 
-        }
+            // to ensure "objEzsigndocument" is required (not null)
+            if (objEzsigndocument == null)
+            {
+                throw new InvalidDataException("objEzsigndocument is a required property for WebhookEzsignDocumentCompleted and cannot be null");
+            }
+            else
+            {
+                this.ObjEzsigndocument = objEzsigndocument;
+            }
 
-        /// <summary>
-        /// Gets or Sets ObjEzsigndocument
-        /// </summary>
-        [DataMember(Name="objEzsigndocument", EmitDefaultValue=true)]
-        public EzsigndocumentResponse ObjEzsigndocument { get; set; }
+        }
 
         /// <summary>
         /// Gets or Sets ObjWebhook
@@ -95,6 +87,12 @@ namespace eZmaxApi.Model
         public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjEzsigndocument
+        /// </summary>
+        [DataMember(Name="objEzsigndocument", EmitDefaultValue=true)]
+        public EzsigndocumentResponse ObjEzsigndocument { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -102,9 +100,9 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebhookEzsignDocumentCompleted {\n");
-            sb.Append("  ObjEzsigndocument: ").Append(ObjEzsigndocument).Append("\n");
             sb.Append("  ObjWebhook: ").Append(ObjWebhook).Append("\n");
             sb.Append("  AObjAttempt: ").Append(AObjAttempt).Append("\n");
+            sb.Append("  ObjEzsigndocument: ").Append(ObjEzsigndocument).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,11 +138,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.ObjEzsigndocument == input.ObjEzsigndocument ||
-                    (this.ObjEzsigndocument != null &&
-                    this.ObjEzsigndocument.Equals(input.ObjEzsigndocument))
-                ) && 
-                (
                     this.ObjWebhook == input.ObjWebhook ||
                     (this.ObjWebhook != null &&
                     this.ObjWebhook.Equals(input.ObjWebhook))
@@ -154,6 +147,11 @@ namespace eZmaxApi.Model
                     this.AObjAttempt != null &&
                     input.AObjAttempt != null &&
                     this.AObjAttempt.SequenceEqual(input.AObjAttempt)
+                ) && 
+                (
+                    this.ObjEzsigndocument == input.ObjEzsigndocument ||
+                    (this.ObjEzsigndocument != null &&
+                    this.ObjEzsigndocument.Equals(input.ObjEzsigndocument))
                 );
         }
 
@@ -166,24 +164,14 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ObjEzsigndocument != null)
-                    hashCode = hashCode * 59 + this.ObjEzsigndocument.GetHashCode();
                 if (this.ObjWebhook != null)
                     hashCode = hashCode * 59 + this.ObjWebhook.GetHashCode();
                 if (this.AObjAttempt != null)
                     hashCode = hashCode * 59 + this.AObjAttempt.GetHashCode();
+                if (this.ObjEzsigndocument != null)
+                    hashCode = hashCode * 59 + this.ObjEzsigndocument.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

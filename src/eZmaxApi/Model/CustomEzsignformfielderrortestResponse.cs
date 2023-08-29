@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Custom Ezsignformfielderrortest Object to contain the detail of the test error
     /// </summary>
     [DataContract]
-    public partial class CustomEzsignformfielderrortestResponse :  IEquatable<CustomEzsignformfielderrortestResponse>, IValidatableObject
+    public partial class CustomEzsignformfielderrortestResponse :  IEquatable<CustomEzsignformfielderrortestResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignformfielderrortestResponse" /> class.
@@ -149,34 +147,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzsignformfielderrortestDetail.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // SEzsignformfielderrortestName (string) pattern
-            Regex regexSEzsignformfielderrortestName = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-            if (false == regexSEzsignformfielderrortestName.Match(this.SEzsignformfielderrortestName).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignformfielderrortestName, must match a pattern of " + regexSEzsignformfielderrortestName, new [] { "SEzsignformfielderrortestName" });
-            }
-
-
-
-            // SEzsignformfielderrortestDetail (string) pattern
-            Regex regexSEzsignformfielderrortestDetail = new Regex(@"^.{0,100}$", RegexOptions.CultureInvariant);
-            if (false == regexSEzsignformfielderrortestDetail.Match(this.SEzsignformfielderrortestDetail).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignformfielderrortestDetail, must match a pattern of " + regexSEzsignformfielderrortestDetail, new [] { "SEzsignformfielderrortestDetail" });
-            }
-
-            yield break;
         }
     }
 

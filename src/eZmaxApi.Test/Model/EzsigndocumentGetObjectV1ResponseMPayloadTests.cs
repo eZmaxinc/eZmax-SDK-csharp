@@ -234,6 +234,14 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'SEzsigndocumentExternalid'
         }
         /// <summary>
+        /// Test the property 'EEzsigndocumentSteptype'
+        /// </summary>
+        [Test]
+        public void EEzsigndocumentSteptypeTest()
+        {
+            // TODO unit test for the property 'EEzsigndocumentSteptype'
+        }
+        /// <summary>
         /// Test the property 'IEzsigndocumentStepformtotal'
         /// </summary>
         [Test]

@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatepackagesignermembership Object and children
     /// </summary>
     [DataContract]
-    public partial class EzsigntemplatepackagesignermembershipRequestCompound :  IEquatable<EzsigntemplatepackagesignermembershipRequestCompound>, IValidatableObject
+    public partial class EzsigntemplatepackagesignermembershipRequestCompound :  IEquatable<EzsigntemplatepackagesignermembershipRequestCompound>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipRequestCompound" /> class.
@@ -209,56 +207,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IEzsigntemplatepackagesignermembershipCopy.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzsigntemplatepackagesignermembershipID (int) minimum
-            if(this.PkiEzsigntemplatepackagesignermembershipID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatepackagesignermembershipID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackagesignermembershipID" });
-            }
-
-
-
-            // FkiEzsigntemplatepackagemembershipID (int) minimum
-            if(this.FkiEzsigntemplatepackagemembershipID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepackagemembershipID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackagemembershipID" });
-            }
-
-
-
-            // FkiEzsigntemplatepackagesignerID (int) minimum
-            if(this.FkiEzsigntemplatepackagesignerID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepackagesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackagesignerID" });
-            }
-
-
-
-            // FkiEzsigntemplatesignerID (int) minimum
-            if(this.FkiEzsigntemplatesignerID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
-            }
-
-
-
-            // IEzsigntemplatepackagesignermembershipCopy (int) minimum
-            if(this.IEzsigntemplatepackagesignermembershipCopy < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatepackagesignermembershipCopy, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatepackagesignermembershipCopy" });
-            }
-
-            yield break;
         }
     }
 

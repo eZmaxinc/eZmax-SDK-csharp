@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingcommission Object
     /// </summary>
     [DataContract]
-    public partial class EzmaxinvoicingcommissionResponse :  IEquatable<EzmaxinvoicingcommissionResponse>, IValidatableObject
+    public partial class EzmaxinvoicingcommissionResponse :  IEquatable<EzmaxinvoicingcommissionResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingcommissionResponse" /> class.
@@ -269,57 +267,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.DEzmaxinvoicingcommissionAmount.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // FkiEzmaxinvoicingsummaryglobalID (int) minimum
-            if(this.FkiEzmaxinvoicingsummaryglobalID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingsummaryglobalID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingsummaryglobalID" });
-            }
-
-
-
-            // FkiEzmaxpartnerID (int) minimum
-            if(this.FkiEzmaxpartnerID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpartnerID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxpartnerID" });
-            }
-
-
-
-            // FkiEzmaxrepresentativeID (int) minimum
-            if(this.FkiEzmaxrepresentativeID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxrepresentativeID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxrepresentativeID" });
-            }
-
-
-
-            // IEzmaxinvoicingcommissionDays (int) minimum
-            if(this.IEzmaxinvoicingcommissionDays < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingcommissionDays, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingcommissionDays" });
-            }
-
-
-
-            // DEzmaxinvoicingcommissionAmount (string) pattern
-            Regex regexDEzmaxinvoicingcommissionAmount = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingcommissionAmount.Match(this.DEzmaxinvoicingcommissionAmount).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingcommissionAmount, must match a pattern of " + regexDEzmaxinvoicingcommissionAmount, new [] { "DEzmaxinvoicingcommissionAmount" });
-            }
-
-            yield break;
         }
     }
 

@@ -74,7 +74,7 @@ namespace eZmaxApi.Test
             //int? fkiEzsignfoldertypeID = null;
             //string eFilterActive = null;
             //string sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
+            //HeaderAcceptLanguage acceptLanguage = null;
             //var response = instance.EzsigntsarequirementGetAutocompleteV2(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(EzsigntsarequirementGetAutocompleteV2Response), response, "response is EzsigntsarequirementGetAutocompleteV2Response");
         }

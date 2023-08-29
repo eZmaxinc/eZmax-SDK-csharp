@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Usergroup List Element
     /// </summary>
     [DataContract]
-    public partial class UsergroupListElement :  IEquatable<UsergroupListElement>, IValidatableObject
+    public partial class UsergroupListElement :  IEquatable<UsergroupListElement>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupListElement" /> class.
@@ -175,53 +173,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ICountUser.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiUsergroupID (int) maximum
-            if(this.PkiUsergroupID > (int)255)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 255.", new [] { "PkiUsergroupID" });
-            }
-
-            // PkiUsergroupID (int) minimum
-            if(this.PkiUsergroupID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
-            }
-
-
-
-            // SUsergroupNameX (string) pattern
-            Regex regexSUsergroupNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-            if (false == regexSUsergroupNameX.Match(this.SUsergroupNameX).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameX, must match a pattern of " + regexSUsergroupNameX, new [] { "SUsergroupNameX" });
-            }
-
-
-
-            // ICountUser (int) maximum
-            if(this.ICountUser > (int)16777215)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICountUser, must be a value less than or equal to 16777215.", new [] { "ICountUser" });
-            }
-
-            // ICountUser (int) minimum
-            if(this.ICountUser < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICountUser, must be a value greater than or equal to 0.", new [] { "ICountUser" });
-            }
-
-            yield break;
         }
     }
 

@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -37,7 +37,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>SecretquestionGetAutocompleteV2Response</returns>
-        SecretquestionGetAutocompleteV2Response SecretquestionGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        SecretquestionGetAutocompleteV2Response SecretquestionGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
 
         /// <summary>
         /// Retrieve Secretquestions and IDs
@@ -51,7 +51,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of SecretquestionGetAutocompleteV2Response</returns>
-        ApiResponse<SecretquestionGetAutocompleteV2Response> SecretquestionGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        ApiResponse<SecretquestionGetAutocompleteV2Response> SecretquestionGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -67,7 +67,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of SecretquestionGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<SecretquestionGetAutocompleteV2Response> SecretquestionGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<SecretquestionGetAutocompleteV2Response> SecretquestionGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Secretquestions and IDs
@@ -82,7 +82,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (SecretquestionGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecretquestionGetAutocompleteV2Response>> SecretquestionGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SecretquestionGetAutocompleteV2Response>> SecretquestionGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -203,7 +203,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>SecretquestionGetAutocompleteV2Response</returns>
-        public SecretquestionGetAutocompleteV2Response SecretquestionGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        public SecretquestionGetAutocompleteV2Response SecretquestionGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
         {
              ApiResponse<SecretquestionGetAutocompleteV2Response> localVarResponse = SecretquestionGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -218,13 +218,13 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of SecretquestionGetAutocompleteV2Response</returns>
-        public ApiResponse<SecretquestionGetAutocompleteV2Response> SecretquestionGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        public ApiResponse<SecretquestionGetAutocompleteV2Response> SecretquestionGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectSecretquestionApi->SecretquestionGetAutocompleteV2");
 
-            var localVarPath = "/2/object/secretquestion/getAutocomplete/{sSelector}";
+            var localVarPath = "./2/object/secretquestion/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -270,7 +270,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SecretquestionGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (SecretquestionGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecretquestionGetAutocompleteV2Response)));
         }
 
@@ -284,7 +284,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of SecretquestionGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<SecretquestionGetAutocompleteV2Response> SecretquestionGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<SecretquestionGetAutocompleteV2Response> SecretquestionGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<SecretquestionGetAutocompleteV2Response> localVarResponse = await SecretquestionGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -301,13 +301,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (SecretquestionGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecretquestionGetAutocompleteV2Response>> SecretquestionGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<SecretquestionGetAutocompleteV2Response>> SecretquestionGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectSecretquestionApi->SecretquestionGetAutocompleteV2");
 
-            var localVarPath = "/2/object/secretquestion/getAutocomplete/{sSelector}";
+            var localVarPath = "./2/object/secretquestion/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -353,7 +353,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SecretquestionGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (SecretquestionGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecretquestionGetAutocompleteV2Response)));
         }
 

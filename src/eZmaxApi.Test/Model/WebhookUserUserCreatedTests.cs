@@ -66,14 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'ObjUser'
-        /// </summary>
-        [Test]
-        public void ObjUserTest()
-        {
-            // TODO unit test for the property 'ObjUser'
-        }
-        /// <summary>
         /// Test the property 'ObjWebhook'
         /// </summary>
         [Test]
@@ -88,6 +80,14 @@ namespace eZmaxApi.Test
         public void AObjAttemptTest()
         {
             // TODO unit test for the property 'AObjAttempt'
+        }
+        /// <summary>
+        /// Test the property 'ObjUser'
+        /// </summary>
+        [Test]
+        public void ObjUserTest()
+        {
+            // TODO unit test for the property 'ObjUser'
         }
 
     }

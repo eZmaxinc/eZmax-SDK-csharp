@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// The description of the Variableexpense
     /// </summary>
     [DataContract]
-    public partial class MultilingualVariableexpenseDescription :  IEquatable<MultilingualVariableexpenseDescription>, IValidatableObject
+    public partial class MultilingualVariableexpenseDescription :  IEquatable<MultilingualVariableexpenseDescription>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualVariableexpenseDescription" /> class.
@@ -126,34 +124,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SVariableexpenseDescription2.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // SVariableexpenseDescription1 (string) pattern
-            Regex regexSVariableexpenseDescription1 = new Regex(@"^.{0,40}$", RegexOptions.CultureInvariant);
-            if (false == regexSVariableexpenseDescription1.Match(this.SVariableexpenseDescription1).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SVariableexpenseDescription1, must match a pattern of " + regexSVariableexpenseDescription1, new [] { "SVariableexpenseDescription1" });
-            }
-
-
-
-            // SVariableexpenseDescription2 (string) pattern
-            Regex regexSVariableexpenseDescription2 = new Regex(@"^.{0,40}$", RegexOptions.CultureInvariant);
-            if (false == regexSVariableexpenseDescription2.Match(this.SVariableexpenseDescription2).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SVariableexpenseDescription2, must match a pattern of " + regexSVariableexpenseDescription2, new [] { "SVariableexpenseDescription2" });
-            }
-
-            yield break;
         }
     }
 

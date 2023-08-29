@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
     /// </summary>
     [DataContract]
-    public partial class EzsignbulksendCreateEzsignbulksendtransmissionV1Request :  IEquatable<EzsignbulksendCreateEzsignbulksendtransmissionV1Request>, IValidatableObject
+    public partial class EzsignbulksendCreateEzsignbulksendtransmissionV1Request :  IEquatable<EzsignbulksendCreateEzsignbulksendtransmissionV1Request>
     {
         /// <summary>
         /// Gets or Sets EEzsignfolderSendreminderfrequency
@@ -269,38 +267,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SCsvBase64.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // FkiUserlogintypeID (int) minimum
-            if(this.FkiUserlogintypeID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserlogintypeID, must be a value greater than or equal to 0.", new [] { "FkiUserlogintypeID" });
-            }
-
-
-
-            // FkiEzsigntsarequirementID (int) maximum
-            if(this.FkiEzsigntsarequirementID > (int)3)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "FkiEzsigntsarequirementID" });
-            }
-
-            // FkiEzsigntsarequirementID (int) minimum
-            if(this.FkiEzsigntsarequirementID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
-            }
-
-            yield break;
         }
     }
 

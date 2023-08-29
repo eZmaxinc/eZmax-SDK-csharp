@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsignature Object
     /// </summary>
     [DataContract]
-    public partial class EzsignsignatureRequest :  IEquatable<EzsignsignatureRequest>, IValidatableObject
+    public partial class EzsignsignatureRequest :  IEquatable<EzsignsignatureRequest>
     {
         /// <summary>
         /// Gets or Sets EEzsignsignatureType
@@ -81,9 +79,10 @@ namespace eZmaxApi.Model
         /// <param name="eEzsignsignatureAttachmentnamesource">eEzsignsignatureAttachmentnamesource.</param>
         /// <param name="sEzsignsignatureAttachmentdescription">The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments.</param>
         /// <param name="iEzsignsignatureValidationstep">The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments.</param>
+        /// <param name="iEzsignsignatureMaxlength">The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**.</param>
         /// <param name="eEzsignsignatureTextvalidation">eEzsignsignatureTextvalidation.</param>
         /// <param name="sEzsignsignatureRegexp">A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**.</param>
-        public EzsignsignatureRequest(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int fkiEzsignfoldersignerassociationIDValidation = default(int), bool bEzsignsignatureRequired = default(bool), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), string sEzsignsignatureAttachmentdescription = default(string), int iEzsignsignatureValidationstep = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureRegexp = default(string))
+        public EzsignsignatureRequest(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int fkiEzsignfoldersignerassociationIDValidation = default(int), bool bEzsignsignatureRequired = default(bool), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), string sEzsignsignatureAttachmentdescription = default(string), int iEzsignsignatureValidationstep = default(int), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureRegexp = default(string))
         {
             // to ensure "fkiEzsignfoldersignerassociationID" is required (not null)
             if (fkiEzsignfoldersignerassociationID == null)
@@ -166,6 +165,7 @@ namespace eZmaxApi.Model
             this.EEzsignsignatureAttachmentnamesource = eEzsignsignatureAttachmentnamesource;
             this.SEzsignsignatureAttachmentdescription = sEzsignsignatureAttachmentdescription;
             this.IEzsignsignatureValidationstep = iEzsignsignatureValidationstep;
+            this.IEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
             this.EEzsignsignatureTextvalidation = eEzsignsignatureTextvalidation;
             this.SEzsignsignatureRegexp = sEzsignsignatureRegexp;
         }
@@ -272,6 +272,13 @@ namespace eZmaxApi.Model
         [DataMember(Name="iEzsignsignatureValidationstep", EmitDefaultValue=false)]
         public int IEzsignsignatureValidationstep { get; set; }
 
+        /// <summary>
+        /// The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+        /// </summary>
+        /// <value>The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**</value>
+        [DataMember(Name="iEzsignsignatureMaxlength", EmitDefaultValue=false)]
+        public int IEzsignsignatureMaxlength { get; set; }
+
 
         /// <summary>
         /// A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
@@ -306,6 +313,7 @@ namespace eZmaxApi.Model
             sb.Append("  EEzsignsignatureAttachmentnamesource: ").Append(EEzsignsignatureAttachmentnamesource).Append("\n");
             sb.Append("  SEzsignsignatureAttachmentdescription: ").Append(SEzsignsignatureAttachmentdescription).Append("\n");
             sb.Append("  IEzsignsignatureValidationstep: ").Append(IEzsignsignatureValidationstep).Append("\n");
+            sb.Append("  IEzsignsignatureMaxlength: ").Append(IEzsignsignatureMaxlength).Append("\n");
             sb.Append("  EEzsignsignatureTextvalidation: ").Append(EEzsignsignatureTextvalidation).Append("\n");
             sb.Append("  SEzsignsignatureRegexp: ").Append(SEzsignsignatureRegexp).Append("\n");
             sb.Append("}\n");
@@ -433,6 +441,11 @@ namespace eZmaxApi.Model
                     this.IEzsignsignatureValidationstep.Equals(input.IEzsignsignatureValidationstep))
                 ) && 
                 (
+                    this.IEzsignsignatureMaxlength == input.IEzsignsignatureMaxlength ||
+                    (this.IEzsignsignatureMaxlength != null &&
+                    this.IEzsignsignatureMaxlength.Equals(input.IEzsignsignatureMaxlength))
+                ) && 
+                (
                     this.EEzsignsignatureTextvalidation == input.EEzsignsignatureTextvalidation ||
                     (this.EEzsignsignatureTextvalidation != null &&
                     this.EEzsignsignatureTextvalidation.Equals(input.EEzsignsignatureTextvalidation))
@@ -489,94 +502,14 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzsignsignatureAttachmentdescription.GetHashCode();
                 if (this.IEzsignsignatureValidationstep != null)
                     hashCode = hashCode * 59 + this.IEzsignsignatureValidationstep.GetHashCode();
+                if (this.IEzsignsignatureMaxlength != null)
+                    hashCode = hashCode * 59 + this.IEzsignsignatureMaxlength.GetHashCode();
                 if (this.EEzsignsignatureTextvalidation != null)
                     hashCode = hashCode * 59 + this.EEzsignsignatureTextvalidation.GetHashCode();
                 if (this.SEzsignsignatureRegexp != null)
                     hashCode = hashCode * 59 + this.SEzsignsignatureRegexp.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzsignsignatureID (int) minimum
-            if(this.PkiEzsignsignatureID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignatureID" });
-            }
-
-
-
-            // FkiEzsignfoldersignerassociationID (int) minimum
-            if(this.FkiEzsignfoldersignerassociationID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
-            }
-
-
-
-            // IEzsignpagePagenumber (int) minimum
-            if(this.IEzsignpagePagenumber < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
-            }
-
-
-
-            // IEzsignsignatureX (int) minimum
-            if(this.IEzsignsignatureX < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignatureX, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureX" });
-            }
-
-
-
-            // IEzsignsignatureY (int) minimum
-            if(this.IEzsignsignatureY < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignatureY, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureY" });
-            }
-
-
-
-            // IEzsignsignatureWidth (int) minimum
-            if(this.IEzsignsignatureWidth < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignatureWidth, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureWidth" });
-            }
-
-
-
-            // IEzsignsignatureHeight (int) minimum
-            if(this.IEzsignsignatureHeight < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignatureHeight, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureHeight" });
-            }
-
-
-
-            // FkiEzsigndocumentID (int) minimum
-            if(this.FkiEzsigndocumentID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
-            }
-
-
-
-            // FkiEzsignfoldersignerassociationIDValidation (int) minimum
-            if(this.FkiEzsignfoldersignerassociationIDValidation < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationIDValidation" });
-            }
-
-            yield break;
         }
     }
 

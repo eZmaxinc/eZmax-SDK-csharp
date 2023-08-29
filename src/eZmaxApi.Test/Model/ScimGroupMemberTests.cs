@@ -90,12 +90,12 @@ namespace eZmaxApi.Test
             // TODO unit test for the property 'Type'
         }
         /// <summary>
-        /// Test the property 'Ref'
+        /// Test the property 'VarRef'
         /// </summary>
         [Test]
-        public void RefTest()
+        public void VarRefTest()
         {
-            // TODO unit test for the property 'Ref'
+            // TODO unit test for the property 'VarRef'
         }
 
     }

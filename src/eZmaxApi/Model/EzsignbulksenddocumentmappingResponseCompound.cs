@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Ezsignbulksenddocumentmapping Object
     /// </summary>
     [DataContract]
-    public partial class EzsignbulksenddocumentmappingResponseCompound :  IEquatable<EzsignbulksenddocumentmappingResponseCompound>, IValidatableObject
+    public partial class EzsignbulksenddocumentmappingResponseCompound :  IEquatable<EzsignbulksenddocumentmappingResponseCompound>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingResponseCompound" /> class.
@@ -241,56 +239,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ObjEzsigntemplatepackage.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzsignbulksenddocumentmappingID (int) minimum
-            if(this.PkiEzsignbulksenddocumentmappingID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignbulksenddocumentmappingID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksenddocumentmappingID" });
-            }
-
-
-
-            // FkiEzsignbulksendID (int) minimum
-            if(this.FkiEzsignbulksendID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
-            }
-
-
-
-            // FkiEzsigntemplatepackageID (int) minimum
-            if(this.FkiEzsigntemplatepackageID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
-            }
-
-
-
-            // FkiEzsigntemplateID (int) minimum
-            if(this.FkiEzsigntemplateID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
-            }
-
-
-
-            // IEzsignbulksenddocumentmappingOrder (int) minimum
-            if(this.IEzsignbulksenddocumentmappingOrder < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignbulksenddocumentmappingOrder, must be a value greater than or equal to 0.", new [] { "IEzsignbulksenddocumentmappingOrder" });
-            }
-
-            yield break;
         }
     }
 

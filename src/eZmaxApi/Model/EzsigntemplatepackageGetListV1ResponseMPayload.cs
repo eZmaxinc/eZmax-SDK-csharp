@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsigntemplatepackage/getList
     /// </summary>
     [DataContract]
-    public partial class EzsigntemplatepackageGetListV1ResponseMPayload :  IEquatable<EzsigntemplatepackageGetListV1ResponseMPayload>, IValidatableObject
+    public partial class EzsigntemplatepackageGetListV1ResponseMPayload :  IEquatable<EzsigntemplatepackageGetListV1ResponseMPayload>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageGetListV1ResponseMPayload" /> class.
@@ -38,21 +36,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsigntemplatepackage">aObjEzsigntemplatepackage (required).</param>
         /// <param name="iRowReturned">The number of rows returned (required).</param>
         /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        public EzsigntemplatepackageGetListV1ResponseMPayload(List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage = default(List<EzsigntemplatepackageListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
+        /// <param name="aObjEzsigntemplatepackage">aObjEzsigntemplatepackage (required).</param>
+        public EzsigntemplatepackageGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage = default(List<EzsigntemplatepackageListElement>))
         {
-            // to ensure "aObjEzsigntemplatepackage" is required (not null)
-            if (aObjEzsigntemplatepackage == null)
-            {
-                throw new InvalidDataException("aObjEzsigntemplatepackage is a required property for EzsigntemplatepackageGetListV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.AObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
-            }
-
             // to ensure "iRowReturned" is required (not null)
             if (iRowReturned == null)
             {
@@ -73,13 +61,17 @@ namespace eZmaxApi.Model
                 this.IRowFiltered = iRowFiltered;
             }
 
-        }
+            // to ensure "aObjEzsigntemplatepackage" is required (not null)
+            if (aObjEzsigntemplatepackage == null)
+            {
+                throw new InvalidDataException("aObjEzsigntemplatepackage is a required property for EzsigntemplatepackageGetListV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
+            }
 
-        /// <summary>
-        /// Gets or Sets AObjEzsigntemplatepackage
-        /// </summary>
-        [DataMember(Name="a_objEzsigntemplatepackage", EmitDefaultValue=true)]
-        public List<EzsigntemplatepackageListElement> AObjEzsigntemplatepackage { get; set; }
+        }
 
         /// <summary>
         /// The number of rows returned
@@ -96,6 +88,12 @@ namespace eZmaxApi.Model
         public int IRowFiltered { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjEzsigntemplatepackage
+        /// </summary>
+        [DataMember(Name="a_objEzsigntemplatepackage", EmitDefaultValue=true)]
+        public List<EzsigntemplatepackageListElement> AObjEzsigntemplatepackage { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -103,9 +101,9 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsigntemplatepackageGetListV1ResponseMPayload {\n");
-            sb.Append("  AObjEzsigntemplatepackage: ").Append(AObjEzsigntemplatepackage).Append("\n");
             sb.Append("  IRowReturned: ").Append(IRowReturned).Append("\n");
             sb.Append("  IRowFiltered: ").Append(IRowFiltered).Append("\n");
+            sb.Append("  AObjEzsigntemplatepackage: ").Append(AObjEzsigntemplatepackage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,12 +139,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.AObjEzsigntemplatepackage == input.AObjEzsigntemplatepackage ||
-                    this.AObjEzsigntemplatepackage != null &&
-                    input.AObjEzsigntemplatepackage != null &&
-                    this.AObjEzsigntemplatepackage.SequenceEqual(input.AObjEzsigntemplatepackage)
-                ) && 
-                (
                     this.IRowReturned == input.IRowReturned ||
                     (this.IRowReturned != null &&
                     this.IRowReturned.Equals(input.IRowReturned))
@@ -155,6 +147,12 @@ namespace eZmaxApi.Model
                     this.IRowFiltered == input.IRowFiltered ||
                     (this.IRowFiltered != null &&
                     this.IRowFiltered.Equals(input.IRowFiltered))
+                ) && 
+                (
+                    this.AObjEzsigntemplatepackage == input.AObjEzsigntemplatepackage ||
+                    this.AObjEzsigntemplatepackage != null &&
+                    input.AObjEzsigntemplatepackage != null &&
+                    this.AObjEzsigntemplatepackage.SequenceEqual(input.AObjEzsigntemplatepackage)
                 );
         }
 
@@ -167,24 +165,14 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AObjEzsigntemplatepackage != null)
-                    hashCode = hashCode * 59 + this.AObjEzsigntemplatepackage.GetHashCode();
                 if (this.IRowReturned != null)
                     hashCode = hashCode * 59 + this.IRowReturned.GetHashCode();
                 if (this.IRowFiltered != null)
                     hashCode = hashCode * 59 + this.IRowFiltered.GetHashCode();
+                if (this.AObjEzsigntemplatepackage != null)
+                    hashCode = hashCode * 59 + this.AObjEzsigntemplatepackage.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

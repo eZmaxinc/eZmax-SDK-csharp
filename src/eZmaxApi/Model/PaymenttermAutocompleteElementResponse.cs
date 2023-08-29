@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Paymentterm AutocompleteElement Response
     /// </summary>
     [DataContract]
-    public partial class PaymenttermAutocompleteElementResponse :  IEquatable<PaymenttermAutocompleteElementResponse>, IValidatableObject
+    public partial class PaymenttermAutocompleteElementResponse :  IEquatable<PaymenttermAutocompleteElementResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermAutocompleteElementResponse" /> class.
@@ -175,25 +173,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BPaymenttermIsactive.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // SPaymenttermDescriptionX (string) pattern
-            Regex regexSPaymenttermDescriptionX = new Regex(@"^.{1,40}$", RegexOptions.CultureInvariant);
-            if (false == regexSPaymenttermDescriptionX.Match(this.SPaymenttermDescriptionX).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermDescriptionX, must match a pattern of " + regexSPaymenttermDescriptionX, new [] { "SPaymenttermDescriptionX" });
-            }
-
-            yield break;
         }
     }
 

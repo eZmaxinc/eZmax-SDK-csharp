@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/userstaged/getList
     /// </summary>
     [DataContract]
-    public partial class UserstagedGetListV1Response :  IEquatable<UserstagedGetListV1Response>, IValidatableObject
+    public partial class UserstagedGetListV1Response :  IEquatable<UserstagedGetListV1Response>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedGetListV1Response" /> class.
@@ -38,11 +36,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedGetListV1Response" /> class.
         /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
+        /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        public UserstagedGetListV1Response(UserstagedGetListV1ResponseMPayload mPayload = default(UserstagedGetListV1ResponseMPayload), CommonResponseObjDebugPayloadGetList objDebugPayload = default(CommonResponseObjDebugPayloadGetList), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        /// <param name="mPayload">mPayload (required).</param>
+        public UserstagedGetListV1Response(CommonResponseObjDebugPayloadGetList objDebugPayload = default(CommonResponseObjDebugPayloadGetList), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), UserstagedGetListV1ResponseMPayload mPayload = default(UserstagedGetListV1ResponseMPayload))
         {
+            // to ensure "objDebugPayload" is required (not null)
+            if (objDebugPayload == null)
+            {
+                throw new InvalidDataException("objDebugPayload is a required property for UserstagedGetListV1Response and cannot be null");
+            }
+            else
+            {
+                this.ObjDebugPayload = objDebugPayload;
+            }
+
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
@@ -53,20 +61,13 @@ namespace eZmaxApi.Model
                 this.MPayload = mPayload;
             }
 
-            this.ObjDebugPayload = objDebugPayload;
             this.ObjDebug = objDebug;
         }
 
         /// <summary>
-        /// Gets or Sets MPayload
-        /// </summary>
-        [DataMember(Name="mPayload", EmitDefaultValue=true)]
-        public UserstagedGetListV1ResponseMPayload MPayload { get; set; }
-
-        /// <summary>
         /// Gets or Sets ObjDebugPayload
         /// </summary>
-        [DataMember(Name="objDebugPayload", EmitDefaultValue=false)]
+        [DataMember(Name="objDebugPayload", EmitDefaultValue=true)]
         public CommonResponseObjDebugPayloadGetList ObjDebugPayload { get; set; }
 
         /// <summary>
@@ -76,6 +77,12 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
+        /// Gets or Sets MPayload
+        /// </summary>
+        [DataMember(Name="mPayload", EmitDefaultValue=true)]
+        public UserstagedGetListV1ResponseMPayload MPayload { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,9 +90,9 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserstagedGetListV1Response {\n");
-            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
             sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
+            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,11 +128,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.MPayload == input.MPayload ||
-                    (this.MPayload != null &&
-                    this.MPayload.Equals(input.MPayload))
-                ) && 
-                (
                     this.ObjDebugPayload == input.ObjDebugPayload ||
                     (this.ObjDebugPayload != null &&
                     this.ObjDebugPayload.Equals(input.ObjDebugPayload))
@@ -134,6 +136,11 @@ namespace eZmaxApi.Model
                     this.ObjDebug == input.ObjDebug ||
                     (this.ObjDebug != null &&
                     this.ObjDebug.Equals(input.ObjDebug))
+                ) && 
+                (
+                    this.MPayload == input.MPayload ||
+                    (this.MPayload != null &&
+                    this.MPayload.Equals(input.MPayload))
                 );
         }
 
@@ -146,24 +153,14 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.MPayload != null)
-                    hashCode = hashCode * 59 + this.MPayload.GetHashCode();
                 if (this.ObjDebugPayload != null)
                     hashCode = hashCode * 59 + this.ObjDebugPayload.GetHashCode();
                 if (this.ObjDebug != null)
                     hashCode = hashCode * 59 + this.ObjDebug.GetHashCode();
+                if (this.MPayload != null)
+                    hashCode = hashCode * 59 + this.MPayload.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

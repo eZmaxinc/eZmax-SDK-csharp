@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## FranchiseofficeGetAutocompleteV2
 
-> FranchiseofficeGetAutocompleteV2Response FranchiseofficeGetAutocompleteV2 (string sSelector, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+> FranchiseofficeGetAutocompleteV2Response FranchiseofficeGetAutocompleteV2 (string sSelector, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage acceptLanguage = null)
 
 Retrieve Franchiseoffices and IDs
 
@@ -41,7 +41,7 @@ namespace Example
             var sSelector = "All";  // string | The type of Franchiseoffices to return
             var eFilterActive = "All";  // string | Specify which results we want to display. (optional)  (default to Active)
             var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
-            var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
+            var acceptLanguage = new HeaderAcceptLanguage(); // HeaderAcceptLanguage |  (optional) 
 
             try
             {
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
  **sSelector** | **string**| The type of Franchiseoffices to return | 
  **eFilterActive** | **string**| Specify which results we want to display. | [optional] [default to Active]
  **sQuery** | **string**| Allow to filter the returned results | [optional] 
- **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
+ **acceptLanguage** | [**HeaderAcceptLanguage**](HeaderAcceptLanguage.md)|  | [optional] 
 
 ### Return type
 

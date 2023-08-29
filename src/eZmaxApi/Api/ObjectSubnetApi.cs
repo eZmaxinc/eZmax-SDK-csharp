@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -342,7 +342,7 @@ namespace eZmaxApi.Api
             if (subnetCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'subnetCreateObjectV1Request' when calling ObjectSubnetApi->SubnetCreateObjectV1");
 
-            var localVarPath = "/1/object/subnet";
+            var localVarPath = "./1/object/subnet";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -393,7 +393,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SubnetCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (SubnetCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubnetCreateObjectV1Response)));
         }
 
@@ -424,7 +424,7 @@ namespace eZmaxApi.Api
             if (subnetCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'subnetCreateObjectV1Request' when calling ObjectSubnetApi->SubnetCreateObjectV1");
 
-            var localVarPath = "/1/object/subnet";
+            var localVarPath = "./1/object/subnet";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -475,7 +475,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SubnetCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (SubnetCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubnetCreateObjectV1Response)));
         }
 
@@ -503,7 +503,7 @@ namespace eZmaxApi.Api
             if (pkiSubnetID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiSubnetID' when calling ObjectSubnetApi->SubnetDeleteObjectV1");
 
-            var localVarPath = "/1/object/subnet/{pkiSubnetID}";
+            var localVarPath = "./1/object/subnet/{pkiSubnetID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -546,7 +546,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SubnetDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (SubnetDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubnetDeleteObjectV1Response)));
         }
 
@@ -577,7 +577,7 @@ namespace eZmaxApi.Api
             if (pkiSubnetID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiSubnetID' when calling ObjectSubnetApi->SubnetDeleteObjectV1");
 
-            var localVarPath = "/1/object/subnet/{pkiSubnetID}";
+            var localVarPath = "./1/object/subnet/{pkiSubnetID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -620,7 +620,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SubnetDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (SubnetDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubnetDeleteObjectV1Response)));
         }
 
@@ -653,7 +653,7 @@ namespace eZmaxApi.Api
             if (subnetEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'subnetEditObjectV1Request' when calling ObjectSubnetApi->SubnetEditObjectV1");
 
-            var localVarPath = "/1/object/subnet/{pkiSubnetID}";
+            var localVarPath = "./1/object/subnet/{pkiSubnetID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -705,7 +705,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SubnetEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (SubnetEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubnetEditObjectV1Response)));
         }
 
@@ -741,7 +741,7 @@ namespace eZmaxApi.Api
             if (subnetEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'subnetEditObjectV1Request' when calling ObjectSubnetApi->SubnetEditObjectV1");
 
-            var localVarPath = "/1/object/subnet/{pkiSubnetID}";
+            var localVarPath = "./1/object/subnet/{pkiSubnetID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -793,7 +793,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SubnetEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (SubnetEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubnetEditObjectV1Response)));
         }
 
@@ -821,7 +821,7 @@ namespace eZmaxApi.Api
             if (pkiSubnetID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiSubnetID' when calling ObjectSubnetApi->SubnetGetObjectV2");
 
-            var localVarPath = "/2/object/subnet/{pkiSubnetID}";
+            var localVarPath = "./2/object/subnet/{pkiSubnetID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -864,7 +864,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SubnetGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (SubnetGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubnetGetObjectV2Response)));
         }
 
@@ -895,7 +895,7 @@ namespace eZmaxApi.Api
             if (pkiSubnetID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiSubnetID' when calling ObjectSubnetApi->SubnetGetObjectV2");
 
-            var localVarPath = "/2/object/subnet/{pkiSubnetID}";
+            var localVarPath = "./2/object/subnet/{pkiSubnetID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -938,7 +938,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SubnetGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (SubnetGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubnetGetObjectV2Response)));
         }
 

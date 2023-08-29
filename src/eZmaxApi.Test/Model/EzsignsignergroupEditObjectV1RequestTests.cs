@@ -66,12 +66,12 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'ObjBranding'
+        /// Test the property 'ObjEzsignsignergroup'
         /// </summary>
         [Test]
-        public void ObjBrandingTest()
+        public void ObjEzsignsignergroupTest()
         {
-            // TODO unit test for the property 'ObjBranding'
+            // TODO unit test for the property 'ObjEzsignsignergroup'
         }
 
     }

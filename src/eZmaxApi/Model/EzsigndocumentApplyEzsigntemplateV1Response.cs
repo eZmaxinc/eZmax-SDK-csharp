@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,23 +26,37 @@ namespace eZmaxApi.Model
     /// Response for POST /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
     /// </summary>
     [DataContract]
-    public partial class EzsigndocumentApplyEzsigntemplateV1Response :  IEquatable<EzsigndocumentApplyEzsigntemplateV1Response>, IValidatableObject
+    public partial class EzsigndocumentApplyEzsigntemplateV1Response :  IEquatable<EzsigndocumentApplyEzsigntemplateV1Response>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentApplyEzsigntemplateV1Response" /> class.
         /// </summary>
-        /// <param name="objDebugPayload">objDebugPayload.</param>
+        [JsonConstructorAttribute]
+        protected EzsigndocumentApplyEzsigntemplateV1Response() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsigndocumentApplyEzsigntemplateV1Response" /> class.
+        /// </summary>
+        /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
         public EzsigndocumentApplyEzsigntemplateV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
-            this.ObjDebugPayload = objDebugPayload;
+            // to ensure "objDebugPayload" is required (not null)
+            if (objDebugPayload == null)
+            {
+                throw new InvalidDataException("objDebugPayload is a required property for EzsigndocumentApplyEzsigntemplateV1Response and cannot be null");
+            }
+            else
+            {
+                this.ObjDebugPayload = objDebugPayload;
+            }
+
             this.ObjDebug = objDebug;
         }
 
         /// <summary>
         /// Gets or Sets ObjDebugPayload
         /// </summary>
-        [DataMember(Name="objDebugPayload", EmitDefaultValue=false)]
+        [DataMember(Name="objDebugPayload", EmitDefaultValue=true)]
         public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
 
         /// <summary>
@@ -124,16 +136,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ObjDebug.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

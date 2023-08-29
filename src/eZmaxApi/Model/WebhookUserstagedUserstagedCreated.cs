@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// This is the base Webhook object
     /// </summary>
     [DataContract]
-    public partial class WebhookUserstagedUserstagedCreated :  IEquatable<WebhookUserstagedUserstagedCreated>, IValidatableObject
+    public partial class WebhookUserstagedUserstagedCreated :  IEquatable<WebhookUserstagedUserstagedCreated>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookUserstagedUserstagedCreated" /> class.
@@ -38,21 +36,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookUserstagedUserstagedCreated" /> class.
         /// </summary>
-        /// <param name="objUserstaged">objUserstaged (required).</param>
         /// <param name="objWebhook">objWebhook (required).</param>
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        public WebhookUserstagedUserstagedCreated(UserstagedResponseCompound objUserstaged = default(UserstagedResponseCompound), CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>))
+        /// <param name="objUserstaged">objUserstaged (required).</param>
+        public WebhookUserstagedUserstagedCreated(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), UserstagedResponseCompound objUserstaged = default(UserstagedResponseCompound))
         {
-            // to ensure "objUserstaged" is required (not null)
-            if (objUserstaged == null)
-            {
-                throw new InvalidDataException("objUserstaged is a required property for WebhookUserstagedUserstagedCreated and cannot be null");
-            }
-            else
-            {
-                this.ObjUserstaged = objUserstaged;
-            }
-
             // to ensure "objWebhook" is required (not null)
             if (objWebhook == null)
             {
@@ -73,13 +61,17 @@ namespace eZmaxApi.Model
                 this.AObjAttempt = aObjAttempt;
             }
 
-        }
+            // to ensure "objUserstaged" is required (not null)
+            if (objUserstaged == null)
+            {
+                throw new InvalidDataException("objUserstaged is a required property for WebhookUserstagedUserstagedCreated and cannot be null");
+            }
+            else
+            {
+                this.ObjUserstaged = objUserstaged;
+            }
 
-        /// <summary>
-        /// Gets or Sets ObjUserstaged
-        /// </summary>
-        [DataMember(Name="objUserstaged", EmitDefaultValue=true)]
-        public UserstagedResponseCompound ObjUserstaged { get; set; }
+        }
 
         /// <summary>
         /// Gets or Sets ObjWebhook
@@ -95,6 +87,12 @@ namespace eZmaxApi.Model
         public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjUserstaged
+        /// </summary>
+        [DataMember(Name="objUserstaged", EmitDefaultValue=true)]
+        public UserstagedResponseCompound ObjUserstaged { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -102,9 +100,9 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebhookUserstagedUserstagedCreated {\n");
-            sb.Append("  ObjUserstaged: ").Append(ObjUserstaged).Append("\n");
             sb.Append("  ObjWebhook: ").Append(ObjWebhook).Append("\n");
             sb.Append("  AObjAttempt: ").Append(AObjAttempt).Append("\n");
+            sb.Append("  ObjUserstaged: ").Append(ObjUserstaged).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,11 +138,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.ObjUserstaged == input.ObjUserstaged ||
-                    (this.ObjUserstaged != null &&
-                    this.ObjUserstaged.Equals(input.ObjUserstaged))
-                ) && 
-                (
                     this.ObjWebhook == input.ObjWebhook ||
                     (this.ObjWebhook != null &&
                     this.ObjWebhook.Equals(input.ObjWebhook))
@@ -154,6 +147,11 @@ namespace eZmaxApi.Model
                     this.AObjAttempt != null &&
                     input.AObjAttempt != null &&
                     this.AObjAttempt.SequenceEqual(input.AObjAttempt)
+                ) && 
+                (
+                    this.ObjUserstaged == input.ObjUserstaged ||
+                    (this.ObjUserstaged != null &&
+                    this.ObjUserstaged.Equals(input.ObjUserstaged))
                 );
         }
 
@@ -166,24 +164,14 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ObjUserstaged != null)
-                    hashCode = hashCode * 59 + this.ObjUserstaged.GetHashCode();
                 if (this.ObjWebhook != null)
                     hashCode = hashCode * 59 + this.ObjWebhook.GetHashCode();
                 if (this.AObjAttempt != null)
                     hashCode = hashCode * 59 + this.AObjAttempt.GetHashCode();
+                if (this.ObjUserstaged != null)
+                    hashCode = hashCode * 59 + this.ObjUserstaged.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

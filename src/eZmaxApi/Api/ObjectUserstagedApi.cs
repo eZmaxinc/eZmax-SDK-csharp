@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -82,7 +82,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>UserstagedGetListV1Response</returns>
-        UserstagedGetListV1Response UserstagedGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+        UserstagedGetListV1Response UserstagedGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
 
         /// <summary>
         /// Retrieve Userstaged list
@@ -97,7 +97,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of UserstagedGetListV1Response</returns>
-        ApiResponse<UserstagedGetListV1Response> UserstagedGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+        ApiResponse<UserstagedGetListV1Response> UserstagedGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
         /// <summary>
         /// Retrieve an existing Userstaged
         /// </summary>
@@ -206,7 +206,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of UserstagedGetListV1Response</returns>
-        System.Threading.Tasks.Task<UserstagedGetListV1Response> UserstagedGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<UserstagedGetListV1Response> UserstagedGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Userstaged list
@@ -222,7 +222,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (UserstagedGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserstagedGetListV1Response>> UserstagedGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserstagedGetListV1Response>> UserstagedGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Userstaged
         /// </summary>
@@ -411,7 +411,7 @@ namespace eZmaxApi.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling ObjectUserstagedApi->UserstagedCreateUserV1");
 
-            var localVarPath = "/1/object/userstaged/{pkiUserstagedID}/createUser";
+            var localVarPath = "./1/object/userstaged/{pkiUserstagedID}/createUser";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -463,7 +463,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UserstagedCreateUserV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UserstagedCreateUserV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserstagedCreateUserV1Response)));
         }
 
@@ -499,7 +499,7 @@ namespace eZmaxApi.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling ObjectUserstagedApi->UserstagedCreateUserV1");
 
-            var localVarPath = "/1/object/userstaged/{pkiUserstagedID}/createUser";
+            var localVarPath = "./1/object/userstaged/{pkiUserstagedID}/createUser";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -551,7 +551,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UserstagedCreateUserV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UserstagedCreateUserV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserstagedCreateUserV1Response)));
         }
 
@@ -579,7 +579,7 @@ namespace eZmaxApi.Api
             if (pkiUserstagedID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUserstagedID' when calling ObjectUserstagedApi->UserstagedDeleteObjectV1");
 
-            var localVarPath = "/1/object/userstaged/{pkiUserstagedID}";
+            var localVarPath = "./1/object/userstaged/{pkiUserstagedID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -622,7 +622,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UserstagedDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UserstagedDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserstagedDeleteObjectV1Response)));
         }
 
@@ -653,7 +653,7 @@ namespace eZmaxApi.Api
             if (pkiUserstagedID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUserstagedID' when calling ObjectUserstagedApi->UserstagedDeleteObjectV1");
 
-            var localVarPath = "/1/object/userstaged/{pkiUserstagedID}";
+            var localVarPath = "./1/object/userstaged/{pkiUserstagedID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -696,7 +696,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UserstagedDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UserstagedDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserstagedDeleteObjectV1Response)));
         }
 
@@ -710,7 +710,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>UserstagedGetListV1Response</returns>
-        public UserstagedGetListV1Response UserstagedGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        public UserstagedGetListV1Response UserstagedGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
         {
              ApiResponse<UserstagedGetListV1Response> localVarResponse = UserstagedGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -726,10 +726,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of UserstagedGetListV1Response</returns>
-        public ApiResponse<UserstagedGetListV1Response> UserstagedGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        public ApiResponse<UserstagedGetListV1Response> UserstagedGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
         {
 
-            var localVarPath = "/1/object/userstaged/getList";
+            var localVarPath = "./1/object/userstaged/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -777,7 +777,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UserstagedGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UserstagedGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserstagedGetListV1Response)));
         }
 
@@ -792,7 +792,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of UserstagedGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<UserstagedGetListV1Response> UserstagedGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<UserstagedGetListV1Response> UserstagedGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<UserstagedGetListV1Response> localVarResponse = await UserstagedGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -810,10 +810,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (UserstagedGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserstagedGetListV1Response>> UserstagedGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<UserstagedGetListV1Response>> UserstagedGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/1/object/userstaged/getList";
+            var localVarPath = "./1/object/userstaged/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -861,7 +861,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UserstagedGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UserstagedGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserstagedGetListV1Response)));
         }
 
@@ -889,7 +889,7 @@ namespace eZmaxApi.Api
             if (pkiUserstagedID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUserstagedID' when calling ObjectUserstagedApi->UserstagedGetObjectV2");
 
-            var localVarPath = "/2/object/userstaged/{pkiUserstagedID}";
+            var localVarPath = "./2/object/userstaged/{pkiUserstagedID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -932,7 +932,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UserstagedGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UserstagedGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserstagedGetObjectV2Response)));
         }
 
@@ -963,7 +963,7 @@ namespace eZmaxApi.Api
             if (pkiUserstagedID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUserstagedID' when calling ObjectUserstagedApi->UserstagedGetObjectV2");
 
-            var localVarPath = "/2/object/userstaged/{pkiUserstagedID}";
+            var localVarPath = "./2/object/userstaged/{pkiUserstagedID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1006,7 +1006,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UserstagedGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UserstagedGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserstagedGetObjectV2Response)));
         }
 
@@ -1039,7 +1039,7 @@ namespace eZmaxApi.Api
             if (userstagedMapV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'userstagedMapV1Request' when calling ObjectUserstagedApi->UserstagedMapV1");
 
-            var localVarPath = "/1/object/userstaged/{pkiUserstagedID}/map";
+            var localVarPath = "./1/object/userstaged/{pkiUserstagedID}/map";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1091,7 +1091,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UserstagedMapV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UserstagedMapV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserstagedMapV1Response)));
         }
 
@@ -1127,7 +1127,7 @@ namespace eZmaxApi.Api
             if (userstagedMapV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'userstagedMapV1Request' when calling ObjectUserstagedApi->UserstagedMapV1");
 
-            var localVarPath = "/1/object/userstaged/{pkiUserstagedID}/map";
+            var localVarPath = "./1/object/userstaged/{pkiUserstagedID}/map";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1179,7 +1179,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UserstagedMapV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (UserstagedMapV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserstagedMapV1Response)));
         }
 

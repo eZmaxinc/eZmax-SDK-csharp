@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -218,7 +218,7 @@ namespace eZmaxApi.Api
             if (pksCustomerCode == null)
                 throw new ApiException(400, "Missing required parameter 'pksCustomerCode' when calling GlobalCustomerApi->GlobalCustomerGetEndpointV1");
 
-            var localVarPath = "/1/customer/{pksCustomerCode}/endpoint";
+            var localVarPath = "./1/customer/{pksCustomerCode}/endpoint";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -257,7 +257,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<GlobalCustomerGetEndpointV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (GlobalCustomerGetEndpointV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GlobalCustomerGetEndpointV1Response)));
         }
 
@@ -292,7 +292,7 @@ namespace eZmaxApi.Api
             if (pksCustomerCode == null)
                 throw new ApiException(400, "Missing required parameter 'pksCustomerCode' when calling GlobalCustomerApi->GlobalCustomerGetEndpointV1");
 
-            var localVarPath = "/1/customer/{pksCustomerCode}/endpoint";
+            var localVarPath = "./1/customer/{pksCustomerCode}/endpoint";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -331,7 +331,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<GlobalCustomerGetEndpointV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (GlobalCustomerGetEndpointV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GlobalCustomerGetEndpointV1Response)));
         }
 

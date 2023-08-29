@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// An Activesession-&gt;User Object and children to create a complete structure
     /// </summary>
     [DataContract]
-    public partial class ActivesessionResponseCompoundUser :  IEquatable<ActivesessionResponseCompoundUser>, IValidatableObject
+    public partial class ActivesessionResponseCompoundUser :  IEquatable<ActivesessionResponseCompoundUser>
     {
         /// <summary>
         /// Gets or Sets EUserEzsignsendreminderfrequency
@@ -356,54 +354,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IUserListresult.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiUserID (int) minimum
-            if(this.PkiUserID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
-            }
-
-
-
-            // FkiTimezoneID (int) minimum
-            if(this.FkiTimezoneID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
-            }
-
-
-
-            // IUserInterfacecolor (int) minimum
-            if(this.IUserInterfacecolor < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IUserInterfacecolor, must be a value greater than or equal to 0.", new [] { "IUserInterfacecolor" });
-            }
-
-
-
-            // IUserListresult (int) maximum
-            if(this.IUserListresult > (int)500)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IUserListresult, must be a value less than or equal to 500.", new [] { "IUserListresult" });
-            }
-
-            // IUserListresult (int) minimum
-            if(this.IUserListresult < (int)5)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IUserListresult, must be a value greater than or equal to 5.", new [] { "IUserListresult" });
-            }
-
-            yield break;
         }
     }
 

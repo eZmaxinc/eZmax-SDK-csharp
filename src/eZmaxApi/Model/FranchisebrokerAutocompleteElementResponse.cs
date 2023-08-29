@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Franchisebroker AutocompleteElement Response
     /// </summary>
     [DataContract]
-    public partial class FranchisebrokerAutocompleteElementResponse :  IEquatable<FranchisebrokerAutocompleteElementResponse>, IValidatableObject
+    public partial class FranchisebrokerAutocompleteElementResponse :  IEquatable<FranchisebrokerAutocompleteElementResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisebrokerAutocompleteElementResponse" /> class.
@@ -175,24 +173,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BFranchisebrokerIsactive.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiFranchisebrokerID (int) minimum
-            if(this.PkiFranchisebrokerID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiFranchisebrokerID, must be a value greater than or equal to 0.", new [] { "PkiFranchisebrokerID" });
-            }
-
-            yield break;
         }
     }
 

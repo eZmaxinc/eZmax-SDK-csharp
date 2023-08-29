@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ## BillingentityinternalGetAutocompleteV2
 
-> BillingentityinternalGetAutocompleteV2Response BillingentityinternalGetAutocompleteV2 (string sSelector, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+> BillingentityinternalGetAutocompleteV2Response BillingentityinternalGetAutocompleteV2 (string sSelector, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage acceptLanguage = null)
 
 Retrieve Billingentityinternals and IDs
 
@@ -209,7 +209,7 @@ namespace Example
             var sSelector = "All";  // string | The type of Billingentityinternals to return
             var eFilterActive = "All";  // string | Specify which results we want to display. (optional)  (default to Active)
             var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
-            var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
+            var acceptLanguage = new HeaderAcceptLanguage(); // HeaderAcceptLanguage |  (optional) 
 
             try
             {
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
  **sSelector** | **string**| The type of Billingentityinternals to return | 
  **eFilterActive** | **string**| Specify which results we want to display. | [optional] [default to Active]
  **sQuery** | **string**| Allow to filter the returned results | [optional] 
- **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
+ **acceptLanguage** | [**HeaderAcceptLanguage**](HeaderAcceptLanguage.md)|  | [optional] 
 
 ### Return type
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 ## BillingentityinternalGetListV1
 
-> BillingentityinternalGetListV1Response BillingentityinternalGetListV1 (string eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string sFilter = null)
+> BillingentityinternalGetListV1Response BillingentityinternalGetListV1 (string eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage acceptLanguage = null, string sFilter = null)
 
 Retrieve Billingentityinternal list
 
@@ -294,7 +294,7 @@ namespace Example
             var eOrderBy = "pkiBillingentityinternalID_ASC";  // string | Specify how you want the results to be sorted (optional) 
             var iRowMax = 10000;  // int? |  (optional)  (default to 10000)
             var iRowOffset = 0;  // int? |  (optional)  (default to 0)
-            var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
+            var acceptLanguage = new HeaderAcceptLanguage(); // HeaderAcceptLanguage |  (optional) 
             var sFilter = "sFilter_example";  // string |  (optional) 
 
             try
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
  **eOrderBy** | **string**| Specify how you want the results to be sorted | [optional] 
  **iRowMax** | **int?**|  | [optional] [default to 10000]
  **iRowOffset** | **int?**|  | [optional] [default to 0]
- **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
+ **acceptLanguage** | [**HeaderAcceptLanguage**](HeaderAcceptLanguage.md)|  | [optional] 
  **sFilter** | **string**|  | [optional] 
 
 ### Return type

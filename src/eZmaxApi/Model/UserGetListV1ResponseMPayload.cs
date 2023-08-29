@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/user/getList
     /// </summary>
     [DataContract]
-    public partial class UserGetListV1ResponseMPayload :  IEquatable<UserGetListV1ResponseMPayload>, IValidatableObject
+    public partial class UserGetListV1ResponseMPayload :  IEquatable<UserGetListV1ResponseMPayload>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetListV1ResponseMPayload" /> class.
@@ -38,21 +36,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjUser">aObjUser (required).</param>
         /// <param name="iRowReturned">The number of rows returned (required).</param>
         /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        public UserGetListV1ResponseMPayload(List<UserListElement> aObjUser = default(List<UserListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
+        /// <param name="aObjUser">aObjUser (required).</param>
+        public UserGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<UserListElement> aObjUser = default(List<UserListElement>))
         {
-            // to ensure "aObjUser" is required (not null)
-            if (aObjUser == null)
-            {
-                throw new InvalidDataException("aObjUser is a required property for UserGetListV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.AObjUser = aObjUser;
-            }
-
             // to ensure "iRowReturned" is required (not null)
             if (iRowReturned == null)
             {
@@ -73,13 +61,17 @@ namespace eZmaxApi.Model
                 this.IRowFiltered = iRowFiltered;
             }
 
-        }
+            // to ensure "aObjUser" is required (not null)
+            if (aObjUser == null)
+            {
+                throw new InvalidDataException("aObjUser is a required property for UserGetListV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjUser = aObjUser;
+            }
 
-        /// <summary>
-        /// Gets or Sets AObjUser
-        /// </summary>
-        [DataMember(Name="a_objUser", EmitDefaultValue=true)]
-        public List<UserListElement> AObjUser { get; set; }
+        }
 
         /// <summary>
         /// The number of rows returned
@@ -96,6 +88,12 @@ namespace eZmaxApi.Model
         public int IRowFiltered { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjUser
+        /// </summary>
+        [DataMember(Name="a_objUser", EmitDefaultValue=true)]
+        public List<UserListElement> AObjUser { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -103,9 +101,9 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserGetListV1ResponseMPayload {\n");
-            sb.Append("  AObjUser: ").Append(AObjUser).Append("\n");
             sb.Append("  IRowReturned: ").Append(IRowReturned).Append("\n");
             sb.Append("  IRowFiltered: ").Append(IRowFiltered).Append("\n");
+            sb.Append("  AObjUser: ").Append(AObjUser).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,12 +139,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.AObjUser == input.AObjUser ||
-                    this.AObjUser != null &&
-                    input.AObjUser != null &&
-                    this.AObjUser.SequenceEqual(input.AObjUser)
-                ) && 
-                (
                     this.IRowReturned == input.IRowReturned ||
                     (this.IRowReturned != null &&
                     this.IRowReturned.Equals(input.IRowReturned))
@@ -155,6 +147,12 @@ namespace eZmaxApi.Model
                     this.IRowFiltered == input.IRowFiltered ||
                     (this.IRowFiltered != null &&
                     this.IRowFiltered.Equals(input.IRowFiltered))
+                ) && 
+                (
+                    this.AObjUser == input.AObjUser ||
+                    this.AObjUser != null &&
+                    input.AObjUser != null &&
+                    this.AObjUser.SequenceEqual(input.AObjUser)
                 );
         }
 
@@ -167,24 +165,14 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AObjUser != null)
-                    hashCode = hashCode * 59 + this.AObjUser.GetHashCode();
                 if (this.IRowReturned != null)
                     hashCode = hashCode * 59 + this.IRowReturned.GetHashCode();
                 if (this.IRowFiltered != null)
                     hashCode = hashCode * 59 + this.IRowFiltered.GetHashCode();
+                if (this.AObjUser != null)
+                    hashCode = hashCode * 59 + this.AObjUser.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

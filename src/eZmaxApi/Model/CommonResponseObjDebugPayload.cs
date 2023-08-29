@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// This is a debug object containing debugging information on the actual function
     /// </summary>
     [DataContract]
-    public partial class CommonResponseObjDebugPayload :  IEquatable<CommonResponseObjDebugPayload>, IValidatableObject
+    public partial class CommonResponseObjDebugPayload :  IEquatable<CommonResponseObjDebugPayload>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayload" /> class.
@@ -41,7 +39,8 @@ namespace eZmaxApi.Model
         /// <param name="iVersionMin">The minimum version of the function that can be called (required).</param>
         /// <param name="iVersionMax">The maximum version of the function that can be called (required).</param>
         /// <param name="aRequiredPermission">An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them. (required).</param>
-        public CommonResponseObjDebugPayload(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>))
+        /// <param name="bVersionDeprecated">Wheter the current route is deprecated or not (required).</param>
+        public CommonResponseObjDebugPayload(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), bool bVersionDeprecated = default(bool))
         {
             // to ensure "iVersionMin" is required (not null)
             if (iVersionMin == null)
@@ -73,6 +72,16 @@ namespace eZmaxApi.Model
                 this.ARequiredPermission = aRequiredPermission;
             }
 
+            // to ensure "bVersionDeprecated" is required (not null)
+            if (bVersionDeprecated == null)
+            {
+                throw new InvalidDataException("bVersionDeprecated is a required property for CommonResponseObjDebugPayload and cannot be null");
+            }
+            else
+            {
+                this.BVersionDeprecated = bVersionDeprecated;
+            }
+
         }
 
         /// <summary>
@@ -97,6 +106,13 @@ namespace eZmaxApi.Model
         public List<int> ARequiredPermission { get; set; }
 
         /// <summary>
+        /// Wheter the current route is deprecated or not
+        /// </summary>
+        /// <value>Wheter the current route is deprecated or not</value>
+        [DataMember(Name="bVersionDeprecated", EmitDefaultValue=true)]
+        public bool BVersionDeprecated { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -107,6 +123,7 @@ namespace eZmaxApi.Model
             sb.Append("  IVersionMin: ").Append(IVersionMin).Append("\n");
             sb.Append("  IVersionMax: ").Append(IVersionMax).Append("\n");
             sb.Append("  ARequiredPermission: ").Append(ARequiredPermission).Append("\n");
+            sb.Append("  BVersionDeprecated: ").Append(BVersionDeprecated).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -156,6 +173,11 @@ namespace eZmaxApi.Model
                     this.ARequiredPermission != null &&
                     input.ARequiredPermission != null &&
                     this.ARequiredPermission.SequenceEqual(input.ARequiredPermission)
+                ) && 
+                (
+                    this.BVersionDeprecated == input.BVersionDeprecated ||
+                    (this.BVersionDeprecated != null &&
+                    this.BVersionDeprecated.Equals(input.BVersionDeprecated))
                 );
         }
 
@@ -174,18 +196,10 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IVersionMax.GetHashCode();
                 if (this.ARequiredPermission != null)
                     hashCode = hashCode * 59 + this.ARequiredPermission.GetHashCode();
+                if (this.BVersionDeprecated != null)
+                    hashCode = hashCode * 59 + this.BVersionDeprecated.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

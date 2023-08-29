@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,22 +26,36 @@ namespace eZmaxApi.Model
     /// Request for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
     /// </summary>
     [DataContract]
-    public partial class EzsignsignergroupEditObjectV1Request :  IEquatable<EzsignsignergroupEditObjectV1Request>, IValidatableObject
+    public partial class EzsignsignergroupEditObjectV1Request :  IEquatable<EzsignsignergroupEditObjectV1Request>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objBranding">objBranding.</param>
-        public EzsignsignergroupEditObjectV1Request(EzsignsignergroupRequestCompound objBranding = default(EzsignsignergroupRequestCompound))
+        [JsonConstructorAttribute]
+        protected EzsignsignergroupEditObjectV1Request() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzsignsignergroupEditObjectV1Request" /> class.
+        /// </summary>
+        /// <param name="objEzsignsignergroup">objEzsignsignergroup (required).</param>
+        public EzsignsignergroupEditObjectV1Request(EzsignsignergroupRequestCompound objEzsignsignergroup = default(EzsignsignergroupRequestCompound))
         {
-            this.ObjBranding = objBranding;
+            // to ensure "objEzsignsignergroup" is required (not null)
+            if (objEzsignsignergroup == null)
+            {
+                throw new InvalidDataException("objEzsignsignergroup is a required property for EzsignsignergroupEditObjectV1Request and cannot be null");
+            }
+            else
+            {
+                this.ObjEzsignsignergroup = objEzsignsignergroup;
+            }
+
         }
 
         /// <summary>
-        /// Gets or Sets ObjBranding
+        /// Gets or Sets ObjEzsignsignergroup
         /// </summary>
-        [DataMember(Name="objBranding", EmitDefaultValue=false)]
-        public EzsignsignergroupRequestCompound ObjBranding { get; set; }
+        [DataMember(Name="objEzsignsignergroup", EmitDefaultValue=true)]
+        public EzsignsignergroupRequestCompound ObjEzsignsignergroup { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,7 +65,7 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EzsignsignergroupEditObjectV1Request {\n");
-            sb.Append("  ObjBranding: ").Append(ObjBranding).Append("\n");
+            sb.Append("  ObjEzsignsignergroup: ").Append(ObjEzsignsignergroup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,9 +101,9 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.ObjBranding == input.ObjBranding ||
-                    (this.ObjBranding != null &&
-                    this.ObjBranding.Equals(input.ObjBranding))
+                    this.ObjEzsignsignergroup == input.ObjEzsignsignergroup ||
+                    (this.ObjEzsignsignergroup != null &&
+                    this.ObjEzsignsignergroup.Equals(input.ObjEzsignsignergroup))
                 );
         }
 
@@ -104,20 +116,10 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ObjBranding != null)
-                    hashCode = hashCode * 59 + this.ObjBranding.GetHashCode();
+                if (this.ObjEzsignsignergroup != null)
+                    hashCode = hashCode * 59 + this.ObjEzsignsignergroup.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

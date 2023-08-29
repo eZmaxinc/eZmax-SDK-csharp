@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -38,7 +38,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>EzsigntsarequirementGetAutocompleteV2Response</returns>
-        EzsigntsarequirementGetAutocompleteV2Response EzsigntsarequirementGetAutocompleteV2 (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        EzsigntsarequirementGetAutocompleteV2Response EzsigntsarequirementGetAutocompleteV2 (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
 
         /// <summary>
         /// Retrieve Ezsigntsarequirements and IDs
@@ -53,7 +53,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of EzsigntsarequirementGetAutocompleteV2Response</returns>
-        ApiResponse<EzsigntsarequirementGetAutocompleteV2Response> EzsigntsarequirementGetAutocompleteV2WithHttpInfo (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        ApiResponse<EzsigntsarequirementGetAutocompleteV2Response> EzsigntsarequirementGetAutocompleteV2WithHttpInfo (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -70,7 +70,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigntsarequirementGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntsarequirementGetAutocompleteV2Response> EzsigntsarequirementGetAutocompleteV2Async (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<EzsigntsarequirementGetAutocompleteV2Response> EzsigntsarequirementGetAutocompleteV2Async (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsigntsarequirements and IDs
@@ -86,7 +86,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigntsarequirementGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntsarequirementGetAutocompleteV2Response>> EzsigntsarequirementGetAutocompleteV2WithHttpInfoAsync (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntsarequirementGetAutocompleteV2Response>> EzsigntsarequirementGetAutocompleteV2WithHttpInfoAsync (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -208,7 +208,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>EzsigntsarequirementGetAutocompleteV2Response</returns>
-        public EzsigntsarequirementGetAutocompleteV2Response EzsigntsarequirementGetAutocompleteV2 (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        public EzsigntsarequirementGetAutocompleteV2Response EzsigntsarequirementGetAutocompleteV2 (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
         {
              ApiResponse<EzsigntsarequirementGetAutocompleteV2Response> localVarResponse = EzsigntsarequirementGetAutocompleteV2WithHttpInfo(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -224,13 +224,13 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of EzsigntsarequirementGetAutocompleteV2Response</returns>
-        public ApiResponse<EzsigntsarequirementGetAutocompleteV2Response> EzsigntsarequirementGetAutocompleteV2WithHttpInfo (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        public ApiResponse<EzsigntsarequirementGetAutocompleteV2Response> EzsigntsarequirementGetAutocompleteV2WithHttpInfo (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsigntsarequirementApi->EzsigntsarequirementGetAutocompleteV2");
 
-            var localVarPath = "/2/object/ezsigntsarequirement/getAutocomplete/{sSelector}";
+            var localVarPath = "./2/object/ezsigntsarequirement/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -277,7 +277,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntsarequirementGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsigntsarequirementGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntsarequirementGetAutocompleteV2Response)));
         }
 
@@ -292,7 +292,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigntsarequirementGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntsarequirementGetAutocompleteV2Response> EzsigntsarequirementGetAutocompleteV2Async (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntsarequirementGetAutocompleteV2Response> EzsigntsarequirementGetAutocompleteV2Async (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<EzsigntsarequirementGetAutocompleteV2Response> localVarResponse = await EzsigntsarequirementGetAutocompleteV2WithHttpInfoAsync(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -310,13 +310,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigntsarequirementGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EzsigntsarequirementGetAutocompleteV2Response>> EzsigntsarequirementGetAutocompleteV2WithHttpInfoAsync (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigntsarequirementGetAutocompleteV2Response>> EzsigntsarequirementGetAutocompleteV2WithHttpInfoAsync (string sSelector, int? fkiEzsignfoldertypeID = default(int?), string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsigntsarequirementApi->EzsigntsarequirementGetAutocompleteV2");
 
-            var localVarPath = "/2/object/ezsigntsarequirement/getAutocomplete/{sSelector}";
+            var localVarPath = "./2/object/ezsigntsarequirement/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -363,7 +363,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntsarequirementGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (EzsigntsarequirementGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntsarequirementGetAutocompleteV2Response)));
         }
 

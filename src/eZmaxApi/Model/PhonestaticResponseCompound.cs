@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Phonestatic Object and children to create a complete structure
     /// </summary>
     [DataContract]
-    public partial class PhonestaticResponseCompound :  IEquatable<PhonestaticResponseCompound>, IValidatableObject
+    public partial class PhonestaticResponseCompound :  IEquatable<PhonestaticResponseCompound>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PhonestaticResponseCompound" /> class.
@@ -157,42 +155,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SPhonestaticExtension.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiPhonestaticID (int) minimum
-            if(this.PkiPhonestaticID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPhonestaticID, must be a value greater than or equal to 0.", new [] { "PkiPhonestaticID" });
-            }
-
-
-
-            // SPhonestaticE164 (string) pattern
-            Regex regexSPhonestaticE164 = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);
-            if (false == regexSPhonestaticE164.Match(this.SPhonestaticE164).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhonestaticE164, must match a pattern of " + regexSPhonestaticE164, new [] { "SPhonestaticE164" });
-            }
-
-
-
-            // SPhonestaticExtension (string) pattern
-            Regex regexSPhonestaticExtension = new Regex(@"^\d", RegexOptions.CultureInvariant);
-            if (false == regexSPhonestaticExtension.Match(this.SPhonestaticExtension).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhonestaticExtension, must match a pattern of " + regexSPhonestaticExtension, new [] { "SPhonestaticExtension" });
-            }
-
-            yield break;
         }
     }
 

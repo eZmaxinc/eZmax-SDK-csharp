@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp;
+using RestSharp.Portable;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -81,7 +81,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>BrandingGetAutocompleteV2Response</returns>
-        BrandingGetAutocompleteV2Response BrandingGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        BrandingGetAutocompleteV2Response BrandingGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
 
         /// <summary>
         /// Retrieve Brandings and IDs
@@ -95,7 +95,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of BrandingGetAutocompleteV2Response</returns>
-        ApiResponse<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
+        ApiResponse<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
         /// <summary>
         /// Retrieve Branding list
         /// </summary>
@@ -109,7 +109,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>BrandingGetListV1Response</returns>
-        BrandingGetListV1Response BrandingGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+        BrandingGetListV1Response BrandingGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
 
         /// <summary>
         /// Retrieve Branding list
@@ -124,7 +124,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of BrandingGetListV1Response</returns>
-        ApiResponse<BrandingGetListV1Response> BrandingGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string));
+        ApiResponse<BrandingGetListV1Response> BrandingGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
         /// <summary>
         /// Retrieve an existing Branding
         /// </summary>
@@ -209,7 +209,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of BrandingGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Brandings and IDs
@@ -224,7 +224,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (BrandingGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingGetAutocompleteV2Response>> BrandingGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingGetAutocompleteV2Response>> BrandingGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Branding list
         /// </summary>
@@ -239,7 +239,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of BrandingGetListV1Response</returns>
-        System.Threading.Tasks.Task<BrandingGetListV1Response> BrandingGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<BrandingGetListV1Response> BrandingGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Branding list
@@ -255,7 +255,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (BrandingGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingGetListV1Response>> BrandingGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingGetListV1Response>> BrandingGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Branding
         /// </summary>
@@ -414,7 +414,7 @@ namespace eZmaxApi.Api
             if (brandingCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'brandingCreateObjectV1Request' when calling ObjectBrandingApi->BrandingCreateObjectV1");
 
-            var localVarPath = "/1/object/branding";
+            var localVarPath = "./1/object/branding";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -465,7 +465,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<BrandingCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (BrandingCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BrandingCreateObjectV1Response)));
         }
 
@@ -496,7 +496,7 @@ namespace eZmaxApi.Api
             if (brandingCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'brandingCreateObjectV1Request' when calling ObjectBrandingApi->BrandingCreateObjectV1");
 
-            var localVarPath = "/1/object/branding";
+            var localVarPath = "./1/object/branding";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -547,7 +547,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<BrandingCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (BrandingCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BrandingCreateObjectV1Response)));
         }
 
@@ -580,7 +580,7 @@ namespace eZmaxApi.Api
             if (brandingEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'brandingEditObjectV1Request' when calling ObjectBrandingApi->BrandingEditObjectV1");
 
-            var localVarPath = "/1/object/branding/{pkiBrandingID}";
+            var localVarPath = "./1/object/branding/{pkiBrandingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -632,7 +632,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<BrandingEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (BrandingEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BrandingEditObjectV1Response)));
         }
 
@@ -668,7 +668,7 @@ namespace eZmaxApi.Api
             if (brandingEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'brandingEditObjectV1Request' when calling ObjectBrandingApi->BrandingEditObjectV1");
 
-            var localVarPath = "/1/object/branding/{pkiBrandingID}";
+            var localVarPath = "./1/object/branding/{pkiBrandingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -720,7 +720,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<BrandingEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (BrandingEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BrandingEditObjectV1Response)));
         }
 
@@ -733,7 +733,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>BrandingGetAutocompleteV2Response</returns>
-        public BrandingGetAutocompleteV2Response BrandingGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        public BrandingGetAutocompleteV2Response BrandingGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
         {
              ApiResponse<BrandingGetAutocompleteV2Response> localVarResponse = BrandingGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -748,13 +748,13 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of BrandingGetAutocompleteV2Response</returns>
-        public ApiResponse<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
+        public ApiResponse<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectBrandingApi->BrandingGetAutocompleteV2");
 
-            var localVarPath = "/2/object/branding/getAutocomplete/{sSelector}";
+            var localVarPath = "./2/object/branding/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -800,7 +800,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<BrandingGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (BrandingGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BrandingGetAutocompleteV2Response)));
         }
 
@@ -814,7 +814,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of BrandingGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<BrandingGetAutocompleteV2Response> localVarResponse = await BrandingGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -831,13 +831,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (BrandingGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BrandingGetAutocompleteV2Response>> BrandingGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<BrandingGetAutocompleteV2Response>> BrandingGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectBrandingApi->BrandingGetAutocompleteV2");
 
-            var localVarPath = "/2/object/branding/getAutocomplete/{sSelector}";
+            var localVarPath = "./2/object/branding/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -883,7 +883,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<BrandingGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (BrandingGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BrandingGetAutocompleteV2Response)));
         }
 
@@ -897,7 +897,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>BrandingGetListV1Response</returns>
-        public BrandingGetListV1Response BrandingGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        public BrandingGetListV1Response BrandingGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
         {
              ApiResponse<BrandingGetListV1Response> localVarResponse = BrandingGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -913,10 +913,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of BrandingGetListV1Response</returns>
-        public ApiResponse<BrandingGetListV1Response> BrandingGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string))
+        public ApiResponse<BrandingGetListV1Response> BrandingGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
         {
 
-            var localVarPath = "/1/object/branding/getList";
+            var localVarPath = "./1/object/branding/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -964,7 +964,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<BrandingGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (BrandingGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BrandingGetListV1Response)));
         }
 
@@ -979,7 +979,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of BrandingGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<BrandingGetListV1Response> BrandingGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingGetListV1Response> BrandingGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<BrandingGetListV1Response> localVarResponse = await BrandingGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -997,10 +997,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (BrandingGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BrandingGetListV1Response>> BrandingGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<BrandingGetListV1Response>> BrandingGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/1/object/branding/getList";
+            var localVarPath = "./1/object/branding/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1048,7 +1048,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<BrandingGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (BrandingGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BrandingGetListV1Response)));
         }
 
@@ -1076,7 +1076,7 @@ namespace eZmaxApi.Api
             if (pkiBrandingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiBrandingID' when calling ObjectBrandingApi->BrandingGetObjectV2");
 
-            var localVarPath = "/2/object/branding/{pkiBrandingID}";
+            var localVarPath = "./2/object/branding/{pkiBrandingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1119,7 +1119,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<BrandingGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (BrandingGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BrandingGetObjectV2Response)));
         }
 
@@ -1150,7 +1150,7 @@ namespace eZmaxApi.Api
             if (pkiBrandingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiBrandingID' when calling ObjectBrandingApi->BrandingGetObjectV2");
 
-            var localVarPath = "/2/object/branding/{pkiBrandingID}";
+            var localVarPath = "./2/object/branding/{pkiBrandingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1193,7 +1193,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<BrandingGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
                 (BrandingGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BrandingGetObjectV2Response)));
         }
 

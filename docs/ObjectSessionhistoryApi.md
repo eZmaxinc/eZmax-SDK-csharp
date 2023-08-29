@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## SessionhistoryGetListV1
 
-> SessionhistoryGetListV1Response SessionhistoryGetListV1 (string eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string sFilter = null)
+> SessionhistoryGetListV1Response SessionhistoryGetListV1 (string eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage acceptLanguage = null, string sFilter = null)
 
 Retrieve Sessionhistory list
 
@@ -39,7 +39,7 @@ namespace Example
             var eOrderBy = "pkiSessionhistoryID_ASC";  // string | Specify how you want the results to be sorted (optional) 
             var iRowMax = 10000;  // int? |  (optional)  (default to 10000)
             var iRowOffset = 0;  // int? |  (optional)  (default to 0)
-            var acceptLanguage = (HeaderAcceptLanguage) "*";  // HeaderAcceptLanguage? |  (optional) 
+            var acceptLanguage = new HeaderAcceptLanguage(); // HeaderAcceptLanguage |  (optional) 
             var sFilter = "sFilter_example";  // string |  (optional) 
 
             try
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
  **eOrderBy** | **string**| Specify how you want the results to be sorted | [optional] 
  **iRowMax** | **int?**|  | [optional] [default to 10000]
  **iRowOffset** | **int?**|  | [optional] [default to 0]
- **acceptLanguage** | **HeaderAcceptLanguage?**|  | [optional] 
+ **acceptLanguage** | [**HeaderAcceptLanguage**](HeaderAcceptLanguage.md)|  | [optional] 
  **sFilter** | **string**|  | [optional] 
 
 ### Return type

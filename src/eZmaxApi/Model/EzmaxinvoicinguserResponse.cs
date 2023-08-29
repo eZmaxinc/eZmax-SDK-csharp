@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicinguser Object
     /// </summary>
     [DataContract]
-    public partial class EzmaxinvoicinguserResponse :  IEquatable<EzmaxinvoicinguserResponse>, IValidatableObject
+    public partial class EzmaxinvoicinguserResponse :  IEquatable<EzmaxinvoicinguserResponse>
     {
         /// <summary>
         /// Gets or Sets EEzmaxinvoicinguserVariationezsign
@@ -312,56 +310,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.EEzmaxinvoicinguserVariationezsign.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzmaxinvoicinguserID (int) minimum
-            if(this.PkiEzmaxinvoicinguserID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicinguserID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicinguserID" });
-            }
-
-
-
-            // FkiEzmaxinvoicingID (int) minimum
-            if(this.FkiEzmaxinvoicingID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
-            }
-
-
-
-            // FkiBillingentityinternalID (int) minimum
-            if(this.FkiBillingentityinternalID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
-            }
-
-
-
-            // FkiUserID (int) minimum
-            if(this.FkiUserID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
-            }
-
-
-
-            // IEzmaxinvoicinguserEzsigndocument (int) minimum
-            if(this.IEzmaxinvoicinguserEzsigndocument < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicinguserEzsigndocument, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicinguserEzsigndocument" });
-            }
-
-            yield break;
         }
     }
 

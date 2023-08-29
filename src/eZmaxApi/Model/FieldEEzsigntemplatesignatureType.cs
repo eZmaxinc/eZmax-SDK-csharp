@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -67,7 +65,19 @@ namespace eZmaxApi.Model
         /// Enum Attachments for value: Attachments
         /// </summary>
         [EnumMember(Value = "Attachments")]
-        Attachments = 6
+        Attachments = 6,
+
+        /// <summary>
+        /// Enum FieldText for value: FieldText
+        /// </summary>
+        [EnumMember(Value = "FieldText")]
+        FieldText = 7,
+
+        /// <summary>
+        /// Enum FieldTextarea for value: FieldTextarea
+        /// </summary>
+        [EnumMember(Value = "FieldTextarea")]
+        FieldTextarea = 8
 
     }
 

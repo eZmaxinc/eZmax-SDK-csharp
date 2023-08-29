@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingsummaryexternal Object
     /// </summary>
     [DataContract]
-    public partial class EzmaxinvoicingsummaryexternalResponse :  IEquatable<EzmaxinvoicingsummaryexternalResponse>, IValidatableObject
+    public partial class EzmaxinvoicingsummaryexternalResponse :  IEquatable<EzmaxinvoicingsummaryexternalResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponse" /> class.
@@ -209,47 +207,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzmaxinvoicingsummaryexternalDescription.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzmaxinvoicingsummaryexternalID (int) minimum
-            if(this.PkiEzmaxinvoicingsummaryexternalID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryexternalID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryexternalID" });
-            }
-
-
-
-            // FkiEzmaxinvoicingID (int) minimum
-            if(this.FkiEzmaxinvoicingID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
-            }
-
-
-
-            // FkiBillingentityexternalID (int) minimum
-            if(this.FkiBillingentityexternalID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
-            }
-
-            // SEzmaxinvoicingsummaryexternalDescription (string) maxLength
-            if(this.SEzmaxinvoicingsummaryexternalDescription != null && this.SEzmaxinvoicingsummaryexternalDescription.Length > 70)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxinvoicingsummaryexternalDescription, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryexternalDescription" });
-            }
-
-
-            yield break;
         }
     }
 

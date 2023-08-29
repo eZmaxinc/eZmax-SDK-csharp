@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/sessionhistory/getList
     /// </summary>
     [DataContract]
-    public partial class SessionhistoryGetListV1ResponseMPayload :  IEquatable<SessionhistoryGetListV1ResponseMPayload>, IValidatableObject
+    public partial class SessionhistoryGetListV1ResponseMPayload :  IEquatable<SessionhistoryGetListV1ResponseMPayload>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionhistoryGetListV1ResponseMPayload" /> class.
@@ -38,21 +36,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionhistoryGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjSessionhistory">aObjSessionhistory (required).</param>
         /// <param name="iRowReturned">The number of rows returned (required).</param>
         /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        public SessionhistoryGetListV1ResponseMPayload(List<SessionhistoryListElement> aObjSessionhistory = default(List<SessionhistoryListElement>), int iRowReturned = default(int), int iRowFiltered = default(int))
+        /// <param name="aObjSessionhistory">aObjSessionhistory (required).</param>
+        public SessionhistoryGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<SessionhistoryListElement> aObjSessionhistory = default(List<SessionhistoryListElement>))
         {
-            // to ensure "aObjSessionhistory" is required (not null)
-            if (aObjSessionhistory == null)
-            {
-                throw new InvalidDataException("aObjSessionhistory is a required property for SessionhistoryGetListV1ResponseMPayload and cannot be null");
-            }
-            else
-            {
-                this.AObjSessionhistory = aObjSessionhistory;
-            }
-
             // to ensure "iRowReturned" is required (not null)
             if (iRowReturned == null)
             {
@@ -73,13 +61,17 @@ namespace eZmaxApi.Model
                 this.IRowFiltered = iRowFiltered;
             }
 
-        }
+            // to ensure "aObjSessionhistory" is required (not null)
+            if (aObjSessionhistory == null)
+            {
+                throw new InvalidDataException("aObjSessionhistory is a required property for SessionhistoryGetListV1ResponseMPayload and cannot be null");
+            }
+            else
+            {
+                this.AObjSessionhistory = aObjSessionhistory;
+            }
 
-        /// <summary>
-        /// Gets or Sets AObjSessionhistory
-        /// </summary>
-        [DataMember(Name="a_objSessionhistory", EmitDefaultValue=true)]
-        public List<SessionhistoryListElement> AObjSessionhistory { get; set; }
+        }
 
         /// <summary>
         /// The number of rows returned
@@ -96,6 +88,12 @@ namespace eZmaxApi.Model
         public int IRowFiltered { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjSessionhistory
+        /// </summary>
+        [DataMember(Name="a_objSessionhistory", EmitDefaultValue=true)]
+        public List<SessionhistoryListElement> AObjSessionhistory { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -103,9 +101,9 @@ namespace eZmaxApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SessionhistoryGetListV1ResponseMPayload {\n");
-            sb.Append("  AObjSessionhistory: ").Append(AObjSessionhistory).Append("\n");
             sb.Append("  IRowReturned: ").Append(IRowReturned).Append("\n");
             sb.Append("  IRowFiltered: ").Append(IRowFiltered).Append("\n");
+            sb.Append("  AObjSessionhistory: ").Append(AObjSessionhistory).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,12 +139,6 @@ namespace eZmaxApi.Model
 
             return 
                 (
-                    this.AObjSessionhistory == input.AObjSessionhistory ||
-                    this.AObjSessionhistory != null &&
-                    input.AObjSessionhistory != null &&
-                    this.AObjSessionhistory.SequenceEqual(input.AObjSessionhistory)
-                ) && 
-                (
                     this.IRowReturned == input.IRowReturned ||
                     (this.IRowReturned != null &&
                     this.IRowReturned.Equals(input.IRowReturned))
@@ -155,6 +147,12 @@ namespace eZmaxApi.Model
                     this.IRowFiltered == input.IRowFiltered ||
                     (this.IRowFiltered != null &&
                     this.IRowFiltered.Equals(input.IRowFiltered))
+                ) && 
+                (
+                    this.AObjSessionhistory == input.AObjSessionhistory ||
+                    this.AObjSessionhistory != null &&
+                    input.AObjSessionhistory != null &&
+                    this.AObjSessionhistory.SequenceEqual(input.AObjSessionhistory)
                 );
         }
 
@@ -167,24 +165,14 @@ namespace eZmaxApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AObjSessionhistory != null)
-                    hashCode = hashCode * 59 + this.AObjSessionhistory.GetHashCode();
                 if (this.IRowReturned != null)
                     hashCode = hashCode * 59 + this.IRowReturned.GetHashCode();
                 if (this.IRowFiltered != null)
                     hashCode = hashCode * 59 + this.IRowFiltered.GetHashCode();
+                if (this.AObjSessionhistory != null)
+                    hashCode = hashCode * 59 + this.AObjSessionhistory.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

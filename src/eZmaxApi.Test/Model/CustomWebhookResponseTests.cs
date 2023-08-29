@@ -66,22 +66,6 @@ namespace eZmaxApi.Test
 
 
         /// <summary>
-        /// Test the property 'PksCustomerCode'
-        /// </summary>
-        [Test]
-        public void PksCustomerCodeTest()
-        {
-            // TODO unit test for the property 'PksCustomerCode'
-        }
-        /// <summary>
-        /// Test the property 'BWebhookTest'
-        /// </summary>
-        [Test]
-        public void BWebhookTestTest()
-        {
-            // TODO unit test for the property 'BWebhookTest'
-        }
-        /// <summary>
         /// Test the property 'PkiWebhookID'
         /// </summary>
         [Test]
@@ -168,6 +152,22 @@ namespace eZmaxApi.Test
         public void BWebhookSkipsslvalidationTest()
         {
             // TODO unit test for the property 'BWebhookSkipsslvalidation'
+        }
+        /// <summary>
+        /// Test the property 'PksCustomerCode'
+        /// </summary>
+        [Test]
+        public void PksCustomerCodeTest()
+        {
+            // TODO unit test for the property 'PksCustomerCode'
+        }
+        /// <summary>
+        /// Test the property 'BWebhookTest'
+        /// </summary>
+        [Test]
+        public void BWebhookTestTest()
+        {
+            // TODO unit test for the property 'BWebhookTest'
         }
 
     }

@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A custom Creditcardtransaction Object
     /// </summary>
     [DataContract]
-    public partial class CustomCreditcardtransactionResponse :  IEquatable<CustomCreditcardtransactionResponse>, IValidatableObject
+    public partial class CustomCreditcardtransactionResponse :  IEquatable<CustomCreditcardtransactionResponse>
     {
         /// <summary>
         /// Gets or Sets ECreditcardtypeCodename
@@ -191,43 +189,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SCreditcardtransactionReferencenumber.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // DCreditcardtransactionAmount (string) pattern
-            Regex regexDCreditcardtransactionAmount = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDCreditcardtransactionAmount.Match(this.DCreditcardtransactionAmount).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DCreditcardtransactionAmount, must match a pattern of " + regexDCreditcardtransactionAmount, new [] { "DCreditcardtransactionAmount" });
-            }
-
-
-
-            // SCreditcardtransactionPartiallydecryptednumber (string) pattern
-            Regex regexSCreditcardtransactionPartiallydecryptednumber = new Regex(@"^([X]{4}[ ]){3}(\d){4}$", RegexOptions.CultureInvariant);
-            if (false == regexSCreditcardtransactionPartiallydecryptednumber.Match(this.SCreditcardtransactionPartiallydecryptednumber).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCreditcardtransactionPartiallydecryptednumber, must match a pattern of " + regexSCreditcardtransactionPartiallydecryptednumber, new [] { "SCreditcardtransactionPartiallydecryptednumber" });
-            }
-
-
-
-            // SCreditcardtransactionReferencenumber (string) pattern
-            Regex regexSCreditcardtransactionReferencenumber = new Regex(@"^[\d]{18}$", RegexOptions.CultureInvariant);
-            if (false == regexSCreditcardtransactionReferencenumber.Match(this.SCreditcardtransactionReferencenumber).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCreditcardtransactionReferencenumber, must match a pattern of " + regexSCreditcardtransactionReferencenumber, new [] { "SCreditcardtransactionReferencenumber" });
-            }
-
-            yield break;
         }
     }
 

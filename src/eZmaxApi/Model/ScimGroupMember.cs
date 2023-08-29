@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// ScimGroupMember
     /// </summary>
     [DataContract]
-    public partial class ScimGroupMember :  IEquatable<ScimGroupMember>, IValidatableObject
+    public partial class ScimGroupMember :  IEquatable<ScimGroupMember>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimGroupMember" /> class.
@@ -36,13 +34,13 @@ namespace eZmaxApi.Model
         /// <param name="value">value.</param>
         /// <param name="display">display.</param>
         /// <param name="type">type.</param>
-        /// <param name="_ref">_ref.</param>
-        public ScimGroupMember(string value = default(string), string display = default(string), string type = default(string), string _ref = default(string))
+        /// <param name="varRef">varRef.</param>
+        public ScimGroupMember(string value = default(string), string display = default(string), string type = default(string), string varRef = default(string))
         {
             this.Value = value;
             this.Display = display;
             this.Type = type;
-            this.Ref = _ref;
+            this.VarRef = varRef;
         }
 
         /// <summary>
@@ -64,10 +62,10 @@ namespace eZmaxApi.Model
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets Ref
+        /// Gets or Sets VarRef
         /// </summary>
         [DataMember(Name="$ref", EmitDefaultValue=false)]
-        public string Ref { get; set; }
+        public string VarRef { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -80,7 +78,7 @@ namespace eZmaxApi.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Display: ").Append(Display).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Ref: ").Append(Ref).Append("\n");
+            sb.Append("  VarRef: ").Append(VarRef).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -131,9 +129,9 @@ namespace eZmaxApi.Model
                     this.Type.Equals(input.Type))
                 ) && 
                 (
-                    this.Ref == input.Ref ||
-                    (this.Ref != null &&
-                    this.Ref.Equals(input.Ref))
+                    this.VarRef == input.VarRef ||
+                    (this.VarRef != null &&
+                    this.VarRef.Equals(input.VarRef))
                 );
         }
 
@@ -152,20 +150,10 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.Display.GetHashCode();
                 if (this.Type != null)
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
-                if (this.Ref != null)
-                    hashCode = hashCode * 59 + this.Ref.GetHashCode();
+                if (this.VarRef != null)
+                    hashCode = hashCode * 59 + this.VarRef.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

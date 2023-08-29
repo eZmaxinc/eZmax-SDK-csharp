@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingcontract Object
     /// </summary>
     [DataContract]
-    public partial class EzmaxinvoicingcontractResponse :  IEquatable<EzmaxinvoicingcontractResponse>, IValidatableObject
+    public partial class EzmaxinvoicingcontractResponse :  IEquatable<EzmaxinvoicingcontractResponse>
     {
         /// <summary>
         /// Gets or Sets EEzmaxinvoicingcontractPaymenttype
@@ -329,50 +327,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ObjAudit.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // PkiEzmaxinvoicingcontractID (int) minimum
-            if(this.PkiEzmaxinvoicingcontractID < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingcontractID, must be a value greater than or equal to 1.", new [] { "PkiEzmaxinvoicingcontractID" });
-            }
-
-
-
-            // IEzmaxinvoicingcontractLength (int) minimum
-            if(this.IEzmaxinvoicingcontractLength < (int)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingcontractLength, must be a value greater than or equal to 1.", new [] { "IEzmaxinvoicingcontractLength" });
-            }
-
-
-
-            // DEzmaxinvoicingcontractLicense (string) pattern
-            Regex regexDEzmaxinvoicingcontractLicense = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingcontractLicense.Match(this.DEzmaxinvoicingcontractLicense).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingcontractLicense, must match a pattern of " + regexDEzmaxinvoicingcontractLicense, new [] { "DEzmaxinvoicingcontractLicense" });
-            }
-
-
-
-            // DEzmaxinvoicingcontract121qa (string) pattern
-            Regex regexDEzmaxinvoicingcontract121qa = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
-            if (false == regexDEzmaxinvoicingcontract121qa.Match(this.DEzmaxinvoicingcontract121qa).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingcontract121qa, must match a pattern of " + regexDEzmaxinvoicingcontract121qa, new [] { "DEzmaxinvoicingcontract121qa" });
-            }
-
-            yield break;
         }
     }
 

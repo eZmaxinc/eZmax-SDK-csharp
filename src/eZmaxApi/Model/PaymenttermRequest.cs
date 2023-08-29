@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -28,7 +26,7 @@ namespace eZmaxApi.Model
     /// A Paymentterm Object
     /// </summary>
     [DataContract]
-    public partial class PaymenttermRequest :  IEquatable<PaymenttermRequest>, IValidatableObject
+    public partial class PaymenttermRequest :  IEquatable<PaymenttermRequest>
     {
         /// <summary>
         /// Gets or Sets EPaymenttermType
@@ -242,39 +240,6 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BPaymenttermIsactive.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-
-
-            // SPaymenttermCode (string) pattern
-            Regex regexSPaymenttermCode = new Regex(@"^[A-Z0-9]{1,4}$", RegexOptions.CultureInvariant);
-            if (false == regexSPaymenttermCode.Match(this.SPaymenttermCode).Success)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermCode, must match a pattern of " + regexSPaymenttermCode, new [] { "SPaymenttermCode" });
-            }
-
-
-
-            // IPaymenttermDay (int) maximum
-            if(this.IPaymenttermDay > (int)255)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IPaymenttermDay, must be a value less than or equal to 255.", new [] { "IPaymenttermDay" });
-            }
-
-            // IPaymenttermDay (int) minimum
-            if(this.IPaymenttermDay < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IPaymenttermDay, must be a value greater than or equal to 0.", new [] { "IPaymenttermDay" });
-            }
-
-            yield break;
         }
     }
 
