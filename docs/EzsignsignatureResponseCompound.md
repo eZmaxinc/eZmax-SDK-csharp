@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **EEzsignsignatureTextvalidation** | **EnumTextvalidation** |  | [optional] 
 **SEzsignsignatureRegexp** | **string** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** | [optional] 
 **ObjContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
+**ObjContactNameDelegation** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | [optional] 
 **ObjSignature** | [**SignatureResponseCompound**](SignatureResponseCompound.md) |  | [optional] 
 **BEzsignsignatureCustomdate** | **bool** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) | [optional] 
 **AObjEzsignsignaturecustomdate** | [**List&lt;EzsignsignaturecustomdateResponseCompound&gt;**](EzsignsignaturecustomdateResponseCompound.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. | [optional] 

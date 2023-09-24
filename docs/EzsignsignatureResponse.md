@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **EEzsignsignatureTextvalidation** | **EnumTextvalidation** |  | [optional] 
 **SEzsignsignatureRegexp** | **string** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** | [optional] 
 **ObjContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
+**ObjContactNameDelegation** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | [optional] 
 **ObjSignature** | [**SignatureResponseCompound**](SignatureResponseCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)

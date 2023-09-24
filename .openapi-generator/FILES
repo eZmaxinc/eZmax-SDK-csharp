@@ -166,6 +166,7 @@ docs/CustomEzsignfoldersignerassociationmineResponse.md
 docs/CustomEzsignfoldersignerassociationstatusResponse.md
 docs/CustomEzsignfoldertransmissionResponse.md
 docs/CustomEzsignfoldertransmissionSignerResponse.md
+docs/CustomEzsignfoldertypeResponse.md
 docs/CustomEzsignformfieldRequest.md
 docs/CustomEzsignformfielderrorResponse.md
 docs/CustomEzsignformfielderrortestResponse.md
@@ -1359,6 +1360,7 @@ src/eZmaxApi.Test/Model/CustomEzsignfoldersignerassociationmineResponseTests.cs
 src/eZmaxApi.Test/Model/CustomEzsignfoldersignerassociationstatusResponseTests.cs
 src/eZmaxApi.Test/Model/CustomEzsignfoldertransmissionResponseTests.cs
 src/eZmaxApi.Test/Model/CustomEzsignfoldertransmissionSignerResponseTests.cs
+src/eZmaxApi.Test/Model/CustomEzsignfoldertypeResponseTests.cs
 src/eZmaxApi.Test/Model/CustomEzsignformfieldRequestTests.cs
 src/eZmaxApi.Test/Model/CustomEzsignformfielderrorResponseTests.cs
 src/eZmaxApi.Test/Model/CustomEzsignformfielderrortestResponseTests.cs
@@ -2498,6 +2500,7 @@ src/eZmaxApi/Model/CustomEzsignfoldersignerassociationmineResponse.cs
 src/eZmaxApi/Model/CustomEzsignfoldersignerassociationstatusResponse.cs
 src/eZmaxApi/Model/CustomEzsignfoldertransmissionResponse.cs
 src/eZmaxApi/Model/CustomEzsignfoldertransmissionSignerResponse.cs
+src/eZmaxApi/Model/CustomEzsignfoldertypeResponse.cs
 src/eZmaxApi/Model/CustomEzsignformfieldRequest.cs
 src/eZmaxApi/Model/CustomEzsignformfielderrorResponse.cs
 src/eZmaxApi/Model/CustomEzsignformfielderrortestResponse.cs
