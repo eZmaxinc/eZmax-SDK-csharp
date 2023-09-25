@@ -2,14 +2,12 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**UserCreateEzsignuserV1**](ModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**UserCreateEzsignuserV1**](ModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser |
 
-
-
-## UserCreateEzsignuserV1
-
+<a id="usercreateezsignuserv1"></a>
+# **UserCreateEzsignuserV1**
 > UserCreateEzsignuserV1Response UserCreateEzsignuserV1 (List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request)
 
 Create a new User of type Ezsignuser
@@ -17,7 +15,6 @@ Create a new User of type Ezsignuser
 The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,13 +28,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ModuleUserApi(Configuration.Default);
+            var apiInstance = new ModuleUserApi(config);
             var userCreateEzsignuserV1Request = new List<UserCreateEzsignuserV1Request>(); // List<UserCreateEzsignuserV1Request> | 
 
             try
@@ -46,10 +44,10 @@ namespace Example
                 UserCreateEzsignuserV1Response result = apiInstance.UserCreateEzsignuserV1(userCreateEzsignuserV1Request);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ModuleUserApi.UserCreateEzsignuserV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ModuleUserApi.UserCreateEzsignuserV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -57,12 +55,31 @@ namespace Example
 }
 ```
 
+#### Using the UserCreateEzsignuserV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a new User of type Ezsignuser
+    ApiResponse<UserCreateEzsignuserV1Response> response = apiInstance.UserCreateEzsignuserV1WithHttpInfo(userCreateEzsignuserV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ModuleUserApi.UserCreateEzsignuserV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userCreateEzsignuserV1Request** | [**List&lt;UserCreateEzsignuserV1Request&gt;**](UserCreateEzsignuserV1Request.md)|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userCreateEzsignuserV1Request** | [**List&lt;UserCreateEzsignuserV1Request&gt;**](UserCreateEzsignuserV1Request.md) |  |  |
 
 ### Return type
 
@@ -74,8 +91,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -83,8 +100,5 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

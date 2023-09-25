@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.ContactinformationsRequestCompound
+A Contactinformations Object and children to create a complete structure
 
 ## Properties
 
@@ -14,7 +14,5 @@ Name | Type | Description | Notes
 **AObjEmail** | [**List&lt;EmailRequestCompound&gt;**](EmailRequestCompound.md) |  | 
 **AObjWebsite** | [**List&lt;WebsiteRequestCompound&gt;**](WebsiteRequestCompound.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

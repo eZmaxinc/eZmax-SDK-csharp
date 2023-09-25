@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.BillingentityinternalproductResponse
+A Billingentityinternalproduct Object
 
 ## Properties
 
@@ -13,7 +13,5 @@ Name | Type | Description | Notes
 **FkiBillingentityexternalID** | **int** | The unique ID of the Billingentityexternal | 
 **SBillingentityexternalDescription** | **string** | The description of the Billingentityexternal | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigndocumentResponseCompound
+An Ezsigndocument Object and children to create a complete structure
 
 ## Properties
 
@@ -33,7 +33,5 @@ Name | Type | Description | Notes
 **IEzsigndocumentStepsignatureCurrent** | **int** | The current step in the signature phase | 
 **AObjEzsignfoldersignerassociationstatus** | [**List&lt;CustomEzsignfoldersignerassociationstatusResponse&gt;**](CustomEzsignfoldersignerassociationstatusResponse.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

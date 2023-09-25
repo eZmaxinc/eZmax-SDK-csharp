@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.CommonReportsection
+A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
 
 ## Properties
 
@@ -11,7 +11,5 @@ Name | Type | Description | Notes
 **IReportsectionColumncount** | **int** | The number of Reportcolumns in the Reportsection | 
 **IReportsectionWidth** | **int** | The combined width of all the Reportcolumns in the Reportsection | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

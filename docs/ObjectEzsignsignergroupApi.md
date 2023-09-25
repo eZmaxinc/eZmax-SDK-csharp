@@ -2,19 +2,17 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**EzsignsignergroupCreateObjectV1**](ObjectEzsignsignergroupApi.md#ezsignsignergroupcreateobjectv1) | **POST** /1/object/ezsignsignergroup | Create a new Ezsignsignergroup
-[**EzsignsignergroupDeleteObjectV1**](ObjectEzsignsignergroupApi.md#ezsignsignergroupdeleteobjectv1) | **DELETE** /1/object/ezsignsignergroup/{pkiEzsignsignergroupID} | Delete an existing Ezsignsignergroup
-[**EzsignsignergroupEditEzsignsignergroupmembershipsV1**](ObjectEzsignsignergroupApi.md#ezsignsignergroupeditezsignsignergroupmembershipsv1) | **PUT** /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships | Edit multiple Ezsignsignergroupmemberships
-[**EzsignsignergroupEditObjectV1**](ObjectEzsignsignergroupApi.md#ezsignsignergroupeditobjectv1) | **PUT** /1/object/ezsignsignergroup/{pkiEzsignsignergroupID} | Edit an existing Ezsignsignergroup
-[**EzsignsignergroupGetEzsignsignergroupmembershipsV1**](ObjectEzsignsignergroupApi.md#ezsignsignergroupgetezsignsignergroupmembershipsv1) | **GET** /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships | Retrieve an existing Ezsignsignergroup&#39;s Ezsignsignergroupmemberships
-[**EzsignsignergroupGetObjectV2**](ObjectEzsignsignergroupApi.md#ezsignsignergroupgetobjectv2) | **GET** /2/object/ezsignsignergroup/{pkiEzsignsignergroupID} | Retrieve an existing Ezsignsignergroup
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**EzsignsignergroupCreateObjectV1**](ObjectEzsignsignergroupApi.md#ezsignsignergroupcreateobjectv1) | **POST** /1/object/ezsignsignergroup | Create a new Ezsignsignergroup |
+| [**EzsignsignergroupDeleteObjectV1**](ObjectEzsignsignergroupApi.md#ezsignsignergroupdeleteobjectv1) | **DELETE** /1/object/ezsignsignergroup/{pkiEzsignsignergroupID} | Delete an existing Ezsignsignergroup |
+| [**EzsignsignergroupEditEzsignsignergroupmembershipsV1**](ObjectEzsignsignergroupApi.md#ezsignsignergroupeditezsignsignergroupmembershipsv1) | **PUT** /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships | Edit multiple Ezsignsignergroupmemberships |
+| [**EzsignsignergroupEditObjectV1**](ObjectEzsignsignergroupApi.md#ezsignsignergroupeditobjectv1) | **PUT** /1/object/ezsignsignergroup/{pkiEzsignsignergroupID} | Edit an existing Ezsignsignergroup |
+| [**EzsignsignergroupGetEzsignsignergroupmembershipsV1**](ObjectEzsignsignergroupApi.md#ezsignsignergroupgetezsignsignergroupmembershipsv1) | **GET** /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships | Retrieve an existing Ezsignsignergroup&#39;s Ezsignsignergroupmemberships |
+| [**EzsignsignergroupGetObjectV2**](ObjectEzsignsignergroupApi.md#ezsignsignergroupgetobjectv2) | **GET** /2/object/ezsignsignergroup/{pkiEzsignsignergroupID} | Retrieve an existing Ezsignsignergroup |
 
-
-
-## EzsignsignergroupCreateObjectV1
-
+<a id="ezsignsignergroupcreateobjectv1"></a>
+# **EzsignsignergroupCreateObjectV1**
 > EzsignsignergroupCreateObjectV1Response EzsignsignergroupCreateObjectV1 (EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request)
 
 Create a new Ezsignsignergroup
@@ -22,7 +20,6 @@ Create a new Ezsignsignergroup
 The endpoint allows to create one or many elements at once.
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -36,13 +33,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectEzsignsignergroupApi(Configuration.Default);
+            var apiInstance = new ObjectEzsignsignergroupApi(config);
             var ezsignsignergroupCreateObjectV1Request = new EzsignsignergroupCreateObjectV1Request(); // EzsignsignergroupCreateObjectV1Request | 
 
             try
@@ -51,10 +49,10 @@ namespace Example
                 EzsignsignergroupCreateObjectV1Response result = apiInstance.EzsignsignergroupCreateObjectV1(ezsignsignergroupCreateObjectV1Request);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupCreateObjectV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupCreateObjectV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -62,12 +60,31 @@ namespace Example
 }
 ```
 
+#### Using the EzsignsignergroupCreateObjectV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a new Ezsignsignergroup
+    ApiResponse<EzsignsignergroupCreateObjectV1Response> response = apiInstance.EzsignsignergroupCreateObjectV1WithHttpInfo(ezsignsignergroupCreateObjectV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupCreateObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ezsignsignergroupCreateObjectV1Request** | [**EzsignsignergroupCreateObjectV1Request**](EzsignsignergroupCreateObjectV1Request.md)|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **ezsignsignergroupCreateObjectV1Request** | [**EzsignsignergroupCreateObjectV1Request**](EzsignsignergroupCreateObjectV1Request.md) |  |  |
 
 ### Return type
 
@@ -79,8 +96,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -88,20 +105,15 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## EzsignsignergroupDeleteObjectV1
-
+<a id="ezsignsignergroupdeleteobjectv1"></a>
+# **EzsignsignergroupDeleteObjectV1**
 > EzsignsignergroupDeleteObjectV1Response EzsignsignergroupDeleteObjectV1 (int pkiEzsignsignergroupID)
 
 Delete an existing Ezsignsignergroup
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -115,13 +127,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectEzsignsignergroupApi(Configuration.Default);
+            var apiInstance = new ObjectEzsignsignergroupApi(config);
             var pkiEzsignsignergroupID = 56;  // int | The unique ID of the Ezsignsignergroup
 
             try
@@ -130,10 +143,10 @@ namespace Example
                 EzsignsignergroupDeleteObjectV1Response result = apiInstance.EzsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupDeleteObjectV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupDeleteObjectV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -141,12 +154,31 @@ namespace Example
 }
 ```
 
+#### Using the EzsignsignergroupDeleteObjectV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete an existing Ezsignsignergroup
+    ApiResponse<EzsignsignergroupDeleteObjectV1Response> response = apiInstance.EzsignsignergroupDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupDeleteObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignergroupID** | **int**| The unique ID of the Ezsignsignergroup | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignsignergroupID** | **int** | The unique ID of the Ezsignsignergroup |  |
 
 ### Return type
 
@@ -158,8 +190,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -168,14 +200,10 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## EzsignsignergroupEditEzsignsignergroupmembershipsV1
-
+<a id="ezsignsignergroupeditezsignsignergroupmembershipsv1"></a>
+# **EzsignsignergroupEditEzsignsignergroupmembershipsV1**
 > EzsignsignergroupEditEzsignsignergroupmembershipsV1Response EzsignsignergroupEditEzsignsignergroupmembershipsV1 (int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request)
 
 Edit multiple Ezsignsignergroupmemberships
@@ -183,7 +211,6 @@ Edit multiple Ezsignsignergroupmemberships
 Using this endpoint, you can edit multiple Ezsignsignergroupmemberships at the same time.
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -197,13 +224,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectEzsignsignergroupApi(Configuration.Default);
+            var apiInstance = new ObjectEzsignsignergroupApi(config);
             var pkiEzsignsignergroupID = 56;  // int | 
             var ezsignsignergroupEditEzsignsignergroupmembershipsV1Request = new EzsignsignergroupEditEzsignsignergroupmembershipsV1Request(); // EzsignsignergroupEditEzsignsignergroupmembershipsV1Request | 
 
@@ -213,10 +241,10 @@ namespace Example
                 EzsignsignergroupEditEzsignsignergroupmembershipsV1Response result = apiInstance.EzsignsignergroupEditEzsignsignergroupmembershipsV1(pkiEzsignsignergroupID, ezsignsignergroupEditEzsignsignergroupmembershipsV1Request);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupEditEzsignsignergroupmembershipsV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupEditEzsignsignergroupmembershipsV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -224,13 +252,32 @@ namespace Example
 }
 ```
 
+#### Using the EzsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Edit multiple Ezsignsignergroupmemberships
+    ApiResponse<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response> response = apiInstance.EzsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditEzsignsignergroupmembershipsV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignergroupID** | **int**|  | 
- **ezsignsignergroupEditEzsignsignergroupmembershipsV1Request** | [**EzsignsignergroupEditEzsignsignergroupmembershipsV1Request**](EzsignsignergroupEditEzsignsignergroupmembershipsV1Request.md)|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignsignergroupID** | **int** |  |  |
+| **ezsignsignergroupEditEzsignsignergroupmembershipsV1Request** | [**EzsignsignergroupEditEzsignsignergroupmembershipsV1Request**](EzsignsignergroupEditEzsignsignergroupmembershipsV1Request.md) |  |  |
 
 ### Return type
 
@@ -242,8 +289,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -253,20 +300,15 @@ Name | Type | Description  | Notes
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## EzsignsignergroupEditObjectV1
-
+<a id="ezsignsignergroupeditobjectv1"></a>
+# **EzsignsignergroupEditObjectV1**
 > EzsignsignergroupEditObjectV1Response EzsignsignergroupEditObjectV1 (int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request)
 
 Edit an existing Ezsignsignergroup
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -280,13 +322,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectEzsignsignergroupApi(Configuration.Default);
+            var apiInstance = new ObjectEzsignsignergroupApi(config);
             var pkiEzsignsignergroupID = 56;  // int | The unique ID of the Ezsignsignergroup
             var ezsignsignergroupEditObjectV1Request = new EzsignsignergroupEditObjectV1Request(); // EzsignsignergroupEditObjectV1Request | 
 
@@ -296,10 +339,10 @@ namespace Example
                 EzsignsignergroupEditObjectV1Response result = apiInstance.EzsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupEditObjectV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupEditObjectV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -307,13 +350,32 @@ namespace Example
 }
 ```
 
+#### Using the EzsignsignergroupEditObjectV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Edit an existing Ezsignsignergroup
+    ApiResponse<EzsignsignergroupEditObjectV1Response> response = apiInstance.EzsignsignergroupEditObjectV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupEditObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignergroupID** | **int**| The unique ID of the Ezsignsignergroup | 
- **ezsignsignergroupEditObjectV1Request** | [**EzsignsignergroupEditObjectV1Request**](EzsignsignergroupEditObjectV1Request.md)|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignsignergroupID** | **int** | The unique ID of the Ezsignsignergroup |  |
+| **ezsignsignergroupEditObjectV1Request** | [**EzsignsignergroupEditObjectV1Request**](EzsignsignergroupEditObjectV1Request.md) |  |  |
 
 ### Return type
 
@@ -325,8 +387,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -335,20 +397,15 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## EzsignsignergroupGetEzsignsignergroupmembershipsV1
-
+<a id="ezsignsignergroupgetezsignsignergroupmembershipsv1"></a>
+# **EzsignsignergroupGetEzsignsignergroupmembershipsV1**
 > EzsignsignergroupGetEzsignsignergroupmembershipsV1Response EzsignsignergroupGetEzsignsignergroupmembershipsV1 (int pkiEzsignsignergroupID)
 
 Retrieve an existing Ezsignsignergroup's Ezsignsignergroupmemberships
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -362,13 +419,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectEzsignsignergroupApi(Configuration.Default);
+            var apiInstance = new ObjectEzsignsignergroupApi(config);
             var pkiEzsignsignergroupID = 56;  // int | 
 
             try
@@ -377,10 +435,10 @@ namespace Example
                 EzsignsignergroupGetEzsignsignergroupmembershipsV1Response result = apiInstance.EzsignsignergroupGetEzsignsignergroupmembershipsV1(pkiEzsignsignergroupID);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupGetEzsignsignergroupmembershipsV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupGetEzsignsignergroupmembershipsV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -388,12 +446,31 @@ namespace Example
 }
 ```
 
+#### Using the EzsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Ezsignsignergroup's Ezsignsignergroupmemberships
+    ApiResponse<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response> response = apiInstance.EzsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfo(pkiEzsignsignergroupID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignergroupID** | **int**|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignsignergroupID** | **int** |  |  |
 
 ### Return type
 
@@ -405,8 +482,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -415,20 +492,15 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## EzsignsignergroupGetObjectV2
-
+<a id="ezsignsignergroupgetobjectv2"></a>
+# **EzsignsignergroupGetObjectV2**
 > EzsignsignergroupGetObjectV2Response EzsignsignergroupGetObjectV2 (int pkiEzsignsignergroupID)
 
 Retrieve an existing Ezsignsignergroup
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -442,13 +514,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectEzsignsignergroupApi(Configuration.Default);
+            var apiInstance = new ObjectEzsignsignergroupApi(config);
             var pkiEzsignsignergroupID = 56;  // int | The unique ID of the Ezsignsignergroup
 
             try
@@ -457,10 +530,10 @@ namespace Example
                 EzsignsignergroupGetObjectV2Response result = apiInstance.EzsignsignergroupGetObjectV2(pkiEzsignsignergroupID);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupGetObjectV2: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupGetObjectV2: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -468,12 +541,31 @@ namespace Example
 }
 ```
 
+#### Using the EzsignsignergroupGetObjectV2WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Ezsignsignergroup
+    ApiResponse<EzsignsignergroupGetObjectV2Response> response = apiInstance.EzsignsignergroupGetObjectV2WithHttpInfo(pkiEzsignsignergroupID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignsignergroupApi.EzsignsignergroupGetObjectV2WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignergroupID** | **int**| The unique ID of the Ezsignsignergroup | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignsignergroupID** | **int** | The unique ID of the Ezsignsignergroup |  |
 
 ### Return type
 
@@ -485,8 +577,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -495,8 +587,5 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

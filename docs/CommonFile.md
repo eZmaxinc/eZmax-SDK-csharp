@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.CommonFile
+Object representing a file used in a request or response context 
 
 ## Properties
 
@@ -10,7 +10,5 @@ Name | Type | Description | Notes
 **SFileBase64** | **byte[]** | The Base64 encoded binary content of the File | [optional] 
 **EFileSource** | **string** | The source of the File | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

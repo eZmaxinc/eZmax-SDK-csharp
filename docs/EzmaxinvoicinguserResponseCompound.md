@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzmaxinvoicinguserResponseCompound
+A Ezmaxinvoicinguser Object
 
 ## Properties
 
@@ -16,7 +16,5 @@ Name | Type | Description | Notes
 **EEzmaxinvoicinguserVariationezsign** | **FieldEEzmaxinvoicinguserVariationezsign** |  | 
 **ObjContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.CommunicationattachmentResponse
+A Communicationattachment Object
 
 ## Properties
 
@@ -12,7 +12,5 @@ Name | Type | Description | Notes
 **SCommunicationattachmentName** | **string** | The name of the Communicationattachment | 
 **SDownloadUrl** | **string** | The Url to the requested document.  Url will expire after 3 hours. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

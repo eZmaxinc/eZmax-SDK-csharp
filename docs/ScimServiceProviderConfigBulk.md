@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.ScimServiceProviderConfigBulk
+A complex type that specifies bulk configuration options.
 
 ## Properties
 
@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **MaxOperations** | **int** | An integer value specifying the maximum number of operations. | 
 **MaxPayloadSize** | **int** | An integer value specifying the maximum payload size in bytes. | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

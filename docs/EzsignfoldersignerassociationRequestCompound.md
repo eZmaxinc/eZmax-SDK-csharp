@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignfoldersignerassociationRequestCompound
+An Ezsignfoldersignerassociation Object and children to create a complete structure
 
 ## Properties
 
@@ -13,7 +13,5 @@ Name | Type | Description | Notes
 **TEzsignfoldersignerassociationMessage** | **string** | A custom text message that will be added to the email sent. | [optional] 
 **ObjEzsignsigner** | [**EzsignsignerRequestCompound**](EzsignsignerRequestCompound.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

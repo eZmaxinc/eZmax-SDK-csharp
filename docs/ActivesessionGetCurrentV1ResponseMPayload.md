@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.ActivesessionGetCurrentV1ResponseMPayload
+Payload for GET /1/object/activesession/getCurrent
 
 ## Properties
 
@@ -22,7 +22,5 @@ Name | Type | Description | Notes
 **ObjApikey** | [**ActivesessionResponseCompoundApikey**](ActivesessionResponseCompoundApikey.md) |  | [optional] 
 **AEModuleInternalname** | **List&lt;string&gt;** | An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignbulksendCreateEzsignbulksendtransmissionV1Request
+Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
 
 ## Properties
 
@@ -13,7 +13,5 @@ Name | Type | Description | Notes
 **TExtraMessage** | **string** | A custom text message that will be added to the email sent. | 
 **SCsvBase64** | **byte[]** | The Base64 encoded binary content of the CSV file. | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

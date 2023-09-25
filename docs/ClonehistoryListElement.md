@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.ClonehistoryListElement
+A Clonehistory List Element
 
 ## Properties
 
@@ -17,7 +17,5 @@ Name | Type | Description | Notes
 **SUserFirstnameCloned** | **string** | The first name of the user | 
 **SUserLastnameCloned** | **string** | The last name of the user | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.BrandingGetAutocompleteV2ResponseMPayload
+Payload for POST /2/object/branding/getAutocomplete
 
 ## Properties
 
@@ -7,7 +7,5 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AObjBranding** | [**List&lt;BrandingAutocompleteElementResponse&gt;**](BrandingAutocompleteElementResponse.md) | An array of Branding object containing the description, ID and active status about the element. | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

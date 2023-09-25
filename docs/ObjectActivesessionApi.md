@@ -2,15 +2,13 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ActivesessionGetCurrentV1**](ObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
-[**ActivesessionGetListV1**](ObjectActivesessionApi.md#activesessiongetlistv1) | **GET** /1/object/activesession/getList | Retrieve Activesession list
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**ActivesessionGetCurrentV1**](ObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession |
+| [**ActivesessionGetListV1**](ObjectActivesessionApi.md#activesessiongetlistv1) | **GET** /1/object/activesession/getList | Retrieve Activesession list |
 
-
-
-## ActivesessionGetCurrentV1
-
+<a id="activesessiongetcurrentv1"></a>
+# **ActivesessionGetCurrentV1**
 > ActivesessionGetCurrentV1Response ActivesessionGetCurrentV1 ()
 
 Get Current Activesession
@@ -18,7 +16,6 @@ Get Current Activesession
 Retrieve the details about the current activesession
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -32,13 +29,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectActivesessionApi(Configuration.Default);
+            var apiInstance = new ObjectActivesessionApi(config);
 
             try
             {
@@ -46,10 +44,10 @@ namespace Example
                 ActivesessionGetCurrentV1Response result = apiInstance.ActivesessionGetCurrentV1();
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectActivesessionApi.ActivesessionGetCurrentV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectActivesessionApi.ActivesessionGetCurrentV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -57,10 +55,28 @@ namespace Example
 }
 ```
 
+#### Using the ActivesessionGetCurrentV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Current Activesession
+    ApiResponse<ActivesessionGetCurrentV1Response> response = apiInstance.ActivesessionGetCurrentV1WithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectActivesessionApi.ActivesessionGetCurrentV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
-
 This endpoint does not need any parameter.
-
 ### Return type
 
 [**ActivesessionGetCurrentV1Response**](ActivesessionGetCurrentV1Response.md)
@@ -71,8 +87,8 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -87,20 +103,15 @@ This endpoint does not need any parameter.
 | **355** | The user must change its password before he can continue with this request |  -  |
 | **356** | The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## ActivesessionGetListV1
-
+<a id="activesessiongetlistv1"></a>
+# **ActivesessionGetListV1**
 > ActivesessionGetListV1Response ActivesessionGetListV1 (string? eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string? sFilter = null)
 
 Retrieve Activesession list
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -114,13 +125,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectActivesessionApi(Configuration.Default);
+            var apiInstance = new ObjectActivesessionApi(config);
             var eOrderBy = "pkiActivesessionID_ASC";  // string? | Specify how you want the results to be sorted (optional) 
             var iRowMax = 10000;  // int? |  (optional)  (default to 10000)
             var iRowOffset = 0;  // int? |  (optional)  (default to 0)
@@ -133,10 +145,10 @@ namespace Example
                 ActivesessionGetListV1Response result = apiInstance.ActivesessionGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectActivesessionApi.ActivesessionGetListV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectActivesessionApi.ActivesessionGetListV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -144,16 +156,35 @@ namespace Example
 }
 ```
 
+#### Using the ActivesessionGetListV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Activesession list
+    ApiResponse<ActivesessionGetListV1Response> response = apiInstance.ActivesessionGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectActivesessionApi.ActivesessionGetListV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eOrderBy** | **string?**| Specify how you want the results to be sorted | [optional] 
- **iRowMax** | **int?**|  | [optional] [default to 10000]
- **iRowOffset** | **int?**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md)|  | [optional] 
- **sFilter** | **string?**|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **eOrderBy** | **string?** | Specify how you want the results to be sorted | [optional]  |
+| **iRowMax** | **int?** |  | [optional] [default to 10000] |
+| **iRowOffset** | **int?** |  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md) |  | [optional]  |
+| **sFilter** | **string?** |  | [optional]  |
 
 ### Return type
 
@@ -165,8 +196,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 
 ### HTTP response details
@@ -175,8 +206,5 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.UserRequestCompound
+A User Object and children
 
 ## Properties
 
@@ -33,7 +33,5 @@ Name | Type | Description | Notes
 **BUserAttachmentautoverified** | **bool** | Whether if Attachments uploaded by the User must be validated or not | [optional] 
 **BUserChangepassword** | **bool** | Whether if the User is forced to change its password | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

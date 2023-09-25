@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.WebhookResponse
+A webhook object
 
 ## Properties
 
@@ -17,7 +17,5 @@ Name | Type | Description | Notes
 **BWebhookIsactive** | **bool** | Whether the Webhook is active or not | [optional] 
 **BWebhookSkipsslvalidation** | **bool** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

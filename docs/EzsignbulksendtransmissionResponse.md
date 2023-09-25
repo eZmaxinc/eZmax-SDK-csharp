@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignbulksendtransmissionResponse
+An Ezsignbulksendtransmission Object
 
 ## Properties
 
@@ -11,7 +11,5 @@ Name | Type | Description | Notes
 **IEzsignbulksendtransmissionErrors** | **int** | The number of errors during the Ezsignbulksendtransmission | 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

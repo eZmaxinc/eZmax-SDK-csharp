@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigndocumentlogResponseCompound
+An Ezsigndocumentlog Object and children to create a complete structure
 
 ## Properties
 
@@ -14,7 +14,5 @@ Name | Type | Description | Notes
 **SEzsigndocumentlogFirstname** | **string** | The first name of the User or Ezsignsigner | 
 **SEzsigndocumentlogIP** | **string** | Represent an IP address. | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

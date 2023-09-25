@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzmaxinvoicingsummaryglobalResponseCompound
+A Ezmaxinvoicingsummaryglobal Object
 
 ## Properties
 
@@ -26,7 +26,5 @@ Name | Type | Description | Notes
 **TEzmaxproductHelpX** | **string** | The help message of the Ezmaxproduct in the language of the requester | 
 **AObjEzmaxinvoicingcommission** | [**List&lt;EzmaxinvoicingcommissionResponseCompound&gt;**](EzmaxinvoicingcommissionResponseCompound.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

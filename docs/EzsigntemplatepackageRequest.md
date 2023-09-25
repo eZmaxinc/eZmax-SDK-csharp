@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigntemplatepackageRequest
+A Ezsigntemplatepackage Object
 
 ## Properties
 
@@ -12,7 +12,5 @@ Name | Type | Description | Notes
 **BEzsigntemplatepackageAdminonly** | **bool** | Whether the Ezsigntemplatepackage can be accessed by admin users only (eUserType&#x3D;Normal) | 
 **BEzsigntemplatepackageIsactive** | **bool** | Whether the Ezsigntemplatepackage is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

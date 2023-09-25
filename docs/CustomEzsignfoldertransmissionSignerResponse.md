@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.CustomEzsignfoldertransmissionSignerResponse
+A form Signer Object in the context of an Ezsignfoldertransmissions
 
 ## Properties
 
@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **SContactFirstname** | **string** | The First name of the contact | 
 **SContactLastname** | **string** | The Last name of the contact | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

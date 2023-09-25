@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigntemplateListElement
+A Ezsigntemplate List Element
 
 ## Properties
 
@@ -15,7 +15,5 @@ Name | Type | Description | Notes
 **BEzsigntemplateIncomplete** | **bool** | Indicate the Ezsigntemplate is incomplete and cannot be used | 
 **SEzsignfoldertypeNameX** | **string** | The name of the Ezsignfoldertype in the language of the requester | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

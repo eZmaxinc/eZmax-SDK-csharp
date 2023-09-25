@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigntsarequirementAutocompleteElementResponse
+A Ezsigntsarequirement AutocompleteElement Response
 
 ## Properties
 
@@ -10,7 +10,5 @@ Name | Type | Description | Notes
 **BEzsigntsarequirementIsactive** | **bool** | Whether the Ezsigntsarequirement is active or not | 
 **BDisabled** | **bool** | Indicates if the element is disabled in the context | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

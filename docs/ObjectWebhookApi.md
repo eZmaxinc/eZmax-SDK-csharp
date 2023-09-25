@@ -2,20 +2,18 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**WebhookCreateObjectV1**](ObjectWebhookApi.md#webhookcreateobjectv1) | **POST** /1/object/webhook | Create a new Webhook
-[**WebhookDeleteObjectV1**](ObjectWebhookApi.md#webhookdeleteobjectv1) | **DELETE** /1/object/webhook/{pkiWebhookID} | Delete an existing Webhook
-[**WebhookEditObjectV1**](ObjectWebhookApi.md#webhookeditobjectv1) | **PUT** /1/object/webhook/{pkiWebhookID} | Edit an existing Webhook
-[**WebhookGetHistoryV1**](ObjectWebhookApi.md#webhookgethistoryv1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
-[**WebhookGetListV1**](ObjectWebhookApi.md#webhookgetlistv1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
-[**WebhookGetObjectV2**](ObjectWebhookApi.md#webhookgetobjectv2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
-[**WebhookTestV1**](ObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**WebhookCreateObjectV1**](ObjectWebhookApi.md#webhookcreateobjectv1) | **POST** /1/object/webhook | Create a new Webhook |
+| [**WebhookDeleteObjectV1**](ObjectWebhookApi.md#webhookdeleteobjectv1) | **DELETE** /1/object/webhook/{pkiWebhookID} | Delete an existing Webhook |
+| [**WebhookEditObjectV1**](ObjectWebhookApi.md#webhookeditobjectv1) | **PUT** /1/object/webhook/{pkiWebhookID} | Edit an existing Webhook |
+| [**WebhookGetHistoryV1**](ObjectWebhookApi.md#webhookgethistoryv1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls |
+| [**WebhookGetListV1**](ObjectWebhookApi.md#webhookgetlistv1) | **GET** /1/object/webhook/getList | Retrieve Webhook list |
+| [**WebhookGetObjectV2**](ObjectWebhookApi.md#webhookgetobjectv2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook |
+| [**WebhookTestV1**](ObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url |
 
-
-
-## WebhookCreateObjectV1
-
+<a id="webhookcreateobjectv1"></a>
+# **WebhookCreateObjectV1**
 > WebhookCreateObjectV1Response WebhookCreateObjectV1 (WebhookCreateObjectV1Request webhookCreateObjectV1Request)
 
 Create a new Webhook
@@ -23,7 +21,6 @@ Create a new Webhook
 The endpoint allows to create one or many elements at once.
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -37,13 +34,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectWebhookApi(Configuration.Default);
+            var apiInstance = new ObjectWebhookApi(config);
             var webhookCreateObjectV1Request = new WebhookCreateObjectV1Request(); // WebhookCreateObjectV1Request | 
 
             try
@@ -52,10 +50,10 @@ namespace Example
                 WebhookCreateObjectV1Response result = apiInstance.WebhookCreateObjectV1(webhookCreateObjectV1Request);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectWebhookApi.WebhookCreateObjectV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectWebhookApi.WebhookCreateObjectV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -63,12 +61,31 @@ namespace Example
 }
 ```
 
+#### Using the WebhookCreateObjectV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a new Webhook
+    ApiResponse<WebhookCreateObjectV1Response> response = apiInstance.WebhookCreateObjectV1WithHttpInfo(webhookCreateObjectV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectWebhookApi.WebhookCreateObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webhookCreateObjectV1Request** | [**WebhookCreateObjectV1Request**](WebhookCreateObjectV1Request.md)|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **webhookCreateObjectV1Request** | [**WebhookCreateObjectV1Request**](WebhookCreateObjectV1Request.md) |  |  |
 
 ### Return type
 
@@ -80,8 +97,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -89,20 +106,15 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## WebhookDeleteObjectV1
-
+<a id="webhookdeleteobjectv1"></a>
+# **WebhookDeleteObjectV1**
 > WebhookDeleteObjectV1Response WebhookDeleteObjectV1 (int pkiWebhookID)
 
 Delete an existing Webhook
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -116,13 +128,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectWebhookApi(Configuration.Default);
+            var apiInstance = new ObjectWebhookApi(config);
             var pkiWebhookID = 56;  // int | 
 
             try
@@ -131,10 +144,10 @@ namespace Example
                 WebhookDeleteObjectV1Response result = apiInstance.WebhookDeleteObjectV1(pkiWebhookID);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectWebhookApi.WebhookDeleteObjectV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectWebhookApi.WebhookDeleteObjectV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -142,12 +155,31 @@ namespace Example
 }
 ```
 
+#### Using the WebhookDeleteObjectV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete an existing Webhook
+    ApiResponse<WebhookDeleteObjectV1Response> response = apiInstance.WebhookDeleteObjectV1WithHttpInfo(pkiWebhookID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectWebhookApi.WebhookDeleteObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiWebhookID** | **int**|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiWebhookID** | **int** |  |  |
 
 ### Return type
 
@@ -159,8 +191,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -169,20 +201,15 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## WebhookEditObjectV1
-
+<a id="webhookeditobjectv1"></a>
+# **WebhookEditObjectV1**
 > WebhookEditObjectV1Response WebhookEditObjectV1 (int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request)
 
 Edit an existing Webhook
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -196,13 +223,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectWebhookApi(Configuration.Default);
+            var apiInstance = new ObjectWebhookApi(config);
             var pkiWebhookID = 56;  // int | 
             var webhookEditObjectV1Request = new WebhookEditObjectV1Request(); // WebhookEditObjectV1Request | 
 
@@ -212,10 +240,10 @@ namespace Example
                 WebhookEditObjectV1Response result = apiInstance.WebhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectWebhookApi.WebhookEditObjectV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectWebhookApi.WebhookEditObjectV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -223,13 +251,32 @@ namespace Example
 }
 ```
 
+#### Using the WebhookEditObjectV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Edit an existing Webhook
+    ApiResponse<WebhookEditObjectV1Response> response = apiInstance.WebhookEditObjectV1WithHttpInfo(pkiWebhookID, webhookEditObjectV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectWebhookApi.WebhookEditObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiWebhookID** | **int**|  | 
- **webhookEditObjectV1Request** | [**WebhookEditObjectV1Request**](WebhookEditObjectV1Request.md)|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiWebhookID** | **int** |  |  |
+| **webhookEditObjectV1Request** | [**WebhookEditObjectV1Request**](WebhookEditObjectV1Request.md) |  |  |
 
 ### Return type
 
@@ -241,8 +288,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -251,20 +298,15 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## WebhookGetHistoryV1
-
+<a id="webhookgethistoryv1"></a>
+# **WebhookGetHistoryV1**
 > WebhookGetHistoryV1Response WebhookGetHistoryV1 (int pkiWebhookID, string eWebhookHistoryinterval)
 
 Retrieve the logs for recent Webhook calls
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -278,13 +320,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectWebhookApi(Configuration.Default);
+            var apiInstance = new ObjectWebhookApi(config);
             var pkiWebhookID = 56;  // int | 
             var eWebhookHistoryinterval = "LastDay";  // string | The number of days to return
 
@@ -294,10 +337,10 @@ namespace Example
                 WebhookGetHistoryV1Response result = apiInstance.WebhookGetHistoryV1(pkiWebhookID, eWebhookHistoryinterval);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectWebhookApi.WebhookGetHistoryV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectWebhookApi.WebhookGetHistoryV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -305,13 +348,32 @@ namespace Example
 }
 ```
 
+#### Using the WebhookGetHistoryV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve the logs for recent Webhook calls
+    ApiResponse<WebhookGetHistoryV1Response> response = apiInstance.WebhookGetHistoryV1WithHttpInfo(pkiWebhookID, eWebhookHistoryinterval);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectWebhookApi.WebhookGetHistoryV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiWebhookID** | **int**|  | 
- **eWebhookHistoryinterval** | **string**| The number of days to return | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiWebhookID** | **int** |  |  |
+| **eWebhookHistoryinterval** | **string** | The number of days to return |  |
 
 ### Return type
 
@@ -323,8 +385,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -334,14 +396,10 @@ Name | Type | Description  | Notes
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **429** | Too Many Requests |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## WebhookGetListV1
-
+<a id="webhookgetlistv1"></a>
+# **WebhookGetListV1**
 > WebhookGetListV1Response WebhookGetListV1 (string? eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string? sFilter = null)
 
 Retrieve Webhook list
@@ -349,7 +407,6 @@ Retrieve Webhook list
 Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eWebhookModule | Ezsign<br>Management | | eWebhookEzsignevent | DocumentCompleted<br>FolderCompleted | | eWebhookManagementevent | UserCreated |
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -363,13 +420,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectWebhookApi(Configuration.Default);
+            var apiInstance = new ObjectWebhookApi(config);
             var eOrderBy = "pkiWebhookID_ASC";  // string? | Specify how you want the results to be sorted (optional) 
             var iRowMax = 10000;  // int? |  (optional)  (default to 10000)
             var iRowOffset = 0;  // int? |  (optional)  (default to 0)
@@ -382,10 +440,10 @@ namespace Example
                 WebhookGetListV1Response result = apiInstance.WebhookGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectWebhookApi.WebhookGetListV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectWebhookApi.WebhookGetListV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -393,16 +451,35 @@ namespace Example
 }
 ```
 
+#### Using the WebhookGetListV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Webhook list
+    ApiResponse<WebhookGetListV1Response> response = apiInstance.WebhookGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectWebhookApi.WebhookGetListV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eOrderBy** | **string?**| Specify how you want the results to be sorted | [optional] 
- **iRowMax** | **int?**|  | [optional] [default to 10000]
- **iRowOffset** | **int?**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md)|  | [optional] 
- **sFilter** | **string?**|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **eOrderBy** | **string?** | Specify how you want the results to be sorted | [optional]  |
+| **iRowMax** | **int?** |  | [optional] [default to 10000] |
+| **iRowOffset** | **int?** |  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md) |  | [optional]  |
+| **sFilter** | **string?** |  | [optional]  |
 
 ### Return type
 
@@ -414,8 +491,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 
 ### HTTP response details
@@ -424,20 +501,15 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## WebhookGetObjectV2
-
+<a id="webhookgetobjectv2"></a>
+# **WebhookGetObjectV2**
 > WebhookGetObjectV2Response WebhookGetObjectV2 (int pkiWebhookID)
 
 Retrieve an existing Webhook
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -451,13 +523,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectWebhookApi(Configuration.Default);
+            var apiInstance = new ObjectWebhookApi(config);
             var pkiWebhookID = 56;  // int | 
 
             try
@@ -466,10 +539,10 @@ namespace Example
                 WebhookGetObjectV2Response result = apiInstance.WebhookGetObjectV2(pkiWebhookID);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectWebhookApi.WebhookGetObjectV2: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectWebhookApi.WebhookGetObjectV2: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -477,12 +550,31 @@ namespace Example
 }
 ```
 
+#### Using the WebhookGetObjectV2WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Webhook
+    ApiResponse<WebhookGetObjectV2Response> response = apiInstance.WebhookGetObjectV2WithHttpInfo(pkiWebhookID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectWebhookApi.WebhookGetObjectV2WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiWebhookID** | **int**|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiWebhookID** | **int** |  |  |
 
 ### Return type
 
@@ -494,8 +586,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -504,20 +596,15 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## WebhookTestV1
-
+<a id="webhooktestv1"></a>
+# **WebhookTestV1**
 > WebhookTestV1Response WebhookTestV1 (int pkiWebhookID, Object body)
 
 Test the Webhook by calling the Url
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -531,13 +618,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectWebhookApi(Configuration.Default);
+            var apiInstance = new ObjectWebhookApi(config);
             var pkiWebhookID = 56;  // int | 
             var body = null;  // Object | 
 
@@ -547,10 +635,10 @@ namespace Example
                 WebhookTestV1Response result = apiInstance.WebhookTestV1(pkiWebhookID, body);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectWebhookApi.WebhookTestV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectWebhookApi.WebhookTestV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -558,13 +646,32 @@ namespace Example
 }
 ```
 
+#### Using the WebhookTestV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Test the Webhook by calling the Url
+    ApiResponse<WebhookTestV1Response> response = apiInstance.WebhookTestV1WithHttpInfo(pkiWebhookID, body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectWebhookApi.WebhookTestV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiWebhookID** | **int**|  | 
- **body** | **Object**|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiWebhookID** | **int** |  |  |
+| **body** | **Object** |  |  |
 
 ### Return type
 
@@ -576,8 +683,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -586,8 +693,5 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

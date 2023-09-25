@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.BillingentityinternalAutocompleteElementResponse
+A Billingentityinternal AutocompleteElement Response
 
 ## Properties
 
@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **SBillingentityinternalDescriptionX** | **string** | The description of the Billingentityinternal in the language of the requester | 
 **BBillingentityinternalIsactive** | **bool** | Whether the Billingentityinternal is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

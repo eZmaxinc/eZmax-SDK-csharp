@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.PaymenttermResponse
+A Paymentterm Object
 
 ## Properties
 
@@ -13,7 +13,5 @@ Name | Type | Description | Notes
 **BPaymenttermIsactive** | **bool** | Whether the Paymentterm is active or not | 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

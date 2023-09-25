@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.UserAutocompleteElementResponse
+A User AutocompleteElement Response
 
 ## Properties
 
@@ -10,7 +10,5 @@ Name | Type | Description | Notes
 **PkiUserID** | **int** | The unique ID of the User | 
 **BUserIsactive** | **bool** | Whether the User is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

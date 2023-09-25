@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.AddressRequest
+An Address Object
 
 ## Properties
 
@@ -14,7 +14,5 @@ Name | Type | Description | Notes
 **FkiCountryID** | **int** | The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States| | 
 **SAddressZip** | **string** | The Postal/Zip Code  The value must be entered without spaces | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

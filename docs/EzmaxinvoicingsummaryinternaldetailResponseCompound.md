@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzmaxinvoicingsummaryinternaldetailResponseCompound
+A Ezmaxinvoicingsummaryinternaldetail Object
 
 ## Properties
 
@@ -18,7 +18,5 @@ Name | Type | Description | Notes
 **BEzmaxinvoicingsummaryinternaldetailAdjustment** | **bool** | Whether if it&#39;s an adjustment | 
 **TEzmaxproductHelpX** | **string** | The help message of the Ezmaxproduct in the language of the requester | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

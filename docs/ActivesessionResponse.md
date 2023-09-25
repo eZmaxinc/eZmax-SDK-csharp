@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.ActivesessionResponse
+An Activesession Object
 
 ## Properties
 
@@ -17,7 +17,5 @@ Name | Type | Description | Notes
 **FkiSystemconfigurationtypeID** | **int** | The unique ID of the Systemconfigurationtype | [optional] 
 **FkiSignatureID** | **int** | The unique ID of the Signature | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

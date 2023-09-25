@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigntemplatedocumentResponse
+A Ezsigntemplatedocument Object
 
 ## Properties
 
@@ -12,7 +12,5 @@ Name | Type | Description | Notes
 **IEzsigntemplatedocumentSignaturetotal** | **int** | The number of total signatures in the Ezsigntemplate. | 
 **BEzsigntemplatedocumentHassignedsignatures** | **bool** | If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

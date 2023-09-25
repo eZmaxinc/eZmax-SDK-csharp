@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.BrandingListElement
+A Branding List Element
 
 ## Properties
 
@@ -15,7 +15,5 @@ Name | Type | Description | Notes
 **IBrandingColorbackgroundsmallbox** | **int** | The color of the background of the small box. This is a RGB color converted into integer | 
 **BBrandingIsactive** | **bool** | Whether the Branding is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

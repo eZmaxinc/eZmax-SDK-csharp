@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignannotationResponseCompound
+A Ezsignannotation Object
 
 ## Properties
 
@@ -18,7 +18,5 @@ Name | Type | Description | Notes
 **IEzsignpagePagenumber** | **int** | The page number in the Ezsigndocument | 
 **ObjTextstylestatic** | [**TextstylestaticResponseCompound**](TextstylestaticResponseCompound.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

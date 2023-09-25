@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzmaxinvoicingResponse
+A Ezmaxinvoicing Object
 
 ## Properties
 
@@ -19,7 +19,5 @@ Name | Type | Description | Notes
 **BEzmaxinvoicingRebateEzsignallagents** | **bool** | Whether the rebate for eZsign is for all agents | 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

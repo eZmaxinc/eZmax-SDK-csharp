@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.ModuleResponseCompound
+A Module Object
 
 ## Properties
 
@@ -13,7 +13,5 @@ Name | Type | Description | Notes
 **BModuleRegisteredapi** | **bool** | Whether the Module is registered or not for api use | 
 **AObjModulesection** | [**List&lt;ModulesectionResponseCompound&gt;**](ModulesectionResponseCompound.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

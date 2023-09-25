@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.UsergroupmembershipResponse
+A Usergroupmembership Object
 
 ## Properties
 
@@ -14,7 +14,5 @@ Name | Type | Description | Notes
 **SEmailAddress** | **string** | The email address. | [optional] 
 **SUsergroupNameX** | **string** | The Name of the Usergroup in the language of the requester | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

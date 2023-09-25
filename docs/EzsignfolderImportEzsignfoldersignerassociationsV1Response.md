@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignfolderImportEzsignfoldersignerassociationsV1Response
+Response for POST /1/object/ezsignfolder/{pkiEzsignfolder}/importEzsignfoldersignerassociations
 
 ## Properties
 
@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 **MPayload** | [**EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload**](EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

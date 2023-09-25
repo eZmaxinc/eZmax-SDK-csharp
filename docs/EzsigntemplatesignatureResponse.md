@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigntemplatesignatureResponse
+A Ezsigntemplatesignature Object
 
 ## Properties
 
@@ -27,7 +27,5 @@ Name | Type | Description | Notes
 **SEzsigntemplatesignatureRegexp** | **string** | A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea** | [optional] 
 **EEzsigntemplatesignatureTextvalidation** | **EnumTextvalidation** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

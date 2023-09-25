@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigntemplatepackagesignermembershipResponseCompound
+A Ezsigntemplatepackagesignermembership Object
 
 ## Properties
 
@@ -11,7 +11,5 @@ Name | Type | Description | Notes
 **FkiEzsigntemplatesignerID** | **int** | The unique ID of the Ezsigntemplatesigner | 
 **IEzsigntemplatepackagesignermembershipCopy** | **int** | The Copy number in case of multiple copies. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

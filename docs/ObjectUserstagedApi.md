@@ -2,18 +2,16 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**UserstagedCreateUserV1**](ObjectUserstagedApi.md#userstagedcreateuserv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/createUser | Create a User from a Userstaged and then map it
-[**UserstagedDeleteObjectV1**](ObjectUserstagedApi.md#userstageddeleteobjectv1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
-[**UserstagedGetListV1**](ObjectUserstagedApi.md#userstagedgetlistv1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
-[**UserstagedGetObjectV2**](ObjectUserstagedApi.md#userstagedgetobjectv2) | **GET** /2/object/userstaged/{pkiUserstagedID} | Retrieve an existing Userstaged
-[**UserstagedMapV1**](ObjectUserstagedApi.md#userstagedmapv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/map | Map the Userstaged to an existing user
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**UserstagedCreateUserV1**](ObjectUserstagedApi.md#userstagedcreateuserv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/createUser | Create a User from a Userstaged and then map it |
+| [**UserstagedDeleteObjectV1**](ObjectUserstagedApi.md#userstageddeleteobjectv1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged |
+| [**UserstagedGetListV1**](ObjectUserstagedApi.md#userstagedgetlistv1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list |
+| [**UserstagedGetObjectV2**](ObjectUserstagedApi.md#userstagedgetobjectv2) | **GET** /2/object/userstaged/{pkiUserstagedID} | Retrieve an existing Userstaged |
+| [**UserstagedMapV1**](ObjectUserstagedApi.md#userstagedmapv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/map | Map the Userstaged to an existing user |
 
-
-
-## UserstagedCreateUserV1
-
+<a id="userstagedcreateuserv1"></a>
+# **UserstagedCreateUserV1**
 > UserstagedCreateUserV1Response UserstagedCreateUserV1 (int pkiUserstagedID, Object body)
 
 Create a User from a Userstaged and then map it
@@ -21,7 +19,6 @@ Create a User from a Userstaged and then map it
 Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -35,13 +32,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectUserstagedApi(Configuration.Default);
+            var apiInstance = new ObjectUserstagedApi(config);
             var pkiUserstagedID = 56;  // int | 
             var body = null;  // Object | 
 
@@ -51,10 +49,10 @@ namespace Example
                 UserstagedCreateUserV1Response result = apiInstance.UserstagedCreateUserV1(pkiUserstagedID, body);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedCreateUserV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedCreateUserV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -62,13 +60,32 @@ namespace Example
 }
 ```
 
+#### Using the UserstagedCreateUserV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a User from a Userstaged and then map it
+    ApiResponse<UserstagedCreateUserV1Response> response = apiInstance.UserstagedCreateUserV1WithHttpInfo(pkiUserstagedID, body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedCreateUserV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **int**|  | 
- **body** | **Object**|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiUserstagedID** | **int** |  |  |
+| **body** | **Object** |  |  |
 
 ### Return type
 
@@ -80,8 +97,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -90,20 +107,15 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## UserstagedDeleteObjectV1
-
+<a id="userstageddeleteobjectv1"></a>
+# **UserstagedDeleteObjectV1**
 > UserstagedDeleteObjectV1Response UserstagedDeleteObjectV1 (int pkiUserstagedID)
 
 Delete an existing Userstaged
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -117,13 +129,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectUserstagedApi(Configuration.Default);
+            var apiInstance = new ObjectUserstagedApi(config);
             var pkiUserstagedID = 56;  // int | 
 
             try
@@ -132,10 +145,10 @@ namespace Example
                 UserstagedDeleteObjectV1Response result = apiInstance.UserstagedDeleteObjectV1(pkiUserstagedID);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedDeleteObjectV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedDeleteObjectV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -143,12 +156,31 @@ namespace Example
 }
 ```
 
+#### Using the UserstagedDeleteObjectV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete an existing Userstaged
+    ApiResponse<UserstagedDeleteObjectV1Response> response = apiInstance.UserstagedDeleteObjectV1WithHttpInfo(pkiUserstagedID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedDeleteObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **int**|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiUserstagedID** | **int** |  |  |
 
 ### Return type
 
@@ -160,8 +192,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -170,20 +202,15 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## UserstagedGetListV1
-
+<a id="userstagedgetlistv1"></a>
+# **UserstagedGetListV1**
 > UserstagedGetListV1Response UserstagedGetListV1 (string? eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string? sFilter = null)
 
 Retrieve Userstaged list
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -197,13 +224,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectUserstagedApi(Configuration.Default);
+            var apiInstance = new ObjectUserstagedApi(config);
             var eOrderBy = "pkiUserstagedID_ASC";  // string? | Specify how you want the results to be sorted (optional) 
             var iRowMax = 10000;  // int? |  (optional)  (default to 10000)
             var iRowOffset = 0;  // int? |  (optional)  (default to 0)
@@ -216,10 +244,10 @@ namespace Example
                 UserstagedGetListV1Response result = apiInstance.UserstagedGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedGetListV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedGetListV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -227,16 +255,35 @@ namespace Example
 }
 ```
 
+#### Using the UserstagedGetListV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Userstaged list
+    ApiResponse<UserstagedGetListV1Response> response = apiInstance.UserstagedGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedGetListV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eOrderBy** | **string?**| Specify how you want the results to be sorted | [optional] 
- **iRowMax** | **int?**|  | [optional] [default to 10000]
- **iRowOffset** | **int?**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md)|  | [optional] 
- **sFilter** | **string?**|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **eOrderBy** | **string?** | Specify how you want the results to be sorted | [optional]  |
+| **iRowMax** | **int?** |  | [optional] [default to 10000] |
+| **iRowOffset** | **int?** |  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md) |  | [optional]  |
+| **sFilter** | **string?** |  | [optional]  |
 
 ### Return type
 
@@ -248,8 +295,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 
 ### HTTP response details
@@ -258,20 +305,15 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## UserstagedGetObjectV2
-
+<a id="userstagedgetobjectv2"></a>
+# **UserstagedGetObjectV2**
 > UserstagedGetObjectV2Response UserstagedGetObjectV2 (int pkiUserstagedID)
 
 Retrieve an existing Userstaged
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -285,13 +327,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectUserstagedApi(Configuration.Default);
+            var apiInstance = new ObjectUserstagedApi(config);
             var pkiUserstagedID = 56;  // int | 
 
             try
@@ -300,10 +343,10 @@ namespace Example
                 UserstagedGetObjectV2Response result = apiInstance.UserstagedGetObjectV2(pkiUserstagedID);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedGetObjectV2: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedGetObjectV2: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -311,12 +354,31 @@ namespace Example
 }
 ```
 
+#### Using the UserstagedGetObjectV2WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Userstaged
+    ApiResponse<UserstagedGetObjectV2Response> response = apiInstance.UserstagedGetObjectV2WithHttpInfo(pkiUserstagedID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedGetObjectV2WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **int**|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiUserstagedID** | **int** |  |  |
 
 ### Return type
 
@@ -328,8 +390,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -338,20 +400,15 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## UserstagedMapV1
-
+<a id="userstagedmapv1"></a>
+# **UserstagedMapV1**
 > UserstagedMapV1Response UserstagedMapV1 (int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request)
 
 Map the Userstaged to an existing user
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -365,13 +422,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectUserstagedApi(Configuration.Default);
+            var apiInstance = new ObjectUserstagedApi(config);
             var pkiUserstagedID = 56;  // int | 
             var userstagedMapV1Request = new UserstagedMapV1Request(); // UserstagedMapV1Request | 
 
@@ -381,10 +439,10 @@ namespace Example
                 UserstagedMapV1Response result = apiInstance.UserstagedMapV1(pkiUserstagedID, userstagedMapV1Request);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedMapV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedMapV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -392,13 +450,32 @@ namespace Example
 }
 ```
 
+#### Using the UserstagedMapV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Map the Userstaged to an existing user
+    ApiResponse<UserstagedMapV1Response> response = apiInstance.UserstagedMapV1WithHttpInfo(pkiUserstagedID, userstagedMapV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectUserstagedApi.UserstagedMapV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **int**|  | 
- **userstagedMapV1Request** | [**UserstagedMapV1Request**](UserstagedMapV1Request.md)|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiUserstagedID** | **int** |  |  |
+| **userstagedMapV1Request** | [**UserstagedMapV1Request**](UserstagedMapV1Request.md) |  |  |
 
 ### Return type
 
@@ -410,8 +487,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -421,8 +498,5 @@ Name | Type | Description  | Notes
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

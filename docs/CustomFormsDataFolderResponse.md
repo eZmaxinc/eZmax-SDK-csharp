@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.CustomFormsDataFolderResponse
+A forms Data Folder Object
 
 ## Properties
 
@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **SEzsignfolderDescription** | **string** | The description of the Ezsignfolder | 
 **AObjFormDataDocument** | [**List&lt;CustomFormDataDocumentResponse&gt;**](CustomFormDataDocumentResponse.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

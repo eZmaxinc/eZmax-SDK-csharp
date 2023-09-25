@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.BrandingRequest
+A Branding Object
 
 ## Properties
 
@@ -19,7 +19,5 @@ Name | Type | Description | Notes
 **SEmailAddress** | **string** | The email address. | [optional] 
 **BBrandingIsactive** | **bool** | Whether the Branding is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigndocumentGetWordsPositionsV1Request
+Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
 
 ## Properties
 
@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **BWordCaseSensitive** | **bool** | IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive. | 
 **ASWord** | **List&lt;string&gt;** | Array of words to find in the document | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

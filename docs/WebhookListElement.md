@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.WebhookListElement
+A Webhook List Element
 
 ## Properties
 
@@ -15,7 +15,5 @@ Name | Type | Description | Notes
 **EWebhookManagementevent** | **FieldEWebhookManagementevent** |  | [optional] 
 **BWebhookIsactive** | **bool** | Whether the Webhook is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

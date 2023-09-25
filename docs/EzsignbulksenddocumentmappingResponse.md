@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignbulksenddocumentmappingResponse
+A Ezsignbulksenddocumentmapping Object
 
 ## Properties
 
@@ -11,7 +11,5 @@ Name | Type | Description | Notes
 **FkiEzsigntemplateID** | **int** | The unique ID of the Ezsigntemplate | [optional] 
 **IEzsignbulksenddocumentmappingOrder** | **int** | The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

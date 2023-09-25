@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.GlobalEzmaxcustomerGetConfigurationV1Response
+Response for GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
 
 ## Properties
 
@@ -11,7 +11,5 @@ Name | Type | Description | Notes
 **SCognitoClientIDExternal** | **string** | The ID of the client in Cognito | [optional] 
 **SCognitoClientIDEzmaxpublic** | **string** | The ID of the client in Cognito | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

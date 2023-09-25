@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignfoldertypeListElement
+An Ezsignfoldertype List Element
 
 ## Properties
 
@@ -10,7 +10,5 @@ Name | Type | Description | Notes
 **SEzsignfoldertypeNameX** | **string** | The name of the Ezsignfoldertype in the language of the requester | 
 **BEzsignfoldertypeIsactive** | **bool** | Whether the Ezsignfoldertype is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.CommunicationResponseCompound
+A Communication Object
 
 ## Properties
 
@@ -21,7 +21,5 @@ Name | Type | Description | Notes
 **AObjCommunicationrecipient** | [**List&lt;CommunicationrecipientResponseCompound&gt;**](CommunicationrecipientResponseCompound.md) |  | 
 **AObjCommunicationexternalrecipient** | [**List&lt;CommunicationexternalrecipientResponseCompound&gt;**](CommunicationexternalrecipientResponseCompound.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

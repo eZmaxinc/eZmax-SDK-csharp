@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignbulksendRequest
+A Ezsignbulksend Object
 
 ## Properties
 
@@ -13,7 +13,5 @@ Name | Type | Description | Notes
 **BEzsignbulksendNeedvalidation** | **bool** | Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation | 
 **BEzsignbulksendIsactive** | **bool** | Whether the Ezsignbulksend is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

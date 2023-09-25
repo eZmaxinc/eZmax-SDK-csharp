@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.TextstylestaticResponse
+A Textstylestatic Object
 
 ## Properties
 
@@ -14,7 +14,5 @@ Name | Type | Description | Notes
 **ITextstylestaticFontcolor** | **int** | The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795 | 
 **ITextstylestaticSize** | **int** | The Size for the Font of the Textstylestatic | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

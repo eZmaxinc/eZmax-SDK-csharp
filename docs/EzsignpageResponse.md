@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignpageResponse
+An Ezsignpage Object
 
 ## Properties
 
@@ -13,7 +13,5 @@ Name | Type | Description | Notes
 **IEzsignpagePagenumber** | **int** | The page number in the Ezsigndocument | 
 **SComputedImageurl** | **string** | The Url to the Ezsignpage&#39;s rasterized image.  Url will expire after 5 minutes. | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.ContactRequest
+A Contact Object
 
 ## Properties
 
@@ -12,7 +12,5 @@ Name | Type | Description | Notes
 **SContactCompany** | **string** | The Company name of the contact | 
 **DtContactBirthdate** | **string** | The Birth Date of the contact | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

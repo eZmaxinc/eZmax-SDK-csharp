@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignbulksendListElement
+An Ezsignbulksend List Element
 
 ## Properties
 
@@ -17,7 +17,5 @@ Name | Type | Description | Notes
 **IEzsignsignatureSigned** | **int** | The total number of already signed Ezsignsignature blocks in the Ezsignbulksend | 
 **BEzsignbulksendIsactive** | **bool** | Whether the Ezsignbulksend is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

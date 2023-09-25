@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignsignatureRequest
+An Ezsignsignature Object
 
 ## Properties
 
@@ -27,7 +27,5 @@ Name | Type | Description | Notes
 **EEzsignsignatureTextvalidation** | **EnumTextvalidation** |  | [optional] 
 **SEzsignsignatureRegexp** | **string** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

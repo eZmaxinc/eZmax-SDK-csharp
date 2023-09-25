@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzmaxinvoicingsummaryinternalResponseCompound
+A Ezmaxinvoicingsummaryinternal Object
 
 ## Properties
 
@@ -13,7 +13,5 @@ Name | Type | Description | Notes
 **SBillingentityinternalDescriptionX** | **string** | The description of the Billingentityinternal in the language of the requester | 
 **AObjEzmaxinvoicingsummaryinternaldetail** | [**List&lt;EzmaxinvoicingsummaryinternaldetailResponseCompound&gt;**](EzmaxinvoicingsummaryinternaldetailResponseCompound.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

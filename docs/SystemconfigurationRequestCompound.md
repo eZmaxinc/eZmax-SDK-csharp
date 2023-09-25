@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.SystemconfigurationRequestCompound
+A Systemconfiguration Object and children
 
 ## Properties
 
@@ -15,7 +15,5 @@ Name | Type | Description | Notes
 **DtSystemconfigurationReadonlyexpirationstart** | **string** | The start date where the system will be in read only | [optional] 
 **DtSystemconfigurationReadonlyexpirationend** | **string** | The end date where the system will be in read only | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

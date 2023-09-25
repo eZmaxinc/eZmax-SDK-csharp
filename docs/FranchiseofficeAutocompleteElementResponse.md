@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.FranchiseofficeAutocompleteElementResponse
+A Franchiseoffice AutocompleteElement Response
 
 ## Properties
 
@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **PkiFranchiseofficeID** | **int** | The unique ID of the Franchisereoffice | 
 **BFranchiseofficeIsactive** | **bool** | Whether the Franchiseoffice is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

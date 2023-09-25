@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigndocumentGetObjectV1ResponseMPayload
+Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
 
 ## Properties
 
@@ -33,7 +33,5 @@ Name | Type | Description | Notes
 **IEzsigndocumentStepsignatureCurrent** | **int** | The current step in the signature phase | 
 **AObjEzsignfoldersignerassociationstatus** | [**List&lt;CustomEzsignfoldersignerassociationstatusResponse&gt;**](CustomEzsignfoldersignerassociationstatusResponse.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

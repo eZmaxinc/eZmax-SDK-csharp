@@ -2,14 +2,12 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ReportGetReportFromCacheV1**](ModuleReportApi.md#reportgetreportfromcachev1) | **GET** /1/module/report/getReportFromCache/{sReportgroupCacheID} | Retrieve report from cache
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**ReportGetReportFromCacheV1**](ModuleReportApi.md#reportgetreportfromcachev1) | **GET** /1/module/report/getReportFromCache/{sReportgroupCacheID} | Retrieve report from cache |
 
-
-
-## ReportGetReportFromCacheV1
-
+<a id="reportgetreportfromcachev1"></a>
+# **ReportGetReportFromCacheV1**
 > CommonGetReportV1Response ReportGetReportFromCacheV1 (string sReportgroupCacheID)
 
 Retrieve report from cache
@@ -17,7 +15,6 @@ Retrieve report from cache
 Retrieve a report that was previously generated and cached
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,17 +28,18 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             // Configure API key authorization: Authorization
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
             // Configure API key authorization: Presigned
-            Configuration.Default.AddApiKey("sAuthorization", "YOUR_API_KEY");
+            config.AddApiKey("sAuthorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("sAuthorization", "Bearer");
+            // config.AddApiKeyPrefix("sAuthorization", "Bearer");
 
-            var apiInstance = new ModuleReportApi(Configuration.Default);
+            var apiInstance = new ModuleReportApi(config);
             var sReportgroupCacheID = "sReportgroupCacheID_example";  // string | 
 
             try
@@ -50,10 +48,10 @@ namespace Example
                 CommonGetReportV1Response result = apiInstance.ReportGetReportFromCacheV1(sReportgroupCacheID);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ModuleReportApi.ReportGetReportFromCacheV1: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ModuleReportApi.ReportGetReportFromCacheV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -61,12 +59,31 @@ namespace Example
 }
 ```
 
+#### Using the ReportGetReportFromCacheV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve report from cache
+    ApiResponse<CommonGetReportV1Response> response = apiInstance.ReportGetReportFromCacheV1WithHttpInfo(sReportgroupCacheID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ModuleReportApi.ReportGetReportFromCacheV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sReportgroupCacheID** | **string**|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **sReportgroupCacheID** | **string** |  |  |
 
 ### Return type
 
@@ -78,8 +95,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/pdf, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/zip, text/html
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/pdf, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/zip, text/html
 
 
 ### HTTP response details
@@ -88,8 +105,5 @@ Name | Type | Description  | Notes
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

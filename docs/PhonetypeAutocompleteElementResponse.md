@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.PhonetypeAutocompleteElementResponse
+A Phonetype AutocompleteElement Response
 
 ## Properties
 
@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **SPhonetypeNameX** | **string** | The name of the Phonetype in the language of the requester | 
 **BPhonetypeIsactive** | **bool** | Whether the Phonetype is active or not | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

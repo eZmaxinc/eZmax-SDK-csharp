@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.CommunicationResponse
+A Communication Object
 
 ## Properties
 
@@ -18,7 +18,5 @@ Name | Type | Description | Notes
 **ObjPhonestaticSender** | [**PhonestaticResponse**](PhonestaticResponse.md) |  | [optional] 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

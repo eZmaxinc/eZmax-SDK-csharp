@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.UserListElement
+A User List Element
 
 ## Properties
 
@@ -16,7 +16,5 @@ Name | Type | Description | Notes
 **DtUserEzsignprepaidexpiration** | **string** | The eZsign prepaid expiration date | [optional] 
 **SEmailAddress** | **string** | The email address. | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

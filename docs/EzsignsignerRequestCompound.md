@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsignsignerRequestCompound
+An Ezsignsigner Object and children to create a complete structure
 
 ## Properties
 
@@ -12,7 +12,5 @@ Name | Type | Description | Notes
 **SEzsignsignerSecretanswer** | **string** | The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate. | [optional] 
 **ObjContact** | [**EzsignsignerRequestCompoundContact**](EzsignsignerRequestCompoundContact.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

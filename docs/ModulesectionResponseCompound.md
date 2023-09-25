@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.ModulesectionResponseCompound
+A Modulesection Object
 
 ## Properties
 
@@ -11,7 +11,5 @@ Name | Type | Description | Notes
 **SModulesectionNameX** | **string** | The Name of the Modulesection in the language of the requester | 
 **AObjPermission** | [**List&lt;PermissionResponseCompound&gt;**](PermissionResponseCompound.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

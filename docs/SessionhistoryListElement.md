@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.SessionhistoryListElement
+A Sessionhistory List Element
 
 ## Properties
 
@@ -16,7 +16,5 @@ Name | Type | Description | Notes
 **SSessionhistoryIP** | **string** | Represent an IP address. | 
 **SUserLoginname** | **string** | The login name of the User. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

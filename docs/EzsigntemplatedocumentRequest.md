@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.EzsigntemplatedocumentRequest
+A Ezsigntemplatedocument Object
 
 ## Properties
 
@@ -18,7 +18,5 @@ Name | Type | Description | Notes
 **EEzsigntemplatedocumentForm** | **string** | If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID** | [optional] 
 **SEzsigntemplatedocumentPassword** | **string** | If the source template is password protected, the password to open/modify it. | [optional] [default to ""]
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

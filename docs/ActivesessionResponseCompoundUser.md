@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.ActivesessionResponseCompoundUser
+An Activesession->User Object and children to create a complete structure
 
 ## Properties
 
@@ -16,7 +16,5 @@ Name | Type | Description | Notes
 **BUserInterfacedark** | **bool** | Whether to use a dark mode interface | 
 **IUserListresult** | **int** | The number of rows to return by default in lists | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

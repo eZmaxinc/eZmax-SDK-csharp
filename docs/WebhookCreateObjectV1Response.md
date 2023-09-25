@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.WebhookCreateObjectV1Response
+Response for POST /1/object/webhook
 
 ## Properties
 
@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 **MPayload** | [**WebhookCreateObjectV1ResponseMPayload**](WebhookCreateObjectV1ResponseMPayload.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

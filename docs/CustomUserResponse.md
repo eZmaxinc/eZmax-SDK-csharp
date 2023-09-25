@@ -1,5 +1,5 @@
-
 # eZmaxApi.Model.CustomUserResponse
+A User Object
 
 ## Properties
 
@@ -10,7 +10,5 @@ Name | Type | Description | Notes
 **SUserFirstname** | **string** | The first name of the user | 
 **SEmailAddress** | **string** | The email address. | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
