@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -38,7 +38,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        CommonGetAutocompleteV1Response EzmaxinvoicingGetAutocompleteV1 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        CommonGetAutocompleteV1Response EzmaxinvoicingGetAutocompleteV1 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
 
         /// <summary>
         /// Retrieve Ezmaxinvoicings and IDs
@@ -53,7 +53,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        ApiResponse<CommonGetAutocompleteV1Response> EzmaxinvoicingGetAutocompleteV1WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        ApiResponse<CommonGetAutocompleteV1Response> EzmaxinvoicingGetAutocompleteV1WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
         /// <summary>
         /// Retrieve Ezmaxinvoicings and IDs
         /// </summary>
@@ -66,7 +66,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>EzmaxinvoicingGetAutocompleteV2Response</returns>
-        EzmaxinvoicingGetAutocompleteV2Response EzmaxinvoicingGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        EzmaxinvoicingGetAutocompleteV2Response EzmaxinvoicingGetAutocompleteV2 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
 
         /// <summary>
         /// Retrieve Ezmaxinvoicings and IDs
@@ -80,7 +80,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of EzmaxinvoicingGetAutocompleteV2Response</returns>
-        ApiResponse<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        ApiResponse<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
         /// <summary>
         /// Retrieve an existing Ezmaxinvoicing
         /// </summary>
@@ -137,7 +137,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzmaxinvoicingGetAutocompleteV1Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzmaxinvoicingGetAutocompleteV1Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezmaxinvoicings and IDs
@@ -153,7 +153,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzmaxinvoicingGetAutocompleteV1WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzmaxinvoicingGetAutocompleteV1WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Ezmaxinvoicings and IDs
         /// </summary>
@@ -167,7 +167,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzmaxinvoicingGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezmaxinvoicings and IDs
@@ -182,7 +182,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzmaxinvoicingGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetAutocompleteV2Response>> EzmaxinvoicingGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetAutocompleteV2Response>> EzmaxinvoicingGetAutocompleteV2WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezmaxinvoicing
         /// </summary>
@@ -348,7 +348,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        public CommonGetAutocompleteV1Response EzmaxinvoicingGetAutocompleteV1 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public CommonGetAutocompleteV1Response EzmaxinvoicingGetAutocompleteV1 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
              ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = EzmaxinvoicingGetAutocompleteV1WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -364,13 +364,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        public ApiResponse<CommonGetAutocompleteV1Response> EzmaxinvoicingGetAutocompleteV1WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public ApiResponse<CommonGetAutocompleteV1Response> EzmaxinvoicingGetAutocompleteV1WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzmaxinvoicingApi->EzmaxinvoicingGetAutocompleteV1");
 
-            var localVarPath = "./1/object/ezmaxinvoicing/getAutocomplete/{sSelector}";
+            var localVarPath = "/1/object/ezmaxinvoicing/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -416,7 +416,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
         }
 
@@ -431,7 +431,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of CommonGetAutocompleteV1Response</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzmaxinvoicingGetAutocompleteV1Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<CommonGetAutocompleteV1Response> EzmaxinvoicingGetAutocompleteV1Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<CommonGetAutocompleteV1Response> localVarResponse = await EzmaxinvoicingGetAutocompleteV1WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -449,13 +449,13 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (CommonGetAutocompleteV1Response)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzmaxinvoicingGetAutocompleteV1WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<CommonGetAutocompleteV1Response>> EzmaxinvoicingGetAutocompleteV1WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzmaxinvoicingApi->EzmaxinvoicingGetAutocompleteV1");
 
-            var localVarPath = "./1/object/ezmaxinvoicing/getAutocomplete/{sSelector}";
+            var localVarPath = "/1/object/ezmaxinvoicing/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -501,7 +501,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<CommonGetAutocompleteV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (CommonGetAutocompleteV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommonGetAutocompleteV1Response)));
         }
 
@@ -514,7 +514,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>EzmaxinvoicingGetAutocompleteV2Response</returns>
-        public EzmaxinvoicingGetAutocompleteV2Response EzmaxinvoicingGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public EzmaxinvoicingGetAutocompleteV2Response EzmaxinvoicingGetAutocompleteV2 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
              ApiResponse<EzmaxinvoicingGetAutocompleteV2Response> localVarResponse = EzmaxinvoicingGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -529,13 +529,13 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of EzmaxinvoicingGetAutocompleteV2Response</returns>
-        public ApiResponse<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public ApiResponse<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzmaxinvoicingApi->EzmaxinvoicingGetAutocompleteV2");
 
-            var localVarPath = "./2/object/ezmaxinvoicing/getAutocomplete/{sSelector}";
+            var localVarPath = "/2/object/ezmaxinvoicing/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -581,7 +581,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzmaxinvoicingGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzmaxinvoicingGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzmaxinvoicingGetAutocompleteV2Response)));
         }
 
@@ -595,7 +595,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzmaxinvoicingGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<EzmaxinvoicingGetAutocompleteV2Response> localVarResponse = await EzmaxinvoicingGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -612,13 +612,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzmaxinvoicingGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetAutocompleteV2Response>> EzmaxinvoicingGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetAutocompleteV2Response>> EzmaxinvoicingGetAutocompleteV2WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzmaxinvoicingApi->EzmaxinvoicingGetAutocompleteV2");
 
-            var localVarPath = "./2/object/ezmaxinvoicing/getAutocomplete/{sSelector}";
+            var localVarPath = "/2/object/ezmaxinvoicing/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -664,7 +664,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzmaxinvoicingGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzmaxinvoicingGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzmaxinvoicingGetAutocompleteV2Response)));
         }
 
@@ -692,7 +692,7 @@ namespace eZmaxApi.Api
             if (pkiEzmaxinvoicingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzmaxinvoicingID' when calling ObjectEzmaxinvoicingApi->EzmaxinvoicingGetObjectV2");
 
-            var localVarPath = "./2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}";
+            var localVarPath = "/2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -735,7 +735,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzmaxinvoicingGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzmaxinvoicingGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzmaxinvoicingGetObjectV2Response)));
         }
 
@@ -766,7 +766,7 @@ namespace eZmaxApi.Api
             if (pkiEzmaxinvoicingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzmaxinvoicingID' when calling ObjectEzmaxinvoicingApi->EzmaxinvoicingGetObjectV2");
 
-            var localVarPath = "./2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}";
+            var localVarPath = "/2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -809,7 +809,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzmaxinvoicingGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzmaxinvoicingGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzmaxinvoicingGetObjectV2Response)));
         }
 
@@ -832,7 +832,7 @@ namespace eZmaxApi.Api
         public ApiResponse<EzmaxinvoicingGetProvisionalV1Response> EzmaxinvoicingGetProvisionalV1WithHttpInfo ()
         {
 
-            var localVarPath = "./1/object/ezmaxinvoicing/getProvisional";
+            var localVarPath = "/1/object/ezmaxinvoicing/getProvisional";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -874,7 +874,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzmaxinvoicingGetProvisionalV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzmaxinvoicingGetProvisionalV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzmaxinvoicingGetProvisionalV1Response)));
         }
 
@@ -900,7 +900,7 @@ namespace eZmaxApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetProvisionalV1Response>> EzmaxinvoicingGetProvisionalV1WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/object/ezmaxinvoicing/getProvisional";
+            var localVarPath = "/1/object/ezmaxinvoicing/getProvisional";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -942,7 +942,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzmaxinvoicingGetProvisionalV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzmaxinvoicingGetProvisionalV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzmaxinvoicingGetProvisionalV1Response)));
         }
 

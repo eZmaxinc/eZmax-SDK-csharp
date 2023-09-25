@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -342,7 +342,7 @@ namespace eZmaxApi.Api
             if (ezsignformfieldgroupCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignformfieldgroupCreateObjectV1Request' when calling ObjectEzsignformfieldgroupApi->EzsignformfieldgroupCreateObjectV1");
 
-            var localVarPath = "./1/object/ezsignformfieldgroup";
+            var localVarPath = "/1/object/ezsignformfieldgroup";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -393,7 +393,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignformfieldgroupCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignformfieldgroupCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignformfieldgroupCreateObjectV1Response)));
         }
 
@@ -424,7 +424,7 @@ namespace eZmaxApi.Api
             if (ezsignformfieldgroupCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignformfieldgroupCreateObjectV1Request' when calling ObjectEzsignformfieldgroupApi->EzsignformfieldgroupCreateObjectV1");
 
-            var localVarPath = "./1/object/ezsignformfieldgroup";
+            var localVarPath = "/1/object/ezsignformfieldgroup";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -475,7 +475,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignformfieldgroupCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignformfieldgroupCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignformfieldgroupCreateObjectV1Response)));
         }
 
@@ -503,7 +503,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignformfieldgroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignformfieldgroupID' when calling ObjectEzsignformfieldgroupApi->EzsignformfieldgroupDeleteObjectV1");
 
-            var localVarPath = "./1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
+            var localVarPath = "/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -546,7 +546,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignformfieldgroupDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignformfieldgroupDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignformfieldgroupDeleteObjectV1Response)));
         }
 
@@ -577,7 +577,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignformfieldgroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignformfieldgroupID' when calling ObjectEzsignformfieldgroupApi->EzsignformfieldgroupDeleteObjectV1");
 
-            var localVarPath = "./1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
+            var localVarPath = "/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -620,7 +620,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignformfieldgroupDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignformfieldgroupDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignformfieldgroupDeleteObjectV1Response)));
         }
 
@@ -653,7 +653,7 @@ namespace eZmaxApi.Api
             if (ezsignformfieldgroupEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignformfieldgroupEditObjectV1Request' when calling ObjectEzsignformfieldgroupApi->EzsignformfieldgroupEditObjectV1");
 
-            var localVarPath = "./1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
+            var localVarPath = "/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -705,7 +705,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignformfieldgroupEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignformfieldgroupEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignformfieldgroupEditObjectV1Response)));
         }
 
@@ -741,7 +741,7 @@ namespace eZmaxApi.Api
             if (ezsignformfieldgroupEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignformfieldgroupEditObjectV1Request' when calling ObjectEzsignformfieldgroupApi->EzsignformfieldgroupEditObjectV1");
 
-            var localVarPath = "./1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
+            var localVarPath = "/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -793,7 +793,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignformfieldgroupEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignformfieldgroupEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignformfieldgroupEditObjectV1Response)));
         }
 
@@ -821,7 +821,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignformfieldgroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignformfieldgroupID' when calling ObjectEzsignformfieldgroupApi->EzsignformfieldgroupGetObjectV2");
 
-            var localVarPath = "./2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
+            var localVarPath = "/2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -864,7 +864,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignformfieldgroupGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignformfieldgroupGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignformfieldgroupGetObjectV2Response)));
         }
 
@@ -895,7 +895,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignformfieldgroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignformfieldgroupID' when calling ObjectEzsignformfieldgroupApi->EzsignformfieldgroupGetObjectV2");
 
-            var localVarPath = "./2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
+            var localVarPath = "/2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -938,7 +938,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignformfieldgroupGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignformfieldgroupGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignformfieldgroupGetObjectV2Response)));
         }
 

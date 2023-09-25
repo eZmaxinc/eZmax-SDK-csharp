@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntsarequirement AutocompleteElement Response
     /// </summary>
     [DataContract]
-    public partial class EzsigntsarequirementAutocompleteElementResponse :  IEquatable<EzsigntsarequirementAutocompleteElementResponse>
+    public partial class EzsigntsarequirementAutocompleteElementResponse :  IEquatable<EzsigntsarequirementAutocompleteElementResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntsarequirementAutocompleteElementResponse" /> class.
@@ -199,6 +201,30 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BDisabled.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsigntsarequirementID (int) maximum
+            if(this.PkiEzsigntsarequirementID > (int)3)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "PkiEzsigntsarequirementID" });
+            }
+
+            // PkiEzsigntsarequirementID (int) minimum
+            if(this.PkiEzsigntsarequirementID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "PkiEzsigntsarequirementID" });
+            }
+
+            yield break;
         }
     }
 

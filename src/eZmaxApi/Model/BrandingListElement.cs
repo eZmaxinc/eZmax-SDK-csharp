@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Branding List Element
     /// </summary>
     [DataContract]
-    public partial class BrandingListElement :  IEquatable<BrandingListElement>
+    public partial class BrandingListElement :  IEquatable<BrandingListElement>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingListElement" /> class.
@@ -329,6 +331,108 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BBrandingIsactive.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiBrandingID (int) minimum
+            if(this.PkiBrandingID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBrandingID, must be a value greater than or equal to 0.", new [] { "PkiBrandingID" });
+            }
+
+
+
+            // IBrandingColortext (int) maximum
+            if(this.IBrandingColortext > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortext, must be a value less than or equal to 16777215.", new [] { "IBrandingColortext" });
+            }
+
+            // IBrandingColortext (int) minimum
+            if(this.IBrandingColortext < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortext, must be a value greater than or equal to 0.", new [] { "IBrandingColortext" });
+            }
+
+
+
+            // IBrandingColortextlinkbox (int) maximum
+            if(this.IBrandingColortextlinkbox > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortextlinkbox, must be a value less than or equal to 16777215.", new [] { "IBrandingColortextlinkbox" });
+            }
+
+            // IBrandingColortextlinkbox (int) minimum
+            if(this.IBrandingColortextlinkbox < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortextlinkbox, must be a value greater than or equal to 0.", new [] { "IBrandingColortextlinkbox" });
+            }
+
+
+
+            // IBrandingColortextbutton (int) maximum
+            if(this.IBrandingColortextbutton > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortextbutton, must be a value less than or equal to 16777215.", new [] { "IBrandingColortextbutton" });
+            }
+
+            // IBrandingColortextbutton (int) minimum
+            if(this.IBrandingColortextbutton < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortextbutton, must be a value greater than or equal to 0.", new [] { "IBrandingColortextbutton" });
+            }
+
+
+
+            // IBrandingColorbackground (int) maximum
+            if(this.IBrandingColorbackground > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackground, must be a value less than or equal to 16777215.", new [] { "IBrandingColorbackground" });
+            }
+
+            // IBrandingColorbackground (int) minimum
+            if(this.IBrandingColorbackground < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackground, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackground" });
+            }
+
+
+
+            // IBrandingColorbackgroundbutton (int) maximum
+            if(this.IBrandingColorbackgroundbutton > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackgroundbutton, must be a value less than or equal to 16777215.", new [] { "IBrandingColorbackgroundbutton" });
+            }
+
+            // IBrandingColorbackgroundbutton (int) minimum
+            if(this.IBrandingColorbackgroundbutton < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackgroundbutton, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackgroundbutton" });
+            }
+
+
+
+            // IBrandingColorbackgroundsmallbox (int) maximum
+            if(this.IBrandingColorbackgroundsmallbox > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackgroundsmallbox, must be a value less than or equal to 16777215.", new [] { "IBrandingColorbackgroundsmallbox" });
+            }
+
+            // IBrandingColorbackgroundsmallbox (int) minimum
+            if(this.IBrandingColorbackgroundsmallbox < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackgroundsmallbox, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackgroundsmallbox" });
+            }
+
+            yield break;
         }
     }
 

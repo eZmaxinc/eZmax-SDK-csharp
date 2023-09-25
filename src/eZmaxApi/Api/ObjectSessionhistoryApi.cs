@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -38,7 +38,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>SessionhistoryGetListV1Response</returns>
-        SessionhistoryGetListV1Response SessionhistoryGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        SessionhistoryGetListV1Response SessionhistoryGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
 
         /// <summary>
         /// Retrieve Sessionhistory list
@@ -53,7 +53,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of SessionhistoryGetListV1Response</returns>
-        ApiResponse<SessionhistoryGetListV1Response> SessionhistoryGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        ApiResponse<SessionhistoryGetListV1Response> SessionhistoryGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -70,7 +70,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of SessionhistoryGetListV1Response</returns>
-        System.Threading.Tasks.Task<SessionhistoryGetListV1Response> SessionhistoryGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<SessionhistoryGetListV1Response> SessionhistoryGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Sessionhistory list
@@ -86,7 +86,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (SessionhistoryGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionhistoryGetListV1Response>> SessionhistoryGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SessionhistoryGetListV1Response>> SessionhistoryGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -208,7 +208,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>SessionhistoryGetListV1Response</returns>
-        public SessionhistoryGetListV1Response SessionhistoryGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public SessionhistoryGetListV1Response SessionhistoryGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
              ApiResponse<SessionhistoryGetListV1Response> localVarResponse = SessionhistoryGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -224,10 +224,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of SessionhistoryGetListV1Response</returns>
-        public ApiResponse<SessionhistoryGetListV1Response> SessionhistoryGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public ApiResponse<SessionhistoryGetListV1Response> SessionhistoryGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
 
-            var localVarPath = "./1/object/sessionhistory/getList";
+            var localVarPath = "/1/object/sessionhistory/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -275,7 +275,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SessionhistoryGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SessionhistoryGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionhistoryGetListV1Response)));
         }
 
@@ -290,7 +290,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of SessionhistoryGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<SessionhistoryGetListV1Response> SessionhistoryGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<SessionhistoryGetListV1Response> SessionhistoryGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<SessionhistoryGetListV1Response> localVarResponse = await SessionhistoryGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -308,10 +308,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (SessionhistoryGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SessionhistoryGetListV1Response>> SessionhistoryGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<SessionhistoryGetListV1Response>> SessionhistoryGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/object/sessionhistory/getList";
+            var localVarPath = "/1/object/sessionhistory/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -359,7 +359,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SessionhistoryGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SessionhistoryGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionhistoryGetListV1Response)));
         }
 

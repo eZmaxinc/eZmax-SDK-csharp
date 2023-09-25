@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -241,7 +241,7 @@ namespace eZmaxApi.Api
         public ApiResponse<EzsignSuggestSignersV1Response> EzsignSuggestSignersV1WithHttpInfo ()
         {
 
-            var localVarPath = "./1/module/ezsign/suggestSigners";
+            var localVarPath = "/1/module/ezsign/suggestSigners";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -283,7 +283,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignSuggestSignersV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignSuggestSignersV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignSuggestSignersV1Response)));
         }
 
@@ -309,7 +309,7 @@ namespace eZmaxApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<EzsignSuggestSignersV1Response>> EzsignSuggestSignersV1WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/module/ezsign/suggestSigners";
+            var localVarPath = "/1/module/ezsign/suggestSigners";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -351,7 +351,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignSuggestSignersV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignSuggestSignersV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignSuggestSignersV1Response)));
         }
 
@@ -376,7 +376,7 @@ namespace eZmaxApi.Api
         public ApiResponse<EzsignSuggestTemplatesV1Response> EzsignSuggestTemplatesV1WithHttpInfo (int? fkiEzsignfoldertypeID = default(int?))
         {
 
-            var localVarPath = "./1/module/ezsign/suggestTemplates";
+            var localVarPath = "/1/module/ezsign/suggestTemplates";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -419,7 +419,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignSuggestTemplatesV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignSuggestTemplatesV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignSuggestTemplatesV1Response)));
         }
 
@@ -447,7 +447,7 @@ namespace eZmaxApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<EzsignSuggestTemplatesV1Response>> EzsignSuggestTemplatesV1WithHttpInfoAsync (int? fkiEzsignfoldertypeID = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/module/ezsign/suggestTemplates";
+            var localVarPath = "/1/module/ezsign/suggestTemplates";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -490,7 +490,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignSuggestTemplatesV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignSuggestTemplatesV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignSuggestTemplatesV1Response)));
         }
 

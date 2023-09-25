@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Ezsignbulksendsignermapping Object and children
     /// </summary>
     [DataContract]
-    public partial class EzsignbulksendsignermappingRequestCompound :  IEquatable<EzsignbulksendsignermappingRequestCompound>
+    public partial class EzsignbulksendsignermappingRequestCompound :  IEquatable<EzsignbulksendsignermappingRequestCompound>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingRequestCompound" /> class.
@@ -181,6 +183,40 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzsignbulksendsignermappingDescription.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsignbulksendsignermappingID (int) minimum
+            if(this.PkiEzsignbulksendsignermappingID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignbulksendsignermappingID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendsignermappingID" });
+            }
+
+
+
+            // FkiEzsignbulksendID (int) minimum
+            if(this.FkiEzsignbulksendID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
+            }
+
+
+
+            // FkiUserID (int) minimum
+            if(this.FkiUserID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+            yield break;
         }
     }
 

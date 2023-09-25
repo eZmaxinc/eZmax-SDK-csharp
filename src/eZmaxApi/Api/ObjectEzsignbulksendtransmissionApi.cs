@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -338,7 +338,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendtransmissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendtransmissionID' when calling ObjectEzsignbulksendtransmissionApi->EzsignbulksendtransmissionGetCsvErrorsV1");
 
-            var localVarPath = "./1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors";
+            var localVarPath = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -382,7 +382,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -413,7 +413,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendtransmissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendtransmissionID' when calling ObjectEzsignbulksendtransmissionApi->EzsignbulksendtransmissionGetCsvErrorsV1");
 
-            var localVarPath = "./1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors";
+            var localVarPath = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -457,7 +457,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -485,7 +485,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendtransmissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendtransmissionID' when calling ObjectEzsignbulksendtransmissionApi->EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1");
 
-            var localVarPath = "./1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic";
+            var localVarPath = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -528,7 +528,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response)));
         }
 
@@ -559,7 +559,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendtransmissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendtransmissionID' when calling ObjectEzsignbulksendtransmissionApi->EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1");
 
-            var localVarPath = "./1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic";
+            var localVarPath = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -602,7 +602,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response)));
         }
 
@@ -630,7 +630,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendtransmissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendtransmissionID' when calling ObjectEzsignbulksendtransmissionApi->EzsignbulksendtransmissionGetFormsDataV1");
 
-            var localVarPath = "./1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData";
+            var localVarPath = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -674,7 +674,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendtransmissionGetFormsDataV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendtransmissionGetFormsDataV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendtransmissionGetFormsDataV1Response)));
         }
 
@@ -705,7 +705,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendtransmissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendtransmissionID' when calling ObjectEzsignbulksendtransmissionApi->EzsignbulksendtransmissionGetFormsDataV1");
 
-            var localVarPath = "./1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData";
+            var localVarPath = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -749,7 +749,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendtransmissionGetFormsDataV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendtransmissionGetFormsDataV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendtransmissionGetFormsDataV1Response)));
         }
 
@@ -777,7 +777,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendtransmissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendtransmissionID' when calling ObjectEzsignbulksendtransmissionApi->EzsignbulksendtransmissionGetObjectV2");
 
-            var localVarPath = "./2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}";
+            var localVarPath = "/2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -820,7 +820,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendtransmissionGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendtransmissionGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendtransmissionGetObjectV2Response)));
         }
 
@@ -851,7 +851,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendtransmissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendtransmissionID' when calling ObjectEzsignbulksendtransmissionApi->EzsignbulksendtransmissionGetObjectV2");
 
-            var localVarPath = "./2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}";
+            var localVarPath = "/2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -894,7 +894,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendtransmissionGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendtransmissionGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendtransmissionGetObjectV2Response)));
         }
 

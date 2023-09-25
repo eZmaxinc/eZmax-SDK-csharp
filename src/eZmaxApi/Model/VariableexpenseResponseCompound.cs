@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Variableexpense Object
     /// </summary>
     [DataContract]
-    public partial class VariableexpenseResponseCompound :  IEquatable<VariableexpenseResponseCompound>
+    public partial class VariableexpenseResponseCompound :  IEquatable<VariableexpenseResponseCompound>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EVariableexpenseTaxable
@@ -196,6 +198,39 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BVariableexpenseIsactive.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiVariableexpenseID (int) maximum
+            if(this.PkiVariableexpenseID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "PkiVariableexpenseID" });
+            }
+
+            // PkiVariableexpenseID (int) minimum
+            if(this.PkiVariableexpenseID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "PkiVariableexpenseID" });
+            }
+
+
+
+            // SVariableexpenseCode (string) pattern
+            Regex regexSVariableexpenseCode = new Regex(@"^.{0,5}$", RegexOptions.CultureInvariant);
+            if (false == regexSVariableexpenseCode.Match(this.SVariableexpenseCode).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SVariableexpenseCode, must match a pattern of " + regexSVariableexpenseCode, new [] { "SVariableexpenseCode" });
+            }
+
+            yield break;
         }
     }
 

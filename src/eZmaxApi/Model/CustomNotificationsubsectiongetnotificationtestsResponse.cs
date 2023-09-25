@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Notificationsubsection Object in the context of getNotificationtests
     /// </summary>
     [DataContract]
-    public partial class CustomNotificationsubsectiongetnotificationtestsResponse :  IEquatable<CustomNotificationsubsectiongetnotificationtestsResponse>
+    public partial class CustomNotificationsubsectiongetnotificationtestsResponse :  IEquatable<CustomNotificationsubsectiongetnotificationtestsResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomNotificationsubsectiongetnotificationtestsResponse" /> class.
@@ -232,6 +234,32 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjNotificationtest.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiNotificationsubsectionID (int) minimum
+            if(this.PkiNotificationsubsectionID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiNotificationsubsectionID, must be a value greater than or equal to 0.", new [] { "PkiNotificationsubsectionID" });
+            }
+
+
+
+            // FkiNotificationsectionID (int) minimum
+            if(this.FkiNotificationsectionID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiNotificationsectionID, must be a value greater than or equal to 0.", new [] { "FkiNotificationsectionID" });
+            }
+
+            yield break;
         }
     }
 

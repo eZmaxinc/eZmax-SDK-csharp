@@ -96,9 +96,9 @@ namespace eZmaxApi.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string sSelector = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage acceptLanguage = null;
+            //string? eFilterActive = null;
+            //string? sQuery = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
             //var response = instance.VariableexpenseGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(VariableexpenseGetAutocompleteV2Response), response, "response is VariableexpenseGetAutocompleteV2Response");
         }
@@ -110,11 +110,11 @@ namespace eZmaxApi.Test
         public void VariableexpenseGetListV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string eOrderBy = null;
+            //string? eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage acceptLanguage = null;
-            //string sFilter = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string? sFilter = null;
             //var response = instance.VariableexpenseGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(VariableexpenseGetListV1Response), response, "response is VariableexpenseGetListV1Response");
         }

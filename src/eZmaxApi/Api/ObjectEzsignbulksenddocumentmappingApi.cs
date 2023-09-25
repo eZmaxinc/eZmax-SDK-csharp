@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -294,7 +294,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksenddocumentmappingCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksenddocumentmappingCreateObjectV1Request' when calling ObjectEzsignbulksenddocumentmappingApi->EzsignbulksenddocumentmappingCreateObjectV1");
 
-            var localVarPath = "./1/object/ezsignbulksenddocumentmapping";
+            var localVarPath = "/1/object/ezsignbulksenddocumentmapping";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -345,7 +345,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksenddocumentmappingCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksenddocumentmappingCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksenddocumentmappingCreateObjectV1Response)));
         }
 
@@ -376,7 +376,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksenddocumentmappingCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksenddocumentmappingCreateObjectV1Request' when calling ObjectEzsignbulksenddocumentmappingApi->EzsignbulksenddocumentmappingCreateObjectV1");
 
-            var localVarPath = "./1/object/ezsignbulksenddocumentmapping";
+            var localVarPath = "/1/object/ezsignbulksenddocumentmapping";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksenddocumentmappingCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksenddocumentmappingCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksenddocumentmappingCreateObjectV1Response)));
         }
 
@@ -455,7 +455,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksenddocumentmappingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksenddocumentmappingID' when calling ObjectEzsignbulksenddocumentmappingApi->EzsignbulksenddocumentmappingDeleteObjectV1");
 
-            var localVarPath = "./1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}";
+            var localVarPath = "/1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -498,7 +498,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksenddocumentmappingDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksenddocumentmappingDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksenddocumentmappingDeleteObjectV1Response)));
         }
 
@@ -529,7 +529,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksenddocumentmappingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksenddocumentmappingID' when calling ObjectEzsignbulksenddocumentmappingApi->EzsignbulksenddocumentmappingDeleteObjectV1");
 
-            var localVarPath = "./1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}";
+            var localVarPath = "/1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -572,7 +572,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksenddocumentmappingDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksenddocumentmappingDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksenddocumentmappingDeleteObjectV1Response)));
         }
 
@@ -600,7 +600,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksenddocumentmappingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksenddocumentmappingID' when calling ObjectEzsignbulksenddocumentmappingApi->EzsignbulksenddocumentmappingGetObjectV2");
 
-            var localVarPath = "./2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}";
+            var localVarPath = "/2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -643,7 +643,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksenddocumentmappingGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksenddocumentmappingGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksenddocumentmappingGetObjectV2Response)));
         }
 
@@ -674,7 +674,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksenddocumentmappingID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksenddocumentmappingID' when calling ObjectEzsignbulksenddocumentmappingApi->EzsignbulksenddocumentmappingGetObjectV2");
 
-            var localVarPath = "./2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}";
+            var localVarPath = "/2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -717,7 +717,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksenddocumentmappingGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksenddocumentmappingGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksenddocumentmappingGetObjectV2Response)));
         }
 

@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -342,7 +342,7 @@ namespace eZmaxApi.Api
             if (permissionCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'permissionCreateObjectV1Request' when calling ObjectPermissionApi->PermissionCreateObjectV1");
 
-            var localVarPath = "./1/object/permission";
+            var localVarPath = "/1/object/permission";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -393,7 +393,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PermissionCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PermissionCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionCreateObjectV1Response)));
         }
 
@@ -424,7 +424,7 @@ namespace eZmaxApi.Api
             if (permissionCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'permissionCreateObjectV1Request' when calling ObjectPermissionApi->PermissionCreateObjectV1");
 
-            var localVarPath = "./1/object/permission";
+            var localVarPath = "/1/object/permission";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -475,7 +475,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PermissionCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PermissionCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionCreateObjectV1Response)));
         }
 
@@ -503,7 +503,7 @@ namespace eZmaxApi.Api
             if (pkiPermissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiPermissionID' when calling ObjectPermissionApi->PermissionDeleteObjectV1");
 
-            var localVarPath = "./1/object/permission/{pkiPermissionID}";
+            var localVarPath = "/1/object/permission/{pkiPermissionID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -546,7 +546,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PermissionDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PermissionDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionDeleteObjectV1Response)));
         }
 
@@ -577,7 +577,7 @@ namespace eZmaxApi.Api
             if (pkiPermissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiPermissionID' when calling ObjectPermissionApi->PermissionDeleteObjectV1");
 
-            var localVarPath = "./1/object/permission/{pkiPermissionID}";
+            var localVarPath = "/1/object/permission/{pkiPermissionID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -620,7 +620,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PermissionDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PermissionDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionDeleteObjectV1Response)));
         }
 
@@ -653,7 +653,7 @@ namespace eZmaxApi.Api
             if (permissionEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'permissionEditObjectV1Request' when calling ObjectPermissionApi->PermissionEditObjectV1");
 
-            var localVarPath = "./1/object/permission/{pkiPermissionID}";
+            var localVarPath = "/1/object/permission/{pkiPermissionID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -705,7 +705,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PermissionEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PermissionEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionEditObjectV1Response)));
         }
 
@@ -741,7 +741,7 @@ namespace eZmaxApi.Api
             if (permissionEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'permissionEditObjectV1Request' when calling ObjectPermissionApi->PermissionEditObjectV1");
 
-            var localVarPath = "./1/object/permission/{pkiPermissionID}";
+            var localVarPath = "/1/object/permission/{pkiPermissionID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -793,7 +793,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PermissionEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PermissionEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionEditObjectV1Response)));
         }
 
@@ -821,7 +821,7 @@ namespace eZmaxApi.Api
             if (pkiPermissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiPermissionID' when calling ObjectPermissionApi->PermissionGetObjectV2");
 
-            var localVarPath = "./2/object/permission/{pkiPermissionID}";
+            var localVarPath = "/2/object/permission/{pkiPermissionID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -864,7 +864,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PermissionGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PermissionGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionGetObjectV2Response)));
         }
 
@@ -895,7 +895,7 @@ namespace eZmaxApi.Api
             if (pkiPermissionID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiPermissionID' when calling ObjectPermissionApi->PermissionGetObjectV2");
 
-            var localVarPath = "./2/object/permission/{pkiPermissionID}";
+            var localVarPath = "/2/object/permission/{pkiPermissionID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -938,7 +938,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PermissionGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PermissionGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionGetObjectV2Response)));
         }
 

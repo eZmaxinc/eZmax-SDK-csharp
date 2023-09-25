@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// An Ezsignfolder Object in the context of an EzsignsignaturesAutomatic path
     /// </summary>
     [DataContract]
-    public partial class CustomEzsignfolderEzsignsignaturesAutomaticResponse :  IEquatable<CustomEzsignfolderEzsignsignaturesAutomaticResponse>
+    public partial class CustomEzsignfolderEzsignsignaturesAutomaticResponse :  IEquatable<CustomEzsignfolderEzsignsignaturesAutomaticResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfolderEzsignsignaturesAutomaticResponse" /> class.
@@ -173,6 +175,24 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjEzsigndocument.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsignfolderID (int) minimum
+            if(this.PkiEzsignfolderID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
+            }
+
+            yield break;
         }
     }
 

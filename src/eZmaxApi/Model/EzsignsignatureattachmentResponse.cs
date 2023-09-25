@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsignatureattachment Object
     /// </summary>
     [DataContract]
-    public partial class EzsignsignatureattachmentResponse :  IEquatable<EzsignsignatureattachmentResponse>
+    public partial class EzsignsignatureattachmentResponse :  IEquatable<EzsignsignatureattachmentResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureattachmentResponse" /> class.
@@ -225,6 +227,47 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SDownloadUrl.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsignsignatureattachmentID (int) maximum
+            if(this.PkiEzsignsignatureattachmentID > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignatureattachmentID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignsignatureattachmentID" });
+            }
+
+            // PkiEzsignsignatureattachmentID (int) minimum
+            if(this.PkiEzsignsignatureattachmentID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignatureattachmentID, must be a value greater than or equal to 1.", new [] { "PkiEzsignsignatureattachmentID" });
+            }
+
+
+
+            // FkiEzsignsignatureID (int) minimum
+            if(this.FkiEzsignsignatureID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignatureID" });
+            }
+
+
+
+            // SEzsignsignatureattachmentName (string) pattern
+            Regex regexSEzsignsignatureattachmentName = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
+            if (false == regexSEzsignsignatureattachmentName.Match(this.SEzsignsignatureattachmentName).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignsignatureattachmentName, must match a pattern of " + regexSEzsignsignatureattachmentName, new [] { "SEzsignsignatureattachmentName" });
+            }
+
+            yield break;
         }
     }
 

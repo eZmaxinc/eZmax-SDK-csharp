@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplate AutocompleteElement Response
     /// </summary>
     [DataContract]
-    public partial class EzsigntemplateAutocompleteElementResponse :  IEquatable<EzsigntemplateAutocompleteElementResponse>
+    public partial class EzsigntemplateAutocompleteElementResponse :  IEquatable<EzsigntemplateAutocompleteElementResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EEzsignfoldertypePrivacylevel
@@ -198,6 +200,24 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzsigntemplateIsactive.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsigntemplateID (int) minimum
+            if(this.PkiEzsigntemplateID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateID" });
+            }
+
+            yield break;
         }
     }
 

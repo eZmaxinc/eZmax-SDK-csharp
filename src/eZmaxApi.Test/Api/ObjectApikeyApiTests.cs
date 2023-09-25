@@ -120,11 +120,11 @@ namespace eZmaxApi.Test
         public void ApikeyGetListV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string eOrderBy = null;
+            //string? eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage acceptLanguage = null;
-            //string sFilter = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string? sFilter = null;
             //var response = instance.ApikeyGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(ApikeyGetListV1Response), response, "response is ApikeyGetListV1Response");
         }

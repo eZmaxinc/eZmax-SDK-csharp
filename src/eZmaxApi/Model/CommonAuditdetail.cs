@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// Gives informations about the user that created the object or the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same. 
     /// </summary>
     [DataContract]
-    public partial class CommonAuditdetail :  IEquatable<CommonAuditdetail>
+    public partial class CommonAuditdetail :  IEquatable<CommonAuditdetail>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonAuditdetail" /> class.
@@ -259,6 +261,41 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.DtAuditdetailDate.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // FkiUserID (int) minimum
+            if(this.FkiUserID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+
+
+            // FkiApikeyID (int) minimum
+            if(this.FkiApikeyID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
+            }
+
+
+
+            // SUserLoginname (string) pattern
+            Regex regexSUserLoginname = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,4})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
+            if (false == regexSUserLoginname.Match(this.SUserLoginname).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
+            }
+
+            yield break;
         }
     }
 

@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -206,7 +206,7 @@ namespace eZmaxApi.Api
             if (pkiVersionhistoryID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiVersionhistoryID' when calling ObjectVersionhistoryApi->VersionhistoryGetObjectV2");
 
-            var localVarPath = "./2/object/versionhistory/{pkiVersionhistoryID}";
+            var localVarPath = "/2/object/versionhistory/{pkiVersionhistoryID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -249,7 +249,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VersionhistoryGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VersionhistoryGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VersionhistoryGetObjectV2Response)));
         }
 
@@ -280,7 +280,7 @@ namespace eZmaxApi.Api
             if (pkiVersionhistoryID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiVersionhistoryID' when calling ObjectVersionhistoryApi->VersionhistoryGetObjectV2");
 
-            var localVarPath = "./2/object/versionhistory/{pkiVersionhistoryID}";
+            var localVarPath = "/2/object/versionhistory/{pkiVersionhistoryID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -323,7 +323,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VersionhistoryGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VersionhistoryGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VersionhistoryGetObjectV2Response)));
         }
 

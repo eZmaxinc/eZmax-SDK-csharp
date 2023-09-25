@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Signature Object
     /// </summary>
     [DataContract]
-    public partial class SignatureRequest :  IEquatable<SignatureRequest>
+    public partial class SignatureRequest :  IEquatable<SignatureRequest>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureRequest" /> class.
@@ -138,6 +140,39 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.TSignatureSvg.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiSignatureID (int) maximum
+            if(this.PkiSignatureID > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSignatureID, must be a value less than or equal to 16777215.", new [] { "PkiSignatureID" });
+            }
+
+            // PkiSignatureID (int) minimum
+            if(this.PkiSignatureID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSignatureID, must be a value greater than or equal to 0.", new [] { "PkiSignatureID" });
+            }
+
+
+
+            // TSignatureSvg (string) pattern
+            Regex regexTSignatureSvg = new Regex(@"^.{0,32767}$", RegexOptions.CultureInvariant);
+            if (false == regexTSignatureSvg.Match(this.TSignatureSvg).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TSignatureSvg, must match a pattern of " + regexTSignatureSvg, new [] { "TSignatureSvg" });
+            }
+
+            yield break;
         }
     }
 

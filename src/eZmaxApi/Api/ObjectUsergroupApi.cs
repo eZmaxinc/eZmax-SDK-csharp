@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -150,7 +150,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>UsergroupGetAutocompleteV2Response</returns>
-        UsergroupGetAutocompleteV2Response UsergroupGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        UsergroupGetAutocompleteV2Response UsergroupGetAutocompleteV2 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
 
         /// <summary>
         /// Retrieve Usergroups and IDs
@@ -164,7 +164,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of UsergroupGetAutocompleteV2Response</returns>
-        ApiResponse<UsergroupGetAutocompleteV2Response> UsergroupGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        ApiResponse<UsergroupGetAutocompleteV2Response> UsergroupGetAutocompleteV2WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
         /// <summary>
         /// Retrieve Usergroup list
         /// </summary>
@@ -178,7 +178,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>UsergroupGetListV1Response</returns>
-        UsergroupGetListV1Response UsergroupGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        UsergroupGetListV1Response UsergroupGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
 
         /// <summary>
         /// Retrieve Usergroup list
@@ -193,7 +193,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of UsergroupGetListV1Response</returns>
-        ApiResponse<UsergroupGetListV1Response> UsergroupGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        ApiResponse<UsergroupGetListV1Response> UsergroupGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
         /// <summary>
         /// Retrieve an existing Usergroup
         /// </summary>
@@ -416,7 +416,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of UsergroupGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<UsergroupGetAutocompleteV2Response> UsergroupGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<UsergroupGetAutocompleteV2Response> UsergroupGetAutocompleteV2Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Usergroups and IDs
@@ -431,7 +431,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (UsergroupGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsergroupGetAutocompleteV2Response>> UsergroupGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UsergroupGetAutocompleteV2Response>> UsergroupGetAutocompleteV2WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Usergroup list
         /// </summary>
@@ -446,7 +446,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of UsergroupGetListV1Response</returns>
-        System.Threading.Tasks.Task<UsergroupGetListV1Response> UsergroupGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<UsergroupGetListV1Response> UsergroupGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Usergroup list
@@ -462,7 +462,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (UsergroupGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsergroupGetListV1Response>> UsergroupGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UsergroupGetListV1Response>> UsergroupGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Usergroup
         /// </summary>
@@ -690,7 +690,7 @@ namespace eZmaxApi.Api
             if (usergroupCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupCreateObjectV1Request' when calling ObjectUsergroupApi->UsergroupCreateObjectV1");
 
-            var localVarPath = "./1/object/usergroup";
+            var localVarPath = "/1/object/usergroup";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -741,7 +741,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupCreateObjectV1Response)));
         }
 
@@ -772,7 +772,7 @@ namespace eZmaxApi.Api
             if (usergroupCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupCreateObjectV1Request' when calling ObjectUsergroupApi->UsergroupCreateObjectV1");
 
-            var localVarPath = "./1/object/usergroup";
+            var localVarPath = "/1/object/usergroup";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -823,7 +823,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupCreateObjectV1Response)));
         }
 
@@ -856,7 +856,7 @@ namespace eZmaxApi.Api
             if (usergroupEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupEditObjectV1Request' when calling ObjectUsergroupApi->UsergroupEditObjectV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -908,7 +908,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupEditObjectV1Response)));
         }
 
@@ -944,7 +944,7 @@ namespace eZmaxApi.Api
             if (usergroupEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupEditObjectV1Request' when calling ObjectUsergroupApi->UsergroupEditObjectV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -996,7 +996,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupEditObjectV1Response)));
         }
 
@@ -1029,7 +1029,7 @@ namespace eZmaxApi.Api
             if (usergroupEditPermissionsV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupEditPermissionsV1Request' when calling ObjectUsergroupApi->UsergroupEditPermissionsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/editPermissions";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/editPermissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1081,7 +1081,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupEditPermissionsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupEditPermissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupEditPermissionsV1Response)));
         }
 
@@ -1117,7 +1117,7 @@ namespace eZmaxApi.Api
             if (usergroupEditPermissionsV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupEditPermissionsV1Request' when calling ObjectUsergroupApi->UsergroupEditPermissionsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/editPermissions";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/editPermissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1169,7 +1169,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupEditPermissionsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupEditPermissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupEditPermissionsV1Response)));
         }
 
@@ -1202,7 +1202,7 @@ namespace eZmaxApi.Api
             if (usergroupEditUsergroupdelegationsV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupEditUsergroupdelegationsV1Request' when calling ObjectUsergroupApi->UsergroupEditUsergroupdelegationsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1254,7 +1254,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupEditUsergroupdelegationsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupEditUsergroupdelegationsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupEditUsergroupdelegationsV1Response)));
         }
 
@@ -1290,7 +1290,7 @@ namespace eZmaxApi.Api
             if (usergroupEditUsergroupdelegationsV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupEditUsergroupdelegationsV1Request' when calling ObjectUsergroupApi->UsergroupEditUsergroupdelegationsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1342,7 +1342,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupEditUsergroupdelegationsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupEditUsergroupdelegationsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupEditUsergroupdelegationsV1Response)));
         }
 
@@ -1375,7 +1375,7 @@ namespace eZmaxApi.Api
             if (usergroupEditUsergroupmembershipsV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupEditUsergroupmembershipsV1Request' when calling ObjectUsergroupApi->UsergroupEditUsergroupmembershipsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1427,7 +1427,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupEditUsergroupmembershipsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupEditUsergroupmembershipsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupEditUsergroupmembershipsV1Response)));
         }
 
@@ -1463,7 +1463,7 @@ namespace eZmaxApi.Api
             if (usergroupEditUsergroupmembershipsV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupEditUsergroupmembershipsV1Request' when calling ObjectUsergroupApi->UsergroupEditUsergroupmembershipsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1515,7 +1515,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupEditUsergroupmembershipsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupEditUsergroupmembershipsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupEditUsergroupmembershipsV1Response)));
         }
 
@@ -1528,7 +1528,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>UsergroupGetAutocompleteV2Response</returns>
-        public UsergroupGetAutocompleteV2Response UsergroupGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public UsergroupGetAutocompleteV2Response UsergroupGetAutocompleteV2 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
              ApiResponse<UsergroupGetAutocompleteV2Response> localVarResponse = UsergroupGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -1543,13 +1543,13 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of UsergroupGetAutocompleteV2Response</returns>
-        public ApiResponse<UsergroupGetAutocompleteV2Response> UsergroupGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public ApiResponse<UsergroupGetAutocompleteV2Response> UsergroupGetAutocompleteV2WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectUsergroupApi->UsergroupGetAutocompleteV2");
 
-            var localVarPath = "./2/object/usergroup/getAutocomplete/{sSelector}";
+            var localVarPath = "/2/object/usergroup/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1595,7 +1595,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetAutocompleteV2Response)));
         }
 
@@ -1609,7 +1609,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of UsergroupGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<UsergroupGetAutocompleteV2Response> UsergroupGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<UsergroupGetAutocompleteV2Response> UsergroupGetAutocompleteV2Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<UsergroupGetAutocompleteV2Response> localVarResponse = await UsergroupGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -1626,13 +1626,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (UsergroupGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsergroupGetAutocompleteV2Response>> UsergroupGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<UsergroupGetAutocompleteV2Response>> UsergroupGetAutocompleteV2WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectUsergroupApi->UsergroupGetAutocompleteV2");
 
-            var localVarPath = "./2/object/usergroup/getAutocomplete/{sSelector}";
+            var localVarPath = "/2/object/usergroup/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1678,7 +1678,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetAutocompleteV2Response)));
         }
 
@@ -1692,7 +1692,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>UsergroupGetListV1Response</returns>
-        public UsergroupGetListV1Response UsergroupGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public UsergroupGetListV1Response UsergroupGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
              ApiResponse<UsergroupGetListV1Response> localVarResponse = UsergroupGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -1708,10 +1708,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of UsergroupGetListV1Response</returns>
-        public ApiResponse<UsergroupGetListV1Response> UsergroupGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public ApiResponse<UsergroupGetListV1Response> UsergroupGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
 
-            var localVarPath = "./1/object/usergroup/getList";
+            var localVarPath = "/1/object/usergroup/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1759,7 +1759,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetListV1Response)));
         }
 
@@ -1774,7 +1774,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of UsergroupGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<UsergroupGetListV1Response> UsergroupGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<UsergroupGetListV1Response> UsergroupGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<UsergroupGetListV1Response> localVarResponse = await UsergroupGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -1792,10 +1792,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (UsergroupGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsergroupGetListV1Response>> UsergroupGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<UsergroupGetListV1Response>> UsergroupGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/object/usergroup/getList";
+            var localVarPath = "/1/object/usergroup/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1843,7 +1843,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetListV1Response)));
         }
 
@@ -1871,7 +1871,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetObjectV2");
 
-            var localVarPath = "./2/object/usergroup/{pkiUsergroupID}";
+            var localVarPath = "/2/object/usergroup/{pkiUsergroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1914,7 +1914,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetObjectV2Response)));
         }
 
@@ -1945,7 +1945,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetObjectV2");
 
-            var localVarPath = "./2/object/usergroup/{pkiUsergroupID}";
+            var localVarPath = "/2/object/usergroup/{pkiUsergroupID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1988,7 +1988,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetObjectV2Response)));
         }
 
@@ -2016,7 +2016,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetPermissionsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/getPermissions";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/getPermissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2059,7 +2059,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetPermissionsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetPermissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetPermissionsV1Response)));
         }
 
@@ -2090,7 +2090,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetPermissionsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/getPermissions";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/getPermissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2133,7 +2133,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetPermissionsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetPermissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetPermissionsV1Response)));
         }
 
@@ -2161,7 +2161,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetUsergroupdelegationsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2204,7 +2204,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetUsergroupdelegationsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetUsergroupdelegationsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetUsergroupdelegationsV1Response)));
         }
 
@@ -2235,7 +2235,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetUsergroupdelegationsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2278,7 +2278,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetUsergroupdelegationsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetUsergroupdelegationsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetUsergroupdelegationsV1Response)));
         }
 
@@ -2306,7 +2306,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetUsergroupmembershipsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2349,7 +2349,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetUsergroupmembershipsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetUsergroupmembershipsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetUsergroupmembershipsV1Response)));
         }
 
@@ -2380,7 +2380,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupID' when calling ObjectUsergroupApi->UsergroupGetUsergroupmembershipsV1");
 
-            var localVarPath = "./1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships";
+            var localVarPath = "/1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2423,7 +2423,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupGetUsergroupmembershipsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupGetUsergroupmembershipsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupGetUsergroupmembershipsV1Response)));
         }
 

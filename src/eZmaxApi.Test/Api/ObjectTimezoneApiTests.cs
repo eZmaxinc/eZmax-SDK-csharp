@@ -71,9 +71,9 @@ namespace eZmaxApi.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string sSelector = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage acceptLanguage = null;
+            //string? eFilterActive = null;
+            //string? sQuery = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
             //var response = instance.TimezoneGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(TimezoneGetAutocompleteV2Response), response, "response is TimezoneGetAutocompleteV2Response");
         }

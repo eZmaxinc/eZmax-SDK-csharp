@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A User List Element
     /// </summary>
     [DataContract]
-    public partial class UserListElement :  IEquatable<UserListElement>
+    public partial class UserListElement :  IEquatable<UserListElement>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EUserType
@@ -343,6 +345,42 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEmailAddress.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiUserID (int) minimum
+            if(this.PkiUserID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
+            }
+
+
+
+            // SUserLoginname (string) pattern
+            Regex regexSUserLoginname = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,4})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
+            if (false == regexSUserLoginname.Match(this.SUserLoginname).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
+            }
+
+
+
+            // DtUserEzsignprepaidexpiration (string) pattern
+            Regex regexDtUserEzsignprepaidexpiration = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+            if (false == regexDtUserEzsignprepaidexpiration.Match(this.DtUserEzsignprepaidexpiration).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtUserEzsignprepaidexpiration, must match a pattern of " + regexDtUserEzsignprepaidexpiration, new [] { "DtUserEzsignprepaidexpiration" });
+            }
+
+            yield break;
         }
     }
 

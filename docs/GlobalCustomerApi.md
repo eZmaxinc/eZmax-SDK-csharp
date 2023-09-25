@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GlobalCustomerGetEndpointV1
 
-> GlobalCustomerGetEndpointV1Response GlobalCustomerGetEndpointV1 (string pksCustomerCode, string sInfrastructureproductCode = null)
+> GlobalCustomerGetEndpointV1Response GlobalCustomerGetEndpointV1 (string pksCustomerCode, string? sInfrastructureproductCode = null)
 
 Get customer endpoint
 
@@ -34,7 +34,7 @@ namespace Example
             Configuration.Default.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             var apiInstance = new GlobalCustomerApi(Configuration.Default);
             var pksCustomerCode = "pksCustomerCode_example";  // string | 
-            var sInfrastructureproductCode = "appcluster01";  // string | The infrastructure product Code  If undefined, \"appcluster01\" is assumed (optional) 
+            var sInfrastructureproductCode = "appcluster01";  // string? | The infrastructure product Code  If undefined, \"appcluster01\" is assumed (optional) 
 
             try
             {
@@ -59,7 +59,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pksCustomerCode** | **string**|  | 
- **sInfrastructureproductCode** | **string**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] 
+ **sInfrastructureproductCode** | **string?**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] 
 
 ### Return type
 

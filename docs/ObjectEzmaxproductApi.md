@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## EzmaxproductGetAutocompleteV2
 
-> EzmaxproductGetAutocompleteV2Response EzmaxproductGetAutocompleteV2 (string sSelector, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage acceptLanguage = null)
+> EzmaxproductGetAutocompleteV2Response EzmaxproductGetAutocompleteV2 (string sSelector, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
 
 Retrieve Ezmaxproducts and IDs
 
@@ -39,9 +39,9 @@ namespace Example
 
             var apiInstance = new ObjectEzmaxproductApi(Configuration.Default);
             var sSelector = "All";  // string | The type of Ezmaxproducts to return
-            var eFilterActive = "All";  // string | Specify which results we want to display. (optional)  (default to Active)
-            var sQuery = "sQuery_example";  // string | Allow to filter the returned results (optional) 
-            var acceptLanguage = new HeaderAcceptLanguage(); // HeaderAcceptLanguage |  (optional) 
+            var eFilterActive = "All";  // string? | Specify which results we want to display. (optional)  (default to Active)
+            var sQuery = "sQuery_example";  // string? | Allow to filter the returned results (optional) 
+            var acceptLanguage = new HeaderAcceptLanguage?(); // HeaderAcceptLanguage? |  (optional) 
 
             try
             {
@@ -66,9 +66,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **string**| The type of Ezmaxproducts to return | 
- **eFilterActive** | **string**| Specify which results we want to display. | [optional] [default to Active]
- **sQuery** | **string**| Allow to filter the returned results | [optional] 
- **acceptLanguage** | [**HeaderAcceptLanguage**](HeaderAcceptLanguage.md)|  | [optional] 
+ **eFilterActive** | **string?**| Specify which results we want to display. | [optional] [default to Active]
+ **sQuery** | **string?**| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md)|  | [optional] 
 
 ### Return type
 

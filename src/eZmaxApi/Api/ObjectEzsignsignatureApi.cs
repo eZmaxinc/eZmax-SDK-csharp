@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -524,7 +524,7 @@ namespace eZmaxApi.Api
             if (ezsignsignatureCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignsignatureCreateObjectV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureCreateObjectV1");
 
-            var localVarPath = "./1/object/ezsignsignature";
+            var localVarPath = "/1/object/ezsignsignature";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -575,7 +575,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureCreateObjectV1Response)));
         }
 
@@ -608,7 +608,7 @@ namespace eZmaxApi.Api
             if (ezsignsignatureCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignsignatureCreateObjectV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureCreateObjectV1");
 
-            var localVarPath = "./1/object/ezsignsignature";
+            var localVarPath = "/1/object/ezsignsignature";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -659,7 +659,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureCreateObjectV1Response)));
         }
 
@@ -687,7 +687,7 @@ namespace eZmaxApi.Api
             if (ezsignsignatureCreateObjectV2Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignsignatureCreateObjectV2Request' when calling ObjectEzsignsignatureApi->EzsignsignatureCreateObjectV2");
 
-            var localVarPath = "./2/object/ezsignsignature";
+            var localVarPath = "/2/object/ezsignsignature";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -738,7 +738,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureCreateObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureCreateObjectV2Response)));
         }
 
@@ -769,7 +769,7 @@ namespace eZmaxApi.Api
             if (ezsignsignatureCreateObjectV2Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignsignatureCreateObjectV2Request' when calling ObjectEzsignsignatureApi->EzsignsignatureCreateObjectV2");
 
-            var localVarPath = "./2/object/ezsignsignature";
+            var localVarPath = "/2/object/ezsignsignature";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -820,7 +820,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureCreateObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureCreateObjectV2Response)));
         }
 
@@ -848,7 +848,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignsignatureID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignsignatureID' when calling ObjectEzsignsignatureApi->EzsignsignatureDeleteObjectV1");
 
-            var localVarPath = "./1/object/ezsignsignature/{pkiEzsignsignatureID}";
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -891,7 +891,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureDeleteObjectV1Response)));
         }
 
@@ -922,7 +922,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignsignatureID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignsignatureID' when calling ObjectEzsignsignatureApi->EzsignsignatureDeleteObjectV1");
 
-            var localVarPath = "./1/object/ezsignsignature/{pkiEzsignsignatureID}";
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -965,7 +965,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureDeleteObjectV1Response)));
         }
 
@@ -998,7 +998,7 @@ namespace eZmaxApi.Api
             if (ezsignsignatureEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignsignatureEditObjectV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureEditObjectV1");
 
-            var localVarPath = "./1/object/ezsignsignature/{pkiEzsignsignatureID}";
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1050,7 +1050,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureEditObjectV1Response)));
         }
 
@@ -1086,7 +1086,7 @@ namespace eZmaxApi.Api
             if (ezsignsignatureEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignsignatureEditObjectV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureEditObjectV1");
 
-            var localVarPath = "./1/object/ezsignsignature/{pkiEzsignsignatureID}";
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1138,7 +1138,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureEditObjectV1Response)));
         }
 
@@ -1166,7 +1166,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignsignatureID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignsignatureID' when calling ObjectEzsignsignatureApi->EzsignsignatureGetEzsignsignatureattachmentV1");
 
-            var localVarPath = "./1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment";
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1209,7 +1209,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureGetEzsignsignatureattachmentV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureGetEzsignsignatureattachmentV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureGetEzsignsignatureattachmentV1Response)));
         }
 
@@ -1240,7 +1240,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignsignatureID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignsignatureID' when calling ObjectEzsignsignatureApi->EzsignsignatureGetEzsignsignatureattachmentV1");
 
-            var localVarPath = "./1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment";
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1283,7 +1283,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureGetEzsignsignatureattachmentV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureGetEzsignsignatureattachmentV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureGetEzsignsignatureattachmentV1Response)));
         }
 
@@ -1306,7 +1306,7 @@ namespace eZmaxApi.Api
         public ApiResponse<EzsignsignatureGetEzsignsignaturesAutomaticV1Response> EzsignsignatureGetEzsignsignaturesAutomaticV1WithHttpInfo ()
         {
 
-            var localVarPath = "./1/object/ezsignsignature/getEzsignsignaturesAutomatic";
+            var localVarPath = "/1/object/ezsignsignature/getEzsignsignaturesAutomatic";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1348,7 +1348,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureGetEzsignsignaturesAutomaticV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureGetEzsignsignaturesAutomaticV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureGetEzsignsignaturesAutomaticV1Response)));
         }
 
@@ -1374,7 +1374,7 @@ namespace eZmaxApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<EzsignsignatureGetEzsignsignaturesAutomaticV1Response>> EzsignsignatureGetEzsignsignaturesAutomaticV1WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/object/ezsignsignature/getEzsignsignaturesAutomatic";
+            var localVarPath = "/1/object/ezsignsignature/getEzsignsignaturesAutomatic";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1416,7 +1416,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureGetEzsignsignaturesAutomaticV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureGetEzsignsignaturesAutomaticV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureGetEzsignsignaturesAutomaticV1Response)));
         }
 
@@ -1444,7 +1444,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignsignatureID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignsignatureID' when calling ObjectEzsignsignatureApi->EzsignsignatureGetObjectV2");
 
-            var localVarPath = "./2/object/ezsignsignature/{pkiEzsignsignatureID}";
+            var localVarPath = "/2/object/ezsignsignature/{pkiEzsignsignatureID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1487,7 +1487,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureGetObjectV2Response)));
         }
 
@@ -1518,7 +1518,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignsignatureID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignsignatureID' when calling ObjectEzsignsignatureApi->EzsignsignatureGetObjectV2");
 
-            var localVarPath = "./2/object/ezsignsignature/{pkiEzsignsignatureID}";
+            var localVarPath = "/2/object/ezsignsignature/{pkiEzsignsignatureID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1561,7 +1561,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureGetObjectV2Response)));
         }
 
@@ -1594,7 +1594,7 @@ namespace eZmaxApi.Api
             if (ezsignsignatureSignV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignsignatureSignV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureSignV1");
 
-            var localVarPath = "./1/object/ezsignsignature/{pkiEzsignsignatureID}/sign";
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1646,7 +1646,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureSignV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureSignV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureSignV1Response)));
         }
 
@@ -1682,7 +1682,7 @@ namespace eZmaxApi.Api
             if (ezsignsignatureSignV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignsignatureSignV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureSignV1");
 
-            var localVarPath = "./1/object/ezsignsignature/{pkiEzsignsignatureID}/sign";
+            var localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1734,7 +1734,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignsignatureSignV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignsignatureSignV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignsignatureSignV1Response)));
         }
 

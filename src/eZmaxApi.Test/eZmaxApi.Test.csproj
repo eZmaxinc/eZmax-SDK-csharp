@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <AssemblyName>eZmaxApi.Test</AssemblyName>
     <PackageId>eZmaxApi.Test</PackageId>
     <OutputType>Library</OutputType>
@@ -18,11 +18,22 @@
 
   <ItemGroup>
     <PackageReference Include="NUnit" Version="2.6.4" />
-    <PackageReference Include="FubarCoder.RestSharp.Portable.Core" Version="4.0.7" />
+    <PackageReference Include="RestSharp" Version="" />
     <PackageReference Include="Newtonsoft.Json" Version="" />
     <PackageReference Include="JsonSubTypes" Version="" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\eZmaxApi\eZmaxApi.csproj" />

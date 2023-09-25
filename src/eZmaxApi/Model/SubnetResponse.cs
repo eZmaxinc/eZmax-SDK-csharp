@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Subnet Object
     /// </summary>
     [DataContract]
-    public partial class SubnetResponse :  IEquatable<SubnetResponse>
+    public partial class SubnetResponse :  IEquatable<SubnetResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SubnetResponse" /> class.
@@ -232,6 +234,74 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ISubnetMask.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiSubnetID (int) maximum
+            if(this.PkiSubnetID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSubnetID, must be a value less than or equal to 65535.", new [] { "PkiSubnetID" });
+            }
+
+            // PkiSubnetID (int) minimum
+            if(this.PkiSubnetID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSubnetID, must be a value greater than or equal to 0.", new [] { "PkiSubnetID" });
+            }
+
+
+
+            // FkiUserID (int) minimum
+            if(this.FkiUserID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+
+
+            // FkiApikeyID (int) minimum
+            if(this.FkiApikeyID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
+            }
+
+
+
+            // ISubnetNetwork (long) maximum
+            if(this.ISubnetNetwork > (long)4294967295)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISubnetNetwork, must be a value less than or equal to 4294967295.", new [] { "ISubnetNetwork" });
+            }
+
+            // ISubnetNetwork (long) minimum
+            if(this.ISubnetNetwork < (long)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISubnetNetwork, must be a value greater than or equal to 0.", new [] { "ISubnetNetwork" });
+            }
+
+
+
+            // ISubnetMask (long) maximum
+            if(this.ISubnetMask > (long)4294967295)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISubnetMask, must be a value less than or equal to 4294967295.", new [] { "ISubnetMask" });
+            }
+
+            // ISubnetMask (long) minimum
+            if(this.ISubnetMask < (long)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISubnetMask, must be a value greater than or equal to 0.", new [] { "ISubnetMask" });
+            }
+
+            yield break;
         }
     }
 

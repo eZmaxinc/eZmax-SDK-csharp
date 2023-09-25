@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
     /// </summary>
     [DataContract]
-    public partial class EzsignsignatureSignV1Request :  IEquatable<EzsignsignatureSignV1Request>
+    public partial class EzsignsignatureSignV1Request :  IEquatable<EzsignsignatureSignV1Request>, IValidatableObject
     {
         /// <summary>
         /// Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
@@ -227,6 +229,25 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BIsAutomatic.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // SSvg (string) pattern
+            Regex regexSSvg = new Regex(@"^.{0,32767}$", RegexOptions.CultureInvariant);
+            if (false == regexSSvg.Match(this.SSvg).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SSvg, must match a pattern of " + regexSSvg, new [] { "SSvg" });
+            }
+
+            yield break;
         }
     }
 

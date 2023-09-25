@@ -107,7 +107,7 @@ namespace eZmaxApi.Test
         public void UsersGetListScimV2Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string filter = null;
+            //string? filter = null;
             //var response = instance.UsersGetListScimV2(filter);
             //Assert.IsInstanceOf(typeof(ScimUserList), response, "response is ScimUserList");
         }

@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Communicationattachment Object
     /// </summary>
     [DataContract]
-    public partial class CommunicationattachmentResponse :  IEquatable<CommunicationattachmentResponse>
+    public partial class CommunicationattachmentResponse :  IEquatable<CommunicationattachmentResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationattachmentResponse" /> class.
@@ -215,6 +217,40 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SDownloadUrl.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // FkiAttachmentID (int) minimum
+            if(this.FkiAttachmentID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAttachmentID, must be a value greater than or equal to 0.", new [] { "FkiAttachmentID" });
+            }
+
+
+
+            // FkiInvoiceID (int) minimum
+            if(this.FkiInvoiceID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInvoiceID, must be a value greater than or equal to 0.", new [] { "FkiInvoiceID" });
+            }
+
+
+
+            // FkiSalarypreparationID (int) minimum
+            if(this.FkiSalarypreparationID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSalarypreparationID, must be a value greater than or equal to 0.", new [] { "FkiSalarypreparationID" });
+            }
+
+            yield break;
         }
     }
 

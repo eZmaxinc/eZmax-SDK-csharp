@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// Payload for Websocket GetWebsocketID V1
     /// </summary>
     [DataContract]
-    public partial class WebsocketResponseGetWebsocketIDV1MPayload :  IEquatable<WebsocketResponseGetWebsocketIDV1MPayload>
+    public partial class WebsocketResponseGetWebsocketIDV1MPayload :  IEquatable<WebsocketResponseGetWebsocketIDV1MPayload>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1MPayload" /> class.
@@ -121,6 +123,25 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SWebsocketID.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // SWebsocketID (string) pattern
+            Regex regexSWebsocketID = new Regex(@"^[a-zA-Z0-9_-]{15}=$", RegexOptions.CultureInvariant);
+            if (false == regexSWebsocketID.Match(this.SWebsocketID).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SWebsocketID, must match a pattern of " + regexSWebsocketID, new [] { "SWebsocketID" });
+            }
+
+            yield break;
         }
     }
 

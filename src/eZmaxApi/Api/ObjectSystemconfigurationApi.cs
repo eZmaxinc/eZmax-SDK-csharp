@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -259,7 +259,7 @@ namespace eZmaxApi.Api
             if (systemconfigurationEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'systemconfigurationEditObjectV1Request' when calling ObjectSystemconfigurationApi->SystemconfigurationEditObjectV1");
 
-            var localVarPath = "./1/object/systemconfiguration/{pkiSystemconfigurationID}";
+            var localVarPath = "/1/object/systemconfiguration/{pkiSystemconfigurationID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -311,7 +311,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SystemconfigurationEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SystemconfigurationEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemconfigurationEditObjectV1Response)));
         }
 
@@ -347,7 +347,7 @@ namespace eZmaxApi.Api
             if (systemconfigurationEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'systemconfigurationEditObjectV1Request' when calling ObjectSystemconfigurationApi->SystemconfigurationEditObjectV1");
 
-            var localVarPath = "./1/object/systemconfiguration/{pkiSystemconfigurationID}";
+            var localVarPath = "/1/object/systemconfiguration/{pkiSystemconfigurationID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -399,7 +399,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SystemconfigurationEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SystemconfigurationEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemconfigurationEditObjectV1Response)));
         }
 
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
             if (pkiSystemconfigurationID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiSystemconfigurationID' when calling ObjectSystemconfigurationApi->SystemconfigurationGetObjectV2");
 
-            var localVarPath = "./2/object/systemconfiguration/{pkiSystemconfigurationID}";
+            var localVarPath = "/2/object/systemconfiguration/{pkiSystemconfigurationID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -470,7 +470,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SystemconfigurationGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SystemconfigurationGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemconfigurationGetObjectV2Response)));
         }
 
@@ -501,7 +501,7 @@ namespace eZmaxApi.Api
             if (pkiSystemconfigurationID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiSystemconfigurationID' when calling ObjectSystemconfigurationApi->SystemconfigurationGetObjectV2");
 
-            var localVarPath = "./2/object/systemconfiguration/{pkiSystemconfigurationID}";
+            var localVarPath = "/2/object/systemconfiguration/{pkiSystemconfigurationID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -544,7 +544,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<SystemconfigurationGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SystemconfigurationGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemconfigurationGetObjectV2Response)));
         }
 

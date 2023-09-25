@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// An Ezsignfolder Object
     /// </summary>
     [DataContract]
-    public partial class EzsignfolderRequest :  IEquatable<EzsignfolderRequest>
+    public partial class EzsignfolderRequest :  IEquatable<EzsignfolderRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EEzsignfolderSendreminderfrequency
@@ -249,6 +251,55 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzsignfolderExternalid.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsignfolderID (int) minimum
+            if(this.PkiEzsignfolderID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
+            }
+
+
+
+            // FkiEzsignfoldertypeID (int) minimum
+            if(this.FkiEzsignfoldertypeID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
+
+
+            // FkiEzsigntsarequirementID (int) maximum
+            if(this.FkiEzsigntsarequirementID > (int)3)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "FkiEzsigntsarequirementID" });
+            }
+
+            // FkiEzsigntsarequirementID (int) minimum
+            if(this.FkiEzsigntsarequirementID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
+            }
+
+
+
+            // SEzsignfolderExternalid (string) pattern
+            Regex regexSEzsignfolderExternalid = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
+            if (false == regexSEzsignfolderExternalid.Match(this.SEzsignfolderExternalid).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignfolderExternalid, must match a pattern of " + regexSEzsignfolderExternalid, new [] { "SEzsignfolderExternalid" });
+            }
+
+            yield break;
         }
     }
 

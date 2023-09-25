@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -99,7 +99,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Filter expression for searching groups (optional)</param>
         /// <returns>ScimGroup</returns>
-        ScimGroup GroupsGetListScimV2 (string filter = default(string));
+        ScimGroup GroupsGetListScimV2 (string? filter = default(string?));
 
         /// <summary>
         /// Retrieve Usergroup list
@@ -110,7 +110,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Filter expression for searching groups (optional)</param>
         /// <returns>ApiResponse of ScimGroup</returns>
-        ApiResponse<ScimGroup> GroupsGetListScimV2WithHttpInfo (string filter = default(string));
+        ApiResponse<ScimGroup> GroupsGetListScimV2WithHttpInfo (string? filter = default(string?));
         /// <summary>
         /// Retrieve an existing Usergroup
         /// </summary>
@@ -215,7 +215,7 @@ namespace eZmaxApi.Api
         /// <param name="filter">Filter expression for searching groups (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ScimGroup</returns>
-        System.Threading.Tasks.Task<ScimGroup> GroupsGetListScimV2Async (string filter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ScimGroup> GroupsGetListScimV2Async (string? filter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Usergroup list
@@ -227,7 +227,7 @@ namespace eZmaxApi.Api
         /// <param name="filter">Filter expression for searching groups (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ScimGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsGetListScimV2WithHttpInfoAsync (string filter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsGetListScimV2WithHttpInfoAsync (string? filter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Usergroup
         /// </summary>
@@ -386,7 +386,7 @@ namespace eZmaxApi.Api
             if (scimGroup == null)
                 throw new ApiException(400, "Missing required parameter 'scimGroup' when calling ScimGroupsApi->GroupsCreateObjectScimV2");
 
-            var localVarPath = "./2/scim/Groups";
+            var localVarPath = "/2/scim/Groups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -438,7 +438,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ScimGroup>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ScimGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimGroup)));
         }
 
@@ -469,7 +469,7 @@ namespace eZmaxApi.Api
             if (scimGroup == null)
                 throw new ApiException(400, "Missing required parameter 'scimGroup' when calling ScimGroupsApi->GroupsCreateObjectScimV2");
 
-            var localVarPath = "./2/scim/Groups";
+            var localVarPath = "/2/scim/Groups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -521,7 +521,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ScimGroup>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ScimGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimGroup)));
         }
 
@@ -548,7 +548,7 @@ namespace eZmaxApi.Api
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling ScimGroupsApi->GroupsDeleteObjectScimV2");
 
-            var localVarPath = "./2/scim/Groups/{groupId}";
+            var localVarPath = "/2/scim/Groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -591,7 +591,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -621,7 +621,7 @@ namespace eZmaxApi.Api
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling ScimGroupsApi->GroupsDeleteObjectScimV2");
 
-            var localVarPath = "./2/scim/Groups/{groupId}";
+            var localVarPath = "/2/scim/Groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -664,7 +664,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -697,7 +697,7 @@ namespace eZmaxApi.Api
             if (scimGroup == null)
                 throw new ApiException(400, "Missing required parameter 'scimGroup' when calling ScimGroupsApi->GroupsEditObjectScimV2");
 
-            var localVarPath = "./2/scim/Groups/{groupId}";
+            var localVarPath = "/2/scim/Groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -750,7 +750,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ScimGroup>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ScimGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimGroup)));
         }
 
@@ -786,7 +786,7 @@ namespace eZmaxApi.Api
             if (scimGroup == null)
                 throw new ApiException(400, "Missing required parameter 'scimGroup' when calling ScimGroupsApi->GroupsEditObjectScimV2");
 
-            var localVarPath = "./2/scim/Groups/{groupId}";
+            var localVarPath = "/2/scim/Groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -839,7 +839,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ScimGroup>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ScimGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimGroup)));
         }
 
@@ -849,7 +849,7 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Filter expression for searching groups (optional)</param>
         /// <returns>ScimGroup</returns>
-        public ScimGroup GroupsGetListScimV2 (string filter = default(string))
+        public ScimGroup GroupsGetListScimV2 (string? filter = default(string?))
         {
              ApiResponse<ScimGroup> localVarResponse = GroupsGetListScimV2WithHttpInfo(filter);
              return localVarResponse.Data;
@@ -861,10 +861,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Filter expression for searching groups (optional)</param>
         /// <returns>ApiResponse of ScimGroup</returns>
-        public ApiResponse<ScimGroup> GroupsGetListScimV2WithHttpInfo (string filter = default(string))
+        public ApiResponse<ScimGroup> GroupsGetListScimV2WithHttpInfo (string? filter = default(string?))
         {
 
-            var localVarPath = "./2/scim/Groups";
+            var localVarPath = "/2/scim/Groups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -908,7 +908,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ScimGroup>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ScimGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimGroup)));
         }
 
@@ -919,7 +919,7 @@ namespace eZmaxApi.Api
         /// <param name="filter">Filter expression for searching groups (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ScimGroup</returns>
-        public async System.Threading.Tasks.Task<ScimGroup> GroupsGetListScimV2Async (string filter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ScimGroup> GroupsGetListScimV2Async (string? filter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<ScimGroup> localVarResponse = await GroupsGetListScimV2WithHttpInfoAsync(filter, cancellationToken);
              return localVarResponse.Data;
@@ -933,10 +933,10 @@ namespace eZmaxApi.Api
         /// <param name="filter">Filter expression for searching groups (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ScimGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsGetListScimV2WithHttpInfoAsync (string filter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsGetListScimV2WithHttpInfoAsync (string? filter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./2/scim/Groups";
+            var localVarPath = "/2/scim/Groups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -980,7 +980,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ScimGroup>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ScimGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimGroup)));
         }
 
@@ -1008,7 +1008,7 @@ namespace eZmaxApi.Api
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling ScimGroupsApi->GroupsGetObjectScimV2");
 
-            var localVarPath = "./2/scim/Groups/{groupId}";
+            var localVarPath = "/2/scim/Groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1052,7 +1052,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ScimGroup>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ScimGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimGroup)));
         }
 
@@ -1083,7 +1083,7 @@ namespace eZmaxApi.Api
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling ScimGroupsApi->GroupsGetObjectScimV2");
 
-            var localVarPath = "./2/scim/Groups/{groupId}";
+            var localVarPath = "/2/scim/Groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1127,7 +1127,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ScimGroup>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ScimGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimGroup)));
         }
 

@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsigner Object
     /// </summary>
     [DataContract]
-    public partial class EzsignsignerResponse :  IEquatable<EzsignsignerResponse>
+    public partial class EzsignsignerResponse :  IEquatable<EzsignsignerResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignerResponse" /> class.
@@ -216,6 +218,54 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SUserlogintypeDescriptionX.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsignsignerID (int) minimum
+            if(this.PkiEzsignsignerID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignerID" });
+            }
+
+
+
+            // FkiTaxassignmentID (int) maximum
+            if(this.FkiTaxassignmentID > (int)15)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTaxassignmentID, must be a value less than or equal to 15.", new [] { "FkiTaxassignmentID" });
+            }
+
+            // FkiTaxassignmentID (int) minimum
+            if(this.FkiTaxassignmentID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTaxassignmentID, must be a value greater than or equal to 0.", new [] { "FkiTaxassignmentID" });
+            }
+
+
+
+            // FkiSecretquestionID (int) minimum
+            if(this.FkiSecretquestionID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSecretquestionID, must be a value greater than or equal to 0.", new [] { "FkiSecretquestionID" });
+            }
+
+
+
+            // FkiUserlogintypeID (int) minimum
+            if(this.FkiUserlogintypeID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserlogintypeID, must be a value greater than or equal to 0.", new [] { "FkiUserlogintypeID" });
+            }
+
+            yield break;
         }
     }
 

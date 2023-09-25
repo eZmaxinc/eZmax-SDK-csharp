@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Activesession List Element
     /// </summary>
     [DataContract]
-    public partial class ActivesessionListElement :  IEquatable<ActivesessionListElement>
+    public partial class ActivesessionListElement :  IEquatable<ActivesessionListElement>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionListElement" /> class.
@@ -407,6 +409,96 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SActivesessionIP.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // FkiUserID (int) minimum
+            if(this.FkiUserID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+
+
+            // FkiComputerID (int) maximum
+            if(this.FkiComputerID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiComputerID, must be a value less than or equal to 65535.", new [] { "FkiComputerID" });
+            }
+
+            // FkiComputerID (int) minimum
+            if(this.FkiComputerID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiComputerID, must be a value greater than or equal to 1.", new [] { "FkiComputerID" });
+            }
+
+
+
+            // FkiCompanyID (int) maximum
+            if(this.FkiCompanyID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCompanyID, must be a value less than or equal to 255.", new [] { "FkiCompanyID" });
+            }
+
+            // FkiCompanyID (int) minimum
+            if(this.FkiCompanyID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCompanyID, must be a value greater than or equal to 1.", new [] { "FkiCompanyID" });
+            }
+
+
+
+            // FkiDepartmentID (int) minimum
+            if(this.FkiDepartmentID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
+            }
+
+
+
+            // SActivesessionLoginname (string) pattern
+            Regex regexSActivesessionLoginname = new Regex(@"^.{0,32}$", RegexOptions.CultureInvariant);
+            if (false == regexSActivesessionLoginname.Match(this.SActivesessionLoginname).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SActivesessionLoginname, must match a pattern of " + regexSActivesessionLoginname, new [] { "SActivesessionLoginname" });
+            }
+
+
+
+            // SComputerDescription (string) pattern
+            Regex regexSComputerDescription = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+            if (false == regexSComputerDescription.Match(this.SComputerDescription).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SComputerDescription, must match a pattern of " + regexSComputerDescription, new [] { "SComputerDescription" });
+            }
+
+
+
+            // DtActivesessionFirsthit (string) pattern
+            Regex regexDtActivesessionFirsthit = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
+            if (false == regexDtActivesessionFirsthit.Match(this.DtActivesessionFirsthit).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtActivesessionFirsthit, must match a pattern of " + regexDtActivesessionFirsthit, new [] { "DtActivesessionFirsthit" });
+            }
+
+
+
+            // DtActivesessionLasthit (string) pattern
+            Regex regexDtActivesessionLasthit = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
+            if (false == regexDtActivesessionLasthit.Match(this.DtActivesessionLasthit).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtActivesessionLasthit, must match a pattern of " + regexDtActivesessionLasthit, new [] { "DtActivesessionLasthit" });
+            }
+
+            yield break;
         }
     }
 

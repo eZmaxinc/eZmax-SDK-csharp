@@ -96,9 +96,9 @@ namespace eZmaxApi.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string sSelector = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage acceptLanguage = null;
+            //string? eFilterActive = null;
+            //string? sQuery = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
             //var response = instance.BrandingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(BrandingGetAutocompleteV2Response), response, "response is BrandingGetAutocompleteV2Response");
         }
@@ -110,11 +110,11 @@ namespace eZmaxApi.Test
         public void BrandingGetListV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string eOrderBy = null;
+            //string? eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage acceptLanguage = null;
-            //string sFilter = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string? sFilter = null;
             //var response = instance.BrandingGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(BrandingGetListV1Response), response, "response is BrandingGetListV1Response");
         }

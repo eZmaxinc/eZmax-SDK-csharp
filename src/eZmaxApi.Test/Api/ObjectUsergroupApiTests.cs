@@ -135,9 +135,9 @@ namespace eZmaxApi.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string sSelector = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage acceptLanguage = null;
+            //string? eFilterActive = null;
+            //string? sQuery = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
             //var response = instance.UsergroupGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(UsergroupGetAutocompleteV2Response), response, "response is UsergroupGetAutocompleteV2Response");
         }
@@ -149,11 +149,11 @@ namespace eZmaxApi.Test
         public void UsergroupGetListV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string eOrderBy = null;
+            //string? eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage acceptLanguage = null;
-            //string sFilter = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string? sFilter = null;
             //var response = instance.UsergroupGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(UsergroupGetListV1Response), response, "response is UsergroupGetListV1Response");
         }

@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -206,7 +206,7 @@ namespace eZmaxApi.Api
             if (pkiNotificationtestID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiNotificationtestID' when calling ObjectNotificationtestApi->NotificationtestGetElementsV1");
 
-            var localVarPath = "./1/object/notificationtest/{pkiNotificationtestID}/getElements";
+            var localVarPath = "/1/object/notificationtest/{pkiNotificationtestID}/getElements";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -249,7 +249,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<NotificationtestGetElementsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (NotificationtestGetElementsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificationtestGetElementsV1Response)));
         }
 
@@ -280,7 +280,7 @@ namespace eZmaxApi.Api
             if (pkiNotificationtestID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiNotificationtestID' when calling ObjectNotificationtestApi->NotificationtestGetElementsV1");
 
-            var localVarPath = "./1/object/notificationtest/{pkiNotificationtestID}/getElements";
+            var localVarPath = "/1/object/notificationtest/{pkiNotificationtestID}/getElements";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -323,7 +323,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<NotificationtestGetElementsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (NotificationtestGetElementsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificationtestGetElementsV1Response)));
         }
 

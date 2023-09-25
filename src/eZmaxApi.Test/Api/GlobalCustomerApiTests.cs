@@ -71,7 +71,7 @@ namespace eZmaxApi.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string pksCustomerCode = null;
-            //string sInfrastructureproductCode = null;
+            //string? sInfrastructureproductCode = null;
             //var response = instance.GlobalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode);
             //Assert.IsInstanceOf(typeof(GlobalCustomerGetEndpointV1Response), response, "response is GlobalCustomerGetEndpointV1Response");
         }

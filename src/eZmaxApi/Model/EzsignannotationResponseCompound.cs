@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Ezsignannotation Object
     /// </summary>
     [DataContract]
-    public partial class EzsignannotationResponseCompound :  IEquatable<EzsignannotationResponseCompound>
+    public partial class EzsignannotationResponseCompound :  IEquatable<EzsignannotationResponseCompound>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EEzsignannotationHorizontalalignment
@@ -349,6 +351,64 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ObjTextstylestatic.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // FkiEzsigndocumentID (int) minimum
+            if(this.FkiEzsigndocumentID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
+            }
+
+
+
+            // IEzsignannotationX (int) minimum
+            if(this.IEzsignannotationX < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignannotationX, must be a value greater than or equal to 0.", new [] { "IEzsignannotationX" });
+            }
+
+
+
+            // IEzsignannotationY (int) minimum
+            if(this.IEzsignannotationY < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignannotationY, must be a value greater than or equal to 0.", new [] { "IEzsignannotationY" });
+            }
+
+
+
+            // IEzsignannotationWidth (int) minimum
+            if(this.IEzsignannotationWidth < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignannotationWidth, must be a value greater than or equal to 0.", new [] { "IEzsignannotationWidth" });
+            }
+
+
+
+            // IEzsignannotationHeight (int) minimum
+            if(this.IEzsignannotationHeight < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignannotationHeight, must be a value greater than or equal to 0.", new [] { "IEzsignannotationHeight" });
+            }
+
+
+
+            // IEzsignpagePagenumber (int) minimum
+            if(this.IEzsignpagePagenumber < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
+            }
+
+            yield break;
         }
     }
 

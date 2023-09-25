@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -125,7 +125,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
 
         /// <summary>
         /// Retrieve Ezsigntemplatepackages and IDs
@@ -139,7 +139,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
         /// <summary>
         /// Retrieve Ezsigntemplatepackage list
         /// </summary>
@@ -153,7 +153,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>EzsigntemplatepackageGetListV1Response</returns>
-        EzsigntemplatepackageGetListV1Response EzsigntemplatepackageGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        EzsigntemplatepackageGetListV1Response EzsigntemplatepackageGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
 
         /// <summary>
         /// Retrieve Ezsigntemplatepackage list
@@ -168,7 +168,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of EzsigntemplatepackageGetListV1Response</returns>
-        ApiResponse<EzsigntemplatepackageGetListV1Response> EzsigntemplatepackageGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        ApiResponse<EzsigntemplatepackageGetListV1Response> EzsigntemplatepackageGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
         /// <summary>
         /// Retrieve an existing Ezsigntemplatepackage
         /// </summary>
@@ -301,7 +301,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsigntemplatepackages and IDs
@@ -316,7 +316,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigntemplatepackageGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response>> EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response>> EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Ezsigntemplatepackage list
         /// </summary>
@@ -331,7 +331,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigntemplatepackageGetListV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepackageGetListV1Response> EzsigntemplatepackageGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepackageGetListV1Response> EzsigntemplatepackageGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsigntemplatepackage list
@@ -347,7 +347,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigntemplatepackageGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetListV1Response>> EzsigntemplatepackageGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetListV1Response>> EzsigntemplatepackageGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsigntemplatepackage
         /// </summary>
@@ -506,7 +506,7 @@ namespace eZmaxApi.Api
             if (ezsigntemplatepackageCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageCreateObjectV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageCreateObjectV1");
 
-            var localVarPath = "./1/object/ezsigntemplatepackage";
+            var localVarPath = "/1/object/ezsigntemplatepackage";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -557,7 +557,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageCreateObjectV1Response)));
         }
 
@@ -588,7 +588,7 @@ namespace eZmaxApi.Api
             if (ezsigntemplatepackageCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageCreateObjectV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageCreateObjectV1");
 
-            var localVarPath = "./1/object/ezsigntemplatepackage";
+            var localVarPath = "/1/object/ezsigntemplatepackage";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -639,7 +639,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageCreateObjectV1Response)));
         }
 
@@ -667,7 +667,7 @@ namespace eZmaxApi.Api
             if (pkiEzsigntemplatepackageID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageDeleteObjectV1");
 
-            var localVarPath = "./1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -710,7 +710,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageDeleteObjectV1Response)));
         }
 
@@ -741,7 +741,7 @@ namespace eZmaxApi.Api
             if (pkiEzsigntemplatepackageID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageDeleteObjectV1");
 
-            var localVarPath = "./1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -784,7 +784,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageDeleteObjectV1Response)));
         }
 
@@ -817,7 +817,7 @@ namespace eZmaxApi.Api
             if (ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditEzsigntemplatepackagesignersV1");
 
-            var localVarPath = "./1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners";
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -869,7 +869,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response)));
         }
 
@@ -905,7 +905,7 @@ namespace eZmaxApi.Api
             if (ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditEzsigntemplatepackagesignersV1");
 
-            var localVarPath = "./1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners";
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -957,7 +957,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response)));
         }
 
@@ -990,7 +990,7 @@ namespace eZmaxApi.Api
             if (ezsigntemplatepackageEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageEditObjectV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditObjectV1");
 
-            var localVarPath = "./1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1042,7 +1042,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageEditObjectV1Response)));
         }
 
@@ -1078,7 +1078,7 @@ namespace eZmaxApi.Api
             if (ezsigntemplatepackageEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsigntemplatepackageEditObjectV1Request' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageEditObjectV1");
 
-            var localVarPath = "./1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPath = "/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1130,7 +1130,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageEditObjectV1Response)));
         }
 
@@ -1143,7 +1143,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        public EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
              ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> localVarResponse = EzsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -1158,13 +1158,13 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        public ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageGetAutocompleteV2");
 
-            var localVarPath = "./2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}";
+            var localVarPath = "/2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1210,7 +1210,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageGetAutocompleteV2Response)));
         }
 
@@ -1224,7 +1224,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> localVarResponse = await EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -1241,13 +1241,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigntemplatepackageGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response>> EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response>> EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageGetAutocompleteV2");
 
-            var localVarPath = "./2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}";
+            var localVarPath = "/2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1293,7 +1293,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageGetAutocompleteV2Response)));
         }
 
@@ -1307,7 +1307,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>EzsigntemplatepackageGetListV1Response</returns>
-        public EzsigntemplatepackageGetListV1Response EzsigntemplatepackageGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public EzsigntemplatepackageGetListV1Response EzsigntemplatepackageGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
              ApiResponse<EzsigntemplatepackageGetListV1Response> localVarResponse = EzsigntemplatepackageGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -1323,10 +1323,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of EzsigntemplatepackageGetListV1Response</returns>
-        public ApiResponse<EzsigntemplatepackageGetListV1Response> EzsigntemplatepackageGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public ApiResponse<EzsigntemplatepackageGetListV1Response> EzsigntemplatepackageGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
 
-            var localVarPath = "./1/object/ezsigntemplatepackage/getList";
+            var localVarPath = "/1/object/ezsigntemplatepackage/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1374,7 +1374,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageGetListV1Response)));
         }
 
@@ -1389,7 +1389,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsigntemplatepackageGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepackageGetListV1Response> EzsigntemplatepackageGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepackageGetListV1Response> EzsigntemplatepackageGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<EzsigntemplatepackageGetListV1Response> localVarResponse = await EzsigntemplatepackageGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -1407,10 +1407,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsigntemplatepackageGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetListV1Response>> EzsigntemplatepackageGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetListV1Response>> EzsigntemplatepackageGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/object/ezsigntemplatepackage/getList";
+            var localVarPath = "/1/object/ezsigntemplatepackage/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1458,7 +1458,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageGetListV1Response)));
         }
 
@@ -1486,7 +1486,7 @@ namespace eZmaxApi.Api
             if (pkiEzsigntemplatepackageID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageGetObjectV2");
 
-            var localVarPath = "./2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPath = "/2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1529,7 +1529,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageGetObjectV2Response)));
         }
 
@@ -1560,7 +1560,7 @@ namespace eZmaxApi.Api
             if (pkiEzsigntemplatepackageID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsigntemplatepackageID' when calling ObjectEzsigntemplatepackageApi->EzsigntemplatepackageGetObjectV2");
 
-            var localVarPath = "./2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
+            var localVarPath = "/2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1603,7 +1603,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsigntemplatepackageGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsigntemplatepackageGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsigntemplatepackageGetObjectV2Response)));
         }
 

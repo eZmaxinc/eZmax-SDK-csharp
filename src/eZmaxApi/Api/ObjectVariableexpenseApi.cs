@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -81,7 +81,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>VariableexpenseGetAutocompleteV2Response</returns>
-        VariableexpenseGetAutocompleteV2Response VariableexpenseGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        VariableexpenseGetAutocompleteV2Response VariableexpenseGetAutocompleteV2 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
 
         /// <summary>
         /// Retrieve Variableexpenses and IDs
@@ -95,7 +95,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of VariableexpenseGetAutocompleteV2Response</returns>
-        ApiResponse<VariableexpenseGetAutocompleteV2Response> VariableexpenseGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        ApiResponse<VariableexpenseGetAutocompleteV2Response> VariableexpenseGetAutocompleteV2WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
         /// <summary>
         /// Retrieve Variableexpense list
         /// </summary>
@@ -109,7 +109,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>VariableexpenseGetListV1Response</returns>
-        VariableexpenseGetListV1Response VariableexpenseGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        VariableexpenseGetListV1Response VariableexpenseGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
 
         /// <summary>
         /// Retrieve Variableexpense list
@@ -124,7 +124,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of VariableexpenseGetListV1Response</returns>
-        ApiResponse<VariableexpenseGetListV1Response> VariableexpenseGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        ApiResponse<VariableexpenseGetListV1Response> VariableexpenseGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
         /// <summary>
         /// Retrieve an existing Variableexpense
         /// </summary>
@@ -209,7 +209,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of VariableexpenseGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<VariableexpenseGetAutocompleteV2Response> VariableexpenseGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<VariableexpenseGetAutocompleteV2Response> VariableexpenseGetAutocompleteV2Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Variableexpenses and IDs
@@ -224,7 +224,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VariableexpenseGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VariableexpenseGetAutocompleteV2Response>> VariableexpenseGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<VariableexpenseGetAutocompleteV2Response>> VariableexpenseGetAutocompleteV2WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Variableexpense list
         /// </summary>
@@ -239,7 +239,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of VariableexpenseGetListV1Response</returns>
-        System.Threading.Tasks.Task<VariableexpenseGetListV1Response> VariableexpenseGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<VariableexpenseGetListV1Response> VariableexpenseGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Variableexpense list
@@ -255,7 +255,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VariableexpenseGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VariableexpenseGetListV1Response>> VariableexpenseGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<VariableexpenseGetListV1Response>> VariableexpenseGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Variableexpense
         /// </summary>
@@ -414,7 +414,7 @@ namespace eZmaxApi.Api
             if (variableexpenseCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'variableexpenseCreateObjectV1Request' when calling ObjectVariableexpenseApi->VariableexpenseCreateObjectV1");
 
-            var localVarPath = "./1/object/variableexpense";
+            var localVarPath = "/1/object/variableexpense";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -465,7 +465,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VariableexpenseCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseCreateObjectV1Response)));
         }
 
@@ -496,7 +496,7 @@ namespace eZmaxApi.Api
             if (variableexpenseCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'variableexpenseCreateObjectV1Request' when calling ObjectVariableexpenseApi->VariableexpenseCreateObjectV1");
 
-            var localVarPath = "./1/object/variableexpense";
+            var localVarPath = "/1/object/variableexpense";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -547,7 +547,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VariableexpenseCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseCreateObjectV1Response)));
         }
 
@@ -580,7 +580,7 @@ namespace eZmaxApi.Api
             if (variableexpenseEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'variableexpenseEditObjectV1Request' when calling ObjectVariableexpenseApi->VariableexpenseEditObjectV1");
 
-            var localVarPath = "./1/object/variableexpense/{pkiVariableexpenseID}";
+            var localVarPath = "/1/object/variableexpense/{pkiVariableexpenseID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -632,7 +632,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VariableexpenseEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseEditObjectV1Response)));
         }
 
@@ -668,7 +668,7 @@ namespace eZmaxApi.Api
             if (variableexpenseEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'variableexpenseEditObjectV1Request' when calling ObjectVariableexpenseApi->VariableexpenseEditObjectV1");
 
-            var localVarPath = "./1/object/variableexpense/{pkiVariableexpenseID}";
+            var localVarPath = "/1/object/variableexpense/{pkiVariableexpenseID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -720,7 +720,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VariableexpenseEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseEditObjectV1Response)));
         }
 
@@ -733,7 +733,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>VariableexpenseGetAutocompleteV2Response</returns>
-        public VariableexpenseGetAutocompleteV2Response VariableexpenseGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public VariableexpenseGetAutocompleteV2Response VariableexpenseGetAutocompleteV2 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
              ApiResponse<VariableexpenseGetAutocompleteV2Response> localVarResponse = VariableexpenseGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -748,13 +748,13 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of VariableexpenseGetAutocompleteV2Response</returns>
-        public ApiResponse<VariableexpenseGetAutocompleteV2Response> VariableexpenseGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public ApiResponse<VariableexpenseGetAutocompleteV2Response> VariableexpenseGetAutocompleteV2WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectVariableexpenseApi->VariableexpenseGetAutocompleteV2");
 
-            var localVarPath = "./2/object/variableexpense/getAutocomplete/{sSelector}";
+            var localVarPath = "/2/object/variableexpense/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -800,7 +800,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VariableexpenseGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseGetAutocompleteV2Response)));
         }
 
@@ -814,7 +814,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of VariableexpenseGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<VariableexpenseGetAutocompleteV2Response> VariableexpenseGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<VariableexpenseGetAutocompleteV2Response> VariableexpenseGetAutocompleteV2Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<VariableexpenseGetAutocompleteV2Response> localVarResponse = await VariableexpenseGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -831,13 +831,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VariableexpenseGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VariableexpenseGetAutocompleteV2Response>> VariableexpenseGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<VariableexpenseGetAutocompleteV2Response>> VariableexpenseGetAutocompleteV2WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectVariableexpenseApi->VariableexpenseGetAutocompleteV2");
 
-            var localVarPath = "./2/object/variableexpense/getAutocomplete/{sSelector}";
+            var localVarPath = "/2/object/variableexpense/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -883,7 +883,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VariableexpenseGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseGetAutocompleteV2Response)));
         }
 
@@ -897,7 +897,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>VariableexpenseGetListV1Response</returns>
-        public VariableexpenseGetListV1Response VariableexpenseGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public VariableexpenseGetListV1Response VariableexpenseGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
              ApiResponse<VariableexpenseGetListV1Response> localVarResponse = VariableexpenseGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -913,10 +913,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of VariableexpenseGetListV1Response</returns>
-        public ApiResponse<VariableexpenseGetListV1Response> VariableexpenseGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public ApiResponse<VariableexpenseGetListV1Response> VariableexpenseGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
 
-            var localVarPath = "./1/object/variableexpense/getList";
+            var localVarPath = "/1/object/variableexpense/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -964,7 +964,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VariableexpenseGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseGetListV1Response)));
         }
 
@@ -979,7 +979,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of VariableexpenseGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<VariableexpenseGetListV1Response> VariableexpenseGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<VariableexpenseGetListV1Response> VariableexpenseGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<VariableexpenseGetListV1Response> localVarResponse = await VariableexpenseGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -997,10 +997,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VariableexpenseGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VariableexpenseGetListV1Response>> VariableexpenseGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<VariableexpenseGetListV1Response>> VariableexpenseGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/object/variableexpense/getList";
+            var localVarPath = "/1/object/variableexpense/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1048,7 +1048,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VariableexpenseGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseGetListV1Response)));
         }
 
@@ -1076,7 +1076,7 @@ namespace eZmaxApi.Api
             if (pkiVariableexpenseID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiVariableexpenseID' when calling ObjectVariableexpenseApi->VariableexpenseGetObjectV2");
 
-            var localVarPath = "./2/object/variableexpense/{pkiVariableexpenseID}";
+            var localVarPath = "/2/object/variableexpense/{pkiVariableexpenseID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1119,7 +1119,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VariableexpenseGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseGetObjectV2Response)));
         }
 
@@ -1150,7 +1150,7 @@ namespace eZmaxApi.Api
             if (pkiVariableexpenseID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiVariableexpenseID' when calling ObjectVariableexpenseApi->VariableexpenseGetObjectV2");
 
-            var localVarPath = "./2/object/variableexpense/{pkiVariableexpenseID}";
+            var localVarPath = "/2/object/variableexpense/{pkiVariableexpenseID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1193,7 +1193,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<VariableexpenseGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (VariableexpenseGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VariableexpenseGetObjectV2Response)));
         }
 

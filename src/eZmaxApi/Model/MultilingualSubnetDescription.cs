@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// The description of the Subnet
     /// </summary>
     [DataContract]
-    public partial class MultilingualSubnetDescription :  IEquatable<MultilingualSubnetDescription>
+    public partial class MultilingualSubnetDescription :  IEquatable<MultilingualSubnetDescription>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualSubnetDescription" /> class.
@@ -124,6 +126,34 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SSubnetDescription2.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // SSubnetDescription1 (string) pattern
+            Regex regexSSubnetDescription1 = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+            if (false == regexSSubnetDescription1.Match(this.SSubnetDescription1).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SSubnetDescription1, must match a pattern of " + regexSSubnetDescription1, new [] { "SSubnetDescription1" });
+            }
+
+
+
+            // SSubnetDescription2 (string) pattern
+            Regex regexSSubnetDescription2 = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+            if (false == regexSSubnetDescription2.Match(this.SSubnetDescription2).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SSubnetDescription2, must match a pattern of " + regexSSubnetDescription2, new [] { "SSubnetDescription2" });
+            }
+
+            yield break;
         }
     }
 

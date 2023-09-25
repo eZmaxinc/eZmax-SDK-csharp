@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
     /// </summary>
     [DataContract]
-    public partial class EzsigndocumentGetWordsPositionsV1Request :  IEquatable<EzsigndocumentGetWordsPositionsV1Request>
+    public partial class EzsigndocumentGetWordsPositionsV1Request :  IEquatable<EzsigndocumentGetWordsPositionsV1Request>, IValidatableObject
     {
         /// <summary>
         /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
@@ -186,6 +188,16 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ASWord.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
         }
     }
 

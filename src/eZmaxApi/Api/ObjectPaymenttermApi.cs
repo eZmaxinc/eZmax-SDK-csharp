@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -81,7 +81,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>PaymenttermGetAutocompleteV2Response</returns>
-        PaymenttermGetAutocompleteV2Response PaymenttermGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        PaymenttermGetAutocompleteV2Response PaymenttermGetAutocompleteV2 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
 
         /// <summary>
         /// Retrieve Paymentterms and IDs
@@ -95,7 +95,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of PaymenttermGetAutocompleteV2Response</returns>
-        ApiResponse<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage));
+        ApiResponse<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?));
         /// <summary>
         /// Retrieve Paymentterm list
         /// </summary>
@@ -109,7 +109,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>PaymenttermGetListV1Response</returns>
-        PaymenttermGetListV1Response PaymenttermGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        PaymenttermGetListV1Response PaymenttermGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
 
         /// <summary>
         /// Retrieve Paymentterm list
@@ -124,7 +124,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of PaymenttermGetListV1Response</returns>
-        ApiResponse<PaymenttermGetListV1Response> PaymenttermGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        ApiResponse<PaymenttermGetListV1Response> PaymenttermGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
         /// <summary>
         /// Retrieve an existing Paymentterm
         /// </summary>
@@ -209,7 +209,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of PaymenttermGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Paymentterms and IDs
@@ -224,7 +224,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (PaymenttermGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymenttermGetAutocompleteV2Response>> PaymenttermGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymenttermGetAutocompleteV2Response>> PaymenttermGetAutocompleteV2WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve Paymentterm list
         /// </summary>
@@ -239,7 +239,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of PaymenttermGetListV1Response</returns>
-        System.Threading.Tasks.Task<PaymenttermGetListV1Response> PaymenttermGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<PaymenttermGetListV1Response> PaymenttermGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Paymentterm list
@@ -255,7 +255,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (PaymenttermGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymenttermGetListV1Response>> PaymenttermGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymenttermGetListV1Response>> PaymenttermGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Paymentterm
         /// </summary>
@@ -414,7 +414,7 @@ namespace eZmaxApi.Api
             if (paymenttermCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'paymenttermCreateObjectV1Request' when calling ObjectPaymenttermApi->PaymenttermCreateObjectV1");
 
-            var localVarPath = "./1/object/paymentterm";
+            var localVarPath = "/1/object/paymentterm";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -465,7 +465,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PaymenttermCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermCreateObjectV1Response)));
         }
 
@@ -496,7 +496,7 @@ namespace eZmaxApi.Api
             if (paymenttermCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'paymenttermCreateObjectV1Request' when calling ObjectPaymenttermApi->PaymenttermCreateObjectV1");
 
-            var localVarPath = "./1/object/paymentterm";
+            var localVarPath = "/1/object/paymentterm";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -547,7 +547,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PaymenttermCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermCreateObjectV1Response)));
         }
 
@@ -580,7 +580,7 @@ namespace eZmaxApi.Api
             if (paymenttermEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'paymenttermEditObjectV1Request' when calling ObjectPaymenttermApi->PaymenttermEditObjectV1");
 
-            var localVarPath = "./1/object/paymentterm/{pkiPaymenttermID}";
+            var localVarPath = "/1/object/paymentterm/{pkiPaymenttermID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -632,7 +632,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PaymenttermEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermEditObjectV1Response)));
         }
 
@@ -668,7 +668,7 @@ namespace eZmaxApi.Api
             if (paymenttermEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'paymenttermEditObjectV1Request' when calling ObjectPaymenttermApi->PaymenttermEditObjectV1");
 
-            var localVarPath = "./1/object/paymentterm/{pkiPaymenttermID}";
+            var localVarPath = "/1/object/paymentterm/{pkiPaymenttermID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -720,7 +720,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PaymenttermEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermEditObjectV1Response)));
         }
 
@@ -733,7 +733,7 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>PaymenttermGetAutocompleteV2Response</returns>
-        public PaymenttermGetAutocompleteV2Response PaymenttermGetAutocompleteV2 (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public PaymenttermGetAutocompleteV2Response PaymenttermGetAutocompleteV2 (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
              ApiResponse<PaymenttermGetAutocompleteV2Response> localVarResponse = PaymenttermGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
              return localVarResponse.Data;
@@ -748,13 +748,13 @@ namespace eZmaxApi.Api
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <returns>ApiResponse of PaymenttermGetAutocompleteV2Response</returns>
-        public ApiResponse<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2WithHttpInfo (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage))
+        public ApiResponse<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2WithHttpInfo (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectPaymenttermApi->PaymenttermGetAutocompleteV2");
 
-            var localVarPath = "./2/object/paymentterm/getAutocomplete/{sSelector}";
+            var localVarPath = "/2/object/paymentterm/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -800,7 +800,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PaymenttermGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermGetAutocompleteV2Response)));
         }
 
@@ -814,7 +814,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of PaymenttermGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2Async (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2Async (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<PaymenttermGetAutocompleteV2Response> localVarResponse = await PaymenttermGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, cancellationToken);
              return localVarResponse.Data;
@@ -831,13 +831,13 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (PaymenttermGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PaymenttermGetAutocompleteV2Response>> PaymenttermGetAutocompleteV2WithHttpInfoAsync (string sSelector, string eFilterActive = default(string), string sQuery = default(string), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<PaymenttermGetAutocompleteV2Response>> PaymenttermGetAutocompleteV2WithHttpInfoAsync (string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
                 throw new ApiException(400, "Missing required parameter 'sSelector' when calling ObjectPaymenttermApi->PaymenttermGetAutocompleteV2");
 
-            var localVarPath = "./2/object/paymentterm/getAutocomplete/{sSelector}";
+            var localVarPath = "/2/object/paymentterm/getAutocomplete/{sSelector}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -883,7 +883,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PaymenttermGetAutocompleteV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermGetAutocompleteV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermGetAutocompleteV2Response)));
         }
 
@@ -897,7 +897,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>PaymenttermGetListV1Response</returns>
-        public PaymenttermGetListV1Response PaymenttermGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public PaymenttermGetListV1Response PaymenttermGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
              ApiResponse<PaymenttermGetListV1Response> localVarResponse = PaymenttermGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -913,10 +913,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of PaymenttermGetListV1Response</returns>
-        public ApiResponse<PaymenttermGetListV1Response> PaymenttermGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public ApiResponse<PaymenttermGetListV1Response> PaymenttermGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
 
-            var localVarPath = "./1/object/paymentterm/getList";
+            var localVarPath = "/1/object/paymentterm/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -964,7 +964,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PaymenttermGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermGetListV1Response)));
         }
 
@@ -979,7 +979,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of PaymenttermGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<PaymenttermGetListV1Response> PaymenttermGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<PaymenttermGetListV1Response> PaymenttermGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<PaymenttermGetListV1Response> localVarResponse = await PaymenttermGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -997,10 +997,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (PaymenttermGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PaymenttermGetListV1Response>> PaymenttermGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<PaymenttermGetListV1Response>> PaymenttermGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/object/paymentterm/getList";
+            var localVarPath = "/1/object/paymentterm/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1048,7 +1048,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PaymenttermGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermGetListV1Response)));
         }
 
@@ -1076,7 +1076,7 @@ namespace eZmaxApi.Api
             if (pkiPaymenttermID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiPaymenttermID' when calling ObjectPaymenttermApi->PaymenttermGetObjectV2");
 
-            var localVarPath = "./2/object/paymentterm/{pkiPaymenttermID}";
+            var localVarPath = "/2/object/paymentterm/{pkiPaymenttermID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1119,7 +1119,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PaymenttermGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermGetObjectV2Response)));
         }
 
@@ -1150,7 +1150,7 @@ namespace eZmaxApi.Api
             if (pkiPaymenttermID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiPaymenttermID' when calling ObjectPaymenttermApi->PaymenttermGetObjectV2");
 
-            var localVarPath = "./2/object/paymentterm/{pkiPaymenttermID}";
+            var localVarPath = "/2/object/paymentterm/{pkiPaymenttermID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1193,7 +1193,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<PaymenttermGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PaymenttermGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaymenttermGetObjectV2Response)));
         }
 

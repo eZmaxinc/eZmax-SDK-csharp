@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ## GroupsGetListScimV2
 
-> ScimGroup GroupsGetListScimV2 (string filter = null)
+> ScimGroup GroupsGetListScimV2 (string? filter = null)
 
 Retrieve Usergroup list
 
@@ -270,7 +270,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ScimGroupsApi(Configuration.Default);
-            var filter = "filter_example";  // string | Filter expression for searching groups (optional) 
+            var filter = "filter_example";  // string? | Filter expression for searching groups (optional) 
 
             try
             {
@@ -294,7 +294,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string**| Filter expression for searching groups | [optional] 
+ **filter** | **string?**| Filter expression for searching groups | [optional] 
 
 ### Return type
 

@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// The description of the Billingentityinternal
     /// </summary>
     [DataContract]
-    public partial class MultilingualBillingentityinternalDescription :  IEquatable<MultilingualBillingentityinternalDescription>
+    public partial class MultilingualBillingentityinternalDescription :  IEquatable<MultilingualBillingentityinternalDescription>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualBillingentityinternalDescription" /> class.
@@ -124,6 +126,34 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SBillingentityinternalDescription2.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // SBillingentityinternalDescription1 (string) pattern
+            Regex regexSBillingentityinternalDescription1 = new Regex(@"^.{0,70}$", RegexOptions.CultureInvariant);
+            if (false == regexSBillingentityinternalDescription1.Match(this.SBillingentityinternalDescription1).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SBillingentityinternalDescription1, must match a pattern of " + regexSBillingentityinternalDescription1, new [] { "SBillingentityinternalDescription1" });
+            }
+
+
+
+            // SBillingentityinternalDescription2 (string) pattern
+            Regex regexSBillingentityinternalDescription2 = new Regex(@"^.{0,70}$", RegexOptions.CultureInvariant);
+            if (false == regexSBillingentityinternalDescription2.Match(this.SBillingentityinternalDescription2).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SBillingentityinternalDescription2, must match a pattern of " + regexSBillingentityinternalDescription2, new [] { "SBillingentityinternalDescription2" });
+            }
+
+            yield break;
         }
     }
 

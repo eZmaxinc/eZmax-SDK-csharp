@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// ScimAuthenticationScheme
     /// </summary>
     [DataContract]
-    public partial class ScimAuthenticationScheme :  IEquatable<ScimAuthenticationScheme>
+    public partial class ScimAuthenticationScheme :  IEquatable<ScimAuthenticationScheme>, IValidatableObject
     {
         /// <summary>
         /// The authentication scheme.
@@ -212,6 +214,16 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
         }
     }
 

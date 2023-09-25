@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ## UsersGetListScimV2
 
-> ScimUserList UsersGetListScimV2 (string filter = null)
+> ScimUserList UsersGetListScimV2 (string? filter = null)
 
 Retrieve User list
 
@@ -270,7 +270,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ScimUsersApi(Configuration.Default);
-            var filter = "filter_example";  // string | Filter expression for searching users (optional) 
+            var filter = "filter_example";  // string? | Filter expression for searching users (optional) 
 
             try
             {
@@ -294,7 +294,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string**| Filter expression for searching users | [optional] 
+ **filter** | **string?**| Filter expression for searching users | [optional] 
 
 ### Return type
 

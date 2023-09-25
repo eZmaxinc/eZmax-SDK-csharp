@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -197,7 +197,7 @@ namespace eZmaxApi.Api
         public ApiResponse<ScimServiceProviderConfig> ServiceProviderConfigGetObjectScimV2WithHttpInfo ()
         {
 
-            var localVarPath = "./2/scim/ServiceProviderConfig";
+            var localVarPath = "/2/scim/ServiceProviderConfig";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -234,7 +234,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ScimServiceProviderConfig>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ScimServiceProviderConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimServiceProviderConfig)));
         }
 
@@ -260,7 +260,7 @@ namespace eZmaxApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<ScimServiceProviderConfig>> ServiceProviderConfigGetObjectScimV2WithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./2/scim/ServiceProviderConfig";
+            var localVarPath = "/2/scim/ServiceProviderConfig";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -297,7 +297,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ScimServiceProviderConfig>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ScimServiceProviderConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimServiceProviderConfig)));
         }
 

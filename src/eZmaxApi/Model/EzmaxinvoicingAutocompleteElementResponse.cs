@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicing AutocompleteElement Response
     /// </summary>
     [DataContract]
-    public partial class EzmaxinvoicingAutocompleteElementResponse :  IEquatable<EzmaxinvoicingAutocompleteElementResponse>
+    public partial class EzmaxinvoicingAutocompleteElementResponse :  IEquatable<EzmaxinvoicingAutocompleteElementResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingAutocompleteElementResponse" /> class.
@@ -173,6 +175,31 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzmaxinvoicingIsactive.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            // YyyymmEzmaxinvoicing (string) maxLength
+            if(this.YyyymmEzmaxinvoicing != null && this.YyyymmEzmaxinvoicing.Length > 7)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for YyyymmEzmaxinvoicing, length must be less than 7.", new [] { "YyyymmEzmaxinvoicing" });
+            }
+
+
+
+
+            // PkiEzmaxinvoicingID (int) minimum
+            if(this.PkiEzmaxinvoicingID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingID" });
+            }
+
+            yield break;
         }
     }
 

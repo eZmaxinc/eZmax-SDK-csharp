@@ -107,7 +107,7 @@ namespace eZmaxApi.Test
         public void GroupsGetListScimV2Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string filter = null;
+            //string? filter = null;
             //var response = instance.GroupsGetListScimV2(filter);
             //Assert.IsInstanceOf(typeof(ScimGroup), response, "response is ScimGroup");
         }

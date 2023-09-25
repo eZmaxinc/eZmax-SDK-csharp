@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -126,7 +126,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApikeyGetListV1Response</returns>
-        ApikeyGetListV1Response ApikeyGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        ApikeyGetListV1Response ApikeyGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
 
         /// <summary>
         /// Retrieve Apikey list
@@ -141,7 +141,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of ApikeyGetListV1Response</returns>
-        ApiResponse<ApikeyGetListV1Response> ApikeyGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        ApiResponse<ApikeyGetListV1Response> ApikeyGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
         /// <summary>
         /// Retrieve an existing Apikey
         /// </summary>
@@ -340,7 +340,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApikeyGetListV1Response</returns>
-        System.Threading.Tasks.Task<ApikeyGetListV1Response> ApikeyGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApikeyGetListV1Response> ApikeyGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Apikey list
@@ -356,7 +356,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApikeyGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyGetListV1Response>> ApikeyGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApikeyGetListV1Response>> ApikeyGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Apikey
         /// </summary>
@@ -586,7 +586,7 @@ namespace eZmaxApi.Api
             if (apikeyCreateObjectV2Request == null)
                 throw new ApiException(400, "Missing required parameter 'apikeyCreateObjectV2Request' when calling ObjectApikeyApi->ApikeyCreateObjectV2");
 
-            var localVarPath = "./2/object/apikey";
+            var localVarPath = "/2/object/apikey";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -637,7 +637,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyCreateObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyCreateObjectV2Response)));
         }
 
@@ -668,7 +668,7 @@ namespace eZmaxApi.Api
             if (apikeyCreateObjectV2Request == null)
                 throw new ApiException(400, "Missing required parameter 'apikeyCreateObjectV2Request' when calling ObjectApikeyApi->ApikeyCreateObjectV2");
 
-            var localVarPath = "./2/object/apikey";
+            var localVarPath = "/2/object/apikey";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -719,7 +719,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyCreateObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyCreateObjectV2Response)));
         }
 
@@ -752,7 +752,7 @@ namespace eZmaxApi.Api
             if (apikeyEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'apikeyEditObjectV1Request' when calling ObjectApikeyApi->ApikeyEditObjectV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -804,7 +804,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyEditObjectV1Response)));
         }
 
@@ -840,7 +840,7 @@ namespace eZmaxApi.Api
             if (apikeyEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'apikeyEditObjectV1Request' when calling ObjectApikeyApi->ApikeyEditObjectV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -892,7 +892,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyEditObjectV1Response)));
         }
 
@@ -925,7 +925,7 @@ namespace eZmaxApi.Api
             if (apikeyEditPermissionsV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'apikeyEditPermissionsV1Request' when calling ObjectApikeyApi->ApikeyEditPermissionsV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}/editPermissions";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/editPermissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -977,7 +977,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyEditPermissionsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyEditPermissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyEditPermissionsV1Response)));
         }
 
@@ -1013,7 +1013,7 @@ namespace eZmaxApi.Api
             if (apikeyEditPermissionsV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'apikeyEditPermissionsV1Request' when calling ObjectApikeyApi->ApikeyEditPermissionsV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}/editPermissions";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/editPermissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1065,7 +1065,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyEditPermissionsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyEditPermissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyEditPermissionsV1Response)));
         }
 
@@ -1093,7 +1093,7 @@ namespace eZmaxApi.Api
             if (pkiApikeyID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyGetCorsV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}/getCors";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/getCors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1136,7 +1136,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyGetCorsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetCorsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetCorsV1Response)));
         }
 
@@ -1167,7 +1167,7 @@ namespace eZmaxApi.Api
             if (pkiApikeyID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyGetCorsV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}/getCors";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/getCors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1210,7 +1210,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyGetCorsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetCorsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetCorsV1Response)));
         }
 
@@ -1224,7 +1224,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApikeyGetListV1Response</returns>
-        public ApikeyGetListV1Response ApikeyGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public ApikeyGetListV1Response ApikeyGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
              ApiResponse<ApikeyGetListV1Response> localVarResponse = ApikeyGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -1240,10 +1240,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of ApikeyGetListV1Response</returns>
-        public ApiResponse<ApikeyGetListV1Response> ApikeyGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public ApiResponse<ApikeyGetListV1Response> ApikeyGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
 
-            var localVarPath = "./1/object/apikey/getList";
+            var localVarPath = "/1/object/apikey/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1291,7 +1291,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetListV1Response)));
         }
 
@@ -1306,7 +1306,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApikeyGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyGetListV1Response> ApikeyGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApikeyGetListV1Response> ApikeyGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<ApikeyGetListV1Response> localVarResponse = await ApikeyGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -1324,10 +1324,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApikeyGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApikeyGetListV1Response>> ApikeyGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<ApikeyGetListV1Response>> ApikeyGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/object/apikey/getList";
+            var localVarPath = "/1/object/apikey/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1375,7 +1375,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetListV1Response)));
         }
 
@@ -1403,7 +1403,7 @@ namespace eZmaxApi.Api
             if (pkiApikeyID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyGetObjectV2");
 
-            var localVarPath = "./2/object/apikey/{pkiApikeyID}";
+            var localVarPath = "/2/object/apikey/{pkiApikeyID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1446,7 +1446,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetObjectV2Response)));
         }
 
@@ -1477,7 +1477,7 @@ namespace eZmaxApi.Api
             if (pkiApikeyID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyGetObjectV2");
 
-            var localVarPath = "./2/object/apikey/{pkiApikeyID}";
+            var localVarPath = "/2/object/apikey/{pkiApikeyID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1520,7 +1520,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetObjectV2Response)));
         }
 
@@ -1548,7 +1548,7 @@ namespace eZmaxApi.Api
             if (pkiApikeyID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyGetPermissionsV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}/getPermissions";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/getPermissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1591,7 +1591,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyGetPermissionsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetPermissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetPermissionsV1Response)));
         }
 
@@ -1622,7 +1622,7 @@ namespace eZmaxApi.Api
             if (pkiApikeyID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyGetPermissionsV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}/getPermissions";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/getPermissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1665,7 +1665,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyGetPermissionsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetPermissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetPermissionsV1Response)));
         }
 
@@ -1693,7 +1693,7 @@ namespace eZmaxApi.Api
             if (pkiApikeyID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyGetSubnetsV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}/getSubnets";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/getSubnets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1736,7 +1736,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyGetSubnetsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetSubnetsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetSubnetsV1Response)));
         }
 
@@ -1767,7 +1767,7 @@ namespace eZmaxApi.Api
             if (pkiApikeyID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiApikeyID' when calling ObjectApikeyApi->ApikeyGetSubnetsV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}/getSubnets";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/getSubnets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1810,7 +1810,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyGetSubnetsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyGetSubnetsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyGetSubnetsV1Response)));
         }
 
@@ -1843,7 +1843,7 @@ namespace eZmaxApi.Api
             if (apikeyRegenerateV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'apikeyRegenerateV1Request' when calling ObjectApikeyApi->ApikeyRegenerateV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}/regenerate";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/regenerate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1895,7 +1895,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyRegenerateV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyRegenerateV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyRegenerateV1Response)));
         }
 
@@ -1931,7 +1931,7 @@ namespace eZmaxApi.Api
             if (apikeyRegenerateV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'apikeyRegenerateV1Request' when calling ObjectApikeyApi->ApikeyRegenerateV1");
 
-            var localVarPath = "./1/object/apikey/{pkiApikeyID}/regenerate";
+            var localVarPath = "/1/object/apikey/{pkiApikeyID}/regenerate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1983,7 +1983,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<ApikeyRegenerateV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApikeyRegenerateV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApikeyRegenerateV1Response)));
         }
 

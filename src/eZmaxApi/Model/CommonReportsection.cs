@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
     /// </summary>
     [DataContract]
-    public partial class CommonReportsection :  IEquatable<CommonReportsection>
+    public partial class CommonReportsection :  IEquatable<CommonReportsection>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EReportsectionHorizontalalignment
@@ -224,6 +226,16 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IReportsectionWidth.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
         }
     }
 

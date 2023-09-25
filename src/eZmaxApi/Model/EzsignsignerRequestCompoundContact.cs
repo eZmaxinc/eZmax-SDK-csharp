@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Ezsignsigner-&gt;Contact Object and children to create a complete structure
     /// </summary>
     [DataContract]
-    public partial class EzsignsignerRequestCompoundContact :  IEquatable<EzsignsignerRequestCompoundContact>
+    public partial class EzsignsignerRequestCompoundContact :  IEquatable<EzsignsignerRequestCompoundContact>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundContact" /> class.
@@ -275,6 +277,48 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SPhoneNumberCell.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // FkiLanguageID (int) maximum
+            if(this.FkiLanguageID > (int)2)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+            }
+
+            // FkiLanguageID (int) minimum
+            if(this.FkiLanguageID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+
+
+            // SPhoneE164 (string) pattern
+            Regex regexSPhoneE164 = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);
+            if (false == regexSPhoneE164.Match(this.SPhoneE164).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164, must match a pattern of " + regexSPhoneE164, new [] { "SPhoneE164" });
+            }
+
+
+
+            // SPhoneE164Cell (string) pattern
+            Regex regexSPhoneE164Cell = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);
+            if (false == regexSPhoneE164Cell.Match(this.SPhoneE164Cell).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164Cell, must match a pattern of " + regexSPhoneE164Cell, new [] { "SPhoneE164Cell" });
+            }
+
+            yield break;
         }
     }
 

@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
     /// </summary>
     [DataContract]
-    public partial class EzsigndocumentGetObjectV1ResponseMPayload :  IEquatable<EzsigndocumentGetObjectV1ResponseMPayload>
+    public partial class EzsigndocumentGetObjectV1ResponseMPayload :  IEquatable<EzsigndocumentGetObjectV1ResponseMPayload>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EEzsigndocumentStep
@@ -686,6 +688,95 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjEzsignfoldersignerassociationstatus.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsigndocumentID (int) minimum
+            if(this.PkiEzsigndocumentID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentID" });
+            }
+
+
+
+            // FkiEzsignfolderID (int) minimum
+            if(this.FkiEzsignfolderID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+            }
+
+
+
+            // FkiEzsignfoldersignerassociationIDDeclinedtosign (int) minimum
+            if(this.FkiEzsignfoldersignerassociationIDDeclinedtosign < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationIDDeclinedtosign, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationIDDeclinedtosign" });
+            }
+
+
+
+            // FkiLanguageID (int) maximum
+            if(this.FkiLanguageID > (int)2)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+            }
+
+            // FkiLanguageID (int) minimum
+            if(this.FkiLanguageID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+
+
+            // IEzsigndocumentOrder (int) minimum
+            if(this.IEzsigndocumentOrder < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentOrder, must be a value greater than or equal to 1.", new [] { "IEzsigndocumentOrder" });
+            }
+
+
+
+            // IEzsigndocumentPagetotal (int) minimum
+            if(this.IEzsigndocumentPagetotal < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigndocumentPagetotal" });
+            }
+
+
+
+            // IEzsigndocumentSignaturesigned (int) minimum
+            if(this.IEzsigndocumentSignaturesigned < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentSignaturesigned, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturesigned" });
+            }
+
+
+
+            // IEzsigndocumentSignaturetotal (int) minimum
+            if(this.IEzsigndocumentSignaturetotal < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentSignaturetotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturetotal" });
+            }
+
+
+
+            // SEzsigndocumentExternalid (string) pattern
+            Regex regexSEzsigndocumentExternalid = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
+            if (false == regexSEzsigndocumentExternalid.Match(this.SEzsigndocumentExternalid).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigndocumentExternalid, must match a pattern of " + regexSEzsigndocumentExternalid, new [] { "SEzsigndocumentExternalid" });
+            }
+
+            yield break;
         }
     }
 

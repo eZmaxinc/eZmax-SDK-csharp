@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// Description of the Ezmaxinvoicingsummaryinternal
     /// </summary>
     [DataContract]
-    public partial class MultilingualEzmaxinvoicingsummaryinternalDescription :  IEquatable<MultilingualEzmaxinvoicingsummaryinternalDescription>
+    public partial class MultilingualEzmaxinvoicingsummaryinternalDescription :  IEquatable<MultilingualEzmaxinvoicingsummaryinternalDescription>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzmaxinvoicingsummaryinternalDescription" /> class.
@@ -124,6 +126,30 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzmaxinvoicingsummaryinternalDescription2.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            // SEzmaxinvoicingsummaryinternalDescription1 (string) maxLength
+            if(this.SEzmaxinvoicingsummaryinternalDescription1 != null && this.SEzmaxinvoicingsummaryinternalDescription1.Length > 70)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescription1, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescription1" });
+            }
+
+
+            // SEzmaxinvoicingsummaryinternalDescription2 (string) maxLength
+            if(this.SEzmaxinvoicingsummaryinternalDescription2 != null && this.SEzmaxinvoicingsummaryinternalDescription2.Length > 70)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescription2, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescription2" });
+            }
+
+
+            yield break;
         }
     }
 

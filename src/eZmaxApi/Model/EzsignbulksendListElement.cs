@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// An Ezsignbulksend List Element
     /// </summary>
     [DataContract]
-    public partial class EzsignbulksendListElement :  IEquatable<EzsignbulksendListElement>
+    public partial class EzsignbulksendListElement :  IEquatable<EzsignbulksendListElement>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendListElement" /> class.
@@ -381,6 +383,32 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzsignbulksendIsactive.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsignbulksendID (int) minimum
+            if(this.PkiEzsignbulksendID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendID" });
+            }
+
+
+
+            // FkiEzsignfoldertypeID (int) minimum
+            if(this.FkiEzsignfoldertypeID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
+            yield break;
         }
     }
 

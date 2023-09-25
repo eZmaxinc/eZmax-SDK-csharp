@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign
     /// </summary>
     [DataContract]
-    public partial class EzsigndocumentDeclineToSignV1Request :  IEquatable<EzsigndocumentDeclineToSignV1Request>
+    public partial class EzsigndocumentDeclineToSignV1Request :  IEquatable<EzsigndocumentDeclineToSignV1Request>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentDeclineToSignV1Request" /> class.
@@ -121,6 +123,25 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SReason.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // SReason (string) pattern
+            Regex regexSReason = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
+            if (false == regexSReason.Match(this.SReason).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SReason, must match a pattern of " + regexSReason, new [] { "SReason" });
+            }
+
+            yield break;
         }
     }
 

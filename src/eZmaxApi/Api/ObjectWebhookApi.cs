@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -126,7 +126,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>WebhookGetListV1Response</returns>
-        WebhookGetListV1Response WebhookGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        WebhookGetListV1Response WebhookGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
 
         /// <summary>
         /// Retrieve Webhook list
@@ -141,7 +141,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of WebhookGetListV1Response</returns>
-        ApiResponse<WebhookGetListV1Response> WebhookGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        ApiResponse<WebhookGetListV1Response> WebhookGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
         /// <summary>
         /// Retrieve an existing Webhook
         /// </summary>
@@ -298,7 +298,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of WebhookGetListV1Response</returns>
-        System.Threading.Tasks.Task<WebhookGetListV1Response> WebhookGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<WebhookGetListV1Response> WebhookGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Webhook list
@@ -314,7 +314,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (WebhookGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookGetListV1Response>> WebhookGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookGetListV1Response>> WebhookGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Webhook
         /// </summary>
@@ -498,7 +498,7 @@ namespace eZmaxApi.Api
             if (webhookCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'webhookCreateObjectV1Request' when calling ObjectWebhookApi->WebhookCreateObjectV1");
 
-            var localVarPath = "./1/object/webhook";
+            var localVarPath = "/1/object/webhook";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -549,7 +549,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookCreateObjectV1Response)));
         }
 
@@ -580,7 +580,7 @@ namespace eZmaxApi.Api
             if (webhookCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'webhookCreateObjectV1Request' when calling ObjectWebhookApi->WebhookCreateObjectV1");
 
-            var localVarPath = "./1/object/webhook";
+            var localVarPath = "/1/object/webhook";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -631,7 +631,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookCreateObjectV1Response)));
         }
 
@@ -659,7 +659,7 @@ namespace eZmaxApi.Api
             if (pkiWebhookID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiWebhookID' when calling ObjectWebhookApi->WebhookDeleteObjectV1");
 
-            var localVarPath = "./1/object/webhook/{pkiWebhookID}";
+            var localVarPath = "/1/object/webhook/{pkiWebhookID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -702,7 +702,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookDeleteObjectV1Response)));
         }
 
@@ -733,7 +733,7 @@ namespace eZmaxApi.Api
             if (pkiWebhookID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiWebhookID' when calling ObjectWebhookApi->WebhookDeleteObjectV1");
 
-            var localVarPath = "./1/object/webhook/{pkiWebhookID}";
+            var localVarPath = "/1/object/webhook/{pkiWebhookID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -776,7 +776,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookDeleteObjectV1Response)));
         }
 
@@ -809,7 +809,7 @@ namespace eZmaxApi.Api
             if (webhookEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'webhookEditObjectV1Request' when calling ObjectWebhookApi->WebhookEditObjectV1");
 
-            var localVarPath = "./1/object/webhook/{pkiWebhookID}";
+            var localVarPath = "/1/object/webhook/{pkiWebhookID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -861,7 +861,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookEditObjectV1Response)));
         }
 
@@ -897,7 +897,7 @@ namespace eZmaxApi.Api
             if (webhookEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'webhookEditObjectV1Request' when calling ObjectWebhookApi->WebhookEditObjectV1");
 
-            var localVarPath = "./1/object/webhook/{pkiWebhookID}";
+            var localVarPath = "/1/object/webhook/{pkiWebhookID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -949,7 +949,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookEditObjectV1Response)));
         }
 
@@ -982,7 +982,7 @@ namespace eZmaxApi.Api
             if (eWebhookHistoryinterval == null)
                 throw new ApiException(400, "Missing required parameter 'eWebhookHistoryinterval' when calling ObjectWebhookApi->WebhookGetHistoryV1");
 
-            var localVarPath = "./1/object/webhook/{pkiWebhookID}/getHistory";
+            var localVarPath = "/1/object/webhook/{pkiWebhookID}/getHistory";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1026,7 +1026,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookGetHistoryV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookGetHistoryV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookGetHistoryV1Response)));
         }
 
@@ -1062,7 +1062,7 @@ namespace eZmaxApi.Api
             if (eWebhookHistoryinterval == null)
                 throw new ApiException(400, "Missing required parameter 'eWebhookHistoryinterval' when calling ObjectWebhookApi->WebhookGetHistoryV1");
 
-            var localVarPath = "./1/object/webhook/{pkiWebhookID}/getHistory";
+            var localVarPath = "/1/object/webhook/{pkiWebhookID}/getHistory";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1106,7 +1106,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookGetHistoryV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookGetHistoryV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookGetHistoryV1Response)));
         }
 
@@ -1120,7 +1120,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>WebhookGetListV1Response</returns>
-        public WebhookGetListV1Response WebhookGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public WebhookGetListV1Response WebhookGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
              ApiResponse<WebhookGetListV1Response> localVarResponse = WebhookGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -1136,10 +1136,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of WebhookGetListV1Response</returns>
-        public ApiResponse<WebhookGetListV1Response> WebhookGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public ApiResponse<WebhookGetListV1Response> WebhookGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
 
-            var localVarPath = "./1/object/webhook/getList";
+            var localVarPath = "/1/object/webhook/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1187,7 +1187,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookGetListV1Response)));
         }
 
@@ -1202,7 +1202,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of WebhookGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<WebhookGetListV1Response> WebhookGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookGetListV1Response> WebhookGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<WebhookGetListV1Response> localVarResponse = await WebhookGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -1220,10 +1220,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (WebhookGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebhookGetListV1Response>> WebhookGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<WebhookGetListV1Response>> WebhookGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/object/webhook/getList";
+            var localVarPath = "/1/object/webhook/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1271,7 +1271,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookGetListV1Response)));
         }
 
@@ -1299,7 +1299,7 @@ namespace eZmaxApi.Api
             if (pkiWebhookID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiWebhookID' when calling ObjectWebhookApi->WebhookGetObjectV2");
 
-            var localVarPath = "./2/object/webhook/{pkiWebhookID}";
+            var localVarPath = "/2/object/webhook/{pkiWebhookID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1342,7 +1342,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookGetObjectV2Response)));
         }
 
@@ -1373,7 +1373,7 @@ namespace eZmaxApi.Api
             if (pkiWebhookID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiWebhookID' when calling ObjectWebhookApi->WebhookGetObjectV2");
 
-            var localVarPath = "./2/object/webhook/{pkiWebhookID}";
+            var localVarPath = "/2/object/webhook/{pkiWebhookID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1416,7 +1416,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookGetObjectV2Response)));
         }
 
@@ -1449,7 +1449,7 @@ namespace eZmaxApi.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling ObjectWebhookApi->WebhookTestV1");
 
-            var localVarPath = "./1/object/webhook/{pkiWebhookID}/test";
+            var localVarPath = "/1/object/webhook/{pkiWebhookID}/test";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1501,7 +1501,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookTestV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookTestV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookTestV1Response)));
         }
 
@@ -1537,7 +1537,7 @@ namespace eZmaxApi.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling ObjectWebhookApi->WebhookTestV1");
 
-            var localVarPath = "./1/object/webhook/{pkiWebhookID}/test";
+            var localVarPath = "/1/object/webhook/{pkiWebhookID}/test";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1589,7 +1589,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<WebhookTestV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (WebhookTestV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebhookTestV1Response)));
         }
 

@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicing Object
     /// </summary>
     [DataContract]
-    public partial class EzmaxinvoicingResponseCompound :  IEquatable<EzmaxinvoicingResponseCompound>
+    public partial class EzmaxinvoicingResponseCompound :  IEquatable<EzmaxinvoicingResponseCompound>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EEzmaxinvoicingPaymenttype
@@ -645,6 +647,89 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjEzmaxinvoicingezsigndocument.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzmaxinvoicingID (int) minimum
+            if(this.PkiEzmaxinvoicingID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingID" });
+            }
+
+
+
+            // FkiEzmaxinvoicingcontractID (int) minimum
+            if(this.FkiEzmaxinvoicingcontractID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingcontractID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxinvoicingcontractID" });
+            }
+
+
+
+            // FkiEzmaxpricingID (int) minimum
+            if(this.FkiEzmaxpricingID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpricingID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxpricingID" });
+            }
+
+
+
+            // FkiSystemconfigurationtypeID (int) minimum
+            if(this.FkiSystemconfigurationtypeID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
+            }
+
+            // YyyymmEzmaxinvoicing (string) maxLength
+            if(this.YyyymmEzmaxinvoicing != null && this.YyyymmEzmaxinvoicing.Length > 7)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for YyyymmEzmaxinvoicing, length must be less than 7.", new [] { "YyyymmEzmaxinvoicing" });
+            }
+
+
+
+
+            // IEzmaxinvoicingDays (int) minimum
+            if(this.IEzmaxinvoicingDays < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingDays, must be a value greater than or equal to 1.", new [] { "IEzmaxinvoicingDays" });
+            }
+
+
+
+            // DEzmaxinvoicingRebatepaymenttype (string) pattern
+            Regex regexDEzmaxinvoicingRebatepaymenttype = new Regex(@"^-{0,1}[\d]{1,3}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+            if (false == regexDEzmaxinvoicingRebatepaymenttype.Match(this.DEzmaxinvoicingRebatepaymenttype).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingRebatepaymenttype, must match a pattern of " + regexDEzmaxinvoicingRebatepaymenttype, new [] { "DEzmaxinvoicingRebatepaymenttype" });
+            }
+
+
+
+            // IEzmaxinvoicingContractlength (int) minimum
+            if(this.IEzmaxinvoicingContractlength < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingContractlength, must be a value greater than or equal to 1.", new [] { "IEzmaxinvoicingContractlength" });
+            }
+
+
+
+            // DEzmaxinvoicingRebatecontractlength (string) pattern
+            Regex regexDEzmaxinvoicingRebatecontractlength = new Regex(@"^-{0,1}[\d]{1,3}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+            if (false == regexDEzmaxinvoicingRebatecontractlength.Match(this.DEzmaxinvoicingRebatecontractlength).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingRebatecontractlength, must match a pattern of " + regexDEzmaxinvoicingRebatecontractlength, new [] { "DEzmaxinvoicingRebatecontractlength" });
+            }
+
+            yield break;
         }
     }
 

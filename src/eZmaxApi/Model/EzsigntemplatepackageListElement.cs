@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// An Ezsigntemplatepackage List Element
     /// </summary>
     [DataContract]
-    public partial class EzsigntemplatepackageListElement :  IEquatable<EzsigntemplatepackageListElement>
+    public partial class EzsigntemplatepackageListElement :  IEquatable<EzsigntemplatepackageListElement>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageListElement" /> class.
@@ -303,6 +305,46 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BEzsigntemplatepackageIsactive.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsigntemplatepackageID (int) minimum
+            if(this.PkiEzsigntemplatepackageID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackageID" });
+            }
+
+
+
+            // FkiEzsignfoldertypeID (int) minimum
+            if(this.FkiEzsignfoldertypeID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
+
+
+            // FkiLanguageID (int) maximum
+            if(this.FkiLanguageID > (int)2)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+            }
+
+            // FkiLanguageID (int) minimum
+            if(this.FkiLanguageID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+            yield break;
         }
     }
 

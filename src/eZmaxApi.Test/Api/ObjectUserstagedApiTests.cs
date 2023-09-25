@@ -95,11 +95,11 @@ namespace eZmaxApi.Test
         public void UserstagedGetListV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string eOrderBy = null;
+            //string? eOrderBy = null;
             //int? iRowMax = null;
             //int? iRowOffset = null;
-            //HeaderAcceptLanguage acceptLanguage = null;
-            //string sFilter = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
+            //string? sFilter = null;
             //var response = instance.UserstagedGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
             //Assert.IsInstanceOf(typeof(UserstagedGetListV1Response), response, "response is UserstagedGetListV1Response");
         }

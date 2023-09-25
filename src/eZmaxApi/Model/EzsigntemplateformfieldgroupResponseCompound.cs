@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplateformfieldgroup Object and children
     /// </summary>
     [DataContract]
-    public partial class EzsigntemplateformfieldgroupResponseCompound :  IEquatable<EzsigntemplateformfieldgroupResponseCompound>
+    public partial class EzsigntemplateformfieldgroupResponseCompound :  IEquatable<EzsigntemplateformfieldgroupResponseCompound>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EEzsigntemplateformfieldgroupType
@@ -513,6 +515,91 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjEzsigntemplateformfield.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsigntemplateformfieldgroupID (int) minimum
+            if(this.PkiEzsigntemplateformfieldgroupID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateformfieldgroupID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateformfieldgroupID" });
+            }
+
+
+
+            // FkiEzsigntemplatedocumentID (int) minimum
+            if(this.FkiEzsigntemplatedocumentID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentID" });
+            }
+
+            // SEzsigntemplateformfieldgroupLabel (string) maxLength
+            if(this.SEzsigntemplateformfieldgroupLabel != null && this.SEzsigntemplateformfieldgroupLabel.Length > 50)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateformfieldgroupLabel, length must be less than 50.", new [] { "SEzsigntemplateformfieldgroupLabel" });
+            }
+
+            // SEzsigntemplateformfieldgroupLabel (string) minLength
+            if(this.SEzsigntemplateformfieldgroupLabel != null && this.SEzsigntemplateformfieldgroupLabel.Length < 1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateformfieldgroupLabel, length must be greater than 1.", new [] { "SEzsigntemplateformfieldgroupLabel" });
+            }
+
+
+
+            // IEzsigntemplateformfieldgroupStep (int) minimum
+            if(this.IEzsigntemplateformfieldgroupStep < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateformfieldgroupStep, must be a value greater than or equal to 1.", new [] { "IEzsigntemplateformfieldgroupStep" });
+            }
+
+
+
+            // IEzsigntemplateformfieldgroupFilledmin (int) minimum
+            if(this.IEzsigntemplateformfieldgroupFilledmin < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateformfieldgroupFilledmin, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldgroupFilledmin" });
+            }
+
+
+
+            // IEzsigntemplateformfieldgroupFilledmax (int) minimum
+            if(this.IEzsigntemplateformfieldgroupFilledmax < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateformfieldgroupFilledmax, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldgroupFilledmax" });
+            }
+
+
+
+            // IEzsigntemplateformfieldgroupMaxlength (int) maximum
+            if(this.IEzsigntemplateformfieldgroupMaxlength > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateformfieldgroupMaxlength, must be a value less than or equal to 65535.", new [] { "IEzsigntemplateformfieldgroupMaxlength" });
+            }
+
+            // IEzsigntemplateformfieldgroupMaxlength (int) minimum
+            if(this.IEzsigntemplateformfieldgroupMaxlength < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateformfieldgroupMaxlength, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldgroupMaxlength" });
+            }
+
+
+
+            // SEzsigntemplateformfieldgroupRegexp (string) pattern
+            Regex regexSEzsigntemplateformfieldgroupRegexp = new Regex(@"^\^.*\$$|^$", RegexOptions.CultureInvariant);
+            if (false == regexSEzsigntemplateformfieldgroupRegexp.Match(this.SEzsigntemplateformfieldgroupRegexp).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateformfieldgroupRegexp, must match a pattern of " + regexSEzsigntemplateformfieldgroupRegexp, new [] { "SEzsigntemplateformfieldgroupRegexp" });
+            }
+
+            yield break;
         }
     }
 

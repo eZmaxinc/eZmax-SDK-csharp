@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -212,7 +212,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>EzsignbulksendGetListV1Response</returns>
-        EzsignbulksendGetListV1Response EzsignbulksendGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        EzsignbulksendGetListV1Response EzsignbulksendGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
 
         /// <summary>
         /// Retrieve Ezsignbulksend list
@@ -227,7 +227,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of EzsignbulksendGetListV1Response</returns>
-        ApiResponse<EzsignbulksendGetListV1Response> EzsignbulksendGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string));
+        ApiResponse<EzsignbulksendGetListV1Response> EzsignbulksendGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?));
         /// <summary>
         /// Retrieve an existing Ezsignbulksend
         /// </summary>
@@ -478,7 +478,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignbulksendGetListV1Response</returns>
-        System.Threading.Tasks.Task<EzsignbulksendGetListV1Response> EzsignbulksendGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<EzsignbulksendGetListV1Response> EzsignbulksendGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsignbulksend list
@@ -494,7 +494,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignbulksendGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignbulksendGetListV1Response>> EzsignbulksendGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignbulksendGetListV1Response>> EzsignbulksendGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignbulksend
         /// </summary>
@@ -683,7 +683,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksendCreateEzsignbulksendtransmissionV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' when calling ObjectEzsignbulksendApi->EzsignbulksendCreateEzsignbulksendtransmissionV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -735,7 +735,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendCreateEzsignbulksendtransmissionV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendCreateEzsignbulksendtransmissionV1Response)));
         }
 
@@ -771,7 +771,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksendCreateEzsignbulksendtransmissionV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' when calling ObjectEzsignbulksendApi->EzsignbulksendCreateEzsignbulksendtransmissionV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -823,7 +823,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendCreateEzsignbulksendtransmissionV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendCreateEzsignbulksendtransmissionV1Response)));
         }
 
@@ -851,7 +851,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksendCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksendCreateObjectV1Request' when calling ObjectEzsignbulksendApi->EzsignbulksendCreateObjectV1");
 
-            var localVarPath = "./1/object/ezsignbulksend";
+            var localVarPath = "/1/object/ezsignbulksend";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -902,7 +902,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendCreateObjectV1Response)));
         }
 
@@ -933,7 +933,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksendCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksendCreateObjectV1Request' when calling ObjectEzsignbulksendApi->EzsignbulksendCreateObjectV1");
 
-            var localVarPath = "./1/object/ezsignbulksend";
+            var localVarPath = "/1/object/ezsignbulksend";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -984,7 +984,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendCreateObjectV1Response)));
         }
 
@@ -1012,7 +1012,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendDeleteObjectV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1055,7 +1055,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendDeleteObjectV1Response)));
         }
 
@@ -1086,7 +1086,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendDeleteObjectV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1129,7 +1129,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendDeleteObjectV1Response)));
         }
 
@@ -1162,7 +1162,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksendEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksendEditObjectV1Request' when calling ObjectEzsignbulksendApi->EzsignbulksendEditObjectV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1214,7 +1214,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendEditObjectV1Response)));
         }
 
@@ -1250,7 +1250,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksendEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksendEditObjectV1Request' when calling ObjectEzsignbulksendApi->EzsignbulksendEditObjectV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1302,7 +1302,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendEditObjectV1Response)));
         }
 
@@ -1335,7 +1335,7 @@ namespace eZmaxApi.Api
             if (eCsvSeparator == null)
                 throw new ApiException(400, "Missing required parameter 'eCsvSeparator' when calling ObjectEzsignbulksendApi->EzsignbulksendGetCsvTemplateV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1380,7 +1380,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -1416,7 +1416,7 @@ namespace eZmaxApi.Api
             if (eCsvSeparator == null)
                 throw new ApiException(400, "Missing required parameter 'eCsvSeparator' when calling ObjectEzsignbulksendApi->EzsignbulksendGetCsvTemplateV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1461,7 +1461,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
@@ -1489,7 +1489,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendGetEzsignbulksendtransmissionsV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1532,7 +1532,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendGetEzsignbulksendtransmissionsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendGetEzsignbulksendtransmissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetEzsignbulksendtransmissionsV1Response)));
         }
 
@@ -1563,7 +1563,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendGetEzsignbulksendtransmissionsV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1606,7 +1606,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendGetEzsignbulksendtransmissionsV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendGetEzsignbulksendtransmissionsV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetEzsignbulksendtransmissionsV1Response)));
         }
 
@@ -1634,7 +1634,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendGetEzsignsignaturesAutomaticV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1677,7 +1677,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendGetEzsignsignaturesAutomaticV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendGetEzsignsignaturesAutomaticV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetEzsignsignaturesAutomaticV1Response)));
         }
 
@@ -1708,7 +1708,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendGetEzsignsignaturesAutomaticV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1751,7 +1751,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendGetEzsignsignaturesAutomaticV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendGetEzsignsignaturesAutomaticV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetEzsignsignaturesAutomaticV1Response)));
         }
 
@@ -1779,7 +1779,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendGetFormsDataV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1823,7 +1823,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendGetFormsDataV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendGetFormsDataV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetFormsDataV1Response)));
         }
 
@@ -1854,7 +1854,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendGetFormsDataV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1898,7 +1898,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendGetFormsDataV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendGetFormsDataV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetFormsDataV1Response)));
         }
 
@@ -1912,7 +1912,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>EzsignbulksendGetListV1Response</returns>
-        public EzsignbulksendGetListV1Response EzsignbulksendGetListV1 (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public EzsignbulksendGetListV1Response EzsignbulksendGetListV1 (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
              ApiResponse<EzsignbulksendGetListV1Response> localVarResponse = EzsignbulksendGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
              return localVarResponse.Data;
@@ -1928,10 +1928,10 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
         /// <returns>ApiResponse of EzsignbulksendGetListV1Response</returns>
-        public ApiResponse<EzsignbulksendGetListV1Response> EzsignbulksendGetListV1WithHttpInfo (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string))
+        public ApiResponse<EzsignbulksendGetListV1Response> EzsignbulksendGetListV1WithHttpInfo (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?))
         {
 
-            var localVarPath = "./1/object/ezsignbulksend/getList";
+            var localVarPath = "/1/object/ezsignbulksend/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1979,7 +1979,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetListV1Response)));
         }
 
@@ -1994,7 +1994,7 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of EzsignbulksendGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignbulksendGetListV1Response> EzsignbulksendGetListV1Async (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignbulksendGetListV1Response> EzsignbulksendGetListV1Async (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<EzsignbulksendGetListV1Response> localVarResponse = await EzsignbulksendGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, cancellationToken);
              return localVarResponse.Data;
@@ -2012,10 +2012,10 @@ namespace eZmaxApi.Api
         /// <param name="sFilter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (EzsignbulksendGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EzsignbulksendGetListV1Response>> EzsignbulksendGetListV1WithHttpInfoAsync (string eOrderBy = default(string), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage acceptLanguage = default(HeaderAcceptLanguage), string sFilter = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<EzsignbulksendGetListV1Response>> EzsignbulksendGetListV1WithHttpInfoAsync (string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "./1/object/ezsignbulksend/getList";
+            var localVarPath = "/1/object/ezsignbulksend/getList";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2063,7 +2063,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendGetListV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendGetListV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetListV1Response)));
         }
 
@@ -2091,7 +2091,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendGetObjectV2");
 
-            var localVarPath = "./2/object/ezsignbulksend/{pkiEzsignbulksendID}";
+            var localVarPath = "/2/object/ezsignbulksend/{pkiEzsignbulksendID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2134,7 +2134,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetObjectV2Response)));
         }
 
@@ -2165,7 +2165,7 @@ namespace eZmaxApi.Api
             if (pkiEzsignbulksendID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiEzsignbulksendID' when calling ObjectEzsignbulksendApi->EzsignbulksendGetObjectV2");
 
-            var localVarPath = "./2/object/ezsignbulksend/{pkiEzsignbulksendID}";
+            var localVarPath = "/2/object/ezsignbulksend/{pkiEzsignbulksendID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2208,7 +2208,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendGetObjectV2Response)));
         }
 
@@ -2241,7 +2241,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksendReorderV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksendReorderV1Request' when calling ObjectEzsignbulksendApi->EzsignbulksendReorderV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2293,7 +2293,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendReorderV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendReorderV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendReorderV1Response)));
         }
 
@@ -2329,7 +2329,7 @@ namespace eZmaxApi.Api
             if (ezsignbulksendReorderV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'ezsignbulksendReorderV1Request' when calling ObjectEzsignbulksendApi->EzsignbulksendReorderV1");
 
-            var localVarPath = "./1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder";
+            var localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2381,7 +2381,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<EzsignbulksendReorderV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (EzsignbulksendReorderV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EzsignbulksendReorderV1Response)));
         }
 

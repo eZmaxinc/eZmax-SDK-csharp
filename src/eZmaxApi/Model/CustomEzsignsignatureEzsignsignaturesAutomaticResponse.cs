@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsignature Object in the context of an EzsignsignaturesAutomatic path
     /// </summary>
     [DataContract]
-    public partial class CustomEzsignsignatureEzsignsignaturesAutomaticResponse :  IEquatable<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>
+    public partial class CustomEzsignsignatureEzsignsignaturesAutomaticResponse :  IEquatable<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EEzsignsignatureType
@@ -172,6 +174,32 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.IEzsignpagePagenumber.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsignsignatureID (int) minimum
+            if(this.PkiEzsignsignatureID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignatureID" });
+            }
+
+
+
+            // IEzsignpagePagenumber (int) minimum
+            if(this.IEzsignpagePagenumber < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
+            }
+
+            yield break;
         }
     }
 

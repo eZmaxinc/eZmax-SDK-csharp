@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Billingentityinternal Object
     /// </summary>
     [DataContract]
-    public partial class BillingentityinternalResponseCompound :  IEquatable<BillingentityinternalResponseCompound>
+    public partial class BillingentityinternalResponseCompound :  IEquatable<BillingentityinternalResponseCompound>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalResponseCompound" /> class.
@@ -172,6 +174,24 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.AObjBillingentityinternalproduct.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiBillingentityinternalID (int) minimum
+            if(this.PkiBillingentityinternalID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "PkiBillingentityinternalID" });
+            }
+
+            yield break;
         }
     }
 

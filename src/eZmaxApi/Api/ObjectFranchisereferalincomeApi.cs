@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -256,7 +256,7 @@ namespace eZmaxApi.Api
             if (franchisereferalincomeCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'franchisereferalincomeCreateObjectV1Request' when calling ObjectFranchisereferalincomeApi->FranchisereferalincomeCreateObjectV1");
 
-            var localVarPath = "./1/object/franchisereferalincome";
+            var localVarPath = "/1/object/franchisereferalincome";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -307,7 +307,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<FranchisereferalincomeCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (FranchisereferalincomeCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FranchisereferalincomeCreateObjectV1Response)));
         }
 
@@ -340,7 +340,7 @@ namespace eZmaxApi.Api
             if (franchisereferalincomeCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'franchisereferalincomeCreateObjectV1Request' when calling ObjectFranchisereferalincomeApi->FranchisereferalincomeCreateObjectV1");
 
-            var localVarPath = "./1/object/franchisereferalincome";
+            var localVarPath = "/1/object/franchisereferalincome";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -391,7 +391,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<FranchisereferalincomeCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (FranchisereferalincomeCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FranchisereferalincomeCreateObjectV1Response)));
         }
 
@@ -419,7 +419,7 @@ namespace eZmaxApi.Api
             if (franchisereferalincomeCreateObjectV2Request == null)
                 throw new ApiException(400, "Missing required parameter 'franchisereferalincomeCreateObjectV2Request' when calling ObjectFranchisereferalincomeApi->FranchisereferalincomeCreateObjectV2");
 
-            var localVarPath = "./2/object/franchisereferalincome";
+            var localVarPath = "/2/object/franchisereferalincome";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -470,7 +470,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<FranchisereferalincomeCreateObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (FranchisereferalincomeCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FranchisereferalincomeCreateObjectV2Response)));
         }
 
@@ -501,7 +501,7 @@ namespace eZmaxApi.Api
             if (franchisereferalincomeCreateObjectV2Request == null)
                 throw new ApiException(400, "Missing required parameter 'franchisereferalincomeCreateObjectV2Request' when calling ObjectFranchisereferalincomeApi->FranchisereferalincomeCreateObjectV2");
 
-            var localVarPath = "./2/object/franchisereferalincome";
+            var localVarPath = "/2/object/franchisereferalincome";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -552,7 +552,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<FranchisereferalincomeCreateObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (FranchisereferalincomeCreateObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FranchisereferalincomeCreateObjectV2Response)));
         }
 

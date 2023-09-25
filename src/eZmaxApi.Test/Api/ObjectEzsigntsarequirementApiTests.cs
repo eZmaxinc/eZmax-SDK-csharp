@@ -72,9 +72,9 @@ namespace eZmaxApi.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string sSelector = null;
             //int? fkiEzsignfoldertypeID = null;
-            //string eFilterActive = null;
-            //string sQuery = null;
-            //HeaderAcceptLanguage acceptLanguage = null;
+            //string? eFilterActive = null;
+            //string? sQuery = null;
+            //HeaderAcceptLanguage? acceptLanguage = null;
             //var response = instance.EzsigntsarequirementGetAutocompleteV2(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsInstanceOf(typeof(EzsigntsarequirementGetAutocompleteV2Response), response, "response is EzsigntsarequirementGetAutocompleteV2Response");
         }

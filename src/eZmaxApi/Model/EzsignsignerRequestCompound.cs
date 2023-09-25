@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsigner Object and children to create a complete structure
     /// </summary>
     [DataContract]
-    public partial class EzsignsignerRequestCompound :  IEquatable<EzsignsignerRequestCompound>
+    public partial class EzsignsignerRequestCompound :  IEquatable<EzsignsignerRequestCompound>, IValidatableObject
     {
         /// <summary>
         /// The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
@@ -254,6 +256,46 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.ObjContact.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // FkiUserlogintypeID (int) minimum
+            if(this.FkiUserlogintypeID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserlogintypeID, must be a value greater than or equal to 0.", new [] { "FkiUserlogintypeID" });
+            }
+
+
+
+            // FkiTaxassignmentID (int) maximum
+            if(this.FkiTaxassignmentID > (int)15)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTaxassignmentID, must be a value less than or equal to 15.", new [] { "FkiTaxassignmentID" });
+            }
+
+            // FkiTaxassignmentID (int) minimum
+            if(this.FkiTaxassignmentID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTaxassignmentID, must be a value greater than or equal to 0.", new [] { "FkiTaxassignmentID" });
+            }
+
+
+
+            // FkiSecretquestionID (int) minimum
+            if(this.FkiSecretquestionID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSecretquestionID, must be a value greater than or equal to 0.", new [] { "FkiSecretquestionID" });
+            }
+
+            yield break;
         }
     }
 

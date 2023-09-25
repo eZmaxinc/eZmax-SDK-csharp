@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Versionhistory Object
     /// </summary>
     [DataContract]
-    public partial class VersionhistoryResponse :  IEquatable<VersionhistoryResponse>
+    public partial class VersionhistoryResponse :  IEquatable<VersionhistoryResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets EVersionhistoryUsertype
@@ -324,6 +326,40 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.BVersionhistoryDraft.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiVersionhistoryID (int) minimum
+            if(this.PkiVersionhistoryID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiVersionhistoryID, must be a value greater than or equal to 0.", new [] { "PkiVersionhistoryID" });
+            }
+
+
+
+            // FkiModuleID (int) minimum
+            if(this.FkiModuleID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiModuleID, must be a value greater than or equal to 0.", new [] { "FkiModuleID" });
+            }
+
+
+
+            // FkiModulesectionID (int) minimum
+            if(this.FkiModulesectionID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiModulesectionID, must be a value greater than or equal to 0.", new [] { "FkiModulesectionID" });
+            }
+
+            yield break;
         }
     }
 

@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// An Ezsignformfield Object and children to create a complete structure
     /// </summary>
     [DataContract]
-    public partial class EzsignformfieldResponseCompound :  IEquatable<EzsignformfieldResponseCompound>
+    public partial class EzsignformfieldResponseCompound :  IEquatable<EzsignformfieldResponseCompound>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldResponseCompound" /> class.
@@ -328,6 +330,64 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SEzsignformfieldEnteredvalue.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiEzsignformfieldID (int) minimum
+            if(this.PkiEzsignformfieldID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignformfieldID, must be a value greater than or equal to 0.", new [] { "PkiEzsignformfieldID" });
+            }
+
+
+
+            // IEzsignpagePagenumber (int) minimum
+            if(this.IEzsignpagePagenumber < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
+            }
+
+
+
+            // IEzsignformfieldX (int) minimum
+            if(this.IEzsignformfieldX < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldX, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldX" });
+            }
+
+
+
+            // IEzsignformfieldY (int) minimum
+            if(this.IEzsignformfieldY < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldY, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldY" });
+            }
+
+
+
+            // IEzsignformfieldWidth (int) minimum
+            if(this.IEzsignformfieldWidth < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldWidth, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldWidth" });
+            }
+
+
+
+            // IEzsignformfieldHeight (int) minimum
+            if(this.IEzsignformfieldHeight < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldHeight, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldHeight" });
+            }
+
+            yield break;
         }
     }
 

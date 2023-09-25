@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Userstaged Object
     /// </summary>
     [DataContract]
-    public partial class UserstagedResponse :  IEquatable<UserstagedResponse>
+    public partial class UserstagedResponse :  IEquatable<UserstagedResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedResponse" /> class.
@@ -251,6 +253,71 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.SUserstagedExternalid.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiUserstagedID (int) maximum
+            if(this.PkiUserstagedID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserstagedID, must be a value less than or equal to 65535.", new [] { "PkiUserstagedID" });
+            }
+
+            // PkiUserstagedID (int) minimum
+            if(this.PkiUserstagedID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserstagedID, must be a value greater than or equal to 1.", new [] { "PkiUserstagedID" });
+            }
+
+
+
+            // FkiEmailID (int) maximum
+            if(this.FkiEmailID > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailID, must be a value less than or equal to 16777215.", new [] { "FkiEmailID" });
+            }
+
+            // FkiEmailID (int) minimum
+            if(this.FkiEmailID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailID, must be a value greater than or equal to 1.", new [] { "FkiEmailID" });
+            }
+
+
+
+            // SUserstagedFirstname (string) pattern
+            Regex regexSUserstagedFirstname = new Regex(@"^.{0,20}$", RegexOptions.CultureInvariant);
+            if (false == regexSUserstagedFirstname.Match(this.SUserstagedFirstname).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserstagedFirstname, must match a pattern of " + regexSUserstagedFirstname, new [] { "SUserstagedFirstname" });
+            }
+
+
+
+            // SUserstagedLastname (string) pattern
+            Regex regexSUserstagedLastname = new Regex(@"^.{0,25}$", RegexOptions.CultureInvariant);
+            if (false == regexSUserstagedLastname.Match(this.SUserstagedLastname).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserstagedLastname, must match a pattern of " + regexSUserstagedLastname, new [] { "SUserstagedLastname" });
+            }
+
+
+
+            // SUserstagedExternalid (string) pattern
+            Regex regexSUserstagedExternalid = new Regex(@"^.{1,60}$", RegexOptions.CultureInvariant);
+            if (false == regexSUserstagedExternalid.Match(this.SUserstagedExternalid).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserstagedExternalid, must match a pattern of " + regexSUserstagedExternalid, new [] { "SUserstagedExternalid" });
+            }
+
+            yield break;
         }
     }
 

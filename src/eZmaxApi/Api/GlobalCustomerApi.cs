@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -36,7 +36,7 @@ namespace eZmaxApi.Api
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>GlobalCustomerGetEndpointV1Response</returns>
         [Obsolete]
-        GlobalCustomerGetEndpointV1Response GlobalCustomerGetEndpointV1 (string pksCustomerCode, string sInfrastructureproductCode = default(string));
+        GlobalCustomerGetEndpointV1Response GlobalCustomerGetEndpointV1 (string pksCustomerCode, string? sInfrastructureproductCode = default(string?));
 
         /// <summary>
         /// Get customer endpoint
@@ -49,7 +49,7 @@ namespace eZmaxApi.Api
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>ApiResponse of GlobalCustomerGetEndpointV1Response</returns>
         [Obsolete]
-        ApiResponse<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1WithHttpInfo (string pksCustomerCode, string sInfrastructureproductCode = default(string));
+        ApiResponse<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1WithHttpInfo (string pksCustomerCode, string? sInfrastructureproductCode = default(string?));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -64,7 +64,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of GlobalCustomerGetEndpointV1Response</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1Async (string pksCustomerCode, string sInfrastructureproductCode = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1Async (string pksCustomerCode, string? sInfrastructureproductCode = default(string?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get customer endpoint
@@ -78,7 +78,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (GlobalCustomerGetEndpointV1Response)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<GlobalCustomerGetEndpointV1Response>> GlobalCustomerGetEndpointV1WithHttpInfoAsync (string pksCustomerCode, string sInfrastructureproductCode = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GlobalCustomerGetEndpointV1Response>> GlobalCustomerGetEndpointV1WithHttpInfoAsync (string pksCustomerCode, string? sInfrastructureproductCode = default(string?), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -198,7 +198,7 @@ namespace eZmaxApi.Api
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>GlobalCustomerGetEndpointV1Response</returns>
         [Obsolete]
-        public GlobalCustomerGetEndpointV1Response GlobalCustomerGetEndpointV1 (string pksCustomerCode, string sInfrastructureproductCode = default(string))
+        public GlobalCustomerGetEndpointV1Response GlobalCustomerGetEndpointV1 (string pksCustomerCode, string? sInfrastructureproductCode = default(string?))
         {
              ApiResponse<GlobalCustomerGetEndpointV1Response> localVarResponse = GlobalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode, sInfrastructureproductCode);
              return localVarResponse.Data;
@@ -212,13 +212,13 @@ namespace eZmaxApi.Api
         /// <param name="sInfrastructureproductCode">The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)</param>
         /// <returns>ApiResponse of GlobalCustomerGetEndpointV1Response</returns>
         [Obsolete]
-        public ApiResponse<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1WithHttpInfo (string pksCustomerCode, string sInfrastructureproductCode = default(string))
+        public ApiResponse<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1WithHttpInfo (string pksCustomerCode, string? sInfrastructureproductCode = default(string?))
         {
             // verify the required parameter 'pksCustomerCode' is set
             if (pksCustomerCode == null)
                 throw new ApiException(400, "Missing required parameter 'pksCustomerCode' when calling GlobalCustomerApi->GlobalCustomerGetEndpointV1");
 
-            var localVarPath = "./1/customer/{pksCustomerCode}/endpoint";
+            var localVarPath = "/1/customer/{pksCustomerCode}/endpoint";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -257,7 +257,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<GlobalCustomerGetEndpointV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (GlobalCustomerGetEndpointV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GlobalCustomerGetEndpointV1Response)));
         }
 
@@ -270,7 +270,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of GlobalCustomerGetEndpointV1Response</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1Async (string pksCustomerCode, string sInfrastructureproductCode = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1Async (string pksCustomerCode, string? sInfrastructureproductCode = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
              ApiResponse<GlobalCustomerGetEndpointV1Response> localVarResponse = await GlobalCustomerGetEndpointV1WithHttpInfoAsync(pksCustomerCode, sInfrastructureproductCode, cancellationToken);
              return localVarResponse.Data;
@@ -286,13 +286,13 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (GlobalCustomerGetEndpointV1Response)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<GlobalCustomerGetEndpointV1Response>> GlobalCustomerGetEndpointV1WithHttpInfoAsync (string pksCustomerCode, string sInfrastructureproductCode = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<GlobalCustomerGetEndpointV1Response>> GlobalCustomerGetEndpointV1WithHttpInfoAsync (string pksCustomerCode, string? sInfrastructureproductCode = default(string?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'pksCustomerCode' is set
             if (pksCustomerCode == null)
                 throw new ApiException(400, "Missing required parameter 'pksCustomerCode' when calling GlobalCustomerApi->GlobalCustomerGetEndpointV1");
 
-            var localVarPath = "./1/customer/{pksCustomerCode}/endpoint";
+            var localVarPath = "/1/customer/{pksCustomerCode}/endpoint";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -331,7 +331,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<GlobalCustomerGetEndpointV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (GlobalCustomerGetEndpointV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GlobalCustomerGetEndpointV1Response)));
         }
 

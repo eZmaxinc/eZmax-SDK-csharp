@@ -12,12 +12,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 
 namespace eZmaxApi.Model
@@ -26,7 +28,7 @@ namespace eZmaxApi.Model
     /// A Systemconfiguration Object
     /// </summary>
     [DataContract]
-    public partial class SystemconfigurationResponseCompound :  IEquatable<SystemconfigurationResponseCompound>
+    public partial class SystemconfigurationResponseCompound :  IEquatable<SystemconfigurationResponseCompound>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ESystemconfigurationNewexternaluseraction
@@ -359,6 +361,56 @@ namespace eZmaxApi.Model
                     hashCode = hashCode * 59 + this.DtSystemconfigurationReadonlyexpirationend.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+
+
+            // PkiSystemconfigurationID (int) maximum
+            if(this.PkiSystemconfigurationID > (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value less than or equal to 1.", new [] { "PkiSystemconfigurationID" });
+            }
+
+            // PkiSystemconfigurationID (int) minimum
+            if(this.PkiSystemconfigurationID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value greater than or equal to 1.", new [] { "PkiSystemconfigurationID" });
+            }
+
+
+
+            // FkiSystemconfigurationtypeID (int) minimum
+            if(this.FkiSystemconfigurationtypeID < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
+            }
+
+
+
+            // DtSystemconfigurationReadonlyexpirationstart (string) pattern
+            Regex regexDtSystemconfigurationReadonlyexpirationstart = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+            if (false == regexDtSystemconfigurationReadonlyexpirationstart.Match(this.DtSystemconfigurationReadonlyexpirationstart).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtSystemconfigurationReadonlyexpirationstart, must match a pattern of " + regexDtSystemconfigurationReadonlyexpirationstart, new [] { "DtSystemconfigurationReadonlyexpirationstart" });
+            }
+
+
+
+            // DtSystemconfigurationReadonlyexpirationend (string) pattern
+            Regex regexDtSystemconfigurationReadonlyexpirationend = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+            if (false == regexDtSystemconfigurationReadonlyexpirationend.Match(this.DtSystemconfigurationReadonlyexpirationend).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtSystemconfigurationReadonlyexpirationend, must match a pattern of " + regexDtSystemconfigurationReadonlyexpirationend, new [] { "DtSystemconfigurationReadonlyexpirationend" });
+            }
+
+            yield break;
         }
     }
 

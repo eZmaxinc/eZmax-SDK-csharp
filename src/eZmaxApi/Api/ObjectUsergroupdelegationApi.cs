@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -342,7 +342,7 @@ namespace eZmaxApi.Api
             if (usergroupdelegationCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupdelegationCreateObjectV1Request' when calling ObjectUsergroupdelegationApi->UsergroupdelegationCreateObjectV1");
 
-            var localVarPath = "./1/object/usergroupdelegation";
+            var localVarPath = "/1/object/usergroupdelegation";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -393,7 +393,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupdelegationCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupdelegationCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupdelegationCreateObjectV1Response)));
         }
 
@@ -424,7 +424,7 @@ namespace eZmaxApi.Api
             if (usergroupdelegationCreateObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupdelegationCreateObjectV1Request' when calling ObjectUsergroupdelegationApi->UsergroupdelegationCreateObjectV1");
 
-            var localVarPath = "./1/object/usergroupdelegation";
+            var localVarPath = "/1/object/usergroupdelegation";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -475,7 +475,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupdelegationCreateObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupdelegationCreateObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupdelegationCreateObjectV1Response)));
         }
 
@@ -503,7 +503,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupdelegationID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupdelegationID' when calling ObjectUsergroupdelegationApi->UsergroupdelegationDeleteObjectV1");
 
-            var localVarPath = "./1/object/usergroupdelegation/{pkiUsergroupdelegationID}";
+            var localVarPath = "/1/object/usergroupdelegation/{pkiUsergroupdelegationID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -546,7 +546,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupdelegationDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupdelegationDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupdelegationDeleteObjectV1Response)));
         }
 
@@ -577,7 +577,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupdelegationID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupdelegationID' when calling ObjectUsergroupdelegationApi->UsergroupdelegationDeleteObjectV1");
 
-            var localVarPath = "./1/object/usergroupdelegation/{pkiUsergroupdelegationID}";
+            var localVarPath = "/1/object/usergroupdelegation/{pkiUsergroupdelegationID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -620,7 +620,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupdelegationDeleteObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupdelegationDeleteObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupdelegationDeleteObjectV1Response)));
         }
 
@@ -653,7 +653,7 @@ namespace eZmaxApi.Api
             if (usergroupdelegationEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupdelegationEditObjectV1Request' when calling ObjectUsergroupdelegationApi->UsergroupdelegationEditObjectV1");
 
-            var localVarPath = "./1/object/usergroupdelegation/{pkiUsergroupdelegationID}";
+            var localVarPath = "/1/object/usergroupdelegation/{pkiUsergroupdelegationID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -705,7 +705,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupdelegationEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupdelegationEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupdelegationEditObjectV1Response)));
         }
 
@@ -741,7 +741,7 @@ namespace eZmaxApi.Api
             if (usergroupdelegationEditObjectV1Request == null)
                 throw new ApiException(400, "Missing required parameter 'usergroupdelegationEditObjectV1Request' when calling ObjectUsergroupdelegationApi->UsergroupdelegationEditObjectV1");
 
-            var localVarPath = "./1/object/usergroupdelegation/{pkiUsergroupdelegationID}";
+            var localVarPath = "/1/object/usergroupdelegation/{pkiUsergroupdelegationID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -793,7 +793,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupdelegationEditObjectV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupdelegationEditObjectV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupdelegationEditObjectV1Response)));
         }
 
@@ -821,7 +821,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupdelegationID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupdelegationID' when calling ObjectUsergroupdelegationApi->UsergroupdelegationGetObjectV2");
 
-            var localVarPath = "./2/object/usergroupdelegation/{pkiUsergroupdelegationID}";
+            var localVarPath = "/2/object/usergroupdelegation/{pkiUsergroupdelegationID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -864,7 +864,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupdelegationGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupdelegationGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupdelegationGetObjectV2Response)));
         }
 
@@ -895,7 +895,7 @@ namespace eZmaxApi.Api
             if (pkiUsergroupdelegationID == null)
                 throw new ApiException(400, "Missing required parameter 'pkiUsergroupdelegationID' when calling ObjectUsergroupdelegationApi->UsergroupdelegationGetObjectV2");
 
-            var localVarPath = "./2/object/usergroupdelegation/{pkiUsergroupdelegationID}";
+            var localVarPath = "/2/object/usergroupdelegation/{pkiUsergroupdelegationID}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -938,7 +938,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<UsergroupdelegationGetObjectV2Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UsergroupdelegationGetObjectV2Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsergroupdelegationGetObjectV2Response)));
         }
 

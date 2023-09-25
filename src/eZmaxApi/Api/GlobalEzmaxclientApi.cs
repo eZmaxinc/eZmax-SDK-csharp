@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
-using RestSharp.Portable;
+using RestSharp;
 using eZmaxApi.Client;
 using eZmaxApi.Model;
 
@@ -206,7 +206,7 @@ namespace eZmaxApi.Api
             if (pksEzmaxclientOs == null)
                 throw new ApiException(400, "Missing required parameter 'pksEzmaxclientOs' when calling GlobalEzmaxclientApi->GlobalEzmaxclientVersionV1");
 
-            var localVarPath = "./1/ezmaxclient/{pksEzmaxclientOs}/version";
+            var localVarPath = "/1/ezmaxclient/{pksEzmaxclientOs}/version";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -244,7 +244,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<GlobalEzmaxclientVersionV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (GlobalEzmaxclientVersionV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GlobalEzmaxclientVersionV1Response)));
         }
 
@@ -275,7 +275,7 @@ namespace eZmaxApi.Api
             if (pksEzmaxclientOs == null)
                 throw new ApiException(400, "Missing required parameter 'pksEzmaxclientOs' when calling GlobalEzmaxclientApi->GlobalEzmaxclientVersionV1");
 
-            var localVarPath = "./1/ezmaxclient/{pksEzmaxclientOs}/version";
+            var localVarPath = "/1/ezmaxclient/{pksEzmaxclientOs}/version";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -313,7 +313,7 @@ namespace eZmaxApi.Api
             }
 
             return new ApiResponse<GlobalEzmaxclientVersionV1Response>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (GlobalEzmaxclientVersionV1Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GlobalEzmaxclientVersionV1Response)));
         }
 
