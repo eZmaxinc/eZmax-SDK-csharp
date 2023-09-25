@@ -73,7 +73,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Modulesection
         /// </summary>
         /// <value>The unique ID of the Modulesection</value>
-        /// <example>53</example>
+        </example> }}
+		/* <example>53</example>*/
         [DataMember(Name = "pkiModulesectionID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiModulesectionID { get; set; }
 
@@ -81,7 +82,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Module
         /// </summary>
         /// <value>The unique ID of the Module</value>
-        /// <example>40</example>
+        </example> }}
+		/* <example>40</example>*/
         [DataMember(Name = "fkiModuleID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiModuleID { get; set; }
 
@@ -89,7 +91,8 @@ namespace eZmaxApi.Model
         /// The Internal name of the Module section.
         /// </summary>
         /// <value>The Internal name of the Module section.</value>
-        /// <example>Access</example>
+        </example> }}
+		/* <example>Access</example>*/
         [DataMember(Name = "sModulesectionInternalname", IsRequired = true, EmitDefaultValue = true)]
         public string SModulesectionInternalname { get; set; }
 
@@ -97,7 +100,8 @@ namespace eZmaxApi.Model
         /// The Name of the Modulesection in the language of the requester
         /// </summary>
         /// <value>The Name of the Modulesection in the language of the requester</value>
-        /// <example>Access</example>
+        </example> }}
+		/* <example>Access</example>*/
         [DataMember(Name = "sModulesectionNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SModulesectionNameX { get; set; }
 

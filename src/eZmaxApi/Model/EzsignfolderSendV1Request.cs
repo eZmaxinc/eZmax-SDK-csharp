@@ -55,7 +55,8 @@ namespace eZmaxApi.Model
         /// A custom text message that will be added to the email sent.
         /// </summary>
         /// <value>A custom text message that will be added to the email sent.</value>
-        /// <example>Hi John,
+        </example> }}
+		/* <example>Hi John,
 
 This is the document I need you to review.
 
@@ -63,7 +64,7 @@ Could you sign it before Monday please.
 
 Best Regards.
 
-Mary</example>
+Mary</example>*/
         [DataMember(Name = "tExtraMessage", IsRequired = true, EmitDefaultValue = true)]
         public string TExtraMessage { get; set; }
 

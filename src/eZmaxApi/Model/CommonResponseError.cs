@@ -63,7 +63,8 @@ namespace eZmaxApi.Model
         /// The message giving details about the error
         /// </summary>
         /// <value>The message giving details about the error</value>
-        /// <example>Invalid Signature Headers</example>
+        </example> }}
+		/* <example>Invalid Signature Headers</example>*/
         [DataMember(Name = "sErrorMessage", IsRequired = true, EmitDefaultValue = true)]
         public string SErrorMessage { get; set; }
 

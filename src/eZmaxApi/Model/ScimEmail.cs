@@ -47,7 +47,8 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-        /// <example>email@example.com</example>
+        </example> }}
+		/* <example>email@example.com</example>*/
         [DataMember(Name = "value", EmitDefaultValue = false)]
         public string Value { get; set; }
 

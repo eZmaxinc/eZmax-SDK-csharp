@@ -83,7 +83,8 @@ namespace eZmaxApi.Model
         /// The step at which the Ezsignsigner will be invited to sign or fill the form fields
         /// </summary>
         /// <value>The step at which the Ezsignsigner will be invited to sign or fill the form fields</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "iEzsignsignaturestatusStep", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignsignaturestatusStep { get; set; }
 
@@ -91,7 +92,8 @@ namespace eZmaxApi.Model
         /// The total number of signature or form fields the Ezsignsigner must process at the current step
         /// </summary>
         /// <value>The total number of signature or form fields the Ezsignsigner must process at the current step</value>
-        /// <example>2</example>
+        </example> }}
+		/* <example>2</example>*/
         [DataMember(Name = "iEzsignsignaturestatusTotal", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignsignaturestatusTotal { get; set; }
 
@@ -99,7 +101,8 @@ namespace eZmaxApi.Model
         /// The number of signature or form fields the Ezsignsigner has already processed at the current step
         /// </summary>
         /// <value>The number of signature or form fields the Ezsignsigner has already processed at the current step</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "iEzsignsignaturestatusSigned", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignsignaturestatusSigned { get; set; }
 

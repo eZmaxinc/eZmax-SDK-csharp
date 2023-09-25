@@ -75,7 +75,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicingsummaryexternal
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicingsummaryexternal</value>
-        /// <example>177</example>
+        </example> }}
+		/* <example>177</example>*/
         [DataMember(Name = "pkiEzmaxinvoicingsummaryexternalID", EmitDefaultValue = false)]
         public int PkiEzmaxinvoicingsummaryexternalID { get; set; }
 
@@ -83,7 +84,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicing
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicing</value>
-        /// <example>28</example>
+        </example> }}
+		/* <example>28</example>*/
         [DataMember(Name = "fkiEzmaxinvoicingID", EmitDefaultValue = false)]
         public int FkiEzmaxinvoicingID { get; set; }
 
@@ -91,7 +93,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityexternal
         /// </summary>
         /// <value>The unique ID of the Billingentityexternal</value>
-        /// <example>83</example>
+        </example> }}
+		/* <example>83</example>*/
         [DataMember(Name = "fkiBillingentityexternalID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiBillingentityexternalID { get; set; }
 
@@ -99,7 +102,8 @@ namespace eZmaxApi.Model
         /// The description of the Billingentityexternal
         /// </summary>
         /// <value>The description of the Billingentityexternal</value>
-        /// <example>ACME Inc</example>
+        </example> }}
+		/* <example>ACME Inc</example>*/
         [DataMember(Name = "sBillingentityexternalDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SBillingentityexternalDescription { get; set; }
 
@@ -107,7 +111,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezmaxinvoicingsummaryexternal
         /// </summary>
         /// <value>The description of the Ezmaxinvoicingsummaryexternal</value>
-        /// <example>Company Demo</example>
+        </example> }}
+		/* <example>Company Demo</example>*/
         [DataMember(Name = "sEzmaxinvoicingsummaryexternalDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzmaxinvoicingsummaryexternalDescription { get; set; }
 

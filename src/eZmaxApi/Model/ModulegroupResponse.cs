@@ -57,7 +57,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Modulegroup
         /// </summary>
         /// <value>The unique ID of the Modulegroup</value>
-        /// <example>46</example>
+        </example> }}
+		/* <example>46</example>*/
         [DataMember(Name = "pkiModulegroupID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiModulegroupID { get; set; }
 
@@ -65,7 +66,8 @@ namespace eZmaxApi.Model
         /// The name of the Modulegroup in the language of the requester
         /// </summary>
         /// <value>The name of the Modulegroup in the language of the requester</value>
-        /// <example>Management</example>
+        </example> }}
+		/* <example>Management</example>*/
         [DataMember(Name = "sModulegroupNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SModulegroupNameX { get; set; }
 

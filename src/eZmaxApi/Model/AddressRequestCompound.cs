@@ -89,7 +89,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Addresstype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Real Estate Invoice| |4|Invoicing| |5|Shipping|
         /// </summary>
         /// <value>The unique ID of the Addresstype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Real Estate Invoice| |4|Invoicing| |5|Shipping|</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiAddresstypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiAddresstypeID { get; set; }
 
@@ -97,7 +98,8 @@ namespace eZmaxApi.Model
         /// The Civic number.
         /// </summary>
         /// <value>The Civic number.</value>
-        /// <example>2540</example>
+        </example> }}
+		/* <example>2540</example>*/
         [DataMember(Name = "sAddressCivic", IsRequired = true, EmitDefaultValue = true)]
         public string SAddressCivic { get; set; }
 
@@ -105,7 +107,8 @@ namespace eZmaxApi.Model
         /// The Street Name
         /// </summary>
         /// <value>The Street Name</value>
-        /// <example>Daniel-Johnson Blvd.</example>
+        </example> }}
+		/* <example>Daniel-Johnson Blvd.</example>*/
         [DataMember(Name = "sAddressStreet", IsRequired = true, EmitDefaultValue = true)]
         public string SAddressStreet { get; set; }
 
@@ -113,7 +116,8 @@ namespace eZmaxApi.Model
         /// The Suite or appartment number
         /// </summary>
         /// <value>The Suite or appartment number</value>
-        /// <example>610</example>
+        </example> }}
+		/* <example>610</example>*/
         [DataMember(Name = "sAddressSuite", IsRequired = true, EmitDefaultValue = true)]
         public string SAddressSuite { get; set; }
 
@@ -121,7 +125,8 @@ namespace eZmaxApi.Model
         /// The City name
         /// </summary>
         /// <value>The City name</value>
-        /// <example>Laval</example>
+        </example> }}
+		/* <example>Laval</example>*/
         [DataMember(Name = "sAddressCity", IsRequired = true, EmitDefaultValue = true)]
         public string SAddressCity { get; set; }
 
@@ -129,7 +134,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|
         /// </summary>
         /// <value>The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|</value>
-        /// <example>11</example>
+        </example> }}
+		/* <example>11</example>*/
         [DataMember(Name = "fkiProvinceID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiProvinceID { get; set; }
 
@@ -137,7 +143,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
         /// </summary>
         /// <value>The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiCountryID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiCountryID { get; set; }
 
@@ -145,7 +152,8 @@ namespace eZmaxApi.Model
         /// The Postal/Zip Code  The value must be entered without spaces
         /// </summary>
         /// <value>The Postal/Zip Code  The value must be entered without spaces</value>
-        /// <example>H7T2S3</example>
+        </example> }}
+		/* <example>H7T2S3</example>*/
         [DataMember(Name = "sAddressZip", IsRequired = true, EmitDefaultValue = true)]
         public string SAddressZip { get; set; }
 

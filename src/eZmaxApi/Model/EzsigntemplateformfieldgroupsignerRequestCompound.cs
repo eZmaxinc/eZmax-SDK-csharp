@@ -52,7 +52,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplateformfieldgroupsigner
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplateformfieldgroupsigner</value>
-        /// <example>87</example>
+        </example> }}
+		/* <example>87</example>*/
         [DataMember(Name = "pkiEzsigntemplateformfieldgroupsignerID", EmitDefaultValue = false)]
         public int PkiEzsigntemplateformfieldgroupsignerID { get; set; }
 
@@ -60,7 +61,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatesigner
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatesigner</value>
-        /// <example>9</example>
+        </example> }}
+		/* <example>9</example>*/
         [DataMember(Name = "fkiEzsigntemplatesignerID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplatesignerID { get; set; }
 

@@ -62,7 +62,8 @@ namespace eZmaxApi.Model
         /// The date and time at which the Webhooklog happened.
         /// </summary>
         /// <value>The date and time at which the Webhooklog happened.</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtWebhooklogDate", IsRequired = true, EmitDefaultValue = true)]
         public string DtWebhooklogDate { get; set; }
 
@@ -70,7 +71,8 @@ namespace eZmaxApi.Model
         /// The Json containing the Webhook call and return
         /// </summary>
         /// <value>The Json containing the Webhook call and return</value>
-        /// <example>{}</example>
+        </example> }}
+		/* <example>{}</example>*/
         [DataMember(Name = "tWebhooklogJson", IsRequired = true, EmitDefaultValue = true)]
         public string TWebhooklogJson { get; set; }
 

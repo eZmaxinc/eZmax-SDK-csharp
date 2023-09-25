@@ -63,7 +63,8 @@ namespace eZmaxApi.Model
         /// The reportrow height in pixels
         /// </summary>
         /// <value>The reportrow height in pixels</value>
-        /// <example>20</example>
+        </example> }}
+		/* <example>20</example>*/
         [DataMember(Name = "iReportrowHeight", IsRequired = true, EmitDefaultValue = true)]
         public int IReportrowHeight { get; set; }
 

@@ -69,7 +69,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezsigntemplatepackage
         /// </summary>
         /// <value>The description of the Ezsigntemplatepackage</value>
-        /// <example>Package for new clients</example>
+        </example> }}
+		/* <example>Package for new clients</example>*/
         [DataMember(Name = "sEzsigntemplatepackageDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigntemplatepackageDescription { get; set; }
 
@@ -77,7 +78,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackage
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackage</value>
-        /// <example>99</example>
+        </example> }}
+		/* <example>99</example>*/
         [DataMember(Name = "pkiEzsigntemplatepackageID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigntemplatepackageID { get; set; }
 
@@ -85,7 +87,8 @@ namespace eZmaxApi.Model
         /// Whether the Ezsigntemplatepackage is active or not
         /// </summary>
         /// <value>Whether the Ezsigntemplatepackage is active or not</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bEzsigntemplatepackageIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsigntemplatepackageIsactive { get; set; }
 

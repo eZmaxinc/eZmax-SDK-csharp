@@ -94,7 +94,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        /// <example>2</example>
+        </example> }}
+		/* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
 
@@ -102,7 +103,8 @@ namespace eZmaxApi.Model
         /// The first name of the user
         /// </summary>
         /// <value>The first name of the user</value>
-        /// <example>John</example>
+        </example> }}
+		/* <example>John</example>*/
         [DataMember(Name = "sUserFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserFirstname { get; set; }
 
@@ -110,7 +112,8 @@ namespace eZmaxApi.Model
         /// The last name of the user
         /// </summary>
         /// <value>The last name of the user</value>
-        /// <example>Doe</example>
+        </example> }}
+		/* <example>Doe</example>*/
         [DataMember(Name = "sUserLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLastname { get; set; }
 
@@ -118,7 +121,8 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-        /// <example>email@example.com</example>
+        </example> }}
+		/* <example>email@example.com</example>*/
         [DataMember(Name = "sEmailAddress", IsRequired = true, EmitDefaultValue = true)]
         public string SEmailAddress { get; set; }
 
@@ -126,7 +130,8 @@ namespace eZmaxApi.Model
         /// The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123
         /// </summary>
         /// <value>The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123</value>
-        /// <example>514</example>
+        </example> }}
+		/* <example>514</example>*/
         [DataMember(Name = "sPhoneRegion", IsRequired = true, EmitDefaultValue = true)]
         [Obsolete]
         public string SPhoneRegion { get; set; }
@@ -135,7 +140,8 @@ namespace eZmaxApi.Model
         /// The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123
         /// </summary>
         /// <value>The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123</value>
-        /// <example>990</example>
+        </example> }}
+		/* <example>990</example>*/
         [DataMember(Name = "sPhoneExchange", IsRequired = true, EmitDefaultValue = true)]
         [Obsolete]
         public string SPhoneExchange { get; set; }
@@ -144,7 +150,8 @@ namespace eZmaxApi.Model
         /// The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123
         /// </summary>
         /// <value>The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123</value>
-        /// <example>1516</example>
+        </example> }}
+		/* <example>1516</example>*/
         [DataMember(Name = "sPhoneNumber", IsRequired = true, EmitDefaultValue = true)]
         [Obsolete]
         public string SPhoneNumber { get; set; }
@@ -153,7 +160,8 @@ namespace eZmaxApi.Model
         /// The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
         /// </summary>
         /// <value>The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers</value>
-        /// <example>123</example>
+        </example> }}
+		/* <example>123</example>*/
         [DataMember(Name = "sPhoneExtension", EmitDefaultValue = false)]
         public string SPhoneExtension { get; set; }
 

@@ -69,7 +69,8 @@ namespace eZmaxApi.Model
         /// A custom text message that will be added to the email sent.
         /// </summary>
         /// <value>A custom text message that will be added to the email sent.</value>
-        /// <example>Hi everyone,
+        </example> }}
+		/* <example>Hi everyone,
 
 This is the document I need you to review.
 
@@ -77,7 +78,7 @@ Could you sign it before Monday please.
 
 Best Regards.
 
-Mary</example>
+Mary</example>*/
         [DataMember(Name = "tEzsignfolderMessage", IsRequired = true, EmitDefaultValue = true)]
         public string TEzsignfolderMessage { get; set; }
 

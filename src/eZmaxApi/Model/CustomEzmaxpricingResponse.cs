@@ -66,7 +66,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxpricing
         /// </summary>
         /// <value>The unique ID of the Ezmaxpricing</value>
-        /// <example>28</example>
+        </example> }}
+		/* <example>28</example>*/
         [DataMember(Name = "pkiEzmaxpricingID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzmaxpricingID { get; set; }
 
@@ -74,7 +75,8 @@ namespace eZmaxApi.Model
         /// The rebate offered when eZsign is taken for all agents
         /// </summary>
         /// <value>The rebate offered when eZsign is taken for all agents</value>
-        /// <example>90.00</example>
+        </example> }}
+		/* <example>90.00</example>*/
         [DataMember(Name = "dEzmaxpricingRebateezsignallagents", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxpricingRebateezsignallagents { get; set; }
 
@@ -82,7 +84,8 @@ namespace eZmaxApi.Model
         /// The start date of the Ezmaxpricing
         /// </summary>
         /// <value>The start date of the Ezmaxpricing</value>
-        /// <example>2020-12-31</example>
+        </example> }}
+		/* <example>2020-12-31</example>*/
         [DataMember(Name = "dtEzmaxpricingStart", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzmaxpricingStart { get; set; }
 
@@ -90,7 +93,8 @@ namespace eZmaxApi.Model
         /// The end date of the Ezmaxpricing
         /// </summary>
         /// <value>The end date of the Ezmaxpricing</value>
-        /// <example>2020-12-31</example>
+        </example> }}
+		/* <example>2020-12-31</example>*/
         [DataMember(Name = "dtEzmaxpricingEnd", EmitDefaultValue = false)]
         public string DtEzmaxpricingEnd { get; set; }
 

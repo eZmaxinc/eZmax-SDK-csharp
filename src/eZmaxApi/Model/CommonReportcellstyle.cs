@@ -88,7 +88,8 @@ namespace eZmaxApi.Model
         /// Whether there is a border at the top of the Reportcell
         /// </summary>
         /// <value>Whether there is a border at the top of the Reportcell</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bReportcellstyleBordertop", IsRequired = true, EmitDefaultValue = true)]
         public bool BReportcellstyleBordertop { get; set; }
 
@@ -96,7 +97,8 @@ namespace eZmaxApi.Model
         /// Whether there is a border at the bottom of the Reportcell
         /// </summary>
         /// <value>Whether there is a border at the bottom of the Reportcell</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bReportcellstyleBorderbottom", IsRequired = true, EmitDefaultValue = true)]
         public bool BReportcellstyleBorderbottom { get; set; }
 
@@ -104,7 +106,8 @@ namespace eZmaxApi.Model
         /// Whether there is a border at the left of the Reportcell
         /// </summary>
         /// <value>Whether there is a border at the left of the Reportcell</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bReportcellstyleBorderleft", IsRequired = true, EmitDefaultValue = true)]
         public bool BReportcellstyleBorderleft { get; set; }
 
@@ -112,7 +115,8 @@ namespace eZmaxApi.Model
         /// Whether there is a border at the right of the Reportcell
         /// </summary>
         /// <value>Whether there is a border at the right of the Reportcell</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bReportcellstyleBorderright", IsRequired = true, EmitDefaultValue = true)]
         public bool BReportcellstyleBorderright { get; set; }
 

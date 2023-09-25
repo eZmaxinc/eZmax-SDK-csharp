@@ -47,7 +47,8 @@ namespace eZmaxApi.Model
         /// The description of the Billingentityinternal in French
         /// </summary>
         /// <value>The description of the Billingentityinternal in French</value>
-        /// <example>Défaut</example>
+        </example> }}
+		/* <example>Défaut</example>*/
         [DataMember(Name = "sBillingentityinternalDescription1", EmitDefaultValue = false)]
         public string SBillingentityinternalDescription1 { get; set; }
 
@@ -55,7 +56,8 @@ namespace eZmaxApi.Model
         /// The description of the Billingentityinternal in English
         /// </summary>
         /// <value>The description of the Billingentityinternal in English</value>
-        /// <example>Default</example>
+        </example> }}
+		/* <example>Default</example>*/
         [DataMember(Name = "sBillingentityinternalDescription2", EmitDefaultValue = false)]
         public string SBillingentityinternalDescription2 { get; set; }
 

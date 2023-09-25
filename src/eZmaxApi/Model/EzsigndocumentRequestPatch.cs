@@ -47,7 +47,8 @@ namespace eZmaxApi.Model
         /// The maximum date and time at which the Ezsigndocument can be signed.
         /// </summary>
         /// <value>The maximum date and time at which the Ezsigndocument can be signed.</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsigndocumentDuedate", EmitDefaultValue = false)]
         public string DtEzsigndocumentDuedate { get; set; }
 
@@ -55,7 +56,8 @@ namespace eZmaxApi.Model
         /// The name of the document that will be presented to Ezsignfoldersignerassociations
         /// </summary>
         /// <value>The name of the document that will be presented to Ezsignfoldersignerassociations</value>
-        /// <example>Contract #123</example>
+        </example> }}
+		/* <example>Contract #123</example>*/
         [DataMember(Name = "sEzsigndocumentName", EmitDefaultValue = false)]
         public string SEzsigndocumentName { get; set; }
 

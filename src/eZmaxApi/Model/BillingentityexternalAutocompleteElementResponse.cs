@@ -59,7 +59,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityexternal
         /// </summary>
         /// <value>The unique ID of the Billingentityexternal</value>
-        /// <example>83</example>
+        </example> }}
+		/* <example>83</example>*/
         [DataMember(Name = "pkiBillingentityexternalID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiBillingentityexternalID { get; set; }
 
@@ -67,7 +68,8 @@ namespace eZmaxApi.Model
         /// The description of the Billingentityexternal
         /// </summary>
         /// <value>The description of the Billingentityexternal</value>
-        /// <example>ACME Inc</example>
+        </example> }}
+		/* <example>ACME Inc</example>*/
         [DataMember(Name = "sBillingentityexternalDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SBillingentityexternalDescription { get; set; }
 
@@ -75,7 +77,8 @@ namespace eZmaxApi.Model
         /// Whether the Billingentityexternal is active or not
         /// </summary>
         /// <value>Whether the Billingentityexternal is active or not</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bBillingentityexternalIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BBillingentityexternalIsactive { get; set; }
 

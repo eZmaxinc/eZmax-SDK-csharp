@@ -94,7 +94,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        /// <example>70</example>
+        </example> }}
+		/* <example>70</example>*/
         [DataMember(Name = "pkiUserID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiUserID { get; set; }
 
@@ -102,7 +103,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Timezone
         /// </summary>
         /// <value>The unique ID of the Timezone</value>
-        /// <example>247</example>
+        </example> }}
+		/* <example>247</example>*/
         [DataMember(Name = "fkiTimezoneID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiTimezoneID { get; set; }
 
@@ -110,7 +112,8 @@ namespace eZmaxApi.Model
         /// The url of the picture used as avatar
         /// </summary>
         /// <value>The url of the picture used as avatar</value>
-        /// <example>http://www.website.com/avatar.jpg</example>
+        </example> }}
+		/* <example>http://www.website.com/avatar.jpg</example>*/
         [DataMember(Name = "sAvatarUrl", IsRequired = true, EmitDefaultValue = true)]
         public string SAvatarUrl { get; set; }
 
@@ -118,7 +121,8 @@ namespace eZmaxApi.Model
         /// The first name of the user
         /// </summary>
         /// <value>The first name of the user</value>
-        /// <example>John</example>
+        </example> }}
+		/* <example>John</example>*/
         [DataMember(Name = "sUserFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserFirstname { get; set; }
 
@@ -126,7 +130,8 @@ namespace eZmaxApi.Model
         /// The last name of the user
         /// </summary>
         /// <value>The last name of the user</value>
-        /// <example>Doe</example>
+        </example> }}
+		/* <example>Doe</example>*/
         [DataMember(Name = "sUserLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLastname { get; set; }
 
@@ -134,7 +139,8 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-        /// <example>email@example.com</example>
+        </example> }}
+		/* <example>email@example.com</example>*/
         [DataMember(Name = "sEmailAddress", IsRequired = true, EmitDefaultValue = true)]
         public string SEmailAddress { get; set; }
 
@@ -142,7 +148,8 @@ namespace eZmaxApi.Model
         /// The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
         /// </summary>
         /// <value>The int32 representation of the interface color. For example, RGB color #39435B would be 3752795</value>
-        /// <example>3752795</example>
+        </example> }}
+		/* <example>3752795</example>*/
         [DataMember(Name = "iUserInterfacecolor", IsRequired = true, EmitDefaultValue = true)]
         public int IUserInterfacecolor { get; set; }
 
@@ -150,7 +157,8 @@ namespace eZmaxApi.Model
         /// Whether to use a dark mode interface
         /// </summary>
         /// <value>Whether to use a dark mode interface</value>
-        /// <example>false</example>
+        </example> }}
+		/* <example>false</example>*/
         [DataMember(Name = "bUserInterfacedark", IsRequired = true, EmitDefaultValue = true)]
         public bool BUserInterfacedark { get; set; }
 
@@ -158,7 +166,8 @@ namespace eZmaxApi.Model
         /// The number of rows to return by default in lists
         /// </summary>
         /// <value>The number of rows to return by default in lists</value>
-        /// <example>25</example>
+        </example> }}
+		/* <example>25</example>*/
         [DataMember(Name = "iUserListresult", IsRequired = true, EmitDefaultValue = true)]
         public int IUserListresult { get; set; }
 

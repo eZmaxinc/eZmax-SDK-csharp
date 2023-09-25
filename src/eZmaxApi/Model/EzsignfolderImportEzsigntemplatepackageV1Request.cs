@@ -64,7 +64,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackage
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackage</value>
-        /// <example>99</example>
+        </example> }}
+		/* <example>99</example>*/
         [DataMember(Name = "fkiEzsigntemplatepackageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplatepackageID { get; set; }
 
@@ -72,7 +73,8 @@ namespace eZmaxApi.Model
         /// The maximum date and time at which the Ezsigndocument can be signed.
         /// </summary>
         /// <value>The maximum date and time at which the Ezsigndocument can be signed.</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsigndocumentDuedate", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzsigndocumentDuedate { get; set; }
 

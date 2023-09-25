@@ -64,7 +64,8 @@ namespace eZmaxApi.Model
         /// Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
         /// </summary>
         /// <value>Represent a Date Time. The timezone is the one configured in the User&#39;s profile.</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtAttemptStart", IsRequired = true, EmitDefaultValue = true)]
         public string DtAttemptStart { get; set; }
 

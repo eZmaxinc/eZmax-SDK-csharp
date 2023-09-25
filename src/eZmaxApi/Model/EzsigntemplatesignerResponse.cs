@@ -59,7 +59,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatesigner
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatesigner</value>
-        /// <example>9</example>
+        </example> }}
+		/* <example>9</example>*/
         [DataMember(Name = "pkiEzsigntemplatesignerID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigntemplatesignerID { get; set; }
 
@@ -67,7 +68,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplate
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplate</value>
-        /// <example>36</example>
+        </example> }}
+		/* <example>36</example>*/
         [DataMember(Name = "fkiEzsigntemplateID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplateID { get; set; }
 
@@ -75,7 +77,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezsigntemplatesigner
         /// </summary>
         /// <value>The description of the Ezsigntemplatesigner</value>
-        /// <example>Customer</example>
+        </example> }}
+		/* <example>Customer</example>*/
         [DataMember(Name = "sEzsigntemplatesignerDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigntemplatesignerDescription { get; set; }
 

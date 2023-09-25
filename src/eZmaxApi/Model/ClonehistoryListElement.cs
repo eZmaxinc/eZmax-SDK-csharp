@@ -105,7 +105,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Clonehistory
         /// </summary>
         /// <value>The unique ID of the Clonehistory</value>
-        /// <example>12</example>
+        </example> }}
+		/* <example>12</example>*/
         [DataMember(Name = "pkiClonehistoryID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiClonehistoryID { get; set; }
 
@@ -113,7 +114,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        /// <example>70</example>
+        </example> }}
+		/* <example>70</example>*/
         [DataMember(Name = "fkiUserIDCloning", IsRequired = true, EmitDefaultValue = true)]
         public int FkiUserIDCloning { get; set; }
 
@@ -121,7 +123,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        /// <example>70</example>
+        </example> }}
+		/* <example>70</example>*/
         [DataMember(Name = "fkiUserIDCloned", IsRequired = true, EmitDefaultValue = true)]
         public int FkiUserIDCloned { get; set; }
 
@@ -129,7 +132,8 @@ namespace eZmaxApi.Model
         /// The firsthit of the Clonehistory
         /// </summary>
         /// <value>The firsthit of the Clonehistory</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtClonehistoryFirsthit", IsRequired = true, EmitDefaultValue = true)]
         public string DtClonehistoryFirsthit { get; set; }
 
@@ -137,7 +141,8 @@ namespace eZmaxApi.Model
         /// The lasthit of the Clonehistory
         /// </summary>
         /// <value>The lasthit of the Clonehistory</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtClonehistoryLasthit", EmitDefaultValue = false)]
         public string DtClonehistoryLasthit { get; set; }
 
@@ -145,7 +150,8 @@ namespace eZmaxApi.Model
         /// The login name of the User.
         /// </summary>
         /// <value>The login name of the User.</value>
-        /// <example>JohnDoe</example>
+        </example> }}
+		/* <example>JohnDoe</example>*/
         [DataMember(Name = "sUserLoginnameCloning", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLoginnameCloning { get; set; }
 
@@ -153,7 +159,8 @@ namespace eZmaxApi.Model
         /// The first name of the user
         /// </summary>
         /// <value>The first name of the user</value>
-        /// <example>John</example>
+        </example> }}
+		/* <example>John</example>*/
         [DataMember(Name = "sUserFirstnameCloning", IsRequired = true, EmitDefaultValue = true)]
         public string SUserFirstnameCloning { get; set; }
 
@@ -161,7 +168,8 @@ namespace eZmaxApi.Model
         /// The last name of the user
         /// </summary>
         /// <value>The last name of the user</value>
-        /// <example>Doe</example>
+        </example> }}
+		/* <example>Doe</example>*/
         [DataMember(Name = "sUserLastnameCloning", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLastnameCloning { get; set; }
 
@@ -169,7 +177,8 @@ namespace eZmaxApi.Model
         /// The login name of the User.
         /// </summary>
         /// <value>The login name of the User.</value>
-        /// <example>JohnDoe</example>
+        </example> }}
+		/* <example>JohnDoe</example>*/
         [DataMember(Name = "sUserLoginnameCloned", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLoginnameCloned { get; set; }
 
@@ -177,7 +186,8 @@ namespace eZmaxApi.Model
         /// The first name of the user
         /// </summary>
         /// <value>The first name of the user</value>
-        /// <example>John</example>
+        </example> }}
+		/* <example>John</example>*/
         [DataMember(Name = "sUserFirstnameCloned", IsRequired = true, EmitDefaultValue = true)]
         public string SUserFirstnameCloned { get; set; }
 
@@ -185,7 +195,8 @@ namespace eZmaxApi.Model
         /// The last name of the user
         /// </summary>
         /// <value>The last name of the user</value>
-        /// <example>Doe</example>
+        </example> }}
+		/* <example>Doe</example>*/
         [DataMember(Name = "sUserLastnameCloned", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLastnameCloned { get; set; }
 

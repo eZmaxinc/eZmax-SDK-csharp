@@ -63,7 +63,8 @@ namespace eZmaxApi.Model
         /// The Reportcolumn width in pixels
         /// </summary>
         /// <value>The Reportcolumn width in pixels</value>
-        /// <example>120</example>
+        </example> }}
+		/* <example>120</example>*/
         [DataMember(Name = "iReportcolumnWidth", IsRequired = true, EmitDefaultValue = true)]
         public int IReportcolumnWidth { get; set; }
 

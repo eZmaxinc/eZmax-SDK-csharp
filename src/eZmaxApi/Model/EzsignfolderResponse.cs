@@ -109,7 +109,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfolder
         /// </summary>
         /// <value>The unique ID of the Ezsignfolder</value>
-        /// <example>33</example>
+        </example> }}
+		/* <example>33</example>*/
         [DataMember(Name = "pkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignfolderID { get; set; }
 
@@ -117,7 +118,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-        /// <example>5</example>
+        </example> }}
+		/* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", EmitDefaultValue = false)]
         public int FkiEzsignfoldertypeID { get; set; }
 
@@ -138,7 +140,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityinternal.
         /// </summary>
         /// <value>The unique ID of the Billingentityinternal.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiBillingentityinternalID", EmitDefaultValue = false)]
         public int FkiBillingentityinternalID { get; set; }
 
@@ -146,7 +149,8 @@ namespace eZmaxApi.Model
         /// The description of the Billingentityinternal in the language of the requester
         /// </summary>
         /// <value>The description of the Billingentityinternal in the language of the requester</value>
-        /// <example>Default</example>
+        </example> }}
+		/* <example>Default</example>*/
         [DataMember(Name = "sBillingentityinternalDescriptionX", EmitDefaultValue = false)]
         public string SBillingentityinternalDescriptionX { get; set; }
 
@@ -154,7 +158,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
         /// </summary>
         /// <value>The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiEzsigntsarequirementID", EmitDefaultValue = false)]
         public int FkiEzsigntsarequirementID { get; set; }
 
@@ -162,7 +167,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezsigntsarequirement in the language of the requester
         /// </summary>
         /// <value>The description of the Ezsigntsarequirement in the language of the requester</value>
-        /// <example>Default</example>
+        </example> }}
+		/* <example>Default</example>*/
         [DataMember(Name = "sEzsigntsarequirementDescriptionX", EmitDefaultValue = false)]
         public string SEzsigntsarequirementDescriptionX { get; set; }
 
@@ -170,7 +176,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignfolder
         /// </summary>
         /// <value>The description of the Ezsignfolder</value>
-        /// <example>Test eZsign Folder</example>
+        </example> }}
+		/* <example>Test eZsign Folder</example>*/
         [DataMember(Name = "sEzsignfolderDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignfolderDescription { get; set; }
 
@@ -178,7 +185,8 @@ namespace eZmaxApi.Model
         /// Note about the Ezsignfolder
         /// </summary>
         /// <value>Note about the Ezsignfolder</value>
-        /// <example>This is a note</example>
+        </example> }}
+		/* <example>This is a note</example>*/
         [DataMember(Name = "tEzsignfolderNote", EmitDefaultValue = false)]
         public string TEzsignfolderNote { get; set; }
 
@@ -186,7 +194,8 @@ namespace eZmaxApi.Model
         /// If the Ezsigndocument can be disposed
         /// </summary>
         /// <value>If the Ezsigndocument can be disposed</value>
-        /// <example>false</example>
+        </example> }}
+		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfolderIsdisposable", EmitDefaultValue = true)]
         public bool BEzsignfolderIsdisposable { get; set; }
 
@@ -194,7 +203,8 @@ namespace eZmaxApi.Model
         /// The date and time at which the Ezsignfolder will be sent in the future.
         /// </summary>
         /// <value>The date and time at which the Ezsignfolder will be sent in the future.</value>
-        /// <example>2020-12-31T23:59:59.000Z</example>
+        </example> }}
+		/* <example>2020-12-31T23:59:59.000Z</example>*/
         [DataMember(Name = "dtEzsignfolderDelayedsenddate", EmitDefaultValue = false)]
         public string DtEzsignfolderDelayedsenddate { get; set; }
 
@@ -202,7 +212,8 @@ namespace eZmaxApi.Model
         /// The maximum date and time at which the Ezsignfolder can be signed.
         /// </summary>
         /// <value>The maximum date and time at which the Ezsignfolder can be signed.</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsignfolderDuedate", EmitDefaultValue = false)]
         public string DtEzsignfolderDuedate { get; set; }
 
@@ -210,7 +221,8 @@ namespace eZmaxApi.Model
         /// The date and time at which the Ezsignfolder was sent the last time.
         /// </summary>
         /// <value>The date and time at which the Ezsignfolder was sent the last time.</value>
-        /// <example>2020-12-31T23:59:59.000Z</example>
+        </example> }}
+		/* <example>2020-12-31T23:59:59.000Z</example>*/
         [DataMember(Name = "dtEzsignfolderSentdate", EmitDefaultValue = false)]
         public string DtEzsignfolderSentdate { get; set; }
 
@@ -218,7 +230,8 @@ namespace eZmaxApi.Model
         /// The scheduled date and time at which the Ezsignfolder should be archived.
         /// </summary>
         /// <value>The scheduled date and time at which the Ezsignfolder should be archived.</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsignfolderScheduledarchive", EmitDefaultValue = false)]
         public string DtEzsignfolderScheduledarchive { get; set; }
 
@@ -226,7 +239,8 @@ namespace eZmaxApi.Model
         /// The scheduled date at which the Ezsignfolder should be Disposed.
         /// </summary>
         /// <value>The scheduled date at which the Ezsignfolder should be Disposed.</value>
-        /// <example>2020-12-31</example>
+        </example> }}
+		/* <example>2020-12-31</example>*/
         [DataMember(Name = "dtEzsignfolderScheduleddispose", EmitDefaultValue = false)]
         public string DtEzsignfolderScheduleddispose { get; set; }
 
@@ -234,7 +248,8 @@ namespace eZmaxApi.Model
         /// The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
         /// </summary>
         /// <value>The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsignfolderClose", EmitDefaultValue = false)]
         public string DtEzsignfolderClose { get; set; }
 
@@ -242,7 +257,8 @@ namespace eZmaxApi.Model
         /// A custom text message that will be added to the email sent.
         /// </summary>
         /// <value>A custom text message that will be added to the email sent.</value>
-        /// <example>Hi everyone,
+        </example> }}
+		/* <example>Hi everyone,
 
 This is the document I need you to review.
 
@@ -250,7 +266,7 @@ Could you sign it before Monday please.
 
 Best Regards.
 
-Mary</example>
+Mary</example>*/
         [DataMember(Name = "tEzsignfolderMessage", EmitDefaultValue = false)]
         public string TEzsignfolderMessage { get; set; }
 
@@ -264,7 +280,8 @@ Mary</example>
         /// This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
         /// </summary>
         /// <value>This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. </value>
-        /// <example>{&quot;ID&quot;: 1234, &quot;TAGS&quot;: [&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]}</example>
+        </example> }}
+		/* <example>{&quot;ID&quot;: 1234, &quot;TAGS&quot;: [&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]}</example>*/
         [DataMember(Name = "sEzsignfolderExternalid", EmitDefaultValue = false)]
         public string SEzsignfolderExternalid { get; set; }
 

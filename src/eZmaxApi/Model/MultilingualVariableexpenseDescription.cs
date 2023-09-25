@@ -47,7 +47,8 @@ namespace eZmaxApi.Model
         /// The description of the Variableexpense in French
         /// </summary>
         /// <value>The description of the Variableexpense in French</value>
-        /// <example>Équipements de bureau</example>
+        </example> }}
+		/* <example>Équipements de bureau</example>*/
         [DataMember(Name = "sVariableexpenseDescription1", EmitDefaultValue = false)]
         public string SVariableexpenseDescription1 { get; set; }
 
@@ -55,7 +56,8 @@ namespace eZmaxApi.Model
         /// The description of the Variableexpense in English
         /// </summary>
         /// <value>The description of the Variableexpense in English</value>
-        /// <example>Office equipment</example>
+        </example> }}
+		/* <example>Office equipment</example>*/
         [DataMember(Name = "sVariableexpenseDescription2", EmitDefaultValue = false)]
         public string SVariableexpenseDescription2 { get; set; }
 

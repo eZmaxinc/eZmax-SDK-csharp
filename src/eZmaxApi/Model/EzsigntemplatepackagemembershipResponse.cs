@@ -56,7 +56,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackagemembership
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackagemembership</value>
-        /// <example>194</example>
+        </example> }}
+		/* <example>194</example>*/
         [DataMember(Name = "pkiEzsigntemplatepackagemembershipID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigntemplatepackagemembershipID { get; set; }
 
@@ -64,7 +65,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackage
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackage</value>
-        /// <example>99</example>
+        </example> }}
+		/* <example>99</example>*/
         [DataMember(Name = "fkiEzsigntemplatepackageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplatepackageID { get; set; }
 
@@ -72,7 +74,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplate
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplate</value>
-        /// <example>36</example>
+        </example> }}
+		/* <example>36</example>*/
         [DataMember(Name = "fkiEzsigntemplateID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplateID { get; set; }
 
@@ -80,7 +83,8 @@ namespace eZmaxApi.Model
         /// The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage.
         /// </summary>
         /// <value>The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "iEzsigntemplatepackagemembershipOrder", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplatepackagemembershipOrder { get; set; }
 

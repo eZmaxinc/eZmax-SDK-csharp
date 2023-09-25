@@ -52,7 +52,8 @@ namespace eZmaxApi.Model
         /// The number of Reportcolumns the Reportcell spans
         /// </summary>
         /// <value>The number of Reportcolumns the Reportcell spans</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "iReportcellColumnspan", IsRequired = true, EmitDefaultValue = true)]
         public int IReportcellColumnspan { get; set; }
 
@@ -60,7 +61,8 @@ namespace eZmaxApi.Model
         /// The number of Reportrows the Reportcell spans
         /// </summary>
         /// <value>The number of Reportrows the Reportcell spans</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "iReportcellRowspan", IsRequired = true, EmitDefaultValue = true)]
         public int IReportcellRowspan { get; set; }
 

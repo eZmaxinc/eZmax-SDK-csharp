@@ -60,7 +60,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignsignature
         /// </summary>
         /// <value>The unique ID of the Ezsignsignature</value>
-        /// <example>49</example>
+        </example> }}
+		/* <example>49</example>*/
         [DataMember(Name = "pkiEzsignsignatureID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignsignatureID { get; set; }
 
@@ -68,7 +69,8 @@ namespace eZmaxApi.Model
         /// The page number in the Ezsigndocument
         /// </summary>
         /// <value>The page number in the Ezsigndocument</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "iEzsignpagePagenumber", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignpagePagenumber { get; set; }
 

@@ -95,7 +95,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        /// <example>70</example>
+        </example> }}
+		/* <example>70</example>*/
         [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
 
@@ -103,7 +104,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignsigner
         /// </summary>
         /// <value>The unique ID of the Ezsignsigner</value>
-        /// <example>89</example>
+        </example> }}
+		/* <example>89</example>*/
         [DataMember(Name = "fkiEzsignsignerID", EmitDefaultValue = false)]
         public int FkiEzsignsignerID { get; set; }
 
@@ -111,7 +113,8 @@ namespace eZmaxApi.Model
         /// The date and time at which the event was logged
         /// </summary>
         /// <value>The date and time at which the event was logged</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsigndocumentlogDatetime", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzsigndocumentlogDatetime { get; set; }
 
@@ -119,7 +122,8 @@ namespace eZmaxApi.Model
         /// The detail of the Ezsigndocumentlog
         /// </summary>
         /// <value>The detail of the Ezsigndocumentlog</value>
-        /// <example>Page 1 MD5: a56bbc742ba2a4d074f2493550cf6ea5</example>
+        </example> }}
+		/* <example>Page 1 MD5: a56bbc742ba2a4d074f2493550cf6ea5</example>*/
         [DataMember(Name = "sEzsigndocumentlogDetail", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigndocumentlogDetail { get; set; }
 
@@ -127,7 +131,8 @@ namespace eZmaxApi.Model
         /// The last name of the User or Ezsignsigner
         /// </summary>
         /// <value>The last name of the User or Ezsignsigner</value>
-        /// <example>Doe</example>
+        </example> }}
+		/* <example>Doe</example>*/
         [DataMember(Name = "sEzsigndocumentlogLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigndocumentlogLastname { get; set; }
 
@@ -135,7 +140,8 @@ namespace eZmaxApi.Model
         /// The first name of the User or Ezsignsigner
         /// </summary>
         /// <value>The first name of the User or Ezsignsigner</value>
-        /// <example>John</example>
+        </example> }}
+		/* <example>John</example>*/
         [DataMember(Name = "sEzsigndocumentlogFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigndocumentlogFirstname { get; set; }
 
@@ -143,7 +149,8 @@ namespace eZmaxApi.Model
         /// Represent an IP address.
         /// </summary>
         /// <value>Represent an IP address.</value>
-        /// <example>127.0.0.1</example>
+        </example> }}
+		/* <example>127.0.0.1</example>*/
         [DataMember(Name = "sEzsigndocumentlogIP", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigndocumentlogIP { get; set; }
 

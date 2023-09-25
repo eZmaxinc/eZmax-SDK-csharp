@@ -69,7 +69,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Communicationexternalrecipient
         /// </summary>
         /// <value>The unique ID of the Communicationexternalrecipient</value>
-        /// <example>9</example>
+        </example> }}
+		/* <example>9</example>*/
         [DataMember(Name = "pkiCommunicationexternalrecipientID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiCommunicationexternalrecipientID { get; set; }
 

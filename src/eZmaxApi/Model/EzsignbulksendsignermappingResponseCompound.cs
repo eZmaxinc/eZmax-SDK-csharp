@@ -61,7 +61,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignbulksendsignermapping
         /// </summary>
         /// <value>The unique ID of the Ezsignbulksendsignermapping</value>
-        /// <example>57</example>
+        </example> }}
+		/* <example>57</example>*/
         [DataMember(Name = "pkiEzsignbulksendsignermappingID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignbulksendsignermappingID { get; set; }
 
@@ -69,7 +70,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignbulksend
         /// </summary>
         /// <value>The unique ID of the Ezsignbulksend</value>
-        /// <example>8</example>
+        </example> }}
+		/* <example>8</example>*/
         [DataMember(Name = "fkiEzsignbulksendID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignbulksendID { get; set; }
 
@@ -77,7 +79,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        /// <example>70</example>
+        </example> }}
+		/* <example>70</example>*/
         [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
 
@@ -85,7 +88,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignbulksendsignermapping
         /// </summary>
         /// <value>The description of the Ezsignbulksendsignermapping</value>
-        /// <example>Supervisor</example>
+        </example> }}
+		/* <example>Supervisor</example>*/
         [DataMember(Name = "sEzsignbulksendsignermappingDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignbulksendsignermappingDescription { get; set; }
 

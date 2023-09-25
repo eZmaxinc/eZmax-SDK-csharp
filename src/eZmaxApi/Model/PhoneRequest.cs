@@ -73,7 +73,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Phone.
         /// </summary>
         /// <value>The unique ID of the Phone.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "pkiPhoneID", EmitDefaultValue = false)]
         public int PkiPhoneID { get; set; }
 
@@ -81,7 +82,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|
         /// </summary>
         /// <value>The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiPhonetypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiPhonetypeID { get; set; }
 
@@ -89,7 +91,8 @@ namespace eZmaxApi.Model
         /// The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123
         /// </summary>
         /// <value>The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123</value>
-        /// <example>514</example>
+        </example> }}
+		/* <example>514</example>*/
         [DataMember(Name = "sPhoneRegion", EmitDefaultValue = false)]
         [Obsolete]
         public string SPhoneRegion { get; set; }
@@ -98,7 +101,8 @@ namespace eZmaxApi.Model
         /// The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123
         /// </summary>
         /// <value>The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123</value>
-        /// <example>990</example>
+        </example> }}
+		/* <example>990</example>*/
         [DataMember(Name = "sPhoneExchange", EmitDefaultValue = false)]
         [Obsolete]
         public string SPhoneExchange { get; set; }
@@ -107,7 +111,8 @@ namespace eZmaxApi.Model
         /// The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123
         /// </summary>
         /// <value>The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123</value>
-        /// <example>1516</example>
+        </example> }}
+		/* <example>1516</example>*/
         [DataMember(Name = "sPhoneNumber", EmitDefaultValue = false)]
         [Obsolete]
         public string SPhoneNumber { get; set; }
@@ -116,7 +121,8 @@ namespace eZmaxApi.Model
         /// The international phone number.
         /// </summary>
         /// <value>The international phone number.</value>
-        /// <example>15149901516</example>
+        </example> }}
+		/* <example>15149901516</example>*/
         [DataMember(Name = "sPhoneInternational", EmitDefaultValue = false)]
         [Obsolete]
         public string SPhoneInternational { get; set; }
@@ -125,7 +131,8 @@ namespace eZmaxApi.Model
         /// The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
         /// </summary>
         /// <value>The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers</value>
-        /// <example>123</example>
+        </example> }}
+		/* <example>123</example>*/
         [DataMember(Name = "sPhoneExtension", EmitDefaultValue = false)]
         public string SPhoneExtension { get; set; }
 
@@ -133,7 +140,8 @@ namespace eZmaxApi.Model
         /// A phone number in E.164 Format
         /// </summary>
         /// <value>A phone number in E.164 Format</value>
-        /// <example>+15149901516</example>
+        </example> }}
+		/* <example>+15149901516</example>*/
         [DataMember(Name = "sPhoneE164", EmitDefaultValue = false)]
         public string SPhoneE164 { get; set; }
 

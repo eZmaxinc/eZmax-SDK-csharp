@@ -59,7 +59,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Usergroup
         /// </summary>
         /// <value>The unique ID of the Usergroup</value>
-        /// <example>2</example>
+        </example> }}
+		/* <example>2</example>*/
         [DataMember(Name = "pkiUsergroupID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiUsergroupID { get; set; }
 
@@ -67,7 +68,8 @@ namespace eZmaxApi.Model
         /// The Name of the Usergroup in the language of the requester
         /// </summary>
         /// <value>The Name of the Usergroup in the language of the requester</value>
-        /// <example>Administration</example>
+        </example> }}
+		/* <example>Administration</example>*/
         [DataMember(Name = "sUsergroupNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SUsergroupNameX { get; set; }
 
@@ -75,7 +77,8 @@ namespace eZmaxApi.Model
         /// Number of users in group
         /// </summary>
         /// <value>Number of users in group</value>
-        /// <example>15</example>
+        </example> }}
+		/* <example>15</example>*/
         [DataMember(Name = "iCountUser", IsRequired = true, EmitDefaultValue = true)]
         public int ICountUser { get; set; }
 

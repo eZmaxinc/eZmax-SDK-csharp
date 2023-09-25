@@ -54,7 +54,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Usergroupdelegation
         /// </summary>
         /// <value>The unique ID of the Usergroupdelegation</value>
-        /// <example>141</example>
+        </example> }}
+		/* <example>141</example>*/
         [DataMember(Name = "pkiUsergroupdelegationID", EmitDefaultValue = false)]
         public int PkiUsergroupdelegationID { get; set; }
 
@@ -62,7 +63,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Usergroup
         /// </summary>
         /// <value>The unique ID of the Usergroup</value>
-        /// <example>2</example>
+        </example> }}
+		/* <example>2</example>*/
         [DataMember(Name = "fkiUsergroupID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiUsergroupID { get; set; }
 
@@ -70,7 +72,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        /// <example>70</example>
+        </example> }}
+		/* <example>70</example>*/
         [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiUserID { get; set; }
 

@@ -52,7 +52,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldersignerassociation
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
-        /// <example>20</example>
+        </example> }}
+		/* <example>20</example>*/
         [DataMember(Name = "fkiEzsignfoldersignerassociationID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldersignerassociationID { get; set; }
 
@@ -60,7 +61,8 @@ namespace eZmaxApi.Model
         /// A custom text message that will be added to the email sent.
         /// </summary>
         /// <value>A custom text message that will be added to the email sent.</value>
-        /// <example>Hi John,
+        </example> }}
+		/* <example>Hi John,
 
 This is the document I need you to review.
 
@@ -68,7 +70,7 @@ Could you sign it before Monday please.
 
 Best Regards.
 
-Mary</example>
+Mary</example>*/
         [DataMember(Name = "tEzsignfoldersignerassociationMessage", EmitDefaultValue = false)]
         public string TEzsignfoldersignerassociationMessage { get; set; }
 

@@ -73,7 +73,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignformfield
         /// </summary>
         /// <value>The unique ID of the Ezsignformfield</value>
-        /// <example>32</example>
+        </example> }}
+		/* <example>32</example>*/
         [DataMember(Name = "pkiEzsignformfieldID", EmitDefaultValue = false)]
         public int PkiEzsignformfieldID { get; set; }
 
@@ -81,7 +82,8 @@ namespace eZmaxApi.Model
         /// The page number in the Ezsigndocument
         /// </summary>
         /// <value>The page number in the Ezsigndocument</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "iEzsignpagePagenumber", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignpagePagenumber { get; set; }
 
@@ -89,7 +91,8 @@ namespace eZmaxApi.Model
         /// The Label for the Ezsignformfield
         /// </summary>
         /// <value>The Label for the Ezsignformfield</value>
-        /// <example>Peanuts</example>
+        </example> }}
+		/* <example>Peanuts</example>*/
         [DataMember(Name = "sEzsignformfieldLabel", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignformfieldLabel { get; set; }
 
@@ -97,7 +100,8 @@ namespace eZmaxApi.Model
         /// The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio
         /// </summary>
         /// <value>The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio</value>
-        /// <example>Yes</example>
+        </example> }}
+		/* <example>Yes</example>*/
         [DataMember(Name = "sEzsignformfieldValue", EmitDefaultValue = false)]
         public string SEzsignformfieldValue { get; set; }
 
@@ -105,7 +109,8 @@ namespace eZmaxApi.Model
         /// The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
         /// </summary>
         /// <value>The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.</value>
-        /// <example>200</example>
+        </example> }}
+		/* <example>200</example>*/
         [DataMember(Name = "iEzsignformfieldX", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignformfieldX { get; set; }
 
@@ -113,7 +118,8 @@ namespace eZmaxApi.Model
         /// The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
         /// </summary>
         /// <value>The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
-        /// <example>300</example>
+        </example> }}
+		/* <example>300</example>*/
         [DataMember(Name = "iEzsignformfieldY", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignformfieldY { get; set; }
 
@@ -121,7 +127,8 @@ namespace eZmaxApi.Model
         /// The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
         /// </summary>
         /// <value>The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |</value>
-        /// <example>102</example>
+        </example> }}
+		/* <example>102</example>*/
         [DataMember(Name = "iEzsignformfieldWidth", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignformfieldWidth { get; set; }
 
@@ -129,7 +136,8 @@ namespace eZmaxApi.Model
         /// The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
         /// </summary>
         /// <value>The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | </value>
-        /// <example>22</example>
+        </example> }}
+		/* <example>22</example>*/
         [DataMember(Name = "iEzsignformfieldHeight", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignformfieldHeight { get; set; }
 
@@ -144,7 +152,8 @@ namespace eZmaxApi.Model
         /// This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
         /// </summary>
         /// <value>This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**</value>
-        /// <example>Montreal</example>
+        </example> }}
+		/* <example>Montreal</example>*/
         [DataMember(Name = "sEzsignformfieldEnteredvalue", EmitDefaultValue = false)]
         public string SEzsignformfieldEnteredvalue { get; set; }
 

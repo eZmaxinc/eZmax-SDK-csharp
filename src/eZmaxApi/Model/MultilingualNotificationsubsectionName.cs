@@ -47,7 +47,8 @@ namespace eZmaxApi.Model
         /// The name of the Notificationsubsection in French
         /// </summary>
         /// <value>The name of the Notificationsubsection in French</value>
-        /// <example>Signature électronique</example>
+        </example> }}
+		/* <example>Signature électronique</example>*/
         [DataMember(Name = "sNotificationsubsectionName1", EmitDefaultValue = false)]
         public string SNotificationsubsectionName1 { get; set; }
 
@@ -55,7 +56,8 @@ namespace eZmaxApi.Model
         /// The name of the Notificationsubsection in English
         /// </summary>
         /// <value>The name of the Notificationsubsection in English</value>
-        /// <example>Electronic signature</example>
+        </example> }}
+		/* <example>Electronic signature</example>*/
         [DataMember(Name = "sNotificationsubsectionName2", EmitDefaultValue = false)]
         public string SNotificationsubsectionName2 { get; set; }
 

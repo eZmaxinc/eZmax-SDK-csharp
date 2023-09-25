@@ -94,7 +94,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Branding
         /// </summary>
         /// <value>The unique ID of the Branding</value>
-        /// <example>78</example>
+        </example> }}
+		/* <example>78</example>*/
         [DataMember(Name = "pkiBrandingID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiBrandingID { get; set; }
 
@@ -102,7 +103,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Email
         /// </summary>
         /// <value>The unique ID of the Email</value>
-        /// <example>22</example>
+        </example> }}
+		/* <example>22</example>*/
         [DataMember(Name = "fkiEmailID", EmitDefaultValue = false)]
         public int FkiEmailID { get; set; }
 
@@ -116,7 +118,8 @@ namespace eZmaxApi.Model
         /// The Description of the Branding in the language of the requester
         /// </summary>
         /// <value>The Description of the Branding in the language of the requester</value>
-        /// <example>Company X</example>
+        </example> }}
+		/* <example>Company X</example>*/
         [DataMember(Name = "sBrandingDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SBrandingDescriptionX { get; set; }
 
@@ -124,7 +127,8 @@ namespace eZmaxApi.Model
         /// The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
         /// </summary>
         /// <value>The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty</value>
-        /// <example>eZmax (Corp)</example>
+        </example> }}
+		/* <example>eZmax (Corp)</example>*/
         [DataMember(Name = "sBrandingName", EmitDefaultValue = false)]
         public string SBrandingName { get; set; }
 
@@ -132,7 +136,8 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-        /// <example>email@example.com</example>
+        </example> }}
+		/* <example>email@example.com</example>*/
         [DataMember(Name = "sEmailAddress", EmitDefaultValue = false)]
         public string SEmailAddress { get; set; }
 
@@ -140,7 +145,8 @@ namespace eZmaxApi.Model
         /// The color of the text. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the text. This is a RGB color converted into integer</value>
-        /// <example>3752795</example>
+        </example> }}
+		/* <example>3752795</example>*/
         [DataMember(Name = "iBrandingColortext", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColortext { get; set; }
 
@@ -148,7 +154,8 @@ namespace eZmaxApi.Model
         /// The color of the text in the link box. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the text in the link box. This is a RGB color converted into integer</value>
-        /// <example>0</example>
+        </example> }}
+		/* <example>0</example>*/
         [DataMember(Name = "iBrandingColortextlinkbox", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColortextlinkbox { get; set; }
 
@@ -156,7 +163,8 @@ namespace eZmaxApi.Model
         /// The color of the text in the button. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the text in the button. This is a RGB color converted into integer</value>
-        /// <example>16777215</example>
+        </example> }}
+		/* <example>16777215</example>*/
         [DataMember(Name = "iBrandingColortextbutton", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColortextbutton { get; set; }
 
@@ -164,7 +172,8 @@ namespace eZmaxApi.Model
         /// The color of the background. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the background. This is a RGB color converted into integer</value>
-        /// <example>15658734</example>
+        </example> }}
+		/* <example>15658734</example>*/
         [DataMember(Name = "iBrandingColorbackground", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColorbackground { get; set; }
 
@@ -172,7 +181,8 @@ namespace eZmaxApi.Model
         /// The color of the background of the button. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the background of the button. This is a RGB color converted into integer</value>
-        /// <example>13577007</example>
+        </example> }}
+		/* <example>13577007</example>*/
         [DataMember(Name = "iBrandingColorbackgroundbutton", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColorbackgroundbutton { get; set; }
 
@@ -180,7 +190,8 @@ namespace eZmaxApi.Model
         /// The color of the background of the small box. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the background of the small box. This is a RGB color converted into integer</value>
-        /// <example>16777215</example>
+        </example> }}
+		/* <example>16777215</example>*/
         [DataMember(Name = "iBrandingColorbackgroundsmallbox", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColorbackgroundsmallbox { get; set; }
 
@@ -188,7 +199,8 @@ namespace eZmaxApi.Model
         /// Whether the Branding is active or not
         /// </summary>
         /// <value>Whether the Branding is active or not</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bBrandingIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BBrandingIsactive { get; set; }
 
@@ -196,7 +208,8 @@ namespace eZmaxApi.Model
         /// The url of the picture used as logo in the Branding
         /// </summary>
         /// <value>The url of the picture used as logo in the Branding</value>
-        /// <example>http://www.example.com/logo.jpg</example>
+        </example> }}
+		/* <example>http://www.example.com/logo.jpg</example>*/
         [DataMember(Name = "sBrandingLogourl", EmitDefaultValue = false)]
         public string SBrandingLogourl { get; set; }
 

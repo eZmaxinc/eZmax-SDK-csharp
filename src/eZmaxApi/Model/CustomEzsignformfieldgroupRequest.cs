@@ -59,7 +59,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignformfieldgroup
         /// </summary>
         /// <value>The unique ID of the Ezsignformfieldgroup</value>
-        /// <example>26</example>
+        </example> }}
+		/* <example>26</example>*/
         [DataMember(Name = "pkiEzsignformfieldgroupID", EmitDefaultValue = false)]
         public int PkiEzsignformfieldgroupID { get; set; }
 
@@ -67,7 +68,8 @@ namespace eZmaxApi.Model
         /// The Label for the Ezsignformfieldgroup
         /// </summary>
         /// <value>The Label for the Ezsignformfieldgroup</value>
-        /// <example>Allergies</example>
+        </example> }}
+		/* <example>Allergies</example>*/
         [DataMember(Name = "sEzsignformfieldgroupLabel", EmitDefaultValue = false)]
         public string SEzsignformfieldgroupLabel { get; set; }
 

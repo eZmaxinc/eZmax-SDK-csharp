@@ -78,7 +78,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfolder
         /// </summary>
         /// <value>The unique ID of the Ezsignfolder</value>
-        /// <example>33</example>
+        </example> }}
+		/* <example>33</example>*/
         [DataMember(Name = "pkiEzsignfolderID", EmitDefaultValue = false)]
         public int PkiEzsignfolderID { get; set; }
 
@@ -86,7 +87,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-        /// <example>5</example>
+        </example> }}
+		/* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldertypeID { get; set; }
 
@@ -94,7 +96,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
         /// </summary>
         /// <value>The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiEzsigntsarequirementID", EmitDefaultValue = false)]
         public int FkiEzsigntsarequirementID { get; set; }
 
@@ -102,7 +105,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignfolder
         /// </summary>
         /// <value>The description of the Ezsignfolder</value>
-        /// <example>Test eZsign Folder</example>
+        </example> }}
+		/* <example>Test eZsign Folder</example>*/
         [DataMember(Name = "sEzsignfolderDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignfolderDescription { get; set; }
 
@@ -110,7 +114,8 @@ namespace eZmaxApi.Model
         /// Note about the Ezsignfolder
         /// </summary>
         /// <value>Note about the Ezsignfolder</value>
-        /// <example>This is a note</example>
+        </example> }}
+		/* <example>This is a note</example>*/
         [DataMember(Name = "tEzsignfolderNote", IsRequired = true, EmitDefaultValue = true)]
         public string TEzsignfolderNote { get; set; }
 
@@ -118,7 +123,8 @@ namespace eZmaxApi.Model
         /// This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
         /// </summary>
         /// <value>This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. </value>
-        /// <example>{&quot;ID&quot;: 1234, &quot;TAGS&quot;: [&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]}</example>
+        </example> }}
+		/* <example>{&quot;ID&quot;: 1234, &quot;TAGS&quot;: [&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]}</example>*/
         [DataMember(Name = "sEzsignfolderExternalid", EmitDefaultValue = false)]
         public string SEzsignfolderExternalid { get; set; }
 

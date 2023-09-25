@@ -104,7 +104,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Communication.
         /// </summary>
         /// <value>The unique ID of the Communication.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "pkiCommunicationID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiCommunicationID { get; set; }
 
@@ -112,7 +113,8 @@ namespace eZmaxApi.Model
         /// The date and time at which the object was created
         /// </summary>
         /// <value>The date and time at which the object was created</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtCreatedDate", IsRequired = true, EmitDefaultValue = true)]
         public string DtCreatedDate { get; set; }
 
@@ -120,7 +122,8 @@ namespace eZmaxApi.Model
         /// The count of Communicationrecipient
         /// </summary>
         /// <value>The count of Communicationrecipient</value>
-        /// <example>8</example>
+        </example> }}
+		/* <example>8</example>*/
         [DataMember(Name = "iCommunicationrecipientCount", IsRequired = true, EmitDefaultValue = true)]
         public int ICommunicationrecipientCount { get; set; }
 
@@ -128,7 +131,8 @@ namespace eZmaxApi.Model
         /// The subject of the Communication
         /// </summary>
         /// <value>The subject of the Communication</value>
-        /// <example>This is an example of subject</example>
+        </example> }}
+		/* <example>This is an example of subject</example>*/
         [DataMember(Name = "sCommunicationSubject", IsRequired = true, EmitDefaultValue = true)]
         public string SCommunicationSubject { get; set; }
 
@@ -136,7 +140,8 @@ namespace eZmaxApi.Model
         /// The sender name of the Communication
         /// </summary>
         /// <value>The sender name of the Communication</value>
-        /// <example>John Doe</example>
+        </example> }}
+		/* <example>John Doe</example>*/
         [DataMember(Name = "sCommunicationSender", IsRequired = true, EmitDefaultValue = true)]
         public string SCommunicationSender { get; set; }
 
@@ -144,7 +149,8 @@ namespace eZmaxApi.Model
         /// The recipients&#39; name of the Communication
         /// </summary>
         /// <value>The recipients&#39; name of the Communication</value>
-        /// <example>Jane Doe</example>
+        </example> }}
+		/* <example>Jane Doe</example>*/
         [DataMember(Name = "sCommunicationRecipient", IsRequired = true, EmitDefaultValue = true)]
         public string SCommunicationRecipient { get; set; }
 

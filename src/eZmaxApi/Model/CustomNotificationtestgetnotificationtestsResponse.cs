@@ -83,7 +83,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Notificationtest
         /// </summary>
         /// <value>The unique ID of the Notificationtest</value>
-        /// <example>14</example>
+        </example> }}
+		/* <example>14</example>*/
         [DataMember(Name = "pkiNotificationtestID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiNotificationtestID { get; set; }
 
@@ -97,7 +98,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Notificationsubsection
         /// </summary>
         /// <value>The unique ID of the Notificationsubsection</value>
-        /// <example>3</example>
+        </example> }}
+		/* <example>3</example>*/
         [DataMember(Name = "fkiNotificationsubsectionID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiNotificationsubsectionID { get; set; }
 
@@ -105,7 +107,8 @@ namespace eZmaxApi.Model
         /// The function name of the Notificationtest
         /// </summary>
         /// <value>The function name of the Notificationtest</value>
-        /// <example>Default</example>
+        </example> }}
+		/* <example>Default</example>*/
         [DataMember(Name = "sNotificationtestFunction", IsRequired = true, EmitDefaultValue = true)]
         public string SNotificationtestFunction { get; set; }
 
@@ -113,7 +116,8 @@ namespace eZmaxApi.Model
         /// The name of the Notificationtest in the language of the requester
         /// </summary>
         /// <value>The name of the Notificationtest in the language of the requester</value>
-        /// <example>Default</example>
+        </example> }}
+		/* <example>Default</example>*/
         [DataMember(Name = "sNotificationtestNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SNotificationtestNameX { get; set; }
 
@@ -121,7 +125,8 @@ namespace eZmaxApi.Model
         /// The number of elements returned by the Notificationtest
         /// </summary>
         /// <value>The number of elements returned by the Notificationtest</value>
-        /// <example>27</example>
+        </example> }}
+		/* <example>27</example>*/
         [DataMember(Name = "iNotificationtest", IsRequired = true, EmitDefaultValue = true)]
         public int INotificationtest { get; set; }
 

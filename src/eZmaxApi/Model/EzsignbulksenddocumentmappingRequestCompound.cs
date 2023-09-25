@@ -56,7 +56,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignbulksenddocumentmapping.
         /// </summary>
         /// <value>The unique ID of the Ezsignbulksenddocumentmapping.</value>
-        /// <example>48</example>
+        </example> }}
+		/* <example>48</example>*/
         [DataMember(Name = "pkiEzsignbulksenddocumentmappingID", EmitDefaultValue = false)]
         public int PkiEzsignbulksenddocumentmappingID { get; set; }
 
@@ -64,7 +65,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignbulksend
         /// </summary>
         /// <value>The unique ID of the Ezsignbulksend</value>
-        /// <example>8</example>
+        </example> }}
+		/* <example>8</example>*/
         [DataMember(Name = "fkiEzsignbulksendID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignbulksendID { get; set; }
 
@@ -72,7 +74,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackage
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackage</value>
-        /// <example>99</example>
+        </example> }}
+		/* <example>99</example>*/
         [DataMember(Name = "fkiEzsigntemplatepackageID", EmitDefaultValue = false)]
         public int FkiEzsigntemplatepackageID { get; set; }
 
@@ -80,7 +83,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplate
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplate</value>
-        /// <example>36</example>
+        </example> }}
+		/* <example>36</example>*/
         [DataMember(Name = "fkiEzsigntemplateID", EmitDefaultValue = false)]
         public int FkiEzsigntemplateID { get; set; }
 

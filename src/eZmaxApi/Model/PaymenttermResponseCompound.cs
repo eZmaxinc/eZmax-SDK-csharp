@@ -83,7 +83,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Paymentterm
         /// </summary>
         /// <value>The unique ID of the Paymentterm</value>
-        /// <example>46</example>
+        </example> }}
+		/* <example>46</example>*/
         [DataMember(Name = "pkiPaymenttermID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiPaymenttermID { get; set; }
 
@@ -91,7 +92,8 @@ namespace eZmaxApi.Model
         /// The code of the Paymentterm
         /// </summary>
         /// <value>The code of the Paymentterm</value>
-        /// <example>0030</example>
+        </example> }}
+		/* <example>0030</example>*/
         [DataMember(Name = "sPaymenttermCode", IsRequired = true, EmitDefaultValue = true)]
         public string SPaymenttermCode { get; set; }
 
@@ -99,7 +101,8 @@ namespace eZmaxApi.Model
         /// The day of the Paymentterm
         /// </summary>
         /// <value>The day of the Paymentterm</value>
-        /// <example>30</example>
+        </example> }}
+		/* <example>30</example>*/
         [DataMember(Name = "iPaymenttermDay", IsRequired = true, EmitDefaultValue = true)]
         public int IPaymenttermDay { get; set; }
 
@@ -113,7 +116,8 @@ namespace eZmaxApi.Model
         /// Whether the Paymentterm is active or not
         /// </summary>
         /// <value>Whether the Paymentterm is active or not</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bPaymenttermIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BPaymenttermIsactive { get; set; }
 

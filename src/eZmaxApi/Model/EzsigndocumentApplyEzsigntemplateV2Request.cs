@@ -64,7 +64,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplate
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplate</value>
-        /// <example>36</example>
+        </example> }}
+		/* <example>36</example>*/
         [DataMember(Name = "fkiEzsigntemplateID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplateID { get; set; }
 

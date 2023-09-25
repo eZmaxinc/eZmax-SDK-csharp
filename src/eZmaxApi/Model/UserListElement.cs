@@ -106,7 +106,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        /// <example>70</example>
+        </example> }}
+		/* <example>70</example>*/
         [DataMember(Name = "pkiUserID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiUserID { get; set; }
 
@@ -114,7 +115,8 @@ namespace eZmaxApi.Model
         /// The first name of the user
         /// </summary>
         /// <value>The first name of the user</value>
-        /// <example>John</example>
+        </example> }}
+		/* <example>John</example>*/
         [DataMember(Name = "sUserFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserFirstname { get; set; }
 
@@ -122,7 +124,8 @@ namespace eZmaxApi.Model
         /// The last name of the user
         /// </summary>
         /// <value>The last name of the user</value>
-        /// <example>Doe</example>
+        </example> }}
+		/* <example>Doe</example>*/
         [DataMember(Name = "sUserLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLastname { get; set; }
 
@@ -130,7 +133,8 @@ namespace eZmaxApi.Model
         /// The login name of the User.
         /// </summary>
         /// <value>The login name of the User.</value>
-        /// <example>JohnDoe</example>
+        </example> }}
+		/* <example>JohnDoe</example>*/
         [DataMember(Name = "sUserLoginname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLoginname { get; set; }
 
@@ -138,7 +142,8 @@ namespace eZmaxApi.Model
         /// Whether the User is active or not
         /// </summary>
         /// <value>Whether the User is active or not</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bUserIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BUserIsactive { get; set; }
 
@@ -146,7 +151,8 @@ namespace eZmaxApi.Model
         /// The eZsign prepaid expiration date
         /// </summary>
         /// <value>The eZsign prepaid expiration date</value>
-        /// <example>2020-12-31</example>
+        </example> }}
+		/* <example>2020-12-31</example>*/
         [DataMember(Name = "dtUserEzsignprepaidexpiration", EmitDefaultValue = false)]
         public string DtUserEzsignprepaidexpiration { get; set; }
 
@@ -154,7 +160,8 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-        /// <example>email@example.com</example>
+        </example> }}
+		/* <example>email@example.com</example>*/
         [DataMember(Name = "sEmailAddress", IsRequired = true, EmitDefaultValue = true)]
         public string SEmailAddress { get; set; }
 

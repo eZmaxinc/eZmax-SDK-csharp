@@ -125,7 +125,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplateformfieldgroup
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplateformfieldgroup</value>
-        /// <example>64</example>
+        </example> }}
+		/* <example>64</example>*/
         [DataMember(Name = "pkiEzsigntemplateformfieldgroupID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigntemplateformfieldgroupID { get; set; }
 
@@ -133,7 +134,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatedocument
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatedocument</value>
-        /// <example>133</example>
+        </example> }}
+		/* <example>133</example>*/
         [DataMember(Name = "fkiEzsigntemplatedocumentID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplatedocumentID { get; set; }
 
@@ -141,7 +143,8 @@ namespace eZmaxApi.Model
         /// The Label for the Ezsigntemplateformfieldgroup
         /// </summary>
         /// <value>The Label for the Ezsigntemplateformfieldgroup</value>
-        /// <example>Allergies</example>
+        </example> }}
+		/* <example>Allergies</example>*/
         [DataMember(Name = "sEzsigntemplateformfieldgroupLabel", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigntemplateformfieldgroupLabel { get; set; }
 
@@ -149,7 +152,8 @@ namespace eZmaxApi.Model
         /// The step when the Ezsigntemplatesigner will be invited to fill the form fields
         /// </summary>
         /// <value>The step when the Ezsigntemplatesigner will be invited to fill the form fields</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "iEzsigntemplateformfieldgroupStep", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplateformfieldgroupStep { get; set; }
 
@@ -157,7 +161,8 @@ namespace eZmaxApi.Model
         /// The default value for the Ezsigntemplateformfieldgroup
         /// </summary>
         /// <value>The default value for the Ezsigntemplateformfieldgroup</value>
-        /// <example>Foo</example>
+        </example> }}
+		/* <example>Foo</example>*/
         [DataMember(Name = "sEzsigntemplateformfieldgroupDefaultvalue", EmitDefaultValue = false)]
         public string SEzsigntemplateformfieldgroupDefaultvalue { get; set; }
 
@@ -165,7 +170,8 @@ namespace eZmaxApi.Model
         /// The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
         /// </summary>
         /// <value>The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "iEzsigntemplateformfieldgroupFilledmin", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplateformfieldgroupFilledmin { get; set; }
 
@@ -173,7 +179,8 @@ namespace eZmaxApi.Model
         /// The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
         /// </summary>
         /// <value>The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup</value>
-        /// <example>2</example>
+        </example> }}
+		/* <example>2</example>*/
         [DataMember(Name = "iEzsigntemplateformfieldgroupFilledmax", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplateformfieldgroupFilledmax { get; set; }
 
@@ -188,7 +195,8 @@ namespace eZmaxApi.Model
         /// The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
         /// </summary>
         /// <value>The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**</value>
-        /// <example>75</example>
+        </example> }}
+		/* <example>75</example>*/
         [DataMember(Name = "iEzsigntemplateformfieldgroupMaxlength", EmitDefaultValue = false)]
         public int IEzsigntemplateformfieldgroupMaxlength { get; set; }
 
@@ -203,7 +211,8 @@ namespace eZmaxApi.Model
         /// A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
         /// </summary>
         /// <value>A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**</value>
-        /// <example>/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/</example>
+        </example> }}
+		/* <example>/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/</example>*/
         [DataMember(Name = "sEzsigntemplateformfieldgroupRegexp", EmitDefaultValue = false)]
         public string SEzsigntemplateformfieldgroupRegexp { get; set; }
 
@@ -211,7 +220,8 @@ namespace eZmaxApi.Model
         /// A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup
         /// </summary>
         /// <value>A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup</value>
-        /// <example>Please enter a valid email address</example>
+        </example> }}
+		/* <example>Please enter a valid email address</example>*/
         [DataMember(Name = "tEzsigntemplateformfieldgroupTooltip", EmitDefaultValue = false)]
         public string TEzsigntemplateformfieldgroupTooltip { get; set; }
 

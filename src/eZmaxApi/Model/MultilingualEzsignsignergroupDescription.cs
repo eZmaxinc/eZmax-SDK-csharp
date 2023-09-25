@@ -47,7 +47,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignsignergroup in French
         /// </summary>
         /// <value>The description of the Ezsignsignergroup in French</value>
-        /// <example>RH</example>
+        </example> }}
+		/* <example>RH</example>*/
         [DataMember(Name = "sEzsignsignergroupDescription1", EmitDefaultValue = false)]
         public string SEzsignsignergroupDescription1 { get; set; }
 
@@ -55,7 +56,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignsignergroup in English
         /// </summary>
         /// <value>The description of the Ezsignsignergroup in English</value>
-        /// <example>HR</example>
+        </example> }}
+		/* <example>HR</example>*/
         [DataMember(Name = "sEzsignsignergroupDescription2", EmitDefaultValue = false)]
         public string SEzsignsignergroupDescription2 { get; set; }
 

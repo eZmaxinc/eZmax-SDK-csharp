@@ -81,7 +81,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackage
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackage</value>
-        /// <example>99</example>
+        </example> }}
+		/* <example>99</example>*/
         [DataMember(Name = "pkiEzsigntemplatepackageID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigntemplatepackageID { get; set; }
 
@@ -89,7 +90,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-        /// <example>5</example>
+        </example> }}
+		/* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldertypeID { get; set; }
 
@@ -97,7 +99,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        /// <example>2</example>
+        </example> }}
+		/* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
 
@@ -105,7 +108,8 @@ namespace eZmaxApi.Model
         /// The Name of the Language in the language of the requester
         /// </summary>
         /// <value>The Name of the Language in the language of the requester</value>
-        /// <example>English</example>
+        </example> }}
+		/* <example>English</example>*/
         [DataMember(Name = "sLanguageNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SLanguageNameX { get; set; }
 
@@ -113,7 +117,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezsigntemplatepackage
         /// </summary>
         /// <value>The description of the Ezsigntemplatepackage</value>
-        /// <example>Package for new clients</example>
+        </example> }}
+		/* <example>Package for new clients</example>*/
         [DataMember(Name = "sEzsigntemplatepackageDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigntemplatepackageDescription { get; set; }
 
@@ -135,7 +140,8 @@ namespace eZmaxApi.Model
         /// Whether the Ezsigntemplatepackage is active or not
         /// </summary>
         /// <value>Whether the Ezsigntemplatepackage is active or not</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bEzsigntemplatepackageIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsigntemplatepackageIsactive { get; set; }
 
@@ -143,7 +149,8 @@ namespace eZmaxApi.Model
         /// The name of the Ezsignfoldertype in the language of the requester
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
-        /// <example>Default</example>
+        </example> }}
+		/* <example>Default</example>*/
         [DataMember(Name = "sEzsignfoldertypeNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignfoldertypeNameX { get; set; }
 

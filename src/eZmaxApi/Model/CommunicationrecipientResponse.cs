@@ -107,7 +107,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Communicationrecipient.
         /// </summary>
         /// <value>The unique ID of the Communicationrecipient.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "pkiCommunicationrecipientID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiCommunicationrecipientID { get; set; }
 
@@ -115,7 +116,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Agent.
         /// </summary>
         /// <value>The unique ID of the Agent.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiAgentID", EmitDefaultValue = false)]
         public int FkiAgentID { get; set; }
 
@@ -123,7 +125,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Broker.
         /// </summary>
         /// <value>The unique ID of the Broker.</value>
-        /// <example>26</example>
+        </example> }}
+		/* <example>26</example>*/
         [DataMember(Name = "fkiBrokerID", EmitDefaultValue = false)]
         public int FkiBrokerID { get; set; }
 
@@ -131,7 +134,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Contact
         /// </summary>
         /// <value>The unique ID of the Contact</value>
-        /// <example>21</example>
+        </example> }}
+		/* <example>21</example>*/
         [DataMember(Name = "fkiContactID", EmitDefaultValue = false)]
         public int FkiContactID { get; set; }
 
@@ -139,7 +143,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Customer.
         /// </summary>
         /// <value>The unique ID of the Customer.</value>
-        /// <example>18</example>
+        </example> }}
+		/* <example>18</example>*/
         [DataMember(Name = "fkiCustomerID", EmitDefaultValue = false)]
         public int FkiCustomerID { get; set; }
 
@@ -147,7 +152,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Employee.
         /// </summary>
         /// <value>The unique ID of the Employee.</value>
-        /// <example>31</example>
+        </example> }}
+		/* <example>31</example>*/
         [DataMember(Name = "fkiEmployeeID", EmitDefaultValue = false)]
         public int FkiEmployeeID { get; set; }
 
@@ -155,7 +161,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignsigner
         /// </summary>
         /// <value>The unique ID of the Ezsignsigner</value>
-        /// <example>89</example>
+        </example> }}
+		/* <example>89</example>*/
         [DataMember(Name = "fkiEzsignsignerID", EmitDefaultValue = false)]
         public int FkiEzsignsignerID { get; set; }
 
@@ -163,7 +170,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Franchisereoffice
         /// </summary>
         /// <value>The unique ID of the Franchisereoffice</value>
-        /// <example>50</example>
+        </example> }}
+		/* <example>50</example>*/
         [DataMember(Name = "fkiFranchiseofficeID", EmitDefaultValue = false)]
         public int FkiFranchiseofficeID { get; set; }
 
@@ -171,7 +179,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        /// <example>70</example>
+        </example> }}
+		/* <example>70</example>*/
         [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
 
@@ -179,7 +188,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Agentincorporation.
         /// </summary>
         /// <value>The unique ID of the Agentincorporation.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiAgentincorporationID", EmitDefaultValue = false)]
         public int FkiAgentincorporationID { get; set; }
 
@@ -187,7 +197,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Assistant.
         /// </summary>
         /// <value>The unique ID of the Assistant.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiAssistantID", EmitDefaultValue = false)]
         public int FkiAssistantID { get; set; }
 
@@ -195,7 +206,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Externalbroker.
         /// </summary>
         /// <value>The unique ID of the Externalbroker.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiExternalbrokerID", EmitDefaultValue = false)]
         public int FkiExternalbrokerID { get; set; }
 
@@ -203,7 +215,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezcomagent.
         /// </summary>
         /// <value>The unique ID of the Ezcomagent.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiEzcomagentID", EmitDefaultValue = false)]
         public int FkiEzcomagentID { get; set; }
 
@@ -211,7 +224,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Notary.
         /// </summary>
         /// <value>The unique ID of the Notary.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiNotaryID", EmitDefaultValue = false)]
         public int FkiNotaryID { get; set; }
 
@@ -219,7 +233,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Rewardmember.
         /// </summary>
         /// <value>The unique ID of the Rewardmember.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiRewardmemberID", EmitDefaultValue = false)]
         public int FkiRewardmemberID { get; set; }
 
@@ -227,7 +242,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Supplier.
         /// </summary>
         /// <value>The unique ID of the Supplier.</value>
-        /// <example>1</example>
+        </example> }}
+		/* <example>1</example>*/
         [DataMember(Name = "fkiSupplierID", EmitDefaultValue = false)]
         public int FkiSupplierID { get; set; }
 

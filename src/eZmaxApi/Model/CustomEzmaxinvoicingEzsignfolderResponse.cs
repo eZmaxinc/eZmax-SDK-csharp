@@ -65,7 +65,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfolder
         /// </summary>
         /// <value>The unique ID of the Ezsignfolder</value>
-        /// <example>33</example>
+        </example> }}
+		/* <example>33</example>*/
         [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfolderID { get; set; }
 
@@ -73,7 +74,8 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignfolder
         /// </summary>
         /// <value>The description of the Ezsignfolder</value>
-        /// <example>Test eZsign Folder</example>
+        </example> }}
+		/* <example>Test eZsign Folder</example>*/
         [DataMember(Name = "sEzsignfolderDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignfolderDescription { get; set; }
 
@@ -81,7 +83,8 @@ namespace eZmaxApi.Model
         /// Whether the TSA requirement is billable or not
         /// </summary>
         /// <value>Whether the TSA requirement is billable or not</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bEzsigntsarequirementBillable", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsigntsarequirementBillable { get; set; }
 
@@ -89,7 +92,8 @@ namespace eZmaxApi.Model
         /// Whether the MFA was used or not for the Ezsignfolder
         /// </summary>
         /// <value>Whether the MFA was used or not for the Ezsignfolder</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bEzsignfolderMfaused", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfolderMfaused { get; set; }
 
@@ -97,7 +101,8 @@ namespace eZmaxApi.Model
         /// Whether there was a signature is of type payment
         /// </summary>
         /// <value>Whether there was a signature is of type payment</value>
-        /// <example>true</example>
+        </example> }}
+		/* <example>true</example>*/
         [DataMember(Name = "bEzsignfolderPaymentused", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfolderPaymentused { get; set; }
 

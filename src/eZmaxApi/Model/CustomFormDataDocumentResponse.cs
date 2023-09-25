@@ -73,7 +73,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigndocument
         /// </summary>
         /// <value>The unique ID of the Ezsigndocument</value>
-        /// <example>97</example>
+        </example> }}
+		/* <example>97</example>*/
         [DataMember(Name = "pkiEzsigndocumentID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigndocumentID { get; set; }
 
@@ -81,7 +82,8 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfolder
         /// </summary>
         /// <value>The unique ID of the Ezsignfolder</value>
-        /// <example>33</example>
+        </example> }}
+		/* <example>33</example>*/
         [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfolderID { get; set; }
 
@@ -89,7 +91,8 @@ namespace eZmaxApi.Model
         /// The name of the document that will be presented to Ezsignfoldersignerassociations
         /// </summary>
         /// <value>The name of the document that will be presented to Ezsignfoldersignerassociations</value>
-        /// <example>Contract #123</example>
+        </example> }}
+		/* <example>Contract #123</example>*/
         [DataMember(Name = "sEzsigndocumentName", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigndocumentName { get; set; }
 
@@ -97,7 +100,8 @@ namespace eZmaxApi.Model
         /// The date and time at which the object was last modified
         /// </summary>
         /// <value>The date and time at which the object was last modified</value>
-        /// <example>2020-12-31 23:59:59</example>
+        </example> }}
+		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtModifiedDate", IsRequired = true, EmitDefaultValue = true)]
         public string DtModifiedDate { get; set; }
 
