@@ -57,7 +57,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Emailstatic
         /// </summary>
         /// <value>The unique ID of the Emailstatic</value>
-        </example> }}
 		/* <example>99</example>*/
         [DataMember(Name = "pkiEmailstaticID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEmailstaticID { get; set; }
@@ -66,7 +65,6 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-        </example> }}
 		/* <example>email@example.com</example>*/
         [DataMember(Name = "sEmailstaticAddress", IsRequired = true, EmitDefaultValue = true)]
         public string SEmailstaticAddress { get; set; }

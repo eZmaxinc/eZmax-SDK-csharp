@@ -65,7 +65,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Communicationattachment
         /// </summary>
         /// <value>The unique ID of the Communicationattachment</value>
-        </example> }}
 		/* <example>203</example>*/
         [DataMember(Name = "pkiCommunicationattachmentID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiCommunicationattachmentID { get; set; }
@@ -74,7 +73,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Attachment.
         /// </summary>
         /// <value>The unique ID of the Attachment.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiAttachmentID", EmitDefaultValue = false)]
         public int FkiAttachmentID { get; set; }
@@ -83,7 +81,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Invoice.
         /// </summary>
         /// <value>The unique ID of the Invoice.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiInvoiceID", EmitDefaultValue = false)]
         public int FkiInvoiceID { get; set; }
@@ -92,7 +89,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Salarypreparation.
         /// </summary>
         /// <value>The unique ID of the Salarypreparation.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiSalarypreparationID", EmitDefaultValue = false)]
         public int FkiSalarypreparationID { get; set; }
@@ -101,7 +97,6 @@ namespace eZmaxApi.Model
         /// The name of the Communicationattachment
         /// </summary>
         /// <value>The name of the Communicationattachment</value>
-        </example> }}
 		/* <example>File.pdf</example>*/
         [DataMember(Name = "sCommunicationattachmentName", IsRequired = true, EmitDefaultValue = true)]
         public string SCommunicationattachmentName { get; set; }

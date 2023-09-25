@@ -71,7 +71,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Branding
         /// </summary>
         /// <value>The unique ID of the Branding</value>
-        </example> }}
 		/* <example>78</example>*/
         [DataMember(Name = "pkiBrandingID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiBrandingID { get; set; }
@@ -80,7 +79,6 @@ namespace eZmaxApi.Model
         /// The Description of the Branding in the language of the requester
         /// </summary>
         /// <value>The Description of the Branding in the language of the requester</value>
-        </example> }}
 		/* <example>Company X</example>*/
         [DataMember(Name = "sBrandingDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SBrandingDescriptionX { get; set; }
@@ -89,7 +87,6 @@ namespace eZmaxApi.Model
         /// The color of the text. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the text. This is a RGB color converted into integer</value>
-        </example> }}
 		/* <example>3752795</example>*/
         [DataMember(Name = "iBrandingColortext", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColortext { get; set; }
@@ -98,7 +95,6 @@ namespace eZmaxApi.Model
         /// The color of the text in the link box. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the text in the link box. This is a RGB color converted into integer</value>
-        </example> }}
 		/* <example>0</example>*/
         [DataMember(Name = "iBrandingColortextlinkbox", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColortextlinkbox { get; set; }
@@ -107,7 +103,6 @@ namespace eZmaxApi.Model
         /// The color of the text in the button. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the text in the button. This is a RGB color converted into integer</value>
-        </example> }}
 		/* <example>16777215</example>*/
         [DataMember(Name = "iBrandingColortextbutton", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColortextbutton { get; set; }
@@ -116,7 +111,6 @@ namespace eZmaxApi.Model
         /// The color of the background. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the background. This is a RGB color converted into integer</value>
-        </example> }}
 		/* <example>15658734</example>*/
         [DataMember(Name = "iBrandingColorbackground", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColorbackground { get; set; }
@@ -125,7 +119,6 @@ namespace eZmaxApi.Model
         /// The color of the background of the button. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the background of the button. This is a RGB color converted into integer</value>
-        </example> }}
 		/* <example>13577007</example>*/
         [DataMember(Name = "iBrandingColorbackgroundbutton", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColorbackgroundbutton { get; set; }
@@ -134,7 +127,6 @@ namespace eZmaxApi.Model
         /// The color of the background of the small box. This is a RGB color converted into integer
         /// </summary>
         /// <value>The color of the background of the small box. This is a RGB color converted into integer</value>
-        </example> }}
 		/* <example>16777215</example>*/
         [DataMember(Name = "iBrandingColorbackgroundsmallbox", IsRequired = true, EmitDefaultValue = true)]
         public int IBrandingColorbackgroundsmallbox { get; set; }
@@ -143,7 +135,6 @@ namespace eZmaxApi.Model
         /// Whether the Branding is active or not
         /// </summary>
         /// <value>Whether the Branding is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bBrandingIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BBrandingIsactive { get; set; }

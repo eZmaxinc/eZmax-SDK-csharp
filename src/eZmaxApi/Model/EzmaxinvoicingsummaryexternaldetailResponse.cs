@@ -98,7 +98,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicingsummaryexternaldetail
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicingsummaryexternaldetail</value>
-        </example> }}
 		/* <example>163</example>*/
         [DataMember(Name = "pkiEzmaxinvoicingsummaryexternaldetailID", EmitDefaultValue = false)]
         public int PkiEzmaxinvoicingsummaryexternaldetailID { get; set; }
@@ -107,7 +106,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicingsummaryexternal
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicingsummaryexternal</value>
-        </example> }}
 		/* <example>177</example>*/
         [DataMember(Name = "fkiEzmaxinvoicingsummaryexternalID", EmitDefaultValue = false)]
         public int FkiEzmaxinvoicingsummaryexternalID { get; set; }
@@ -116,7 +114,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxproduct
         /// </summary>
         /// <value>The unique ID of the Ezmaxproduct</value>
-        </example> }}
 		/* <example>172</example>*/
         [DataMember(Name = "fkiEzmaxproductID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzmaxproductID { get; set; }
@@ -125,7 +122,6 @@ namespace eZmaxApi.Model
         /// The description of the Ezmaxproduct in the language of the requester
         /// </summary>
         /// <value>The description of the Ezmaxproduct in the language of the requester</value>
-        </example> }}
 		/* <example>eZmax (License)</example>*/
         [DataMember(Name = "sEzmaxproductDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzmaxproductDescriptionX { get; set; }
@@ -134,7 +130,6 @@ namespace eZmaxApi.Model
         /// The count item invoiced for the product
         /// </summary>
         /// <value>The count item invoiced for the product</value>
-        </example> }}
 		/* <example>815.61</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryexternaldetailCountreal", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryexternaldetailCountreal { get; set; }
@@ -143,7 +138,6 @@ namespace eZmaxApi.Model
         /// The subtotal invoiced for the product
         /// </summary>
         /// <value>The subtotal invoiced for the product</value>
-        </example> }}
 		/* <example>382.88</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryexternaldetailSubtotal", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryexternaldetailSubtotal { get; set; }
@@ -152,7 +146,6 @@ namespace eZmaxApi.Model
         /// The rebate for the product
         /// </summary>
         /// <value>The rebate for the product</value>
-        </example> }}
 		/* <example>608.18</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryexternaldetailRebate", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryexternaldetailRebate { get; set; }
@@ -161,7 +154,6 @@ namespace eZmaxApi.Model
         /// The total invoiced for the product
         /// </summary>
         /// <value>The total invoiced for the product</value>
-        </example> }}
 		/* <example>869.71</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryexternaldetailTotal", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryexternaldetailTotal { get; set; }
@@ -170,7 +162,6 @@ namespace eZmaxApi.Model
         /// Whether it&#39;s an adjustment
         /// </summary>
         /// <value>Whether it&#39;s an adjustment</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzmaxinvoicingsummaryexternaldetailAdjustment", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzmaxinvoicingsummaryexternaldetailAdjustment { get; set; }
@@ -179,7 +170,6 @@ namespace eZmaxApi.Model
         /// The help message of the Ezmaxproduct in the language of the requester
         /// </summary>
         /// <value>The help message of the Ezmaxproduct in the language of the requester</value>
-        </example> }}
 		/* <example>This is an exemple of help message</example>*/
         [DataMember(Name = "tEzmaxproductHelpX", IsRequired = true, EmitDefaultValue = true)]
         public string TEzmaxproductHelpX { get; set; }

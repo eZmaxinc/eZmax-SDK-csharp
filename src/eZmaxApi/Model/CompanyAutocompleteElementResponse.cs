@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Company
         /// </summary>
         /// <value>The unique ID of the Company</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "pkiCompanyID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiCompanyID { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The Name of the Company in the language of the requester
         /// </summary>
         /// <value>The Name of the Company in the language of the requester</value>
-        </example> }}
 		/* <example>Acme inc.</example>*/
         [DataMember(Name = "sCompanyNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SCompanyNameX { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// Whether the Company is active or not
         /// </summary>
         /// <value>Whether the Company is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bCompanyIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BCompanyIsactive { get; set; }

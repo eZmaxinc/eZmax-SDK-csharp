@@ -64,7 +64,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Textstylestatic
         /// </summary>
         /// <value>The unique ID of the Textstylestatic</value>
-        </example> }}
 		/* <example>216</example>*/
         [DataMember(Name = "pkiTextstylestaticID", EmitDefaultValue = false)]
         public int PkiTextstylestaticID { get; set; }
@@ -73,7 +72,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Font
         /// </summary>
         /// <value>The unique ID of the Font</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiFontID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiFontID { get; set; }
@@ -82,7 +80,6 @@ namespace eZmaxApi.Model
         /// Whether the Textstylestatic is Bold or not
         /// </summary>
         /// <value>Whether the Textstylestatic is Bold or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bTextstylestaticBold", IsRequired = true, EmitDefaultValue = true)]
         public bool BTextstylestaticBold { get; set; }
@@ -91,7 +88,6 @@ namespace eZmaxApi.Model
         /// Whether the Textstylestatic is Underline or not
         /// </summary>
         /// <value>Whether the Textstylestatic is Underline or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bTextstylestaticUnderline", IsRequired = true, EmitDefaultValue = true)]
         public bool BTextstylestaticUnderline { get; set; }
@@ -100,7 +96,6 @@ namespace eZmaxApi.Model
         /// Whether the Textstylestatic is Italic or not
         /// </summary>
         /// <value>Whether the Textstylestatic is Italic or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bTextstylestaticItalic", IsRequired = true, EmitDefaultValue = true)]
         public bool BTextstylestaticItalic { get; set; }
@@ -109,7 +104,6 @@ namespace eZmaxApi.Model
         /// Whether the Textstylestatic is Strikethrough or not
         /// </summary>
         /// <value>Whether the Textstylestatic is Strikethrough or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bTextstylestaticStrikethrough", IsRequired = true, EmitDefaultValue = true)]
         public bool BTextstylestaticStrikethrough { get; set; }
@@ -118,7 +112,6 @@ namespace eZmaxApi.Model
         /// The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795
         /// </summary>
         /// <value>The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795</value>
-        </example> }}
 		/* <example>3752795</example>*/
         [DataMember(Name = "iTextstylestaticFontcolor", IsRequired = true, EmitDefaultValue = true)]
         public int ITextstylestaticFontcolor { get; set; }
@@ -127,7 +120,6 @@ namespace eZmaxApi.Model
         /// The Size for the Font of the Textstylestatic
         /// </summary>
         /// <value>The Size for the Font of the Textstylestatic</value>
-        </example> }}
 		/* <example>12</example>*/
         [DataMember(Name = "iTextstylestaticSize", IsRequired = true, EmitDefaultValue = true)]
         public int ITextstylestaticSize { get; set; }

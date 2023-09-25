@@ -58,7 +58,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignbulksenddocumentmapping.
         /// </summary>
         /// <value>The unique ID of the Ezsignbulksenddocumentmapping.</value>
-        </example> }}
 		/* <example>48</example>*/
         [DataMember(Name = "pkiEzsignbulksenddocumentmappingID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignbulksenddocumentmappingID { get; set; }
@@ -67,7 +66,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignbulksend
         /// </summary>
         /// <value>The unique ID of the Ezsignbulksend</value>
-        </example> }}
 		/* <example>8</example>*/
         [DataMember(Name = "fkiEzsignbulksendID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignbulksendID { get; set; }
@@ -76,7 +74,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackage
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackage</value>
-        </example> }}
 		/* <example>99</example>*/
         [DataMember(Name = "fkiEzsigntemplatepackageID", EmitDefaultValue = false)]
         public int FkiEzsigntemplatepackageID { get; set; }
@@ -85,7 +82,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplate
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplate</value>
-        </example> }}
 		/* <example>36</example>*/
         [DataMember(Name = "fkiEzsigntemplateID", EmitDefaultValue = false)]
         public int FkiEzsigntemplateID { get; set; }
@@ -94,7 +90,6 @@ namespace eZmaxApi.Model
         /// The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder.
         /// </summary>
         /// <value>The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "iEzsignbulksenddocumentmappingOrder", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignbulksenddocumentmappingOrder { get; set; }

@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The description of the Timezone
         /// </summary>
         /// <value>The description of the Timezone</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sTimezoneName", IsRequired = true, EmitDefaultValue = true)]
         public string STimezoneName { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Timezone
         /// </summary>
         /// <value>The unique ID of the Timezone</value>
-        </example> }}
 		/* <example>247</example>*/
         [DataMember(Name = "pkiTimezoneID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiTimezoneID { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// Whether the Timezone is active or not
         /// </summary>
         /// <value>Whether the Timezone is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bTimezoneIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BTimezoneIsactive { get; set; }

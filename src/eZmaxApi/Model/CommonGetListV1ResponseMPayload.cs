@@ -52,7 +52,6 @@ namespace eZmaxApi.Model
         /// The number of rows returned
         /// </summary>
         /// <value>The number of rows returned</value>
-        </example> }}
 		/* <example>100</example>*/
         [DataMember(Name = "iRowReturned", IsRequired = true, EmitDefaultValue = true)]
         public int IRowReturned { get; set; }
@@ -61,7 +60,6 @@ namespace eZmaxApi.Model
         /// The number of rows matching your filters (if any) or the total number of rows
         /// </summary>
         /// <value>The number of rows matching your filters (if any) or the total number of rows</value>
-        </example> }}
 		/* <example>533</example>*/
         [DataMember(Name = "iRowFiltered", IsRequired = true, EmitDefaultValue = true)]
         public int IRowFiltered { get; set; }

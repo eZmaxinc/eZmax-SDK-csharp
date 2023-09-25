@@ -107,7 +107,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Activesession
         /// </summary>
         /// <value>The unique ID of the Activesession</value>
-        </example> }}
 		/* <example>16</example>*/
         [DataMember(Name = "pkiActivesessionID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiActivesessionID { get; set; }
@@ -116,7 +115,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        </example> }}
 		/* <example>70</example>*/
         [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiUserID { get; set; }
@@ -125,7 +123,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Computer
         /// </summary>
         /// <value>The unique ID of the Computer</value>
-        </example> }}
 		/* <example>249</example>*/
         [DataMember(Name = "fkiComputerID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiComputerID { get; set; }
@@ -134,7 +131,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Company
         /// </summary>
         /// <value>The unique ID of the Company</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiCompanyID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiCompanyID { get; set; }
@@ -143,7 +139,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Department
         /// </summary>
         /// <value>The unique ID of the Department</value>
-        </example> }}
 		/* <example>21</example>*/
         [DataMember(Name = "fkiDepartmentID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiDepartmentID { get; set; }
@@ -152,7 +147,6 @@ namespace eZmaxApi.Model
         /// The Name of the Company in the language of the requester
         /// </summary>
         /// <value>The Name of the Company in the language of the requester</value>
-        </example> }}
 		/* <example>Acme inc.</example>*/
         [DataMember(Name = "sCompanyNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SCompanyNameX { get; set; }
@@ -161,7 +155,6 @@ namespace eZmaxApi.Model
         /// The Name of the Department in the language of the requester
         /// </summary>
         /// <value>The Name of the Department in the language of the requester</value>
-        </example> }}
 		/* <example>Head Office</example>*/
         [DataMember(Name = "sDepartmentNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SDepartmentNameX { get; set; }
@@ -170,7 +163,6 @@ namespace eZmaxApi.Model
         /// The loginname of the Activesession
         /// </summary>
         /// <value>The loginname of the Activesession</value>
-        </example> }}
 		/* <example>doej</example>*/
         [DataMember(Name = "sActivesessionLoginname", IsRequired = true, EmitDefaultValue = true)]
         public string SActivesessionLoginname { get; set; }
@@ -179,7 +171,6 @@ namespace eZmaxApi.Model
         /// The description of the Computer
         /// </summary>
         /// <value>The description of the Computer</value>
-        </example> }}
 		/* <example>PC001</example>*/
         [DataMember(Name = "sComputerDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SComputerDescription { get; set; }
@@ -188,7 +179,6 @@ namespace eZmaxApi.Model
         /// The first hit of the Activesession
         /// </summary>
         /// <value>The first hit of the Activesession</value>
-        </example> }}
 		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtActivesessionFirsthit", IsRequired = true, EmitDefaultValue = true)]
         public string DtActivesessionFirsthit { get; set; }
@@ -197,7 +187,6 @@ namespace eZmaxApi.Model
         /// The last hit of the Activesession
         /// </summary>
         /// <value>The last hit of the Activesession</value>
-        </example> }}
 		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtActivesessionLasthit", IsRequired = true, EmitDefaultValue = true)]
         public string DtActivesessionLasthit { get; set; }
@@ -206,7 +195,6 @@ namespace eZmaxApi.Model
         /// Represent an IP address.
         /// </summary>
         /// <value>Represent an IP address.</value>
-        </example> }}
 		/* <example>127.0.0.1</example>*/
         [DataMember(Name = "sActivesessionIP", IsRequired = true, EmitDefaultValue = true)]
         public string SActivesessionIP { get; set; }

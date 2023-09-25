@@ -101,7 +101,6 @@ namespace eZmaxApi.Model
         /// The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false
         /// </summary>
         /// <value>The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false</value>
-        </example> }}
 		/* <example>{&quot;$ref&quot;:&quot;#/components/examples/Svg/value&quot;}</example>*/
         [DataMember(Name = "sSvg", EmitDefaultValue = false)]
         public string SSvg { get; set; }

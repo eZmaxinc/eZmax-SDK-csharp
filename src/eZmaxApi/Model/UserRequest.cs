@@ -140,7 +140,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        </example> }}
 		/* <example>70</example>*/
         [DataMember(Name = "pkiUserID", EmitDefaultValue = false)]
         public int PkiUserID { get; set; }
@@ -149,7 +148,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Agent.
         /// </summary>
         /// <value>The unique ID of the Agent.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiAgentID", EmitDefaultValue = false)]
         public int FkiAgentID { get; set; }
@@ -158,7 +156,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Broker.
         /// </summary>
         /// <value>The unique ID of the Broker.</value>
-        </example> }}
 		/* <example>26</example>*/
         [DataMember(Name = "fkiBrokerID", EmitDefaultValue = false)]
         public int FkiBrokerID { get; set; }
@@ -167,7 +164,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Assistant.
         /// </summary>
         /// <value>The unique ID of the Assistant.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiAssistantID", EmitDefaultValue = false)]
         public int FkiAssistantID { get; set; }
@@ -176,7 +172,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Employee.
         /// </summary>
         /// <value>The unique ID of the Employee.</value>
-        </example> }}
 		/* <example>31</example>*/
         [DataMember(Name = "fkiEmployeeID", EmitDefaultValue = false)]
         public int FkiEmployeeID { get; set; }
@@ -185,7 +180,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Company
         /// </summary>
         /// <value>The unique ID of the Company</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiCompanyIDDefault", IsRequired = true, EmitDefaultValue = true)]
         public int FkiCompanyIDDefault { get; set; }
@@ -194,7 +188,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Department
         /// </summary>
         /// <value>The unique ID of the Department</value>
-        </example> }}
 		/* <example>21</example>*/
         [DataMember(Name = "fkiDepartmentIDDefault", IsRequired = true, EmitDefaultValue = true)]
         public int FkiDepartmentIDDefault { get; set; }
@@ -203,7 +196,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Timezone
         /// </summary>
         /// <value>The unique ID of the Timezone</value>
-        </example> }}
 		/* <example>247</example>*/
         [DataMember(Name = "fkiTimezoneID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiTimezoneID { get; set; }
@@ -212,7 +204,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
@@ -227,7 +218,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityinternal.
         /// </summary>
         /// <value>The unique ID of the Billingentityinternal.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiBillingentityinternalID { get; set; }
@@ -248,7 +238,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)|
         /// </summary>
         /// <value>The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)|</value>
-        </example> }}
 		/* <example>7</example>*/
         [DataMember(Name = "fkiSecretquestionID", EmitDefaultValue = false)]
         public int FkiSecretquestionID { get; set; }
@@ -257,7 +246,6 @@ namespace eZmaxApi.Model
         /// The answer to the Secretquestion
         /// </summary>
         /// <value>The answer to the Secretquestion</value>
-        </example> }}
 		/* <example>Montreal General Hospital</example>*/
         [DataMember(Name = "sUserSecretresponse", EmitDefaultValue = false)]
         public string SUserSecretresponse { get; set; }
@@ -266,7 +254,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Module
         /// </summary>
         /// <value>The unique ID of the Module</value>
-        </example> }}
 		/* <example>40</example>*/
         [DataMember(Name = "fkiModuleIDForm", EmitDefaultValue = false)]
         public int FkiModuleIDForm { get; set; }
@@ -275,7 +262,6 @@ namespace eZmaxApi.Model
         /// The first name of the user
         /// </summary>
         /// <value>The first name of the user</value>
-        </example> }}
 		/* <example>John</example>*/
         [DataMember(Name = "sUserFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserFirstname { get; set; }
@@ -284,7 +270,6 @@ namespace eZmaxApi.Model
         /// The last name of the user
         /// </summary>
         /// <value>The last name of the user</value>
-        </example> }}
 		/* <example>Doe</example>*/
         [DataMember(Name = "sUserLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLastname { get; set; }
@@ -293,7 +278,6 @@ namespace eZmaxApi.Model
         /// The login name of the User.
         /// </summary>
         /// <value>The login name of the User.</value>
-        </example> }}
 		/* <example>JohnDoe</example>*/
         [DataMember(Name = "sUserLoginname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLoginname { get; set; }
@@ -302,7 +286,6 @@ namespace eZmaxApi.Model
         /// Whether the User is active or not
         /// </summary>
         /// <value>Whether the User is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bUserIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BUserIsactive { get; set; }
@@ -311,7 +294,6 @@ namespace eZmaxApi.Model
         /// Whether if the transactions in which the User is implicated must be validated by administrative personnel or not
         /// </summary>
         /// <value>Whether if the transactions in which the User is implicated must be validated by administrative personnel or not</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bUserValidatebyadministration", EmitDefaultValue = true)]
         public bool BUserValidatebyadministration { get; set; }
@@ -320,7 +302,6 @@ namespace eZmaxApi.Model
         /// Whether if the transactions in which the User is implicated must be validated by a director or not
         /// </summary>
         /// <value>Whether if the transactions in which the User is implicated must be validated by a director or not</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bUserValidatebydirector", EmitDefaultValue = true)]
         public bool BUserValidatebydirector { get; set; }
@@ -329,7 +310,6 @@ namespace eZmaxApi.Model
         /// Whether if Attachments uploaded by the User must be validated or not
         /// </summary>
         /// <value>Whether if Attachments uploaded by the User must be validated or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bUserAttachmentautoverified", EmitDefaultValue = true)]
         public bool BUserAttachmentautoverified { get; set; }
@@ -338,7 +318,6 @@ namespace eZmaxApi.Model
         /// Whether if the User is forced to change its password
         /// </summary>
         /// <value>Whether if the User is forced to change its password</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bUserChangepassword", EmitDefaultValue = true)]
         public bool BUserChangepassword { get; set; }

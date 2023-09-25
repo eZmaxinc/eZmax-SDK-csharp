@@ -79,7 +79,6 @@ namespace eZmaxApi.Model
         /// The minimum version of the function that can be called
         /// </summary>
         /// <value>The minimum version of the function that can be called</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "iVersionMin", IsRequired = true, EmitDefaultValue = true)]
         public int IVersionMin { get; set; }
@@ -88,7 +87,6 @@ namespace eZmaxApi.Model
         /// The maximum version of the function that can be called
         /// </summary>
         /// <value>The maximum version of the function that can be called</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "iVersionMax", IsRequired = true, EmitDefaultValue = true)]
         public int IVersionMax { get; set; }
@@ -104,7 +102,6 @@ namespace eZmaxApi.Model
         /// Wheter the current route is deprecated or not
         /// </summary>
         /// <value>Wheter the current route is deprecated or not</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bVersionDeprecated", IsRequired = true, EmitDefaultValue = true)]
         public bool BVersionDeprecated { get; set; }
@@ -126,7 +123,6 @@ namespace eZmaxApi.Model
         /// The maximum numbers of results to be returned
         /// </summary>
         /// <value>The maximum numbers of results to be returned</value>
-        </example> }}
 		/* <example>100</example>*/
         [DataMember(Name = "iRowMax", IsRequired = true, EmitDefaultValue = true)]
         public int IRowMax { get; set; }
@@ -135,7 +131,6 @@ namespace eZmaxApi.Model
         /// The starting element from where to start retrieving the results. For example if you started at iRowOffset&#x3D;0 and asked for iRowMax&#x3D;100, to get the next 100 results, you could specify iRowOffset&#x3D;100&amp;iRowMax&#x3D;100,
         /// </summary>
         /// <value>The starting element from where to start retrieving the results. For example if you started at iRowOffset&#x3D;0 and asked for iRowMax&#x3D;100, to get the next 100 results, you could specify iRowOffset&#x3D;100&amp;iRowMax&#x3D;100,</value>
-        </example> }}
 		/* <example>0</example>*/
         [DataMember(Name = "iRowOffset", IsRequired = true, EmitDefaultValue = true)]
         public int IRowOffset { get; set; }

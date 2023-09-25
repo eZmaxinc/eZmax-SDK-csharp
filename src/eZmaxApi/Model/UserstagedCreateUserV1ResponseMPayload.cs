@@ -50,7 +50,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        </example> }}
 		/* <example>70</example>*/
         [DataMember(Name = "pkiUserID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiUserID { get; set; }

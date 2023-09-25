@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The text of the Secretquestion in the language of the requester
         /// </summary>
         /// <value>The text of the Secretquestion in the language of the requester</value>
-        </example> }}
 		/* <example>The name of the hospital in which you were born</example>*/
         [DataMember(Name = "sSecretquestionTextX", IsRequired = true, EmitDefaultValue = true)]
         public string SSecretquestionTextX { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)|
         /// </summary>
         /// <value>The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)|</value>
-        </example> }}
 		/* <example>7</example>*/
         [DataMember(Name = "pkiSecretquestionID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiSecretquestionID { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// Whether the Secretquestion is active or not
         /// </summary>
         /// <value>Whether the Secretquestion is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bSecretquestionIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BSecretquestionIsactive { get; set; }

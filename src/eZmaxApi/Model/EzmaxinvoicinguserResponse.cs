@@ -77,7 +77,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicinguser
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicinguser</value>
-        </example> }}
 		/* <example>202</example>*/
         [DataMember(Name = "pkiEzmaxinvoicinguserID", EmitDefaultValue = false)]
         public int PkiEzmaxinvoicinguserID { get; set; }
@@ -86,7 +85,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicing
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicing</value>
-        </example> }}
 		/* <example>28</example>*/
         [DataMember(Name = "fkiEzmaxinvoicingID", EmitDefaultValue = false)]
         public int FkiEzmaxinvoicingID { get; set; }
@@ -95,7 +93,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityinternal.
         /// </summary>
         /// <value>The unique ID of the Billingentityinternal.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiBillingentityinternalID { get; set; }
@@ -104,7 +101,6 @@ namespace eZmaxApi.Model
         /// The description of the Billingentityinternal in the language of the requester
         /// </summary>
         /// <value>The description of the Billingentityinternal in the language of the requester</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sBillingentityinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SBillingentityinternalDescriptionX { get; set; }
@@ -113,7 +109,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        </example> }}
 		/* <example>70</example>*/
         [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiUserID { get; set; }
@@ -122,7 +117,6 @@ namespace eZmaxApi.Model
         /// The number of ezsign documents
         /// </summary>
         /// <value>The number of ezsign documents</value>
-        </example> }}
 		/* <example>243</example>*/
         [DataMember(Name = "iEzmaxinvoicinguserEzsigndocument", IsRequired = true, EmitDefaultValue = true)]
         public int IEzmaxinvoicinguserEzsigndocument { get; set; }
@@ -131,7 +125,6 @@ namespace eZmaxApi.Model
         /// Whether there is an eZsign account
         /// </summary>
         /// <value>Whether there is an eZsign account</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzmaxinvoicinguserEzsignaccount", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzmaxinvoicinguserEzsignaccount { get; set; }
@@ -140,7 +133,6 @@ namespace eZmaxApi.Model
         /// Whether it is billable for eZsign
         /// </summary>
         /// <value>Whether it is billable for eZsign</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzmaxinvoicinguserBillableezsign", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzmaxinvoicinguserBillableezsign { get; set; }

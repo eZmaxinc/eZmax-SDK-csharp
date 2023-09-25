@@ -72,7 +72,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignbulksend
         /// </summary>
         /// <value>The unique ID of the Ezsignbulksend</value>
-        </example> }}
 		/* <example>8</example>*/
         [DataMember(Name = "pkiEzsignbulksendID", EmitDefaultValue = false)]
         public int PkiEzsignbulksendID { get; set; }
@@ -81,7 +80,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-        </example> }}
 		/* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldertypeID { get; set; }
@@ -90,7 +88,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
@@ -99,7 +96,6 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignbulksend
         /// </summary>
         /// <value>The description of the Ezsignbulksend</value>
-        </example> }}
 		/* <example>Test eZsign Bulk Send</example>*/
         [DataMember(Name = "sEzsignbulksendDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignbulksendDescription { get; set; }
@@ -108,7 +104,6 @@ namespace eZmaxApi.Model
         /// Note about the Ezsignbulksend
         /// </summary>
         /// <value>Note about the Ezsignbulksend</value>
-        </example> }}
 		/* <example>This is a note</example>*/
         [DataMember(Name = "tEzsignbulksendNote", IsRequired = true, EmitDefaultValue = true)]
         public string TEzsignbulksendNote { get; set; }
@@ -124,7 +119,6 @@ namespace eZmaxApi.Model
         /// Whether the Ezsignbulksend is active or not
         /// </summary>
         /// <value>Whether the Ezsignbulksend is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzsignbulksendIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignbulksendIsactive { get; set; }

@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Cors
         /// </summary>
         /// <value>The unique ID of the Cors</value>
-        </example> }}
 		/* <example>228</example>*/
         [DataMember(Name = "pkiCorsID", EmitDefaultValue = false)]
         public int PkiCorsID { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Apikey
         /// </summary>
         /// <value>The unique ID of the Apikey</value>
-        </example> }}
 		/* <example>99</example>*/
         [DataMember(Name = "fkiApikeyID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiApikeyID { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// The entryurl of the Cors
         /// </summary>
         /// <value>The entryurl of the Cors</value>
-        </example> }}
 		/* <example>Https://www.example.com</example>*/
         [DataMember(Name = "sCorsEntryurl", IsRequired = true, EmitDefaultValue = true)]
         public string SCorsEntryurl { get; set; }

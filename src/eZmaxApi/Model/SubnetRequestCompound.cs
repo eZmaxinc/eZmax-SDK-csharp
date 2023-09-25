@@ -65,7 +65,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Subnet
         /// </summary>
         /// <value>The unique ID of the Subnet</value>
-        </example> }}
 		/* <example>3</example>*/
         [DataMember(Name = "pkiSubnetID", EmitDefaultValue = false)]
         public int PkiSubnetID { get; set; }
@@ -74,7 +73,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        </example> }}
 		/* <example>70</example>*/
         [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
@@ -83,7 +81,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Apikey
         /// </summary>
         /// <value>The unique ID of the Apikey</value>
-        </example> }}
 		/* <example>99</example>*/
         [DataMember(Name = "fkiApikeyID", EmitDefaultValue = false)]
         public int FkiApikeyID { get; set; }
@@ -98,7 +95,6 @@ namespace eZmaxApi.Model
         /// The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064
         /// </summary>
         /// <value>The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064</value>
-        </example> }}
 		/* <example>134744064</example>*/
         [DataMember(Name = "iSubnetNetwork", IsRequired = true, EmitDefaultValue = true)]
         public long ISubnetNetwork { get; set; }
@@ -107,7 +103,6 @@ namespace eZmaxApi.Model
         /// The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040
         /// </summary>
         /// <value>The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040</value>
-        </example> }}
 		/* <example>4294967040</example>*/
         [DataMember(Name = "iSubnetMask", IsRequired = true, EmitDefaultValue = true)]
         public long ISubnetMask { get; set; }

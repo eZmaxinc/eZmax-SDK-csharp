@@ -121,7 +121,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Communication.
         /// </summary>
         /// <value>The unique ID of the Communication.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "pkiCommunicationID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiCommunicationID { get; set; }
@@ -130,7 +129,6 @@ namespace eZmaxApi.Model
         /// The subject of the Communication
         /// </summary>
         /// <value>The subject of the Communication</value>
-        </example> }}
 		/* <example>This is an example of subject</example>*/
         [DataMember(Name = "sCommunicationSubject", IsRequired = true, EmitDefaultValue = true)]
         public string SCommunicationSubject { get; set; }
@@ -139,7 +137,6 @@ namespace eZmaxApi.Model
         /// The url of the body used as body in the Communication
         /// </summary>
         /// <value>The url of the body used as body in the Communication</value>
-        </example> }}
 		/* <example>http://www.example.com/4526.html</example>*/
         [DataMember(Name = "sCommunicationBodyurl", EmitDefaultValue = false)]
         public string SCommunicationBodyurl { get; set; }
@@ -148,7 +145,6 @@ namespace eZmaxApi.Model
         /// The count of Communicationrecipient
         /// </summary>
         /// <value>The count of Communicationrecipient</value>
-        </example> }}
 		/* <example>8</example>*/
         [DataMember(Name = "iCommunicationrecipientCount", IsRequired = true, EmitDefaultValue = true)]
         public int ICommunicationrecipientCount { get; set; }
@@ -157,7 +153,6 @@ namespace eZmaxApi.Model
         /// Whether the Communication is private or not
         /// </summary>
         /// <value>Whether the Communication is private or not</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bCommunicationPrivate", IsRequired = true, EmitDefaultValue = true)]
         public bool BCommunicationPrivate { get; set; }

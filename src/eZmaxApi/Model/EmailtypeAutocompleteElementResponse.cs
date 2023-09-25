@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home|
         /// </summary>
         /// <value>The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home|</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "pkiEmailtypeID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEmailtypeID { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The name of the Emailtype in the language of the requester
         /// </summary>
         /// <value>The name of the Emailtype in the language of the requester</value>
-        </example> }}
 		/* <example>Office</example>*/
         [DataMember(Name = "sEmailtypeNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SEmailtypeNameX { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// Whether the Emailtype is active or not
         /// </summary>
         /// <value>Whether the Emailtype is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEmailtypeIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BEmailtypeIsactive { get; set; }

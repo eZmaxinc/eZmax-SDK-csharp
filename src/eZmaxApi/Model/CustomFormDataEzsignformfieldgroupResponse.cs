@@ -62,7 +62,6 @@ namespace eZmaxApi.Model
         /// The Label for the Ezsignformfieldgroup
         /// </summary>
         /// <value>The Label for the Ezsignformfieldgroup</value>
-        </example> }}
 		/* <example>Allergies</example>*/
         [DataMember(Name = "sEzsignformfieldgroupLabel", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignformfieldgroupLabel { get; set; }

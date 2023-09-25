@@ -68,7 +68,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignbulksendtransmission
         /// </summary>
         /// <value>The unique ID of the Ezsignbulksendtransmission</value>
-        </example> }}
 		/* <example>21</example>*/
         [DataMember(Name = "pkiEzsignbulksendtransmissionID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignbulksendtransmissionID { get; set; }
@@ -77,7 +76,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignbulksend
         /// </summary>
         /// <value>The unique ID of the Ezsignbulksend</value>
-        </example> }}
 		/* <example>8</example>*/
         [DataMember(Name = "fkiEzsignbulksendID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignbulksendID { get; set; }
@@ -86,7 +84,6 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignbulksendtransmission
         /// </summary>
         /// <value>The description of the Ezsignbulksendtransmission</value>
-        </example> }}
 		/* <example>Test eZsign Bulk Send Transmission #1</example>*/
         [DataMember(Name = "sEzsignbulksendtransmissionDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignbulksendtransmissionDescription { get; set; }
@@ -95,7 +92,6 @@ namespace eZmaxApi.Model
         /// The number of errors during the Ezsignbulksendtransmission
         /// </summary>
         /// <value>The number of errors during the Ezsignbulksendtransmission</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "iEzsignbulksendtransmissionErrors", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignbulksendtransmissionErrors { get; set; }

@@ -57,7 +57,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Descriptionstatic
         /// </summary>
         /// <value>The unique ID of the Descriptionstatic</value>
-        </example> }}
 		/* <example>37</example>*/
         [DataMember(Name = "pkiDescriptionstaticID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiDescriptionstaticID { get; set; }
@@ -66,7 +65,6 @@ namespace eZmaxApi.Model
         /// The description of the Descriptionstatic
         /// </summary>
         /// <value>The description of the Descriptionstatic</value>
-        </example> }}
 		/* <example>Static description</example>*/
         [DataMember(Name = "sDescriptionstaticDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SDescriptionstaticDescription { get; set; }

@@ -47,7 +47,6 @@ namespace eZmaxApi.Model
         /// The description of the Apikey in French
         /// </summary>
         /// <value>The description of the Apikey in French</value>
-        </example> }}
 		/* <example>Projet X</example>*/
         [DataMember(Name = "sApikeyDescription1", EmitDefaultValue = false)]
         public string SApikeyDescription1 { get; set; }
@@ -56,7 +55,6 @@ namespace eZmaxApi.Model
         /// The description of the Apikey in English
         /// </summary>
         /// <value>The description of the Apikey in English</value>
-        </example> }}
 		/* <example>Project X</example>*/
         [DataMember(Name = "sApikeyDescription2", EmitDefaultValue = false)]
         public string SApikeyDescription2 { get; set; }

@@ -47,7 +47,6 @@ namespace eZmaxApi.Model
         /// The description of the Subnet in French
         /// </summary>
         /// <value>The description of the Subnet in French</value>
-        </example> }}
 		/* <example>Bureau chef</example>*/
         [DataMember(Name = "sSubnetDescription1", EmitDefaultValue = false)]
         public string SSubnetDescription1 { get; set; }
@@ -56,7 +55,6 @@ namespace eZmaxApi.Model
         /// The description of the Subnet in English
         /// </summary>
         /// <value>The description of the Subnet in English</value>
-        </example> }}
 		/* <example>Head office</example>*/
         [DataMember(Name = "sSubnetDescription2", EmitDefaultValue = false)]
         public string SSubnetDescription2 { get; set; }

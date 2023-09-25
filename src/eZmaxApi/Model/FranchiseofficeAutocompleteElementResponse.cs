@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The description of the Franchiseoffice in the language of the requester
         /// </summary>
         /// <value>The description of the Franchiseoffice in the language of the requester</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sFranchiseofficeDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SFranchiseofficeDescription { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Franchisereoffice
         /// </summary>
         /// <value>The unique ID of the Franchisereoffice</value>
-        </example> }}
 		/* <example>50</example>*/
         [DataMember(Name = "pkiFranchiseofficeID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiFranchiseofficeID { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// Whether the Franchiseoffice is active or not
         /// </summary>
         /// <value>Whether the Franchiseoffice is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bFranchiseofficeIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BFranchiseofficeIsactive { get; set; }

@@ -78,7 +78,6 @@ namespace eZmaxApi.Model
         /// The region code
         /// </summary>
         /// <value>The region code</value>
-        </example> }}
 		/* <example>ca-central-1</example>*/
         [DataMember(Name = "sInfrastructureregionCode", IsRequired = true, EmitDefaultValue = true)]
         public string SInfrastructureregionCode { get; set; }
@@ -87,7 +86,6 @@ namespace eZmaxApi.Model
         /// The region code
         /// </summary>
         /// <value>The region code</value>
-        </example> }}
 		/* <example>ca-central-1</example>*/
         [DataMember(Name = "sInfrastructureregionCodeWeb", IsRequired = true, EmitDefaultValue = true)]
         public string SInfrastructureregionCodeWeb { get; set; }
@@ -96,7 +94,6 @@ namespace eZmaxApi.Model
         /// The environment type Description
         /// </summary>
         /// <value>The environment type Description</value>
-        </example> }}
 		/* <example>prod</example>*/
         [DataMember(Name = "sInfrastructureenvironmenttypeDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SInfrastructureenvironmenttypeDescription { get; set; }
@@ -105,7 +102,6 @@ namespace eZmaxApi.Model
         /// The ID of the client in Cognito
         /// </summary>
         /// <value>The ID of the client in Cognito</value>
-        </example> }}
 		/* <example>6kivk421lhteuktijfsvv4r1cl</example>*/
         [DataMember(Name = "sCognitoClientIDExternal", EmitDefaultValue = false)]
         public string SCognitoClientIDExternal { get; set; }
@@ -114,7 +110,6 @@ namespace eZmaxApi.Model
         /// The ID of the client in Cognito
         /// </summary>
         /// <value>The ID of the client in Cognito</value>
-        </example> }}
 		/* <example>6kivk421lhteuktijfsvv4r1cl</example>*/
         [DataMember(Name = "sCognitoClientIDEzmaxpublic", IsRequired = true, EmitDefaultValue = true)]
         public string SCognitoClientIDEzmaxpublic { get; set; }

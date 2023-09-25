@@ -86,7 +86,6 @@ namespace eZmaxApi.Model
         /// The number of Reportcolumns in the Reportsection
         /// </summary>
         /// <value>The number of Reportcolumns in the Reportsection</value>
-        </example> }}
 		/* <example>5</example>*/
         [DataMember(Name = "iReportsectionColumncount", IsRequired = true, EmitDefaultValue = true)]
         public int IReportsectionColumncount { get; set; }
@@ -95,7 +94,6 @@ namespace eZmaxApi.Model
         /// The combined width of all the Reportcolumns in the Reportsection
         /// </summary>
         /// <value>The combined width of all the Reportcolumns in the Reportsection</value>
-        </example> }}
 		/* <example>1200</example>*/
         [DataMember(Name = "iReportsectionWidth", IsRequired = true, EmitDefaultValue = true)]
         public int IReportsectionWidth { get; set; }

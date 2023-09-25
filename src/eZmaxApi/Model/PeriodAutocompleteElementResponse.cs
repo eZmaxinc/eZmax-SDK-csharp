@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The YYYYMM of the Period
         /// </summary>
         /// <value>The YYYYMM of the Period</value>
-        </example> }}
 		/* <example>2202-12</example>*/
         [DataMember(Name = "sPeriodYYYYMM", IsRequired = true, EmitDefaultValue = true)]
         public string SPeriodYYYYMM { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Period
         /// </summary>
         /// <value>The unique ID of the Period</value>
-        </example> }}
 		/* <example>21</example>*/
         [DataMember(Name = "pkiPeriodID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiPeriodID { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// Whether the Period is active or not
         /// </summary>
         /// <value>Whether the Period is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bPeriodIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BPeriodIsactive { get; set; }

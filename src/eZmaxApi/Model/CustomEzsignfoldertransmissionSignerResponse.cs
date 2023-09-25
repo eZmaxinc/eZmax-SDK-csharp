@@ -64,7 +64,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        </example> }}
 		/* <example>70</example>*/
         [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
@@ -73,7 +72,6 @@ namespace eZmaxApi.Model
         /// The First name of the contact
         /// </summary>
         /// <value>The First name of the contact</value>
-        </example> }}
 		/* <example>John</example>*/
         [DataMember(Name = "sContactFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SContactFirstname { get; set; }
@@ -82,7 +80,6 @@ namespace eZmaxApi.Model
         /// The Last name of the contact
         /// </summary>
         /// <value>The Last name of the contact</value>
-        </example> }}
 		/* <example>Doe</example>*/
         [DataMember(Name = "sContactLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SContactLastname { get; set; }

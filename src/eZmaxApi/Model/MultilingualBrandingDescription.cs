@@ -47,7 +47,6 @@ namespace eZmaxApi.Model
         /// The description of the Branding in French
         /// </summary>
         /// <value>The description of the Branding in French</value>
-        </example> }}
 		/* <example>Compagnie X</example>*/
         [DataMember(Name = "sBrandingDescription1", EmitDefaultValue = false)]
         public string SBrandingDescription1 { get; set; }
@@ -56,7 +55,6 @@ namespace eZmaxApi.Model
         /// The description of the Branding in English
         /// </summary>
         /// <value>The description of the Branding in English</value>
-        </example> }}
 		/* <example>Company X</example>*/
         [DataMember(Name = "sBrandingDescription2", EmitDefaultValue = false)]
         public string SBrandingDescription2 { get; set; }

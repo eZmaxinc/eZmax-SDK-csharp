@@ -205,7 +205,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigndocument
         /// </summary>
         /// <value>The unique ID of the Ezsigndocument</value>
-        </example> }}
 		/* <example>97</example>*/
         [DataMember(Name = "pkiEzsigndocumentID", EmitDefaultValue = false)]
         public int PkiEzsigndocumentID { get; set; }
@@ -214,7 +213,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfolder
         /// </summary>
         /// <value>The unique ID of the Ezsignfolder</value>
-        </example> }}
 		/* <example>33</example>*/
         [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfolderID { get; set; }
@@ -223,7 +221,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplate
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplate</value>
-        </example> }}
 		/* <example>36</example>*/
         [DataMember(Name = "fkiEzsigntemplateID", EmitDefaultValue = false)]
         public int FkiEzsigntemplateID { get; set; }
@@ -232,7 +229,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldersignerassociation
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
-        </example> }}
 		/* <example>20</example>*/
         [DataMember(Name = "fkiEzsignfoldersignerassociationID", EmitDefaultValue = false)]
         public int FkiEzsignfoldersignerassociationID { get; set; }
@@ -241,7 +237,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
@@ -250,7 +245,6 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64.
         /// </summary>
         /// <value>The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64.</value>
-        </example> }}
 		/* <example>[B@4985cbcb</example>*/
         [DataMember(Name = "sEzsigndocumentBase64", EmitDefaultValue = false)]
         public byte[] SEzsigndocumentBase64 { get; set; }
@@ -259,7 +253,6 @@ namespace eZmaxApi.Model
         /// The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url.
         /// </summary>
         /// <value>The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url.</value>
-        </example> }}
 		/* <example>http://www.example.com/document.pdf</example>*/
         [DataMember(Name = "sEzsigndocumentUrl", EmitDefaultValue = false)]
         public string SEzsigndocumentUrl { get; set; }
@@ -275,7 +268,6 @@ namespace eZmaxApi.Model
         /// If the source document is password protected, the password to open/modify it.
         /// </summary>
         /// <value>If the source document is password protected, the password to open/modify it.</value>
-        </example> }}
 		/* <example>SecretPassword123</example>*/
         [DataMember(Name = "sEzsigndocumentPassword", EmitDefaultValue = false)]
         public string SEzsigndocumentPassword { get; set; }
@@ -284,7 +276,6 @@ namespace eZmaxApi.Model
         /// The maximum date and time at which the Ezsigndocument can be signed.
         /// </summary>
         /// <value>The maximum date and time at which the Ezsigndocument can be signed.</value>
-        </example> }}
 		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsigndocumentDuedate", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzsigndocumentDuedate { get; set; }
@@ -293,7 +284,6 @@ namespace eZmaxApi.Model
         /// The name of the document that will be presented to Ezsignfoldersignerassociations
         /// </summary>
         /// <value>The name of the document that will be presented to Ezsignfoldersignerassociations</value>
-        </example> }}
 		/* <example>Contract #123</example>*/
         [DataMember(Name = "sEzsigndocumentName", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigndocumentName { get; set; }
@@ -302,7 +292,6 @@ namespace eZmaxApi.Model
         /// This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
         /// </summary>
         /// <value>This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. </value>
-        </example> }}
 		/* <example>{&quot;ID&quot;: 1234, &quot;TAGS&quot;: [&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]}</example>*/
         [DataMember(Name = "sEzsigndocumentExternalid", EmitDefaultValue = false)]
         public string SEzsigndocumentExternalid { get; set; }

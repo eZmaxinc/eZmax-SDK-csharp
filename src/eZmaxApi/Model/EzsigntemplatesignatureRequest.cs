@@ -120,7 +120,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatesignature
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatesignature</value>
-        </example> }}
 		/* <example>99</example>*/
         [DataMember(Name = "pkiEzsigntemplatesignatureID", EmitDefaultValue = false)]
         public int PkiEzsigntemplatesignatureID { get; set; }
@@ -129,7 +128,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatedocument
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatedocument</value>
-        </example> }}
 		/* <example>133</example>*/
         [DataMember(Name = "fkiEzsigntemplatedocumentID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplatedocumentID { get; set; }
@@ -138,7 +136,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatesigner
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatesigner</value>
-        </example> }}
 		/* <example>9</example>*/
         [DataMember(Name = "fkiEzsigntemplatesignerID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplatesignerID { get; set; }
@@ -147,7 +144,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatesigner
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatesigner</value>
-        </example> }}
 		/* <example>9</example>*/
         [DataMember(Name = "fkiEzsigntemplatesignerIDValidation", EmitDefaultValue = false)]
         public int FkiEzsigntemplatesignerIDValidation { get; set; }
@@ -156,7 +152,6 @@ namespace eZmaxApi.Model
         /// The page number in the Ezsigntemplatedocument
         /// </summary>
         /// <value>The page number in the Ezsigntemplatedocument</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "iEzsigntemplatedocumentpagePagenumber", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplatedocumentpagePagenumber { get; set; }
@@ -165,7 +160,6 @@ namespace eZmaxApi.Model
         /// The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
         /// </summary>
         /// <value>The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.</value>
-        </example> }}
 		/* <example>200</example>*/
         [DataMember(Name = "iEzsigntemplatesignatureX", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplatesignatureX { get; set; }
@@ -174,7 +168,6 @@ namespace eZmaxApi.Model
         /// The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
         /// </summary>
         /// <value>The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
-        </example> }}
 		/* <example>300</example>*/
         [DataMember(Name = "iEzsigntemplatesignatureY", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplatesignatureY { get; set; }
@@ -183,7 +176,6 @@ namespace eZmaxApi.Model
         /// The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureWidth.
         /// </summary>
         /// <value>The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureWidth.</value>
-        </example> }}
 		/* <example>200</example>*/
         [DataMember(Name = "iEzsigntemplatesignatureWidth", EmitDefaultValue = false)]
         public int IEzsigntemplatesignatureWidth { get; set; }
@@ -192,7 +184,6 @@ namespace eZmaxApi.Model
         /// The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureHeight.
         /// </summary>
         /// <value>The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureHeight.</value>
-        </example> }}
 		/* <example>200</example>*/
         [DataMember(Name = "iEzsigntemplatesignatureHeight", EmitDefaultValue = false)]
         public int IEzsigntemplatesignatureHeight { get; set; }
@@ -201,7 +192,6 @@ namespace eZmaxApi.Model
         /// The step when the Ezsigntemplatesigner will be invited to sign
         /// </summary>
         /// <value>The step when the Ezsigntemplatesigner will be invited to sign</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "iEzsigntemplatesignatureStep", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplatesignatureStep { get; set; }
@@ -210,7 +200,6 @@ namespace eZmaxApi.Model
         /// A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature
         /// </summary>
         /// <value>A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature</value>
-        </example> }}
 		/* <example>Please sign here if you agree to the terms</example>*/
         [DataMember(Name = "tEzsigntemplatesignatureTooltip", EmitDefaultValue = false)]
         public string TEzsigntemplatesignatureTooltip { get; set; }
@@ -226,7 +215,6 @@ namespace eZmaxApi.Model
         /// The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
         /// </summary>
         /// <value>The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments</value>
-        </example> }}
 		/* <example>Attachment</example>*/
         [DataMember(Name = "sEzsigntemplatesignatureAttachmentdescription", EmitDefaultValue = false)]
         public string SEzsigntemplatesignatureAttachmentdescription { get; set; }
@@ -235,7 +223,6 @@ namespace eZmaxApi.Model
         /// The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
         /// </summary>
         /// <value>The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "iEzsigntemplatesignatureValidationstep", EmitDefaultValue = false)]
         public int IEzsigntemplatesignatureValidationstep { get; set; }
@@ -244,7 +231,6 @@ namespace eZmaxApi.Model
         /// The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**
         /// </summary>
         /// <value>The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**</value>
-        </example> }}
 		/* <example>75</example>*/
         [DataMember(Name = "iEzsigntemplatesignatureMaxlength", EmitDefaultValue = false)]
         public int IEzsigntemplatesignatureMaxlength { get; set; }
@@ -253,7 +239,6 @@ namespace eZmaxApi.Model
         /// A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
         /// </summary>
         /// <value>A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**</value>
-        </example> }}
 		/* <example>/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/</example>*/
         [DataMember(Name = "sEzsigntemplatesignatureRegexp", EmitDefaultValue = false)]
         public string SEzsigntemplatesignatureRegexp { get; set; }

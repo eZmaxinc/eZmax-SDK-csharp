@@ -65,7 +65,6 @@ namespace eZmaxApi.Model
         /// The message giving details about the error
         /// </summary>
         /// <value>The message giving details about the error</value>
-        </example> }}
 		/* <example>Invalid Signature Headers</example>*/
         [DataMember(Name = "sErrorMessage", IsRequired = true, EmitDefaultValue = true)]
         public string SErrorMessage { get; set; }
@@ -74,7 +73,6 @@ namespace eZmaxApi.Model
         /// The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
         /// </summary>
         /// <value>The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.</value>
-        </example> }}
 		/* <example>http://www.example.com/document.pdf</example>*/
         [DataMember(Name = "sTemporaryFileUrl", EmitDefaultValue = false)]
         public string STemporaryFileUrl { get; set; }

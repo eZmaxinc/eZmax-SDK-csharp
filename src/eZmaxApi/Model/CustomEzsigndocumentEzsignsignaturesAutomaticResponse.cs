@@ -64,7 +64,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigndocument
         /// </summary>
         /// <value>The unique ID of the Ezsigndocument</value>
-        </example> }}
 		/* <example>97</example>*/
         [DataMember(Name = "pkiEzsigndocumentID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigndocumentID { get; set; }
@@ -73,7 +72,6 @@ namespace eZmaxApi.Model
         /// The name of the document that will be presented to Ezsignfoldersignerassociations
         /// </summary>
         /// <value>The name of the document that will be presented to Ezsignfoldersignerassociations</value>
-        </example> }}
 		/* <example>Contract #123</example>*/
         [DataMember(Name = "sEzsigndocumentName", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigndocumentName { get; set; }

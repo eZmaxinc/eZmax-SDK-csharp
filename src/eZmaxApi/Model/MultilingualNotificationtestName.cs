@@ -47,7 +47,6 @@ namespace eZmaxApi.Model
         /// The name of the Notificationtest in French
         /// </summary>
         /// <value>The name of the Notificationtest in French</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sNotificationtestName1", EmitDefaultValue = false)]
         public string SNotificationtestName1 { get; set; }
@@ -56,7 +55,6 @@ namespace eZmaxApi.Model
         /// The name of the Notificationtest in English
         /// </summary>
         /// <value>The name of the Notificationtest in English</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sNotificationtestName2", EmitDefaultValue = false)]
         public string SNotificationtestName2 { get; set; }

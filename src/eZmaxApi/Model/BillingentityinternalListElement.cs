@@ -57,7 +57,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityinternal.
         /// </summary>
         /// <value>The unique ID of the Billingentityinternal.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "pkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiBillingentityinternalID { get; set; }
@@ -66,7 +65,6 @@ namespace eZmaxApi.Model
         /// The description of the Billingentityinternal in the language of the requester
         /// </summary>
         /// <value>The description of the Billingentityinternal in the language of the requester</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sBillingentityinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SBillingentityinternalDescriptionX { get; set; }

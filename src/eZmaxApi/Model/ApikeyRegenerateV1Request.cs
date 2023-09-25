@@ -45,7 +45,6 @@ namespace eZmaxApi.Model
         /// Whether the apikey is signed or not
         /// </summary>
         /// <value>Whether the apikey is signed or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bApikeyIssigned", EmitDefaultValue = true)]
         public bool BApikeyIssigned { get; set; }

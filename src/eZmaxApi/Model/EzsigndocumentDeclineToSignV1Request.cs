@@ -55,7 +55,6 @@ namespace eZmaxApi.Model
         /// Reason for refusal
         /// </summary>
         /// <value>Reason for refusal</value>
-        </example> }}
 		/* <example>Wrong document</example>*/
         [DataMember(Name = "sReason", IsRequired = true, EmitDefaultValue = true)]
         public string SReason { get; set; }

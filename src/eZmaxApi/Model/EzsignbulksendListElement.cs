@@ -80,7 +80,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignbulksend
         /// </summary>
         /// <value>The unique ID of the Ezsignbulksend</value>
-        </example> }}
 		/* <example>8</example>*/
         [DataMember(Name = "pkiEzsignbulksendID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignbulksendID { get; set; }
@@ -89,7 +88,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-        </example> }}
 		/* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldertypeID { get; set; }
@@ -98,7 +96,6 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignbulksend
         /// </summary>
         /// <value>The description of the Ezsignbulksend</value>
-        </example> }}
 		/* <example>Test eZsign Bulk Send</example>*/
         [DataMember(Name = "sEzsignbulksendDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignbulksendDescription { get; set; }
@@ -107,7 +104,6 @@ namespace eZmaxApi.Model
         /// The name of the Ezsignfoldertype in the language of the requester
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sEzsignfoldertypeNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignfoldertypeNameX { get; set; }
@@ -158,7 +154,6 @@ namespace eZmaxApi.Model
         /// Whether the Ezsignbulksend is active or not
         /// </summary>
         /// <value>Whether the Ezsignbulksend is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzsignbulksendIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignbulksendIsactive { get; set; }

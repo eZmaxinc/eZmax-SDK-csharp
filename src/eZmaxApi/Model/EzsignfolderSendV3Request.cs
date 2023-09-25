@@ -64,7 +64,6 @@ namespace eZmaxApi.Model
         /// A custom text message that will be added to the email sent.
         /// </summary>
         /// <value>A custom text message that will be added to the email sent.</value>
-        </example> }}
 		/* <example>Hi everyone,
 
 This is the document I need you to review.
@@ -81,7 +80,6 @@ Mary</example>*/
         /// The date and time at which the Ezsignfolder will be sent in the future.
         /// </summary>
         /// <value>The date and time at which the Ezsignfolder will be sent in the future.</value>
-        </example> }}
 		/* <example>2020-12-31T23:59:59.000Z</example>*/
         [DataMember(Name = "dtEzsignfolderDelayedsenddate", EmitDefaultValue = false)]
         public string DtEzsignfolderDelayedsenddate { get; set; }

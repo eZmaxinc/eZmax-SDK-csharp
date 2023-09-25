@@ -45,7 +45,6 @@ namespace eZmaxApi.Model
         /// The name of the Ezsigntemplatedocument.
         /// </summary>
         /// <value>The name of the Ezsigntemplatedocument.</value>
-        </example> }}
 		/* <example>Standard Contract</example>*/
         [DataMember(Name = "sEzsigntemplatedocumentName", EmitDefaultValue = false)]
         public string SEzsigntemplatedocumentName { get; set; }

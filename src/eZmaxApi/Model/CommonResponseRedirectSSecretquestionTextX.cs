@@ -55,7 +55,6 @@ namespace eZmaxApi.Model
         /// The text of the Secretquestion in the language of the requester
         /// </summary>
         /// <value>The text of the Secretquestion in the language of the requester</value>
-        </example> }}
 		/* <example>The name of the hospital in which you were born</example>*/
         [DataMember(Name = "sSecretquestionTextX", IsRequired = true, EmitDefaultValue = true)]
         public string SSecretquestionTextX { get; set; }

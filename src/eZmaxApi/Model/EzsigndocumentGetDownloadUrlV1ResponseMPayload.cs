@@ -55,7 +55,6 @@ namespace eZmaxApi.Model
         /// The Url to the requested document.  Url will expire after 5 minutes.
         /// </summary>
         /// <value>The Url to the requested document.  Url will expire after 5 minutes.</value>
-        </example> }}
 		/* <example>http://www.example.com/document.pdf</example>*/
         [DataMember(Name = "sDownloadUrl", IsRequired = true, EmitDefaultValue = true)]
         public string SDownloadUrl { get; set; }

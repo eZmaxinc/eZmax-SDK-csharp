@@ -66,7 +66,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Notificationtest
         /// </summary>
         /// <value>The unique ID of the Notificationtest</value>
-        </example> }}
 		/* <example>14</example>*/
         [DataMember(Name = "pkiNotificationtestID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiNotificationtestID { get; set; }
@@ -75,7 +74,6 @@ namespace eZmaxApi.Model
         /// The function name of the Notificationtest
         /// </summary>
         /// <value>The function name of the Notificationtest</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sNotificationtestFunction", IsRequired = true, EmitDefaultValue = true)]
         public string SNotificationtestFunction { get; set; }

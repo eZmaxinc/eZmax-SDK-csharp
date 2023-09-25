@@ -75,7 +75,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Apikey
         /// </summary>
         /// <value>The unique ID of the Apikey</value>
-        </example> }}
 		/* <example>99</example>*/
         [DataMember(Name = "pkiApikeyID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiApikeyID { get; set; }
@@ -84,7 +83,6 @@ namespace eZmaxApi.Model
         /// The description of the Apikey in the language of the requester
         /// </summary>
         /// <value>The description of the Apikey in the language of the requester</value>
-        </example> }}
 		/* <example>Project X</example>*/
         [DataMember(Name = "sApikeyDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SApikeyDescriptionX { get; set; }
@@ -93,7 +91,6 @@ namespace eZmaxApi.Model
         /// The first name of the user
         /// </summary>
         /// <value>The first name of the user</value>
-        </example> }}
 		/* <example>John</example>*/
         [DataMember(Name = "sUserFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserFirstname { get; set; }
@@ -102,7 +99,6 @@ namespace eZmaxApi.Model
         /// The last name of the user
         /// </summary>
         /// <value>The last name of the user</value>
-        </example> }}
 		/* <example>Doe</example>*/
         [DataMember(Name = "sUserLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLastname { get; set; }
@@ -111,7 +107,6 @@ namespace eZmaxApi.Model
         /// Whether the apikey is active or not
         /// </summary>
         /// <value>Whether the apikey is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bApikeyIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BApikeyIsactive { get; set; }
@@ -120,7 +115,6 @@ namespace eZmaxApi.Model
         /// Whether the apikey is signed or not
         /// </summary>
         /// <value>Whether the apikey is signed or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bApikeyIssigned", IsRequired = true, EmitDefaultValue = true)]
         public bool BApikeyIssigned { get; set; }

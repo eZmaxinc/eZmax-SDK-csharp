@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxproduct
         /// </summary>
         /// <value>The unique ID of the Ezmaxproduct</value>
-        </example> }}
 		/* <example>172</example>*/
         [DataMember(Name = "pkiEzmaxproductID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzmaxproductID { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The description of the Ezmaxproduct in the language of the requester
         /// </summary>
         /// <value>The description of the Ezmaxproduct in the language of the requester</value>
-        </example> }}
 		/* <example>eZmax (License)</example>*/
         [DataMember(Name = "sEzmaxproductDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzmaxproductDescriptionX { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// Whether the Ezmaxproduct is active or not
         /// </summary>
         /// <value>Whether the Ezmaxproduct is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzmaxproductIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzmaxproductIsactive { get; set; }

@@ -77,7 +77,6 @@ namespace eZmaxApi.Model
         /// The amount of the Creditcardtransaction
         /// </summary>
         /// <value>The amount of the Creditcardtransaction</value>
-        </example> }}
 		/* <example>167.58</example>*/
         [DataMember(Name = "dCreditcardtransactionAmount", IsRequired = true, EmitDefaultValue = true)]
         public string DCreditcardtransactionAmount { get; set; }
@@ -86,7 +85,6 @@ namespace eZmaxApi.Model
         /// The partially decrypted credit card number used in the Creditcardtransaction
         /// </summary>
         /// <value>The partially decrypted credit card number used in the Creditcardtransaction</value>
-        </example> }}
 		/* <example>XXXX XXXX XXXX 1234</example>*/
         [DataMember(Name = "sCreditcardtransactionPartiallydecryptednumber", IsRequired = true, EmitDefaultValue = true)]
         public string SCreditcardtransactionPartiallydecryptednumber { get; set; }
@@ -95,7 +93,6 @@ namespace eZmaxApi.Model
         /// The reference number on the creditcard service for the Creditcardtransaction
         /// </summary>
         /// <value>The reference number on the creditcard service for the Creditcardtransaction</value>
-        </example> }}
 		/* <example>651447854715478415</example>*/
         [DataMember(Name = "sCreditcardtransactionReferencenumber", IsRequired = true, EmitDefaultValue = true)]
         public string SCreditcardtransactionReferencenumber { get; set; }

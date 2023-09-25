@@ -101,7 +101,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfolder
         /// </summary>
         /// <value>The unique ID of the Ezsignfolder</value>
-        </example> }}
 		/* <example>33</example>*/
         [DataMember(Name = "pkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignfolderID { get; set; }
@@ -110,7 +109,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-        </example> }}
 		/* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldertypeID { get; set; }
@@ -119,7 +117,6 @@ namespace eZmaxApi.Model
         /// The name of the Ezsignfoldertype in the language of the requester
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sEzsignfoldertypeNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignfoldertypeNameX { get; set; }
@@ -128,7 +125,6 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignfolder
         /// </summary>
         /// <value>The description of the Ezsignfolder</value>
-        </example> }}
 		/* <example>Test eZsign Folder</example>*/
         [DataMember(Name = "sEzsignfolderDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignfolderDescription { get; set; }
@@ -137,7 +133,6 @@ namespace eZmaxApi.Model
         /// The date and time at which the object was created
         /// </summary>
         /// <value>The date and time at which the object was created</value>
-        </example> }}
 		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtCreatedDate", IsRequired = true, EmitDefaultValue = true)]
         public string DtCreatedDate { get; set; }
@@ -146,7 +141,6 @@ namespace eZmaxApi.Model
         /// The date and time at which the Ezsignfolder was sent the last time.
         /// </summary>
         /// <value>The date and time at which the Ezsignfolder was sent the last time.</value>
-        </example> }}
 		/* <example>2020-12-31T23:59:59.000Z</example>*/
         [DataMember(Name = "dtEzsignfolderSentdate", EmitDefaultValue = false)]
         public string DtEzsignfolderSentdate { get; set; }
@@ -155,7 +149,6 @@ namespace eZmaxApi.Model
         /// The maximum date and time at which the Ezsignfolder can be signed.
         /// </summary>
         /// <value>The maximum date and time at which the Ezsignfolder can be signed.</value>
-        </example> }}
 		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsignfolderDuedate", EmitDefaultValue = false)]
         public string DtEzsignfolderDuedate { get; set; }

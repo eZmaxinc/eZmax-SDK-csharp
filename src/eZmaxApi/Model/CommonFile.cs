@@ -88,7 +88,6 @@ namespace eZmaxApi.Model
         /// The name of the file
         /// </summary>
         /// <value>The name of the file</value>
-        </example> }}
 		/* <example>example.pdf</example>*/
         [DataMember(Name = "sFileName", IsRequired = true, EmitDefaultValue = true)]
         public string SFileName { get; set; }
@@ -104,7 +103,6 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the File
         /// </summary>
         /// <value>The Base64 encoded binary content of the File</value>
-        </example> }}
 		/* <example>[B@5af28b27</example>*/
         [DataMember(Name = "sFileBase64", EmitDefaultValue = false)]
         public byte[] SFileBase64 { get; set; }

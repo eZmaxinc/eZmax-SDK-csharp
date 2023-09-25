@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|
         /// </summary>
         /// <value>The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "pkiPhonetypeID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiPhonetypeID { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The name of the Phonetype in the language of the requester
         /// </summary>
         /// <value>The name of the Phonetype in the language of the requester</value>
-        </example> }}
 		/* <example>Office</example>*/
         [DataMember(Name = "sPhonetypeNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SPhonetypeNameX { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// Whether the Phonetype is active or not
         /// </summary>
         /// <value>Whether the Phonetype is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bPhonetypeIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BPhonetypeIsactive { get; set; }

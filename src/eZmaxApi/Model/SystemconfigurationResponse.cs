@@ -99,7 +99,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Systemconfiguration
         /// </summary>
         /// <value>The unique ID of the Systemconfiguration</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "pkiSystemconfigurationID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiSystemconfigurationID { get; set; }
@@ -108,7 +107,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Systemconfigurationtype
         /// </summary>
         /// <value>The unique ID of the Systemconfigurationtype</value>
-        </example> }}
 		/* <example>28</example>*/
         [DataMember(Name = "fkiSystemconfigurationtypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiSystemconfigurationtypeID { get; set; }
@@ -117,7 +115,6 @@ namespace eZmaxApi.Model
         /// The description of the Systemconfigurationtype in the language of the requester
         /// </summary>
         /// <value>The description of the Systemconfigurationtype in the language of the requester</value>
-        </example> }}
 		/* <example>eZsign (Pro)</example>*/
         [DataMember(Name = "sSystemconfigurationtypeDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SSystemconfigurationtypeDescriptionX { get; set; }
@@ -126,7 +123,6 @@ namespace eZmaxApi.Model
         /// Whether if we allow the creation of personal files in eZsign
         /// </summary>
         /// <value>Whether if we allow the creation of personal files in eZsign</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bSystemconfigurationEzsignpersonnal", IsRequired = true, EmitDefaultValue = true)]
         public bool BSystemconfigurationEzsignpersonnal { get; set; }
@@ -135,7 +131,6 @@ namespace eZmaxApi.Model
         /// Whether if we allow SSPR
         /// </summary>
         /// <value>Whether if we allow SSPR</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bSystemconfigurationSspr", IsRequired = true, EmitDefaultValue = true)]
         public bool BSystemconfigurationSspr { get; set; }
@@ -144,7 +139,6 @@ namespace eZmaxApi.Model
         /// The start date where the system will be in read only
         /// </summary>
         /// <value>The start date where the system will be in read only</value>
-        </example> }}
 		/* <example>2020-12-31</example>*/
         [DataMember(Name = "dtSystemconfigurationReadonlyexpirationstart", EmitDefaultValue = false)]
         public string DtSystemconfigurationReadonlyexpirationstart { get; set; }
@@ -153,7 +147,6 @@ namespace eZmaxApi.Model
         /// The end date where the system will be in read only
         /// </summary>
         /// <value>The end date where the system will be in read only</value>
-        </example> }}
 		/* <example>2021-12-31</example>*/
         [DataMember(Name = "dtSystemconfigurationReadonlyexpirationend", EmitDefaultValue = false)]
         public string DtSystemconfigurationReadonlyexpirationend { get; set; }

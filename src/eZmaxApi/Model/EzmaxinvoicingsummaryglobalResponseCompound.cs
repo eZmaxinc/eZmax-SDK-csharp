@@ -143,7 +143,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicingsummaryglobal
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicingsummaryglobal</value>
-        </example> }}
 		/* <example>241</example>*/
         [DataMember(Name = "pkiEzmaxinvoicingsummaryglobalID", EmitDefaultValue = false)]
         public int PkiEzmaxinvoicingsummaryglobalID { get; set; }
@@ -152,7 +151,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicing
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicing</value>
-        </example> }}
 		/* <example>28</example>*/
         [DataMember(Name = "fkiEzmaxinvoicingID", EmitDefaultValue = false)]
         public int FkiEzmaxinvoicingID { get; set; }
@@ -161,7 +159,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxproduct
         /// </summary>
         /// <value>The unique ID of the Ezmaxproduct</value>
-        </example> }}
 		/* <example>172</example>*/
         [DataMember(Name = "fkiEzmaxproductID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzmaxproductID { get; set; }
@@ -170,7 +167,6 @@ namespace eZmaxApi.Model
         /// The description of the Ezmaxproduct in the language of the requester
         /// </summary>
         /// <value>The description of the Ezmaxproduct in the language of the requester</value>
-        </example> }}
 		/* <example>eZmax (License)</example>*/
         [DataMember(Name = "sEzmaxproductDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzmaxproductDescriptionX { get; set; }
@@ -179,7 +175,6 @@ namespace eZmaxApi.Model
         /// The start date for the Ezmaxinvoicingsummaryglobal
         /// </summary>
         /// <value>The start date for the Ezmaxinvoicingsummaryglobal</value>
-        </example> }}
 		/* <example>2020-12-31</example>*/
         [DataMember(Name = "dtEzmaxinvoicingsummaryglobalStart", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzmaxinvoicingsummaryglobalStart { get; set; }
@@ -188,7 +183,6 @@ namespace eZmaxApi.Model
         /// The end date for the Ezmaxinvoicingsummaryglobal
         /// </summary>
         /// <value>The end date for the Ezmaxinvoicingsummaryglobal</value>
-        </example> }}
 		/* <example>2020-12-31</example>*/
         [DataMember(Name = "dtEzmaxinvoicingsummaryglobalEnd", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzmaxinvoicingsummaryglobalEnd { get; set; }
@@ -197,7 +191,6 @@ namespace eZmaxApi.Model
         /// The number of days for the Ezmaxinvoicingsummaryglobal
         /// </summary>
         /// <value>The number of days for the Ezmaxinvoicingsummaryglobal</value>
-        </example> }}
 		/* <example>30</example>*/
         [DataMember(Name = "iEzmaxinvoicingsummaryglobalDays", IsRequired = true, EmitDefaultValue = true)]
         public int IEzmaxinvoicingsummaryglobalDays { get; set; }
@@ -206,7 +199,6 @@ namespace eZmaxApi.Model
         /// The count item calculated
         /// </summary>
         /// <value>The count item calculated</value>
-        </example> }}
 		/* <example>649.08</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryglobalCountreal", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryglobalCountreal { get; set; }
@@ -215,7 +207,6 @@ namespace eZmaxApi.Model
         /// The count item billed
         /// </summary>
         /// <value>The count item billed</value>
-        </example> }}
 		/* <example>581.56</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryglobalCountbilled", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryglobalCountbilled { get; set; }
@@ -224,7 +215,6 @@ namespace eZmaxApi.Model
         /// The Ezmaxinvoicingsummaryglobal subtotal
         /// </summary>
         /// <value>The Ezmaxinvoicingsummaryglobal subtotal</value>
-        </example> }}
 		/* <example>200.00</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryglobalSubtotal", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryglobalSubtotal { get; set; }
@@ -233,7 +223,6 @@ namespace eZmaxApi.Model
         /// The rebate amount for the Ezmaxinvoicingsummaryglobal
         /// </summary>
         /// <value>The rebate amount for the Ezmaxinvoicingsummaryglobal</value>
-        </example> }}
 		/* <example>0.00</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryglobalRebateamount", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryglobalRebateamount { get; set; }
@@ -242,7 +231,6 @@ namespace eZmaxApi.Model
         /// The rebate percentage of the Ezmaxinvoicingsummaryglobal
         /// </summary>
         /// <value>The rebate percentage of the Ezmaxinvoicingsummaryglobal</value>
-        </example> }}
 		/* <example>0.00</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryglobalRebatepercent", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryglobalRebatepercent { get; set; }
@@ -251,7 +239,6 @@ namespace eZmaxApi.Model
         /// The rebate amount total for the Ezmaxinvoicingsummaryglobal
         /// </summary>
         /// <value>The rebate amount total for the Ezmaxinvoicingsummaryglobal</value>
-        </example> }}
 		/* <example>2.00</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryglobalRebatetotal", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryglobalRebatetotal { get; set; }
@@ -260,7 +247,6 @@ namespace eZmaxApi.Model
         /// The Ezmaxinvoicingsummaryglobal total
         /// </summary>
         /// <value>The Ezmaxinvoicingsummaryglobal total</value>
-        </example> }}
 		/* <example>198.00</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryglobalTotal", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingsummaryglobalTotal { get; set; }
@@ -269,7 +255,6 @@ namespace eZmaxApi.Model
         /// The amount of commission for the representative
         /// </summary>
         /// <value>The amount of commission for the representative</value>
-        </example> }}
 		/* <example>685.88</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryglobalRepresentative", EmitDefaultValue = false)]
         public string DEzmaxinvoicingsummaryglobalRepresentative { get; set; }
@@ -278,7 +263,6 @@ namespace eZmaxApi.Model
         /// The amount of commission for the partner
         /// </summary>
         /// <value>The amount of commission for the partner</value>
-        </example> }}
 		/* <example>266.49</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryglobalPartner", EmitDefaultValue = false)]
         public string DEzmaxinvoicingsummaryglobalPartner { get; set; }
@@ -287,7 +271,6 @@ namespace eZmaxApi.Model
         /// The net amount of the Ezmaxinvoicingsummaryglobal
         /// </summary>
         /// <value>The net amount of the Ezmaxinvoicingsummaryglobal</value>
-        </example> }}
 		/* <example>521.71</example>*/
         [DataMember(Name = "dEzmaxinvoicingsummaryglobalNet", EmitDefaultValue = false)]
         public string DEzmaxinvoicingsummaryglobalNet { get; set; }
@@ -296,7 +279,6 @@ namespace eZmaxApi.Model
         /// Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
         /// </summary>
         /// <value>Whether it is adjustment for the Ezmaxinvoicingsummaryglobal</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzmaxinvoicingsummaryglobalAdjustment", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzmaxinvoicingsummaryglobalAdjustment { get; set; }
@@ -305,7 +287,6 @@ namespace eZmaxApi.Model
         /// The help message of the Ezmaxproduct in the language of the requester
         /// </summary>
         /// <value>The help message of the Ezmaxproduct in the language of the requester</value>
-        </example> }}
 		/* <example>This is an exemple of help message</example>*/
         [DataMember(Name = "tEzmaxproductHelpX", IsRequired = true, EmitDefaultValue = true)]
         public string TEzmaxproductHelpX { get; set; }

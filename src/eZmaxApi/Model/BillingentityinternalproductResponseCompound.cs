@@ -77,7 +77,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityinternalproduct
         /// </summary>
         /// <value>The unique ID of the Billingentityinternalproduct</value>
-        </example> }}
 		/* <example>254</example>*/
         [DataMember(Name = "pkiBillingentityinternalproductID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiBillingentityinternalproductID { get; set; }
@@ -86,7 +85,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityinternal.
         /// </summary>
         /// <value>The unique ID of the Billingentityinternal.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiBillingentityinternalID { get; set; }
@@ -95,7 +93,6 @@ namespace eZmaxApi.Model
         /// The description of the Billingentityinternal in the language of the requester
         /// </summary>
         /// <value>The description of the Billingentityinternal in the language of the requester</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sBillingentityinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SBillingentityinternalDescriptionX { get; set; }
@@ -104,7 +101,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxproduct
         /// </summary>
         /// <value>The unique ID of the Ezmaxproduct</value>
-        </example> }}
 		/* <example>172</example>*/
         [DataMember(Name = "fkiEzmaxproductID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzmaxproductID { get; set; }
@@ -113,7 +109,6 @@ namespace eZmaxApi.Model
         /// The description of the Ezmaxproduct in the language of the requester
         /// </summary>
         /// <value>The description of the Ezmaxproduct in the language of the requester</value>
-        </example> }}
 		/* <example>eZmax (License)</example>*/
         [DataMember(Name = "sEzmaxproductDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzmaxproductDescriptionX { get; set; }
@@ -122,7 +117,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityexternal
         /// </summary>
         /// <value>The unique ID of the Billingentityexternal</value>
-        </example> }}
 		/* <example>83</example>*/
         [DataMember(Name = "fkiBillingentityexternalID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiBillingentityexternalID { get; set; }
@@ -131,7 +125,6 @@ namespace eZmaxApi.Model
         /// The description of the Billingentityexternal
         /// </summary>
         /// <value>The description of the Billingentityexternal</value>
-        </example> }}
 		/* <example>ACME Inc</example>*/
         [DataMember(Name = "sBillingentityexternalDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SBillingentityexternalDescription { get; set; }

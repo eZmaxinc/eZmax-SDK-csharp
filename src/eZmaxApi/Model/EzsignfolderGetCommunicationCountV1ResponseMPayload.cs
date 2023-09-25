@@ -50,7 +50,6 @@ namespace eZmaxApi.Model
         /// The count of Communication.
         /// </summary>
         /// <value>The count of Communication.</value>
-        </example> }}
 		/* <example>8</example>*/
         [DataMember(Name = "iCommunicationCount", IsRequired = true, EmitDefaultValue = true)]
         public int ICommunicationCount { get; set; }

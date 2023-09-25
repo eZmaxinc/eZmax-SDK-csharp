@@ -88,7 +88,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignannotation
         /// </summary>
         /// <value>The unique ID of the Ezsignannotation</value>
-        </example> }}
 		/* <example>113</example>*/
         [DataMember(Name = "pkiEzsignannotationID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignannotationID { get; set; }
@@ -97,7 +96,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigndocument
         /// </summary>
         /// <value>The unique ID of the Ezsigndocument</value>
-        </example> }}
 		/* <example>97</example>*/
         [DataMember(Name = "fkiEzsigndocumentID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigndocumentID { get; set; }
@@ -106,7 +104,6 @@ namespace eZmaxApi.Model
         /// The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
         /// </summary>
         /// <value>The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.</value>
-        </example> }}
 		/* <example>50</example>*/
         [DataMember(Name = "iEzsignannotationX", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignannotationX { get; set; }
@@ -115,7 +112,6 @@ namespace eZmaxApi.Model
         /// The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
         /// </summary>
         /// <value>The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
-        </example> }}
 		/* <example>50</example>*/
         [DataMember(Name = "iEzsignannotationY", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignannotationY { get; set; }
@@ -124,7 +120,6 @@ namespace eZmaxApi.Model
         /// The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \&quot;300\&quot; for the Width.
         /// </summary>
         /// <value>The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \&quot;300\&quot; for the Width.</value>
-        </example> }}
 		/* <example>75</example>*/
         [DataMember(Name = "iEzsignannotationWidth", EmitDefaultValue = false)]
         public int IEzsignannotationWidth { get; set; }
@@ -133,7 +128,6 @@ namespace eZmaxApi.Model
         /// The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**
         /// </summary>
         /// <value>The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**</value>
-        </example> }}
 		/* <example>25</example>*/
         [DataMember(Name = "iEzsignannotationHeight", EmitDefaultValue = false)]
         public int IEzsignannotationHeight { get; set; }
@@ -142,7 +136,6 @@ namespace eZmaxApi.Model
         /// The Text of the Ezsignannotation
         /// </summary>
         /// <value>The Text of the Ezsignannotation</value>
-        </example> }}
 		/* <example>Sample</example>*/
         [DataMember(Name = "sEzsignannotationText", EmitDefaultValue = false)]
         public string SEzsignannotationText { get; set; }
@@ -151,7 +144,6 @@ namespace eZmaxApi.Model
         /// The page number in the Ezsigndocument
         /// </summary>
         /// <value>The page number in the Ezsigndocument</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "iEzsignpagePagenumber", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignpagePagenumber { get; set; }

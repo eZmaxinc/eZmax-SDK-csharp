@@ -55,7 +55,6 @@ namespace eZmaxApi.Model
         /// A custom text message that will be added to the email sent.
         /// </summary>
         /// <value>A custom text message that will be added to the email sent.</value>
-        </example> }}
 		/* <example>Hi John,
 
 This is the document I need you to review.

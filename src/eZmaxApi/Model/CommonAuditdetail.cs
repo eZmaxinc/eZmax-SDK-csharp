@@ -82,7 +82,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-        </example> }}
 		/* <example>70</example>*/
         [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiUserID { get; set; }
@@ -91,7 +90,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Apikey
         /// </summary>
         /// <value>The unique ID of the Apikey</value>
-        </example> }}
 		/* <example>99</example>*/
         [DataMember(Name = "fkiApikeyID", EmitDefaultValue = false)]
         public int FkiApikeyID { get; set; }
@@ -100,7 +98,6 @@ namespace eZmaxApi.Model
         /// The login name of the User.
         /// </summary>
         /// <value>The login name of the User.</value>
-        </example> }}
 		/* <example>JohnDoe</example>*/
         [DataMember(Name = "sUserLoginname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLoginname { get; set; }
@@ -109,7 +106,6 @@ namespace eZmaxApi.Model
         /// The last name of the user
         /// </summary>
         /// <value>The last name of the user</value>
-        </example> }}
 		/* <example>Doe</example>*/
         [DataMember(Name = "sUserLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserLastname { get; set; }
@@ -118,7 +114,6 @@ namespace eZmaxApi.Model
         /// The first name of the user
         /// </summary>
         /// <value>The first name of the user</value>
-        </example> }}
 		/* <example>John</example>*/
         [DataMember(Name = "sUserFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserFirstname { get; set; }
@@ -127,7 +122,6 @@ namespace eZmaxApi.Model
         /// The description of the Apikey in the language of the requester
         /// </summary>
         /// <value>The description of the Apikey in the language of the requester</value>
-        </example> }}
 		/* <example>Project X</example>*/
         [DataMember(Name = "sApikeyDescriptionX", EmitDefaultValue = false)]
         public string SApikeyDescriptionX { get; set; }
@@ -136,7 +130,6 @@ namespace eZmaxApi.Model
         /// Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
         /// </summary>
         /// <value>Represent a Date Time. The timezone is the one configured in the User&#39;s profile.</value>
-        </example> }}
 		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtAuditdetailDate", IsRequired = true, EmitDefaultValue = true)]
         public string DtAuditdetailDate { get; set; }

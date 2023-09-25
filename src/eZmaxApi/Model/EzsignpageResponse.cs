@@ -67,7 +67,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignpage
         /// </summary>
         /// <value>The unique ID of the Ezsignpage</value>
-        </example> }}
 		/* <example>64</example>*/
         [DataMember(Name = "pkiEzsignpageID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignpageID { get; set; }
@@ -76,7 +75,6 @@ namespace eZmaxApi.Model
         /// The Width of the page&#39;s image in pixels calculated at 100 DPI
         /// </summary>
         /// <value>The Width of the page&#39;s image in pixels calculated at 100 DPI</value>
-        </example> }}
 		/* <example>850</example>*/
         [DataMember(Name = "iEzsignpageWidthimage", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignpageWidthimage { get; set; }
@@ -85,7 +83,6 @@ namespace eZmaxApi.Model
         /// The Height of the page&#39;s image in pixels calculated at 100 DPI
         /// </summary>
         /// <value>The Height of the page&#39;s image in pixels calculated at 100 DPI</value>
-        </example> }}
 		/* <example>1100</example>*/
         [DataMember(Name = "iEzsignpageHeightimage", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignpageHeightimage { get; set; }
@@ -94,7 +91,6 @@ namespace eZmaxApi.Model
         /// The Width of the page in points calculated at 72 DPI
         /// </summary>
         /// <value>The Width of the page in points calculated at 72 DPI</value>
-        </example> }}
 		/* <example>612</example>*/
         [DataMember(Name = "iEzsignpageWidthpdf", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignpageWidthpdf { get; set; }
@@ -103,7 +99,6 @@ namespace eZmaxApi.Model
         /// The Height of the page in points calculated at 72 DPI
         /// </summary>
         /// <value>The Height of the page in points calculated at 72 DPI</value>
-        </example> }}
 		/* <example>792</example>*/
         [DataMember(Name = "iEzsignpageHeightpdf", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignpageHeightpdf { get; set; }
@@ -112,7 +107,6 @@ namespace eZmaxApi.Model
         /// The page number in the Ezsigndocument
         /// </summary>
         /// <value>The page number in the Ezsigndocument</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "iEzsignpagePagenumber", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignpagePagenumber { get; set; }

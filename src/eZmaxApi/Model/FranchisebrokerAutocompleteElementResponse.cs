@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The name of the Franchisebroker in the language of the requester
         /// </summary>
         /// <value>The name of the Franchisebroker in the language of the requester</value>
-        </example> }}
 		/* <example>Default</example>*/
         [DataMember(Name = "sFranchisebrokerName", IsRequired = true, EmitDefaultValue = true)]
         public string SFranchisebrokerName { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Franchisebroker
         /// </summary>
         /// <value>The unique ID of the Franchisebroker</value>
-        </example> }}
 		/* <example>61</example>*/
         [DataMember(Name = "pkiFranchisebrokerID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiFranchisebrokerID { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// Whether the Franchisebroker is active or not
         /// </summary>
         /// <value>Whether the Franchisebroker is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bFranchisebrokerIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BFranchisebrokerIsactive { get; set; }

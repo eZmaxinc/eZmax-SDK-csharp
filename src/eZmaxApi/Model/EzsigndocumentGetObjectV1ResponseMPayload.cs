@@ -129,7 +129,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigndocument
         /// </summary>
         /// <value>The unique ID of the Ezsigndocument</value>
-        </example> }}
 		/* <example>97</example>*/
         [DataMember(Name = "pkiEzsigndocumentID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigndocumentID { get; set; }
@@ -138,7 +137,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfolder
         /// </summary>
         /// <value>The unique ID of the Ezsignfolder</value>
-        </example> }}
 		/* <example>33</example>*/
         [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfolderID { get; set; }
@@ -147,7 +145,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldersignerassociation
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
-        </example> }}
 		/* <example>20</example>*/
         [DataMember(Name = "fkiEzsignfoldersignerassociationIDDeclinedtosign", EmitDefaultValue = false)]
         public int FkiEzsignfoldersignerassociationIDDeclinedtosign { get; set; }
@@ -156,7 +153,6 @@ namespace eZmaxApi.Model
         /// The maximum date and time at which the Ezsigndocument can be signed.
         /// </summary>
         /// <value>The maximum date and time at which the Ezsigndocument can be signed.</value>
-        </example> }}
 		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsigndocumentDuedate", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzsigndocumentDuedate { get; set; }
@@ -165,7 +161,6 @@ namespace eZmaxApi.Model
         /// The date and time at which the Ezsignform has been completed.
         /// </summary>
         /// <value>The date and time at which the Ezsignform has been completed.</value>
-        </example> }}
 		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsignformCompleted", EmitDefaultValue = false)]
         public string DtEzsignformCompleted { get; set; }
@@ -174,7 +169,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", EmitDefaultValue = false)]
         public int FkiLanguageID { get; set; }
@@ -183,7 +177,6 @@ namespace eZmaxApi.Model
         /// The name of the document that will be presented to Ezsignfoldersignerassociations
         /// </summary>
         /// <value>The name of the document that will be presented to Ezsignfoldersignerassociations</value>
-        </example> }}
 		/* <example>Contract #123</example>*/
         [DataMember(Name = "sEzsigndocumentName", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigndocumentName { get; set; }
@@ -192,7 +185,6 @@ namespace eZmaxApi.Model
         /// The date and time when the Ezsigndocument was first sent.
         /// </summary>
         /// <value>The date and time when the Ezsigndocument was first sent.</value>
-        </example> }}
 		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsigndocumentFirstsend", EmitDefaultValue = false)]
         public string DtEzsigndocumentFirstsend { get; set; }
@@ -201,7 +193,6 @@ namespace eZmaxApi.Model
         /// The date and time when the Ezsigndocument was sent the last time.
         /// </summary>
         /// <value>The date and time when the Ezsigndocument was sent the last time.</value>
-        </example> }}
 		/* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsigndocumentLastsend", EmitDefaultValue = false)]
         public string DtEzsigndocumentLastsend { get; set; }
@@ -210,7 +201,6 @@ namespace eZmaxApi.Model
         /// The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
         /// </summary>
         /// <value>The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "iEzsigndocumentOrder", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigndocumentOrder { get; set; }
@@ -219,7 +209,6 @@ namespace eZmaxApi.Model
         /// The number of pages in the Ezsigndocument.
         /// </summary>
         /// <value>The number of pages in the Ezsigndocument.</value>
-        </example> }}
 		/* <example>4</example>*/
         [DataMember(Name = "iEzsigndocumentPagetotal", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigndocumentPagetotal { get; set; }
@@ -228,7 +217,6 @@ namespace eZmaxApi.Model
         /// The number of signatures that were signed in the document.
         /// </summary>
         /// <value>The number of signatures that were signed in the document.</value>
-        </example> }}
 		/* <example>3</example>*/
         [DataMember(Name = "iEzsigndocumentSignaturesigned", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigndocumentSignaturesigned { get; set; }
@@ -237,7 +225,6 @@ namespace eZmaxApi.Model
         /// The number of total signatures that were requested in the Ezsigndocument.
         /// </summary>
         /// <value>The number of total signatures that were requested in the Ezsigndocument.</value>
-        </example> }}
 		/* <example>4</example>*/
         [DataMember(Name = "iEzsigndocumentSignaturetotal", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigndocumentSignaturetotal { get; set; }
@@ -246,7 +233,6 @@ namespace eZmaxApi.Model
         /// MD5 Hash of the initial PDF Document before signatures were applied to it.
         /// </summary>
         /// <value>MD5 Hash of the initial PDF Document before signatures were applied to it.</value>
-        </example> }}
 		/* <example>012345678901234567890123456789AB</example>*/
         [DataMember(Name = "sEzsigndocumentMD5initial", EmitDefaultValue = false)]
         public string SEzsigndocumentMD5initial { get; set; }
@@ -255,7 +241,6 @@ namespace eZmaxApi.Model
         /// A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign
         /// </summary>
         /// <value>A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign</value>
-        </example> }}
 		/* <example>The conditions in the contract are different than those discuted</example>*/
         [DataMember(Name = "tEzsigndocumentDeclinedtosignreason", EmitDefaultValue = false)]
         public string TEzsigndocumentDeclinedtosignreason { get; set; }
@@ -264,7 +249,6 @@ namespace eZmaxApi.Model
         /// MD5 Hash of the final PDF Document after all signatures were applied to it.
         /// </summary>
         /// <value>MD5 Hash of the final PDF Document after all signatures were applied to it.</value>
-        </example> }}
 		/* <example>012345678901234567890123456789AB</example>*/
         [DataMember(Name = "sEzsigndocumentMD5signed", EmitDefaultValue = false)]
         public string SEzsigndocumentMD5signed { get; set; }
@@ -273,7 +257,6 @@ namespace eZmaxApi.Model
         /// If the Ezsigndocument contains an Ezsignform or not
         /// </summary>
         /// <value>If the Ezsigndocument contains an Ezsignform or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzsigndocumentEzsignform", EmitDefaultValue = true)]
         public bool BEzsigndocumentEzsignform { get; set; }
@@ -282,7 +265,6 @@ namespace eZmaxApi.Model
         /// If the Ezsigndocument contains signed signatures (From internal or external sources)
         /// </summary>
         /// <value>If the Ezsigndocument contains signed signatures (From internal or external sources)</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzsigndocumentHassignedsignatures", EmitDefaultValue = true)]
         public bool BEzsigndocumentHassignedsignatures { get; set; }
@@ -297,7 +279,6 @@ namespace eZmaxApi.Model
         /// This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
         /// </summary>
         /// <value>This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. </value>
-        </example> }}
 		/* <example>{&quot;ID&quot;: 1234, &quot;TAGS&quot;: [&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]}</example>*/
         [DataMember(Name = "sEzsigndocumentExternalid", EmitDefaultValue = false)]
         public string SEzsigndocumentExternalid { get; set; }
@@ -306,7 +287,6 @@ namespace eZmaxApi.Model
         /// The total number of steps in the form filling phase
         /// </summary>
         /// <value>The total number of steps in the form filling phase</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "iEzsigndocumentStepformtotal", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigndocumentStepformtotal { get; set; }
@@ -315,7 +295,6 @@ namespace eZmaxApi.Model
         /// The current step in the form filling phase
         /// </summary>
         /// <value>The current step in the form filling phase</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "iEzsigndocumentStepformcurrent", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigndocumentStepformcurrent { get; set; }
@@ -324,7 +303,6 @@ namespace eZmaxApi.Model
         /// The total number of steps in the signature filling phase
         /// </summary>
         /// <value>The total number of steps in the signature filling phase</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "iEzsigndocumentStepsignaturetotal", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigndocumentStepsignaturetotal { get; set; }
@@ -333,7 +311,6 @@ namespace eZmaxApi.Model
         /// The current step in the signature phase
         /// </summary>
         /// <value>The current step in the signature phase</value>
-        </example> }}
 		/* <example>0</example>*/
         [DataMember(Name = "iEzsigndocumentStepsignatureCurrent", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigndocumentStepsignatureCurrent { get; set; }

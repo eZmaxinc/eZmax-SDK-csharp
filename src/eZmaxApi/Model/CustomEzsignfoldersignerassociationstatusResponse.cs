@@ -63,7 +63,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldersignerassociation
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
-        </example> }}
 		/* <example>20</example>*/
         [DataMember(Name = "fkiEzsignfoldersignerassociationID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldersignerassociationID { get; set; }
@@ -72,7 +71,6 @@ namespace eZmaxApi.Model
         /// The last name of the Ezsignsigner
         /// </summary>
         /// <value>The last name of the Ezsignsigner</value>
-        </example> }}
 		/* <example>Doe</example>*/
         [DataMember(Name = "sEzsignfoldersignerassociationstatusLastname", EmitDefaultValue = false)]
         [Obsolete]
@@ -82,7 +80,6 @@ namespace eZmaxApi.Model
         /// The first name of the Ezsignsigner
         /// </summary>
         /// <value>The first name of the Ezsignsigner</value>
-        </example> }}
 		/* <example>John</example>*/
         [DataMember(Name = "sEzsignfoldersignerassociationstatusFirstname", EmitDefaultValue = false)]
         [Obsolete]
@@ -92,7 +89,6 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignsigner
         /// </summary>
         /// <value>The description of the Ezsignsigner</value>
-        </example> }}
 		/* <example>John Doe</example>*/
         [DataMember(Name = "sEzsignfoldersignerassociationstatusDescriptionX", EmitDefaultValue = false)]
         public string SEzsignfoldersignerassociationstatusDescriptionX { get; set; }

@@ -74,7 +74,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Variableexpense
         /// </summary>
         /// <value>The unique ID of the Variableexpense</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "pkiVariableexpenseID", EmitDefaultValue = false)]
         public int PkiVariableexpenseID { get; set; }
@@ -83,7 +82,6 @@ namespace eZmaxApi.Model
         /// The code of the Variableexpense
         /// </summary>
         /// <value>The code of the Variableexpense</value>
-        </example> }}
 		/* <example>EQBUR</example>*/
         [DataMember(Name = "sVariableexpenseCode", IsRequired = true, EmitDefaultValue = true)]
         public string SVariableexpenseCode { get; set; }
@@ -98,7 +96,6 @@ namespace eZmaxApi.Model
         /// Whether the variableexpense is active or not
         /// </summary>
         /// <value>Whether the variableexpense is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bVariableexpenseIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BVariableexpenseIsactive { get; set; }

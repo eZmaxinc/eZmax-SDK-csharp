@@ -73,7 +73,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignsignatureattachment
         /// </summary>
         /// <value>The unique ID of the Ezsignsignatureattachment</value>
-        </example> }}
 		/* <example>177</example>*/
         [DataMember(Name = "pkiEzsignsignatureattachmentID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignsignatureattachmentID { get; set; }
@@ -82,7 +81,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignsignature
         /// </summary>
         /// <value>The unique ID of the Ezsignsignature</value>
-        </example> }}
 		/* <example>49</example>*/
         [DataMember(Name = "fkiEzsignsignatureID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignsignatureID { get; set; }
@@ -91,7 +89,6 @@ namespace eZmaxApi.Model
         /// The md5 of the Ezsignsignatureattachment
         /// </summary>
         /// <value>The md5 of the Ezsignsignatureattachment</value>
-        </example> }}
 		/* <example>098f6bcd4621d373cade4e832627b4f6</example>*/
         [DataMember(Name = "binEzsignsignatureattachmentMD5", IsRequired = true, EmitDefaultValue = true)]
         public string BinEzsignsignatureattachmentMD5 { get; set; }
@@ -100,7 +97,6 @@ namespace eZmaxApi.Model
         /// The name of the Ezsignsignatureattachment
         /// </summary>
         /// <value>The name of the Ezsignsignatureattachment</value>
-        </example> }}
 		/* <example>document.pdf</example>*/
         [DataMember(Name = "sEzsignsignatureattachmentName", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignsignatureattachmentName { get; set; }
@@ -109,7 +105,6 @@ namespace eZmaxApi.Model
         /// The Url to the requested document.  Url will expire after 3 hours.
         /// </summary>
         /// <value>The Url to the requested document.  Url will expire after 3 hours.</value>
-        </example> }}
 		/* <example>http://www.example.com/document.pdf</example>*/
         [DataMember(Name = "sDownloadUrl", IsRequired = true, EmitDefaultValue = true)]
         public string SDownloadUrl { get; set; }

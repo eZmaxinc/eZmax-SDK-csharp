@@ -65,7 +65,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackage
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackage</value>
-        </example> }}
 		/* <example>99</example>*/
         [DataMember(Name = "pkiEzsigntemplatepackageID", EmitDefaultValue = false)]
         public int PkiEzsigntemplatepackageID { get; set; }
@@ -74,7 +73,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-        </example> }}
 		/* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldertypeID { get; set; }
@@ -83,7 +81,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
@@ -92,7 +89,6 @@ namespace eZmaxApi.Model
         /// The description of the Ezsigntemplatepackage
         /// </summary>
         /// <value>The description of the Ezsigntemplatepackage</value>
-        </example> }}
 		/* <example>Package for new clients</example>*/
         [DataMember(Name = "sEzsigntemplatepackageDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigntemplatepackageDescription { get; set; }
@@ -108,7 +104,6 @@ namespace eZmaxApi.Model
         /// Whether the Ezsigntemplatepackage is active or not
         /// </summary>
         /// <value>Whether the Ezsigntemplatepackage is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzsigntemplatepackageIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsigntemplatepackageIsactive { get; set; }

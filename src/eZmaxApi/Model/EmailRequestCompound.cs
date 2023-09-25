@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Email
         /// </summary>
         /// <value>The unique ID of the Email</value>
-        </example> }}
 		/* <example>22</example>*/
         [DataMember(Name = "pkiEmailID", EmitDefaultValue = false)]
         public int PkiEmailID { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home|
         /// </summary>
         /// <value>The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home|</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiEmailtypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEmailtypeID { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-        </example> }}
 		/* <example>email@example.com</example>*/
         [DataMember(Name = "sEmailAddress", IsRequired = true, EmitDefaultValue = true)]
         public string SEmailAddress { get; set; }

@@ -54,7 +54,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Phone.
         /// </summary>
         /// <value>The unique ID of the Phone.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "pkiPhonestaticID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiPhonestaticID { get; set; }
@@ -63,7 +62,6 @@ namespace eZmaxApi.Model
         /// A phone number in E.164 Format
         /// </summary>
         /// <value>A phone number in E.164 Format</value>
-        </example> }}
 		/* <example>+15149901516</example>*/
         [DataMember(Name = "sPhonestaticE164", EmitDefaultValue = false)]
         public string SPhonestaticE164 { get; set; }
@@ -72,7 +70,6 @@ namespace eZmaxApi.Model
         /// The extension of the phone number.
         /// </summary>
         /// <value>The extension of the phone number.</value>
-        </example> }}
 		/* <example>123</example>*/
         [DataMember(Name = "sPhonestaticExtension", EmitDefaultValue = false)]
         public string SPhonestaticExtension { get; set; }

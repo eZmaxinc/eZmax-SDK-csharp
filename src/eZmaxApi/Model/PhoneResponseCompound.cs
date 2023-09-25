@@ -65,7 +65,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Phone.
         /// </summary>
         /// <value>The unique ID of the Phone.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "pkiPhoneID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiPhoneID { get; set; }
@@ -74,7 +73,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|
         /// </summary>
         /// <value>The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiPhonetypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiPhonetypeID { get; set; }
@@ -83,7 +81,6 @@ namespace eZmaxApi.Model
         /// A phone number in E.164 Format
         /// </summary>
         /// <value>A phone number in E.164 Format</value>
-        </example> }}
 		/* <example>+15149901516</example>*/
         [DataMember(Name = "sPhoneE164", EmitDefaultValue = false)]
         public string SPhoneE164 { get; set; }
@@ -92,7 +89,6 @@ namespace eZmaxApi.Model
         /// The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
         /// </summary>
         /// <value>The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers</value>
-        </example> }}
 		/* <example>123</example>*/
         [DataMember(Name = "sPhoneExtension", EmitDefaultValue = false)]
         public string SPhoneExtension { get; set; }

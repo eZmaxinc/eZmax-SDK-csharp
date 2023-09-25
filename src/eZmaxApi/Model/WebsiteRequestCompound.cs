@@ -57,7 +57,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|
         /// </summary>
         /// <value>The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiWebsitetypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiWebsitetypeID { get; set; }
@@ -66,7 +65,6 @@ namespace eZmaxApi.Model
         /// The URL of the website.
         /// </summary>
         /// <value>The URL of the website.</value>
-        </example> }}
 		/* <example>https://www.example.com</example>*/
         [DataMember(Name = "sWebsiteAddress", IsRequired = true, EmitDefaultValue = true)]
         public string SWebsiteAddress { get; set; }

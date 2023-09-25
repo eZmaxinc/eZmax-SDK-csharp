@@ -104,7 +104,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Webhook
         /// </summary>
         /// <value>The unique ID of the Webhook</value>
-        </example> }}
 		/* <example>77</example>*/
         [DataMember(Name = "pkiWebhookID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiWebhookID { get; set; }
@@ -113,7 +112,6 @@ namespace eZmaxApi.Model
         /// The description of the Webhook
         /// </summary>
         /// <value>The description of the Webhook</value>
-        </example> }}
 		/* <example>Import into our system</example>*/
         [DataMember(Name = "sWebhookDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SWebhookDescription { get; set; }
@@ -122,7 +120,6 @@ namespace eZmaxApi.Model
         /// The URL of the Webhook callback
         /// </summary>
         /// <value>The URL of the Webhook callback</value>
-        </example> }}
 		/* <example>https://www.example.com</example>*/
         [DataMember(Name = "sWebhookUrl", IsRequired = true, EmitDefaultValue = true)]
         public string SWebhookUrl { get; set; }
@@ -131,7 +128,6 @@ namespace eZmaxApi.Model
         /// The concatenated string to describe the Webhook event
         /// </summary>
         /// <value>The concatenated string to describe the Webhook event</value>
-        </example> }}
 		/* <example>Ezsign-DocumentCompleted</example>*/
         [DataMember(Name = "sWebhookEvent", IsRequired = true, EmitDefaultValue = true)]
         public string SWebhookEvent { get; set; }
@@ -140,7 +136,6 @@ namespace eZmaxApi.Model
         /// The email that will receive the Webhook in case all attempts fail
         /// </summary>
         /// <value>The email that will receive the Webhook in case all attempts fail</value>
-        </example> }}
 		/* <example>email@example.com</example>*/
         [DataMember(Name = "sWebhookEmailfailed", IsRequired = true, EmitDefaultValue = true)]
         public string SWebhookEmailfailed { get; set; }
@@ -149,7 +144,6 @@ namespace eZmaxApi.Model
         /// Whether the Webhook is active or not
         /// </summary>
         /// <value>Whether the Webhook is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bWebhookIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BWebhookIsactive { get; set; }

@@ -59,7 +59,6 @@ namespace eZmaxApi.Model
         /// The name of the Font
         /// </summary>
         /// <value>The name of the Font</value>
-        </example> }}
 		/* <example>Arial</example>*/
         [DataMember(Name = "sFontName", IsRequired = true, EmitDefaultValue = true)]
         public string SFontName { get; set; }
@@ -68,7 +67,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Font
         /// </summary>
         /// <value>The unique ID of the Font</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "pkiFontID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiFontID { get; set; }
@@ -77,7 +75,6 @@ namespace eZmaxApi.Model
         /// Whether the Font is active or not
         /// </summary>
         /// <value>Whether the Font is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bFontIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BFontIsactive { get; set; }

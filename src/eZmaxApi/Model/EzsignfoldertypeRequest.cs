@@ -133,7 +133,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-        </example> }}
 		/* <example>5</example>*/
         [DataMember(Name = "pkiEzsignfoldertypeID", EmitDefaultValue = false)]
         public int PkiEzsignfoldertypeID { get; set; }
@@ -148,7 +147,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Branding
         /// </summary>
         /// <value>The unique ID of the Branding</value>
-        </example> }}
 		/* <example>78</example>*/
         [DataMember(Name = "fkiBrandingID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiBrandingID { get; set; }
@@ -157,7 +155,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityinternal.
         /// </summary>
         /// <value>The unique ID of the Billingentityinternal.</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiBillingentityinternalID", EmitDefaultValue = false)]
         public int FkiBillingentityinternalID { get; set; }
@@ -166,7 +163,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Usergroup
         /// </summary>
         /// <value>The unique ID of the Usergroup</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "fkiUsergroupID", EmitDefaultValue = false)]
         public int FkiUsergroupID { get; set; }
@@ -175,7 +171,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Usergroup
         /// </summary>
         /// <value>The unique ID of the Usergroup</value>
-        </example> }}
 		/* <example>2</example>*/
         [DataMember(Name = "fkiUsergroupIDRestricted", EmitDefaultValue = false)]
         public int FkiUsergroupIDRestricted { get; set; }
@@ -184,7 +179,6 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
         /// </summary>
         /// <value>The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|</value>
-        </example> }}
 		/* <example>1</example>*/
         [DataMember(Name = "fkiEzsigntsarequirementID", EmitDefaultValue = false)]
         public int FkiEzsigntsarequirementID { get; set; }
@@ -193,7 +187,6 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-        </example> }}
 		/* <example>email@example.com</example>*/
         [DataMember(Name = "sEmailAddressSigned", EmitDefaultValue = false)]
         public string SEmailAddressSigned { get; set; }
@@ -202,7 +195,6 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-        </example> }}
 		/* <example>email@example.com</example>*/
         [DataMember(Name = "sEmailAddressSummary", EmitDefaultValue = false)]
         public string SEmailAddressSummary { get; set; }
@@ -211,7 +203,6 @@ namespace eZmaxApi.Model
         /// The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype
         /// </summary>
         /// <value>The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype</value>
-        </example> }}
 		/* <example>30</example>*/
         [DataMember(Name = "iEzsignfoldertypeArchivaldays", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignfoldertypeArchivaldays { get; set; }
@@ -220,7 +211,6 @@ namespace eZmaxApi.Model
         /// The number of days after the archival before the disposal of the Ezsignfolder
         /// </summary>
         /// <value>The number of days after the archival before the disposal of the Ezsignfolder</value>
-        </example> }}
 		/* <example>365</example>*/
         [DataMember(Name = "iEzsignfoldertypeDisposaldays", EmitDefaultValue = false)]
         public int IEzsignfoldertypeDisposaldays { get; set; }
@@ -229,7 +219,6 @@ namespace eZmaxApi.Model
         /// The number of days to get all Ezsignsignatures
         /// </summary>
         /// <value>The number of days to get all Ezsignsignatures</value>
-        </example> }}
 		/* <example>5</example>*/
         [DataMember(Name = "iEzsignfoldertypeDeadlinedays", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignfoldertypeDeadlinedays { get; set; }
@@ -238,7 +227,6 @@ namespace eZmaxApi.Model
         /// Wheter if delegation of signature is allowed to another user or not
         /// </summary>
         /// <value>Wheter if delegation of signature is allowed to another user or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeDelegate", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeDelegate { get; set; }
@@ -247,7 +235,6 @@ namespace eZmaxApi.Model
         /// Wheter if Reassignment of signature is allowed to another signatory or not
         /// </summary>
         /// <value>Wheter if Reassignment of signature is allowed to another signatory or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeReassign", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeReassign { get; set; }
@@ -256,7 +243,6 @@ namespace eZmaxApi.Model
         /// Whether we send the Ezsigndocument and the proof as attachment in the email
         /// </summary>
         /// <value>Whether we send the Ezsigndocument and the proof as attachment in the email</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendattatchmentsigner", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendattatchmentsigner { get; set; }
@@ -265,7 +251,6 @@ namespace eZmaxApi.Model
         /// Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner
         /// </summary>
         /// <value>Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendsignedtodocumentowner", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendsignedtodocumentowner { get; set; }
@@ -274,7 +259,6 @@ namespace eZmaxApi.Model
         /// Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner
         /// </summary>
         /// <value>Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendsignedtofolderowner", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendsignedtofolderowner { get; set; }
@@ -283,7 +267,6 @@ namespace eZmaxApi.Model
         /// Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders
         /// </summary>
         /// <value>Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendsignedtofullgroup", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendsignedtofullgroup { get; set; }
@@ -292,7 +275,6 @@ namespace eZmaxApi.Model
         /// Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
         /// </summary>
         /// <value>Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendsignedtolimitedgroup", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendsignedtolimitedgroup { get; set; }
@@ -301,7 +283,6 @@ namespace eZmaxApi.Model
         /// Whether we send the signed Ezsigndocument to the colleagues
         /// </summary>
         /// <value>Whether we send the signed Ezsigndocument to the colleagues</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendsignedtocolleague", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendsignedtocolleague { get; set; }
@@ -310,7 +291,6 @@ namespace eZmaxApi.Model
         /// Whether we send the summary to the Ezsigndocument&#39;s owner
         /// </summary>
         /// <value>Whether we send the summary to the Ezsigndocument&#39;s owner</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendsummarytodocumentowner", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendsummarytodocumentowner { get; set; }
@@ -319,7 +299,6 @@ namespace eZmaxApi.Model
         /// Whether we send the summary to the Ezsignfolder&#39;s owner
         /// </summary>
         /// <value>Whether we send the summary to the Ezsignfolder&#39;s owner</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendsummarytofolderowner", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendsummarytofolderowner { get; set; }
@@ -328,7 +307,6 @@ namespace eZmaxApi.Model
         /// Whether we send the summary to the Usergroup that has acces to all Ezsignfolders
         /// </summary>
         /// <value>Whether we send the summary to the Usergroup that has acces to all Ezsignfolders</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendsummarytofullgroup", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendsummarytofullgroup { get; set; }
@@ -337,7 +315,6 @@ namespace eZmaxApi.Model
         /// Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders
         /// </summary>
         /// <value>Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendsummarytolimitedgroup", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendsummarytolimitedgroup { get; set; }
@@ -346,7 +323,6 @@ namespace eZmaxApi.Model
         /// Whether we send the summary to the colleagues
         /// </summary>
         /// <value>Whether we send the summary to the colleagues</value>
-        </example> }}
 		/* <example>false</example>*/
         [DataMember(Name = "bEzsignfoldertypeSendsummarytocolleague", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeSendsummarytocolleague { get; set; }
@@ -355,7 +331,6 @@ namespace eZmaxApi.Model
         /// Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
         /// </summary>
         /// <value>Whether we include the proof with the signed Ezsigndocument for Ezsignsigners</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeIncludeproofsigner", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeIncludeproofsigner { get; set; }
@@ -364,7 +339,6 @@ namespace eZmaxApi.Model
         /// Whether we include the proof with the signed Ezsigndocument for users
         /// </summary>
         /// <value>Whether we include the proof with the signed Ezsigndocument for users</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeIncludeproofuser", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeIncludeproofuser { get; set; }
@@ -373,7 +347,6 @@ namespace eZmaxApi.Model
         /// Whether the Ezsignfoldertype is active or not
         /// </summary>
         /// <value>Whether the Ezsignfoldertype is active or not</value>
-        </example> }}
 		/* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeIsactive { get; set; }
