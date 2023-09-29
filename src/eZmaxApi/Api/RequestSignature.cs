@@ -1,10 +1,10 @@
 ﻿using eZmaxApi.Client;
 using RestSharp;
 using System;
-using System.Net;
 using System.Text;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Web;
 
 #pragma warning disable CS1591    //Missing XML comment
 
@@ -44,7 +44,7 @@ namespace eZmaxApi.Api
                 if (param.Type == ParameterType.UrlSegment) {
                         
                         sURL = sURL.Replace("{" + param.Name + "}",
-                                    WebUtility.UrlEncode(param.Value.ToString()) );
+                                    urlEncode(param.Value.ToString() ) );
                 }
             }
 	             
@@ -68,10 +68,9 @@ namespace eZmaxApi.Api
 	        var iRemain = queryParams.Count;
 	        foreach(KeyValuePair<string, string> entry in queryParams)
 	        {
-
-	            sURL += WebUtility.UrlEncode(entry.Key) +
+	            sURL += urlEncode(entry.Key) +
 	                    "=" + 
-                        WebUtility.UrlEncode(entry.Value);
+                        urlEncode(entry.Value);
 	                          
 	            iRemain -= 1;
 	            if (iRemain > 0) {
@@ -199,6 +198,18 @@ namespace eZmaxApi.Api
 
 			return sbHex.ToString();
 		}
+
+        ////////////////////////////////////////////////////////////////////////////////
+        private static string urlEncode(string text)
+        {
+            // "sDescription like '%foo=%'"
+            //   Should encode to
+            // "sDescription%20like%20%25foo%3d%25"
+
+            var urlEncoded = HttpUtility.UrlEncode(text);
+            urlEncoded = urlEncoded.Replace("+", "%20");
+            return urlEncoded;
+        }
     }
 }
 
