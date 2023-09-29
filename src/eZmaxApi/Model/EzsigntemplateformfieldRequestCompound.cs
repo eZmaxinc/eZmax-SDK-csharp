@@ -48,8 +48,9 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigntemplateformfieldY">The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
         /// <param name="iEzsigntemplateformfieldWidth">The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | (required).</param>
         /// <param name="iEzsigntemplateformfieldHeight">The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  (required).</param>
+        /// <param name="bEzsigntemplateformfieldAutocomplete">Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**.</param>
         /// <param name="bEzsigntemplateformfieldSelected">Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**.</param>
-        public EzsigntemplateformfieldRequestCompound(int pkiEzsigntemplateformfieldID = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), string sEzsigntemplateformfieldLabel = default(string), string sEzsigntemplateformfieldValue = default(string), int iEzsigntemplateformfieldX = default(int), int iEzsigntemplateformfieldY = default(int), int iEzsigntemplateformfieldWidth = default(int), int iEzsigntemplateformfieldHeight = default(int), bool bEzsigntemplateformfieldSelected = default(bool))
+        public EzsigntemplateformfieldRequestCompound(int pkiEzsigntemplateformfieldID = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), string sEzsigntemplateformfieldLabel = default(string), string sEzsigntemplateformfieldValue = default(string), int iEzsigntemplateformfieldX = default(int), int iEzsigntemplateformfieldY = default(int), int iEzsigntemplateformfieldWidth = default(int), int iEzsigntemplateformfieldHeight = default(int), bool bEzsigntemplateformfieldAutocomplete = default(bool), bool bEzsigntemplateformfieldSelected = default(bool))
         {
             this.IEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
             // to ensure "sEzsigntemplateformfieldLabel" is required (not null)
@@ -64,6 +65,7 @@ namespace eZmaxApi.Model
             this.IEzsigntemplateformfieldHeight = iEzsigntemplateformfieldHeight;
             this.PkiEzsigntemplateformfieldID = pkiEzsigntemplateformfieldID;
             this.SEzsigntemplateformfieldValue = sEzsigntemplateformfieldValue;
+            this.BEzsigntemplateformfieldAutocomplete = bEzsigntemplateformfieldAutocomplete;
             this.BEzsigntemplateformfieldSelected = bEzsigntemplateformfieldSelected;
         }
 
@@ -132,6 +134,13 @@ namespace eZmaxApi.Model
         public int IEzsigntemplateformfieldHeight { get; set; }
 
         /// <summary>
+        /// Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**
+        /// </summary>
+        /// <value>Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**</value>
+        [DataMember(Name = "bEzsigntemplateformfieldAutocomplete", EmitDefaultValue = true)]
+        public bool BEzsigntemplateformfieldAutocomplete { get; set; }
+
+        /// <summary>
         /// Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
         /// </summary>
         /// <value>Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**</value>
@@ -154,6 +163,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsigntemplateformfieldY: ").Append(IEzsigntemplateformfieldY).Append("\n");
             sb.Append("  IEzsigntemplateformfieldWidth: ").Append(IEzsigntemplateformfieldWidth).Append("\n");
             sb.Append("  IEzsigntemplateformfieldHeight: ").Append(IEzsigntemplateformfieldHeight).Append("\n");
+            sb.Append("  BEzsigntemplateformfieldAutocomplete: ").Append(BEzsigntemplateformfieldAutocomplete).Append("\n");
             sb.Append("  BEzsigntemplateformfieldSelected: ").Append(BEzsigntemplateformfieldSelected).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -225,6 +235,10 @@ namespace eZmaxApi.Model
                     this.IEzsigntemplateformfieldHeight.Equals(input.IEzsigntemplateformfieldHeight)
                 ) && 
                 (
+                    this.BEzsigntemplateformfieldAutocomplete == input.BEzsigntemplateformfieldAutocomplete ||
+                    this.BEzsigntemplateformfieldAutocomplete.Equals(input.BEzsigntemplateformfieldAutocomplete)
+                ) && 
+                (
                     this.BEzsigntemplateformfieldSelected == input.BEzsigntemplateformfieldSelected ||
                     this.BEzsigntemplateformfieldSelected.Equals(input.BEzsigntemplateformfieldSelected)
                 );
@@ -253,6 +267,7 @@ namespace eZmaxApi.Model
                 hashCode = (hashCode * 59) + this.IEzsigntemplateformfieldY.GetHashCode();
                 hashCode = (hashCode * 59) + this.IEzsigntemplateformfieldWidth.GetHashCode();
                 hashCode = (hashCode * 59) + this.IEzsigntemplateformfieldHeight.GetHashCode();
+                hashCode = (hashCode * 59) + this.BEzsigntemplateformfieldAutocomplete.GetHashCode();
                 hashCode = (hashCode * 59) + this.BEzsigntemplateformfieldSelected.GetHashCode();
                 return hashCode;
             }

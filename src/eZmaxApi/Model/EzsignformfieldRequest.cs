@@ -48,9 +48,10 @@ namespace eZmaxApi.Model
         /// <param name="iEzsignformfieldY">The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
         /// <param name="iEzsignformfieldWidth">The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | (required).</param>
         /// <param name="iEzsignformfieldHeight">The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  (required).</param>
+        /// <param name="bEzsignformfieldAutocomplete">Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**.</param>
         /// <param name="bEzsignformfieldSelected">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
         /// <param name="sEzsignformfieldEnteredvalue">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
-        public EzsignformfieldRequest(int pkiEzsignformfieldID = default(int), int iEzsignpagePagenumber = default(int), string sEzsignformfieldLabel = default(string), string sEzsignformfieldValue = default(string), int iEzsignformfieldX = default(int), int iEzsignformfieldY = default(int), int iEzsignformfieldWidth = default(int), int iEzsignformfieldHeight = default(int), bool bEzsignformfieldSelected = default(bool), string sEzsignformfieldEnteredvalue = default(string))
+        public EzsignformfieldRequest(int pkiEzsignformfieldID = default(int), int iEzsignpagePagenumber = default(int), string sEzsignformfieldLabel = default(string), string sEzsignformfieldValue = default(string), int iEzsignformfieldX = default(int), int iEzsignformfieldY = default(int), int iEzsignformfieldWidth = default(int), int iEzsignformfieldHeight = default(int), bool bEzsignformfieldAutocomplete = default(bool), bool bEzsignformfieldSelected = default(bool), string sEzsignformfieldEnteredvalue = default(string))
         {
             this.IEzsignpagePagenumber = iEzsignpagePagenumber;
             // to ensure "sEzsignformfieldLabel" is required (not null)
@@ -65,6 +66,7 @@ namespace eZmaxApi.Model
             this.IEzsignformfieldHeight = iEzsignformfieldHeight;
             this.PkiEzsignformfieldID = pkiEzsignformfieldID;
             this.SEzsignformfieldValue = sEzsignformfieldValue;
+            this.BEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
             this.BEzsignformfieldSelected = bEzsignformfieldSelected;
             this.SEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
         }
@@ -134,6 +136,13 @@ namespace eZmaxApi.Model
         public int IEzsignformfieldHeight { get; set; }
 
         /// <summary>
+        /// Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**
+        /// </summary>
+        /// <value>Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**</value>
+        [DataMember(Name = "bEzsignformfieldAutocomplete", EmitDefaultValue = true)]
+        public bool BEzsignformfieldAutocomplete { get; set; }
+
+        /// <summary>
         /// Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
         /// </summary>
         /// <value>Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**</value>
@@ -164,6 +173,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsignformfieldY: ").Append(IEzsignformfieldY).Append("\n");
             sb.Append("  IEzsignformfieldWidth: ").Append(IEzsignformfieldWidth).Append("\n");
             sb.Append("  IEzsignformfieldHeight: ").Append(IEzsignformfieldHeight).Append("\n");
+            sb.Append("  BEzsignformfieldAutocomplete: ").Append(BEzsignformfieldAutocomplete).Append("\n");
             sb.Append("  BEzsignformfieldSelected: ").Append(BEzsignformfieldSelected).Append("\n");
             sb.Append("  SEzsignformfieldEnteredvalue: ").Append(SEzsignformfieldEnteredvalue).Append("\n");
             sb.Append("}\n");
@@ -236,6 +246,10 @@ namespace eZmaxApi.Model
                     this.IEzsignformfieldHeight.Equals(input.IEzsignformfieldHeight)
                 ) && 
                 (
+                    this.BEzsignformfieldAutocomplete == input.BEzsignformfieldAutocomplete ||
+                    this.BEzsignformfieldAutocomplete.Equals(input.BEzsignformfieldAutocomplete)
+                ) && 
+                (
                     this.BEzsignformfieldSelected == input.BEzsignformfieldSelected ||
                     this.BEzsignformfieldSelected.Equals(input.BEzsignformfieldSelected)
                 ) && 
@@ -269,6 +283,7 @@ namespace eZmaxApi.Model
                 hashCode = (hashCode * 59) + this.IEzsignformfieldY.GetHashCode();
                 hashCode = (hashCode * 59) + this.IEzsignformfieldWidth.GetHashCode();
                 hashCode = (hashCode * 59) + this.IEzsignformfieldHeight.GetHashCode();
+                hashCode = (hashCode * 59) + this.BEzsignformfieldAutocomplete.GetHashCode();
                 hashCode = (hashCode * 59) + this.BEzsignformfieldSelected.GetHashCode();
                 if (this.SEzsignformfieldEnteredvalue != null)
                 {

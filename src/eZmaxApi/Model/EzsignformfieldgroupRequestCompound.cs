@@ -70,7 +70,7 @@ namespace eZmaxApi.Model
         /// <param name="eEzsignformfieldgroupSignerrequirement">eEzsignformfieldgroupSignerrequirement (required).</param>
         /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup (required).</param>
         /// <param name="iEzsignformfieldgroupStep">The step when the Ezsignsigner will be invited to fill the form fields (required).</param>
-        /// <param name="sEzsignformfieldgroupDefaultvalue">The default value for the Ezsignformfieldgroup (required).</param>
+        /// <param name="sEzsignformfieldgroupDefaultvalue">The default value for the Ezsignformfieldgroup.</param>
         /// <param name="iEzsignformfieldgroupFilledmin">The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup (required).</param>
         /// <param name="iEzsignformfieldgroupFilledmax">The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup (required).</param>
         /// <param name="bEzsignformfieldgroupReadonly">Whether the Ezsignformfieldgroup is read only or not. (required).</param>
@@ -95,12 +95,6 @@ namespace eZmaxApi.Model
             }
             this.SEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
             this.IEzsignformfieldgroupStep = iEzsignformfieldgroupStep;
-            // to ensure "sEzsignformfieldgroupDefaultvalue" is required (not null)
-            if (sEzsignformfieldgroupDefaultvalue == null)
-            {
-                throw new ArgumentNullException("sEzsignformfieldgroupDefaultvalue is a required property for EzsignformfieldgroupRequestCompound and cannot be null");
-            }
-            this.SEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
             this.IEzsignformfieldgroupFilledmin = iEzsignformfieldgroupFilledmin;
             this.IEzsignformfieldgroupFilledmax = iEzsignformfieldgroupFilledmax;
             this.BEzsignformfieldgroupReadonly = bEzsignformfieldgroupReadonly;
@@ -117,6 +111,7 @@ namespace eZmaxApi.Model
             }
             this.AObjEzsignformfield = aObjEzsignformfield;
             this.PkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
+            this.SEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
             this.IEzsignformfieldgroupMaxlength = iEzsignformfieldgroupMaxlength;
             this.BEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
             this.SEzsignformfieldgroupRegexp = sEzsignformfieldgroupRegexp;
@@ -163,7 +158,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The default value for the Ezsignformfieldgroup</value>
 		/* <example>Foo</example>*/
-        [DataMember(Name = "sEzsignformfieldgroupDefaultvalue", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sEzsignformfieldgroupDefaultvalue", EmitDefaultValue = false)]
         public string SEzsignformfieldgroupDefaultvalue { get; set; }
 
         /// <summary>

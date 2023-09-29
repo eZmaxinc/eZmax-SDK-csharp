@@ -6,9 +6,9 @@ A Custom Ezsignfoldertype Object
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | 
-**SEzsignfoldertypeNameX** | **string** | The name of the Ezsignfoldertype in the language of the requester | 
-**BEzsignfoldertypeIncludeproofsigner** | **bool** | Whether we include the proof with the signed Ezsigndocument for Ezsignsigners | 
-**BEzsignfoldertypeIncludeproofuser** | **bool** | Whether we include the proof with the signed Ezsigndocument for users | 
+**SEzsignfoldertypeNameX** | **string** | The name of the Ezsignfoldertype in the language of the requester | [optional] 
+**BEzsignfoldertypeIncludeproofsigner** | **bool** | Whether we include the proof with the signed Ezsigndocument for Ezsignsigners | [optional] 
+**BEzsignfoldertypeIncludeproofuser** | **bool** | Whether we include the proof with the signed Ezsigndocument for users | [optional] 
 **BEzsignfoldertypeDelegate** | **bool** | Wheter if delegation of signature is allowed to another user or not | [optional] 
 **BEzsignfoldertypeReassign** | **bool** | Wheter if Reassignment of signature is allowed to another signatory or not | [optional] 
 

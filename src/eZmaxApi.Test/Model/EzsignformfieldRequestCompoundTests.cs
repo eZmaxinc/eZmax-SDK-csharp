@@ -128,6 +128,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BEzsignformfieldAutocomplete'
+        /// </summary>
+        [Fact]
+        public void BEzsignformfieldAutocompleteTest()
+        {
+            // TODO unit test for the property 'BEzsignformfieldAutocomplete'
+        }
+
+        /// <summary>
         /// Test the property 'BEzsignformfieldSelected'
         /// </summary>
         [Fact]

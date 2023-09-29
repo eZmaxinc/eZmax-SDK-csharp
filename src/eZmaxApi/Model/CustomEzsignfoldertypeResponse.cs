@@ -41,19 +41,14 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CustomEzsignfoldertypeResponse" /> class.
         /// </summary>
         /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="bEzsignfoldertypeIncludeproofsigner">Whether we include the proof with the signed Ezsigndocument for Ezsignsigners (required).</param>
-        /// <param name="bEzsignfoldertypeIncludeproofuser">Whether we include the proof with the signed Ezsigndocument for users (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester.</param>
+        /// <param name="bEzsignfoldertypeIncludeproofsigner">Whether we include the proof with the signed Ezsigndocument for Ezsignsigners.</param>
+        /// <param name="bEzsignfoldertypeIncludeproofuser">Whether we include the proof with the signed Ezsigndocument for users.</param>
         /// <param name="bEzsignfoldertypeDelegate">Wheter if delegation of signature is allowed to another user or not.</param>
         /// <param name="bEzsignfoldertypeReassign">Wheter if Reassignment of signature is allowed to another signatory or not.</param>
         public CustomEzsignfoldertypeResponse(int pkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), bool bEzsignfoldertypeIncludeproofsigner = default(bool), bool bEzsignfoldertypeIncludeproofuser = default(bool), bool bEzsignfoldertypeDelegate = default(bool), bool bEzsignfoldertypeReassign = default(bool))
         {
             this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
-            // to ensure "sEzsignfoldertypeNameX" is required (not null)
-            if (sEzsignfoldertypeNameX == null)
-            {
-                throw new ArgumentNullException("sEzsignfoldertypeNameX is a required property for CustomEzsignfoldertypeResponse and cannot be null");
-            }
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             this.BEzsignfoldertypeIncludeproofsigner = bEzsignfoldertypeIncludeproofsigner;
             this.BEzsignfoldertypeIncludeproofuser = bEzsignfoldertypeIncludeproofuser;
@@ -74,7 +69,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
 		/* <example>Default</example>*/
-        [DataMember(Name = "sEzsignfoldertypeNameX", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sEzsignfoldertypeNameX", EmitDefaultValue = false)]
         public string SEzsignfoldertypeNameX { get; set; }
 
         /// <summary>
@@ -82,7 +77,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>Whether we include the proof with the signed Ezsigndocument for Ezsignsigners</value>
 		/* <example>true</example>*/
-        [DataMember(Name = "bEzsignfoldertypeIncludeproofsigner", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "bEzsignfoldertypeIncludeproofsigner", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeIncludeproofsigner { get; set; }
 
         /// <summary>
@@ -90,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>Whether we include the proof with the signed Ezsigndocument for users</value>
 		/* <example>true</example>*/
-        [DataMember(Name = "bEzsignfoldertypeIncludeproofuser", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "bEzsignfoldertypeIncludeproofuser", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeIncludeproofuser { get; set; }
 
         /// <summary>

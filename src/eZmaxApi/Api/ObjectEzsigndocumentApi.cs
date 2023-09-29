@@ -326,7 +326,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
+        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigndocumentGetDownloadUrlV1Response</returns>
         EzsigndocumentGetDownloadUrlV1Response EzsigndocumentGetDownloadUrlV1(int pkiEzsigndocumentID, string eDocumentType, int operationIndex = 0);
@@ -339,7 +339,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
+        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigndocumentGetDownloadUrlV1Response</returns>
         ApiResponse<EzsigndocumentGetDownloadUrlV1Response> EzsigndocumentGetDownloadUrlV1WithHttpInfo(int pkiEzsigndocumentID, string eDocumentType, int operationIndex = 0);
@@ -957,7 +957,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
+        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigndocumentGetDownloadUrlV1Response</returns>
@@ -971,7 +971,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
+        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetDownloadUrlV1Response)</returns>
@@ -3316,7 +3316,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
+        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigndocumentGetDownloadUrlV1Response</returns>
         public EzsigndocumentGetDownloadUrlV1Response EzsigndocumentGetDownloadUrlV1(int pkiEzsigndocumentID, string eDocumentType, int operationIndex = 0)
@@ -3330,7 +3330,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
+        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigndocumentGetDownloadUrlV1Response</returns>
         public eZmaxApi.Client.ApiResponse<EzsigndocumentGetDownloadUrlV1Response> EzsigndocumentGetDownloadUrlV1WithHttpInfo(int pkiEzsigndocumentID, string eDocumentType, int operationIndex = 0)
@@ -3394,7 +3394,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
+        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigndocumentGetDownloadUrlV1Response</returns>
@@ -3409,7 +3409,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. </param>
+        /// <param name="eDocumentType">The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. </param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetDownloadUrlV1Response)</returns>

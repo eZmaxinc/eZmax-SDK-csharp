@@ -216,18 +216,6 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzsignfolderGetEzsignfoldersignerassociationsmineV1
-        /// </summary>
-        [Fact]
-        public void EzsignfolderGetEzsignfoldersignerassociationsmineV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsignfolderID = null;
-            //var response = instance.EzsignfolderGetEzsignfoldersignerassociationsmineV1(pkiEzsignfolderID);
-            //Assert.IsType<EzsignfolderGetEzsignfoldersignerassociationsmineV1Response>(response);
-        }
-
-        /// <summary>
         /// Test EzsignfolderGetEzsignsignaturesAutomaticV1
         /// </summary>
         [Fact]

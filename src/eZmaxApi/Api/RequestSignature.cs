@@ -1,24 +1,110 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Security.Cryptography;
+﻿using eZmaxApi.Client;
 using RestSharp;
-using eZmaxApi.Client;
+using System;
+using System.Net;
+using System.Text;
+using System.Collections.Generic;
+using System.Security.Cryptography;
+
+#pragma warning disable CS1591    //Missing XML comment
 
 namespace eZmaxApi.Api
 {
     public class RequestSignature
-    {
-		
-		public static string GetFingerprintV1 (string sAuthorization, 
+    {	
+		////////////////////////////////////////////////////////////////////////////////
+		public static void injectSecurityHeaders(IReadableConfiguration configuration,
+                                                            RestRequest request,
+                                                                 String jsonBody) 
+        {
+            //Get required "Autorization" & possible "secret"
+            //If no secret is defined, we skiped all the processing 
+            //to generate the fingerprint and signature
+            ////////////////////////////////////////////////////////
+            var sSecret = configuration.GetApiKeyWithPrefix("secret");          		
+			if (sSecret == null) { return; }
+            var sAuthorization = configuration.GetApiKeyWithPrefix("Authorization");			
+
+
+	        //Get Method
+	        ////////////
+            var sMethod = request.Method.ToString().ToUpper();
+
+
+	        //We need to recreate the full URL
+	        //////////////////////////////////
+            var sURL =  eZmaxApi.Client.GlobalConfiguration.Instance.BasePath;
+            sURL += request.Resource.ToString();
+
+
+	        //Put the pathParams back in URL
+            ////////////////////////////////
+            foreach (var param in request.Parameters) {
+
+                if (param.Type == ParameterType.UrlSegment) {
+                        
+                        sURL = sURL.Replace("{" + param.Name + "}",
+                                    WebUtility.UrlEncode(param.Value.ToString()) );
+                }
+            }
+	             
+
+            //Put the queries back in URL
+            /////////////////////////////
+            var queryParams = new List<KeyValuePair<String, String>>();
+            foreach (var param in request.Parameters) {
+
+                if (param.Type == ParameterType.QueryString) {
+                        
+                    queryParams.Add(new KeyValuePair<string, string>(param.Name, param.Value.ToString()));       
+                }
+            }
+
+	        if (queryParams.Count > 0) {
+
+	            sURL += "?";
+	        }
+
+	        var iRemain = queryParams.Count;
+	        foreach(KeyValuePair<string, string> entry in queryParams)
+	        {
+
+	            sURL += WebUtility.UrlEncode(entry.Key) +
+	                    "=" + 
+                        WebUtility.UrlEncode(entry.Value);
+	                          
+	            iRemain -= 1;
+	            if (iRemain > 0) {
+
+	                sURL += "&";
+	            }
+	        }
+	            
+
+	        //Get the 3 signature headers
+	        /////////////////////////////
+	        var headersV1 = RequestSignature.getHeadersV1(sAuthorization: sAuthorization, 
+	                                                             sSecret: sSecret, 
+	                                                             sMethod: sMethod, 
+	                                                                sURL: sURL, 
+	                                                               sBody: jsonBody,
+                                                             iExpiration: null);
+
+	        //Inject the new headers in the request
+	        ///////////////////////////////////////
+            foreach(var header in headersV1) {
+
+                request.AddHeader(header.Key, header.Value);
+            }			
+		}
+
+		private static string getFingerprintV1 (string sAuthorization, 
                                                string dtDate, 
                                                string sMethod, 
                                                string sURL, 
                                                string sBody,
-                                                 int? iExpiration) {
-		
+                                                 int? iExpiration) 
+        {
 			var sContentToHash = sMethod        + "\n" + 
                                  sURL           + "\n" +
                                  sBody          + "\n" +
@@ -30,21 +116,29 @@ namespace eZmaxApi.Api
                 sContentToHash += "\n" + iExpiration.ToString();
             }
                                 
-			var sha256             = SHA256Managed.Create();
-			var bytesContentToHash = Encoding.UTF8.GetBytes(sContentToHash);
-			var bytesSha256        = sha256.ComputeHash(bytesContentToHash);
-			var fingerprintV1      = ToHexLowercaseWithBytes(bytesSha256);
+            var fingerprintV1 = stringToSha256HashHex(sContentToHash);
 
 			return "v1=" + fingerprintV1;
 		}
 
+        ////////////////////////////////////////////////////////////////////////////////
+        private static string stringToSha256HashHex(string s) 
+        {    
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                var bytesContentToHash = Encoding.UTF8.GetBytes(s);
+                byte[] bytes = sha256Hash.ComputeHash(bytesContentToHash);
+                var hex = bytesToLowercaseHex(bytes);
+                return hex;
+            }
+        }
 
 		////////////////////////////////////////////////////////////////////////////////
-		public static string GetSignatureV1 (string sAuthorization, 
+		private static string getSignatureV1 (string sAuthorization, 
                                              string dtDate, 
                                              string sFingerprint,
-                                             string sSecret) {
-		
+                                             string sSecret) 
+        {
 			var sContentToSign = sFingerprint   + 
                                  sAuthorization + 
                                  dtDate;
@@ -53,31 +147,30 @@ namespace eZmaxApi.Api
 			var bytesContentToSign = Encoding.Default.GetBytes(sContentToSign);
 			var hmacSha256         = new HMACSHA256(bytesSecret);
             var bytesHmacSha256    = hmacSha256.ComputeHash(bytesContentToSign);
-			var signatureV1        = ToHexLowercaseWithBytes(bytesHmacSha256);
+			var signatureV1        = bytesToLowercaseHex(bytesHmacSha256);
 
 			return "v1=" + signatureV1;
 		}
 
 
 		////////////////////////////////////////////////////////////////////////////////
-		public static Dictionary<string, string> GetHeadersV1 (string sAuthorization,
+		private static Dictionary<string, string> getHeadersV1 (string sAuthorization,
                                                                string sSecret,
                                                                string sMethod,
                                                                string sURL, 
                                                                string sBody,
-                                                                 int? iExpiration) {
-	    
+                                                                 int? iExpiration) 
+        {
 			var dtDate = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ");
 
-	
-			var sFingerprint = RequestSignature.GetFingerprintV1(sAuthorization, 
+			var sFingerprint = RequestSignature.getFingerprintV1(sAuthorization, 
                                                                  dtDate, 
                                                                  sMethod, 
                                                                  sURL, 
                                                                  sBody,
                                                                  iExpiration);
 	
-			var sSignature = RequestSignature.GetSignatureV1(sAuthorization,
+			var sSignature = RequestSignature.getSignatureV1(sAuthorization,
                                                              dtDate, 
                                                              sFingerprint, 
                                                              sSecret);
@@ -89,106 +182,15 @@ namespace eZmaxApi.Api
 
             if (iExpiration != null) {
                 
-                headersV1.Add("Ezmax-Expiration",  iExpiration.ToString());
+                headersV1.Add("Ezmax-Expiration", iExpiration.ToString());
             }
 
 			return headersV1;
 		}
 
-
 		////////////////////////////////////////////////////////////////////////////////
-		public static void InjectSecurityHeaders(ref Dictionary<String, String> headerParams,
-                                                                         Method method,
-                                                                         Object postBody,   
-                                                                         string path,
-                                                     Dictionary<String, String> pathParams,
-                                             List<KeyValuePair<String, String>> queryParams) {
-
-
-            //Get Autorization
-            //////////////////
-			var sAuthorization = Configuration.Default.GetApiKeyWithPrefix("Authorization");
-                
-            //Get Secret
-            ////////////
-			var sSecret = Configuration.Default.GetApiKeyWithPrefix("secret");
-			
-			//If no secret is defined, we skiped all the processing to generate the fingerprint and signature
-			if (sSecret != null) {
-				
-	            //Get Method
-	            ////////////
-				var sMethod = method.ToString(); 
-
-	            //We need to recreate the full URL
-	            //////////////////////////////////
-	            var sURL = Configuration.Default.ApiClient.RestClient.BaseUrl.ToString();
-	            sURL += path;
-
-
-	            //Put the pathParams back in URL
-	            foreach(var param in pathParams) {
-
-	                sURL = sURL.Replace("{" + param.Key + "}", 
-	                                    ApiClient.UrlEncode(param.Value) );
-	            }
-	                
-
-	            //Put the queries back in URL
-	            if (queryParams != null) {
-
-	                
-	                if (queryParams.Count > 0) {
-
-	                    sURL += "?";
-	                }
-
-	                var iRemain = queryParams.Count;
-	                foreach(KeyValuePair<string, string> entry in queryParams)
-	                {
-	                     
-	                    sURL += ApiClient.UrlEncode(entry.Key) + 
-	                            "=" + 
-	                            ApiClient.UrlEncode(entry.Value);
-	                          
-
-	                    iRemain -= 1;
-	                    if (iRemain > 0) {
-
-	                        sURL += "&";
-	                    }
-	                }
-	            }
-
-
-	            //Exctact the body
-	            //////////////////
-	            var sBody = "";
-	            if (postBody != null) {
-
-	                sBody = postBody.ToString();
-	            }   
-
-
-	            //Get the 3 signature headers
-	            /////////////////////////////
-	            var headersV1 = RequestSignature.GetHeadersV1(sAuthorization: sAuthorization, 
-	                                                                 sSecret: sSecret, 
-	                                                                 sMethod: sMethod, 
-	                                                                    sURL: sURL, 
-	                                                                   sBody: sBody,
-                                                                 iExpiration: null);
-
-	            //Inject the new headers in the headers
-	            ///////////////////////////////////////
-	            headerParams = headerParams.Concat(headersV1).ToDictionary(x=>x.Key,
-	                                                                       x=>x.Value);
-			}
-		}
-
-		////////////////////////////////////////////////////////////////////////////////
-		private static string ToHexLowercaseWithBytes(byte[] bytes) {
-
+		private static string bytesToLowercaseHex(byte[] bytes) 
+        {
 			var sbHex = new StringBuilder(bytes.Length * 2);
 			for (int i = 0; i < bytes.Length; i++) {
 
@@ -199,3 +201,5 @@ namespace eZmaxApi.Api
 		}
     }
 }
+
+#pragma warning restore CS1591     //Missing XML comment

@@ -384,6 +384,16 @@ namespace eZmaxApi.Client
                 }
             }
 
+            var customJsonCodec = new CustomJsonCodec(SerializerSettings, configuration);
+            var jsonBody = customJsonCodec.Serialize(options.Data);
+
+            if (jsonBody == "null") {
+            	jsonBody = "";
+            }
+
+            RequestSignature.injectSecurityHeaders(configuration: configuration, 
+                                                         request: request, 
+                                                        jsonBody: jsonBody);
             return request;
         }
 
