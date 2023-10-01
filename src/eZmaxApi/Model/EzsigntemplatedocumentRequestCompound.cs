@@ -195,7 +195,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatedocument
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatedocument</value>
-		/* <example>133</example>*/
+        /* <example>133</example>*/
         [DataMember(Name = "pkiEzsigntemplatedocumentID", EmitDefaultValue = false)]
         public int PkiEzsigntemplatedocumentID { get; set; }
 
@@ -203,7 +203,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplate
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplate</value>
-		/* <example>36</example>*/
+        /* <example>36</example>*/
         [DataMember(Name = "fkiEzsigntemplateID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplateID { get; set; }
 
@@ -211,7 +211,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigndocument
         /// </summary>
         /// <value>The unique ID of the Ezsigndocument</value>
-		/* <example>97</example>*/
+        /* <example>97</example>*/
         [DataMember(Name = "fkiEzsigndocumentID", EmitDefaultValue = false)]
         public int FkiEzsigndocumentID { get; set; }
 
@@ -219,7 +219,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatesigner
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatesigner</value>
-		/* <example>9</example>*/
+        /* <example>9</example>*/
         [DataMember(Name = "fkiEzsigntemplatesignerID", EmitDefaultValue = false)]
         public int FkiEzsigntemplatesignerID { get; set; }
 
@@ -227,7 +227,7 @@ namespace eZmaxApi.Model
         /// The name of the Ezsigntemplatedocument.
         /// </summary>
         /// <value>The name of the Ezsigntemplatedocument.</value>
-		/* <example>Standard Contract</example>*/
+        /* <example>Standard Contract</example>*/
         [DataMember(Name = "sEzsigntemplatedocumentName", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigntemplatedocumentName { get; set; }
 
@@ -235,7 +235,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.
         /// </summary>
         /// <value>The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.</value>
-		/* <example>[B@72f46e16</example>*/
+        /* <example>[B@72f46e16</example>*/
         [DataMember(Name = "sEzsigntemplatedocumentBase64", EmitDefaultValue = false)]
         public byte[] SEzsigntemplatedocumentBase64 { get; set; }
 
@@ -243,7 +243,7 @@ namespace eZmaxApi.Model
         /// The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Url.
         /// </summary>
         /// <value>The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Url.</value>
-		/* <example>http://www.example.com/template.pdf</example>*/
+        /* <example>http://www.example.com/template.pdf</example>*/
         [DataMember(Name = "sEzsigntemplatedocumentUrl", EmitDefaultValue = false)]
         public string SEzsigntemplatedocumentUrl { get; set; }
 
@@ -258,7 +258,7 @@ namespace eZmaxApi.Model
         /// If the source template is password protected, the password to open/modify it.
         /// </summary>
         /// <value>If the source template is password protected, the password to open/modify it.</value>
-		/* <example>SecretPassword123</example>*/
+        /* <example>SecretPassword123</example>*/
         [DataMember(Name = "sEzsigntemplatedocumentPassword", EmitDefaultValue = false)]
         public string SEzsigntemplatedocumentPassword { get; set; }
 

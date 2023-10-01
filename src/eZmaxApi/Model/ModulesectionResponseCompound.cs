@@ -44,7 +44,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiModuleID">The unique ID of the Module (required).</param>
         /// <param name="sModulesectionInternalname">The Internal name of the Module section. (required).</param>
         /// <param name="sModulesectionNameX">The Name of the Modulesection in the language of the requester (required).</param>
-        /// <param name="aObjPermission">aObjPermission (required).</param>
+        /// <param name="aObjPermission">aObjPermission.</param>
         public ModulesectionResponseCompound(int pkiModulesectionID = default(int), int fkiModuleID = default(int), string sModulesectionInternalname = default(string), string sModulesectionNameX = default(string), List<PermissionResponseCompound> aObjPermission = default(List<PermissionResponseCompound>))
         {
             this.PkiModulesectionID = pkiModulesectionID;
@@ -61,11 +61,6 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sModulesectionNameX is a required property for ModulesectionResponseCompound and cannot be null");
             }
             this.SModulesectionNameX = sModulesectionNameX;
-            // to ensure "aObjPermission" is required (not null)
-            if (aObjPermission == null)
-            {
-                throw new ArgumentNullException("aObjPermission is a required property for ModulesectionResponseCompound and cannot be null");
-            }
             this.AObjPermission = aObjPermission;
         }
 
@@ -73,7 +68,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Modulesection
         /// </summary>
         /// <value>The unique ID of the Modulesection</value>
-		/* <example>53</example>*/
+        /* <example>53</example>*/
         [DataMember(Name = "pkiModulesectionID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiModulesectionID { get; set; }
 
@@ -81,7 +76,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Module
         /// </summary>
         /// <value>The unique ID of the Module</value>
-		/* <example>40</example>*/
+        /* <example>40</example>*/
         [DataMember(Name = "fkiModuleID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiModuleID { get; set; }
 
@@ -89,7 +84,7 @@ namespace eZmaxApi.Model
         /// The Internal name of the Module section.
         /// </summary>
         /// <value>The Internal name of the Module section.</value>
-		/* <example>Access</example>*/
+        /* <example>Access</example>*/
         [DataMember(Name = "sModulesectionInternalname", IsRequired = true, EmitDefaultValue = true)]
         public string SModulesectionInternalname { get; set; }
 
@@ -97,14 +92,14 @@ namespace eZmaxApi.Model
         /// The Name of the Modulesection in the language of the requester
         /// </summary>
         /// <value>The Name of the Modulesection in the language of the requester</value>
-		/* <example>Access</example>*/
+        /* <example>Access</example>*/
         [DataMember(Name = "sModulesectionNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SModulesectionNameX { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjPermission
         /// </summary>
-        [DataMember(Name = "a_objPermission", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "a_objPermission", EmitDefaultValue = false)]
         public List<PermissionResponseCompound> AObjPermission { get; set; }
 
         /// <summary>

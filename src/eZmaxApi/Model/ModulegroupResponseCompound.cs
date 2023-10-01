@@ -42,7 +42,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiModulegroupID">The unique ID of the Modulegroup (required).</param>
         /// <param name="sModulegroupNameX">The name of the Modulegroup in the language of the requester (required).</param>
-        /// <param name="aObjModule">aObjModule (required).</param>
+        /// <param name="aObjModule">aObjModule.</param>
         public ModulegroupResponseCompound(int pkiModulegroupID = default(int), string sModulegroupNameX = default(string), List<ModuleResponseCompound> aObjModule = default(List<ModuleResponseCompound>))
         {
             this.PkiModulegroupID = pkiModulegroupID;
@@ -52,11 +52,6 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sModulegroupNameX is a required property for ModulegroupResponseCompound and cannot be null");
             }
             this.SModulegroupNameX = sModulegroupNameX;
-            // to ensure "aObjModule" is required (not null)
-            if (aObjModule == null)
-            {
-                throw new ArgumentNullException("aObjModule is a required property for ModulegroupResponseCompound and cannot be null");
-            }
             this.AObjModule = aObjModule;
         }
 
@@ -64,7 +59,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Modulegroup
         /// </summary>
         /// <value>The unique ID of the Modulegroup</value>
-		/* <example>46</example>*/
+        /* <example>46</example>*/
         [DataMember(Name = "pkiModulegroupID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiModulegroupID { get; set; }
 
@@ -72,14 +67,14 @@ namespace eZmaxApi.Model
         /// The name of the Modulegroup in the language of the requester
         /// </summary>
         /// <value>The name of the Modulegroup in the language of the requester</value>
-		/* <example>Management</example>*/
+        /* <example>Management</example>*/
         [DataMember(Name = "sModulegroupNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SModulegroupNameX { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjModule
         /// </summary>
-        [DataMember(Name = "a_objModule", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "a_objModule", EmitDefaultValue = false)]
         public List<ModuleResponseCompound> AObjModule { get; set; }
 
         /// <summary>

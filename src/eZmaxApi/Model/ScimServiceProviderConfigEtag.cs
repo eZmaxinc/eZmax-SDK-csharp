@@ -50,7 +50,7 @@ namespace eZmaxApi.Model
         /// A Boolean value specifying whether or not the operation is supported.
         /// </summary>
         /// <value>A Boolean value specifying whether or not the operation is supported.</value>
-		/* <example>false</example>*/
+        /* <example>false</example>*/
         [DataMember(Name = "supported", IsRequired = true, EmitDefaultValue = true)]
         public bool Supported { get; set; }
 

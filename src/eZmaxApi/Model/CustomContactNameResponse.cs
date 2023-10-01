@@ -49,7 +49,7 @@ namespace eZmaxApi.Model
         /// The First name of the contact
         /// </summary>
         /// <value>The First name of the contact</value>
-		/* <example>John</example>*/
+        /* <example>John</example>*/
         [DataMember(Name = "sContactFirstname", EmitDefaultValue = false)]
         public string SContactFirstname { get; set; }
 
@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// The Last name of the contact
         /// </summary>
         /// <value>The Last name of the contact</value>
-		/* <example>Doe</example>*/
+        /* <example>Doe</example>*/
         [DataMember(Name = "sContactLastname", EmitDefaultValue = false)]
         public string SContactLastname { get; set; }
 
@@ -65,7 +65,7 @@ namespace eZmaxApi.Model
         /// The Company name of the contact
         /// </summary>
         /// <value>The Company name of the contact</value>
-		/* <example>eZmax Solutions Inc.</example>*/
+        /* <example>eZmax Solutions Inc.</example>*/
         [DataMember(Name = "sContactCompany", EmitDefaultValue = false)]
         public string SContactCompany { get; set; }
 

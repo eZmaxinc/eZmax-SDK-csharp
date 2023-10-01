@@ -47,7 +47,7 @@ namespace eZmaxApi.Model
         /// Detail of the Versionhistory in French
         /// </summary>
         /// <value>Detail of the Versionhistory in French</value>
-		/* <example>Message important</example>*/
+        /* <example>Message important</example>*/
         [DataMember(Name = "tVersionhistoryDetail1", EmitDefaultValue = false)]
         public string TVersionhistoryDetail1 { get; set; }
 
@@ -55,7 +55,7 @@ namespace eZmaxApi.Model
         /// Detail of the Versionhistory in English
         /// </summary>
         /// <value>Detail of the Versionhistory in English</value>
-		/* <example>Important message</example>*/
+        /* <example>Important message</example>*/
         [DataMember(Name = "tVersionhistoryDetail2", EmitDefaultValue = false)]
         public string TVersionhistoryDetail2 { get; set; }
 

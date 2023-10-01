@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Signature
         /// </summary>
         /// <value>The unique ID of the Signature</value>
-		/* <example>12</example>*/
+        /* <example>12</example>*/
         [DataMember(Name = "pkiSignatureID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiSignatureID { get; set; }
 
@@ -65,7 +65,7 @@ namespace eZmaxApi.Model
         /// The URL of the SVG file for the Signature
         /// </summary>
         /// <value>The URL of the SVG file for the Signature</value>
-		/* <example>https://www.example.com/signature.svg</example>*/
+        /* <example>https://www.example.com/signature.svg</example>*/
         [DataMember(Name = "sSignatureUrl", IsRequired = true, EmitDefaultValue = true)]
         public string SSignatureUrl { get; set; }
 

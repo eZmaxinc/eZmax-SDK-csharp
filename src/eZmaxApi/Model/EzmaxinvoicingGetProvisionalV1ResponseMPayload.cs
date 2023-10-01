@@ -163,7 +163,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicing
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicing</value>
-		/* <example>28</example>*/
+        /* <example>28</example>*/
         [DataMember(Name = "pkiEzmaxinvoicingID", EmitDefaultValue = false)]
         public int PkiEzmaxinvoicingID { get; set; }
 
@@ -171,7 +171,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicingcontract
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicingcontract</value>
-		/* <example>28</example>*/
+        /* <example>28</example>*/
         [DataMember(Name = "fkiEzmaxinvoicingcontractID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzmaxinvoicingcontractID { get; set; }
 
@@ -179,7 +179,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxpricing
         /// </summary>
         /// <value>The unique ID of the Ezmaxpricing</value>
-		/* <example>28</example>*/
+        /* <example>28</example>*/
         [DataMember(Name = "fkiEzmaxpricingID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzmaxpricingID { get; set; }
 
@@ -187,7 +187,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Systemconfigurationtype
         /// </summary>
         /// <value>The unique ID of the Systemconfigurationtype</value>
-		/* <example>28</example>*/
+        /* <example>28</example>*/
         [DataMember(Name = "fkiSystemconfigurationtypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiSystemconfigurationtypeID { get; set; }
 
@@ -195,7 +195,7 @@ namespace eZmaxApi.Model
         /// The description of the Systemconfigurationtype in the language of the requester
         /// </summary>
         /// <value>The description of the Systemconfigurationtype in the language of the requester</value>
-		/* <example>eZsign (Pro)</example>*/
+        /* <example>eZsign (Pro)</example>*/
         [DataMember(Name = "sSystemconfigurationtypeDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SSystemconfigurationtypeDescriptionX { get; set; }
 
@@ -203,7 +203,7 @@ namespace eZmaxApi.Model
         /// The YYYYMM period of the Ezmaxinvoicing
         /// </summary>
         /// <value>The YYYYMM period of the Ezmaxinvoicing</value>
-		/* <example>2022-01</example>*/
+        /* <example>2022-01</example>*/
         [DataMember(Name = "yyyymmEzmaxinvoicing", IsRequired = true, EmitDefaultValue = true)]
         public string YyyymmEzmaxinvoicing { get; set; }
 
@@ -211,7 +211,7 @@ namespace eZmaxApi.Model
         /// The number of days invoiced
         /// </summary>
         /// <value>The number of days invoiced</value>
-		/* <example>28</example>*/
+        /* <example>28</example>*/
         [DataMember(Name = "iEzmaxinvoicingDays", IsRequired = true, EmitDefaultValue = true)]
         public int IEzmaxinvoicingDays { get; set; }
 
@@ -219,7 +219,7 @@ namespace eZmaxApi.Model
         /// The percentage of rebate depending of the payment type
         /// </summary>
         /// <value>The percentage of rebate depending of the payment type</value>
-		/* <example>1.00</example>*/
+        /* <example>1.00</example>*/
         [DataMember(Name = "dEzmaxinvoicingRebatepaymenttype", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingRebatepaymenttype { get; set; }
 
@@ -227,7 +227,7 @@ namespace eZmaxApi.Model
         /// The length of the contract in years
         /// </summary>
         /// <value>The length of the contract in years</value>
-		/* <example>1</example>*/
+        /* <example>1</example>*/
         [DataMember(Name = "iEzmaxinvoicingContractlength", IsRequired = true, EmitDefaultValue = true)]
         public int IEzmaxinvoicingContractlength { get; set; }
 
@@ -235,7 +235,7 @@ namespace eZmaxApi.Model
         /// The percentage of rebate depending of the contract length
         /// </summary>
         /// <value>The percentage of rebate depending of the contract length</value>
-		/* <example>1.00</example>*/
+        /* <example>1.00</example>*/
         [DataMember(Name = "dEzmaxinvoicingRebatecontractlength", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingRebatecontractlength { get; set; }
 
@@ -243,7 +243,7 @@ namespace eZmaxApi.Model
         /// Whether the rebate for eZsign is for all agents
         /// </summary>
         /// <value>Whether the rebate for eZsign is for all agents</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bEzmaxinvoicingRebateEzsignallagents", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzmaxinvoicingRebateEzsignallagents { get; set; }
 

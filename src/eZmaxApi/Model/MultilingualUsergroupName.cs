@@ -47,7 +47,7 @@ namespace eZmaxApi.Model
         /// The name of the Usergroup in French
         /// </summary>
         /// <value>The name of the Usergroup in French</value>
-		/* <example>Direction</example>*/
+        /* <example>Direction</example>*/
         [DataMember(Name = "sUsergroupName1", EmitDefaultValue = false)]
         public string SUsergroupName1 { get; set; }
 
@@ -55,7 +55,7 @@ namespace eZmaxApi.Model
         /// The name of the Usergroup in English
         /// </summary>
         /// <value>The name of the Usergroup in English</value>
-		/* <example>Management</example>*/
+        /* <example>Management</example>*/
         [DataMember(Name = "sUsergroupName2", EmitDefaultValue = false)]
         public string SUsergroupName2 { get; set; }
 

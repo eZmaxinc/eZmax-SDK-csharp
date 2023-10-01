@@ -52,7 +52,7 @@ namespace eZmaxApi.Model
         /// <param name="tFranchisereferalincomeComment">Comment about the transaction (required).</param>
         /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
         /// <param name="sFranchisereferalincomeRemoteid">sFranchisereferalincomeRemoteid (required).</param>
-        /// <param name="objAddress">objAddress (required).</param>
+        /// <param name="objAddress">objAddress.</param>
         /// <param name="aObjContact">aObjContact (required).</param>
         public FranchisereferalincomeRequestCompound(int pkiFranchisereferalincomeID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchisereferalincomeprogramID = default(int), int fkiPeriodID = default(int), string dFranchisereferalincomeLoan = default(string), string dFranchisereferalincomeFranchiseamount = default(string), string dFranchisereferalincomeFranchisoramount = default(string), string dFranchisereferalincomeAgentamount = default(string), string dtFranchisereferalincomeDisbursed = default(string), string tFranchisereferalincomeComment = default(string), int fkiFranchiseofficeID = default(int), string sFranchisereferalincomeRemoteid = default(string), AddressRequest objAddress = default(AddressRequest), List<ContactRequestCompound> aObjContact = default(List<ContactRequestCompound>))
         {
@@ -102,12 +102,6 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sFranchisereferalincomeRemoteid is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
             this.SFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
-            // to ensure "objAddress" is required (not null)
-            if (objAddress == null)
-            {
-                throw new ArgumentNullException("objAddress is a required property for FranchisereferalincomeRequestCompound and cannot be null");
-            }
-            this.ObjAddress = objAddress;
             // to ensure "aObjContact" is required (not null)
             if (aObjContact == null)
             {
@@ -115,13 +109,14 @@ namespace eZmaxApi.Model
             }
             this.AObjContact = aObjContact;
             this.PkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
+            this.ObjAddress = objAddress;
         }
 
         /// <summary>
         /// The unique ID of the Franchisereferalincome
         /// </summary>
         /// <value>The unique ID of the Franchisereferalincome</value>
-		/* <example>35</example>*/
+        /* <example>35</example>*/
         [DataMember(Name = "pkiFranchisereferalincomeID", EmitDefaultValue = false)]
         public int PkiFranchisereferalincomeID { get; set; }
 
@@ -129,7 +124,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Franchisebroker
         /// </summary>
         /// <value>The unique ID of the Franchisebroker</value>
-		/* <example>61</example>*/
+        /* <example>61</example>*/
         [DataMember(Name = "fkiFranchisebrokerID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiFranchisebrokerID { get; set; }
 
@@ -137,7 +132,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Franchisereferalincomeprogram
         /// </summary>
         /// <value>The unique ID of the Franchisereferalincomeprogram</value>
-		/* <example>51</example>*/
+        /* <example>51</example>*/
         [DataMember(Name = "fkiFranchisereferalincomeprogramID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiFranchisereferalincomeprogramID { get; set; }
 
@@ -145,7 +140,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Period
         /// </summary>
         /// <value>The unique ID of the Period</value>
-		/* <example>21</example>*/
+        /* <example>21</example>*/
         [DataMember(Name = "fkiPeriodID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiPeriodID { get; set; }
 
@@ -153,7 +148,7 @@ namespace eZmaxApi.Model
         /// The loan amount
         /// </summary>
         /// <value>The loan amount</value>
-		/* <example>500275.62</example>*/
+        /* <example>500275.62</example>*/
         [DataMember(Name = "dFranchisereferalincomeLoan", IsRequired = true, EmitDefaultValue = true)]
         public string DFranchisereferalincomeLoan { get; set; }
 
@@ -161,7 +156,7 @@ namespace eZmaxApi.Model
         /// The amount that will be given to the franchise
         /// </summary>
         /// <value>The amount that will be given to the franchise</value>
-		/* <example>275.00</example>*/
+        /* <example>275.00</example>*/
         [DataMember(Name = "dFranchisereferalincomeFranchiseamount", IsRequired = true, EmitDefaultValue = true)]
         public string DFranchisereferalincomeFranchiseamount { get; set; }
 
@@ -169,7 +164,7 @@ namespace eZmaxApi.Model
         /// The amount that will be kept by the franchisor
         /// </summary>
         /// <value>The amount that will be kept by the franchisor</value>
-		/* <example>385.00</example>*/
+        /* <example>385.00</example>*/
         [DataMember(Name = "dFranchisereferalincomeFranchisoramount", IsRequired = true, EmitDefaultValue = true)]
         public string DFranchisereferalincomeFranchisoramount { get; set; }
 
@@ -177,7 +172,7 @@ namespace eZmaxApi.Model
         /// The amount that will be given to the agent
         /// </summary>
         /// <value>The amount that will be given to the agent</value>
-		/* <example>800.00</example>*/
+        /* <example>800.00</example>*/
         [DataMember(Name = "dFranchisereferalincomeAgentamount", IsRequired = true, EmitDefaultValue = true)]
         public string DFranchisereferalincomeAgentamount { get; set; }
 
@@ -185,7 +180,7 @@ namespace eZmaxApi.Model
         /// The date the amounts were disbursed
         /// </summary>
         /// <value>The date the amounts were disbursed</value>
-		/* <example>2020-12-31</example>*/
+        /* <example>2020-12-31</example>*/
         [DataMember(Name = "dtFranchisereferalincomeDisbursed", IsRequired = true, EmitDefaultValue = true)]
         public string DtFranchisereferalincomeDisbursed { get; set; }
 
@@ -193,7 +188,7 @@ namespace eZmaxApi.Model
         /// Comment about the transaction
         /// </summary>
         /// <value>Comment about the transaction</value>
-		/* <example>This is a comment</example>*/
+        /* <example>This is a comment</example>*/
         [DataMember(Name = "tFranchisereferalincomeComment", IsRequired = true, EmitDefaultValue = true)]
         public string TFranchisereferalincomeComment { get; set; }
 
@@ -201,7 +196,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Franchisereoffice
         /// </summary>
         /// <value>The unique ID of the Franchisereoffice</value>
-		/* <example>50</example>*/
+        /* <example>50</example>*/
         [DataMember(Name = "fkiFranchiseofficeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiFranchiseofficeID { get; set; }
 
@@ -214,7 +209,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Gets or Sets ObjAddress
         /// </summary>
-        [DataMember(Name = "objAddress", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "objAddress", EmitDefaultValue = false)]
         public AddressRequest ObjAddress { get; set; }
 
         /// <summary>

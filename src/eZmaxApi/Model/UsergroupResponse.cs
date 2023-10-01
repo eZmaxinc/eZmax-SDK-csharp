@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Usergroup
         /// </summary>
         /// <value>The unique ID of the Usergroup</value>
-		/* <example>2</example>*/
+        /* <example>2</example>*/
         [DataMember(Name = "pkiUsergroupID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiUsergroupID { get; set; }
 

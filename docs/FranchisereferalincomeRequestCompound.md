@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **TFranchisereferalincomeComment** | **string** | Comment about the transaction | 
 **FkiFranchiseofficeID** | **int** | The unique ID of the Franchisereoffice | 
 **SFranchisereferalincomeRemoteid** | **string** |  | 
-**ObjAddress** | [**AddressRequest**](AddressRequest.md) |  | 
+**ObjAddress** | [**AddressRequest**](AddressRequest.md) |  | [optional] 
 **AObjContact** | [**List&lt;ContactRequestCompound&gt;**](ContactRequestCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -65,7 +65,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatedocument
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatedocument</value>
-		/* <example>133</example>*/
+        /* <example>133</example>*/
         [DataMember(Name = "pkiEzsigntemplatedocumentID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigntemplatedocumentID { get; set; }
 
@@ -73,7 +73,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplate
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplate</value>
-		/* <example>36</example>*/
+        /* <example>36</example>*/
         [DataMember(Name = "fkiEzsigntemplateID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplateID { get; set; }
 
@@ -81,7 +81,7 @@ namespace eZmaxApi.Model
         /// The name of the Ezsigntemplatedocument.
         /// </summary>
         /// <value>The name of the Ezsigntemplatedocument.</value>
-		/* <example>Standard Contract</example>*/
+        /* <example>Standard Contract</example>*/
         [DataMember(Name = "sEzsigntemplatedocumentName", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigntemplatedocumentName { get; set; }
 
@@ -89,7 +89,7 @@ namespace eZmaxApi.Model
         /// The number of pages in the Ezsigntemplatedocument.
         /// </summary>
         /// <value>The number of pages in the Ezsigntemplatedocument.</value>
-		/* <example>5</example>*/
+        /* <example>5</example>*/
         [DataMember(Name = "iEzsigntemplatedocumentPagetotal", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplatedocumentPagetotal { get; set; }
 
@@ -97,7 +97,7 @@ namespace eZmaxApi.Model
         /// The number of total signatures in the Ezsigntemplate.
         /// </summary>
         /// <value>The number of total signatures in the Ezsigntemplate.</value>
-		/* <example>8</example>*/
+        /* <example>8</example>*/
         [DataMember(Name = "iEzsigntemplatedocumentSignaturetotal", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplatedocumentSignaturetotal { get; set; }
 
@@ -105,7 +105,7 @@ namespace eZmaxApi.Model
         /// If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
         /// </summary>
         /// <value>If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bEzsigntemplatedocumentHassignedsignatures", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsigntemplatedocumentHassignedsignatures { get; set; }
 

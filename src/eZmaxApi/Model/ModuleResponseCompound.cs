@@ -46,7 +46,7 @@ namespace eZmaxApi.Model
         /// <param name="sModuleNameX">The Name of the Module in the language of the requester (required).</param>
         /// <param name="bModuleRegistered">Whether the Module is registered or not (required).</param>
         /// <param name="bModuleRegisteredapi">Whether the Module is registered or not for api use (required).</param>
-        /// <param name="aObjModulesection">aObjModulesection (required).</param>
+        /// <param name="aObjModulesection">aObjModulesection.</param>
         public ModuleResponseCompound(int pkiModuleID = default(int), int fkiModulegroupID = default(int), string eModuleInternalname = default(string), string sModuleNameX = default(string), bool bModuleRegistered = default(bool), bool bModuleRegisteredapi = default(bool), List<ModulesectionResponseCompound> aObjModulesection = default(List<ModulesectionResponseCompound>))
         {
             this.PkiModuleID = pkiModuleID;
@@ -65,11 +65,6 @@ namespace eZmaxApi.Model
             this.SModuleNameX = sModuleNameX;
             this.BModuleRegistered = bModuleRegistered;
             this.BModuleRegisteredapi = bModuleRegisteredapi;
-            // to ensure "aObjModulesection" is required (not null)
-            if (aObjModulesection == null)
-            {
-                throw new ArgumentNullException("aObjModulesection is a required property for ModuleResponseCompound and cannot be null");
-            }
             this.AObjModulesection = aObjModulesection;
         }
 
@@ -77,7 +72,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Module
         /// </summary>
         /// <value>The unique ID of the Module</value>
-		/* <example>40</example>*/
+        /* <example>40</example>*/
         [DataMember(Name = "pkiModuleID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiModuleID { get; set; }
 
@@ -85,7 +80,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Modulegroup
         /// </summary>
         /// <value>The unique ID of the Modulegroup</value>
-		/* <example>46</example>*/
+        /* <example>46</example>*/
         [DataMember(Name = "fkiModulegroupID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiModulegroupID { get; set; }
 
@@ -93,7 +88,7 @@ namespace eZmaxApi.Model
         /// The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all.
         /// </summary>
         /// <value>The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all.</value>
-		/* <example>Purchases</example>*/
+        /* <example>Purchases</example>*/
         [DataMember(Name = "eModuleInternalname", IsRequired = true, EmitDefaultValue = true)]
         public string EModuleInternalname { get; set; }
 
@@ -101,7 +96,7 @@ namespace eZmaxApi.Model
         /// The Name of the Module in the language of the requester
         /// </summary>
         /// <value>The Name of the Module in the language of the requester</value>
-		/* <example>Purchase</example>*/
+        /* <example>Purchase</example>*/
         [DataMember(Name = "sModuleNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SModuleNameX { get; set; }
 
@@ -109,7 +104,7 @@ namespace eZmaxApi.Model
         /// Whether the Module is registered or not
         /// </summary>
         /// <value>Whether the Module is registered or not</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bModuleRegistered", IsRequired = true, EmitDefaultValue = true)]
         public bool BModuleRegistered { get; set; }
 
@@ -117,14 +112,14 @@ namespace eZmaxApi.Model
         /// Whether the Module is registered or not for api use
         /// </summary>
         /// <value>Whether the Module is registered or not for api use</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bModuleRegisteredapi", IsRequired = true, EmitDefaultValue = true)]
         public bool BModuleRegisteredapi { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjModulesection
         /// </summary>
-        [DataMember(Name = "a_objModulesection", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "a_objModulesection", EmitDefaultValue = false)]
         public List<ModulesectionResponseCompound> AObjModulesection { get; set; }
 
         /// <summary>

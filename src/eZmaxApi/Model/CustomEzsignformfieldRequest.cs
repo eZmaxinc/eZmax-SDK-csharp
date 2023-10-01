@@ -51,7 +51,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignformfield
         /// </summary>
         /// <value>The unique ID of the Ezsignformfield</value>
-		/* <example>32</example>*/
+        /* <example>32</example>*/
         [DataMember(Name = "pkiEzsignformfieldID", EmitDefaultValue = false)]
         public int PkiEzsignformfieldID { get; set; }
 
@@ -59,7 +59,7 @@ namespace eZmaxApi.Model
         /// The Label for the Ezsignformfield
         /// </summary>
         /// <value>The Label for the Ezsignformfield</value>
-		/* <example>Peanuts</example>*/
+        /* <example>Peanuts</example>*/
         [DataMember(Name = "sEzsignformfieldLabel", EmitDefaultValue = false)]
         public string SEzsignformfieldLabel { get; set; }
 
@@ -74,7 +74,7 @@ namespace eZmaxApi.Model
         /// This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
         /// </summary>
         /// <value>This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**</value>
-		/* <example>Montreal</example>*/
+        /* <example>Montreal</example>*/
         [DataMember(Name = "sEzsignformfieldEnteredvalue", EmitDefaultValue = false)]
         public string SEzsignformfieldEnteredvalue { get; set; }
 

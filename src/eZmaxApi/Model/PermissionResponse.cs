@@ -62,7 +62,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Permission
         /// </summary>
         /// <value>The unique ID of the Permission</value>
-		/* <example>31</example>*/
+        /* <example>31</example>*/
         [DataMember(Name = "pkiPermissionID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiPermissionID { get; set; }
 
@@ -70,7 +70,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-		/* <example>70</example>*/
+        /* <example>70</example>*/
         [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
 
@@ -78,7 +78,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Apikey
         /// </summary>
         /// <value>The unique ID of the Apikey</value>
-		/* <example>99</example>*/
+        /* <example>99</example>*/
         [DataMember(Name = "fkiApikeyID", EmitDefaultValue = false)]
         public int FkiApikeyID { get; set; }
 
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Usergroup
         /// </summary>
         /// <value>The unique ID of the Usergroup</value>
-		/* <example>2</example>*/
+        /* <example>2</example>*/
         [DataMember(Name = "fkiUsergroupID", EmitDefaultValue = false)]
         public int FkiUsergroupID { get; set; }
 
@@ -94,7 +94,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Company
         /// </summary>
         /// <value>The unique ID of the Company</value>
-		/* <example>1</example>*/
+        /* <example>1</example>*/
         [DataMember(Name = "fkiCompanyID", EmitDefaultValue = false)]
         public int FkiCompanyID { get; set; }
 
@@ -102,7 +102,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Modulesection
         /// </summary>
         /// <value>The unique ID of the Modulesection</value>
-		/* <example>53</example>*/
+        /* <example>53</example>*/
         [DataMember(Name = "fkiModulesectionID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiModulesectionID { get; set; }
 
@@ -110,7 +110,7 @@ namespace eZmaxApi.Model
         /// The Name of the Company in the language of the requester
         /// </summary>
         /// <value>The Name of the Company in the language of the requester</value>
-		/* <example>Acme inc.</example>*/
+        /* <example>Acme inc.</example>*/
         [DataMember(Name = "sCompanyNameX", EmitDefaultValue = false)]
         public string SCompanyNameX { get; set; }
 

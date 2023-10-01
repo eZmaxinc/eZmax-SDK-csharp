@@ -70,7 +70,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Notificationsubsection
         /// </summary>
         /// <value>The unique ID of the Notificationsubsection</value>
-		/* <example>3</example>*/
+        /* <example>3</example>*/
         [DataMember(Name = "pkiNotificationsubsectionID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiNotificationsubsectionID { get; set; }
 
@@ -78,7 +78,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Notificationsection
         /// </summary>
         /// <value>The unique ID of the Notificationsection</value>
-		/* <example>1</example>*/
+        /* <example>1</example>*/
         [DataMember(Name = "fkiNotificationsectionID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiNotificationsectionID { get; set; }
 
@@ -92,7 +92,7 @@ namespace eZmaxApi.Model
         /// The name of the Notificationsection in the language of the requester
         /// </summary>
         /// <value>The name of the Notificationsection in the language of the requester</value>
-		/* <example>Homepage</example>*/
+        /* <example>Homepage</example>*/
         [DataMember(Name = "sNotificationsectionNameX", EmitDefaultValue = false)]
         public string SNotificationsectionNameX { get; set; }
 
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// The name of the Notificationsubsection in the language of the requester
         /// </summary>
         /// <value>The name of the Notificationsubsection in the language of the requester</value>
-		/* <example>Default</example>*/
+        /* <example>Default</example>*/
         [DataMember(Name = "sNotificationsubsectionNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SNotificationsubsectionNameX { get; set; }
 

@@ -35,9 +35,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailtypeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEmailtype">An array of Emailtype autocomplete element response..</param>
+        [JsonConstructorAttribute]
+        protected EmailtypeGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmailtypeGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEmailtype">An array of Emailtype autocomplete element response. (required).</param>
         public EmailtypeGetAutocompleteV2ResponseMPayload(List<EmailtypeAutocompleteElementResponse> aObjEmailtype = default(List<EmailtypeAutocompleteElementResponse>))
         {
+            // to ensure "aObjEmailtype" is required (not null)
+            if (aObjEmailtype == null)
+            {
+                throw new ArgumentNullException("aObjEmailtype is a required property for EmailtypeGetAutocompleteV2ResponseMPayload and cannot be null");
+            }
             this.AObjEmailtype = aObjEmailtype;
         }
 
@@ -45,7 +55,7 @@ namespace eZmaxApi.Model
         /// An array of Emailtype autocomplete element response.
         /// </summary>
         /// <value>An array of Emailtype autocomplete element response.</value>
-        [DataMember(Name = "a_objEmailtype", EmitDefaultValue = false)]
+        [DataMember(Name = "a_objEmailtype", IsRequired = true, EmitDefaultValue = true)]
         public List<EmailtypeAutocompleteElementResponse> AObjEmailtype { get; set; }
 
         /// <summary>

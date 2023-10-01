@@ -49,7 +49,7 @@ namespace eZmaxApi.Model
         /// <param name="objUser">objUser.</param>
         /// <param name="objEzsignsigner">objEzsignsigner.</param>
         /// <param name="bEzsignfoldersignerassociationHasactionableelementsCurrent">Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step (required).</param>
-        /// <param name="bEzsignfoldersignerassociationHasactionableelementsFuture">Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step.</param>
+        /// <param name="bEzsignfoldersignerassociationHasactionableelementsFuture">Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step (required).</param>
         public CustomEzsignfoldersignerassociationActionableElementResponse(int pkiEzsignfoldersignerassociationID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationDelayedsend = default(bool), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string), EzsignsignergroupResponseCompound objEzsignsignergroup = default(EzsignsignergroupResponseCompound), EzsignfoldersignerassociationResponseCompoundUser objUser = default(EzsignfoldersignerassociationResponseCompoundUser), EzsignsignerResponseCompound objEzsignsigner = default(EzsignsignerResponseCompound), bool bEzsignfoldersignerassociationHasactionableelementsCurrent = default(bool), bool bEzsignfoldersignerassociationHasactionableelementsFuture = default(bool))
         {
             this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
@@ -63,17 +63,17 @@ namespace eZmaxApi.Model
             }
             this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
             this.BEzsignfoldersignerassociationHasactionableelementsCurrent = bEzsignfoldersignerassociationHasactionableelementsCurrent;
+            this.BEzsignfoldersignerassociationHasactionableelementsFuture = bEzsignfoldersignerassociationHasactionableelementsFuture;
             this.ObjEzsignsignergroup = objEzsignsignergroup;
             this.ObjUser = objUser;
             this.ObjEzsignsigner = objEzsignsigner;
-            this.BEzsignfoldersignerassociationHasactionableelementsFuture = bEzsignfoldersignerassociationHasactionableelementsFuture;
         }
 
         /// <summary>
         /// The unique ID of the Ezsignfoldersignerassociation
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
-		/* <example>20</example>*/
+        /* <example>20</example>*/
         [DataMember(Name = "pkiEzsignfoldersignerassociationID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignfoldersignerassociationID { get; set; }
 
@@ -81,7 +81,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfolder
         /// </summary>
         /// <value>The unique ID of the Ezsignfolder</value>
-		/* <example>33</example>*/
+        /* <example>33</example>*/
         [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfolderID { get; set; }
 
@@ -103,7 +103,7 @@ namespace eZmaxApi.Model
         /// A custom text message that will be added to the email sent.
         /// </summary>
         /// <value>A custom text message that will be added to the email sent.</value>
-		/* <example>Hi John,
+        /* <example>Hi John,
 
 This is the document I need you to review.
 
@@ -144,7 +144,7 @@ Mary</example>*/
         /// Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step
         /// </summary>
         /// <value>Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step</value>
-        [DataMember(Name = "bEzsignfoldersignerassociationHasactionableelementsFuture", EmitDefaultValue = true)]
+        [DataMember(Name = "bEzsignfoldersignerassociationHasactionableelementsFuture", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldersignerassociationHasactionableelementsFuture { get; set; }
 
         /// <summary>

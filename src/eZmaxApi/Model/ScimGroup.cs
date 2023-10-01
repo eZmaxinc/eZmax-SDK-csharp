@@ -65,7 +65,7 @@ namespace eZmaxApi.Model
         /// The Name of the Usergroup in the language of the requester
         /// </summary>
         /// <value>The Name of the Usergroup in the language of the requester</value>
-		/* <example>Administration</example>*/
+        /* <example>Administration</example>*/
         [DataMember(Name = "displayName", IsRequired = true, EmitDefaultValue = true)]
         public string DisplayName { get; set; }
 

@@ -88,7 +88,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
         /// </summary>
         /// <value>The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|</value>
-		/* <example>2</example>*/
+        /* <example>2</example>*/
         [DataMember(Name = "fkiUserlogintypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiUserlogintypeID { get; set; }
 
@@ -96,7 +96,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
         /// </summary>
         /// <value>The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|</value>
-		/* <example>1</example>*/
+        /* <example>1</example>*/
         [DataMember(Name = "fkiEzsigntsarequirementID", EmitDefaultValue = false)]
         public int FkiEzsigntsarequirementID { get; set; }
 
@@ -104,7 +104,7 @@ namespace eZmaxApi.Model
         /// The description of the Ezsignbulksendtransmission
         /// </summary>
         /// <value>The description of the Ezsignbulksendtransmission</value>
-		/* <example>Test eZsign Bulk Send Transmission #1</example>*/
+        /* <example>Test eZsign Bulk Send Transmission #1</example>*/
         [DataMember(Name = "sEzsignbulksendtransmissionDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignbulksendtransmissionDescription { get; set; }
 
@@ -112,7 +112,7 @@ namespace eZmaxApi.Model
         /// The maximum date and time at which the Ezsigndocument can be signed.
         /// </summary>
         /// <value>The maximum date and time at which the Ezsigndocument can be signed.</value>
-		/* <example>2020-12-31 23:59:59</example>*/
+        /* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtEzsigndocumentDuedate", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzsigndocumentDuedate { get; set; }
 
@@ -120,7 +120,7 @@ namespace eZmaxApi.Model
         /// A custom text message that will be added to the email sent.
         /// </summary>
         /// <value>A custom text message that will be added to the email sent.</value>
-		/* <example>Hi John,
+        /* <example>Hi John,
 
 This is the document I need you to review.
 

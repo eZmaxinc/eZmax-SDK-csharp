@@ -60,7 +60,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-		/* <example>5</example>*/
+        /* <example>5</example>*/
         [DataMember(Name = "pkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignfoldertypeID { get; set; }
 
@@ -68,7 +68,7 @@ namespace eZmaxApi.Model
         /// The name of the Ezsignfoldertype in the language of the requester
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
-		/* <example>Default</example>*/
+        /* <example>Default</example>*/
         [DataMember(Name = "sEzsignfoldertypeNameX", EmitDefaultValue = false)]
         public string SEzsignfoldertypeNameX { get; set; }
 
@@ -76,7 +76,7 @@ namespace eZmaxApi.Model
         /// Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
         /// </summary>
         /// <value>Whether we include the proof with the signed Ezsigndocument for Ezsignsigners</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeIncludeproofsigner", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeIncludeproofsigner { get; set; }
 
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// Whether we include the proof with the signed Ezsigndocument for users
         /// </summary>
         /// <value>Whether we include the proof with the signed Ezsigndocument for users</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeIncludeproofuser", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeIncludeproofuser { get; set; }
 
@@ -92,7 +92,7 @@ namespace eZmaxApi.Model
         /// Wheter if delegation of signature is allowed to another user or not
         /// </summary>
         /// <value>Wheter if delegation of signature is allowed to another user or not</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeDelegate", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeDelegate { get; set; }
 
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// Wheter if Reassignment of signature is allowed to another signatory or not
         /// </summary>
         /// <value>Wheter if Reassignment of signature is allowed to another signatory or not</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeReassign", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeReassign { get; set; }
 

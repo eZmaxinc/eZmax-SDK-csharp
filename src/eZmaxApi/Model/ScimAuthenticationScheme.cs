@@ -75,7 +75,7 @@ namespace eZmaxApi.Model
         /// The authentication scheme.
         /// </summary>
         /// <value>The authentication scheme.</value>
-		/* <example>oauthbearertoken</example>*/
+        /* <example>oauthbearertoken</example>*/
         [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = true)]
         public TypeEnum Type { get; set; }
         /// <summary>
@@ -110,7 +110,7 @@ namespace eZmaxApi.Model
         /// A description of the authentication scheme.
         /// </summary>
         /// <value>A description of the authentication scheme.</value>
-		/* <example>Bearer token in the Authorization header</example>*/
+        /* <example>Bearer token in the Authorization header</example>*/
         [DataMember(Name = "description", IsRequired = true, EmitDefaultValue = true)]
         public string Description { get; set; }
 
@@ -118,7 +118,7 @@ namespace eZmaxApi.Model
         /// The common authentication scheme name
         /// </summary>
         /// <value>The common authentication scheme name</value>
-		/* <example>Bearer</example>*/
+        /* <example>Bearer</example>*/
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = true)]
         public string Name { get; set; }
 

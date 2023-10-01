@@ -97,7 +97,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicingcontract
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicingcontract</value>
-		/* <example>28</example>*/
+        /* <example>28</example>*/
         [DataMember(Name = "pkiEzmaxinvoicingcontractID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzmaxinvoicingcontractID { get; set; }
 
@@ -105,7 +105,7 @@ namespace eZmaxApi.Model
         /// The length in years of the Ezmaxinvoicingcontract
         /// </summary>
         /// <value>The length in years of the Ezmaxinvoicingcontract</value>
-		/* <example>3</example>*/
+        /* <example>3</example>*/
         [DataMember(Name = "iEzmaxinvoicingcontractLength", IsRequired = true, EmitDefaultValue = true)]
         public int IEzmaxinvoicingcontractLength { get; set; }
 
@@ -113,7 +113,7 @@ namespace eZmaxApi.Model
         /// The start date of the Ezmaxinvoicingcontract
         /// </summary>
         /// <value>The start date of the Ezmaxinvoicingcontract</value>
-		/* <example>2020-12-31</example>*/
+        /* <example>2020-12-31</example>*/
         [DataMember(Name = "dtEzmaxinvoicingcontractStart", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzmaxinvoicingcontractStart { get; set; }
 
@@ -121,7 +121,7 @@ namespace eZmaxApi.Model
         /// The end date of the Ezmaxinvoicingcontract
         /// </summary>
         /// <value>The end date of the Ezmaxinvoicingcontract</value>
-		/* <example>2020-12-31</example>*/
+        /* <example>2020-12-31</example>*/
         [DataMember(Name = "dtEzmaxinvoicingcontractEnd", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzmaxinvoicingcontractEnd { get; set; }
 
@@ -129,7 +129,7 @@ namespace eZmaxApi.Model
         /// The price of the license
         /// </summary>
         /// <value>The price of the license</value>
-		/* <example>335.42</example>*/
+        /* <example>335.42</example>*/
         [DataMember(Name = "dEzmaxinvoicingcontractLicense", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingcontractLicense { get; set; }
 
@@ -137,7 +137,7 @@ namespace eZmaxApi.Model
         /// The price for 121QA
         /// </summary>
         /// <value>The price for 121QA</value>
-		/* <example>295.48</example>*/
+        /* <example>295.48</example>*/
         [DataMember(Name = "dEzmaxinvoicingcontract121qa", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingcontract121qa { get; set; }
 
@@ -145,7 +145,7 @@ namespace eZmaxApi.Model
         /// Whether eZsign is for all agents
         /// </summary>
         /// <value>Whether eZsign is for all agents</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bEzmaxinvoicingcontractEzsignallagents", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzmaxinvoicingcontractEzsignallagents { get; set; }
 

@@ -62,7 +62,7 @@ namespace eZmaxApi.Model
         /// The Label for the Ezsignformfield
         /// </summary>
         /// <value>The Label for the Ezsignformfield</value>
-		/* <example>Peanuts</example>*/
+        /* <example>Peanuts</example>*/
         [DataMember(Name = "sEzsignformfieldLabel", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignformfieldLabel { get; set; }
 

@@ -59,7 +59,7 @@ namespace eZmaxApi.Model
         /// The Description of the Branding in the language of the requester
         /// </summary>
         /// <value>The Description of the Branding in the language of the requester</value>
-		/* <example>Company X</example>*/
+        /* <example>Company X</example>*/
         [DataMember(Name = "sBrandingDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SBrandingDescriptionX { get; set; }
 
@@ -67,7 +67,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Branding
         /// </summary>
         /// <value>The unique ID of the Branding</value>
-		/* <example>78</example>*/
+        /* <example>78</example>*/
         [DataMember(Name = "pkiBrandingID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiBrandingID { get; set; }
 
@@ -75,7 +75,7 @@ namespace eZmaxApi.Model
         /// Whether the Branding is active or not
         /// </summary>
         /// <value>Whether the Branding is active or not</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bBrandingIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BBrandingIsactive { get; set; }
 

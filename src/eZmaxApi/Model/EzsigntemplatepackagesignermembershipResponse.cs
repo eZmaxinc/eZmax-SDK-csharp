@@ -58,7 +58,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackagesignermembership
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackagesignermembership</value>
-		/* <example>237</example>*/
+        /* <example>237</example>*/
         [DataMember(Name = "pkiEzsigntemplatepackagesignermembershipID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigntemplatepackagesignermembershipID { get; set; }
 
@@ -66,7 +66,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackagemembership
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackagemembership</value>
-		/* <example>194</example>*/
+        /* <example>194</example>*/
         [DataMember(Name = "fkiEzsigntemplatepackagemembershipID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplatepackagemembershipID { get; set; }
 
@@ -74,7 +74,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatepackagesigner
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatepackagesigner</value>
-		/* <example>174</example>*/
+        /* <example>174</example>*/
         [DataMember(Name = "fkiEzsigntemplatepackagesignerID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplatepackagesignerID { get; set; }
 
@@ -82,7 +82,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplatesigner
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplatesigner</value>
-		/* <example>9</example>*/
+        /* <example>9</example>*/
         [DataMember(Name = "fkiEzsigntemplatesignerID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsigntemplatesignerID { get; set; }
 
@@ -90,7 +90,7 @@ namespace eZmaxApi.Model
         /// The Copy number in case of multiple copies.
         /// </summary>
         /// <value>The Copy number in case of multiple copies.</value>
-		/* <example>1</example>*/
+        /* <example>1</example>*/
         [DataMember(Name = "iEzsigntemplatepackagesignermembershipCopy", EmitDefaultValue = false)]
         public int IEzsigntemplatepackagesignermembershipCopy { get; set; }
 

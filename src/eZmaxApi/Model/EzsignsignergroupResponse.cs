@@ -59,7 +59,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignsignergroup
         /// </summary>
         /// <value>The unique ID of the Ezsignsignergroup</value>
-		/* <example>27</example>*/
+        /* <example>27</example>*/
         [DataMember(Name = "pkiEzsignsignergroupID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignsignergroupID { get; set; }
 
@@ -73,7 +73,7 @@ namespace eZmaxApi.Model
         /// The Description of the Ezsignsignergroup in the language of the requester
         /// </summary>
         /// <value>The Description of the Ezsignsignergroup in the language of the requester</value>
-		/* <example>HR</example>*/
+        /* <example>HR</example>*/
         [DataMember(Name = "sEzsignsignergroupDescriptionX", EmitDefaultValue = false)]
         public string SEzsignsignergroupDescriptionX { get; set; }
 

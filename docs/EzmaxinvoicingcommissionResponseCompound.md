@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **DtEzmaxinvoicingcommissionEnd** | **string** | The end date for the Ezmaxinvoicingcommission | 
 **IEzmaxinvoicingcommissionDays** | **int** | This is the number of days during the month on which the Ezmaxinvoigcommission applies | 
 **DEzmaxinvoicingcommissionAmount** | **string** | The amount of Ezmaxinvoicingcommission | 
-**ObjContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
+**ObjContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

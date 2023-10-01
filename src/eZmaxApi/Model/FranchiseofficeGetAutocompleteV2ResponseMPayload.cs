@@ -35,9 +35,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchiseofficeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjFranchiseoffice">An array of Franchiseoffice autocomplete element response..</param>
+        [JsonConstructorAttribute]
+        protected FranchiseofficeGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FranchiseofficeGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjFranchiseoffice">An array of Franchiseoffice autocomplete element response. (required).</param>
         public FranchiseofficeGetAutocompleteV2ResponseMPayload(List<FranchiseofficeAutocompleteElementResponse> aObjFranchiseoffice = default(List<FranchiseofficeAutocompleteElementResponse>))
         {
+            // to ensure "aObjFranchiseoffice" is required (not null)
+            if (aObjFranchiseoffice == null)
+            {
+                throw new ArgumentNullException("aObjFranchiseoffice is a required property for FranchiseofficeGetAutocompleteV2ResponseMPayload and cannot be null");
+            }
             this.AObjFranchiseoffice = aObjFranchiseoffice;
         }
 
@@ -45,7 +55,7 @@ namespace eZmaxApi.Model
         /// An array of Franchiseoffice autocomplete element response.
         /// </summary>
         /// <value>An array of Franchiseoffice autocomplete element response.</value>
-        [DataMember(Name = "a_objFranchiseoffice", EmitDefaultValue = false)]
+        [DataMember(Name = "a_objFranchiseoffice", IsRequired = true, EmitDefaultValue = true)]
         public List<FranchiseofficeAutocompleteElementResponse> AObjFranchiseoffice { get; set; }
 
         /// <summary>

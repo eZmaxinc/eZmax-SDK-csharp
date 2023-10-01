@@ -55,7 +55,7 @@ namespace eZmaxApi.Model
         /// Information message
         /// </summary>
         /// <value>Information message</value>
-		/* <example>Rasterizing pages</example>*/
+        /* <example>Rasterizing pages</example>*/
         [DataMember(Name = "sInformationMessage", IsRequired = true, EmitDefaultValue = true)]
         public string SInformationMessage { get; set; }
 

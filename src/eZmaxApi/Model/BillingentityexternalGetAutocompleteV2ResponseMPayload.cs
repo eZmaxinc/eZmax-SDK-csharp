@@ -35,9 +35,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityexternalGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjBillingentityexternal">An array of Billingentityexternal autocomplete element response..</param>
+        [JsonConstructorAttribute]
+        protected BillingentityexternalGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingentityexternalGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjBillingentityexternal">An array of Billingentityexternal autocomplete element response. (required).</param>
         public BillingentityexternalGetAutocompleteV2ResponseMPayload(List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal = default(List<BillingentityexternalAutocompleteElementResponse>))
         {
+            // to ensure "aObjBillingentityexternal" is required (not null)
+            if (aObjBillingentityexternal == null)
+            {
+                throw new ArgumentNullException("aObjBillingentityexternal is a required property for BillingentityexternalGetAutocompleteV2ResponseMPayload and cannot be null");
+            }
             this.AObjBillingentityexternal = aObjBillingentityexternal;
         }
 
@@ -45,7 +55,7 @@ namespace eZmaxApi.Model
         /// An array of Billingentityexternal autocomplete element response.
         /// </summary>
         /// <value>An array of Billingentityexternal autocomplete element response.</value>
-        [DataMember(Name = "a_objBillingentityexternal", EmitDefaultValue = false)]
+        [DataMember(Name = "a_objBillingentityexternal", IsRequired = true, EmitDefaultValue = true)]
         public List<BillingentityexternalAutocompleteElementResponse> AObjBillingentityexternal { get; set; }
 
         /// <summary>

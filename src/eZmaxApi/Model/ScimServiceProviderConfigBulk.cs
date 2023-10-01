@@ -54,7 +54,7 @@ namespace eZmaxApi.Model
         /// A Boolean value specifying whether or not the operation is supported.
         /// </summary>
         /// <value>A Boolean value specifying whether or not the operation is supported.</value>
-		/* <example>false</example>*/
+        /* <example>false</example>*/
         [DataMember(Name = "supported", IsRequired = true, EmitDefaultValue = true)]
         public bool Supported { get; set; }
 
@@ -62,7 +62,7 @@ namespace eZmaxApi.Model
         /// An integer value specifying the maximum number of operations.
         /// </summary>
         /// <value>An integer value specifying the maximum number of operations.</value>
-		/* <example>0</example>*/
+        /* <example>0</example>*/
         [DataMember(Name = "maxOperations", IsRequired = true, EmitDefaultValue = true)]
         public int MaxOperations { get; set; }
 
@@ -70,7 +70,7 @@ namespace eZmaxApi.Model
         /// An integer value specifying the maximum payload size in bytes.
         /// </summary>
         /// <value>An integer value specifying the maximum payload size in bytes.</value>
-		/* <example>0</example>*/
+        /* <example>0</example>*/
         [DataMember(Name = "maxPayloadSize", IsRequired = true, EmitDefaultValue = true)]
         public int MaxPayloadSize { get; set; }
 

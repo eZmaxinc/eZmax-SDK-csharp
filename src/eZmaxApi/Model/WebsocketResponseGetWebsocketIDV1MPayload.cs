@@ -55,7 +55,7 @@ namespace eZmaxApi.Model
         /// The Unique ID of the Websocket Connection
         /// </summary>
         /// <value>The Unique ID of the Websocket Connection</value>
-		/* <example>G_omidyY4osCFEQ&#x3D;</example>*/
+        /* <example>G_omidyY4osCFEQ&#x3D;</example>*/
         [DataMember(Name = "sWebsocketID", IsRequired = true, EmitDefaultValue = true)]
         public string SWebsocketID { get; set; }
 

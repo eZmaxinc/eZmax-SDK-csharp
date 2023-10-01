@@ -80,7 +80,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Userstaged
         /// </summary>
         /// <value>The unique ID of the Userstaged</value>
-		/* <example>90</example>*/
+        /* <example>90</example>*/
         [DataMember(Name = "pkiUserstagedID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiUserstagedID { get; set; }
 
@@ -88,7 +88,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Email
         /// </summary>
         /// <value>The unique ID of the Email</value>
-		/* <example>22</example>*/
+        /* <example>22</example>*/
         [DataMember(Name = "fkiEmailID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEmailID { get; set; }
 
@@ -96,7 +96,7 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-		/* <example>email@example.com</example>*/
+        /* <example>email@example.com</example>*/
         [DataMember(Name = "sEmailAddress", IsRequired = true, EmitDefaultValue = true)]
         public string SEmailAddress { get; set; }
 
@@ -104,7 +104,7 @@ namespace eZmaxApi.Model
         /// The firstname of the Userstaged
         /// </summary>
         /// <value>The firstname of the Userstaged</value>
-		/* <example>Jane</example>*/
+        /* <example>Jane</example>*/
         [DataMember(Name = "sUserstagedFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserstagedFirstname { get; set; }
 
@@ -112,7 +112,7 @@ namespace eZmaxApi.Model
         /// The lastname of the Userstaged
         /// </summary>
         /// <value>The lastname of the Userstaged</value>
-		/* <example>Doe</example>*/
+        /* <example>Doe</example>*/
         [DataMember(Name = "sUserstagedLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SUserstagedLastname { get; set; }
 
@@ -120,7 +120,7 @@ namespace eZmaxApi.Model
         /// The externalid of the Userstaged
         /// </summary>
         /// <value>The externalid of the Userstaged</value>
-		/* <example>azuread_6b303ca8-9e34-4c21-9a53-0856342dec5e</example>*/
+        /* <example>azuread_6b303ca8-9e34-4c21-9a53-0856342dec5e</example>*/
         [DataMember(Name = "sUserstagedExternalid", IsRequired = true, EmitDefaultValue = true)]
         public string SUserstagedExternalid { get; set; }
 

@@ -35,9 +35,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FontGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjFont">An array of Font autocomplete element response..</param>
+        [JsonConstructorAttribute]
+        protected FontGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FontGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjFont">An array of Font autocomplete element response. (required).</param>
         public FontGetAutocompleteV2ResponseMPayload(List<FontAutocompleteElementResponse> aObjFont = default(List<FontAutocompleteElementResponse>))
         {
+            // to ensure "aObjFont" is required (not null)
+            if (aObjFont == null)
+            {
+                throw new ArgumentNullException("aObjFont is a required property for FontGetAutocompleteV2ResponseMPayload and cannot be null");
+            }
             this.AObjFont = aObjFont;
         }
 
@@ -45,7 +55,7 @@ namespace eZmaxApi.Model
         /// An array of Font autocomplete element response.
         /// </summary>
         /// <value>An array of Font autocomplete element response.</value>
-        [DataMember(Name = "a_objFont", EmitDefaultValue = false)]
+        [DataMember(Name = "a_objFont", IsRequired = true, EmitDefaultValue = true)]
         public List<FontAutocompleteElementResponse> AObjFont { get; set; }
 
         /// <summary>

@@ -35,9 +35,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxproductGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzmaxproduct">An array of Ezmaxproduct autocomplete element response..</param>
+        [JsonConstructorAttribute]
+        protected EzmaxproductGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EzmaxproductGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjEzmaxproduct">An array of Ezmaxproduct autocomplete element response. (required).</param>
         public EzmaxproductGetAutocompleteV2ResponseMPayload(List<EzmaxproductAutocompleteElementResponse> aObjEzmaxproduct = default(List<EzmaxproductAutocompleteElementResponse>))
         {
+            // to ensure "aObjEzmaxproduct" is required (not null)
+            if (aObjEzmaxproduct == null)
+            {
+                throw new ArgumentNullException("aObjEzmaxproduct is a required property for EzmaxproductGetAutocompleteV2ResponseMPayload and cannot be null");
+            }
             this.AObjEzmaxproduct = aObjEzmaxproduct;
         }
 
@@ -45,7 +55,7 @@ namespace eZmaxApi.Model
         /// An array of Ezmaxproduct autocomplete element response.
         /// </summary>
         /// <value>An array of Ezmaxproduct autocomplete element response.</value>
-        [DataMember(Name = "a_objEzmaxproduct", EmitDefaultValue = false)]
+        [DataMember(Name = "a_objEzmaxproduct", IsRequired = true, EmitDefaultValue = true)]
         public List<EzmaxproductAutocompleteElementResponse> AObjEzmaxproduct { get; set; }
 
         /// <summary>

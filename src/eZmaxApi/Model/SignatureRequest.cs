@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Signature
         /// </summary>
         /// <value>The unique ID of the Signature</value>
-		/* <example>12</example>*/
+        /* <example>12</example>*/
         [DataMember(Name = "pkiSignatureID", EmitDefaultValue = false)]
         public int PkiSignatureID { get; set; }
 
@@ -65,7 +65,7 @@ namespace eZmaxApi.Model
         /// The svg of the Signature
         /// </summary>
         /// <value>The svg of the Signature</value>
-		/* <example>{&quot;$ref&quot;:&quot;#/components/examples/Svg/value&quot;}</example>*/
+        /* <example>{&quot;$ref&quot;:&quot;#/components/examples/Svg/value&quot;}</example>*/
         [DataMember(Name = "tSignatureSvg", IsRequired = true, EmitDefaultValue = true)]
         public string TSignatureSvg { get; set; }
 

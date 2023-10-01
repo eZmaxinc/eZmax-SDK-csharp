@@ -36,8 +36,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Gets or Sets ECreditcardtypeCodename
         /// </summary>
-        [DataMember(Name = "eCreditcardtypeCodename", EmitDefaultValue = false)]
-        public FieldECreditcardtypeCodename? ECreditcardtypeCodename { get; set; }
+        [DataMember(Name = "eCreditcardtypeCodename", IsRequired = true, EmitDefaultValue = true)]
+        public FieldECreditcardtypeCodename ECreditcardtypeCodename { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCreditcardtransactionResponse" /> class.
         /// </summary>
@@ -46,12 +46,13 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCreditcardtransactionResponse" /> class.
         /// </summary>
-        /// <param name="eCreditcardtypeCodename">eCreditcardtypeCodename.</param>
+        /// <param name="eCreditcardtypeCodename">eCreditcardtypeCodename (required).</param>
         /// <param name="dCreditcardtransactionAmount">The amount of the Creditcardtransaction (required).</param>
         /// <param name="sCreditcardtransactionPartiallydecryptednumber">The partially decrypted credit card number used in the Creditcardtransaction (required).</param>
         /// <param name="sCreditcardtransactionReferencenumber">The reference number on the creditcard service for the Creditcardtransaction (required).</param>
-        public CustomCreditcardtransactionResponse(FieldECreditcardtypeCodename? eCreditcardtypeCodename = default(FieldECreditcardtypeCodename?), string dCreditcardtransactionAmount = default(string), string sCreditcardtransactionPartiallydecryptednumber = default(string), string sCreditcardtransactionReferencenumber = default(string))
+        public CustomCreditcardtransactionResponse(FieldECreditcardtypeCodename eCreditcardtypeCodename = default(FieldECreditcardtypeCodename), string dCreditcardtransactionAmount = default(string), string sCreditcardtransactionPartiallydecryptednumber = default(string), string sCreditcardtransactionReferencenumber = default(string))
         {
+            this.ECreditcardtypeCodename = eCreditcardtypeCodename;
             // to ensure "dCreditcardtransactionAmount" is required (not null)
             if (dCreditcardtransactionAmount == null)
             {
@@ -70,14 +71,13 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sCreditcardtransactionReferencenumber is a required property for CustomCreditcardtransactionResponse and cannot be null");
             }
             this.SCreditcardtransactionReferencenumber = sCreditcardtransactionReferencenumber;
-            this.ECreditcardtypeCodename = eCreditcardtypeCodename;
         }
 
         /// <summary>
         /// The amount of the Creditcardtransaction
         /// </summary>
         /// <value>The amount of the Creditcardtransaction</value>
-		/* <example>167.58</example>*/
+        /* <example>167.58</example>*/
         [DataMember(Name = "dCreditcardtransactionAmount", IsRequired = true, EmitDefaultValue = true)]
         public string DCreditcardtransactionAmount { get; set; }
 
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// The partially decrypted credit card number used in the Creditcardtransaction
         /// </summary>
         /// <value>The partially decrypted credit card number used in the Creditcardtransaction</value>
-		/* <example>XXXX XXXX XXXX 1234</example>*/
+        /* <example>XXXX XXXX XXXX 1234</example>*/
         [DataMember(Name = "sCreditcardtransactionPartiallydecryptednumber", IsRequired = true, EmitDefaultValue = true)]
         public string SCreditcardtransactionPartiallydecryptednumber { get; set; }
 
@@ -93,7 +93,7 @@ namespace eZmaxApi.Model
         /// The reference number on the creditcard service for the Creditcardtransaction
         /// </summary>
         /// <value>The reference number on the creditcard service for the Creditcardtransaction</value>
-		/* <example>651447854715478415</example>*/
+        /* <example>651447854715478415</example>*/
         [DataMember(Name = "sCreditcardtransactionReferencenumber", IsRequired = true, EmitDefaultValue = true)]
         public string SCreditcardtransactionReferencenumber { get; set; }
 

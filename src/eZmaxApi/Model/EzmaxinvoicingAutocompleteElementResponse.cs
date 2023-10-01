@@ -59,7 +59,7 @@ namespace eZmaxApi.Model
         /// The YYYYMM period of the Ezmaxinvoicing
         /// </summary>
         /// <value>The YYYYMM period of the Ezmaxinvoicing</value>
-		/* <example>2022-01</example>*/
+        /* <example>2022-01</example>*/
         [DataMember(Name = "yyyymmEzmaxinvoicing", IsRequired = true, EmitDefaultValue = true)]
         public string YyyymmEzmaxinvoicing { get; set; }
 
@@ -67,7 +67,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicing
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicing</value>
-		/* <example>28</example>*/
+        /* <example>28</example>*/
         [DataMember(Name = "pkiEzmaxinvoicingID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzmaxinvoicingID { get; set; }
 
@@ -75,7 +75,7 @@ namespace eZmaxApi.Model
         /// Whether the Ezmaxinvoicing is active or not
         /// </summary>
         /// <value>Whether the Ezmaxinvoicing is active or not</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bEzmaxinvoicingIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzmaxinvoicingIsactive { get; set; }
 

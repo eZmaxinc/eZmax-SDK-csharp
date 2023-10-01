@@ -57,7 +57,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Apikey
         /// </summary>
         /// <value>The unique ID of the Apikey</value>
-		/* <example>99</example>*/
+        /* <example>99</example>*/
         [DataMember(Name = "pkiApikeyID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiApikeyID { get; set; }
 
@@ -65,7 +65,7 @@ namespace eZmaxApi.Model
         /// The description of the Apikey in the language of the requester
         /// </summary>
         /// <value>The description of the Apikey in the language of the requester</value>
-		/* <example>Project X</example>*/
+        /* <example>Project X</example>*/
         [DataMember(Name = "sApikeyDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SApikeyDescriptionX { get; set; }
 

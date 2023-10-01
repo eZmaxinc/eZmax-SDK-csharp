@@ -62,7 +62,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldersignerassociation
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
-		/* <example>20</example>*/
+        /* <example>20</example>*/
         [DataMember(Name = "pkiEzsignfoldersignerassociationID", EmitDefaultValue = false)]
         public int PkiEzsignfoldersignerassociationID { get; set; }
 
@@ -70,7 +70,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-		/* <example>70</example>*/
+        /* <example>70</example>*/
         [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
 
@@ -78,7 +78,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignsignergroup
         /// </summary>
         /// <value>The unique ID of the Ezsignsignergroup</value>
-		/* <example>27</example>*/
+        /* <example>27</example>*/
         [DataMember(Name = "fkiEzsignsignergroupID", EmitDefaultValue = false)]
         public int FkiEzsignsignergroupID { get; set; }
 
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfolder
         /// </summary>
         /// <value>The unique ID of the Ezsignfolder</value>
-		/* <example>33</example>*/
+        /* <example>33</example>*/
         [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfolderID { get; set; }
 
@@ -101,7 +101,7 @@ namespace eZmaxApi.Model
         /// A custom text message that will be added to the email sent.
         /// </summary>
         /// <value>A custom text message that will be added to the email sent.</value>
-		/* <example>Hi John,
+        /* <example>Hi John,
 
 This is the document I need you to review.
 

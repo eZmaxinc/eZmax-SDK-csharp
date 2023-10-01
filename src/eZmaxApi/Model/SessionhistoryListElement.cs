@@ -94,7 +94,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Sessionhistory
         /// </summary>
         /// <value>The unique ID of the Sessionhistory</value>
-		/* <example>259</example>*/
+        /* <example>259</example>*/
         [DataMember(Name = "pkiSessionhistoryID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiSessionhistoryID { get; set; }
 
@@ -102,7 +102,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Computer
         /// </summary>
         /// <value>The unique ID of the Computer</value>
-		/* <example>249</example>*/
+        /* <example>249</example>*/
         [DataMember(Name = "fkiComputerID", EmitDefaultValue = false)]
         public int FkiComputerID { get; set; }
 
@@ -110,7 +110,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-		/* <example>70</example>*/
+        /* <example>70</example>*/
         [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
 
@@ -118,7 +118,7 @@ namespace eZmaxApi.Model
         /// The first hit of the Sessionhistory
         /// </summary>
         /// <value>The first hit of the Sessionhistory</value>
-		/* <example>2020-12-31 17:35:37</example>*/
+        /* <example>2020-12-31 17:35:37</example>*/
         [DataMember(Name = "dtSessionhistoryFirsthit", IsRequired = true, EmitDefaultValue = true)]
         public string DtSessionhistoryFirsthit { get; set; }
 
@@ -126,7 +126,7 @@ namespace eZmaxApi.Model
         /// The last hit of the Sessionhistory
         /// </summary>
         /// <value>The last hit of the Sessionhistory</value>
-		/* <example>2020-12-31 19:27:38</example>*/
+        /* <example>2020-12-31 19:27:38</example>*/
         [DataMember(Name = "dtSessionhistoryLasthit", IsRequired = true, EmitDefaultValue = true)]
         public string DtSessionhistoryLasthit { get; set; }
 
@@ -134,7 +134,7 @@ namespace eZmaxApi.Model
         /// The description of the Computer
         /// </summary>
         /// <value>The description of the Computer</value>
-		/* <example>PC001</example>*/
+        /* <example>PC001</example>*/
         [DataMember(Name = "sComputerDescription", EmitDefaultValue = false)]
         public string SComputerDescription { get; set; }
 
@@ -142,7 +142,7 @@ namespace eZmaxApi.Model
         /// The duration of the session
         /// </summary>
         /// <value>The duration of the session</value>
-		/* <example>01:52:01</example>*/
+        /* <example>01:52:01</example>*/
         [DataMember(Name = "sSessionhistoryDuration", IsRequired = true, EmitDefaultValue = true)]
         public string SSessionhistoryDuration { get; set; }
 
@@ -150,7 +150,7 @@ namespace eZmaxApi.Model
         /// Represent an IP address.
         /// </summary>
         /// <value>Represent an IP address.</value>
-		/* <example>127.0.0.1</example>*/
+        /* <example>127.0.0.1</example>*/
         [DataMember(Name = "sSessionhistoryIP", IsRequired = true, EmitDefaultValue = true)]
         public string SSessionhistoryIP { get; set; }
 
@@ -158,7 +158,7 @@ namespace eZmaxApi.Model
         /// The login name of the User.
         /// </summary>
         /// <value>The login name of the User.</value>
-		/* <example>JohnDoe</example>*/
+        /* <example>JohnDoe</example>*/
         [DataMember(Name = "sUserLoginname", EmitDefaultValue = false)]
         public string SUserLoginname { get; set; }
 

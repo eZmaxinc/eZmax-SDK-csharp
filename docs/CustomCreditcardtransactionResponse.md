@@ -5,7 +5,7 @@ A custom Creditcardtransaction Object
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ECreditcardtypeCodename** | **FieldECreditcardtypeCodename** |  | [optional] 
+**ECreditcardtypeCodename** | **FieldECreditcardtypeCodename** |  | 
 **DCreditcardtransactionAmount** | **string** | The amount of the Creditcardtransaction | 
 **SCreditcardtransactionPartiallydecryptednumber** | **string** | The partially decrypted credit card number used in the Creditcardtransaction | 
 **SCreditcardtransactionReferencenumber** | **string** | The reference number on the creditcard service for the Creditcardtransaction | 

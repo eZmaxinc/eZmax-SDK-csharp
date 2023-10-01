@@ -76,7 +76,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplate
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplate</value>
-		/* <example>36</example>*/
+        /* <example>36</example>*/
         [DataMember(Name = "pkiEzsigntemplateID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsigntemplateID { get; set; }
 
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-		/* <example>5</example>*/
+        /* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldertypeID { get; set; }
 
@@ -92,7 +92,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-		/* <example>2</example>*/
+        /* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
 
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// The description of the Ezsigntemplate
         /// </summary>
         /// <value>The description of the Ezsigntemplate</value>
-		/* <example>Standard Contract</example>*/
+        /* <example>Standard Contract</example>*/
         [DataMember(Name = "sEzsigntemplateDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigntemplateDescription { get; set; }
 
@@ -108,7 +108,7 @@ namespace eZmaxApi.Model
         /// The number of pages in the Ezsigntemplatedocument.
         /// </summary>
         /// <value>The number of pages in the Ezsigntemplatedocument.</value>
-		/* <example>5</example>*/
+        /* <example>5</example>*/
         [DataMember(Name = "iEzsigntemplatedocumentPagetotal", EmitDefaultValue = false)]
         public int IEzsigntemplatedocumentPagetotal { get; set; }
 
@@ -116,7 +116,7 @@ namespace eZmaxApi.Model
         /// The number of total signatures in the Ezsigntemplate.
         /// </summary>
         /// <value>The number of total signatures in the Ezsigntemplate.</value>
-		/* <example>8</example>*/
+        /* <example>8</example>*/
         [DataMember(Name = "iEzsigntemplateSignaturetotal", EmitDefaultValue = false)]
         public int IEzsigntemplateSignaturetotal { get; set; }
 
@@ -124,7 +124,7 @@ namespace eZmaxApi.Model
         /// The number of total form fields in the Ezsigntemplate.
         /// </summary>
         /// <value>The number of total form fields in the Ezsigntemplate.</value>
-		/* <example>8</example>*/
+        /* <example>8</example>*/
         [DataMember(Name = "iEzsigntemplateFormfieldtotal", EmitDefaultValue = false)]
         public int IEzsigntemplateFormfieldtotal { get; set; }
 
@@ -132,7 +132,7 @@ namespace eZmaxApi.Model
         /// Indicate the Ezsigntemplate is incomplete and cannot be used
         /// </summary>
         /// <value>Indicate the Ezsigntemplate is incomplete and cannot be used</value>
-		/* <example>false</example>*/
+        /* <example>false</example>*/
         [DataMember(Name = "bEzsigntemplateIncomplete", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsigntemplateIncomplete { get; set; }
 
@@ -140,7 +140,7 @@ namespace eZmaxApi.Model
         /// The name of the Ezsignfoldertype in the language of the requester
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
-		/* <example>Default</example>*/
+        /* <example>Default</example>*/
         [DataMember(Name = "sEzsignfoldertypeNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignfoldertypeNameX { get; set; }
 

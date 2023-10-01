@@ -73,7 +73,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsigntemplateformfield
         /// </summary>
         /// <value>The unique ID of the Ezsigntemplateformfield</value>
-		/* <example>71</example>*/
+        /* <example>71</example>*/
         [DataMember(Name = "pkiEzsigntemplateformfieldID", EmitDefaultValue = false)]
         public int PkiEzsigntemplateformfieldID { get; set; }
 
@@ -81,7 +81,7 @@ namespace eZmaxApi.Model
         /// The page number in the Ezsigntemplatedocument
         /// </summary>
         /// <value>The page number in the Ezsigntemplatedocument</value>
-		/* <example>1</example>*/
+        /* <example>1</example>*/
         [DataMember(Name = "iEzsigntemplatedocumentpagePagenumber", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplatedocumentpagePagenumber { get; set; }
 
@@ -89,7 +89,7 @@ namespace eZmaxApi.Model
         /// The Label for the Ezsigntemplateformfield
         /// </summary>
         /// <value>The Label for the Ezsigntemplateformfield</value>
-		/* <example>Peanuts</example>*/
+        /* <example>Peanuts</example>*/
         [DataMember(Name = "sEzsigntemplateformfieldLabel", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigntemplateformfieldLabel { get; set; }
 
@@ -97,7 +97,7 @@ namespace eZmaxApi.Model
         /// The value for the Ezsigntemplateformfield
         /// </summary>
         /// <value>The value for the Ezsigntemplateformfield</value>
-		/* <example>Yes</example>*/
+        /* <example>Yes</example>*/
         [DataMember(Name = "sEzsigntemplateformfieldValue", EmitDefaultValue = false)]
         public string SEzsigntemplateformfieldValue { get; set; }
 
@@ -105,7 +105,7 @@ namespace eZmaxApi.Model
         /// The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
         /// </summary>
         /// <value>The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.</value>
-		/* <example>200</example>*/
+        /* <example>200</example>*/
         [DataMember(Name = "iEzsigntemplateformfieldX", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplateformfieldX { get; set; }
 
@@ -113,7 +113,7 @@ namespace eZmaxApi.Model
         /// The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
         /// </summary>
         /// <value>The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
-		/* <example>300</example>*/
+        /* <example>300</example>*/
         [DataMember(Name = "iEzsigntemplateformfieldY", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplateformfieldY { get; set; }
 
@@ -121,7 +121,7 @@ namespace eZmaxApi.Model
         /// The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
         /// </summary>
         /// <value>The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |</value>
-		/* <example>102</example>*/
+        /* <example>102</example>*/
         [DataMember(Name = "iEzsigntemplateformfieldWidth", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplateformfieldWidth { get; set; }
 
@@ -129,7 +129,7 @@ namespace eZmaxApi.Model
         /// The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
         /// </summary>
         /// <value>The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | </value>
-		/* <example>22</example>*/
+        /* <example>22</example>*/
         [DataMember(Name = "iEzsigntemplateformfieldHeight", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsigntemplateformfieldHeight { get; set; }
 

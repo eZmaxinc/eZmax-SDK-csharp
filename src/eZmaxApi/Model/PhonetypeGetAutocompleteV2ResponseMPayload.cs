@@ -35,9 +35,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhonetypeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjPhonetype">An array of Phonetype autocomplete element response..</param>
+        [JsonConstructorAttribute]
+        protected PhonetypeGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PhonetypeGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjPhonetype">An array of Phonetype autocomplete element response. (required).</param>
         public PhonetypeGetAutocompleteV2ResponseMPayload(List<PhonetypeAutocompleteElementResponse> aObjPhonetype = default(List<PhonetypeAutocompleteElementResponse>))
         {
+            // to ensure "aObjPhonetype" is required (not null)
+            if (aObjPhonetype == null)
+            {
+                throw new ArgumentNullException("aObjPhonetype is a required property for PhonetypeGetAutocompleteV2ResponseMPayload and cannot be null");
+            }
             this.AObjPhonetype = aObjPhonetype;
         }
 
@@ -45,7 +55,7 @@ namespace eZmaxApi.Model
         /// An array of Phonetype autocomplete element response.
         /// </summary>
         /// <value>An array of Phonetype autocomplete element response.</value>
-        [DataMember(Name = "a_objPhonetype", EmitDefaultValue = false)]
+        [DataMember(Name = "a_objPhonetype", IsRequired = true, EmitDefaultValue = true)]
         public List<PhonetypeAutocompleteElementResponse> AObjPhonetype { get; set; }
 
         /// <summary>

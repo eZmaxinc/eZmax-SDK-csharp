@@ -35,9 +35,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjPeriod">An array of Period autocomplete element response..</param>
+        [JsonConstructorAttribute]
+        protected PeriodGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjPeriod">An array of Period autocomplete element response. (required).</param>
         public PeriodGetAutocompleteV2ResponseMPayload(List<PeriodAutocompleteElementResponse> aObjPeriod = default(List<PeriodAutocompleteElementResponse>))
         {
+            // to ensure "aObjPeriod" is required (not null)
+            if (aObjPeriod == null)
+            {
+                throw new ArgumentNullException("aObjPeriod is a required property for PeriodGetAutocompleteV2ResponseMPayload and cannot be null");
+            }
             this.AObjPeriod = aObjPeriod;
         }
 
@@ -45,7 +55,7 @@ namespace eZmaxApi.Model
         /// An array of Period autocomplete element response.
         /// </summary>
         /// <value>An array of Period autocomplete element response.</value>
-        [DataMember(Name = "a_objPeriod", EmitDefaultValue = false)]
+        [DataMember(Name = "a_objPeriod", IsRequired = true, EmitDefaultValue = true)]
         public List<PeriodAutocompleteElementResponse> AObjPeriod { get; set; }
 
         /// <summary>

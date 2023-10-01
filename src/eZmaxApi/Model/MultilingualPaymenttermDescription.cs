@@ -47,7 +47,7 @@ namespace eZmaxApi.Model
         /// The description of the Paymentterm in French
         /// </summary>
         /// <value>The description of the Paymentterm in French</value>
-		/* <example>Net 30 jours</example>*/
+        /* <example>Net 30 jours</example>*/
         [DataMember(Name = "sPaymenttermDescription1", EmitDefaultValue = false)]
         public string SPaymenttermDescription1 { get; set; }
 
@@ -55,7 +55,7 @@ namespace eZmaxApi.Model
         /// The description of the Paymentterm in English
         /// </summary>
         /// <value>The description of the Paymentterm in English</value>
-		/* <example>Net 30 days</example>*/
+        /* <example>Net 30 days</example>*/
         [DataMember(Name = "sPaymenttermDescription2", EmitDefaultValue = false)]
         public string SPaymenttermDescription2 { get; set; }
 

@@ -54,7 +54,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityinternalproduct
         /// </summary>
         /// <value>The unique ID of the Billingentityinternalproduct</value>
-		/* <example>254</example>*/
+        /* <example>254</example>*/
         [DataMember(Name = "pkiBillingentityinternalproductID", EmitDefaultValue = false)]
         public int PkiBillingentityinternalproductID { get; set; }
 
@@ -62,7 +62,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxproduct
         /// </summary>
         /// <value>The unique ID of the Ezmaxproduct</value>
-		/* <example>172</example>*/
+        /* <example>172</example>*/
         [DataMember(Name = "fkiEzmaxproductID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzmaxproductID { get; set; }
 
@@ -70,7 +70,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityexternal
         /// </summary>
         /// <value>The unique ID of the Billingentityexternal</value>
-		/* <example>83</example>*/
+        /* <example>83</example>*/
         [DataMember(Name = "fkiBillingentityexternalID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiBillingentityexternalID { get; set; }
 

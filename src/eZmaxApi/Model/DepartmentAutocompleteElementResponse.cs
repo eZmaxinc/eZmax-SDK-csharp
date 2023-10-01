@@ -66,7 +66,7 @@ namespace eZmaxApi.Model
         /// The Name of the Company in the language of the requester
         /// </summary>
         /// <value>The Name of the Company in the language of the requester</value>
-		/* <example>Acme inc.</example>*/
+        /* <example>Acme inc.</example>*/
         [DataMember(Name = "sCompanyNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SCompanyNameX { get; set; }
 
@@ -74,7 +74,7 @@ namespace eZmaxApi.Model
         /// The Name of the Department in the language of the requester
         /// </summary>
         /// <value>The Name of the Department in the language of the requester</value>
-		/* <example>Head Office</example>*/
+        /* <example>Head Office</example>*/
         [DataMember(Name = "sDepartmentNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SDepartmentNameX { get; set; }
 
@@ -82,7 +82,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Department
         /// </summary>
         /// <value>The unique ID of the Department</value>
-		/* <example>21</example>*/
+        /* <example>21</example>*/
         [DataMember(Name = "pkiDepartmentID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiDepartmentID { get; set; }
 
@@ -90,7 +90,7 @@ namespace eZmaxApi.Model
         /// Whether the Department is active or not
         /// </summary>
         /// <value>Whether the Department is active or not</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bDepartmentIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BDepartmentIsactive { get; set; }
 

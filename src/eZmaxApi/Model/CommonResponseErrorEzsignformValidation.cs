@@ -27,7 +27,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// CommonResponseErrorEzsignformValidation
+    /// Generic Error Message
     /// </summary>
     [DataContract(Name = "Common-Response-Error-EzsignformValidation")]
     public partial class CommonResponseErrorEzsignformValidation : IEquatable<CommonResponseErrorEzsignformValidation>, IValidatableObject
@@ -70,7 +70,7 @@ namespace eZmaxApi.Model
         /// The message giving details about the error
         /// </summary>
         /// <value>The message giving details about the error</value>
-		/* <example>Invalid Signature Headers</example>*/
+        /* <example>Invalid Signature Headers</example>*/
         [DataMember(Name = "sErrorMessage", IsRequired = true, EmitDefaultValue = true)]
         public string SErrorMessage { get; set; }
 

@@ -1,4 +1,5 @@
 # eZmaxApi.Model.CommonResponseErrorEzsignformValidation
+Generic Error Message
 
 ## Properties
 

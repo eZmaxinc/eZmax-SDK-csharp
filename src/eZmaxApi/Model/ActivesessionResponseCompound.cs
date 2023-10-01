@@ -67,7 +67,7 @@ namespace eZmaxApi.Model
         /// <param name="bActivesessionDebug">Whether the active session is in debug or not (required).</param>
         /// <param name="bActivesessionIssuperadmin">Whether the active session is superadmin or not (required).</param>
         /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
-        /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype.</param>
+        /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
         /// <param name="fkiSignatureID">The unique ID of the Signature.</param>
         /// <param name="aPkiPermissionID">An array of permissions granted to the user or api key (required).</param>
         /// <param name="objUserReal">objUserReal (required).</param>
@@ -100,6 +100,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("pksCustomerCode is a required property for ActivesessionResponseCompound and cannot be null");
             }
             this.PksCustomerCode = pksCustomerCode;
+            this.FkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
             // to ensure "aPkiPermissionID" is required (not null)
             if (aPkiPermissionID == null)
             {
@@ -118,7 +119,6 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("aEModuleInternalname is a required property for ActivesessionResponseCompound and cannot be null");
             }
             this.AEModuleInternalname = aEModuleInternalname;
-            this.FkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
             this.FkiSignatureID = fkiSignatureID;
             this.ObjUserCloned = objUserCloned;
             this.ObjApikey = objApikey;
@@ -128,7 +128,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-		/* <example>2</example>*/
+        /* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
 
@@ -136,7 +136,7 @@ namespace eZmaxApi.Model
         /// The Name of the Company in the language of the requester
         /// </summary>
         /// <value>The Name of the Company in the language of the requester</value>
-		/* <example>Acme inc.</example>*/
+        /* <example>Acme inc.</example>*/
         [DataMember(Name = "sCompanyNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SCompanyNameX { get; set; }
 
@@ -144,7 +144,7 @@ namespace eZmaxApi.Model
         /// The Name of the Department in the language of the requester
         /// </summary>
         /// <value>The Name of the Department in the language of the requester</value>
-		/* <example>Head Office</example>*/
+        /* <example>Head Office</example>*/
         [DataMember(Name = "sDepartmentNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SDepartmentNameX { get; set; }
 
@@ -152,7 +152,7 @@ namespace eZmaxApi.Model
         /// Whether the active session is in debug or not
         /// </summary>
         /// <value>Whether the active session is in debug or not</value>
-		/* <example>false</example>*/
+        /* <example>false</example>*/
         [DataMember(Name = "bActivesessionDebug", IsRequired = true, EmitDefaultValue = true)]
         public bool BActivesessionDebug { get; set; }
 
@@ -160,7 +160,7 @@ namespace eZmaxApi.Model
         /// Whether the active session is superadmin or not
         /// </summary>
         /// <value>Whether the active session is superadmin or not</value>
-		/* <example>false</example>*/
+        /* <example>false</example>*/
         [DataMember(Name = "bActivesessionIssuperadmin", IsRequired = true, EmitDefaultValue = true)]
         public bool BActivesessionIssuperadmin { get; set; }
 
@@ -168,7 +168,7 @@ namespace eZmaxApi.Model
         /// The customer code assigned to your account
         /// </summary>
         /// <value>The customer code assigned to your account</value>
-		/* <example>demo</example>*/
+        /* <example>demo</example>*/
         [DataMember(Name = "pksCustomerCode", IsRequired = true, EmitDefaultValue = true)]
         public string PksCustomerCode { get; set; }
 
@@ -176,15 +176,15 @@ namespace eZmaxApi.Model
         /// The unique ID of the Systemconfigurationtype
         /// </summary>
         /// <value>The unique ID of the Systemconfigurationtype</value>
-		/* <example>28</example>*/
-        [DataMember(Name = "fkiSystemconfigurationtypeID", EmitDefaultValue = false)]
+        /* <example>28</example>*/
+        [DataMember(Name = "fkiSystemconfigurationtypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiSystemconfigurationtypeID { get; set; }
 
         /// <summary>
         /// The unique ID of the Signature
         /// </summary>
         /// <value>The unique ID of the Signature</value>
-		/* <example>12</example>*/
+        /* <example>12</example>*/
         [DataMember(Name = "fkiSignatureID", EmitDefaultValue = false)]
         public int FkiSignatureID { get; set; }
 

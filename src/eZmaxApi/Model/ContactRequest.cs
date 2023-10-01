@@ -75,7 +75,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|
         /// </summary>
         /// <value>The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|</value>
-		/* <example>2</example>*/
+        /* <example>2</example>*/
         [DataMember(Name = "fkiContacttitleID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiContacttitleID { get; set; }
 
@@ -83,7 +83,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-		/* <example>2</example>*/
+        /* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
 
@@ -91,7 +91,7 @@ namespace eZmaxApi.Model
         /// The First name of the contact
         /// </summary>
         /// <value>The First name of the contact</value>
-		/* <example>John</example>*/
+        /* <example>John</example>*/
         [DataMember(Name = "sContactFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SContactFirstname { get; set; }
 
@@ -99,7 +99,7 @@ namespace eZmaxApi.Model
         /// The Last name of the contact
         /// </summary>
         /// <value>The Last name of the contact</value>
-		/* <example>Doe</example>*/
+        /* <example>Doe</example>*/
         [DataMember(Name = "sContactLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SContactLastname { get; set; }
 
@@ -107,7 +107,7 @@ namespace eZmaxApi.Model
         /// The Company name of the contact
         /// </summary>
         /// <value>The Company name of the contact</value>
-		/* <example>eZmax Solutions Inc.</example>*/
+        /* <example>eZmax Solutions Inc.</example>*/
         [DataMember(Name = "sContactCompany", IsRequired = true, EmitDefaultValue = true)]
         public string SContactCompany { get; set; }
 
@@ -115,7 +115,7 @@ namespace eZmaxApi.Model
         /// The Birth Date of the contact
         /// </summary>
         /// <value>The Birth Date of the contact</value>
-		/* <example>1980-01-01</example>*/
+        /* <example>1980-01-01</example>*/
         [DataMember(Name = "dtContactBirthdate", EmitDefaultValue = false)]
         public string DtContactBirthdate { get; set; }
 

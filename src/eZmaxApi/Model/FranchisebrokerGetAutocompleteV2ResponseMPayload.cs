@@ -35,9 +35,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisebrokerGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjFranchisebroker">An array of Franchisebroker autocomplete element response..</param>
+        [JsonConstructorAttribute]
+        protected FranchisebrokerGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FranchisebrokerGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjFranchisebroker">An array of Franchisebroker autocomplete element response. (required).</param>
         public FranchisebrokerGetAutocompleteV2ResponseMPayload(List<FranchisebrokerAutocompleteElementResponse> aObjFranchisebroker = default(List<FranchisebrokerAutocompleteElementResponse>))
         {
+            // to ensure "aObjFranchisebroker" is required (not null)
+            if (aObjFranchisebroker == null)
+            {
+                throw new ArgumentNullException("aObjFranchisebroker is a required property for FranchisebrokerGetAutocompleteV2ResponseMPayload and cannot be null");
+            }
             this.AObjFranchisebroker = aObjFranchisebroker;
         }
 
@@ -45,7 +55,7 @@ namespace eZmaxApi.Model
         /// An array of Franchisebroker autocomplete element response.
         /// </summary>
         /// <value>An array of Franchisebroker autocomplete element response.</value>
-        [DataMember(Name = "a_objFranchisebroker", EmitDefaultValue = false)]
+        [DataMember(Name = "a_objFranchisebroker", IsRequired = true, EmitDefaultValue = true)]
         public List<FranchisebrokerAutocompleteElementResponse> AObjFranchisebroker { get; set; }
 
         /// <summary>

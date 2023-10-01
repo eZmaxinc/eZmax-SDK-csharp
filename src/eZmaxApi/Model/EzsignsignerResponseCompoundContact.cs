@@ -74,7 +74,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Contact
         /// </summary>
         /// <value>The unique ID of the Contact</value>
-		/* <example>21</example>*/
+        /* <example>21</example>*/
         [DataMember(Name = "pkiContactID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiContactID { get; set; }
 
@@ -82,7 +82,7 @@ namespace eZmaxApi.Model
         /// The First name of the contact
         /// </summary>
         /// <value>The First name of the contact</value>
-		/* <example>John</example>*/
+        /* <example>John</example>*/
         [DataMember(Name = "sContactFirstname", IsRequired = true, EmitDefaultValue = true)]
         public string SContactFirstname { get; set; }
 
@@ -90,7 +90,7 @@ namespace eZmaxApi.Model
         /// The Last name of the contact
         /// </summary>
         /// <value>The Last name of the contact</value>
-		/* <example>Doe</example>*/
+        /* <example>Doe</example>*/
         [DataMember(Name = "sContactLastname", IsRequired = true, EmitDefaultValue = true)]
         public string SContactLastname { get; set; }
 
@@ -98,7 +98,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-		/* <example>2</example>*/
+        /* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
 
@@ -106,7 +106,7 @@ namespace eZmaxApi.Model
         /// The email address.
         /// </summary>
         /// <value>The email address.</value>
-		/* <example>email@example.com</example>*/
+        /* <example>email@example.com</example>*/
         [DataMember(Name = "sEmailAddress", EmitDefaultValue = false)]
         public string SEmailAddress { get; set; }
 
@@ -114,7 +114,7 @@ namespace eZmaxApi.Model
         /// A phone number in E.164 Format
         /// </summary>
         /// <value>A phone number in E.164 Format</value>
-		/* <example>+15149901516</example>*/
+        /* <example>+15149901516</example>*/
         [DataMember(Name = "sPhoneE164", EmitDefaultValue = false)]
         public string SPhoneE164 { get; set; }
 
@@ -122,7 +122,7 @@ namespace eZmaxApi.Model
         /// The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
         /// </summary>
         /// <value>The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers</value>
-		/* <example>123</example>*/
+        /* <example>123</example>*/
         [DataMember(Name = "sPhoneExtension", EmitDefaultValue = false)]
         public string SPhoneExtension { get; set; }
 
@@ -130,7 +130,7 @@ namespace eZmaxApi.Model
         /// A phone number in E.164 Format
         /// </summary>
         /// <value>A phone number in E.164 Format</value>
-		/* <example>+15149901516</example>*/
+        /* <example>+15149901516</example>*/
         [DataMember(Name = "sPhoneE164Cell", EmitDefaultValue = false)]
         public string SPhoneE164Cell { get; set; }
 

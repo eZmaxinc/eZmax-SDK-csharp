@@ -67,7 +67,7 @@ namespace eZmaxApi.Model
         /// The name of the Ezsignfoldertype in the language of the requester
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
-		/* <example>Default</example>*/
+        /* <example>Default</example>*/
         [DataMember(Name = "sEzsignfoldertypeNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignfoldertypeNameX { get; set; }
 
@@ -75,7 +75,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-		/* <example>5</example>*/
+        /* <example>5</example>*/
         [DataMember(Name = "pkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignfoldertypeID { get; set; }
 
@@ -83,7 +83,7 @@ namespace eZmaxApi.Model
         /// Whether the Ezsignfoldertype is active or not
         /// </summary>
         /// <value>Whether the Ezsignfoldertype is active or not</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BEzsignfoldertypeIsactive { get; set; }
 

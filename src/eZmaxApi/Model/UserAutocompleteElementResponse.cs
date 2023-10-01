@@ -67,7 +67,7 @@ namespace eZmaxApi.Model
         /// The description of the User in the language of the requester
         /// </summary>
         /// <value>The description of the User in the language of the requester</value>
-		/* <example>Default</example>*/
+        /* <example>Default</example>*/
         [DataMember(Name = "sUserName", IsRequired = true, EmitDefaultValue = true)]
         public string SUserName { get; set; }
 
@@ -75,7 +75,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-		/* <example>70</example>*/
+        /* <example>70</example>*/
         [DataMember(Name = "pkiUserID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiUserID { get; set; }
 
@@ -83,7 +83,7 @@ namespace eZmaxApi.Model
         /// Whether the User is active or not
         /// </summary>
         /// <value>Whether the User is active or not</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bUserIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BUserIsactive { get; set; }
 

@@ -61,7 +61,7 @@ namespace eZmaxApi.Model
         /// The minimum version of the function that can be called
         /// </summary>
         /// <value>The minimum version of the function that can be called</value>
-		/* <example>1</example>*/
+        /* <example>1</example>*/
         [DataMember(Name = "iVersionMin", IsRequired = true, EmitDefaultValue = true)]
         public int IVersionMin { get; set; }
 
@@ -69,7 +69,7 @@ namespace eZmaxApi.Model
         /// The maximum version of the function that can be called
         /// </summary>
         /// <value>The maximum version of the function that can be called</value>
-		/* <example>2</example>*/
+        /* <example>2</example>*/
         [DataMember(Name = "iVersionMax", IsRequired = true, EmitDefaultValue = true)]
         public int IVersionMax { get; set; }
 
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// Wheter the current route is deprecated or not
         /// </summary>
         /// <value>Wheter the current route is deprecated or not</value>
-		/* <example>false</example>*/
+        /* <example>false</example>*/
         [DataMember(Name = "bVersionDeprecated", IsRequired = true, EmitDefaultValue = true)]
         public bool BVersionDeprecated { get; set; }
 

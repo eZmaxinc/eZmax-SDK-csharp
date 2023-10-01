@@ -62,7 +62,7 @@ namespace eZmaxApi.Model
         /// The Label for the Ezsignformfield
         /// </summary>
         /// <value>The Label for the Ezsignformfield</value>
-		/* <example>Peanuts</example>*/
+        /* <example>Peanuts</example>*/
         [DataMember(Name = "sEzsignformfieldLabel", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignformfieldLabel { get; set; }
 
@@ -70,7 +70,7 @@ namespace eZmaxApi.Model
         /// The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio
         /// </summary>
         /// <value>The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio</value>
-		/* <example>Yes</example>*/
+        /* <example>Yes</example>*/
         [DataMember(Name = "sEzsignformfieldValue", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsignformfieldValue { get; set; }
 

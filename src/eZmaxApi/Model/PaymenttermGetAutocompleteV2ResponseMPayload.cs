@@ -35,9 +35,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjPaymentterm">An array of Paymentterm autocomplete element response..</param>
+        [JsonConstructorAttribute]
+        protected PaymenttermGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymenttermGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjPaymentterm">An array of Paymentterm autocomplete element response. (required).</param>
         public PaymenttermGetAutocompleteV2ResponseMPayload(List<PaymenttermAutocompleteElementResponse> aObjPaymentterm = default(List<PaymenttermAutocompleteElementResponse>))
         {
+            // to ensure "aObjPaymentterm" is required (not null)
+            if (aObjPaymentterm == null)
+            {
+                throw new ArgumentNullException("aObjPaymentterm is a required property for PaymenttermGetAutocompleteV2ResponseMPayload and cannot be null");
+            }
             this.AObjPaymentterm = aObjPaymentterm;
         }
 
@@ -45,7 +55,7 @@ namespace eZmaxApi.Model
         /// An array of Paymentterm autocomplete element response.
         /// </summary>
         /// <value>An array of Paymentterm autocomplete element response.</value>
-        [DataMember(Name = "a_objPaymentterm", EmitDefaultValue = false)]
+        [DataMember(Name = "a_objPaymentterm", IsRequired = true, EmitDefaultValue = true)]
         public List<PaymenttermAutocompleteElementResponse> AObjPaymentterm { get; set; }
 
         /// <summary>

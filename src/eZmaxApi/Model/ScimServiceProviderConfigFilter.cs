@@ -52,7 +52,7 @@ namespace eZmaxApi.Model
         /// A Boolean value specifying whether or not the operation is supported.
         /// </summary>
         /// <value>A Boolean value specifying whether or not the operation is supported.</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "supported", IsRequired = true, EmitDefaultValue = true)]
         public bool Supported { get; set; }
 
@@ -60,7 +60,7 @@ namespace eZmaxApi.Model
         /// An integer value specifying the maximum number of resources returned in a response.
         /// </summary>
         /// <value>An integer value specifying the maximum number of resources returned in a response.</value>
-		/* <example>10000</example>*/
+        /* <example>10000</example>*/
         [DataMember(Name = "maxResults", IsRequired = true, EmitDefaultValue = true)]
         public int MaxResults { get; set; }
 

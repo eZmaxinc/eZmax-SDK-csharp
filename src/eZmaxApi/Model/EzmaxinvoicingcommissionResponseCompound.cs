@@ -48,7 +48,7 @@ namespace eZmaxApi.Model
         /// <param name="dtEzmaxinvoicingcommissionEnd">The end date for the Ezmaxinvoicingcommission (required).</param>
         /// <param name="iEzmaxinvoicingcommissionDays">This is the number of days during the month on which the Ezmaxinvoigcommission applies (required).</param>
         /// <param name="dEzmaxinvoicingcommissionAmount">The amount of Ezmaxinvoicingcommission (required).</param>
-        /// <param name="objContactName">objContactName (required).</param>
+        /// <param name="objContactName">objContactName.</param>
         public EzmaxinvoicingcommissionResponseCompound(int pkiEzmaxinvoicingcommissionID = default(int), int fkiEzmaxinvoicingsummaryglobalID = default(int), int fkiEzmaxpartnerID = default(int), int fkiEzmaxrepresentativeID = default(int), string dtEzmaxinvoicingcommissionStart = default(string), string dtEzmaxinvoicingcommissionEnd = default(string), int iEzmaxinvoicingcommissionDays = default(int), string dEzmaxinvoicingcommissionAmount = default(string), CustomContactNameResponse objContactName = default(CustomContactNameResponse))
         {
             // to ensure "dtEzmaxinvoicingcommissionStart" is required (not null)
@@ -70,23 +70,18 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("dEzmaxinvoicingcommissionAmount is a required property for EzmaxinvoicingcommissionResponseCompound and cannot be null");
             }
             this.DEzmaxinvoicingcommissionAmount = dEzmaxinvoicingcommissionAmount;
-            // to ensure "objContactName" is required (not null)
-            if (objContactName == null)
-            {
-                throw new ArgumentNullException("objContactName is a required property for EzmaxinvoicingcommissionResponseCompound and cannot be null");
-            }
-            this.ObjContactName = objContactName;
             this.PkiEzmaxinvoicingcommissionID = pkiEzmaxinvoicingcommissionID;
             this.FkiEzmaxinvoicingsummaryglobalID = fkiEzmaxinvoicingsummaryglobalID;
             this.FkiEzmaxpartnerID = fkiEzmaxpartnerID;
             this.FkiEzmaxrepresentativeID = fkiEzmaxrepresentativeID;
+            this.ObjContactName = objContactName;
         }
 
         /// <summary>
         /// The unique ID of the Ezmaxinvoicingcommission
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicingcommission</value>
-		/* <example>36</example>*/
+        /* <example>36</example>*/
         [DataMember(Name = "pkiEzmaxinvoicingcommissionID", EmitDefaultValue = false)]
         public int PkiEzmaxinvoicingcommissionID { get; set; }
 
@@ -94,7 +89,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicingsummaryglobal
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicingsummaryglobal</value>
-		/* <example>241</example>*/
+        /* <example>241</example>*/
         [DataMember(Name = "fkiEzmaxinvoicingsummaryglobalID", EmitDefaultValue = false)]
         public int FkiEzmaxinvoicingsummaryglobalID { get; set; }
 
@@ -102,7 +97,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxpartner
         /// </summary>
         /// <value>The unique ID of the Ezmaxpartner</value>
-		/* <example>12</example>*/
+        /* <example>12</example>*/
         [DataMember(Name = "fkiEzmaxpartnerID", EmitDefaultValue = false)]
         public int FkiEzmaxpartnerID { get; set; }
 
@@ -110,7 +105,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxrepresentative
         /// </summary>
         /// <value>The unique ID of the Ezmaxrepresentative</value>
-		/* <example>21</example>*/
+        /* <example>21</example>*/
         [DataMember(Name = "fkiEzmaxrepresentativeID", EmitDefaultValue = false)]
         public int FkiEzmaxrepresentativeID { get; set; }
 
@@ -118,7 +113,7 @@ namespace eZmaxApi.Model
         /// The start date for the Ezmaxinvoicingcommission
         /// </summary>
         /// <value>The start date for the Ezmaxinvoicingcommission</value>
-		/* <example>2020-12-31</example>*/
+        /* <example>2020-12-31</example>*/
         [DataMember(Name = "dtEzmaxinvoicingcommissionStart", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzmaxinvoicingcommissionStart { get; set; }
 
@@ -126,7 +121,7 @@ namespace eZmaxApi.Model
         /// The end date for the Ezmaxinvoicingcommission
         /// </summary>
         /// <value>The end date for the Ezmaxinvoicingcommission</value>
-		/* <example>2020-12-31</example>*/
+        /* <example>2020-12-31</example>*/
         [DataMember(Name = "dtEzmaxinvoicingcommissionEnd", IsRequired = true, EmitDefaultValue = true)]
         public string DtEzmaxinvoicingcommissionEnd { get; set; }
 
@@ -134,7 +129,7 @@ namespace eZmaxApi.Model
         /// This is the number of days during the month on which the Ezmaxinvoigcommission applies
         /// </summary>
         /// <value>This is the number of days during the month on which the Ezmaxinvoigcommission applies</value>
-		/* <example>30</example>*/
+        /* <example>30</example>*/
         [DataMember(Name = "iEzmaxinvoicingcommissionDays", IsRequired = true, EmitDefaultValue = true)]
         public int IEzmaxinvoicingcommissionDays { get; set; }
 
@@ -142,14 +137,14 @@ namespace eZmaxApi.Model
         /// The amount of Ezmaxinvoicingcommission
         /// </summary>
         /// <value>The amount of Ezmaxinvoicingcommission</value>
-		/* <example>450.34</example>*/
+        /* <example>450.34</example>*/
         [DataMember(Name = "dEzmaxinvoicingcommissionAmount", IsRequired = true, EmitDefaultValue = true)]
         public string DEzmaxinvoicingcommissionAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjContactName
         /// </summary>
-        [DataMember(Name = "objContactName", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "objContactName", EmitDefaultValue = false)]
         public CustomContactNameResponse ObjContactName { get; set; }
 
         /// <summary>

@@ -59,7 +59,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Paymentterm
         /// </summary>
         /// <value>The unique ID of the Paymentterm</value>
-		/* <example>46</example>*/
+        /* <example>46</example>*/
         [DataMember(Name = "pkiPaymenttermID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiPaymenttermID { get; set; }
 
@@ -67,7 +67,7 @@ namespace eZmaxApi.Model
         /// The description of the Paymentterm in the language of the requester
         /// </summary>
         /// <value>The description of the Paymentterm in the language of the requester</value>
-		/* <example>Net 30 days</example>*/
+        /* <example>Net 30 days</example>*/
         [DataMember(Name = "sPaymenttermDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SPaymenttermDescriptionX { get; set; }
 
@@ -75,7 +75,7 @@ namespace eZmaxApi.Model
         /// Whether the Paymentterm is active or not
         /// </summary>
         /// <value>Whether the Paymentterm is active or not</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bPaymenttermIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BPaymenttermIsactive { get; set; }
 

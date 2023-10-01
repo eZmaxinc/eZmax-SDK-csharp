@@ -82,7 +82,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicingsummaryinternal
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicingsummaryinternal</value>
-		/* <example>57</example>*/
+        /* <example>57</example>*/
         [DataMember(Name = "pkiEzmaxinvoicingsummaryinternalID", EmitDefaultValue = false)]
         public int PkiEzmaxinvoicingsummaryinternalID { get; set; }
 
@@ -96,7 +96,7 @@ namespace eZmaxApi.Model
         /// The Ezmaxinvoicingsummaryinternal description in the language of the requester
         /// </summary>
         /// <value>The Ezmaxinvoicingsummaryinternal description in the language of the requester</value>
-		/* <example>Défaut</example>*/
+        /* <example>Défaut</example>*/
         [DataMember(Name = "sEzmaxinvoicingsummaryinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzmaxinvoicingsummaryinternalDescriptionX { get; set; }
 
@@ -104,7 +104,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezmaxinvoicing
         /// </summary>
         /// <value>The unique ID of the Ezmaxinvoicing</value>
-		/* <example>28</example>*/
+        /* <example>28</example>*/
         [DataMember(Name = "fkiEzmaxinvoicingID", EmitDefaultValue = false)]
         public int FkiEzmaxinvoicingID { get; set; }
 
@@ -112,7 +112,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Billingentityinternal.
         /// </summary>
         /// <value>The unique ID of the Billingentityinternal.</value>
-		/* <example>1</example>*/
+        /* <example>1</example>*/
         [DataMember(Name = "fkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiBillingentityinternalID { get; set; }
 
@@ -120,7 +120,7 @@ namespace eZmaxApi.Model
         /// The description of the Billingentityinternal in the language of the requester
         /// </summary>
         /// <value>The description of the Billingentityinternal in the language of the requester</value>
-		/* <example>Default</example>*/
+        /* <example>Default</example>*/
         [DataMember(Name = "sBillingentityinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SBillingentityinternalDescriptionX { get; set; }
 

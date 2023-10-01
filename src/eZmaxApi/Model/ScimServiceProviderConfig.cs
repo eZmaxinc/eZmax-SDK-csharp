@@ -123,7 +123,7 @@ namespace eZmaxApi.Model
         /// An HTTP-addressable URL pointing to the service provider&#39;s human-consumable help documentation
         /// </summary>
         /// <value>An HTTP-addressable URL pointing to the service provider&#39;s human-consumable help documentation</value>
-		/* <example>https://github.com/eZmaxinc/eZmax-API</example>*/
+        /* <example>https://github.com/eZmaxinc/eZmax-API</example>*/
         [DataMember(Name = "documentationUri", IsRequired = true, EmitDefaultValue = true)]
         public string DocumentationUri { get; set; }
 

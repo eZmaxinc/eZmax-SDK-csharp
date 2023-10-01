@@ -42,7 +42,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiNotificationtestID">The unique ID of the Notificationtest (required).</param>
         /// <param name="sNotificationtestFunction">The function name of the Notificationtest (required).</param>
-        /// <param name="aSVariableobjectProperty">aSVariableobjectProperty.</param>
+        /// <param name="aSVariableobjectProperty">aSVariableobjectProperty (required).</param>
         /// <param name="aObjVariableobject">aObjVariableobject (required).</param>
         public NotificationtestGetElementsV1ResponseMPayload(int pkiNotificationtestID = default(int), string sNotificationtestFunction = default(string), List<string> aSVariableobjectProperty = default(List<string>), List<Dictionary<string, Object>> aObjVariableobject = default(List<Dictionary<string, Object>>))
         {
@@ -53,20 +53,25 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sNotificationtestFunction is a required property for NotificationtestGetElementsV1ResponseMPayload and cannot be null");
             }
             this.SNotificationtestFunction = sNotificationtestFunction;
+            // to ensure "aSVariableobjectProperty" is required (not null)
+            if (aSVariableobjectProperty == null)
+            {
+                throw new ArgumentNullException("aSVariableobjectProperty is a required property for NotificationtestGetElementsV1ResponseMPayload and cannot be null");
+            }
+            this.ASVariableobjectProperty = aSVariableobjectProperty;
             // to ensure "aObjVariableobject" is required (not null)
             if (aObjVariableobject == null)
             {
                 throw new ArgumentNullException("aObjVariableobject is a required property for NotificationtestGetElementsV1ResponseMPayload and cannot be null");
             }
             this.AObjVariableobject = aObjVariableobject;
-            this.ASVariableobjectProperty = aSVariableobjectProperty;
         }
 
         /// <summary>
         /// The unique ID of the Notificationtest
         /// </summary>
         /// <value>The unique ID of the Notificationtest</value>
-		/* <example>14</example>*/
+        /* <example>14</example>*/
         [DataMember(Name = "pkiNotificationtestID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiNotificationtestID { get; set; }
 
@@ -74,14 +79,14 @@ namespace eZmaxApi.Model
         /// The function name of the Notificationtest
         /// </summary>
         /// <value>The function name of the Notificationtest</value>
-		/* <example>Default</example>*/
+        /* <example>Default</example>*/
         [DataMember(Name = "sNotificationtestFunction", IsRequired = true, EmitDefaultValue = true)]
         public string SNotificationtestFunction { get; set; }
 
         /// <summary>
         /// Gets or Sets ASVariableobjectProperty
         /// </summary>
-        [DataMember(Name = "a_sVariableobjectProperty", EmitDefaultValue = false)]
+        [DataMember(Name = "a_sVariableobjectProperty", IsRequired = true, EmitDefaultValue = true)]
         public List<string> ASVariableobjectProperty { get; set; }
 
         /// <summary>

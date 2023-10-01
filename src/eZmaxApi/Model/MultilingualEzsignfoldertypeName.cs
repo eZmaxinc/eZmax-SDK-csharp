@@ -47,7 +47,7 @@ namespace eZmaxApi.Model
         /// The name of the Ezsignfoldertype in French
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in French</value>
-		/* <example>Embauche</example>*/
+        /* <example>Embauche</example>*/
         [DataMember(Name = "sEzsignfoldertypeName1", EmitDefaultValue = false)]
         public string SEzsignfoldertypeName1 { get; set; }
 
@@ -55,7 +55,7 @@ namespace eZmaxApi.Model
         /// The name of the Ezsignfoldertype in English
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in English</value>
-		/* <example>Recruitment</example>*/
+        /* <example>Recruitment</example>*/
         [DataMember(Name = "sEzsignfoldertypeName2", EmitDefaultValue = false)]
         public string SEzsignfoldertypeName2 { get; set; }
 

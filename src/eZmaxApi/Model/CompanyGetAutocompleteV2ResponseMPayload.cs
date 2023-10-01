@@ -35,9 +35,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CompanyGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjCompany">An array of Company autocomplete element response..</param>
+        [JsonConstructorAttribute]
+        protected CompanyGetAutocompleteV2ResponseMPayload() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CompanyGetAutocompleteV2ResponseMPayload" /> class.
+        /// </summary>
+        /// <param name="aObjCompany">An array of Company autocomplete element response. (required).</param>
         public CompanyGetAutocompleteV2ResponseMPayload(List<CompanyAutocompleteElementResponse> aObjCompany = default(List<CompanyAutocompleteElementResponse>))
         {
+            // to ensure "aObjCompany" is required (not null)
+            if (aObjCompany == null)
+            {
+                throw new ArgumentNullException("aObjCompany is a required property for CompanyGetAutocompleteV2ResponseMPayload and cannot be null");
+            }
             this.AObjCompany = aObjCompany;
         }
 
@@ -45,7 +55,7 @@ namespace eZmaxApi.Model
         /// An array of Company autocomplete element response.
         /// </summary>
         /// <value>An array of Company autocomplete element response.</value>
-        [DataMember(Name = "a_objCompany", EmitDefaultValue = false)]
+        [DataMember(Name = "a_objCompany", IsRequired = true, EmitDefaultValue = true)]
         public List<CompanyAutocompleteElementResponse> AObjCompany { get; set; }
 
         /// <summary>

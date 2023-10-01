@@ -69,7 +69,7 @@ namespace eZmaxApi.Model
         /// <param name="sWebhookEmailfailed">The email that will receive the Webhook in case all attempts fail (required).</param>
         /// <param name="bWebhookIsactive">Whether the Webhook is active or not.</param>
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
-        /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event (required).</param>
+        /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
         public WebhookResponseCompound(int pkiWebhookID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), bool bWebhookIsactive = default(bool), bool bWebhookSkipsslvalidation = default(bool), string sWebhookEvent = default(string))
         {
             this.PkiWebhookID = pkiWebhookID;
@@ -93,24 +93,19 @@ namespace eZmaxApi.Model
             }
             this.SWebhookEmailfailed = sWebhookEmailfailed;
             this.BWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
-            // to ensure "sWebhookEvent" is required (not null)
-            if (sWebhookEvent == null)
-            {
-                throw new ArgumentNullException("sWebhookEvent is a required property for WebhookResponseCompound and cannot be null");
-            }
-            this.SWebhookEvent = sWebhookEvent;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             this.EWebhookEzsignevent = eWebhookEzsignevent;
             this.EWebhookManagementevent = eWebhookManagementevent;
             this.BWebhookIsactive = bWebhookIsactive;
+            this.SWebhookEvent = sWebhookEvent;
         }
 
         /// <summary>
         /// The unique ID of the Webhook
         /// </summary>
         /// <value>The unique ID of the Webhook</value>
-		/* <example>77</example>*/
+        /* <example>77</example>*/
         [DataMember(Name = "pkiWebhookID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiWebhookID { get; set; }
 
@@ -118,7 +113,7 @@ namespace eZmaxApi.Model
         /// The description of the Webhook
         /// </summary>
         /// <value>The description of the Webhook</value>
-		/* <example>Import into our system</example>*/
+        /* <example>Import into our system</example>*/
         [DataMember(Name = "sWebhookDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SWebhookDescription { get; set; }
 
@@ -126,7 +121,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignfoldertype.
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
-		/* <example>5</example>*/
+        /* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", EmitDefaultValue = false)]
         public int FkiEzsignfoldertypeID { get; set; }
 
@@ -134,7 +129,7 @@ namespace eZmaxApi.Model
         /// The name of the Ezsignfoldertype in the language of the requester
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
-		/* <example>Default</example>*/
+        /* <example>Default</example>*/
         [DataMember(Name = "sEzsignfoldertypeNameX", EmitDefaultValue = false)]
         public string SEzsignfoldertypeNameX { get; set; }
 
@@ -142,7 +137,7 @@ namespace eZmaxApi.Model
         /// The URL of the Webhook callback
         /// </summary>
         /// <value>The URL of the Webhook callback</value>
-		/* <example>https://www.example.com</example>*/
+        /* <example>https://www.example.com</example>*/
         [DataMember(Name = "sWebhookUrl", IsRequired = true, EmitDefaultValue = true)]
         public string SWebhookUrl { get; set; }
 
@@ -150,7 +145,7 @@ namespace eZmaxApi.Model
         /// The email that will receive the Webhook in case all attempts fail
         /// </summary>
         /// <value>The email that will receive the Webhook in case all attempts fail</value>
-		/* <example>email@example.com</example>*/
+        /* <example>email@example.com</example>*/
         [DataMember(Name = "sWebhookEmailfailed", IsRequired = true, EmitDefaultValue = true)]
         public string SWebhookEmailfailed { get; set; }
 
@@ -158,7 +153,7 @@ namespace eZmaxApi.Model
         /// Whether the Webhook is active or not
         /// </summary>
         /// <value>Whether the Webhook is active or not</value>
-		/* <example>true</example>*/
+        /* <example>true</example>*/
         [DataMember(Name = "bWebhookIsactive", EmitDefaultValue = true)]
         public bool BWebhookIsactive { get; set; }
 
@@ -166,7 +161,7 @@ namespace eZmaxApi.Model
         /// Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use
         /// </summary>
         /// <value>Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use</value>
-		/* <example>false</example>*/
+        /* <example>false</example>*/
         [DataMember(Name = "bWebhookSkipsslvalidation", IsRequired = true, EmitDefaultValue = true)]
         public bool BWebhookSkipsslvalidation { get; set; }
 
@@ -174,8 +169,8 @@ namespace eZmaxApi.Model
         /// The concatenated string to describe the Webhook event
         /// </summary>
         /// <value>The concatenated string to describe the Webhook event</value>
-		/* <example>Ezsign-DocumentCompleted</example>*/
-        [DataMember(Name = "sWebhookEvent", IsRequired = true, EmitDefaultValue = true)]
+        /* <example>Ezsign-DocumentCompleted</example>*/
+        [DataMember(Name = "sWebhookEvent", EmitDefaultValue = false)]
         public string SWebhookEvent { get; set; }
 
         /// <summary>

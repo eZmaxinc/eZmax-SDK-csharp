@@ -92,7 +92,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Versionhistory
         /// </summary>
         /// <value>The unique ID of the Versionhistory</value>
-		/* <example>42</example>*/
+        /* <example>42</example>*/
         [DataMember(Name = "pkiVersionhistoryID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiVersionhistoryID { get; set; }
 
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Module
         /// </summary>
         /// <value>The unique ID of the Module</value>
-		/* <example>40</example>*/
+        /* <example>40</example>*/
         [DataMember(Name = "fkiModuleID", EmitDefaultValue = false)]
         public int FkiModuleID { get; set; }
 
@@ -108,7 +108,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Modulesection
         /// </summary>
         /// <value>The unique ID of the Modulesection</value>
-		/* <example>53</example>*/
+        /* <example>53</example>*/
         [DataMember(Name = "fkiModulesectionID", EmitDefaultValue = false)]
         public int FkiModulesectionID { get; set; }
 
@@ -116,7 +116,7 @@ namespace eZmaxApi.Model
         /// The Name of the Module in the language of the requester
         /// </summary>
         /// <value>The Name of the Module in the language of the requester</value>
-		/* <example>Purchase</example>*/
+        /* <example>Purchase</example>*/
         [DataMember(Name = "sModuleNameX", EmitDefaultValue = false)]
         public string SModuleNameX { get; set; }
 
@@ -124,7 +124,7 @@ namespace eZmaxApi.Model
         /// The Name of the Modulesection in the language of the requester
         /// </summary>
         /// <value>The Name of the Modulesection in the language of the requester</value>
-		/* <example>Access</example>*/
+        /* <example>Access</example>*/
         [DataMember(Name = "sModulesectionNameX", EmitDefaultValue = false)]
         public string SModulesectionNameX { get; set; }
 
@@ -138,7 +138,7 @@ namespace eZmaxApi.Model
         /// The date  at which the Versionhistory was published or should be published
         /// </summary>
         /// <value>The date  at which the Versionhistory was published or should be published</value>
-		/* <example>2020-12-31</example>*/
+        /* <example>2020-12-31</example>*/
         [DataMember(Name = "dtVersionhistoryDate", IsRequired = true, EmitDefaultValue = true)]
         public string DtVersionhistoryDate { get; set; }
 
@@ -146,7 +146,7 @@ namespace eZmaxApi.Model
         /// The date  at which the Versionhistory will no longer be visible
         /// </summary>
         /// <value>The date  at which the Versionhistory will no longer be visible</value>
-		/* <example>2020-12-31</example>*/
+        /* <example>2020-12-31</example>*/
         [DataMember(Name = "dtVersionhistoryDateend", EmitDefaultValue = false)]
         public string DtVersionhistoryDateend { get; set; }
 

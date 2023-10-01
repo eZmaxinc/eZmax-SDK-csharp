@@ -43,8 +43,7 @@ namespace eZmaxApi.Api
 
                 if (param.Type == ParameterType.UrlSegment) {
                         
-                        sURL = sURL.Replace("{" + param.Name + "}",
-                                    urlEncode(param.Value.ToString() ) );
+                        sURL = sURL.Replace("{" + param.Name + "}", urlEncode(param.Value.ToString()));
                 }
             }
 	             

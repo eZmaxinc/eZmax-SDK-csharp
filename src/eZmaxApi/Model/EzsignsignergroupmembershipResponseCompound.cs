@@ -58,7 +58,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignsignergroupmembership
         /// </summary>
         /// <value>The unique ID of the Ezsignsignergroupmembership</value>
-		/* <example>153</example>*/
+        /* <example>153</example>*/
         [DataMember(Name = "pkiEzsignsignergroupmembershipID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignsignergroupmembershipID { get; set; }
 
@@ -66,7 +66,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignsignergroup
         /// </summary>
         /// <value>The unique ID of the Ezsignsignergroup</value>
-		/* <example>27</example>*/
+        /* <example>27</example>*/
         [DataMember(Name = "fkiEzsignsignergroupID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignsignergroupID { get; set; }
 
@@ -74,7 +74,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Ezsignsigner
         /// </summary>
         /// <value>The unique ID of the Ezsignsigner</value>
-		/* <example>89</example>*/
+        /* <example>89</example>*/
         [DataMember(Name = "fkiEzsignsignerID", EmitDefaultValue = false)]
         public int FkiEzsignsignerID { get; set; }
 
@@ -82,7 +82,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
-		/* <example>70</example>*/
+        /* <example>70</example>*/
         [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
 
@@ -90,7 +90,7 @@ namespace eZmaxApi.Model
         /// The unique ID of the Usergroup
         /// </summary>
         /// <value>The unique ID of the Usergroup</value>
-		/* <example>2</example>*/
+        /* <example>2</example>*/
         [DataMember(Name = "fkiUsergroupID", EmitDefaultValue = false)]
         public int FkiUsergroupID { get; set; }
 
