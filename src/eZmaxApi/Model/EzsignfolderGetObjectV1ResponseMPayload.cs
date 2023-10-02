@@ -162,7 +162,7 @@ namespace eZmaxApi.Model
         /// The description of the Ezsigntsarequirement in the language of the requester
         /// </summary>
         /// <value>The description of the Ezsigntsarequirement in the language of the requester</value>
-        /* <example>Default</example>*/
+        /* <example>No</example>*/
         [DataMember(Name = "sEzsigntsarequirementDescriptionX", EmitDefaultValue = false)]
         public string SEzsigntsarequirementDescriptionX { get; set; }
 
