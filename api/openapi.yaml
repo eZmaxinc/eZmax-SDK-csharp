@@ -4142,7 +4142,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
   /1/object/ezsigndocument:
     description: ""
@@ -4414,7 +4414,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate:
     post:
@@ -4894,7 +4894,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra:
       - EzsignSigner
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations:
@@ -5785,7 +5785,7 @@ paths:
       - Ezsign
       x-permissions:
       - ElectronicSignature_DisposalofeZsignfolders
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements:
     get:
@@ -6288,7 +6288,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
   /2/object/ezsignfolder/{pkiEzsignfolderID}/send:
     post:
@@ -6632,7 +6632,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
   /1/object/ezsignfoldersignerassociation:
     description: ""
@@ -7173,7 +7173,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
   /1/object/ezsignfoldertype/getAutocomplete/{sSelector}:
     description: ""
@@ -10401,7 +10401,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
   /2/object/font/getAutocomplete/{sSelector}:
     description: ""
@@ -12702,7 +12702,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
   /1/object/user/getList:
     description: ""
