@@ -1286,6 +1286,7 @@ paths:
       x-permissions:
       - All
       x-powerautomate: true
+      x-ms-visibility: advanced
       x-usertypeextra:
       - EzsignSigner
   /1/object/activesession/getList:
@@ -7174,6 +7175,7 @@ paths:
       x-permissions:
       - All
       x-powerautomate: true
+      x-ms-visibility: advanced
       x-usertypeextra: []
   /1/object/ezsignfoldertype/getAutocomplete/{sSelector}:
     description: ""
@@ -8517,6 +8519,7 @@ paths:
       x-permissions:
       - All
       x-powerautomate: true
+      x-ms-visibility: advanced
       x-usertypeextra: []
   /1/object/ezsigntemplate/getList:
     description: ""
@@ -10402,6 +10405,7 @@ paths:
       x-permissions:
       - All
       x-powerautomate: true
+      x-ms-visibility: advanced
       x-usertypeextra: []
   /2/object/font/getAutocomplete/{sSelector}:
     description: ""
@@ -12178,6 +12182,7 @@ paths:
       x-permissions:
       - All
       x-powerautomate: true
+      x-ms-visibility: advanced
       x-usertypeextra: []
   /2/object/timezone/getAutocomplete/{sSelector}:
     description: ""
@@ -12703,6 +12708,7 @@ paths:
       x-permissions:
       - All
       x-powerautomate: true
+      x-ms-visibility: advanced
       x-usertypeextra: []
   /1/object/user/getList:
     description: ""
