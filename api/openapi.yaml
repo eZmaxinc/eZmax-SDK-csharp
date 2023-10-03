@@ -26196,7 +26196,6 @@ components:
       - eEzsignfolderSendreminderfrequency
       - fkiEzsignfoldertypeID
       - sEzsignfolderDescription
-      - tEzsignfolderNote
       type: object
     ezsignfolder-RequestCompound:
       allOf:
@@ -26888,7 +26887,6 @@ components:
           type: array
       required:
       - a_fkiEzsignfoldersignerassociationID
-      - tEzsignfolderMessage
       type: object
     ezsignfolder-send-v3-Response:
       allOf:

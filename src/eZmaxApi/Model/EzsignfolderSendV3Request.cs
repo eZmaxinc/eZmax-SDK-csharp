@@ -40,23 +40,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderSendV3Request" /> class.
         /// </summary>
-        /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent. (required).</param>
+        /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent..</param>
         /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
         /// <param name="aFkiEzsignfoldersignerassociationID">aFkiEzsignfoldersignerassociationID (required).</param>
         public EzsignfolderSendV3Request(string tEzsignfolderMessage = default(string), string dtEzsignfolderDelayedsenddate = default(string), List<int> aFkiEzsignfoldersignerassociationID = default(List<int>))
         {
-            // to ensure "tEzsignfolderMessage" is required (not null)
-            if (tEzsignfolderMessage == null)
-            {
-                throw new ArgumentNullException("tEzsignfolderMessage is a required property for EzsignfolderSendV3Request and cannot be null");
-            }
-            this.TEzsignfolderMessage = tEzsignfolderMessage;
             // to ensure "aFkiEzsignfoldersignerassociationID" is required (not null)
             if (aFkiEzsignfoldersignerassociationID == null)
             {
                 throw new ArgumentNullException("aFkiEzsignfoldersignerassociationID is a required property for EzsignfolderSendV3Request and cannot be null");
             }
             this.AFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
+            this.TEzsignfolderMessage = tEzsignfolderMessage;
             this.DtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
         }
 
@@ -73,7 +68,7 @@ Could you sign it before Monday please.
 Best Regards.
 
 Mary</example>*/
-        [DataMember(Name = "tEzsignfolderMessage", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "tEzsignfolderMessage", EmitDefaultValue = false)]
         public string TEzsignfolderMessage { get; set; }
 
         /// <summary>
