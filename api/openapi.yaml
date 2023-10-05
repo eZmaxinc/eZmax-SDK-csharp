@@ -88,25 +88,34 @@ tags:
     \n- POST /1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations\r\n- POST\
     \ /1/object/usergroupdelegation\r\n- PUT /1/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\
     \n- Added avanced search filters sContactFirstname, sContactLastname and sEzsigndocumentName\
-    \ to Ezsignfolder list\r\n- Added property bVersionDeprecated in Common-Response-objDebugPayload\r\
-    \n- Added property eEzsigndocumentSteptype in ezsigndocument-ResponseCompound\r\
-    \n- Added property iEzsigntemplatesignatureWidth and iEzsigntemplatesignatureHeight\
-    \ in object ezsigntemplatesignature-Request and ezsigntemplatesignature-Response\r\
-    \n- Added property eEzsignformfieldgroupTextvalidation in ezsignformfieldgroup-Response\r\
-    \n- Added property eEzsigntemplateformfieldgroupTextvalidation in ezsigntemplateformfieldgroup-Request\
-    \ and ezsigntemplateformfieldgroup-Response\r\n- Added property iEzsignsignatureMaxlength\
-    \ in ezsignsignature-Request and ezsignsignature-Response\r\n- Added properties\
-    \ iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp and eEzsigntemplatesignatureTextvalidation\
-    \ in ezsigntemplatesignature-Request and ezsigntemplatesignature-Response\r\n\
-    - Added property objContactNameDelegation in ezsignsignature-Response\r\n- Added\
-    \ property objEzsignfoldertype in ezsignfolder-Response\r\n- Added property bEzsignformfieldAutocomplete\
-    \ in ezsignformfield-Request and ezsignformfield-Responce\r\n- Added property\
-    \ bEzsigntemplateformfieldAutocomplete in ezsigntemplateformfield-Request and\
-    \ ezsigntemplateformfield-Responce\r\n- Added properties bEzsignfoldertypeDelegate\
-    \ and bEzsignfoldertypeReassign in Custom-Ezsignfoldertype-Response, ezsignfoldertype-Request\
-    \ and ezsignfoldertype-Response\r\n- Added value AgentBrokerEzsignUserNormal for\
-    \ sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\n- Added value\
-    \ AllButEveryone for sSelector in GET /2/object/usergroup/getAutocomplete/{sSelector}\r\
+    \ to Ezsignfolder list\r\n- Added property a_objEzsignelementdependency in ezsignformfield-RequestCompound,\
+    \ ezsignformfield-ResponseCompound, ezsignsignature-RequestCompound and ezsignsignature-RequestCompound\r\
+    \n- Added property a_objEzsigntemplateelementdependency in ezsigntemplateformfield-RequestCompound,\
+    \ ezsigntemplateformfield-ResponseCompound, ezsigntemplatesignature-RequestCompound\
+    \ and ezsigntemplatesignature-RequestCompound\r\n- Added property bVersionDeprecated\
+    \ in Common-Response-objDebugPayload\r\n- Added property eEzsigndocumentSteptype\
+    \ in ezsigndocument-ResponseCompound\r\n- Added property iEzsigntemplatesignatureWidth\
+    \ and iEzsigntemplatesignatureHeight in object ezsigntemplatesignature-Request\
+    \ and ezsigntemplatesignature-Response\r\n- Added property eEzsignformfieldDependencyrequirement\
+    \ in object ezsignformfield-Request and ezsignformfield-Response\r\n- Added property\
+    \ eEzsignformfieldgroupTextvalidation in ezsignformfieldgroup-Response\r\n- Added\
+    \ property eEzsigntemplateformfieldDependencyrequirement in ezsigntemplateformfield-Request\
+    \ and ezsigntemplateformfield-Response \r\n- Added property eEzsigntemplatesignatureDependencyrequirement\
+    \ in ezsigntemplatesignature-Request and ezsigntemplatesignature-Response \r\n\
+    - Added property eEzsigntemplateformfieldgroupTextvalidation in ezsigntemplateformfieldgroup-Request\
+    \ and ezsigntemplateformfieldgroup-Response\r\n- Added properties iEzsignsignatureMaxlength,\
+    \ eEzsignsignatureDependencyrequirement in ezsignsignature-Request and ezsignsignature-Response\r\
+    \n- Added properties iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp\
+    \ and eEzsigntemplatesignatureTextvalidation in ezsigntemplatesignature-Request\
+    \ and ezsigntemplatesignature-Response\r\n- Added property objContactNameDelegation\
+    \ in ezsignsignature-Response\r\n- Added property objEzsignfoldertype in ezsignfolder-Response\r\
+    \n- Added property bEzsignformfieldAutocomplete in ezsignformfield-Request and\
+    \ ezsignformfield-Responce\r\n- Added property bEzsigntemplateformfieldAutocomplete\
+    \ in ezsigntemplateformfield-Request and ezsigntemplateformfield-Responce\r\n\
+    - Added properties bEzsignfoldertypeDelegate and bEzsignfoldertypeReassign in\
+    \ Custom-Ezsignfoldertype-Response, ezsignfoldertype-Request and ezsignfoldertype-Response\r\
+    \n- Added value AgentBrokerEzsignUserNormal for sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\
+    \n- Added value AllButEveryone for sSelector in GET /2/object/usergroup/getAutocomplete/{sSelector}\r\
     \n- New 401 error code UNAUTHORIZED_REQUEST_APIKEY\r\n- New 401 error code UNAUTHORIZED_REQUEST_PRESIGNED\
     \ \r\n\r\n## Older Releases\r\nDocumentation and changelog for older releases\
     \ can be found here\r\n- [1.1.x Releases Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.1.html)\r\
@@ -1015,10 +1024,7 @@ paths:
       summary: Get customer endpoint
       tags:
       - Global_Customer
-      x-superadmin: false
-      x-presentations: []
       x-permissions: []
-      x-powerautomate: false
       x-usertypeextra: []
   /1/ezmaxclient/{pksEzmaxclientOs}/version:
     description: ""
@@ -1053,10 +1059,7 @@ paths:
       summary: Retrieve the latest version of the Ezmaxclient
       tags:
       - Global_Ezmaxclient
-      x-superadmin: false
-      x-presentations: []
       x-permissions: []
-      x-powerautomate: false
       x-usertypeextra: []
   /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration:
     description: ""
@@ -1093,10 +1096,7 @@ paths:
       summary: Get ezmaxcustomer configuration
       tags:
       - Global_Ezmaxcustomer
-      x-superadmin: false
-      x-presentations: []
       x-permissions: []
-      x-powerautomate: false
       x-usertypeextra: []
   /1/module/ezsign/suggestSigners:
     get:
@@ -1114,11 +1114,8 @@ paths:
       summary: Suggest signers
       tags:
       - Module_Ezsign
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/module/ezsign/suggestTemplates:
     get:
@@ -1145,11 +1142,8 @@ paths:
       summary: Suggest templates
       tags:
       - Module_Ezsign
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/module/report/getReportFromCache/{sReportgroupCacheID}:
     get:
@@ -1196,11 +1190,8 @@ paths:
       summary: Retrieve report from cache
       tags:
       - Module_Report
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/module/user/createezsignuser:
     description: ""
@@ -1230,12 +1221,8 @@ paths:
       summary: Create a new User of type Ezsignuser
       tags:
       - Module_User
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - ElectronicSignatureConfiguration_CreateeZsignuser
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/activesession/getCurrent:
     description: ""
@@ -1280,12 +1267,8 @@ paths:
       summary: Get Current Activesession
       tags:
       - Object_Activesession
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: true
       x-ms-visibility: advanced
       x-usertypeextra:
       - EzsignSigner
@@ -1378,10 +1361,7 @@ paths:
       summary: Retrieve Activesession list
       tags:
       - Object_Activesession
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
@@ -1408,12 +1388,8 @@ paths:
       summary: Create a new Apikey
       tags:
       - Object_Apikey
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Management_APIKeyGeneration
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/apikey/{pkiApikeyID}:
     description: ""
@@ -1450,10 +1426,7 @@ paths:
       - Object_Apikey
       x-permissions:
       - Management_APIKeyGeneration
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/apikey/{pkiApikeyID}:
     description: ""
     put:
@@ -1502,10 +1475,7 @@ paths:
       - Object_Apikey
       x-permissions:
       - Management_APIKeyGeneration
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/apikey/{pkiApikeyID}/editPermissions:
     put:
       description: "Using this endpoint, you can edit multiple Permissions at the\
@@ -1554,10 +1524,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/apikey/{pkiApikeyID}/getCors:
     description: ""
     get:
@@ -1592,10 +1559,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/apikey/{pkiApikeyID}/getPermissions:
     description: ""
     get:
@@ -1630,10 +1594,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/apikey/{pkiApikeyID}/getSubnets:
     description: ""
     get:
@@ -1668,10 +1629,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/apikey/{pkiApikeyID}/regenerate:
     post:
       description: ""
@@ -1709,11 +1667,8 @@ paths:
       summary: Regenerate the Apikey
       tags:
       - Object_Apikey
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_APIKeyGeneration
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/apikey/getList:
     description: ""
@@ -1797,12 +1752,8 @@ paths:
       summary: Retrieve Apikey list
       tags:
       - Object_Apikey
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Management_APIKeyGeneration
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/billingentityexternal/getAutocomplete/{sSelector}:
     description: ""
@@ -1863,10 +1814,7 @@ paths:
       - Object_Billingentityexternal
       x-permissions:
       - EzmaxInvoicing_Access
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/billingentityinternal:
     description: ""
     post:
@@ -1892,10 +1840,7 @@ paths:
       - Object_Billingentityinternal
       x-permissions:
       - Management_Billingentities
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/billingentityinternal/{pkiBillingentityinternalID}:
     description: ""
     get:
@@ -1930,10 +1875,7 @@ paths:
       - Object_Billingentityinternal
       x-permissions:
       - Management_Billingentities
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/billingentityinternal/{pkiBillingentityinternalID}:
     description: ""
     put:
@@ -1981,10 +1923,7 @@ paths:
       - Object_Billingentityinternal
       x-permissions:
       - Management_Billingentities
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/billingentityinternal/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -2042,12 +1981,9 @@ paths:
       summary: Retrieve Billingentityinternals and IDs
       tags:
       - Object_Billingentityinternal
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - EzmaxInvoicing_Access
       - ElectronicSignature_CreationModificationFolderTypes
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/billingentityinternal/getList:
     description: ""
@@ -2121,10 +2057,7 @@ paths:
       - Object_Billingentityinternal
       x-permissions:
       - Management_Billingentities
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/branding:
     description: ""
     post:
@@ -2148,12 +2081,8 @@ paths:
       summary: Create a new Branding
       tags:
       - Object_Branding
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Branding_CreationModification
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/branding/{pkiBrandingID}:
     description: ""
@@ -2187,12 +2116,8 @@ paths:
       summary: Retrieve an existing Branding
       tags:
       - Object_Branding
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Branding_CreationModification
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/branding/{pkiBrandingID}:
     description: ""
@@ -2232,12 +2157,8 @@ paths:
       summary: Edit an existing Branding
       tags:
       - Object_Branding
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Branding_CreationModification
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/branding/getAutocomplete/{sSelector}:
     description: ""
@@ -2296,12 +2217,8 @@ paths:
       summary: Retrieve Brandings and IDs
       tags:
       - Object_Branding
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/branding/getList:
     description: ""
@@ -2392,12 +2309,8 @@ paths:
       summary: Retrieve Branding list
       tags:
       - Object_Branding
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Branding_CreationModification
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/clonehistory/getList:
     description: ""
@@ -2489,12 +2402,9 @@ paths:
       - Object_Clonehistory
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - Assistant
-      x-superadmin: false
-      x-presentations: []
   /2/object/communication/{pkiCommunicationID}:
     description: ""
     get:
@@ -2527,11 +2437,8 @@ paths:
       summary: Retrieve an existing Communication
       tags:
       - Object_Communication
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/company/getAutocomplete/{sSelector}:
     description: ""
@@ -2592,10 +2499,7 @@ paths:
       - Object_Company
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/cors:
     description: ""
     post:
@@ -2622,10 +2526,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/cors/{pkiCorsID}:
     description: ""
     get:
@@ -2662,10 +2563,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/cors/{pkiCorsID}:
     delete:
       description: ""
@@ -2701,10 +2599,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
     description: ""
     put:
       description: ""
@@ -2753,10 +2648,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/department/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -2817,11 +2709,8 @@ paths:
       summary: Retrieve Departments and IDs
       tags:
       - Object_Department
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/emailtype/getAutocomplete/{sSelector}:
     description: ""
@@ -2882,11 +2771,8 @@ paths:
       - Object_Emailtype
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
-      x-superadmin: false
-      x-presentations: []
   /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}:
     get:
       description: ""
@@ -2918,11 +2804,8 @@ paths:
       summary: Retrieve an existing Ezmaxinvoicing
       tags:
       - Object_Ezmaxinvoicing
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - EzmaxInvoicing_Access
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}:
     description: ""
@@ -2981,11 +2864,8 @@ paths:
       summary: Retrieve Ezmaxinvoicings and IDs
       tags:
       - Object_Ezmaxinvoicing
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_Billingentities
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}:
     description: ""
@@ -3045,11 +2925,8 @@ paths:
       summary: Retrieve Ezmaxinvoicings and IDs
       tags:
       - Object_Ezmaxinvoicing
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_Billingentities
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezmaxinvoicing/getProvisional:
     description: ""
@@ -3075,12 +2952,9 @@ paths:
       summary: Retrieve provisional Ezmaxinvoicing
       tags:
       - Object_Ezmaxinvoicing
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - EzmaxInvoicing_Access
       - Management_Billingentities
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezmaxproduct/getAutocomplete/{sSelector}:
     description: ""
@@ -3144,10 +3018,7 @@ paths:
       x-permissions:
       - EzmaxInvoicing_Access
       - Management_Billingentities
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/ezsignbulksend:
     description: ""
     post:
@@ -3171,12 +3042,8 @@ paths:
       summary: Create a new Ezsignbulksend
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignbulksend/{pkiEzsignbulksendID}:
     get:
@@ -3209,12 +3076,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksend
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}:
     delete:
@@ -3254,12 +3117,8 @@ paths:
       summary: Delete an existing Ezsignbulksend
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     put:
@@ -3305,12 +3164,8 @@ paths:
       summary: Edit an existing Ezsignbulksend
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission:
     post:
@@ -3355,11 +3210,8 @@ paths:
       summary: Create a new Ezsignbulksendtransmission in the Ezsignbulksend
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate:
     get:
@@ -3418,11 +3270,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksend's empty Csv template
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions:
     get:
@@ -3455,12 +3304,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksend's Ezsignbulksendtransmissions
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic:
     get:
@@ -3494,11 +3339,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksend's automatic Ezsignsignatures
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData:
     get:
@@ -3549,12 +3391,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksend's forms data
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder:
     post:
@@ -3599,11 +3437,8 @@ paths:
       summary: Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksend/getList:
     description: ""
@@ -3700,12 +3535,8 @@ paths:
       summary: Retrieve Ezsignbulksend list
       tags:
       - Object_Ezsignbulksend
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksenddocumentmapping:
     description: ""
@@ -3737,11 +3568,8 @@ paths:
       summary: Create a new Ezsignbulksenddocumentmapping
       tags:
       - Object_Ezsignbulksenddocumentmapping
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}:
     get:
@@ -3774,11 +3602,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksenddocumentmapping
       tags:
       - Object_Ezsignbulksenddocumentmapping
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}:
     delete:
@@ -3811,11 +3636,8 @@ paths:
       summary: Delete an existing Ezsignbulksenddocumentmapping
       tags:
       - Object_Ezsignbulksenddocumentmapping
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
   /1/object/ezsignbulksendsignermapping:
@@ -3841,11 +3663,8 @@ paths:
       summary: Create a new Ezsignbulksendsignermapping
       tags:
       - Object_Ezsignbulksendsignermapping
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}:
     get:
@@ -3878,11 +3697,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksendsignermapping
       tags:
       - Object_Ezsignbulksendsignermapping
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}:
     delete:
@@ -3915,11 +3731,8 @@ paths:
       summary: Delete an existing Ezsignbulksendsignermapping
       tags:
       - Object_Ezsignbulksendsignermapping
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
   /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}:
@@ -3953,12 +3766,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksendtransmission
       tags:
       - Object_Ezsignbulksendtransmission
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors:
     get:
@@ -4006,11 +3815,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksendtransmission's Csv containing errors
       tags:
       - Object_Ezsignbulksendtransmission
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic:
     get:
@@ -4044,11 +3850,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksendtransmission's automatic Ezsignsignatures
       tags:
       - Object_Ezsignbulksendtransmission
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData:
     get:
@@ -4099,12 +3902,8 @@ paths:
       summary: Retrieve an existing Ezsignbulksendtransmission's forms data
       tags:
       - Object_Ezsignbulksendtransmission
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigndocument:
     description: ""
@@ -4138,12 +3937,8 @@ paths:
       summary: Create a new Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: true
       x-usertypeextra: []
   /1/object/ezsigndocument:
     description: ""
@@ -4185,11 +3980,8 @@ paths:
       summary: Create a new Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigndocument/{pkiEzsigndocumentID}:
     get:
@@ -4222,12 +4014,8 @@ paths:
       summary: Retrieve an existing Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
   /1/object/ezsigndocument/{pkiEzsigndocumentID}:
@@ -4268,12 +4056,8 @@ paths:
       summary: Delete an existing Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     get:
@@ -4306,11 +4090,8 @@ paths:
       summary: Retrieve an existing Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     patch:
       description: ""
@@ -4355,12 +4136,8 @@ paths:
       summary: Patch an existing Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate:
     post:
@@ -4410,12 +4187,8 @@ paths:
       summary: Apply an Ezsigntemplate to the Ezsigndocument.
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: true
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate:
     post:
@@ -4468,11 +4241,8 @@ paths:
       summary: Apply an Ezsigntemplate to the Ezsigndocument.
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign:
     post:
@@ -4520,13 +4290,9 @@ paths:
       - Object_Ezsigndocument
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       - AgentBroker
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups:
     put:
       description: "Using this endpoint, you can edit multiple Ezsignformfieldgroups\
@@ -4572,11 +4338,8 @@ paths:
       summary: Edit multiple Ezsignformfieldgroups
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures:
     put:
@@ -4623,11 +4386,8 @@ paths:
       summary: Edit multiple Ezsignsignatures
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely:
     post:
@@ -4674,12 +4434,8 @@ paths:
       summary: End prematurely
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten:
     post:
@@ -4727,12 +4483,8 @@ paths:
       summary: Flatten
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements:
     get:
@@ -4773,11 +4525,8 @@ paths:
       summary: Retrieve actionable elements for the Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements:
@@ -4819,12 +4568,8 @@ paths:
       summary: Retrieve completed elements for the Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
@@ -4890,12 +4635,8 @@ paths:
       summary: Retrieve a URL to download documents.
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: true
       x-usertypeextra:
       - EzsignSigner
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations:
@@ -4936,11 +4677,8 @@ paths:
       summary: Retrieve an existing Ezsigndocument's Ezsignannotations
       tags:
       - Object_Ezsigndocument
-      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups:
@@ -4981,12 +4719,8 @@ paths:
       summary: Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages:
     get:
@@ -5026,11 +4760,8 @@ paths:
       summary: Retrieve an existing Ezsigndocument's Ezsignpages
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures:
@@ -5071,12 +4802,8 @@ paths:
       summary: Retrieve an existing Ezsigndocument's Ezsignsignatures
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic:
     get:
@@ -5110,11 +4837,8 @@ paths:
       summary: Retrieve an existing Ezsigndocument's automatic Ezsignsignatures
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData:
     get:
@@ -5176,12 +4900,8 @@ paths:
       summary: Retrieve an existing Ezsigndocument's Form Data
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof:
     get:
@@ -5222,12 +4942,8 @@ paths:
       summary: Retrieve the temporary proof
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions:
     post:
@@ -5273,12 +4989,8 @@ paths:
       summary: "Retrieve positions X,Y of given words from a Ezsigndocument"
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform:
     post:
@@ -5324,12 +5036,8 @@ paths:
       summary: Submit the Ezsignform
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       - AgentBroker
@@ -5384,12 +5092,8 @@ paths:
       summary: Unsend the Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignfolder:
     description: ""
@@ -5414,12 +5118,8 @@ paths:
       summary: Create a new Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: true
       x-usertypeextra: []
   /1/object/ezsignfolder:
     description: ""
@@ -5452,11 +5152,8 @@ paths:
       summary: Create a new Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignfolder/{pkiEzsignfolderID}:
     get:
@@ -5489,12 +5186,8 @@ paths:
       summary: Retrieve an existing Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
   /1/object/ezsignfolder/{pkiEzsignfolderID}:
@@ -5534,12 +5227,8 @@ paths:
       summary: Delete an existing Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     get:
@@ -5572,11 +5261,8 @@ paths:
       summary: Retrieve an existing Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     put:
       description: ""
@@ -5621,12 +5307,8 @@ paths:
       summary: Edit an existing Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/archive:
     post:
@@ -5672,12 +5354,8 @@ paths:
       summary: Archive the Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload:
     post:
@@ -5730,12 +5408,8 @@ paths:
       summary: Download multiples files from an Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose:
     post:
@@ -5781,12 +5455,8 @@ paths:
       summary: Dispose the Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - ElectronicSignature_DisposalofeZsignfolders
-      x-powerautomate: true
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements:
     get:
@@ -5827,11 +5497,8 @@ paths:
       summary: Retrieve actionable elements for the Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount:
     get:
@@ -5864,11 +5531,8 @@ paths:
       summary: Retrieve Communication count
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList:
     get:
@@ -5901,11 +5565,8 @@ paths:
       summary: Retrieve Communication list
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments:
     get:
@@ -5938,12 +5599,8 @@ paths:
       summary: Retrieve an existing Ezsignfolder's Ezsigndocuments
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations:
@@ -5977,12 +5634,8 @@ paths:
       summary: Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic:
     get:
@@ -6016,11 +5669,8 @@ paths:
       summary: Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData:
     get:
@@ -6071,12 +5721,8 @@ paths:
       summary: Retrieve an existing Ezsignfolder's forms data
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations:
     post:
@@ -6129,12 +5775,8 @@ paths:
       summary: Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage:
     post:
@@ -6183,12 +5825,8 @@ paths:
       summary: Import an Ezsigntemplatepackage in the Ezsignfolder.
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder:
     post:
@@ -6233,12 +5871,8 @@ paths:
       summary: Reorder Ezsigndocuments in the Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /3/object/ezsignfolder/{pkiEzsignfolderID}/send:
     post:
@@ -6284,12 +5918,8 @@ paths:
       summary: Send the Ezsignfolder to the signatories for signature
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: true
       x-usertypeextra: []
   /2/object/ezsignfolder/{pkiEzsignfolderID}/send:
     post:
@@ -6336,11 +5966,8 @@ paths:
       summary: Send the Ezsignfolder to the signatories for signature
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/send:
     post:
@@ -6387,11 +6014,8 @@ paths:
       summary: Send the Ezsignfolder to the signatories for signature
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend:
     post:
@@ -6444,12 +6068,8 @@ paths:
       summary: Unsend the Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/disposeEzsignfolders:
     description: ""
@@ -6488,11 +6108,8 @@ paths:
       summary: Dispose Ezsignfolders
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - ElectronicSignature_DisposalofeZsignfolders
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfolder/getList:
     description: ""
@@ -6598,12 +6215,8 @@ paths:
       summary: Retrieve Ezsignfolder list
       tags:
       - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignfoldersignerassociation:
     description: ""
@@ -6628,12 +6241,8 @@ paths:
       summary: Create a new Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: true
       x-usertypeextra: []
   /1/object/ezsignfoldersignerassociation:
     description: ""
@@ -6666,11 +6275,8 @@ paths:
       summary: Create a new Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
     get:
@@ -6703,12 +6309,8 @@ paths:
       summary: Retrieve an existing Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
     delete:
@@ -6748,12 +6350,8 @@ paths:
       summary: Delete an existing Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     get:
@@ -6787,11 +6385,8 @@ paths:
       summary: Retrieve an existing Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     patch:
       operationId: Ezsignfoldersignerassociation_PatchObject_V1
@@ -6835,12 +6430,8 @@ paths:
       summary: Patch an existing Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     put:
       description: ""
@@ -6885,12 +6476,8 @@ paths:
       summary: Edit an existing Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect:
     post:
@@ -6936,12 +6523,8 @@ paths:
       summary: Disconnects the Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl:
     get:
@@ -6984,12 +6567,8 @@ paths:
       summary: Retrieve a Login Url to allow In-Person signing
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfoldertype:
     description: ""
@@ -7014,12 +6593,8 @@ paths:
       summary: Create a new Ezsignfoldertype
       tags:
       - Object_Ezsignfoldertype
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - ElectronicSignature_CreationModificationFolderTypes
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}:
     get:
@@ -7052,12 +6627,8 @@ paths:
       summary: Retrieve an existing Ezsignfoldertype
       tags:
       - Object_Ezsignfoldertype
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}:
     description: ""
@@ -7104,12 +6675,8 @@ paths:
       summary: Edit an existing Ezsignfoldertype
       tags:
       - Object_Ezsignfoldertype
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - ElectronicSignature_CreationModificationFolderTypes
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignfoldertype/getAutocomplete/{sSelector}:
     description: ""
@@ -7169,12 +6736,8 @@ paths:
       summary: Retrieve Ezsignfoldertypes and IDs
       tags:
       - Object_Ezsignfoldertype
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: true
       x-ms-visibility: advanced
       x-usertypeextra: []
   /1/object/ezsignfoldertype/getAutocomplete/{sSelector}:
@@ -7236,11 +6799,8 @@ paths:
       summary: Retrieve Ezsignfoldertypes and IDs
       tags:
       - Object_Ezsignfoldertype
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignfoldertype/getList:
     description: ""
@@ -7321,12 +6881,8 @@ paths:
       summary: Retrieve Ezsignfoldertype list
       tags:
       - Object_Ezsignfoldertype
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - ElectronicSignature_CreationModificationFolderTypes
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignformfieldgroup:
     description: ""
@@ -7351,12 +6907,8 @@ paths:
       summary: Create a new Ezsignformfieldgroup
       tags:
       - Object_Ezsignformfieldgroup
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}:
     get:
@@ -7389,12 +6941,8 @@ paths:
       summary: Retrieve an existing Ezsignformfieldgroup
       tags:
       - Object_Ezsignformfieldgroup
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}:
     delete:
@@ -7434,12 +6982,8 @@ paths:
       summary: Delete an existing Ezsignformfieldgroup
       tags:
       - Object_Ezsignformfieldgroup
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     put:
@@ -7485,12 +7029,8 @@ paths:
       summary: Edit an existing Ezsignformfieldgroup
       tags:
       - Object_Ezsignformfieldgroup
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignpage/{pkiEzsignpageID}/consult:
     description: ""
@@ -7538,12 +7078,8 @@ paths:
       - Object_Ezsignpage
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /2/object/ezsignsignature:
     description: ""
     post:
@@ -7567,12 +7103,8 @@ paths:
       summary: Create a new Ezsignsignature
       tags:
       - Object_Ezsignsignature
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignsignature:
     description: ""
@@ -7605,11 +7137,8 @@ paths:
       summary: Create a new Ezsignsignature
       tags:
       - Object_Ezsignsignature
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsignsignature/{pkiEzsignsignatureID}:
     get:
@@ -7642,12 +7171,8 @@ paths:
       summary: Retrieve an existing Ezsignsignature
       tags:
       - Object_Ezsignsignature
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignsignature/{pkiEzsignsignatureID}:
     delete:
@@ -7687,12 +7212,8 @@ paths:
       summary: Delete an existing Ezsignsignature
       tags:
       - Object_Ezsignsignature
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     put:
@@ -7738,12 +7259,8 @@ paths:
       summary: Edit an existing Ezsignsignature
       tags:
       - Object_Ezsignsignature
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment:
     description: ""
@@ -7785,13 +7302,9 @@ paths:
       - Object_Ezsignsignature
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign:
     post:
       description: ""
@@ -7836,11 +7349,8 @@ paths:
       summary: Sign the Ezsignsignature
       tags:
       - Object_Ezsignsignature
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
   /1/object/ezsignsignature/getEzsignsignaturesAutomatic:
@@ -7860,11 +7370,8 @@ paths:
       summary: Retrieve all automatic Ezsignsignatures
       tags:
       - Object_Ezsignsignature
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignsignergroup:
     description: ""
@@ -7891,11 +7398,7 @@ paths:
       - Object_Ezsignsignergroup
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /2/object/ezsignsignergroup/{pkiEzsignsignergroupID}:
     description: ""
     get:
@@ -7931,11 +7434,7 @@ paths:
       - Object_Ezsignsignergroup
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}:
     delete:
       description: ""
@@ -7970,11 +7469,7 @@ paths:
       - Object_Ezsignsignergroup
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
     description: ""
     put:
       description: ""
@@ -8013,12 +7508,8 @@ paths:
       summary: Edit an existing Ezsignsignergroup
       tags:
       - Object_Ezsignsignergroup
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships:
     put:
@@ -8067,10 +7558,7 @@ paths:
       - Object_Ezsignsignergroup
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships:
     description: ""
     get:
@@ -8104,10 +7592,7 @@ paths:
       - Object_Ezsignsignergroup
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/ezsignsignergroupmembership:
     description: ""
     post:
@@ -8133,11 +7618,7 @@ paths:
       - Object_Ezsignsignergroupmembership
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}:
     description: ""
     get:
@@ -8173,11 +7654,7 @@ paths:
       - Object_Ezsignsignergroupmembership
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /1/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}:
     delete:
       description: ""
@@ -8212,11 +7689,7 @@ paths:
       - Object_Ezsignsignergroupmembership
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
     description: ""
   /1/object/ezsigntemplate:
     description: ""
@@ -8241,12 +7714,8 @@ paths:
       summary: Create a new Ezsigntemplate
       tags:
       - Object_Ezsigntemplate
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplate/{pkiEzsigntemplateID}:
     get:
@@ -8279,12 +7748,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplate
       tags:
       - Object_Ezsigntemplate
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplate/{pkiEzsigntemplateID}:
     delete:
@@ -8317,12 +7782,8 @@ paths:
       summary: Delete an existing Ezsigntemplate
       tags:
       - Object_Ezsigntemplate
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     get:
@@ -8356,11 +7817,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplate
       tags:
       - Object_Ezsigntemplate
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     put:
       description: ""
@@ -8405,12 +7863,8 @@ paths:
       summary: Edit an existing Ezsigntemplate
       tags:
       - Object_Ezsigntemplate
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy:
     post:
@@ -8449,12 +7903,8 @@ paths:
       summary: Copy the Ezsigntemplate
       tags:
       - Object_Ezsigntemplate
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplate/getAutocomplete/{sSelector}:
     description: ""
@@ -8513,12 +7963,8 @@ paths:
       summary: Retrieve Ezsigntemplates and IDs
       tags:
       - Object_Ezsigntemplate
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: true
       x-ms-visibility: advanced
       x-usertypeextra: []
   /1/object/ezsigntemplate/getList:
@@ -8614,12 +8060,8 @@ paths:
       summary: Retrieve Ezsigntemplate list
       tags:
       - Object_Ezsigntemplate
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatedocument:
     description: ""
@@ -8653,12 +8095,8 @@ paths:
       summary: Create a new Ezsigntemplatedocument
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}:
     get:
@@ -8691,12 +8129,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplatedocument
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}:
     description: ""
@@ -8736,12 +8170,8 @@ paths:
       summary: Patch an existing Ezsigntemplatedocument
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     put:
       description: ""
@@ -8788,12 +8218,8 @@ paths:
       summary: Edit an existing Ezsigntemplatedocument
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups:
     put:
@@ -8840,11 +8266,8 @@ paths:
       summary: Edit multiple Ezsigntemplateformfieldgroups
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures:
     put:
@@ -8891,11 +8314,8 @@ paths:
       summary: Edit multiple Ezsigntemplatesignatures
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten:
     post:
@@ -8943,12 +8363,8 @@ paths:
       summary: Flatten
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages:
     get:
@@ -8981,11 +8397,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpages
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups:
     get:
@@ -9025,12 +8438,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplatedocument's Ezsigntemplateformfieldgroups
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures:
     get:
@@ -9070,12 +8479,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatesignatures
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions:
     post:
@@ -9114,12 +8519,8 @@ paths:
       summary: "Retrieve positions X,Y of given words from a Ezsigntemplatedocument"
       tags:
       - Object_Ezsigntemplatedocument
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplateformfieldgroup:
     description: ""
@@ -9144,12 +8545,8 @@ paths:
       summary: Create a new Ezsigntemplateformfieldgroup
       tags:
       - Object_Ezsigntemplateformfieldgroup
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}:
     get:
@@ -9182,12 +8579,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplateformfieldgroup
       tags:
       - Object_Ezsigntemplateformfieldgroup
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}:
     delete:
@@ -9220,12 +8613,8 @@ paths:
       summary: Delete an existing Ezsigntemplateformfieldgroup
       tags:
       - Object_Ezsigntemplateformfieldgroup
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     put:
@@ -9271,12 +8660,8 @@ paths:
       summary: Edit an existing Ezsigntemplateformfieldgroup
       tags:
       - Object_Ezsigntemplateformfieldgroup
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatepackage:
     description: ""
@@ -9301,11 +8686,8 @@ paths:
       summary: Create a new Ezsigntemplatepackage
       tags:
       - Object_Ezsigntemplatepackage
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}:
     get:
@@ -9338,11 +8720,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplatepackage
       tags:
       - Object_Ezsigntemplatepackage
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}:
     delete:
@@ -9375,11 +8754,8 @@ paths:
       summary: Delete an existing Ezsigntemplatepackage
       tags:
       - Object_Ezsigntemplatepackage
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     put:
@@ -9425,11 +8801,8 @@ paths:
       summary: Edit an existing Ezsigntemplatepackage
       tags:
       - Object_Ezsigntemplatepackage
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners:
     put:
@@ -9476,11 +8849,8 @@ paths:
       summary: Edit multiple Ezsigntemplatepackagesigners
       tags:
       - Object_Ezsigntemplatepackage
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}:
     description: ""
@@ -9540,12 +8910,8 @@ paths:
       summary: Retrieve Ezsigntemplatepackages and IDs
       tags:
       - Object_Ezsigntemplatepackage
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatepackage/getList:
     description: ""
@@ -9638,12 +9004,8 @@ paths:
       summary: Retrieve Ezsigntemplatepackage list
       tags:
       - Object_Ezsigntemplatepackage
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatepackagemembership:
     description: ""
@@ -9675,11 +9037,8 @@ paths:
       summary: Create a new Ezsigntemplatepackagemembership
       tags:
       - Object_Ezsigntemplatepackagemembership
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}:
     get:
@@ -9712,11 +9071,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplatepackagemembership
       tags:
       - Object_Ezsigntemplatepackagemembership
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}:
     delete:
@@ -9749,11 +9105,8 @@ paths:
       summary: Delete an existing Ezsigntemplatepackagemembership
       tags:
       - Object_Ezsigntemplatepackagemembership
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
   /1/object/ezsigntemplatepackagesigner:
@@ -9779,11 +9132,8 @@ paths:
       summary: Create a new Ezsigntemplatepackagesigner
       tags:
       - Object_Ezsigntemplatepackagesigner
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}:
     get:
@@ -9816,11 +9166,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplatepackagesigner
       tags:
       - Object_Ezsigntemplatepackagesigner
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}:
     delete:
@@ -9853,11 +9200,8 @@ paths:
       summary: Delete an existing Ezsigntemplatepackagesigner
       tags:
       - Object_Ezsigntemplatepackagesigner
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     put:
@@ -9903,11 +9247,8 @@ paths:
       summary: Edit an existing Ezsigntemplatepackagesigner
       tags:
       - Object_Ezsigntemplatepackagesigner
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatepackagesignermembership:
     description: ""
@@ -9939,11 +9280,8 @@ paths:
       summary: Create a new Ezsigntemplatepackagesignermembership
       tags:
       - Object_Ezsigntemplatepackagesignermembership
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}:
     get:
@@ -9976,11 +9314,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplatepackagesignermembership
       tags:
       - Object_Ezsigntemplatepackagesignermembership
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}:
     delete:
@@ -10013,11 +9348,8 @@ paths:
       summary: Delete an existing Ezsigntemplatepackagesignermembership
       tags:
       - Object_Ezsigntemplatepackagesignermembership
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
   /1/object/ezsigntemplatesignature:
@@ -10043,12 +9375,8 @@ paths:
       summary: Create a new Ezsigntemplatesignature
       tags:
       - Object_Ezsigntemplatesignature
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}:
     get:
@@ -10081,12 +9409,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplatesignature
       tags:
       - Object_Ezsigntemplatesignature
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}:
     delete:
@@ -10119,12 +9443,8 @@ paths:
       summary: Delete an existing Ezsigntemplatesignature
       tags:
       - Object_Ezsigntemplatesignature
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     put:
@@ -10170,12 +9490,8 @@ paths:
       summary: Edit an existing Ezsigntemplatesignature
       tags:
       - Object_Ezsigntemplatesignature
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatesigner:
     description: ""
@@ -10200,12 +9516,8 @@ paths:
       summary: Create a new Ezsigntemplatesigner
       tags:
       - Object_Ezsigntemplatesigner
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}:
     description: ""
@@ -10239,12 +9551,8 @@ paths:
       summary: Retrieve an existing Ezsigntemplatesigner
       tags:
       - Object_Ezsigntemplatesigner
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}:
     delete:
@@ -10277,12 +9585,8 @@ paths:
       summary: Delete an existing Ezsigntemplatesigner
       tags:
       - Object_Ezsigntemplatesigner
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     put:
@@ -10328,12 +9632,8 @@ paths:
       summary: Edit an existing Ezsigntemplatesigner
       tags:
       - Object_Ezsigntemplatesigner
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/ezsigntsarequirement/getAutocomplete/{sSelector}:
     description: ""
@@ -10400,11 +9700,8 @@ paths:
       summary: Retrieve Ezsigntsarequirements and IDs
       tags:
       - Object_Ezsigntsarequirement
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: true
       x-ms-visibility: advanced
       x-usertypeextra: []
   /2/object/font/getAutocomplete/{sSelector}:
@@ -10463,11 +9760,8 @@ paths:
       summary: Retrieve Fonts and IDs
       tags:
       - Object_Font
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/franchisebroker/getAutocomplete/{sSelector}:
     description: ""
@@ -10526,12 +9820,8 @@ paths:
       summary: Retrieve Franchisebrokers and IDs
       tags:
       - Object_Franchisebroker
-      x-superadmin: false
-      x-presentations:
-      - RemaxQC
       x-permissions:
       - RemaxFranchise_ReferencedIncomeAccess
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/franchisebroker/getAutocomplete/{sSelector}:
     description: ""
@@ -10592,11 +9882,8 @@ paths:
       summary: Retrieve Franchisebrokers and IDs
       tags:
       - Object_Franchisebroker
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - RemaxFranchise_ReferencedIncomeAccess
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/franchiseoffice/getAutocomplete/{sSelector}:
     description: ""
@@ -10655,13 +9942,9 @@ paths:
       summary: Retrieve Franchiseoffices and IDs
       tags:
       - Object_Franchiseoffice
-      x-superadmin: false
-      x-presentations:
-      - RemaxQC
       x-permissions:
       - Invoicing_Reports
       - RemaxFranchise_ReferencedIncomeAccess
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/franchisereferalincome:
     description: ""
@@ -10686,12 +9969,8 @@ paths:
       summary: Create a new Franchisereferalincome
       tags:
       - Object_Franchisereferalincome
-      x-superadmin: false
-      x-presentations:
-      - RemaxQC
       x-permissions:
       - RemaxFranchise_ReferencedIncomeAccess
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/franchisereferalincome:
     description: ""
@@ -10724,11 +10003,8 @@ paths:
       summary: Create a new Franchisereferalincome
       tags:
       - Object_Franchisereferalincome
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - RemaxFranchise_ReferencedIncomeAccess
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/modulegroup/getAll/{eContext}:
     description: ""
@@ -10765,10 +10041,7 @@ paths:
       - Management_UsersEmployee
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests:
     get:
       description: ""
@@ -10808,11 +10081,8 @@ paths:
       summary: Retrieve an existing Notificationsection's Notificationtests
       tags:
       - Object_Notificationsection
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/notificationtest/{pkiNotificationtestID}/getElements:
     get:
@@ -10845,12 +10115,8 @@ paths:
       summary: Retrieve an existing Notificationtest's Elements
       tags:
       - Object_Notificationtest
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/paymentterm:
     description: ""
@@ -10882,11 +10148,8 @@ paths:
       summary: Create a new Paymentterm
       tags:
       - Object_Paymentterm
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_PaymentTerms
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/paymentterm/{pkiPaymenttermID}:
     description: ""
@@ -10920,11 +10183,8 @@ paths:
       summary: Retrieve an existing Paymentterm
       tags:
       - Object_Paymentterm
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_PaymentTerms
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/paymentterm/{pkiPaymenttermID}:
     description: ""
@@ -10971,11 +10231,8 @@ paths:
       summary: Edit an existing Paymentterm
       tags:
       - Object_Paymentterm
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_PaymentTerms
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/paymentterm/getAutocomplete/{sSelector}:
     description: ""
@@ -11034,12 +10291,9 @@ paths:
       summary: Retrieve Paymentterms and IDs
       tags:
       - Object_Paymentterm
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - RemaxFranchise_CreationModification
       - Purchases_CreationModification
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/paymentterm/getList:
     description: ""
@@ -11118,11 +10372,8 @@ paths:
       summary: Retrieve Paymentterm list
       tags:
       - Object_Paymentterm
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_PaymentTerms
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/period/getAutocomplete/{sSelector}:
     description: ""
@@ -11184,9 +10435,6 @@ paths:
       summary: Retrieve Periods and IDs
       tags:
       - Object_Period
-      x-superadmin: false
-      x-presentations:
-      - RemaxQC
       x-permissions:
       - Purchases_Access
       - Purchases_Reports
@@ -11198,7 +10446,6 @@ paths:
       - RealEstateReports_OfficeReports
       - Inscription_Inspections
       - RemaxFranchise_ReferencedIncomeAccess
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/period/getAutocomplete/{sSelector}:
     description: ""
@@ -11261,8 +10508,6 @@ paths:
       summary: Retrieve Periods and IDs
       tags:
       - Object_Period
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Purchases_Access
       - Purchases_Reports
@@ -11274,7 +10519,6 @@ paths:
       - RealEstateReports_OfficeReports
       - Inscription_Inspections
       - RemaxFranchise_ReferencedIncomeAccess
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/permission:
     description: ""
@@ -11309,10 +10553,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/permission/{pkiPermissionID}:
     description: ""
     get:
@@ -11349,10 +10590,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/permission/{pkiPermissionID}:
     delete:
       description: ""
@@ -11388,10 +10626,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
     description: ""
     put:
       description: ""
@@ -11440,10 +10675,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/phonetype/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -11503,11 +10735,8 @@ paths:
       - Object_Phonetype
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
-      x-superadmin: false
-      x-presentations: []
   /2/object/secretquestion/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -11565,11 +10794,8 @@ paths:
       summary: Retrieve Secretquestions and IDs
       tags:
       - Object_Secretquestion
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/sessionhistory/getList:
     description: ""
@@ -11656,10 +10882,7 @@ paths:
       summary: Retrieve Sessionhistory list
       tags:
       - Object_Sessionhistory
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_UsersAgentBroker
       - Management_UsersAssistant
@@ -11705,12 +10928,9 @@ paths:
       - Management_UsersNormal
       - Management_UsersAgentBroker
       - Management_UsersEzsignUser
-      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
-      x-superadmin: false
-      x-presentations: []
   /2/object/signature/{pkiSignatureID}:
     description: ""
     get:
@@ -11748,12 +10968,9 @@ paths:
       - Management_UsersNormal
       - Management_UsersAgentBroker
       - Management_UsersEzsignUser
-      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
-      x-superadmin: false
-      x-presentations: []
   /1/object/signature/{pkiSignatureID}:
     delete:
       description: ""
@@ -11790,12 +11007,9 @@ paths:
       - Management_UsersNormal
       - Management_UsersAgentBroker
       - Management_UsersEzsignUser
-      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
-      x-superadmin: false
-      x-presentations: []
     description: ""
     put:
       description: ""
@@ -11845,12 +11059,9 @@ paths:
       - Management_UsersNormal
       - Management_UsersAgentBroker
       - Management_UsersEzsignUser
-      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
-      x-superadmin: false
-      x-presentations: []
   /1/object/subnet:
     description: ""
     post:
@@ -11884,10 +11095,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/subnet/{pkiSubnetID}:
     description: ""
     get:
@@ -11924,10 +11132,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/subnet/{pkiSubnetID}:
     delete:
       description: ""
@@ -11970,10 +11175,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
     description: ""
     put:
       description: ""
@@ -12022,10 +11224,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/systemconfiguration/{pkiSystemconfigurationID}:
     description: ""
     get:
@@ -12061,12 +11260,9 @@ paths:
       - Object_Systemconfiguration
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - Assistant
-      x-superadmin: false
-      x-presentations: []
   /1/object/systemconfiguration/{pkiSystemconfigurationID}:
     description: ""
     put:
@@ -12115,10 +11311,7 @@ paths:
       - Object_Systemconfiguration
       x-permissions:
       - Management_SystemconfigurationEdit
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/taxassignment/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -12177,11 +11370,8 @@ paths:
       summary: Retrieve Taxassignments and IDs
       tags:
       - Object_Taxassignment
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: true
       x-ms-visibility: advanced
       x-usertypeextra: []
   /2/object/timezone/getAutocomplete/{sSelector}:
@@ -12242,11 +11432,8 @@ paths:
       summary: Retrieve Timezones and IDs
       tags:
       - Object_Timezone
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/user:
     description: ""
@@ -12277,10 +11464,7 @@ paths:
       - Management_UsersEmployee
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/user/{pkiUserID}:
     description: ""
     get:
@@ -12320,10 +11504,7 @@ paths:
       - Management_UsersEmployee
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/user/{pkiUserID}:
     description: ""
     put:
@@ -12376,10 +11557,7 @@ paths:
       - Management_UsersEmployee
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/user/{pkiUserID}/editPermissions:
     put:
       description: "Using this endpoint, you can edit multiple Permissions at the\
@@ -12428,10 +11606,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/user/{pkiUserID}/getApikeys:
     description: ""
     get:
@@ -12465,11 +11640,7 @@ paths:
       - Object_User
       x-permissions:
       - Management_APIKeyGeneration
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /1/object/user/{pkiUserID}/getEffectivePermissions:
     description: ""
     get:
@@ -12507,10 +11678,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/user/{pkiUserID}/getPermissions:
     description: ""
     get:
@@ -12545,10 +11713,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/user/{pkiUserID}/getSubnets:
     description: ""
     get:
@@ -12583,10 +11748,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/user/{pkiUserID}/sendPasswordReset:
     post:
       description: Send the password reset email
@@ -12634,10 +11796,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/user/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -12702,12 +11861,8 @@ paths:
       summary: Retrieve Users and IDs
       tags:
       - Object_User
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - All
-      x-powerautomate: true
       x-ms-visibility: advanced
       x-usertypeextra: []
   /1/object/user/getList:
@@ -12809,10 +11964,7 @@ paths:
       - Management_UsersEmployee
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroup:
     description: ""
     post:
@@ -12838,10 +11990,7 @@ paths:
       - Object_Usergroup
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/usergroup/{pkiUsergroupID}:
     description: ""
     get:
@@ -12877,10 +12026,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroup/{pkiUsergroupID}:
     description: ""
     put:
@@ -12928,10 +12074,7 @@ paths:
       - Object_Usergroup
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroup/{pkiUsergroupID}/editPermissions:
     put:
       description: "Using this endpoint, you can edit multiple Permissions at the\
@@ -12979,10 +12122,7 @@ paths:
       - Object_Usergroup
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations:
     put:
       description: Edit multiple Usergroupdelegations
@@ -13029,10 +12169,7 @@ paths:
       - Object_Usergroup
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships:
     put:
       description: "Using this endpoint, you can edit multiple Usergroupmemberships\
@@ -13081,10 +12218,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroup/{pkiUsergroupID}/getPermissions:
     description: ""
     get:
@@ -13118,10 +12252,7 @@ paths:
       - Object_Usergroup
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations:
     description: ""
     get:
@@ -13156,10 +12287,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships:
     description: ""
     get:
@@ -13194,10 +12322,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/usergroup/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -13256,11 +12381,8 @@ paths:
       summary: Retrieve Usergroups and IDs
       tags:
       - Object_Usergroup
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - ElectronicSignature_CreationModificationFolderTypes
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/usergroup/getList:
     description: ""
@@ -13337,10 +12459,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroupdelegation:
     description: ""
     post:
@@ -13366,10 +12485,7 @@ paths:
       - Object_Usergroupdelegation
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/usergroupdelegation/{pkiUsergroupdelegationID}:
     description: ""
     get:
@@ -13405,10 +12521,7 @@ paths:
       - Object_Usergroupdelegation
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroupdelegation/{pkiUsergroupdelegationID}:
     delete:
       description: ""
@@ -13443,10 +12556,7 @@ paths:
       - Object_Usergroupdelegation
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
     description: ""
     put:
       description: ""
@@ -13494,10 +12604,7 @@ paths:
       - Object_Usergroupdelegation
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroupmembership:
     description: ""
     post:
@@ -13524,10 +12631,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/usergroupmembership/{pkiUsergroupmembershipID}:
     description: ""
     get:
@@ -13563,10 +12667,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /1/object/usergroupmembership/{pkiUsergroupmembershipID}:
     delete:
       description: ""
@@ -13601,10 +12702,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
     description: ""
     put:
       description: ""
@@ -13652,10 +12750,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations: []
   /2/object/userstaged/{pkiUserstagedID}:
     description: ""
     get:
@@ -13691,11 +12786,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /1/object/userstaged/{pkiUserstagedID}:
     delete:
       description: ""
@@ -13730,11 +12821,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
     description: ""
   /1/object/userstaged/{pkiUserstagedID}/createUser:
     description: ""
@@ -13778,11 +12865,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /1/object/userstaged/{pkiUserstagedID}/map:
     description: ""
     post:
@@ -13831,11 +12914,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /1/object/userstaged/getList:
     description: ""
     get:
@@ -13915,11 +12994,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   /1/object/variableexpense:
     description: ""
     post:
@@ -13943,11 +13018,8 @@ paths:
       summary: Create a new Variableexpense
       tags:
       - Object_Variableexpense
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_VariableExpenses
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/variableexpense/{pkiVariableexpenseID}:
     description: ""
@@ -13981,11 +13053,8 @@ paths:
       summary: Retrieve an existing Variableexpense
       tags:
       - Object_Variableexpense
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_VariableExpenses
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/variableexpense/{pkiVariableexpenseID}:
     description: ""
@@ -14032,11 +13101,8 @@ paths:
       summary: Edit an existing Variableexpense
       tags:
       - Object_Variableexpense
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_VariableExpenses
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/variableexpense/getAutocomplete/{sSelector}:
     description: ""
@@ -14095,11 +13161,8 @@ paths:
       summary: Retrieve Variableexpenses and IDs
       tags:
       - Object_Variableexpense
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Purchases_CreationModification
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/variableexpense/getList:
     description: ""
@@ -14182,11 +13245,8 @@ paths:
       summary: Retrieve Variableexpense list
       tags:
       - Object_Variableexpense
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_VariableExpenses
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/versionhistory/{pkiVersionhistoryID}:
     get:
@@ -14219,11 +13279,8 @@ paths:
       summary: Retrieve an existing Versionhistory
       tags:
       - Object_Versionhistory
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/webhook:
     description: ""
@@ -14248,12 +13305,8 @@ paths:
       summary: Create a new Webhook
       tags:
       - Object_Webhook
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Management_Webhook
-      x-powerautomate: false
       x-usertypeextra: []
   /2/object/webhook/{pkiWebhookID}:
     get:
@@ -14286,12 +13339,8 @@ paths:
       summary: Retrieve an existing Webhook
       tags:
       - Object_Webhook
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Management_Webhook
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/webhook/{pkiWebhookID}:
     delete:
@@ -14324,12 +13373,8 @@ paths:
       summary: Delete an existing Webhook
       tags:
       - Object_Webhook
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Management_Webhook
-      x-powerautomate: false
       x-usertypeextra: []
     description: ""
     put:
@@ -14368,12 +13413,8 @@ paths:
       summary: Edit an existing Webhook
       tags:
       - Object_Webhook
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Management_Webhook
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/webhook/{pkiWebhookID}/getHistory:
     get:
@@ -14423,12 +13464,8 @@ paths:
       summary: Retrieve the logs for recent Webhook calls
       tags:
       - Object_Webhook
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Management_Webhook
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/webhook/{pkiWebhookID}/test:
     post:
@@ -14467,12 +13504,8 @@ paths:
       summary: Test the Webhook by calling the Url
       tags:
       - Object_Webhook
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Management_Webhook
-      x-powerautomate: false
       x-usertypeextra: []
   /1/object/webhook/getList:
     description: ""
@@ -14565,12 +13598,8 @@ paths:
       summary: Retrieve Webhook list
       tags:
       - Object_Webhook
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
       x-permissions:
       - Management_Webhook
-      x-powerautomate: false
       x-usertypeextra: []
   /2/scim/Groups:
     get:
@@ -14596,11 +13625,8 @@ paths:
       summary: Retrieve Usergroup list
       tags:
       - Scim_Groups
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
     post:
       operationId: Groups_CreateObjectScim_V2
@@ -14622,11 +13648,8 @@ paths:
       summary: Create a new Usergroup
       tags:
       - Scim_Groups
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
   /2/scim/Groups/{groupId}:
     delete:
@@ -14647,11 +13670,8 @@ paths:
       summary: Delete an existing Usergroup
       tags:
       - Scim_Groups
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
     get:
       operationId: Groups_GetObjectScim_V2
@@ -14675,11 +13695,8 @@ paths:
       summary: Retrieve an existing Usergroup
       tags:
       - Scim_Groups
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
     put:
       operationId: Groups_EditObjectScim_V2
@@ -14709,11 +13726,8 @@ paths:
       summary: Edit an existing Usergroup
       tags:
       - Scim_Groups
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_Usergroup
-      x-powerautomate: false
       x-usertypeextra: []
   /2/scim/ServiceProviderConfig:
     get:
@@ -14730,10 +13744,7 @@ paths:
       summary: Get Service Provider Configuration
       tags:
       - Scim_ServiceProviderConfig
-      x-superadmin: false
-      x-presentations: []
       x-permissions: []
-      x-powerautomate: false
       x-usertypeextra: []
   /2/scim/Users:
     get:
@@ -14759,12 +13770,9 @@ paths:
       summary: Retrieve User list
       tags:
       - Scim_Users
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
     post:
       operationId: Users_CreateObjectScim_V2
@@ -14786,12 +13794,9 @@ paths:
       summary: Create a new User
       tags:
       - Scim_Users
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
   /2/scim/Users/{userId}:
     delete:
@@ -14812,12 +13817,9 @@ paths:
       summary: Delete an existing User
       tags:
       - Scim_Users
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
     get:
       operationId: Users_GetObjectScim_V2
@@ -14841,12 +13843,9 @@ paths:
       summary: Retrieve an existing User
       tags:
       - Scim_Users
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
     put:
       operationId: Users_EditObjectScim_V2
@@ -14876,12 +13875,9 @@ paths:
       summary: Edit an existing User
       tags:
       - Scim_Users
-      x-superadmin: false
-      x-presentations: []
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
-      x-powerautomate: false
       x-usertypeextra: []
 components:
   examples:
@@ -16742,6 +15738,11 @@ components:
         or external sources)
       example: true
       type: boolean
+    Field-bEzsignelementdependencySelected:
+      description: Whether if it's selected or not when using eEzsignelementdependencyValidation
+        = Selected
+      example: false
+      type: boolean
     Field-bEzsignfolderMfaused:
       description: Whether the MFA was used or not for the Ezsignfolder
       example: true
@@ -16872,6 +15873,11 @@ components:
       description: If the Ezsigntemplatedocument contains signed signatures (From
         internal or external sources)
       example: true
+      type: boolean
+    Field-bEzsigntemplateelementdependencySelected:
+      description: Whether if it's selected or not when using eEzsigntemplateelementdependencyValidation
+        = Selected
+      example: false
       type: boolean
     Field-bEzsigntemplateformfieldAutocomplete:
       description: |-
@@ -17585,7 +16591,32 @@ components:
       - DelayedSendEmail
       - RegeneratePage
       - RegeneratePageForm
+      - Reassign
       example: Createpage
+      type: string
+    Field-eEzsignelementdependencyOperator:
+      description: The operator of the Ezsignelementdependency
+      enum:
+      - eq
+      - neq
+      - gt
+      - gte
+      - lt
+      - lte
+      - in
+      - nin
+      - rg
+      - like
+      - between
+      example: eq
+      type: string
+    Field-eEzsignelementdependencyValidation:
+      description: The validation type of the Ezsignelementdependency
+      enum:
+      - Value
+      - Selected
+      - Filled
+      example: Value
       type: string
     Field-eEzsignfolderSendreminderfrequency:
       description: Frequency at which reminders will be sent to signers that haven't
@@ -17636,6 +16667,13 @@ components:
       - Weekly
       example: None
       type: string
+    Field-eEzsignformfieldDependencyrequirement:
+      description: The Dependency requirement of the Ezsignformfield
+      enum:
+      - AllOf
+      - AnyOf
+      example: AllOf
+      type: string
     Field-eEzsignformfieldgroupSignerrequirement:
       description: "The Signer requirement of the Ezsignformfieldgroup. **All** means\
         \ anyone can fill it, **One** means a specific person must fill it."
@@ -17675,6 +16713,13 @@ components:
       - Customer
       - DescriptionCustomer
       example: Description
+      type: string
+    Field-eEzsignsignatureDependencyrequirement:
+      description: The Dependency requirement of the Ezsignsignature
+      enum:
+      - AllOf
+      - AnyOf
+      example: AllOf
       type: string
     Field-eEzsignsignatureFont:
       description: |-
@@ -17719,6 +16764,37 @@ components:
       - FieldTextarea
       example: Name
       type: string
+    Field-eEzsigntemplateelementdependencyOperator:
+      description: The operator of the Ezsigntemplateelementdependency
+      enum:
+      - eq
+      - neq
+      - gt
+      - gte
+      - lt
+      - lte
+      - in
+      - nin
+      - rg
+      - like
+      - between
+      example: eq
+      type: string
+    Field-eEzsigntemplateelementdependencyValidation:
+      description: The validation type of the Ezsigntemplateelementdependency
+      enum:
+      - Value
+      - Selected
+      - Filled
+      example: Value
+      type: string
+    Field-eEzsigntemplateformfieldDependencyrequirement:
+      description: The Dependency requirement of the Ezsigntemplateformfield
+      enum:
+      - AllOf
+      - AnyOf
+      example: AllOf
+      type: string
     Field-eEzsigntemplateformfieldgroupSignerrequirement:
       description: "The Signer requirement of the Ezsigntemplateformfieldgroup. **All**\
         \ means anyone can fill it, **One** means a specific person must fill it."
@@ -17758,6 +16834,13 @@ components:
       - Customer
       - DescriptionCustomer
       example: Description
+      type: string
+    Field-eEzsigntemplatesignatureDependencyrequirement:
+      description: The Dependency requirement of the Ezsigntemplatesignature
+      enum:
+      - AllOf
+      - AnyOf
+      example: AllOf
       type: string
     Field-eEzsigntemplatesignatureFont:
       description: |-
@@ -18904,6 +17987,12 @@ components:
       example: 97
       minimum: 0
       type: integer
+    Field-pkiEzsignelementdependencyID:
+      description: The unique ID of the Ezsignelementdependency
+      example: 89
+      maximum: 65535
+      minimum: 0
+      type: integer
     Field-pkiEzsignfolderID:
       description: The unique ID of the Ezsignfolder
       example: 33
@@ -19001,6 +18090,12 @@ components:
       example: 85
       minimum: 0
       type: integer
+    Field-pkiEzsigntemplateelementdependencyID:
+      description: The unique ID of the Ezsigntemplateelementdependency
+      example: 314
+      maximum: 65535
+      minimum: 0
+      type: integer
     Field-pkiEzsigntemplateformfieldID:
       description: The unique ID of the Ezsigntemplateformfield
       example: 71
@@ -19021,6 +18116,13 @@ components:
       example: 99
       minimum: 0
       type: integer
+      x-ms-dynamic-values:
+        operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+        value-path: pkiEzsigntemplatepackageID
+        value-title: sEzsigntemplatepackageDescription
+        value-collection: mPayload/a_objEzsigntemplatepackage
+        parameters:
+          sSelector: All
     Field-pkiEzsigntemplatepackagemembershipID:
       description: The unique ID of the Ezsigntemplatepackagemembership
       example: 194
@@ -19111,6 +18213,13 @@ components:
       maximum: 2
       minimum: 1
       type: integer
+      x-ms-dynamic-values:
+        operationId: Language_GetAutocomplete_V2
+        value-path: pkiLanguageID
+        value-title: sLanguageNameX
+        value-collection: mPayload/a_objLanguage
+        parameters:
+          sSelector: All
     Field-pkiModuleID:
       description: The unique ID of the Module
       example: 40
@@ -19677,6 +18786,11 @@ components:
       description: The detail of the Ezsigndocumentlog
       example: "Page 1 MD5: a56bbc742ba2a4d074f2493550cf6ea5"
       type: string
+    Field-sEzsignelementdependencyValue:
+      description: The value of the Ezsignelementdependency
+      example: Montreal
+      pattern: "^.{0,50}$"
+      type: string
     Field-sEzsignfolderDescription:
       description: The description of the Ezsignfolder
       example: Test eZsign Folder
@@ -19772,6 +18886,11 @@ components:
     Field-sEzsigntemplatedocumentName:
       description: The name of the Ezsigntemplatedocument.
       example: Standard Contract
+      type: string
+    Field-sEzsigntemplateelementdependencyValue:
+      description: The value of the Ezsignelementdependency
+      example: Montreal
+      pattern: "^.{0,50}$"
       type: string
     Field-sEzsigntemplateformfieldLabel:
       description: The Label for the Ezsigntemplateformfield
@@ -20889,6 +20008,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sCompanyNameX:
           description: The Name of the Company in the language of the requester
           example: Acme inc.
@@ -22751,6 +21877,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sContactFirstname:
           description: The First name of the contact
           example: John
@@ -24335,6 +23468,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sEzsignbulksendDescription:
           description: The description of the Ezsignbulksend
           example: Test eZsign Bulk Send
@@ -24399,6 +23539,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sLanguageNameX:
           description: The Name of the Language in the language of the requester
           example: English
@@ -24749,6 +23896,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
@@ -24788,6 +23942,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
@@ -25166,6 +24327,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         eEzsigndocumentSource:
           description: Indicates where to look for the document binary content.
           enum:
@@ -25305,6 +24473,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sEzsigndocumentName:
           description: The name of the document that will be presented to Ezsignfoldersignerassociations
           example: "Contract #123"
@@ -26061,6 +25236,111 @@ components:
       - $ref: '#/components/schemas/ezsigndocumentlog-Response'
       description: An Ezsigndocumentlog Object and children to create a complete structure
       type: object
+    ezsignelementdependency-Request:
+      description: An Ezsignelementdependency Object
+      properties:
+        pkiEzsignelementdependencyID:
+          description: The unique ID of the Ezsignelementdependency
+          example: 89
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiEzsignformfieldIDValidation:
+          description: The unique ID of the Ezsignformfield
+          example: 32
+          minimum: 0
+          type: integer
+        fkiEzsignformfieldgroupIDValidation:
+          description: The unique ID of the Ezsignformfieldgroup
+          example: 26
+          minimum: 0
+          type: integer
+        sEzsignelementdependencyEzsignformfieldgrouplabel:
+          description: The Label for the Ezsignformfieldgroup
+          example: Allergies
+          maxLength: 50
+          minLength: 1
+          type: string
+        sEzsignelementdependencyEzsignformfieldlabel:
+          description: The Label for the Ezsignformfield
+          example: Peanuts
+          type: string
+        eEzsignelementdependencyValidation:
+          $ref: '#/components/schemas/Field-eEzsignelementdependencyValidation'
+        bEzsignelementdependencySelected:
+          description: Whether if it's selected or not when using eEzsignelementdependencyValidation
+            = Selected
+          example: false
+          type: boolean
+        eEzsignelementdependencyOperator:
+          $ref: '#/components/schemas/Field-eEzsignelementdependencyOperator'
+        sEzsignelementdependencyValue:
+          description: The value of the Ezsignelementdependency
+          example: Montreal
+          pattern: "^.{0,50}$"
+          type: string
+      required:
+      - eEzsignelementdependencyValidation
+      type: object
+    ezsignelementdependency-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignelementdependency-Request'
+      description: An Ezsignelementdependency Object and children to create a complete
+        structure
+      type: object
+    ezsignelementdependency-Response:
+      description: An Ezsignelementdependency Object
+      properties:
+        pkiEzsignelementdependencyID:
+          description: The unique ID of the Ezsignelementdependency
+          example: 89
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiEzsignformfieldID:
+          description: The unique ID of the Ezsignformfield
+          example: 32
+          minimum: 0
+          type: integer
+        fkiEzsignsignatureID:
+          description: The unique ID of the Ezsignsignature
+          example: 49
+          minimum: 0
+          type: integer
+        fkiEzsignformfieldIDValidation:
+          description: The unique ID of the Ezsignformfield
+          example: 32
+          minimum: 0
+          type: integer
+        fkiEzsignformfieldgroupIDValidation:
+          description: The unique ID of the Ezsignformfieldgroup
+          example: 26
+          minimum: 0
+          type: integer
+        eEzsignelementdependencyValidation:
+          $ref: '#/components/schemas/Field-eEzsignelementdependencyValidation'
+        bEzsignelementdependencySelected:
+          description: Whether if it's selected or not when using eEzsignelementdependencyValidation
+            = Selected
+          example: false
+          type: boolean
+        eEzsignelementdependencyOperator:
+          $ref: '#/components/schemas/Field-eEzsignelementdependencyOperator'
+        sEzsignelementdependencyValue:
+          description: The value of the Ezsignelementdependency
+          example: Montreal
+          pattern: "^.{0,50}$"
+          type: string
+      required:
+      - eEzsignelementdependencyValidation
+      - pkiEzsignelementdependencyID
+      type: object
+    ezsignelementdependency-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignelementdependency-Response'
+      description: An Ezsignelementdependency Object and children to create a complete
+        structure
+      type: object
     ezsignfolder-ListElement:
       description: An Ezsignfolder List Element
       properties:
@@ -26751,6 +26031,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         dtEzsigndocumentDuedate:
           description: The maximum date and time at which the Ezsigndocument can be
             signed.
@@ -27051,6 +26338,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sUserFirstname:
           description: The first name of the user
           example: John
@@ -27928,6 +27222,8 @@ components:
             This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
           example: Montreal
           type: string
+        eEzsignformfieldDependencyrequirement:
+          $ref: '#/components/schemas/Field-eEzsignformfieldDependencyrequirement'
       required:
       - iEzsignformfieldHeight
       - iEzsignformfieldWidth
@@ -27939,6 +27235,12 @@ components:
     ezsignformfield-RequestCompound:
       allOf:
       - $ref: '#/components/schemas/ezsignformfield-Request'
+      - properties:
+          a_objEzsignelementdependency:
+            items:
+              $ref: '#/components/schemas/ezsignelementdependency-RequestCompound'
+            type: array
+        type: object
       description: An Ezsignformfield Object and children to create a complete structure
       type: object
     ezsignformfield-Response:
@@ -28032,6 +27334,8 @@ components:
             This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
           example: Montreal
           type: string
+        eEzsignformfieldDependencyrequirement:
+          $ref: '#/components/schemas/Field-eEzsignformfieldDependencyrequirement'
       required:
       - iEzsignformfieldHeight
       - iEzsignformfieldWidth
@@ -28044,6 +27348,12 @@ components:
     ezsignformfield-ResponseCompound:
       allOf:
       - $ref: '#/components/schemas/ezsignformfield-Response'
+      - properties:
+          a_objEzsignelementdependency:
+            items:
+              $ref: '#/components/schemas/ezsignelementdependency-ResponseCompound'
+            type: array
+        type: object
       description: An Ezsignformfield Object and children to create a complete structure
       type: object
     ezsignformfieldgroup-Request:
@@ -28565,6 +27875,8 @@ components:
           example: "/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/"
           pattern: ^\^.*\$$|^$
           type: string
+        eEzsignsignatureDependencyrequirement:
+          $ref: '#/components/schemas/Field-eEzsignsignatureDependencyrequirement'
       required:
       - eEzsignsignatureType
       - fkiEzsigndocumentID
@@ -28589,6 +27901,10 @@ components:
               Use an empty array if you don't want to have a date at all.
             items:
               $ref: '#/components/schemas/ezsignsignaturecustomdate-RequestCompound'
+            type: array
+          a_objEzsignelementdependency:
+            items:
+              $ref: '#/components/schemas/ezsignelementdependency-RequestCompound'
             type: array
         type: object
       description: An Ezsignsignature Object and children to create a complete structure
@@ -28709,6 +28025,8 @@ components:
           type: integer
         eEzsignsignatureTextvalidation:
           $ref: '#/components/schemas/Enum-Textvalidation'
+        eEzsignsignatureDependencyrequirement:
+          $ref: '#/components/schemas/Field-eEzsignsignatureDependencyrequirement'
         sEzsignsignatureRegexp:
           description: |-
             A regular expression to indicate what values are acceptable for the Ezsignsignature.
@@ -28752,6 +28070,10 @@ components:
             type: array
           objCreditcardtransaction:
             $ref: '#/components/schemas/Custom-Creditcardtransaction-Response'
+          a_objEzsignelementdependency:
+            items:
+              $ref: '#/components/schemas/ezsignelementdependency-ResponseCompound'
+            type: array
         type: object
       description: An Ezsignsignature Object and children to create a complete structure
       type: object
@@ -29261,6 +28583,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sEmailAddress:
           description: The email address.
           example: email@example.com
@@ -29432,6 +28761,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sEmailAddress:
           description: The email address.
           example: email@example.com
@@ -29851,6 +29187,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sEzsigntemplateDescription:
           description: The description of the Ezsigntemplate
           example: Standard Contract
@@ -29925,6 +29268,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sEzsigntemplateDescription:
           description: The description of the Ezsigntemplate
           example: Standard Contract
@@ -29991,6 +29341,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sLanguageNameX:
           description: The Name of the Language in the language of the requester
           example: English
@@ -30684,6 +30041,111 @@ components:
       description: An Ezsigntemplatedocumentpage Object and children to create a complete
         structure
       type: object
+    ezsigntemplateelementdependency-Request:
+      description: An Ezsigntemplateelementdependency Object
+      properties:
+        pkiEzsigntemplateelementdependencyID:
+          description: The unique ID of the Ezsigntemplateelementdependency
+          example: 314
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiEzsigntemplateformfieldIDValidation:
+          description: The unique ID of the Ezsigntemplateformfield
+          example: 71
+          minimum: 0
+          type: integer
+        fkiEzsigntemplateformfieldgroupIDValidation:
+          description: The unique ID of the Ezsigntemplateformfieldgroup
+          example: 64
+          minimum: 0
+          type: integer
+        sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel:
+          description: The Label for the Ezsigntemplateformfieldgroup
+          example: Allergies
+          maxLength: 50
+          minLength: 1
+          type: string
+        sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel:
+          description: The Label for the Ezsigntemplateformfield
+          example: Peanuts
+          type: string
+        eEzsigntemplateelementdependencyValidation:
+          $ref: '#/components/schemas/Field-eEzsigntemplateelementdependencyValidation'
+        bEzsigntemplateelementdependencySelected:
+          description: Whether if it's selected or not when using eEzsigntemplateelementdependencyValidation
+            = Selected
+          example: false
+          type: boolean
+        eEzsigntemplateelementdependencyOperator:
+          $ref: '#/components/schemas/Field-eEzsigntemplateelementdependencyOperator'
+        sEzsigntemplateelementdependencyValue:
+          description: The value of the Ezsignelementdependency
+          example: Montreal
+          pattern: "^.{0,50}$"
+          type: string
+      required:
+      - eEzsigntemplateelementdependencyValidation
+      type: object
+    ezsigntemplateelementdependency-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplateelementdependency-Request'
+      description: An Ezsigntemplateelementdependency Object and children to create
+        a complete structure
+      type: object
+    ezsigntemplateelementdependency-Response:
+      description: An Ezsigntemplateelementdependency Object
+      properties:
+        pkiEzsigntemplateelementdependencyID:
+          description: The unique ID of the Ezsigntemplateelementdependency
+          example: 314
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiEzsigntemplateformfieldID:
+          description: The unique ID of the Ezsigntemplateformfield
+          example: 71
+          minimum: 0
+          type: integer
+        fkiEzsigntemplatesignatureID:
+          description: The unique ID of the Ezsigntemplatesignature
+          example: 99
+          minimum: 0
+          type: integer
+        fkiEzsigntemplateformfieldIDValidation:
+          description: The unique ID of the Ezsigntemplateformfield
+          example: 71
+          minimum: 0
+          type: integer
+        fkiEzsigntemplateformfieldgroupIDValidation:
+          description: The unique ID of the Ezsigntemplateformfieldgroup
+          example: 64
+          minimum: 0
+          type: integer
+        eEzsigntemplateelementdependencyValidation:
+          $ref: '#/components/schemas/Field-eEzsigntemplateelementdependencyValidation'
+        bEzsigntemplateelementdependencySelected:
+          description: Whether if it's selected or not when using eEzsigntemplateelementdependencyValidation
+            = Selected
+          example: false
+          type: boolean
+        eEzsigntemplateelementdependencyOperator:
+          $ref: '#/components/schemas/Field-eEzsigntemplateelementdependencyOperator'
+        sEzsigntemplateelementdependencyValue:
+          description: The value of the Ezsignelementdependency
+          example: Montreal
+          pattern: "^.{0,50}$"
+          type: string
+      required:
+      - eEzsigntemplateelementdependencyValidation
+      - pkiEzsigntemplateelementdependencyID
+      type: object
+    ezsigntemplateelementdependency-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplateelementdependency-Response'
+      description: An Ezsigntemplateelementdependency Object and children to create
+        a complete structure
+      type: object
     ezsigntemplateformfield-Request:
       description: A Ezsigntemplateformfield Object
       properties:
@@ -30765,6 +30227,8 @@ components:
 
             This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
           type: boolean
+        eEzsigntemplateformfieldDependencyrequirement:
+          $ref: '#/components/schemas/Field-eEzsigntemplateformfieldDependencyrequirement'
       required:
       - iEzsigntemplatedocumentpagePagenumber
       - iEzsigntemplateformfieldHeight
@@ -30776,6 +30240,12 @@ components:
     ezsigntemplateformfield-RequestCompound:
       allOf:
       - $ref: '#/components/schemas/ezsigntemplateformfield-Request'
+      - properties:
+          a_objEzsigntemplateelementdependency:
+            items:
+              $ref: '#/components/schemas/ezsigntemplateelementdependency-RequestCompound'
+            type: array
+        type: object
       description: An Ezsigntemplateformfield Object and children to create a complete
         structure
       type: object
@@ -30860,6 +30330,8 @@ components:
 
             This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
           type: boolean
+        eEzsigntemplateformfieldDependencyrequirement:
+          $ref: '#/components/schemas/Field-eEzsigntemplateformfieldDependencyrequirement'
       required:
       - iEzsigntemplatedocumentpagePagenumber
       - iEzsigntemplateformfieldHeight
@@ -30872,6 +30344,12 @@ components:
     ezsigntemplateformfield-ResponseCompound:
       allOf:
       - $ref: '#/components/schemas/ezsigntemplateformfield-Response'
+      - properties:
+          a_objEzsigntemplateelementdependency:
+            items:
+              $ref: '#/components/schemas/ezsigntemplateelementdependency-ResponseCompound'
+            type: array
+        type: object
       description: An Ezsigntemplateformfield Object and children
       type: object
     ezsigntemplateformfieldgroup-Request:
@@ -31230,6 +30708,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         bEzsigntemplatepackageIsactive:
           description: Whether the Ezsigntemplatepackage is active or not
           example: true
@@ -31252,6 +30737,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
@@ -31278,6 +30770,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sEzsigntemplatepackageDescription:
           description: The description of the Ezsigntemplatepackage
           example: Package for new clients
@@ -31316,6 +30815,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
@@ -31342,6 +30848,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sEzsigntemplatepackageDescription:
           description: The description of the Ezsigntemplatepackage
           example: Package for new clients
@@ -31375,6 +30888,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
@@ -31401,6 +30921,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sLanguageNameX:
           description: The Name of the Language in the language of the requester
           example: English
@@ -31618,6 +31145,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
@@ -31653,6 +31187,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
@@ -31776,6 +31317,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         sEzsigntemplatepackagesignerDescription:
           description: The description of the Ezsigntemplatepackagesigner
           example: Customer
@@ -31803,6 +31351,13 @@ components:
           example: 99
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+            value-path: pkiEzsigntemplatepackageID
+            value-title: sEzsigntemplatepackageDescription
+            value-collection: mPayload/a_objEzsigntemplatepackage
+            parameters:
+              sSelector: All
         sEzsigntemplatepackagesignerDescription:
           description: The description of the Ezsigntemplatepackagesigner
           example: Customer
@@ -32186,6 +31741,8 @@ components:
           type: string
         eEzsigntemplatesignatureTextvalidation:
           $ref: '#/components/schemas/Enum-Textvalidation'
+        eEzsigntemplatesignatureDependencyrequirement:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignatureDependencyrequirement'
       required:
       - eEzsigntemplatesignatureType
       - fkiEzsigntemplatedocumentID
@@ -32210,6 +31767,10 @@ components:
               Use an empty array if you don't want to have a date at all.
             items:
               $ref: '#/components/schemas/ezsigntemplatesignaturecustomdate-RequestCompound'
+            type: array
+          a_objEzsigntemplateelementdependency:
+            items:
+              $ref: '#/components/schemas/ezsigntemplateelementdependency-RequestCompound'
             type: array
         type: object
       description: A Ezsigntemplatesignature Object and children
@@ -32326,6 +31887,8 @@ components:
           type: string
         eEzsigntemplatesignatureTextvalidation:
           $ref: '#/components/schemas/Enum-Textvalidation'
+        eEzsigntemplatesignatureDependencyrequirement:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignatureDependencyrequirement'
       required:
       - eEzsigntemplatesignatureType
       - fkiEzsigntemplatedocumentID
@@ -32351,6 +31914,10 @@ components:
               Use an empty array if you don't want to have a date at all.
             items:
               $ref: '#/components/schemas/ezsigntemplatesignaturecustomdate-ResponseCompound'
+            type: array
+          a_objEzsigntemplateelementdependency:
+            items:
+              $ref: '#/components/schemas/ezsigntemplateelementdependency-ResponseCompound'
             type: array
         type: object
       description: A Ezsigntemplatesignature Object
@@ -34918,6 +34485,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         objEmail:
           $ref: '#/components/schemas/email-RequestCompound'
         fkiBillingentityinternalID:
@@ -35104,6 +34678,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sLanguageNameX:
           description: The Name of the Language in the language of the requester
           example: English
@@ -35273,6 +34854,13 @@ components:
           maximum: 2
           minimum: 1
           type: integer
+          x-ms-dynamic-values:
+            operationId: Language_GetAutocomplete_V2
+            value-path: pkiLanguageID
+            value-title: sLanguageNameX
+            value-collection: mPayload/a_objLanguage
+            parameters:
+              sSelector: All
         sUserFirstname:
           description: The first name of the user
           example: John
@@ -37234,9 +36822,6 @@ x-webhooks:
           $ref: '#/components/responses/Response-Webhook-202'
         "204":
           $ref: '#/components/responses/Response-Webhook-204'
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   Webhook-Ezsign-EzsignsignerAcceptclause:
     post:
       summary: Webhook Ezsignsigner Accept Clause
@@ -37256,9 +36841,6 @@ x-webhooks:
           $ref: '#/components/responses/Response-Webhook-202'
         "204":
           $ref: '#/components/responses/Response-Webhook-204'
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   Webhook-Ezsign-EzsignsignerConnect:
     post:
       summary: Webhook Ezsignsigner Connect
@@ -37278,9 +36860,6 @@ x-webhooks:
           $ref: '#/components/responses/Response-Webhook-202'
         "204":
           $ref: '#/components/responses/Response-Webhook-204'
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   Webhook-Ezsign-FolderCompleted:
     post:
       summary: Webhook Folder Completed
@@ -37301,9 +36880,6 @@ x-webhooks:
           $ref: '#/components/responses/Response-Webhook-202'
         "204":
           $ref: '#/components/responses/Response-Webhook-204'
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   Webhook-User-UserCreated:
     post:
       summary: Webhook User Created
@@ -37323,9 +36899,6 @@ x-webhooks:
           $ref: '#/components/responses/Response-Webhook-202'
         "204":
           $ref: '#/components/responses/Response-Webhook-204'
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   Webhook-Userstaged-UserstagedCreated:
     post:
       summary: Webhook Userstaged Created
@@ -37346,9 +36919,6 @@ x-webhooks:
           $ref: '#/components/responses/Response-Webhook-202'
         "204":
           $ref: '#/components/responses/Response-Webhook-204'
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   Websocket-RequestServer-GetWebsocketID-V1:
     post:
       summary: Retrieve Websocket ID
@@ -37366,9 +36936,6 @@ x-webhooks:
       responses:
         "101":
           $ref: '#/components/responses/Response-Websocket'
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   Websocket-Response-Error-V1:
     post:
       summary: Error message
@@ -37386,8 +36953,6 @@ x-webhooks:
       responses:
         "101":
           $ref: '#/components/responses/Response-Websocket'
-      x-superadmin: false
-      x-presentations: []
   Websocket-Response-GetWebsocketID-V1:
     post:
       summary: Websocket ID
@@ -37405,9 +36970,6 @@ x-webhooks:
       responses:
         "101":
           $ref: '#/components/responses/Response-Websocket'
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
   Websocket-Response-Information-V1:
     post:
       summary: Information message
@@ -37425,9 +36987,6 @@ x-webhooks:
       responses:
         "101":
           $ref: '#/components/responses/Response-Websocket'
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
 x-tagGroups:
 - name: General
   tags:

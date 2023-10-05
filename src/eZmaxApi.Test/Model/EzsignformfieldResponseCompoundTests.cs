@@ -153,5 +153,23 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'SEzsignformfieldEnteredvalue'
         }
+
+        /// <summary>
+        /// Test the property 'EEzsignformfieldDependencyrequirement'
+        /// </summary>
+        [Fact]
+        public void EEzsignformfieldDependencyrequirementTest()
+        {
+            // TODO unit test for the property 'EEzsignformfieldDependencyrequirement'
+        }
+
+        /// <summary>
+        /// Test the property 'AObjEzsignelementdependency'
+        /// </summary>
+        [Fact]
+        public void AObjEzsignelementdependencyTest()
+        {
+            // TODO unit test for the property 'AObjEzsignelementdependency'
+        }
     }
 }

@@ -263,6 +263,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EEzsignsignatureDependencyrequirement'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureDependencyrequirementTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureDependencyrequirement'
+        }
+
+        /// <summary>
         /// Test the property 'SEzsignsignatureRegexp'
         /// </summary>
         [Fact]
@@ -323,6 +332,15 @@ namespace eZmaxApi.Test.Model
         public void ObjCreditcardtransactionTest()
         {
             // TODO unit test for the property 'ObjCreditcardtransaction'
+        }
+
+        /// <summary>
+        /// Test the property 'AObjEzsignelementdependency'
+        /// </summary>
+        [Fact]
+        public void AObjEzsignelementdependencyTest()
+        {
+            // TODO unit test for the property 'AObjEzsignelementdependency'
         }
     }
 }

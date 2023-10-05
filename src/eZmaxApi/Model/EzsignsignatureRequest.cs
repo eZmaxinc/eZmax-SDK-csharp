@@ -62,6 +62,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eEzsignsignatureTextvalidation", EmitDefaultValue = false)]
         public EnumTextvalidation? EEzsignsignatureTextvalidation { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureDependencyrequirement
+        /// </summary>
+        [DataMember(Name = "eEzsignsignatureDependencyrequirement", EmitDefaultValue = false)]
+        public FieldEEzsignsignatureDependencyrequirement? EEzsignsignatureDependencyrequirement { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureRequest" /> class.
         /// </summary>
@@ -91,7 +97,8 @@ namespace eZmaxApi.Model
         /// <param name="iEzsignsignatureMaxlength">The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**.</param>
         /// <param name="eEzsignsignatureTextvalidation">eEzsignsignatureTextvalidation.</param>
         /// <param name="sEzsignsignatureRegexp">A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**.</param>
-        public EzsignsignatureRequest(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int fkiEzsignfoldersignerassociationIDValidation = default(int), bool bEzsignsignatureRequired = default(bool), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), string sEzsignsignatureAttachmentdescription = default(string), int iEzsignsignatureValidationstep = default(int), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureRegexp = default(string))
+        /// <param name="eEzsignsignatureDependencyrequirement">eEzsignsignatureDependencyrequirement.</param>
+        public EzsignsignatureRequest(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int fkiEzsignfoldersignerassociationIDValidation = default(int), bool bEzsignsignatureRequired = default(bool), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), string sEzsignsignatureAttachmentdescription = default(string), int iEzsignsignatureValidationstep = default(int), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureRegexp = default(string), FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default(FieldEEzsignsignatureDependencyrequirement?))
         {
             this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
             this.IEzsignpagePagenumber = iEzsignpagePagenumber;
@@ -114,6 +121,7 @@ namespace eZmaxApi.Model
             this.IEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
             this.EEzsignsignatureTextvalidation = eEzsignsignatureTextvalidation;
             this.SEzsignsignatureRegexp = sEzsignsignatureRegexp;
+            this.EEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
         }
 
         /// <summary>
@@ -272,6 +280,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsignsignatureMaxlength: ").Append(IEzsignsignatureMaxlength).Append("\n");
             sb.Append("  EEzsignsignatureTextvalidation: ").Append(EEzsignsignatureTextvalidation).Append("\n");
             sb.Append("  SEzsignsignatureRegexp: ").Append(SEzsignsignatureRegexp).Append("\n");
+            sb.Append("  EEzsignsignatureDependencyrequirement: ").Append(EEzsignsignatureDependencyrequirement).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -393,6 +402,10 @@ namespace eZmaxApi.Model
                     this.SEzsignsignatureRegexp == input.SEzsignsignatureRegexp ||
                     (this.SEzsignsignatureRegexp != null &&
                     this.SEzsignsignatureRegexp.Equals(input.SEzsignsignatureRegexp))
+                ) && 
+                (
+                    this.EEzsignsignatureDependencyrequirement == input.EEzsignsignatureDependencyrequirement ||
+                    this.EEzsignsignatureDependencyrequirement.Equals(input.EEzsignsignatureDependencyrequirement)
                 );
         }
 
@@ -435,6 +448,7 @@ namespace eZmaxApi.Model
                 {
                     hashCode = (hashCode * 59) + this.SEzsignsignatureRegexp.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.EEzsignsignatureDependencyrequirement.GetHashCode();
                 return hashCode;
             }
         }

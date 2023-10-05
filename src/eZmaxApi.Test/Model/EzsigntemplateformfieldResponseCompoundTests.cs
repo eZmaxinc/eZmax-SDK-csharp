@@ -144,5 +144,23 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'BEzsigntemplateformfieldSelected'
         }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplateformfieldDependencyrequirement'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplateformfieldDependencyrequirementTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplateformfieldDependencyrequirement'
+        }
+
+        /// <summary>
+        /// Test the property 'AObjEzsigntemplateelementdependency'
+        /// </summary>
+        [Fact]
+        public void AObjEzsigntemplateelementdependencyTest()
+        {
+            // TODO unit test for the property 'AObjEzsigntemplateelementdependency'
+        }
     }
 }

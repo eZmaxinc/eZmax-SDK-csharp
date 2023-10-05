@@ -187,7 +187,13 @@ namespace eZmaxApi.Model
         /// Enum RegeneratePageForm for value: RegeneratePageForm
         /// </summary>
         [EnumMember(Value = "RegeneratePageForm")]
-        RegeneratePageForm = 26
+        RegeneratePageForm = 26,
+
+        /// <summary>
+        /// Enum Reassign for value: Reassign
+        /// </summary>
+        [EnumMember(Value = "Reassign")]
+        Reassign = 27
     }
 
 }

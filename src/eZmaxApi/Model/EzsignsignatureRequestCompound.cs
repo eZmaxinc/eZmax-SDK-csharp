@@ -62,6 +62,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eEzsignsignatureTextvalidation", EmitDefaultValue = false)]
         public EnumTextvalidation? EEzsignsignatureTextvalidation { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureDependencyrequirement
+        /// </summary>
+        [DataMember(Name = "eEzsignsignatureDependencyrequirement", EmitDefaultValue = false)]
+        public FieldEEzsignsignatureDependencyrequirement? EEzsignsignatureDependencyrequirement { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureRequestCompound" /> class.
         /// </summary>
@@ -91,9 +97,11 @@ namespace eZmaxApi.Model
         /// <param name="iEzsignsignatureMaxlength">The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**.</param>
         /// <param name="eEzsignsignatureTextvalidation">eEzsignsignatureTextvalidation.</param>
         /// <param name="sEzsignsignatureRegexp">A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**.</param>
+        /// <param name="eEzsignsignatureDependencyrequirement">eEzsignsignatureDependencyrequirement.</param>
         /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
         /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
-        public EzsignsignatureRequestCompound(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int fkiEzsignfoldersignerassociationIDValidation = default(int), bool bEzsignsignatureRequired = default(bool), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), string sEzsignsignatureAttachmentdescription = default(string), int iEzsignsignatureValidationstep = default(int), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureRegexp = default(string), bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequestCompound>))
+        /// <param name="aObjEzsignelementdependency">aObjEzsignelementdependency.</param>
+        public EzsignsignatureRequestCompound(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int fkiEzsignfoldersignerassociationIDValidation = default(int), bool bEzsignsignatureRequired = default(bool), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), string sEzsignsignatureAttachmentdescription = default(string), int iEzsignsignatureValidationstep = default(int), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureRegexp = default(string), FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default(FieldEEzsignsignatureDependencyrequirement?), bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequestCompound>), List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = default(List<EzsignelementdependencyRequestCompound>))
         {
             this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
             this.IEzsignpagePagenumber = iEzsignpagePagenumber;
@@ -116,8 +124,10 @@ namespace eZmaxApi.Model
             this.IEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
             this.EEzsignsignatureTextvalidation = eEzsignsignatureTextvalidation;
             this.SEzsignsignatureRegexp = sEzsignsignatureRegexp;
+            this.EEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
             this.BEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
             this.AObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+            this.AObjEzsignelementdependency = aObjEzsignelementdependency;
         }
 
         /// <summary>
@@ -262,6 +272,12 @@ namespace eZmaxApi.Model
         public List<EzsignsignaturecustomdateRequestCompound> AObjEzsignsignaturecustomdate { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjEzsignelementdependency
+        /// </summary>
+        [DataMember(Name = "a_objEzsignelementdependency", EmitDefaultValue = false)]
+        public List<EzsignelementdependencyRequestCompound> AObjEzsignelementdependency { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -290,8 +306,10 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsignsignatureMaxlength: ").Append(IEzsignsignatureMaxlength).Append("\n");
             sb.Append("  EEzsignsignatureTextvalidation: ").Append(EEzsignsignatureTextvalidation).Append("\n");
             sb.Append("  SEzsignsignatureRegexp: ").Append(SEzsignsignatureRegexp).Append("\n");
+            sb.Append("  EEzsignsignatureDependencyrequirement: ").Append(EEzsignsignatureDependencyrequirement).Append("\n");
             sb.Append("  BEzsignsignatureCustomdate: ").Append(BEzsignsignatureCustomdate).Append("\n");
             sb.Append("  AObjEzsignsignaturecustomdate: ").Append(AObjEzsignsignaturecustomdate).Append("\n");
+            sb.Append("  AObjEzsignelementdependency: ").Append(AObjEzsignelementdependency).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -415,6 +433,10 @@ namespace eZmaxApi.Model
                     this.SEzsignsignatureRegexp.Equals(input.SEzsignsignatureRegexp))
                 ) && 
                 (
+                    this.EEzsignsignatureDependencyrequirement == input.EEzsignsignatureDependencyrequirement ||
+                    this.EEzsignsignatureDependencyrequirement.Equals(input.EEzsignsignatureDependencyrequirement)
+                ) && 
+                (
                     this.BEzsignsignatureCustomdate == input.BEzsignsignatureCustomdate ||
                     this.BEzsignsignatureCustomdate.Equals(input.BEzsignsignatureCustomdate)
                 ) && 
@@ -423,6 +445,12 @@ namespace eZmaxApi.Model
                     this.AObjEzsignsignaturecustomdate != null &&
                     input.AObjEzsignsignaturecustomdate != null &&
                     this.AObjEzsignsignaturecustomdate.SequenceEqual(input.AObjEzsignsignaturecustomdate)
+                ) && 
+                (
+                    this.AObjEzsignelementdependency == input.AObjEzsignelementdependency ||
+                    this.AObjEzsignelementdependency != null &&
+                    input.AObjEzsignelementdependency != null &&
+                    this.AObjEzsignelementdependency.SequenceEqual(input.AObjEzsignelementdependency)
                 );
         }
 
@@ -465,10 +493,15 @@ namespace eZmaxApi.Model
                 {
                     hashCode = (hashCode * 59) + this.SEzsignsignatureRegexp.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.EEzsignsignatureDependencyrequirement.GetHashCode();
                 hashCode = (hashCode * 59) + this.BEzsignsignatureCustomdate.GetHashCode();
                 if (this.AObjEzsignsignaturecustomdate != null)
                 {
                     hashCode = (hashCode * 59) + this.AObjEzsignsignaturecustomdate.GetHashCode();
+                }
+                if (this.AObjEzsignelementdependency != null)
+                {
+                    hashCode = (hashCode * 59) + this.AObjEzsignelementdependency.GetHashCode();
                 }
                 return hashCode;
             }

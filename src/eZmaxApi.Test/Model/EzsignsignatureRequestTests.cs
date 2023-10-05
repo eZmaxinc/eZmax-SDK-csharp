@@ -243,5 +243,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'SEzsignsignatureRegexp'
         }
+
+        /// <summary>
+        /// Test the property 'EEzsignsignatureDependencyrequirement'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureDependencyrequirementTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureDependencyrequirement'
+        }
     }
 }

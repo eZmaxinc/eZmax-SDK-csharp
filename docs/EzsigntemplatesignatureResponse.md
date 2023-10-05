@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **IEzsigntemplatesignatureMaxlength** | **int** | The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea** | [optional] 
 **SEzsigntemplatesignatureRegexp** | **string** | A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea** | [optional] 
 **EEzsigntemplatesignatureTextvalidation** | **EnumTextvalidation** |  | [optional] 
+**EEzsigntemplatesignatureDependencyrequirement** | **FieldEEzsigntemplatesignatureDependencyrequirement** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

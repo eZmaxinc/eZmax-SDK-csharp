@@ -62,6 +62,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eEzsigntemplatesignatureTextvalidation", EmitDefaultValue = false)]
         public EnumTextvalidation? EEzsigntemplatesignatureTextvalidation { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsigntemplatesignatureDependencyrequirement
+        /// </summary>
+        [DataMember(Name = "eEzsigntemplatesignatureDependencyrequirement", EmitDefaultValue = false)]
+        public FieldEEzsigntemplatesignatureDependencyrequirement? EEzsigntemplatesignatureDependencyrequirement { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignatureRequest" /> class.
         /// </summary>
@@ -91,7 +97,8 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigntemplatesignatureMaxlength">The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**.</param>
         /// <param name="sEzsigntemplatesignatureRegexp">A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**.</param>
         /// <param name="eEzsigntemplatesignatureTextvalidation">eEzsigntemplatesignatureTextvalidation.</param>
-        public EzsigntemplatesignatureRequest(int pkiEzsigntemplatesignatureID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), int fkiEzsigntemplatesignerIDValidation = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), int iEzsigntemplatesignatureX = default(int), int iEzsigntemplatesignatureY = default(int), int iEzsigntemplatesignatureWidth = default(int), int iEzsigntemplatesignatureHeight = default(int), int iEzsigntemplatesignatureStep = default(int), FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType = default(FieldEEzsigntemplatesignatureType), string tEzsigntemplatesignatureTooltip = default(string), FieldEEzsigntemplatesignatureTooltipposition? eEzsigntemplatesignatureTooltipposition = default(FieldEEzsigntemplatesignatureTooltipposition?), FieldEEzsigntemplatesignatureFont? eEzsigntemplatesignatureFont = default(FieldEEzsigntemplatesignatureFont?), bool bEzsigntemplatesignatureRequired = default(bool), FieldEEzsigntemplatesignatureAttachmentnamesource? eEzsigntemplatesignatureAttachmentnamesource = default(FieldEEzsigntemplatesignatureAttachmentnamesource?), string sEzsigntemplatesignatureAttachmentdescription = default(string), int iEzsigntemplatesignatureValidationstep = default(int), int iEzsigntemplatesignatureMaxlength = default(int), string sEzsigntemplatesignatureRegexp = default(string), EnumTextvalidation? eEzsigntemplatesignatureTextvalidation = default(EnumTextvalidation?))
+        /// <param name="eEzsigntemplatesignatureDependencyrequirement">eEzsigntemplatesignatureDependencyrequirement.</param>
+        public EzsigntemplatesignatureRequest(int pkiEzsigntemplatesignatureID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), int fkiEzsigntemplatesignerIDValidation = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), int iEzsigntemplatesignatureX = default(int), int iEzsigntemplatesignatureY = default(int), int iEzsigntemplatesignatureWidth = default(int), int iEzsigntemplatesignatureHeight = default(int), int iEzsigntemplatesignatureStep = default(int), FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType = default(FieldEEzsigntemplatesignatureType), string tEzsigntemplatesignatureTooltip = default(string), FieldEEzsigntemplatesignatureTooltipposition? eEzsigntemplatesignatureTooltipposition = default(FieldEEzsigntemplatesignatureTooltipposition?), FieldEEzsigntemplatesignatureFont? eEzsigntemplatesignatureFont = default(FieldEEzsigntemplatesignatureFont?), bool bEzsigntemplatesignatureRequired = default(bool), FieldEEzsigntemplatesignatureAttachmentnamesource? eEzsigntemplatesignatureAttachmentnamesource = default(FieldEEzsigntemplatesignatureAttachmentnamesource?), string sEzsigntemplatesignatureAttachmentdescription = default(string), int iEzsigntemplatesignatureValidationstep = default(int), int iEzsigntemplatesignatureMaxlength = default(int), string sEzsigntemplatesignatureRegexp = default(string), EnumTextvalidation? eEzsigntemplatesignatureTextvalidation = default(EnumTextvalidation?), FieldEEzsigntemplatesignatureDependencyrequirement? eEzsigntemplatesignatureDependencyrequirement = default(FieldEEzsigntemplatesignatureDependencyrequirement?))
         {
             this.FkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
             this.FkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
@@ -114,6 +121,7 @@ namespace eZmaxApi.Model
             this.IEzsigntemplatesignatureMaxlength = iEzsigntemplatesignatureMaxlength;
             this.SEzsigntemplatesignatureRegexp = sEzsigntemplatesignatureRegexp;
             this.EEzsigntemplatesignatureTextvalidation = eEzsigntemplatesignatureTextvalidation;
+            this.EEzsigntemplatesignatureDependencyrequirement = eEzsigntemplatesignatureDependencyrequirement;
         }
 
         /// <summary>
@@ -272,6 +280,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsigntemplatesignatureMaxlength: ").Append(IEzsigntemplatesignatureMaxlength).Append("\n");
             sb.Append("  SEzsigntemplatesignatureRegexp: ").Append(SEzsigntemplatesignatureRegexp).Append("\n");
             sb.Append("  EEzsigntemplatesignatureTextvalidation: ").Append(EEzsigntemplatesignatureTextvalidation).Append("\n");
+            sb.Append("  EEzsigntemplatesignatureDependencyrequirement: ").Append(EEzsigntemplatesignatureDependencyrequirement).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -393,6 +402,10 @@ namespace eZmaxApi.Model
                 (
                     this.EEzsigntemplatesignatureTextvalidation == input.EEzsigntemplatesignatureTextvalidation ||
                     this.EEzsigntemplatesignatureTextvalidation.Equals(input.EEzsigntemplatesignatureTextvalidation)
+                ) && 
+                (
+                    this.EEzsigntemplatesignatureDependencyrequirement == input.EEzsigntemplatesignatureDependencyrequirement ||
+                    this.EEzsigntemplatesignatureDependencyrequirement.Equals(input.EEzsigntemplatesignatureDependencyrequirement)
                 );
         }
 
@@ -435,6 +448,7 @@ namespace eZmaxApi.Model
                     hashCode = (hashCode * 59) + this.SEzsigntemplatesignatureRegexp.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.EEzsigntemplatesignatureTextvalidation.GetHashCode();
+                hashCode = (hashCode * 59) + this.EEzsigntemplatesignatureDependencyrequirement.GetHashCode();
                 return hashCode;
             }
         }

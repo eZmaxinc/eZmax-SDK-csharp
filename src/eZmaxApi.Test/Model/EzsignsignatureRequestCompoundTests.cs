@@ -245,6 +245,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EEzsignsignatureDependencyrequirement'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureDependencyrequirementTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureDependencyrequirement'
+        }
+
+        /// <summary>
         /// Test the property 'BEzsignsignatureCustomdate'
         /// </summary>
         [Fact]
@@ -260,6 +269,15 @@ namespace eZmaxApi.Test.Model
         public void AObjEzsignsignaturecustomdateTest()
         {
             // TODO unit test for the property 'AObjEzsignsignaturecustomdate'
+        }
+
+        /// <summary>
+        /// Test the property 'AObjEzsignelementdependency'
+        /// </summary>
+        [Fact]
+        public void AObjEzsignelementdependencyTest()
+        {
+            // TODO unit test for the property 'AObjEzsignelementdependency'
         }
     }
 }

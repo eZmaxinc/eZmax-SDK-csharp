@@ -32,6 +32,12 @@ namespace eZmaxApi.Model
     [DataContract(Name = "ezsignformfield-RequestCompound")]
     public partial class EzsignformfieldRequestCompound : IEquatable<EzsignformfieldRequestCompound>, IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EEzsignformfieldDependencyrequirement
+        /// </summary>
+        [DataMember(Name = "eEzsignformfieldDependencyrequirement", EmitDefaultValue = false)]
+        public FieldEEzsignformfieldDependencyrequirement? EEzsignformfieldDependencyrequirement { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldRequestCompound" /> class.
         /// </summary>
@@ -51,7 +57,9 @@ namespace eZmaxApi.Model
         /// <param name="bEzsignformfieldAutocomplete">Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**.</param>
         /// <param name="bEzsignformfieldSelected">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
         /// <param name="sEzsignformfieldEnteredvalue">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
-        public EzsignformfieldRequestCompound(int pkiEzsignformfieldID = default(int), int iEzsignpagePagenumber = default(int), string sEzsignformfieldLabel = default(string), string sEzsignformfieldValue = default(string), int iEzsignformfieldX = default(int), int iEzsignformfieldY = default(int), int iEzsignformfieldWidth = default(int), int iEzsignformfieldHeight = default(int), bool bEzsignformfieldAutocomplete = default(bool), bool bEzsignformfieldSelected = default(bool), string sEzsignformfieldEnteredvalue = default(string))
+        /// <param name="eEzsignformfieldDependencyrequirement">eEzsignformfieldDependencyrequirement.</param>
+        /// <param name="aObjEzsignelementdependency">aObjEzsignelementdependency.</param>
+        public EzsignformfieldRequestCompound(int pkiEzsignformfieldID = default(int), int iEzsignpagePagenumber = default(int), string sEzsignformfieldLabel = default(string), string sEzsignformfieldValue = default(string), int iEzsignformfieldX = default(int), int iEzsignformfieldY = default(int), int iEzsignformfieldWidth = default(int), int iEzsignformfieldHeight = default(int), bool bEzsignformfieldAutocomplete = default(bool), bool bEzsignformfieldSelected = default(bool), string sEzsignformfieldEnteredvalue = default(string), FieldEEzsignformfieldDependencyrequirement? eEzsignformfieldDependencyrequirement = default(FieldEEzsignformfieldDependencyrequirement?), List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = default(List<EzsignelementdependencyRequestCompound>))
         {
             this.IEzsignpagePagenumber = iEzsignpagePagenumber;
             // to ensure "sEzsignformfieldLabel" is required (not null)
@@ -69,6 +77,8 @@ namespace eZmaxApi.Model
             this.BEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
             this.BEzsignformfieldSelected = bEzsignformfieldSelected;
             this.SEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
+            this.EEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
+            this.AObjEzsignelementdependency = aObjEzsignelementdependency;
         }
 
         /// <summary>
@@ -158,6 +168,12 @@ namespace eZmaxApi.Model
         public string SEzsignformfieldEnteredvalue { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjEzsignelementdependency
+        /// </summary>
+        [DataMember(Name = "a_objEzsignelementdependency", EmitDefaultValue = false)]
+        public List<EzsignelementdependencyRequestCompound> AObjEzsignelementdependency { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -176,6 +192,8 @@ namespace eZmaxApi.Model
             sb.Append("  BEzsignformfieldAutocomplete: ").Append(BEzsignformfieldAutocomplete).Append("\n");
             sb.Append("  BEzsignformfieldSelected: ").Append(BEzsignformfieldSelected).Append("\n");
             sb.Append("  SEzsignformfieldEnteredvalue: ").Append(SEzsignformfieldEnteredvalue).Append("\n");
+            sb.Append("  EEzsignformfieldDependencyrequirement: ").Append(EEzsignformfieldDependencyrequirement).Append("\n");
+            sb.Append("  AObjEzsignelementdependency: ").Append(AObjEzsignelementdependency).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -257,6 +275,16 @@ namespace eZmaxApi.Model
                     this.SEzsignformfieldEnteredvalue == input.SEzsignformfieldEnteredvalue ||
                     (this.SEzsignformfieldEnteredvalue != null &&
                     this.SEzsignformfieldEnteredvalue.Equals(input.SEzsignformfieldEnteredvalue))
+                ) && 
+                (
+                    this.EEzsignformfieldDependencyrequirement == input.EEzsignformfieldDependencyrequirement ||
+                    this.EEzsignformfieldDependencyrequirement.Equals(input.EEzsignformfieldDependencyrequirement)
+                ) && 
+                (
+                    this.AObjEzsignelementdependency == input.AObjEzsignelementdependency ||
+                    this.AObjEzsignelementdependency != null &&
+                    input.AObjEzsignelementdependency != null &&
+                    this.AObjEzsignelementdependency.SequenceEqual(input.AObjEzsignelementdependency)
                 );
         }
 
@@ -288,6 +316,11 @@ namespace eZmaxApi.Model
                 if (this.SEzsignformfieldEnteredvalue != null)
                 {
                     hashCode = (hashCode * 59) + this.SEzsignformfieldEnteredvalue.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.EEzsignformfieldDependencyrequirement.GetHashCode();
+                if (this.AObjEzsignelementdependency != null)
+                {
+                    hashCode = (hashCode * 59) + this.AObjEzsignelementdependency.GetHashCode();
                 }
                 return hashCode;
             }

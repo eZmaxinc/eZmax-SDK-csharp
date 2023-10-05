@@ -32,6 +32,12 @@ namespace eZmaxApi.Model
     [DataContract(Name = "ezsigntemplateformfield-ResponseCompound")]
     public partial class EzsigntemplateformfieldResponseCompound : IEquatable<EzsigntemplateformfieldResponseCompound>, IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EEzsigntemplateformfieldDependencyrequirement
+        /// </summary>
+        [DataMember(Name = "eEzsigntemplateformfieldDependencyrequirement", EmitDefaultValue = false)]
+        public FieldEEzsigntemplateformfieldDependencyrequirement? EEzsigntemplateformfieldDependencyrequirement { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateformfieldResponseCompound" /> class.
         /// </summary>
@@ -50,7 +56,9 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigntemplateformfieldHeight">The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  (required).</param>
         /// <param name="bEzsigntemplateformfieldAutocomplete">Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**.</param>
         /// <param name="bEzsigntemplateformfieldSelected">Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**.</param>
-        public EzsigntemplateformfieldResponseCompound(int pkiEzsigntemplateformfieldID = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), string sEzsigntemplateformfieldLabel = default(string), string sEzsigntemplateformfieldValue = default(string), int iEzsigntemplateformfieldX = default(int), int iEzsigntemplateformfieldY = default(int), int iEzsigntemplateformfieldWidth = default(int), int iEzsigntemplateformfieldHeight = default(int), bool bEzsigntemplateformfieldAutocomplete = default(bool), bool bEzsigntemplateformfieldSelected = default(bool))
+        /// <param name="eEzsigntemplateformfieldDependencyrequirement">eEzsigntemplateformfieldDependencyrequirement.</param>
+        /// <param name="aObjEzsigntemplateelementdependency">aObjEzsigntemplateelementdependency.</param>
+        public EzsigntemplateformfieldResponseCompound(int pkiEzsigntemplateformfieldID = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), string sEzsigntemplateformfieldLabel = default(string), string sEzsigntemplateformfieldValue = default(string), int iEzsigntemplateformfieldX = default(int), int iEzsigntemplateformfieldY = default(int), int iEzsigntemplateformfieldWidth = default(int), int iEzsigntemplateformfieldHeight = default(int), bool bEzsigntemplateformfieldAutocomplete = default(bool), bool bEzsigntemplateformfieldSelected = default(bool), FieldEEzsigntemplateformfieldDependencyrequirement? eEzsigntemplateformfieldDependencyrequirement = default(FieldEEzsigntemplateformfieldDependencyrequirement?), List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency = default(List<EzsigntemplateelementdependencyResponseCompound>))
         {
             this.PkiEzsigntemplateformfieldID = pkiEzsigntemplateformfieldID;
             this.IEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
@@ -67,6 +75,8 @@ namespace eZmaxApi.Model
             this.SEzsigntemplateformfieldValue = sEzsigntemplateformfieldValue;
             this.BEzsigntemplateformfieldAutocomplete = bEzsigntemplateformfieldAutocomplete;
             this.BEzsigntemplateformfieldSelected = bEzsigntemplateformfieldSelected;
+            this.EEzsigntemplateformfieldDependencyrequirement = eEzsigntemplateformfieldDependencyrequirement;
+            this.AObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
         }
 
         /// <summary>
@@ -148,6 +158,12 @@ namespace eZmaxApi.Model
         public bool BEzsigntemplateformfieldSelected { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjEzsigntemplateelementdependency
+        /// </summary>
+        [DataMember(Name = "a_objEzsigntemplateelementdependency", EmitDefaultValue = false)]
+        public List<EzsigntemplateelementdependencyResponseCompound> AObjEzsigntemplateelementdependency { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -165,6 +181,8 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsigntemplateformfieldHeight: ").Append(IEzsigntemplateformfieldHeight).Append("\n");
             sb.Append("  BEzsigntemplateformfieldAutocomplete: ").Append(BEzsigntemplateformfieldAutocomplete).Append("\n");
             sb.Append("  BEzsigntemplateformfieldSelected: ").Append(BEzsigntemplateformfieldSelected).Append("\n");
+            sb.Append("  EEzsigntemplateformfieldDependencyrequirement: ").Append(EEzsigntemplateformfieldDependencyrequirement).Append("\n");
+            sb.Append("  AObjEzsigntemplateelementdependency: ").Append(AObjEzsigntemplateelementdependency).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -241,6 +259,16 @@ namespace eZmaxApi.Model
                 (
                     this.BEzsigntemplateformfieldSelected == input.BEzsigntemplateformfieldSelected ||
                     this.BEzsigntemplateformfieldSelected.Equals(input.BEzsigntemplateformfieldSelected)
+                ) && 
+                (
+                    this.EEzsigntemplateformfieldDependencyrequirement == input.EEzsigntemplateformfieldDependencyrequirement ||
+                    this.EEzsigntemplateformfieldDependencyrequirement.Equals(input.EEzsigntemplateformfieldDependencyrequirement)
+                ) && 
+                (
+                    this.AObjEzsigntemplateelementdependency == input.AObjEzsigntemplateelementdependency ||
+                    this.AObjEzsigntemplateelementdependency != null &&
+                    input.AObjEzsigntemplateelementdependency != null &&
+                    this.AObjEzsigntemplateelementdependency.SequenceEqual(input.AObjEzsigntemplateelementdependency)
                 );
         }
 
@@ -269,6 +297,11 @@ namespace eZmaxApi.Model
                 hashCode = (hashCode * 59) + this.IEzsigntemplateformfieldHeight.GetHashCode();
                 hashCode = (hashCode * 59) + this.BEzsigntemplateformfieldAutocomplete.GetHashCode();
                 hashCode = (hashCode * 59) + this.BEzsigntemplateformfieldSelected.GetHashCode();
+                hashCode = (hashCode * 59) + this.EEzsigntemplateformfieldDependencyrequirement.GetHashCode();
+                if (this.AObjEzsigntemplateelementdependency != null)
+                {
+                    hashCode = (hashCode * 59) + this.AObjEzsigntemplateelementdependency.GetHashCode();
+                }
                 return hashCode;
             }
         }

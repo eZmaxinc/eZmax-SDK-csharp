@@ -62,6 +62,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eEzsignsignatureTextvalidation", EmitDefaultValue = false)]
         public EnumTextvalidation? EEzsignsignatureTextvalidation { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureDependencyrequirement
+        /// </summary>
+        [DataMember(Name = "eEzsignsignatureDependencyrequirement", EmitDefaultValue = false)]
+        public FieldEEzsignsignatureDependencyrequirement? EEzsignsignatureDependencyrequirement { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureResponse" /> class.
         /// </summary>
@@ -93,11 +99,12 @@ namespace eZmaxApi.Model
         /// <param name="sEzsignsignatureDescription">The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea**.</param>
         /// <param name="iEzsignsignatureMaxlength">The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**.</param>
         /// <param name="eEzsignsignatureTextvalidation">eEzsignsignatureTextvalidation.</param>
+        /// <param name="eEzsignsignatureDependencyrequirement">eEzsignsignatureDependencyrequirement.</param>
         /// <param name="sEzsignsignatureRegexp">A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**.</param>
         /// <param name="objContactName">objContactName (required).</param>
         /// <param name="objContactNameDelegation">objContactNameDelegation.</param>
         /// <param name="objSignature">objSignature.</param>
-        public EzsignsignatureResponse(int pkiEzsignsignatureID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int iEzsignsignatureValidationstep = default(int), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), bool bEzsignsignatureRequired = default(bool), int fkiEzsignfoldersignerassociationIDValidation = default(int), string dtEzsignsignatureDate = default(string), int iEzsignsignatureattachmentCount = default(int), string sEzsignsignatureDescription = default(string), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureRegexp = default(string), CustomContactNameResponse objContactName = default(CustomContactNameResponse), CustomContactNameResponse objContactNameDelegation = default(CustomContactNameResponse), SignatureResponseCompound objSignature = default(SignatureResponseCompound))
+        public EzsignsignatureResponse(int pkiEzsignsignatureID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int iEzsignsignatureValidationstep = default(int), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), bool bEzsignsignatureRequired = default(bool), int fkiEzsignfoldersignerassociationIDValidation = default(int), string dtEzsignsignatureDate = default(string), int iEzsignsignatureattachmentCount = default(int), string sEzsignsignatureDescription = default(string), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default(FieldEEzsignsignatureDependencyrequirement?), string sEzsignsignatureRegexp = default(string), CustomContactNameResponse objContactName = default(CustomContactNameResponse), CustomContactNameResponse objContactNameDelegation = default(CustomContactNameResponse), SignatureResponseCompound objSignature = default(SignatureResponseCompound))
         {
             this.PkiEzsignsignatureID = pkiEzsignsignatureID;
             this.FkiEzsigndocumentID = fkiEzsigndocumentID;
@@ -128,6 +135,7 @@ namespace eZmaxApi.Model
             this.SEzsignsignatureDescription = sEzsignsignatureDescription;
             this.IEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
             this.EEzsignsignatureTextvalidation = eEzsignsignatureTextvalidation;
+            this.EEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
             this.SEzsignsignatureRegexp = sEzsignsignatureRegexp;
             this.ObjContactNameDelegation = objContactNameDelegation;
             this.ObjSignature = objSignature;
@@ -333,6 +341,7 @@ namespace eZmaxApi.Model
             sb.Append("  SEzsignsignatureDescription: ").Append(SEzsignsignatureDescription).Append("\n");
             sb.Append("  IEzsignsignatureMaxlength: ").Append(IEzsignsignatureMaxlength).Append("\n");
             sb.Append("  EEzsignsignatureTextvalidation: ").Append(EEzsignsignatureTextvalidation).Append("\n");
+            sb.Append("  EEzsignsignatureDependencyrequirement: ").Append(EEzsignsignatureDependencyrequirement).Append("\n");
             sb.Append("  SEzsignsignatureRegexp: ").Append(SEzsignsignatureRegexp).Append("\n");
             sb.Append("  ObjContactName: ").Append(ObjContactName).Append("\n");
             sb.Append("  ObjContactNameDelegation: ").Append(ObjContactNameDelegation).Append("\n");
@@ -469,6 +478,10 @@ namespace eZmaxApi.Model
                     this.EEzsignsignatureTextvalidation.Equals(input.EEzsignsignatureTextvalidation)
                 ) && 
                 (
+                    this.EEzsignsignatureDependencyrequirement == input.EEzsignsignatureDependencyrequirement ||
+                    this.EEzsignsignatureDependencyrequirement.Equals(input.EEzsignsignatureDependencyrequirement)
+                ) && 
+                (
                     this.SEzsignsignatureRegexp == input.SEzsignsignatureRegexp ||
                     (this.SEzsignsignatureRegexp != null &&
                     this.SEzsignsignatureRegexp.Equals(input.SEzsignsignatureRegexp))
@@ -534,6 +547,7 @@ namespace eZmaxApi.Model
                 }
                 hashCode = (hashCode * 59) + this.IEzsignsignatureMaxlength.GetHashCode();
                 hashCode = (hashCode * 59) + this.EEzsignsignatureTextvalidation.GetHashCode();
+                hashCode = (hashCode * 59) + this.EEzsignsignatureDependencyrequirement.GetHashCode();
                 if (this.SEzsignsignatureRegexp != null)
                 {
                     hashCode = (hashCode * 59) + this.SEzsignsignatureRegexp.GetHashCode();

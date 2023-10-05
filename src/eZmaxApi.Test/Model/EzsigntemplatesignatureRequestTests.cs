@@ -243,5 +243,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'EEzsigntemplatesignatureTextvalidation'
         }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplatesignatureDependencyrequirement'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplatesignatureDependencyrequirementTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatesignatureDependencyrequirement'
+        }
     }
 }
