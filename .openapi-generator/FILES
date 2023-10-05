@@ -788,6 +788,9 @@ docs/GlobalEzmaxclientVersionV1Response.md
 docs/GlobalEzmaxcustomerApi.md
 docs/GlobalEzmaxcustomerGetConfigurationV1Response.md
 docs/HeaderAcceptLanguage.md
+docs/LanguageAutocompleteElementResponse.md
+docs/LanguageGetAutocompleteV2Response.md
+docs/LanguageGetAutocompleteV2ResponseMPayload.md
 docs/ModuleEzsignApi.md
 docs/ModuleReportApi.md
 docs/ModuleResponse.md
@@ -858,6 +861,7 @@ docs/ObjectFontApi.md
 docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
+docs/ObjectLanguageApi.md
 docs/ObjectModulegroupApi.md
 docs/ObjectNotificationsectionApi.md
 docs/ObjectNotificationtestApi.md
@@ -1185,6 +1189,7 @@ src/eZmaxApi.Test/Api/ObjectFontApiTests.cs
 src/eZmaxApi.Test/Api/ObjectFranchisebrokerApiTests.cs
 src/eZmaxApi.Test/Api/ObjectFranchiseofficeApiTests.cs
 src/eZmaxApi.Test/Api/ObjectFranchisereferalincomeApiTests.cs
+src/eZmaxApi.Test/Api/ObjectLanguageApiTests.cs
 src/eZmaxApi.Test/Api/ObjectModulegroupApiTests.cs
 src/eZmaxApi.Test/Api/ObjectNotificationsectionApiTests.cs
 src/eZmaxApi.Test/Api/ObjectNotificationtestApiTests.cs
@@ -1992,6 +1997,9 @@ src/eZmaxApi.Test/Model/GlobalCustomerGetEndpointV1ResponseTests.cs
 src/eZmaxApi.Test/Model/GlobalEzmaxclientVersionV1ResponseTests.cs
 src/eZmaxApi.Test/Model/GlobalEzmaxcustomerGetConfigurationV1ResponseTests.cs
 src/eZmaxApi.Test/Model/HeaderAcceptLanguageTests.cs
+src/eZmaxApi.Test/Model/LanguageAutocompleteElementResponseTests.cs
+src/eZmaxApi.Test/Model/LanguageGetAutocompleteV2ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/LanguageGetAutocompleteV2ResponseTests.cs
 src/eZmaxApi.Test/Model/ModuleResponseCompoundTests.cs
 src/eZmaxApi.Test/Model/ModuleResponseTests.cs
 src/eZmaxApi.Test/Model/ModulegroupGetAllV1ResponseMPayloadTests.cs
@@ -2320,6 +2328,7 @@ src/eZmaxApi/Api/ObjectFontApi.cs
 src/eZmaxApi/Api/ObjectFranchisebrokerApi.cs
 src/eZmaxApi/Api/ObjectFranchiseofficeApi.cs
 src/eZmaxApi/Api/ObjectFranchisereferalincomeApi.cs
+src/eZmaxApi/Api/ObjectLanguageApi.cs
 src/eZmaxApi/Api/ObjectModulegroupApi.cs
 src/eZmaxApi/Api/ObjectNotificationsectionApi.cs
 src/eZmaxApi/Api/ObjectNotificationtestApi.cs
@@ -3145,6 +3154,9 @@ src/eZmaxApi/Model/GlobalCustomerGetEndpointV1Response.cs
 src/eZmaxApi/Model/GlobalEzmaxclientVersionV1Response.cs
 src/eZmaxApi/Model/GlobalEzmaxcustomerGetConfigurationV1Response.cs
 src/eZmaxApi/Model/HeaderAcceptLanguage.cs
+src/eZmaxApi/Model/LanguageAutocompleteElementResponse.cs
+src/eZmaxApi/Model/LanguageGetAutocompleteV2Response.cs
+src/eZmaxApi/Model/LanguageGetAutocompleteV2ResponseMPayload.cs
 src/eZmaxApi/Model/ModuleResponse.cs
 src/eZmaxApi/Model/ModuleResponseCompound.cs
 src/eZmaxApi/Model/ModulegroupGetAllV1Response.cs
