@@ -435,7 +435,7 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectUserApi(config);
-            var sSelector = "All";  // string | The type of Users to return
+            var sSelector = "AgentBrokerEmployeeEzsignUserNormal";  // string | The type of Users to return
             var eFilterActive = "All";  // string? | Specify which results we want to display. (optional)  (default to Active)
             var sQuery = "sQuery_example";  // string? | Allow to filter the returned results (optional) 
             var acceptLanguage = new HeaderAcceptLanguage?(); // HeaderAcceptLanguage? |  (optional) 

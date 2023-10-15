@@ -64,136 +64,160 @@ namespace eZmaxApi.Model
         Goodcode = 5,
 
         /// <summary>
+        /// Enum Badresponse for value: Badresponse
+        /// </summary>
+        [EnumMember(Value = "Badresponse")]
+        Badresponse = 6,
+
+        /// <summary>
+        /// Enum Goodresponse for value: Goodresponse
+        /// </summary>
+        [EnumMember(Value = "Goodresponse")]
+        Goodresponse = 7,
+
+        /// <summary>
         /// Enum Authentication for value: Authentication
         /// </summary>
         [EnumMember(Value = "Authentication")]
-        Authentication = 6,
+        Authentication = 8,
 
         /// <summary>
         /// Enum Createpage for value: Createpage
         /// </summary>
         [EnumMember(Value = "Createpage")]
-        Createpage = 7,
+        Createpage = 9,
 
         /// <summary>
         /// Enum Download for value: Download
         /// </summary>
         [EnumMember(Value = "Download")]
-        Download = 8,
+        Download = 10,
 
         /// <summary>
         /// Enum Send for value: Send
         /// </summary>
         [EnumMember(Value = "Send")]
-        Send = 9,
+        Send = 11,
 
         /// <summary>
         /// Enum Sign for value: Sign
         /// </summary>
         [EnumMember(Value = "Sign")]
-        Sign = 10,
+        Sign = 12,
 
         /// <summary>
         /// Enum Upload for value: Upload
         /// </summary>
         [EnumMember(Value = "Upload")]
-        Upload = 11,
+        Upload = 13,
 
         /// <summary>
         /// Enum View for value: View
         /// </summary>
         [EnumMember(Value = "View")]
-        View = 12,
+        View = 14,
 
         /// <summary>
         /// Enum Completion for value: Completion
         /// </summary>
         [EnumMember(Value = "Completion")]
-        Completion = 13,
+        Completion = 15,
 
         /// <summary>
         /// Enum Changelimitdate for value: Changelimitdate
         /// </summary>
         [EnumMember(Value = "Changelimitdate")]
-        Changelimitdate = 14,
+        Changelimitdate = 16,
 
         /// <summary>
         /// Enum Unsign for value: Unsign
         /// </summary>
         [EnumMember(Value = "Unsign")]
-        Unsign = 15,
+        Unsign = 17,
 
         /// <summary>
         /// Enum ImportFromInstanet for value: ImportFromInstanet
         /// </summary>
         [EnumMember(Value = "ImportFromInstanet")]
-        ImportFromInstanet = 16,
+        ImportFromInstanet = 18,
 
         /// <summary>
         /// Enum SendEmail for value: SendEmail
         /// </summary>
         [EnumMember(Value = "SendEmail")]
-        SendEmail = 17,
+        SendEmail = 19,
 
         /// <summary>
         /// Enum FormCompletion for value: FormCompletion
         /// </summary>
         [EnumMember(Value = "FormCompletion")]
-        FormCompletion = 18,
+        FormCompletion = 20,
 
         /// <summary>
         /// Enum SignatureAttachmentAdd for value: SignatureAttachmentAdd
         /// </summary>
         [EnumMember(Value = "SignatureAttachmentAdd")]
-        SignatureAttachmentAdd = 19,
+        SignatureAttachmentAdd = 21,
 
         /// <summary>
         /// Enum SignatureAttachmentValidation for value: SignatureAttachmentValidation
         /// </summary>
         [EnumMember(Value = "SignatureAttachmentValidation")]
-        SignatureAttachmentValidation = 20,
+        SignatureAttachmentValidation = 22,
 
         /// <summary>
         /// Enum SignatureAttachmentRefused for value: SignatureAttachmentRefused
         /// </summary>
         [EnumMember(Value = "SignatureAttachmentRefused")]
-        SignatureAttachmentRefused = 21,
+        SignatureAttachmentRefused = 23,
 
         /// <summary>
         /// Enum SignatureAttachmentDeleted for value: SignatureAttachmentDeleted
         /// </summary>
         [EnumMember(Value = "SignatureAttachmentDeleted")]
-        SignatureAttachmentDeleted = 22,
+        SignatureAttachmentDeleted = 24,
 
         /// <summary>
         /// Enum DeclinedToSign for value: DeclinedToSign
         /// </summary>
         [EnumMember(Value = "DeclinedToSign")]
-        DeclinedToSign = 23,
+        DeclinedToSign = 25,
 
         /// <summary>
         /// Enum DelayedSendEmail for value: DelayedSendEmail
         /// </summary>
         [EnumMember(Value = "DelayedSendEmail")]
-        DelayedSendEmail = 24,
+        DelayedSendEmail = 26,
+
+        /// <summary>
+        /// Enum AnnotationAdded for value: AnnotationAdded
+        /// </summary>
+        [EnumMember(Value = "AnnotationAdded")]
+        AnnotationAdded = 27,
+
+        /// <summary>
+        /// Enum Flatten for value: Flatten
+        /// </summary>
+        [EnumMember(Value = "Flatten")]
+        Flatten = 28,
 
         /// <summary>
         /// Enum RegeneratePage for value: RegeneratePage
         /// </summary>
         [EnumMember(Value = "RegeneratePage")]
-        RegeneratePage = 25,
+        RegeneratePage = 29,
 
         /// <summary>
         /// Enum RegeneratePageForm for value: RegeneratePageForm
         /// </summary>
         [EnumMember(Value = "RegeneratePageForm")]
-        RegeneratePageForm = 26,
+        RegeneratePageForm = 30,
 
         /// <summary>
         /// Enum Reassign for value: Reassign
         /// </summary>
         [EnumMember(Value = "Reassign")]
-        Reassign = 27
+        Reassign = 31
     }
 
 }

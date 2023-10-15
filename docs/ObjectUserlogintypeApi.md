@@ -1,18 +1,18 @@
-# eZmaxApi.Api.ObjectEzsigntsarequirementApi
+# eZmaxApi.Api.ObjectUserlogintypeApi
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**EzsigntsarequirementGetAutocompleteV2**](ObjectEzsigntsarequirementApi.md#ezsigntsarequirementgetautocompletev2) | **GET** /2/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs |
+| [**UserlogintypeGetAutocompleteV2**](ObjectUserlogintypeApi.md#userlogintypegetautocompletev2) | **GET** /2/object/userlogintype/getAutocomplete/{sSelector} | Retrieve Userlogintypes and IDs |
 
-<a id="ezsigntsarequirementgetautocompletev2"></a>
-# **EzsigntsarequirementGetAutocompleteV2**
-> EzsigntsarequirementGetAutocompleteV2Response EzsigntsarequirementGetAutocompleteV2 (string sSelector, int? fkiEzsignfoldertypeID = null, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+<a id="userlogintypegetautocompletev2"></a>
+# **UserlogintypeGetAutocompleteV2**
+> UserlogintypeGetAutocompleteV2Response UserlogintypeGetAutocompleteV2 (string sSelector, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
 
-Retrieve Ezsigntsarequirements and IDs
+Retrieve Userlogintypes and IDs
 
-Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
+Get the list of Userlogintype to be used in a dropdown or autocomplete control.
 
 ### Example
 ```csharp
@@ -24,7 +24,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsigntsarequirementGetAutocompleteV2Example
+    public class UserlogintypeGetAutocompleteV2Example
     {
         public static void Main()
         {
@@ -35,22 +35,21 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new ObjectEzsigntsarequirementApi(config);
-            var sSelector = "All";  // string | The type of Ezsigntsarequirements to return
-            var fkiEzsignfoldertypeID = 56;  // int? |  (optional) 
+            var apiInstance = new ObjectUserlogintypeApi(config);
+            var sSelector = "All";  // string | The type of Userlogintypes to return
             var eFilterActive = "All";  // string? | Specify which results we want to display. (optional)  (default to Active)
             var sQuery = "sQuery_example";  // string? | Allow to filter the returned results (optional) 
             var acceptLanguage = new HeaderAcceptLanguage?(); // HeaderAcceptLanguage? |  (optional) 
 
             try
             {
-                // Retrieve Ezsigntsarequirements and IDs
-                EzsigntsarequirementGetAutocompleteV2Response result = apiInstance.EzsigntsarequirementGetAutocompleteV2(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
+                // Retrieve Userlogintypes and IDs
+                UserlogintypeGetAutocompleteV2Response result = apiInstance.UserlogintypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsigntsarequirementApi.EzsigntsarequirementGetAutocompleteV2: " + e.Message);
+                Debug.Print("Exception when calling ObjectUserlogintypeApi.UserlogintypeGetAutocompleteV2: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -59,21 +58,21 @@ namespace Example
 }
 ```
 
-#### Using the EzsigntsarequirementGetAutocompleteV2WithHttpInfo variant
+#### Using the UserlogintypeGetAutocompleteV2WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Retrieve Ezsigntsarequirements and IDs
-    ApiResponse<EzsigntsarequirementGetAutocompleteV2Response> response = apiInstance.EzsigntsarequirementGetAutocompleteV2WithHttpInfo(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
+    // Retrieve Userlogintypes and IDs
+    ApiResponse<UserlogintypeGetAutocompleteV2Response> response = apiInstance.UserlogintypeGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectEzsigntsarequirementApi.EzsigntsarequirementGetAutocompleteV2WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectUserlogintypeApi.UserlogintypeGetAutocompleteV2WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -83,15 +82,14 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **sSelector** | **string** | The type of Ezsigntsarequirements to return |  |
-| **fkiEzsignfoldertypeID** | **int?** |  | [optional]  |
+| **sSelector** | **string** | The type of Userlogintypes to return |  |
 | **eFilterActive** | **string?** | Specify which results we want to display. | [optional] [default to Active] |
 | **sQuery** | **string?** | Allow to filter the returned results | [optional]  |
 | **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md) |  | [optional]  |
 
 ### Return type
 
-[**EzsigntsarequirementGetAutocompleteV2Response**](EzsigntsarequirementGetAutocompleteV2Response.md)
+[**UserlogintypeGetAutocompleteV2Response**](UserlogintypeGetAutocompleteV2Response.md)
 
 ### Authorization
 

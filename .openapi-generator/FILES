@@ -880,6 +880,7 @@ docs/ObjectUserApi.md
 docs/ObjectUsergroupApi.md
 docs/ObjectUsergroupdelegationApi.md
 docs/ObjectUsergroupmembershipApi.md
+docs/ObjectUserlogintypeApi.md
 docs/ObjectUserstagedApi.md
 docs/ObjectVariableexpenseApi.md
 docs/ObjectVersionhistoryApi.md
@@ -1075,6 +1076,9 @@ docs/UsergroupmembershipRequest.md
 docs/UsergroupmembershipRequestCompound.md
 docs/UsergroupmembershipResponse.md
 docs/UsergroupmembershipResponseCompound.md
+docs/UserlogintypeAutocompleteElementResponse.md
+docs/UserlogintypeGetAutocompleteV2Response.md
+docs/UserlogintypeGetAutocompleteV2ResponseMPayload.md
 docs/UserstagedCreateUserV1Response.md
 docs/UserstagedCreateUserV1ResponseMPayload.md
 docs/UserstagedDeleteObjectV1Response.md
@@ -1208,6 +1212,7 @@ src/eZmaxApi.Test/Api/ObjectUserApiTests.cs
 src/eZmaxApi.Test/Api/ObjectUsergroupApiTests.cs
 src/eZmaxApi.Test/Api/ObjectUsergroupdelegationApiTests.cs
 src/eZmaxApi.Test/Api/ObjectUsergroupmembershipApiTests.cs
+src/eZmaxApi.Test/Api/ObjectUserlogintypeApiTests.cs
 src/eZmaxApi.Test/Api/ObjectUserstagedApiTests.cs
 src/eZmaxApi.Test/Api/ObjectVariableexpenseApiTests.cs
 src/eZmaxApi.Test/Api/ObjectVersionhistoryApiTests.cs
@@ -2215,6 +2220,9 @@ src/eZmaxApi.Test/Model/UsergroupmembershipRequestCompoundTests.cs
 src/eZmaxApi.Test/Model/UsergroupmembershipRequestTests.cs
 src/eZmaxApi.Test/Model/UsergroupmembershipResponseCompoundTests.cs
 src/eZmaxApi.Test/Model/UsergroupmembershipResponseTests.cs
+src/eZmaxApi.Test/Model/UserlogintypeAutocompleteElementResponseTests.cs
+src/eZmaxApi.Test/Model/UserlogintypeGetAutocompleteV2ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/UserlogintypeGetAutocompleteV2ResponseTests.cs
 src/eZmaxApi.Test/Model/UserstagedCreateUserV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/UserstagedCreateUserV1ResponseTests.cs
 src/eZmaxApi.Test/Model/UserstagedDeleteObjectV1ResponseTests.cs
@@ -2347,6 +2355,7 @@ src/eZmaxApi/Api/ObjectUserApi.cs
 src/eZmaxApi/Api/ObjectUsergroupApi.cs
 src/eZmaxApi/Api/ObjectUsergroupdelegationApi.cs
 src/eZmaxApi/Api/ObjectUsergroupmembershipApi.cs
+src/eZmaxApi/Api/ObjectUserlogintypeApi.cs
 src/eZmaxApi/Api/ObjectUserstagedApi.cs
 src/eZmaxApi/Api/ObjectVariableexpenseApi.cs
 src/eZmaxApi/Api/ObjectVersionhistoryApi.cs
@@ -3372,6 +3381,9 @@ src/eZmaxApi/Model/UsergroupmembershipRequest.cs
 src/eZmaxApi/Model/UsergroupmembershipRequestCompound.cs
 src/eZmaxApi/Model/UsergroupmembershipResponse.cs
 src/eZmaxApi/Model/UsergroupmembershipResponseCompound.cs
+src/eZmaxApi/Model/UserlogintypeAutocompleteElementResponse.cs
+src/eZmaxApi/Model/UserlogintypeGetAutocompleteV2Response.cs
+src/eZmaxApi/Model/UserlogintypeGetAutocompleteV2ResponseMPayload.cs
 src/eZmaxApi/Model/UserstagedCreateUserV1Response.cs
 src/eZmaxApi/Model/UserstagedCreateUserV1ResponseMPayload.cs
 src/eZmaxApi/Model/UserstagedDeleteObjectV1Response.cs
