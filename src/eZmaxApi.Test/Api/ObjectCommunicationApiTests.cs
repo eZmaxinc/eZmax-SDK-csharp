@@ -56,15 +56,15 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test CommunicationGetObjectV2
+        /// Test CommunicationSendV1
         /// </summary>
         [Fact]
-        public void CommunicationGetObjectV2Test()
+        public void CommunicationSendV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //int pkiCommunicationID = null;
-            //var response = instance.CommunicationGetObjectV2(pkiCommunicationID);
-            //Assert.IsType<CommunicationGetObjectV2Response>(response);
+            //CommunicationSendV1Request communicationSendV1Request = null;
+            //var response = instance.CommunicationSendV1(communicationSendV1Request);
+            //Assert.IsType<CommunicationSendV1Response>(response);
         }
     }
 }

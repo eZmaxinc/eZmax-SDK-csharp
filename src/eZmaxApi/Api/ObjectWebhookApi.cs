@@ -122,7 +122,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -138,7 +138,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -308,7 +308,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -325,7 +325,7 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -1130,7 +1130,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -1147,7 +1147,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -1227,7 +1227,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -1245,7 +1245,7 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>

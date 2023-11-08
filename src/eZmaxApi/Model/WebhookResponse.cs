@@ -67,7 +67,7 @@ namespace eZmaxApi.Model
         /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
         /// <param name="sWebhookUrl">The URL of the Webhook callback (required).</param>
         /// <param name="sWebhookEmailfailed">The email that will receive the Webhook in case all attempts fail (required).</param>
-        /// <param name="bWebhookIsactive">Whether the Webhook is active or not.</param>
+        /// <param name="bWebhookIsactive">Whether the Webhook is active or not (required).</param>
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
         public WebhookResponse(int pkiWebhookID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), bool bWebhookIsactive = default(bool), bool bWebhookSkipsslvalidation = default(bool))
         {
@@ -91,12 +91,12 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sWebhookEmailfailed is a required property for WebhookResponse and cannot be null");
             }
             this.SWebhookEmailfailed = sWebhookEmailfailed;
+            this.BWebhookIsactive = bWebhookIsactive;
             this.BWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             this.EWebhookEzsignevent = eWebhookEzsignevent;
             this.EWebhookManagementevent = eWebhookManagementevent;
-            this.BWebhookIsactive = bWebhookIsactive;
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>Whether the Webhook is active or not</value>
         /* <example>true</example>*/
-        [DataMember(Name = "bWebhookIsactive", EmitDefaultValue = true)]
+        [DataMember(Name = "bWebhookIsactive", IsRequired = true, EmitDefaultValue = true)]
         public bool BWebhookIsactive { get; set; }
 
         /// <summary>

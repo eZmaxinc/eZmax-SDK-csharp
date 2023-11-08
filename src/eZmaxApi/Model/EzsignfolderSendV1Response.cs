@@ -27,7 +27,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
+    /// Response for GET /1/object/attachment/{pkiAttachmentID}/download
     /// </summary>
     [DataContract(Name = "ezsignfolder-send-v1-Response")]
     public partial class EzsignfolderSendV1Response : IEquatable<EzsignfolderSendV1Response>, IValidatableObject

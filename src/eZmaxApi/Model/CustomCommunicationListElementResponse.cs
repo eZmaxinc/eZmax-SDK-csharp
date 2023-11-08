@@ -289,6 +289,15 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCommunicationID, must be a value greater than or equal to 0.", new [] { "PkiCommunicationID" });
             }
 
+            if (this.SCommunicationSubject != null) {
+                // SCommunicationSubject (string) pattern
+                Regex regexSCommunicationSubject = new Regex(@"^.{0,150}$", RegexOptions.CultureInvariant);
+                if (!regexSCommunicationSubject.Match(this.SCommunicationSubject).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCommunicationSubject, must match a pattern of " + regexSCommunicationSubject, new [] { "SCommunicationSubject" });
+                }
+            }
+
             yield break;
         }
     }

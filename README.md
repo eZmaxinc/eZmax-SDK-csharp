@@ -133,6 +133,7 @@ Class | Method | HTTP request | Description
 *ObjectApikeyApi* | [**ApikeyGetPermissionsV1**](docs/ObjectApikeyApi.md#apikeygetpermissionsv1) | **GET** /1/object/apikey/{pkiApikeyID}/getPermissions | Retrieve an existing Apikey's Permissions
 *ObjectApikeyApi* | [**ApikeyGetSubnetsV1**](docs/ObjectApikeyApi.md#apikeygetsubnetsv1) | **GET** /1/object/apikey/{pkiApikeyID}/getSubnets | Retrieve an existing Apikey's subnets
 *ObjectApikeyApi* | [**ApikeyRegenerateV1**](docs/ObjectApikeyApi.md#apikeyregeneratev1) | **POST** /1/object/apikey/{pkiApikeyID}/regenerate | Regenerate the Apikey
+*ObjectAttachmentApi* | [**AttachmentDownloadV1**](docs/ObjectAttachmentApi.md#attachmentdownloadv1) | **GET** /1/object/attachment/{pkiAttachmentID}/download | Retrieve the content
 *ObjectBillingentityexternalApi* | [**BillingentityexternalGetAutocompleteV2**](docs/ObjectBillingentityexternalApi.md#billingentityexternalgetautocompletev2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
 *ObjectBillingentityinternalApi* | [**BillingentityinternalCreateObjectV1**](docs/ObjectBillingentityinternalApi.md#billingentityinternalcreateobjectv1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
 *ObjectBillingentityinternalApi* | [**BillingentityinternalEditObjectV1**](docs/ObjectBillingentityinternalApi.md#billingentityinternaleditobjectv1) | **PUT** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Edit an existing Billingentityinternal
@@ -144,14 +145,16 @@ Class | Method | HTTP request | Description
 *ObjectBrandingApi* | [**BrandingGetAutocompleteV2**](docs/ObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 *ObjectBrandingApi* | [**BrandingGetListV1**](docs/ObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *ObjectBrandingApi* | [**BrandingGetObjectV2**](docs/ObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+*ObjectBuyercontractApi* | [**BuyercontractGetCommunicationListV1**](docs/ObjectBuyercontractApi.md#buyercontractgetcommunicationlistv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList | Retrieve Communication list
 *ObjectClonehistoryApi* | [**ClonehistoryGetListV1**](docs/ObjectClonehistoryApi.md#clonehistorygetlistv1) | **GET** /1/object/clonehistory/getList | Retrieve Clonehistory list
-*ObjectCommunicationApi* | [**CommunicationGetObjectV2**](docs/ObjectCommunicationApi.md#communicationgetobjectv2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
+*ObjectCommunicationApi* | [**CommunicationSendV1**](docs/ObjectCommunicationApi.md#communicationsendv1) | **POST** /1/object/communication/send | Send a new Communication
 *ObjectCompanyApi* | [**CompanyGetAutocompleteV2**](docs/ObjectCompanyApi.md#companygetautocompletev2) | **GET** /2/object/company/getAutocomplete/{sSelector} | Retrieve Companys and IDs
 *ObjectCorsApi* | [**CorsCreateObjectV1**](docs/ObjectCorsApi.md#corscreateobjectv1) | **POST** /1/object/cors | Create a new Cors
 *ObjectCorsApi* | [**CorsDeleteObjectV1**](docs/ObjectCorsApi.md#corsdeleteobjectv1) | **DELETE** /1/object/cors/{pkiCorsID} | Delete an existing Cors
 *ObjectCorsApi* | [**CorsEditObjectV1**](docs/ObjectCorsApi.md#corseditobjectv1) | **PUT** /1/object/cors/{pkiCorsID} | Edit an existing Cors
 *ObjectCorsApi* | [**CorsGetObjectV2**](docs/ObjectCorsApi.md#corsgetobjectv2) | **GET** /2/object/cors/{pkiCorsID} | Retrieve an existing Cors
 *ObjectDepartmentApi* | [**DepartmentGetAutocompleteV2**](docs/ObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
+*ObjectElectronicfundstransferApi* | [**EletronicfundstransferGetCommunicationListV1**](docs/ObjectElectronicfundstransferApi.md#eletronicfundstransfergetcommunicationlistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
 *ObjectEmailtypeApi* | [**EmailtypeGetAutocompleteV2**](docs/ObjectEmailtypeApi.md#emailtypegetautocompletev2) | **GET** /2/object/emailtype/getAutocomplete/{sSelector} | Retrieve Emailtypes and IDs
 *ObjectEzmaxinvoicingApi* | [**EzmaxinvoicingGetAutocompleteV1**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *ObjectEzmaxinvoicingApi* | [**EzmaxinvoicingGetAutocompleteV2**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
@@ -216,6 +219,8 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfolderApi* | [**EzsignfolderGetActionableElementsV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 *ObjectEzsignfolderApi* | [**EzsignfolderGetCommunicationCountV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationcountv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount | Retrieve Communication count
 *ObjectEzsignfolderApi* | [**EzsignfolderGetCommunicationListV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationlistv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList | Retrieve Communication list
+*ObjectEzsignfolderApi* | [**EzsignfolderGetCommunicationrecipientsV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationrecipientsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients | Retrieve Ezsignfolder's Communicationrecipient
+*ObjectEzsignfolderApi* | [**EzsignfolderGetCommunicationsendersV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationsendersv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders | Retrieve Ezsignfolder's Communicationsender
 *ObjectEzsignfolderApi* | [**EzsignfolderGetEzsigndocumentsV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
 *ObjectEzsignfolderApi* | [**EzsignfolderGetEzsignfoldersignerassociationsV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
 *ObjectEzsignfolderApi* | [**EzsignfolderGetEzsignsignaturesAutomaticV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
@@ -322,10 +327,15 @@ Class | Method | HTTP request | Description
 *ObjectFranchiseofficeApi* | [**FranchiseofficeGetAutocompleteV2**](docs/ObjectFranchiseofficeApi.md#franchiseofficegetautocompletev2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *ObjectFranchisereferalincomeApi* | [**FranchisereferalincomeCreateObjectV1**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *ObjectFranchisereferalincomeApi* | [**FranchisereferalincomeCreateObjectV2**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
+*ObjectInscriptionApi* | [**InscriptionGetCommunicationListV1**](docs/ObjectInscriptionApi.md#inscriptiongetcommunicationlistv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list
+*ObjectInscriptionnotauthenticatedApi* | [**InscriptionnotauthenticatedGetCommunicationListV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetcommunicationlistv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList | Retrieve Communication list
+*ObjectInscriptiontempApi* | [**InscriptiontempGetCommunicationListV1**](docs/ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationlistv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList | Retrieve Communication list
+*ObjectInvoiceApi* | [**InvoiceGetCommunicationListV1**](docs/ObjectInvoiceApi.md#invoicegetcommunicationlistv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationList | Retrieve Communication list
 *ObjectLanguageApi* | [**LanguageGetAutocompleteV2**](docs/ObjectLanguageApi.md#languagegetautocompletev2) | **GET** /2/object/language/getAutocomplete/{sSelector} | Retrieve Languages and IDs
 *ObjectModulegroupApi* | [**ModulegroupGetAllV1**](docs/ObjectModulegroupApi.md#modulegroupgetallv1) | **GET** /1/object/modulegroup/getAll/{eContext} | Retrieve all Modulegroups
 *ObjectNotificationsectionApi* | [**NotificationsectionGetNotificationtestsV1**](docs/ObjectNotificationsectionApi.md#notificationsectiongetnotificationtestsv1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection's Notificationtests
 *ObjectNotificationtestApi* | [**NotificationtestGetElementsV1**](docs/ObjectNotificationtestApi.md#notificationtestgetelementsv1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest's Elements
+*ObjectOtherincomeApi* | [**OtherincomeGetCommunicationListV1**](docs/ObjectOtherincomeApi.md#otherincomegetcommunicationlistv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList | Retrieve Communication list
 *ObjectPaymenttermApi* | [**PaymenttermCreateObjectV1**](docs/ObjectPaymenttermApi.md#paymenttermcreateobjectv1) | **POST** /1/object/paymentterm | Create a new Paymentterm
 *ObjectPaymenttermApi* | [**PaymenttermEditObjectV1**](docs/ObjectPaymenttermApi.md#paymenttermeditobjectv1) | **PUT** /1/object/paymentterm/{pkiPaymenttermID} | Edit an existing Paymentterm
 *ObjectPaymenttermApi* | [**PaymenttermGetAutocompleteV2**](docs/ObjectPaymenttermApi.md#paymenttermgetautocompletev2) | **GET** /2/object/paymentterm/getAutocomplete/{sSelector} | Retrieve Paymentterms and IDs
@@ -338,6 +348,7 @@ Class | Method | HTTP request | Description
 *ObjectPermissionApi* | [**PermissionEditObjectV1**](docs/ObjectPermissionApi.md#permissioneditobjectv1) | **PUT** /1/object/permission/{pkiPermissionID} | Edit an existing Permission
 *ObjectPermissionApi* | [**PermissionGetObjectV2**](docs/ObjectPermissionApi.md#permissiongetobjectv2) | **GET** /2/object/permission/{pkiPermissionID} | Retrieve an existing Permission
 *ObjectPhonetypeApi* | [**PhonetypeGetAutocompleteV2**](docs/ObjectPhonetypeApi.md#phonetypegetautocompletev2) | **GET** /2/object/phonetype/getAutocomplete/{sSelector} | Retrieve Phonetypes and IDs
+*ObjectRejectedoffertopurchaseApi* | [**RejectedoffertopurchaseGetCommunicationListV1**](docs/ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationlistv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList | Retrieve Communication list
 *ObjectSecretquestionApi* | [**SecretquestionGetAutocompleteV2**](docs/ObjectSecretquestionApi.md#secretquestiongetautocompletev2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *ObjectSessionhistoryApi* | [**SessionhistoryGetListV1**](docs/ObjectSessionhistoryApi.md#sessionhistorygetlistv1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list
 *ObjectSignatureApi* | [**SignatureCreateObjectV1**](docs/ObjectSignatureApi.md#signaturecreateobjectv1) | **POST** /1/object/signature | Create a new Signature
@@ -454,6 +465,7 @@ Class | Method | HTTP request | Description
  - [Model.ApikeyRequestCompound](docs/ApikeyRequestCompound.md)
  - [Model.ApikeyResponse](docs/ApikeyResponse.md)
  - [Model.ApikeyResponseCompound](docs/ApikeyResponseCompound.md)
+ - [Model.AttachmentDownloadV1Response](docs/AttachmentDownloadV1Response.md)
  - [Model.AttemptResponse](docs/AttemptResponse.md)
  - [Model.AttemptResponseCompound](docs/AttemptResponseCompound.md)
  - [Model.BillingentityexternalAutocompleteElementResponse](docs/BillingentityexternalAutocompleteElementResponse.md)
@@ -497,6 +509,8 @@ Class | Method | HTTP request | Description
  - [Model.BrandingRequestCompound](docs/BrandingRequestCompound.md)
  - [Model.BrandingResponse](docs/BrandingResponse.md)
  - [Model.BrandingResponseCompound](docs/BrandingResponseCompound.md)
+ - [Model.BuyercontractGetCommunicationListV1Response](docs/BuyercontractGetCommunicationListV1Response.md)
+ - [Model.BuyercontractGetCommunicationListV1ResponseMPayload](docs/BuyercontractGetCommunicationListV1ResponseMPayload.md)
  - [Model.ClonehistoryGetListV1Response](docs/ClonehistoryGetListV1Response.md)
  - [Model.ClonehistoryGetListV1ResponseMPayload](docs/ClonehistoryGetListV1ResponseMPayload.md)
  - [Model.ClonehistoryListElement](docs/ClonehistoryListElement.md)
@@ -530,16 +544,19 @@ Class | Method | HTTP request | Description
  - [Model.CommonResponseRedirectSSecretquestionTextX](docs/CommonResponseRedirectSSecretquestionTextX.md)
  - [Model.CommonResponseWarning](docs/CommonResponseWarning.md)
  - [Model.CommonWebhook](docs/CommonWebhook.md)
- - [Model.CommunicationGetObjectV2Response](docs/CommunicationGetObjectV2Response.md)
- - [Model.CommunicationGetObjectV2ResponseMPayload](docs/CommunicationGetObjectV2ResponseMPayload.md)
- - [Model.CommunicationResponse](docs/CommunicationResponse.md)
- - [Model.CommunicationResponseCompound](docs/CommunicationResponseCompound.md)
- - [Model.CommunicationattachmentResponse](docs/CommunicationattachmentResponse.md)
- - [Model.CommunicationattachmentResponseCompound](docs/CommunicationattachmentResponseCompound.md)
- - [Model.CommunicationexternalrecipientResponse](docs/CommunicationexternalrecipientResponse.md)
- - [Model.CommunicationexternalrecipientResponseCompound](docs/CommunicationexternalrecipientResponseCompound.md)
- - [Model.CommunicationrecipientResponse](docs/CommunicationrecipientResponse.md)
- - [Model.CommunicationrecipientResponseCompound](docs/CommunicationrecipientResponseCompound.md)
+ - [Model.CommunicationCreateObjectV1ResponseMPayload](docs/CommunicationCreateObjectV1ResponseMPayload.md)
+ - [Model.CommunicationRequest](docs/CommunicationRequest.md)
+ - [Model.CommunicationRequestCompound](docs/CommunicationRequestCompound.md)
+ - [Model.CommunicationSendV1Request](docs/CommunicationSendV1Request.md)
+ - [Model.CommunicationSendV1Response](docs/CommunicationSendV1Response.md)
+ - [Model.CommunicationattachmentRequest](docs/CommunicationattachmentRequest.md)
+ - [Model.CommunicationattachmentRequestCompound](docs/CommunicationattachmentRequestCompound.md)
+ - [Model.CommunicationexternalrecipientRequest](docs/CommunicationexternalrecipientRequest.md)
+ - [Model.CommunicationexternalrecipientRequestCompound](docs/CommunicationexternalrecipientRequestCompound.md)
+ - [Model.CommunicationrecipientRequest](docs/CommunicationrecipientRequest.md)
+ - [Model.CommunicationrecipientRequestCompound](docs/CommunicationrecipientRequestCompound.md)
+ - [Model.CommunicationreferenceRequest](docs/CommunicationreferenceRequest.md)
+ - [Model.CommunicationreferenceRequestCompound](docs/CommunicationreferenceRequestCompound.md)
  - [Model.CompanyAutocompleteElementResponse](docs/CompanyAutocompleteElementResponse.md)
  - [Model.CompanyGetAutocompleteV2Response](docs/CompanyGetAutocompleteV2Response.md)
  - [Model.CompanyGetAutocompleteV2ResponseMPayload](docs/CompanyGetAutocompleteV2ResponseMPayload.md)
@@ -563,6 +580,11 @@ Class | Method | HTTP request | Description
  - [Model.CorsResponseCompound](docs/CorsResponseCompound.md)
  - [Model.CustomAutocompleteElementResponse](docs/CustomAutocompleteElementResponse.md)
  - [Model.CustomCommunicationListElementResponse](docs/CustomCommunicationListElementResponse.md)
+ - [Model.CustomCommunicationattachmentRequest](docs/CustomCommunicationattachmentRequest.md)
+ - [Model.CustomCommunicationrecipientsgroupResponse](docs/CustomCommunicationrecipientsgroupResponse.md)
+ - [Model.CustomCommunicationrecipientsrecipientResponse](docs/CustomCommunicationrecipientsrecipientResponse.md)
+ - [Model.CustomCommunicationsenderRequest](docs/CustomCommunicationsenderRequest.md)
+ - [Model.CustomCommunicationsenderResponse](docs/CustomCommunicationsenderResponse.md)
  - [Model.CustomContactNameResponse](docs/CustomContactNameResponse.md)
  - [Model.CustomCreditcardtransactionResponse](docs/CustomCreditcardtransactionResponse.md)
  - [Model.CustomDropdownElementRequest](docs/CustomDropdownElementRequest.md)
@@ -602,14 +624,12 @@ Class | Method | HTTP request | Description
  - [Model.DepartmentAutocompleteElementResponse](docs/DepartmentAutocompleteElementResponse.md)
  - [Model.DepartmentGetAutocompleteV2Response](docs/DepartmentGetAutocompleteV2Response.md)
  - [Model.DepartmentGetAutocompleteV2ResponseMPayload](docs/DepartmentGetAutocompleteV2ResponseMPayload.md)
- - [Model.DescriptionstaticResponse](docs/DescriptionstaticResponse.md)
- - [Model.DescriptionstaticResponseCompound](docs/DescriptionstaticResponseCompound.md)
+ - [Model.ElectronicfundstransferGetCommunicationListV1Response](docs/ElectronicfundstransferGetCommunicationListV1Response.md)
+ - [Model.ElectronicfundstransferGetCommunicationListV1ResponseMPayload](docs/ElectronicfundstransferGetCommunicationListV1ResponseMPayload.md)
  - [Model.EmailRequest](docs/EmailRequest.md)
  - [Model.EmailRequestCompound](docs/EmailRequestCompound.md)
  - [Model.EmailResponse](docs/EmailResponse.md)
  - [Model.EmailResponseCompound](docs/EmailResponseCompound.md)
- - [Model.EmailstaticResponse](docs/EmailstaticResponse.md)
- - [Model.EmailstaticResponseCompound](docs/EmailstaticResponseCompound.md)
  - [Model.EmailtypeAutocompleteElementResponse](docs/EmailtypeAutocompleteElementResponse.md)
  - [Model.EmailtypeGetAutocompleteV2Response](docs/EmailtypeGetAutocompleteV2Response.md)
  - [Model.EmailtypeGetAutocompleteV2ResponseMPayload](docs/EmailtypeGetAutocompleteV2ResponseMPayload.md)
@@ -791,6 +811,10 @@ Class | Method | HTTP request | Description
  - [Model.EzsignfolderGetCommunicationCountV1ResponseMPayload](docs/EzsignfolderGetCommunicationCountV1ResponseMPayload.md)
  - [Model.EzsignfolderGetCommunicationListV1Response](docs/EzsignfolderGetCommunicationListV1Response.md)
  - [Model.EzsignfolderGetCommunicationListV1ResponseMPayload](docs/EzsignfolderGetCommunicationListV1ResponseMPayload.md)
+ - [Model.EzsignfolderGetCommunicationrecipientsV1Response](docs/EzsignfolderGetCommunicationrecipientsV1Response.md)
+ - [Model.EzsignfolderGetCommunicationrecipientsV1ResponseMPayload](docs/EzsignfolderGetCommunicationrecipientsV1ResponseMPayload.md)
+ - [Model.EzsignfolderGetCommunicationsendersV1Response](docs/EzsignfolderGetCommunicationsendersV1Response.md)
+ - [Model.EzsignfolderGetCommunicationsendersV1ResponseMPayload](docs/EzsignfolderGetCommunicationsendersV1ResponseMPayload.md)
  - [Model.EzsignfolderGetEzsigndocumentsV1Response](docs/EzsignfolderGetEzsigndocumentsV1Response.md)
  - [Model.EzsignfolderGetEzsigndocumentsV1ResponseMPayload](docs/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md)
  - [Model.EzsignfolderGetEzsignfoldersignerassociationsV1Response](docs/EzsignfolderGetEzsignfoldersignerassociationsV1Response.md)
@@ -1119,7 +1143,6 @@ Class | Method | HTTP request | Description
  - [Model.FieldECommunicationImportance](docs/FieldECommunicationImportance.md)
  - [Model.FieldECommunicationType](docs/FieldECommunicationType.md)
  - [Model.FieldECommunicationexternalrecipientType](docs/FieldECommunicationexternalrecipientType.md)
- - [Model.FieldECommunicationrecipientObjecttype](docs/FieldECommunicationrecipientObjecttype.md)
  - [Model.FieldECommunicationrecipientType](docs/FieldECommunicationrecipientType.md)
  - [Model.FieldECreditcardtypeCodename](docs/FieldECreditcardtypeCodename.md)
  - [Model.FieldEErrorCode](docs/FieldEErrorCode.md)
@@ -1199,6 +1222,14 @@ Class | Method | HTTP request | Description
  - [Model.GlobalEzmaxclientVersionV1Response](docs/GlobalEzmaxclientVersionV1Response.md)
  - [Model.GlobalEzmaxcustomerGetConfigurationV1Response](docs/GlobalEzmaxcustomerGetConfigurationV1Response.md)
  - [Model.HeaderAcceptLanguage](docs/HeaderAcceptLanguage.md)
+ - [Model.InscriptionGetCommunicationListV1Response](docs/InscriptionGetCommunicationListV1Response.md)
+ - [Model.InscriptionGetCommunicationListV1ResponseMPayload](docs/InscriptionGetCommunicationListV1ResponseMPayload.md)
+ - [Model.InscriptionnotauthenticatedGetCommunicationListV1Response](docs/InscriptionnotauthenticatedGetCommunicationListV1Response.md)
+ - [Model.InscriptionnotauthenticatedGetCommunicationListV1ResponseMPayload](docs/InscriptionnotauthenticatedGetCommunicationListV1ResponseMPayload.md)
+ - [Model.InscriptiontempGetCommunicationListV1Response](docs/InscriptiontempGetCommunicationListV1Response.md)
+ - [Model.InscriptiontempGetCommunicationListV1ResponseMPayload](docs/InscriptiontempGetCommunicationListV1ResponseMPayload.md)
+ - [Model.InvoiceGetCommunicationListV1Response](docs/InvoiceGetCommunicationListV1Response.md)
+ - [Model.InvoiceGetCommunicationListV1ResponseMPayload](docs/InvoiceGetCommunicationListV1ResponseMPayload.md)
  - [Model.LanguageAutocompleteElementResponse](docs/LanguageAutocompleteElementResponse.md)
  - [Model.LanguageGetAutocompleteV2Response](docs/LanguageGetAutocompleteV2Response.md)
  - [Model.LanguageGetAutocompleteV2ResponseMPayload](docs/LanguageGetAutocompleteV2ResponseMPayload.md)
@@ -1229,6 +1260,8 @@ Class | Method | HTTP request | Description
  - [Model.NotificationtestGetElementsV1Response](docs/NotificationtestGetElementsV1Response.md)
  - [Model.NotificationtestGetElementsV1ResponseMPayload](docs/NotificationtestGetElementsV1ResponseMPayload.md)
  - [Model.NotificationtestResponse](docs/NotificationtestResponse.md)
+ - [Model.OtherincomeGetCommunicationListV1Response](docs/OtherincomeGetCommunicationListV1Response.md)
+ - [Model.OtherincomeGetCommunicationListV1ResponseMPayload](docs/OtherincomeGetCommunicationListV1ResponseMPayload.md)
  - [Model.PaymenttermAutocompleteElementResponse](docs/PaymenttermAutocompleteElementResponse.md)
  - [Model.PaymenttermCreateObjectV1Request](docs/PaymenttermCreateObjectV1Request.md)
  - [Model.PaymenttermCreateObjectV1Response](docs/PaymenttermCreateObjectV1Response.md)
@@ -1265,11 +1298,11 @@ Class | Method | HTTP request | Description
  - [Model.PhoneRequestCompound](docs/PhoneRequestCompound.md)
  - [Model.PhoneResponse](docs/PhoneResponse.md)
  - [Model.PhoneResponseCompound](docs/PhoneResponseCompound.md)
- - [Model.PhonestaticResponse](docs/PhonestaticResponse.md)
- - [Model.PhonestaticResponseCompound](docs/PhonestaticResponseCompound.md)
  - [Model.PhonetypeAutocompleteElementResponse](docs/PhonetypeAutocompleteElementResponse.md)
  - [Model.PhonetypeGetAutocompleteV2Response](docs/PhonetypeGetAutocompleteV2Response.md)
  - [Model.PhonetypeGetAutocompleteV2ResponseMPayload](docs/PhonetypeGetAutocompleteV2ResponseMPayload.md)
+ - [Model.RejectedoffertopurchaseGetCommunicationListV1Response](docs/RejectedoffertopurchaseGetCommunicationListV1Response.md)
+ - [Model.RejectedoffertopurchaseGetCommunicationListV1ResponseMPayload](docs/RejectedoffertopurchaseGetCommunicationListV1ResponseMPayload.md)
  - [Model.ScimAuthenticationScheme](docs/ScimAuthenticationScheme.md)
  - [Model.ScimEmail](docs/ScimEmail.md)
  - [Model.ScimGroup](docs/ScimGroup.md)

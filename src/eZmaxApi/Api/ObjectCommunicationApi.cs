@@ -28,25 +28,28 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Retrieve an existing Communication
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiCommunicationID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommunicationGetObjectV2Response</returns>
-        CommunicationGetObjectV2Response CommunicationGetObjectV2(int pkiCommunicationID, int operationIndex = 0);
-
-        /// <summary>
-        /// Retrieve an existing Communication
+        /// Send a new Communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// The endpoint allows to send one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiCommunicationID"></param>
+        /// <param name="communicationSendV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommunicationGetObjectV2Response</returns>
-        ApiResponse<CommunicationGetObjectV2Response> CommunicationGetObjectV2WithHttpInfo(int pkiCommunicationID, int operationIndex = 0);
+        /// <returns>CommunicationSendV1Response</returns>
+        CommunicationSendV1Response CommunicationSendV1(CommunicationSendV1Request communicationSendV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Send a new Communication
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to send one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationSendV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CommunicationSendV1Response</returns>
+        ApiResponse<CommunicationSendV1Response> CommunicationSendV1WithHttpInfo(CommunicationSendV1Request communicationSendV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -57,30 +60,30 @@ namespace eZmaxApi.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Retrieve an existing Communication
+        /// Send a new Communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// The endpoint allows to send one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiCommunicationID"></param>
+        /// <param name="communicationSendV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommunicationGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<CommunicationGetObjectV2Response> CommunicationGetObjectV2Async(int pkiCommunicationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommunicationSendV1Response</returns>
+        System.Threading.Tasks.Task<CommunicationSendV1Response> CommunicationSendV1Async(CommunicationSendV1Request communicationSendV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Retrieve an existing Communication
+        /// Send a new Communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// The endpoint allows to send one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiCommunicationID"></param>
+        /// <param name="communicationSendV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommunicationGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommunicationGetObjectV2Response>> CommunicationGetObjectV2WithHttpInfoAsync(int pkiCommunicationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommunicationSendV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommunicationSendV1Response>> CommunicationSendV1WithHttpInfoAsync(CommunicationSendV1Request communicationSendV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -202,30 +205,37 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Communication 
+        /// Send a new Communication The endpoint allows to send one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiCommunicationID"></param>
+        /// <param name="communicationSendV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommunicationGetObjectV2Response</returns>
-        public CommunicationGetObjectV2Response CommunicationGetObjectV2(int pkiCommunicationID, int operationIndex = 0)
+        /// <returns>CommunicationSendV1Response</returns>
+        public CommunicationSendV1Response CommunicationSendV1(CommunicationSendV1Request communicationSendV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommunicationGetObjectV2Response> localVarResponse = CommunicationGetObjectV2WithHttpInfo(pkiCommunicationID);
+            eZmaxApi.Client.ApiResponse<CommunicationSendV1Response> localVarResponse = CommunicationSendV1WithHttpInfo(communicationSendV1Request);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Retrieve an existing Communication 
+        /// Send a new Communication The endpoint allows to send one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiCommunicationID"></param>
+        /// <param name="communicationSendV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommunicationGetObjectV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<CommunicationGetObjectV2Response> CommunicationGetObjectV2WithHttpInfo(int pkiCommunicationID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommunicationSendV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<CommunicationSendV1Response> CommunicationSendV1WithHttpInfo(CommunicationSendV1Request communicationSendV1Request, int operationIndex = 0)
         {
+            // verify the required parameter 'communicationSendV1Request' is set
+            if (communicationSendV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'communicationSendV1Request' when calling ObjectCommunicationApi->CommunicationSendV1");
+            }
+
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -245,9 +255,9 @@ namespace eZmaxApi.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("pkiCommunicationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCommunicationID)); // path parameter
+            localVarRequestOptions.Data = communicationSendV1Request;
 
-            localVarRequestOptions.Operation = "ObjectCommunicationApi.CommunicationGetObjectV2";
+            localVarRequestOptions.Operation = "ObjectCommunicationApi.CommunicationSendV1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -257,10 +267,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<CommunicationGetObjectV2Response>("/2/object/communication/{pkiCommunicationID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<CommunicationSendV1Response>("/1/object/communication/send", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CommunicationGetObjectV2", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CommunicationSendV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -271,33 +281,40 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve an existing Communication 
+        /// Send a new Communication The endpoint allows to send one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiCommunicationID"></param>
+        /// <param name="communicationSendV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommunicationGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<CommunicationGetObjectV2Response> CommunicationGetObjectV2Async(int pkiCommunicationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommunicationSendV1Response</returns>
+        public async System.Threading.Tasks.Task<CommunicationSendV1Response> CommunicationSendV1Async(CommunicationSendV1Request communicationSendV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommunicationGetObjectV2Response> localVarResponse = await CommunicationGetObjectV2WithHttpInfoAsync(pkiCommunicationID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommunicationSendV1Response> localVarResponse = await CommunicationSendV1WithHttpInfoAsync(communicationSendV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Retrieve an existing Communication 
+        /// Send a new Communication The endpoint allows to send one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiCommunicationID"></param>
+        /// <param name="communicationSendV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommunicationGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommunicationGetObjectV2Response>> CommunicationGetObjectV2WithHttpInfoAsync(int pkiCommunicationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommunicationSendV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommunicationSendV1Response>> CommunicationSendV1WithHttpInfoAsync(CommunicationSendV1Request communicationSendV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'communicationSendV1Request' is set
+            if (communicationSendV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'communicationSendV1Request' when calling ObjectCommunicationApi->CommunicationSendV1");
+            }
+
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -317,9 +334,9 @@ namespace eZmaxApi.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("pkiCommunicationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCommunicationID)); // path parameter
+            localVarRequestOptions.Data = communicationSendV1Request;
 
-            localVarRequestOptions.Operation = "ObjectCommunicationApi.CommunicationGetObjectV2";
+            localVarRequestOptions.Operation = "ObjectCommunicationApi.CommunicationSendV1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -329,11 +346,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<CommunicationGetObjectV2Response>("/2/object/communication/{pkiCommunicationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CommunicationSendV1Response>("/1/object/communication/send", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CommunicationGetObjectV2", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CommunicationSendV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

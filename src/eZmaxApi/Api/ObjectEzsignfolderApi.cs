@@ -267,6 +267,46 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsignfolderGetCommunicationListV1Response</returns>
         ApiResponse<EzsignfolderGetCommunicationListV1Response> EzsignfolderGetCommunicationListV1WithHttpInfo(int pkiEzsignfolderID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationrecipient
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfolderGetCommunicationrecipientsV1Response</returns>
+        EzsignfolderGetCommunicationrecipientsV1Response EzsignfolderGetCommunicationrecipientsV1(int pkiEzsignfolderID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfolderGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<EzsignfolderGetCommunicationrecipientsV1Response> EzsignfolderGetCommunicationrecipientsV1WithHttpInfo(int pkiEzsignfolderID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationsender
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfolderGetCommunicationsendersV1Response</returns>
+        EzsignfolderGetCommunicationsendersV1Response EzsignfolderGetCommunicationsendersV1(int pkiEzsignfolderID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfolderGetCommunicationsendersV1Response</returns>
+        ApiResponse<EzsignfolderGetCommunicationsendersV1Response> EzsignfolderGetCommunicationsendersV1WithHttpInfo(int pkiEzsignfolderID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -353,11 +393,11 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -369,11 +409,11 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -881,6 +921,56 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsignfolderGetCommunicationListV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfolderGetCommunicationListV1Response>> EzsignfolderGetCommunicationListV1WithHttpInfoAsync(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfolderGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderGetCommunicationrecipientsV1Response> EzsignfolderGetCommunicationrecipientsV1Async(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfolderGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderGetCommunicationrecipientsV1Response>> EzsignfolderGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfolderGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderGetCommunicationsendersV1Response> EzsignfolderGetCommunicationsendersV1Async(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfolderGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderGetCommunicationsendersV1Response>> EzsignfolderGetCommunicationsendersV1WithHttpInfoAsync(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
         /// </summary>
         /// <remarks>
@@ -984,11 +1074,11 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -1001,11 +1091,11 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -3069,6 +3159,290 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfolderGetCommunicationrecipientsV1Response</returns>
+        public EzsignfolderGetCommunicationrecipientsV1Response EzsignfolderGetCommunicationrecipientsV1(int pkiEzsignfolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfolderGetCommunicationrecipientsV1Response> localVarResponse = EzsignfolderGetCommunicationrecipientsV1WithHttpInfo(pkiEzsignfolderID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfolderGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignfolderGetCommunicationrecipientsV1Response> EzsignfolderGetCommunicationrecipientsV1WithHttpInfo(int pkiEzsignfolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<EzsignfolderGetCommunicationrecipientsV1Response>("/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfolderGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfolderGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderGetCommunicationrecipientsV1Response> EzsignfolderGetCommunicationrecipientsV1Async(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfolderGetCommunicationrecipientsV1Response> localVarResponse = await EzsignfolderGetCommunicationrecipientsV1WithHttpInfoAsync(pkiEzsignfolderID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfolderGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfolderGetCommunicationrecipientsV1Response>> EzsignfolderGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsignfolderGetCommunicationrecipientsV1Response>("/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfolderGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfolderGetCommunicationsendersV1Response</returns>
+        public EzsignfolderGetCommunicationsendersV1Response EzsignfolderGetCommunicationsendersV1(int pkiEzsignfolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfolderGetCommunicationsendersV1Response> localVarResponse = EzsignfolderGetCommunicationsendersV1WithHttpInfo(pkiEzsignfolderID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfolderGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignfolderGetCommunicationsendersV1Response> EzsignfolderGetCommunicationsendersV1WithHttpInfo(int pkiEzsignfolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<EzsignfolderGetCommunicationsendersV1Response>("/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfolderGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfolderGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderGetCommunicationsendersV1Response> EzsignfolderGetCommunicationsendersV1Async(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfolderGetCommunicationsendersV1Response> localVarResponse = await EzsignfolderGetCommunicationsendersV1WithHttpInfoAsync(pkiEzsignfolderID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsignfolder&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfolderGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfolderGetCommunicationsendersV1Response>> EzsignfolderGetCommunicationsendersV1WithHttpInfoAsync(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsignfolderGetCommunicationsendersV1Response>("/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfolderGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3639,11 +4013,11 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -3656,11 +4030,11 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -3736,11 +4110,11 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>
@@ -3754,11 +4128,11 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional, default to 10000)</param>
+        /// <param name="iRowMax"> (optional)</param>
         /// <param name="iRowOffset"> (optional, default to 0)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="sFilter"> (optional)</param>

@@ -275,7 +275,7 @@ namespace eZmaxApi.Model
 
             if (this.SUserLoginname != null) {
                 // SUserLoginname (string) pattern
-                Regex regexSUserLoginname = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,4})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
+                Regex regexSUserLoginname = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
                 if (!regexSUserLoginname.Match(this.SUserLoginname).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });

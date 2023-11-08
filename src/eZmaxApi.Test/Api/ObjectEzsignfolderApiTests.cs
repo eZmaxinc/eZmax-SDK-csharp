@@ -192,6 +192,30 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsignfolderGetCommunicationrecipientsV1
+        /// </summary>
+        [Fact]
+        public void EzsignfolderGetCommunicationrecipientsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //var response = instance.EzsignfolderGetCommunicationrecipientsV1(pkiEzsignfolderID);
+            //Assert.IsType<EzsignfolderGetCommunicationrecipientsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test EzsignfolderGetCommunicationsendersV1
+        /// </summary>
+        [Fact]
+        public void EzsignfolderGetCommunicationsendersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //var response = instance.EzsignfolderGetCommunicationsendersV1(pkiEzsignfolderID);
+            //Assert.IsType<EzsignfolderGetCommunicationsendersV1Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsignfolderGetEzsigndocumentsV1
         /// </summary>
         [Fact]

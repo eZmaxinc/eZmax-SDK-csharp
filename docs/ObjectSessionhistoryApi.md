@@ -35,7 +35,7 @@ namespace Example
 
             var apiInstance = new ObjectSessionhistoryApi(config);
             var eOrderBy = "pkiSessionhistoryID_ASC";  // string? | Specify how you want the results to be sorted (optional) 
-            var iRowMax = 10000;  // int? |  (optional)  (default to 10000)
+            var iRowMax = 56;  // int? |  (optional) 
             var iRowOffset = 0;  // int? |  (optional)  (default to 0)
             var acceptLanguage = new HeaderAcceptLanguage?(); // HeaderAcceptLanguage? |  (optional) 
             var sFilter = "sFilter_example";  // string? |  (optional) 
@@ -82,7 +82,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **eOrderBy** | **string?** | Specify how you want the results to be sorted | [optional]  |
-| **iRowMax** | **int?** |  | [optional] [default to 10000] |
+| **iRowMax** | **int?** |  | [optional]  |
 | **iRowOffset** | **int?** |  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md) |  | [optional]  |
 | **sFilter** | **string?** |  | [optional]  |

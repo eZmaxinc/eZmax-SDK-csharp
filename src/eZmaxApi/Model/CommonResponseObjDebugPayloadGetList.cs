@@ -46,9 +46,9 @@ namespace eZmaxApi.Model
         /// <param name="bVersionDeprecated">Wheter the current route is deprecated or not (required).</param>
         /// <param name="aFilter">aFilter (required).</param>
         /// <param name="aOrderBy">List of available values for *eOrderBy* (required).</param>
-        /// <param name="iRowMax">The maximum numbers of results to be returned (required) (default to 10000).</param>
+        /// <param name="iRowMax">The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it&#39;s **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned. (required).</param>
         /// <param name="iRowOffset">The starting element from where to start retrieving the results. For example if you started at iRowOffset&#x3D;0 and asked for iRowMax&#x3D;100, to get the next 100 results, you could specify iRowOffset&#x3D;100&amp;iRowMax&#x3D;100, (required) (default to 0).</param>
-        public CommonResponseObjDebugPayloadGetList(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), bool bVersionDeprecated = default(bool), CommonResponseFilter aFilter = default(CommonResponseFilter), Dictionary<string, string> aOrderBy = default(Dictionary<string, string>), int iRowMax = 10000, int iRowOffset = 0)
+        public CommonResponseObjDebugPayloadGetList(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), bool bVersionDeprecated = default(bool), CommonResponseFilter aFilter = default(CommonResponseFilter), Dictionary<string, string> aOrderBy = default(Dictionary<string, string>), int iRowMax = default(int), int iRowOffset = 0)
         {
             this.IVersionMin = iVersionMin;
             this.IVersionMax = iVersionMax;
@@ -120,9 +120,9 @@ namespace eZmaxApi.Model
         public Dictionary<string, string> AOrderBy { get; set; }
 
         /// <summary>
-        /// The maximum numbers of results to be returned
+        /// The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it&#39;s **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned.
         /// </summary>
-        /// <value>The maximum numbers of results to be returned</value>
+        /// <value>The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it&#39;s **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned.</value>
         /* <example>100</example>*/
         [DataMember(Name = "iRowMax", IsRequired = true, EmitDefaultValue = true)]
         public int IRowMax { get; set; }

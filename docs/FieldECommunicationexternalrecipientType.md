@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldECommunicationexternalrecipientType
-The type of Communicationexternalrecipient
+The type of Communicationexternalrecipient.  Only used when eCommunicationType is **Email**
 
 ## Properties
 
