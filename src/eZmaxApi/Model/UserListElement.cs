@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A User List Element
     /// </summary>
     [DataContract(Name = "user-ListElement")]
-    public partial class UserListElement : IEquatable<UserListElement>, IValidatableObject
+    public partial class UserListElement : IValidatableObject
     {
 
         /// <summary>
@@ -187,113 +187,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserListElement);
-        }
-
-        /// <summary>
-        /// Returns true if UserListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiUserID == input.PkiUserID ||
-                    this.PkiUserID.Equals(input.PkiUserID)
-                ) && 
-                (
-                    this.SUserFirstname == input.SUserFirstname ||
-                    (this.SUserFirstname != null &&
-                    this.SUserFirstname.Equals(input.SUserFirstname))
-                ) && 
-                (
-                    this.SUserLastname == input.SUserLastname ||
-                    (this.SUserLastname != null &&
-                    this.SUserLastname.Equals(input.SUserLastname))
-                ) && 
-                (
-                    this.SUserLoginname == input.SUserLoginname ||
-                    (this.SUserLoginname != null &&
-                    this.SUserLoginname.Equals(input.SUserLoginname))
-                ) && 
-                (
-                    this.BUserIsactive == input.BUserIsactive ||
-                    this.BUserIsactive.Equals(input.BUserIsactive)
-                ) && 
-                (
-                    this.EUserType == input.EUserType ||
-                    this.EUserType.Equals(input.EUserType)
-                ) && 
-                (
-                    this.EUserOrigin == input.EUserOrigin ||
-                    this.EUserOrigin.Equals(input.EUserOrigin)
-                ) && 
-                (
-                    this.EUserEzsignaccess == input.EUserEzsignaccess ||
-                    this.EUserEzsignaccess.Equals(input.EUserEzsignaccess)
-                ) && 
-                (
-                    this.DtUserEzsignprepaidexpiration == input.DtUserEzsignprepaidexpiration ||
-                    (this.DtUserEzsignprepaidexpiration != null &&
-                    this.DtUserEzsignprepaidexpiration.Equals(input.DtUserEzsignprepaidexpiration))
-                ) && 
-                (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiUserID.GetHashCode();
-                if (this.SUserFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserFirstname.GetHashCode();
-                }
-                if (this.SUserLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLastname.GetHashCode();
-                }
-                if (this.SUserLoginname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLoginname.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BUserIsactive.GetHashCode();
-                hashCode = (hashCode * 59) + this.EUserType.GetHashCode();
-                hashCode = (hashCode * 59) + this.EUserOrigin.GetHashCode();
-                hashCode = (hashCode * 59) + this.EUserEzsignaccess.GetHashCode();
-                if (this.DtUserEzsignprepaidexpiration != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtUserEzsignprepaidexpiration.GetHashCode();
-                }
-                if (this.SEmailAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailAddress.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

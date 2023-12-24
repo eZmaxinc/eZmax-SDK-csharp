@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingsummaryinternaldetail Object
     /// </summary>
     [DataContract(Name = "ezmaxinvoicingsummaryinternaldetail-Response")]
-    public partial class EzmaxinvoicingsummaryinternaldetailResponse : IEquatable<EzmaxinvoicingsummaryinternaldetailResponse>, IValidatableObject
+    public partial class EzmaxinvoicingsummaryinternaldetailResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryinternaldetailResponse" /> class.
@@ -230,131 +230,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzmaxinvoicingsummaryinternaldetailResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzmaxinvoicingsummaryinternaldetailResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzmaxinvoicingsummaryinternaldetailResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzmaxinvoicingsummaryinternaldetailResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzmaxinvoicingsummaryinternaldetailID == input.PkiEzmaxinvoicingsummaryinternaldetailID ||
-                    this.PkiEzmaxinvoicingsummaryinternaldetailID.Equals(input.PkiEzmaxinvoicingsummaryinternaldetailID)
-                ) && 
-                (
-                    this.FkiEzmaxinvoicingsummaryinternalID == input.FkiEzmaxinvoicingsummaryinternalID ||
-                    this.FkiEzmaxinvoicingsummaryinternalID.Equals(input.FkiEzmaxinvoicingsummaryinternalID)
-                ) && 
-                (
-                    this.FkiEzmaxproductID == input.FkiEzmaxproductID ||
-                    this.FkiEzmaxproductID.Equals(input.FkiEzmaxproductID)
-                ) && 
-                (
-                    this.SEzmaxproductDescriptionX == input.SEzmaxproductDescriptionX ||
-                    (this.SEzmaxproductDescriptionX != null &&
-                    this.SEzmaxproductDescriptionX.Equals(input.SEzmaxproductDescriptionX))
-                ) && 
-                (
-                    this.FkiBillingentityexternalID == input.FkiBillingentityexternalID ||
-                    this.FkiBillingentityexternalID.Equals(input.FkiBillingentityexternalID)
-                ) && 
-                (
-                    this.SBillingentityexternalDescription == input.SBillingentityexternalDescription ||
-                    (this.SBillingentityexternalDescription != null &&
-                    this.SBillingentityexternalDescription.Equals(input.SBillingentityexternalDescription))
-                ) && 
-                (
-                    this.DEzmaxinvoicingsummaryinternaldetailCountreal == input.DEzmaxinvoicingsummaryinternaldetailCountreal ||
-                    (this.DEzmaxinvoicingsummaryinternaldetailCountreal != null &&
-                    this.DEzmaxinvoicingsummaryinternaldetailCountreal.Equals(input.DEzmaxinvoicingsummaryinternaldetailCountreal))
-                ) && 
-                (
-                    this.DEzmaxinvoicingsummaryinternaldetailSubtotal == input.DEzmaxinvoicingsummaryinternaldetailSubtotal ||
-                    (this.DEzmaxinvoicingsummaryinternaldetailSubtotal != null &&
-                    this.DEzmaxinvoicingsummaryinternaldetailSubtotal.Equals(input.DEzmaxinvoicingsummaryinternaldetailSubtotal))
-                ) && 
-                (
-                    this.DEzmaxinvoicingsummaryinternaldetailRebate == input.DEzmaxinvoicingsummaryinternaldetailRebate ||
-                    (this.DEzmaxinvoicingsummaryinternaldetailRebate != null &&
-                    this.DEzmaxinvoicingsummaryinternaldetailRebate.Equals(input.DEzmaxinvoicingsummaryinternaldetailRebate))
-                ) && 
-                (
-                    this.DEzmaxinvoicingsummaryinternaldetailTotal == input.DEzmaxinvoicingsummaryinternaldetailTotal ||
-                    (this.DEzmaxinvoicingsummaryinternaldetailTotal != null &&
-                    this.DEzmaxinvoicingsummaryinternaldetailTotal.Equals(input.DEzmaxinvoicingsummaryinternaldetailTotal))
-                ) && 
-                (
-                    this.BEzmaxinvoicingsummaryinternaldetailAdjustment == input.BEzmaxinvoicingsummaryinternaldetailAdjustment ||
-                    this.BEzmaxinvoicingsummaryinternaldetailAdjustment.Equals(input.BEzmaxinvoicingsummaryinternaldetailAdjustment)
-                ) && 
-                (
-                    this.TEzmaxproductHelpX == input.TEzmaxproductHelpX ||
-                    (this.TEzmaxproductHelpX != null &&
-                    this.TEzmaxproductHelpX.Equals(input.TEzmaxproductHelpX))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzmaxinvoicingsummaryinternaldetailID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzmaxinvoicingsummaryinternalID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzmaxproductID.GetHashCode();
-                if (this.SEzmaxproductDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzmaxproductDescriptionX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.FkiBillingentityexternalID.GetHashCode();
-                if (this.SBillingentityexternalDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBillingentityexternalDescription.GetHashCode();
-                }
-                if (this.DEzmaxinvoicingsummaryinternaldetailCountreal != null)
-                {
-                    hashCode = (hashCode * 59) + this.DEzmaxinvoicingsummaryinternaldetailCountreal.GetHashCode();
-                }
-                if (this.DEzmaxinvoicingsummaryinternaldetailSubtotal != null)
-                {
-                    hashCode = (hashCode * 59) + this.DEzmaxinvoicingsummaryinternaldetailSubtotal.GetHashCode();
-                }
-                if (this.DEzmaxinvoicingsummaryinternaldetailRebate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DEzmaxinvoicingsummaryinternaldetailRebate.GetHashCode();
-                }
-                if (this.DEzmaxinvoicingsummaryinternaldetailTotal != null)
-                {
-                    hashCode = (hashCode * 59) + this.DEzmaxinvoicingsummaryinternaldetailTotal.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzmaxinvoicingsummaryinternaldetailAdjustment.GetHashCode();
-                if (this.TEzmaxproductHelpX != null)
-                {
-                    hashCode = (hashCode * 59) + this.TEzmaxproductHelpX.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

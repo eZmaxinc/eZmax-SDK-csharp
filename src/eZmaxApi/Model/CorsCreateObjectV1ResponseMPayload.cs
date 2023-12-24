@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/cors
     /// </summary>
     [DataContract(Name = "cors-createObject-v1-Response-mPayload")]
-    public partial class CorsCreateObjectV1ResponseMPayload : IEquatable<CorsCreateObjectV1ResponseMPayload>, IValidatableObject
+    public partial class CorsCreateObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CorsCreateObjectV1ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CorsCreateObjectV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if CorsCreateObjectV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CorsCreateObjectV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CorsCreateObjectV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiCorsID == input.APkiCorsID ||
-                    this.APkiCorsID != null &&
-                    input.APkiCorsID != null &&
-                    this.APkiCorsID.SequenceEqual(input.APkiCorsID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiCorsID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiCorsID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -296,6 +296,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigndocumentGetActionableElementsV1Response</returns>
         ApiResponse<EzsigndocumentGetActionableElementsV1Response> EzsigndocumentGetActionableElementsV1WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Ezsigndocument&#39;s Attachments
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentGetAttachmentsV1Response</returns>
+        EzsigndocumentGetAttachmentsV1Response EzsigndocumentGetAttachmentsV1(int pkiEzsigndocumentID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Ezsigndocument&#39;s Attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentGetAttachmentsV1Response</returns>
+        ApiResponse<EzsigndocumentGetAttachmentsV1Response> EzsigndocumentGetAttachmentsV1WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve completed elements for the Ezsigndocument
         /// </summary>
         /// <remarks>
@@ -924,6 +944,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetActionableElementsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetActionableElementsV1Response>> EzsigndocumentGetActionableElementsV1WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Ezsigndocument&#39;s Attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentGetAttachmentsV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentGetAttachmentsV1Response> EzsigndocumentGetAttachmentsV1Async(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Ezsigndocument&#39;s Attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentGetAttachmentsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetAttachmentsV1Response>> EzsigndocumentGetAttachmentsV1WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve completed elements for the Ezsigndocument
         /// </summary>
@@ -3160,6 +3205,148 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentGetActionableElementsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsigndocument&#39;s Attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentGetAttachmentsV1Response</returns>
+        public EzsigndocumentGetAttachmentsV1Response EzsigndocumentGetAttachmentsV1(int pkiEzsigndocumentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentGetAttachmentsV1Response> localVarResponse = EzsigndocumentGetAttachmentsV1WithHttpInfo(pkiEzsigndocumentID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsigndocument&#39;s Attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentGetAttachmentsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentGetAttachmentsV1Response> EzsigndocumentGetAttachmentsV1WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<EzsigndocumentGetAttachmentsV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsigndocument&#39;s Attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentGetAttachmentsV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentGetAttachmentsV1Response> EzsigndocumentGetAttachmentsV1Async(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentGetAttachmentsV1Response> localVarResponse = await EzsigndocumentGetAttachmentsV1WithHttpInfoAsync(pkiEzsigndocumentID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Ezsigndocument&#39;s Attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentGetAttachmentsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentGetAttachmentsV1Response>> EzsigndocumentGetAttachmentsV1WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsigndocumentGetAttachmentsV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentGetAttachmentsV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

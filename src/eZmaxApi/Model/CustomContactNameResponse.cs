@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Custom ContactName Object
     /// </summary>
     [DataContract(Name = "Custom-ContactName-Response")]
-    public partial class CustomContactNameResponse : IEquatable<CustomContactNameResponse>, IValidatableObject
+    public partial class CustomContactNameResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomContactNameResponse" /> class.
@@ -91,70 +91,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomContactNameResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomContactNameResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomContactNameResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomContactNameResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SContactFirstname == input.SContactFirstname ||
-                    (this.SContactFirstname != null &&
-                    this.SContactFirstname.Equals(input.SContactFirstname))
-                ) && 
-                (
-                    this.SContactLastname == input.SContactLastname ||
-                    (this.SContactLastname != null &&
-                    this.SContactLastname.Equals(input.SContactLastname))
-                ) && 
-                (
-                    this.SContactCompany == input.SContactCompany ||
-                    (this.SContactCompany != null &&
-                    this.SContactCompany.Equals(input.SContactCompany))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SContactFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SContactFirstname.GetHashCode();
-                }
-                if (this.SContactLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SContactLastname.GetHashCode();
-                }
-                if (this.SContactCompany != null)
-                {
-                    hashCode = (hashCode * 59) + this.SContactCompany.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

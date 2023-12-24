@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/billingentityinternal
     /// </summary>
     [DataContract(Name = "billingentityinternal-createObject-v1-Request")]
-    public partial class BillingentityinternalCreateObjectV1Request : IEquatable<BillingentityinternalCreateObjectV1Request>, IValidatableObject
+    public partial class BillingentityinternalCreateObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BillingentityinternalCreateObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if BillingentityinternalCreateObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BillingentityinternalCreateObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BillingentityinternalCreateObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjBillingentityinternal == input.AObjBillingentityinternal ||
-                    this.AObjBillingentityinternal != null &&
-                    input.AObjBillingentityinternal != null &&
-                    this.AObjBillingentityinternal.SequenceEqual(input.AObjBillingentityinternal)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjBillingentityinternal != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjBillingentityinternal.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

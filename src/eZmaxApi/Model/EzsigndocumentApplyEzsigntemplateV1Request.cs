@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
     /// </summary>
     [DataContract(Name = "ezsigndocument-applyEzsigntemplate-v1-Request")]
-    public partial class EzsigndocumentApplyEzsigntemplateV1Request : IEquatable<EzsigndocumentApplyEzsigntemplateV1Request>, IValidatableObject
+    public partial class EzsigndocumentApplyEzsigntemplateV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentApplyEzsigntemplateV1Request" /> class.
@@ -102,68 +102,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentApplyEzsigntemplateV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentApplyEzsigntemplateV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentApplyEzsigntemplateV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentApplyEzsigntemplateV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiEzsigntemplateID == input.FkiEzsigntemplateID ||
-                    this.FkiEzsigntemplateID.Equals(input.FkiEzsigntemplateID)
-                ) && 
-                (
-                    this.ASEzsigntemplatesigner == input.ASEzsigntemplatesigner ||
-                    this.ASEzsigntemplatesigner != null &&
-                    input.ASEzsigntemplatesigner != null &&
-                    this.ASEzsigntemplatesigner.SequenceEqual(input.ASEzsigntemplatesigner)
-                ) && 
-                (
-                    this.APkiEzsignfoldersignerassociationID == input.APkiEzsignfoldersignerassociationID ||
-                    this.APkiEzsignfoldersignerassociationID != null &&
-                    input.APkiEzsignfoldersignerassociationID != null &&
-                    this.APkiEzsignfoldersignerassociationID.SequenceEqual(input.APkiEzsignfoldersignerassociationID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplateID.GetHashCode();
-                if (this.ASEzsigntemplatesigner != null)
-                {
-                    hashCode = (hashCode * 59) + this.ASEzsigntemplatesigner.GetHashCode();
-                }
-                if (this.APkiEzsignfoldersignerassociationID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiEzsignfoldersignerassociationID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Report containing Reportsections 
     /// </summary>
     [DataContract(Name = "Common-Report")]
-    public partial class CommonReport : IEquatable<CommonReport>, IValidatableObject
+    public partial class CommonReport : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReport" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonReport);
-        }
-
-        /// <summary>
-        /// Returns true if CommonReport instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonReport to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonReport input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjReportsection == input.AObjReportsection ||
-                    this.AObjReportsection != null &&
-                    input.AObjReportsection != null &&
-                    this.AObjReportsection.SequenceEqual(input.AObjReportsection)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjReportsection != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjReportsection.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

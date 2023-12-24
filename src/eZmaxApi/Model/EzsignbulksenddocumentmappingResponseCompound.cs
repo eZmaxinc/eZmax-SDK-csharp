@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignbulksenddocumentmapping Object
     /// </summary>
     [DataContract(Name = "ezsignbulksenddocumentmapping-ResponseCompound")]
-    public partial class EzsignbulksenddocumentmappingResponseCompound : IEquatable<EzsignbulksenddocumentmappingResponseCompound>, IValidatableObject
+    public partial class EzsignbulksenddocumentmappingResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingResponseCompound" /> class.
@@ -136,86 +136,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksenddocumentmappingResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksenddocumentmappingResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksenddocumentmappingResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksenddocumentmappingResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignbulksenddocumentmappingID == input.PkiEzsignbulksenddocumentmappingID ||
-                    this.PkiEzsignbulksenddocumentmappingID.Equals(input.PkiEzsignbulksenddocumentmappingID)
-                ) && 
-                (
-                    this.FkiEzsignbulksendID == input.FkiEzsignbulksendID ||
-                    this.FkiEzsignbulksendID.Equals(input.FkiEzsignbulksendID)
-                ) && 
-                (
-                    this.FkiEzsigntemplatepackageID == input.FkiEzsigntemplatepackageID ||
-                    this.FkiEzsigntemplatepackageID.Equals(input.FkiEzsigntemplatepackageID)
-                ) && 
-                (
-                    this.FkiEzsigntemplateID == input.FkiEzsigntemplateID ||
-                    this.FkiEzsigntemplateID.Equals(input.FkiEzsigntemplateID)
-                ) && 
-                (
-                    this.IEzsignbulksenddocumentmappingOrder == input.IEzsignbulksenddocumentmappingOrder ||
-                    this.IEzsignbulksenddocumentmappingOrder.Equals(input.IEzsignbulksenddocumentmappingOrder)
-                ) && 
-                (
-                    this.ObjEzsigntemplate == input.ObjEzsigntemplate ||
-                    (this.ObjEzsigntemplate != null &&
-                    this.ObjEzsigntemplate.Equals(input.ObjEzsigntemplate))
-                ) && 
-                (
-                    this.ObjEzsigntemplatepackage == input.ObjEzsigntemplatepackage ||
-                    (this.ObjEzsigntemplatepackage != null &&
-                    this.ObjEzsigntemplatepackage.Equals(input.ObjEzsigntemplatepackage))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignbulksenddocumentmappingID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignbulksendID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplatepackageID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplateID.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignbulksenddocumentmappingOrder.GetHashCode();
-                if (this.ObjEzsigntemplate != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsigntemplate.GetHashCode();
-                }
-                if (this.ObjEzsigntemplatepackage != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsigntemplatepackage.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

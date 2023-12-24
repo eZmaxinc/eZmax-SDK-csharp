@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// ScimServiceProviderConfig
     /// </summary>
     [DataContract(Name = "Scim-ServiceProviderConfig")]
-    public partial class ScimServiceProviderConfig : IEquatable<ScimServiceProviderConfig>, IValidatableObject
+    public partial class ScimServiceProviderConfig : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfig" /> class.
@@ -178,116 +178,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ScimServiceProviderConfig);
-        }
-
-        /// <summary>
-        /// Returns true if ScimServiceProviderConfig instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ScimServiceProviderConfig to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ScimServiceProviderConfig input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AuthenticationSchemes == input.AuthenticationSchemes ||
-                    this.AuthenticationSchemes != null &&
-                    input.AuthenticationSchemes != null &&
-                    this.AuthenticationSchemes.SequenceEqual(input.AuthenticationSchemes)
-                ) && 
-                (
-                    this.Bulk == input.Bulk ||
-                    (this.Bulk != null &&
-                    this.Bulk.Equals(input.Bulk))
-                ) && 
-                (
-                    this.ChangePassword == input.ChangePassword ||
-                    (this.ChangePassword != null &&
-                    this.ChangePassword.Equals(input.ChangePassword))
-                ) && 
-                (
-                    this.DocumentationUri == input.DocumentationUri ||
-                    (this.DocumentationUri != null &&
-                    this.DocumentationUri.Equals(input.DocumentationUri))
-                ) && 
-                (
-                    this.Etag == input.Etag ||
-                    (this.Etag != null &&
-                    this.Etag.Equals(input.Etag))
-                ) && 
-                (
-                    this.Filter == input.Filter ||
-                    (this.Filter != null &&
-                    this.Filter.Equals(input.Filter))
-                ) && 
-                (
-                    this.Patch == input.Patch ||
-                    (this.Patch != null &&
-                    this.Patch.Equals(input.Patch))
-                ) && 
-                (
-                    this.Sort == input.Sort ||
-                    (this.Sort != null &&
-                    this.Sort.Equals(input.Sort))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AuthenticationSchemes != null)
-                {
-                    hashCode = (hashCode * 59) + this.AuthenticationSchemes.GetHashCode();
-                }
-                if (this.Bulk != null)
-                {
-                    hashCode = (hashCode * 59) + this.Bulk.GetHashCode();
-                }
-                if (this.ChangePassword != null)
-                {
-                    hashCode = (hashCode * 59) + this.ChangePassword.GetHashCode();
-                }
-                if (this.DocumentationUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.DocumentationUri.GetHashCode();
-                }
-                if (this.Etag != null)
-                {
-                    hashCode = (hashCode * 59) + this.Etag.GetHashCode();
-                }
-                if (this.Filter != null)
-                {
-                    hashCode = (hashCode * 59) + this.Filter.GetHashCode();
-                }
-                if (this.Patch != null)
-                {
-                    hashCode = (hashCode * 59) + this.Patch.GetHashCode();
-                }
-                if (this.Sort != null)
-                {
-                    hashCode = (hashCode * 59) + this.Sort.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

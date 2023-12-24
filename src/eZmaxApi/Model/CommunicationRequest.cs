@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/communication
     /// </summary>
     [DataContract(Name = "communication-Request")]
-    public partial class CommunicationRequest : IEquatable<CommunicationRequest>, IValidatableObject
+    public partial class CommunicationRequest : IValidatableObject
     {
 
         /// <summary>
@@ -191,105 +191,6 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommunicationRequest);
-        }
-
-        /// <summary>
-        /// Returns true if CommunicationRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommunicationRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommunicationRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiCommunicationID == input.PkiCommunicationID ||
-                    this.PkiCommunicationID.Equals(input.PkiCommunicationID)
-                ) && 
-                (
-                    this.ECommunicationImportance == input.ECommunicationImportance ||
-                    this.ECommunicationImportance.Equals(input.ECommunicationImportance)
-                ) && 
-                (
-                    this.ECommunicationType == input.ECommunicationType ||
-                    this.ECommunicationType.Equals(input.ECommunicationType)
-                ) && 
-                (
-                    this.ObjCommunicationsender == input.ObjCommunicationsender ||
-                    (this.ObjCommunicationsender != null &&
-                    this.ObjCommunicationsender.Equals(input.ObjCommunicationsender))
-                ) && 
-                (
-                    this.SCommunicationSubject == input.SCommunicationSubject ||
-                    (this.SCommunicationSubject != null &&
-                    this.SCommunicationSubject.Equals(input.SCommunicationSubject))
-                ) && 
-                (
-                    this.TCommunicationBody == input.TCommunicationBody ||
-                    (this.TCommunicationBody != null &&
-                    this.TCommunicationBody.Equals(input.TCommunicationBody))
-                ) && 
-                (
-                    this.BCommunicationPrivate == input.BCommunicationPrivate ||
-                    this.BCommunicationPrivate.Equals(input.BCommunicationPrivate)
-                ) && 
-                (
-                    this.ECommunicationAttachmenttype == input.ECommunicationAttachmenttype ||
-                    this.ECommunicationAttachmenttype.Equals(input.ECommunicationAttachmenttype)
-                ) && 
-                (
-                    this.ICommunicationAttachmentlinkexpiration == input.ICommunicationAttachmentlinkexpiration ||
-                    this.ICommunicationAttachmentlinkexpiration.Equals(input.ICommunicationAttachmentlinkexpiration)
-                ) && 
-                (
-                    this.BCommunicationReadreceipt == input.BCommunicationReadreceipt ||
-                    this.BCommunicationReadreceipt.Equals(input.BCommunicationReadreceipt)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiCommunicationID.GetHashCode();
-                hashCode = (hashCode * 59) + this.ECommunicationImportance.GetHashCode();
-                hashCode = (hashCode * 59) + this.ECommunicationType.GetHashCode();
-                if (this.ObjCommunicationsender != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjCommunicationsender.GetHashCode();
-                }
-                if (this.SCommunicationSubject != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCommunicationSubject.GetHashCode();
-                }
-                if (this.TCommunicationBody != null)
-                {
-                    hashCode = (hashCode * 59) + this.TCommunicationBody.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BCommunicationPrivate.GetHashCode();
-                hashCode = (hashCode * 59) + this.ECommunicationAttachmenttype.GetHashCode();
-                hashCode = (hashCode * 59) + this.ICommunicationAttachmentlinkexpiration.GetHashCode();
-                hashCode = (hashCode * 59) + this.BCommunicationReadreceipt.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
@@ -304,7 +205,7 @@ namespace eZmaxApi.Model
 
             if (this.SCommunicationSubject != null) {
                 // SCommunicationSubject (string) pattern
-                Regex regexSCommunicationSubject = new Regex(@"^.{0,150}$", RegexOptions.CultureInvariant);
+                Regex regexSCommunicationSubject = new Regex(@"^.{0,200}$", RegexOptions.CultureInvariant);
                 if (!regexSCommunicationSubject.Match(this.SCommunicationSubject).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCommunicationSubject, must match a pattern of " + regexSCommunicationSubject, new [] { "SCommunicationSubject" });

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Period AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "period-AutocompleteElement-Response")]
-    public partial class PeriodAutocompleteElementResponse : IEquatable<PeriodAutocompleteElementResponse>, IValidatableObject
+    public partial class PeriodAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PeriodAutocompleteElementResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PeriodAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if PeriodAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PeriodAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PeriodAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SPeriodYYYYMM == input.SPeriodYYYYMM ||
-                    (this.SPeriodYYYYMM != null &&
-                    this.SPeriodYYYYMM.Equals(input.SPeriodYYYYMM))
-                ) && 
-                (
-                    this.PkiPeriodID == input.PkiPeriodID ||
-                    this.PkiPeriodID.Equals(input.PkiPeriodID)
-                ) && 
-                (
-                    this.BPeriodIsactive == input.BPeriodIsactive ||
-                    this.BPeriodIsactive.Equals(input.BPeriodIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SPeriodYYYYMM != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPeriodYYYYMM.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiPeriodID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BPeriodIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

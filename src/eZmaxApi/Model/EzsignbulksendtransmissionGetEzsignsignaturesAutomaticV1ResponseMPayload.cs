@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic
     /// </summary>
     [DataContract(Name = "ezsignbulksendtransmission-getEzsignsignaturesAutomatic-v1-Response-mPayload")]
-    public partial class EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload : IEquatable<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload" /> class.
@@ -92,63 +92,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AEEzsignsignatureType == input.AEEzsignsignatureType ||
-                    this.AEEzsignsignatureType != null &&
-                    input.AEEzsignsignatureType != null &&
-                    this.AEEzsignsignatureType.SequenceEqual(input.AEEzsignsignatureType)
-                ) && 
-                (
-                    this.AObjEzsignfolder == input.AObjEzsignfolder ||
-                    this.AObjEzsignfolder != null &&
-                    input.AObjEzsignfolder != null &&
-                    this.AObjEzsignfolder.SequenceEqual(input.AObjEzsignfolder)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AEEzsignsignatureType != null)
-                {
-                    hashCode = (hashCode * 59) + this.AEEzsignsignatureType.GetHashCode();
-                }
-                if (this.AObjEzsignfolder != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignfolder.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/department/getAutocomplete
     /// </summary>
     [DataContract(Name = "department-getAutocomplete-v2-Response-mPayload")]
-    public partial class DepartmentGetAutocompleteV2ResponseMPayload : IEquatable<DepartmentGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class DepartmentGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DepartmentGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as DepartmentGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if DepartmentGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of DepartmentGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(DepartmentGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjDepartment == input.AObjDepartment ||
-                    this.AObjDepartment != null &&
-                    input.AObjDepartment != null &&
-                    this.AObjDepartment.SequenceEqual(input.AObjDepartment)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjDepartment != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjDepartment.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Word Position Object
     /// </summary>
     [DataContract(Name = "Custom-WordPositionWord-Response")]
-    public partial class CustomWordPositionWordResponse : IEquatable<CustomWordPositionWordResponse>, IValidatableObject
+    public partial class CustomWordPositionWordResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomWordPositionWordResponse" /> class.
@@ -93,62 +93,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomWordPositionWordResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomWordPositionWordResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomWordPositionWordResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomWordPositionWordResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SWord == input.SWord ||
-                    (this.SWord != null &&
-                    this.SWord.Equals(input.SWord))
-                ) && 
-                (
-                    this.AObjWordPositionOccurence == input.AObjWordPositionOccurence ||
-                    this.AObjWordPositionOccurence != null &&
-                    input.AObjWordPositionOccurence != null &&
-                    this.AObjWordPositionOccurence.SequenceEqual(input.AObjWordPositionOccurence)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SWord != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWord.GetHashCode();
-                }
-                if (this.AObjWordPositionOccurence != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjWordPositionOccurence.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Permission Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "permission-RequestCompound")]
-    public partial class PermissionRequestCompound : IEquatable<PermissionRequestCompound>, IValidatableObject
+    public partial class PermissionRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionRequestCompound" /> class.
@@ -129,73 +129,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PermissionRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if PermissionRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PermissionRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PermissionRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiPermissionID == input.PkiPermissionID ||
-                    this.PkiPermissionID.Equals(input.PkiPermissionID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.FkiApikeyID == input.FkiApikeyID ||
-                    this.FkiApikeyID.Equals(input.FkiApikeyID)
-                ) && 
-                (
-                    this.FkiUsergroupID == input.FkiUsergroupID ||
-                    this.FkiUsergroupID.Equals(input.FkiUsergroupID)
-                ) && 
-                (
-                    this.FkiCompanyID == input.FkiCompanyID ||
-                    this.FkiCompanyID.Equals(input.FkiCompanyID)
-                ) && 
-                (
-                    this.FkiModulesectionID == input.FkiModulesectionID ||
-                    this.FkiModulesectionID.Equals(input.FkiModulesectionID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiPermissionID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiApikeyID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUsergroupID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiCompanyID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiModulesectionID.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

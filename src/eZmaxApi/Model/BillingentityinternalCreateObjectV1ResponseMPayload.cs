@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/billingentityinternal
     /// </summary>
     [DataContract(Name = "billingentityinternal-createObject-v1-Response-mPayload")]
-    public partial class BillingentityinternalCreateObjectV1ResponseMPayload : IEquatable<BillingentityinternalCreateObjectV1ResponseMPayload>, IValidatableObject
+    public partial class BillingentityinternalCreateObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BillingentityinternalCreateObjectV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if BillingentityinternalCreateObjectV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BillingentityinternalCreateObjectV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BillingentityinternalCreateObjectV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiBillingentityinternalID == input.APkiBillingentityinternalID ||
-                    this.APkiBillingentityinternalID != null &&
-                    input.APkiBillingentityinternalID != null &&
-                    this.APkiBillingentityinternalID.SequenceEqual(input.APkiBillingentityinternalID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiBillingentityinternalID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiBillingentityinternalID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

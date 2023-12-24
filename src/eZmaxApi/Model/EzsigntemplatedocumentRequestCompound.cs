@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatedocument Object and children
     /// </summary>
     [DataContract(Name = "ezsigntemplatedocument-RequestCompound")]
-    public partial class EzsigntemplatedocumentRequestCompound : IEquatable<EzsigntemplatedocumentRequestCompound>, IValidatableObject
+    public partial class EzsigntemplatedocumentRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Indicates where to look for the document binary content.
@@ -235,7 +235,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.
         /// </summary>
         /// <value>The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.</value>
-        /* <example>[B@72f46e16</example>*/
+        /* <example>eyIkcmVmIjoiIy9jb21wb25lbnRzL2V4YW1wbGVzL1BkZkFzQmFzZTY0L3ZhbHVlIn0&#x3D;</example>*/
         [DataMember(Name = "sEzsigntemplatedocumentBase64", EmitDefaultValue = false)]
         public byte[] SEzsigntemplatedocumentBase64 { get; set; }
 
@@ -293,119 +293,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatedocumentRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatedocumentRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatedocumentRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatedocumentRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsigntemplatedocumentID == input.PkiEzsigntemplatedocumentID ||
-                    this.PkiEzsigntemplatedocumentID.Equals(input.PkiEzsigntemplatedocumentID)
-                ) && 
-                (
-                    this.FkiEzsigntemplateID == input.FkiEzsigntemplateID ||
-                    this.FkiEzsigntemplateID.Equals(input.FkiEzsigntemplateID)
-                ) && 
-                (
-                    this.FkiEzsigndocumentID == input.FkiEzsigndocumentID ||
-                    this.FkiEzsigndocumentID.Equals(input.FkiEzsigndocumentID)
-                ) && 
-                (
-                    this.FkiEzsigntemplatesignerID == input.FkiEzsigntemplatesignerID ||
-                    this.FkiEzsigntemplatesignerID.Equals(input.FkiEzsigntemplatesignerID)
-                ) && 
-                (
-                    this.SEzsigntemplatedocumentName == input.SEzsigntemplatedocumentName ||
-                    (this.SEzsigntemplatedocumentName != null &&
-                    this.SEzsigntemplatedocumentName.Equals(input.SEzsigntemplatedocumentName))
-                ) && 
-                (
-                    this.EEzsigntemplatedocumentSource == input.EEzsigntemplatedocumentSource ||
-                    this.EEzsigntemplatedocumentSource.Equals(input.EEzsigntemplatedocumentSource)
-                ) && 
-                (
-                    this.EEzsigntemplatedocumentFormat == input.EEzsigntemplatedocumentFormat ||
-                    this.EEzsigntemplatedocumentFormat.Equals(input.EEzsigntemplatedocumentFormat)
-                ) && 
-                (
-                    this.SEzsigntemplatedocumentBase64 == input.SEzsigntemplatedocumentBase64 ||
-                    (this.SEzsigntemplatedocumentBase64 != null &&
-                    this.SEzsigntemplatedocumentBase64.Equals(input.SEzsigntemplatedocumentBase64))
-                ) && 
-                (
-                    this.SEzsigntemplatedocumentUrl == input.SEzsigntemplatedocumentUrl ||
-                    (this.SEzsigntemplatedocumentUrl != null &&
-                    this.SEzsigntemplatedocumentUrl.Equals(input.SEzsigntemplatedocumentUrl))
-                ) && 
-                (
-                    this.BEzsigntemplatedocumentForcerepair == input.BEzsigntemplatedocumentForcerepair ||
-                    this.BEzsigntemplatedocumentForcerepair.Equals(input.BEzsigntemplatedocumentForcerepair)
-                ) && 
-                (
-                    this.EEzsigntemplatedocumentForm == input.EEzsigntemplatedocumentForm ||
-                    this.EEzsigntemplatedocumentForm.Equals(input.EEzsigntemplatedocumentForm)
-                ) && 
-                (
-                    this.SEzsigntemplatedocumentPassword == input.SEzsigntemplatedocumentPassword ||
-                    (this.SEzsigntemplatedocumentPassword != null &&
-                    this.SEzsigntemplatedocumentPassword.Equals(input.SEzsigntemplatedocumentPassword))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsigntemplatedocumentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplateID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigndocumentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplatesignerID.GetHashCode();
-                if (this.SEzsigntemplatedocumentName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplatedocumentName.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EEzsigntemplatedocumentSource.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsigntemplatedocumentFormat.GetHashCode();
-                if (this.SEzsigntemplatedocumentBase64 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplatedocumentBase64.GetHashCode();
-                }
-                if (this.SEzsigntemplatedocumentUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplatedocumentUrl.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzsigntemplatedocumentForcerepair.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsigntemplatedocumentForm.GetHashCode();
-                if (this.SEzsigntemplatedocumentPassword != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplatedocumentPassword.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

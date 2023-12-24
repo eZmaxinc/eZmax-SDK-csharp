@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/period/getAutocomplete
     /// </summary>
     [DataContract(Name = "period-getAutocomplete-v2-Response-mPayload")]
-    public partial class PeriodGetAutocompleteV2ResponseMPayload : IEquatable<PeriodGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class PeriodGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PeriodGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if PeriodGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PeriodGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PeriodGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjPeriod == input.AObjPeriod ||
-                    this.AObjPeriod != null &&
-                    input.AObjPeriod != null &&
-                    this.AObjPeriod.SequenceEqual(input.AObjPeriod)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjPeriod != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjPeriod.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

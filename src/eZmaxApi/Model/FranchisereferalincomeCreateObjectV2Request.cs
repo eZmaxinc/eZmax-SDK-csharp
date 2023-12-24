@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /2/object/franchisereferalincome
     /// </summary>
     [DataContract(Name = "franchisereferalincome-createObject-v2-Request")]
-    public partial class FranchisereferalincomeCreateObjectV2Request : IEquatable<FranchisereferalincomeCreateObjectV2Request>, IValidatableObject
+    public partial class FranchisereferalincomeCreateObjectV2Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeCreateObjectV2Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as FranchisereferalincomeCreateObjectV2Request);
-        }
-
-        /// <summary>
-        /// Returns true if FranchisereferalincomeCreateObjectV2Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of FranchisereferalincomeCreateObjectV2Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(FranchisereferalincomeCreateObjectV2Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjFranchisereferalincome == input.AObjFranchisereferalincome ||
-                    this.AObjFranchisereferalincome != null &&
-                    input.AObjFranchisereferalincome != null &&
-                    this.AObjFranchisereferalincome.SequenceEqual(input.AObjFranchisereferalincome)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjFranchisereferalincome != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjFranchisereferalincome.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /2/object/ezsignfolder
     /// </summary>
     [DataContract(Name = "ezsignfolder-createObject-v2-Request")]
-    public partial class EzsignfolderCreateObjectV2Request : IEquatable<EzsignfolderCreateObjectV2Request>, IValidatableObject
+    public partial class EzsignfolderCreateObjectV2Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderCreateObjectV2Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfolderCreateObjectV2Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfolderCreateObjectV2Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfolderCreateObjectV2Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfolderCreateObjectV2Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsignfolder == input.AObjEzsignfolder ||
-                    this.AObjEzsignfolder != null &&
-                    input.AObjEzsignfolder != null &&
-                    this.AObjEzsignfolder.SequenceEqual(input.AObjEzsignfolder)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsignfolder != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignfolder.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

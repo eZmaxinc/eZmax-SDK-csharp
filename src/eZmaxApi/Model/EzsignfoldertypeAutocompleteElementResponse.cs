@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignfoldertype AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "ezsignfoldertype-AutocompleteElement-Response")]
-    public partial class EzsignfoldertypeAutocompleteElementResponse : IEquatable<EzsignfoldertypeAutocompleteElementResponse>, IValidatableObject
+    public partial class EzsignfoldertypeAutocompleteElementResponse : IValidatableObject
     {
 
         /// <summary>
@@ -110,67 +110,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfoldertypeAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfoldertypeAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfoldertypeAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfoldertypeAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.EEzsignfoldertypePrivacylevel == input.EEzsignfoldertypePrivacylevel ||
-                    this.EEzsignfoldertypePrivacylevel.Equals(input.EEzsignfoldertypePrivacylevel)
-                ) && 
-                (
-                    this.SEzsignfoldertypeNameX == input.SEzsignfoldertypeNameX ||
-                    (this.SEzsignfoldertypeNameX != null &&
-                    this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
-                ) && 
-                (
-                    this.PkiEzsignfoldertypeID == input.PkiEzsignfoldertypeID ||
-                    this.PkiEzsignfoldertypeID.Equals(input.PkiEzsignfoldertypeID)
-                ) && 
-                (
-                    this.BEzsignfoldertypeIsactive == input.BEzsignfoldertypeIsactive ||
-                    this.BEzsignfoldertypeIsactive.Equals(input.BEzsignfoldertypeIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.EEzsignfoldertypePrivacylevel.GetHashCode();
-                if (this.SEzsignfoldertypeNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldertypeNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiEzsignfoldertypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignfoldertypeIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

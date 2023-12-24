@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/clonehistory/getList
     /// </summary>
     [DataContract(Name = "clonehistory-getList-v1-Response-mPayload")]
-    public partial class ClonehistoryGetListV1ResponseMPayload : IEquatable<ClonehistoryGetListV1ResponseMPayload>, IValidatableObject
+    public partial class ClonehistoryGetListV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ClonehistoryGetListV1ResponseMPayload" /> class.
@@ -99,63 +99,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ClonehistoryGetListV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if ClonehistoryGetListV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ClonehistoryGetListV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ClonehistoryGetListV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.IRowReturned == input.IRowReturned ||
-                    this.IRowReturned.Equals(input.IRowReturned)
-                ) && 
-                (
-                    this.IRowFiltered == input.IRowFiltered ||
-                    this.IRowFiltered.Equals(input.IRowFiltered)
-                ) && 
-                (
-                    this.AObjClonehistory == input.AObjClonehistory ||
-                    this.AObjClonehistory != null &&
-                    input.AObjClonehistory != null &&
-                    this.AObjClonehistory.SequenceEqual(input.AObjClonehistory)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.IRowReturned.GetHashCode();
-                hashCode = (hashCode * 59) + this.IRowFiltered.GetHashCode();
-                if (this.AObjClonehistory != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjClonehistory.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

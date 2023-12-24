@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsignature Object in the context of an EzsignsignaturesAutomatic path
     /// </summary>
     [DataContract(Name = "Custom-EzsignsignatureEzsignsignaturesAutomatic-Response")]
-    public partial class CustomEzsignsignatureEzsignsignaturesAutomaticResponse : IEquatable<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>, IValidatableObject
+    public partial class CustomEzsignsignatureEzsignsignaturesAutomaticResponse : IValidatableObject
     {
 
         /// <summary>
@@ -94,58 +94,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomEzsignsignatureEzsignsignaturesAutomaticResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomEzsignsignatureEzsignsignaturesAutomaticResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomEzsignsignatureEzsignsignaturesAutomaticResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomEzsignsignatureEzsignsignaturesAutomaticResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignsignatureID == input.PkiEzsignsignatureID ||
-                    this.PkiEzsignsignatureID.Equals(input.PkiEzsignsignatureID)
-                ) && 
-                (
-                    this.EEzsignsignatureType == input.EEzsignsignatureType ||
-                    this.EEzsignsignatureType.Equals(input.EEzsignsignatureType)
-                ) && 
-                (
-                    this.IEzsignpagePagenumber == input.IEzsignpagePagenumber ||
-                    this.IEzsignpagePagenumber.Equals(input.IEzsignpagePagenumber)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignsignatureID.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignsignatureType.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignpagePagenumber.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

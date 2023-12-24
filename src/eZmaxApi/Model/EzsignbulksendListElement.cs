@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignbulksend List Element
     /// </summary>
     [DataContract(Name = "ezsignbulksend-ListElement")]
-    public partial class EzsignbulksendListElement : IEquatable<EzsignbulksendListElement>, IValidatableObject
+    public partial class EzsignbulksendListElement : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendListElement" /> class.
@@ -188,106 +188,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksendListElement);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksendListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksendListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksendListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignbulksendID == input.PkiEzsignbulksendID ||
-                    this.PkiEzsignbulksendID.Equals(input.PkiEzsignbulksendID)
-                ) && 
-                (
-                    this.FkiEzsignfoldertypeID == input.FkiEzsignfoldertypeID ||
-                    this.FkiEzsignfoldertypeID.Equals(input.FkiEzsignfoldertypeID)
-                ) && 
-                (
-                    this.SEzsignbulksendDescription == input.SEzsignbulksendDescription ||
-                    (this.SEzsignbulksendDescription != null &&
-                    this.SEzsignbulksendDescription.Equals(input.SEzsignbulksendDescription))
-                ) && 
-                (
-                    this.SEzsignfoldertypeNameX == input.SEzsignfoldertypeNameX ||
-                    (this.SEzsignfoldertypeNameX != null &&
-                    this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
-                ) && 
-                (
-                    this.BEzsignbulksendNeedvalidation == input.BEzsignbulksendNeedvalidation ||
-                    this.BEzsignbulksendNeedvalidation.Equals(input.BEzsignbulksendNeedvalidation)
-                ) && 
-                (
-                    this.IEzsignbulksendtransmission == input.IEzsignbulksendtransmission ||
-                    this.IEzsignbulksendtransmission.Equals(input.IEzsignbulksendtransmission)
-                ) && 
-                (
-                    this.IEzsignfolder == input.IEzsignfolder ||
-                    this.IEzsignfolder.Equals(input.IEzsignfolder)
-                ) && 
-                (
-                    this.IEzsigndocument == input.IEzsigndocument ||
-                    this.IEzsigndocument.Equals(input.IEzsigndocument)
-                ) && 
-                (
-                    this.IEzsignsignature == input.IEzsignsignature ||
-                    this.IEzsignsignature.Equals(input.IEzsignsignature)
-                ) && 
-                (
-                    this.IEzsignsignatureSigned == input.IEzsignsignatureSigned ||
-                    this.IEzsignsignatureSigned.Equals(input.IEzsignsignatureSigned)
-                ) && 
-                (
-                    this.BEzsignbulksendIsactive == input.BEzsignbulksendIsactive ||
-                    this.BEzsignbulksendIsactive.Equals(input.BEzsignbulksendIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignbulksendID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldertypeID.GetHashCode();
-                if (this.SEzsignbulksendDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignbulksendDescription.GetHashCode();
-                }
-                if (this.SEzsignfoldertypeNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldertypeNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzsignbulksendNeedvalidation.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignbulksendtransmission.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignfolder.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigndocument.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignature.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignatureSigned.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignbulksendIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsignatureattachment Object
     /// </summary>
     [DataContract(Name = "ezsignsignatureattachment-Response")]
-    public partial class EzsignsignatureattachmentResponse : IEquatable<EzsignsignatureattachmentResponse>, IValidatableObject
+    public partial class EzsignsignatureattachmentResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureattachmentResponse" /> class.
@@ -133,80 +133,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignatureattachmentResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignatureattachmentResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignatureattachmentResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignatureattachmentResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignsignatureattachmentID == input.PkiEzsignsignatureattachmentID ||
-                    this.PkiEzsignsignatureattachmentID.Equals(input.PkiEzsignsignatureattachmentID)
-                ) && 
-                (
-                    this.FkiEzsignsignatureID == input.FkiEzsignsignatureID ||
-                    this.FkiEzsignsignatureID.Equals(input.FkiEzsignsignatureID)
-                ) && 
-                (
-                    this.BinEzsignsignatureattachmentMD5 == input.BinEzsignsignatureattachmentMD5 ||
-                    (this.BinEzsignsignatureattachmentMD5 != null &&
-                    this.BinEzsignsignatureattachmentMD5.Equals(input.BinEzsignsignatureattachmentMD5))
-                ) && 
-                (
-                    this.SEzsignsignatureattachmentName == input.SEzsignsignatureattachmentName ||
-                    (this.SEzsignsignatureattachmentName != null &&
-                    this.SEzsignsignatureattachmentName.Equals(input.SEzsignsignatureattachmentName))
-                ) && 
-                (
-                    this.SDownloadUrl == input.SDownloadUrl ||
-                    (this.SDownloadUrl != null &&
-                    this.SDownloadUrl.Equals(input.SDownloadUrl))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignsignatureattachmentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignsignatureID.GetHashCode();
-                if (this.BinEzsignsignatureattachmentMD5 != null)
-                {
-                    hashCode = (hashCode * 59) + this.BinEzsignsignatureattachmentMD5.GetHashCode();
-                }
-                if (this.SEzsignsignatureattachmentName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignsignatureattachmentName.GetHashCode();
-                }
-                if (this.SDownloadUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SDownloadUrl.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -6,6 +6,7 @@ Response for Websocket Error V1
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EWebsocketMessagetype** | **string** | The Type of message | 
+**SWebsocketChannel** | **string** | The Channel on which to route the websocket message | 
 **MPayload** | [**WebsocketResponseErrorV1MPayload**](WebsocketResponseErrorV1MPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

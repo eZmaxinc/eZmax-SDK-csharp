@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/webhook/{pkiWebhookID}
     /// </summary>
     [DataContract(Name = "webhook-getObject-v2-Response-mPayload")]
-    public partial class WebhookGetObjectV2ResponseMPayload : IEquatable<WebhookGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class WebhookGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebhookGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if WebhookGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebhookGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebhookGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjWebhook == input.ObjWebhook ||
-                    (this.ObjWebhook != null &&
-                    this.ObjWebhook.Equals(input.ObjWebhook))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjWebhook != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjWebhook.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

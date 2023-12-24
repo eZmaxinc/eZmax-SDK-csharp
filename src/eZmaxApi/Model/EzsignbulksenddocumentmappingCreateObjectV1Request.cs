@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsignbulksenddocumentmapping
     /// </summary>
     [DataContract(Name = "ezsignbulksenddocumentmapping-createObject-v1-Request")]
-    public partial class EzsignbulksenddocumentmappingCreateObjectV1Request : IEquatable<EzsignbulksenddocumentmappingCreateObjectV1Request>, IValidatableObject
+    public partial class EzsignbulksenddocumentmappingCreateObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingCreateObjectV1Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksenddocumentmappingCreateObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksenddocumentmappingCreateObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksenddocumentmappingCreateObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksenddocumentmappingCreateObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsignbulksenddocumentmapping == input.AObjEzsignbulksenddocumentmapping ||
-                    this.AObjEzsignbulksenddocumentmapping != null &&
-                    input.AObjEzsignbulksenddocumentmapping != null &&
-                    this.AObjEzsignbulksenddocumentmapping.SequenceEqual(input.AObjEzsignbulksenddocumentmapping)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsignbulksenddocumentmapping != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignbulksenddocumentmapping.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

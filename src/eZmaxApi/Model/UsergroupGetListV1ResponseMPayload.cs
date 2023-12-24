@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/usergroup/getList
     /// </summary>
     [DataContract(Name = "usergroup-getList-v1-Response-mPayload")]
-    public partial class UsergroupGetListV1ResponseMPayload : IEquatable<UsergroupGetListV1ResponseMPayload>, IValidatableObject
+    public partial class UsergroupGetListV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupGetListV1ResponseMPayload" /> class.
@@ -99,63 +99,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UsergroupGetListV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if UsergroupGetListV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UsergroupGetListV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UsergroupGetListV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.IRowReturned == input.IRowReturned ||
-                    this.IRowReturned.Equals(input.IRowReturned)
-                ) && 
-                (
-                    this.IRowFiltered == input.IRowFiltered ||
-                    this.IRowFiltered.Equals(input.IRowFiltered)
-                ) && 
-                (
-                    this.AObjUsergroup == input.AObjUsergroup ||
-                    this.AObjUsergroup != null &&
-                    input.AObjUsergroup != null &&
-                    this.AObjUsergroup.SequenceEqual(input.AObjUsergroup)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.IRowReturned.GetHashCode();
-                hashCode = (hashCode * 59) + this.IRowFiltered.GetHashCode();
-                if (this.AObjUsergroup != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjUsergroup.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

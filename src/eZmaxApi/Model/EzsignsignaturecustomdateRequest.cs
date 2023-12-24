@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsignaturecustomdate Object
     /// </summary>
     [DataContract(Name = "ezsignsignaturecustomdate-Request")]
-    public partial class EzsignsignaturecustomdateRequest : IEquatable<EzsignsignaturecustomdateRequest>, IValidatableObject
+    public partial class EzsignsignaturecustomdateRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignaturecustomdateRequest" /> class.
@@ -112,67 +112,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignaturecustomdateRequest);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignaturecustomdateRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignaturecustomdateRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignaturecustomdateRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignsignaturecustomdateID == input.PkiEzsignsignaturecustomdateID ||
-                    this.PkiEzsignsignaturecustomdateID.Equals(input.PkiEzsignsignaturecustomdateID)
-                ) && 
-                (
-                    this.IEzsignsignaturecustomdateX == input.IEzsignsignaturecustomdateX ||
-                    this.IEzsignsignaturecustomdateX.Equals(input.IEzsignsignaturecustomdateX)
-                ) && 
-                (
-                    this.IEzsignsignaturecustomdateY == input.IEzsignsignaturecustomdateY ||
-                    this.IEzsignsignaturecustomdateY.Equals(input.IEzsignsignaturecustomdateY)
-                ) && 
-                (
-                    this.SEzsignsignaturecustomdateFormat == input.SEzsignsignaturecustomdateFormat ||
-                    (this.SEzsignsignaturecustomdateFormat != null &&
-                    this.SEzsignsignaturecustomdateFormat.Equals(input.SEzsignsignaturecustomdateFormat))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignsignaturecustomdateID.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignaturecustomdateX.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignaturecustomdateY.GetHashCode();
-                if (this.SEzsignsignaturecustomdateFormat != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignsignaturecustomdateFormat.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

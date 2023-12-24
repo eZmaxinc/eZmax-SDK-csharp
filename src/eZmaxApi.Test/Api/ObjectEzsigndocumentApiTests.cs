@@ -195,6 +195,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsigndocumentGetAttachmentsV1
+        /// </summary>
+        [Fact]
+        public void EzsigndocumentGetAttachmentsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentGetAttachmentsV1(pkiEzsigndocumentID);
+            //Assert.IsType<EzsigndocumentGetAttachmentsV1Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsigndocumentGetCompletedElementsV1
         /// </summary>
         [Fact]

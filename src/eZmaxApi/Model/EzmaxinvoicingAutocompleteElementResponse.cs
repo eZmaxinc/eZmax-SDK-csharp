@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicing AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "ezmaxinvoicing-AutocompleteElement-Response")]
-    public partial class EzmaxinvoicingAutocompleteElementResponse : IEquatable<EzmaxinvoicingAutocompleteElementResponse>, IValidatableObject
+    public partial class EzmaxinvoicingAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingAutocompleteElementResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzmaxinvoicingAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzmaxinvoicingAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzmaxinvoicingAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzmaxinvoicingAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.YyyymmEzmaxinvoicing == input.YyyymmEzmaxinvoicing ||
-                    (this.YyyymmEzmaxinvoicing != null &&
-                    this.YyyymmEzmaxinvoicing.Equals(input.YyyymmEzmaxinvoicing))
-                ) && 
-                (
-                    this.PkiEzmaxinvoicingID == input.PkiEzmaxinvoicingID ||
-                    this.PkiEzmaxinvoicingID.Equals(input.PkiEzmaxinvoicingID)
-                ) && 
-                (
-                    this.BEzmaxinvoicingIsactive == input.BEzmaxinvoicingIsactive ||
-                    this.BEzmaxinvoicingIsactive.Equals(input.BEzmaxinvoicingIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.YyyymmEzmaxinvoicing != null)
-                {
-                    hashCode = (hashCode * 59) + this.YyyymmEzmaxinvoicing.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiEzmaxinvoicingID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzmaxinvoicingIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

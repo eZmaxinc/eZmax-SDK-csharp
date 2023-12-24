@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A cell in a Reportrow 
     /// </summary>
     [DataContract(Name = "Common-Reportcell")]
-    public partial class CommonReportcell : IEquatable<CommonReportcell>, IValidatableObject
+    public partial class CommonReportcell : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportcell" /> class.
@@ -85,53 +85,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonReportcell);
-        }
-
-        /// <summary>
-        /// Returns true if CommonReportcell instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonReportcell to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonReportcell input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.IReportcellColumnspan == input.IReportcellColumnspan ||
-                    this.IReportcellColumnspan.Equals(input.IReportcellColumnspan)
-                ) && 
-                (
-                    this.IReportcellRowspan == input.IReportcellRowspan ||
-                    this.IReportcellRowspan.Equals(input.IReportcellRowspan)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.IReportcellColumnspan.GetHashCode();
-                hashCode = (hashCode * 59) + this.IReportcellRowspan.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsignfolder
     /// </summary>
     [DataContract(Name = "ezsignfolder-createObject-v1-Request")]
-    public partial class EzsignfolderCreateObjectV1Request : IEquatable<EzsignfolderCreateObjectV1Request>, IValidatableObject
+    public partial class EzsignfolderCreateObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderCreateObjectV1Request" /> class.
@@ -76,61 +76,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfolderCreateObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfolderCreateObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfolderCreateObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfolderCreateObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzsignfolder == input.ObjEzsignfolder ||
-                    (this.ObjEzsignfolder != null &&
-                    this.ObjEzsignfolder.Equals(input.ObjEzsignfolder))
-                ) && 
-                (
-                    this.ObjEzsignfolderCompound == input.ObjEzsignfolderCompound ||
-                    (this.ObjEzsignfolderCompound != null &&
-                    this.ObjEzsignfolderCompound.Equals(input.ObjEzsignfolderCompound))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzsignfolder != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsignfolder.GetHashCode();
-                }
-                if (this.ObjEzsignfolderCompound != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsignfolderCompound.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

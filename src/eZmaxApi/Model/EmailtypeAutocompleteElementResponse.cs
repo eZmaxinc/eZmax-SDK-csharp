@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Emailtype AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "emailtype-AutocompleteElement-Response")]
-    public partial class EmailtypeAutocompleteElementResponse : IEquatable<EmailtypeAutocompleteElementResponse>, IValidatableObject
+    public partial class EmailtypeAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailtypeAutocompleteElementResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EmailtypeAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EmailtypeAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EmailtypeAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EmailtypeAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEmailtypeID == input.PkiEmailtypeID ||
-                    this.PkiEmailtypeID.Equals(input.PkiEmailtypeID)
-                ) && 
-                (
-                    this.SEmailtypeNameX == input.SEmailtypeNameX ||
-                    (this.SEmailtypeNameX != null &&
-                    this.SEmailtypeNameX.Equals(input.SEmailtypeNameX))
-                ) && 
-                (
-                    this.BEmailtypeIsactive == input.BEmailtypeIsactive ||
-                    this.BEmailtypeIsactive.Equals(input.BEmailtypeIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEmailtypeID.GetHashCode();
-                if (this.SEmailtypeNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailtypeNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEmailtypeIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

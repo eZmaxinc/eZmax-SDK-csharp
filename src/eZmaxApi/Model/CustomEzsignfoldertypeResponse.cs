@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Custom Ezsignfoldertype Object
     /// </summary>
     [DataContract(Name = "Custom-Ezsignfoldertype-Response")]
-    public partial class CustomEzsignfoldertypeResponse : IEquatable<CustomEzsignfoldertypeResponse>, IValidatableObject
+    public partial class CustomEzsignfoldertypeResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfoldertypeResponse" /> class.
@@ -42,16 +42,22 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
         /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester.</param>
-        /// <param name="bEzsignfoldertypeIncludeproofsigner">Whether we include the proof with the signed Ezsigndocument for Ezsignsigners.</param>
+        /// <param name="bEzsignfoldertypeSendproofezsignsigner">Whether we send the proof in the email to Ezsignsigner.</param>
+        /// <param name="bEzsignfoldertypeIncludeproofsigner">THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners.</param>
         /// <param name="bEzsignfoldertypeIncludeproofuser">Whether we include the proof with the signed Ezsigndocument for users.</param>
+        /// <param name="bEzsignfoldertypeAllowdownloadattachmentezsignsigner">Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner.</param>
+        /// <param name="bEzsignfoldertypeAllowdownloadproofezsignsigner">Whether we allow the proof to be downloaded by an Ezsignsigner.</param>
         /// <param name="bEzsignfoldertypeDelegate">Wheter if delegation of signature is allowed to another user or not.</param>
         /// <param name="bEzsignfoldertypeReassign">Wheter if Reassignment of signature is allowed to another signatory or not.</param>
-        public CustomEzsignfoldertypeResponse(int pkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), bool bEzsignfoldertypeIncludeproofsigner = default(bool), bool bEzsignfoldertypeIncludeproofuser = default(bool), bool bEzsignfoldertypeDelegate = default(bool), bool bEzsignfoldertypeReassign = default(bool))
+        public CustomEzsignfoldertypeResponse(int pkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), bool bEzsignfoldertypeSendproofezsignsigner = default(bool), bool bEzsignfoldertypeIncludeproofsigner = default(bool), bool bEzsignfoldertypeIncludeproofuser = default(bool), bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner = default(bool), bool bEzsignfoldertypeAllowdownloadproofezsignsigner = default(bool), bool bEzsignfoldertypeDelegate = default(bool), bool bEzsignfoldertypeReassign = default(bool))
         {
             this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+            this.BEzsignfoldertypeSendproofezsignsigner = bEzsignfoldertypeSendproofezsignsigner;
             this.BEzsignfoldertypeIncludeproofsigner = bEzsignfoldertypeIncludeproofsigner;
             this.BEzsignfoldertypeIncludeproofuser = bEzsignfoldertypeIncludeproofuser;
+            this.BEzsignfoldertypeAllowdownloadattachmentezsignsigner = bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+            this.BEzsignfoldertypeAllowdownloadproofezsignsigner = bEzsignfoldertypeAllowdownloadproofezsignsigner;
             this.BEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
             this.BEzsignfoldertypeReassign = bEzsignfoldertypeReassign;
         }
@@ -73,9 +79,17 @@ namespace eZmaxApi.Model
         public string SEzsignfoldertypeNameX { get; set; }
 
         /// <summary>
-        /// Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+        /// Whether we send the proof in the email to Ezsignsigner
         /// </summary>
-        /// <value>Whether we include the proof with the signed Ezsigndocument for Ezsignsigners</value>
+        /// <value>Whether we send the proof in the email to Ezsignsigner</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bEzsignfoldertypeSendproofezsignsigner", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeSendproofezsignsigner { get; set; }
+
+        /// <summary>
+        /// THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+        /// </summary>
+        /// <value>THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners</value>
         /* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeIncludeproofsigner", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeIncludeproofsigner { get; set; }
@@ -87,6 +101,22 @@ namespace eZmaxApi.Model
         /* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeIncludeproofuser", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeIncludeproofuser { get; set; }
+
+        /// <summary>
+        /// Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
+        /// </summary>
+        /// <value>Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bEzsignfoldertypeAllowdownloadattachmentezsignsigner", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeAllowdownloadattachmentezsignsigner { get; set; }
+
+        /// <summary>
+        /// Whether we allow the proof to be downloaded by an Ezsignsigner
+        /// </summary>
+        /// <value>Whether we allow the proof to be downloaded by an Ezsignsigner</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bEzsignfoldertypeAllowdownloadproofezsignsigner", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeAllowdownloadproofezsignsigner { get; set; }
 
         /// <summary>
         /// Wheter if delegation of signature is allowed to another user or not
@@ -114,8 +144,11 @@ namespace eZmaxApi.Model
             sb.Append("class CustomEzsignfoldertypeResponse {\n");
             sb.Append("  PkiEzsignfoldertypeID: ").Append(PkiEzsignfoldertypeID).Append("\n");
             sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
+            sb.Append("  BEzsignfoldertypeSendproofezsignsigner: ").Append(BEzsignfoldertypeSendproofezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeIncludeproofsigner: ").Append(BEzsignfoldertypeIncludeproofsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeIncludeproofuser: ").Append(BEzsignfoldertypeIncludeproofuser).Append("\n");
+            sb.Append("  BEzsignfoldertypeAllowdownloadattachmentezsignsigner: ").Append(BEzsignfoldertypeAllowdownloadattachmentezsignsigner).Append("\n");
+            sb.Append("  BEzsignfoldertypeAllowdownloadproofezsignsigner: ").Append(BEzsignfoldertypeAllowdownloadproofezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeDelegate: ").Append(BEzsignfoldertypeDelegate).Append("\n");
             sb.Append("  BEzsignfoldertypeReassign: ").Append(BEzsignfoldertypeReassign).Append("\n");
             sb.Append("}\n");
@@ -129,77 +162,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomEzsignfoldertypeResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomEzsignfoldertypeResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomEzsignfoldertypeResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomEzsignfoldertypeResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignfoldertypeID == input.PkiEzsignfoldertypeID ||
-                    this.PkiEzsignfoldertypeID.Equals(input.PkiEzsignfoldertypeID)
-                ) && 
-                (
-                    this.SEzsignfoldertypeNameX == input.SEzsignfoldertypeNameX ||
-                    (this.SEzsignfoldertypeNameX != null &&
-                    this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
-                ) && 
-                (
-                    this.BEzsignfoldertypeIncludeproofsigner == input.BEzsignfoldertypeIncludeproofsigner ||
-                    this.BEzsignfoldertypeIncludeproofsigner.Equals(input.BEzsignfoldertypeIncludeproofsigner)
-                ) && 
-                (
-                    this.BEzsignfoldertypeIncludeproofuser == input.BEzsignfoldertypeIncludeproofuser ||
-                    this.BEzsignfoldertypeIncludeproofuser.Equals(input.BEzsignfoldertypeIncludeproofuser)
-                ) && 
-                (
-                    this.BEzsignfoldertypeDelegate == input.BEzsignfoldertypeDelegate ||
-                    this.BEzsignfoldertypeDelegate.Equals(input.BEzsignfoldertypeDelegate)
-                ) && 
-                (
-                    this.BEzsignfoldertypeReassign == input.BEzsignfoldertypeReassign ||
-                    this.BEzsignfoldertypeReassign.Equals(input.BEzsignfoldertypeReassign)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignfoldertypeID.GetHashCode();
-                if (this.SEzsignfoldertypeNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldertypeNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzsignfoldertypeIncludeproofsigner.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignfoldertypeIncludeproofuser.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignfoldertypeDelegate.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignfoldertypeReassign.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

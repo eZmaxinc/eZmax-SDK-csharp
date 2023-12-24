@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for Websocket Error V1
     /// </summary>
     [DataContract(Name = "Websocket-Response-Error-V1")]
-    public partial class WebsocketResponseErrorV1 : IEquatable<WebsocketResponseErrorV1>, IValidatableObject
+    public partial class WebsocketResponseErrorV1 : IValidatableObject
     {
         /// <summary>
         /// The Type of message
@@ -62,10 +62,17 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="WebsocketResponseErrorV1" /> class.
         /// </summary>
         /// <param name="eWebsocketMessagetype">The Type of message (required).</param>
+        /// <param name="sWebsocketChannel">The Channel on which to route the websocket message (required).</param>
         /// <param name="mPayload">mPayload (required).</param>
-        public WebsocketResponseErrorV1(EWebsocketMessagetypeEnum eWebsocketMessagetype = default(EWebsocketMessagetypeEnum), WebsocketResponseErrorV1MPayload mPayload = default(WebsocketResponseErrorV1MPayload))
+        public WebsocketResponseErrorV1(EWebsocketMessagetypeEnum eWebsocketMessagetype = default(EWebsocketMessagetypeEnum), string sWebsocketChannel = default(string), WebsocketResponseErrorV1MPayload mPayload = default(WebsocketResponseErrorV1MPayload))
         {
             this.EWebsocketMessagetype = eWebsocketMessagetype;
+            // to ensure "sWebsocketChannel" is required (not null)
+            if (sWebsocketChannel == null)
+            {
+                throw new ArgumentNullException("sWebsocketChannel is a required property for WebsocketResponseErrorV1 and cannot be null");
+            }
+            this.SWebsocketChannel = sWebsocketChannel;
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
@@ -73,6 +80,14 @@ namespace eZmaxApi.Model
             }
             this.MPayload = mPayload;
         }
+
+        /// <summary>
+        /// The Channel on which to route the websocket message
+        /// </summary>
+        /// <value>The Channel on which to route the websocket message</value>
+        /* <example>Ch@nnel_1.0</example>*/
+        [DataMember(Name = "sWebsocketChannel", IsRequired = true, EmitDefaultValue = true)]
+        public string SWebsocketChannel { get; set; }
 
         /// <summary>
         /// Gets or Sets MPayload
@@ -89,6 +104,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class WebsocketResponseErrorV1 {\n");
             sb.Append("  EWebsocketMessagetype: ").Append(EWebsocketMessagetype).Append("\n");
+            sb.Append("  SWebsocketChannel: ").Append(SWebsocketChannel).Append("\n");
             sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -104,63 +120,21 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebsocketResponseErrorV1);
-        }
-
-        /// <summary>
-        /// Returns true if WebsocketResponseErrorV1 instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebsocketResponseErrorV1 to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebsocketResponseErrorV1 input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.EWebsocketMessagetype == input.EWebsocketMessagetype ||
-                    this.EWebsocketMessagetype.Equals(input.EWebsocketMessagetype)
-                ) && 
-                (
-                    this.MPayload == input.MPayload ||
-                    (this.MPayload != null &&
-                    this.MPayload.Equals(input.MPayload))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.EWebsocketMessagetype.GetHashCode();
-                if (this.MPayload != null)
-                {
-                    hashCode = (hashCode * 59) + this.MPayload.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            if (this.SWebsocketChannel != null) {
+                // SWebsocketChannel (string) pattern
+                Regex regexSWebsocketChannel = new Regex(@"^[a-zA-Z0-9_@.]{32}$", RegexOptions.CultureInvariant);
+                if (!regexSWebsocketChannel.Match(this.SWebsocketChannel).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SWebsocketChannel, must match a pattern of " + regexSWebsocketChannel, new [] { "SWebsocketChannel" });
+                }
+            }
+
             yield break;
         }
     }

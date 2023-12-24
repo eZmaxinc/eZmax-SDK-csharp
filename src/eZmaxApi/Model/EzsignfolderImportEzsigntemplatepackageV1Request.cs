@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
     /// </summary>
     [DataContract(Name = "ezsignfolder-importEzsigntemplatepackage-v1-Request")]
-    public partial class EzsignfolderImportEzsigntemplatepackageV1Request : IEquatable<EzsignfolderImportEzsigntemplatepackageV1Request>, IValidatableObject
+    public partial class EzsignfolderImportEzsigntemplatepackageV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderImportEzsigntemplatepackageV1Request" /> class.
@@ -104,67 +104,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfolderImportEzsigntemplatepackageV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfolderImportEzsigntemplatepackageV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfolderImportEzsigntemplatepackageV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfolderImportEzsigntemplatepackageV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiEzsigntemplatepackageID == input.FkiEzsigntemplatepackageID ||
-                    this.FkiEzsigntemplatepackageID.Equals(input.FkiEzsigntemplatepackageID)
-                ) && 
-                (
-                    this.DtEzsigndocumentDuedate == input.DtEzsigndocumentDuedate ||
-                    (this.DtEzsigndocumentDuedate != null &&
-                    this.DtEzsigndocumentDuedate.Equals(input.DtEzsigndocumentDuedate))
-                ) && 
-                (
-                    this.AObjImportEzsigntemplatepackageRelation == input.AObjImportEzsigntemplatepackageRelation ||
-                    this.AObjImportEzsigntemplatepackageRelation != null &&
-                    input.AObjImportEzsigntemplatepackageRelation != null &&
-                    this.AObjImportEzsigntemplatepackageRelation.SequenceEqual(input.AObjImportEzsigntemplatepackageRelation)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplatepackageID.GetHashCode();
-                if (this.DtEzsigndocumentDuedate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsigndocumentDuedate.GetHashCode();
-                }
-                if (this.AObjImportEzsigntemplatepackageRelation != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjImportEzsigntemplatepackageRelation.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

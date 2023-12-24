@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages
     /// </summary>
     [DataContract(Name = "ezsigntemplatedocument-getEzsigntemplatedocumentpages-v1-Response-mPayload")]
-    public partial class EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload : IEquatable<EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload>, IValidatableObject
+    public partial class EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsigntemplatedocumentpage == input.AObjEzsigntemplatedocumentpage ||
-                    this.AObjEzsigntemplatedocumentpage != null &&
-                    input.AObjEzsigntemplatedocumentpage != null &&
-                    this.AObjEzsigntemplatedocumentpage.SequenceEqual(input.AObjEzsigntemplatedocumentpage)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsigntemplatedocumentpage != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsigntemplatedocumentpage.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

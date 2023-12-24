@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}
     /// </summary>
     [DataContract(Name = "ezsignbulksendsignermapping-getObject-v2-Response-mPayload")]
-    public partial class EzsignbulksendsignermappingGetObjectV2ResponseMPayload : IEquatable<EzsignbulksendsignermappingGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class EzsignbulksendsignermappingGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksendsignermappingGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksendsignermappingGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksendsignermappingGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksendsignermappingGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzsignbulksendsignermapping == input.ObjEzsignbulksendsignermapping ||
-                    (this.ObjEzsignbulksendsignermapping != null &&
-                    this.ObjEzsignbulksendsignermapping.Equals(input.ObjEzsignbulksendsignermapping))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzsignbulksendsignermapping != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsignbulksendsignermapping.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// This is the base Webhook object
     /// </summary>
     [DataContract(Name = "Webhook-User-UserCreated")]
-    public partial class WebhookUserUserCreated : IEquatable<WebhookUserUserCreated>, IValidatableObject
+    public partial class WebhookUserUserCreated : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookUserUserCreated" /> class.
@@ -106,71 +106,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebhookUserUserCreated);
-        }
-
-        /// <summary>
-        /// Returns true if WebhookUserUserCreated instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebhookUserUserCreated to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebhookUserUserCreated input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjWebhook == input.ObjWebhook ||
-                    (this.ObjWebhook != null &&
-                    this.ObjWebhook.Equals(input.ObjWebhook))
-                ) && 
-                (
-                    this.AObjAttempt == input.AObjAttempt ||
-                    this.AObjAttempt != null &&
-                    input.AObjAttempt != null &&
-                    this.AObjAttempt.SequenceEqual(input.AObjAttempt)
-                ) && 
-                (
-                    this.ObjUser == input.ObjUser ||
-                    (this.ObjUser != null &&
-                    this.ObjUser.Equals(input.ObjUser))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjWebhook != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjWebhook.GetHashCode();
-                }
-                if (this.AObjAttempt != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjAttempt.GetHashCode();
-                }
-                if (this.ObjUser != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjUser.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

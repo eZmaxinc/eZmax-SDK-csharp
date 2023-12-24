@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// The name of the Usergroup
     /// </summary>
     [DataContract(Name = "Multilingual-UsergroupName")]
-    public partial class MultilingualUsergroupName : IEquatable<MultilingualUsergroupName>, IValidatableObject
+    public partial class MultilingualUsergroupName : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualUsergroupName" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualUsergroupName);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualUsergroupName instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualUsergroupName to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualUsergroupName input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SUsergroupName1 == input.SUsergroupName1 ||
-                    (this.SUsergroupName1 != null &&
-                    this.SUsergroupName1.Equals(input.SUsergroupName1))
-                ) && 
-                (
-                    this.SUsergroupName2 == input.SUsergroupName2 ||
-                    (this.SUsergroupName2 != null &&
-                    this.SUsergroupName2.Equals(input.SUsergroupName2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SUsergroupName1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUsergroupName1.GetHashCode();
-                }
-                if (this.SUsergroupName2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUsergroupName2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

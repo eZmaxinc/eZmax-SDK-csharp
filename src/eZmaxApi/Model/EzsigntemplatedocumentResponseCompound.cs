@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatedocument Object
     /// </summary>
     [DataContract(Name = "ezsigntemplatedocument-ResponseCompound")]
-    public partial class EzsigntemplatedocumentResponseCompound : IEquatable<EzsigntemplatedocumentResponseCompound>, IValidatableObject
+    public partial class EzsigntemplatedocumentResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentResponseCompound" /> class.
@@ -134,77 +134,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatedocumentResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatedocumentResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatedocumentResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatedocumentResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsigntemplatedocumentID == input.PkiEzsigntemplatedocumentID ||
-                    this.PkiEzsigntemplatedocumentID.Equals(input.PkiEzsigntemplatedocumentID)
-                ) && 
-                (
-                    this.FkiEzsigntemplateID == input.FkiEzsigntemplateID ||
-                    this.FkiEzsigntemplateID.Equals(input.FkiEzsigntemplateID)
-                ) && 
-                (
-                    this.SEzsigntemplatedocumentName == input.SEzsigntemplatedocumentName ||
-                    (this.SEzsigntemplatedocumentName != null &&
-                    this.SEzsigntemplatedocumentName.Equals(input.SEzsigntemplatedocumentName))
-                ) && 
-                (
-                    this.IEzsigntemplatedocumentPagetotal == input.IEzsigntemplatedocumentPagetotal ||
-                    this.IEzsigntemplatedocumentPagetotal.Equals(input.IEzsigntemplatedocumentPagetotal)
-                ) && 
-                (
-                    this.IEzsigntemplatedocumentSignaturetotal == input.IEzsigntemplatedocumentSignaturetotal ||
-                    this.IEzsigntemplatedocumentSignaturetotal.Equals(input.IEzsigntemplatedocumentSignaturetotal)
-                ) && 
-                (
-                    this.BEzsigntemplatedocumentHassignedsignatures == input.BEzsigntemplatedocumentHassignedsignatures ||
-                    this.BEzsigntemplatedocumentHassignedsignatures.Equals(input.BEzsigntemplatedocumentHassignedsignatures)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsigntemplatedocumentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplateID.GetHashCode();
-                if (this.SEzsigntemplatedocumentName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplatedocumentName.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzsigntemplatedocumentPagetotal.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplatedocumentSignaturetotal.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsigntemplatedocumentHassignedsignatures.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

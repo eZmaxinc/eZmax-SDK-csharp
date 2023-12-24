@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A complex type that specifies PATCH configuration options.
     /// </summary>
     [DataContract(Name = "Scim_ServiceProviderConfig_patch")]
-    public partial class ScimServiceProviderConfigPatch : IEquatable<ScimServiceProviderConfigPatch>, IValidatableObject
+    public partial class ScimServiceProviderConfigPatch : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigPatch" /> class.
@@ -74,48 +74,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ScimServiceProviderConfigPatch);
-        }
-
-        /// <summary>
-        /// Returns true if ScimServiceProviderConfigPatch instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ScimServiceProviderConfigPatch to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ScimServiceProviderConfigPatch input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Supported == input.Supported ||
-                    this.Supported.Equals(input.Supported)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Supported.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

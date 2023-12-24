@@ -56,6 +56,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test InvoiceGetAttachmentsV1
+        /// </summary>
+        [Fact]
+        public void InvoiceGetAttachmentsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInvoiceID = null;
+            //var response = instance.InvoiceGetAttachmentsV1(pkiInvoiceID);
+            //Assert.IsType<InvoiceGetAttachmentsV1Response>(response);
+        }
+
+        /// <summary>
         /// Test InvoiceGetCommunicationListV1
         /// </summary>
         [Fact]

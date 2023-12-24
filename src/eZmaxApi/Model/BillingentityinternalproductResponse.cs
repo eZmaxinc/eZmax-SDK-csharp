@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Billingentityinternalproduct Object
     /// </summary>
     [DataContract(Name = "billingentityinternalproduct-Response")]
-    public partial class BillingentityinternalproductResponse : IEquatable<BillingentityinternalproductResponse>, IValidatableObject
+    public partial class BillingentityinternalproductResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalproductResponse" /> class.
@@ -155,90 +155,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BillingentityinternalproductResponse);
-        }
-
-        /// <summary>
-        /// Returns true if BillingentityinternalproductResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BillingentityinternalproductResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BillingentityinternalproductResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiBillingentityinternalproductID == input.PkiBillingentityinternalproductID ||
-                    this.PkiBillingentityinternalproductID.Equals(input.PkiBillingentityinternalproductID)
-                ) && 
-                (
-                    this.FkiBillingentityinternalID == input.FkiBillingentityinternalID ||
-                    this.FkiBillingentityinternalID.Equals(input.FkiBillingentityinternalID)
-                ) && 
-                (
-                    this.SBillingentityinternalDescriptionX == input.SBillingentityinternalDescriptionX ||
-                    (this.SBillingentityinternalDescriptionX != null &&
-                    this.SBillingentityinternalDescriptionX.Equals(input.SBillingentityinternalDescriptionX))
-                ) && 
-                (
-                    this.FkiEzmaxproductID == input.FkiEzmaxproductID ||
-                    this.FkiEzmaxproductID.Equals(input.FkiEzmaxproductID)
-                ) && 
-                (
-                    this.SEzmaxproductDescriptionX == input.SEzmaxproductDescriptionX ||
-                    (this.SEzmaxproductDescriptionX != null &&
-                    this.SEzmaxproductDescriptionX.Equals(input.SEzmaxproductDescriptionX))
-                ) && 
-                (
-                    this.FkiBillingentityexternalID == input.FkiBillingentityexternalID ||
-                    this.FkiBillingentityexternalID.Equals(input.FkiBillingentityexternalID)
-                ) && 
-                (
-                    this.SBillingentityexternalDescription == input.SBillingentityexternalDescription ||
-                    (this.SBillingentityexternalDescription != null &&
-                    this.SBillingentityexternalDescription.Equals(input.SBillingentityexternalDescription))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiBillingentityinternalproductID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiBillingentityinternalID.GetHashCode();
-                if (this.SBillingentityinternalDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBillingentityinternalDescriptionX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.FkiEzmaxproductID.GetHashCode();
-                if (this.SEzmaxproductDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzmaxproductDescriptionX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.FkiBillingentityexternalID.GetHashCode();
-                if (this.SBillingentityexternalDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBillingentityexternalDescription.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

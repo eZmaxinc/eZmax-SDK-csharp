@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Versionhistory Object
     /// </summary>
     [DataContract(Name = "versionhistory-Response")]
-    public partial class VersionhistoryResponse : IEquatable<VersionhistoryResponse>, IValidatableObject
+    public partial class VersionhistoryResponse : IValidatableObject
     {
 
         /// <summary>
@@ -187,118 +187,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as VersionhistoryResponse);
-        }
-
-        /// <summary>
-        /// Returns true if VersionhistoryResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of VersionhistoryResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(VersionhistoryResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiVersionhistoryID == input.PkiVersionhistoryID ||
-                    this.PkiVersionhistoryID.Equals(input.PkiVersionhistoryID)
-                ) && 
-                (
-                    this.FkiModuleID == input.FkiModuleID ||
-                    this.FkiModuleID.Equals(input.FkiModuleID)
-                ) && 
-                (
-                    this.FkiModulesectionID == input.FkiModulesectionID ||
-                    this.FkiModulesectionID.Equals(input.FkiModulesectionID)
-                ) && 
-                (
-                    this.SModuleNameX == input.SModuleNameX ||
-                    (this.SModuleNameX != null &&
-                    this.SModuleNameX.Equals(input.SModuleNameX))
-                ) && 
-                (
-                    this.SModulesectionNameX == input.SModulesectionNameX ||
-                    (this.SModulesectionNameX != null &&
-                    this.SModulesectionNameX.Equals(input.SModulesectionNameX))
-                ) && 
-                (
-                    this.EVersionhistoryUsertype == input.EVersionhistoryUsertype ||
-                    this.EVersionhistoryUsertype.Equals(input.EVersionhistoryUsertype)
-                ) && 
-                (
-                    this.ObjVersionhistoryDetail == input.ObjVersionhistoryDetail ||
-                    (this.ObjVersionhistoryDetail != null &&
-                    this.ObjVersionhistoryDetail.Equals(input.ObjVersionhistoryDetail))
-                ) && 
-                (
-                    this.DtVersionhistoryDate == input.DtVersionhistoryDate ||
-                    (this.DtVersionhistoryDate != null &&
-                    this.DtVersionhistoryDate.Equals(input.DtVersionhistoryDate))
-                ) && 
-                (
-                    this.DtVersionhistoryDateend == input.DtVersionhistoryDateend ||
-                    (this.DtVersionhistoryDateend != null &&
-                    this.DtVersionhistoryDateend.Equals(input.DtVersionhistoryDateend))
-                ) && 
-                (
-                    this.EVersionhistoryType == input.EVersionhistoryType ||
-                    this.EVersionhistoryType.Equals(input.EVersionhistoryType)
-                ) && 
-                (
-                    this.BVersionhistoryDraft == input.BVersionhistoryDraft ||
-                    this.BVersionhistoryDraft.Equals(input.BVersionhistoryDraft)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiVersionhistoryID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiModuleID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiModulesectionID.GetHashCode();
-                if (this.SModuleNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SModuleNameX.GetHashCode();
-                }
-                if (this.SModulesectionNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SModulesectionNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EVersionhistoryUsertype.GetHashCode();
-                if (this.ObjVersionhistoryDetail != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjVersionhistoryDetail.GetHashCode();
-                }
-                if (this.DtVersionhistoryDate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtVersionhistoryDate.GetHashCode();
-                }
-                if (this.DtVersionhistoryDateend != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtVersionhistoryDateend.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EVersionhistoryType.GetHashCode();
-                hashCode = (hashCode * 59) + this.BVersionhistoryDraft.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

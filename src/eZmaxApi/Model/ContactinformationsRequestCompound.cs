@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Contactinformations Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "contactinformations-RequestCompound")]
-    public partial class ContactinformationsRequestCompound : IEquatable<ContactinformationsRequestCompound>, IValidatableObject
+    public partial class ContactinformationsRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactinformationsRequestCompound" /> class.
@@ -159,103 +159,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ContactinformationsRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if ContactinformationsRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ContactinformationsRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ContactinformationsRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.IAddressDefault == input.IAddressDefault ||
-                    this.IAddressDefault.Equals(input.IAddressDefault)
-                ) && 
-                (
-                    this.IPhoneDefault == input.IPhoneDefault ||
-                    this.IPhoneDefault.Equals(input.IPhoneDefault)
-                ) && 
-                (
-                    this.IEmailDefault == input.IEmailDefault ||
-                    this.IEmailDefault.Equals(input.IEmailDefault)
-                ) && 
-                (
-                    this.IWebsiteDefault == input.IWebsiteDefault ||
-                    this.IWebsiteDefault.Equals(input.IWebsiteDefault)
-                ) && 
-                (
-                    this.AObjAddress == input.AObjAddress ||
-                    this.AObjAddress != null &&
-                    input.AObjAddress != null &&
-                    this.AObjAddress.SequenceEqual(input.AObjAddress)
-                ) && 
-                (
-                    this.AObjPhone == input.AObjPhone ||
-                    this.AObjPhone != null &&
-                    input.AObjPhone != null &&
-                    this.AObjPhone.SequenceEqual(input.AObjPhone)
-                ) && 
-                (
-                    this.AObjEmail == input.AObjEmail ||
-                    this.AObjEmail != null &&
-                    input.AObjEmail != null &&
-                    this.AObjEmail.SequenceEqual(input.AObjEmail)
-                ) && 
-                (
-                    this.AObjWebsite == input.AObjWebsite ||
-                    this.AObjWebsite != null &&
-                    input.AObjWebsite != null &&
-                    this.AObjWebsite.SequenceEqual(input.AObjWebsite)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.IAddressDefault.GetHashCode();
-                hashCode = (hashCode * 59) + this.IPhoneDefault.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEmailDefault.GetHashCode();
-                hashCode = (hashCode * 59) + this.IWebsiteDefault.GetHashCode();
-                if (this.AObjAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjAddress.GetHashCode();
-                }
-                if (this.AObjPhone != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjPhone.GetHashCode();
-                }
-                if (this.AObjEmail != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEmail.GetHashCode();
-                }
-                if (this.AObjWebsite != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjWebsite.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

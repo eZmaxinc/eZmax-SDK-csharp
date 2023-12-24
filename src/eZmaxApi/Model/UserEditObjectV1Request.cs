@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for PUT /1/object/user/{pkiUserID}
     /// </summary>
     [DataContract(Name = "user-editObject-v1-Request")]
-    public partial class UserEditObjectV1Request : IEquatable<UserEditObjectV1Request>, IValidatableObject
+    public partial class UserEditObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEditObjectV1Request" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserEditObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if UserEditObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserEditObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserEditObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjUser == input.ObjUser ||
-                    (this.ObjUser != null &&
-                    this.ObjUser.Equals(input.ObjUser))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjUser != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjUser.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

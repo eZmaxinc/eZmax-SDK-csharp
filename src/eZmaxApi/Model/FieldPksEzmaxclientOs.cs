@@ -40,16 +40,22 @@ namespace eZmaxApi.Model
         IOS = 1,
 
         /// <summary>
+        /// Enum IPadOS for value: iPadOS
+        /// </summary>
+        [EnumMember(Value = "iPadOS")]
+        IPadOS = 2,
+
+        /// <summary>
         /// Enum MacOS for value: macOS
         /// </summary>
         [EnumMember(Value = "macOS")]
-        MacOS = 2,
+        MacOS = 3,
 
         /// <summary>
         /// Enum Windows for value: Windows
         /// </summary>
         [EnumMember(Value = "Windows")]
-        Windows = 3
+        Windows = 4
     }
 
 }

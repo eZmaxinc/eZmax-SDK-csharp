@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/userstaged/{pkiUserstagedID}/map
     /// </summary>
     [DataContract(Name = "userstaged-map-v1-Request")]
-    public partial class UserstagedMapV1Request : IEquatable<UserstagedMapV1Request>, IValidatableObject
+    public partial class UserstagedMapV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedMapV1Request" /> class.
@@ -74,48 +74,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserstagedMapV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if UserstagedMapV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserstagedMapV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserstagedMapV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

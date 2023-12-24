@@ -137,6 +137,7 @@ namespace eZmaxApi.Client
                                         {"default_value", "prod"},
                                         {
                                             "enum_values", new List<string>() {
+                                                "iso",
                                                 "prod",
                                                 "stg",
                                                 "qa",
@@ -173,8 +174,6 @@ namespace eZmaxApi.Client
                                         {
                                             "enum_values", new List<string>() {
                                                 "prod",
-                                                "stg",
-                                                "qa",
                                                 "dev"
                                             }
                                         }
@@ -196,6 +195,7 @@ namespace eZmaxApi.Client
                                         {"default_value", "prod"},
                                         {
                                             "enum_values", new List<string>() {
+                                                "iso",
                                                 "prod",
                                                 "stg",
                                                 "qa",

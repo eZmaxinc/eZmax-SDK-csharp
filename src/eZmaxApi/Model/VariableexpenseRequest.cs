@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Variableexpense Object
     /// </summary>
     [DataContract(Name = "variableexpense-Request")]
-    public partial class VariableexpenseRequest : IEquatable<VariableexpenseRequest>, IValidatableObject
+    public partial class VariableexpenseRequest : IValidatableObject
     {
 
         /// <summary>
@@ -124,76 +124,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as VariableexpenseRequest);
-        }
-
-        /// <summary>
-        /// Returns true if VariableexpenseRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of VariableexpenseRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(VariableexpenseRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiVariableexpenseID == input.PkiVariableexpenseID ||
-                    this.PkiVariableexpenseID.Equals(input.PkiVariableexpenseID)
-                ) && 
-                (
-                    this.SVariableexpenseCode == input.SVariableexpenseCode ||
-                    (this.SVariableexpenseCode != null &&
-                    this.SVariableexpenseCode.Equals(input.SVariableexpenseCode))
-                ) && 
-                (
-                    this.ObjVariableexpenseDescription == input.ObjVariableexpenseDescription ||
-                    (this.ObjVariableexpenseDescription != null &&
-                    this.ObjVariableexpenseDescription.Equals(input.ObjVariableexpenseDescription))
-                ) && 
-                (
-                    this.EVariableexpenseTaxable == input.EVariableexpenseTaxable ||
-                    this.EVariableexpenseTaxable.Equals(input.EVariableexpenseTaxable)
-                ) && 
-                (
-                    this.BVariableexpenseIsactive == input.BVariableexpenseIsactive ||
-                    this.BVariableexpenseIsactive.Equals(input.BVariableexpenseIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiVariableexpenseID.GetHashCode();
-                if (this.SVariableexpenseCode != null)
-                {
-                    hashCode = (hashCode * 59) + this.SVariableexpenseCode.GetHashCode();
-                }
-                if (this.ObjVariableexpenseDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjVariableexpenseDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EVariableexpenseTaxable.GetHashCode();
-                hashCode = (hashCode * 59) + this.BVariableexpenseIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/ezmaxinvoicing/getAutocomplete
     /// </summary>
     [DataContract(Name = "ezmaxinvoicing-getAutocomplete-v2-Response-mPayload")]
-    public partial class EzmaxinvoicingGetAutocompleteV2ResponseMPayload : IEquatable<EzmaxinvoicingGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class EzmaxinvoicingGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzmaxinvoicingGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzmaxinvoicingGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzmaxinvoicingGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzmaxinvoicingGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzmaxinvoicing == input.AObjEzmaxinvoicing ||
-                    this.AObjEzmaxinvoicing != null &&
-                    input.AObjEzmaxinvoicing != null &&
-                    this.AObjEzmaxinvoicing.SequenceEqual(input.AObjEzmaxinvoicing)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzmaxinvoicing != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzmaxinvoicing.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships
     /// </summary>
     [DataContract(Name = "usergroup-editUsergroupmemberships-v1-Response-mPayload")]
-    public partial class UsergroupEditUsergroupmembershipsV1ResponseMPayload : IEquatable<UsergroupEditUsergroupmembershipsV1ResponseMPayload>, IValidatableObject
+    public partial class UsergroupEditUsergroupmembershipsV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupEditUsergroupmembershipsV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UsergroupEditUsergroupmembershipsV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if UsergroupEditUsergroupmembershipsV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UsergroupEditUsergroupmembershipsV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UsergroupEditUsergroupmembershipsV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiUsergroupmembershipID == input.APkiUsergroupmembershipID ||
-                    this.APkiUsergroupmembershipID != null &&
-                    input.APkiUsergroupmembershipID != null &&
-                    this.APkiUsergroupmembershipID.SequenceEqual(input.APkiUsergroupmembershipID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiUsergroupmembershipID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiUsergroupmembershipID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

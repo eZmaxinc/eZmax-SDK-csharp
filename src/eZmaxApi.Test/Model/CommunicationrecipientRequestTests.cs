@@ -74,21 +74,21 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'FkiAgentincorporationID'
-        /// </summary>
-        [Fact]
-        public void FkiAgentincorporationIDTest()
-        {
-            // TODO unit test for the property 'FkiAgentincorporationID'
-        }
-
-        /// <summary>
         /// Test the property 'FkiBrokerID'
         /// </summary>
         [Fact]
         public void FkiBrokerIDTest()
         {
             // TODO unit test for the property 'FkiBrokerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiContactID'
+        /// </summary>
+        [Fact]
+        public void FkiContactIDTest()
+        {
+            // TODO unit test for the property 'FkiContactID'
         }
 
         /// <summary>
@@ -161,6 +161,24 @@ namespace eZmaxApi.Test.Model
         public void FkiUserIDTest()
         {
             // TODO unit test for the property 'FkiUserID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiMailboxsharedID'
+        /// </summary>
+        [Fact]
+        public void FkiMailboxsharedIDTest()
+        {
+            // TODO unit test for the property 'FkiMailboxsharedID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiPhonelinesharedID'
+        /// </summary>
+        [Fact]
+        public void FkiPhonelinesharedIDTest()
+        {
+            // TODO unit test for the property 'FkiPhonelinesharedID'
         }
 
         /// <summary>

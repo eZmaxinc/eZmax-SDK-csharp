@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Usergroupmembership Object
     /// </summary>
     [DataContract(Name = "usergroupmembership-ResponseCompound")]
-    public partial class UsergroupmembershipResponseCompound : IEquatable<UsergroupmembershipResponseCompound>, IValidatableObject
+    public partial class UsergroupmembershipResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupmembershipResponseCompound" /> class.
@@ -171,103 +171,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UsergroupmembershipResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if UsergroupmembershipResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UsergroupmembershipResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UsergroupmembershipResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiUsergroupmembershipID == input.PkiUsergroupmembershipID ||
-                    this.PkiUsergroupmembershipID.Equals(input.PkiUsergroupmembershipID)
-                ) && 
-                (
-                    this.FkiUsergroupID == input.FkiUsergroupID ||
-                    this.FkiUsergroupID.Equals(input.FkiUsergroupID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.SUserFirstname == input.SUserFirstname ||
-                    (this.SUserFirstname != null &&
-                    this.SUserFirstname.Equals(input.SUserFirstname))
-                ) && 
-                (
-                    this.SUserLastname == input.SUserLastname ||
-                    (this.SUserLastname != null &&
-                    this.SUserLastname.Equals(input.SUserLastname))
-                ) && 
-                (
-                    this.SUserLoginname == input.SUserLoginname ||
-                    (this.SUserLoginname != null &&
-                    this.SUserLoginname.Equals(input.SUserLoginname))
-                ) && 
-                (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                ) && 
-                (
-                    this.SUsergroupNameX == input.SUsergroupNameX ||
-                    (this.SUsergroupNameX != null &&
-                    this.SUsergroupNameX.Equals(input.SUsergroupNameX))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiUsergroupmembershipID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUsergroupID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                if (this.SUserFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserFirstname.GetHashCode();
-                }
-                if (this.SUserLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLastname.GetHashCode();
-                }
-                if (this.SUserLoginname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLoginname.GetHashCode();
-                }
-                if (this.SEmailAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailAddress.GetHashCode();
-                }
-                if (this.SUsergroupNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUsergroupNameX.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

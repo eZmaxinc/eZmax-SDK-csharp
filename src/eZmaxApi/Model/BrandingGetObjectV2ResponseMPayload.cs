@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/branding/{pkiBrandingID}
     /// </summary>
     [DataContract(Name = "branding-getObject-v2-Response-mPayload")]
-    public partial class BrandingGetObjectV2ResponseMPayload : IEquatable<BrandingGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class BrandingGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrandingGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if BrandingGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrandingGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrandingGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjBranding == input.ObjBranding ||
-                    (this.ObjBranding != null &&
-                    this.ObjBranding.Equals(input.ObjBranding))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjBranding != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjBranding.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

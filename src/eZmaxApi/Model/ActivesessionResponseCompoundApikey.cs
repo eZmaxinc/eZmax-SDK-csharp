@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Activesession-&gt;Apikey object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "activesession-ResponseCompound-Apikey")]
-    public partial class ActivesessionResponseCompoundApikey : IEquatable<ActivesessionResponseCompoundApikey>, IValidatableObject
+    public partial class ActivesessionResponseCompoundApikey : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundApikey" /> class.
@@ -90,57 +90,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ActivesessionResponseCompoundApikey);
-        }
-
-        /// <summary>
-        /// Returns true if ActivesessionResponseCompoundApikey instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ActivesessionResponseCompoundApikey to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ActivesessionResponseCompoundApikey input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiApikeyID == input.PkiApikeyID ||
-                    this.PkiApikeyID.Equals(input.PkiApikeyID)
-                ) && 
-                (
-                    this.SApikeyDescriptionX == input.SApikeyDescriptionX ||
-                    (this.SApikeyDescriptionX != null &&
-                    this.SApikeyDescriptionX.Equals(input.SApikeyDescriptionX))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiApikeyID.GetHashCode();
-                if (this.SApikeyDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SApikeyDescriptionX.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

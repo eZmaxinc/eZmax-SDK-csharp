@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder
     /// </summary>
     [DataContract(Name = "ezsignfolder-reorder-v1-Request")]
-    public partial class EzsignfolderReorderV1Request : IEquatable<EzsignfolderReorderV1Request>, IValidatableObject
+    public partial class EzsignfolderReorderV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderReorderV1Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfolderReorderV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfolderReorderV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfolderReorderV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfolderReorderV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiEzsigndocumentID == input.APkiEzsigndocumentID ||
-                    this.APkiEzsigndocumentID != null &&
-                    input.APkiEzsigndocumentID != null &&
-                    this.APkiEzsigndocumentID.SequenceEqual(input.APkiEzsigndocumentID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiEzsigndocumentID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiEzsigndocumentID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

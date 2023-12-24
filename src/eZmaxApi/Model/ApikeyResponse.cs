@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Apikey Object
     /// </summary>
     [DataContract(Name = "apikey-Response")]
-    public partial class ApikeyResponse : IEquatable<ApikeyResponse>, IValidatableObject
+    public partial class ApikeyResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyResponse" /> class.
@@ -169,108 +169,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ApikeyResponse);
-        }
-
-        /// <summary>
-        /// Returns true if ApikeyResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ApikeyResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ApikeyResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiApikeyID == input.PkiApikeyID ||
-                    this.PkiApikeyID.Equals(input.PkiApikeyID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.ObjApikeyDescription == input.ObjApikeyDescription ||
-                    (this.ObjApikeyDescription != null &&
-                    this.ObjApikeyDescription.Equals(input.ObjApikeyDescription))
-                ) && 
-                (
-                    this.ObjContactName == input.ObjContactName ||
-                    (this.ObjContactName != null &&
-                    this.ObjContactName.Equals(input.ObjContactName))
-                ) && 
-                (
-                    this.SApikeyApikey == input.SApikeyApikey ||
-                    (this.SApikeyApikey != null &&
-                    this.SApikeyApikey.Equals(input.SApikeyApikey))
-                ) && 
-                (
-                    this.SApikeySecret == input.SApikeySecret ||
-                    (this.SApikeySecret != null &&
-                    this.SApikeySecret.Equals(input.SApikeySecret))
-                ) && 
-                (
-                    this.BApikeyIsactive == input.BApikeyIsactive ||
-                    this.BApikeyIsactive.Equals(input.BApikeyIsactive)
-                ) && 
-                (
-                    this.BApikeyIssigned == input.BApikeyIssigned ||
-                    this.BApikeyIssigned.Equals(input.BApikeyIssigned)
-                ) && 
-                (
-                    this.ObjAudit == input.ObjAudit ||
-                    (this.ObjAudit != null &&
-                    this.ObjAudit.Equals(input.ObjAudit))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiApikeyID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                if (this.ObjApikeyDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjApikeyDescription.GetHashCode();
-                }
-                if (this.ObjContactName != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjContactName.GetHashCode();
-                }
-                if (this.SApikeyApikey != null)
-                {
-                    hashCode = (hashCode * 59) + this.SApikeyApikey.GetHashCode();
-                }
-                if (this.SApikeySecret != null)
-                {
-                    hashCode = (hashCode * 59) + this.SApikeySecret.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BApikeyIsactive.GetHashCode();
-                hashCode = (hashCode * 59) + this.BApikeyIssigned.GetHashCode();
-                if (this.ObjAudit != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjAudit.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

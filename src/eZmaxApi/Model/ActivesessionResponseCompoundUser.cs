@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Activesession-&gt;User Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "activesession-ResponseCompound-User")]
-    public partial class ActivesessionResponseCompoundUser : IEquatable<ActivesessionResponseCompoundUser>, IValidatableObject
+    public partial class ActivesessionResponseCompoundUser : IValidatableObject
     {
 
         /// <summary>
@@ -191,109 +191,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ActivesessionResponseCompoundUser);
-        }
-
-        /// <summary>
-        /// Returns true if ActivesessionResponseCompoundUser instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ActivesessionResponseCompoundUser to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ActivesessionResponseCompoundUser input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiUserID == input.PkiUserID ||
-                    this.PkiUserID.Equals(input.PkiUserID)
-                ) && 
-                (
-                    this.FkiTimezoneID == input.FkiTimezoneID ||
-                    this.FkiTimezoneID.Equals(input.FkiTimezoneID)
-                ) && 
-                (
-                    this.SAvatarUrl == input.SAvatarUrl ||
-                    (this.SAvatarUrl != null &&
-                    this.SAvatarUrl.Equals(input.SAvatarUrl))
-                ) && 
-                (
-                    this.SUserFirstname == input.SUserFirstname ||
-                    (this.SUserFirstname != null &&
-                    this.SUserFirstname.Equals(input.SUserFirstname))
-                ) && 
-                (
-                    this.SUserLastname == input.SUserLastname ||
-                    (this.SUserLastname != null &&
-                    this.SUserLastname.Equals(input.SUserLastname))
-                ) && 
-                (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                ) && 
-                (
-                    this.EUserEzsignsendreminderfrequency == input.EUserEzsignsendreminderfrequency ||
-                    this.EUserEzsignsendreminderfrequency.Equals(input.EUserEzsignsendreminderfrequency)
-                ) && 
-                (
-                    this.IUserInterfacecolor == input.IUserInterfacecolor ||
-                    this.IUserInterfacecolor.Equals(input.IUserInterfacecolor)
-                ) && 
-                (
-                    this.BUserInterfacedark == input.BUserInterfacedark ||
-                    this.BUserInterfacedark.Equals(input.BUserInterfacedark)
-                ) && 
-                (
-                    this.IUserListresult == input.IUserListresult ||
-                    this.IUserListresult.Equals(input.IUserListresult)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiUserID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiTimezoneID.GetHashCode();
-                if (this.SAvatarUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SAvatarUrl.GetHashCode();
-                }
-                if (this.SUserFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserFirstname.GetHashCode();
-                }
-                if (this.SUserLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLastname.GetHashCode();
-                }
-                if (this.SEmailAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailAddress.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EUserEzsignsendreminderfrequency.GetHashCode();
-                hashCode = (hashCode * 59) + this.IUserInterfacecolor.GetHashCode();
-                hashCode = (hashCode * 59) + this.BUserInterfacedark.GetHashCode();
-                hashCode = (hashCode * 59) + this.IUserListresult.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

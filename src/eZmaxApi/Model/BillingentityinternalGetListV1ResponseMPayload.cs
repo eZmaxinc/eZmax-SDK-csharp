@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/billingentityinternal/getList
     /// </summary>
     [DataContract(Name = "billingentityinternal-getList-v1-Response-mPayload")]
-    public partial class BillingentityinternalGetListV1ResponseMPayload : IEquatable<BillingentityinternalGetListV1ResponseMPayload>, IValidatableObject
+    public partial class BillingentityinternalGetListV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalGetListV1ResponseMPayload" /> class.
@@ -99,63 +99,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BillingentityinternalGetListV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if BillingentityinternalGetListV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BillingentityinternalGetListV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BillingentityinternalGetListV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.IRowReturned == input.IRowReturned ||
-                    this.IRowReturned.Equals(input.IRowReturned)
-                ) && 
-                (
-                    this.IRowFiltered == input.IRowFiltered ||
-                    this.IRowFiltered.Equals(input.IRowFiltered)
-                ) && 
-                (
-                    this.AObjBillingentityinternal == input.AObjBillingentityinternal ||
-                    this.AObjBillingentityinternal != null &&
-                    input.AObjBillingentityinternal != null &&
-                    this.AObjBillingentityinternal.SequenceEqual(input.AObjBillingentityinternal)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.IRowReturned.GetHashCode();
-                hashCode = (hashCode * 59) + this.IRowFiltered.GetHashCode();
-                if (this.AObjBillingentityinternal != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjBillingentityinternal.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

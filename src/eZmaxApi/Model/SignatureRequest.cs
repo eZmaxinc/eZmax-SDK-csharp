@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Signature Object
     /// </summary>
     [DataContract(Name = "signature-Request")]
-    public partial class SignatureRequest : IEquatable<SignatureRequest>, IValidatableObject
+    public partial class SignatureRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureRequest" /> class.
@@ -93,57 +93,6 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SignatureRequest);
-        }
-
-        /// <summary>
-        /// Returns true if SignatureRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SignatureRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SignatureRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiSignatureID == input.PkiSignatureID ||
-                    this.PkiSignatureID.Equals(input.PkiSignatureID)
-                ) && 
-                (
-                    this.TSignatureSvg == input.TSignatureSvg ||
-                    (this.TSignatureSvg != null &&
-                    this.TSignatureSvg.Equals(input.TSignatureSvg))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiSignatureID.GetHashCode();
-                if (this.TSignatureSvg != null)
-                {
-                    hashCode = (hashCode * 59) + this.TSignatureSvg.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
@@ -164,7 +113,7 @@ namespace eZmaxApi.Model
 
             if (this.TSignatureSvg != null) {
                 // TSignatureSvg (string) pattern
-                Regex regexTSignatureSvg = new Regex(@"^.{0,32767}$", RegexOptions.CultureInvariant);
+                Regex regexTSignatureSvg = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
                 if (!regexTSignatureSvg.Match(this.TSignatureSvg).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TSignatureSvg, must match a pattern of " + regexTSignatureSvg, new [] { "TSignatureSvg" });

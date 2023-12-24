@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/subnet
     /// </summary>
     [DataContract(Name = "subnet-createObject-v1-Request")]
-    public partial class SubnetCreateObjectV1Request : IEquatable<SubnetCreateObjectV1Request>, IValidatableObject
+    public partial class SubnetCreateObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SubnetCreateObjectV1Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SubnetCreateObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if SubnetCreateObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SubnetCreateObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SubnetCreateObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjSubnet == input.AObjSubnet ||
-                    this.AObjSubnet != null &&
-                    input.AObjSubnet != null &&
-                    this.AObjSubnet.SequenceEqual(input.AObjSubnet)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjSubnet != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjSubnet.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

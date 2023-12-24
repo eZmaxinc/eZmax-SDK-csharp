@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Object representing a file used in a request or response context 
     /// </summary>
     [DataContract(Name = "Common-File")]
-    public partial class CommonFile : IEquatable<CommonFile>, IValidatableObject
+    public partial class CommonFile : IValidatableObject
     {
         /// <summary>
         /// The source of the File
@@ -103,7 +103,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the File
         /// </summary>
         /// <value>The Base64 encoded binary content of the File</value>
-        /* <example>[B@5af28b27</example>*/
+        /* <example>[B@74cec793</example>*/
         [DataMember(Name = "sFileBase64", EmitDefaultValue = false)]
         public byte[] SFileBase64 { get; set; }
 
@@ -130,75 +130,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonFile);
-        }
-
-        /// <summary>
-        /// Returns true if CommonFile instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonFile to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonFile input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SFileName == input.SFileName ||
-                    (this.SFileName != null &&
-                    this.SFileName.Equals(input.SFileName))
-                ) && 
-                (
-                    this.SFileUrl == input.SFileUrl ||
-                    (this.SFileUrl != null &&
-                    this.SFileUrl.Equals(input.SFileUrl))
-                ) && 
-                (
-                    this.SFileBase64 == input.SFileBase64 ||
-                    (this.SFileBase64 != null &&
-                    this.SFileBase64.Equals(input.SFileBase64))
-                ) && 
-                (
-                    this.EFileSource == input.EFileSource ||
-                    this.EFileSource.Equals(input.EFileSource)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SFileName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SFileName.GetHashCode();
-                }
-                if (this.SFileUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SFileUrl.GetHashCode();
-                }
-                if (this.SFileBase64 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SFileBase64.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EFileSource.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Definition of Filters for getList
     /// </summary>
     [DataContract(Name = "Common-Response-Filter")]
-    public partial class CommonResponseFilter : IEquatable<CommonResponseFilter>, IValidatableObject
+    public partial class CommonResponseFilter : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseFilter" /> class.
@@ -88,73 +88,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonResponseFilter);
-        }
-
-        /// <summary>
-        /// Returns true if CommonResponseFilter instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonResponseFilter to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonResponseFilter input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AAutoType == input.AAutoType ||
-                    this.AAutoType != null &&
-                    input.AAutoType != null &&
-                    this.AAutoType.SequenceEqual(input.AAutoType)
-                ) && 
-                (
-                    this.AAutoTypeHaving == input.AAutoTypeHaving ||
-                    this.AAutoTypeHaving != null &&
-                    input.AAutoTypeHaving != null &&
-                    this.AAutoTypeHaving.SequenceEqual(input.AAutoTypeHaving)
-                ) && 
-                (
-                    this.AEnum == input.AEnum ||
-                    this.AEnum != null &&
-                    input.AEnum != null &&
-                    this.AEnum.SequenceEqual(input.AEnum)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AAutoType != null)
-                {
-                    hashCode = (hashCode * 59) + this.AAutoType.GetHashCode();
-                }
-                if (this.AAutoTypeHaving != null)
-                {
-                    hashCode = (hashCode * 59) + this.AAutoTypeHaving.GetHashCode();
-                }
-                if (this.AEnum != null)
-                {
-                    hashCode = (hashCode * 59) + this.AEnum.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

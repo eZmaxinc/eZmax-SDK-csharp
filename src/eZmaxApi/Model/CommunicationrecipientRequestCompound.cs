@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Communicationrecipient Object and children
     /// </summary>
     [DataContract(Name = "communicationrecipient-RequestCompound")]
-    public partial class CommunicationrecipientRequestCompound : IEquatable<CommunicationrecipientRequestCompound>, IValidatableObject
+    public partial class CommunicationrecipientRequestCompound : IValidatableObject
     {
 
         /// <summary>
@@ -43,8 +43,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiCommunicationrecipientID">The unique ID of the Communicationrecipient..</param>
         /// <param name="fkiAgentID">The unique ID of the Agent..</param>
-        /// <param name="fkiAgentincorporationID">The unique ID of the Agentincorporation..</param>
         /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
+        /// <param name="fkiContactID">The unique ID of the Contact.</param>
         /// <param name="fkiCustomerID">The unique ID of the Customer..</param>
         /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
         /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
@@ -53,13 +53,15 @@ namespace eZmaxApi.Model
         /// <param name="fkiNotaryID">The unique ID of the Notary..</param>
         /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiMailboxsharedID">The unique ID of the Mailboxshared.</param>
+        /// <param name="fkiPhonelinesharedID">The unique ID of the Phonelineshared.</param>
         /// <param name="eCommunicationrecipientType">eCommunicationrecipientType.</param>
-        public CommunicationrecipientRequestCompound(int pkiCommunicationrecipientID = default(int), int fkiAgentID = default(int), int fkiAgentincorporationID = default(int), int fkiBrokerID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzsignsignerID = default(int), int fkiNotaryID = default(int), int fkiSupplierID = default(int), int fkiUserID = default(int), FieldECommunicationrecipientType? eCommunicationrecipientType = default(FieldECommunicationrecipientType?))
+        public CommunicationrecipientRequestCompound(int pkiCommunicationrecipientID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiContactID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzsignsignerID = default(int), int fkiNotaryID = default(int), int fkiSupplierID = default(int), int fkiUserID = default(int), int fkiMailboxsharedID = default(int), int fkiPhonelinesharedID = default(int), FieldECommunicationrecipientType? eCommunicationrecipientType = default(FieldECommunicationrecipientType?))
         {
             this.PkiCommunicationrecipientID = pkiCommunicationrecipientID;
             this.FkiAgentID = fkiAgentID;
-            this.FkiAgentincorporationID = fkiAgentincorporationID;
             this.FkiBrokerID = fkiBrokerID;
+            this.FkiContactID = fkiContactID;
             this.FkiCustomerID = fkiCustomerID;
             this.FkiEmployeeID = fkiEmployeeID;
             this.FkiAssistantID = fkiAssistantID;
@@ -68,6 +70,8 @@ namespace eZmaxApi.Model
             this.FkiNotaryID = fkiNotaryID;
             this.FkiSupplierID = fkiSupplierID;
             this.FkiUserID = fkiUserID;
+            this.FkiMailboxsharedID = fkiMailboxsharedID;
+            this.FkiPhonelinesharedID = fkiPhonelinesharedID;
             this.ECommunicationrecipientType = eCommunicationrecipientType;
         }
 
@@ -88,20 +92,20 @@ namespace eZmaxApi.Model
         public int FkiAgentID { get; set; }
 
         /// <summary>
-        /// The unique ID of the Agentincorporation.
-        /// </summary>
-        /// <value>The unique ID of the Agentincorporation.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiAgentincorporationID", EmitDefaultValue = false)]
-        public int FkiAgentincorporationID { get; set; }
-
-        /// <summary>
         /// The unique ID of the Broker.
         /// </summary>
         /// <value>The unique ID of the Broker.</value>
         /* <example>26</example>*/
         [DataMember(Name = "fkiBrokerID", EmitDefaultValue = false)]
         public int FkiBrokerID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Contact
+        /// </summary>
+        /// <value>The unique ID of the Contact</value>
+        /* <example>21</example>*/
+        [DataMember(Name = "fkiContactID", EmitDefaultValue = false)]
+        public int FkiContactID { get; set; }
 
         /// <summary>
         /// The unique ID of the Customer.
@@ -168,6 +172,22 @@ namespace eZmaxApi.Model
         public int FkiUserID { get; set; }
 
         /// <summary>
+        /// The unique ID of the Mailboxshared
+        /// </summary>
+        /// <value>The unique ID of the Mailboxshared</value>
+        /* <example>47</example>*/
+        [DataMember(Name = "fkiMailboxsharedID", EmitDefaultValue = false)]
+        public int FkiMailboxsharedID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Phonelineshared
+        /// </summary>
+        /// <value>The unique ID of the Phonelineshared</value>
+        /* <example>47</example>*/
+        [DataMember(Name = "fkiPhonelinesharedID", EmitDefaultValue = false)]
+        public int FkiPhonelinesharedID { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -177,8 +197,8 @@ namespace eZmaxApi.Model
             sb.Append("class CommunicationrecipientRequestCompound {\n");
             sb.Append("  PkiCommunicationrecipientID: ").Append(PkiCommunicationrecipientID).Append("\n");
             sb.Append("  FkiAgentID: ").Append(FkiAgentID).Append("\n");
-            sb.Append("  FkiAgentincorporationID: ").Append(FkiAgentincorporationID).Append("\n");
             sb.Append("  FkiBrokerID: ").Append(FkiBrokerID).Append("\n");
+            sb.Append("  FkiContactID: ").Append(FkiContactID).Append("\n");
             sb.Append("  FkiCustomerID: ").Append(FkiCustomerID).Append("\n");
             sb.Append("  FkiEmployeeID: ").Append(FkiEmployeeID).Append("\n");
             sb.Append("  FkiAssistantID: ").Append(FkiAssistantID).Append("\n");
@@ -187,6 +207,8 @@ namespace eZmaxApi.Model
             sb.Append("  FkiNotaryID: ").Append(FkiNotaryID).Append("\n");
             sb.Append("  FkiSupplierID: ").Append(FkiSupplierID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  FkiMailboxsharedID: ").Append(FkiMailboxsharedID).Append("\n");
+            sb.Append("  FkiPhonelinesharedID: ").Append(FkiPhonelinesharedID).Append("\n");
             sb.Append("  ECommunicationrecipientType: ").Append(ECommunicationrecipientType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -199,108 +221,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommunicationrecipientRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if CommunicationrecipientRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommunicationrecipientRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommunicationrecipientRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiCommunicationrecipientID == input.PkiCommunicationrecipientID ||
-                    this.PkiCommunicationrecipientID.Equals(input.PkiCommunicationrecipientID)
-                ) && 
-                (
-                    this.FkiAgentID == input.FkiAgentID ||
-                    this.FkiAgentID.Equals(input.FkiAgentID)
-                ) && 
-                (
-                    this.FkiAgentincorporationID == input.FkiAgentincorporationID ||
-                    this.FkiAgentincorporationID.Equals(input.FkiAgentincorporationID)
-                ) && 
-                (
-                    this.FkiBrokerID == input.FkiBrokerID ||
-                    this.FkiBrokerID.Equals(input.FkiBrokerID)
-                ) && 
-                (
-                    this.FkiCustomerID == input.FkiCustomerID ||
-                    this.FkiCustomerID.Equals(input.FkiCustomerID)
-                ) && 
-                (
-                    this.FkiEmployeeID == input.FkiEmployeeID ||
-                    this.FkiEmployeeID.Equals(input.FkiEmployeeID)
-                ) && 
-                (
-                    this.FkiAssistantID == input.FkiAssistantID ||
-                    this.FkiAssistantID.Equals(input.FkiAssistantID)
-                ) && 
-                (
-                    this.FkiExternalbrokerID == input.FkiExternalbrokerID ||
-                    this.FkiExternalbrokerID.Equals(input.FkiExternalbrokerID)
-                ) && 
-                (
-                    this.FkiEzsignsignerID == input.FkiEzsignsignerID ||
-                    this.FkiEzsignsignerID.Equals(input.FkiEzsignsignerID)
-                ) && 
-                (
-                    this.FkiNotaryID == input.FkiNotaryID ||
-                    this.FkiNotaryID.Equals(input.FkiNotaryID)
-                ) && 
-                (
-                    this.FkiSupplierID == input.FkiSupplierID ||
-                    this.FkiSupplierID.Equals(input.FkiSupplierID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.ECommunicationrecipientType == input.ECommunicationrecipientType ||
-                    this.ECommunicationrecipientType.Equals(input.ECommunicationrecipientType)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiCommunicationrecipientID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiAgentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiAgentincorporationID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiBrokerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiCustomerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEmployeeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiAssistantID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiExternalbrokerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignsignerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiNotaryID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiSupplierID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                hashCode = (hashCode * 59) + this.ECommunicationrecipientType.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>
@@ -322,16 +242,16 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
             }
 
-            // FkiAgentincorporationID (int) minimum
-            if (this.FkiAgentincorporationID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentincorporationID, must be a value greater than or equal to 0.", new [] { "FkiAgentincorporationID" });
-            }
-
             // FkiBrokerID (int) minimum
             if (this.FkiBrokerID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+            }
+
+            // FkiContactID (int) minimum
+            if (this.FkiContactID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContactID, must be a value greater than or equal to 0.", new [] { "FkiContactID" });
             }
 
             // FkiCustomerID (int) minimum
@@ -380,6 +300,30 @@ namespace eZmaxApi.Model
             if (this.FkiUserID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+            // FkiMailboxsharedID (int) maximum
+            if (this.FkiMailboxsharedID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMailboxsharedID, must be a value less than or equal to 255.", new [] { "FkiMailboxsharedID" });
+            }
+
+            // FkiMailboxsharedID (int) minimum
+            if (this.FkiMailboxsharedID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMailboxsharedID, must be a value greater than or equal to 0.", new [] { "FkiMailboxsharedID" });
+            }
+
+            // FkiPhonelinesharedID (int) maximum
+            if (this.FkiPhonelinesharedID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value less than or equal to 255.", new [] { "FkiPhonelinesharedID" });
+            }
+
+            // FkiPhonelinesharedID (int) minimum
+            if (this.FkiPhonelinesharedID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value greater than or equal to 0.", new [] { "FkiPhonelinesharedID" });
             }
 
             yield break;

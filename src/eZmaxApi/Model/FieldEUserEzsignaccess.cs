@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The type or eZsign access the User has
+    /// The type of eZsign access the User has
     /// </summary>
-    /// <value>The type or eZsign access the User has</value>
+    /// <value>The type of eZsign access the User has</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEUserEzsignaccess
     {

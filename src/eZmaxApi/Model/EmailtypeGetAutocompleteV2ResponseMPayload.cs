@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/emailtype/getAutocomplete
     /// </summary>
     [DataContract(Name = "emailtype-getAutocomplete-v2-Response-mPayload")]
-    public partial class EmailtypeGetAutocompleteV2ResponseMPayload : IEquatable<EmailtypeGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class EmailtypeGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailtypeGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EmailtypeGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EmailtypeGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EmailtypeGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EmailtypeGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEmailtype == input.AObjEmailtype ||
-                    this.AObjEmailtype != null &&
-                    input.AObjEmailtype != null &&
-                    this.AObjEmailtype.SequenceEqual(input.AObjEmailtype)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEmailtype != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEmailtype.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

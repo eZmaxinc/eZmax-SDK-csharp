@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for PUT /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}
     /// </summary>
     [DataContract(Name = "ezsigntemplatesigner-editObject-v1-Request")]
-    public partial class EzsigntemplatesignerEditObjectV1Request : IEquatable<EzsigntemplatesignerEditObjectV1Request>, IValidatableObject
+    public partial class EzsigntemplatesignerEditObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignerEditObjectV1Request" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatesignerEditObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatesignerEditObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatesignerEditObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatesignerEditObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzsigntemplatesigner == input.ObjEzsigntemplatesigner ||
-                    (this.ObjEzsigntemplatesigner != null &&
-                    this.ObjEzsigntemplatesigner.Equals(input.ObjEzsigntemplatesigner))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzsigntemplatesigner != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsigntemplatesigner.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

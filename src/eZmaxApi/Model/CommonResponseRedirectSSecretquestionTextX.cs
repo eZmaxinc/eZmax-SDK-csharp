@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// 352 Redirect Message containing secret question
     /// </summary>
     [DataContract(Name = "Common-Response-Redirect-sSecretquestionTextX")]
-    public partial class CommonResponseRedirectSSecretquestionTextX : IEquatable<CommonResponseRedirectSSecretquestionTextX>, IValidatableObject
+    public partial class CommonResponseRedirectSSecretquestionTextX : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseRedirectSSecretquestionTextX" /> class.
@@ -79,52 +79,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonResponseRedirectSSecretquestionTextX);
-        }
-
-        /// <summary>
-        /// Returns true if CommonResponseRedirectSSecretquestionTextX instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonResponseRedirectSSecretquestionTextX to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonResponseRedirectSSecretquestionTextX input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SSecretquestionTextX == input.SSecretquestionTextX ||
-                    (this.SSecretquestionTextX != null &&
-                    this.SSecretquestionTextX.Equals(input.SSecretquestionTextX))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SSecretquestionTextX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SSecretquestionTextX.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

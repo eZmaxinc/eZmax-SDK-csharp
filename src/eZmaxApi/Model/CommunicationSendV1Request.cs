@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/communication
     /// </summary>
     [DataContract(Name = "communication-send-v1-Request")]
-    public partial class CommunicationSendV1Request : IEquatable<CommunicationSendV1Request>, IValidatableObject
+    public partial class CommunicationSendV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationSendV1Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommunicationSendV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if CommunicationSendV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommunicationSendV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommunicationSendV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjCommunication == input.AObjCommunication ||
-                    this.AObjCommunication != null &&
-                    input.AObjCommunication != null &&
-                    this.AObjCommunication.SequenceEqual(input.AObjCommunication)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjCommunication != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjCommunication.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

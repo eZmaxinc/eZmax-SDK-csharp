@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/usergroup/getAutocomplete
     /// </summary>
     [DataContract(Name = "usergroup-getAutocomplete-v2-Response-mPayload")]
-    public partial class UsergroupGetAutocompleteV2ResponseMPayload : IEquatable<UsergroupGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class UsergroupGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UsergroupGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if UsergroupGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UsergroupGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UsergroupGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjUsergroup == input.AObjUsergroup ||
-                    this.AObjUsergroup != null &&
-                    input.AObjUsergroup != null &&
-                    this.AObjUsergroup.SequenceEqual(input.AObjUsergroup)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjUsergroup != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjUsergroup.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

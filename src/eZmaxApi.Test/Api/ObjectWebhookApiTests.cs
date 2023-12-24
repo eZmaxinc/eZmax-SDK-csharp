@@ -68,6 +68,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test WebhookCreateObjectV2
+        /// </summary>
+        [Fact]
+        public void WebhookCreateObjectV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //WebhookCreateObjectV2Request webhookCreateObjectV2Request = null;
+            //var response = instance.WebhookCreateObjectV2(webhookCreateObjectV2Request);
+            //Assert.IsType<WebhookCreateObjectV2Response>(response);
+        }
+
+        /// <summary>
         /// Test WebhookDeleteObjectV1
         /// </summary>
         [Fact]
@@ -131,6 +143,19 @@ namespace eZmaxApi.Test.Api
             //int pkiWebhookID = null;
             //var response = instance.WebhookGetObjectV2(pkiWebhookID);
             //Assert.IsType<WebhookGetObjectV2Response>(response);
+        }
+
+        /// <summary>
+        /// Test WebhookRegenerateApikeyV1
+        /// </summary>
+        [Fact]
+        public void WebhookRegenerateApikeyV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiWebhookID = null;
+            //WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request = null;
+            //var response = instance.WebhookRegenerateApikeyV1(pkiWebhookID, webhookRegenerateApikeyV1Request);
+            //Assert.IsType<WebhookRegenerateApikeyV1Response>(response);
         }
 
         /// <summary>

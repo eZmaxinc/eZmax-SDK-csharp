@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Description of the Ezsignsignergroup
     /// </summary>
     [DataContract(Name = "Multilingual-EzsignsignergroupDescription")]
-    public partial class MultilingualEzsignsignergroupDescription : IEquatable<MultilingualEzsignsignergroupDescription>, IValidatableObject
+    public partial class MultilingualEzsignsignergroupDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzsignsignergroupDescription" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualEzsignsignergroupDescription);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualEzsignsignergroupDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualEzsignsignergroupDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualEzsignsignergroupDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SEzsignsignergroupDescription1 == input.SEzsignsignergroupDescription1 ||
-                    (this.SEzsignsignergroupDescription1 != null &&
-                    this.SEzsignsignergroupDescription1.Equals(input.SEzsignsignergroupDescription1))
-                ) && 
-                (
-                    this.SEzsignsignergroupDescription2 == input.SEzsignsignergroupDescription2 ||
-                    (this.SEzsignsignergroupDescription2 != null &&
-                    this.SEzsignsignergroupDescription2.Equals(input.SEzsignsignergroupDescription2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SEzsignsignergroupDescription1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignsignergroupDescription1.GetHashCode();
-                }
-                if (this.SEzsignsignergroupDescription2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignsignergroupDescription2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

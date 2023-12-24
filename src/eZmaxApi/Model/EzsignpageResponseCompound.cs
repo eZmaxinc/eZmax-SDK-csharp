@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignpage Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignpage-ResponseCompound")]
-    public partial class EzsignpageResponseCompound : IEquatable<EzsignpageResponseCompound>, IValidatableObject
+    public partial class EzsignpageResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignpageResponseCompound" /> class.
@@ -144,82 +144,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignpageResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignpageResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignpageResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignpageResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignpageID == input.PkiEzsignpageID ||
-                    this.PkiEzsignpageID.Equals(input.PkiEzsignpageID)
-                ) && 
-                (
-                    this.IEzsignpageWidthimage == input.IEzsignpageWidthimage ||
-                    this.IEzsignpageWidthimage.Equals(input.IEzsignpageWidthimage)
-                ) && 
-                (
-                    this.IEzsignpageHeightimage == input.IEzsignpageHeightimage ||
-                    this.IEzsignpageHeightimage.Equals(input.IEzsignpageHeightimage)
-                ) && 
-                (
-                    this.IEzsignpageWidthpdf == input.IEzsignpageWidthpdf ||
-                    this.IEzsignpageWidthpdf.Equals(input.IEzsignpageWidthpdf)
-                ) && 
-                (
-                    this.IEzsignpageHeightpdf == input.IEzsignpageHeightpdf ||
-                    this.IEzsignpageHeightpdf.Equals(input.IEzsignpageHeightpdf)
-                ) && 
-                (
-                    this.IEzsignpagePagenumber == input.IEzsignpagePagenumber ||
-                    this.IEzsignpagePagenumber.Equals(input.IEzsignpagePagenumber)
-                ) && 
-                (
-                    this.SComputedImageurl == input.SComputedImageurl ||
-                    (this.SComputedImageurl != null &&
-                    this.SComputedImageurl.Equals(input.SComputedImageurl))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignpageID.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignpageWidthimage.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignpageHeightimage.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignpageWidthpdf.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignpageHeightpdf.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignpagePagenumber.GetHashCode();
-                if (this.SComputedImageurl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SComputedImageurl.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Communicationreference Object
     /// </summary>
     [DataContract(Name = "communicationreference-Request")]
-    public partial class CommunicationreferenceRequest : IEquatable<CommunicationreferenceRequest>, IValidatableObject
+    public partial class CommunicationreferenceRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationreferenceRequest" /> class.
@@ -157,88 +157,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommunicationreferenceRequest);
-        }
-
-        /// <summary>
-        /// Returns true if CommunicationreferenceRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommunicationreferenceRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommunicationreferenceRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiCommunicationreferenceID == input.PkiCommunicationreferenceID ||
-                    this.PkiCommunicationreferenceID.Equals(input.PkiCommunicationreferenceID)
-                ) && 
-                (
-                    this.FkiBuyercontractID == input.FkiBuyercontractID ||
-                    this.FkiBuyercontractID.Equals(input.FkiBuyercontractID)
-                ) && 
-                (
-                    this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
-                    this.FkiEzsignfolderID.Equals(input.FkiEzsignfolderID)
-                ) && 
-                (
-                    this.FkiInscriptionID == input.FkiInscriptionID ||
-                    this.FkiInscriptionID.Equals(input.FkiInscriptionID)
-                ) && 
-                (
-                    this.FkiInscriptiontempID == input.FkiInscriptiontempID ||
-                    this.FkiInscriptiontempID.Equals(input.FkiInscriptiontempID)
-                ) && 
-                (
-                    this.FkiInvoiceID == input.FkiInvoiceID ||
-                    this.FkiInvoiceID.Equals(input.FkiInvoiceID)
-                ) && 
-                (
-                    this.FkiOtherincomeID == input.FkiOtherincomeID ||
-                    this.FkiOtherincomeID.Equals(input.FkiOtherincomeID)
-                ) && 
-                (
-                    this.FkiElectronicfundstransferID == input.FkiElectronicfundstransferID ||
-                    this.FkiElectronicfundstransferID.Equals(input.FkiElectronicfundstransferID)
-                ) && 
-                (
-                    this.FkiRejectedoffertopurchaseID == input.FkiRejectedoffertopurchaseID ||
-                    this.FkiRejectedoffertopurchaseID.Equals(input.FkiRejectedoffertopurchaseID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiCommunicationreferenceID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiBuyercontractID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfolderID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiInscriptionID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiInscriptiontempID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiInvoiceID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiOtherincomeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiElectronicfundstransferID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiRejectedoffertopurchaseID.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

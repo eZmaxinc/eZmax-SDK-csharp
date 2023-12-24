@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Detail of the Versionhistory
     /// </summary>
     [DataContract(Name = "Multilingual-VersionhistoryDetail")]
-    public partial class MultilingualVersionhistoryDetail : IEquatable<MultilingualVersionhistoryDetail>, IValidatableObject
+    public partial class MultilingualVersionhistoryDetail : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualVersionhistoryDetail" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualVersionhistoryDetail);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualVersionhistoryDetail instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualVersionhistoryDetail to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualVersionhistoryDetail input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.TVersionhistoryDetail1 == input.TVersionhistoryDetail1 ||
-                    (this.TVersionhistoryDetail1 != null &&
-                    this.TVersionhistoryDetail1.Equals(input.TVersionhistoryDetail1))
-                ) && 
-                (
-                    this.TVersionhistoryDetail2 == input.TVersionhistoryDetail2 ||
-                    (this.TVersionhistoryDetail2 != null &&
-                    this.TVersionhistoryDetail2.Equals(input.TVersionhistoryDetail2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.TVersionhistoryDetail1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.TVersionhistoryDetail1.GetHashCode();
-                }
-                if (this.TVersionhistoryDetail2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.TVersionhistoryDetail2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

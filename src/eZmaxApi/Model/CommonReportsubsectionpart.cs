@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A part in the Reportsubsection 
     /// </summary>
     [DataContract(Name = "Common-Reportsubsectionpart")]
-    public partial class CommonReportsubsectionpart : IEquatable<CommonReportsubsectionpart>, IValidatableObject
+    public partial class CommonReportsubsectionpart : IValidatableObject
     {
         /// <summary>
         /// The type of the Reportsubsectionpart
@@ -113,58 +113,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonReportsubsectionpart);
-        }
-
-        /// <summary>
-        /// Returns true if CommonReportsubsectionpart instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonReportsubsectionpart to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonReportsubsectionpart input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.EReportsubsectionpartType == input.EReportsubsectionpartType ||
-                    this.EReportsubsectionpartType.Equals(input.EReportsubsectionpartType)
-                ) && 
-                (
-                    this.AObjReportrow == input.AObjReportrow ||
-                    this.AObjReportrow != null &&
-                    input.AObjReportrow != null &&
-                    this.AObjReportrow.SequenceEqual(input.AObjReportrow)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.EReportsubsectionpartType.GetHashCode();
-                if (this.AObjReportrow != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjReportrow.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

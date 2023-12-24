@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/phonetype/getAutocomplete
     /// </summary>
     [DataContract(Name = "phonetype-getAutocomplete-v2-Response-mPayload")]
-    public partial class PhonetypeGetAutocompleteV2ResponseMPayload : IEquatable<PhonetypeGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class PhonetypeGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PhonetypeGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PhonetypeGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if PhonetypeGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PhonetypeGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PhonetypeGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjPhonetype == input.AObjPhonetype ||
-                    this.AObjPhonetype != null &&
-                    input.AObjPhonetype != null &&
-                    this.AObjPhonetype.SequenceEqual(input.AObjPhonetype)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjPhonetype != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjPhonetype.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

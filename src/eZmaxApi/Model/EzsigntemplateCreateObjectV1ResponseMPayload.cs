@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/ezsigntemplate
     /// </summary>
     [DataContract(Name = "ezsigntemplate-createObject-v1-Response-mPayload")]
-    public partial class EzsigntemplateCreateObjectV1ResponseMPayload : IEquatable<EzsigntemplateCreateObjectV1ResponseMPayload>, IValidatableObject
+    public partial class EzsigntemplateCreateObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateCreateObjectV1ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplateCreateObjectV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplateCreateObjectV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplateCreateObjectV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplateCreateObjectV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiEzsigntemplateID == input.APkiEzsigntemplateID ||
-                    this.APkiEzsigntemplateID != null &&
-                    input.APkiEzsigntemplateID != null &&
-                    this.APkiEzsigntemplateID.SequenceEqual(input.APkiEzsigntemplateID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiEzsigntemplateID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiEzsigntemplateID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

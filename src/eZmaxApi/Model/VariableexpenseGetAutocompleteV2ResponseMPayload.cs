@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/variableexpense/getAutocomplete
     /// </summary>
     [DataContract(Name = "variableexpense-getAutocomplete-v2-Response-mPayload")]
-    public partial class VariableexpenseGetAutocompleteV2ResponseMPayload : IEquatable<VariableexpenseGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class VariableexpenseGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as VariableexpenseGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if VariableexpenseGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of VariableexpenseGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(VariableexpenseGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjVariableexpense == input.AObjVariableexpense ||
-                    this.AObjVariableexpense != null &&
-                    input.AObjVariableexpense != null &&
-                    this.AObjVariableexpense.SequenceEqual(input.AObjVariableexpense)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjVariableexpense != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjVariableexpense.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -61,7 +61,19 @@ namespace eZmaxApi.Model
         /// Enum Checkbox for value: Checkbox
         /// </summary>
         [EnumMember(Value = "Checkbox")]
-        Checkbox = 5
+        Checkbox = 5,
+
+        /// <summary>
+        /// Enum Number for value: Number
+        /// </summary>
+        [EnumMember(Value = "Number")]
+        Number = 6,
+
+        /// <summary>
+        /// Enum Date for value: Date
+        /// </summary>
+        [EnumMember(Value = "Date")]
+        Date = 7
     }
 
 }

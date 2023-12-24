@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Branding List Element
     /// </summary>
     [DataContract(Name = "apikey-ListElement")]
-    public partial class ApikeyListElement : IEquatable<ApikeyListElement>, IValidatableObject
+    public partial class ApikeyListElement : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyListElement" /> class.
@@ -144,85 +144,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ApikeyListElement);
-        }
-
-        /// <summary>
-        /// Returns true if ApikeyListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ApikeyListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ApikeyListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiApikeyID == input.PkiApikeyID ||
-                    this.PkiApikeyID.Equals(input.PkiApikeyID)
-                ) && 
-                (
-                    this.SApikeyDescriptionX == input.SApikeyDescriptionX ||
-                    (this.SApikeyDescriptionX != null &&
-                    this.SApikeyDescriptionX.Equals(input.SApikeyDescriptionX))
-                ) && 
-                (
-                    this.SUserFirstname == input.SUserFirstname ||
-                    (this.SUserFirstname != null &&
-                    this.SUserFirstname.Equals(input.SUserFirstname))
-                ) && 
-                (
-                    this.SUserLastname == input.SUserLastname ||
-                    (this.SUserLastname != null &&
-                    this.SUserLastname.Equals(input.SUserLastname))
-                ) && 
-                (
-                    this.BApikeyIsactive == input.BApikeyIsactive ||
-                    this.BApikeyIsactive.Equals(input.BApikeyIsactive)
-                ) && 
-                (
-                    this.BApikeyIssigned == input.BApikeyIssigned ||
-                    this.BApikeyIssigned.Equals(input.BApikeyIssigned)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiApikeyID.GetHashCode();
-                if (this.SApikeyDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SApikeyDescriptionX.GetHashCode();
-                }
-                if (this.SUserFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserFirstname.GetHashCode();
-                }
-                if (this.SUserLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLastname.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BApikeyIsactive.GetHashCode();
-                hashCode = (hashCode * 59) + this.BApikeyIssigned.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

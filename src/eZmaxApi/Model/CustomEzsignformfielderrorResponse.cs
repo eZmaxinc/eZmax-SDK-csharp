@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Custom Ezsignformfield Object to contain an error list
     /// </summary>
     [DataContract(Name = "Custom-Ezsignformfielderror-Response")]
-    public partial class CustomEzsignformfielderrorResponse : IEquatable<CustomEzsignformfielderrorResponse>, IValidatableObject
+    public partial class CustomEzsignformfielderrorResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignformfielderrorResponse" /> class.
@@ -93,62 +93,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomEzsignformfielderrorResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomEzsignformfielderrorResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomEzsignformfielderrorResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomEzsignformfielderrorResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SEzsignformfieldLabel == input.SEzsignformfieldLabel ||
-                    (this.SEzsignformfieldLabel != null &&
-                    this.SEzsignformfieldLabel.Equals(input.SEzsignformfieldLabel))
-                ) && 
-                (
-                    this.AObjEzsignformfielderrortest == input.AObjEzsignformfielderrortest ||
-                    this.AObjEzsignformfielderrortest != null &&
-                    input.AObjEzsignformfielderrortest != null &&
-                    this.AObjEzsignformfielderrortest.SequenceEqual(input.AObjEzsignformfielderrortest)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SEzsignformfieldLabel != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignformfieldLabel.GetHashCode();
-                }
-                if (this.AObjEzsignformfielderrortest != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignformfielderrortest.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

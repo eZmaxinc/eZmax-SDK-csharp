@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl
     /// </summary>
     [DataContract(Name = "ezsigndocument-getDownloadUrl-v1-Response-mPayload")]
-    public partial class EzsigndocumentGetDownloadUrlV1ResponseMPayload : IEquatable<EzsigndocumentGetDownloadUrlV1ResponseMPayload>, IValidatableObject
+    public partial class EzsigndocumentGetDownloadUrlV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetDownloadUrlV1ResponseMPayload" /> class.
@@ -79,52 +79,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentGetDownloadUrlV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentGetDownloadUrlV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentGetDownloadUrlV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentGetDownloadUrlV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SDownloadUrl == input.SDownloadUrl ||
-                    (this.SDownloadUrl != null &&
-                    this.SDownloadUrl.Equals(input.SDownloadUrl))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SDownloadUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SDownloadUrl.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

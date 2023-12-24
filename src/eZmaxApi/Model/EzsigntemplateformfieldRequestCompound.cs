@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsigntemplateformfield Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsigntemplateformfield-RequestCompound")]
-    public partial class EzsigntemplateformfieldRequestCompound : IEquatable<EzsigntemplateformfieldRequestCompound>, IValidatableObject
+    public partial class EzsigntemplateformfieldRequestCompound : IValidatableObject
     {
 
         /// <summary>
@@ -194,116 +194,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplateformfieldRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplateformfieldRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplateformfieldRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplateformfieldRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsigntemplateformfieldID == input.PkiEzsigntemplateformfieldID ||
-                    this.PkiEzsigntemplateformfieldID.Equals(input.PkiEzsigntemplateformfieldID)
-                ) && 
-                (
-                    this.IEzsigntemplatedocumentpagePagenumber == input.IEzsigntemplatedocumentpagePagenumber ||
-                    this.IEzsigntemplatedocumentpagePagenumber.Equals(input.IEzsigntemplatedocumentpagePagenumber)
-                ) && 
-                (
-                    this.SEzsigntemplateformfieldLabel == input.SEzsigntemplateformfieldLabel ||
-                    (this.SEzsigntemplateformfieldLabel != null &&
-                    this.SEzsigntemplateformfieldLabel.Equals(input.SEzsigntemplateformfieldLabel))
-                ) && 
-                (
-                    this.SEzsigntemplateformfieldValue == input.SEzsigntemplateformfieldValue ||
-                    (this.SEzsigntemplateformfieldValue != null &&
-                    this.SEzsigntemplateformfieldValue.Equals(input.SEzsigntemplateformfieldValue))
-                ) && 
-                (
-                    this.IEzsigntemplateformfieldX == input.IEzsigntemplateformfieldX ||
-                    this.IEzsigntemplateformfieldX.Equals(input.IEzsigntemplateformfieldX)
-                ) && 
-                (
-                    this.IEzsigntemplateformfieldY == input.IEzsigntemplateformfieldY ||
-                    this.IEzsigntemplateformfieldY.Equals(input.IEzsigntemplateformfieldY)
-                ) && 
-                (
-                    this.IEzsigntemplateformfieldWidth == input.IEzsigntemplateformfieldWidth ||
-                    this.IEzsigntemplateformfieldWidth.Equals(input.IEzsigntemplateformfieldWidth)
-                ) && 
-                (
-                    this.IEzsigntemplateformfieldHeight == input.IEzsigntemplateformfieldHeight ||
-                    this.IEzsigntemplateformfieldHeight.Equals(input.IEzsigntemplateformfieldHeight)
-                ) && 
-                (
-                    this.BEzsigntemplateformfieldAutocomplete == input.BEzsigntemplateformfieldAutocomplete ||
-                    this.BEzsigntemplateformfieldAutocomplete.Equals(input.BEzsigntemplateformfieldAutocomplete)
-                ) && 
-                (
-                    this.BEzsigntemplateformfieldSelected == input.BEzsigntemplateformfieldSelected ||
-                    this.BEzsigntemplateformfieldSelected.Equals(input.BEzsigntemplateformfieldSelected)
-                ) && 
-                (
-                    this.EEzsigntemplateformfieldDependencyrequirement == input.EEzsigntemplateformfieldDependencyrequirement ||
-                    this.EEzsigntemplateformfieldDependencyrequirement.Equals(input.EEzsigntemplateformfieldDependencyrequirement)
-                ) && 
-                (
-                    this.AObjEzsigntemplateelementdependency == input.AObjEzsigntemplateelementdependency ||
-                    this.AObjEzsigntemplateelementdependency != null &&
-                    input.AObjEzsigntemplateelementdependency != null &&
-                    this.AObjEzsigntemplateelementdependency.SequenceEqual(input.AObjEzsigntemplateelementdependency)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsigntemplateformfieldID.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplatedocumentpagePagenumber.GetHashCode();
-                if (this.SEzsigntemplateformfieldLabel != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplateformfieldLabel.GetHashCode();
-                }
-                if (this.SEzsigntemplateformfieldValue != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplateformfieldValue.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzsigntemplateformfieldX.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplateformfieldY.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplateformfieldWidth.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplateformfieldHeight.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsigntemplateformfieldAutocomplete.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsigntemplateformfieldSelected.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsigntemplateformfieldDependencyrequirement.GetHashCode();
-                if (this.AObjEzsigntemplateelementdependency != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsigntemplateelementdependency.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

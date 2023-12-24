@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Billingentityinternalproduct Object
     /// </summary>
     [DataContract(Name = "billingentityinternalproduct-Request")]
-    public partial class BillingentityinternalproductRequest : IEquatable<BillingentityinternalproductRequest>, IValidatableObject
+    public partial class BillingentityinternalproductRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalproductRequest" /> class.
@@ -96,58 +96,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BillingentityinternalproductRequest);
-        }
-
-        /// <summary>
-        /// Returns true if BillingentityinternalproductRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BillingentityinternalproductRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BillingentityinternalproductRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiBillingentityinternalproductID == input.PkiBillingentityinternalproductID ||
-                    this.PkiBillingentityinternalproductID.Equals(input.PkiBillingentityinternalproductID)
-                ) && 
-                (
-                    this.FkiEzmaxproductID == input.FkiEzmaxproductID ||
-                    this.FkiEzmaxproductID.Equals(input.FkiEzmaxproductID)
-                ) && 
-                (
-                    this.FkiBillingentityexternalID == input.FkiBillingentityexternalID ||
-                    this.FkiBillingentityexternalID.Equals(input.FkiBillingentityexternalID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiBillingentityinternalproductID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzmaxproductID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiBillingentityexternalID.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

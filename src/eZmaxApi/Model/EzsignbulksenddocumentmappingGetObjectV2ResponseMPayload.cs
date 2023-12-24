@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}
     /// </summary>
     [DataContract(Name = "ezsignbulksenddocumentmapping-getObject-v2-Response-mPayload")]
-    public partial class EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload : IEquatable<EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzsignbulksenddocumentmapping == input.ObjEzsignbulksenddocumentmapping ||
-                    (this.ObjEzsignbulksenddocumentmapping != null &&
-                    this.ObjEzsignbulksenddocumentmapping.Equals(input.ObjEzsignbulksenddocumentmapping))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzsignbulksenddocumentmapping != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsignbulksenddocumentmapping.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

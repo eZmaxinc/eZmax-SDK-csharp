@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /2/object/ezsignsignature
     /// </summary>
     [DataContract(Name = "ezsignsignature-createObject-v2-Request")]
-    public partial class EzsignsignatureCreateObjectV2Request : IEquatable<EzsignsignatureCreateObjectV2Request>, IValidatableObject
+    public partial class EzsignsignatureCreateObjectV2Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureCreateObjectV2Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignatureCreateObjectV2Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignatureCreateObjectV2Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignatureCreateObjectV2Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignatureCreateObjectV2Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsignsignature == input.AObjEzsignsignature ||
-                    this.AObjEzsignsignature != null &&
-                    input.AObjEzsignsignature != null &&
-                    this.AObjEzsignsignature.SequenceEqual(input.AObjEzsignsignature)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsignsignature != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignsignature.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

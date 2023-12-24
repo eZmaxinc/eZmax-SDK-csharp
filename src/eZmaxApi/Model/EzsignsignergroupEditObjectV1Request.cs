@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
     /// </summary>
     [DataContract(Name = "ezsignsignergroup-editObject-v1-Request")]
-    public partial class EzsignsignergroupEditObjectV1Request : IEquatable<EzsignsignergroupEditObjectV1Request>, IValidatableObject
+    public partial class EzsignsignergroupEditObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupEditObjectV1Request" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignergroupEditObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignergroupEditObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignergroupEditObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignergroupEditObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzsignsignergroup == input.ObjEzsignsignergroup ||
-                    (this.ObjEzsignsignergroup != null &&
-                    this.ObjEzsignsignergroup.Equals(input.ObjEzsignsignergroup))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzsignsignergroup != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsignsignergroup.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

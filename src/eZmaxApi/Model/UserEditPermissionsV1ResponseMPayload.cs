@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for PUT /1/object/user/{pkiUserID}/editPermissions
     /// </summary>
     [DataContract(Name = "user-editPermissions-v1-Response-mPayload")]
-    public partial class UserEditPermissionsV1ResponseMPayload : IEquatable<UserEditPermissionsV1ResponseMPayload>, IValidatableObject
+    public partial class UserEditPermissionsV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEditPermissionsV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserEditPermissionsV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if UserEditPermissionsV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserEditPermissionsV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserEditPermissionsV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiPermissionID == input.APkiPermissionID ||
-                    this.APkiPermissionID != null &&
-                    input.APkiPermissionID != null &&
-                    this.APkiPermissionID.SequenceEqual(input.APkiPermissionID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiPermissionID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiPermissionID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

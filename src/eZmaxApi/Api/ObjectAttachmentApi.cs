@@ -36,8 +36,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AttachmentDownloadV1Response</returns>
-        AttachmentDownloadV1Response AttachmentDownloadV1(int pkiAttachmentID, int operationIndex = 0);
+        /// <returns></returns>
+        void AttachmentDownloadV1(int pkiAttachmentID, int operationIndex = 0);
 
         /// <summary>
         /// Retrieve the content
@@ -48,8 +48,54 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AttachmentDownloadV1Response</returns>
-        ApiResponse<AttachmentDownloadV1Response> AttachmentDownloadV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> AttachmentDownloadV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve the Attachmentlogs
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentGetAttachmentlogsV1Response</returns>
+        AttachmentGetAttachmentlogsV1Response AttachmentGetAttachmentlogsV1(int pkiAttachmentID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve the Attachmentlogs
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentGetAttachmentlogsV1Response</returns>
+        ApiResponse<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve a URL to download attachments.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentGetDownloadUrlV1Response</returns>
+        AttachmentGetDownloadUrlV1Response AttachmentGetDownloadUrlV1(int pkiAttachmentID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve a URL to download attachments.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentGetDownloadUrlV1Response</returns>
+        ApiResponse<AttachmentGetDownloadUrlV1Response> AttachmentGetDownloadUrlV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -69,8 +115,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAttachmentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AttachmentDownloadV1Response</returns>
-        System.Threading.Tasks.Task<AttachmentDownloadV1Response> AttachmentDownloadV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task AttachmentDownloadV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve the content
@@ -82,8 +128,58 @@ namespace eZmaxApi.Api
         /// <param name="pkiAttachmentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AttachmentDownloadV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttachmentDownloadV1Response>> AttachmentDownloadV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentDownloadV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve the Attachmentlogs
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentGetAttachmentlogsV1Response</returns>
+        System.Threading.Tasks.Task<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve the Attachmentlogs
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentGetAttachmentlogsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttachmentGetAttachmentlogsV1Response>> AttachmentGetAttachmentlogsV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve a URL to download attachments.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentGetDownloadUrlV1Response</returns>
+        System.Threading.Tasks.Task<AttachmentGetDownloadUrlV1Response> AttachmentGetDownloadUrlV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve a URL to download attachments.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentGetDownloadUrlV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttachmentGetDownloadUrlV1Response>> AttachmentGetDownloadUrlV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -210,11 +306,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AttachmentDownloadV1Response</returns>
-        public AttachmentDownloadV1Response AttachmentDownloadV1(int pkiAttachmentID, int operationIndex = 0)
+        /// <returns></returns>
+        public void AttachmentDownloadV1(int pkiAttachmentID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<AttachmentDownloadV1Response> localVarResponse = AttachmentDownloadV1WithHttpInfo(pkiAttachmentID);
-            return localVarResponse.Data;
+            AttachmentDownloadV1WithHttpInfo(pkiAttachmentID);
         }
 
         /// <summary>
@@ -223,8 +318,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AttachmentDownloadV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<AttachmentDownloadV1Response> AttachmentDownloadV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public eZmaxApi.Client.ApiResponse<Object> AttachmentDownloadV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -258,9 +353,14 @@ namespace eZmaxApi.Api
             {
                 localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
             }
+            // authentication (Presigned) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("sAuthorization")))
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sAuthorization", this.Configuration.GetApiKeyWithPrefix("sAuthorization")));
+            }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AttachmentDownloadV1Response>("/1/object/attachment/{pkiAttachmentID}/download", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/1/object/attachment/{pkiAttachmentID}/download", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AttachmentDownloadV1", localVarResponse);
@@ -280,11 +380,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiAttachmentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AttachmentDownloadV1Response</returns>
-        public async System.Threading.Tasks.Task<AttachmentDownloadV1Response> AttachmentDownloadV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task AttachmentDownloadV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<AttachmentDownloadV1Response> localVarResponse = await AttachmentDownloadV1WithHttpInfoAsync(pkiAttachmentID, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
+            await AttachmentDownloadV1WithHttpInfoAsync(pkiAttachmentID, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -294,8 +393,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAttachmentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AttachmentDownloadV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentDownloadV1Response>> AttachmentDownloadV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<Object>> AttachmentDownloadV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -330,13 +429,302 @@ namespace eZmaxApi.Api
             {
                 localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
             }
+            // authentication (Presigned) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("sAuthorization")))
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sAuthorization", this.Configuration.GetApiKeyWithPrefix("sAuthorization")));
+            }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AttachmentDownloadV1Response>("/1/object/attachment/{pkiAttachmentID}/download", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/1/object/attachment/{pkiAttachmentID}/download", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AttachmentDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve the Attachmentlogs Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentGetAttachmentlogsV1Response</returns>
+        public AttachmentGetAttachmentlogsV1Response AttachmentGetAttachmentlogsV1(int pkiAttachmentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentGetAttachmentlogsV1Response> localVarResponse = AttachmentGetAttachmentlogsV1WithHttpInfo(pkiAttachmentID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve the Attachmentlogs Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentGetAttachmentlogsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentGetAttachmentlogsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<AttachmentGetAttachmentlogsV1Response>("/1/object/attachment/{pkiAttachmentID}/getAttachmentlogs", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentGetAttachmentlogsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve the Attachmentlogs Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentGetAttachmentlogsV1Response</returns>
+        public async System.Threading.Tasks.Task<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentGetAttachmentlogsV1Response> localVarResponse = await AttachmentGetAttachmentlogsV1WithHttpInfoAsync(pkiAttachmentID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve the Attachmentlogs Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentGetAttachmentlogsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentGetAttachmentlogsV1Response>> AttachmentGetAttachmentlogsV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentGetAttachmentlogsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<AttachmentGetAttachmentlogsV1Response>("/1/object/attachment/{pkiAttachmentID}/getAttachmentlogs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentGetAttachmentlogsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve a URL to download attachments. This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentGetDownloadUrlV1Response</returns>
+        public AttachmentGetDownloadUrlV1Response AttachmentGetDownloadUrlV1(int pkiAttachmentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentGetDownloadUrlV1Response> localVarResponse = AttachmentGetDownloadUrlV1WithHttpInfo(pkiAttachmentID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a URL to download attachments. This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentGetDownloadUrlV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AttachmentGetDownloadUrlV1Response> AttachmentGetDownloadUrlV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentGetDownloadUrlV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<AttachmentGetDownloadUrlV1Response>("/1/object/attachment/{pkiAttachmentID}/getDownloadUrl", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentGetDownloadUrlV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve a URL to download attachments. This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentGetDownloadUrlV1Response</returns>
+        public async System.Threading.Tasks.Task<AttachmentGetDownloadUrlV1Response> AttachmentGetDownloadUrlV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentGetDownloadUrlV1Response> localVarResponse = await AttachmentGetDownloadUrlV1WithHttpInfoAsync(pkiAttachmentID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a URL to download attachments. This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentGetDownloadUrlV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentGetDownloadUrlV1Response>> AttachmentGetDownloadUrlV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentGetDownloadUrlV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<AttachmentGetDownloadUrlV1Response>("/1/object/attachment/{pkiAttachmentID}/getDownloadUrl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentGetDownloadUrlV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

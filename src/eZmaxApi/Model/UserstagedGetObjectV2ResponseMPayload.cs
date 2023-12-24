@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/userstaged/{pkiUserstagedID}
     /// </summary>
     [DataContract(Name = "userstaged-getObject-v2-Response-mPayload")]
-    public partial class UserstagedGetObjectV2ResponseMPayload : IEquatable<UserstagedGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class UserstagedGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserstagedGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if UserstagedGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserstagedGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserstagedGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjUserstaged == input.ObjUserstaged ||
-                    (this.ObjUserstaged != null &&
-                    this.ObjUserstaged.Equals(input.ObjUserstaged))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjUserstaged != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjUserstaged.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

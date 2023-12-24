@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/ezsigntemplate/getAutocomplete
     /// </summary>
     [DataContract(Name = "ezsigntemplate-getAutocomplete-v2-Response-mPayload")]
-    public partial class EzsigntemplateGetAutocompleteV2ResponseMPayload : IEquatable<EzsigntemplateGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class EzsigntemplateGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplateGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplateGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplateGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplateGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsigntemplate == input.AObjEzsigntemplate ||
-                    this.AObjEzsigntemplate != null &&
-                    input.AObjEzsigntemplate != null &&
-                    this.AObjEzsigntemplate.SequenceEqual(input.AObjEzsigntemplate)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsigntemplate != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsigntemplate.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

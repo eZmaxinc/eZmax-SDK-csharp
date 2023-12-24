@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignsignaturestatus Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "Custom-Ezsignsignaturestatus-Response")]
-    public partial class CustomEzsignsignaturestatusResponse : IEquatable<CustomEzsignsignaturestatusResponse>, IValidatableObject
+    public partial class CustomEzsignsignaturestatusResponse : IValidatableObject
     {
         /// <summary>
         /// Type of step
@@ -126,63 +126,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomEzsignsignaturestatusResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomEzsignsignaturestatusResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomEzsignsignaturestatusResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomEzsignsignaturestatusResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.EEzsignsignaturestatusSteptype == input.EEzsignsignaturestatusSteptype ||
-                    this.EEzsignsignaturestatusSteptype.Equals(input.EEzsignsignaturestatusSteptype)
-                ) && 
-                (
-                    this.IEzsignsignaturestatusStep == input.IEzsignsignaturestatusStep ||
-                    this.IEzsignsignaturestatusStep.Equals(input.IEzsignsignaturestatusStep)
-                ) && 
-                (
-                    this.IEzsignsignaturestatusTotal == input.IEzsignsignaturestatusTotal ||
-                    this.IEzsignsignaturestatusTotal.Equals(input.IEzsignsignaturestatusTotal)
-                ) && 
-                (
-                    this.IEzsignsignaturestatusSigned == input.IEzsignsignaturestatusSigned ||
-                    this.IEzsignsignaturestatusSigned.Equals(input.IEzsignsignaturestatusSigned)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.EEzsignsignaturestatusSteptype.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignaturestatusStep.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignaturestatusTotal.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignaturestatusSigned.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

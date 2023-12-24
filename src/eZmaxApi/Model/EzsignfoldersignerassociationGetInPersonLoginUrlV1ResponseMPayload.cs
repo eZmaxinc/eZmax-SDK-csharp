@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl
     /// </summary>
     [DataContract(Name = "ezsignfoldersignerassociation-getInPersonLoginUrl-v1-Response-mPayload")]
-    public partial class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload : IEquatable<EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload" /> class.
@@ -78,52 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SLoginUrl == input.SLoginUrl ||
-                    (this.SLoginUrl != null &&
-                    this.SLoginUrl.Equals(input.SLoginUrl))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SLoginUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SLoginUrl.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

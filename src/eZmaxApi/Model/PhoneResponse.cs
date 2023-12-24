@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Phone Object
     /// </summary>
     [DataContract(Name = "phone-Response")]
-    public partial class PhoneResponse : IEquatable<PhoneResponse>, IValidatableObject
+    public partial class PhoneResponse : IValidatableObject
     {
 
         /// <summary>
@@ -117,76 +117,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PhoneResponse);
-        }
-
-        /// <summary>
-        /// Returns true if PhoneResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PhoneResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PhoneResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiPhoneID == input.PkiPhoneID ||
-                    this.PkiPhoneID.Equals(input.PkiPhoneID)
-                ) && 
-                (
-                    this.FkiPhonetypeID == input.FkiPhonetypeID ||
-                    this.FkiPhonetypeID.Equals(input.FkiPhonetypeID)
-                ) && 
-                (
-                    this.EPhoneType == input.EPhoneType ||
-                    this.EPhoneType.Equals(input.EPhoneType)
-                ) && 
-                (
-                    this.SPhoneE164 == input.SPhoneE164 ||
-                    (this.SPhoneE164 != null &&
-                    this.SPhoneE164.Equals(input.SPhoneE164))
-                ) && 
-                (
-                    this.SPhoneExtension == input.SPhoneExtension ||
-                    (this.SPhoneExtension != null &&
-                    this.SPhoneExtension.Equals(input.SPhoneExtension))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiPhoneID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiPhonetypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.EPhoneType.GetHashCode();
-                if (this.SPhoneE164 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneE164.GetHashCode();
-                }
-                if (this.SPhoneExtension != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneExtension.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

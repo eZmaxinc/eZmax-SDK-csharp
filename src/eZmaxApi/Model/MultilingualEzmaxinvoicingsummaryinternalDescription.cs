@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Description of the Ezmaxinvoicingsummaryinternal
     /// </summary>
     [DataContract(Name = "Multilingual-EzmaxinvoicingsummaryinternalDescription")]
-    public partial class MultilingualEzmaxinvoicingsummaryinternalDescription : IEquatable<MultilingualEzmaxinvoicingsummaryinternalDescription>, IValidatableObject
+    public partial class MultilingualEzmaxinvoicingsummaryinternalDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzmaxinvoicingsummaryinternalDescription" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualEzmaxinvoicingsummaryinternalDescription);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualEzmaxinvoicingsummaryinternalDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualEzmaxinvoicingsummaryinternalDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualEzmaxinvoicingsummaryinternalDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SEzmaxinvoicingsummaryinternalDescription1 == input.SEzmaxinvoicingsummaryinternalDescription1 ||
-                    (this.SEzmaxinvoicingsummaryinternalDescription1 != null &&
-                    this.SEzmaxinvoicingsummaryinternalDescription1.Equals(input.SEzmaxinvoicingsummaryinternalDescription1))
-                ) && 
-                (
-                    this.SEzmaxinvoicingsummaryinternalDescription2 == input.SEzmaxinvoicingsummaryinternalDescription2 ||
-                    (this.SEzmaxinvoicingsummaryinternalDescription2 != null &&
-                    this.SEzmaxinvoicingsummaryinternalDescription2.Equals(input.SEzmaxinvoicingsummaryinternalDescription2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SEzmaxinvoicingsummaryinternalDescription1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzmaxinvoicingsummaryinternalDescription1.GetHashCode();
-                }
-                if (this.SEzmaxinvoicingsummaryinternalDescription2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzmaxinvoicingsummaryinternalDescription2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

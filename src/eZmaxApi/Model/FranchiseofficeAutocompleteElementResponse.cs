@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Franchiseoffice AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "franchiseoffice-AutocompleteElement-Response")]
-    public partial class FranchiseofficeAutocompleteElementResponse : IEquatable<FranchiseofficeAutocompleteElementResponse>, IValidatableObject
+    public partial class FranchiseofficeAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchiseofficeAutocompleteElementResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as FranchiseofficeAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if FranchiseofficeAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of FranchiseofficeAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(FranchiseofficeAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SFranchiseofficeDescription == input.SFranchiseofficeDescription ||
-                    (this.SFranchiseofficeDescription != null &&
-                    this.SFranchiseofficeDescription.Equals(input.SFranchiseofficeDescription))
-                ) && 
-                (
-                    this.PkiFranchiseofficeID == input.PkiFranchiseofficeID ||
-                    this.PkiFranchiseofficeID.Equals(input.PkiFranchiseofficeID)
-                ) && 
-                (
-                    this.BFranchiseofficeIsactive == input.BFranchiseofficeIsactive ||
-                    this.BFranchiseofficeIsactive.Equals(input.BFranchiseofficeIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SFranchiseofficeDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SFranchiseofficeDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiFranchiseofficeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BFranchiseofficeIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

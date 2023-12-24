@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
     /// </summary>
     [DataContract(Name = "webhook-getHistory-v1-Response-mPayload")]
-    public partial class WebhookGetHistoryV1ResponseMPayload : IEquatable<WebhookGetHistoryV1ResponseMPayload>, IValidatableObject
+    public partial class WebhookGetHistoryV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookGetHistoryV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebhookGetHistoryV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if WebhookGetHistoryV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebhookGetHistoryV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebhookGetHistoryV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjWebhooklog == input.AObjWebhooklog ||
-                    this.AObjWebhooklog != null &&
-                    input.AObjWebhooklog != null &&
-                    this.AObjWebhooklog.SequenceEqual(input.AObjWebhooklog)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjWebhooklog != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjWebhooklog.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

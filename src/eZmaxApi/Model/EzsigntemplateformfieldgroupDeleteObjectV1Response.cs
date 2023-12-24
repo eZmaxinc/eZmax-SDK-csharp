@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for DELETE /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
     /// </summary>
     [DataContract(Name = "ezsigntemplateformfieldgroup-deleteObject-v1-Response")]
-    public partial class EzsigntemplateformfieldgroupDeleteObjectV1Response : IEquatable<EzsigntemplateformfieldgroupDeleteObjectV1Response>, IValidatableObject
+    public partial class EzsigntemplateformfieldgroupDeleteObjectV1Response : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupDeleteObjectV1Response" /> class.
@@ -86,61 +86,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplateformfieldgroupDeleteObjectV1Response);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplateformfieldgroupDeleteObjectV1Response instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplateformfieldgroupDeleteObjectV1Response to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplateformfieldgroupDeleteObjectV1Response input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjDebugPayload == input.ObjDebugPayload ||
-                    (this.ObjDebugPayload != null &&
-                    this.ObjDebugPayload.Equals(input.ObjDebugPayload))
-                ) && 
-                (
-                    this.ObjDebug == input.ObjDebug ||
-                    (this.ObjDebug != null &&
-                    this.ObjDebug.Equals(input.ObjDebug))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjDebugPayload != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjDebugPayload.GetHashCode();
-                }
-                if (this.ObjDebug != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjDebug.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

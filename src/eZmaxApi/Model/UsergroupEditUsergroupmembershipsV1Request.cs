@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships
     /// </summary>
     [DataContract(Name = "usergroup-editUsergroupmemberships-v1-Request")]
-    public partial class UsergroupEditUsergroupmembershipsV1Request : IEquatable<UsergroupEditUsergroupmembershipsV1Request>, IValidatableObject
+    public partial class UsergroupEditUsergroupmembershipsV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupEditUsergroupmembershipsV1Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UsergroupEditUsergroupmembershipsV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if UsergroupEditUsergroupmembershipsV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UsergroupEditUsergroupmembershipsV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UsergroupEditUsergroupmembershipsV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjUsergroupmembership == input.AObjUsergroupmembership ||
-                    this.AObjUsergroupmembership != null &&
-                    input.AObjUsergroupmembership != null &&
-                    this.AObjUsergroupmembership.SequenceEqual(input.AObjUsergroupmembership)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjUsergroupmembership != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjUsergroupmembership.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

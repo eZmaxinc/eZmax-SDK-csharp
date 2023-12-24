@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicing Object
     /// </summary>
     [DataContract(Name = "ezmaxinvoicing-Response")]
-    public partial class EzmaxinvoicingResponse : IEquatable<EzmaxinvoicingResponse>, IValidatableObject
+    public partial class EzmaxinvoicingResponse : IValidatableObject
     {
 
         /// <summary>
@@ -222,128 +222,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzmaxinvoicingResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzmaxinvoicingResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzmaxinvoicingResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzmaxinvoicingResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzmaxinvoicingID == input.PkiEzmaxinvoicingID ||
-                    this.PkiEzmaxinvoicingID.Equals(input.PkiEzmaxinvoicingID)
-                ) && 
-                (
-                    this.FkiEzmaxinvoicingcontractID == input.FkiEzmaxinvoicingcontractID ||
-                    this.FkiEzmaxinvoicingcontractID.Equals(input.FkiEzmaxinvoicingcontractID)
-                ) && 
-                (
-                    this.FkiEzmaxpricingID == input.FkiEzmaxpricingID ||
-                    this.FkiEzmaxpricingID.Equals(input.FkiEzmaxpricingID)
-                ) && 
-                (
-                    this.FkiSystemconfigurationtypeID == input.FkiSystemconfigurationtypeID ||
-                    this.FkiSystemconfigurationtypeID.Equals(input.FkiSystemconfigurationtypeID)
-                ) && 
-                (
-                    this.SSystemconfigurationtypeDescriptionX == input.SSystemconfigurationtypeDescriptionX ||
-                    (this.SSystemconfigurationtypeDescriptionX != null &&
-                    this.SSystemconfigurationtypeDescriptionX.Equals(input.SSystemconfigurationtypeDescriptionX))
-                ) && 
-                (
-                    this.YyyymmEzmaxinvoicing == input.YyyymmEzmaxinvoicing ||
-                    (this.YyyymmEzmaxinvoicing != null &&
-                    this.YyyymmEzmaxinvoicing.Equals(input.YyyymmEzmaxinvoicing))
-                ) && 
-                (
-                    this.IEzmaxinvoicingDays == input.IEzmaxinvoicingDays ||
-                    this.IEzmaxinvoicingDays.Equals(input.IEzmaxinvoicingDays)
-                ) && 
-                (
-                    this.EEzmaxinvoicingPaymenttype == input.EEzmaxinvoicingPaymenttype ||
-                    this.EEzmaxinvoicingPaymenttype.Equals(input.EEzmaxinvoicingPaymenttype)
-                ) && 
-                (
-                    this.DEzmaxinvoicingRebatepaymenttype == input.DEzmaxinvoicingRebatepaymenttype ||
-                    (this.DEzmaxinvoicingRebatepaymenttype != null &&
-                    this.DEzmaxinvoicingRebatepaymenttype.Equals(input.DEzmaxinvoicingRebatepaymenttype))
-                ) && 
-                (
-                    this.IEzmaxinvoicingContractlength == input.IEzmaxinvoicingContractlength ||
-                    this.IEzmaxinvoicingContractlength.Equals(input.IEzmaxinvoicingContractlength)
-                ) && 
-                (
-                    this.DEzmaxinvoicingRebatecontractlength == input.DEzmaxinvoicingRebatecontractlength ||
-                    (this.DEzmaxinvoicingRebatecontractlength != null &&
-                    this.DEzmaxinvoicingRebatecontractlength.Equals(input.DEzmaxinvoicingRebatecontractlength))
-                ) && 
-                (
-                    this.BEzmaxinvoicingRebateEzsignallagents == input.BEzmaxinvoicingRebateEzsignallagents ||
-                    this.BEzmaxinvoicingRebateEzsignallagents.Equals(input.BEzmaxinvoicingRebateEzsignallagents)
-                ) && 
-                (
-                    this.ObjAudit == input.ObjAudit ||
-                    (this.ObjAudit != null &&
-                    this.ObjAudit.Equals(input.ObjAudit))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzmaxinvoicingID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzmaxinvoicingcontractID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzmaxpricingID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiSystemconfigurationtypeID.GetHashCode();
-                if (this.SSystemconfigurationtypeDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SSystemconfigurationtypeDescriptionX.GetHashCode();
-                }
-                if (this.YyyymmEzmaxinvoicing != null)
-                {
-                    hashCode = (hashCode * 59) + this.YyyymmEzmaxinvoicing.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzmaxinvoicingDays.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzmaxinvoicingPaymenttype.GetHashCode();
-                if (this.DEzmaxinvoicingRebatepaymenttype != null)
-                {
-                    hashCode = (hashCode * 59) + this.DEzmaxinvoicingRebatepaymenttype.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzmaxinvoicingContractlength.GetHashCode();
-                if (this.DEzmaxinvoicingRebatecontractlength != null)
-                {
-                    hashCode = (hashCode * 59) + this.DEzmaxinvoicingRebatecontractlength.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzmaxinvoicingRebateEzsignallagents.GetHashCode();
-                if (this.ObjAudit != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjAudit.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

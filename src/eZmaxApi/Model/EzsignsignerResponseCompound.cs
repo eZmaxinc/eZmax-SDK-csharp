@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsigner Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignsigner-ResponseCompound")]
-    public partial class EzsignsignerResponseCompound : IEquatable<EzsignsignerResponseCompound>, IValidatableObject
+    public partial class EzsignsignerResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignerResponseCompound" /> class.
@@ -137,81 +137,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignerResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignerResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignerResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignerResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignsignerID == input.PkiEzsignsignerID ||
-                    this.PkiEzsignsignerID.Equals(input.PkiEzsignsignerID)
-                ) && 
-                (
-                    this.FkiTaxassignmentID == input.FkiTaxassignmentID ||
-                    this.FkiTaxassignmentID.Equals(input.FkiTaxassignmentID)
-                ) && 
-                (
-                    this.FkiSecretquestionID == input.FkiSecretquestionID ||
-                    this.FkiSecretquestionID.Equals(input.FkiSecretquestionID)
-                ) && 
-                (
-                    this.FkiUserlogintypeID == input.FkiUserlogintypeID ||
-                    this.FkiUserlogintypeID.Equals(input.FkiUserlogintypeID)
-                ) && 
-                (
-                    this.SUserlogintypeDescriptionX == input.SUserlogintypeDescriptionX ||
-                    (this.SUserlogintypeDescriptionX != null &&
-                    this.SUserlogintypeDescriptionX.Equals(input.SUserlogintypeDescriptionX))
-                ) && 
-                (
-                    this.ObjContact == input.ObjContact ||
-                    (this.ObjContact != null &&
-                    this.ObjContact.Equals(input.ObjContact))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignsignerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiTaxassignmentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiSecretquestionID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserlogintypeID.GetHashCode();
-                if (this.SUserlogintypeDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserlogintypeDescriptionX.GetHashCode();
-                }
-                if (this.ObjContact != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjContact.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

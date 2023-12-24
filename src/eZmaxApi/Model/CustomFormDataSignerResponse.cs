@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A form Data Signer Object
     /// </summary>
     [DataContract(Name = "Custom-FormDataSigner-Response")]
-    public partial class CustomFormDataSignerResponse : IEquatable<CustomFormDataSignerResponse>, IValidatableObject
+    public partial class CustomFormDataSignerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomFormDataSignerResponse" /> class.
@@ -131,81 +131,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomFormDataSignerResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomFormDataSignerResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomFormDataSignerResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomFormDataSignerResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
-                    this.FkiEzsignfoldersignerassociationID.Equals(input.FkiEzsignfoldersignerassociationID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.SContactFirstname == input.SContactFirstname ||
-                    (this.SContactFirstname != null &&
-                    this.SContactFirstname.Equals(input.SContactFirstname))
-                ) && 
-                (
-                    this.SContactLastname == input.SContactLastname ||
-                    (this.SContactLastname != null &&
-                    this.SContactLastname.Equals(input.SContactLastname))
-                ) && 
-                (
-                    this.AObjEzsignformfieldgroup == input.AObjEzsignformfieldgroup ||
-                    this.AObjEzsignformfieldgroup != null &&
-                    input.AObjEzsignformfieldgroup != null &&
-                    this.AObjEzsignformfieldgroup.SequenceEqual(input.AObjEzsignformfieldgroup)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldersignerassociationID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                if (this.SContactFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SContactFirstname.GetHashCode();
-                }
-                if (this.SContactLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SContactLastname.GetHashCode();
-                }
-                if (this.AObjEzsignformfieldgroup != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignformfieldgroup.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

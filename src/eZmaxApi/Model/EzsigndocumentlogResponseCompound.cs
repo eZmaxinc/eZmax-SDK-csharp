@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsigndocumentlog Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsigndocumentlog-ResponseCompound")]
-    public partial class EzsigndocumentlogResponseCompound : IEquatable<EzsigndocumentlogResponseCompound>, IValidatableObject
+    public partial class EzsigndocumentlogResponseCompound : IValidatableObject
     {
 
         /// <summary>
@@ -174,103 +174,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentlogResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentlogResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentlogResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentlogResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.FkiEzsignsignerID == input.FkiEzsignsignerID ||
-                    this.FkiEzsignsignerID.Equals(input.FkiEzsignsignerID)
-                ) && 
-                (
-                    this.DtEzsigndocumentlogDatetime == input.DtEzsigndocumentlogDatetime ||
-                    (this.DtEzsigndocumentlogDatetime != null &&
-                    this.DtEzsigndocumentlogDatetime.Equals(input.DtEzsigndocumentlogDatetime))
-                ) && 
-                (
-                    this.EEzsigndocumentlogType == input.EEzsigndocumentlogType ||
-                    this.EEzsigndocumentlogType.Equals(input.EEzsigndocumentlogType)
-                ) && 
-                (
-                    this.SEzsigndocumentlogDetail == input.SEzsigndocumentlogDetail ||
-                    (this.SEzsigndocumentlogDetail != null &&
-                    this.SEzsigndocumentlogDetail.Equals(input.SEzsigndocumentlogDetail))
-                ) && 
-                (
-                    this.SEzsigndocumentlogLastname == input.SEzsigndocumentlogLastname ||
-                    (this.SEzsigndocumentlogLastname != null &&
-                    this.SEzsigndocumentlogLastname.Equals(input.SEzsigndocumentlogLastname))
-                ) && 
-                (
-                    this.SEzsigndocumentlogFirstname == input.SEzsigndocumentlogFirstname ||
-                    (this.SEzsigndocumentlogFirstname != null &&
-                    this.SEzsigndocumentlogFirstname.Equals(input.SEzsigndocumentlogFirstname))
-                ) && 
-                (
-                    this.SEzsigndocumentlogIP == input.SEzsigndocumentlogIP ||
-                    (this.SEzsigndocumentlogIP != null &&
-                    this.SEzsigndocumentlogIP.Equals(input.SEzsigndocumentlogIP))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignsignerID.GetHashCode();
-                if (this.DtEzsigndocumentlogDatetime != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsigndocumentlogDatetime.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EEzsigndocumentlogType.GetHashCode();
-                if (this.SEzsigndocumentlogDetail != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentlogDetail.GetHashCode();
-                }
-                if (this.SEzsigndocumentlogLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentlogLastname.GetHashCode();
-                }
-                if (this.SEzsigndocumentlogFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentlogFirstname.GetHashCode();
-                }
-                if (this.SEzsigndocumentlogIP != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentlogIP.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for PUT /1/object/apikey/{pkiApikeyID}
     /// </summary>
     [DataContract(Name = "apikey-editObject-v1-Request")]
-    public partial class ApikeyEditObjectV1Request : IEquatable<ApikeyEditObjectV1Request>, IValidatableObject
+    public partial class ApikeyEditObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyEditObjectV1Request" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ApikeyEditObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if ApikeyEditObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ApikeyEditObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ApikeyEditObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjApikey == input.ObjApikey ||
-                    (this.ObjApikey != null &&
-                    this.ObjApikey.Equals(input.ObjApikey))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjApikey != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjApikey.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

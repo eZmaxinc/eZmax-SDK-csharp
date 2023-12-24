@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignbulksend Object
     /// </summary>
     [DataContract(Name = "ezsignbulksend-Request")]
-    public partial class EzsignbulksendRequest : IEquatable<EzsignbulksendRequest>, IValidatableObject
+    public partial class EzsignbulksendRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendRequest" /> class.
@@ -149,86 +149,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksendRequest);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksendRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksendRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksendRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignbulksendID == input.PkiEzsignbulksendID ||
-                    this.PkiEzsignbulksendID.Equals(input.PkiEzsignbulksendID)
-                ) && 
-                (
-                    this.FkiEzsignfoldertypeID == input.FkiEzsignfoldertypeID ||
-                    this.FkiEzsignfoldertypeID.Equals(input.FkiEzsignfoldertypeID)
-                ) && 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    this.FkiLanguageID.Equals(input.FkiLanguageID)
-                ) && 
-                (
-                    this.SEzsignbulksendDescription == input.SEzsignbulksendDescription ||
-                    (this.SEzsignbulksendDescription != null &&
-                    this.SEzsignbulksendDescription.Equals(input.SEzsignbulksendDescription))
-                ) && 
-                (
-                    this.TEzsignbulksendNote == input.TEzsignbulksendNote ||
-                    (this.TEzsignbulksendNote != null &&
-                    this.TEzsignbulksendNote.Equals(input.TEzsignbulksendNote))
-                ) && 
-                (
-                    this.BEzsignbulksendNeedvalidation == input.BEzsignbulksendNeedvalidation ||
-                    this.BEzsignbulksendNeedvalidation.Equals(input.BEzsignbulksendNeedvalidation)
-                ) && 
-                (
-                    this.BEzsignbulksendIsactive == input.BEzsignbulksendIsactive ||
-                    this.BEzsignbulksendIsactive.Equals(input.BEzsignbulksendIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignbulksendID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldertypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiLanguageID.GetHashCode();
-                if (this.SEzsignbulksendDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignbulksendDescription.GetHashCode();
-                }
-                if (this.TEzsignbulksendNote != null)
-                {
-                    hashCode = (hashCode * 59) + this.TEzsignbulksendNote.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzsignbulksendNeedvalidation.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignbulksendIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

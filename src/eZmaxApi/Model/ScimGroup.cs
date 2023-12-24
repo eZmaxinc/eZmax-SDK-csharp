@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// ScimGroup
     /// </summary>
     [DataContract(Name = "Scim-Group")]
-    public partial class ScimGroup : IEquatable<ScimGroup>, IValidatableObject
+    public partial class ScimGroup : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimGroup" /> class.
@@ -97,71 +97,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ScimGroup);
-        }
-
-        /// <summary>
-        /// Returns true if ScimGroup instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ScimGroup to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ScimGroup input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
-                ) && 
-                (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    this.Members == input.Members ||
-                    this.Members != null &&
-                    input.Members != null &&
-                    this.Members.SequenceEqual(input.Members)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Id != null)
-                {
-                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
-                }
-                if (this.DisplayName != null)
-                {
-                    hashCode = (hashCode * 59) + this.DisplayName.GetHashCode();
-                }
-                if (this.Members != null)
-                {
-                    hashCode = (hashCode * 59) + this.Members.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

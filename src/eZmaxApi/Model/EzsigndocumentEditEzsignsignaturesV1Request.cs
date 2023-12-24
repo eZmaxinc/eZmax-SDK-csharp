@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
     /// </summary>
     [DataContract(Name = "ezsigndocument-editEzsignsignatures-v1-Request")]
-    public partial class EzsigndocumentEditEzsignsignaturesV1Request : IEquatable<EzsigndocumentEditEzsignsignaturesV1Request>, IValidatableObject
+    public partial class EzsigndocumentEditEzsignsignaturesV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignsignaturesV1Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentEditEzsignsignaturesV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentEditEzsignsignaturesV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentEditEzsignsignaturesV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentEditEzsignsignaturesV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsignsignature == input.AObjEzsignsignature ||
-                    this.AObjEzsignsignature != null &&
-                    input.AObjEzsignsignature != null &&
-                    this.AObjEzsignsignature.SequenceEqual(input.AObjEzsignsignature)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsignsignature != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignsignature.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

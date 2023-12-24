@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships
     /// </summary>
     [DataContract(Name = "ezsignsignergroup-getEzsignsignergroupmemberships-v1-Response-mPayload")]
-    public partial class EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload : IEquatable<EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsignsignergroupmembership == input.AObjEzsignsignergroupmembership ||
-                    this.AObjEzsignsignergroupmembership != null &&
-                    input.AObjEzsignsignergroupmembership != null &&
-                    this.AObjEzsignsignergroupmembership.SequenceEqual(input.AObjEzsignsignergroupmembership)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsignsignergroupmembership != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignsignergroupmembership.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

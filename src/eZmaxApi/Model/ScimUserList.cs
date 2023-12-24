@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// ScimUserList
     /// </summary>
     [DataContract(Name = "Scim-UserList")]
-    public partial class ScimUserList : IEquatable<ScimUserList>, IValidatableObject
+    public partial class ScimUserList : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimUserList" /> class.
@@ -103,78 +103,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ScimUserList);
-        }
-
-        /// <summary>
-        /// Returns true if ScimUserList instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ScimUserList to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ScimUserList input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.TotalResults == input.TotalResults ||
-                    this.TotalResults.Equals(input.TotalResults)
-                ) && 
-                (
-                    this.ItemsPerPage == input.ItemsPerPage ||
-                    this.ItemsPerPage.Equals(input.ItemsPerPage)
-                ) && 
-                (
-                    this.StartIndex == input.StartIndex ||
-                    this.StartIndex.Equals(input.StartIndex)
-                ) && 
-                (
-                    this.Schemas == input.Schemas ||
-                    this.Schemas != null &&
-                    input.Schemas != null &&
-                    this.Schemas.SequenceEqual(input.Schemas)
-                ) && 
-                (
-                    this.Resources == input.Resources ||
-                    this.Resources != null &&
-                    input.Resources != null &&
-                    this.Resources.SequenceEqual(input.Resources)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.TotalResults.GetHashCode();
-                hashCode = (hashCode * 59) + this.ItemsPerPage.GetHashCode();
-                hashCode = (hashCode * 59) + this.StartIndex.GetHashCode();
-                if (this.Schemas != null)
-                {
-                    hashCode = (hashCode * 59) + this.Schemas.GetHashCode();
-                }
-                if (this.Resources != null)
-                {
-                    hashCode = (hashCode * 59) + this.Resources.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

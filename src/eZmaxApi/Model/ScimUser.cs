@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// ScimUser
     /// </summary>
     [DataContract(Name = "Scim-User")]
-    public partial class ScimUser : IEquatable<ScimUser>, IValidatableObject
+    public partial class ScimUser : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimUser" /> class.
@@ -105,80 +105,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ScimUser);
-        }
-
-        /// <summary>
-        /// Returns true if ScimUser instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ScimUser to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ScimUser input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
-                ) && 
-                (
-                    this.UserName == input.UserName ||
-                    (this.UserName != null &&
-                    this.UserName.Equals(input.UserName))
-                ) && 
-                (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    this.Emails == input.Emails ||
-                    this.Emails != null &&
-                    input.Emails != null &&
-                    this.Emails.SequenceEqual(input.Emails)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Id != null)
-                {
-                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
-                }
-                if (this.UserName != null)
-                {
-                    hashCode = (hashCode * 59) + this.UserName.GetHashCode();
-                }
-                if (this.DisplayName != null)
-                {
-                    hashCode = (hashCode * 59) + this.DisplayName.GetHashCode();
-                }
-                if (this.Emails != null)
-                {
-                    hashCode = (hashCode * 59) + this.Emails.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount
     /// </summary>
     [DataContract(Name = "ezsignfolder-getCommunicationCount-v1-Response-mPayload")]
-    public partial class EzsignfolderGetCommunicationCountV1ResponseMPayload : IEquatable<EzsignfolderGetCommunicationCountV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignfolderGetCommunicationCountV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationCountV1ResponseMPayload" /> class.
@@ -74,48 +74,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfolderGetCommunicationCountV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfolderGetCommunicationCountV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfolderGetCommunicationCountV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfolderGetCommunicationCountV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ICommunicationCount == input.ICommunicationCount ||
-                    this.ICommunicationCount.Equals(input.ICommunicationCount)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.ICommunicationCount.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

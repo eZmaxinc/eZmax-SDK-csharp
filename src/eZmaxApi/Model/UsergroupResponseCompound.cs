@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Usergroup Object
     /// </summary>
     [DataContract(Name = "usergroup-ResponseCompound")]
-    public partial class UsergroupResponseCompound : IEquatable<UsergroupResponseCompound>, IValidatableObject
+    public partial class UsergroupResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupResponseCompound" /> class.
@@ -88,57 +88,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UsergroupResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if UsergroupResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UsergroupResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UsergroupResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiUsergroupID == input.PkiUsergroupID ||
-                    this.PkiUsergroupID.Equals(input.PkiUsergroupID)
-                ) && 
-                (
-                    this.ObjUsergroupName == input.ObjUsergroupName ||
-                    (this.ObjUsergroupName != null &&
-                    this.ObjUsergroupName.Equals(input.ObjUsergroupName))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiUsergroupID.GetHashCode();
-                if (this.ObjUsergroupName != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjUsergroupName.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

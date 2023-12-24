@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Contact Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "contact-RequestCompound")]
-    public partial class ContactRequestCompound : IEquatable<ContactRequestCompound>, IValidatableObject
+    public partial class ContactRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactRequestCompound" /> class.
@@ -158,98 +158,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ContactRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if ContactRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ContactRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ContactRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiContacttitleID == input.FkiContacttitleID ||
-                    this.FkiContacttitleID.Equals(input.FkiContacttitleID)
-                ) && 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    this.FkiLanguageID.Equals(input.FkiLanguageID)
-                ) && 
-                (
-                    this.SContactFirstname == input.SContactFirstname ||
-                    (this.SContactFirstname != null &&
-                    this.SContactFirstname.Equals(input.SContactFirstname))
-                ) && 
-                (
-                    this.SContactLastname == input.SContactLastname ||
-                    (this.SContactLastname != null &&
-                    this.SContactLastname.Equals(input.SContactLastname))
-                ) && 
-                (
-                    this.SContactCompany == input.SContactCompany ||
-                    (this.SContactCompany != null &&
-                    this.SContactCompany.Equals(input.SContactCompany))
-                ) && 
-                (
-                    this.DtContactBirthdate == input.DtContactBirthdate ||
-                    (this.DtContactBirthdate != null &&
-                    this.DtContactBirthdate.Equals(input.DtContactBirthdate))
-                ) && 
-                (
-                    this.ObjContactinformations == input.ObjContactinformations ||
-                    (this.ObjContactinformations != null &&
-                    this.ObjContactinformations.Equals(input.ObjContactinformations))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiContacttitleID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiLanguageID.GetHashCode();
-                if (this.SContactFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SContactFirstname.GetHashCode();
-                }
-                if (this.SContactLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SContactLastname.GetHashCode();
-                }
-                if (this.SContactCompany != null)
-                {
-                    hashCode = (hashCode * 59) + this.SContactCompany.GetHashCode();
-                }
-                if (this.DtContactBirthdate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtContactBirthdate.GetHashCode();
-                }
-                if (this.ObjContactinformations != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjContactinformations.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

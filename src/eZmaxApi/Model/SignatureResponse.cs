@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Signature Object
     /// </summary>
     [DataContract(Name = "signature-Response")]
-    public partial class SignatureResponse : IEquatable<SignatureResponse>, IValidatableObject
+    public partial class SignatureResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureResponse" /> class.
@@ -90,57 +90,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SignatureResponse);
-        }
-
-        /// <summary>
-        /// Returns true if SignatureResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SignatureResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SignatureResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiSignatureID == input.PkiSignatureID ||
-                    this.PkiSignatureID.Equals(input.PkiSignatureID)
-                ) && 
-                (
-                    this.SSignatureUrl == input.SSignatureUrl ||
-                    (this.SSignatureUrl != null &&
-                    this.SSignatureUrl.Equals(input.SSignatureUrl))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiSignatureID.GetHashCode();
-                if (this.SSignatureUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SSignatureUrl.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

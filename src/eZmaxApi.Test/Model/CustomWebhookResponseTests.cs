@@ -137,12 +137,39 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SWebhookApikey'
+        /// </summary>
+        [Fact]
+        public void SWebhookApikeyTest()
+        {
+            // TODO unit test for the property 'SWebhookApikey'
+        }
+
+        /// <summary>
+        /// Test the property 'SWebhookSecret'
+        /// </summary>
+        [Fact]
+        public void SWebhookSecretTest()
+        {
+            // TODO unit test for the property 'SWebhookSecret'
+        }
+
+        /// <summary>
         /// Test the property 'BWebhookIsactive'
         /// </summary>
         [Fact]
         public void BWebhookIsactiveTest()
         {
             // TODO unit test for the property 'BWebhookIsactive'
+        }
+
+        /// <summary>
+        /// Test the property 'BWebhookIssigned'
+        /// </summary>
+        [Fact]
+        public void BWebhookIssignedTest()
+        {
+            // TODO unit test for the property 'BWebhookIssigned'
         }
 
         /// <summary>

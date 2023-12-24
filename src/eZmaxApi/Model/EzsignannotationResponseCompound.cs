@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignannotation Object
     /// </summary>
     [DataContract(Name = "ezsignannotation-ResponseCompound")]
-    public partial class EzsignannotationResponseCompound : IEquatable<EzsignannotationResponseCompound>, IValidatableObject
+    public partial class EzsignannotationResponseCompound : IValidatableObject
     {
 
         /// <summary>
@@ -187,111 +187,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignannotationResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignannotationResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignannotationResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignannotationResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignannotationID == input.PkiEzsignannotationID ||
-                    this.PkiEzsignannotationID.Equals(input.PkiEzsignannotationID)
-                ) && 
-                (
-                    this.FkiEzsigndocumentID == input.FkiEzsigndocumentID ||
-                    this.FkiEzsigndocumentID.Equals(input.FkiEzsigndocumentID)
-                ) && 
-                (
-                    this.EEzsignannotationHorizontalalignment == input.EEzsignannotationHorizontalalignment ||
-                    this.EEzsignannotationHorizontalalignment.Equals(input.EEzsignannotationHorizontalalignment)
-                ) && 
-                (
-                    this.EEzsignannotationVerticalalignment == input.EEzsignannotationVerticalalignment ||
-                    this.EEzsignannotationVerticalalignment.Equals(input.EEzsignannotationVerticalalignment)
-                ) && 
-                (
-                    this.EEzsignannotationType == input.EEzsignannotationType ||
-                    this.EEzsignannotationType.Equals(input.EEzsignannotationType)
-                ) && 
-                (
-                    this.IEzsignannotationX == input.IEzsignannotationX ||
-                    this.IEzsignannotationX.Equals(input.IEzsignannotationX)
-                ) && 
-                (
-                    this.IEzsignannotationY == input.IEzsignannotationY ||
-                    this.IEzsignannotationY.Equals(input.IEzsignannotationY)
-                ) && 
-                (
-                    this.IEzsignannotationWidth == input.IEzsignannotationWidth ||
-                    this.IEzsignannotationWidth.Equals(input.IEzsignannotationWidth)
-                ) && 
-                (
-                    this.IEzsignannotationHeight == input.IEzsignannotationHeight ||
-                    this.IEzsignannotationHeight.Equals(input.IEzsignannotationHeight)
-                ) && 
-                (
-                    this.SEzsignannotationText == input.SEzsignannotationText ||
-                    (this.SEzsignannotationText != null &&
-                    this.SEzsignannotationText.Equals(input.SEzsignannotationText))
-                ) && 
-                (
-                    this.IEzsignpagePagenumber == input.IEzsignpagePagenumber ||
-                    this.IEzsignpagePagenumber.Equals(input.IEzsignpagePagenumber)
-                ) && 
-                (
-                    this.ObjTextstylestatic == input.ObjTextstylestatic ||
-                    (this.ObjTextstylestatic != null &&
-                    this.ObjTextstylestatic.Equals(input.ObjTextstylestatic))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignannotationID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigndocumentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignannotationHorizontalalignment.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignannotationVerticalalignment.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignannotationType.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignannotationX.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignannotationY.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignannotationWidth.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignannotationHeight.GetHashCode();
-                if (this.SEzsignannotationText != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignannotationText.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzsignpagePagenumber.GetHashCode();
-                if (this.ObjTextstylestatic != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjTextstylestatic.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

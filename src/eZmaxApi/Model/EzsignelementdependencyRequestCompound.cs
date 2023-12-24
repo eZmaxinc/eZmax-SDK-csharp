@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignelementdependency Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignelementdependency-RequestCompound")]
-    public partial class EzsignelementdependencyRequestCompound : IEquatable<EzsignelementdependencyRequestCompound>, IValidatableObject
+    public partial class EzsignelementdependencyRequestCompound : IValidatableObject
     {
 
         /// <summary>
@@ -158,100 +158,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignelementdependencyRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignelementdependencyRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignelementdependencyRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignelementdependencyRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignelementdependencyID == input.PkiEzsignelementdependencyID ||
-                    this.PkiEzsignelementdependencyID.Equals(input.PkiEzsignelementdependencyID)
-                ) && 
-                (
-                    this.FkiEzsignformfieldIDValidation == input.FkiEzsignformfieldIDValidation ||
-                    this.FkiEzsignformfieldIDValidation.Equals(input.FkiEzsignformfieldIDValidation)
-                ) && 
-                (
-                    this.FkiEzsignformfieldgroupIDValidation == input.FkiEzsignformfieldgroupIDValidation ||
-                    this.FkiEzsignformfieldgroupIDValidation.Equals(input.FkiEzsignformfieldgroupIDValidation)
-                ) && 
-                (
-                    this.SEzsignelementdependencyEzsignformfieldgrouplabel == input.SEzsignelementdependencyEzsignformfieldgrouplabel ||
-                    (this.SEzsignelementdependencyEzsignformfieldgrouplabel != null &&
-                    this.SEzsignelementdependencyEzsignformfieldgrouplabel.Equals(input.SEzsignelementdependencyEzsignformfieldgrouplabel))
-                ) && 
-                (
-                    this.SEzsignelementdependencyEzsignformfieldlabel == input.SEzsignelementdependencyEzsignformfieldlabel ||
-                    (this.SEzsignelementdependencyEzsignformfieldlabel != null &&
-                    this.SEzsignelementdependencyEzsignformfieldlabel.Equals(input.SEzsignelementdependencyEzsignformfieldlabel))
-                ) && 
-                (
-                    this.EEzsignelementdependencyValidation == input.EEzsignelementdependencyValidation ||
-                    this.EEzsignelementdependencyValidation.Equals(input.EEzsignelementdependencyValidation)
-                ) && 
-                (
-                    this.BEzsignelementdependencySelected == input.BEzsignelementdependencySelected ||
-                    this.BEzsignelementdependencySelected.Equals(input.BEzsignelementdependencySelected)
-                ) && 
-                (
-                    this.EEzsignelementdependencyOperator == input.EEzsignelementdependencyOperator ||
-                    this.EEzsignelementdependencyOperator.Equals(input.EEzsignelementdependencyOperator)
-                ) && 
-                (
-                    this.SEzsignelementdependencyValue == input.SEzsignelementdependencyValue ||
-                    (this.SEzsignelementdependencyValue != null &&
-                    this.SEzsignelementdependencyValue.Equals(input.SEzsignelementdependencyValue))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignelementdependencyID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignformfieldIDValidation.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignformfieldgroupIDValidation.GetHashCode();
-                if (this.SEzsignelementdependencyEzsignformfieldgrouplabel != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignelementdependencyEzsignformfieldgrouplabel.GetHashCode();
-                }
-                if (this.SEzsignelementdependencyEzsignformfieldlabel != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignelementdependencyEzsignformfieldlabel.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EEzsignelementdependencyValidation.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignelementdependencySelected.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignelementdependencyOperator.GetHashCode();
-                if (this.SEzsignelementdependencyValue != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignelementdependencyValue.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

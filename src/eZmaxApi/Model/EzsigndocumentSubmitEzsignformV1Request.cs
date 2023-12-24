@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform
     /// </summary>
     [DataContract(Name = "ezsigndocument-submitEzsignform-v1-Request")]
-    public partial class EzsigndocumentSubmitEzsignformV1Request : IEquatable<EzsigndocumentSubmitEzsignformV1Request>, IValidatableObject
+    public partial class EzsigndocumentSubmitEzsignformV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentSubmitEzsignformV1Request" /> class.
@@ -87,58 +87,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentSubmitEzsignformV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentSubmitEzsignformV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentSubmitEzsignformV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentSubmitEzsignformV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.BEzsignformIsdraft == input.BEzsignformIsdraft ||
-                    this.BEzsignformIsdraft.Equals(input.BEzsignformIsdraft)
-                ) && 
-                (
-                    this.AObjEzsignformfieldgroup == input.AObjEzsignformfieldgroup ||
-                    this.AObjEzsignformfieldgroup != null &&
-                    input.AObjEzsignformfieldgroup != null &&
-                    this.AObjEzsignformfieldgroup.SequenceEqual(input.AObjEzsignformfieldgroup)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.BEzsignformIsdraft.GetHashCode();
-                if (this.AObjEzsignformfieldgroup != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignformfieldgroup.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

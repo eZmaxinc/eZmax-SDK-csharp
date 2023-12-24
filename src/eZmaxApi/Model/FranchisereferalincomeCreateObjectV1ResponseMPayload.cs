@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/franchisereferalincome
     /// </summary>
     [DataContract(Name = "franchisereferalincome-createObject-v1-Response-mPayload")]
-    public partial class FranchisereferalincomeCreateObjectV1ResponseMPayload : IEquatable<FranchisereferalincomeCreateObjectV1ResponseMPayload>, IValidatableObject
+    public partial class FranchisereferalincomeCreateObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeCreateObjectV1ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as FranchisereferalincomeCreateObjectV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if FranchisereferalincomeCreateObjectV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of FranchisereferalincomeCreateObjectV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(FranchisereferalincomeCreateObjectV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiFranchisereferalincomeID == input.APkiFranchisereferalincomeID ||
-                    this.APkiFranchisereferalincomeID != null &&
-                    input.APkiFranchisereferalincomeID != null &&
-                    this.APkiFranchisereferalincomeID.SequenceEqual(input.APkiFranchisereferalincomeID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiFranchisereferalincomeID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiFranchisereferalincomeID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

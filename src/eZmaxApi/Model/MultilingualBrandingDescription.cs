@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Description of the Branding
     /// </summary>
     [DataContract(Name = "Multilingual-BrandingDescription")]
-    public partial class MultilingualBrandingDescription : IEquatable<MultilingualBrandingDescription>, IValidatableObject
+    public partial class MultilingualBrandingDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualBrandingDescription" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualBrandingDescription);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualBrandingDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualBrandingDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualBrandingDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SBrandingDescription1 == input.SBrandingDescription1 ||
-                    (this.SBrandingDescription1 != null &&
-                    this.SBrandingDescription1.Equals(input.SBrandingDescription1))
-                ) && 
-                (
-                    this.SBrandingDescription2 == input.SBrandingDescription2 ||
-                    (this.SBrandingDescription2 != null &&
-                    this.SBrandingDescription2.Equals(input.SBrandingDescription2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SBrandingDescription1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBrandingDescription1.GetHashCode();
-                }
-                if (this.SBrandingDescription2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBrandingDescription2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

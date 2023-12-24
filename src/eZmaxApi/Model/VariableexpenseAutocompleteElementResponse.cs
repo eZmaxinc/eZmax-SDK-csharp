@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Variableexpense AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "variableexpense-AutocompleteElement-Response")]
-    public partial class VariableexpenseAutocompleteElementResponse : IEquatable<VariableexpenseAutocompleteElementResponse>, IValidatableObject
+    public partial class VariableexpenseAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseAutocompleteElementResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as VariableexpenseAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if VariableexpenseAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of VariableexpenseAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(VariableexpenseAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SVariableexpenseDescriptionX == input.SVariableexpenseDescriptionX ||
-                    (this.SVariableexpenseDescriptionX != null &&
-                    this.SVariableexpenseDescriptionX.Equals(input.SVariableexpenseDescriptionX))
-                ) && 
-                (
-                    this.PkiVariableexpenseID == input.PkiVariableexpenseID ||
-                    this.PkiVariableexpenseID.Equals(input.PkiVariableexpenseID)
-                ) && 
-                (
-                    this.BVariableexpenseIsactive == input.BVariableexpenseIsactive ||
-                    this.BVariableexpenseIsactive.Equals(input.BVariableexpenseIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SVariableexpenseDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SVariableexpenseDescriptionX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiVariableexpenseID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BVariableexpenseIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/module/user/createEzsignuser
     /// </summary>
     [DataContract(Name = "user-createEzsignuser-v1-Response-mPayload")]
-    public partial class UserCreateEzsignuserV1ResponseMPayload : IEquatable<UserCreateEzsignuserV1ResponseMPayload>, IValidatableObject
+    public partial class UserCreateEzsignuserV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1ResponseMPayload" /> class.
@@ -93,63 +93,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserCreateEzsignuserV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if UserCreateEzsignuserV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserCreateEzsignuserV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserCreateEzsignuserV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ASEmailAddressSuccess == input.ASEmailAddressSuccess ||
-                    this.ASEmailAddressSuccess != null &&
-                    input.ASEmailAddressSuccess != null &&
-                    this.ASEmailAddressSuccess.SequenceEqual(input.ASEmailAddressSuccess)
-                ) && 
-                (
-                    this.ASEmailAddressFailure == input.ASEmailAddressFailure ||
-                    this.ASEmailAddressFailure != null &&
-                    input.ASEmailAddressFailure != null &&
-                    this.ASEmailAddressFailure.SequenceEqual(input.ASEmailAddressFailure)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ASEmailAddressSuccess != null)
-                {
-                    hashCode = (hashCode * 59) + this.ASEmailAddressSuccess.GetHashCode();
-                }
-                if (this.ASEmailAddressFailure != null)
-                {
-                    hashCode = (hashCode * 59) + this.ASEmailAddressFailure.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

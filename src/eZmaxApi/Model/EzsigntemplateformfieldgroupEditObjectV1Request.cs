@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for PUT /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
     /// </summary>
     [DataContract(Name = "ezsigntemplateformfieldgroup-editObject-v1-Request")]
-    public partial class EzsigntemplateformfieldgroupEditObjectV1Request : IEquatable<EzsigntemplateformfieldgroupEditObjectV1Request>, IValidatableObject
+    public partial class EzsigntemplateformfieldgroupEditObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupEditObjectV1Request" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplateformfieldgroupEditObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplateformfieldgroupEditObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplateformfieldgroupEditObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplateformfieldgroupEditObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzsigntemplateformfieldgroup == input.ObjEzsigntemplateformfieldgroup ||
-                    (this.ObjEzsigntemplateformfieldgroup != null &&
-                    this.ObjEzsigntemplateformfieldgroup.Equals(input.ObjEzsigntemplateformfieldgroup))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzsigntemplateformfieldgroup != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsigntemplateformfieldgroup.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

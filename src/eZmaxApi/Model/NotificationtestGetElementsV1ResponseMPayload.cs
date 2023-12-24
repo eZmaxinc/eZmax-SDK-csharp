@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/notificationtest/{pkiNotificationtestID}/getElements
     /// </summary>
     [DataContract(Name = "notificationtest-getElements-v1-Response-mPayload")]
-    public partial class NotificationtestGetElementsV1ResponseMPayload : IEquatable<NotificationtestGetElementsV1ResponseMPayload>, IValidatableObject
+    public partial class NotificationtestGetElementsV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationtestGetElementsV1ResponseMPayload" /> class.
@@ -118,77 +118,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as NotificationtestGetElementsV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if NotificationtestGetElementsV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of NotificationtestGetElementsV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(NotificationtestGetElementsV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiNotificationtestID == input.PkiNotificationtestID ||
-                    this.PkiNotificationtestID.Equals(input.PkiNotificationtestID)
-                ) && 
-                (
-                    this.SNotificationtestFunction == input.SNotificationtestFunction ||
-                    (this.SNotificationtestFunction != null &&
-                    this.SNotificationtestFunction.Equals(input.SNotificationtestFunction))
-                ) && 
-                (
-                    this.ASVariableobjectProperty == input.ASVariableobjectProperty ||
-                    this.ASVariableobjectProperty != null &&
-                    input.ASVariableobjectProperty != null &&
-                    this.ASVariableobjectProperty.SequenceEqual(input.ASVariableobjectProperty)
-                ) && 
-                (
-                    this.AObjVariableobject == input.AObjVariableobject ||
-                    this.AObjVariableobject != null &&
-                    input.AObjVariableobject != null &&
-                    this.AObjVariableobject.SequenceEqual(input.AObjVariableobject)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiNotificationtestID.GetHashCode();
-                if (this.SNotificationtestFunction != null)
-                {
-                    hashCode = (hashCode * 59) + this.SNotificationtestFunction.GetHashCode();
-                }
-                if (this.ASVariableobjectProperty != null)
-                {
-                    hashCode = (hashCode * 59) + this.ASVariableobjectProperty.GetHashCode();
-                }
-                if (this.AObjVariableobject != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjVariableobject.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

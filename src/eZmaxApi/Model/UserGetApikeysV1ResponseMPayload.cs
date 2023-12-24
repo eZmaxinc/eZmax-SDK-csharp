@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/user/{pkiUserID}/getApikeys
     /// </summary>
     [DataContract(Name = "user-getApikeys-v1-Response-mPayload")]
-    public partial class UserGetApikeysV1ResponseMPayload : IEquatable<UserGetApikeysV1ResponseMPayload>, IValidatableObject
+    public partial class UserGetApikeysV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetApikeysV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserGetApikeysV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if UserGetApikeysV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserGetApikeysV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserGetApikeysV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjApikey == input.AObjApikey ||
-                    this.AObjApikey != null &&
-                    input.AObjApikey != null &&
-                    this.AObjApikey.SequenceEqual(input.AObjApikey)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjApikey != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjApikey.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

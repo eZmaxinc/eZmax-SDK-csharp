@@ -137,6 +137,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BWebhookIssigned'
+        /// </summary>
+        [Fact]
+        public void BWebhookIssignedTest()
+        {
+            // TODO unit test for the property 'BWebhookIssigned'
+        }
+
+        /// <summary>
         /// Test the property 'BWebhookSkipsslvalidation'
         /// </summary>
         [Fact]

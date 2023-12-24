@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/communication
     /// </summary>
     [DataContract(Name = "communication-createObject-v1-Response-mPayload")]
-    public partial class CommunicationCreateObjectV1ResponseMPayload : IEquatable<CommunicationCreateObjectV1ResponseMPayload>, IValidatableObject
+    public partial class CommunicationCreateObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationCreateObjectV1ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommunicationCreateObjectV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if CommunicationCreateObjectV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommunicationCreateObjectV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommunicationCreateObjectV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiCommunicationID == input.APkiCommunicationID ||
-                    this.APkiCommunicationID != null &&
-                    input.APkiCommunicationID != null &&
-                    this.APkiCommunicationID.SequenceEqual(input.APkiCommunicationID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiCommunicationID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiCommunicationID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

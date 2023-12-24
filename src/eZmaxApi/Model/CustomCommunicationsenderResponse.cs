@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Generic Communicationsender Response
     /// </summary>
     [DataContract(Name = "Custom-Communicationsender-Response")]
-    public partial class CustomCommunicationsenderResponse : IEquatable<CustomCommunicationsenderResponse>, IValidatableObject
+    public partial class CustomCommunicationsenderResponse : IValidatableObject
     {
         /// <summary>
         /// Defines ECommunicationsenderObjecttype
@@ -60,7 +60,13 @@ namespace eZmaxApi.Model
             /// Enum Mailboxshared for value: Mailboxshared
             /// </summary>
             [EnumMember(Value = "Mailboxshared")]
-            Mailboxshared = 4
+            Mailboxshared = 4,
+
+            /// <summary>
+            /// Enum Phonelineshared for value: Phonelineshared
+            /// </summary>
+            [EnumMember(Value = "Phonelineshared")]
+            Phonelineshared = 5
         }
 
 
@@ -82,11 +88,13 @@ namespace eZmaxApi.Model
         /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
         /// <param name="fkiMailboxsharedID">The unique ID of the Mailboxshared.</param>
+        /// <param name="fkiPhonelinesharedID">The unique ID of the Phonelineshared.</param>
         /// <param name="eCommunicationsenderObjecttype">eCommunicationsenderObjecttype (required).</param>
         /// <param name="objContactName">objContactName (required).</param>
-        /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
-        public CustomCommunicationsenderResponse(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiUserID = default(int), int fkiMailboxsharedID = default(int), ECommunicationsenderObjecttypeEnum eCommunicationsenderObjecttype = default(ECommunicationsenderObjecttypeEnum), CustomContactNameResponse objContactName = default(CustomContactNameResponse), string sEmailAddress = default(string), string sPhoneE164 = default(string))
+        /// <param name="objEmail">objEmail.</param>
+        /// <param name="objPhoneFax">objPhoneFax.</param>
+        /// <param name="objPhoneSMS">objPhoneSMS.</param>
+        public CustomCommunicationsenderResponse(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiUserID = default(int), int fkiMailboxsharedID = default(int), int fkiPhonelinesharedID = default(int), ECommunicationsenderObjecttypeEnum eCommunicationsenderObjecttype = default(ECommunicationsenderObjecttypeEnum), CustomContactNameResponse objContactName = default(CustomContactNameResponse), EmailResponseCompound objEmail = default(EmailResponseCompound), PhoneResponseCompound objPhoneFax = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound))
         {
             this.ECommunicationsenderObjecttype = eCommunicationsenderObjecttype;
             // to ensure "objContactName" is required (not null)
@@ -99,8 +107,10 @@ namespace eZmaxApi.Model
             this.FkiBrokerID = fkiBrokerID;
             this.FkiUserID = fkiUserID;
             this.FkiMailboxsharedID = fkiMailboxsharedID;
-            this.SEmailAddress = sEmailAddress;
-            this.SPhoneE164 = sPhoneE164;
+            this.FkiPhonelinesharedID = fkiPhonelinesharedID;
+            this.ObjEmail = objEmail;
+            this.ObjPhoneFax = objPhoneFax;
+            this.ObjPhoneSMS = objPhoneSMS;
         }
 
         /// <summary>
@@ -136,26 +146,36 @@ namespace eZmaxApi.Model
         public int FkiMailboxsharedID { get; set; }
 
         /// <summary>
+        /// The unique ID of the Phonelineshared
+        /// </summary>
+        /// <value>The unique ID of the Phonelineshared</value>
+        /* <example>47</example>*/
+        [DataMember(Name = "fkiPhonelinesharedID", EmitDefaultValue = false)]
+        public int FkiPhonelinesharedID { get; set; }
+
+        /// <summary>
         /// Gets or Sets ObjContactName
         /// </summary>
         [DataMember(Name = "objContactName", IsRequired = true, EmitDefaultValue = true)]
         public CustomContactNameResponse ObjContactName { get; set; }
 
         /// <summary>
-        /// The email address.
+        /// Gets or Sets ObjEmail
         /// </summary>
-        /// <value>The email address.</value>
-        /* <example>email@example.com</example>*/
-        [DataMember(Name = "sEmailAddress", EmitDefaultValue = false)]
-        public string SEmailAddress { get; set; }
+        [DataMember(Name = "objEmail", EmitDefaultValue = false)]
+        public EmailResponseCompound ObjEmail { get; set; }
 
         /// <summary>
-        /// A phone number in E.164 Format
+        /// Gets or Sets ObjPhoneFax
         /// </summary>
-        /// <value>A phone number in E.164 Format</value>
-        /* <example>+15149901516</example>*/
-        [DataMember(Name = "sPhoneE164", EmitDefaultValue = false)]
-        public string SPhoneE164 { get; set; }
+        [DataMember(Name = "objPhoneFax", EmitDefaultValue = false)]
+        public PhoneResponseCompound ObjPhoneFax { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjPhoneSMS
+        /// </summary>
+        [DataMember(Name = "objPhoneSMS", EmitDefaultValue = false)]
+        public PhoneResponseCompound ObjPhoneSMS { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -169,10 +189,12 @@ namespace eZmaxApi.Model
             sb.Append("  FkiBrokerID: ").Append(FkiBrokerID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
             sb.Append("  FkiMailboxsharedID: ").Append(FkiMailboxsharedID).Append("\n");
+            sb.Append("  FkiPhonelinesharedID: ").Append(FkiPhonelinesharedID).Append("\n");
             sb.Append("  ECommunicationsenderObjecttype: ").Append(ECommunicationsenderObjecttype).Append("\n");
             sb.Append("  ObjContactName: ").Append(ObjContactName).Append("\n");
-            sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
-            sb.Append("  SPhoneE164: ").Append(SPhoneE164).Append("\n");
+            sb.Append("  ObjEmail: ").Append(ObjEmail).Append("\n");
+            sb.Append("  ObjPhoneFax: ").Append(ObjPhoneFax).Append("\n");
+            sb.Append("  ObjPhoneSMS: ").Append(ObjPhoneSMS).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -184,95 +206,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomCommunicationsenderResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomCommunicationsenderResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomCommunicationsenderResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomCommunicationsenderResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiAgentID == input.FkiAgentID ||
-                    this.FkiAgentID.Equals(input.FkiAgentID)
-                ) && 
-                (
-                    this.FkiBrokerID == input.FkiBrokerID ||
-                    this.FkiBrokerID.Equals(input.FkiBrokerID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.FkiMailboxsharedID == input.FkiMailboxsharedID ||
-                    this.FkiMailboxsharedID.Equals(input.FkiMailboxsharedID)
-                ) && 
-                (
-                    this.ECommunicationsenderObjecttype == input.ECommunicationsenderObjecttype ||
-                    this.ECommunicationsenderObjecttype.Equals(input.ECommunicationsenderObjecttype)
-                ) && 
-                (
-                    this.ObjContactName == input.ObjContactName ||
-                    (this.ObjContactName != null &&
-                    this.ObjContactName.Equals(input.ObjContactName))
-                ) && 
-                (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                ) && 
-                (
-                    this.SPhoneE164 == input.SPhoneE164 ||
-                    (this.SPhoneE164 != null &&
-                    this.SPhoneE164.Equals(input.SPhoneE164))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiAgentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiBrokerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiMailboxsharedID.GetHashCode();
-                hashCode = (hashCode * 59) + this.ECommunicationsenderObjecttype.GetHashCode();
-                if (this.ObjContactName != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjContactName.GetHashCode();
-                }
-                if (this.SEmailAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailAddress.GetHashCode();
-                }
-                if (this.SPhoneE164 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneE164.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>
@@ -312,13 +245,16 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMailboxsharedID, must be a value greater than or equal to 0.", new [] { "FkiMailboxsharedID" });
             }
 
-            if (this.SPhoneE164 != null) {
-                // SPhoneE164 (string) pattern
-                Regex regexSPhoneE164 = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);
-                if (!regexSPhoneE164.Match(this.SPhoneE164).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164, must match a pattern of " + regexSPhoneE164, new [] { "SPhoneE164" });
-                }
+            // FkiPhonelinesharedID (int) maximum
+            if (this.FkiPhonelinesharedID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value less than or equal to 255.", new [] { "FkiPhonelinesharedID" });
+            }
+
+            // FkiPhonelinesharedID (int) minimum
+            if (this.FkiPhonelinesharedID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value greater than or equal to 0.", new [] { "FkiPhonelinesharedID" });
             }
 
             yield break;

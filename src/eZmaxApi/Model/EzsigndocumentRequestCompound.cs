@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsigndocument Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsigndocument-RequestCompound")]
-    public partial class EzsigndocumentRequestCompound : IEquatable<EzsigndocumentRequestCompound>, IValidatableObject
+    public partial class EzsigndocumentRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Indicates where to look for the document binary content.
@@ -245,7 +245,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64.
         /// </summary>
         /// <value>The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64.</value>
-        /* <example>[B@4985cbcb</example>*/
+        /* <example>eyIkcmVmIjoiIy9jb21wb25lbnRzL2V4YW1wbGVzL1BkZkFzQmFzZTY0L3ZhbHVlIn0&#x3D;</example>*/
         [DataMember(Name = "sEzsigndocumentBase64", EmitDefaultValue = false)]
         public byte[] SEzsigndocumentBase64 { get; set; }
 
@@ -330,142 +330,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsigndocumentID == input.PkiEzsigndocumentID ||
-                    this.PkiEzsigndocumentID.Equals(input.PkiEzsigndocumentID)
-                ) && 
-                (
-                    this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
-                    this.FkiEzsignfolderID.Equals(input.FkiEzsignfolderID)
-                ) && 
-                (
-                    this.FkiEzsigntemplateID == input.FkiEzsigntemplateID ||
-                    this.FkiEzsigntemplateID.Equals(input.FkiEzsigntemplateID)
-                ) && 
-                (
-                    this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
-                    this.FkiEzsignfoldersignerassociationID.Equals(input.FkiEzsignfoldersignerassociationID)
-                ) && 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    this.FkiLanguageID.Equals(input.FkiLanguageID)
-                ) && 
-                (
-                    this.EEzsigndocumentSource == input.EEzsigndocumentSource ||
-                    this.EEzsigndocumentSource.Equals(input.EEzsigndocumentSource)
-                ) && 
-                (
-                    this.EEzsigndocumentFormat == input.EEzsigndocumentFormat ||
-                    this.EEzsigndocumentFormat.Equals(input.EEzsigndocumentFormat)
-                ) && 
-                (
-                    this.SEzsigndocumentBase64 == input.SEzsigndocumentBase64 ||
-                    (this.SEzsigndocumentBase64 != null &&
-                    this.SEzsigndocumentBase64.Equals(input.SEzsigndocumentBase64))
-                ) && 
-                (
-                    this.SEzsigndocumentUrl == input.SEzsigndocumentUrl ||
-                    (this.SEzsigndocumentUrl != null &&
-                    this.SEzsigndocumentUrl.Equals(input.SEzsigndocumentUrl))
-                ) && 
-                (
-                    this.BEzsigndocumentForcerepair == input.BEzsigndocumentForcerepair ||
-                    this.BEzsigndocumentForcerepair.Equals(input.BEzsigndocumentForcerepair)
-                ) && 
-                (
-                    this.SEzsigndocumentPassword == input.SEzsigndocumentPassword ||
-                    (this.SEzsigndocumentPassword != null &&
-                    this.SEzsigndocumentPassword.Equals(input.SEzsigndocumentPassword))
-                ) && 
-                (
-                    this.EEzsigndocumentForm == input.EEzsigndocumentForm ||
-                    this.EEzsigndocumentForm.Equals(input.EEzsigndocumentForm)
-                ) && 
-                (
-                    this.DtEzsigndocumentDuedate == input.DtEzsigndocumentDuedate ||
-                    (this.DtEzsigndocumentDuedate != null &&
-                    this.DtEzsigndocumentDuedate.Equals(input.DtEzsigndocumentDuedate))
-                ) && 
-                (
-                    this.SEzsigndocumentName == input.SEzsigndocumentName ||
-                    (this.SEzsigndocumentName != null &&
-                    this.SEzsigndocumentName.Equals(input.SEzsigndocumentName))
-                ) && 
-                (
-                    this.SEzsigndocumentExternalid == input.SEzsigndocumentExternalid ||
-                    (this.SEzsigndocumentExternalid != null &&
-                    this.SEzsigndocumentExternalid.Equals(input.SEzsigndocumentExternalid))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsigndocumentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfolderID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplateID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldersignerassociationID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiLanguageID.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsigndocumentSource.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsigndocumentFormat.GetHashCode();
-                if (this.SEzsigndocumentBase64 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentBase64.GetHashCode();
-                }
-                if (this.SEzsigndocumentUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentUrl.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzsigndocumentForcerepair.GetHashCode();
-                if (this.SEzsigndocumentPassword != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentPassword.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EEzsigndocumentForm.GetHashCode();
-                if (this.DtEzsigndocumentDuedate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsigndocumentDuedate.GetHashCode();
-                }
-                if (this.SEzsigndocumentName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentName.GetHashCode();
-                }
-                if (this.SEzsigndocumentExternalid != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentExternalid.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

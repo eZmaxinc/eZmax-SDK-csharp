@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsignature Object
     /// </summary>
     [DataContract(Name = "ezsignsignature-Response")]
-    public partial class EzsignsignatureResponse : IEquatable<EzsignsignatureResponse>, IValidatableObject
+    public partial class EzsignsignatureResponse : IValidatableObject
     {
 
         /// <summary>
@@ -79,6 +79,8 @@ namespace eZmaxApi.Model
         /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature (required).</param>
         /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
         /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="fkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason.</param>
+        /// <param name="sEzsignsigningreasonDescriptionX">The description of the Ezsignsigningreason in the language of the requester.</param>
         /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
         /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
         /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
@@ -104,7 +106,7 @@ namespace eZmaxApi.Model
         /// <param name="objContactName">objContactName (required).</param>
         /// <param name="objContactNameDelegation">objContactNameDelegation.</param>
         /// <param name="objSignature">objSignature.</param>
-        public EzsignsignatureResponse(int pkiEzsignsignatureID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int iEzsignsignatureValidationstep = default(int), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), bool bEzsignsignatureRequired = default(bool), int fkiEzsignfoldersignerassociationIDValidation = default(int), string dtEzsignsignatureDate = default(string), int iEzsignsignatureattachmentCount = default(int), string sEzsignsignatureDescription = default(string), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default(FieldEEzsignsignatureDependencyrequirement?), string sEzsignsignatureRegexp = default(string), CustomContactNameResponse objContactName = default(CustomContactNameResponse), CustomContactNameResponse objContactNameDelegation = default(CustomContactNameResponse), SignatureResponseCompound objSignature = default(SignatureResponseCompound))
+        public EzsignsignatureResponse(int pkiEzsignsignatureID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiEzsignsigningreasonID = default(int), string sEzsignsigningreasonDescriptionX = default(string), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int iEzsignsignatureValidationstep = default(int), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), bool bEzsignsignatureRequired = default(bool), int fkiEzsignfoldersignerassociationIDValidation = default(int), string dtEzsignsignatureDate = default(string), int iEzsignsignatureattachmentCount = default(int), string sEzsignsignatureDescription = default(string), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default(FieldEEzsignsignatureDependencyrequirement?), string sEzsignsignatureRegexp = default(string), CustomContactNameResponse objContactName = default(CustomContactNameResponse), CustomContactNameResponse objContactNameDelegation = default(CustomContactNameResponse), SignatureResponseCompound objSignature = default(SignatureResponseCompound))
         {
             this.PkiEzsignsignatureID = pkiEzsignsignatureID;
             this.FkiEzsigndocumentID = fkiEzsigndocumentID;
@@ -120,6 +122,8 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("objContactName is a required property for EzsignsignatureResponse and cannot be null");
             }
             this.ObjContactName = objContactName;
+            this.FkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
+            this.SEzsignsigningreasonDescriptionX = sEzsignsigningreasonDescriptionX;
             this.IEzsignsignatureHeight = iEzsignsignatureHeight;
             this.IEzsignsignatureWidth = iEzsignsignatureWidth;
             this.TEzsignsignatureTooltip = tEzsignsignatureTooltip;
@@ -164,6 +168,22 @@ namespace eZmaxApi.Model
         /* <example>20</example>*/
         [DataMember(Name = "fkiEzsignfoldersignerassociationID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldersignerassociationID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignsigningreason
+        /// </summary>
+        /// <value>The unique ID of the Ezsignsigningreason</value>
+        /* <example>194</example>*/
+        [DataMember(Name = "fkiEzsignsigningreasonID", EmitDefaultValue = false)]
+        public int FkiEzsignsigningreasonID { get; set; }
+
+        /// <summary>
+        /// The description of the Ezsignsigningreason in the language of the requester
+        /// </summary>
+        /// <value>The description of the Ezsignsigningreason in the language of the requester</value>
+        /* <example>I approve this document</example>*/
+        [DataMember(Name = "sEzsignsigningreasonDescriptionX", EmitDefaultValue = false)]
+        public string SEzsignsigningreasonDescriptionX { get; set; }
 
         /// <summary>
         /// The page number in the Ezsigndocument
@@ -321,6 +341,8 @@ namespace eZmaxApi.Model
             sb.Append("  PkiEzsignsignatureID: ").Append(PkiEzsignsignatureID).Append("\n");
             sb.Append("  FkiEzsigndocumentID: ").Append(FkiEzsigndocumentID).Append("\n");
             sb.Append("  FkiEzsignfoldersignerassociationID: ").Append(FkiEzsignfoldersignerassociationID).Append("\n");
+            sb.Append("  FkiEzsignsigningreasonID: ").Append(FkiEzsignsigningreasonID).Append("\n");
+            sb.Append("  SEzsignsigningreasonDescriptionX: ").Append(SEzsignsigningreasonDescriptionX).Append("\n");
             sb.Append("  IEzsignpagePagenumber: ").Append(IEzsignpagePagenumber).Append("\n");
             sb.Append("  IEzsignsignatureX: ").Append(IEzsignsignatureX).Append("\n");
             sb.Append("  IEzsignsignatureY: ").Append(IEzsignsignatureY).Append("\n");
@@ -360,215 +382,6 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignatureResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignatureResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignatureResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignatureResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignsignatureID == input.PkiEzsignsignatureID ||
-                    this.PkiEzsignsignatureID.Equals(input.PkiEzsignsignatureID)
-                ) && 
-                (
-                    this.FkiEzsigndocumentID == input.FkiEzsigndocumentID ||
-                    this.FkiEzsigndocumentID.Equals(input.FkiEzsigndocumentID)
-                ) && 
-                (
-                    this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
-                    this.FkiEzsignfoldersignerassociationID.Equals(input.FkiEzsignfoldersignerassociationID)
-                ) && 
-                (
-                    this.IEzsignpagePagenumber == input.IEzsignpagePagenumber ||
-                    this.IEzsignpagePagenumber.Equals(input.IEzsignpagePagenumber)
-                ) && 
-                (
-                    this.IEzsignsignatureX == input.IEzsignsignatureX ||
-                    this.IEzsignsignatureX.Equals(input.IEzsignsignatureX)
-                ) && 
-                (
-                    this.IEzsignsignatureY == input.IEzsignsignatureY ||
-                    this.IEzsignsignatureY.Equals(input.IEzsignsignatureY)
-                ) && 
-                (
-                    this.IEzsignsignatureHeight == input.IEzsignsignatureHeight ||
-                    this.IEzsignsignatureHeight.Equals(input.IEzsignsignatureHeight)
-                ) && 
-                (
-                    this.IEzsignsignatureWidth == input.IEzsignsignatureWidth ||
-                    this.IEzsignsignatureWidth.Equals(input.IEzsignsignatureWidth)
-                ) && 
-                (
-                    this.IEzsignsignatureStep == input.IEzsignsignatureStep ||
-                    this.IEzsignsignatureStep.Equals(input.IEzsignsignatureStep)
-                ) && 
-                (
-                    this.EEzsignsignatureType == input.EEzsignsignatureType ||
-                    this.EEzsignsignatureType.Equals(input.EEzsignsignatureType)
-                ) && 
-                (
-                    this.TEzsignsignatureTooltip == input.TEzsignsignatureTooltip ||
-                    (this.TEzsignsignatureTooltip != null &&
-                    this.TEzsignsignatureTooltip.Equals(input.TEzsignsignatureTooltip))
-                ) && 
-                (
-                    this.EEzsignsignatureTooltipposition == input.EEzsignsignatureTooltipposition ||
-                    this.EEzsignsignatureTooltipposition.Equals(input.EEzsignsignatureTooltipposition)
-                ) && 
-                (
-                    this.EEzsignsignatureFont == input.EEzsignsignatureFont ||
-                    this.EEzsignsignatureFont.Equals(input.EEzsignsignatureFont)
-                ) && 
-                (
-                    this.IEzsignsignatureValidationstep == input.IEzsignsignatureValidationstep ||
-                    this.IEzsignsignatureValidationstep.Equals(input.IEzsignsignatureValidationstep)
-                ) && 
-                (
-                    this.SEzsignsignatureAttachmentdescription == input.SEzsignsignatureAttachmentdescription ||
-                    (this.SEzsignsignatureAttachmentdescription != null &&
-                    this.SEzsignsignatureAttachmentdescription.Equals(input.SEzsignsignatureAttachmentdescription))
-                ) && 
-                (
-                    this.EEzsignsignatureAttachmentnamesource == input.EEzsignsignatureAttachmentnamesource ||
-                    this.EEzsignsignatureAttachmentnamesource.Equals(input.EEzsignsignatureAttachmentnamesource)
-                ) && 
-                (
-                    this.BEzsignsignatureRequired == input.BEzsignsignatureRequired ||
-                    this.BEzsignsignatureRequired.Equals(input.BEzsignsignatureRequired)
-                ) && 
-                (
-                    this.FkiEzsignfoldersignerassociationIDValidation == input.FkiEzsignfoldersignerassociationIDValidation ||
-                    this.FkiEzsignfoldersignerassociationIDValidation.Equals(input.FkiEzsignfoldersignerassociationIDValidation)
-                ) && 
-                (
-                    this.DtEzsignsignatureDate == input.DtEzsignsignatureDate ||
-                    (this.DtEzsignsignatureDate != null &&
-                    this.DtEzsignsignatureDate.Equals(input.DtEzsignsignatureDate))
-                ) && 
-                (
-                    this.IEzsignsignatureattachmentCount == input.IEzsignsignatureattachmentCount ||
-                    this.IEzsignsignatureattachmentCount.Equals(input.IEzsignsignatureattachmentCount)
-                ) && 
-                (
-                    this.SEzsignsignatureDescription == input.SEzsignsignatureDescription ||
-                    (this.SEzsignsignatureDescription != null &&
-                    this.SEzsignsignatureDescription.Equals(input.SEzsignsignatureDescription))
-                ) && 
-                (
-                    this.IEzsignsignatureMaxlength == input.IEzsignsignatureMaxlength ||
-                    this.IEzsignsignatureMaxlength.Equals(input.IEzsignsignatureMaxlength)
-                ) && 
-                (
-                    this.EEzsignsignatureTextvalidation == input.EEzsignsignatureTextvalidation ||
-                    this.EEzsignsignatureTextvalidation.Equals(input.EEzsignsignatureTextvalidation)
-                ) && 
-                (
-                    this.EEzsignsignatureDependencyrequirement == input.EEzsignsignatureDependencyrequirement ||
-                    this.EEzsignsignatureDependencyrequirement.Equals(input.EEzsignsignatureDependencyrequirement)
-                ) && 
-                (
-                    this.SEzsignsignatureRegexp == input.SEzsignsignatureRegexp ||
-                    (this.SEzsignsignatureRegexp != null &&
-                    this.SEzsignsignatureRegexp.Equals(input.SEzsignsignatureRegexp))
-                ) && 
-                (
-                    this.ObjContactName == input.ObjContactName ||
-                    (this.ObjContactName != null &&
-                    this.ObjContactName.Equals(input.ObjContactName))
-                ) && 
-                (
-                    this.ObjContactNameDelegation == input.ObjContactNameDelegation ||
-                    (this.ObjContactNameDelegation != null &&
-                    this.ObjContactNameDelegation.Equals(input.ObjContactNameDelegation))
-                ) && 
-                (
-                    this.ObjSignature == input.ObjSignature ||
-                    (this.ObjSignature != null &&
-                    this.ObjSignature.Equals(input.ObjSignature))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignsignatureID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigndocumentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldersignerassociationID.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignpagePagenumber.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignatureX.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignatureY.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignatureHeight.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignatureWidth.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignatureStep.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignsignatureType.GetHashCode();
-                if (this.TEzsignsignatureTooltip != null)
-                {
-                    hashCode = (hashCode * 59) + this.TEzsignsignatureTooltip.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EEzsignsignatureTooltipposition.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignsignatureFont.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignatureValidationstep.GetHashCode();
-                if (this.SEzsignsignatureAttachmentdescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignsignatureAttachmentdescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EEzsignsignatureAttachmentnamesource.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignsignatureRequired.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldersignerassociationIDValidation.GetHashCode();
-                if (this.DtEzsignsignatureDate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsignsignatureDate.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzsignsignatureattachmentCount.GetHashCode();
-                if (this.SEzsignsignatureDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignsignatureDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzsignsignatureMaxlength.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignsignatureTextvalidation.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignsignatureDependencyrequirement.GetHashCode();
-                if (this.SEzsignsignatureRegexp != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignsignatureRegexp.GetHashCode();
-                }
-                if (this.ObjContactName != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjContactName.GetHashCode();
-                }
-                if (this.ObjContactNameDelegation != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjContactNameDelegation.GetHashCode();
-                }
-                if (this.ObjSignature != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjSignature.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
@@ -591,6 +404,27 @@ namespace eZmaxApi.Model
             if (this.FkiEzsignfoldersignerassociationID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
+            }
+
+            // FkiEzsignsigningreasonID (int) maximum
+            if (this.FkiEzsignsigningreasonID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value less than or equal to 255.", new [] { "FkiEzsignsigningreasonID" });
+            }
+
+            // FkiEzsignsigningreasonID (int) minimum
+            if (this.FkiEzsignsigningreasonID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsigningreasonID" });
+            }
+
+            if (this.SEzsignsigningreasonDescriptionX != null) {
+                // SEzsignsigningreasonDescriptionX (string) pattern
+                Regex regexSEzsignsigningreasonDescriptionX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsignsigningreasonDescriptionX.Match(this.SEzsignsigningreasonDescriptionX).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignsigningreasonDescriptionX, must match a pattern of " + regexSEzsignsigningreasonDescriptionX, new [] { "SEzsignsigningreasonDescriptionX" });
+                }
             }
 
             // IEzsignpagePagenumber (int) minimum

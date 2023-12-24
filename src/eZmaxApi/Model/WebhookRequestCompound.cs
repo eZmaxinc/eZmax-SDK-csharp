@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Webhook Object and children
     /// </summary>
     [DataContract(Name = "webhook-RequestCompound")]
-    public partial class WebhookRequestCompound : IEquatable<WebhookRequestCompound>, IValidatableObject
+    public partial class WebhookRequestCompound : IValidatableObject
     {
 
         /// <summary>
@@ -67,8 +67,9 @@ namespace eZmaxApi.Model
         /// <param name="sWebhookUrl">The URL of the Webhook callback (required).</param>
         /// <param name="sWebhookEmailfailed">The email that will receive the Webhook in case all attempts fail (required).</param>
         /// <param name="bWebhookIsactive">Whether the Webhook is active or not (required).</param>
+        /// <param name="bWebhookIssigned">Whether the requests will be signed or not.</param>
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
-        public WebhookRequestCompound(int pkiWebhookID = default(int), int fkiEzsignfoldertypeID = default(int), string sWebhookDescription = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), bool bWebhookIsactive = default(bool), bool bWebhookSkipsslvalidation = default(bool))
+        public WebhookRequestCompound(int pkiWebhookID = default(int), int fkiEzsignfoldertypeID = default(int), string sWebhookDescription = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool), bool bWebhookSkipsslvalidation = default(bool))
         {
             // to ensure "sWebhookDescription" is required (not null)
             if (sWebhookDescription == null)
@@ -95,6 +96,7 @@ namespace eZmaxApi.Model
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.EWebhookEzsignevent = eWebhookEzsignevent;
             this.EWebhookManagementevent = eWebhookManagementevent;
+            this.BWebhookIssigned = bWebhookIssigned;
         }
 
         /// <summary>
@@ -146,6 +148,14 @@ namespace eZmaxApi.Model
         public bool BWebhookIsactive { get; set; }
 
         /// <summary>
+        /// Whether the requests will be signed or not
+        /// </summary>
+        /// <value>Whether the requests will be signed or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bWebhookIssigned", EmitDefaultValue = true)]
+        public bool BWebhookIssigned { get; set; }
+
+        /// <summary>
         /// Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use
         /// </summary>
         /// <value>Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use</value>
@@ -170,6 +180,7 @@ namespace eZmaxApi.Model
             sb.Append("  SWebhookUrl: ").Append(SWebhookUrl).Append("\n");
             sb.Append("  SWebhookEmailfailed: ").Append(SWebhookEmailfailed).Append("\n");
             sb.Append("  BWebhookIsactive: ").Append(BWebhookIsactive).Append("\n");
+            sb.Append("  BWebhookIssigned: ").Append(BWebhookIssigned).Append("\n");
             sb.Append("  BWebhookSkipsslvalidation: ").Append(BWebhookSkipsslvalidation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -182,105 +193,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebhookRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if WebhookRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebhookRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebhookRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiWebhookID == input.PkiWebhookID ||
-                    this.PkiWebhookID.Equals(input.PkiWebhookID)
-                ) && 
-                (
-                    this.FkiEzsignfoldertypeID == input.FkiEzsignfoldertypeID ||
-                    this.FkiEzsignfoldertypeID.Equals(input.FkiEzsignfoldertypeID)
-                ) && 
-                (
-                    this.SWebhookDescription == input.SWebhookDescription ||
-                    (this.SWebhookDescription != null &&
-                    this.SWebhookDescription.Equals(input.SWebhookDescription))
-                ) && 
-                (
-                    this.EWebhookModule == input.EWebhookModule ||
-                    this.EWebhookModule.Equals(input.EWebhookModule)
-                ) && 
-                (
-                    this.EWebhookEzsignevent == input.EWebhookEzsignevent ||
-                    this.EWebhookEzsignevent.Equals(input.EWebhookEzsignevent)
-                ) && 
-                (
-                    this.EWebhookManagementevent == input.EWebhookManagementevent ||
-                    this.EWebhookManagementevent.Equals(input.EWebhookManagementevent)
-                ) && 
-                (
-                    this.SWebhookUrl == input.SWebhookUrl ||
-                    (this.SWebhookUrl != null &&
-                    this.SWebhookUrl.Equals(input.SWebhookUrl))
-                ) && 
-                (
-                    this.SWebhookEmailfailed == input.SWebhookEmailfailed ||
-                    (this.SWebhookEmailfailed != null &&
-                    this.SWebhookEmailfailed.Equals(input.SWebhookEmailfailed))
-                ) && 
-                (
-                    this.BWebhookIsactive == input.BWebhookIsactive ||
-                    this.BWebhookIsactive.Equals(input.BWebhookIsactive)
-                ) && 
-                (
-                    this.BWebhookSkipsslvalidation == input.BWebhookSkipsslvalidation ||
-                    this.BWebhookSkipsslvalidation.Equals(input.BWebhookSkipsslvalidation)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiWebhookID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldertypeID.GetHashCode();
-                if (this.SWebhookDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWebhookDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EWebhookModule.GetHashCode();
-                hashCode = (hashCode * 59) + this.EWebhookEzsignevent.GetHashCode();
-                hashCode = (hashCode * 59) + this.EWebhookManagementevent.GetHashCode();
-                if (this.SWebhookUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWebhookUrl.GetHashCode();
-                }
-                if (this.SWebhookEmailfailed != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWebhookEmailfailed.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BWebhookIsactive.GetHashCode();
-                hashCode = (hashCode * 59) + this.BWebhookSkipsslvalidation.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

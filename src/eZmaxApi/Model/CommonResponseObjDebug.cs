@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// This is a generic debug object that is returned by all API requests
     /// </summary>
     [DataContract(Name = "Common-Response-objDebug")]
-    public partial class CommonResponseObjDebug : IEquatable<CommonResponseObjDebug>, IValidatableObject
+    public partial class CommonResponseObjDebug : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseObjDebug" /> class.
@@ -128,81 +128,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonResponseObjDebug);
-        }
-
-        /// <summary>
-        /// Returns true if CommonResponseObjDebug instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonResponseObjDebug to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonResponseObjDebug input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SMemoryUsage == input.SMemoryUsage ||
-                    (this.SMemoryUsage != null &&
-                    this.SMemoryUsage.Equals(input.SMemoryUsage))
-                ) && 
-                (
-                    this.SRunTime == input.SRunTime ||
-                    (this.SRunTime != null &&
-                    this.SRunTime.Equals(input.SRunTime))
-                ) && 
-                (
-                    this.ISQLSelects == input.ISQLSelects ||
-                    this.ISQLSelects.Equals(input.ISQLSelects)
-                ) && 
-                (
-                    this.ISQLQueries == input.ISQLQueries ||
-                    this.ISQLQueries.Equals(input.ISQLQueries)
-                ) && 
-                (
-                    this.AObjSQLQuery == input.AObjSQLQuery ||
-                    this.AObjSQLQuery != null &&
-                    input.AObjSQLQuery != null &&
-                    this.AObjSQLQuery.SequenceEqual(input.AObjSQLQuery)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SMemoryUsage != null)
-                {
-                    hashCode = (hashCode * 59) + this.SMemoryUsage.GetHashCode();
-                }
-                if (this.SRunTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.SRunTime.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ISQLSelects.GetHashCode();
-                hashCode = (hashCode * 59) + this.ISQLQueries.GetHashCode();
-                if (this.AObjSQLQuery != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjSQLQuery.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -135,5 +135,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'BWebhookIsactive'
         }
+
+        /// <summary>
+        /// Test the property 'BWebhookIssigned'
+        /// </summary>
+        [Fact]
+        public void BWebhookIssignedTest()
+        {
+            // TODO unit test for the property 'BWebhookIssigned'
+        }
     }
 }

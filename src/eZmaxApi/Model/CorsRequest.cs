@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Cors Object
     /// </summary>
     [DataContract(Name = "cors-Request")]
-    public partial class CorsRequest : IEquatable<CorsRequest>, IValidatableObject
+    public partial class CorsRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CorsRequest" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CorsRequest);
-        }
-
-        /// <summary>
-        /// Returns true if CorsRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CorsRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CorsRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiCorsID == input.PkiCorsID ||
-                    this.PkiCorsID.Equals(input.PkiCorsID)
-                ) && 
-                (
-                    this.FkiApikeyID == input.FkiApikeyID ||
-                    this.FkiApikeyID.Equals(input.FkiApikeyID)
-                ) && 
-                (
-                    this.SCorsEntryurl == input.SCorsEntryurl ||
-                    (this.SCorsEntryurl != null &&
-                    this.SCorsEntryurl.Equals(input.SCorsEntryurl))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiCorsID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiApikeyID.GetHashCode();
-                if (this.SCorsEntryurl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCorsEntryurl.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

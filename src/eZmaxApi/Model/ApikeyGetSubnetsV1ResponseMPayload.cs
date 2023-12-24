@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/apikey/{pkiApikeyID}/getSubnets
     /// </summary>
     [DataContract(Name = "apikey-getSubnets-v1-Response-mPayload")]
-    public partial class ApikeyGetSubnetsV1ResponseMPayload : IEquatable<ApikeyGetSubnetsV1ResponseMPayload>, IValidatableObject
+    public partial class ApikeyGetSubnetsV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyGetSubnetsV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ApikeyGetSubnetsV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if ApikeyGetSubnetsV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ApikeyGetSubnetsV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ApikeyGetSubnetsV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjSubnet == input.AObjSubnet ||
-                    this.AObjSubnet != null &&
-                    input.AObjSubnet != null &&
-                    this.AObjSubnet.SequenceEqual(input.AObjSubnet)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjSubnet != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjSubnet.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

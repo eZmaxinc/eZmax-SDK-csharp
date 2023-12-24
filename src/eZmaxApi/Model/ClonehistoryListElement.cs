@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Clonehistory List Element
     /// </summary>
     [DataContract(Name = "clonehistory-ListElement")]
-    public partial class ClonehistoryListElement : IEquatable<ClonehistoryListElement>, IValidatableObject
+    public partial class ClonehistoryListElement : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ClonehistoryListElement" /> class.
@@ -219,130 +219,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ClonehistoryListElement);
-        }
-
-        /// <summary>
-        /// Returns true if ClonehistoryListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ClonehistoryListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ClonehistoryListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiClonehistoryID == input.PkiClonehistoryID ||
-                    this.PkiClonehistoryID.Equals(input.PkiClonehistoryID)
-                ) && 
-                (
-                    this.FkiUserIDCloning == input.FkiUserIDCloning ||
-                    this.FkiUserIDCloning.Equals(input.FkiUserIDCloning)
-                ) && 
-                (
-                    this.FkiUserIDCloned == input.FkiUserIDCloned ||
-                    this.FkiUserIDCloned.Equals(input.FkiUserIDCloned)
-                ) && 
-                (
-                    this.DtClonehistoryFirsthit == input.DtClonehistoryFirsthit ||
-                    (this.DtClonehistoryFirsthit != null &&
-                    this.DtClonehistoryFirsthit.Equals(input.DtClonehistoryFirsthit))
-                ) && 
-                (
-                    this.DtClonehistoryLasthit == input.DtClonehistoryLasthit ||
-                    (this.DtClonehistoryLasthit != null &&
-                    this.DtClonehistoryLasthit.Equals(input.DtClonehistoryLasthit))
-                ) && 
-                (
-                    this.SUserLoginnameCloning == input.SUserLoginnameCloning ||
-                    (this.SUserLoginnameCloning != null &&
-                    this.SUserLoginnameCloning.Equals(input.SUserLoginnameCloning))
-                ) && 
-                (
-                    this.SUserFirstnameCloning == input.SUserFirstnameCloning ||
-                    (this.SUserFirstnameCloning != null &&
-                    this.SUserFirstnameCloning.Equals(input.SUserFirstnameCloning))
-                ) && 
-                (
-                    this.SUserLastnameCloning == input.SUserLastnameCloning ||
-                    (this.SUserLastnameCloning != null &&
-                    this.SUserLastnameCloning.Equals(input.SUserLastnameCloning))
-                ) && 
-                (
-                    this.SUserLoginnameCloned == input.SUserLoginnameCloned ||
-                    (this.SUserLoginnameCloned != null &&
-                    this.SUserLoginnameCloned.Equals(input.SUserLoginnameCloned))
-                ) && 
-                (
-                    this.SUserFirstnameCloned == input.SUserFirstnameCloned ||
-                    (this.SUserFirstnameCloned != null &&
-                    this.SUserFirstnameCloned.Equals(input.SUserFirstnameCloned))
-                ) && 
-                (
-                    this.SUserLastnameCloned == input.SUserLastnameCloned ||
-                    (this.SUserLastnameCloned != null &&
-                    this.SUserLastnameCloned.Equals(input.SUserLastnameCloned))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiClonehistoryID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserIDCloning.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserIDCloned.GetHashCode();
-                if (this.DtClonehistoryFirsthit != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtClonehistoryFirsthit.GetHashCode();
-                }
-                if (this.DtClonehistoryLasthit != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtClonehistoryLasthit.GetHashCode();
-                }
-                if (this.SUserLoginnameCloning != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLoginnameCloning.GetHashCode();
-                }
-                if (this.SUserFirstnameCloning != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserFirstnameCloning.GetHashCode();
-                }
-                if (this.SUserLastnameCloning != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLastnameCloning.GetHashCode();
-                }
-                if (this.SUserLoginnameCloned != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLoginnameCloned.GetHashCode();
-                }
-                if (this.SUserFirstnameCloned != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserFirstnameCloned.GetHashCode();
-                }
-                if (this.SUserLastnameCloned != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLastnameCloned.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

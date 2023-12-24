@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignformfield Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignformfield-RequestCompound")]
-    public partial class EzsignformfieldRequestCompound : IEquatable<EzsignformfieldRequestCompound>, IValidatableObject
+    public partial class EzsignformfieldRequestCompound : IValidatableObject
     {
 
         /// <summary>
@@ -205,125 +205,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignformfieldRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignformfieldRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignformfieldRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignformfieldRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignformfieldID == input.PkiEzsignformfieldID ||
-                    this.PkiEzsignformfieldID.Equals(input.PkiEzsignformfieldID)
-                ) && 
-                (
-                    this.IEzsignpagePagenumber == input.IEzsignpagePagenumber ||
-                    this.IEzsignpagePagenumber.Equals(input.IEzsignpagePagenumber)
-                ) && 
-                (
-                    this.SEzsignformfieldLabel == input.SEzsignformfieldLabel ||
-                    (this.SEzsignformfieldLabel != null &&
-                    this.SEzsignformfieldLabel.Equals(input.SEzsignformfieldLabel))
-                ) && 
-                (
-                    this.SEzsignformfieldValue == input.SEzsignformfieldValue ||
-                    (this.SEzsignformfieldValue != null &&
-                    this.SEzsignformfieldValue.Equals(input.SEzsignformfieldValue))
-                ) && 
-                (
-                    this.IEzsignformfieldX == input.IEzsignformfieldX ||
-                    this.IEzsignformfieldX.Equals(input.IEzsignformfieldX)
-                ) && 
-                (
-                    this.IEzsignformfieldY == input.IEzsignformfieldY ||
-                    this.IEzsignformfieldY.Equals(input.IEzsignformfieldY)
-                ) && 
-                (
-                    this.IEzsignformfieldWidth == input.IEzsignformfieldWidth ||
-                    this.IEzsignformfieldWidth.Equals(input.IEzsignformfieldWidth)
-                ) && 
-                (
-                    this.IEzsignformfieldHeight == input.IEzsignformfieldHeight ||
-                    this.IEzsignformfieldHeight.Equals(input.IEzsignformfieldHeight)
-                ) && 
-                (
-                    this.BEzsignformfieldAutocomplete == input.BEzsignformfieldAutocomplete ||
-                    this.BEzsignformfieldAutocomplete.Equals(input.BEzsignformfieldAutocomplete)
-                ) && 
-                (
-                    this.BEzsignformfieldSelected == input.BEzsignformfieldSelected ||
-                    this.BEzsignformfieldSelected.Equals(input.BEzsignformfieldSelected)
-                ) && 
-                (
-                    this.SEzsignformfieldEnteredvalue == input.SEzsignformfieldEnteredvalue ||
-                    (this.SEzsignformfieldEnteredvalue != null &&
-                    this.SEzsignformfieldEnteredvalue.Equals(input.SEzsignformfieldEnteredvalue))
-                ) && 
-                (
-                    this.EEzsignformfieldDependencyrequirement == input.EEzsignformfieldDependencyrequirement ||
-                    this.EEzsignformfieldDependencyrequirement.Equals(input.EEzsignformfieldDependencyrequirement)
-                ) && 
-                (
-                    this.AObjEzsignelementdependency == input.AObjEzsignelementdependency ||
-                    this.AObjEzsignelementdependency != null &&
-                    input.AObjEzsignelementdependency != null &&
-                    this.AObjEzsignelementdependency.SequenceEqual(input.AObjEzsignelementdependency)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignformfieldID.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignpagePagenumber.GetHashCode();
-                if (this.SEzsignformfieldLabel != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignformfieldLabel.GetHashCode();
-                }
-                if (this.SEzsignformfieldValue != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignformfieldValue.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzsignformfieldX.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignformfieldY.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignformfieldWidth.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignformfieldHeight.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignformfieldAutocomplete.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignformfieldSelected.GetHashCode();
-                if (this.SEzsignformfieldEnteredvalue != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignformfieldEnteredvalue.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EEzsignformfieldDependencyrequirement.GetHashCode();
-                if (this.AObjEzsignelementdependency != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignelementdependency.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

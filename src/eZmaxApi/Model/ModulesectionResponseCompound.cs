@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Modulesection Object
     /// </summary>
     [DataContract(Name = "modulesection-ResponseCompound")]
-    public partial class ModulesectionResponseCompound : IEquatable<ModulesectionResponseCompound>, IValidatableObject
+    public partial class ModulesectionResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulesectionResponseCompound" /> class.
@@ -126,81 +126,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ModulesectionResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if ModulesectionResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ModulesectionResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ModulesectionResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiModulesectionID == input.PkiModulesectionID ||
-                    this.PkiModulesectionID.Equals(input.PkiModulesectionID)
-                ) && 
-                (
-                    this.FkiModuleID == input.FkiModuleID ||
-                    this.FkiModuleID.Equals(input.FkiModuleID)
-                ) && 
-                (
-                    this.SModulesectionInternalname == input.SModulesectionInternalname ||
-                    (this.SModulesectionInternalname != null &&
-                    this.SModulesectionInternalname.Equals(input.SModulesectionInternalname))
-                ) && 
-                (
-                    this.SModulesectionNameX == input.SModulesectionNameX ||
-                    (this.SModulesectionNameX != null &&
-                    this.SModulesectionNameX.Equals(input.SModulesectionNameX))
-                ) && 
-                (
-                    this.AObjPermission == input.AObjPermission ||
-                    this.AObjPermission != null &&
-                    input.AObjPermission != null &&
-                    this.AObjPermission.SequenceEqual(input.AObjPermission)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiModulesectionID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiModuleID.GetHashCode();
-                if (this.SModulesectionInternalname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SModulesectionInternalname.GetHashCode();
-                }
-                if (this.SModulesectionNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SModulesectionNameX.GetHashCode();
-                }
-                if (this.AObjPermission != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjPermission.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

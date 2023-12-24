@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Webhook List Element
     /// </summary>
     [DataContract(Name = "webhook-ListElement")]
-    public partial class WebhookListElement : IEquatable<WebhookListElement>, IValidatableObject
+    public partial class WebhookListElement : IValidatableObject
     {
 
         /// <summary>
@@ -67,7 +67,8 @@ namespace eZmaxApi.Model
         /// <param name="eWebhookEzsignevent">eWebhookEzsignevent.</param>
         /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
         /// <param name="bWebhookIsactive">Whether the Webhook is active or not (required).</param>
-        public WebhookListElement(int pkiWebhookID = default(int), string sWebhookDescription = default(string), string sWebhookUrl = default(string), string sWebhookEvent = default(string), string sWebhookEmailfailed = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), bool bWebhookIsactive = default(bool))
+        /// <param name="bWebhookIssigned">Whether the requests will be signed or not (required).</param>
+        public WebhookListElement(int pkiWebhookID = default(int), string sWebhookDescription = default(string), string sWebhookUrl = default(string), string sWebhookEvent = default(string), string sWebhookEmailfailed = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool))
         {
             this.PkiWebhookID = pkiWebhookID;
             // to ensure "sWebhookDescription" is required (not null)
@@ -96,6 +97,7 @@ namespace eZmaxApi.Model
             this.SWebhookEmailfailed = sWebhookEmailfailed;
             this.EWebhookModule = eWebhookModule;
             this.BWebhookIsactive = bWebhookIsactive;
+            this.BWebhookIssigned = bWebhookIssigned;
             this.EWebhookEzsignevent = eWebhookEzsignevent;
             this.EWebhookManagementevent = eWebhookManagementevent;
         }
@@ -149,6 +151,14 @@ namespace eZmaxApi.Model
         public bool BWebhookIsactive { get; set; }
 
         /// <summary>
+        /// Whether the requests will be signed or not
+        /// </summary>
+        /// <value>Whether the requests will be signed or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bWebhookIssigned", IsRequired = true, EmitDefaultValue = true)]
+        public bool BWebhookIssigned { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -165,6 +175,7 @@ namespace eZmaxApi.Model
             sb.Append("  EWebhookEzsignevent: ").Append(EWebhookEzsignevent).Append("\n");
             sb.Append("  EWebhookManagementevent: ").Append(EWebhookManagementevent).Append("\n");
             sb.Append("  BWebhookIsactive: ").Append(BWebhookIsactive).Append("\n");
+            sb.Append("  BWebhookIssigned: ").Append(BWebhookIssigned).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -176,104 +187,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebhookListElement);
-        }
-
-        /// <summary>
-        /// Returns true if WebhookListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebhookListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebhookListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiWebhookID == input.PkiWebhookID ||
-                    this.PkiWebhookID.Equals(input.PkiWebhookID)
-                ) && 
-                (
-                    this.SWebhookDescription == input.SWebhookDescription ||
-                    (this.SWebhookDescription != null &&
-                    this.SWebhookDescription.Equals(input.SWebhookDescription))
-                ) && 
-                (
-                    this.SWebhookUrl == input.SWebhookUrl ||
-                    (this.SWebhookUrl != null &&
-                    this.SWebhookUrl.Equals(input.SWebhookUrl))
-                ) && 
-                (
-                    this.SWebhookEvent == input.SWebhookEvent ||
-                    (this.SWebhookEvent != null &&
-                    this.SWebhookEvent.Equals(input.SWebhookEvent))
-                ) && 
-                (
-                    this.SWebhookEmailfailed == input.SWebhookEmailfailed ||
-                    (this.SWebhookEmailfailed != null &&
-                    this.SWebhookEmailfailed.Equals(input.SWebhookEmailfailed))
-                ) && 
-                (
-                    this.EWebhookModule == input.EWebhookModule ||
-                    this.EWebhookModule.Equals(input.EWebhookModule)
-                ) && 
-                (
-                    this.EWebhookEzsignevent == input.EWebhookEzsignevent ||
-                    this.EWebhookEzsignevent.Equals(input.EWebhookEzsignevent)
-                ) && 
-                (
-                    this.EWebhookManagementevent == input.EWebhookManagementevent ||
-                    this.EWebhookManagementevent.Equals(input.EWebhookManagementevent)
-                ) && 
-                (
-                    this.BWebhookIsactive == input.BWebhookIsactive ||
-                    this.BWebhookIsactive.Equals(input.BWebhookIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiWebhookID.GetHashCode();
-                if (this.SWebhookDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWebhookDescription.GetHashCode();
-                }
-                if (this.SWebhookUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWebhookUrl.GetHashCode();
-                }
-                if (this.SWebhookEvent != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWebhookEvent.GetHashCode();
-                }
-                if (this.SWebhookEmailfailed != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWebhookEmailfailed.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EWebhookModule.GetHashCode();
-                hashCode = (hashCode * 59) + this.EWebhookEzsignevent.GetHashCode();
-                hashCode = (hashCode * 59) + this.EWebhookManagementevent.GetHashCode();
-                hashCode = (hashCode * 59) + this.BWebhookIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An EzmaxinvoicingEzsignfolder object containing information about the Ezmaxinvoicing for an Ezsignfolder
     /// </summary>
     [DataContract(Name = "Custom-EzmaxinvoicingEzsignfolder-Response")]
-    public partial class CustomEzmaxinvoicingEzsignfolderResponse : IEquatable<CustomEzmaxinvoicingEzsignfolderResponse>, IValidatableObject
+    public partial class CustomEzmaxinvoicingEzsignfolderResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzmaxinvoicingEzsignfolderResponse" /> class.
@@ -133,77 +133,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomEzmaxinvoicingEzsignfolderResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomEzmaxinvoicingEzsignfolderResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomEzmaxinvoicingEzsignfolderResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomEzmaxinvoicingEzsignfolderResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
-                    this.FkiEzsignfolderID.Equals(input.FkiEzsignfolderID)
-                ) && 
-                (
-                    this.SEzsignfolderDescription == input.SEzsignfolderDescription ||
-                    (this.SEzsignfolderDescription != null &&
-                    this.SEzsignfolderDescription.Equals(input.SEzsignfolderDescription))
-                ) && 
-                (
-                    this.BEzsigntsarequirementBillable == input.BEzsigntsarequirementBillable ||
-                    this.BEzsigntsarequirementBillable.Equals(input.BEzsigntsarequirementBillable)
-                ) && 
-                (
-                    this.BEzsignfolderMfaused == input.BEzsignfolderMfaused ||
-                    this.BEzsignfolderMfaused.Equals(input.BEzsignfolderMfaused)
-                ) && 
-                (
-                    this.BEzsignfolderPaymentused == input.BEzsignfolderPaymentused ||
-                    this.BEzsignfolderPaymentused.Equals(input.BEzsignfolderPaymentused)
-                ) && 
-                (
-                    this.BEzsignfolderAllowed == input.BEzsignfolderAllowed ||
-                    this.BEzsignfolderAllowed.Equals(input.BEzsignfolderAllowed)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiEzsignfolderID.GetHashCode();
-                if (this.SEzsignfolderDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfolderDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzsigntsarequirementBillable.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignfolderMfaused.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignfolderPaymentused.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignfolderAllowed.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

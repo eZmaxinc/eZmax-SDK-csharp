@@ -56,14 +56,14 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EletronicfundstransferGetCommunicationListV1
+        /// Test ElectronicfundstransferGetCommunicationListV1
         /// </summary>
         [Fact]
-        public void EletronicfundstransferGetCommunicationListV1Test()
+        public void ElectronicfundstransferGetCommunicationListV1Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiElectronicfundstransferID = null;
-            //var response = instance.EletronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
+            //var response = instance.ElectronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
             //Assert.IsType<ElectronicfundstransferGetCommunicationListV1Response>(response);
         }
     }

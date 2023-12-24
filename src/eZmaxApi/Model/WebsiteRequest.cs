@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Website Object
     /// </summary>
     [DataContract(Name = "website-Request")]
-    public partial class WebsiteRequest : IEquatable<WebsiteRequest>, IValidatableObject
+    public partial class WebsiteRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsiteRequest" /> class.
@@ -90,57 +90,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebsiteRequest);
-        }
-
-        /// <summary>
-        /// Returns true if WebsiteRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebsiteRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebsiteRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiWebsitetypeID == input.FkiWebsitetypeID ||
-                    this.FkiWebsitetypeID.Equals(input.FkiWebsitetypeID)
-                ) && 
-                (
-                    this.SWebsiteAddress == input.SWebsiteAddress ||
-                    (this.SWebsiteAddress != null &&
-                    this.SWebsiteAddress.Equals(input.SWebsiteAddress))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiWebsitetypeID.GetHashCode();
-                if (this.SWebsiteAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWebsiteAddress.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

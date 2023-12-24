@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplateformfieldgroupsigner Object
     /// </summary>
     [DataContract(Name = "ezsigntemplateformfieldgroupsigner-Request")]
-    public partial class EzsigntemplateformfieldgroupsignerRequest : IEquatable<EzsigntemplateformfieldgroupsignerRequest>, IValidatableObject
+    public partial class EzsigntemplateformfieldgroupsignerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupsignerRequest" /> class.
@@ -85,53 +85,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplateformfieldgroupsignerRequest);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplateformfieldgroupsignerRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplateformfieldgroupsignerRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplateformfieldgroupsignerRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsigntemplateformfieldgroupsignerID == input.PkiEzsigntemplateformfieldgroupsignerID ||
-                    this.PkiEzsigntemplateformfieldgroupsignerID.Equals(input.PkiEzsigntemplateformfieldgroupsignerID)
-                ) && 
-                (
-                    this.FkiEzsigntemplatesignerID == input.FkiEzsigntemplatesignerID ||
-                    this.FkiEzsigntemplatesignerID.Equals(input.FkiEzsigntemplatesignerID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsigntemplateformfieldgroupsignerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplatesignerID.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

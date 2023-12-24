@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Taxassignment AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "taxassignment-AutocompleteElement-Response")]
-    public partial class TaxassignmentAutocompleteElementResponse : IEquatable<TaxassignmentAutocompleteElementResponse>, IValidatableObject
+    public partial class TaxassignmentAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TaxassignmentAutocompleteElementResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TaxassignmentAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if TaxassignmentAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TaxassignmentAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TaxassignmentAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.STaxassignmentDescriptionX == input.STaxassignmentDescriptionX ||
-                    (this.STaxassignmentDescriptionX != null &&
-                    this.STaxassignmentDescriptionX.Equals(input.STaxassignmentDescriptionX))
-                ) && 
-                (
-                    this.PkiTaxassignmentID == input.PkiTaxassignmentID ||
-                    this.PkiTaxassignmentID.Equals(input.PkiTaxassignmentID)
-                ) && 
-                (
-                    this.BTaxassignmentIsactive == input.BTaxassignmentIsactive ||
-                    this.BTaxassignmentIsactive.Equals(input.BTaxassignmentIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.STaxassignmentDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.STaxassignmentDescriptionX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiTaxassignmentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BTaxassignmentIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

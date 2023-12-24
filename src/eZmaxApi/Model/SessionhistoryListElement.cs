@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Sessionhistory List Element
     /// </summary>
     [DataContract(Name = "sessionhistory-ListElement")]
-    public partial class SessionhistoryListElement : IEquatable<SessionhistoryListElement>, IValidatableObject
+    public partial class SessionhistoryListElement : IValidatableObject
     {
 
         /// <summary>
@@ -191,117 +191,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SessionhistoryListElement);
-        }
-
-        /// <summary>
-        /// Returns true if SessionhistoryListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SessionhistoryListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SessionhistoryListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiSessionhistoryID == input.PkiSessionhistoryID ||
-                    this.PkiSessionhistoryID.Equals(input.PkiSessionhistoryID)
-                ) && 
-                (
-                    this.FkiComputerID == input.FkiComputerID ||
-                    this.FkiComputerID.Equals(input.FkiComputerID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.DtSessionhistoryFirsthit == input.DtSessionhistoryFirsthit ||
-                    (this.DtSessionhistoryFirsthit != null &&
-                    this.DtSessionhistoryFirsthit.Equals(input.DtSessionhistoryFirsthit))
-                ) && 
-                (
-                    this.DtSessionhistoryLasthit == input.DtSessionhistoryLasthit ||
-                    (this.DtSessionhistoryLasthit != null &&
-                    this.DtSessionhistoryLasthit.Equals(input.DtSessionhistoryLasthit))
-                ) && 
-                (
-                    this.ESessionhistoryEndby == input.ESessionhistoryEndby ||
-                    this.ESessionhistoryEndby.Equals(input.ESessionhistoryEndby)
-                ) && 
-                (
-                    this.SComputerDescription == input.SComputerDescription ||
-                    (this.SComputerDescription != null &&
-                    this.SComputerDescription.Equals(input.SComputerDescription))
-                ) && 
-                (
-                    this.SSessionhistoryDuration == input.SSessionhistoryDuration ||
-                    (this.SSessionhistoryDuration != null &&
-                    this.SSessionhistoryDuration.Equals(input.SSessionhistoryDuration))
-                ) && 
-                (
-                    this.SSessionhistoryIP == input.SSessionhistoryIP ||
-                    (this.SSessionhistoryIP != null &&
-                    this.SSessionhistoryIP.Equals(input.SSessionhistoryIP))
-                ) && 
-                (
-                    this.SUserLoginname == input.SUserLoginname ||
-                    (this.SUserLoginname != null &&
-                    this.SUserLoginname.Equals(input.SUserLoginname))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiSessionhistoryID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiComputerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                if (this.DtSessionhistoryFirsthit != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtSessionhistoryFirsthit.GetHashCode();
-                }
-                if (this.DtSessionhistoryLasthit != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtSessionhistoryLasthit.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ESessionhistoryEndby.GetHashCode();
-                if (this.SComputerDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SComputerDescription.GetHashCode();
-                }
-                if (this.SSessionhistoryDuration != null)
-                {
-                    hashCode = (hashCode * 59) + this.SSessionhistoryDuration.GetHashCode();
-                }
-                if (this.SSessionhistoryIP != null)
-                {
-                    hashCode = (hashCode * 59) + this.SSessionhistoryIP.GetHashCode();
-                }
-                if (this.SUserLoginname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLoginname.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

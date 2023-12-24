@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won&#39;t be returned. 
     /// </summary>
     [DataContract(Name = "Common-Audit")]
-    public partial class CommonAudit : IEquatable<CommonAudit>, IValidatableObject
+    public partial class CommonAudit : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonAudit" /> class.
@@ -86,61 +86,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonAudit);
-        }
-
-        /// <summary>
-        /// Returns true if CommonAudit instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonAudit to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonAudit input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjAuditdetailCreated == input.ObjAuditdetailCreated ||
-                    (this.ObjAuditdetailCreated != null &&
-                    this.ObjAuditdetailCreated.Equals(input.ObjAuditdetailCreated))
-                ) && 
-                (
-                    this.ObjAuditdetailModified == input.ObjAuditdetailModified ||
-                    (this.ObjAuditdetailModified != null &&
-                    this.ObjAuditdetailModified.Equals(input.ObjAuditdetailModified))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjAuditdetailCreated != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjAuditdetailCreated.GetHashCode();
-                }
-                if (this.ObjAuditdetailModified != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjAuditdetailModified.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

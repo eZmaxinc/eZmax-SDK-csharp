@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures
     /// </summary>
     [DataContract(Name = "ezsigntemplatedocument-editEzsigntemplatesignatures-v1-Response-mPayload")]
-    public partial class EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload : IEquatable<EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload>, IValidatableObject
+    public partial class EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiEzsigntemplatesignatureID == input.APkiEzsigntemplatesignatureID ||
-                    this.APkiEzsigntemplatesignatureID != null &&
-                    input.APkiEzsigntemplatesignatureID != null &&
-                    this.APkiEzsigntemplatesignatureID.SequenceEqual(input.APkiEzsigntemplatesignatureID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiEzsigntemplatesignatureID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiEzsigntemplatesignatureID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

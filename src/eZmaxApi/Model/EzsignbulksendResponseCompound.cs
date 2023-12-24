@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignbulksend Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignbulksend-ResponseCompound")]
-    public partial class EzsignbulksendResponseCompound : IEquatable<EzsignbulksendResponseCompound>, IValidatableObject
+    public partial class EzsignbulksendResponseCompound : IValidatableObject
     {
 
         /// <summary>
@@ -232,138 +232,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksendResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksendResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksendResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksendResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignbulksendID == input.PkiEzsignbulksendID ||
-                    this.PkiEzsignbulksendID.Equals(input.PkiEzsignbulksendID)
-                ) && 
-                (
-                    this.FkiEzsignfoldertypeID == input.FkiEzsignfoldertypeID ||
-                    this.FkiEzsignfoldertypeID.Equals(input.FkiEzsignfoldertypeID)
-                ) && 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    this.FkiLanguageID.Equals(input.FkiLanguageID)
-                ) && 
-                (
-                    this.SLanguageNameX == input.SLanguageNameX ||
-                    (this.SLanguageNameX != null &&
-                    this.SLanguageNameX.Equals(input.SLanguageNameX))
-                ) && 
-                (
-                    this.EEzsignfoldertypePrivacylevel == input.EEzsignfoldertypePrivacylevel ||
-                    this.EEzsignfoldertypePrivacylevel.Equals(input.EEzsignfoldertypePrivacylevel)
-                ) && 
-                (
-                    this.SEzsignfoldertypeNameX == input.SEzsignfoldertypeNameX ||
-                    (this.SEzsignfoldertypeNameX != null &&
-                    this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
-                ) && 
-                (
-                    this.SEzsignbulksendDescription == input.SEzsignbulksendDescription ||
-                    (this.SEzsignbulksendDescription != null &&
-                    this.SEzsignbulksendDescription.Equals(input.SEzsignbulksendDescription))
-                ) && 
-                (
-                    this.TEzsignbulksendNote == input.TEzsignbulksendNote ||
-                    (this.TEzsignbulksendNote != null &&
-                    this.TEzsignbulksendNote.Equals(input.TEzsignbulksendNote))
-                ) && 
-                (
-                    this.BEzsignbulksendNeedvalidation == input.BEzsignbulksendNeedvalidation ||
-                    this.BEzsignbulksendNeedvalidation.Equals(input.BEzsignbulksendNeedvalidation)
-                ) && 
-                (
-                    this.BEzsignbulksendIsactive == input.BEzsignbulksendIsactive ||
-                    this.BEzsignbulksendIsactive.Equals(input.BEzsignbulksendIsactive)
-                ) && 
-                (
-                    this.ObjAudit == input.ObjAudit ||
-                    (this.ObjAudit != null &&
-                    this.ObjAudit.Equals(input.ObjAudit))
-                ) && 
-                (
-                    this.AObjEzsignbulksenddocumentmapping == input.AObjEzsignbulksenddocumentmapping ||
-                    this.AObjEzsignbulksenddocumentmapping != null &&
-                    input.AObjEzsignbulksenddocumentmapping != null &&
-                    this.AObjEzsignbulksenddocumentmapping.SequenceEqual(input.AObjEzsignbulksenddocumentmapping)
-                ) && 
-                (
-                    this.AObjEzsignbulksendsignermapping == input.AObjEzsignbulksendsignermapping ||
-                    this.AObjEzsignbulksendsignermapping != null &&
-                    input.AObjEzsignbulksendsignermapping != null &&
-                    this.AObjEzsignbulksendsignermapping.SequenceEqual(input.AObjEzsignbulksendsignermapping)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignbulksendID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldertypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiLanguageID.GetHashCode();
-                if (this.SLanguageNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SLanguageNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EEzsignfoldertypePrivacylevel.GetHashCode();
-                if (this.SEzsignfoldertypeNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldertypeNameX.GetHashCode();
-                }
-                if (this.SEzsignbulksendDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignbulksendDescription.GetHashCode();
-                }
-                if (this.TEzsignbulksendNote != null)
-                {
-                    hashCode = (hashCode * 59) + this.TEzsignbulksendNote.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzsignbulksendNeedvalidation.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignbulksendIsactive.GetHashCode();
-                if (this.ObjAudit != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjAudit.GetHashCode();
-                }
-                if (this.AObjEzsignbulksenddocumentmapping != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignbulksenddocumentmapping.GetHashCode();
-                }
-                if (this.AObjEzsignbulksendsignermapping != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignbulksendsignermapping.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

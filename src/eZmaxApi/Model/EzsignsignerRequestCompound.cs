@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignsigner Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignsigner-RequestCompound")]
-    public partial class EzsignsignerRequestCompound : IEquatable<EzsignsignerRequestCompound>, IValidatableObject
+    public partial class EzsignsignerRequestCompound : IValidatableObject
     {
         /// <summary>
         /// The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
@@ -169,81 +169,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignerRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignerRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignerRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignerRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiUserlogintypeID == input.FkiUserlogintypeID ||
-                    this.FkiUserlogintypeID.Equals(input.FkiUserlogintypeID)
-                ) && 
-                (
-                    this.FkiTaxassignmentID == input.FkiTaxassignmentID ||
-                    this.FkiTaxassignmentID.Equals(input.FkiTaxassignmentID)
-                ) && 
-                (
-                    this.FkiSecretquestionID == input.FkiSecretquestionID ||
-                    this.FkiSecretquestionID.Equals(input.FkiSecretquestionID)
-                ) && 
-                (
-                    this.EEzsignsignerLogintype == input.EEzsignsignerLogintype ||
-                    this.EEzsignsignerLogintype.Equals(input.EEzsignsignerLogintype)
-                ) && 
-                (
-                    this.SEzsignsignerSecretanswer == input.SEzsignsignerSecretanswer ||
-                    (this.SEzsignsignerSecretanswer != null &&
-                    this.SEzsignsignerSecretanswer.Equals(input.SEzsignsignerSecretanswer))
-                ) && 
-                (
-                    this.ObjContact == input.ObjContact ||
-                    (this.ObjContact != null &&
-                    this.ObjContact.Equals(input.ObjContact))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiUserlogintypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiTaxassignmentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiSecretquestionID.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignsignerLogintype.GetHashCode();
-                if (this.SEzsignsignerSecretanswer != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignsignerSecretanswer.GetHashCode();
-                }
-                if (this.ObjContact != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjContact.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

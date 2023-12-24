@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Branding List Element
     /// </summary>
     [DataContract(Name = "branding-ListElement")]
-    public partial class BrandingListElement : IEquatable<BrandingListElement>, IValidatableObject
+    public partial class BrandingListElement : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingListElement" /> class.
@@ -167,92 +167,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrandingListElement);
-        }
-
-        /// <summary>
-        /// Returns true if BrandingListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrandingListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrandingListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiBrandingID == input.PkiBrandingID ||
-                    this.PkiBrandingID.Equals(input.PkiBrandingID)
-                ) && 
-                (
-                    this.SBrandingDescriptionX == input.SBrandingDescriptionX ||
-                    (this.SBrandingDescriptionX != null &&
-                    this.SBrandingDescriptionX.Equals(input.SBrandingDescriptionX))
-                ) && 
-                (
-                    this.IBrandingColortext == input.IBrandingColortext ||
-                    this.IBrandingColortext.Equals(input.IBrandingColortext)
-                ) && 
-                (
-                    this.IBrandingColortextlinkbox == input.IBrandingColortextlinkbox ||
-                    this.IBrandingColortextlinkbox.Equals(input.IBrandingColortextlinkbox)
-                ) && 
-                (
-                    this.IBrandingColortextbutton == input.IBrandingColortextbutton ||
-                    this.IBrandingColortextbutton.Equals(input.IBrandingColortextbutton)
-                ) && 
-                (
-                    this.IBrandingColorbackground == input.IBrandingColorbackground ||
-                    this.IBrandingColorbackground.Equals(input.IBrandingColorbackground)
-                ) && 
-                (
-                    this.IBrandingColorbackgroundbutton == input.IBrandingColorbackgroundbutton ||
-                    this.IBrandingColorbackgroundbutton.Equals(input.IBrandingColorbackgroundbutton)
-                ) && 
-                (
-                    this.IBrandingColorbackgroundsmallbox == input.IBrandingColorbackgroundsmallbox ||
-                    this.IBrandingColorbackgroundsmallbox.Equals(input.IBrandingColorbackgroundsmallbox)
-                ) && 
-                (
-                    this.BBrandingIsactive == input.BBrandingIsactive ||
-                    this.BBrandingIsactive.Equals(input.BBrandingIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiBrandingID.GetHashCode();
-                if (this.SBrandingDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBrandingDescriptionX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IBrandingColortext.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColortextlinkbox.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColortextbutton.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColorbackground.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColorbackgroundbutton.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColorbackgroundsmallbox.GetHashCode();
-                hashCode = (hashCode * 59) + this.BBrandingIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

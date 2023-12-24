@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/customer/{pksCustomerCode}/endpoint
     /// </summary>
     [DataContract(Name = "global-customer-getEndpoint-v1-Response")]
-    public partial class GlobalCustomerGetEndpointV1Response : IEquatable<GlobalCustomerGetEndpointV1Response>, IValidatableObject
+    public partial class GlobalCustomerGetEndpointV1Response : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalCustomerGetEndpointV1Response" /> class.
@@ -78,52 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as GlobalCustomerGetEndpointV1Response);
-        }
-
-        /// <summary>
-        /// Returns true if GlobalCustomerGetEndpointV1Response instances are equal
-        /// </summary>
-        /// <param name="input">Instance of GlobalCustomerGetEndpointV1Response to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(GlobalCustomerGetEndpointV1Response input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SEndpointURL == input.SEndpointURL ||
-                    (this.SEndpointURL != null &&
-                    this.SEndpointURL.Equals(input.SEndpointURL))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SEndpointURL != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEndpointURL.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

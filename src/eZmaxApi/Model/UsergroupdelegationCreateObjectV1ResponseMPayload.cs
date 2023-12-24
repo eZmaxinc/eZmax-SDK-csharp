@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/usergroupdelegation
     /// </summary>
     [DataContract(Name = "usergroupdelegation-createObject-v1-Response-mPayload")]
-    public partial class UsergroupdelegationCreateObjectV1ResponseMPayload : IEquatable<UsergroupdelegationCreateObjectV1ResponseMPayload>, IValidatableObject
+    public partial class UsergroupdelegationCreateObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupdelegationCreateObjectV1ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UsergroupdelegationCreateObjectV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if UsergroupdelegationCreateObjectV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UsergroupdelegationCreateObjectV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UsergroupdelegationCreateObjectV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiUsergroupdelegationID == input.APkiUsergroupdelegationID ||
-                    this.APkiUsergroupdelegationID != null &&
-                    input.APkiUsergroupdelegationID != null &&
-                    this.APkiUsergroupdelegationID.SequenceEqual(input.APkiUsergroupdelegationID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiUsergroupdelegationID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiUsergroupdelegationID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

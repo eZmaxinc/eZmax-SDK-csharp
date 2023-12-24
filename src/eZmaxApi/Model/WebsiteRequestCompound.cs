@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Website Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "website-RequestCompound")]
-    public partial class WebsiteRequestCompound : IEquatable<WebsiteRequestCompound>, IValidatableObject
+    public partial class WebsiteRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsiteRequestCompound" /> class.
@@ -90,57 +90,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebsiteRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if WebsiteRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebsiteRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebsiteRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiWebsitetypeID == input.FkiWebsitetypeID ||
-                    this.FkiWebsitetypeID.Equals(input.FkiWebsitetypeID)
-                ) && 
-                (
-                    this.SWebsiteAddress == input.SWebsiteAddress ||
-                    (this.SWebsiteAddress != null &&
-                    this.SWebsiteAddress.Equals(input.SWebsiteAddress))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiWebsitetypeID.GetHashCode();
-                if (this.SWebsiteAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWebsiteAddress.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

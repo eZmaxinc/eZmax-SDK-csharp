@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/taxassignment/getAutocomplete
     /// </summary>
     [DataContract(Name = "taxassignment-getAutocomplete-v2-Response-mPayload")]
-    public partial class TaxassignmentGetAutocompleteV2ResponseMPayload : IEquatable<TaxassignmentGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class TaxassignmentGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TaxassignmentGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TaxassignmentGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if TaxassignmentGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TaxassignmentGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TaxassignmentGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjTaxassignment == input.AObjTaxassignment ||
-                    this.AObjTaxassignment != null &&
-                    input.AObjTaxassignment != null &&
-                    this.AObjTaxassignment.SequenceEqual(input.AObjTaxassignment)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjTaxassignment != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjTaxassignment.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

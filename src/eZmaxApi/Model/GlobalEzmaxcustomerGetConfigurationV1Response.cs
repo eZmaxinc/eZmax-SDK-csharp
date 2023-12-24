@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
     /// </summary>
     [DataContract(Name = "global-ezmaxcustomer-getConfiguration-v1-Response")]
-    public partial class GlobalEzmaxcustomerGetConfigurationV1Response : IEquatable<GlobalEzmaxcustomerGetConfigurationV1Response>, IValidatableObject
+    public partial class GlobalEzmaxcustomerGetConfigurationV1Response : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalEzmaxcustomerGetConfigurationV1Response" /> class.
@@ -138,88 +138,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as GlobalEzmaxcustomerGetConfigurationV1Response);
-        }
-
-        /// <summary>
-        /// Returns true if GlobalEzmaxcustomerGetConfigurationV1Response instances are equal
-        /// </summary>
-        /// <param name="input">Instance of GlobalEzmaxcustomerGetConfigurationV1Response to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(GlobalEzmaxcustomerGetConfigurationV1Response input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SInfrastructureregionCode == input.SInfrastructureregionCode ||
-                    (this.SInfrastructureregionCode != null &&
-                    this.SInfrastructureregionCode.Equals(input.SInfrastructureregionCode))
-                ) && 
-                (
-                    this.SInfrastructureregionCodeWeb == input.SInfrastructureregionCodeWeb ||
-                    (this.SInfrastructureregionCodeWeb != null &&
-                    this.SInfrastructureregionCodeWeb.Equals(input.SInfrastructureregionCodeWeb))
-                ) && 
-                (
-                    this.SInfrastructureenvironmenttypeDescription == input.SInfrastructureenvironmenttypeDescription ||
-                    (this.SInfrastructureenvironmenttypeDescription != null &&
-                    this.SInfrastructureenvironmenttypeDescription.Equals(input.SInfrastructureenvironmenttypeDescription))
-                ) && 
-                (
-                    this.SCognitoClientIDExternal == input.SCognitoClientIDExternal ||
-                    (this.SCognitoClientIDExternal != null &&
-                    this.SCognitoClientIDExternal.Equals(input.SCognitoClientIDExternal))
-                ) && 
-                (
-                    this.SCognitoClientIDEzmaxpublic == input.SCognitoClientIDEzmaxpublic ||
-                    (this.SCognitoClientIDEzmaxpublic != null &&
-                    this.SCognitoClientIDEzmaxpublic.Equals(input.SCognitoClientIDEzmaxpublic))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SInfrastructureregionCode != null)
-                {
-                    hashCode = (hashCode * 59) + this.SInfrastructureregionCode.GetHashCode();
-                }
-                if (this.SInfrastructureregionCodeWeb != null)
-                {
-                    hashCode = (hashCode * 59) + this.SInfrastructureregionCodeWeb.GetHashCode();
-                }
-                if (this.SInfrastructureenvironmenttypeDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SInfrastructureenvironmenttypeDescription.GetHashCode();
-                }
-                if (this.SCognitoClientIDExternal != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCognitoClientIDExternal.GetHashCode();
-                }
-                if (this.SCognitoClientIDEzmaxpublic != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCognitoClientIDEzmaxpublic.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

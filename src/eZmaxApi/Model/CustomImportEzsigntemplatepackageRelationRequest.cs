@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// The object used in /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage Request
     /// </summary>
     [DataContract(Name = "Custom-ImportEzsigntemplatepackageRelation-Request")]
-    public partial class CustomImportEzsigntemplatepackageRelationRequest : IEquatable<CustomImportEzsigntemplatepackageRelationRequest>, IValidatableObject
+    public partial class CustomImportEzsigntemplatepackageRelationRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomImportEzsigntemplatepackageRelationRequest" /> class.
@@ -96,62 +96,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomImportEzsigntemplatepackageRelationRequest);
-        }
-
-        /// <summary>
-        /// Returns true if CustomImportEzsigntemplatepackageRelationRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomImportEzsigntemplatepackageRelationRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomImportEzsigntemplatepackageRelationRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiEzsigntemplatepackagesignerID == input.FkiEzsigntemplatepackagesignerID ||
-                    this.FkiEzsigntemplatepackagesignerID.Equals(input.FkiEzsigntemplatepackagesignerID)
-                ) && 
-                (
-                    this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
-                    this.FkiEzsignfoldersignerassociationID.Equals(input.FkiEzsignfoldersignerassociationID)
-                ) && 
-                (
-                    this.SEzsigntemplatepackagesignerDescription == input.SEzsigntemplatepackagesignerDescription ||
-                    (this.SEzsigntemplatepackagesignerDescription != null &&
-                    this.SEzsigntemplatepackagesignerDescription.Equals(input.SEzsigntemplatepackagesignerDescription))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplatepackagesignerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldersignerassociationID.GetHashCode();
-                if (this.SEzsigntemplatepackagesignerDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplatepackagesignerDescription.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

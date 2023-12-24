@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/module/ezsign/suggestTemplates
     /// </summary>
     [DataContract(Name = "ezsign-suggestTemplates-v1-Response-mPayload")]
-    public partial class EzsignSuggestTemplatesV1ResponseMPayload : IEquatable<EzsignSuggestTemplatesV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignSuggestTemplatesV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignSuggestTemplatesV1ResponseMPayload" /> class.
@@ -91,63 +91,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignSuggestTemplatesV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignSuggestTemplatesV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignSuggestTemplatesV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignSuggestTemplatesV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsigntemplate == input.AObjEzsigntemplate ||
-                    this.AObjEzsigntemplate != null &&
-                    input.AObjEzsigntemplate != null &&
-                    this.AObjEzsigntemplate.SequenceEqual(input.AObjEzsigntemplate)
-                ) && 
-                (
-                    this.AObjEzsigntemplatepackage == input.AObjEzsigntemplatepackage ||
-                    this.AObjEzsigntemplatepackage != null &&
-                    input.AObjEzsigntemplatepackage != null &&
-                    this.AObjEzsigntemplatepackage.SequenceEqual(input.AObjEzsigntemplatepackage)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsigntemplate != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsigntemplate.GetHashCode();
-                }
-                if (this.AObjEzsigntemplatepackage != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsigntemplatepackage.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

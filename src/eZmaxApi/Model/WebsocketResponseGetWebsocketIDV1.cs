@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for Websocket GetWebsocketID V1
     /// </summary>
     [DataContract(Name = "Websocket-Response-GetWebsocketID-V1")]
-    public partial class WebsocketResponseGetWebsocketIDV1 : IEquatable<WebsocketResponseGetWebsocketIDV1>, IValidatableObject
+    public partial class WebsocketResponseGetWebsocketIDV1 : IValidatableObject
     {
         /// <summary>
         /// The Type of message
@@ -101,57 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebsocketResponseGetWebsocketIDV1);
-        }
-
-        /// <summary>
-        /// Returns true if WebsocketResponseGetWebsocketIDV1 instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebsocketResponseGetWebsocketIDV1 to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebsocketResponseGetWebsocketIDV1 input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.EWebsocketMessagetype == input.EWebsocketMessagetype ||
-                    this.EWebsocketMessagetype.Equals(input.EWebsocketMessagetype)
-                ) && 
-                (
-                    this.MPayload == input.MPayload ||
-                    (this.MPayload != null &&
-                    this.MPayload.Equals(input.MPayload))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.EWebsocketMessagetype.GetHashCode();
-                if (this.MPayload != null)
-                {
-                    hashCode = (hashCode * 59) + this.MPayload.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

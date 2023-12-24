@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/ezsigndocument/{pkiEzsigndocumentID}
     /// </summary>
     [DataContract(Name = "ezsigndocument-getObject-v2-Response-mPayload")]
-    public partial class EzsigndocumentGetObjectV2ResponseMPayload : IEquatable<EzsigndocumentGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class EzsigndocumentGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzsigndocument == input.ObjEzsigndocument ||
-                    (this.ObjEzsigndocument != null &&
-                    this.ObjEzsigndocument.Equals(input.ObjEzsigndocument))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzsigndocument != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsigndocument.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

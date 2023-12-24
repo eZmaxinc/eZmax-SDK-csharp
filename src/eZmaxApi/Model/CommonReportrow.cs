@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A row in a Reportsubsectionpart 
     /// </summary>
     [DataContract(Name = "Common-Reportrow")]
-    public partial class CommonReportrow : IEquatable<CommonReportrow>, IValidatableObject
+    public partial class CommonReportrow : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportrow" /> class.
@@ -88,58 +88,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonReportrow);
-        }
-
-        /// <summary>
-        /// Returns true if CommonReportrow instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonReportrow to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonReportrow input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjReportcell == input.AObjReportcell ||
-                    this.AObjReportcell != null &&
-                    input.AObjReportcell != null &&
-                    this.AObjReportcell.SequenceEqual(input.AObjReportcell)
-                ) && 
-                (
-                    this.IReportrowHeight == input.IReportrowHeight ||
-                    this.IReportrowHeight.Equals(input.IReportrowHeight)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjReportcell != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjReportcell.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IReportrowHeight.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

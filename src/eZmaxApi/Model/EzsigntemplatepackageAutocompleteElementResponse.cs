@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatepackage AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "ezsigntemplatepackage-AutocompleteElement-Response")]
-    public partial class EzsigntemplatepackageAutocompleteElementResponse : IEquatable<EzsigntemplatepackageAutocompleteElementResponse>, IValidatableObject
+    public partial class EzsigntemplatepackageAutocompleteElementResponse : IValidatableObject
     {
 
         /// <summary>
@@ -120,72 +120,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatepackageAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatepackageAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatepackageAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatepackageAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.EEzsignfoldertypePrivacylevel == input.EEzsignfoldertypePrivacylevel ||
-                    this.EEzsignfoldertypePrivacylevel.Equals(input.EEzsignfoldertypePrivacylevel)
-                ) && 
-                (
-                    this.SEzsigntemplatepackageDescription == input.SEzsigntemplatepackageDescription ||
-                    (this.SEzsigntemplatepackageDescription != null &&
-                    this.SEzsigntemplatepackageDescription.Equals(input.SEzsigntemplatepackageDescription))
-                ) && 
-                (
-                    this.PkiEzsigntemplatepackageID == input.PkiEzsigntemplatepackageID ||
-                    this.PkiEzsigntemplatepackageID.Equals(input.PkiEzsigntemplatepackageID)
-                ) && 
-                (
-                    this.BEzsigntemplatepackageIsactive == input.BEzsigntemplatepackageIsactive ||
-                    this.BEzsigntemplatepackageIsactive.Equals(input.BEzsigntemplatepackageIsactive)
-                ) && 
-                (
-                    this.BDisabled == input.BDisabled ||
-                    this.BDisabled.Equals(input.BDisabled)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.EEzsignfoldertypePrivacylevel.GetHashCode();
-                if (this.SEzsigntemplatepackageDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplatepackageDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiEzsigntemplatepackageID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsigntemplatepackageIsactive.GetHashCode();
-                hashCode = (hashCode * 59) + this.BDisabled.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

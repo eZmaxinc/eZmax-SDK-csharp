@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/variableexpense
     /// </summary>
     [DataContract(Name = "variableexpense-createObject-v1-Request")]
-    public partial class VariableexpenseCreateObjectV1Request : IEquatable<VariableexpenseCreateObjectV1Request>, IValidatableObject
+    public partial class VariableexpenseCreateObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as VariableexpenseCreateObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if VariableexpenseCreateObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of VariableexpenseCreateObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(VariableexpenseCreateObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjVariableexpense == input.AObjVariableexpense ||
-                    this.AObjVariableexpense != null &&
-                    input.AObjVariableexpense != null &&
-                    this.AObjVariableexpense.SequenceEqual(input.AObjVariableexpense)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjVariableexpense != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjVariableexpense.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Textstylestatic Object
     /// </summary>
     [DataContract(Name = "textstylestatic-ResponseCompound")]
-    public partial class TextstylestaticResponseCompound : IEquatable<TextstylestaticResponseCompound>, IValidatableObject
+    public partial class TextstylestaticResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TextstylestaticResponseCompound" /> class.
@@ -151,83 +151,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TextstylestaticResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if TextstylestaticResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TextstylestaticResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TextstylestaticResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiTextstylestaticID == input.PkiTextstylestaticID ||
-                    this.PkiTextstylestaticID.Equals(input.PkiTextstylestaticID)
-                ) && 
-                (
-                    this.FkiFontID == input.FkiFontID ||
-                    this.FkiFontID.Equals(input.FkiFontID)
-                ) && 
-                (
-                    this.BTextstylestaticBold == input.BTextstylestaticBold ||
-                    this.BTextstylestaticBold.Equals(input.BTextstylestaticBold)
-                ) && 
-                (
-                    this.BTextstylestaticUnderline == input.BTextstylestaticUnderline ||
-                    this.BTextstylestaticUnderline.Equals(input.BTextstylestaticUnderline)
-                ) && 
-                (
-                    this.BTextstylestaticItalic == input.BTextstylestaticItalic ||
-                    this.BTextstylestaticItalic.Equals(input.BTextstylestaticItalic)
-                ) && 
-                (
-                    this.BTextstylestaticStrikethrough == input.BTextstylestaticStrikethrough ||
-                    this.BTextstylestaticStrikethrough.Equals(input.BTextstylestaticStrikethrough)
-                ) && 
-                (
-                    this.ITextstylestaticFontcolor == input.ITextstylestaticFontcolor ||
-                    this.ITextstylestaticFontcolor.Equals(input.ITextstylestaticFontcolor)
-                ) && 
-                (
-                    this.ITextstylestaticSize == input.ITextstylestaticSize ||
-                    this.ITextstylestaticSize.Equals(input.ITextstylestaticSize)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiTextstylestaticID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiFontID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BTextstylestaticBold.GetHashCode();
-                hashCode = (hashCode * 59) + this.BTextstylestaticUnderline.GetHashCode();
-                hashCode = (hashCode * 59) + this.BTextstylestaticItalic.GetHashCode();
-                hashCode = (hashCode * 59) + this.BTextstylestaticStrikethrough.GetHashCode();
-                hashCode = (hashCode * 59) + this.ITextstylestaticFontcolor.GetHashCode();
-                hashCode = (hashCode * 59) + this.ITextstylestaticSize.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

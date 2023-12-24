@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A form Data Document Object 
     /// </summary>
     [DataContract(Name = "Custom-FormDataDocument-Response")]
-    public partial class CustomFormDataDocumentResponse : IEquatable<CustomFormDataDocumentResponse>, IValidatableObject
+    public partial class CustomFormDataDocumentResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomFormDataDocumentResponse" /> class.
@@ -131,81 +131,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomFormDataDocumentResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomFormDataDocumentResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomFormDataDocumentResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomFormDataDocumentResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsigndocumentID == input.PkiEzsigndocumentID ||
-                    this.PkiEzsigndocumentID.Equals(input.PkiEzsigndocumentID)
-                ) && 
-                (
-                    this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
-                    this.FkiEzsignfolderID.Equals(input.FkiEzsignfolderID)
-                ) && 
-                (
-                    this.SEzsigndocumentName == input.SEzsigndocumentName ||
-                    (this.SEzsigndocumentName != null &&
-                    this.SEzsigndocumentName.Equals(input.SEzsigndocumentName))
-                ) && 
-                (
-                    this.DtModifiedDate == input.DtModifiedDate ||
-                    (this.DtModifiedDate != null &&
-                    this.DtModifiedDate.Equals(input.DtModifiedDate))
-                ) && 
-                (
-                    this.AObjFormDataSigner == input.AObjFormDataSigner ||
-                    this.AObjFormDataSigner != null &&
-                    input.AObjFormDataSigner != null &&
-                    this.AObjFormDataSigner.SequenceEqual(input.AObjFormDataSigner)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsigndocumentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfolderID.GetHashCode();
-                if (this.SEzsigndocumentName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentName.GetHashCode();
-                }
-                if (this.DtModifiedDate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtModifiedDate.GetHashCode();
-                }
-                if (this.AObjFormDataSigner != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjFormDataSigner.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

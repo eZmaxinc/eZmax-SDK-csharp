@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/variableexpense/{pkiVariableexpenseID}
     /// </summary>
     [DataContract(Name = "variableexpense-getObject-v2-Response-mPayload")]
-    public partial class VariableexpenseGetObjectV2ResponseMPayload : IEquatable<VariableexpenseGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class VariableexpenseGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as VariableexpenseGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if VariableexpenseGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of VariableexpenseGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(VariableexpenseGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjVariableexpense == input.ObjVariableexpense ||
-                    (this.ObjVariableexpense != null &&
-                    this.ObjVariableexpense.Equals(input.ObjVariableexpense))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjVariableexpense != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjVariableexpense.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

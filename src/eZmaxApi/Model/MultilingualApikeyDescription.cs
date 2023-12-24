@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Description of the API Key
     /// </summary>
     [DataContract(Name = "Multilingual-ApikeyDescription")]
-    public partial class MultilingualApikeyDescription : IEquatable<MultilingualApikeyDescription>, IValidatableObject
+    public partial class MultilingualApikeyDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualApikeyDescription" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualApikeyDescription);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualApikeyDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualApikeyDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualApikeyDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SApikeyDescription1 == input.SApikeyDescription1 ||
-                    (this.SApikeyDescription1 != null &&
-                    this.SApikeyDescription1.Equals(input.SApikeyDescription1))
-                ) && 
-                (
-                    this.SApikeyDescription2 == input.SApikeyDescription2 ||
-                    (this.SApikeyDescription2 != null &&
-                    this.SApikeyDescription2.Equals(input.SApikeyDescription2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SApikeyDescription1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SApikeyDescription1.GetHashCode();
-                }
-                if (this.SApikeyDescription2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SApikeyDescription2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

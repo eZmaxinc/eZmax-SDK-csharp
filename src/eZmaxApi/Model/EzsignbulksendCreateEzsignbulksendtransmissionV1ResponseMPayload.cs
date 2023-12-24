@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
     /// </summary>
     [DataContract(Name = "ezsignbulksend-createEzsignbulksendtransmission-v1-Response-mPayload")]
-    public partial class EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload : IEquatable<EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzsignbulksendtransmission == input.ObjEzsignbulksendtransmission ||
-                    (this.ObjEzsignbulksendtransmission != null &&
-                    this.ObjEzsignbulksendtransmission.Equals(input.ObjEzsignbulksendtransmission))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzsignbulksendtransmission != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsignbulksendtransmission.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

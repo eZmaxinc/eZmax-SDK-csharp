@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/module/user/createEzsignuser
     /// </summary>
     [DataContract(Name = "user-createEzsignuser-v1-Request")]
-    public partial class UserCreateEzsignuserV1Request : IEquatable<UserCreateEzsignuserV1Request>, IValidatableObject
+    public partial class UserCreateEzsignuserV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1Request" /> class.
@@ -184,111 +184,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserCreateEzsignuserV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if UserCreateEzsignuserV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserCreateEzsignuserV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserCreateEzsignuserV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    this.FkiLanguageID.Equals(input.FkiLanguageID)
-                ) && 
-                (
-                    this.SUserFirstname == input.SUserFirstname ||
-                    (this.SUserFirstname != null &&
-                    this.SUserFirstname.Equals(input.SUserFirstname))
-                ) && 
-                (
-                    this.SUserLastname == input.SUserLastname ||
-                    (this.SUserLastname != null &&
-                    this.SUserLastname.Equals(input.SUserLastname))
-                ) && 
-                (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                ) && 
-                (
-                    this.SPhoneRegion == input.SPhoneRegion ||
-                    (this.SPhoneRegion != null &&
-                    this.SPhoneRegion.Equals(input.SPhoneRegion))
-                ) && 
-                (
-                    this.SPhoneExchange == input.SPhoneExchange ||
-                    (this.SPhoneExchange != null &&
-                    this.SPhoneExchange.Equals(input.SPhoneExchange))
-                ) && 
-                (
-                    this.SPhoneNumber == input.SPhoneNumber ||
-                    (this.SPhoneNumber != null &&
-                    this.SPhoneNumber.Equals(input.SPhoneNumber))
-                ) && 
-                (
-                    this.SPhoneExtension == input.SPhoneExtension ||
-                    (this.SPhoneExtension != null &&
-                    this.SPhoneExtension.Equals(input.SPhoneExtension))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiLanguageID.GetHashCode();
-                if (this.SUserFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserFirstname.GetHashCode();
-                }
-                if (this.SUserLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLastname.GetHashCode();
-                }
-                if (this.SEmailAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailAddress.GetHashCode();
-                }
-                if (this.SPhoneRegion != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneRegion.GetHashCode();
-                }
-                if (this.SPhoneExchange != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneExchange.GetHashCode();
-                }
-                if (this.SPhoneNumber != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneNumber.GetHashCode();
-                }
-                if (this.SPhoneExtension != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneExtension.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

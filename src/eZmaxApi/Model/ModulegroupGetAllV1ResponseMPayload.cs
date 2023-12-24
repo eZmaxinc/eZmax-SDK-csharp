@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/modulegroup/getAll
     /// </summary>
     [DataContract(Name = "modulegroup-getAll-v1-Response-mPayload")]
-    public partial class ModulegroupGetAllV1ResponseMPayload : IEquatable<ModulegroupGetAllV1ResponseMPayload>, IValidatableObject
+    public partial class ModulegroupGetAllV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulegroupGetAllV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ModulegroupGetAllV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if ModulegroupGetAllV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ModulegroupGetAllV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ModulegroupGetAllV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjModulegroup == input.AObjModulegroup ||
-                    this.AObjModulegroup != null &&
-                    input.AObjModulegroup != null &&
-                    this.AObjModulegroup.SequenceEqual(input.AObjModulegroup)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjModulegroup != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjModulegroup.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

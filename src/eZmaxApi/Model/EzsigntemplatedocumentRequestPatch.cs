@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsigntemplatedocument Object
     /// </summary>
     [DataContract(Name = "ezsigntemplatedocument-RequestPatch")]
-    public partial class EzsigntemplatedocumentRequestPatch : IEquatable<EzsigntemplatedocumentRequestPatch>, IValidatableObject
+    public partial class EzsigntemplatedocumentRequestPatch : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentRequestPatch" /> class.
@@ -69,52 +69,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatedocumentRequestPatch);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatedocumentRequestPatch instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatedocumentRequestPatch to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatedocumentRequestPatch input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SEzsigntemplatedocumentName == input.SEzsigntemplatedocumentName ||
-                    (this.SEzsigntemplatedocumentName != null &&
-                    this.SEzsigntemplatedocumentName.Equals(input.SEzsigntemplatedocumentName))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SEzsigntemplatedocumentName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplatedocumentName.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

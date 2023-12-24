@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignfolder Object in the context of an EzsignsignaturesAutomatic path
     /// </summary>
     [DataContract(Name = "Custom-EzsignfolderEzsignsignaturesAutomatic-Response")]
-    public partial class CustomEzsignfolderEzsignsignaturesAutomaticResponse : IEquatable<CustomEzsignfolderEzsignsignaturesAutomaticResponse>, IValidatableObject
+    public partial class CustomEzsignfolderEzsignsignaturesAutomaticResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfolderEzsignsignaturesAutomaticResponse" /> class.
@@ -104,67 +104,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomEzsignfolderEzsignsignaturesAutomaticResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomEzsignfolderEzsignsignaturesAutomaticResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomEzsignfolderEzsignsignaturesAutomaticResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomEzsignfolderEzsignsignaturesAutomaticResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignfolderID == input.PkiEzsignfolderID ||
-                    this.PkiEzsignfolderID.Equals(input.PkiEzsignfolderID)
-                ) && 
-                (
-                    this.SEzsignfolderDescription == input.SEzsignfolderDescription ||
-                    (this.SEzsignfolderDescription != null &&
-                    this.SEzsignfolderDescription.Equals(input.SEzsignfolderDescription))
-                ) && 
-                (
-                    this.AObjEzsigndocument == input.AObjEzsigndocument ||
-                    this.AObjEzsigndocument != null &&
-                    input.AObjEzsigndocument != null &&
-                    this.AObjEzsigndocument.SequenceEqual(input.AObjEzsigndocument)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignfolderID.GetHashCode();
-                if (this.SEzsignfolderDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfolderDescription.GetHashCode();
-                }
-                if (this.AObjEzsigndocument != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsigndocument.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

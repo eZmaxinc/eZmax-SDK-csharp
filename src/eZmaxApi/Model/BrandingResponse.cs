@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Branding Object
     /// </summary>
     [DataContract(Name = "branding-Response")]
-    public partial class BrandingResponse : IEquatable<BrandingResponse>, IValidatableObject
+    public partial class BrandingResponse : IValidatableObject
     {
 
         /// <summary>
@@ -223,129 +223,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrandingResponse);
-        }
-
-        /// <summary>
-        /// Returns true if BrandingResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrandingResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrandingResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiBrandingID == input.PkiBrandingID ||
-                    this.PkiBrandingID.Equals(input.PkiBrandingID)
-                ) && 
-                (
-                    this.FkiEmailID == input.FkiEmailID ||
-                    this.FkiEmailID.Equals(input.FkiEmailID)
-                ) && 
-                (
-                    this.ObjBrandingDescription == input.ObjBrandingDescription ||
-                    (this.ObjBrandingDescription != null &&
-                    this.ObjBrandingDescription.Equals(input.ObjBrandingDescription))
-                ) && 
-                (
-                    this.SBrandingDescriptionX == input.SBrandingDescriptionX ||
-                    (this.SBrandingDescriptionX != null &&
-                    this.SBrandingDescriptionX.Equals(input.SBrandingDescriptionX))
-                ) && 
-                (
-                    this.SBrandingName == input.SBrandingName ||
-                    (this.SBrandingName != null &&
-                    this.SBrandingName.Equals(input.SBrandingName))
-                ) && 
-                (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                ) && 
-                (
-                    this.EBrandingLogo == input.EBrandingLogo ||
-                    this.EBrandingLogo.Equals(input.EBrandingLogo)
-                ) && 
-                (
-                    this.IBrandingColortext == input.IBrandingColortext ||
-                    this.IBrandingColortext.Equals(input.IBrandingColortext)
-                ) && 
-                (
-                    this.IBrandingColortextlinkbox == input.IBrandingColortextlinkbox ||
-                    this.IBrandingColortextlinkbox.Equals(input.IBrandingColortextlinkbox)
-                ) && 
-                (
-                    this.IBrandingColortextbutton == input.IBrandingColortextbutton ||
-                    this.IBrandingColortextbutton.Equals(input.IBrandingColortextbutton)
-                ) && 
-                (
-                    this.IBrandingColorbackground == input.IBrandingColorbackground ||
-                    this.IBrandingColorbackground.Equals(input.IBrandingColorbackground)
-                ) && 
-                (
-                    this.IBrandingColorbackgroundbutton == input.IBrandingColorbackgroundbutton ||
-                    this.IBrandingColorbackgroundbutton.Equals(input.IBrandingColorbackgroundbutton)
-                ) && 
-                (
-                    this.IBrandingColorbackgroundsmallbox == input.IBrandingColorbackgroundsmallbox ||
-                    this.IBrandingColorbackgroundsmallbox.Equals(input.IBrandingColorbackgroundsmallbox)
-                ) && 
-                (
-                    this.BBrandingIsactive == input.BBrandingIsactive ||
-                    this.BBrandingIsactive.Equals(input.BBrandingIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiBrandingID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEmailID.GetHashCode();
-                if (this.ObjBrandingDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjBrandingDescription.GetHashCode();
-                }
-                if (this.SBrandingDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBrandingDescriptionX.GetHashCode();
-                }
-                if (this.SBrandingName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBrandingName.GetHashCode();
-                }
-                if (this.SEmailAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailAddress.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EBrandingLogo.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColortext.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColortextlinkbox.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColortextbutton.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColorbackground.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColorbackgroundbutton.GetHashCode();
-                hashCode = (hashCode * 59) + this.IBrandingColorbackgroundsmallbox.GetHashCode();
-                hashCode = (hashCode * 59) + this.BBrandingIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

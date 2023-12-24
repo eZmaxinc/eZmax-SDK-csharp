@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Styles applied to a Reportcell 
     /// </summary>
     [DataContract(Name = "Common-Reportcellstyle")]
-    public partial class CommonReportcellstyle : IEquatable<CommonReportcellstyle>, IValidatableObject
+    public partial class CommonReportcellstyle : IValidatableObject
     {
 
         /// <summary>
@@ -143,83 +143,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonReportcellstyle);
-        }
-
-        /// <summary>
-        /// Returns true if CommonReportcellstyle instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonReportcellstyle to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonReportcellstyle input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.BReportcellstyleBordertop == input.BReportcellstyleBordertop ||
-                    this.BReportcellstyleBordertop.Equals(input.BReportcellstyleBordertop)
-                ) && 
-                (
-                    this.BReportcellstyleBorderbottom == input.BReportcellstyleBorderbottom ||
-                    this.BReportcellstyleBorderbottom.Equals(input.BReportcellstyleBorderbottom)
-                ) && 
-                (
-                    this.BReportcellstyleBorderleft == input.BReportcellstyleBorderleft ||
-                    this.BReportcellstyleBorderleft.Equals(input.BReportcellstyleBorderleft)
-                ) && 
-                (
-                    this.BReportcellstyleBorderright == input.BReportcellstyleBorderright ||
-                    this.BReportcellstyleBorderright.Equals(input.BReportcellstyleBorderright)
-                ) && 
-                (
-                    this.EReportcellHorizontalalignment == input.EReportcellHorizontalalignment ||
-                    this.EReportcellHorizontalalignment.Equals(input.EReportcellHorizontalalignment)
-                ) && 
-                (
-                    this.EReportcellVerticalalignment == input.EReportcellVerticalalignment ||
-                    this.EReportcellVerticalalignment.Equals(input.EReportcellVerticalalignment)
-                ) && 
-                (
-                    this.EReportcellFontweight == input.EReportcellFontweight ||
-                    this.EReportcellFontweight.Equals(input.EReportcellFontweight)
-                ) && 
-                (
-                    this.EReportcellFontunderline == input.EReportcellFontunderline ||
-                    this.EReportcellFontunderline.Equals(input.EReportcellFontunderline)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.BReportcellstyleBordertop.GetHashCode();
-                hashCode = (hashCode * 59) + this.BReportcellstyleBorderbottom.GetHashCode();
-                hashCode = (hashCode * 59) + this.BReportcellstyleBorderleft.GetHashCode();
-                hashCode = (hashCode * 59) + this.BReportcellstyleBorderright.GetHashCode();
-                hashCode = (hashCode * 59) + this.EReportcellHorizontalalignment.GetHashCode();
-                hashCode = (hashCode * 59) + this.EReportcellVerticalalignment.GetHashCode();
-                hashCode = (hashCode * 59) + this.EReportcellFontweight.GetHashCode();
-                hashCode = (hashCode * 59) + this.EReportcellFontunderline.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

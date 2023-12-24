@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
     /// </summary>
     [DataContract(Name = "ezsignsignature-sign-v1-Request")]
-    public partial class EzsignsignatureSignV1Request : IEquatable<EzsignsignatureSignV1Request>, IValidatableObject
+    public partial class EzsignsignatureSignV1Request : IValidatableObject
     {
         /// <summary>
         /// Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
@@ -67,21 +67,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureSignV1Request" /> class.
         /// </summary>
+        /// <param name="fkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason.</param>
         /// <param name="sValue">The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**.</param>
         /// <param name="eAttachmentsConfirmationDecision">Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
         /// <param name="sAttachmentsRefusalReason">The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
         /// <param name="sSvg">The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false.</param>
         /// <param name="aObjFile">aObjFile.</param>
         /// <param name="bIsAutomatic">Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**.  (required).</param>
-        public EzsignsignatureSignV1Request(string sValue = default(string), EAttachmentsConfirmationDecisionEnum? eAttachmentsConfirmationDecision = default(EAttachmentsConfirmationDecisionEnum?), string sAttachmentsRefusalReason = default(string), string sSvg = default(string), List<CommonFile> aObjFile = default(List<CommonFile>), bool bIsAutomatic = default(bool))
+        public EzsignsignatureSignV1Request(int fkiEzsignsigningreasonID = default(int), string sValue = default(string), EAttachmentsConfirmationDecisionEnum? eAttachmentsConfirmationDecision = default(EAttachmentsConfirmationDecisionEnum?), string sAttachmentsRefusalReason = default(string), string sSvg = default(string), List<CommonFile> aObjFile = default(List<CommonFile>), bool bIsAutomatic = default(bool))
         {
             this.BIsAutomatic = bIsAutomatic;
+            this.FkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
             this.SValue = sValue;
             this.EAttachmentsConfirmationDecision = eAttachmentsConfirmationDecision;
             this.SAttachmentsRefusalReason = sAttachmentsRefusalReason;
             this.SSvg = sSvg;
             this.AObjFile = aObjFile;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignsigningreason
+        /// </summary>
+        /// <value>The unique ID of the Ezsignsigningreason</value>
+        /* <example>194</example>*/
+        [DataMember(Name = "fkiEzsignsigningreasonID", EmitDefaultValue = false)]
+        public int FkiEzsignsigningreasonID { get; set; }
 
         /// <summary>
         /// The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
@@ -126,6 +136,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignsignatureSignV1Request {\n");
+            sb.Append("  FkiEzsignsigningreasonID: ").Append(FkiEzsignsigningreasonID).Append("\n");
             sb.Append("  SValue: ").Append(SValue).Append("\n");
             sb.Append("  EAttachmentsConfirmationDecision: ").Append(EAttachmentsConfirmationDecision).Append("\n");
             sb.Append("  SAttachmentsRefusalReason: ").Append(SAttachmentsRefusalReason).Append("\n");
@@ -146,99 +157,27 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignatureSignV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignatureSignV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignatureSignV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignatureSignV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SValue == input.SValue ||
-                    (this.SValue != null &&
-                    this.SValue.Equals(input.SValue))
-                ) && 
-                (
-                    this.EAttachmentsConfirmationDecision == input.EAttachmentsConfirmationDecision ||
-                    this.EAttachmentsConfirmationDecision.Equals(input.EAttachmentsConfirmationDecision)
-                ) && 
-                (
-                    this.SAttachmentsRefusalReason == input.SAttachmentsRefusalReason ||
-                    (this.SAttachmentsRefusalReason != null &&
-                    this.SAttachmentsRefusalReason.Equals(input.SAttachmentsRefusalReason))
-                ) && 
-                (
-                    this.SSvg == input.SSvg ||
-                    (this.SSvg != null &&
-                    this.SSvg.Equals(input.SSvg))
-                ) && 
-                (
-                    this.AObjFile == input.AObjFile ||
-                    this.AObjFile != null &&
-                    input.AObjFile != null &&
-                    this.AObjFile.SequenceEqual(input.AObjFile)
-                ) && 
-                (
-                    this.BIsAutomatic == input.BIsAutomatic ||
-                    this.BIsAutomatic.Equals(input.BIsAutomatic)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SValue != null)
-                {
-                    hashCode = (hashCode * 59) + this.SValue.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EAttachmentsConfirmationDecision.GetHashCode();
-                if (this.SAttachmentsRefusalReason != null)
-                {
-                    hashCode = (hashCode * 59) + this.SAttachmentsRefusalReason.GetHashCode();
-                }
-                if (this.SSvg != null)
-                {
-                    hashCode = (hashCode * 59) + this.SSvg.GetHashCode();
-                }
-                if (this.AObjFile != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjFile.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BIsAutomatic.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // FkiEzsignsigningreasonID (int) maximum
+            if (this.FkiEzsignsigningreasonID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value less than or equal to 255.", new [] { "FkiEzsignsigningreasonID" });
+            }
+
+            // FkiEzsignsigningreasonID (int) minimum
+            if (this.FkiEzsignsigningreasonID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsigningreasonID" });
+            }
+
             if (this.SSvg != null) {
                 // SSvg (string) pattern
-                Regex regexSSvg = new Regex(@"^.{0,32767}$", RegexOptions.CultureInvariant);
+                Regex regexSSvg = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
                 if (!regexSSvg.Match(this.SSvg).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SSvg, must match a pattern of " + regexSSvg, new [] { "SSvg" });

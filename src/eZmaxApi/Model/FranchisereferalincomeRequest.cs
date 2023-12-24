@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Franchisereferalincome Object
     /// </summary>
     [DataContract(Name = "franchisereferalincome-Request")]
-    public partial class FranchisereferalincomeRequest : IEquatable<FranchisereferalincomeRequest>, IValidatableObject
+    public partial class FranchisereferalincomeRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeRequest" /> class.
@@ -228,131 +228,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as FranchisereferalincomeRequest);
-        }
-
-        /// <summary>
-        /// Returns true if FranchisereferalincomeRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of FranchisereferalincomeRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(FranchisereferalincomeRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiFranchisereferalincomeID == input.PkiFranchisereferalincomeID ||
-                    this.PkiFranchisereferalincomeID.Equals(input.PkiFranchisereferalincomeID)
-                ) && 
-                (
-                    this.FkiFranchisebrokerID == input.FkiFranchisebrokerID ||
-                    this.FkiFranchisebrokerID.Equals(input.FkiFranchisebrokerID)
-                ) && 
-                (
-                    this.FkiFranchisereferalincomeprogramID == input.FkiFranchisereferalincomeprogramID ||
-                    this.FkiFranchisereferalincomeprogramID.Equals(input.FkiFranchisereferalincomeprogramID)
-                ) && 
-                (
-                    this.FkiPeriodID == input.FkiPeriodID ||
-                    this.FkiPeriodID.Equals(input.FkiPeriodID)
-                ) && 
-                (
-                    this.DFranchisereferalincomeLoan == input.DFranchisereferalincomeLoan ||
-                    (this.DFranchisereferalincomeLoan != null &&
-                    this.DFranchisereferalincomeLoan.Equals(input.DFranchisereferalincomeLoan))
-                ) && 
-                (
-                    this.DFranchisereferalincomeFranchiseamount == input.DFranchisereferalincomeFranchiseamount ||
-                    (this.DFranchisereferalincomeFranchiseamount != null &&
-                    this.DFranchisereferalincomeFranchiseamount.Equals(input.DFranchisereferalincomeFranchiseamount))
-                ) && 
-                (
-                    this.DFranchisereferalincomeFranchisoramount == input.DFranchisereferalincomeFranchisoramount ||
-                    (this.DFranchisereferalincomeFranchisoramount != null &&
-                    this.DFranchisereferalincomeFranchisoramount.Equals(input.DFranchisereferalincomeFranchisoramount))
-                ) && 
-                (
-                    this.DFranchisereferalincomeAgentamount == input.DFranchisereferalincomeAgentamount ||
-                    (this.DFranchisereferalincomeAgentamount != null &&
-                    this.DFranchisereferalincomeAgentamount.Equals(input.DFranchisereferalincomeAgentamount))
-                ) && 
-                (
-                    this.DtFranchisereferalincomeDisbursed == input.DtFranchisereferalincomeDisbursed ||
-                    (this.DtFranchisereferalincomeDisbursed != null &&
-                    this.DtFranchisereferalincomeDisbursed.Equals(input.DtFranchisereferalincomeDisbursed))
-                ) && 
-                (
-                    this.TFranchisereferalincomeComment == input.TFranchisereferalincomeComment ||
-                    (this.TFranchisereferalincomeComment != null &&
-                    this.TFranchisereferalincomeComment.Equals(input.TFranchisereferalincomeComment))
-                ) && 
-                (
-                    this.FkiFranchiseofficeID == input.FkiFranchiseofficeID ||
-                    this.FkiFranchiseofficeID.Equals(input.FkiFranchiseofficeID)
-                ) && 
-                (
-                    this.SFranchisereferalincomeRemoteid == input.SFranchisereferalincomeRemoteid ||
-                    (this.SFranchisereferalincomeRemoteid != null &&
-                    this.SFranchisereferalincomeRemoteid.Equals(input.SFranchisereferalincomeRemoteid))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiFranchisereferalincomeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiFranchisebrokerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiFranchisereferalincomeprogramID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiPeriodID.GetHashCode();
-                if (this.DFranchisereferalincomeLoan != null)
-                {
-                    hashCode = (hashCode * 59) + this.DFranchisereferalincomeLoan.GetHashCode();
-                }
-                if (this.DFranchisereferalincomeFranchiseamount != null)
-                {
-                    hashCode = (hashCode * 59) + this.DFranchisereferalincomeFranchiseamount.GetHashCode();
-                }
-                if (this.DFranchisereferalincomeFranchisoramount != null)
-                {
-                    hashCode = (hashCode * 59) + this.DFranchisereferalincomeFranchisoramount.GetHashCode();
-                }
-                if (this.DFranchisereferalincomeAgentamount != null)
-                {
-                    hashCode = (hashCode * 59) + this.DFranchisereferalincomeAgentamount.GetHashCode();
-                }
-                if (this.DtFranchisereferalincomeDisbursed != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtFranchisereferalincomeDisbursed.GetHashCode();
-                }
-                if (this.TFranchisereferalincomeComment != null)
-                {
-                    hashCode = (hashCode * 59) + this.TFranchisereferalincomeComment.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.FkiFranchiseofficeID.GetHashCode();
-                if (this.SFranchisereferalincomeRemoteid != null)
-                {
-                    hashCode = (hashCode * 59) + this.SFranchisereferalincomeRemoteid.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

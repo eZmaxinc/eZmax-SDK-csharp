@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "Custom-Ezsignfoldersignerassociationstatus-Response")]
-    public partial class CustomEzsignfoldersignerassociationstatusResponse : IEquatable<CustomEzsignfoldersignerassociationstatusResponse>, IValidatableObject
+    public partial class CustomEzsignfoldersignerassociationstatusResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationstatusResponse" /> class.
@@ -123,85 +123,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomEzsignfoldersignerassociationstatusResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomEzsignfoldersignerassociationstatusResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomEzsignfoldersignerassociationstatusResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomEzsignfoldersignerassociationstatusResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
-                    this.FkiEzsignfoldersignerassociationID.Equals(input.FkiEzsignfoldersignerassociationID)
-                ) && 
-                (
-                    this.SEzsignfoldersignerassociationstatusLastname == input.SEzsignfoldersignerassociationstatusLastname ||
-                    (this.SEzsignfoldersignerassociationstatusLastname != null &&
-                    this.SEzsignfoldersignerassociationstatusLastname.Equals(input.SEzsignfoldersignerassociationstatusLastname))
-                ) && 
-                (
-                    this.SEzsignfoldersignerassociationstatusFirstname == input.SEzsignfoldersignerassociationstatusFirstname ||
-                    (this.SEzsignfoldersignerassociationstatusFirstname != null &&
-                    this.SEzsignfoldersignerassociationstatusFirstname.Equals(input.SEzsignfoldersignerassociationstatusFirstname))
-                ) && 
-                (
-                    this.SEzsignfoldersignerassociationstatusDescriptionX == input.SEzsignfoldersignerassociationstatusDescriptionX ||
-                    (this.SEzsignfoldersignerassociationstatusDescriptionX != null &&
-                    this.SEzsignfoldersignerassociationstatusDescriptionX.Equals(input.SEzsignfoldersignerassociationstatusDescriptionX))
-                ) && 
-                (
-                    this.AObjEzsignsignaturestatus == input.AObjEzsignsignaturestatus ||
-                    this.AObjEzsignsignaturestatus != null &&
-                    input.AObjEzsignsignaturestatus != null &&
-                    this.AObjEzsignsignaturestatus.SequenceEqual(input.AObjEzsignsignaturestatus)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldersignerassociationID.GetHashCode();
-                if (this.SEzsignfoldersignerassociationstatusLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldersignerassociationstatusLastname.GetHashCode();
-                }
-                if (this.SEzsignfoldersignerassociationstatusFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldersignerassociationstatusFirstname.GetHashCode();
-                }
-                if (this.SEzsignfoldersignerassociationstatusDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldersignerassociationstatusDescriptionX.GetHashCode();
-                }
-                if (this.AObjEzsignsignaturestatus != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignsignaturestatus.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

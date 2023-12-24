@@ -5,10 +5,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**AttachmentDownloadV1**](ObjectAttachmentApi.md#attachmentdownloadv1) | **GET** /1/object/attachment/{pkiAttachmentID}/download | Retrieve the content |
+| [**AttachmentGetAttachmentlogsV1**](ObjectAttachmentApi.md#attachmentgetattachmentlogsv1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs |
+| [**AttachmentGetDownloadUrlV1**](ObjectAttachmentApi.md#attachmentgetdownloadurlv1) | **GET** /1/object/attachment/{pkiAttachmentID}/getDownloadUrl | Retrieve a URL to download attachments. |
 
 <a id="attachmentdownloadv1"></a>
 # **AttachmentDownloadV1**
-> AttachmentDownloadV1Response AttachmentDownloadV1 (int pkiAttachmentID)
+> void AttachmentDownloadV1 (int pkiAttachmentID)
 
 Retrieve the content
 
@@ -34,6 +36,10 @@ namespace Example
             config.AddApiKey("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
+            // Configure API key authorization: Presigned
+            config.AddApiKey("sAuthorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("sAuthorization", "Bearer");
 
             var apiInstance = new ObjectAttachmentApi(config);
             var pkiAttachmentID = 56;  // int | 
@@ -41,8 +47,7 @@ namespace Example
             try
             {
                 // Retrieve the content
-                AttachmentDownloadV1Response result = apiInstance.AttachmentDownloadV1(pkiAttachmentID);
-                Debug.WriteLine(result);
+                apiInstance.AttachmentDownloadV1(pkiAttachmentID);
             }
             catch (ApiException  e)
             {
@@ -62,10 +67,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Retrieve the content
-    ApiResponse<AttachmentDownloadV1Response> response = apiInstance.AttachmentDownloadV1WithHttpInfo(pkiAttachmentID);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
+    apiInstance.AttachmentDownloadV1WithHttpInfo(pkiAttachmentID);
 }
 catch (ApiException e)
 {
@@ -83,7 +85,201 @@ catch (ApiException e)
 
 ### Return type
 
-[**AttachmentDownloadV1Response**](AttachmentDownloadV1Response.md)
+void (empty response body)
+
+### Authorization
+
+[Authorization](../README.md#Authorization), [Presigned](../README.md#Presigned)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **302** | The user has been redirected |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="attachmentgetattachmentlogsv1"></a>
+# **AttachmentGetAttachmentlogsV1**
+> AttachmentGetAttachmentlogsV1Response AttachmentGetAttachmentlogsV1 (int pkiAttachmentID)
+
+Retrieve the Attachmentlogs
+
+Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class AttachmentGetAttachmentlogsV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectAttachmentApi(config);
+            var pkiAttachmentID = 56;  // int | 
+
+            try
+            {
+                // Retrieve the Attachmentlogs
+                AttachmentGetAttachmentlogsV1Response result = apiInstance.AttachmentGetAttachmentlogsV1(pkiAttachmentID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectAttachmentApi.AttachmentGetAttachmentlogsV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the AttachmentGetAttachmentlogsV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve the Attachmentlogs
+    ApiResponse<AttachmentGetAttachmentlogsV1Response> response = apiInstance.AttachmentGetAttachmentlogsV1WithHttpInfo(pkiAttachmentID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectAttachmentApi.AttachmentGetAttachmentlogsV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiAttachmentID** | **int** |  |  |
+
+### Return type
+
+[**AttachmentGetAttachmentlogsV1Response**](AttachmentGetAttachmentlogsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="attachmentgetdownloadurlv1"></a>
+# **AttachmentGetDownloadUrlV1**
+> AttachmentGetDownloadUrlV1Response AttachmentGetDownloadUrlV1 (int pkiAttachmentID)
+
+Retrieve a URL to download attachments.
+
+This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class AttachmentGetDownloadUrlV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectAttachmentApi(config);
+            var pkiAttachmentID = 56;  // int | 
+
+            try
+            {
+                // Retrieve a URL to download attachments.
+                AttachmentGetDownloadUrlV1Response result = apiInstance.AttachmentGetDownloadUrlV1(pkiAttachmentID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectAttachmentApi.AttachmentGetDownloadUrlV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the AttachmentGetDownloadUrlV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve a URL to download attachments.
+    ApiResponse<AttachmentGetDownloadUrlV1Response> response = apiInstance.AttachmentGetDownloadUrlV1WithHttpInfo(pkiAttachmentID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectAttachmentApi.AttachmentGetDownloadUrlV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiAttachmentID** | **int** |  |  |
+
+### Return type
+
+[**AttachmentGetDownloadUrlV1Response**](AttachmentGetDownloadUrlV1Response.md)
 
 ### Authorization
 

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Activesession List Element
     /// </summary>
     [DataContract(Name = "activesession-ListElement")]
-    public partial class ActivesessionListElement : IEquatable<ActivesessionListElement>, IValidatableObject
+    public partial class ActivesessionListElement : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionListElement" /> class.
@@ -230,131 +230,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ActivesessionListElement);
-        }
-
-        /// <summary>
-        /// Returns true if ActivesessionListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ActivesessionListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ActivesessionListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiActivesessionID == input.PkiActivesessionID ||
-                    this.PkiActivesessionID.Equals(input.PkiActivesessionID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.FkiComputerID == input.FkiComputerID ||
-                    this.FkiComputerID.Equals(input.FkiComputerID)
-                ) && 
-                (
-                    this.FkiCompanyID == input.FkiCompanyID ||
-                    this.FkiCompanyID.Equals(input.FkiCompanyID)
-                ) && 
-                (
-                    this.FkiDepartmentID == input.FkiDepartmentID ||
-                    this.FkiDepartmentID.Equals(input.FkiDepartmentID)
-                ) && 
-                (
-                    this.SCompanyNameX == input.SCompanyNameX ||
-                    (this.SCompanyNameX != null &&
-                    this.SCompanyNameX.Equals(input.SCompanyNameX))
-                ) && 
-                (
-                    this.SDepartmentNameX == input.SDepartmentNameX ||
-                    (this.SDepartmentNameX != null &&
-                    this.SDepartmentNameX.Equals(input.SDepartmentNameX))
-                ) && 
-                (
-                    this.SActivesessionLoginname == input.SActivesessionLoginname ||
-                    (this.SActivesessionLoginname != null &&
-                    this.SActivesessionLoginname.Equals(input.SActivesessionLoginname))
-                ) && 
-                (
-                    this.SComputerDescription == input.SComputerDescription ||
-                    (this.SComputerDescription != null &&
-                    this.SComputerDescription.Equals(input.SComputerDescription))
-                ) && 
-                (
-                    this.DtActivesessionFirsthit == input.DtActivesessionFirsthit ||
-                    (this.DtActivesessionFirsthit != null &&
-                    this.DtActivesessionFirsthit.Equals(input.DtActivesessionFirsthit))
-                ) && 
-                (
-                    this.DtActivesessionLasthit == input.DtActivesessionLasthit ||
-                    (this.DtActivesessionLasthit != null &&
-                    this.DtActivesessionLasthit.Equals(input.DtActivesessionLasthit))
-                ) && 
-                (
-                    this.SActivesessionIP == input.SActivesessionIP ||
-                    (this.SActivesessionIP != null &&
-                    this.SActivesessionIP.Equals(input.SActivesessionIP))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiActivesessionID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiComputerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiCompanyID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiDepartmentID.GetHashCode();
-                if (this.SCompanyNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCompanyNameX.GetHashCode();
-                }
-                if (this.SDepartmentNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SDepartmentNameX.GetHashCode();
-                }
-                if (this.SActivesessionLoginname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SActivesessionLoginname.GetHashCode();
-                }
-                if (this.SComputerDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SComputerDescription.GetHashCode();
-                }
-                if (this.DtActivesessionFirsthit != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtActivesessionFirsthit.GetHashCode();
-                }
-                if (this.DtActivesessionLasthit != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtActivesessionLasthit.GetHashCode();
-                }
-                if (this.SActivesessionIP != null)
-                {
-                    hashCode = (hashCode * 59) + this.SActivesessionIP.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Communicationattachment Object and children
     /// </summary>
     [DataContract(Name = "communicationattachment-RequestCompound")]
-    public partial class CommunicationattachmentRequestCompound : IEquatable<CommunicationattachmentRequestCompound>, IValidatableObject
+    public partial class CommunicationattachmentRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationattachmentRequestCompound" /> class.
@@ -102,63 +102,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommunicationattachmentRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if CommunicationattachmentRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommunicationattachmentRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommunicationattachmentRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiCommunicationattachmentID == input.PkiCommunicationattachmentID ||
-                    this.PkiCommunicationattachmentID.Equals(input.PkiCommunicationattachmentID)
-                ) && 
-                (
-                    this.FkiAttachmentID == input.FkiAttachmentID ||
-                    this.FkiAttachmentID.Equals(input.FkiAttachmentID)
-                ) && 
-                (
-                    this.FkiInvoiceID == input.FkiInvoiceID ||
-                    this.FkiInvoiceID.Equals(input.FkiInvoiceID)
-                ) && 
-                (
-                    this.FkiSalarypreparationID == input.FkiSalarypreparationID ||
-                    this.FkiSalarypreparationID.Equals(input.FkiSalarypreparationID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiCommunicationattachmentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiAttachmentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiInvoiceID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiSalarypreparationID.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Systemconfiguration Object
     /// </summary>
     [DataContract(Name = "systemconfiguration-ResponseCompound")]
-    public partial class SystemconfigurationResponseCompound : IEquatable<SystemconfigurationResponseCompound>, IValidatableObject
+    public partial class SystemconfigurationResponseCompound : IValidatableObject
     {
 
         /// <summary>
@@ -181,110 +181,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SystemconfigurationResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if SystemconfigurationResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SystemconfigurationResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SystemconfigurationResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiSystemconfigurationID == input.PkiSystemconfigurationID ||
-                    this.PkiSystemconfigurationID.Equals(input.PkiSystemconfigurationID)
-                ) && 
-                (
-                    this.FkiSystemconfigurationtypeID == input.FkiSystemconfigurationtypeID ||
-                    this.FkiSystemconfigurationtypeID.Equals(input.FkiSystemconfigurationtypeID)
-                ) && 
-                (
-                    this.SSystemconfigurationtypeDescriptionX == input.SSystemconfigurationtypeDescriptionX ||
-                    (this.SSystemconfigurationtypeDescriptionX != null &&
-                    this.SSystemconfigurationtypeDescriptionX.Equals(input.SSystemconfigurationtypeDescriptionX))
-                ) && 
-                (
-                    this.ESystemconfigurationNewexternaluseraction == input.ESystemconfigurationNewexternaluseraction ||
-                    this.ESystemconfigurationNewexternaluseraction.Equals(input.ESystemconfigurationNewexternaluseraction)
-                ) && 
-                (
-                    this.ESystemconfigurationLanguage1 == input.ESystemconfigurationLanguage1 ||
-                    this.ESystemconfigurationLanguage1.Equals(input.ESystemconfigurationLanguage1)
-                ) && 
-                (
-                    this.ESystemconfigurationLanguage2 == input.ESystemconfigurationLanguage2 ||
-                    this.ESystemconfigurationLanguage2.Equals(input.ESystemconfigurationLanguage2)
-                ) && 
-                (
-                    this.ESystemconfigurationEzsign == input.ESystemconfigurationEzsign ||
-                    this.ESystemconfigurationEzsign.Equals(input.ESystemconfigurationEzsign)
-                ) && 
-                (
-                    this.BSystemconfigurationEzsignpersonnal == input.BSystemconfigurationEzsignpersonnal ||
-                    this.BSystemconfigurationEzsignpersonnal.Equals(input.BSystemconfigurationEzsignpersonnal)
-                ) && 
-                (
-                    this.BSystemconfigurationSspr == input.BSystemconfigurationSspr ||
-                    this.BSystemconfigurationSspr.Equals(input.BSystemconfigurationSspr)
-                ) && 
-                (
-                    this.DtSystemconfigurationReadonlyexpirationstart == input.DtSystemconfigurationReadonlyexpirationstart ||
-                    (this.DtSystemconfigurationReadonlyexpirationstart != null &&
-                    this.DtSystemconfigurationReadonlyexpirationstart.Equals(input.DtSystemconfigurationReadonlyexpirationstart))
-                ) && 
-                (
-                    this.DtSystemconfigurationReadonlyexpirationend == input.DtSystemconfigurationReadonlyexpirationend ||
-                    (this.DtSystemconfigurationReadonlyexpirationend != null &&
-                    this.DtSystemconfigurationReadonlyexpirationend.Equals(input.DtSystemconfigurationReadonlyexpirationend))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiSystemconfigurationID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiSystemconfigurationtypeID.GetHashCode();
-                if (this.SSystemconfigurationtypeDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SSystemconfigurationtypeDescriptionX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ESystemconfigurationNewexternaluseraction.GetHashCode();
-                hashCode = (hashCode * 59) + this.ESystemconfigurationLanguage1.GetHashCode();
-                hashCode = (hashCode * 59) + this.ESystemconfigurationLanguage2.GetHashCode();
-                hashCode = (hashCode * 59) + this.ESystemconfigurationEzsign.GetHashCode();
-                hashCode = (hashCode * 59) + this.BSystemconfigurationEzsignpersonnal.GetHashCode();
-                hashCode = (hashCode * 59) + this.BSystemconfigurationSspr.GetHashCode();
-                if (this.DtSystemconfigurationReadonlyexpirationstart != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtSystemconfigurationReadonlyexpirationstart.GetHashCode();
-                }
-                if (this.DtSystemconfigurationReadonlyexpirationend != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtSystemconfigurationReadonlyexpirationend.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

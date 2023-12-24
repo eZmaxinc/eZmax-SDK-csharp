@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsigndocument Object
     /// </summary>
     [DataContract(Name = "ezsigndocument-Response")]
-    public partial class EzsigndocumentResponse : IEquatable<EzsigndocumentResponse>, IValidatableObject
+    public partial class EzsigndocumentResponse : IValidatableObject
     {
 
         /// <summary>
@@ -67,7 +67,8 @@ namespace eZmaxApi.Model
         /// <param name="bEzsigndocumentHassignedsignatures">If the Ezsigndocument contains signed signatures (From internal or external sources).</param>
         /// <param name="objAudit">objAudit.</param>
         /// <param name="sEzsigndocumentExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
-        public EzsigndocumentResponse(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), bool bEzsigndocumentHassignedsignatures = default(bool), CommonAudit objAudit = default(CommonAudit), string sEzsigndocumentExternalid = default(string))
+        /// <param name="iEzsigndocumentEzsignsignatureattachmenttotal">The number of Ezsigndocumentattachment total (required).</param>
+        public EzsigndocumentResponse(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), bool bEzsigndocumentHassignedsignatures = default(bool), CommonAudit objAudit = default(CommonAudit), string sEzsigndocumentExternalid = default(string), int iEzsigndocumentEzsignsignatureattachmenttotal = default(int))
         {
             this.PkiEzsigndocumentID = pkiEzsigndocumentID;
             this.FkiEzsignfolderID = fkiEzsignfolderID;
@@ -88,6 +89,7 @@ namespace eZmaxApi.Model
             this.IEzsigndocumentPagetotal = iEzsigndocumentPagetotal;
             this.IEzsigndocumentSignaturesigned = iEzsigndocumentSignaturesigned;
             this.IEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
+            this.IEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
             this.FkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
             this.DtEzsignformCompleted = dtEzsignformCompleted;
             this.FkiLanguageID = fkiLanguageID;
@@ -261,6 +263,14 @@ namespace eZmaxApi.Model
         public string SEzsigndocumentExternalid { get; set; }
 
         /// <summary>
+        /// The number of Ezsigndocumentattachment total
+        /// </summary>
+        /// <value>The number of Ezsigndocumentattachment total</value>
+        /* <example>3</example>*/
+        [DataMember(Name = "iEzsigndocumentEzsignsignatureattachmenttotal", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzsigndocumentEzsignsignatureattachmenttotal { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -289,6 +299,7 @@ namespace eZmaxApi.Model
             sb.Append("  BEzsigndocumentHassignedsignatures: ").Append(BEzsigndocumentHassignedsignatures).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  SEzsigndocumentExternalid: ").Append(SEzsigndocumentExternalid).Append("\n");
+            sb.Append("  IEzsigndocumentEzsignsignatureattachmenttotal: ").Append(IEzsigndocumentEzsignsignatureattachmenttotal).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -300,188 +311,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsigndocumentID == input.PkiEzsigndocumentID ||
-                    this.PkiEzsigndocumentID.Equals(input.PkiEzsigndocumentID)
-                ) && 
-                (
-                    this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
-                    this.FkiEzsignfolderID.Equals(input.FkiEzsignfolderID)
-                ) && 
-                (
-                    this.FkiEzsignfoldersignerassociationIDDeclinedtosign == input.FkiEzsignfoldersignerassociationIDDeclinedtosign ||
-                    this.FkiEzsignfoldersignerassociationIDDeclinedtosign.Equals(input.FkiEzsignfoldersignerassociationIDDeclinedtosign)
-                ) && 
-                (
-                    this.DtEzsigndocumentDuedate == input.DtEzsigndocumentDuedate ||
-                    (this.DtEzsigndocumentDuedate != null &&
-                    this.DtEzsigndocumentDuedate.Equals(input.DtEzsigndocumentDuedate))
-                ) && 
-                (
-                    this.DtEzsignformCompleted == input.DtEzsignformCompleted ||
-                    (this.DtEzsignformCompleted != null &&
-                    this.DtEzsignformCompleted.Equals(input.DtEzsignformCompleted))
-                ) && 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    this.FkiLanguageID.Equals(input.FkiLanguageID)
-                ) && 
-                (
-                    this.SEzsigndocumentName == input.SEzsigndocumentName ||
-                    (this.SEzsigndocumentName != null &&
-                    this.SEzsigndocumentName.Equals(input.SEzsigndocumentName))
-                ) && 
-                (
-                    this.EEzsigndocumentStep == input.EEzsigndocumentStep ||
-                    this.EEzsigndocumentStep.Equals(input.EEzsigndocumentStep)
-                ) && 
-                (
-                    this.DtEzsigndocumentFirstsend == input.DtEzsigndocumentFirstsend ||
-                    (this.DtEzsigndocumentFirstsend != null &&
-                    this.DtEzsigndocumentFirstsend.Equals(input.DtEzsigndocumentFirstsend))
-                ) && 
-                (
-                    this.DtEzsigndocumentLastsend == input.DtEzsigndocumentLastsend ||
-                    (this.DtEzsigndocumentLastsend != null &&
-                    this.DtEzsigndocumentLastsend.Equals(input.DtEzsigndocumentLastsend))
-                ) && 
-                (
-                    this.IEzsigndocumentOrder == input.IEzsigndocumentOrder ||
-                    this.IEzsigndocumentOrder.Equals(input.IEzsigndocumentOrder)
-                ) && 
-                (
-                    this.IEzsigndocumentPagetotal == input.IEzsigndocumentPagetotal ||
-                    this.IEzsigndocumentPagetotal.Equals(input.IEzsigndocumentPagetotal)
-                ) && 
-                (
-                    this.IEzsigndocumentSignaturesigned == input.IEzsigndocumentSignaturesigned ||
-                    this.IEzsigndocumentSignaturesigned.Equals(input.IEzsigndocumentSignaturesigned)
-                ) && 
-                (
-                    this.IEzsigndocumentSignaturetotal == input.IEzsigndocumentSignaturetotal ||
-                    this.IEzsigndocumentSignaturetotal.Equals(input.IEzsigndocumentSignaturetotal)
-                ) && 
-                (
-                    this.SEzsigndocumentMD5initial == input.SEzsigndocumentMD5initial ||
-                    (this.SEzsigndocumentMD5initial != null &&
-                    this.SEzsigndocumentMD5initial.Equals(input.SEzsigndocumentMD5initial))
-                ) && 
-                (
-                    this.TEzsigndocumentDeclinedtosignreason == input.TEzsigndocumentDeclinedtosignreason ||
-                    (this.TEzsigndocumentDeclinedtosignreason != null &&
-                    this.TEzsigndocumentDeclinedtosignreason.Equals(input.TEzsigndocumentDeclinedtosignreason))
-                ) && 
-                (
-                    this.SEzsigndocumentMD5signed == input.SEzsigndocumentMD5signed ||
-                    (this.SEzsigndocumentMD5signed != null &&
-                    this.SEzsigndocumentMD5signed.Equals(input.SEzsigndocumentMD5signed))
-                ) && 
-                (
-                    this.BEzsigndocumentEzsignform == input.BEzsigndocumentEzsignform ||
-                    this.BEzsigndocumentEzsignform.Equals(input.BEzsigndocumentEzsignform)
-                ) && 
-                (
-                    this.BEzsigndocumentHassignedsignatures == input.BEzsigndocumentHassignedsignatures ||
-                    this.BEzsigndocumentHassignedsignatures.Equals(input.BEzsigndocumentHassignedsignatures)
-                ) && 
-                (
-                    this.ObjAudit == input.ObjAudit ||
-                    (this.ObjAudit != null &&
-                    this.ObjAudit.Equals(input.ObjAudit))
-                ) && 
-                (
-                    this.SEzsigndocumentExternalid == input.SEzsigndocumentExternalid ||
-                    (this.SEzsigndocumentExternalid != null &&
-                    this.SEzsigndocumentExternalid.Equals(input.SEzsigndocumentExternalid))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsigndocumentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfolderID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldersignerassociationIDDeclinedtosign.GetHashCode();
-                if (this.DtEzsigndocumentDuedate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsigndocumentDuedate.GetHashCode();
-                }
-                if (this.DtEzsignformCompleted != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsignformCompleted.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.FkiLanguageID.GetHashCode();
-                if (this.SEzsigndocumentName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentName.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EEzsigndocumentStep.GetHashCode();
-                if (this.DtEzsigndocumentFirstsend != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsigndocumentFirstsend.GetHashCode();
-                }
-                if (this.DtEzsigndocumentLastsend != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsigndocumentLastsend.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzsigndocumentOrder.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigndocumentPagetotal.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigndocumentSignaturesigned.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigndocumentSignaturetotal.GetHashCode();
-                if (this.SEzsigndocumentMD5initial != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentMD5initial.GetHashCode();
-                }
-                if (this.TEzsigndocumentDeclinedtosignreason != null)
-                {
-                    hashCode = (hashCode * 59) + this.TEzsigndocumentDeclinedtosignreason.GetHashCode();
-                }
-                if (this.SEzsigndocumentMD5signed != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentMD5signed.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzsigndocumentEzsignform.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsigndocumentHassignedsignatures.GetHashCode();
-                if (this.ObjAudit != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjAudit.GetHashCode();
-                }
-                if (this.SEzsigndocumentExternalid != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentExternalid.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>
@@ -552,6 +381,12 @@ namespace eZmaxApi.Model
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigndocumentExternalid, must match a pattern of " + regexSEzsigndocumentExternalid, new [] { "SEzsigndocumentExternalid" });
                 }
+            }
+
+            // IEzsigndocumentEzsignsignatureattachmenttotal (int) minimum
+            if (this.IEzsigndocumentEzsignsignatureattachmenttotal < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentEzsignsignatureattachmenttotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentEzsignsignatureattachmenttotal" });
             }
 
             yield break;

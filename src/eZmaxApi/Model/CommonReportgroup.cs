@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A group of reports  Each Reportgroup is for a specific recipient or for a specific context.
     /// </summary>
     [DataContract(Name = "Common-Reportgroup")]
-    public partial class CommonReportgroup : IEquatable<CommonReportgroup>, IValidatableObject
+    public partial class CommonReportgroup : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportgroup" /> class.
@@ -91,63 +91,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonReportgroup);
-        }
-
-        /// <summary>
-        /// Returns true if CommonReportgroup instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonReportgroup to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonReportgroup input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjReport == input.AObjReport ||
-                    this.AObjReport != null &&
-                    input.AObjReport != null &&
-                    this.AObjReport.SequenceEqual(input.AObjReport)
-                ) && 
-                (
-                    this.AObjReportcellstyleCustom == input.AObjReportcellstyleCustom ||
-                    this.AObjReportcellstyleCustom != null &&
-                    input.AObjReportcellstyleCustom != null &&
-                    this.AObjReportcellstyleCustom.SequenceEqual(input.AObjReportcellstyleCustom)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjReport != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjReport.GetHashCode();
-                }
-                if (this.AObjReportcellstyleCustom != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjReportcellstyleCustom.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

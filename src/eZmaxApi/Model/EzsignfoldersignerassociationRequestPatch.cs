@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignfoldersignerassociation Object
     /// </summary>
     [DataContract(Name = "ezsignfoldersignerassociation-RequestPatch")]
-    public partial class EzsignfoldersignerassociationRequestPatch : IEquatable<EzsignfoldersignerassociationRequestPatch>, IValidatableObject
+    public partial class EzsignfoldersignerassociationRequestPatch : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestPatch" /> class.
@@ -77,52 +77,6 @@ Mary</example>*/
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfoldersignerassociationRequestPatch);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfoldersignerassociationRequestPatch instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfoldersignerassociationRequestPatch to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfoldersignerassociationRequestPatch input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.TEzsignfoldersignerassociationMessage == input.TEzsignfoldersignerassociationMessage ||
-                    (this.TEzsignfoldersignerassociationMessage != null &&
-                    this.TEzsignfoldersignerassociationMessage.Equals(input.TEzsignfoldersignerassociationMessage))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.TEzsignfoldersignerassociationMessage != null)
-                {
-                    hashCode = (hashCode * 59) + this.TEzsignfoldersignerassociationMessage.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

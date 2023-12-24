@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/ezsignfolder/{pkiEzsignfolder}/importEzsignfoldersignerassociations
     /// </summary>
     [DataContract(Name = "ezsignfolder-importEzsignfoldersignerassociations-v1-Response-mPayload")]
-    public partial class EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload : IEquatable<EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiEzsignfoldersignerassociationID == input.APkiEzsignfoldersignerassociationID ||
-                    this.APkiEzsignfoldersignerassociationID != null &&
-                    input.APkiEzsignfoldersignerassociationID != null &&
-                    this.APkiEzsignfoldersignerassociationID.SequenceEqual(input.APkiEzsignfoldersignerassociationID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiEzsignfoldersignerassociationID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiEzsignfoldersignerassociationID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

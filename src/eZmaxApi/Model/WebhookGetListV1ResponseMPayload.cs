@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/webhook/getList
     /// </summary>
     [DataContract(Name = "webhook-getList-v1-Response-mPayload")]
-    public partial class WebhookGetListV1ResponseMPayload : IEquatable<WebhookGetListV1ResponseMPayload>, IValidatableObject
+    public partial class WebhookGetListV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookGetListV1ResponseMPayload" /> class.
@@ -99,63 +99,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebhookGetListV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if WebhookGetListV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebhookGetListV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebhookGetListV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.IRowReturned == input.IRowReturned ||
-                    this.IRowReturned.Equals(input.IRowReturned)
-                ) && 
-                (
-                    this.IRowFiltered == input.IRowFiltered ||
-                    this.IRowFiltered.Equals(input.IRowFiltered)
-                ) && 
-                (
-                    this.AObjWebhook == input.AObjWebhook ||
-                    this.AObjWebhook != null &&
-                    input.AObjWebhook != null &&
-                    this.AObjWebhook.SequenceEqual(input.AObjWebhook)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.IRowReturned.GetHashCode();
-                hashCode = (hashCode * 59) + this.IRowFiltered.GetHashCode();
-                if (this.AObjWebhook != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjWebhook.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

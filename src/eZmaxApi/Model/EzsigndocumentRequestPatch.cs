@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsigndocument Object
     /// </summary>
     [DataContract(Name = "ezsigndocument-RequestPatch")]
-    public partial class EzsigndocumentRequestPatch : IEquatable<EzsigndocumentRequestPatch>, IValidatableObject
+    public partial class EzsigndocumentRequestPatch : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentRequestPatch" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentRequestPatch);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentRequestPatch instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentRequestPatch to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentRequestPatch input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.DtEzsigndocumentDuedate == input.DtEzsigndocumentDuedate ||
-                    (this.DtEzsigndocumentDuedate != null &&
-                    this.DtEzsigndocumentDuedate.Equals(input.DtEzsigndocumentDuedate))
-                ) && 
-                (
-                    this.SEzsigndocumentName == input.SEzsigndocumentName ||
-                    (this.SEzsigndocumentName != null &&
-                    this.SEzsigndocumentName.Equals(input.SEzsigndocumentName))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.DtEzsigndocumentDuedate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsigndocumentDuedate.GetHashCode();
-                }
-                if (this.SEzsigndocumentName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigndocumentName.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

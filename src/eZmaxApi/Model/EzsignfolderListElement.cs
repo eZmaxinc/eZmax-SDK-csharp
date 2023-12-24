@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignfolder List Element
     /// </summary>
     [DataContract(Name = "ezsignfolder-ListElement")]
-    public partial class EzsignfolderListElement : IEquatable<EzsignfolderListElement>, IValidatableObject
+    public partial class EzsignfolderListElement : IValidatableObject
     {
 
         /// <summary>
@@ -213,128 +213,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfolderListElement);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfolderListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfolderListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfolderListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignfolderID == input.PkiEzsignfolderID ||
-                    this.PkiEzsignfolderID.Equals(input.PkiEzsignfolderID)
-                ) && 
-                (
-                    this.FkiEzsignfoldertypeID == input.FkiEzsignfoldertypeID ||
-                    this.FkiEzsignfoldertypeID.Equals(input.FkiEzsignfoldertypeID)
-                ) && 
-                (
-                    this.EEzsignfoldertypePrivacylevel == input.EEzsignfoldertypePrivacylevel ||
-                    this.EEzsignfoldertypePrivacylevel.Equals(input.EEzsignfoldertypePrivacylevel)
-                ) && 
-                (
-                    this.SEzsignfoldertypeNameX == input.SEzsignfoldertypeNameX ||
-                    (this.SEzsignfoldertypeNameX != null &&
-                    this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
-                ) && 
-                (
-                    this.SEzsignfolderDescription == input.SEzsignfolderDescription ||
-                    (this.SEzsignfolderDescription != null &&
-                    this.SEzsignfolderDescription.Equals(input.SEzsignfolderDescription))
-                ) && 
-                (
-                    this.EEzsignfolderStep == input.EEzsignfolderStep ||
-                    this.EEzsignfolderStep.Equals(input.EEzsignfolderStep)
-                ) && 
-                (
-                    this.DtCreatedDate == input.DtCreatedDate ||
-                    (this.DtCreatedDate != null &&
-                    this.DtCreatedDate.Equals(input.DtCreatedDate))
-                ) && 
-                (
-                    this.DtEzsignfolderSentdate == input.DtEzsignfolderSentdate ||
-                    (this.DtEzsignfolderSentdate != null &&
-                    this.DtEzsignfolderSentdate.Equals(input.DtEzsignfolderSentdate))
-                ) && 
-                (
-                    this.DtEzsignfolderDuedate == input.DtEzsignfolderDuedate ||
-                    (this.DtEzsignfolderDuedate != null &&
-                    this.DtEzsignfolderDuedate.Equals(input.DtEzsignfolderDuedate))
-                ) && 
-                (
-                    this.IEzsigndocument == input.IEzsigndocument ||
-                    this.IEzsigndocument.Equals(input.IEzsigndocument)
-                ) && 
-                (
-                    this.IEzsigndocumentEdm == input.IEzsigndocumentEdm ||
-                    this.IEzsigndocumentEdm.Equals(input.IEzsigndocumentEdm)
-                ) && 
-                (
-                    this.IEzsignsignature == input.IEzsignsignature ||
-                    this.IEzsignsignature.Equals(input.IEzsignsignature)
-                ) && 
-                (
-                    this.IEzsignsignatureSigned == input.IEzsignsignatureSigned ||
-                    this.IEzsignsignatureSigned.Equals(input.IEzsignsignatureSigned)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignfolderID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldertypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzsignfoldertypePrivacylevel.GetHashCode();
-                if (this.SEzsignfoldertypeNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldertypeNameX.GetHashCode();
-                }
-                if (this.SEzsignfolderDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfolderDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EEzsignfolderStep.GetHashCode();
-                if (this.DtCreatedDate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtCreatedDate.GetHashCode();
-                }
-                if (this.DtEzsignfolderSentdate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsignfolderSentdate.GetHashCode();
-                }
-                if (this.DtEzsignfolderDuedate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzsignfolderDuedate.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzsigndocument.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigndocumentEdm.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignature.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsignsignatureSigned.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

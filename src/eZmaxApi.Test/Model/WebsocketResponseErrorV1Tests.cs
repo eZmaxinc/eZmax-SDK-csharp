@@ -65,6 +65,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SWebsocketChannel'
+        /// </summary>
+        [Fact]
+        public void SWebsocketChannelTest()
+        {
+            // TODO unit test for the property 'SWebsocketChannel'
+        }
+
+        /// <summary>
         /// Test the property 'MPayload'
         /// </summary>
         [Fact]

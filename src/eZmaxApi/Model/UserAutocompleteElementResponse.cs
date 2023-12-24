@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A User AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "user-AutocompleteElement-Response")]
-    public partial class UserAutocompleteElementResponse : IEquatable<UserAutocompleteElementResponse>, IValidatableObject
+    public partial class UserAutocompleteElementResponse : IValidatableObject
     {
 
         /// <summary>
@@ -110,67 +110,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if UserAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.EUserType == input.EUserType ||
-                    this.EUserType.Equals(input.EUserType)
-                ) && 
-                (
-                    this.SUserName == input.SUserName ||
-                    (this.SUserName != null &&
-                    this.SUserName.Equals(input.SUserName))
-                ) && 
-                (
-                    this.PkiUserID == input.PkiUserID ||
-                    this.PkiUserID.Equals(input.PkiUserID)
-                ) && 
-                (
-                    this.BUserIsactive == input.BUserIsactive ||
-                    this.BUserIsactive.Equals(input.BUserIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.EUserType.GetHashCode();
-                if (this.SUserName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserName.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiUserID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BUserIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

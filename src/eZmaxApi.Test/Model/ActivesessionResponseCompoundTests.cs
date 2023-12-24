@@ -155,6 +155,33 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EUserEzsignaccess'
+        /// </summary>
+        [Fact]
+        public void EUserEzsignaccessTest()
+        {
+            // TODO unit test for the property 'EUserEzsignaccess'
+        }
+
+        /// <summary>
+        /// Test the property 'EUserEzsignprepaid'
+        /// </summary>
+        [Fact]
+        public void EUserEzsignprepaidTest()
+        {
+            // TODO unit test for the property 'EUserEzsignprepaid'
+        }
+
+        /// <summary>
+        /// Test the property 'DtUserEzsignprepaidexpiration'
+        /// </summary>
+        [Fact]
+        public void DtUserEzsignprepaidexpirationTest()
+        {
+            // TODO unit test for the property 'DtUserEzsignprepaidexpiration'
+        }
+
+        /// <summary>
         /// Test the property 'APkiPermissionID'
         /// </summary>
         [Fact]

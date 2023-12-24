@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}
     /// </summary>
     [DataContract(Name = "billingentityinternal-editObject-v1-Request")]
-    public partial class BillingentityinternalEditObjectV1Request : IEquatable<BillingentityinternalEditObjectV1Request>, IValidatableObject
+    public partial class BillingentityinternalEditObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalEditObjectV1Request" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BillingentityinternalEditObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if BillingentityinternalEditObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BillingentityinternalEditObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BillingentityinternalEditObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjBillingentityinternal == input.ObjBillingentityinternal ||
-                    (this.ObjBillingentityinternal != null &&
-                    this.ObjBillingentityinternal.Equals(input.ObjBillingentityinternal))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjBillingentityinternal != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjBillingentityinternal.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

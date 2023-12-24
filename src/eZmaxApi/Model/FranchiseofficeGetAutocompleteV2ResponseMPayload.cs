@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/franchiseoffice/getAutocomplete
     /// </summary>
     [DataContract(Name = "franchiseoffice-getAutocomplete-v2-Response-mPayload")]
-    public partial class FranchiseofficeGetAutocompleteV2ResponseMPayload : IEquatable<FranchiseofficeGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class FranchiseofficeGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchiseofficeGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as FranchiseofficeGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if FranchiseofficeGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of FranchiseofficeGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(FranchiseofficeGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjFranchiseoffice == input.AObjFranchiseoffice ||
-                    this.AObjFranchiseoffice != null &&
-                    input.AObjFranchiseoffice != null &&
-                    this.AObjFranchiseoffice.SequenceEqual(input.AObjFranchiseoffice)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjFranchiseoffice != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjFranchiseoffice.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

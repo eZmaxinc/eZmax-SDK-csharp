@@ -56,6 +56,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test InscriptionGetAttachmentsV1
+        /// </summary>
+        [Fact]
+        public void InscriptionGetAttachmentsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInscriptionID = null;
+            //var response = instance.InscriptionGetAttachmentsV1(pkiInscriptionID);
+            //Assert.IsType<InscriptionGetAttachmentsV1Response>(response);
+        }
+
+        /// <summary>
         /// Test InscriptionGetCommunicationListV1
         /// </summary>
         [Fact]
@@ -65,6 +77,18 @@ namespace eZmaxApi.Test.Api
             //int pkiInscriptionID = null;
             //var response = instance.InscriptionGetCommunicationListV1(pkiInscriptionID);
             //Assert.IsType<InscriptionGetCommunicationListV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test InscriptionGetCommunicationsendersV1
+        /// </summary>
+        [Fact]
+        public void InscriptionGetCommunicationsendersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInscriptionID = null;
+            //var response = instance.InscriptionGetCommunicationsendersV1(pkiInscriptionID);
+            //Assert.IsType<InscriptionGetCommunicationsendersV1Response>(response);
         }
     }
 }

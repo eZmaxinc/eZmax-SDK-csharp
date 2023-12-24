@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Activesession Object
     /// </summary>
     [DataContract(Name = "activesession-Response")]
-    public partial class ActivesessionResponse : IEquatable<ActivesessionResponse>, IValidatableObject
+    public partial class ActivesessionResponse : IValidatableObject
     {
 
         /// <summary>
@@ -193,110 +193,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ActivesessionResponse);
-        }
-
-        /// <summary>
-        /// Returns true if ActivesessionResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ActivesessionResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ActivesessionResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.EActivesessionUsertype == input.EActivesessionUsertype ||
-                    this.EActivesessionUsertype.Equals(input.EActivesessionUsertype)
-                ) && 
-                (
-                    this.EActivesessionOrigin == input.EActivesessionOrigin ||
-                    this.EActivesessionOrigin.Equals(input.EActivesessionOrigin)
-                ) && 
-                (
-                    this.EActivesessionWeekdaystart == input.EActivesessionWeekdaystart ||
-                    this.EActivesessionWeekdaystart.Equals(input.EActivesessionWeekdaystart)
-                ) && 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    this.FkiLanguageID.Equals(input.FkiLanguageID)
-                ) && 
-                (
-                    this.SCompanyNameX == input.SCompanyNameX ||
-                    (this.SCompanyNameX != null &&
-                    this.SCompanyNameX.Equals(input.SCompanyNameX))
-                ) && 
-                (
-                    this.SDepartmentNameX == input.SDepartmentNameX ||
-                    (this.SDepartmentNameX != null &&
-                    this.SDepartmentNameX.Equals(input.SDepartmentNameX))
-                ) && 
-                (
-                    this.BActivesessionDebug == input.BActivesessionDebug ||
-                    this.BActivesessionDebug.Equals(input.BActivesessionDebug)
-                ) && 
-                (
-                    this.BActivesessionIssuperadmin == input.BActivesessionIssuperadmin ||
-                    this.BActivesessionIssuperadmin.Equals(input.BActivesessionIssuperadmin)
-                ) && 
-                (
-                    this.PksCustomerCode == input.PksCustomerCode ||
-                    (this.PksCustomerCode != null &&
-                    this.PksCustomerCode.Equals(input.PksCustomerCode))
-                ) && 
-                (
-                    this.FkiSystemconfigurationtypeID == input.FkiSystemconfigurationtypeID ||
-                    this.FkiSystemconfigurationtypeID.Equals(input.FkiSystemconfigurationtypeID)
-                ) && 
-                (
-                    this.FkiSignatureID == input.FkiSignatureID ||
-                    this.FkiSignatureID.Equals(input.FkiSignatureID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.EActivesessionUsertype.GetHashCode();
-                hashCode = (hashCode * 59) + this.EActivesessionOrigin.GetHashCode();
-                hashCode = (hashCode * 59) + this.EActivesessionWeekdaystart.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiLanguageID.GetHashCode();
-                if (this.SCompanyNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCompanyNameX.GetHashCode();
-                }
-                if (this.SDepartmentNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SDepartmentNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BActivesessionDebug.GetHashCode();
-                hashCode = (hashCode * 59) + this.BActivesessionIssuperadmin.GetHashCode();
-                if (this.PksCustomerCode != null)
-                {
-                    hashCode = (hashCode * 59) + this.PksCustomerCode.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.FkiSystemconfigurationtypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiSignatureID.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

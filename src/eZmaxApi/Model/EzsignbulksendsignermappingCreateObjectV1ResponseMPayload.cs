@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/ezsignbulksendsignermapping
     /// </summary>
     [DataContract(Name = "ezsignbulksendsignermapping-createObject-v1-Response-mPayload")]
-    public partial class EzsignbulksendsignermappingCreateObjectV1ResponseMPayload : IEquatable<EzsignbulksendsignermappingCreateObjectV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignbulksendsignermappingCreateObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingCreateObjectV1ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksendsignermappingCreateObjectV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksendsignermappingCreateObjectV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksendsignermappingCreateObjectV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksendsignermappingCreateObjectV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiEzsignbulksendsignermappingID == input.APkiEzsignbulksendsignermappingID ||
-                    this.APkiEzsignbulksendsignermappingID != null &&
-                    input.APkiEzsignbulksendsignermappingID != null &&
-                    this.APkiEzsignbulksendsignermappingID.SequenceEqual(input.APkiEzsignbulksendsignermappingID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiEzsignbulksendsignermappingID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiEzsignbulksendsignermappingID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

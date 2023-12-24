@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Language AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "language-AutocompleteElement-Response")]
-    public partial class LanguageAutocompleteElementResponse : IEquatable<LanguageAutocompleteElementResponse>, IValidatableObject
+    public partial class LanguageAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LanguageAutocompleteElementResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as LanguageAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if LanguageAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of LanguageAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(LanguageAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiLanguageID == input.PkiLanguageID ||
-                    this.PkiLanguageID.Equals(input.PkiLanguageID)
-                ) && 
-                (
-                    this.SLanguageNameX == input.SLanguageNameX ||
-                    (this.SLanguageNameX != null &&
-                    this.SLanguageNameX.Equals(input.SLanguageNameX))
-                ) && 
-                (
-                    this.BLanguageIsactive == input.BLanguageIsactive ||
-                    this.BLanguageIsactive.Equals(input.BLanguageIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiLanguageID.GetHashCode();
-                if (this.SLanguageNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SLanguageNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BLanguageIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. 4. **Initials** is a simple \&quot;click to add initials\&quot; block. 5. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. 6. **Attachments** is to ask for files as attachment that may be validate in another step.    
+    /// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. 4. **Initials** is a simple \&quot;click to add initials\&quot; block. 5. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. 6. **NameReason** is to ask for a signing reason.  7. **Attachments** is to ask for files as attachment that may be validate in another step.    
     /// </summary>
-    /// <value>The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. 4. **Initials** is a simple \&quot;click to add initials\&quot; block. 5. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. 6. **Attachments** is to ask for files as attachment that may be validate in another step.    </value>
+    /// <value>The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. 4. **Initials** is a simple \&quot;click to add initials\&quot; block. 5. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. 6. **NameReason** is to ask for a signing reason.  7. **Attachments** is to ask for files as attachment that may be validate in another step.    </value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEEzsigntemplatesignatureType
     {
@@ -64,22 +64,28 @@ namespace eZmaxApi.Model
         Name = 5,
 
         /// <summary>
+        /// Enum NameReason for value: NameReason
+        /// </summary>
+        [EnumMember(Value = "NameReason")]
+        NameReason = 6,
+
+        /// <summary>
         /// Enum Attachments for value: Attachments
         /// </summary>
         [EnumMember(Value = "Attachments")]
-        Attachments = 6,
+        Attachments = 7,
 
         /// <summary>
         /// Enum FieldText for value: FieldText
         /// </summary>
         [EnumMember(Value = "FieldText")]
-        FieldText = 7,
+        FieldText = 8,
 
         /// <summary>
         /// Enum FieldTextarea for value: FieldTextarea
         /// </summary>
         [EnumMember(Value = "FieldTextarea")]
-        FieldTextarea = 8
+        FieldTextarea = 9
     }
 
 }

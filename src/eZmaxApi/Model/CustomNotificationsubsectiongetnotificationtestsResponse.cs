@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Notificationsubsection Object in the context of getNotificationtests
     /// </summary>
     [DataContract(Name = "Custom-Notificationsubsectiongetnotificationtests-Response")]
-    public partial class CustomNotificationsubsectiongetnotificationtestsResponse : IEquatable<CustomNotificationsubsectiongetnotificationtestsResponse>, IValidatableObject
+    public partial class CustomNotificationsubsectiongetnotificationtestsResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomNotificationsubsectiongetnotificationtestsResponse" /> class.
@@ -135,90 +135,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomNotificationsubsectiongetnotificationtestsResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomNotificationsubsectiongetnotificationtestsResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomNotificationsubsectiongetnotificationtestsResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomNotificationsubsectiongetnotificationtestsResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiNotificationsubsectionID == input.PkiNotificationsubsectionID ||
-                    this.PkiNotificationsubsectionID.Equals(input.PkiNotificationsubsectionID)
-                ) && 
-                (
-                    this.FkiNotificationsectionID == input.FkiNotificationsectionID ||
-                    this.FkiNotificationsectionID.Equals(input.FkiNotificationsectionID)
-                ) && 
-                (
-                    this.ObjNotificationsubsectionName == input.ObjNotificationsubsectionName ||
-                    (this.ObjNotificationsubsectionName != null &&
-                    this.ObjNotificationsubsectionName.Equals(input.ObjNotificationsubsectionName))
-                ) && 
-                (
-                    this.SNotificationsectionNameX == input.SNotificationsectionNameX ||
-                    (this.SNotificationsectionNameX != null &&
-                    this.SNotificationsectionNameX.Equals(input.SNotificationsectionNameX))
-                ) && 
-                (
-                    this.SNotificationsubsectionNameX == input.SNotificationsubsectionNameX ||
-                    (this.SNotificationsubsectionNameX != null &&
-                    this.SNotificationsubsectionNameX.Equals(input.SNotificationsubsectionNameX))
-                ) && 
-                (
-                    this.AObjNotificationtest == input.AObjNotificationtest ||
-                    this.AObjNotificationtest != null &&
-                    input.AObjNotificationtest != null &&
-                    this.AObjNotificationtest.SequenceEqual(input.AObjNotificationtest)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiNotificationsubsectionID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiNotificationsectionID.GetHashCode();
-                if (this.ObjNotificationsubsectionName != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjNotificationsubsectionName.GetHashCode();
-                }
-                if (this.SNotificationsectionNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SNotificationsectionNameX.GetHashCode();
-                }
-                if (this.SNotificationsubsectionNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SNotificationsubsectionNameX.GetHashCode();
-                }
-                if (this.AObjNotificationtest != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjNotificationtest.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

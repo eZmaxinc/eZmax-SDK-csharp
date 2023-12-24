@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Description of the Paymentterm
     /// </summary>
     [DataContract(Name = "Multilingual-PaymenttermDescription")]
-    public partial class MultilingualPaymenttermDescription : IEquatable<MultilingualPaymenttermDescription>, IValidatableObject
+    public partial class MultilingualPaymenttermDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualPaymenttermDescription" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualPaymenttermDescription);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualPaymenttermDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualPaymenttermDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualPaymenttermDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SPaymenttermDescription1 == input.SPaymenttermDescription1 ||
-                    (this.SPaymenttermDescription1 != null &&
-                    this.SPaymenttermDescription1.Equals(input.SPaymenttermDescription1))
-                ) && 
-                (
-                    this.SPaymenttermDescription2 == input.SPaymenttermDescription2 ||
-                    (this.SPaymenttermDescription2 != null &&
-                    this.SPaymenttermDescription2.Equals(input.SPaymenttermDescription2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SPaymenttermDescription1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPaymenttermDescription1.GetHashCode();
-                }
-                if (this.SPaymenttermDescription2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPaymenttermDescription2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

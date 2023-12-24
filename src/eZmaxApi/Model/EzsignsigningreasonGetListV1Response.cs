@@ -27,29 +27,36 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
+    /// Response for GET /1/object/ezsignsigningreason/getList
     /// </summary>
-    [DataContract(Name = "attachment-download-v1-Response")]
-    public partial class AttachmentDownloadV1Response : IEquatable<AttachmentDownloadV1Response>, IValidatableObject
+    [DataContract(Name = "ezsignsigningreason-getList-v1-Response")]
+    public partial class EzsignsigningreasonGetListV1Response : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AttachmentDownloadV1Response" /> class.
+        /// Initializes a new instance of the <see cref="EzsignsigningreasonGetListV1Response" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected AttachmentDownloadV1Response() { }
+        protected EzsignsigningreasonGetListV1Response() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="AttachmentDownloadV1Response" /> class.
+        /// Initializes a new instance of the <see cref="EzsignsigningreasonGetListV1Response" /> class.
         /// </summary>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        public AttachmentDownloadV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzsignsigningreasonGetListV1Response(CommonResponseObjDebugPayloadGetList objDebugPayload = default(CommonResponseObjDebugPayloadGetList), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsignsigningreasonGetListV1ResponseMPayload mPayload = default(EzsignsigningreasonGetListV1ResponseMPayload))
         {
             // to ensure "objDebugPayload" is required (not null)
             if (objDebugPayload == null)
             {
-                throw new ArgumentNullException("objDebugPayload is a required property for AttachmentDownloadV1Response and cannot be null");
+                throw new ArgumentNullException("objDebugPayload is a required property for EzsignsigningreasonGetListV1Response and cannot be null");
             }
             this.ObjDebugPayload = objDebugPayload;
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
+            {
+                throw new ArgumentNullException("mPayload is a required property for EzsignsigningreasonGetListV1Response and cannot be null");
+            }
+            this.MPayload = mPayload;
             this.ObjDebug = objDebug;
         }
 
@@ -57,7 +64,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets ObjDebugPayload
         /// </summary>
         [DataMember(Name = "objDebugPayload", IsRequired = true, EmitDefaultValue = true)]
-        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
+        public CommonResponseObjDebugPayloadGetList ObjDebugPayload { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjDebug
@@ -66,15 +73,22 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
+        /// Gets or Sets MPayload
+        /// </summary>
+        [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
+        public EzsignsigningreasonGetListV1ResponseMPayload MPayload { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AttachmentDownloadV1Response {\n");
+            sb.Append("class EzsignsigningreasonGetListV1Response {\n");
             sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
             sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
+            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -86,61 +100,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as AttachmentDownloadV1Response);
-        }
-
-        /// <summary>
-        /// Returns true if AttachmentDownloadV1Response instances are equal
-        /// </summary>
-        /// <param name="input">Instance of AttachmentDownloadV1Response to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(AttachmentDownloadV1Response input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjDebugPayload == input.ObjDebugPayload ||
-                    (this.ObjDebugPayload != null &&
-                    this.ObjDebugPayload.Equals(input.ObjDebugPayload))
-                ) && 
-                (
-                    this.ObjDebug == input.ObjDebug ||
-                    (this.ObjDebug != null &&
-                    this.ObjDebug.Equals(input.ObjDebug))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjDebugPayload != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjDebugPayload.GetHashCode();
-                }
-                if (this.ObjDebug != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjDebug.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

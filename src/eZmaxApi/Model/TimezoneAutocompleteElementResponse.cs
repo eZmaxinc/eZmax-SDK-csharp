@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Timezone AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "timezone-AutocompleteElement-Response")]
-    public partial class TimezoneAutocompleteElementResponse : IEquatable<TimezoneAutocompleteElementResponse>, IValidatableObject
+    public partial class TimezoneAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TimezoneAutocompleteElementResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TimezoneAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if TimezoneAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TimezoneAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TimezoneAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.STimezoneName == input.STimezoneName ||
-                    (this.STimezoneName != null &&
-                    this.STimezoneName.Equals(input.STimezoneName))
-                ) && 
-                (
-                    this.PkiTimezoneID == input.PkiTimezoneID ||
-                    this.PkiTimezoneID.Equals(input.PkiTimezoneID)
-                ) && 
-                (
-                    this.BTimezoneIsactive == input.BTimezoneIsactive ||
-                    this.BTimezoneIsactive.Equals(input.BTimezoneIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.STimezoneName != null)
-                {
-                    hashCode = (hashCode * 59) + this.STimezoneName.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiTimezoneID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BTimezoneIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

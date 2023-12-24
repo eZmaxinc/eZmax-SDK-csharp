@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/apikey/{pkiApikeyID}/getCors
     /// </summary>
     [DataContract(Name = "apikey-getCors-v1-Response-mPayload")]
-    public partial class ApikeyGetCorsV1ResponseMPayload : IEquatable<ApikeyGetCorsV1ResponseMPayload>, IValidatableObject
+    public partial class ApikeyGetCorsV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyGetCorsV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ApikeyGetCorsV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if ApikeyGetCorsV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ApikeyGetCorsV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ApikeyGetCorsV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjCors == input.AObjCors ||
-                    this.AObjCors != null &&
-                    input.AObjCors != null &&
-                    this.AObjCors.SequenceEqual(input.AObjCors)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjCors != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjCors.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

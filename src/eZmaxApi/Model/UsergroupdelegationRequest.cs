@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Usergroupdelegation Object
     /// </summary>
     [DataContract(Name = "usergroupdelegation-Request")]
-    public partial class UsergroupdelegationRequest : IEquatable<UsergroupdelegationRequest>, IValidatableObject
+    public partial class UsergroupdelegationRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupdelegationRequest" /> class.
@@ -96,58 +96,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UsergroupdelegationRequest);
-        }
-
-        /// <summary>
-        /// Returns true if UsergroupdelegationRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UsergroupdelegationRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UsergroupdelegationRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiUsergroupdelegationID == input.PkiUsergroupdelegationID ||
-                    this.PkiUsergroupdelegationID.Equals(input.PkiUsergroupdelegationID)
-                ) && 
-                (
-                    this.FkiUsergroupID == input.FkiUsergroupID ||
-                    this.FkiUsergroupID.Equals(input.FkiUsergroupID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiUsergroupdelegationID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUsergroupID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

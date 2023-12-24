@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Gives informations about the user that created the object or the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same. 
     /// </summary>
     [DataContract(Name = "Common-Auditdetail")]
-    public partial class CommonAuditdetail : IEquatable<CommonAuditdetail>, IValidatableObject
+    public partial class CommonAuditdetail : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonAuditdetail" /> class.
@@ -160,98 +160,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonAuditdetail);
-        }
-
-        /// <summary>
-        /// Returns true if CommonAuditdetail instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonAuditdetail to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonAuditdetail input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.FkiApikeyID == input.FkiApikeyID ||
-                    this.FkiApikeyID.Equals(input.FkiApikeyID)
-                ) && 
-                (
-                    this.SUserLoginname == input.SUserLoginname ||
-                    (this.SUserLoginname != null &&
-                    this.SUserLoginname.Equals(input.SUserLoginname))
-                ) && 
-                (
-                    this.SUserLastname == input.SUserLastname ||
-                    (this.SUserLastname != null &&
-                    this.SUserLastname.Equals(input.SUserLastname))
-                ) && 
-                (
-                    this.SUserFirstname == input.SUserFirstname ||
-                    (this.SUserFirstname != null &&
-                    this.SUserFirstname.Equals(input.SUserFirstname))
-                ) && 
-                (
-                    this.SApikeyDescriptionX == input.SApikeyDescriptionX ||
-                    (this.SApikeyDescriptionX != null &&
-                    this.SApikeyDescriptionX.Equals(input.SApikeyDescriptionX))
-                ) && 
-                (
-                    this.DtAuditdetailDate == input.DtAuditdetailDate ||
-                    (this.DtAuditdetailDate != null &&
-                    this.DtAuditdetailDate.Equals(input.DtAuditdetailDate))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiApikeyID.GetHashCode();
-                if (this.SUserLoginname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLoginname.GetHashCode();
-                }
-                if (this.SUserLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserLastname.GetHashCode();
-                }
-                if (this.SUserFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserFirstname.GetHashCode();
-                }
-                if (this.SApikeyDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SApikeyDescriptionX.GetHashCode();
-                }
-                if (this.DtAuditdetailDate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtAuditdetailDate.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

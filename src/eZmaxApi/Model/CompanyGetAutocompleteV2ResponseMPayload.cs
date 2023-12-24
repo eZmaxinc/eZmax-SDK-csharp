@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/company/getAutocomplete
     /// </summary>
     [DataContract(Name = "company-getAutocomplete-v2-Response-mPayload")]
-    public partial class CompanyGetAutocompleteV2ResponseMPayload : IEquatable<CompanyGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class CompanyGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CompanyGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CompanyGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if CompanyGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CompanyGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CompanyGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjCompany == input.AObjCompany ||
-                    this.AObjCompany != null &&
-                    input.AObjCompany != null &&
-                    this.AObjCompany.SequenceEqual(input.AObjCompany)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjCompany != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjCompany.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

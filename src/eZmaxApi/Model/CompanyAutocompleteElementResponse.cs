@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Company AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "company-AutocompleteElement-Response")]
-    public partial class CompanyAutocompleteElementResponse : IEquatable<CompanyAutocompleteElementResponse>, IValidatableObject
+    public partial class CompanyAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CompanyAutocompleteElementResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CompanyAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CompanyAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CompanyAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CompanyAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiCompanyID == input.PkiCompanyID ||
-                    this.PkiCompanyID.Equals(input.PkiCompanyID)
-                ) && 
-                (
-                    this.SCompanyNameX == input.SCompanyNameX ||
-                    (this.SCompanyNameX != null &&
-                    this.SCompanyNameX.Equals(input.SCompanyNameX))
-                ) && 
-                (
-                    this.BCompanyIsactive == input.BCompanyIsactive ||
-                    this.BCompanyIsactive.Equals(input.BCompanyIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiCompanyID.GetHashCode();
-                if (this.SCompanyNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCompanyNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BCompanyIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

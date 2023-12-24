@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
     /// </summary>
     [DataContract(Name = "ezsigntemplate-copy-v1-Request")]
-    public partial class EzsigntemplateCopyV1Request : IEquatable<EzsigntemplateCopyV1Request>, IValidatableObject
+    public partial class EzsigntemplateCopyV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateCopyV1Request" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplateCopyV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplateCopyV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplateCopyV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplateCopyV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AFkiEzsignfoldertypeID == input.AFkiEzsignfoldertypeID ||
-                    this.AFkiEzsignfoldertypeID != null &&
-                    input.AFkiEzsignfoldertypeID != null &&
-                    this.AFkiEzsignfoldertypeID.SequenceEqual(input.AFkiEzsignfoldertypeID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AFkiEzsignfoldertypeID != null)
-                {
-                    hashCode = (hashCode * 59) + this.AFkiEzsignfoldertypeID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

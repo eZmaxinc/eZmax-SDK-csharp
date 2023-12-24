@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}
     /// </summary>
     [DataContract(Name = "ezsigntemplatepackage-getObject-v2-Response-mPayload")]
-    public partial class EzsigntemplatepackageGetObjectV2ResponseMPayload : IEquatable<EzsigntemplatepackageGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class EzsigntemplatepackageGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatepackageGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatepackageGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatepackageGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatepackageGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzsigntemplatepackage == input.ObjEzsigntemplatepackage ||
-                    (this.ObjEzsigntemplatepackage != null &&
-                    this.ObjEzsigntemplatepackage.Equals(input.ObjEzsigntemplatepackage))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzsigntemplatepackage != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsigntemplatepackage.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

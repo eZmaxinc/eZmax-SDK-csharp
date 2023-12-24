@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}
     /// </summary>
     [DataContract(Name = "ezsigndocument-patchObject-v1-Request")]
-    public partial class EzsigndocumentPatchObjectV1Request : IEquatable<EzsigndocumentPatchObjectV1Request>, IValidatableObject
+    public partial class EzsigndocumentPatchObjectV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentPatchObjectV1Request" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentPatchObjectV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentPatchObjectV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentPatchObjectV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentPatchObjectV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzsigndocument == input.ObjEzsigndocument ||
-                    (this.ObjEzsigndocument != null &&
-                    this.ObjEzsigndocument.Equals(input.ObjEzsigndocument))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzsigndocument != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsigndocument.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

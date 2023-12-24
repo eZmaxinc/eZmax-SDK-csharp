@@ -218,6 +218,96 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BEzsignfoldertypeSendsignedtoezsignsigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeSendsignedtoezsignsignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeSendsignedtoezsignsigner'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeSendsignedtouser'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeSendsignedtouserTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeSendsignedtouser'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeSendattachmentezsignsigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeSendattachmentezsignsignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeSendattachmentezsignsigner'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeSendproofezsignsigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeSendproofezsignsignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeSendproofezsignsigner'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeSendattachmentuser'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeSendattachmentuserTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeSendattachmentuser'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeSendproofuser'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeSendproofuserTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeSendproofuser'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeSendproofemail'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeSendproofemailTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeSendproofemail'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeAllowdownloadattachmentezsignsigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeAllowdownloadattachmentezsignsignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeAllowdownloadattachmentezsignsigner'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeAllowdownloadproofezsignsigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeAllowdownloadproofezsignsignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeAllowdownloadproofezsignsigner'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeSendproofreceivealldocument'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeSendproofreceivealldocumentTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeSendproofreceivealldocument'
+        }
+
+        /// <summary>
         /// Test the property 'BEzsignfoldertypeSendsignedtodocumentowner'
         /// </summary>
         [Fact]

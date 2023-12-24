@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Notificationsubsection Object
     /// </summary>
     [DataContract(Name = "notificationsubsection-Response")]
-    public partial class NotificationsubsectionResponse : IEquatable<NotificationsubsectionResponse>, IValidatableObject
+    public partial class NotificationsubsectionResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationsubsectionResponse" /> class.
@@ -121,80 +121,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as NotificationsubsectionResponse);
-        }
-
-        /// <summary>
-        /// Returns true if NotificationsubsectionResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of NotificationsubsectionResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(NotificationsubsectionResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiNotificationsubsectionID == input.PkiNotificationsubsectionID ||
-                    this.PkiNotificationsubsectionID.Equals(input.PkiNotificationsubsectionID)
-                ) && 
-                (
-                    this.FkiNotificationsectionID == input.FkiNotificationsectionID ||
-                    this.FkiNotificationsectionID.Equals(input.FkiNotificationsectionID)
-                ) && 
-                (
-                    this.ObjNotificationsubsectionName == input.ObjNotificationsubsectionName ||
-                    (this.ObjNotificationsubsectionName != null &&
-                    this.ObjNotificationsubsectionName.Equals(input.ObjNotificationsubsectionName))
-                ) && 
-                (
-                    this.SNotificationsectionNameX == input.SNotificationsectionNameX ||
-                    (this.SNotificationsectionNameX != null &&
-                    this.SNotificationsectionNameX.Equals(input.SNotificationsectionNameX))
-                ) && 
-                (
-                    this.SNotificationsubsectionNameX == input.SNotificationsubsectionNameX ||
-                    (this.SNotificationsubsectionNameX != null &&
-                    this.SNotificationsubsectionNameX.Equals(input.SNotificationsubsectionNameX))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiNotificationsubsectionID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiNotificationsectionID.GetHashCode();
-                if (this.ObjNotificationsubsectionName != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjNotificationsubsectionName.GetHashCode();
-                }
-                if (this.SNotificationsectionNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SNotificationsectionNameX.GetHashCode();
-                }
-                if (this.SNotificationsubsectionNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SNotificationsubsectionNameX.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

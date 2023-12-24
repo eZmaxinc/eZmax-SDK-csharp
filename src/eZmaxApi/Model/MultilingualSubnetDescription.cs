@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// The description of the Subnet
     /// </summary>
     [DataContract(Name = "Multilingual-SubnetDescription")]
-    public partial class MultilingualSubnetDescription : IEquatable<MultilingualSubnetDescription>, IValidatableObject
+    public partial class MultilingualSubnetDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualSubnetDescription" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualSubnetDescription);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualSubnetDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualSubnetDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualSubnetDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SSubnetDescription1 == input.SSubnetDescription1 ||
-                    (this.SSubnetDescription1 != null &&
-                    this.SSubnetDescription1.Equals(input.SSubnetDescription1))
-                ) && 
-                (
-                    this.SSubnetDescription2 == input.SSubnetDescription2 ||
-                    (this.SSubnetDescription2 != null &&
-                    this.SSubnetDescription2.Equals(input.SSubnetDescription2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SSubnetDescription1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SSubnetDescription1.GetHashCode();
-                }
-                if (this.SSubnetDescription2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SSubnetDescription2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

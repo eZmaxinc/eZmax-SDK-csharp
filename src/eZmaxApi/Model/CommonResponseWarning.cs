@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Generic Warning Message
     /// </summary>
     [DataContract(Name = "Common-Response-Warning")]
-    public partial class CommonResponseWarning : IEquatable<CommonResponseWarning>, IValidatableObject
+    public partial class CommonResponseWarning : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseWarning" /> class.
@@ -93,61 +93,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonResponseWarning);
-        }
-
-        /// <summary>
-        /// Returns true if CommonResponseWarning instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonResponseWarning to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonResponseWarning input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SWarningMessage == input.SWarningMessage ||
-                    (this.SWarningMessage != null &&
-                    this.SWarningMessage.Equals(input.SWarningMessage))
-                ) && 
-                (
-                    this.EWarningCode == input.EWarningCode ||
-                    (this.EWarningCode != null &&
-                    this.EWarningCode.Equals(input.EWarningCode))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SWarningMessage != null)
-                {
-                    hashCode = (hashCode * 59) + this.SWarningMessage.GetHashCode();
-                }
-                if (this.EWarningCode != null)
-                {
-                    hashCode = (hashCode * 59) + this.EWarningCode.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

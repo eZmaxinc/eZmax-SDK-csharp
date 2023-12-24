@@ -4,11 +4,11 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**EletronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#eletronicfundstransfergetcommunicationlistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list |
+| [**ElectronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationlistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list |
 
-<a id="eletronicfundstransfergetcommunicationlistv1"></a>
-# **EletronicfundstransferGetCommunicationListV1**
-> ElectronicfundstransferGetCommunicationListV1Response EletronicfundstransferGetCommunicationListV1 (int pkiElectronicfundstransferID)
+<a id="electronicfundstransfergetcommunicationlistv1"></a>
+# **ElectronicfundstransferGetCommunicationListV1**
+> ElectronicfundstransferGetCommunicationListV1Response ElectronicfundstransferGetCommunicationListV1 (int pkiElectronicfundstransferID)
 
 Retrieve Communication list
 
@@ -22,7 +22,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EletronicfundstransferGetCommunicationListV1Example
+    public class ElectronicfundstransferGetCommunicationListV1Example
     {
         public static void Main()
         {
@@ -39,12 +39,12 @@ namespace Example
             try
             {
                 // Retrieve Communication list
-                ElectronicfundstransferGetCommunicationListV1Response result = apiInstance.EletronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
+                ElectronicfundstransferGetCommunicationListV1Response result = apiInstance.ElectronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectElectronicfundstransferApi.EletronicfundstransferGetCommunicationListV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectElectronicfundstransferApi.ElectronicfundstransferGetCommunicationListV1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -53,21 +53,21 @@ namespace Example
 }
 ```
 
-#### Using the EletronicfundstransferGetCommunicationListV1WithHttpInfo variant
+#### Using the ElectronicfundstransferGetCommunicationListV1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve Communication list
-    ApiResponse<ElectronicfundstransferGetCommunicationListV1Response> response = apiInstance.EletronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID);
+    ApiResponse<ElectronicfundstransferGetCommunicationListV1Response> response = apiInstance.ElectronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectElectronicfundstransferApi.EletronicfundstransferGetCommunicationListV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectElectronicfundstransferApi.ElectronicfundstransferGetCommunicationListV1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

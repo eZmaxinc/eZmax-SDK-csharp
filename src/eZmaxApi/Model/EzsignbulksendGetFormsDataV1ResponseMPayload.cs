@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData
     /// </summary>
     [DataContract(Name = "ezsignbulksend-getFormsData-v1-Response-mPayload")]
-    public partial class EzsignbulksendGetFormsDataV1ResponseMPayload : IEquatable<EzsignbulksendGetFormsDataV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignbulksendGetFormsDataV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendGetFormsDataV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksendGetFormsDataV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksendGetFormsDataV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksendGetFormsDataV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksendGetFormsDataV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjFormsDataFolder == input.AObjFormsDataFolder ||
-                    this.AObjFormsDataFolder != null &&
-                    input.AObjFormsDataFolder != null &&
-                    this.AObjFormsDataFolder.SequenceEqual(input.AObjFormsDataFolder)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjFormsDataFolder != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjFormsDataFolder.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

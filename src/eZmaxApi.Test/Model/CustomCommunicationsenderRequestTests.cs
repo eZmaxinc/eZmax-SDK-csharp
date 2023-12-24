@@ -83,6 +83,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiPhonelinesharedID'
+        /// </summary>
+        [Fact]
+        public void FkiPhonelinesharedIDTest()
+        {
+            // TODO unit test for the property 'FkiPhonelinesharedID'
+        }
+
+        /// <summary>
         /// Test the property 'FkiUserID'
         /// </summary>
         [Fact]

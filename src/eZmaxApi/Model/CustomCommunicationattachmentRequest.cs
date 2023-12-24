@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Custom Communicationattachment Object
     /// </summary>
     [DataContract(Name = "Custom-Communicationattachment-Request")]
-    public partial class CustomCommunicationattachmentRequest : IEquatable<CustomCommunicationattachmentRequest>, IValidatableObject
+    public partial class CustomCommunicationattachmentRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationattachmentRequest" /> class.
@@ -76,61 +76,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomCommunicationattachmentRequest);
-        }
-
-        /// <summary>
-        /// Returns true if CustomCommunicationattachmentRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomCommunicationattachmentRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomCommunicationattachmentRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjCommunicationattachment == input.ObjCommunicationattachment ||
-                    (this.ObjCommunicationattachment != null &&
-                    this.ObjCommunicationattachment.Equals(input.ObjCommunicationattachment))
-                ) && 
-                (
-                    this.ObjCommunicationexternalattachment == input.ObjCommunicationexternalattachment ||
-                    (this.ObjCommunicationexternalattachment != null &&
-                    this.ObjCommunicationexternalattachment.Equals(input.ObjCommunicationexternalattachment))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjCommunicationattachment != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjCommunicationattachment.GetHashCode();
-                }
-                if (this.ObjCommunicationexternalattachment != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjCommunicationexternalattachment.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

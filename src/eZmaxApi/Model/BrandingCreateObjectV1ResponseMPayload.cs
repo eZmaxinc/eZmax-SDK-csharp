@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/branding
     /// </summary>
     [DataContract(Name = "branding-createObject-v1-Response-mPayload")]
-    public partial class BrandingCreateObjectV1ResponseMPayload : IEquatable<BrandingCreateObjectV1ResponseMPayload>, IValidatableObject
+    public partial class BrandingCreateObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingCreateObjectV1ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrandingCreateObjectV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if BrandingCreateObjectV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrandingCreateObjectV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrandingCreateObjectV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiBrandingID == input.APkiBrandingID ||
-                    this.APkiBrandingID != null &&
-                    input.APkiBrandingID != null &&
-                    this.APkiBrandingID.SequenceEqual(input.APkiBrandingID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiBrandingID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiBrandingID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

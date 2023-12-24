@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A custom Creditcardtransaction Object
     /// </summary>
     [DataContract(Name = "Custom-Creditcardtransaction-Response")]
-    public partial class CustomCreditcardtransactionResponse : IEquatable<CustomCreditcardtransactionResponse>, IValidatableObject
+    public partial class CustomCreditcardtransactionResponse : IValidatableObject
     {
 
         /// <summary>
@@ -120,75 +120,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomCreditcardtransactionResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomCreditcardtransactionResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomCreditcardtransactionResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomCreditcardtransactionResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ECreditcardtypeCodename == input.ECreditcardtypeCodename ||
-                    this.ECreditcardtypeCodename.Equals(input.ECreditcardtypeCodename)
-                ) && 
-                (
-                    this.DCreditcardtransactionAmount == input.DCreditcardtransactionAmount ||
-                    (this.DCreditcardtransactionAmount != null &&
-                    this.DCreditcardtransactionAmount.Equals(input.DCreditcardtransactionAmount))
-                ) && 
-                (
-                    this.SCreditcardtransactionPartiallydecryptednumber == input.SCreditcardtransactionPartiallydecryptednumber ||
-                    (this.SCreditcardtransactionPartiallydecryptednumber != null &&
-                    this.SCreditcardtransactionPartiallydecryptednumber.Equals(input.SCreditcardtransactionPartiallydecryptednumber))
-                ) && 
-                (
-                    this.SCreditcardtransactionReferencenumber == input.SCreditcardtransactionReferencenumber ||
-                    (this.SCreditcardtransactionReferencenumber != null &&
-                    this.SCreditcardtransactionReferencenumber.Equals(input.SCreditcardtransactionReferencenumber))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.ECreditcardtypeCodename.GetHashCode();
-                if (this.DCreditcardtransactionAmount != null)
-                {
-                    hashCode = (hashCode * 59) + this.DCreditcardtransactionAmount.GetHashCode();
-                }
-                if (this.SCreditcardtransactionPartiallydecryptednumber != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCreditcardtransactionPartiallydecryptednumber.GetHashCode();
-                }
-                if (this.SCreditcardtransactionReferencenumber != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCreditcardtransactionReferencenumber.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Custom Ezmaxpricing Object
     /// </summary>
     [DataContract(Name = "Custom-Ezmaxpricing-Response")]
-    public partial class CustomEzmaxpricingResponse : IEquatable<CustomEzmaxpricingResponse>, IValidatableObject
+    public partial class CustomEzmaxpricingResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzmaxpricingResponse" /> class.
@@ -117,75 +117,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomEzmaxpricingResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomEzmaxpricingResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomEzmaxpricingResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomEzmaxpricingResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzmaxpricingID == input.PkiEzmaxpricingID ||
-                    this.PkiEzmaxpricingID.Equals(input.PkiEzmaxpricingID)
-                ) && 
-                (
-                    this.DEzmaxpricingRebateezsignallagents == input.DEzmaxpricingRebateezsignallagents ||
-                    (this.DEzmaxpricingRebateezsignallagents != null &&
-                    this.DEzmaxpricingRebateezsignallagents.Equals(input.DEzmaxpricingRebateezsignallagents))
-                ) && 
-                (
-                    this.DtEzmaxpricingStart == input.DtEzmaxpricingStart ||
-                    (this.DtEzmaxpricingStart != null &&
-                    this.DtEzmaxpricingStart.Equals(input.DtEzmaxpricingStart))
-                ) && 
-                (
-                    this.DtEzmaxpricingEnd == input.DtEzmaxpricingEnd ||
-                    (this.DtEzmaxpricingEnd != null &&
-                    this.DtEzmaxpricingEnd.Equals(input.DtEzmaxpricingEnd))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzmaxpricingID.GetHashCode();
-                if (this.DEzmaxpricingRebateezsignallagents != null)
-                {
-                    hashCode = (hashCode * 59) + this.DEzmaxpricingRebateezsignallagents.GetHashCode();
-                }
-                if (this.DtEzmaxpricingStart != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzmaxpricingStart.GetHashCode();
-                }
-                if (this.DtEzmaxpricingEnd != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzmaxpricingEnd.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

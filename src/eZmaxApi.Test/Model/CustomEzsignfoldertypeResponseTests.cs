@@ -74,6 +74,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BEzsignfoldertypeSendproofezsignsigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeSendproofezsignsignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeSendproofezsignsigner'
+        }
+
+        /// <summary>
         /// Test the property 'BEzsignfoldertypeIncludeproofsigner'
         /// </summary>
         [Fact]
@@ -89,6 +98,24 @@ namespace eZmaxApi.Test.Model
         public void BEzsignfoldertypeIncludeproofuserTest()
         {
             // TODO unit test for the property 'BEzsignfoldertypeIncludeproofuser'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeAllowdownloadattachmentezsignsigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeAllowdownloadattachmentezsignsignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeAllowdownloadattachmentezsignsigner'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeAllowdownloadproofezsignsigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeAllowdownloadproofezsignsignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeAllowdownloadproofezsignsigner'
         }
 
         /// <summary>

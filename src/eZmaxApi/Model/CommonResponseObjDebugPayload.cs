@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// This is a debug object containing debugging information on the actual function
     /// </summary>
     [DataContract(Name = "Common-Response-objDebugPayload")]
-    public partial class CommonResponseObjDebugPayload : IEquatable<CommonResponseObjDebugPayload>, IValidatableObject
+    public partial class CommonResponseObjDebugPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayload" /> class.
@@ -111,68 +111,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonResponseObjDebugPayload);
-        }
-
-        /// <summary>
-        /// Returns true if CommonResponseObjDebugPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonResponseObjDebugPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonResponseObjDebugPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.IVersionMin == input.IVersionMin ||
-                    this.IVersionMin.Equals(input.IVersionMin)
-                ) && 
-                (
-                    this.IVersionMax == input.IVersionMax ||
-                    this.IVersionMax.Equals(input.IVersionMax)
-                ) && 
-                (
-                    this.ARequiredPermission == input.ARequiredPermission ||
-                    this.ARequiredPermission != null &&
-                    input.ARequiredPermission != null &&
-                    this.ARequiredPermission.SequenceEqual(input.ARequiredPermission)
-                ) && 
-                (
-                    this.BVersionDeprecated == input.BVersionDeprecated ||
-                    this.BVersionDeprecated.Equals(input.BVersionDeprecated)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.IVersionMin.GetHashCode();
-                hashCode = (hashCode * 59) + this.IVersionMax.GetHashCode();
-                if (this.ARequiredPermission != null)
-                {
-                    hashCode = (hashCode * 59) + this.ARequiredPermission.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BVersionDeprecated.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

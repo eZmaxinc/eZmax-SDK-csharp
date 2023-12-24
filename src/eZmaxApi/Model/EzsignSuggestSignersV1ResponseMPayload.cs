@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/module/ezsign/suggestSigners
     /// </summary>
     [DataContract(Name = "ezsign-suggestSigners-v1-Response-mPayload")]
-    public partial class EzsignSuggestSignersV1ResponseMPayload : IEquatable<EzsignSuggestSignersV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignSuggestSignersV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignSuggestSignersV1ResponseMPayload" /> class.
@@ -105,73 +105,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignSuggestSignersV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignSuggestSignersV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignSuggestSignersV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignSuggestSignersV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsignfoldersignerassociation == input.AObjEzsignfoldersignerassociation ||
-                    this.AObjEzsignfoldersignerassociation != null &&
-                    input.AObjEzsignfoldersignerassociation != null &&
-                    this.AObjEzsignfoldersignerassociation.SequenceEqual(input.AObjEzsignfoldersignerassociation)
-                ) && 
-                (
-                    this.AObjUserTeam == input.AObjUserTeam ||
-                    this.AObjUserTeam != null &&
-                    input.AObjUserTeam != null &&
-                    this.AObjUserTeam.SequenceEqual(input.AObjUserTeam)
-                ) && 
-                (
-                    this.AObjUser == input.AObjUser ||
-                    this.AObjUser != null &&
-                    input.AObjUser != null &&
-                    this.AObjUser.SequenceEqual(input.AObjUser)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsignfoldersignerassociation != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignfoldersignerassociation.GetHashCode();
-                }
-                if (this.AObjUserTeam != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjUserTeam.GetHashCode();
-                }
-                if (this.AObjUser != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjUser.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

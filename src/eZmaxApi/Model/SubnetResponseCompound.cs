@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Subnet Object
     /// </summary>
     [DataContract(Name = "subnet-ResponseCompound")]
-    public partial class SubnetResponseCompound : IEquatable<SubnetResponseCompound>, IValidatableObject
+    public partial class SubnetResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SubnetResponseCompound" /> class.
@@ -132,77 +132,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SubnetResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if SubnetResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SubnetResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SubnetResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiSubnetID == input.PkiSubnetID ||
-                    this.PkiSubnetID.Equals(input.PkiSubnetID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.FkiApikeyID == input.FkiApikeyID ||
-                    this.FkiApikeyID.Equals(input.FkiApikeyID)
-                ) && 
-                (
-                    this.ObjSubnetDescription == input.ObjSubnetDescription ||
-                    (this.ObjSubnetDescription != null &&
-                    this.ObjSubnetDescription.Equals(input.ObjSubnetDescription))
-                ) && 
-                (
-                    this.ISubnetNetwork == input.ISubnetNetwork ||
-                    this.ISubnetNetwork.Equals(input.ISubnetNetwork)
-                ) && 
-                (
-                    this.ISubnetMask == input.ISubnetMask ||
-                    this.ISubnetMask.Equals(input.ISubnetMask)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiSubnetID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiApikeyID.GetHashCode();
-                if (this.ObjSubnetDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjSubnetDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ISubnetNetwork.GetHashCode();
-                hashCode = (hashCode * 59) + this.ISubnetMask.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

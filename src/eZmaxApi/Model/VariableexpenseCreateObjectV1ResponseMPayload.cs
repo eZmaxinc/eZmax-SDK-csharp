@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/variableexpense
     /// </summary>
     [DataContract(Name = "variableexpense-createObject-v1-Response-mPayload")]
-    public partial class VariableexpenseCreateObjectV1ResponseMPayload : IEquatable<VariableexpenseCreateObjectV1ResponseMPayload>, IValidatableObject
+    public partial class VariableexpenseCreateObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as VariableexpenseCreateObjectV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if VariableexpenseCreateObjectV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of VariableexpenseCreateObjectV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(VariableexpenseCreateObjectV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiVariableexpenseID == input.APkiVariableexpenseID ||
-                    this.APkiVariableexpenseID != null &&
-                    input.APkiVariableexpenseID != null &&
-                    this.APkiVariableexpenseID.SequenceEqual(input.APkiVariableexpenseID)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiVariableexpenseID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiVariableexpenseID.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

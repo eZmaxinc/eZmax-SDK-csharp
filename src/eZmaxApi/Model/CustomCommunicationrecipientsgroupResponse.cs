@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Generic CommunicationrecipientsGroup Response
     /// </summary>
     [DataContract(Name = "Custom-Communicationrecipientsgroup-Response")]
-    public partial class CustomCommunicationrecipientsgroupResponse : IEquatable<CustomCommunicationrecipientsgroupResponse>, IValidatableObject
+    public partial class CustomCommunicationrecipientsgroupResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationrecipientsgroupResponse" /> class.
@@ -92,62 +92,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomCommunicationrecipientsgroupResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomCommunicationrecipientsgroupResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomCommunicationrecipientsgroupResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomCommunicationrecipientsgroupResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SCommunicationrecipientsgroupLabel == input.SCommunicationrecipientsgroupLabel ||
-                    (this.SCommunicationrecipientsgroupLabel != null &&
-                    this.SCommunicationrecipientsgroupLabel.Equals(input.SCommunicationrecipientsgroupLabel))
-                ) && 
-                (
-                    this.AObjCommunicationrecipientsrecipient == input.AObjCommunicationrecipientsrecipient ||
-                    this.AObjCommunicationrecipientsrecipient != null &&
-                    input.AObjCommunicationrecipientsrecipient != null &&
-                    this.AObjCommunicationrecipientsrecipient.SequenceEqual(input.AObjCommunicationrecipientsrecipient)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SCommunicationrecipientsgroupLabel != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCommunicationrecipientsgroupLabel.GetHashCode();
-                }
-                if (this.AObjCommunicationrecipientsrecipient != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjCommunicationrecipientsrecipient.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

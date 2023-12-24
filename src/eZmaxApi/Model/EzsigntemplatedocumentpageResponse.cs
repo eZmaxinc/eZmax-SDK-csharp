@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsigntemplatedocumentpage Object
     /// </summary>
     [DataContract(Name = "ezsigntemplatedocumentpage-Response")]
-    public partial class EzsigntemplatedocumentpageResponse : IEquatable<EzsigntemplatedocumentpageResponse>, IValidatableObject
+    public partial class EzsigntemplatedocumentpageResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentpageResponse" /> class.
@@ -144,82 +144,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatedocumentpageResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatedocumentpageResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatedocumentpageResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatedocumentpageResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsigntemplatedocumentpageID == input.PkiEzsigntemplatedocumentpageID ||
-                    this.PkiEzsigntemplatedocumentpageID.Equals(input.PkiEzsigntemplatedocumentpageID)
-                ) && 
-                (
-                    this.IEzsigntemplatedocumentpageWidthimage == input.IEzsigntemplatedocumentpageWidthimage ||
-                    this.IEzsigntemplatedocumentpageWidthimage.Equals(input.IEzsigntemplatedocumentpageWidthimage)
-                ) && 
-                (
-                    this.IEzsigntemplatedocumentpageHeightimage == input.IEzsigntemplatedocumentpageHeightimage ||
-                    this.IEzsigntemplatedocumentpageHeightimage.Equals(input.IEzsigntemplatedocumentpageHeightimage)
-                ) && 
-                (
-                    this.IEzsigntemplatedocumentpageWidthpdf == input.IEzsigntemplatedocumentpageWidthpdf ||
-                    this.IEzsigntemplatedocumentpageWidthpdf.Equals(input.IEzsigntemplatedocumentpageWidthpdf)
-                ) && 
-                (
-                    this.IEzsigntemplatedocumentpageHeightpdf == input.IEzsigntemplatedocumentpageHeightpdf ||
-                    this.IEzsigntemplatedocumentpageHeightpdf.Equals(input.IEzsigntemplatedocumentpageHeightpdf)
-                ) && 
-                (
-                    this.IEzsigntemplatedocumentpagePagenumber == input.IEzsigntemplatedocumentpagePagenumber ||
-                    this.IEzsigntemplatedocumentpagePagenumber.Equals(input.IEzsigntemplatedocumentpagePagenumber)
-                ) && 
-                (
-                    this.SComputedImageurl == input.SComputedImageurl ||
-                    (this.SComputedImageurl != null &&
-                    this.SComputedImageurl.Equals(input.SComputedImageurl))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsigntemplatedocumentpageID.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplatedocumentpageWidthimage.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplatedocumentpageHeightimage.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplatedocumentpageWidthpdf.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplatedocumentpageHeightpdf.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplatedocumentpagePagenumber.GetHashCode();
-                if (this.SComputedImageurl != null)
-                {
-                    hashCode = (hashCode * 59) + this.SComputedImageurl.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

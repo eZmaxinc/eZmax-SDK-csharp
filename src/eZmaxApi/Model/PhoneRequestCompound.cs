@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Phone Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "phone-RequestCompound")]
-    public partial class PhoneRequestCompound : IEquatable<PhoneRequestCompound>, IValidatableObject
+    public partial class PhoneRequestCompound : IValidatableObject
     {
 
         /// <summary>
@@ -165,112 +165,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PhoneRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if PhoneRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PhoneRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PhoneRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiPhoneID == input.PkiPhoneID ||
-                    this.PkiPhoneID.Equals(input.PkiPhoneID)
-                ) && 
-                (
-                    this.FkiPhonetypeID == input.FkiPhonetypeID ||
-                    this.FkiPhonetypeID.Equals(input.FkiPhonetypeID)
-                ) && 
-                (
-                    this.EPhoneType == input.EPhoneType ||
-                    this.EPhoneType.Equals(input.EPhoneType)
-                ) && 
-                (
-                    this.SPhoneRegion == input.SPhoneRegion ||
-                    (this.SPhoneRegion != null &&
-                    this.SPhoneRegion.Equals(input.SPhoneRegion))
-                ) && 
-                (
-                    this.SPhoneExchange == input.SPhoneExchange ||
-                    (this.SPhoneExchange != null &&
-                    this.SPhoneExchange.Equals(input.SPhoneExchange))
-                ) && 
-                (
-                    this.SPhoneNumber == input.SPhoneNumber ||
-                    (this.SPhoneNumber != null &&
-                    this.SPhoneNumber.Equals(input.SPhoneNumber))
-                ) && 
-                (
-                    this.SPhoneInternational == input.SPhoneInternational ||
-                    (this.SPhoneInternational != null &&
-                    this.SPhoneInternational.Equals(input.SPhoneInternational))
-                ) && 
-                (
-                    this.SPhoneExtension == input.SPhoneExtension ||
-                    (this.SPhoneExtension != null &&
-                    this.SPhoneExtension.Equals(input.SPhoneExtension))
-                ) && 
-                (
-                    this.SPhoneE164 == input.SPhoneE164 ||
-                    (this.SPhoneE164 != null &&
-                    this.SPhoneE164.Equals(input.SPhoneE164))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiPhoneID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiPhonetypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.EPhoneType.GetHashCode();
-                if (this.SPhoneRegion != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneRegion.GetHashCode();
-                }
-                if (this.SPhoneExchange != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneExchange.GetHashCode();
-                }
-                if (this.SPhoneNumber != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneNumber.GetHashCode();
-                }
-                if (this.SPhoneInternational != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneInternational.GetHashCode();
-                }
-                if (this.SPhoneExtension != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneExtension.GetHashCode();
-                }
-                if (this.SPhoneE164 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneE164.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

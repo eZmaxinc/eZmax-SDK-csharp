@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Secretquestion AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "secretquestion-AutocompleteElement-Response")]
-    public partial class SecretquestionAutocompleteElementResponse : IEquatable<SecretquestionAutocompleteElementResponse>, IValidatableObject
+    public partial class SecretquestionAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SecretquestionAutocompleteElementResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SecretquestionAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if SecretquestionAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SecretquestionAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SecretquestionAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SSecretquestionTextX == input.SSecretquestionTextX ||
-                    (this.SSecretquestionTextX != null &&
-                    this.SSecretquestionTextX.Equals(input.SSecretquestionTextX))
-                ) && 
-                (
-                    this.PkiSecretquestionID == input.PkiSecretquestionID ||
-                    this.PkiSecretquestionID.Equals(input.PkiSecretquestionID)
-                ) && 
-                (
-                    this.BSecretquestionIsactive == input.BSecretquestionIsactive ||
-                    this.BSecretquestionIsactive.Equals(input.BSecretquestionIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SSecretquestionTextX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SSecretquestionTextX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiSecretquestionID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BSecretquestionIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

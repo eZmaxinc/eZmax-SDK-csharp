@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
     /// </summary>
     [DataContract(Name = "ezsignfolder-send-v1-Request")]
-    public partial class EzsignfolderSendV1Request : IEquatable<EzsignfolderSendV1Request>, IValidatableObject
+    public partial class EzsignfolderSendV1Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderSendV1Request" /> class.
@@ -87,52 +87,6 @@ Mary</example>*/
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfolderSendV1Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfolderSendV1Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfolderSendV1Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfolderSendV1Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.TExtraMessage == input.TExtraMessage ||
-                    (this.TExtraMessage != null &&
-                    this.TExtraMessage.Equals(input.TExtraMessage))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.TExtraMessage != null)
-                {
-                    hashCode = (hashCode * 59) + this.TExtraMessage.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

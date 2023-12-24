@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingsummaryexternal Object
     /// </summary>
     [DataContract(Name = "ezmaxinvoicingsummaryexternal-Response")]
-    public partial class EzmaxinvoicingsummaryexternalResponse : IEquatable<EzmaxinvoicingsummaryexternalResponse>, IValidatableObject
+    public partial class EzmaxinvoicingsummaryexternalResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponse" /> class.
@@ -128,76 +128,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzmaxinvoicingsummaryexternalResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzmaxinvoicingsummaryexternalResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzmaxinvoicingsummaryexternalResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzmaxinvoicingsummaryexternalResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzmaxinvoicingsummaryexternalID == input.PkiEzmaxinvoicingsummaryexternalID ||
-                    this.PkiEzmaxinvoicingsummaryexternalID.Equals(input.PkiEzmaxinvoicingsummaryexternalID)
-                ) && 
-                (
-                    this.FkiEzmaxinvoicingID == input.FkiEzmaxinvoicingID ||
-                    this.FkiEzmaxinvoicingID.Equals(input.FkiEzmaxinvoicingID)
-                ) && 
-                (
-                    this.FkiBillingentityexternalID == input.FkiBillingentityexternalID ||
-                    this.FkiBillingentityexternalID.Equals(input.FkiBillingentityexternalID)
-                ) && 
-                (
-                    this.SBillingentityexternalDescription == input.SBillingentityexternalDescription ||
-                    (this.SBillingentityexternalDescription != null &&
-                    this.SBillingentityexternalDescription.Equals(input.SBillingentityexternalDescription))
-                ) && 
-                (
-                    this.SEzmaxinvoicingsummaryexternalDescription == input.SEzmaxinvoicingsummaryexternalDescription ||
-                    (this.SEzmaxinvoicingsummaryexternalDescription != null &&
-                    this.SEzmaxinvoicingsummaryexternalDescription.Equals(input.SEzmaxinvoicingsummaryexternalDescription))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzmaxinvoicingsummaryexternalID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzmaxinvoicingID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiBillingentityexternalID.GetHashCode();
-                if (this.SBillingentityexternalDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBillingentityexternalDescription.GetHashCode();
-                }
-                if (this.SEzmaxinvoicingsummaryexternalDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzmaxinvoicingsummaryexternalDescription.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

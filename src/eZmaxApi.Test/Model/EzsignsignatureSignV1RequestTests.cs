@@ -56,6 +56,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiEzsignsigningreasonID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsignsigningreasonIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsignsigningreasonID'
+        }
+
+        /// <summary>
         /// Test the property 'SValue'
         /// </summary>
         [Fact]

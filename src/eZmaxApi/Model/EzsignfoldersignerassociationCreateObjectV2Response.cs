@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for POST /2/object/ezsignfoldersignerassociation
     /// </summary>
     [DataContract(Name = "ezsignfoldersignerassociation-createObject-v2-Response")]
-    public partial class EzsignfoldersignerassociationCreateObjectV2Response : IEquatable<EzsignfoldersignerassociationCreateObjectV2Response>, IValidatableObject
+    public partial class EzsignfoldersignerassociationCreateObjectV2Response : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationCreateObjectV2Response" /> class.
@@ -100,70 +100,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfoldersignerassociationCreateObjectV2Response);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfoldersignerassociationCreateObjectV2Response instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfoldersignerassociationCreateObjectV2Response to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfoldersignerassociationCreateObjectV2Response input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjDebugPayload == input.ObjDebugPayload ||
-                    (this.ObjDebugPayload != null &&
-                    this.ObjDebugPayload.Equals(input.ObjDebugPayload))
-                ) && 
-                (
-                    this.ObjDebug == input.ObjDebug ||
-                    (this.ObjDebug != null &&
-                    this.ObjDebug.Equals(input.ObjDebug))
-                ) && 
-                (
-                    this.MPayload == input.MPayload ||
-                    (this.MPayload != null &&
-                    this.MPayload.Equals(input.MPayload))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjDebugPayload != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjDebugPayload.GetHashCode();
-                }
-                if (this.ObjDebug != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjDebug.GetHashCode();
-                }
-                if (this.MPayload != null)
-                {
-                    hashCode = (hashCode * 59) + this.MPayload.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

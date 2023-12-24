@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignformfield Object
     /// </summary>
     [DataContract(Name = "Custom-FormDataEzsignformfield-Response")]
-    public partial class CustomFormDataEzsignformfieldResponse : IEquatable<CustomFormDataEzsignformfieldResponse>, IValidatableObject
+    public partial class CustomFormDataEzsignformfieldResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomFormDataEzsignformfieldResponse" /> class.
@@ -95,61 +95,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomFormDataEzsignformfieldResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomFormDataEzsignformfieldResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomFormDataEzsignformfieldResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomFormDataEzsignformfieldResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SEzsignformfieldLabel == input.SEzsignformfieldLabel ||
-                    (this.SEzsignformfieldLabel != null &&
-                    this.SEzsignformfieldLabel.Equals(input.SEzsignformfieldLabel))
-                ) && 
-                (
-                    this.SEzsignformfieldValue == input.SEzsignformfieldValue ||
-                    (this.SEzsignformfieldValue != null &&
-                    this.SEzsignformfieldValue.Equals(input.SEzsignformfieldValue))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SEzsignformfieldLabel != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignformfieldLabel.GetHashCode();
-                }
-                if (this.SEzsignformfieldValue != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignformfieldValue.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

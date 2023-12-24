@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Userstaged List Element
     /// </summary>
     [DataContract(Name = "userstaged-ListElement")]
-    public partial class UserstagedListElement : IEquatable<UserstagedListElement>, IValidatableObject
+    public partial class UserstagedListElement : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedListElement" /> class.
@@ -138,84 +138,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserstagedListElement);
-        }
-
-        /// <summary>
-        /// Returns true if UserstagedListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserstagedListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserstagedListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiUserstagedID == input.PkiUserstagedID ||
-                    this.PkiUserstagedID.Equals(input.PkiUserstagedID)
-                ) && 
-                (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                ) && 
-                (
-                    this.SUserstagedFirstname == input.SUserstagedFirstname ||
-                    (this.SUserstagedFirstname != null &&
-                    this.SUserstagedFirstname.Equals(input.SUserstagedFirstname))
-                ) && 
-                (
-                    this.SUserstagedLastname == input.SUserstagedLastname ||
-                    (this.SUserstagedLastname != null &&
-                    this.SUserstagedLastname.Equals(input.SUserstagedLastname))
-                ) && 
-                (
-                    this.SUserstagedExternalid == input.SUserstagedExternalid ||
-                    (this.SUserstagedExternalid != null &&
-                    this.SUserstagedExternalid.Equals(input.SUserstagedExternalid))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiUserstagedID.GetHashCode();
-                if (this.SEmailAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailAddress.GetHashCode();
-                }
-                if (this.SUserstagedFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserstagedFirstname.GetHashCode();
-                }
-                if (this.SUserstagedLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserstagedLastname.GetHashCode();
-                }
-                if (this.SUserstagedExternalid != null)
-                {
-                    hashCode = (hashCode * 59) + this.SUserstagedExternalid.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

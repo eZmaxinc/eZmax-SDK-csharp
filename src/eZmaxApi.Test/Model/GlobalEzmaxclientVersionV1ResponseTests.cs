@@ -63,5 +63,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'SEzmaxclientVersion'
         }
+
+        /// <summary>
+        /// Test the property 'SEzmaxclientOslatestversion'
+        /// </summary>
+        [Fact]
+        public void SEzmaxclientOslatestversionTest()
+        {
+            // TODO unit test for the property 'SEzmaxclientOslatestversion'
+        }
     }
 }

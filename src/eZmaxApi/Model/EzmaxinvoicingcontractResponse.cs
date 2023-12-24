@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingcontract Object
     /// </summary>
     [DataContract(Name = "ezmaxinvoicingcontract-Response")]
-    public partial class EzmaxinvoicingcontractResponse : IEquatable<EzmaxinvoicingcontractResponse>, IValidatableObject
+    public partial class EzmaxinvoicingcontractResponse : IValidatableObject
     {
 
         /// <summary>
@@ -183,108 +183,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzmaxinvoicingcontractResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EzmaxinvoicingcontractResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzmaxinvoicingcontractResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzmaxinvoicingcontractResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzmaxinvoicingcontractID == input.PkiEzmaxinvoicingcontractID ||
-                    this.PkiEzmaxinvoicingcontractID.Equals(input.PkiEzmaxinvoicingcontractID)
-                ) && 
-                (
-                    this.EEzmaxinvoicingcontractPaymenttype == input.EEzmaxinvoicingcontractPaymenttype ||
-                    this.EEzmaxinvoicingcontractPaymenttype.Equals(input.EEzmaxinvoicingcontractPaymenttype)
-                ) && 
-                (
-                    this.IEzmaxinvoicingcontractLength == input.IEzmaxinvoicingcontractLength ||
-                    this.IEzmaxinvoicingcontractLength.Equals(input.IEzmaxinvoicingcontractLength)
-                ) && 
-                (
-                    this.DtEzmaxinvoicingcontractStart == input.DtEzmaxinvoicingcontractStart ||
-                    (this.DtEzmaxinvoicingcontractStart != null &&
-                    this.DtEzmaxinvoicingcontractStart.Equals(input.DtEzmaxinvoicingcontractStart))
-                ) && 
-                (
-                    this.DtEzmaxinvoicingcontractEnd == input.DtEzmaxinvoicingcontractEnd ||
-                    (this.DtEzmaxinvoicingcontractEnd != null &&
-                    this.DtEzmaxinvoicingcontractEnd.Equals(input.DtEzmaxinvoicingcontractEnd))
-                ) && 
-                (
-                    this.DEzmaxinvoicingcontractLicense == input.DEzmaxinvoicingcontractLicense ||
-                    (this.DEzmaxinvoicingcontractLicense != null &&
-                    this.DEzmaxinvoicingcontractLicense.Equals(input.DEzmaxinvoicingcontractLicense))
-                ) && 
-                (
-                    this.DEzmaxinvoicingcontract121qa == input.DEzmaxinvoicingcontract121qa ||
-                    (this.DEzmaxinvoicingcontract121qa != null &&
-                    this.DEzmaxinvoicingcontract121qa.Equals(input.DEzmaxinvoicingcontract121qa))
-                ) && 
-                (
-                    this.BEzmaxinvoicingcontractEzsignallagents == input.BEzmaxinvoicingcontractEzsignallagents ||
-                    this.BEzmaxinvoicingcontractEzsignallagents.Equals(input.BEzmaxinvoicingcontractEzsignallagents)
-                ) && 
-                (
-                    this.ObjAudit == input.ObjAudit ||
-                    (this.ObjAudit != null &&
-                    this.ObjAudit.Equals(input.ObjAudit))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzmaxinvoicingcontractID.GetHashCode();
-                hashCode = (hashCode * 59) + this.EEzmaxinvoicingcontractPaymenttype.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzmaxinvoicingcontractLength.GetHashCode();
-                if (this.DtEzmaxinvoicingcontractStart != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzmaxinvoicingcontractStart.GetHashCode();
-                }
-                if (this.DtEzmaxinvoicingcontractEnd != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtEzmaxinvoicingcontractEnd.GetHashCode();
-                }
-                if (this.DEzmaxinvoicingcontractLicense != null)
-                {
-                    hashCode = (hashCode * 59) + this.DEzmaxinvoicingcontractLicense.GetHashCode();
-                }
-                if (this.DEzmaxinvoicingcontract121qa != null)
-                {
-                    hashCode = (hashCode * 59) + this.DEzmaxinvoicingcontract121qa.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzmaxinvoicingcontractEzsignallagents.GetHashCode();
-                if (this.ObjAudit != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjAudit.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

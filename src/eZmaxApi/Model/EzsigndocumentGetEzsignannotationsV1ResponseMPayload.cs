@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignannotations
     /// </summary>
     [DataContract(Name = "ezsigndocument-getEzsignannotations-v1-Response-mPayload")]
-    public partial class EzsigndocumentGetEzsignannotationsV1ResponseMPayload : IEquatable<EzsigndocumentGetEzsignannotationsV1ResponseMPayload>, IValidatableObject
+    public partial class EzsigndocumentGetEzsignannotationsV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignannotationsV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigndocumentGetEzsignannotationsV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigndocumentGetEzsignannotationsV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigndocumentGetEzsignannotationsV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigndocumentGetEzsignannotationsV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsignannotation == input.AObjEzsignannotation ||
-                    this.AObjEzsignannotation != null &&
-                    input.AObjEzsignannotation != null &&
-                    this.AObjEzsignannotation.SequenceEqual(input.AObjEzsignannotation)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsignannotation != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignannotation.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

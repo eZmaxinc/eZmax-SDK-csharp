@@ -245,6 +245,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IEzsigndocumentEzsignsignatureattachmenttotal'
+        /// </summary>
+        [Fact]
+        public void IEzsigndocumentEzsignsignatureattachmenttotalTest()
+        {
+            // TODO unit test for the property 'IEzsigndocumentEzsignsignatureattachmenttotal'
+        }
+
+        /// <summary>
         /// Test the property 'EEzsigndocumentSteptype'
         /// </summary>
         [Fact]

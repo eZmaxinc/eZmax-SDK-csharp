@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Department AutocompleteElement Response
     /// </summary>
     [DataContract(Name = "department-AutocompleteElement-Response")]
-    public partial class DepartmentAutocompleteElementResponse : IEquatable<DepartmentAutocompleteElementResponse>, IValidatableObject
+    public partial class DepartmentAutocompleteElementResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DepartmentAutocompleteElementResponse" /> class.
@@ -117,71 +117,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as DepartmentAutocompleteElementResponse);
-        }
-
-        /// <summary>
-        /// Returns true if DepartmentAutocompleteElementResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of DepartmentAutocompleteElementResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(DepartmentAutocompleteElementResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SCompanyNameX == input.SCompanyNameX ||
-                    (this.SCompanyNameX != null &&
-                    this.SCompanyNameX.Equals(input.SCompanyNameX))
-                ) && 
-                (
-                    this.SDepartmentNameX == input.SDepartmentNameX ||
-                    (this.SDepartmentNameX != null &&
-                    this.SDepartmentNameX.Equals(input.SDepartmentNameX))
-                ) && 
-                (
-                    this.PkiDepartmentID == input.PkiDepartmentID ||
-                    this.PkiDepartmentID.Equals(input.PkiDepartmentID)
-                ) && 
-                (
-                    this.BDepartmentIsactive == input.BDepartmentIsactive ||
-                    this.BDepartmentIsactive.Equals(input.BDepartmentIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SCompanyNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCompanyNameX.GetHashCode();
-                }
-                if (this.SDepartmentNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SDepartmentNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PkiDepartmentID.GetHashCode();
-                hashCode = (hashCode * 59) + this.BDepartmentIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

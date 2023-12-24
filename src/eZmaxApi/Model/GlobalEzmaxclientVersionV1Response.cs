@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/ezmaxclient/{pksEzmaxclientOs}/version
     /// </summary>
     [DataContract(Name = "global-ezmaxclient-version-v1-Response")]
-    public partial class GlobalEzmaxclientVersionV1Response : IEquatable<GlobalEzmaxclientVersionV1Response>, IValidatableObject
+    public partial class GlobalEzmaxclientVersionV1Response : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalEzmaxclientVersionV1Response" /> class.
@@ -41,7 +41,8 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="GlobalEzmaxclientVersionV1Response" /> class.
         /// </summary>
         /// <param name="sEzmaxclientVersion">The version on the store (required).</param>
-        public GlobalEzmaxclientVersionV1Response(string sEzmaxclientVersion = default(string))
+        /// <param name="sEzmaxclientOslatestversion">The latest OS version of the system running the application at the time of release (required) (default to &quot;11&quot;).</param>
+        public GlobalEzmaxclientVersionV1Response(string sEzmaxclientVersion = default(string), string sEzmaxclientOslatestversion = @"11")
         {
             // to ensure "sEzmaxclientVersion" is required (not null)
             if (sEzmaxclientVersion == null)
@@ -49,6 +50,12 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sEzmaxclientVersion is a required property for GlobalEzmaxclientVersionV1Response and cannot be null");
             }
             this.SEzmaxclientVersion = sEzmaxclientVersion;
+            // to ensure "sEzmaxclientOslatestversion" is required (not null)
+            if (sEzmaxclientOslatestversion == null)
+            {
+                throw new ArgumentNullException("sEzmaxclientOslatestversion is a required property for GlobalEzmaxclientVersionV1Response and cannot be null");
+            }
+            this.SEzmaxclientOslatestversion = sEzmaxclientOslatestversion;
         }
 
         /// <summary>
@@ -59,6 +66,13 @@ namespace eZmaxApi.Model
         public string SEzmaxclientVersion { get; set; }
 
         /// <summary>
+        /// The latest OS version of the system running the application at the time of release
+        /// </summary>
+        /// <value>The latest OS version of the system running the application at the time of release</value>
+        [DataMember(Name = "sEzmaxclientOslatestversion", IsRequired = true, EmitDefaultValue = true)]
+        public string SEzmaxclientOslatestversion { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -67,6 +81,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class GlobalEzmaxclientVersionV1Response {\n");
             sb.Append("  SEzmaxclientVersion: ").Append(SEzmaxclientVersion).Append("\n");
+            sb.Append("  SEzmaxclientOslatestversion: ").Append(SEzmaxclientOslatestversion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -78,52 +93,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as GlobalEzmaxclientVersionV1Response);
-        }
-
-        /// <summary>
-        /// Returns true if GlobalEzmaxclientVersionV1Response instances are equal
-        /// </summary>
-        /// <param name="input">Instance of GlobalEzmaxclientVersionV1Response to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(GlobalEzmaxclientVersionV1Response input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SEzmaxclientVersion == input.SEzmaxclientVersion ||
-                    (this.SEzmaxclientVersion != null &&
-                    this.SEzmaxclientVersion.Equals(input.SEzmaxclientVersion))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SEzmaxclientVersion != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzmaxclientVersion.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

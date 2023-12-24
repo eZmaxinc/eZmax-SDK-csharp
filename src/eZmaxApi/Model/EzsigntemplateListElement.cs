@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplate List Element
     /// </summary>
     [DataContract(Name = "ezsigntemplate-ListElement")]
-    public partial class EzsigntemplateListElement : IEquatable<EzsigntemplateListElement>, IValidatableObject
+    public partial class EzsigntemplateListElement : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateListElement" /> class.
@@ -172,96 +172,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplateListElement);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplateListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplateListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplateListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsigntemplateID == input.PkiEzsigntemplateID ||
-                    this.PkiEzsigntemplateID.Equals(input.PkiEzsigntemplateID)
-                ) && 
-                (
-                    this.FkiEzsignfoldertypeID == input.FkiEzsignfoldertypeID ||
-                    this.FkiEzsignfoldertypeID.Equals(input.FkiEzsignfoldertypeID)
-                ) && 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    this.FkiLanguageID.Equals(input.FkiLanguageID)
-                ) && 
-                (
-                    this.SEzsigntemplateDescription == input.SEzsigntemplateDescription ||
-                    (this.SEzsigntemplateDescription != null &&
-                    this.SEzsigntemplateDescription.Equals(input.SEzsigntemplateDescription))
-                ) && 
-                (
-                    this.IEzsigntemplatedocumentPagetotal == input.IEzsigntemplatedocumentPagetotal ||
-                    this.IEzsigntemplatedocumentPagetotal.Equals(input.IEzsigntemplatedocumentPagetotal)
-                ) && 
-                (
-                    this.IEzsigntemplateSignaturetotal == input.IEzsigntemplateSignaturetotal ||
-                    this.IEzsigntemplateSignaturetotal.Equals(input.IEzsigntemplateSignaturetotal)
-                ) && 
-                (
-                    this.IEzsigntemplateFormfieldtotal == input.IEzsigntemplateFormfieldtotal ||
-                    this.IEzsigntemplateFormfieldtotal.Equals(input.IEzsigntemplateFormfieldtotal)
-                ) && 
-                (
-                    this.BEzsigntemplateIncomplete == input.BEzsigntemplateIncomplete ||
-                    this.BEzsigntemplateIncomplete.Equals(input.BEzsigntemplateIncomplete)
-                ) && 
-                (
-                    this.SEzsignfoldertypeNameX == input.SEzsignfoldertypeNameX ||
-                    (this.SEzsignfoldertypeNameX != null &&
-                    this.SEzsignfoldertypeNameX.Equals(input.SEzsignfoldertypeNameX))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsigntemplateID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldertypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiLanguageID.GetHashCode();
-                if (this.SEzsigntemplateDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsigntemplateDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzsigntemplatedocumentPagetotal.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplateSignaturetotal.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplateFormfieldtotal.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsigntemplateIncomplete.GetHashCode();
-                if (this.SEzsignfoldertypeNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldertypeNameX.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

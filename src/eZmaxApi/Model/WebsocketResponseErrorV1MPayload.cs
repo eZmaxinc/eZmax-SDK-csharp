@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for Websocket Error V1
     /// </summary>
     [DataContract(Name = "Websocket-Response-Error-V1-mPayload")]
-    public partial class WebsocketResponseErrorV1MPayload : IEquatable<WebsocketResponseErrorV1MPayload>, IValidatableObject
+    public partial class WebsocketResponseErrorV1MPayload : IValidatableObject
     {
 
         /// <summary>
@@ -88,57 +88,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WebsocketResponseErrorV1MPayload);
-        }
-
-        /// <summary>
-        /// Returns true if WebsocketResponseErrorV1MPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WebsocketResponseErrorV1MPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WebsocketResponseErrorV1MPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SErrorMessage == input.SErrorMessage ||
-                    (this.SErrorMessage != null &&
-                    this.SErrorMessage.Equals(input.SErrorMessage))
-                ) && 
-                (
-                    this.EErrorCode == input.EErrorCode ||
-                    this.EErrorCode.Equals(input.EErrorCode)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SErrorMessage != null)
-                {
-                    hashCode = (hashCode * 59) + this.SErrorMessage.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EErrorCode.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

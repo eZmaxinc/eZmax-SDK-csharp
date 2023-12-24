@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Communicationexternalrecipient Object and children
     /// </summary>
     [DataContract(Name = "communicationexternalrecipient-RequestCompound")]
-    public partial class CommunicationexternalrecipientRequestCompound : IEquatable<CommunicationexternalrecipientRequestCompound>, IValidatableObject
+    public partial class CommunicationexternalrecipientRequestCompound : IValidatableObject
     {
 
         /// <summary>
@@ -41,28 +41,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationexternalrecipientRequestCompound" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected CommunicationexternalrecipientRequestCompound() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommunicationexternalrecipientRequestCompound" /> class.
-        /// </summary>
         /// <param name="pkiCommunicationexternalrecipientID">The unique ID of the Communicationexternalrecipient.</param>
         /// <param name="sEmailAddress">The email address..</param>
         /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
         /// <param name="eCommunicationexternalrecipientType">eCommunicationexternalrecipientType.</param>
-        /// <param name="sCommunicationexternalrecipientName">The name of the Communicationexternalrecipient (required).</param>
+        /// <param name="sCommunicationexternalrecipientName">The name of the Communicationexternalrecipient.</param>
         public CommunicationexternalrecipientRequestCompound(int pkiCommunicationexternalrecipientID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), FieldECommunicationexternalrecipientType? eCommunicationexternalrecipientType = default(FieldECommunicationexternalrecipientType?), string sCommunicationexternalrecipientName = default(string))
         {
-            // to ensure "sCommunicationexternalrecipientName" is required (not null)
-            if (sCommunicationexternalrecipientName == null)
-            {
-                throw new ArgumentNullException("sCommunicationexternalrecipientName is a required property for CommunicationexternalrecipientRequestCompound and cannot be null");
-            }
-            this.SCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
             this.PkiCommunicationexternalrecipientID = pkiCommunicationexternalrecipientID;
             this.SEmailAddress = sEmailAddress;
             this.SPhoneE164 = sPhoneE164;
             this.ECommunicationexternalrecipientType = eCommunicationexternalrecipientType;
+            this.SCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
         }
 
         /// <summary>
@@ -94,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The name of the Communicationexternalrecipient</value>
         /* <example>John Doe</example>*/
-        [DataMember(Name = "sCommunicationexternalrecipientName", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sCommunicationexternalrecipientName", EmitDefaultValue = false)]
         public string SCommunicationexternalrecipientName { get; set; }
 
         /// <summary>
@@ -121,80 +111,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommunicationexternalrecipientRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if CommunicationexternalrecipientRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommunicationexternalrecipientRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommunicationexternalrecipientRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiCommunicationexternalrecipientID == input.PkiCommunicationexternalrecipientID ||
-                    this.PkiCommunicationexternalrecipientID.Equals(input.PkiCommunicationexternalrecipientID)
-                ) && 
-                (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                ) && 
-                (
-                    this.SPhoneE164 == input.SPhoneE164 ||
-                    (this.SPhoneE164 != null &&
-                    this.SPhoneE164.Equals(input.SPhoneE164))
-                ) && 
-                (
-                    this.ECommunicationexternalrecipientType == input.ECommunicationexternalrecipientType ||
-                    this.ECommunicationexternalrecipientType.Equals(input.ECommunicationexternalrecipientType)
-                ) && 
-                (
-                    this.SCommunicationexternalrecipientName == input.SCommunicationexternalrecipientName ||
-                    (this.SCommunicationexternalrecipientName != null &&
-                    this.SCommunicationexternalrecipientName.Equals(input.SCommunicationexternalrecipientName))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiCommunicationexternalrecipientID.GetHashCode();
-                if (this.SEmailAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailAddress.GetHashCode();
-                }
-                if (this.SPhoneE164 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneE164.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ECommunicationexternalrecipientType.GetHashCode();
-                if (this.SCommunicationexternalrecipientName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCommunicationexternalrecipientName.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

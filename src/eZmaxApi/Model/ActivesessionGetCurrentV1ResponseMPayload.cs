@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/activesession/getCurrent
     /// </summary>
     [DataContract(Name = "activesession-getCurrent-v1-Response-mPayload")]
-    public partial class ActivesessionGetCurrentV1ResponseMPayload : IEquatable<ActivesessionGetCurrentV1ResponseMPayload>, IValidatableObject
+    public partial class ActivesessionGetCurrentV1ResponseMPayload : IValidatableObject
     {
 
         /// <summary>
@@ -50,6 +50,18 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eActivesessionWeekdaystart", IsRequired = true, EmitDefaultValue = true)]
         public FieldEActivesessionWeekdaystart EActivesessionWeekdaystart { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EUserEzsignaccess
+        /// </summary>
+        [DataMember(Name = "eUserEzsignaccess", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEUserEzsignaccess EUserEzsignaccess { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EUserEzsignprepaid
+        /// </summary>
+        [DataMember(Name = "eUserEzsignprepaid", EmitDefaultValue = false)]
+        public FieldEUserEzsignprepaid? EUserEzsignprepaid { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionGetCurrentV1ResponseMPayload" /> class.
         /// </summary>
@@ -69,12 +81,15 @@ namespace eZmaxApi.Model
         /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
         /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
         /// <param name="fkiSignatureID">The unique ID of the Signature.</param>
+        /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
+        /// <param name="eUserEzsignprepaid">eUserEzsignprepaid.</param>
+        /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
         /// <param name="aPkiPermissionID">An array of permissions granted to the user or api key (required).</param>
         /// <param name="objUserReal">objUserReal (required).</param>
         /// <param name="objUserCloned">objUserCloned.</param>
         /// <param name="objApikey">objApikey.</param>
         /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
-        public ActivesessionGetCurrentV1ResponseMPayload(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin eActivesessionOrigin = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), bool bActivesessionIssuperadmin = default(bool), string pksCustomerCode = default(string), int fkiSystemconfigurationtypeID = default(int), int fkiSignatureID = default(int), List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>))
+        public ActivesessionGetCurrentV1ResponseMPayload(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin eActivesessionOrigin = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), bool bActivesessionIssuperadmin = default(bool), string pksCustomerCode = default(string), int fkiSystemconfigurationtypeID = default(int), int fkiSignatureID = default(int), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), FieldEUserEzsignprepaid? eUserEzsignprepaid = default(FieldEUserEzsignprepaid?), string dtUserEzsignprepaidexpiration = default(string), List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>))
         {
             this.EActivesessionUsertype = eActivesessionUsertype;
             this.EActivesessionOrigin = eActivesessionOrigin;
@@ -101,6 +116,7 @@ namespace eZmaxApi.Model
             }
             this.PksCustomerCode = pksCustomerCode;
             this.FkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
+            this.EUserEzsignaccess = eUserEzsignaccess;
             // to ensure "aPkiPermissionID" is required (not null)
             if (aPkiPermissionID == null)
             {
@@ -120,6 +136,8 @@ namespace eZmaxApi.Model
             }
             this.AEModuleInternalname = aEModuleInternalname;
             this.FkiSignatureID = fkiSignatureID;
+            this.EUserEzsignprepaid = eUserEzsignprepaid;
+            this.DtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
             this.ObjUserCloned = objUserCloned;
             this.ObjApikey = objApikey;
         }
@@ -189,6 +207,14 @@ namespace eZmaxApi.Model
         public int FkiSignatureID { get; set; }
 
         /// <summary>
+        /// The eZsign prepaid expiration date
+        /// </summary>
+        /// <value>The eZsign prepaid expiration date</value>
+        /* <example>2020-12-31</example>*/
+        [DataMember(Name = "dtUserEzsignprepaidexpiration", EmitDefaultValue = false)]
+        public string DtUserEzsignprepaidexpiration { get; set; }
+
+        /// <summary>
         /// An array of permissions granted to the user or api key
         /// </summary>
         /// <value>An array of permissions granted to the user or api key</value>
@@ -239,6 +265,9 @@ namespace eZmaxApi.Model
             sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
             sb.Append("  FkiSystemconfigurationtypeID: ").Append(FkiSystemconfigurationtypeID).Append("\n");
             sb.Append("  FkiSignatureID: ").Append(FkiSignatureID).Append("\n");
+            sb.Append("  EUserEzsignaccess: ").Append(EUserEzsignaccess).Append("\n");
+            sb.Append("  EUserEzsignprepaid: ").Append(EUserEzsignprepaid).Append("\n");
+            sb.Append("  DtUserEzsignprepaidexpiration: ").Append(DtUserEzsignprepaidexpiration).Append("\n");
             sb.Append("  APkiPermissionID: ").Append(APkiPermissionID).Append("\n");
             sb.Append("  ObjUserReal: ").Append(ObjUserReal).Append("\n");
             sb.Append("  ObjUserCloned: ").Append(ObjUserCloned).Append("\n");
@@ -255,157 +284,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ActivesessionGetCurrentV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if ActivesessionGetCurrentV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ActivesessionGetCurrentV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ActivesessionGetCurrentV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.EActivesessionUsertype == input.EActivesessionUsertype ||
-                    this.EActivesessionUsertype.Equals(input.EActivesessionUsertype)
-                ) && 
-                (
-                    this.EActivesessionOrigin == input.EActivesessionOrigin ||
-                    this.EActivesessionOrigin.Equals(input.EActivesessionOrigin)
-                ) && 
-                (
-                    this.EActivesessionWeekdaystart == input.EActivesessionWeekdaystart ||
-                    this.EActivesessionWeekdaystart.Equals(input.EActivesessionWeekdaystart)
-                ) && 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    this.FkiLanguageID.Equals(input.FkiLanguageID)
-                ) && 
-                (
-                    this.SCompanyNameX == input.SCompanyNameX ||
-                    (this.SCompanyNameX != null &&
-                    this.SCompanyNameX.Equals(input.SCompanyNameX))
-                ) && 
-                (
-                    this.SDepartmentNameX == input.SDepartmentNameX ||
-                    (this.SDepartmentNameX != null &&
-                    this.SDepartmentNameX.Equals(input.SDepartmentNameX))
-                ) && 
-                (
-                    this.BActivesessionDebug == input.BActivesessionDebug ||
-                    this.BActivesessionDebug.Equals(input.BActivesessionDebug)
-                ) && 
-                (
-                    this.BActivesessionIssuperadmin == input.BActivesessionIssuperadmin ||
-                    this.BActivesessionIssuperadmin.Equals(input.BActivesessionIssuperadmin)
-                ) && 
-                (
-                    this.PksCustomerCode == input.PksCustomerCode ||
-                    (this.PksCustomerCode != null &&
-                    this.PksCustomerCode.Equals(input.PksCustomerCode))
-                ) && 
-                (
-                    this.FkiSystemconfigurationtypeID == input.FkiSystemconfigurationtypeID ||
-                    this.FkiSystemconfigurationtypeID.Equals(input.FkiSystemconfigurationtypeID)
-                ) && 
-                (
-                    this.FkiSignatureID == input.FkiSignatureID ||
-                    this.FkiSignatureID.Equals(input.FkiSignatureID)
-                ) && 
-                (
-                    this.APkiPermissionID == input.APkiPermissionID ||
-                    this.APkiPermissionID != null &&
-                    input.APkiPermissionID != null &&
-                    this.APkiPermissionID.SequenceEqual(input.APkiPermissionID)
-                ) && 
-                (
-                    this.ObjUserReal == input.ObjUserReal ||
-                    (this.ObjUserReal != null &&
-                    this.ObjUserReal.Equals(input.ObjUserReal))
-                ) && 
-                (
-                    this.ObjUserCloned == input.ObjUserCloned ||
-                    (this.ObjUserCloned != null &&
-                    this.ObjUserCloned.Equals(input.ObjUserCloned))
-                ) && 
-                (
-                    this.ObjApikey == input.ObjApikey ||
-                    (this.ObjApikey != null &&
-                    this.ObjApikey.Equals(input.ObjApikey))
-                ) && 
-                (
-                    this.AEModuleInternalname == input.AEModuleInternalname ||
-                    this.AEModuleInternalname != null &&
-                    input.AEModuleInternalname != null &&
-                    this.AEModuleInternalname.SequenceEqual(input.AEModuleInternalname)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.EActivesessionUsertype.GetHashCode();
-                hashCode = (hashCode * 59) + this.EActivesessionOrigin.GetHashCode();
-                hashCode = (hashCode * 59) + this.EActivesessionWeekdaystart.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiLanguageID.GetHashCode();
-                if (this.SCompanyNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SCompanyNameX.GetHashCode();
-                }
-                if (this.SDepartmentNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SDepartmentNameX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BActivesessionDebug.GetHashCode();
-                hashCode = (hashCode * 59) + this.BActivesessionIssuperadmin.GetHashCode();
-                if (this.PksCustomerCode != null)
-                {
-                    hashCode = (hashCode * 59) + this.PksCustomerCode.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.FkiSystemconfigurationtypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiSignatureID.GetHashCode();
-                if (this.APkiPermissionID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiPermissionID.GetHashCode();
-                }
-                if (this.ObjUserReal != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjUserReal.GetHashCode();
-                }
-                if (this.ObjUserCloned != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjUserCloned.GetHashCode();
-                }
-                if (this.ObjApikey != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjApikey.GetHashCode();
-                }
-                if (this.AEModuleInternalname != null)
-                {
-                    hashCode = (hashCode * 59) + this.AEModuleInternalname.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>
@@ -455,6 +333,15 @@ namespace eZmaxApi.Model
             if (this.FkiSignatureID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSignatureID, must be a value greater than or equal to 0.", new [] { "FkiSignatureID" });
+            }
+
+            if (this.DtUserEzsignprepaidexpiration != null) {
+                // DtUserEzsignprepaidexpiration (string) pattern
+                Regex regexDtUserEzsignprepaidexpiration = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+                if (!regexDtUserEzsignprepaidexpiration.Match(this.DtUserEzsignprepaidexpiration).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtUserEzsignprepaidexpiration, must match a pattern of " + regexDtUserEzsignprepaidexpiration, new [] { "DtUserEzsignprepaidexpiration" });
+                }
             }
 
             yield break;

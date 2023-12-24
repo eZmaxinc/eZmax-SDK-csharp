@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Paymentterm List Element
     /// </summary>
     [DataContract(Name = "paymentterm-ListElement")]
-    public partial class PaymenttermListElement : IEquatable<PaymenttermListElement>, IValidatableObject
+    public partial class PaymenttermListElement : IValidatableObject
     {
 
         /// <summary>
@@ -137,81 +137,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PaymenttermListElement);
-        }
-
-        /// <summary>
-        /// Returns true if PaymenttermListElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PaymenttermListElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PaymenttermListElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiPaymenttermID == input.PkiPaymenttermID ||
-                    this.PkiPaymenttermID.Equals(input.PkiPaymenttermID)
-                ) && 
-                (
-                    this.SPaymenttermCode == input.SPaymenttermCode ||
-                    (this.SPaymenttermCode != null &&
-                    this.SPaymenttermCode.Equals(input.SPaymenttermCode))
-                ) && 
-                (
-                    this.EPaymenttermType == input.EPaymenttermType ||
-                    this.EPaymenttermType.Equals(input.EPaymenttermType)
-                ) && 
-                (
-                    this.IPaymenttermDay == input.IPaymenttermDay ||
-                    this.IPaymenttermDay.Equals(input.IPaymenttermDay)
-                ) && 
-                (
-                    this.SPaymenttermDescriptionX == input.SPaymenttermDescriptionX ||
-                    (this.SPaymenttermDescriptionX != null &&
-                    this.SPaymenttermDescriptionX.Equals(input.SPaymenttermDescriptionX))
-                ) && 
-                (
-                    this.BPaymenttermIsactive == input.BPaymenttermIsactive ||
-                    this.BPaymenttermIsactive.Equals(input.BPaymenttermIsactive)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiPaymenttermID.GetHashCode();
-                if (this.SPaymenttermCode != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPaymenttermCode.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EPaymenttermType.GetHashCode();
-                hashCode = (hashCode * 59) + this.IPaymenttermDay.GetHashCode();
-                if (this.SPaymenttermDescriptionX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPaymenttermDescriptionX.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BPaymenttermIsactive.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Modulegroup Object
     /// </summary>
     [DataContract(Name = "modulegroup-ResponseCompound")]
-    public partial class ModulegroupResponseCompound : IEquatable<ModulegroupResponseCompound>, IValidatableObject
+    public partial class ModulegroupResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulegroupResponseCompound" /> class.
@@ -99,67 +99,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ModulegroupResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if ModulegroupResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ModulegroupResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ModulegroupResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiModulegroupID == input.PkiModulegroupID ||
-                    this.PkiModulegroupID.Equals(input.PkiModulegroupID)
-                ) && 
-                (
-                    this.SModulegroupNameX == input.SModulegroupNameX ||
-                    (this.SModulegroupNameX != null &&
-                    this.SModulegroupNameX.Equals(input.SModulegroupNameX))
-                ) && 
-                (
-                    this.AObjModule == input.AObjModule ||
-                    this.AObjModule != null &&
-                    input.AObjModule != null &&
-                    this.AObjModule.SequenceEqual(input.AObjModule)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiModulegroupID.GetHashCode();
-                if (this.SModulegroupNameX != null)
-                {
-                    hashCode = (hashCode * 59) + this.SModulegroupNameX.GetHashCode();
-                }
-                if (this.AObjModule != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjModule.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

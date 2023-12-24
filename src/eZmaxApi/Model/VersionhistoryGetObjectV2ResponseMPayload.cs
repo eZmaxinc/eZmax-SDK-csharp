@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/versionhistory/{pkiVersionhistoryID}
     /// </summary>
     [DataContract(Name = "versionhistory-getObject-v2-Response-mPayload")]
-    public partial class VersionhistoryGetObjectV2ResponseMPayload : IEquatable<VersionhistoryGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class VersionhistoryGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VersionhistoryGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as VersionhistoryGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if VersionhistoryGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of VersionhistoryGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(VersionhistoryGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjVersionhistory == input.ObjVersionhistory ||
-                    (this.ObjVersionhistory != null &&
-                    this.ObjVersionhistory.Equals(input.ObjVersionhistory))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjVersionhistory != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjVersionhistory.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

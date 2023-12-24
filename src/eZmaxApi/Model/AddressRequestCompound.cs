@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Address Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "address-RequestCompound")]
-    public partial class AddressRequestCompound : IEquatable<AddressRequestCompound>, IValidatableObject
+    public partial class AddressRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressRequestCompound" /> class.
@@ -176,103 +176,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as AddressRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if AddressRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of AddressRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(AddressRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiAddresstypeID == input.FkiAddresstypeID ||
-                    this.FkiAddresstypeID.Equals(input.FkiAddresstypeID)
-                ) && 
-                (
-                    this.SAddressCivic == input.SAddressCivic ||
-                    (this.SAddressCivic != null &&
-                    this.SAddressCivic.Equals(input.SAddressCivic))
-                ) && 
-                (
-                    this.SAddressStreet == input.SAddressStreet ||
-                    (this.SAddressStreet != null &&
-                    this.SAddressStreet.Equals(input.SAddressStreet))
-                ) && 
-                (
-                    this.SAddressSuite == input.SAddressSuite ||
-                    (this.SAddressSuite != null &&
-                    this.SAddressSuite.Equals(input.SAddressSuite))
-                ) && 
-                (
-                    this.SAddressCity == input.SAddressCity ||
-                    (this.SAddressCity != null &&
-                    this.SAddressCity.Equals(input.SAddressCity))
-                ) && 
-                (
-                    this.FkiProvinceID == input.FkiProvinceID ||
-                    this.FkiProvinceID.Equals(input.FkiProvinceID)
-                ) && 
-                (
-                    this.FkiCountryID == input.FkiCountryID ||
-                    this.FkiCountryID.Equals(input.FkiCountryID)
-                ) && 
-                (
-                    this.SAddressZip == input.SAddressZip ||
-                    (this.SAddressZip != null &&
-                    this.SAddressZip.Equals(input.SAddressZip))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiAddresstypeID.GetHashCode();
-                if (this.SAddressCivic != null)
-                {
-                    hashCode = (hashCode * 59) + this.SAddressCivic.GetHashCode();
-                }
-                if (this.SAddressStreet != null)
-                {
-                    hashCode = (hashCode * 59) + this.SAddressStreet.GetHashCode();
-                }
-                if (this.SAddressSuite != null)
-                {
-                    hashCode = (hashCode * 59) + this.SAddressSuite.GetHashCode();
-                }
-                if (this.SAddressCity != null)
-                {
-                    hashCode = (hashCode * 59) + this.SAddressCity.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.FkiProvinceID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiCountryID.GetHashCode();
-                if (this.SAddressZip != null)
-                {
-                    hashCode = (hashCode * 59) + this.SAddressZip.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

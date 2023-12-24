@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Request for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/send
     /// </summary>
     [DataContract(Name = "ezsignfolder-send-v2-Request")]
-    public partial class EzsignfolderSendV2Request : IEquatable<EzsignfolderSendV2Request>, IValidatableObject
+    public partial class EzsignfolderSendV2Request : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderSendV2Request" /> class.
@@ -115,72 +115,6 @@ Mary</example>*/
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfolderSendV2Request);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfolderSendV2Request instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfolderSendV2Request to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfolderSendV2Request input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.TEzsignfolderMessage == input.TEzsignfolderMessage ||
-                    (this.TEzsignfolderMessage != null &&
-                    this.TEzsignfolderMessage.Equals(input.TEzsignfolderMessage))
-                ) && 
-                (
-                    this.AFkiEzsignfoldersignerassociationID == input.AFkiEzsignfoldersignerassociationID ||
-                    this.AFkiEzsignfoldersignerassociationID != null &&
-                    input.AFkiEzsignfoldersignerassociationID != null &&
-                    this.AFkiEzsignfoldersignerassociationID.SequenceEqual(input.AFkiEzsignfoldersignerassociationID)
-                ) && 
-                (
-                    this.AObjEzsignfoldersignerassociationmessage == input.AObjEzsignfoldersignerassociationmessage ||
-                    this.AObjEzsignfoldersignerassociationmessage != null &&
-                    input.AObjEzsignfoldersignerassociationmessage != null &&
-                    this.AObjEzsignfoldersignerassociationmessage.SequenceEqual(input.AObjEzsignfoldersignerassociationmessage)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.TEzsignfolderMessage != null)
-                {
-                    hashCode = (hashCode * 59) + this.TEzsignfolderMessage.GetHashCode();
-                }
-                if (this.AFkiEzsignfoldersignerassociationID != null)
-                {
-                    hashCode = (hashCode * 59) + this.AFkiEzsignfoldersignerassociationID.GetHashCode();
-                }
-                if (this.AObjEzsignfoldersignerassociationmessage != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignfoldersignerassociationmessage.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

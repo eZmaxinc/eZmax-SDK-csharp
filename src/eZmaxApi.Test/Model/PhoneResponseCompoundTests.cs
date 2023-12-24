@@ -99,5 +99,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'SPhoneExtension'
         }
+
+        /// <summary>
+        /// Test the property 'BPhoneInternational'
+        /// </summary>
+        [Fact]
+        public void BPhoneInternationalTest()
+        {
+            // TODO unit test for the property 'BPhoneInternational'
+        }
     }
 }

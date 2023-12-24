@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// The description of the Variableexpense
     /// </summary>
     [DataContract(Name = "Multilingual-VariableexpenseDescription")]
-    public partial class MultilingualVariableexpenseDescription : IEquatable<MultilingualVariableexpenseDescription>, IValidatableObject
+    public partial class MultilingualVariableexpenseDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualVariableexpenseDescription" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualVariableexpenseDescription);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualVariableexpenseDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualVariableexpenseDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualVariableexpenseDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SVariableexpenseDescription1 == input.SVariableexpenseDescription1 ||
-                    (this.SVariableexpenseDescription1 != null &&
-                    this.SVariableexpenseDescription1.Equals(input.SVariableexpenseDescription1))
-                ) && 
-                (
-                    this.SVariableexpenseDescription2 == input.SVariableexpenseDescription2 ||
-                    (this.SVariableexpenseDescription2 != null &&
-                    this.SVariableexpenseDescription2.Equals(input.SVariableexpenseDescription2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SVariableexpenseDescription1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SVariableexpenseDescription1.GetHashCode();
-                }
-                if (this.SVariableexpenseDescription2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SVariableexpenseDescription2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Name of the Ezsignfoldertype
     /// </summary>
     [DataContract(Name = "Multilingual-EzsignfoldertypeName")]
-    public partial class MultilingualEzsignfoldertypeName : IEquatable<MultilingualEzsignfoldertypeName>, IValidatableObject
+    public partial class MultilingualEzsignfoldertypeName : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzsignfoldertypeName" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualEzsignfoldertypeName);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualEzsignfoldertypeName instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualEzsignfoldertypeName to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualEzsignfoldertypeName input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SEzsignfoldertypeName1 == input.SEzsignfoldertypeName1 ||
-                    (this.SEzsignfoldertypeName1 != null &&
-                    this.SEzsignfoldertypeName1.Equals(input.SEzsignfoldertypeName1))
-                ) && 
-                (
-                    this.SEzsignfoldertypeName2 == input.SEzsignfoldertypeName2 ||
-                    (this.SEzsignfoldertypeName2 != null &&
-                    this.SEzsignfoldertypeName2.Equals(input.SEzsignfoldertypeName2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SEzsignfoldertypeName1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldertypeName1.GetHashCode();
-                }
-                if (this.SEzsignfoldertypeName2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignfoldertypeName2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

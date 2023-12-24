@@ -63,8 +63,31 @@ namespace eZmaxApi.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiAttachmentID = null;
-            //var response = instance.AttachmentDownloadV1(pkiAttachmentID);
-            //Assert.IsType<AttachmentDownloadV1Response>(response);
+            //instance.AttachmentDownloadV1(pkiAttachmentID);
+        }
+
+        /// <summary>
+        /// Test AttachmentGetAttachmentlogsV1
+        /// </summary>
+        [Fact]
+        public void AttachmentGetAttachmentlogsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiAttachmentID = null;
+            //var response = instance.AttachmentGetAttachmentlogsV1(pkiAttachmentID);
+            //Assert.IsType<AttachmentGetAttachmentlogsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test AttachmentGetDownloadUrlV1
+        /// </summary>
+        [Fact]
+        public void AttachmentGetDownloadUrlV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiAttachmentID = null;
+            //var response = instance.AttachmentGetDownloadUrlV1(pkiAttachmentID);
+            //Assert.IsType<AttachmentGetDownloadUrlV1Response>(response);
         }
     }
 }

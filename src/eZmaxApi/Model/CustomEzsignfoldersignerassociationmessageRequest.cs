@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A custom message Object in the context of an Ezsignfolder&#39;s send function
     /// </summary>
     [DataContract(Name = "Custom-Ezsignfoldersignerassociationmessage-Request")]
-    public partial class CustomEzsignfoldersignerassociationmessageRequest : IEquatable<CustomEzsignfoldersignerassociationmessageRequest>, IValidatableObject
+    public partial class CustomEzsignfoldersignerassociationmessageRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationmessageRequest" /> class.
@@ -93,57 +93,6 @@ Mary</example>*/
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomEzsignfoldersignerassociationmessageRequest);
-        }
-
-        /// <summary>
-        /// Returns true if CustomEzsignfoldersignerassociationmessageRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomEzsignfoldersignerassociationmessageRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomEzsignfoldersignerassociationmessageRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.FkiEzsignfoldersignerassociationID == input.FkiEzsignfoldersignerassociationID ||
-                    this.FkiEzsignfoldersignerassociationID.Equals(input.FkiEzsignfoldersignerassociationID)
-                ) && 
-                (
-                    this.TEzsignfoldersignerassociationMessage == input.TEzsignfoldersignerassociationMessage ||
-                    (this.TEzsignfoldersignerassociationMessage != null &&
-                    this.TEzsignfoldersignerassociationMessage.Equals(input.TEzsignfoldersignerassociationMessage))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.FkiEzsignfoldersignerassociationID.GetHashCode();
-                if (this.TEzsignfoldersignerassociationMessage != null)
-                {
-                    hashCode = (hashCode * 59) + this.TEzsignfoldersignerassociationMessage.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment
     /// </summary>
     [DataContract(Name = "ezsignsignature-getEzsignsignatureattachment-v1-Response-mPayload")]
-    public partial class EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload : IEquatable<EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload" /> class.
@@ -77,53 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjEzsignsignatureattachment == input.AObjEzsignsignatureattachment ||
-                    this.AObjEzsignsignatureattachment != null &&
-                    input.AObjEzsignsignatureattachment != null &&
-                    this.AObjEzsignsignatureattachment.SequenceEqual(input.AObjEzsignsignatureattachment)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjEzsignsignatureattachment != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignsignatureattachment.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

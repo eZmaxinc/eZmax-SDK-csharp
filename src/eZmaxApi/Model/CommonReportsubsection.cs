@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Subsection in a Reportsection. It contains 3 Reportsubsectionparts (Header, Body and Footer) 
     /// </summary>
     [DataContract(Name = "Common-Reportsubsection")]
-    public partial class CommonReportsubsection : IEquatable<CommonReportsubsection>, IValidatableObject
+    public partial class CommonReportsubsection : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportsubsection" /> class.
@@ -105,70 +105,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CommonReportsubsection);
-        }
-
-        /// <summary>
-        /// Returns true if CommonReportsubsection instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CommonReportsubsection to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CommonReportsubsection input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjReportsubsectionpartHeader == input.ObjReportsubsectionpartHeader ||
-                    (this.ObjReportsubsectionpartHeader != null &&
-                    this.ObjReportsubsectionpartHeader.Equals(input.ObjReportsubsectionpartHeader))
-                ) && 
-                (
-                    this.ObjReportsubsectionpartBody == input.ObjReportsubsectionpartBody ||
-                    (this.ObjReportsubsectionpartBody != null &&
-                    this.ObjReportsubsectionpartBody.Equals(input.ObjReportsubsectionpartBody))
-                ) && 
-                (
-                    this.ObjReportsubsectionpartFooter == input.ObjReportsubsectionpartFooter ||
-                    (this.ObjReportsubsectionpartFooter != null &&
-                    this.ObjReportsubsectionpartFooter.Equals(input.ObjReportsubsectionpartFooter))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjReportsubsectionpartHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjReportsubsectionpartHeader.GetHashCode();
-                }
-                if (this.ObjReportsubsectionpartBody != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjReportsubsectionpartBody.GetHashCode();
-                }
-                if (this.ObjReportsubsectionpartFooter != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjReportsubsectionpartFooter.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

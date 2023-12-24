@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Email Object
     /// </summary>
     [DataContract(Name = "email-Response")]
-    public partial class EmailResponse : IEquatable<EmailResponse>, IValidatableObject
+    public partial class EmailResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailResponse" /> class.
@@ -101,62 +101,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EmailResponse);
-        }
-
-        /// <summary>
-        /// Returns true if EmailResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EmailResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EmailResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEmailID == input.PkiEmailID ||
-                    this.PkiEmailID.Equals(input.PkiEmailID)
-                ) && 
-                (
-                    this.FkiEmailtypeID == input.FkiEmailtypeID ||
-                    this.FkiEmailtypeID.Equals(input.FkiEmailtypeID)
-                ) && 
-                (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEmailID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEmailtypeID.GetHashCode();
-                if (this.SEmailAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailAddress.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

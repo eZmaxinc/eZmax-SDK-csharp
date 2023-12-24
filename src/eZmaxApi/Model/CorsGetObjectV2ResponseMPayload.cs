@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/cors/{pkiCorsID}
     /// </summary>
     [DataContract(Name = "cors-getObject-v2-Response-mPayload")]
-    public partial class CorsGetObjectV2ResponseMPayload : IEquatable<CorsGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class CorsGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CorsGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CorsGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if CorsGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CorsGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CorsGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjCors == input.ObjCors ||
-                    (this.ObjCors != null &&
-                    this.ObjCors.Equals(input.ObjCors))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjCors != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjCors.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

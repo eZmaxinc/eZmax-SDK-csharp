@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/usergroupdelegation/{pkiUsergroupdelegationID}
     /// </summary>
     [DataContract(Name = "usergroupdelegation-getObject-v2-Response-mPayload")]
-    public partial class UsergroupdelegationGetObjectV2ResponseMPayload : IEquatable<UsergroupdelegationGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class UsergroupdelegationGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupdelegationGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UsergroupdelegationGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if UsergroupdelegationGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UsergroupdelegationGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UsergroupdelegationGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjUsergroupdelegation == input.ObjUsergroupdelegation ||
-                    (this.ObjUsergroupdelegation != null &&
-                    this.ObjUsergroupdelegation.Equals(input.ObjUsergroupdelegation))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjUsergroupdelegation != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjUsergroupdelegation.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

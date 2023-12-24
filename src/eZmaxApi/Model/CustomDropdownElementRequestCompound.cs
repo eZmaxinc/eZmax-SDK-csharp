@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Generic DropdownElement Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "Custom-DropdownElement-RequestCompound")]
-    public partial class CustomDropdownElementRequestCompound : IEquatable<CustomDropdownElementRequestCompound>, IValidatableObject
+    public partial class CustomDropdownElementRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomDropdownElementRequestCompound" /> class.
@@ -93,61 +93,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomDropdownElementRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if CustomDropdownElementRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomDropdownElementRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomDropdownElementRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SLabel == input.SLabel ||
-                    (this.SLabel != null &&
-                    this.SLabel.Equals(input.SLabel))
-                ) && 
-                (
-                    this.SValue == input.SValue ||
-                    (this.SValue != null &&
-                    this.SValue.Equals(input.SValue))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SLabel != null)
-                {
-                    hashCode = (hashCode * 59) + this.SLabel.GetHashCode();
-                }
-                if (this.SValue != null)
-                {
-                    hashCode = (hashCode * 59) + this.SValue.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

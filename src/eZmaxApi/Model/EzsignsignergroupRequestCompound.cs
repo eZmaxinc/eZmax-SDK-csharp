@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignsignergroup Object and children
     /// </summary>
     [DataContract(Name = "ezsignsignergroup-RequestCompound")]
-    public partial class EzsignsignergroupRequestCompound : IEquatable<EzsignsignergroupRequestCompound>, IValidatableObject
+    public partial class EzsignsignergroupRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupRequestCompound" /> class.
@@ -99,62 +99,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignergroupRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignergroupRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignergroupRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignergroupRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignsignergroupID == input.PkiEzsignsignergroupID ||
-                    this.PkiEzsignsignergroupID.Equals(input.PkiEzsignsignergroupID)
-                ) && 
-                (
-                    this.FkiEzsignfolderID == input.FkiEzsignfolderID ||
-                    this.FkiEzsignfolderID.Equals(input.FkiEzsignfolderID)
-                ) && 
-                (
-                    this.ObjEzsignsignergroupDescription == input.ObjEzsignsignergroupDescription ||
-                    (this.ObjEzsignsignergroupDescription != null &&
-                    this.ObjEzsignsignergroupDescription.Equals(input.ObjEzsignsignergroupDescription))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignsignergroupID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignfolderID.GetHashCode();
-                if (this.ObjEzsignsignergroupDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzsignsignergroupDescription.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

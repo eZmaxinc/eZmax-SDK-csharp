@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /2/object/billingentityinternal/getAutocomplete
     /// </summary>
     [DataContract(Name = "billingentityinternal-getAutocomplete-v2-Response-mPayload")]
-    public partial class BillingentityinternalGetAutocompleteV2ResponseMPayload : IEquatable<BillingentityinternalGetAutocompleteV2ResponseMPayload>, IValidatableObject
+    public partial class BillingentityinternalGetAutocompleteV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalGetAutocompleteV2ResponseMPayload" /> class.
@@ -78,53 +78,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BillingentityinternalGetAutocompleteV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if BillingentityinternalGetAutocompleteV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BillingentityinternalGetAutocompleteV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BillingentityinternalGetAutocompleteV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AObjBillingentityinternal == input.AObjBillingentityinternal ||
-                    this.AObjBillingentityinternal != null &&
-                    input.AObjBillingentityinternal != null &&
-                    this.AObjBillingentityinternal.SequenceEqual(input.AObjBillingentityinternal)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AObjBillingentityinternal != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjBillingentityinternal.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

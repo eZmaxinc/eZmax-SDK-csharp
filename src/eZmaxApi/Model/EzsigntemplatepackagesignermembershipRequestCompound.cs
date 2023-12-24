@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatepackagesignermembership Object and children
     /// </summary>
     [DataContract(Name = "ezsigntemplatepackagesignermembership-RequestCompound")]
-    public partial class EzsigntemplatepackagesignermembershipRequestCompound : IEquatable<EzsigntemplatepackagesignermembershipRequestCompound>, IValidatableObject
+    public partial class EzsigntemplatepackagesignermembershipRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipRequestCompound" /> class.
@@ -118,68 +118,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatepackagesignermembershipRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatepackagesignermembershipRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatepackagesignermembershipRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatepackagesignermembershipRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsigntemplatepackagesignermembershipID == input.PkiEzsigntemplatepackagesignermembershipID ||
-                    this.PkiEzsigntemplatepackagesignermembershipID.Equals(input.PkiEzsigntemplatepackagesignermembershipID)
-                ) && 
-                (
-                    this.FkiEzsigntemplatepackagemembershipID == input.FkiEzsigntemplatepackagemembershipID ||
-                    this.FkiEzsigntemplatepackagemembershipID.Equals(input.FkiEzsigntemplatepackagemembershipID)
-                ) && 
-                (
-                    this.FkiEzsigntemplatepackagesignerID == input.FkiEzsigntemplatepackagesignerID ||
-                    this.FkiEzsigntemplatepackagesignerID.Equals(input.FkiEzsigntemplatepackagesignerID)
-                ) && 
-                (
-                    this.FkiEzsigntemplatesignerID == input.FkiEzsigntemplatesignerID ||
-                    this.FkiEzsigntemplatesignerID.Equals(input.FkiEzsigntemplatesignerID)
-                ) && 
-                (
-                    this.IEzsigntemplatepackagesignermembershipCopy == input.IEzsigntemplatepackagesignermembershipCopy ||
-                    this.IEzsigntemplatepackagesignermembershipCopy.Equals(input.IEzsigntemplatepackagesignermembershipCopy)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsigntemplatepackagesignermembershipID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplatepackagemembershipID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplatepackagesignerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsigntemplatesignerID.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEzsigntemplatepackagesignermembershipCopy.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

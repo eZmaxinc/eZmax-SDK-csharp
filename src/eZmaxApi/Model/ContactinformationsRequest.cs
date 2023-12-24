@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Contactinformations Object
     /// </summary>
     [DataContract(Name = "contactinformations-Request")]
-    public partial class ContactinformationsRequest : IEquatable<ContactinformationsRequest>, IValidatableObject
+    public partial class ContactinformationsRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactinformationsRequest" /> class.
@@ -103,63 +103,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ContactinformationsRequest);
-        }
-
-        /// <summary>
-        /// Returns true if ContactinformationsRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ContactinformationsRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ContactinformationsRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.IAddressDefault == input.IAddressDefault ||
-                    this.IAddressDefault.Equals(input.IAddressDefault)
-                ) && 
-                (
-                    this.IPhoneDefault == input.IPhoneDefault ||
-                    this.IPhoneDefault.Equals(input.IPhoneDefault)
-                ) && 
-                (
-                    this.IEmailDefault == input.IEmailDefault ||
-                    this.IEmailDefault.Equals(input.IEmailDefault)
-                ) && 
-                (
-                    this.IWebsiteDefault == input.IWebsiteDefault ||
-                    this.IWebsiteDefault.Equals(input.IWebsiteDefault)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.IAddressDefault.GetHashCode();
-                hashCode = (hashCode * 59) + this.IPhoneDefault.GetHashCode();
-                hashCode = (hashCode * 59) + this.IEmailDefault.GetHashCode();
-                hashCode = (hashCode * 59) + this.IWebsiteDefault.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

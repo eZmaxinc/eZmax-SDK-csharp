@@ -5,6 +5,7 @@ Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**FkiEzsignsigningreasonID** | **int** | The unique ID of the Ezsignsigningreason | [optional] 
 **SValue** | **string** | The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea** | [optional] 
 **EAttachmentsConfirmationDecision** | **string** | Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation** | [optional] 
 **SAttachmentsRefusalReason** | **string** | The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation** | [optional] 

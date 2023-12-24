@@ -168,6 +168,30 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsignfolderGetAttachmentCountV1
+        /// </summary>
+        [Fact]
+        public void EzsignfolderGetAttachmentCountV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //var response = instance.EzsignfolderGetAttachmentCountV1(pkiEzsignfolderID);
+            //Assert.IsType<EzsignfolderGetAttachmentCountV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test EzsignfolderGetAttachmentsV1
+        /// </summary>
+        [Fact]
+        public void EzsignfolderGetAttachmentsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //var response = instance.EzsignfolderGetAttachmentsV1(pkiEzsignfolderID);
+            //Assert.IsType<EzsignfolderGetAttachmentsV1Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsignfolderGetCommunicationCountV1
         /// </summary>
         [Fact]

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}
     /// </summary>
     [DataContract(Name = "ezmaxinvoicing-getObject-v2-Response-mPayload")]
-    public partial class EzmaxinvoicingGetObjectV2ResponseMPayload : IEquatable<EzmaxinvoicingGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class EzmaxinvoicingGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzmaxinvoicingGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzmaxinvoicingGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzmaxinvoicingGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzmaxinvoicingGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjEzmaxinvoicing == input.ObjEzmaxinvoicing ||
-                    (this.ObjEzmaxinvoicing != null &&
-                    this.ObjEzmaxinvoicing.Equals(input.ObjEzmaxinvoicing))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjEzmaxinvoicing != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjEzmaxinvoicing.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

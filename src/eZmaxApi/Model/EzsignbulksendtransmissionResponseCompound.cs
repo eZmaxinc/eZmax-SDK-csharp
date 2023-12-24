@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignbulksendtransmission Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignbulksendtransmission-ResponseCompound")]
-    public partial class EzsignbulksendtransmissionResponseCompound : IEquatable<EzsignbulksendtransmissionResponseCompound>, IValidatableObject
+    public partial class EzsignbulksendtransmissionResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponseCompound" /> class.
@@ -140,86 +140,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksendtransmissionResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksendtransmissionResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksendtransmissionResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksendtransmissionResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignbulksendtransmissionID == input.PkiEzsignbulksendtransmissionID ||
-                    this.PkiEzsignbulksendtransmissionID.Equals(input.PkiEzsignbulksendtransmissionID)
-                ) && 
-                (
-                    this.FkiEzsignbulksendID == input.FkiEzsignbulksendID ||
-                    this.FkiEzsignbulksendID.Equals(input.FkiEzsignbulksendID)
-                ) && 
-                (
-                    this.SEzsignbulksendtransmissionDescription == input.SEzsignbulksendtransmissionDescription ||
-                    (this.SEzsignbulksendtransmissionDescription != null &&
-                    this.SEzsignbulksendtransmissionDescription.Equals(input.SEzsignbulksendtransmissionDescription))
-                ) && 
-                (
-                    this.IEzsignbulksendtransmissionErrors == input.IEzsignbulksendtransmissionErrors ||
-                    this.IEzsignbulksendtransmissionErrors.Equals(input.IEzsignbulksendtransmissionErrors)
-                ) && 
-                (
-                    this.ObjAudit == input.ObjAudit ||
-                    (this.ObjAudit != null &&
-                    this.ObjAudit.Equals(input.ObjAudit))
-                ) && 
-                (
-                    this.AObjEzsignfoldertransmission == input.AObjEzsignfoldertransmission ||
-                    this.AObjEzsignfoldertransmission != null &&
-                    input.AObjEzsignfoldertransmission != null &&
-                    this.AObjEzsignfoldertransmission.SequenceEqual(input.AObjEzsignfoldertransmission)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignbulksendtransmissionID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignbulksendID.GetHashCode();
-                if (this.SEzsignbulksendtransmissionDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignbulksendtransmissionDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IEzsignbulksendtransmissionErrors.GetHashCode();
-                if (this.ObjAudit != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjAudit.GetHashCode();
-                }
-                if (this.AObjEzsignfoldertransmission != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignfoldertransmission.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for POST /1/object/ezsigntemplatepackagemembership
     /// </summary>
     [DataContract(Name = "ezsigntemplatepackagemembership-createObject-v1-Response-mPayload")]
-    public partial class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload : IEquatable<EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload>, IValidatableObject
+    public partial class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload" /> class.
@@ -98,63 +98,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.APkiEzsigntemplatepackagemembershipID == input.APkiEzsigntemplatepackagemembershipID ||
-                    this.APkiEzsigntemplatepackagemembershipID != null &&
-                    input.APkiEzsigntemplatepackagemembershipID != null &&
-                    this.APkiEzsigntemplatepackagemembershipID.SequenceEqual(input.APkiEzsigntemplatepackagemembershipID)
-                ) && 
-                (
-                    this.BEzsigntemplatepackageNeedvalidation == input.BEzsigntemplatepackageNeedvalidation ||
-                    this.BEzsigntemplatepackageNeedvalidation.Equals(input.BEzsigntemplatepackageNeedvalidation)
-                ) && 
-                (
-                    this.BEzsignbulksendNeedvalidation == input.BEzsignbulksendNeedvalidation ||
-                    this.BEzsignbulksendNeedvalidation.Equals(input.BEzsignbulksendNeedvalidation)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.APkiEzsigntemplatepackagemembershipID != null)
-                {
-                    hashCode = (hashCode * 59) + this.APkiEzsigntemplatepackagemembershipID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BEzsigntemplatepackageNeedvalidation.GetHashCode();
-                hashCode = (hashCode * 59) + this.BEzsignbulksendNeedvalidation.GetHashCode();
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsignfoldertype/getList
     /// </summary>
     [DataContract(Name = "ezsignfoldertype-getList-v1-Response-mPayload")]
-    public partial class EzsignfoldertypeGetListV1ResponseMPayload : IEquatable<EzsignfoldertypeGetListV1ResponseMPayload>, IValidatableObject
+    public partial class EzsignfoldertypeGetListV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldertypeGetListV1ResponseMPayload" /> class.
@@ -99,63 +99,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignfoldertypeGetListV1ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignfoldertypeGetListV1ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignfoldertypeGetListV1ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignfoldertypeGetListV1ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.IRowReturned == input.IRowReturned ||
-                    this.IRowReturned.Equals(input.IRowReturned)
-                ) && 
-                (
-                    this.IRowFiltered == input.IRowFiltered ||
-                    this.IRowFiltered.Equals(input.IRowFiltered)
-                ) && 
-                (
-                    this.AObjEzsignfoldertype == input.AObjEzsignfoldertype ||
-                    this.AObjEzsignfoldertype != null &&
-                    input.AObjEzsignfoldertype != null &&
-                    this.AObjEzsignfoldertype.SequenceEqual(input.AObjEzsignfoldertype)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.IRowReturned.GetHashCode();
-                hashCode = (hashCode * 59) + this.IRowFiltered.GetHashCode();
-                if (this.AObjEzsignfoldertype != null)
-                {
-                    hashCode = (hashCode * 59) + this.AObjEzsignfoldertype.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Phone Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "phone-ResponseCompound")]
-    public partial class PhoneResponseCompound : IEquatable<PhoneResponseCompound>, IValidatableObject
+    public partial class PhoneResponseCompound : IValidatableObject
     {
 
         /// <summary>
@@ -52,13 +52,15 @@ namespace eZmaxApi.Model
         /// <param name="ePhoneType">ePhoneType.</param>
         /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
         /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
-        public PhoneResponseCompound(int pkiPhoneID = default(int), int fkiPhonetypeID = default(int), FieldEPhoneType? ePhoneType = default(FieldEPhoneType?), string sPhoneE164 = default(string), string sPhoneExtension = default(string))
+        /// <param name="bPhoneInternational">Indicate the phone number is an international phone number..</param>
+        public PhoneResponseCompound(int pkiPhoneID = default(int), int fkiPhonetypeID = default(int), FieldEPhoneType? ePhoneType = default(FieldEPhoneType?), string sPhoneE164 = default(string), string sPhoneExtension = default(string), bool bPhoneInternational = default(bool))
         {
             this.PkiPhoneID = pkiPhoneID;
             this.FkiPhonetypeID = fkiPhonetypeID;
             this.EPhoneType = ePhoneType;
             this.SPhoneE164 = sPhoneE164;
             this.SPhoneExtension = sPhoneExtension;
+            this.BPhoneInternational = bPhoneInternational;
         }
 
         /// <summary>
@@ -94,6 +96,14 @@ namespace eZmaxApi.Model
         public string SPhoneExtension { get; set; }
 
         /// <summary>
+        /// Indicate the phone number is an international phone number.
+        /// </summary>
+        /// <value>Indicate the phone number is an international phone number.</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bPhoneInternational", EmitDefaultValue = true)]
+        public bool BPhoneInternational { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -106,6 +116,7 @@ namespace eZmaxApi.Model
             sb.Append("  EPhoneType: ").Append(EPhoneType).Append("\n");
             sb.Append("  SPhoneE164: ").Append(SPhoneE164).Append("\n");
             sb.Append("  SPhoneExtension: ").Append(SPhoneExtension).Append("\n");
+            sb.Append("  BPhoneInternational: ").Append(BPhoneInternational).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -117,76 +128,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PhoneResponseCompound);
-        }
-
-        /// <summary>
-        /// Returns true if PhoneResponseCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PhoneResponseCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PhoneResponseCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiPhoneID == input.PkiPhoneID ||
-                    this.PkiPhoneID.Equals(input.PkiPhoneID)
-                ) && 
-                (
-                    this.FkiPhonetypeID == input.FkiPhonetypeID ||
-                    this.FkiPhonetypeID.Equals(input.FkiPhonetypeID)
-                ) && 
-                (
-                    this.EPhoneType == input.EPhoneType ||
-                    this.EPhoneType.Equals(input.EPhoneType)
-                ) && 
-                (
-                    this.SPhoneE164 == input.SPhoneE164 ||
-                    (this.SPhoneE164 != null &&
-                    this.SPhoneE164.Equals(input.SPhoneE164))
-                ) && 
-                (
-                    this.SPhoneExtension == input.SPhoneExtension ||
-                    (this.SPhoneExtension != null &&
-                    this.SPhoneExtension.Equals(input.SPhoneExtension))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiPhoneID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiPhonetypeID.GetHashCode();
-                hashCode = (hashCode * 59) + this.EPhoneType.GetHashCode();
-                if (this.SPhoneE164 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneE164.GetHashCode();
-                }
-                if (this.SPhoneExtension != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneExtension.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

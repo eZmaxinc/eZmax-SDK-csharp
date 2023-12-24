@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignbulksendsignermapping Object and children
     /// </summary>
     [DataContract(Name = "ezsignbulksendsignermapping-RequestCompound")]
-    public partial class EzsignbulksendsignermappingRequestCompound : IEquatable<EzsignbulksendsignermappingRequestCompound>, IValidatableObject
+    public partial class EzsignbulksendsignermappingRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingRequestCompound" /> class.
@@ -112,67 +112,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignbulksendsignermappingRequestCompound);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignbulksendsignermappingRequestCompound instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignbulksendsignermappingRequestCompound to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignbulksendsignermappingRequestCompound input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiEzsignbulksendsignermappingID == input.PkiEzsignbulksendsignermappingID ||
-                    this.PkiEzsignbulksendsignermappingID.Equals(input.PkiEzsignbulksendsignermappingID)
-                ) && 
-                (
-                    this.FkiEzsignbulksendID == input.FkiEzsignbulksendID ||
-                    this.FkiEzsignbulksendID.Equals(input.FkiEzsignbulksendID)
-                ) && 
-                (
-                    this.FkiUserID == input.FkiUserID ||
-                    this.FkiUserID.Equals(input.FkiUserID)
-                ) && 
-                (
-                    this.SEzsignbulksendsignermappingDescription == input.SEzsignbulksendsignermappingDescription ||
-                    (this.SEzsignbulksendsignermappingDescription != null &&
-                    this.SEzsignbulksendsignermappingDescription.Equals(input.SEzsignbulksendsignermappingDescription))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiEzsignbulksendsignermappingID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiEzsignbulksendID.GetHashCode();
-                hashCode = (hashCode * 59) + this.FkiUserID.GetHashCode();
-                if (this.SEzsignbulksendsignermappingDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEzsignbulksendsignermappingDescription.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

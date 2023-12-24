@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignsigner-&gt;Contact Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignsigner-ResponseCompound-Contact")]
-    public partial class EzsignsignerResponseCompoundContact : IEquatable<EzsignsignerResponseCompoundContact>, IValidatableObject
+    public partial class EzsignsignerResponseCompoundContact : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignerResponseCompoundContact" /> class.
@@ -161,107 +161,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EzsignsignerResponseCompoundContact);
-        }
-
-        /// <summary>
-        /// Returns true if EzsignsignerResponseCompoundContact instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EzsignsignerResponseCompoundContact to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EzsignsignerResponseCompoundContact input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PkiContactID == input.PkiContactID ||
-                    this.PkiContactID.Equals(input.PkiContactID)
-                ) && 
-                (
-                    this.SContactFirstname == input.SContactFirstname ||
-                    (this.SContactFirstname != null &&
-                    this.SContactFirstname.Equals(input.SContactFirstname))
-                ) && 
-                (
-                    this.SContactLastname == input.SContactLastname ||
-                    (this.SContactLastname != null &&
-                    this.SContactLastname.Equals(input.SContactLastname))
-                ) && 
-                (
-                    this.FkiLanguageID == input.FkiLanguageID ||
-                    this.FkiLanguageID.Equals(input.FkiLanguageID)
-                ) && 
-                (
-                    this.SEmailAddress == input.SEmailAddress ||
-                    (this.SEmailAddress != null &&
-                    this.SEmailAddress.Equals(input.SEmailAddress))
-                ) && 
-                (
-                    this.SPhoneE164 == input.SPhoneE164 ||
-                    (this.SPhoneE164 != null &&
-                    this.SPhoneE164.Equals(input.SPhoneE164))
-                ) && 
-                (
-                    this.SPhoneExtension == input.SPhoneExtension ||
-                    (this.SPhoneExtension != null &&
-                    this.SPhoneExtension.Equals(input.SPhoneExtension))
-                ) && 
-                (
-                    this.SPhoneE164Cell == input.SPhoneE164Cell ||
-                    (this.SPhoneE164Cell != null &&
-                    this.SPhoneE164Cell.Equals(input.SPhoneE164Cell))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.PkiContactID.GetHashCode();
-                if (this.SContactFirstname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SContactFirstname.GetHashCode();
-                }
-                if (this.SContactLastname != null)
-                {
-                    hashCode = (hashCode * 59) + this.SContactLastname.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.FkiLanguageID.GetHashCode();
-                if (this.SEmailAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.SEmailAddress.GetHashCode();
-                }
-                if (this.SPhoneE164 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneE164.GetHashCode();
-                }
-                if (this.SPhoneExtension != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneExtension.GetHashCode();
-                }
-                if (this.SPhoneE164Cell != null)
-                {
-                    hashCode = (hashCode * 59) + this.SPhoneE164Cell.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

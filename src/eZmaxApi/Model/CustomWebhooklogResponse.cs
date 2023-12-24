@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A custom Webhooklog object
     /// </summary>
     [DataContract(Name = "Custom-Webhooklog-Response")]
-    public partial class CustomWebhooklogResponse : IEquatable<CustomWebhooklogResponse>, IValidatableObject
+    public partial class CustomWebhooklogResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomWebhooklogResponse" /> class.
@@ -95,61 +95,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CustomWebhooklogResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CustomWebhooklogResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CustomWebhooklogResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CustomWebhooklogResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.DtWebhooklogDate == input.DtWebhooklogDate ||
-                    (this.DtWebhooklogDate != null &&
-                    this.DtWebhooklogDate.Equals(input.DtWebhooklogDate))
-                ) && 
-                (
-                    this.TWebhooklogJson == input.TWebhooklogJson ||
-                    (this.TWebhooklogJson != null &&
-                    this.TWebhooklogJson.Equals(input.TWebhooklogJson))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.DtWebhooklogDate != null)
-                {
-                    hashCode = (hashCode * 59) + this.DtWebhooklogDate.GetHashCode();
-                }
-                if (this.TWebhooklogJson != null)
-                {
-                    hashCode = (hashCode * 59) + this.TWebhooklogJson.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

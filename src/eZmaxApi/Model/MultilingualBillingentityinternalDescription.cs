@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// The description of the Billingentityinternal
     /// </summary>
     [DataContract(Name = "Multilingual-BillingentityinternalDescription")]
-    public partial class MultilingualBillingentityinternalDescription : IEquatable<MultilingualBillingentityinternalDescription>, IValidatableObject
+    public partial class MultilingualBillingentityinternalDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualBillingentityinternalDescription" /> class.
@@ -80,61 +80,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MultilingualBillingentityinternalDescription);
-        }
-
-        /// <summary>
-        /// Returns true if MultilingualBillingentityinternalDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MultilingualBillingentityinternalDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MultilingualBillingentityinternalDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SBillingentityinternalDescription1 == input.SBillingentityinternalDescription1 ||
-                    (this.SBillingentityinternalDescription1 != null &&
-                    this.SBillingentityinternalDescription1.Equals(input.SBillingentityinternalDescription1))
-                ) && 
-                (
-                    this.SBillingentityinternalDescription2 == input.SBillingentityinternalDescription2 ||
-                    (this.SBillingentityinternalDescription2 != null &&
-                    this.SBillingentityinternalDescription2.Equals(input.SBillingentityinternalDescription2))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SBillingentityinternalDescription1 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBillingentityinternalDescription1.GetHashCode();
-                }
-                if (this.SBillingentityinternalDescription2 != null)
-                {
-                    hashCode = (hashCode * 59) + this.SBillingentityinternalDescription2.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

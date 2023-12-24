@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /2/object/signature/{pkiSignatureID}
     /// </summary>
     [DataContract(Name = "signature-getObject-v2-Response-mPayload")]
-    public partial class SignatureGetObjectV2ResponseMPayload : IEquatable<SignatureGetObjectV2ResponseMPayload>, IValidatableObject
+    public partial class SignatureGetObjectV2ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureGetObjectV2ResponseMPayload" /> class.
@@ -77,52 +77,6 @@ namespace eZmaxApi.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SignatureGetObjectV2ResponseMPayload);
-        }
-
-        /// <summary>
-        /// Returns true if SignatureGetObjectV2ResponseMPayload instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SignatureGetObjectV2ResponseMPayload to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SignatureGetObjectV2ResponseMPayload input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ObjSignature == input.ObjSignature ||
-                    (this.ObjSignature != null &&
-                    this.ObjSignature.Equals(input.ObjSignature))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ObjSignature != null)
-                {
-                    hashCode = (hashCode * 59) + this.ObjSignature.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
         /// <summary>

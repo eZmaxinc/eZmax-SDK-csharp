@@ -92,6 +92,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiPhonelinesharedID'
+        /// </summary>
+        [Fact]
+        public void FkiPhonelinesharedIDTest()
+        {
+            // TODO unit test for the property 'FkiPhonelinesharedID'
+        }
+
+        /// <summary>
         /// Test the property 'ECommunicationsenderObjecttype'
         /// </summary>
         [Fact]
@@ -110,21 +119,30 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'SEmailAddress'
+        /// Test the property 'ObjEmail'
         /// </summary>
         [Fact]
-        public void SEmailAddressTest()
+        public void ObjEmailTest()
         {
-            // TODO unit test for the property 'SEmailAddress'
+            // TODO unit test for the property 'ObjEmail'
         }
 
         /// <summary>
-        /// Test the property 'SPhoneE164'
+        /// Test the property 'ObjPhoneFax'
         /// </summary>
         [Fact]
-        public void SPhoneE164Test()
+        public void ObjPhoneFaxTest()
         {
-            // TODO unit test for the property 'SPhoneE164'
+            // TODO unit test for the property 'ObjPhoneFax'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjPhoneSMS'
+        /// </summary>
+        [Fact]
+        public void ObjPhoneSMSTest()
+        {
+            // TODO unit test for the property 'ObjPhoneSMS'
         }
     }
 }
