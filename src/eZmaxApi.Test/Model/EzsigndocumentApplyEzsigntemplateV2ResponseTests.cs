@@ -72,5 +72,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'ObjDebug'
         }
+
+        /// <summary>
+        /// Test the property 'AObjWarning'
+        /// </summary>
+        [Fact]
+        public void AObjWarningTest()
+        {
+            // TODO unit test for the property 'AObjWarning'
+        }
     }
 }

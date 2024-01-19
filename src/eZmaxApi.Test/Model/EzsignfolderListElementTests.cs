@@ -119,6 +119,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'DtEzsignfolderDelayedsenddate'
+        /// </summary>
+        [Fact]
+        public void DtEzsignfolderDelayedsenddateTest()
+        {
+            // TODO unit test for the property 'DtEzsignfolderDelayedsenddate'
+        }
+
+        /// <summary>
         /// Test the property 'DtEzsignfolderSentdate'
         /// </summary>
         [Fact]

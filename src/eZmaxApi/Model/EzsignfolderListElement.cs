@@ -59,13 +59,14 @@ namespace eZmaxApi.Model
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="eEzsignfolderStep">eEzsignfolderStep (required).</param>
         /// <param name="dtCreatedDate">The date and time at which the object was created (required).</param>
+        /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
         /// <param name="dtEzsignfolderSentdate">The date and time at which the Ezsignfolder was sent the last time..</param>
         /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed..</param>
         /// <param name="iEzsigndocument">The total number of Ezsigndocument in the folder (required).</param>
         /// <param name="iEzsigndocumentEdm">The total number of Ezsigndocument in the folder that were saved in the edm system (required).</param>
         /// <param name="iEzsignsignature">The total number of signature blocks in all Ezsigndocuments in the folder (required).</param>
         /// <param name="iEzsignsignatureSigned">The total number of already signed signature blocks in all Ezsigndocuments in the folder (required).</param>
-        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderDuedate = default(string), int iEzsigndocument = default(int), int iEzsigndocumentEdm = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int))
+        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderDuedate = default(string), int iEzsigndocument = default(int), int iEzsigndocumentEdm = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int))
         {
             this.PkiEzsignfolderID = pkiEzsignfolderID;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
@@ -93,6 +94,7 @@ namespace eZmaxApi.Model
             this.IEzsigndocumentEdm = iEzsigndocumentEdm;
             this.IEzsignsignature = iEzsignsignature;
             this.IEzsignsignatureSigned = iEzsignsignatureSigned;
+            this.DtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
             this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
             this.DtEzsignfolderDuedate = dtEzsignfolderDuedate;
         }
@@ -136,6 +138,14 @@ namespace eZmaxApi.Model
         /* <example>2020-12-31 23:59:59</example>*/
         [DataMember(Name = "dtCreatedDate", IsRequired = true, EmitDefaultValue = true)]
         public string DtCreatedDate { get; set; }
+
+        /// <summary>
+        /// The date and time at which the Ezsignfolder will be sent in the future.
+        /// </summary>
+        /// <value>The date and time at which the Ezsignfolder will be sent in the future.</value>
+        /* <example>2020-12-31T23:59:59.000Z</example>*/
+        [DataMember(Name = "dtEzsignfolderDelayedsenddate", EmitDefaultValue = false)]
+        public string DtEzsignfolderDelayedsenddate { get; set; }
 
         /// <summary>
         /// The date and time at which the Ezsignfolder was sent the last time.
@@ -196,6 +206,7 @@ namespace eZmaxApi.Model
             sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
             sb.Append("  EEzsignfolderStep: ").Append(EEzsignfolderStep).Append("\n");
             sb.Append("  DtCreatedDate: ").Append(DtCreatedDate).Append("\n");
+            sb.Append("  DtEzsignfolderDelayedsenddate: ").Append(DtEzsignfolderDelayedsenddate).Append("\n");
             sb.Append("  DtEzsignfolderSentdate: ").Append(DtEzsignfolderSentdate).Append("\n");
             sb.Append("  DtEzsignfolderDuedate: ").Append(DtEzsignfolderDuedate).Append("\n");
             sb.Append("  IEzsigndocument: ").Append(IEzsigndocument).Append("\n");

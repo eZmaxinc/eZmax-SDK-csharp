@@ -41,11 +41,12 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CustomEzmaxinvoicingEzsigndocumentResponse" /> class.
         /// </summary>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
         /// <param name="sName">sName (required).</param>
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
         /// <param name="bEzsignfolderAllowed">Whether you have access to the Ezsignfolder or not (required).</param>
-        public CustomEzmaxinvoicingEzsigndocumentResponse(int fkiEzsignfolderID = default(int), string sName = default(string), string sEzsignfolderDescription = default(string), string sEzsigndocumentName = default(string), bool bEzsignfolderAllowed = default(bool))
+        public CustomEzmaxinvoicingEzsigndocumentResponse(int fkiEzsignfolderID = default(int), int fkiBillingentityinternalID = default(int), string sName = default(string), string sEzsignfolderDescription = default(string), string sEzsigndocumentName = default(string), bool bEzsignfolderAllowed = default(bool))
         {
             this.FkiEzsignfolderID = fkiEzsignfolderID;
             // to ensure "sName" is required (not null)
@@ -67,6 +68,7 @@ namespace eZmaxApi.Model
             }
             this.SEzsigndocumentName = sEzsigndocumentName;
             this.BEzsignfolderAllowed = bEzsignfolderAllowed;
+            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
         }
 
         /// <summary>
@@ -76,6 +78,14 @@ namespace eZmaxApi.Model
         /* <example>33</example>*/
         [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfolderID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Billingentityinternal.
+        /// </summary>
+        /// <value>The unique ID of the Billingentityinternal.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiBillingentityinternalID", EmitDefaultValue = false)]
+        public int FkiBillingentityinternalID { get; set; }
 
         /// <summary>
         /// Gets or Sets SName
@@ -115,6 +125,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class CustomEzmaxinvoicingEzsigndocumentResponse {\n");
             sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
+            sb.Append("  FkiBillingentityinternalID: ").Append(FkiBillingentityinternalID).Append("\n");
             sb.Append("  SName: ").Append(SName).Append("\n");
             sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
             sb.Append("  SEzsigndocumentName: ").Append(SEzsigndocumentName).Append("\n");
@@ -143,6 +154,12 @@ namespace eZmaxApi.Model
             if (this.FkiEzsignfolderID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+            }
+
+            // FkiBillingentityinternalID (int) minimum
+            if (this.FkiBillingentityinternalID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
             }
 
             yield break;

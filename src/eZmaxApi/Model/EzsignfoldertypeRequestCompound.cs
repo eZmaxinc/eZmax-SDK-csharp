@@ -50,6 +50,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eEzsignfoldertypeDisposal", IsRequired = true, EmitDefaultValue = true)]
         public FieldEEzsignfoldertypeDisposal EEzsignfoldertypeDisposal { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignfoldertypeCompletion
+        /// </summary>
+        [DataMember(Name = "eEzsignfoldertypeCompletion", EmitDefaultValue = false)]
+        public FieldEEzsignfoldertypeCompletion? EEzsignfoldertypeCompletion { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldertypeRequestCompound" /> class.
         /// </summary>
@@ -71,10 +77,13 @@ namespace eZmaxApi.Model
         /// <param name="eEzsignfoldertypeSendreminderfrequency">eEzsignfoldertypeSendreminderfrequency.</param>
         /// <param name="iEzsignfoldertypeArchivaldays">The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype (required).</param>
         /// <param name="eEzsignfoldertypeDisposal">eEzsignfoldertypeDisposal (required).</param>
+        /// <param name="eEzsignfoldertypeCompletion">eEzsignfoldertypeCompletion.</param>
         /// <param name="iEzsignfoldertypeDisposaldays">The number of days after the archival before the disposal of the Ezsignfolder.</param>
         /// <param name="iEzsignfoldertypeDeadlinedays">The number of days to get all Ezsignsignatures (required).</param>
         /// <param name="bEzsignfoldertypeDelegate">Wheter if delegation of signature is allowed to another user or not.</param>
         /// <param name="bEzsignfoldertypeReassign">Wheter if Reassignment of signature is allowed to another signatory or not.</param>
+        /// <param name="bEzsignfoldertypeReassignezsignsigner">Wheter if Reassignment of signature is allowed by a signatory to another signatory or not.</param>
+        /// <param name="bEzsignfoldertypeReassignuser">Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not.</param>
         /// <param name="bEzsignfoldertypeSendattatchmentsigner">THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email.</param>
         /// <param name="bEzsignfoldertypeSendsignedtoezsignsigner">Whether we send an email to Ezsignsigner  when document is completed.</param>
         /// <param name="bEzsignfoldertypeSendsignedtouser">Whether we send an email to User who signed when document is completed.</param>
@@ -101,7 +110,7 @@ namespace eZmaxApi.Model
         /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
         /// <param name="aFkiUserIDSigned">aFkiUserIDSigned.</param>
         /// <param name="aFkiUserIDSummary">aFkiUserIDSummary.</param>
-        public EzsignfoldertypeRequestCompound(int pkiEzsignfoldertypeID = default(int), MultilingualEzsignfoldertypeName objEzsignfoldertypeName = default(MultilingualEzsignfoldertypeName), int fkiBrandingID = default(int), int fkiBillingentityinternalID = default(int), int fkiUsergroupID = default(int), int fkiUsergroupIDRestricted = default(int), int fkiEzsigntsarequirementID = default(int), string sEmailAddressSigned = default(string), string sEmailAddressSummary = default(string), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), FieldEEzsignfoldertypeSendreminderfrequency? eEzsignfoldertypeSendreminderfrequency = default(FieldEEzsignfoldertypeSendreminderfrequency?), int iEzsignfoldertypeArchivaldays = default(int), FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal = default(FieldEEzsignfoldertypeDisposal), int iEzsignfoldertypeDisposaldays = default(int), int iEzsignfoldertypeDeadlinedays = default(int), bool bEzsignfoldertypeDelegate = default(bool), bool bEzsignfoldertypeReassign = default(bool), bool bEzsignfoldertypeSendattatchmentsigner = default(bool), bool bEzsignfoldertypeSendsignedtoezsignsigner = default(bool), bool bEzsignfoldertypeSendsignedtouser = default(bool), bool bEzsignfoldertypeSendattachmentezsignsigner = default(bool), bool bEzsignfoldertypeSendproofezsignsigner = default(bool), bool bEzsignfoldertypeSendattachmentuser = default(bool), bool bEzsignfoldertypeSendproofuser = default(bool), bool bEzsignfoldertypeSendproofemail = default(bool), bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner = default(bool), bool bEzsignfoldertypeAllowdownloadproofezsignsigner = default(bool), bool bEzsignfoldertypeSendproofreceivealldocument = default(bool), bool bEzsignfoldertypeSendsignedtodocumentowner = default(bool), bool bEzsignfoldertypeSendsignedtofolderowner = default(bool), bool bEzsignfoldertypeSendsignedtofullgroup = default(bool), bool bEzsignfoldertypeSendsignedtolimitedgroup = default(bool), bool bEzsignfoldertypeSendsignedtocolleague = default(bool), bool bEzsignfoldertypeSendsummarytodocumentowner = default(bool), bool bEzsignfoldertypeSendsummarytofolderowner = default(bool), bool bEzsignfoldertypeSendsummarytofullgroup = default(bool), bool bEzsignfoldertypeSendsummarytolimitedgroup = default(bool), bool bEzsignfoldertypeSendsummarytocolleague = default(bool), bool bEzsignfoldertypeIncludeproofsigner = default(bool), bool bEzsignfoldertypeIncludeproofuser = default(bool), bool bEzsignfoldertypeIsactive = default(bool), List<int> aFkiUserIDSigned = default(List<int>), List<int> aFkiUserIDSummary = default(List<int>))
+        public EzsignfoldertypeRequestCompound(int pkiEzsignfoldertypeID = default(int), MultilingualEzsignfoldertypeName objEzsignfoldertypeName = default(MultilingualEzsignfoldertypeName), int fkiBrandingID = default(int), int fkiBillingentityinternalID = default(int), int fkiUsergroupID = default(int), int fkiUsergroupIDRestricted = default(int), int fkiEzsigntsarequirementID = default(int), string sEmailAddressSigned = default(string), string sEmailAddressSummary = default(string), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), FieldEEzsignfoldertypeSendreminderfrequency? eEzsignfoldertypeSendreminderfrequency = default(FieldEEzsignfoldertypeSendreminderfrequency?), int iEzsignfoldertypeArchivaldays = default(int), FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal = default(FieldEEzsignfoldertypeDisposal), FieldEEzsignfoldertypeCompletion? eEzsignfoldertypeCompletion = default(FieldEEzsignfoldertypeCompletion?), int iEzsignfoldertypeDisposaldays = default(int), int iEzsignfoldertypeDeadlinedays = default(int), bool bEzsignfoldertypeDelegate = default(bool), bool bEzsignfoldertypeReassign = default(bool), bool bEzsignfoldertypeReassignezsignsigner = default(bool), bool bEzsignfoldertypeReassignuser = default(bool), bool bEzsignfoldertypeSendattatchmentsigner = default(bool), bool bEzsignfoldertypeSendsignedtoezsignsigner = default(bool), bool bEzsignfoldertypeSendsignedtouser = default(bool), bool bEzsignfoldertypeSendattachmentezsignsigner = default(bool), bool bEzsignfoldertypeSendproofezsignsigner = default(bool), bool bEzsignfoldertypeSendattachmentuser = default(bool), bool bEzsignfoldertypeSendproofuser = default(bool), bool bEzsignfoldertypeSendproofemail = default(bool), bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner = default(bool), bool bEzsignfoldertypeAllowdownloadproofezsignsigner = default(bool), bool bEzsignfoldertypeSendproofreceivealldocument = default(bool), bool bEzsignfoldertypeSendsignedtodocumentowner = default(bool), bool bEzsignfoldertypeSendsignedtofolderowner = default(bool), bool bEzsignfoldertypeSendsignedtofullgroup = default(bool), bool bEzsignfoldertypeSendsignedtolimitedgroup = default(bool), bool bEzsignfoldertypeSendsignedtocolleague = default(bool), bool bEzsignfoldertypeSendsummarytodocumentowner = default(bool), bool bEzsignfoldertypeSendsummarytofolderowner = default(bool), bool bEzsignfoldertypeSendsummarytofullgroup = default(bool), bool bEzsignfoldertypeSendsummarytolimitedgroup = default(bool), bool bEzsignfoldertypeSendsummarytocolleague = default(bool), bool bEzsignfoldertypeIncludeproofsigner = default(bool), bool bEzsignfoldertypeIncludeproofuser = default(bool), bool bEzsignfoldertypeIsactive = default(bool), List<int> aFkiUserIDSigned = default(List<int>), List<int> aFkiUserIDSummary = default(List<int>))
         {
             // to ensure "objEzsignfoldertypeName" is required (not null)
             if (objEzsignfoldertypeName == null)
@@ -130,9 +139,12 @@ namespace eZmaxApi.Model
             this.SEmailAddressSigned = sEmailAddressSigned;
             this.SEmailAddressSummary = sEmailAddressSummary;
             this.EEzsignfoldertypeSendreminderfrequency = eEzsignfoldertypeSendreminderfrequency;
+            this.EEzsignfoldertypeCompletion = eEzsignfoldertypeCompletion;
             this.IEzsignfoldertypeDisposaldays = iEzsignfoldertypeDisposaldays;
             this.BEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
             this.BEzsignfoldertypeReassign = bEzsignfoldertypeReassign;
+            this.BEzsignfoldertypeReassignezsignsigner = bEzsignfoldertypeReassignezsignsigner;
+            this.BEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
             this.BEzsignfoldertypeSendattatchmentsigner = bEzsignfoldertypeSendattatchmentsigner;
             this.BEzsignfoldertypeSendsignedtoezsignsigner = bEzsignfoldertypeSendsignedtoezsignsigner;
             this.BEzsignfoldertypeSendsignedtouser = bEzsignfoldertypeSendsignedtouser;
@@ -262,6 +274,22 @@ namespace eZmaxApi.Model
         /* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeReassign", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeReassign { get; set; }
+
+        /// <summary>
+        /// Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
+        /// </summary>
+        /// <value>Wheter if Reassignment of signature is allowed by a signatory to another signatory or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzsignfoldertypeReassignezsignsigner", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeReassignezsignsigner { get; set; }
+
+        /// <summary>
+        /// Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
+        /// </summary>
+        /// <value>Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzsignfoldertypeReassignuser", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeReassignuser { get; set; }
 
         /// <summary>
         /// THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email
@@ -488,10 +516,13 @@ namespace eZmaxApi.Model
             sb.Append("  EEzsignfoldertypeSendreminderfrequency: ").Append(EEzsignfoldertypeSendreminderfrequency).Append("\n");
             sb.Append("  IEzsignfoldertypeArchivaldays: ").Append(IEzsignfoldertypeArchivaldays).Append("\n");
             sb.Append("  EEzsignfoldertypeDisposal: ").Append(EEzsignfoldertypeDisposal).Append("\n");
+            sb.Append("  EEzsignfoldertypeCompletion: ").Append(EEzsignfoldertypeCompletion).Append("\n");
             sb.Append("  IEzsignfoldertypeDisposaldays: ").Append(IEzsignfoldertypeDisposaldays).Append("\n");
             sb.Append("  IEzsignfoldertypeDeadlinedays: ").Append(IEzsignfoldertypeDeadlinedays).Append("\n");
             sb.Append("  BEzsignfoldertypeDelegate: ").Append(BEzsignfoldertypeDelegate).Append("\n");
             sb.Append("  BEzsignfoldertypeReassign: ").Append(BEzsignfoldertypeReassign).Append("\n");
+            sb.Append("  BEzsignfoldertypeReassignezsignsigner: ").Append(BEzsignfoldertypeReassignezsignsigner).Append("\n");
+            sb.Append("  BEzsignfoldertypeReassignuser: ").Append(BEzsignfoldertypeReassignuser).Append("\n");
             sb.Append("  BEzsignfoldertypeSendattatchmentsigner: ").Append(BEzsignfoldertypeSendattatchmentsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeSendsignedtoezsignsigner: ").Append(BEzsignfoldertypeSendsignedtoezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeSendsignedtouser: ").Append(BEzsignfoldertypeSendsignedtouser).Append("\n");

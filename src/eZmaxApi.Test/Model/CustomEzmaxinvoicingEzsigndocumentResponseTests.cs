@@ -65,6 +65,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiBillingentityinternalID'
+        /// </summary>
+        [Fact]
+        public void FkiBillingentityinternalIDTest()
+        {
+            // TODO unit test for the property 'FkiBillingentityinternalID'
+        }
+
+        /// <summary>
         /// Test the property 'SName'
         /// </summary>
         [Fact]

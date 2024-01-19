@@ -83,6 +83,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EEzsignfolderCompletion'
+        /// </summary>
+        [Fact]
+        public void EEzsignfolderCompletionTest()
+        {
+            // TODO unit test for the property 'EEzsignfolderCompletion'
+        }
+
+        /// <summary>
         /// Test the property 'SEzsignfoldertypeNameX'
         /// </summary>
         [Fact]

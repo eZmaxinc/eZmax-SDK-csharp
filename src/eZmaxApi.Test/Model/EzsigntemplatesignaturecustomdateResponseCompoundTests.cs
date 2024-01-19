@@ -83,6 +83,24 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IEzsigntemplatesignaturecustomdateOffsetx'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplatesignaturecustomdateOffsetxTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatesignaturecustomdateOffsetx'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplatesignaturecustomdateOffsety'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplatesignaturecustomdateOffsetyTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatesignaturecustomdateOffsety'
+        }
+
+        /// <summary>
         /// Test the property 'SEzsigntemplatesignaturecustomdateFormat'
         /// </summary>
         [Fact]

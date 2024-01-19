@@ -42,7 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        public EzsigndocumentApplyEzsigntemplateV2Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        /// <param name="aObjWarning">aObjWarning.</param>
+        public EzsigndocumentApplyEzsigntemplateV2Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), List<CommonResponseWarning> aObjWarning = default(List<CommonResponseWarning>))
         {
             // to ensure "objDebugPayload" is required (not null)
             if (objDebugPayload == null)
@@ -51,6 +52,7 @@ namespace eZmaxApi.Model
             }
             this.ObjDebugPayload = objDebugPayload;
             this.ObjDebug = objDebug;
+            this.AObjWarning = aObjWarning;
         }
 
         /// <summary>
@@ -66,6 +68,12 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjWarning
+        /// </summary>
+        [DataMember(Name = "a_objWarning", EmitDefaultValue = false)]
+        public List<CommonResponseWarning> AObjWarning { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -75,6 +83,7 @@ namespace eZmaxApi.Model
             sb.Append("class EzsigndocumentApplyEzsigntemplateV2Response {\n");
             sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
             sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
+            sb.Append("  AObjWarning: ").Append(AObjWarning).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

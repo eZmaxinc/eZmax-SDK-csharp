@@ -72,8 +72,9 @@ namespace eZmaxApi.Model
         /// <param name="bWebhookIsactive">Whether the Webhook is active or not (required).</param>
         /// <param name="bWebhookIssigned">Whether the requests will be signed or not (required).</param>
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
         /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
-        public WebhookResponseCompound(int pkiWebhookID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), string sWebhookApikey = default(string), string sWebhookSecret = default(string), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool), bool bWebhookSkipsslvalidation = default(bool), string sWebhookEvent = default(string))
+        public WebhookResponseCompound(int pkiWebhookID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), string sWebhookApikey = default(string), string sWebhookSecret = default(string), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool), bool bWebhookSkipsslvalidation = default(bool), CommonAudit objAudit = default(CommonAudit), string sWebhookEvent = default(string))
         {
             this.PkiWebhookID = pkiWebhookID;
             // to ensure "sWebhookDescription" is required (not null)
@@ -98,6 +99,12 @@ namespace eZmaxApi.Model
             this.BWebhookIsactive = bWebhookIsactive;
             this.BWebhookIssigned = bWebhookIssigned;
             this.BWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
+            {
+                throw new ArgumentNullException("objAudit is a required property for WebhookResponseCompound and cannot be null");
+            }
+            this.ObjAudit = objAudit;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             this.EWebhookEzsignevent = eWebhookEzsignevent;
@@ -194,6 +201,12 @@ namespace eZmaxApi.Model
         public bool BWebhookSkipsslvalidation { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjAudit
+        /// </summary>
+        [DataMember(Name = "objAudit", IsRequired = true, EmitDefaultValue = true)]
+        public CommonAudit ObjAudit { get; set; }
+
+        /// <summary>
         /// The concatenated string to describe the Webhook event
         /// </summary>
         /// <value>The concatenated string to describe the Webhook event</value>
@@ -223,6 +236,7 @@ namespace eZmaxApi.Model
             sb.Append("  BWebhookIsactive: ").Append(BWebhookIsactive).Append("\n");
             sb.Append("  BWebhookIssigned: ").Append(BWebhookIssigned).Append("\n");
             sb.Append("  BWebhookSkipsslvalidation: ").Append(BWebhookSkipsslvalidation).Append("\n");
+            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  SWebhookEvent: ").Append(SWebhookEvent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

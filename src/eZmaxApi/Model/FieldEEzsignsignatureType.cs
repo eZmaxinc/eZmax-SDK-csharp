@@ -91,7 +91,13 @@ namespace eZmaxApi.Model
         /// Enum FieldTextarea for value: FieldTextarea
         /// </summary>
         [EnumMember(Value = "FieldTextarea")]
-        FieldTextarea = 10
+        FieldTextarea = 10,
+
+        /// <summary>
+        /// Enum Consultation for value: Consultation
+        /// </summary>
+        [EnumMember(Value = "Consultation")]
+        Consultation = 11
     }
 
 }

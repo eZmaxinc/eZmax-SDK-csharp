@@ -144,5 +144,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'SEmailAddress'
         }
+
+        /// <summary>
+        /// Test the property 'SUserJobtitle'
+        /// </summary>
+        [Fact]
+        public void SUserJobtitleTest()
+        {
+            // TODO unit test for the property 'SUserJobtitle'
+        }
     }
 }

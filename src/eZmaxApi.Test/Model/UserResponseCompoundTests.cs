@@ -299,6 +299,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SUserJobtitle'
+        /// </summary>
+        [Fact]
+        public void SUserJobtitleTest()
+        {
+            // TODO unit test for the property 'SUserJobtitle'
+        }
+
+        /// <summary>
         /// Test the property 'EUserEzsignaccess'
         /// </summary>
         [Fact]

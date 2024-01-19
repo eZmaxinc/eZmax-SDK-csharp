@@ -49,7 +49,9 @@ namespace eZmaxApi.Model
         /// <param name="bEzsignfoldertypeAllowdownloadproofezsignsigner">Whether we allow the proof to be downloaded by an Ezsignsigner.</param>
         /// <param name="bEzsignfoldertypeDelegate">Wheter if delegation of signature is allowed to another user or not.</param>
         /// <param name="bEzsignfoldertypeReassign">Wheter if Reassignment of signature is allowed to another signatory or not.</param>
-        public CustomEzsignfoldertypeResponse(int pkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), bool bEzsignfoldertypeSendproofezsignsigner = default(bool), bool bEzsignfoldertypeIncludeproofsigner = default(bool), bool bEzsignfoldertypeIncludeproofuser = default(bool), bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner = default(bool), bool bEzsignfoldertypeAllowdownloadproofezsignsigner = default(bool), bool bEzsignfoldertypeDelegate = default(bool), bool bEzsignfoldertypeReassign = default(bool))
+        /// <param name="bEzsignfoldertypeReassignezsignsigner">Wheter if Reassignment of signature is allowed by a signatory to another signatory or not.</param>
+        /// <param name="bEzsignfoldertypeReassignuser">Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not.</param>
+        public CustomEzsignfoldertypeResponse(int pkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), bool bEzsignfoldertypeSendproofezsignsigner = default(bool), bool bEzsignfoldertypeIncludeproofsigner = default(bool), bool bEzsignfoldertypeIncludeproofuser = default(bool), bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner = default(bool), bool bEzsignfoldertypeAllowdownloadproofezsignsigner = default(bool), bool bEzsignfoldertypeDelegate = default(bool), bool bEzsignfoldertypeReassign = default(bool), bool bEzsignfoldertypeReassignezsignsigner = default(bool), bool bEzsignfoldertypeReassignuser = default(bool))
         {
             this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
@@ -60,6 +62,8 @@ namespace eZmaxApi.Model
             this.BEzsignfoldertypeAllowdownloadproofezsignsigner = bEzsignfoldertypeAllowdownloadproofezsignsigner;
             this.BEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
             this.BEzsignfoldertypeReassign = bEzsignfoldertypeReassign;
+            this.BEzsignfoldertypeReassignezsignsigner = bEzsignfoldertypeReassignezsignsigner;
+            this.BEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
         }
 
         /// <summary>
@@ -135,6 +139,22 @@ namespace eZmaxApi.Model
         public bool BEzsignfoldertypeReassign { get; set; }
 
         /// <summary>
+        /// Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
+        /// </summary>
+        /// <value>Wheter if Reassignment of signature is allowed by a signatory to another signatory or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzsignfoldertypeReassignezsignsigner", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeReassignezsignsigner { get; set; }
+
+        /// <summary>
+        /// Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
+        /// </summary>
+        /// <value>Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzsignfoldertypeReassignuser", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeReassignuser { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -151,6 +171,8 @@ namespace eZmaxApi.Model
             sb.Append("  BEzsignfoldertypeAllowdownloadproofezsignsigner: ").Append(BEzsignfoldertypeAllowdownloadproofezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeDelegate: ").Append(BEzsignfoldertypeDelegate).Append("\n");
             sb.Append("  BEzsignfoldertypeReassign: ").Append(BEzsignfoldertypeReassign).Append("\n");
+            sb.Append("  BEzsignfoldertypeReassignezsignsigner: ").Append(BEzsignfoldertypeReassignezsignsigner).Append("\n");
+            sb.Append("  BEzsignfoldertypeReassignuser: ").Append(BEzsignfoldertypeReassignuser).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

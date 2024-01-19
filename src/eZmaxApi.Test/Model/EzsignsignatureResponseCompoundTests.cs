@@ -155,6 +155,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IEzsignsignatureStepadjusted'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignatureStepadjustedTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureStepadjusted'
+        }
+
+        /// <summary>
         /// Test the property 'EEzsignsignatureType'
         /// </summary>
         [Fact]

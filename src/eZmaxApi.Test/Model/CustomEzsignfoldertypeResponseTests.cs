@@ -135,5 +135,23 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'BEzsignfoldertypeReassign'
         }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeReassignezsignsigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeReassignezsignsignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeReassignezsignsigner'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeReassignuser'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeReassignuserTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeReassignuser'
+        }
     }
 }

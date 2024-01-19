@@ -68,7 +68,8 @@ namespace eZmaxApi.Model
         /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
         /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
         /// <param name="sEmailAddress">The email address. (required).</param>
-        public UserListElement(int pkiUserID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), bool bUserIsactive = default(bool), FieldEUserType eUserType = default(FieldEUserType), FieldEUserOrigin eUserOrigin = default(FieldEUserOrigin), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), string dtUserEzsignprepaidexpiration = default(string), string sEmailAddress = default(string))
+        /// <param name="sUserJobtitle">The job title of the user.</param>
+        public UserListElement(int pkiUserID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), bool bUserIsactive = default(bool), FieldEUserType eUserType = default(FieldEUserType), FieldEUserOrigin eUserOrigin = default(FieldEUserOrigin), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), string dtUserEzsignprepaidexpiration = default(string), string sEmailAddress = default(string), string sUserJobtitle = default(string))
         {
             this.PkiUserID = pkiUserID;
             // to ensure "sUserFirstname" is required (not null)
@@ -100,6 +101,7 @@ namespace eZmaxApi.Model
             }
             this.SEmailAddress = sEmailAddress;
             this.DtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
+            this.SUserJobtitle = sUserJobtitle;
         }
 
         /// <summary>
@@ -159,6 +161,14 @@ namespace eZmaxApi.Model
         public string SEmailAddress { get; set; }
 
         /// <summary>
+        /// The job title of the user
+        /// </summary>
+        /// <value>The job title of the user</value>
+        /* <example>Sales Representative</example>*/
+        [DataMember(Name = "sUserJobtitle", EmitDefaultValue = false)]
+        public string SUserJobtitle { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -176,6 +186,7 @@ namespace eZmaxApi.Model
             sb.Append("  EUserEzsignaccess: ").Append(EUserEzsignaccess).Append("\n");
             sb.Append("  DtUserEzsignprepaidexpiration: ").Append(DtUserEzsignprepaidexpiration).Append("\n");
             sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
+            sb.Append("  SUserJobtitle: ").Append(SUserJobtitle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -217,6 +228,15 @@ namespace eZmaxApi.Model
                 if (!regexDtUserEzsignprepaidexpiration.Match(this.DtUserEzsignprepaidexpiration).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtUserEzsignprepaidexpiration, must match a pattern of " + regexDtUserEzsignprepaidexpiration, new [] { "DtUserEzsignprepaidexpiration" });
+                }
+            }
+
+            if (this.SUserJobtitle != null) {
+                // SUserJobtitle (string) pattern
+                Regex regexSUserJobtitle = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSUserJobtitle.Match(this.SUserJobtitle).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserJobtitle, must match a pattern of " + regexSUserJobtitle, new [] { "SUserJobtitle" });
                 }
             }
 

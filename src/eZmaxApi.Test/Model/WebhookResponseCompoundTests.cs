@@ -182,6 +182,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ObjAudit'
+        /// </summary>
+        [Fact]
+        public void ObjAuditTest()
+        {
+            // TODO unit test for the property 'ObjAudit'
+        }
+
+        /// <summary>
         /// Test the property 'SWebhookEvent'
         /// </summary>
         [Fact]

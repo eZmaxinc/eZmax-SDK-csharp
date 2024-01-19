@@ -6,6 +6,7 @@ An EzmaxinvoicingEzsignfolder object containing information about the Ezmaxinvoi
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **FkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
+**FkiBillingentityinternalID** | **int** | The unique ID of the Billingentityinternal. | [optional] 
 **SEzsignfolderDescription** | **string** | The description of the Ezsignfolder | 
 **BEzsigntsarequirementBillable** | **bool** | Whether the TSA requirement is billable or not | 
 **BEzsignfolderMfaused** | **bool** | Whether the MFA was used or not for the Ezsignfolder | 

@@ -87,6 +87,7 @@ namespace eZmaxApi.Model
         /// <param name="iEzsignsignatureHeight">The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight..</param>
         /// <param name="iEzsignsignatureWidth">The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth..</param>
         /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign (required).</param>
+        /// <param name="iEzsignsignatureStepadjusted">The step when the Ezsignsigner will be invited to sign.</param>
         /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
         /// <param name="tEzsignsignatureTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignsignature.</param>
         /// <param name="eEzsignsignatureTooltipposition">eEzsignsignatureTooltipposition.</param>
@@ -110,7 +111,7 @@ namespace eZmaxApi.Model
         /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
         /// <param name="objCreditcardtransaction">objCreditcardtransaction.</param>
         /// <param name="aObjEzsignelementdependency">aObjEzsignelementdependency.</param>
-        public EzsignsignatureResponseCompound(int pkiEzsignsignatureID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiEzsignsigningreasonID = default(int), string sEzsignsigningreasonDescriptionX = default(string), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int iEzsignsignatureValidationstep = default(int), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), bool bEzsignsignatureRequired = default(bool), int fkiEzsignfoldersignerassociationIDValidation = default(int), string dtEzsignsignatureDate = default(string), int iEzsignsignatureattachmentCount = default(int), string sEzsignsignatureDescription = default(string), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default(FieldEEzsignsignatureDependencyrequirement?), string sEzsignsignatureRegexp = default(string), CustomContactNameResponse objContactName = default(CustomContactNameResponse), CustomContactNameResponse objContactNameDelegation = default(CustomContactNameResponse), SignatureResponseCompound objSignature = default(SignatureResponseCompound), bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateResponseCompound>), CustomCreditcardtransactionResponse objCreditcardtransaction = default(CustomCreditcardtransactionResponse), List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency = default(List<EzsignelementdependencyResponseCompound>))
+        public EzsignsignatureResponseCompound(int pkiEzsignsignatureID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiEzsignsigningreasonID = default(int), string sEzsignsigningreasonDescriptionX = default(string), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureStep = default(int), int iEzsignsignatureStepadjusted = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int iEzsignsignatureValidationstep = default(int), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), bool bEzsignsignatureRequired = default(bool), int fkiEzsignfoldersignerassociationIDValidation = default(int), string dtEzsignsignatureDate = default(string), int iEzsignsignatureattachmentCount = default(int), string sEzsignsignatureDescription = default(string), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default(FieldEEzsignsignatureDependencyrequirement?), string sEzsignsignatureRegexp = default(string), CustomContactNameResponse objContactName = default(CustomContactNameResponse), CustomContactNameResponse objContactNameDelegation = default(CustomContactNameResponse), SignatureResponseCompound objSignature = default(SignatureResponseCompound), bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateResponseCompound>), CustomCreditcardtransactionResponse objCreditcardtransaction = default(CustomCreditcardtransactionResponse), List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency = default(List<EzsignelementdependencyResponseCompound>))
         {
             this.PkiEzsignsignatureID = pkiEzsignsignatureID;
             this.FkiEzsigndocumentID = fkiEzsigndocumentID;
@@ -130,6 +131,7 @@ namespace eZmaxApi.Model
             this.SEzsignsigningreasonDescriptionX = sEzsignsigningreasonDescriptionX;
             this.IEzsignsignatureHeight = iEzsignsignatureHeight;
             this.IEzsignsignatureWidth = iEzsignsignatureWidth;
+            this.IEzsignsignatureStepadjusted = iEzsignsignatureStepadjusted;
             this.TEzsignsignatureTooltip = tEzsignsignatureTooltip;
             this.EEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
             this.EEzsignsignatureFont = eEzsignsignatureFont;
@@ -240,6 +242,14 @@ namespace eZmaxApi.Model
         /* <example>1</example>*/
         [DataMember(Name = "iEzsignsignatureStep", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignsignatureStep { get; set; }
+
+        /// <summary>
+        /// The step when the Ezsignsigner will be invited to sign
+        /// </summary>
+        /// <value>The step when the Ezsignsigner will be invited to sign</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "iEzsignsignatureStepadjusted", EmitDefaultValue = false)]
+        public int IEzsignsignatureStepadjusted { get; set; }
 
         /// <summary>
         /// A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
@@ -383,6 +393,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsignsignatureHeight: ").Append(IEzsignsignatureHeight).Append("\n");
             sb.Append("  IEzsignsignatureWidth: ").Append(IEzsignsignatureWidth).Append("\n");
             sb.Append("  IEzsignsignatureStep: ").Append(IEzsignsignatureStep).Append("\n");
+            sb.Append("  IEzsignsignatureStepadjusted: ").Append(IEzsignsignatureStepadjusted).Append("\n");
             sb.Append("  EEzsignsignatureType: ").Append(EEzsignsignatureType).Append("\n");
             sb.Append("  TEzsignsignatureTooltip: ").Append(TEzsignsignatureTooltip).Append("\n");
             sb.Append("  EEzsignsignatureTooltipposition: ").Append(EEzsignsignatureTooltipposition).Append("\n");

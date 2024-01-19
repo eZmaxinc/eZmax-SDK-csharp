@@ -173,6 +173,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EEzsignfoldertypeCompletion'
+        /// </summary>
+        [Fact]
+        public void EEzsignfoldertypeCompletionTest()
+        {
+            // TODO unit test for the property 'EEzsignfoldertypeCompletion'
+        }
+
+        /// <summary>
         /// Test the property 'IEzsignfoldertypeDisposaldays'
         /// </summary>
         [Fact]
@@ -206,6 +215,24 @@ namespace eZmaxApi.Test.Model
         public void BEzsignfoldertypeReassignTest()
         {
             // TODO unit test for the property 'BEzsignfoldertypeReassign'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeReassignezsignsigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeReassignezsignsignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeReassignezsignsigner'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeReassignuser'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeReassignuserTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeReassignuser'
         }
 
         /// <summary>

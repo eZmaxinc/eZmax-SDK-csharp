@@ -91,6 +91,7 @@ namespace eZmaxApi.Model
         /// <param name="sUserFirstname">The first name of the user (required).</param>
         /// <param name="sUserLastname">The last name of the user (required).</param>
         /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="sUserJobtitle">The job title of the user.</param>
         /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
         /// <param name="dtUserLastlogondate">The last logon date of the User.</param>
         /// <param name="dtUserPasswordchanged">The date at which the User&#39;s password was last changed.</param>
@@ -101,7 +102,7 @@ namespace eZmaxApi.Model
         /// <param name="bUserAttachmentautoverified">Whether if Attachments uploaded by the User must be validated or not.</param>
         /// <param name="bUserChangepassword">Whether if the User is forced to change its password (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public UserResponseCompound(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), string sCompanyNameX = default(string), int fkiDepartmentIDDefault = default(int), string sDepartmentNameX = default(string), int fkiTimezoneID = default(int), string sTimezoneName = default(string), int fkiLanguageID = default(int), string sLanguageNameX = default(string), EmailResponseCompound objEmail = default(EmailResponseCompound), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), PhoneResponseCompound objPhoneHome = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound), int fkiSecretquestionID = default(int), int fkiModuleIDForm = default(int), string sModuleNameX = default(string), FieldEUserOrigin eUserOrigin = default(FieldEUserOrigin), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), string dtUserLastlogondate = default(string), string dtUserPasswordchanged = default(string), string dtUserEzsignprepaidexpiration = default(string), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool), CommonAudit objAudit = default(CommonAudit))
+        public UserResponseCompound(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), string sCompanyNameX = default(string), int fkiDepartmentIDDefault = default(int), string sDepartmentNameX = default(string), int fkiTimezoneID = default(int), string sTimezoneName = default(string), int fkiLanguageID = default(int), string sLanguageNameX = default(string), EmailResponseCompound objEmail = default(EmailResponseCompound), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), PhoneResponseCompound objPhoneHome = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound), int fkiSecretquestionID = default(int), int fkiModuleIDForm = default(int), string sModuleNameX = default(string), FieldEUserOrigin eUserOrigin = default(FieldEUserOrigin), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sUserJobtitle = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), string dtUserLastlogondate = default(string), string dtUserPasswordchanged = default(string), string dtUserEzsignprepaidexpiration = default(string), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool), CommonAudit objAudit = default(CommonAudit))
         {
             this.PkiUserID = pkiUserID;
             this.FkiCompanyIDDefault = fkiCompanyIDDefault;
@@ -184,6 +185,7 @@ namespace eZmaxApi.Model
             this.FkiSecretquestionID = fkiSecretquestionID;
             this.FkiModuleIDForm = fkiModuleIDForm;
             this.SModuleNameX = sModuleNameX;
+            this.SUserJobtitle = sUserJobtitle;
             this.DtUserLastlogondate = dtUserLastlogondate;
             this.DtUserPasswordchanged = dtUserPasswordchanged;
             this.DtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
@@ -379,6 +381,14 @@ namespace eZmaxApi.Model
         public string SUserLoginname { get; set; }
 
         /// <summary>
+        /// The job title of the user
+        /// </summary>
+        /// <value>The job title of the user</value>
+        /* <example>Sales Representative</example>*/
+        [DataMember(Name = "sUserJobtitle", EmitDefaultValue = false)]
+        public string SUserJobtitle { get; set; }
+
+        /// <summary>
         /// The last logon date of the User
         /// </summary>
         /// <value>The last logon date of the User</value>
@@ -483,6 +493,7 @@ namespace eZmaxApi.Model
             sb.Append("  SUserFirstname: ").Append(SUserFirstname).Append("\n");
             sb.Append("  SUserLastname: ").Append(SUserLastname).Append("\n");
             sb.Append("  SUserLoginname: ").Append(SUserLoginname).Append("\n");
+            sb.Append("  SUserJobtitle: ").Append(SUserJobtitle).Append("\n");
             sb.Append("  EUserEzsignaccess: ").Append(EUserEzsignaccess).Append("\n");
             sb.Append("  DtUserLastlogondate: ").Append(DtUserLastlogondate).Append("\n");
             sb.Append("  DtUserPasswordchanged: ").Append(DtUserPasswordchanged).Append("\n");
@@ -603,6 +614,15 @@ namespace eZmaxApi.Model
                 if (!regexSUserLoginname.Match(this.SUserLoginname).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
+                }
+            }
+
+            if (this.SUserJobtitle != null) {
+                // SUserJobtitle (string) pattern
+                Regex regexSUserJobtitle = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSUserJobtitle.Match(this.SUserJobtitle).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserJobtitle, must match a pattern of " + regexSUserJobtitle, new [] { "SUserJobtitle" });
                 }
             }
 

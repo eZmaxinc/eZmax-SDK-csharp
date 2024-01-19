@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **SUserFirstname** | **string** | The first name of the user | 
 **SUserLastname** | **string** | The last name of the user | 
 **SUserLoginname** | **string** | The login name of the User. | 
+**SUserJobtitle** | **string** | The job title of the user | [optional] 
 **EUserEzsignaccess** | **FieldEUserEzsignaccess** |  | 
 **DtUserLastlogondate** | **string** | The last logon date of the User | [optional] 
 **DtUserPasswordchanged** | **string** | The date at which the User&#39;s password was last changed | [optional] 

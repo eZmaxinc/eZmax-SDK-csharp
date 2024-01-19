@@ -34,6 +34,12 @@ namespace eZmaxApi.Model
     {
 
         /// <summary>
+        /// Gets or Sets EEzsigntemplatesignaturePositioning
+        /// </summary>
+        [DataMember(Name = "eEzsigntemplatesignaturePositioning", EmitDefaultValue = false)]
+        public FieldEEzsigntemplatesignaturePositioning? EEzsigntemplatesignaturePositioning { get; set; }
+
+        /// <summary>
         /// Gets or Sets EEzsigntemplatesignatureType
         /// </summary>
         [DataMember(Name = "eEzsigntemplatesignatureType", IsRequired = true, EmitDefaultValue = true)]
@@ -68,6 +74,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eEzsigntemplatesignatureDependencyrequirement", EmitDefaultValue = false)]
         public FieldEEzsigntemplatesignatureDependencyrequirement? EEzsigntemplatesignatureDependencyrequirement { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsigntemplatesignaturePositioningoccurence
+        /// </summary>
+        [DataMember(Name = "eEzsigntemplatesignaturePositioningoccurence", EmitDefaultValue = false)]
+        public FieldEEzsigntemplatesignaturePositioningoccurence? EEzsigntemplatesignaturePositioningoccurence { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignatureResponse" /> class.
         /// </summary>
@@ -80,9 +92,10 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
         /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
         /// <param name="fkiEzsigntemplatesignerIDValidation">The unique ID of the Ezsigntemplatesigner.</param>
+        /// <param name="eEzsigntemplatesignaturePositioning">eEzsigntemplatesignaturePositioning.</param>
         /// <param name="iEzsigntemplatedocumentpagePagenumber">The page number in the Ezsigntemplatedocument (required).</param>
-        /// <param name="iEzsigntemplatesignatureX">The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="iEzsigntemplatesignatureY">The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="iEzsigntemplatesignatureX">The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate..</param>
+        /// <param name="iEzsigntemplatesignatureY">The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate..</param>
         /// <param name="iEzsigntemplatesignatureWidth">The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureWidth..</param>
         /// <param name="iEzsigntemplatesignatureHeight">The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureHeight..</param>
         /// <param name="iEzsigntemplatesignatureStep">The step when the Ezsigntemplatesigner will be invited to sign (required).</param>
@@ -98,17 +111,22 @@ namespace eZmaxApi.Model
         /// <param name="sEzsigntemplatesignatureRegexp">A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**.</param>
         /// <param name="eEzsigntemplatesignatureTextvalidation">eEzsigntemplatesignatureTextvalidation.</param>
         /// <param name="eEzsigntemplatesignatureDependencyrequirement">eEzsigntemplatesignatureDependencyrequirement.</param>
-        public EzsigntemplatesignatureResponse(int pkiEzsigntemplatesignatureID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), int fkiEzsigntemplatesignerIDValidation = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), int iEzsigntemplatesignatureX = default(int), int iEzsigntemplatesignatureY = default(int), int iEzsigntemplatesignatureWidth = default(int), int iEzsigntemplatesignatureHeight = default(int), int iEzsigntemplatesignatureStep = default(int), FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType = default(FieldEEzsigntemplatesignatureType), string tEzsigntemplatesignatureTooltip = default(string), FieldEEzsigntemplatesignatureTooltipposition? eEzsigntemplatesignatureTooltipposition = default(FieldEEzsigntemplatesignatureTooltipposition?), FieldEEzsigntemplatesignatureFont? eEzsigntemplatesignatureFont = default(FieldEEzsigntemplatesignatureFont?), int iEzsigntemplatesignatureValidationstep = default(int), string sEzsigntemplatesignatureAttachmentdescription = default(string), FieldEEzsigntemplatesignatureAttachmentnamesource? eEzsigntemplatesignatureAttachmentnamesource = default(FieldEEzsigntemplatesignatureAttachmentnamesource?), bool bEzsigntemplatesignatureRequired = default(bool), int iEzsigntemplatesignatureMaxlength = default(int), string sEzsigntemplatesignatureRegexp = default(string), EnumTextvalidation? eEzsigntemplatesignatureTextvalidation = default(EnumTextvalidation?), FieldEEzsigntemplatesignatureDependencyrequirement? eEzsigntemplatesignatureDependencyrequirement = default(FieldEEzsigntemplatesignatureDependencyrequirement?))
+        /// <param name="sEzsigntemplatesignaturePositioningpattern">The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**.</param>
+        /// <param name="iEzsigntemplatesignaturePositioningoffsetx">The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**.</param>
+        /// <param name="iEzsigntemplatesignaturePositioningoffsety">The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**.</param>
+        /// <param name="eEzsigntemplatesignaturePositioningoccurence">eEzsigntemplatesignaturePositioningoccurence.</param>
+        public EzsigntemplatesignatureResponse(int pkiEzsigntemplatesignatureID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), int fkiEzsigntemplatesignerIDValidation = default(int), FieldEEzsigntemplatesignaturePositioning? eEzsigntemplatesignaturePositioning = default(FieldEEzsigntemplatesignaturePositioning?), int iEzsigntemplatedocumentpagePagenumber = default(int), int iEzsigntemplatesignatureX = default(int), int iEzsigntemplatesignatureY = default(int), int iEzsigntemplatesignatureWidth = default(int), int iEzsigntemplatesignatureHeight = default(int), int iEzsigntemplatesignatureStep = default(int), FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType = default(FieldEEzsigntemplatesignatureType), string tEzsigntemplatesignatureTooltip = default(string), FieldEEzsigntemplatesignatureTooltipposition? eEzsigntemplatesignatureTooltipposition = default(FieldEEzsigntemplatesignatureTooltipposition?), FieldEEzsigntemplatesignatureFont? eEzsigntemplatesignatureFont = default(FieldEEzsigntemplatesignatureFont?), int iEzsigntemplatesignatureValidationstep = default(int), string sEzsigntemplatesignatureAttachmentdescription = default(string), FieldEEzsigntemplatesignatureAttachmentnamesource? eEzsigntemplatesignatureAttachmentnamesource = default(FieldEEzsigntemplatesignatureAttachmentnamesource?), bool bEzsigntemplatesignatureRequired = default(bool), int iEzsigntemplatesignatureMaxlength = default(int), string sEzsigntemplatesignatureRegexp = default(string), EnumTextvalidation? eEzsigntemplatesignatureTextvalidation = default(EnumTextvalidation?), FieldEEzsigntemplatesignatureDependencyrequirement? eEzsigntemplatesignatureDependencyrequirement = default(FieldEEzsigntemplatesignatureDependencyrequirement?), string sEzsigntemplatesignaturePositioningpattern = default(string), int iEzsigntemplatesignaturePositioningoffsetx = default(int), int iEzsigntemplatesignaturePositioningoffsety = default(int), FieldEEzsigntemplatesignaturePositioningoccurence? eEzsigntemplatesignaturePositioningoccurence = default(FieldEEzsigntemplatesignaturePositioningoccurence?))
         {
             this.PkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID;
             this.FkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
             this.FkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
             this.IEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
-            this.IEzsigntemplatesignatureX = iEzsigntemplatesignatureX;
-            this.IEzsigntemplatesignatureY = iEzsigntemplatesignatureY;
             this.IEzsigntemplatesignatureStep = iEzsigntemplatesignatureStep;
             this.EEzsigntemplatesignatureType = eEzsigntemplatesignatureType;
             this.FkiEzsigntemplatesignerIDValidation = fkiEzsigntemplatesignerIDValidation;
+            this.EEzsigntemplatesignaturePositioning = eEzsigntemplatesignaturePositioning;
+            this.IEzsigntemplatesignatureX = iEzsigntemplatesignatureX;
+            this.IEzsigntemplatesignatureY = iEzsigntemplatesignatureY;
             this.IEzsigntemplatesignatureWidth = iEzsigntemplatesignatureWidth;
             this.IEzsigntemplatesignatureHeight = iEzsigntemplatesignatureHeight;
             this.TEzsigntemplatesignatureTooltip = tEzsigntemplatesignatureTooltip;
@@ -122,6 +140,10 @@ namespace eZmaxApi.Model
             this.SEzsigntemplatesignatureRegexp = sEzsigntemplatesignatureRegexp;
             this.EEzsigntemplatesignatureTextvalidation = eEzsigntemplatesignatureTextvalidation;
             this.EEzsigntemplatesignatureDependencyrequirement = eEzsigntemplatesignatureDependencyrequirement;
+            this.SEzsigntemplatesignaturePositioningpattern = sEzsigntemplatesignaturePositioningpattern;
+            this.IEzsigntemplatesignaturePositioningoffsetx = iEzsigntemplatesignaturePositioningoffsetx;
+            this.IEzsigntemplatesignaturePositioningoffsety = iEzsigntemplatesignaturePositioningoffsety;
+            this.EEzsigntemplatesignaturePositioningoccurence = eEzsigntemplatesignaturePositioningoccurence;
         }
 
         /// <summary>
@@ -169,7 +191,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.</value>
         /* <example>200</example>*/
-        [DataMember(Name = "iEzsigntemplatesignatureX", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "iEzsigntemplatesignatureX", EmitDefaultValue = false)]
         public int IEzsigntemplatesignatureX { get; set; }
 
         /// <summary>
@@ -177,7 +199,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
         /* <example>300</example>*/
-        [DataMember(Name = "iEzsigntemplatesignatureY", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "iEzsigntemplatesignatureY", EmitDefaultValue = false)]
         public int IEzsigntemplatesignatureY { get; set; }
 
         /// <summary>
@@ -252,6 +274,30 @@ namespace eZmaxApi.Model
         public string SEzsigntemplatesignatureRegexp { get; set; }
 
         /// <summary>
+        /// The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+        /// </summary>
+        /// <value>The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**</value>
+        /* <example>Signature</example>*/
+        [DataMember(Name = "sEzsigntemplatesignaturePositioningpattern", EmitDefaultValue = false)]
+        public string SEzsigntemplatesignaturePositioningpattern { get; set; }
+
+        /// <summary>
+        /// The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+        /// </summary>
+        /// <value>The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**</value>
+        /* <example>200</example>*/
+        [DataMember(Name = "iEzsigntemplatesignaturePositioningoffsetx", EmitDefaultValue = false)]
+        public int IEzsigntemplatesignaturePositioningoffsetx { get; set; }
+
+        /// <summary>
+        /// The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+        /// </summary>
+        /// <value>The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**</value>
+        /* <example>200</example>*/
+        [DataMember(Name = "iEzsigntemplatesignaturePositioningoffsety", EmitDefaultValue = false)]
+        public int IEzsigntemplatesignaturePositioningoffsety { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -263,6 +309,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiEzsigntemplatedocumentID: ").Append(FkiEzsigntemplatedocumentID).Append("\n");
             sb.Append("  FkiEzsigntemplatesignerID: ").Append(FkiEzsigntemplatesignerID).Append("\n");
             sb.Append("  FkiEzsigntemplatesignerIDValidation: ").Append(FkiEzsigntemplatesignerIDValidation).Append("\n");
+            sb.Append("  EEzsigntemplatesignaturePositioning: ").Append(EEzsigntemplatesignaturePositioning).Append("\n");
             sb.Append("  IEzsigntemplatedocumentpagePagenumber: ").Append(IEzsigntemplatedocumentpagePagenumber).Append("\n");
             sb.Append("  IEzsigntemplatesignatureX: ").Append(IEzsigntemplatesignatureX).Append("\n");
             sb.Append("  IEzsigntemplatesignatureY: ").Append(IEzsigntemplatesignatureY).Append("\n");
@@ -281,6 +328,10 @@ namespace eZmaxApi.Model
             sb.Append("  SEzsigntemplatesignatureRegexp: ").Append(SEzsigntemplatesignatureRegexp).Append("\n");
             sb.Append("  EEzsigntemplatesignatureTextvalidation: ").Append(EEzsigntemplatesignatureTextvalidation).Append("\n");
             sb.Append("  EEzsigntemplatesignatureDependencyrequirement: ").Append(EEzsigntemplatesignatureDependencyrequirement).Append("\n");
+            sb.Append("  SEzsigntemplatesignaturePositioningpattern: ").Append(SEzsigntemplatesignaturePositioningpattern).Append("\n");
+            sb.Append("  IEzsigntemplatesignaturePositioningoffsetx: ").Append(IEzsigntemplatesignaturePositioningoffsetx).Append("\n");
+            sb.Append("  IEzsigntemplatesignaturePositioningoffsety: ").Append(IEzsigntemplatesignaturePositioningoffsety).Append("\n");
+            sb.Append("  EEzsigntemplatesignaturePositioningoccurence: ").Append(EEzsigntemplatesignaturePositioningoccurence).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -379,6 +430,15 @@ namespace eZmaxApi.Model
                 if (!regexSEzsigntemplatesignatureRegexp.Match(this.SEzsigntemplatesignatureRegexp).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatesignatureRegexp, must match a pattern of " + regexSEzsigntemplatesignatureRegexp, new [] { "SEzsigntemplatesignatureRegexp" });
+                }
+            }
+
+            if (this.SEzsigntemplatesignaturePositioningpattern != null) {
+                // SEzsigntemplatesignaturePositioningpattern (string) pattern
+                Regex regexSEzsigntemplatesignaturePositioningpattern = new Regex(@"^.{0,30}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsigntemplatesignaturePositioningpattern.Match(this.SEzsigntemplatesignaturePositioningpattern).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatesignaturePositioningpattern, must match a pattern of " + regexSEzsigntemplatesignaturePositioningpattern, new [] { "SEzsigntemplatesignaturePositioningpattern" });
                 }
             }
 

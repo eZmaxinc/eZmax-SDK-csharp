@@ -82,6 +82,19 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsigndocumentCreateEzsignelementsPositionedByWordV1
+        /// </summary>
+        [Fact]
+        public void EzsigndocumentCreateEzsignelementsPositionedByWordV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //EzsigndocumentCreateEzsignelementsPositionedByWordV1Request ezsigndocumentCreateEzsignelementsPositionedByWordV1Request = null;
+            //var response = instance.EzsigndocumentCreateEzsignelementsPositionedByWordV1(pkiEzsigndocumentID, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request);
+            //Assert.IsType<EzsigndocumentCreateEzsignelementsPositionedByWordV1Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsigndocumentCreateObjectV1
         /// </summary>
         [Fact]
@@ -241,6 +254,18 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigndocumentID = null;
             //var response = instance.EzsigndocumentGetEzsignannotationsV1(pkiEzsigndocumentID);
             //Assert.IsType<EzsigndocumentGetEzsignannotationsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test EzsigndocumentGetEzsigndiscussionsV1
+        /// </summary>
+        [Fact]
+        public void EzsigndocumentGetEzsigndiscussionsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //var response = instance.EzsigndocumentGetEzsigndiscussionsV1(pkiEzsigndocumentID);
+            //Assert.IsType<EzsigndocumentGetEzsigndiscussionsV1Response>(response);
         }
 
         /// <summary>

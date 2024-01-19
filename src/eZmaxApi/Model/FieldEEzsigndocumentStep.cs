@@ -64,16 +64,22 @@ namespace eZmaxApi.Model
         PrematurelyEnded = 5,
 
         /// <summary>
+        /// Enum PendingCompletion for value: PendingCompletion
+        /// </summary>
+        [EnumMember(Value = "PendingCompletion")]
+        PendingCompletion = 6,
+
+        /// <summary>
         /// Enum Completed for value: Completed
         /// </summary>
         [EnumMember(Value = "Completed")]
-        Completed = 6,
+        Completed = 7,
 
         /// <summary>
         /// Enum Disposed for value: Disposed
         /// </summary>
         [EnumMember(Value = "Disposed")]
-        Disposed = 7
+        Disposed = 8
     }
 
 }

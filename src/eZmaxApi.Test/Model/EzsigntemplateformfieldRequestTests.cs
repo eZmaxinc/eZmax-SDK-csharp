@@ -65,6 +65,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EEzsigntemplateformfieldPositioning'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplateformfieldPositioningTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplateformfieldPositioning'
+        }
+
+        /// <summary>
         /// Test the property 'IEzsigntemplatedocumentpagePagenumber'
         /// </summary>
         [Fact]
@@ -152,6 +161,42 @@ namespace eZmaxApi.Test.Model
         public void EEzsigntemplateformfieldDependencyrequirementTest()
         {
             // TODO unit test for the property 'EEzsigntemplateformfieldDependencyrequirement'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplateformfieldPositioningpattern'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplateformfieldPositioningpatternTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplateformfieldPositioningpattern'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplateformfieldPositioningoffsetx'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplateformfieldPositioningoffsetxTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplateformfieldPositioningoffsetx'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplateformfieldPositioningoffsety'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplateformfieldPositioningoffsetyTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplateformfieldPositioningoffsety'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplateformfieldPositioningoccurence'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplateformfieldPositioningoccurenceTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplateformfieldPositioningoccurence'
         }
     }
 }

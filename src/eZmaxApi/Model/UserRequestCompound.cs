@@ -79,13 +79,14 @@ namespace eZmaxApi.Model
         /// <param name="sUserFirstname">The first name of the user (required).</param>
         /// <param name="sUserLastname">The last name of the user (required).</param>
         /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="sUserJobtitle">The job title of the user.</param>
         /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
         /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
         /// <param name="bUserValidatebyadministration">Whether if the transactions in which the User is implicated must be validated by administrative personnel or not.</param>
         /// <param name="bUserValidatebydirector">Whether if the transactions in which the User is implicated must be validated by a director or not.</param>
         /// <param name="bUserAttachmentautoverified">Whether if Attachments uploaded by the User must be validated or not.</param>
         /// <param name="bUserChangepassword">Whether if the User is forced to change its password.</param>
-        public UserRequestCompound(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), int fkiDepartmentIDDefault = default(int), int fkiTimezoneID = default(int), int fkiLanguageID = default(int), EmailRequestCompound objEmail = default(EmailRequestCompound), int fkiBillingentityinternalID = default(int), PhoneRequestCompound objPhoneHome = default(PhoneRequestCompound), PhoneRequestCompound objPhoneSMS = default(PhoneRequestCompound), int fkiSecretquestionID = default(int), string sUserSecretresponse = default(string), int fkiModuleIDForm = default(int), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool))
+        public UserRequestCompound(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), int fkiDepartmentIDDefault = default(int), int fkiTimezoneID = default(int), int fkiLanguageID = default(int), EmailRequestCompound objEmail = default(EmailRequestCompound), int fkiBillingentityinternalID = default(int), PhoneRequestCompound objPhoneHome = default(PhoneRequestCompound), PhoneRequestCompound objPhoneSMS = default(PhoneRequestCompound), int fkiSecretquestionID = default(int), string sUserSecretresponse = default(string), int fkiModuleIDForm = default(int), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sUserJobtitle = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool))
         {
             this.FkiCompanyIDDefault = fkiCompanyIDDefault;
             this.FkiDepartmentIDDefault = fkiDepartmentIDDefault;
@@ -130,6 +131,7 @@ namespace eZmaxApi.Model
             this.FkiSecretquestionID = fkiSecretquestionID;
             this.SUserSecretresponse = sUserSecretresponse;
             this.FkiModuleIDForm = fkiModuleIDForm;
+            this.SUserJobtitle = sUserJobtitle;
             this.BUserValidatebyadministration = bUserValidatebyadministration;
             this.BUserValidatebydirector = bUserValidatebydirector;
             this.BUserAttachmentautoverified = bUserAttachmentautoverified;
@@ -283,6 +285,14 @@ namespace eZmaxApi.Model
         public string SUserLoginname { get; set; }
 
         /// <summary>
+        /// The job title of the user
+        /// </summary>
+        /// <value>The job title of the user</value>
+        /* <example>Sales Representative</example>*/
+        [DataMember(Name = "sUserJobtitle", EmitDefaultValue = false)]
+        public string SUserJobtitle { get; set; }
+
+        /// <summary>
         /// Whether the User is active or not
         /// </summary>
         /// <value>Whether the User is active or not</value>
@@ -351,6 +361,7 @@ namespace eZmaxApi.Model
             sb.Append("  SUserFirstname: ").Append(SUserFirstname).Append("\n");
             sb.Append("  SUserLastname: ").Append(SUserLastname).Append("\n");
             sb.Append("  SUserLoginname: ").Append(SUserLoginname).Append("\n");
+            sb.Append("  SUserJobtitle: ").Append(SUserJobtitle).Append("\n");
             sb.Append("  EUserEzsignaccess: ").Append(EUserEzsignaccess).Append("\n");
             sb.Append("  BUserIsactive: ").Append(BUserIsactive).Append("\n");
             sb.Append("  BUserValidatebyadministration: ").Append(BUserValidatebyadministration).Append("\n");
@@ -467,6 +478,15 @@ namespace eZmaxApi.Model
                 if (!regexSUserLoginname.Match(this.SUserLoginname).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
+                }
+            }
+
+            if (this.SUserJobtitle != null) {
+                // SUserJobtitle (string) pattern
+                Regex regexSUserJobtitle = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSUserJobtitle.Match(this.SUserJobtitle).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserJobtitle, must match a pattern of " + regexSUserJobtitle, new [] { "SUserJobtitle" });
                 }
             }
 

@@ -41,20 +41,24 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigntemplatesignaturecustomdateResponseCompound" /> class.
         /// </summary>
         /// <param name="pkiEzsigntemplatesignaturecustomdateID">The unique ID of the Ezsigntemplatesignaturecustomdate (required).</param>
-        /// <param name="iEzsigntemplatesignaturecustomdateX">The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="iEzsigntemplatesignaturecustomdateY">The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="iEzsigntemplatesignaturecustomdateX">The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate..</param>
+        /// <param name="iEzsigntemplatesignaturecustomdateY">The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate..</param>
+        /// <param name="iEzsigntemplatesignaturecustomdateOffsetx">The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use \&quot;200\&quot; for the X coordinate..</param>
+        /// <param name="iEzsigntemplatesignaturecustomdateOffsety">The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use \&quot;200\&quot; for the Y coordinate..</param>
         /// <param name="sEzsigntemplatesignaturecustomdateFormat">The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST |  (required).</param>
-        public EzsigntemplatesignaturecustomdateResponseCompound(int pkiEzsigntemplatesignaturecustomdateID = default(int), int iEzsigntemplatesignaturecustomdateX = default(int), int iEzsigntemplatesignaturecustomdateY = default(int), string sEzsigntemplatesignaturecustomdateFormat = default(string))
+        public EzsigntemplatesignaturecustomdateResponseCompound(int pkiEzsigntemplatesignaturecustomdateID = default(int), int iEzsigntemplatesignaturecustomdateX = default(int), int iEzsigntemplatesignaturecustomdateY = default(int), int iEzsigntemplatesignaturecustomdateOffsetx = default(int), int iEzsigntemplatesignaturecustomdateOffsety = default(int), string sEzsigntemplatesignaturecustomdateFormat = default(string))
         {
             this.PkiEzsigntemplatesignaturecustomdateID = pkiEzsigntemplatesignaturecustomdateID;
-            this.IEzsigntemplatesignaturecustomdateX = iEzsigntemplatesignaturecustomdateX;
-            this.IEzsigntemplatesignaturecustomdateY = iEzsigntemplatesignaturecustomdateY;
             // to ensure "sEzsigntemplatesignaturecustomdateFormat" is required (not null)
             if (sEzsigntemplatesignaturecustomdateFormat == null)
             {
                 throw new ArgumentNullException("sEzsigntemplatesignaturecustomdateFormat is a required property for EzsigntemplatesignaturecustomdateResponseCompound and cannot be null");
             }
             this.SEzsigntemplatesignaturecustomdateFormat = sEzsigntemplatesignaturecustomdateFormat;
+            this.IEzsigntemplatesignaturecustomdateX = iEzsigntemplatesignaturecustomdateX;
+            this.IEzsigntemplatesignaturecustomdateY = iEzsigntemplatesignaturecustomdateY;
+            this.IEzsigntemplatesignaturecustomdateOffsetx = iEzsigntemplatesignaturecustomdateOffsetx;
+            this.IEzsigntemplatesignaturecustomdateOffsety = iEzsigntemplatesignaturecustomdateOffsety;
         }
 
         /// <summary>
@@ -70,7 +74,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.</value>
         /* <example>200</example>*/
-        [DataMember(Name = "iEzsigntemplatesignaturecustomdateX", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "iEzsigntemplatesignaturecustomdateX", EmitDefaultValue = false)]
+        [Obsolete]
         public int IEzsigntemplatesignaturecustomdateX { get; set; }
 
         /// <summary>
@@ -78,8 +83,25 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
         /* <example>300</example>*/
-        [DataMember(Name = "iEzsigntemplatesignaturecustomdateY", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "iEzsigntemplatesignaturecustomdateY", EmitDefaultValue = false)]
+        [Obsolete]
         public int IEzsigntemplatesignaturecustomdateY { get; set; }
+
+        /// <summary>
+        /// The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use \&quot;200\&quot; for the X coordinate.
+        /// </summary>
+        /// <value>The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use \&quot;200\&quot; for the X coordinate.</value>
+        /* <example>200</example>*/
+        [DataMember(Name = "iEzsigntemplatesignaturecustomdateOffsetx", EmitDefaultValue = false)]
+        public int IEzsigntemplatesignaturecustomdateOffsetx { get; set; }
+
+        /// <summary>
+        /// The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use \&quot;200\&quot; for the Y coordinate.
+        /// </summary>
+        /// <value>The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use \&quot;200\&quot; for the Y coordinate.</value>
+        /* <example>200</example>*/
+        [DataMember(Name = "iEzsigntemplatesignaturecustomdateOffsety", EmitDefaultValue = false)]
+        public int IEzsigntemplatesignaturecustomdateOffsety { get; set; }
 
         /// <summary>
         /// The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | 
@@ -100,6 +122,8 @@ namespace eZmaxApi.Model
             sb.Append("  PkiEzsigntemplatesignaturecustomdateID: ").Append(PkiEzsigntemplatesignaturecustomdateID).Append("\n");
             sb.Append("  IEzsigntemplatesignaturecustomdateX: ").Append(IEzsigntemplatesignaturecustomdateX).Append("\n");
             sb.Append("  IEzsigntemplatesignaturecustomdateY: ").Append(IEzsigntemplatesignaturecustomdateY).Append("\n");
+            sb.Append("  IEzsigntemplatesignaturecustomdateOffsetx: ").Append(IEzsigntemplatesignaturecustomdateOffsetx).Append("\n");
+            sb.Append("  IEzsigntemplatesignaturecustomdateOffsety: ").Append(IEzsigntemplatesignaturecustomdateOffsety).Append("\n");
             sb.Append("  SEzsigntemplatesignaturecustomdateFormat: ").Append(SEzsigntemplatesignaturecustomdateFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -137,6 +161,18 @@ namespace eZmaxApi.Model
             if (this.IEzsigntemplatesignaturecustomdateY < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateY" });
+            }
+
+            // IEzsigntemplatesignaturecustomdateOffsetx (int) minimum
+            if (this.IEzsigntemplatesignaturecustomdateOffsetx < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateOffsetx, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateOffsetx" });
+            }
+
+            // IEzsigntemplatesignaturecustomdateOffsety (int) minimum
+            if (this.IEzsigntemplatesignaturecustomdateOffsety < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateOffsety, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateOffsety" });
             }
 
             yield break;

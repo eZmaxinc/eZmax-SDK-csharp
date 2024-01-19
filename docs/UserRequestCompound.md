@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **SUserFirstname** | **string** | The first name of the user | 
 **SUserLastname** | **string** | The last name of the user | 
 **SUserLoginname** | **string** | The login name of the User. | 
+**SUserJobtitle** | **string** | The job title of the user | [optional] 
 **EUserEzsignaccess** | **FieldEUserEzsignaccess** |  | 
 **BUserIsactive** | **bool** | Whether the User is active or not | 
 **BUserValidatebyadministration** | **bool** | Whether if the transactions in which the User is implicated must be validated by administrative personnel or not | [optional] 

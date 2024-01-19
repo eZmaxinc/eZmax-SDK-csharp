@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **PkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
 **FkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | [optional] 
 **ObjEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  | [optional] 
+**EEzsignfolderCompletion** | **FieldEEzsignfolderCompletion** |  | [optional] 
 **SEzsignfoldertypeNameX** | **string** |  | [optional] 
 **FkiBillingentityinternalID** | **int** | The unique ID of the Billingentityinternal. | [optional] 
 **SBillingentityinternalDescriptionX** | **string** | The description of the Billingentityinternal in the language of the requester | [optional] 

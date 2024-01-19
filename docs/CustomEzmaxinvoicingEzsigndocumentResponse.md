@@ -6,6 +6,7 @@ An EzmaxinvoicingEzsigndocument object containing information about the Ezmaxinv
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **FkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
+**FkiBillingentityinternalID** | **int** | The unique ID of the Billingentityinternal. | [optional] 
 **SName** | **string** |  | 
 **SEzsignfolderDescription** | **string** | The description of the Ezsignfolder | 
 **SEzsigndocumentName** | **string** | The name of the document that will be presented to Ezsignfoldersignerassociations | 

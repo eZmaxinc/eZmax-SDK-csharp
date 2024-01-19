@@ -41,12 +41,13 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CustomEzmaxinvoicingEzsignfolderResponse" /> class.
         /// </summary>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="bEzsigntsarequirementBillable">Whether the TSA requirement is billable or not (required).</param>
         /// <param name="bEzsignfolderMfaused">Whether the MFA was used or not for the Ezsignfolder (required).</param>
         /// <param name="bEzsignfolderPaymentused">Whether there was a signature is of type payment (required).</param>
         /// <param name="bEzsignfolderAllowed">Whether you have access to the Ezsignfolder or not (required).</param>
-        public CustomEzmaxinvoicingEzsignfolderResponse(int fkiEzsignfolderID = default(int), string sEzsignfolderDescription = default(string), bool bEzsigntsarequirementBillable = default(bool), bool bEzsignfolderMfaused = default(bool), bool bEzsignfolderPaymentused = default(bool), bool bEzsignfolderAllowed = default(bool))
+        public CustomEzmaxinvoicingEzsignfolderResponse(int fkiEzsignfolderID = default(int), int fkiBillingentityinternalID = default(int), string sEzsignfolderDescription = default(string), bool bEzsigntsarequirementBillable = default(bool), bool bEzsignfolderMfaused = default(bool), bool bEzsignfolderPaymentused = default(bool), bool bEzsignfolderAllowed = default(bool))
         {
             this.FkiEzsignfolderID = fkiEzsignfolderID;
             // to ensure "sEzsignfolderDescription" is required (not null)
@@ -59,6 +60,7 @@ namespace eZmaxApi.Model
             this.BEzsignfolderMfaused = bEzsignfolderMfaused;
             this.BEzsignfolderPaymentused = bEzsignfolderPaymentused;
             this.BEzsignfolderAllowed = bEzsignfolderAllowed;
+            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
         }
 
         /// <summary>
@@ -68,6 +70,14 @@ namespace eZmaxApi.Model
         /* <example>33</example>*/
         [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfolderID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Billingentityinternal.
+        /// </summary>
+        /// <value>The unique ID of the Billingentityinternal.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiBillingentityinternalID", EmitDefaultValue = false)]
+        public int FkiBillingentityinternalID { get; set; }
 
         /// <summary>
         /// The description of the Ezsignfolder
@@ -117,6 +127,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class CustomEzmaxinvoicingEzsignfolderResponse {\n");
             sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
+            sb.Append("  FkiBillingentityinternalID: ").Append(FkiBillingentityinternalID).Append("\n");
             sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
             sb.Append("  BEzsigntsarequirementBillable: ").Append(BEzsigntsarequirementBillable).Append("\n");
             sb.Append("  BEzsignfolderMfaused: ").Append(BEzsignfolderMfaused).Append("\n");
@@ -146,6 +157,12 @@ namespace eZmaxApi.Model
             if (this.FkiEzsignfolderID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+            }
+
+            // FkiBillingentityinternalID (int) minimum
+            if (this.FkiBillingentityinternalID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
             }
 
             yield break;
