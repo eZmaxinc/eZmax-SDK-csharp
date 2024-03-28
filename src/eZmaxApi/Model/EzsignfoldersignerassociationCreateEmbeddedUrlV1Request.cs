@@ -37,12 +37,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="sReturnUrl">The return Url to redirect after the signing is completed.</param>
         /// <param name="sIframedomain">Domain protection for the iFrame.</param>
-        /// <param name="bIsiframe">Whether the url would be in an iFrame or not.</param>
-        public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request(string sReturnUrl = default(string), string sIframedomain = default(string), bool bIsiframe = default(bool))
+        /// <param name="bIsIframe">Whether the url would be in an iFrame or not.</param>
+        public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request(string sReturnUrl = default(string), string sIframedomain = default(string), bool bIsIframe = default(bool))
         {
             this.SReturnUrl = sReturnUrl;
             this.SIframedomain = sIframedomain;
-            this.BIsiframe = bIsiframe;
+            this.BIsIframe = bIsIframe;
         }
 
         /// <summary>
@@ -65,8 +65,8 @@ namespace eZmaxApi.Model
         /// Whether the url would be in an iFrame or not
         /// </summary>
         /// <value>Whether the url would be in an iFrame or not</value>
-        [DataMember(Name = "bIsiframe", EmitDefaultValue = true)]
-        public bool BIsiframe { get; set; }
+        [DataMember(Name = "bIsIframe", EmitDefaultValue = true)]
+        public bool BIsIframe { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -78,7 +78,7 @@ namespace eZmaxApi.Model
             sb.Append("class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {\n");
             sb.Append("  SReturnUrl: ").Append(SReturnUrl).Append("\n");
             sb.Append("  SIframedomain: ").Append(SIframedomain).Append("\n");
-            sb.Append("  BIsiframe: ").Append(BIsiframe).Append("\n");
+            sb.Append("  BIsIframe: ").Append(BIsIframe).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

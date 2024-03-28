@@ -74,12 +74,12 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'BIsiframe'
+        /// Test the property 'BIsIframe'
         /// </summary>
         [Fact]
-        public void BIsiframeTest()
+        public void BIsIframeTest()
         {
-            // TODO unit test for the property 'BIsiframe'
+            // TODO unit test for the property 'BIsIframe'
         }
     }
 }
