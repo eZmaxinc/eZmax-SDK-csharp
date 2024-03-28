@@ -82,6 +82,19 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsigndocumentApplyEzsigntemplateglobalV1
+        /// </summary>
+        [Fact]
+        public void EzsigndocumentApplyEzsigntemplateglobalV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request = null;
+            //var response = instance.EzsigndocumentApplyEzsigntemplateglobalV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV1Request);
+            //Assert.IsType<EzsigndocumentApplyEzsigntemplateglobalV1Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsigndocumentCreateEzsignelementsPositionedByWordV1
         /// </summary>
         [Fact]

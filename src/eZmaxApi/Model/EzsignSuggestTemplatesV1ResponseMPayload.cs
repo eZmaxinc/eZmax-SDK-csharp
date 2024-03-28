@@ -42,7 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="aObjEzsigntemplate">aObjEzsigntemplate (required).</param>
         /// <param name="aObjEzsigntemplatepackage">aObjEzsigntemplatepackage (required).</param>
-        public EzsignSuggestTemplatesV1ResponseMPayload(List<EzsigntemplateResponseCompound> aObjEzsigntemplate = default(List<EzsigntemplateResponseCompound>), List<EzsigntemplatepackageResponseCompound> aObjEzsigntemplatepackage = default(List<EzsigntemplatepackageResponseCompound>))
+        /// <param name="aObjEzsigntemplateglobal">aObjEzsigntemplateglobal (required).</param>
+        public EzsignSuggestTemplatesV1ResponseMPayload(List<EzsigntemplateResponseCompound> aObjEzsigntemplate = default(List<EzsigntemplateResponseCompound>), List<EzsigntemplatepackageResponseCompound> aObjEzsigntemplatepackage = default(List<EzsigntemplatepackageResponseCompound>), List<EzsigntemplateglobalResponseCompound> aObjEzsigntemplateglobal = default(List<EzsigntemplateglobalResponseCompound>))
         {
             // to ensure "aObjEzsigntemplate" is required (not null)
             if (aObjEzsigntemplate == null)
@@ -56,6 +57,12 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("aObjEzsigntemplatepackage is a required property for EzsignSuggestTemplatesV1ResponseMPayload and cannot be null");
             }
             this.AObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
+            // to ensure "aObjEzsigntemplateglobal" is required (not null)
+            if (aObjEzsigntemplateglobal == null)
+            {
+                throw new ArgumentNullException("aObjEzsigntemplateglobal is a required property for EzsignSuggestTemplatesV1ResponseMPayload and cannot be null");
+            }
+            this.AObjEzsigntemplateglobal = aObjEzsigntemplateglobal;
         }
 
         /// <summary>
@@ -71,6 +78,12 @@ namespace eZmaxApi.Model
         public List<EzsigntemplatepackageResponseCompound> AObjEzsigntemplatepackage { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjEzsigntemplateglobal
+        /// </summary>
+        [DataMember(Name = "a_objEzsigntemplateglobal", IsRequired = true, EmitDefaultValue = true)]
+        public List<EzsigntemplateglobalResponseCompound> AObjEzsigntemplateglobal { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -80,6 +93,7 @@ namespace eZmaxApi.Model
             sb.Append("class EzsignSuggestTemplatesV1ResponseMPayload {\n");
             sb.Append("  AObjEzsigntemplate: ").Append(AObjEzsigntemplate).Append("\n");
             sb.Append("  AObjEzsigntemplatepackage: ").Append(AObjEzsigntemplatepackage).Append("\n");
+            sb.Append("  AObjEzsigntemplateglobal: ").Append(AObjEzsigntemplateglobal).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

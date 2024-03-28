@@ -68,7 +68,8 @@ namespace eZmaxApi.Model
         /// <param name="objAudit">objAudit.</param>
         /// <param name="sEzsigndocumentExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
         /// <param name="iEzsigndocumentEzsignsignatureattachmenttotal">The number of Ezsigndocumentattachment total (required).</param>
-        public EzsigndocumentResponse(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), bool bEzsigndocumentHassignedsignatures = default(bool), CommonAudit objAudit = default(CommonAudit), string sEzsigndocumentExternalid = default(string), int iEzsigndocumentEzsignsignatureattachmenttotal = default(int))
+        /// <param name="iEzsigndocumentEzsigndiscussiontotal">The total number of Ezsigndiscussions (required).</param>
+        public EzsigndocumentResponse(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), bool bEzsigndocumentHassignedsignatures = default(bool), CommonAudit objAudit = default(CommonAudit), string sEzsigndocumentExternalid = default(string), int iEzsigndocumentEzsignsignatureattachmenttotal = default(int), int iEzsigndocumentEzsigndiscussiontotal = default(int))
         {
             this.PkiEzsigndocumentID = pkiEzsigndocumentID;
             this.FkiEzsignfolderID = fkiEzsignfolderID;
@@ -90,6 +91,7 @@ namespace eZmaxApi.Model
             this.IEzsigndocumentSignaturesigned = iEzsigndocumentSignaturesigned;
             this.IEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
             this.IEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
+            this.IEzsigndocumentEzsigndiscussiontotal = iEzsigndocumentEzsigndiscussiontotal;
             this.FkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
             this.DtEzsignformCompleted = dtEzsignformCompleted;
             this.FkiLanguageID = fkiLanguageID;
@@ -271,6 +273,14 @@ namespace eZmaxApi.Model
         public int IEzsigndocumentEzsignsignatureattachmenttotal { get; set; }
 
         /// <summary>
+        /// The total number of Ezsigndiscussions
+        /// </summary>
+        /// <value>The total number of Ezsigndiscussions</value>
+        /* <example>14</example>*/
+        [DataMember(Name = "iEzsigndocumentEzsigndiscussiontotal", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzsigndocumentEzsigndiscussiontotal { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -300,6 +310,7 @@ namespace eZmaxApi.Model
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  SEzsigndocumentExternalid: ").Append(SEzsigndocumentExternalid).Append("\n");
             sb.Append("  IEzsigndocumentEzsignsignatureattachmenttotal: ").Append(IEzsigndocumentEzsignsignatureattachmenttotal).Append("\n");
+            sb.Append("  IEzsigndocumentEzsigndiscussiontotal: ").Append(IEzsigndocumentEzsigndiscussiontotal).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

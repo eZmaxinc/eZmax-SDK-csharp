@@ -56,21 +56,6 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test FranchisebrokerGetAutocompleteV1
-        /// </summary>
-        [Fact]
-        public void FranchisebrokerGetAutocompleteV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string sSelector = null;
-            //string? eFilterActive = null;
-            //string? sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.FranchisebrokerGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-            //Assert.IsType<CommonGetAutocompleteV1Response>(response);
-        }
-
-        /// <summary>
         /// Test FranchisebrokerGetAutocompleteV2
         /// </summary>
         [Fact]

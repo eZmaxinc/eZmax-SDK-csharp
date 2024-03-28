@@ -42,7 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiUsergroupID">The unique ID of the Usergroup (required).</param>
         /// <param name="objUsergroupName">objUsergroupName (required).</param>
-        public UsergroupResponse(int pkiUsergroupID = default(int), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName))
+        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester.</param>
+        public UsergroupResponse(int pkiUsergroupID = default(int), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName), string sUsergroupNameX = default(string))
         {
             this.PkiUsergroupID = pkiUsergroupID;
             // to ensure "objUsergroupName" is required (not null)
@@ -51,6 +52,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("objUsergroupName is a required property for UsergroupResponse and cannot be null");
             }
             this.ObjUsergroupName = objUsergroupName;
+            this.SUsergroupNameX = sUsergroupNameX;
         }
 
         /// <summary>
@@ -68,6 +70,14 @@ namespace eZmaxApi.Model
         public MultilingualUsergroupName ObjUsergroupName { get; set; }
 
         /// <summary>
+        /// The Name of the Usergroup in the language of the requester
+        /// </summary>
+        /// <value>The Name of the Usergroup in the language of the requester</value>
+        /* <example>Administration</example>*/
+        [DataMember(Name = "sUsergroupNameX", EmitDefaultValue = false)]
+        public string SUsergroupNameX { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -77,6 +87,7 @@ namespace eZmaxApi.Model
             sb.Append("class UsergroupResponse {\n");
             sb.Append("  PkiUsergroupID: ").Append(PkiUsergroupID).Append("\n");
             sb.Append("  ObjUsergroupName: ").Append(ObjUsergroupName).Append("\n");
+            sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,6 +118,15 @@ namespace eZmaxApi.Model
             if (this.PkiUsergroupID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
+            }
+
+            if (this.SUsergroupNameX != null) {
+                // SUsergroupNameX (string) pattern
+                Regex regexSUsergroupNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSUsergroupNameX.Match(this.SUsergroupNameX).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameX, must match a pattern of " + regexSUsergroupNameX, new [] { "SUsergroupNameX" });
+                }
             }
 
             yield break;

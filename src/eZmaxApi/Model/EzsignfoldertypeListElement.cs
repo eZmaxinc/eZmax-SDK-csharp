@@ -119,6 +119,12 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // PkiEzsignfoldertypeID (int) maximum
+            if (this.PkiEzsignfoldertypeID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "PkiEzsignfoldertypeID" });
+            }
+
             // PkiEzsignfoldertypeID (int) minimum
             if (this.PkiEzsignfoldertypeID < (int)0)
             {

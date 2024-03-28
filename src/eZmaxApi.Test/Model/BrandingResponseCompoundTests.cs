@@ -119,6 +119,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EBrandingLogointerface'
+        /// </summary>
+        [Fact]
+        public void EBrandingLogointerfaceTest()
+        {
+            // TODO unit test for the property 'EBrandingLogointerface'
+        }
+
+        /// <summary>
         /// Test the property 'IBrandingColortext'
         /// </summary>
         [Fact]
@@ -173,6 +182,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IBrandingInterfacecolor'
+        /// </summary>
+        [Fact]
+        public void IBrandingInterfacecolorTest()
+        {
+            // TODO unit test for the property 'IBrandingInterfacecolor'
+        }
+
+        /// <summary>
         /// Test the property 'BBrandingIsactive'
         /// </summary>
         [Fact]
@@ -188,6 +206,15 @@ namespace eZmaxApi.Test.Model
         public void SBrandingLogourlTest()
         {
             // TODO unit test for the property 'SBrandingLogourl'
+        }
+
+        /// <summary>
+        /// Test the property 'SBrandingLogointerfaceurl'
+        /// </summary>
+        [Fact]
+        public void SBrandingLogointerfaceurlTest()
+        {
+            // TODO unit test for the property 'SBrandingLogointerfaceurl'
         }
     }
 }

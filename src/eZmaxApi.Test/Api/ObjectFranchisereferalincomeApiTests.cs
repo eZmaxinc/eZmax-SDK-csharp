@@ -56,18 +56,6 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test FranchisereferalincomeCreateObjectV1
-        /// </summary>
-        [Fact]
-        public void FranchisereferalincomeCreateObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request = null;
-            //var response = instance.FranchisereferalincomeCreateObjectV1(franchisereferalincomeCreateObjectV1Request);
-            //Assert.IsType<FranchisereferalincomeCreateObjectV1Response>(response);
-        }
-
-        /// <summary>
         /// Test FranchisereferalincomeCreateObjectV2
         /// </summary>
         [Fact]

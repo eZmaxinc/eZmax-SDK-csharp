@@ -44,8 +44,9 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
+        /// <param name="sEzsigntemplateFilenamepattern">The filename pattern of the Ezsigntemplate.</param>
         /// <param name="bEzsigntemplateAdminonly">Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
-        public EzsigntemplateRequestCompound(int pkiEzsigntemplateID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsigntemplateDescription = default(string), bool bEzsigntemplateAdminonly = default(bool))
+        public EzsigntemplateRequestCompound(int pkiEzsigntemplateID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsigntemplateDescription = default(string), string sEzsigntemplateFilenamepattern = default(string), bool bEzsigntemplateAdminonly = default(bool))
         {
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.FkiLanguageID = fkiLanguageID;
@@ -57,6 +58,7 @@ namespace eZmaxApi.Model
             this.SEzsigntemplateDescription = sEzsigntemplateDescription;
             this.BEzsigntemplateAdminonly = bEzsigntemplateAdminonly;
             this.PkiEzsigntemplateID = pkiEzsigntemplateID;
+            this.SEzsigntemplateFilenamepattern = sEzsigntemplateFilenamepattern;
         }
 
         /// <summary>
@@ -92,6 +94,14 @@ namespace eZmaxApi.Model
         public string SEzsigntemplateDescription { get; set; }
 
         /// <summary>
+        /// The filename pattern of the Ezsigntemplate
+        /// </summary>
+        /// <value>The filename pattern of the Ezsigntemplate</value>
+        /* <example>Contract</example>*/
+        [DataMember(Name = "sEzsigntemplateFilenamepattern", EmitDefaultValue = false)]
+        public string SEzsigntemplateFilenamepattern { get; set; }
+
+        /// <summary>
         /// Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal)
         /// </summary>
         /// <value>Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal)</value>
@@ -110,6 +120,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  SEzsigntemplateDescription: ").Append(SEzsigntemplateDescription).Append("\n");
+            sb.Append("  SEzsigntemplateFilenamepattern: ").Append(SEzsigntemplateFilenamepattern).Append("\n");
             sb.Append("  BEzsigntemplateAdminonly: ").Append(BEzsigntemplateAdminonly).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -137,6 +148,12 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateID" });
             }
 
+            // FkiEzsignfoldertypeID (int) maximum
+            if (this.FkiEzsignfoldertypeID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
@@ -153,6 +170,15 @@ namespace eZmaxApi.Model
             if (this.FkiLanguageID < (int)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+            if (this.SEzsigntemplateFilenamepattern != null) {
+                // SEzsigntemplateFilenamepattern (string) pattern
+                Regex regexSEzsigntemplateFilenamepattern = new Regex(@"^.{1,50}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsigntemplateFilenamepattern.Match(this.SEzsigntemplateFilenamepattern).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateFilenamepattern, must match a pattern of " + regexSEzsigntemplateFilenamepattern, new [] { "SEzsigntemplateFilenamepattern" });
+                }
             }
 
             yield break;

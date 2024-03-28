@@ -52,6 +52,12 @@ namespace eZmaxApi.Model
         public FieldEActivesessionWeekdaystart EActivesessionWeekdaystart { get; set; }
 
         /// <summary>
+        /// Gets or Sets ESystemconfigurationEzsignofficeplan
+        /// </summary>
+        [DataMember(Name = "eSystemconfigurationEzsignofficeplan", EmitDefaultValue = false)]
+        public FieldESystemconfigurationEzsignofficeplan? ESystemconfigurationEzsignofficeplan { get; set; }
+
+        /// <summary>
         /// Gets or Sets EUserEzsignaccess
         /// </summary>
         [DataMember(Name = "eUserEzsignaccess", IsRequired = true, EmitDefaultValue = true)]
@@ -81,6 +87,8 @@ namespace eZmaxApi.Model
         /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
         /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
         /// <param name="fkiSignatureID">The unique ID of the Signature.</param>
+        /// <param name="bSystemconfigurationEzsignpaidbyoffice">Whether if Ezsign is paid by the company or not.</param>
+        /// <param name="eSystemconfigurationEzsignofficeplan">eSystemconfigurationEzsignofficeplan.</param>
         /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
         /// <param name="eUserEzsignprepaid">eUserEzsignprepaid.</param>
         /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
@@ -89,7 +97,7 @@ namespace eZmaxApi.Model
         /// <param name="objUserCloned">objUserCloned.</param>
         /// <param name="objApikey">objApikey.</param>
         /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
-        public ActivesessionGetCurrentV1ResponseMPayload(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin eActivesessionOrigin = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), bool bActivesessionIssuperadmin = default(bool), string pksCustomerCode = default(string), int fkiSystemconfigurationtypeID = default(int), int fkiSignatureID = default(int), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), FieldEUserEzsignprepaid? eUserEzsignprepaid = default(FieldEUserEzsignprepaid?), string dtUserEzsignprepaidexpiration = default(string), List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>))
+        public ActivesessionGetCurrentV1ResponseMPayload(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin eActivesessionOrigin = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), bool bActivesessionIssuperadmin = default(bool), string pksCustomerCode = default(string), int fkiSystemconfigurationtypeID = default(int), int fkiSignatureID = default(int), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), FieldEUserEzsignprepaid? eUserEzsignprepaid = default(FieldEUserEzsignprepaid?), string dtUserEzsignprepaidexpiration = default(string), List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>))
         {
             this.EActivesessionUsertype = eActivesessionUsertype;
             this.EActivesessionOrigin = eActivesessionOrigin;
@@ -136,6 +144,8 @@ namespace eZmaxApi.Model
             }
             this.AEModuleInternalname = aEModuleInternalname;
             this.FkiSignatureID = fkiSignatureID;
+            this.BSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
+            this.ESystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
             this.EUserEzsignprepaid = eUserEzsignprepaid;
             this.DtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
             this.ObjUserCloned = objUserCloned;
@@ -207,6 +217,14 @@ namespace eZmaxApi.Model
         public int FkiSignatureID { get; set; }
 
         /// <summary>
+        /// Whether if Ezsign is paid by the company or not
+        /// </summary>
+        /// <value>Whether if Ezsign is paid by the company or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bSystemconfigurationEzsignpaidbyoffice", EmitDefaultValue = true)]
+        public bool BSystemconfigurationEzsignpaidbyoffice { get; set; }
+
+        /// <summary>
         /// The eZsign prepaid expiration date
         /// </summary>
         /// <value>The eZsign prepaid expiration date</value>
@@ -265,6 +283,8 @@ namespace eZmaxApi.Model
             sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
             sb.Append("  FkiSystemconfigurationtypeID: ").Append(FkiSystemconfigurationtypeID).Append("\n");
             sb.Append("  FkiSignatureID: ").Append(FkiSignatureID).Append("\n");
+            sb.Append("  BSystemconfigurationEzsignpaidbyoffice: ").Append(BSystemconfigurationEzsignpaidbyoffice).Append("\n");
+            sb.Append("  ESystemconfigurationEzsignofficeplan: ").Append(ESystemconfigurationEzsignofficeplan).Append("\n");
             sb.Append("  EUserEzsignaccess: ").Append(EUserEzsignaccess).Append("\n");
             sb.Append("  EUserEzsignprepaid: ").Append(EUserEzsignprepaid).Append("\n");
             sb.Append("  DtUserEzsignprepaidexpiration: ").Append(DtUserEzsignprepaidexpiration).Append("\n");

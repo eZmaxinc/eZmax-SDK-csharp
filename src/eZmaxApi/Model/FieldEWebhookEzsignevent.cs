@@ -40,22 +40,58 @@ namespace eZmaxApi.Model
         DocumentCompleted = 1,
 
         /// <summary>
+        /// Enum DocumentFormCompleted for value: DocumentFormCompleted
+        /// </summary>
+        [EnumMember(Value = "DocumentFormCompleted")]
+        DocumentFormCompleted = 2,
+
+        /// <summary>
+        /// Enum DocumentUnsent for value: DocumentUnsent
+        /// </summary>
+        [EnumMember(Value = "DocumentUnsent")]
+        DocumentUnsent = 3,
+
+        /// <summary>
         /// Enum EzsignsignerAcceptclause for value: EzsignsignerAcceptclause
         /// </summary>
         [EnumMember(Value = "EzsignsignerAcceptclause")]
-        EzsignsignerAcceptclause = 2,
+        EzsignsignerAcceptclause = 4,
 
         /// <summary>
         /// Enum EzsignsignerConnect for value: EzsignsignerConnect
         /// </summary>
         [EnumMember(Value = "EzsignsignerConnect")]
-        EzsignsignerConnect = 3,
+        EzsignsignerConnect = 5,
 
         /// <summary>
         /// Enum FolderCompleted for value: FolderCompleted
         /// </summary>
         [EnumMember(Value = "FolderCompleted")]
-        FolderCompleted = 4
+        FolderCompleted = 6,
+
+        /// <summary>
+        /// Enum FolderDisposed for value: FolderDisposed
+        /// </summary>
+        [EnumMember(Value = "FolderDisposed")]
+        FolderDisposed = 7,
+
+        /// <summary>
+        /// Enum FolderSent for value: FolderSent
+        /// </summary>
+        [EnumMember(Value = "FolderSent")]
+        FolderSent = 8,
+
+        /// <summary>
+        /// Enum FolderUnsent for value: FolderUnsent
+        /// </summary>
+        [EnumMember(Value = "FolderUnsent")]
+        FolderUnsent = 9,
+
+        /// <summary>
+        /// Enum SignatureSigned for value: SignatureSigned
+        /// </summary>
+        [EnumMember(Value = "SignatureSigned")]
+        SignatureSigned = 10
     }
 
 }

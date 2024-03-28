@@ -34,22 +34,28 @@ namespace eZmaxApi.Model
     public enum FieldEUserEzsignprepaid
     {
         /// <summary>
+        /// Enum No for value: No
+        /// </summary>
+        [EnumMember(Value = "No")]
+        No = 1,
+
+        /// <summary>
         /// Enum Basic for value: Basic
         /// </summary>
         [EnumMember(Value = "Basic")]
-        Basic = 1,
+        Basic = 2,
 
         /// <summary>
-        /// Enum Unlimited for value: Unlimited
+        /// Enum Standard for value: Standard
         /// </summary>
-        [EnumMember(Value = "Unlimited")]
-        Unlimited = 2,
+        [EnumMember(Value = "Standard")]
+        Standard = 3,
 
         /// <summary>
         /// Enum Pro for value: Pro
         /// </summary>
         [EnumMember(Value = "Pro")]
-        Pro = 3
+        Pro = 4
     }
 
 }

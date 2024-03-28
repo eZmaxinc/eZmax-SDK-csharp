@@ -42,12 +42,14 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiUsergroupmembershipID">The unique ID of the Usergroupmembership.</param>
         /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        public UsergroupmembershipRequestCompound(int pkiUsergroupmembershipID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int))
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiUsergroupexternalID">The unique ID of the Usergroupexternal.</param>
+        public UsergroupmembershipRequestCompound(int pkiUsergroupmembershipID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int), int fkiUsergroupexternalID = default(int))
         {
             this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiUserID = fkiUserID;
             this.PkiUsergroupmembershipID = pkiUsergroupmembershipID;
+            this.FkiUserID = fkiUserID;
+            this.FkiUsergroupexternalID = fkiUsergroupexternalID;
         }
 
         /// <summary>
@@ -71,8 +73,16 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The unique ID of the User</value>
         /* <example>70</example>*/
-        [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Usergroupexternal
+        /// </summary>
+        /// <value>The unique ID of the Usergroupexternal</value>
+        /* <example>16</example>*/
+        [DataMember(Name = "fkiUsergroupexternalID", EmitDefaultValue = false)]
+        public int FkiUsergroupexternalID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -85,6 +95,7 @@ namespace eZmaxApi.Model
             sb.Append("  PkiUsergroupmembershipID: ").Append(PkiUsergroupmembershipID).Append("\n");
             sb.Append("  FkiUsergroupID: ").Append(FkiUsergroupID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  FkiUsergroupexternalID: ").Append(FkiUsergroupexternalID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -133,6 +144,18 @@ namespace eZmaxApi.Model
             if (this.FkiUserID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+            // FkiUsergroupexternalID (int) maximum
+            if (this.FkiUsergroupexternalID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value less than or equal to 255.", new [] { "FkiUsergroupexternalID" });
+            }
+
+            // FkiUsergroupexternalID (int) minimum
+            if (this.FkiUsergroupexternalID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupexternalID" });
             }
 
             yield break;

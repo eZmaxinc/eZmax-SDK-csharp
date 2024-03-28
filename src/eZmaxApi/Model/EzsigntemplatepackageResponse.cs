@@ -49,7 +49,8 @@ namespace eZmaxApi.Model
         /// <param name="bEzsigntemplatepackageNeedvalidation">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
         /// <param name="bEzsigntemplatepackageIsactive">Whether the Ezsigntemplatepackage is active or not (required).</param>
         /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        public EzsigntemplatepackageResponse(int pkiEzsigntemplatepackageID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sLanguageNameX = default(string), string sEzsigntemplatepackageDescription = default(string), bool bEzsigntemplatepackageAdminonly = default(bool), bool bEzsigntemplatepackageNeedvalidation = default(bool), bool bEzsigntemplatepackageIsactive = default(bool), string sEzsignfoldertypeNameX = default(string))
+        /// <param name="bEzsigntemplatepackageEditallowed">Whether the Ezsigntemplatepackage if allowed to edit or not (required).</param>
+        public EzsigntemplatepackageResponse(int pkiEzsigntemplatepackageID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sLanguageNameX = default(string), string sEzsigntemplatepackageDescription = default(string), bool bEzsigntemplatepackageAdminonly = default(bool), bool bEzsigntemplatepackageNeedvalidation = default(bool), bool bEzsigntemplatepackageIsactive = default(bool), string sEzsignfoldertypeNameX = default(string), bool bEzsigntemplatepackageEditallowed = default(bool))
         {
             this.PkiEzsigntemplatepackageID = pkiEzsigntemplatepackageID;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
@@ -75,6 +76,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sEzsignfoldertypeNameX is a required property for EzsigntemplatepackageResponse and cannot be null");
             }
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+            this.BEzsigntemplatepackageEditallowed = bEzsigntemplatepackageEditallowed;
         }
 
         /// <summary>
@@ -148,6 +150,13 @@ namespace eZmaxApi.Model
         public string SEzsignfoldertypeNameX { get; set; }
 
         /// <summary>
+        /// Whether the Ezsigntemplatepackage if allowed to edit or not
+        /// </summary>
+        /// <value>Whether the Ezsigntemplatepackage if allowed to edit or not</value>
+        [DataMember(Name = "bEzsigntemplatepackageEditallowed", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzsigntemplatepackageEditallowed { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -164,6 +173,7 @@ namespace eZmaxApi.Model
             sb.Append("  BEzsigntemplatepackageNeedvalidation: ").Append(BEzsigntemplatepackageNeedvalidation).Append("\n");
             sb.Append("  BEzsigntemplatepackageIsactive: ").Append(BEzsigntemplatepackageIsactive).Append("\n");
             sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
+            sb.Append("  BEzsigntemplatepackageEditallowed: ").Append(BEzsigntemplatepackageEditallowed).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -188,6 +198,12 @@ namespace eZmaxApi.Model
             if (this.PkiEzsigntemplatepackageID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackageID" });
+            }
+
+            // FkiEzsignfoldertypeID (int) maximum
+            if (this.FkiEzsignfoldertypeID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum

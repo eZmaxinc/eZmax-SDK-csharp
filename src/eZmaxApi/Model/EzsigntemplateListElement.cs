@@ -32,6 +32,12 @@ namespace eZmaxApi.Model
     [DataContract(Name = "ezsigntemplate-ListElement")]
     public partial class EzsigntemplateListElement : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EEzsigntemplateType
+        /// </summary>
+        [DataMember(Name = "eEzsigntemplateType", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEEzsigntemplateType EEzsigntemplateType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateListElement" /> class.
         /// </summary>
@@ -41,18 +47,18 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigntemplateListElement" /> class.
         /// </summary>
         /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
         /// <param name="iEzsigntemplatedocumentPagetotal">The number of pages in the Ezsigntemplatedocument..</param>
         /// <param name="iEzsigntemplateSignaturetotal">The number of total signatures in the Ezsigntemplate..</param>
         /// <param name="iEzsigntemplateFormfieldtotal">The number of total form fields in the Ezsigntemplate..</param>
         /// <param name="bEzsigntemplateIncomplete">Indicate the Ezsigntemplate is incomplete and cannot be used (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        public EzsigntemplateListElement(int pkiEzsigntemplateID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsigntemplateDescription = default(string), int iEzsigntemplatedocumentPagetotal = default(int), int iEzsigntemplateSignaturetotal = default(int), int iEzsigntemplateFormfieldtotal = default(int), bool bEzsigntemplateIncomplete = default(bool), string sEzsignfoldertypeNameX = default(string))
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester.</param>
+        /// <param name="eEzsigntemplateType">eEzsigntemplateType (required).</param>
+        public EzsigntemplateListElement(int pkiEzsigntemplateID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsigntemplateDescription = default(string), int iEzsigntemplatedocumentPagetotal = default(int), int iEzsigntemplateSignaturetotal = default(int), int iEzsigntemplateFormfieldtotal = default(int), bool bEzsigntemplateIncomplete = default(bool), string sEzsignfoldertypeNameX = default(string), FieldEEzsigntemplateType eEzsigntemplateType = default(FieldEEzsigntemplateType))
         {
             this.PkiEzsigntemplateID = pkiEzsigntemplateID;
-            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.FkiLanguageID = fkiLanguageID;
             // to ensure "sEzsigntemplateDescription" is required (not null)
             if (sEzsigntemplateDescription == null)
@@ -61,15 +67,12 @@ namespace eZmaxApi.Model
             }
             this.SEzsigntemplateDescription = sEzsigntemplateDescription;
             this.BEzsigntemplateIncomplete = bEzsigntemplateIncomplete;
-            // to ensure "sEzsignfoldertypeNameX" is required (not null)
-            if (sEzsignfoldertypeNameX == null)
-            {
-                throw new ArgumentNullException("sEzsignfoldertypeNameX is a required property for EzsigntemplateListElement and cannot be null");
-            }
-            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+            this.EEzsigntemplateType = eEzsigntemplateType;
+            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.IEzsigntemplatedocumentPagetotal = iEzsigntemplatedocumentPagetotal;
             this.IEzsigntemplateSignaturetotal = iEzsigntemplateSignaturetotal;
             this.IEzsigntemplateFormfieldtotal = iEzsigntemplateFormfieldtotal;
+            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
         }
 
         /// <summary>
@@ -85,7 +88,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The unique ID of the Ezsignfoldertype.</value>
         /* <example>5</example>*/
-        [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiEzsignfoldertypeID", EmitDefaultValue = false)]
         public int FkiEzsignfoldertypeID { get; set; }
 
         /// <summary>
@@ -141,7 +144,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
         /* <example>Default</example>*/
-        [DataMember(Name = "sEzsignfoldertypeNameX", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sEzsignfoldertypeNameX", EmitDefaultValue = false)]
         public string SEzsignfoldertypeNameX { get; set; }
 
         /// <summary>
@@ -161,6 +164,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsigntemplateFormfieldtotal: ").Append(IEzsigntemplateFormfieldtotal).Append("\n");
             sb.Append("  BEzsigntemplateIncomplete: ").Append(BEzsigntemplateIncomplete).Append("\n");
             sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
+            sb.Append("  EEzsigntemplateType: ").Append(EEzsigntemplateType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -185,6 +189,12 @@ namespace eZmaxApi.Model
             if (this.PkiEzsigntemplateID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateID" });
+            }
+
+            // FkiEzsignfoldertypeID (int) maximum
+            if (this.FkiEzsignfoldertypeID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum

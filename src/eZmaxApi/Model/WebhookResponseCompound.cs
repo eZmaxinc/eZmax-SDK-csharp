@@ -74,7 +74,8 @@ namespace eZmaxApi.Model
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
         /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
-        public WebhookResponseCompound(int pkiWebhookID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), string sWebhookApikey = default(string), string sWebhookSecret = default(string), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool), bool bWebhookSkipsslvalidation = default(bool), CommonAudit objAudit = default(CommonAudit), string sWebhookEvent = default(string))
+        /// <param name="aObjWebhookheader">aObjWebhookheader.</param>
+        public WebhookResponseCompound(int pkiWebhookID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), string sWebhookApikey = default(string), string sWebhookSecret = default(string), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool), bool bWebhookSkipsslvalidation = default(bool), CommonAudit objAudit = default(CommonAudit), string sWebhookEvent = default(string), List<WebhookheaderResponseCompound> aObjWebhookheader = default(List<WebhookheaderResponseCompound>))
         {
             this.PkiWebhookID = pkiWebhookID;
             // to ensure "sWebhookDescription" is required (not null)
@@ -112,6 +113,7 @@ namespace eZmaxApi.Model
             this.SWebhookApikey = sWebhookApikey;
             this.SWebhookSecret = sWebhookSecret;
             this.SWebhookEvent = sWebhookEvent;
+            this.AObjWebhookheader = aObjWebhookheader;
         }
 
         /// <summary>
@@ -215,6 +217,12 @@ namespace eZmaxApi.Model
         public string SWebhookEvent { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjWebhookheader
+        /// </summary>
+        [DataMember(Name = "a_objWebhookheader", EmitDefaultValue = false)]
+        public List<WebhookheaderResponseCompound> AObjWebhookheader { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -238,6 +246,7 @@ namespace eZmaxApi.Model
             sb.Append("  BWebhookSkipsslvalidation: ").Append(BWebhookSkipsslvalidation).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  SWebhookEvent: ").Append(SWebhookEvent).Append("\n");
+            sb.Append("  AObjWebhookheader: ").Append(AObjWebhookheader).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -258,6 +267,12 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // FkiEzsignfoldertypeID (int) maximum
+            if (this.FkiEzsignfoldertypeID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {

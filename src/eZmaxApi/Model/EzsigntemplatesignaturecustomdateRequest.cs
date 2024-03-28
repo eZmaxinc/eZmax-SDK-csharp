@@ -163,18 +163,6 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateY" });
             }
 
-            // IEzsigntemplatesignaturecustomdateOffsetx (int) minimum
-            if (this.IEzsigntemplatesignaturecustomdateOffsetx < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateOffsetx, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateOffsetx" });
-            }
-
-            // IEzsigntemplatesignaturecustomdateOffsety (int) minimum
-            if (this.IEzsigntemplatesignaturecustomdateOffsety < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateOffsety, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateOffsety" });
-            }
-
             yield break;
         }
     }

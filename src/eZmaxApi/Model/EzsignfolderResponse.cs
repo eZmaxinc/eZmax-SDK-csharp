@@ -36,8 +36,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Gets or Sets EEzsignfolderCompletion
         /// </summary>
-        [DataMember(Name = "eEzsignfolderCompletion", EmitDefaultValue = false)]
-        public FieldEEzsignfolderCompletion? EEzsignfolderCompletion { get; set; }
+        [DataMember(Name = "eEzsignfolderCompletion", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEEzsignfolderCompletion EEzsignfolderCompletion { get; set; }
 
         /// <summary>
         /// Gets or Sets EEzsignfolderSendreminderfrequency
@@ -61,7 +61,7 @@ namespace eZmaxApi.Model
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
         /// <param name="objEzsignfoldertype">objEzsignfoldertype.</param>
-        /// <param name="eEzsignfolderCompletion">eEzsignfolderCompletion.</param>
+        /// <param name="eEzsignfolderCompletion">eEzsignfolderCompletion (required).</param>
         /// <param name="sEzsignfoldertypeNameX">sEzsignfoldertypeNameX.</param>
         /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
         /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester.</param>
@@ -81,9 +81,10 @@ namespace eZmaxApi.Model
         /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent..</param>
         /// <param name="objAudit">objAudit.</param>
         /// <param name="sEzsignfolderExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
-        public EzsignfolderResponse(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), CustomEzsignfoldertypeResponse objEzsignfoldertype = default(CustomEzsignfoldertypeResponse), FieldEEzsignfolderCompletion? eEzsignfolderCompletion = default(FieldEEzsignfolderCompletion?), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), bool bEzsignfolderIsdisposable = default(bool), FieldEEzsignfolderSendreminderfrequency? eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency?), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddispose = default(string), FieldEEzsignfolderStep? eEzsignfolderStep = default(FieldEEzsignfolderStep?), string dtEzsignfolderClose = default(string), string tEzsignfolderMessage = default(string), CommonAudit objAudit = default(CommonAudit), string sEzsignfolderExternalid = default(string))
+        public EzsignfolderResponse(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), CustomEzsignfoldertypeResponse objEzsignfoldertype = default(CustomEzsignfoldertypeResponse), FieldEEzsignfolderCompletion eEzsignfolderCompletion = default(FieldEEzsignfolderCompletion), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), bool bEzsignfolderIsdisposable = default(bool), FieldEEzsignfolderSendreminderfrequency? eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency?), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddispose = default(string), FieldEEzsignfolderStep? eEzsignfolderStep = default(FieldEEzsignfolderStep?), string dtEzsignfolderClose = default(string), string tEzsignfolderMessage = default(string), CommonAudit objAudit = default(CommonAudit), string sEzsignfolderExternalid = default(string))
         {
             this.PkiEzsignfolderID = pkiEzsignfolderID;
+            this.EEzsignfolderCompletion = eEzsignfolderCompletion;
             // to ensure "sEzsignfolderDescription" is required (not null)
             if (sEzsignfolderDescription == null)
             {
@@ -92,7 +93,6 @@ namespace eZmaxApi.Model
             this.SEzsignfolderDescription = sEzsignfolderDescription;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.ObjEzsignfoldertype = objEzsignfoldertype;
-            this.EEzsignfolderCompletion = eEzsignfolderCompletion;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             this.FkiBillingentityinternalID = fkiBillingentityinternalID;
             this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
@@ -331,6 +331,12 @@ Mary</example>*/
             if (this.PkiEzsignfolderID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
+            }
+
+            // FkiEzsignfoldertypeID (int) maximum
+            if (this.FkiEzsignfoldertypeID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum

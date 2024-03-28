@@ -135,5 +135,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'SEzsignfoldertypeNameX'
         }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplateType'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplateTypeTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplateType'
+        }
     }
 }

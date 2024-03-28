@@ -38,6 +38,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eBrandingLogo", IsRequired = true, EmitDefaultValue = true)]
         public FieldEBrandingLogo EBrandingLogo { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EBrandingLogointerface
+        /// </summary>
+        [DataMember(Name = "eBrandingLogointerface", EmitDefaultValue = false)]
+        public FieldEBrandingLogointerface? EBrandingLogointerface { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingResponse" /> class.
         /// </summary>
@@ -53,14 +59,16 @@ namespace eZmaxApi.Model
         /// <param name="sBrandingName">The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty.</param>
         /// <param name="sEmailAddress">The email address..</param>
         /// <param name="eBrandingLogo">eBrandingLogo (required).</param>
+        /// <param name="eBrandingLogointerface">eBrandingLogointerface.</param>
         /// <param name="iBrandingColortext">The color of the text. This is a RGB color converted into integer (required).</param>
         /// <param name="iBrandingColortextlinkbox">The color of the text in the link box. This is a RGB color converted into integer (required).</param>
         /// <param name="iBrandingColortextbutton">The color of the text in the button. This is a RGB color converted into integer (required).</param>
         /// <param name="iBrandingColorbackground">The color of the background. This is a RGB color converted into integer (required).</param>
         /// <param name="iBrandingColorbackgroundbutton">The color of the background of the button. This is a RGB color converted into integer (required).</param>
         /// <param name="iBrandingColorbackgroundsmallbox">The color of the background of the small box. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingInterfacecolor">The color of the interface. This is a RGB color converted into integer.</param>
         /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
-        public BrandingResponse(int pkiBrandingID = default(int), int fkiEmailID = default(int), MultilingualBrandingDescription objBrandingDescription = default(MultilingualBrandingDescription), string sBrandingDescriptionX = default(string), string sBrandingName = default(string), string sEmailAddress = default(string), FieldEBrandingLogo eBrandingLogo = default(FieldEBrandingLogo), int iBrandingColortext = default(int), int iBrandingColortextlinkbox = default(int), int iBrandingColortextbutton = default(int), int iBrandingColorbackground = default(int), int iBrandingColorbackgroundbutton = default(int), int iBrandingColorbackgroundsmallbox = default(int), bool bBrandingIsactive = default(bool))
+        public BrandingResponse(int pkiBrandingID = default(int), int fkiEmailID = default(int), MultilingualBrandingDescription objBrandingDescription = default(MultilingualBrandingDescription), string sBrandingDescriptionX = default(string), string sBrandingName = default(string), string sEmailAddress = default(string), FieldEBrandingLogo eBrandingLogo = default(FieldEBrandingLogo), FieldEBrandingLogointerface? eBrandingLogointerface = default(FieldEBrandingLogointerface?), int iBrandingColortext = default(int), int iBrandingColortextlinkbox = default(int), int iBrandingColortextbutton = default(int), int iBrandingColorbackground = default(int), int iBrandingColorbackgroundbutton = default(int), int iBrandingColorbackgroundsmallbox = default(int), int iBrandingInterfacecolor = default(int), bool bBrandingIsactive = default(bool))
         {
             this.PkiBrandingID = pkiBrandingID;
             // to ensure "objBrandingDescription" is required (not null)
@@ -86,6 +94,8 @@ namespace eZmaxApi.Model
             this.FkiEmailID = fkiEmailID;
             this.SBrandingName = sBrandingName;
             this.SEmailAddress = sEmailAddress;
+            this.EBrandingLogointerface = eBrandingLogointerface;
+            this.IBrandingInterfacecolor = iBrandingInterfacecolor;
         }
 
         /// <summary>
@@ -183,6 +193,14 @@ namespace eZmaxApi.Model
         public int IBrandingColorbackgroundsmallbox { get; set; }
 
         /// <summary>
+        /// The color of the interface. This is a RGB color converted into integer
+        /// </summary>
+        /// <value>The color of the interface. This is a RGB color converted into integer</value>
+        /* <example>15658734</example>*/
+        [DataMember(Name = "iBrandingInterfacecolor", EmitDefaultValue = false)]
+        public int IBrandingInterfacecolor { get; set; }
+
+        /// <summary>
         /// Whether the Branding is active or not
         /// </summary>
         /// <value>Whether the Branding is active or not</value>
@@ -205,12 +223,14 @@ namespace eZmaxApi.Model
             sb.Append("  SBrandingName: ").Append(SBrandingName).Append("\n");
             sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
             sb.Append("  EBrandingLogo: ").Append(EBrandingLogo).Append("\n");
+            sb.Append("  EBrandingLogointerface: ").Append(EBrandingLogointerface).Append("\n");
             sb.Append("  IBrandingColortext: ").Append(IBrandingColortext).Append("\n");
             sb.Append("  IBrandingColortextlinkbox: ").Append(IBrandingColortextlinkbox).Append("\n");
             sb.Append("  IBrandingColortextbutton: ").Append(IBrandingColortextbutton).Append("\n");
             sb.Append("  IBrandingColorbackground: ").Append(IBrandingColorbackground).Append("\n");
             sb.Append("  IBrandingColorbackgroundbutton: ").Append(IBrandingColorbackgroundbutton).Append("\n");
             sb.Append("  IBrandingColorbackgroundsmallbox: ").Append(IBrandingColorbackgroundsmallbox).Append("\n");
+            sb.Append("  IBrandingInterfacecolor: ").Append(IBrandingInterfacecolor).Append("\n");
             sb.Append("  BBrandingIsactive: ").Append(BBrandingIsactive).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -329,6 +349,18 @@ namespace eZmaxApi.Model
             if (this.IBrandingColorbackgroundsmallbox < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackgroundsmallbox, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackgroundsmallbox" });
+            }
+
+            // IBrandingInterfacecolor (int) maximum
+            if (this.IBrandingInterfacecolor > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingInterfacecolor, must be a value less than or equal to 16777215.", new [] { "IBrandingInterfacecolor" });
+            }
+
+            // IBrandingInterfacecolor (int) minimum
+            if (this.IBrandingInterfacecolor < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingInterfacecolor, must be a value greater than or equal to 0.", new [] { "IBrandingInterfacecolor" });
             }
 
             yield break;

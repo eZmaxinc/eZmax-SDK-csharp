@@ -135,5 +135,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'SEzsignfoldertypeNameX'
         }
+
+        /// <summary>
+        /// Test the property 'BEzsigntemplatepackageEditallowed'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplatepackageEditallowedTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplatepackageEditallowed'
+        }
     }
 }

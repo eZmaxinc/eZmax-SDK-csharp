@@ -122,6 +122,15 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
             }
 
+            if (this.SEzsigntemplatesignerDescription != null) {
+                // SEzsigntemplatesignerDescription (string) pattern
+                Regex regexSEzsigntemplatesignerDescription = new Regex(@"^.{1,50}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsigntemplatesignerDescription.Match(this.SEzsigntemplatesignerDescription).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatesignerDescription, must match a pattern of " + regexSEzsigntemplatesignerDescription, new [] { "SEzsigntemplatesignerDescription" });
+                }
+            }
+
             yield break;
         }
     }

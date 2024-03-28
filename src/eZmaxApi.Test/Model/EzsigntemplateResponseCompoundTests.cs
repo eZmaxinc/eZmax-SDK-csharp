@@ -110,6 +110,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SEzsigntemplateFilenamepattern'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplateFilenamepatternTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplateFilenamepattern'
+        }
+
+        /// <summary>
         /// Test the property 'BEzsigntemplateAdminonly'
         /// </summary>
         [Fact]
@@ -134,6 +143,24 @@ namespace eZmaxApi.Test.Model
         public void ObjAuditTest()
         {
             // TODO unit test for the property 'ObjAudit'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsigntemplateEditallowed'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplateEditallowedTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplateEditallowed'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplateType'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplateTypeTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplateType'
         }
 
         /// <summary>

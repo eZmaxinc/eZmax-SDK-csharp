@@ -66,7 +66,11 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigndocumentEdm">The total number of Ezsigndocument in the folder that were saved in the edm system (required).</param>
         /// <param name="iEzsignsignature">The total number of signature blocks in all Ezsigndocuments in the folder (required).</param>
         /// <param name="iEzsignsignatureSigned">The total number of already signed signature blocks in all Ezsigndocuments in the folder (required).</param>
-        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderDuedate = default(string), int iEzsigndocument = default(int), int iEzsigndocumentEdm = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int))
+        /// <param name="iEzsignformfieldgroup">The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder (required).</param>
+        /// <param name="iEzsignformfieldgroupCompleted">The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder (required).</param>
+        /// <param name="bEzsignformHasdependencies">Whether the Ezsignform/Ezsignsignatures has dependencies or not.</param>
+        /// <param name="dEzsignfolderCompletedpercentage">Whether the Ezsignform/Ezsignsignatures has dependencies or not (required).</param>
+        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderDuedate = default(string), int iEzsigndocument = default(int), int iEzsigndocumentEdm = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int), int iEzsignformfieldgroup = default(int), int iEzsignformfieldgroupCompleted = default(int), bool bEzsignformHasdependencies = default(bool), string dEzsignfolderCompletedpercentage = default(string))
         {
             this.PkiEzsignfolderID = pkiEzsignfolderID;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
@@ -94,9 +98,18 @@ namespace eZmaxApi.Model
             this.IEzsigndocumentEdm = iEzsigndocumentEdm;
             this.IEzsignsignature = iEzsignsignature;
             this.IEzsignsignatureSigned = iEzsignsignatureSigned;
+            this.IEzsignformfieldgroup = iEzsignformfieldgroup;
+            this.IEzsignformfieldgroupCompleted = iEzsignformfieldgroupCompleted;
+            // to ensure "dEzsignfolderCompletedpercentage" is required (not null)
+            if (dEzsignfolderCompletedpercentage == null)
+            {
+                throw new ArgumentNullException("dEzsignfolderCompletedpercentage is a required property for EzsignfolderListElement and cannot be null");
+            }
+            this.DEzsignfolderCompletedpercentage = dEzsignfolderCompletedpercentage;
             this.DtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
             this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
             this.DtEzsignfolderDuedate = dtEzsignfolderDuedate;
+            this.BEzsignformHasdependencies = bEzsignformHasdependencies;
         }
 
         /// <summary>
@@ -192,6 +205,34 @@ namespace eZmaxApi.Model
         public int IEzsignsignatureSigned { get; set; }
 
         /// <summary>
+        /// The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder
+        /// </summary>
+        /// <value>The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder</value>
+        [DataMember(Name = "iEzsignformfieldgroup", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzsignformfieldgroup { get; set; }
+
+        /// <summary>
+        /// The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder
+        /// </summary>
+        /// <value>The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder</value>
+        [DataMember(Name = "iEzsignformfieldgroupCompleted", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzsignformfieldgroupCompleted { get; set; }
+
+        /// <summary>
+        /// Whether the Ezsignform/Ezsignsignatures has dependencies or not
+        /// </summary>
+        /// <value>Whether the Ezsignform/Ezsignsignatures has dependencies or not</value>
+        [DataMember(Name = "bEzsignformHasdependencies", EmitDefaultValue = true)]
+        public bool BEzsignformHasdependencies { get; set; }
+
+        /// <summary>
+        /// Whether the Ezsignform/Ezsignsignatures has dependencies or not
+        /// </summary>
+        /// <value>Whether the Ezsignform/Ezsignsignatures has dependencies or not</value>
+        [DataMember(Name = "dEzsignfolderCompletedpercentage", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzsignfolderCompletedpercentage { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -213,6 +254,10 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsigndocumentEdm: ").Append(IEzsigndocumentEdm).Append("\n");
             sb.Append("  IEzsignsignature: ").Append(IEzsignsignature).Append("\n");
             sb.Append("  IEzsignsignatureSigned: ").Append(IEzsignsignatureSigned).Append("\n");
+            sb.Append("  IEzsignformfieldgroup: ").Append(IEzsignformfieldgroup).Append("\n");
+            sb.Append("  IEzsignformfieldgroupCompleted: ").Append(IEzsignformfieldgroupCompleted).Append("\n");
+            sb.Append("  BEzsignformHasdependencies: ").Append(BEzsignformHasdependencies).Append("\n");
+            sb.Append("  DEzsignfolderCompletedpercentage: ").Append(DEzsignfolderCompletedpercentage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -239,10 +284,25 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
             }
 
+            // FkiEzsignfoldertypeID (int) maximum
+            if (this.FkiEzsignfoldertypeID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
+            if (this.DEzsignfolderCompletedpercentage != null) {
+                // DEzsignfolderCompletedpercentage (string) pattern
+                Regex regexDEzsignfolderCompletedpercentage = new Regex(@"^-{0,1}[\d]{1,3}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzsignfolderCompletedpercentage.Match(this.DEzsignfolderCompletedpercentage).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzsignfolderCompletedpercentage, must match a pattern of " + regexDEzsignfolderCompletedpercentage, new [] { "DEzsignfolderCompletedpercentage" });
+                }
             }
 
             yield break;

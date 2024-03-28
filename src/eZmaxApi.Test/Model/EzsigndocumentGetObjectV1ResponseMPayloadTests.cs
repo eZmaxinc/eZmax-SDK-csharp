@@ -254,6 +254,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IEzsigndocumentEzsigndiscussiontotal'
+        /// </summary>
+        [Fact]
+        public void IEzsigndocumentEzsigndiscussiontotalTest()
+        {
+            // TODO unit test for the property 'IEzsigndocumentEzsigndiscussiontotal'
+        }
+
+        /// <summary>
         /// Test the property 'EEzsigndocumentSteptype'
         /// </summary>
         [Fact]

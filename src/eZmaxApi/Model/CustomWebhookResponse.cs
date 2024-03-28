@@ -73,9 +73,11 @@ namespace eZmaxApi.Model
         /// <param name="bWebhookIssigned">Whether the requests will be signed or not (required).</param>
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
+        /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
+        /// <param name="aObjWebhookheader">aObjWebhookheader.</param>
         /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
         /// <param name="bWebhookTest">Wheter the webhook received is a manual test or a real event (required).</param>
-        public CustomWebhookResponse(int pkiWebhookID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), string sWebhookApikey = default(string), string sWebhookSecret = default(string), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool), bool bWebhookSkipsslvalidation = default(bool), CommonAudit objAudit = default(CommonAudit), string pksCustomerCode = default(string), bool bWebhookTest = default(bool))
+        public CustomWebhookResponse(int pkiWebhookID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), string sWebhookApikey = default(string), string sWebhookSecret = default(string), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool), bool bWebhookSkipsslvalidation = default(bool), CommonAudit objAudit = default(CommonAudit), string sWebhookEvent = default(string), List<WebhookheaderResponseCompound> aObjWebhookheader = default(List<WebhookheaderResponseCompound>), string pksCustomerCode = default(string), bool bWebhookTest = default(bool))
         {
             this.PkiWebhookID = pkiWebhookID;
             // to ensure "sWebhookDescription" is required (not null)
@@ -119,6 +121,8 @@ namespace eZmaxApi.Model
             this.EWebhookManagementevent = eWebhookManagementevent;
             this.SWebhookApikey = sWebhookApikey;
             this.SWebhookSecret = sWebhookSecret;
+            this.SWebhookEvent = sWebhookEvent;
+            this.AObjWebhookheader = aObjWebhookheader;
         }
 
         /// <summary>
@@ -214,6 +218,20 @@ namespace eZmaxApi.Model
         public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
+        /// The concatenated string to describe the Webhook event
+        /// </summary>
+        /// <value>The concatenated string to describe the Webhook event</value>
+        /* <example>Ezsign-DocumentCompleted</example>*/
+        [DataMember(Name = "sWebhookEvent", EmitDefaultValue = false)]
+        public string SWebhookEvent { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AObjWebhookheader
+        /// </summary>
+        [DataMember(Name = "a_objWebhookheader", EmitDefaultValue = false)]
+        public List<WebhookheaderResponseCompound> AObjWebhookheader { get; set; }
+
+        /// <summary>
         /// The customer code assigned to your account
         /// </summary>
         /// <value>The customer code assigned to your account</value>
@@ -251,6 +269,8 @@ namespace eZmaxApi.Model
             sb.Append("  BWebhookIssigned: ").Append(BWebhookIssigned).Append("\n");
             sb.Append("  BWebhookSkipsslvalidation: ").Append(BWebhookSkipsslvalidation).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
+            sb.Append("  SWebhookEvent: ").Append(SWebhookEvent).Append("\n");
+            sb.Append("  AObjWebhookheader: ").Append(AObjWebhookheader).Append("\n");
             sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
             sb.Append("  BWebhookTest: ").Append(BWebhookTest).Append("\n");
             sb.Append("}\n");
@@ -273,6 +293,12 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // FkiEzsignfoldertypeID (int) maximum
+            if (this.FkiEzsignfoldertypeID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {

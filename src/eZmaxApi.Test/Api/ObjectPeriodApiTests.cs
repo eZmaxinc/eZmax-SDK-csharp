@@ -56,21 +56,6 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test PeriodGetAutocompleteV1
-        /// </summary>
-        [Fact]
-        public void PeriodGetAutocompleteV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string sSelector = null;
-            //string? eFilterActive = null;
-            //string? sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.PeriodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-            //Assert.IsType<CommonGetAutocompleteV1Response>(response);
-        }
-
-        /// <summary>
         /// Test PeriodGetAutocompleteV2
         /// </summary>
         [Fact]

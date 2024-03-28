@@ -92,6 +92,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SEzsigntemplateFilenamepattern'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplateFilenamepatternTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplateFilenamepattern'
+        }
+
+        /// <summary>
         /// Test the property 'BEzsigntemplateAdminonly'
         /// </summary>
         [Fact]

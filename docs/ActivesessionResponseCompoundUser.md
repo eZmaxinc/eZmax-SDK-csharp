@@ -7,10 +7,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiUserID** | **int** | The unique ID of the User | 
 **FkiTimezoneID** | **int** | The unique ID of the Timezone | 
-**SAvatarUrl** | **string** | The url of the picture used as avatar | 
+**SAvatarUrl** | **string** | The url of the picture used as avatar | [optional] 
 **SUserFirstname** | **string** | The first name of the user | 
 **SUserLastname** | **string** | The last name of the user | 
-**SEmailAddress** | **string** | The email address. | 
+**SEmailAddress** | **string** | The email address. | [optional] 
 **EUserEzsignsendreminderfrequency** | **FieldEUserEzsignsendreminderfrequency** |  | 
 **IUserInterfacecolor** | **int** | The int32 representation of the interface color. For example, RGB color #39435B would be 3752795 | 
 **BUserInterfacedark** | **bool** | Whether to use a dark mode interface | 

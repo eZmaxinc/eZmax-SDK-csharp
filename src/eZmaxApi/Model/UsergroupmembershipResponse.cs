@@ -42,42 +42,31 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiUsergroupmembershipID">The unique ID of the Usergroupmembership (required).</param>
         /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiUsergroupexternalID">The unique ID of the Usergroupexternal.</param>
+        /// <param name="sUserFirstname">The first name of the user.</param>
+        /// <param name="sUserLastname">The last name of the user.</param>
+        /// <param name="sUserLoginname">The login name of the User..</param>
         /// <param name="sEmailAddress">The email address..</param>
         /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
-        public UsergroupmembershipResponse(int pkiUsergroupmembershipID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sEmailAddress = default(string), string sUsergroupNameX = default(string))
+        /// <param name="sUsergroupexternalName">The name of the Usergroupexternal.</param>
+        public UsergroupmembershipResponse(int pkiUsergroupmembershipID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int), int fkiUsergroupexternalID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sEmailAddress = default(string), string sUsergroupNameX = default(string), string sUsergroupexternalName = default(string))
         {
             this.PkiUsergroupmembershipID = pkiUsergroupmembershipID;
             this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiUserID = fkiUserID;
-            // to ensure "sUserFirstname" is required (not null)
-            if (sUserFirstname == null)
-            {
-                throw new ArgumentNullException("sUserFirstname is a required property for UsergroupmembershipResponse and cannot be null");
-            }
-            this.SUserFirstname = sUserFirstname;
-            // to ensure "sUserLastname" is required (not null)
-            if (sUserLastname == null)
-            {
-                throw new ArgumentNullException("sUserLastname is a required property for UsergroupmembershipResponse and cannot be null");
-            }
-            this.SUserLastname = sUserLastname;
-            // to ensure "sUserLoginname" is required (not null)
-            if (sUserLoginname == null)
-            {
-                throw new ArgumentNullException("sUserLoginname is a required property for UsergroupmembershipResponse and cannot be null");
-            }
-            this.SUserLoginname = sUserLoginname;
             // to ensure "sUsergroupNameX" is required (not null)
             if (sUsergroupNameX == null)
             {
                 throw new ArgumentNullException("sUsergroupNameX is a required property for UsergroupmembershipResponse and cannot be null");
             }
             this.SUsergroupNameX = sUsergroupNameX;
+            this.FkiUserID = fkiUserID;
+            this.FkiUsergroupexternalID = fkiUsergroupexternalID;
+            this.SUserFirstname = sUserFirstname;
+            this.SUserLastname = sUserLastname;
+            this.SUserLoginname = sUserLoginname;
             this.SEmailAddress = sEmailAddress;
+            this.SUsergroupexternalName = sUsergroupexternalName;
         }
 
         /// <summary>
@@ -101,15 +90,23 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The unique ID of the User</value>
         /* <example>70</example>*/
-        [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
         public int FkiUserID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Usergroupexternal
+        /// </summary>
+        /// <value>The unique ID of the Usergroupexternal</value>
+        /* <example>16</example>*/
+        [DataMember(Name = "fkiUsergroupexternalID", EmitDefaultValue = false)]
+        public int FkiUsergroupexternalID { get; set; }
 
         /// <summary>
         /// The first name of the user
         /// </summary>
         /// <value>The first name of the user</value>
         /* <example>John</example>*/
-        [DataMember(Name = "sUserFirstname", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sUserFirstname", EmitDefaultValue = false)]
         public string SUserFirstname { get; set; }
 
         /// <summary>
@@ -117,7 +114,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The last name of the user</value>
         /* <example>Doe</example>*/
-        [DataMember(Name = "sUserLastname", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sUserLastname", EmitDefaultValue = false)]
         public string SUserLastname { get; set; }
 
         /// <summary>
@@ -125,7 +122,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The login name of the User.</value>
         /* <example>JohnDoe</example>*/
-        [DataMember(Name = "sUserLoginname", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sUserLoginname", EmitDefaultValue = false)]
         public string SUserLoginname { get; set; }
 
         /// <summary>
@@ -145,6 +142,14 @@ namespace eZmaxApi.Model
         public string SUsergroupNameX { get; set; }
 
         /// <summary>
+        /// The name of the Usergroupexternal
+        /// </summary>
+        /// <value>The name of the Usergroupexternal</value>
+        /* <example>Administrators</example>*/
+        [DataMember(Name = "sUsergroupexternalName", EmitDefaultValue = false)]
+        public string SUsergroupexternalName { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -155,11 +160,13 @@ namespace eZmaxApi.Model
             sb.Append("  PkiUsergroupmembershipID: ").Append(PkiUsergroupmembershipID).Append("\n");
             sb.Append("  FkiUsergroupID: ").Append(FkiUsergroupID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  FkiUsergroupexternalID: ").Append(FkiUsergroupexternalID).Append("\n");
             sb.Append("  SUserFirstname: ").Append(SUserFirstname).Append("\n");
             sb.Append("  SUserLastname: ").Append(SUserLastname).Append("\n");
             sb.Append("  SUserLoginname: ").Append(SUserLoginname).Append("\n");
             sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
             sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
+            sb.Append("  SUsergroupexternalName: ").Append(SUsergroupexternalName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -210,6 +217,18 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
+            // FkiUsergroupexternalID (int) maximum
+            if (this.FkiUsergroupexternalID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value less than or equal to 255.", new [] { "FkiUsergroupexternalID" });
+            }
+
+            // FkiUsergroupexternalID (int) minimum
+            if (this.FkiUsergroupexternalID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupexternalID" });
+            }
+
             if (this.SUserLoginname != null) {
                 // SUserLoginname (string) pattern
                 Regex regexSUserLoginname = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
@@ -225,6 +244,15 @@ namespace eZmaxApi.Model
                 if (!regexSUsergroupNameX.Match(this.SUsergroupNameX).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameX, must match a pattern of " + regexSUsergroupNameX, new [] { "SUsergroupNameX" });
+                }
+            }
+
+            if (this.SUsergroupexternalName != null) {
+                // SUsergroupexternalName (string) pattern
+                Regex regexSUsergroupexternalName = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
+                if (!regexSUsergroupexternalName.Match(this.SUsergroupexternalName).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupexternalName, must match a pattern of " + regexSUsergroupexternalName, new [] { "SUsergroupexternalName" });
                 }
             }
 

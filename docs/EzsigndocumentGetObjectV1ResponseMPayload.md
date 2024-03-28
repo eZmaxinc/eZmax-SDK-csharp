@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | [optional] 
 **SEzsigndocumentExternalid** | **string** | This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  | [optional] 
 **IEzsigndocumentEzsignsignatureattachmenttotal** | **int** | The number of Ezsigndocumentattachment total | 
+**IEzsigndocumentEzsigndiscussiontotal** | **int** | The total number of Ezsigndiscussions | 
 **EEzsigndocumentSteptype** | **ComputedEEzsigndocumentSteptype** |  | 
 **IEzsigndocumentStepformtotal** | **int** | The total number of steps in the form filling phase | 
 **IEzsigndocumentStepformcurrent** | **int** | The current step in the form filling phase | 

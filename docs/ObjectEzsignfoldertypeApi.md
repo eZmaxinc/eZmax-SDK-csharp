@@ -4,16 +4,17 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**EzsignfoldertypeCreateObjectV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypecreateobjectv1) | **POST** /1/object/ezsignfoldertype | Create a new Ezsignfoldertype |
+| [**EzsignfoldertypeCreateObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypecreateobjectv2) | **POST** /2/object/ezsignfoldertype | Create a new Ezsignfoldertype |
 | [**EzsignfoldertypeEditObjectV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeeditobjectv1) | **PUT** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype |
-| [**EzsignfoldertypeGetAutocompleteV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs |
+| [**EzsignfoldertypeEditObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeeditobjectv2) | **PUT** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype |
 | [**EzsignfoldertypeGetAutocompleteV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs |
 | [**EzsignfoldertypeGetListV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list |
 | [**EzsignfoldertypeGetObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetobjectv2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype |
+| [**EzsignfoldertypeGetObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetobjectv3) | **GET** /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype |
 
-<a id="ezsignfoldertypecreateobjectv1"></a>
-# **EzsignfoldertypeCreateObjectV1**
-> EzsignfoldertypeCreateObjectV1Response EzsignfoldertypeCreateObjectV1 (EzsignfoldertypeCreateObjectV1Request ezsignfoldertypeCreateObjectV1Request)
+<a id="ezsignfoldertypecreateobjectv2"></a>
+# **EzsignfoldertypeCreateObjectV2**
+> EzsignfoldertypeCreateObjectV2Response EzsignfoldertypeCreateObjectV2 (EzsignfoldertypeCreateObjectV2Request ezsignfoldertypeCreateObjectV2Request)
 
 Create a new Ezsignfoldertype
 
@@ -29,7 +30,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsignfoldertypeCreateObjectV1Example
+    public class EzsignfoldertypeCreateObjectV2Example
     {
         public static void Main()
         {
@@ -41,17 +42,17 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfoldertypeApi(config);
-            var ezsignfoldertypeCreateObjectV1Request = new EzsignfoldertypeCreateObjectV1Request(); // EzsignfoldertypeCreateObjectV1Request | 
+            var ezsignfoldertypeCreateObjectV2Request = new EzsignfoldertypeCreateObjectV2Request(); // EzsignfoldertypeCreateObjectV2Request | 
 
             try
             {
                 // Create a new Ezsignfoldertype
-                EzsignfoldertypeCreateObjectV1Response result = apiInstance.EzsignfoldertypeCreateObjectV1(ezsignfoldertypeCreateObjectV1Request);
+                EzsignfoldertypeCreateObjectV2Response result = apiInstance.EzsignfoldertypeCreateObjectV2(ezsignfoldertypeCreateObjectV2Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeCreateObjectV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeCreateObjectV2: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -60,21 +61,21 @@ namespace Example
 }
 ```
 
-#### Using the EzsignfoldertypeCreateObjectV1WithHttpInfo variant
+#### Using the EzsignfoldertypeCreateObjectV2WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create a new Ezsignfoldertype
-    ApiResponse<EzsignfoldertypeCreateObjectV1Response> response = apiInstance.EzsignfoldertypeCreateObjectV1WithHttpInfo(ezsignfoldertypeCreateObjectV1Request);
+    ApiResponse<EzsignfoldertypeCreateObjectV2Response> response = apiInstance.EzsignfoldertypeCreateObjectV2WithHttpInfo(ezsignfoldertypeCreateObjectV2Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeCreateObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeCreateObjectV2WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -84,11 +85,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **ezsignfoldertypeCreateObjectV1Request** | [**EzsignfoldertypeCreateObjectV1Request**](EzsignfoldertypeCreateObjectV1Request.md) |  |  |
+| **ezsignfoldertypeCreateObjectV2Request** | [**EzsignfoldertypeCreateObjectV2Request**](EzsignfoldertypeCreateObjectV2Request.md) |  |  |
 
 ### Return type
 
-[**EzsignfoldertypeCreateObjectV1Response**](EzsignfoldertypeCreateObjectV1Response.md)
+[**EzsignfoldertypeCreateObjectV2Response**](EzsignfoldertypeCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -205,13 +206,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="ezsignfoldertypegetautocompletev1"></a>
-# **EzsignfoldertypeGetAutocompleteV1**
-> CommonGetAutocompleteV1Response EzsignfoldertypeGetAutocompleteV1 (string sSelector, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+<a id="ezsignfoldertypeeditobjectv2"></a>
+# **EzsignfoldertypeEditObjectV2**
+> EzsignfoldertypeEditObjectV2Response EzsignfoldertypeEditObjectV2 (int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV2Request ezsignfoldertypeEditObjectV2Request)
 
-Retrieve Ezsignfoldertypes and IDs
-
-Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+Edit an existing Ezsignfoldertype
 
 ### Example
 ```csharp
@@ -223,7 +222,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsignfoldertypeGetAutocompleteV1Example
+    public class EzsignfoldertypeEditObjectV2Example
     {
         public static void Main()
         {
@@ -235,20 +234,18 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsignfoldertypeApi(config);
-            var sSelector = "Active";  // string | The type of Ezsignfoldertypes to return
-            var eFilterActive = "All";  // string? | Specify which results we want to display. (optional)  (default to Active)
-            var sQuery = "sQuery_example";  // string? | Allow to filter the returned results (optional) 
-            var acceptLanguage = new HeaderAcceptLanguage?(); // HeaderAcceptLanguage? |  (optional) 
+            var pkiEzsignfoldertypeID = 56;  // int | 
+            var ezsignfoldertypeEditObjectV2Request = new EzsignfoldertypeEditObjectV2Request(); // EzsignfoldertypeEditObjectV2Request | 
 
             try
             {
-                // Retrieve Ezsignfoldertypes and IDs
-                CommonGetAutocompleteV1Response result = apiInstance.EzsignfoldertypeGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
+                // Edit an existing Ezsignfoldertype
+                EzsignfoldertypeEditObjectV2Response result = apiInstance.EzsignfoldertypeEditObjectV2(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV2Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeGetAutocompleteV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeEditObjectV2: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -257,21 +254,21 @@ namespace Example
 }
 ```
 
-#### Using the EzsignfoldertypeGetAutocompleteV1WithHttpInfo variant
+#### Using the EzsignfoldertypeEditObjectV2WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Retrieve Ezsignfoldertypes and IDs
-    ApiResponse<CommonGetAutocompleteV1Response> response = apiInstance.EzsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+    // Edit an existing Ezsignfoldertype
+    ApiResponse<EzsignfoldertypeEditObjectV2Response> response = apiInstance.EzsignfoldertypeEditObjectV2WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV2Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeGetAutocompleteV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeEditObjectV2WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -281,14 +278,12 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **sSelector** | **string** | The type of Ezsignfoldertypes to return |  |
-| **eFilterActive** | **string?** | Specify which results we want to display. | [optional] [default to Active] |
-| **sQuery** | **string?** | Allow to filter the returned results | [optional]  |
-| **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md) |  | [optional]  |
+| **pkiEzsignfoldertypeID** | **int** |  |  |
+| **ezsignfoldertypeEditObjectV2Request** | [**EzsignfoldertypeEditObjectV2Request**](EzsignfoldertypeEditObjectV2Request.md) |  |  |
 
 ### Return type
 
-[**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
+[**EzsignfoldertypeEditObjectV2Response**](EzsignfoldertypeEditObjectV2Response.md)
 
 ### Authorization
 
@@ -296,7 +291,7 @@ catch (ApiException e)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -304,6 +299,8 @@ catch (ApiException e)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -590,6 +587,101 @@ catch (ApiException e)
 ### Return type
 
 [**EzsignfoldertypeGetObjectV2Response**](EzsignfoldertypeGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsignfoldertypegetobjectv3"></a>
+# **EzsignfoldertypeGetObjectV3**
+> EzsignfoldertypeGetObjectV3Response EzsignfoldertypeGetObjectV3 (int pkiEzsignfoldertypeID)
+
+Retrieve an existing Ezsignfoldertype
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfoldertypeGetObjectV3Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfoldertypeApi(config);
+            var pkiEzsignfoldertypeID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Ezsignfoldertype
+                EzsignfoldertypeGetObjectV3Response result = apiInstance.EzsignfoldertypeGetObjectV3(pkiEzsignfoldertypeID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeGetObjectV3: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsignfoldertypeGetObjectV3WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Ezsignfoldertype
+    ApiResponse<EzsignfoldertypeGetObjectV3Response> response = apiInstance.EzsignfoldertypeGetObjectV3WithHttpInfo(pkiEzsignfoldertypeID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeGetObjectV3WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignfoldertypeID** | **int** |  |  |
+
+### Return type
+
+[**EzsignfoldertypeGetObjectV3Response**](EzsignfoldertypeGetObjectV3Response.md)
 
 ### Authorization
 

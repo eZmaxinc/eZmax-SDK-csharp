@@ -72,5 +72,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'AObjEzsigntemplatepackage'
         }
+
+        /// <summary>
+        /// Test the property 'AObjEzsigntemplateglobal'
+        /// </summary>
+        [Fact]
+        public void AObjEzsigntemplateglobalTest()
+        {
+            // TODO unit test for the property 'AObjEzsigntemplateglobal'
+        }
     }
 }

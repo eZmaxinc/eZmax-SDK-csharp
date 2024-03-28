@@ -56,21 +56,6 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzmaxinvoicingGetAutocompleteV1
-        /// </summary>
-        [Fact]
-        public void EzmaxinvoicingGetAutocompleteV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string sSelector = null;
-            //string? eFilterActive = null;
-            //string? sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.EzmaxinvoicingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-            //Assert.IsType<CommonGetAutocompleteV1Response>(response);
-        }
-
-        /// <summary>
         /// Test EzmaxinvoicingGetAutocompleteV2
         /// </summary>
         [Fact]

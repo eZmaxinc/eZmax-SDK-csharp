@@ -126,5 +126,23 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'SAddressZip'
         }
+
+        /// <summary>
+        /// Test the property 'FAddressLongitude'
+        /// </summary>
+        [Fact]
+        public void FAddressLongitudeTest()
+        {
+            // TODO unit test for the property 'FAddressLongitude'
+        }
+
+        /// <summary>
+        /// Test the property 'FAddressLatitude'
+        /// </summary>
+        [Fact]
+        public void FAddressLatitudeTest()
+        {
+            // TODO unit test for the property 'FAddressLatitude'
+        }
     }
 }

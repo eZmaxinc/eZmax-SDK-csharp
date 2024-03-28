@@ -180,5 +180,41 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'IEzsignsignatureSigned'
         }
+
+        /// <summary>
+        /// Test the property 'IEzsignformfieldgroup'
+        /// </summary>
+        [Fact]
+        public void IEzsignformfieldgroupTest()
+        {
+            // TODO unit test for the property 'IEzsignformfieldgroup'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignformfieldgroupCompleted'
+        /// </summary>
+        [Fact]
+        public void IEzsignformfieldgroupCompletedTest()
+        {
+            // TODO unit test for the property 'IEzsignformfieldgroupCompleted'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignformHasdependencies'
+        /// </summary>
+        [Fact]
+        public void BEzsignformHasdependenciesTest()
+        {
+            // TODO unit test for the property 'BEzsignformHasdependencies'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzsignfolderCompletedpercentage'
+        /// </summary>
+        [Fact]
+        public void DEzsignfolderCompletedpercentageTest()
+        {
+            // TODO unit test for the property 'DEzsignfolderCompletedpercentage'
+        }
     }
 }

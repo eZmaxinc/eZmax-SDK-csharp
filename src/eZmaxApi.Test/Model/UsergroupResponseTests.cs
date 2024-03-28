@@ -72,5 +72,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'ObjUsergroupName'
         }
+
+        /// <summary>
+        /// Test the property 'SUsergroupNameX'
+        /// </summary>
+        [Fact]
+        public void SUsergroupNameXTest()
+        {
+            // TODO unit test for the property 'SUsergroupNameX'
+        }
     }
 }

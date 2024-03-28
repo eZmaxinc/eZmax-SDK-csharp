@@ -38,6 +38,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eBrandingLogo", IsRequired = true, EmitDefaultValue = true)]
         public FieldEBrandingLogo EBrandingLogo { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EBrandingLogointerface
+        /// </summary>
+        [DataMember(Name = "eBrandingLogointerface", EmitDefaultValue = false)]
+        public FieldEBrandingLogointerface? EBrandingLogointerface { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingRequest" /> class.
         /// </summary>
@@ -50,16 +56,19 @@ namespace eZmaxApi.Model
         /// <param name="objBrandingDescription">objBrandingDescription (required).</param>
         /// <param name="eBrandingLogo">eBrandingLogo (required).</param>
         /// <param name="sBrandingBase64">The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used..</param>
+        /// <param name="eBrandingLogointerface">eBrandingLogointerface.</param>
+        /// <param name="sBrandingLogointerfaceBase64">The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogointerface if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used..</param>
         /// <param name="iBrandingColortext">The color of the text. This is a RGB color converted into integer (required).</param>
         /// <param name="iBrandingColortextlinkbox">The color of the text in the link box. This is a RGB color converted into integer (required).</param>
         /// <param name="iBrandingColortextbutton">The color of the text in the button. This is a RGB color converted into integer (required).</param>
         /// <param name="iBrandingColorbackground">The color of the background. This is a RGB color converted into integer (required).</param>
         /// <param name="iBrandingColorbackgroundbutton">The color of the background of the button. This is a RGB color converted into integer (required).</param>
         /// <param name="iBrandingColorbackgroundsmallbox">The color of the background of the small box. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingInterfacecolor">The color of the interface. This is a RGB color converted into integer.</param>
         /// <param name="sBrandingName">The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty.</param>
         /// <param name="sEmailAddress">The email address..</param>
         /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
-        public BrandingRequest(int pkiBrandingID = default(int), MultilingualBrandingDescription objBrandingDescription = default(MultilingualBrandingDescription), FieldEBrandingLogo eBrandingLogo = default(FieldEBrandingLogo), byte[] sBrandingBase64 = default(byte[]), int iBrandingColortext = default(int), int iBrandingColortextlinkbox = default(int), int iBrandingColortextbutton = default(int), int iBrandingColorbackground = default(int), int iBrandingColorbackgroundbutton = default(int), int iBrandingColorbackgroundsmallbox = default(int), string sBrandingName = default(string), string sEmailAddress = default(string), bool bBrandingIsactive = default(bool))
+        public BrandingRequest(int pkiBrandingID = default(int), MultilingualBrandingDescription objBrandingDescription = default(MultilingualBrandingDescription), FieldEBrandingLogo eBrandingLogo = default(FieldEBrandingLogo), byte[] sBrandingBase64 = default(byte[]), FieldEBrandingLogointerface? eBrandingLogointerface = default(FieldEBrandingLogointerface?), byte[] sBrandingLogointerfaceBase64 = default(byte[]), int iBrandingColortext = default(int), int iBrandingColortextlinkbox = default(int), int iBrandingColortextbutton = default(int), int iBrandingColorbackground = default(int), int iBrandingColorbackgroundbutton = default(int), int iBrandingColorbackgroundsmallbox = default(int), int iBrandingInterfacecolor = default(int), string sBrandingName = default(string), string sEmailAddress = default(string), bool bBrandingIsactive = default(bool))
         {
             // to ensure "objBrandingDescription" is required (not null)
             if (objBrandingDescription == null)
@@ -77,6 +86,9 @@ namespace eZmaxApi.Model
             this.BBrandingIsactive = bBrandingIsactive;
             this.PkiBrandingID = pkiBrandingID;
             this.SBrandingBase64 = sBrandingBase64;
+            this.EBrandingLogointerface = eBrandingLogointerface;
+            this.SBrandingLogointerfaceBase64 = sBrandingLogointerfaceBase64;
+            this.IBrandingInterfacecolor = iBrandingInterfacecolor;
             this.SBrandingName = sBrandingName;
             this.SEmailAddress = sEmailAddress;
         }
@@ -102,6 +114,14 @@ namespace eZmaxApi.Model
         /* <example>[B@6fefce9e</example>*/
         [DataMember(Name = "sBrandingBase64", EmitDefaultValue = false)]
         public byte[] SBrandingBase64 { get; set; }
+
+        /// <summary>
+        /// The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogointerface if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used.
+        /// </summary>
+        /// <value>The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogointerface if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used.</value>
+        /* <example>[B@4f8969b0</example>*/
+        [DataMember(Name = "sBrandingLogointerfaceBase64", EmitDefaultValue = false)]
+        public byte[] SBrandingLogointerfaceBase64 { get; set; }
 
         /// <summary>
         /// The color of the text. This is a RGB color converted into integer
@@ -152,6 +172,14 @@ namespace eZmaxApi.Model
         public int IBrandingColorbackgroundsmallbox { get; set; }
 
         /// <summary>
+        /// The color of the interface. This is a RGB color converted into integer
+        /// </summary>
+        /// <value>The color of the interface. This is a RGB color converted into integer</value>
+        /* <example>15658734</example>*/
+        [DataMember(Name = "iBrandingInterfacecolor", EmitDefaultValue = false)]
+        public int IBrandingInterfacecolor { get; set; }
+
+        /// <summary>
         /// The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
         /// </summary>
         /// <value>The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty</value>
@@ -187,12 +215,15 @@ namespace eZmaxApi.Model
             sb.Append("  ObjBrandingDescription: ").Append(ObjBrandingDescription).Append("\n");
             sb.Append("  EBrandingLogo: ").Append(EBrandingLogo).Append("\n");
             sb.Append("  SBrandingBase64: ").Append(SBrandingBase64).Append("\n");
+            sb.Append("  EBrandingLogointerface: ").Append(EBrandingLogointerface).Append("\n");
+            sb.Append("  SBrandingLogointerfaceBase64: ").Append(SBrandingLogointerfaceBase64).Append("\n");
             sb.Append("  IBrandingColortext: ").Append(IBrandingColortext).Append("\n");
             sb.Append("  IBrandingColortextlinkbox: ").Append(IBrandingColortextlinkbox).Append("\n");
             sb.Append("  IBrandingColortextbutton: ").Append(IBrandingColortextbutton).Append("\n");
             sb.Append("  IBrandingColorbackground: ").Append(IBrandingColorbackground).Append("\n");
             sb.Append("  IBrandingColorbackgroundbutton: ").Append(IBrandingColorbackgroundbutton).Append("\n");
             sb.Append("  IBrandingColorbackgroundsmallbox: ").Append(IBrandingColorbackgroundsmallbox).Append("\n");
+            sb.Append("  IBrandingInterfacecolor: ").Append(IBrandingInterfacecolor).Append("\n");
             sb.Append("  SBrandingName: ").Append(SBrandingName).Append("\n");
             sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
             sb.Append("  BBrandingIsactive: ").Append(BBrandingIsactive).Append("\n");
@@ -292,6 +323,18 @@ namespace eZmaxApi.Model
             if (this.IBrandingColorbackgroundsmallbox < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackgroundsmallbox, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackgroundsmallbox" });
+            }
+
+            // IBrandingInterfacecolor (int) maximum
+            if (this.IBrandingInterfacecolor > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingInterfacecolor, must be a value less than or equal to 16777215.", new [] { "IBrandingInterfacecolor" });
+            }
+
+            // IBrandingInterfacecolor (int) minimum
+            if (this.IBrandingInterfacecolor < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingInterfacecolor, must be a value greater than or equal to 0.", new [] { "IBrandingInterfacecolor" });
             }
 
             if (this.SBrandingName != null) {

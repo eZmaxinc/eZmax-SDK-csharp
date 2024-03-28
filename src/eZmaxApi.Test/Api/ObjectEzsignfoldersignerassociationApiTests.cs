@@ -56,6 +56,19 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsignfoldersignerassociationCreateEmbeddedUrlV1
+        /// </summary>
+        [Fact]
+        public void EzsignfoldersignerassociationCreateEmbeddedUrlV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfoldersignerassociationID = null;
+            //EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request = null;
+            //var response = instance.EzsignfoldersignerassociationCreateEmbeddedUrlV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request);
+            //Assert.IsType<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsignfoldersignerassociationCreateObjectV1
         /// </summary>
         [Fact]

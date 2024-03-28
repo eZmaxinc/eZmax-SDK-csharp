@@ -81,5 +81,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'FkiUserID'
         }
+
+        /// <summary>
+        /// Test the property 'FkiUsergroupexternalID'
+        /// </summary>
+        [Fact]
+        public void FkiUsergroupexternalIDTest()
+        {
+            // TODO unit test for the property 'FkiUsergroupexternalID'
+        }
     }
 }

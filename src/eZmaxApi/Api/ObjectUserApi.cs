@@ -51,6 +51,29 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of UserCreateObjectV1Response</returns>
         ApiResponse<UserCreateObjectV1Response> UserCreateObjectV1WithHttpInfo(UserCreateObjectV1Request userCreateObjectV1Request, int operationIndex = 0);
         /// <summary>
+        /// Create a new User
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userCreateObjectV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserCreateObjectV2Response</returns>
+        UserCreateObjectV2Response UserCreateObjectV2(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Create a new User
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userCreateObjectV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserCreateObjectV2Response</returns>
+        ApiResponse<UserCreateObjectV2Response> UserCreateObjectV2WithHttpInfo(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0);
+        /// <summary>
         /// Edit an existing User
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -261,6 +284,46 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of UserGetSubnetsV1Response</returns>
         ApiResponse<UserGetSubnetsV1Response> UserGetSubnetsV1WithHttpInfo(int pkiUserID, int operationIndex = 0);
         /// <summary>
+        /// Get User&#39;s Usergroupexternals
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserGetUsergroupexternalsV1Response</returns>
+        UserGetUsergroupexternalsV1Response UserGetUsergroupexternalsV1(int pkiUserID, int operationIndex = 0);
+
+        /// <summary>
+        /// Get User&#39;s Usergroupexternals
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserGetUsergroupexternalsV1Response</returns>
+        ApiResponse<UserGetUsergroupexternalsV1Response> UserGetUsergroupexternalsV1WithHttpInfo(int pkiUserID, int operationIndex = 0);
+        /// <summary>
+        /// Get User&#39;s Usergroups
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserGetUsergroupsV1Response</returns>
+        UserGetUsergroupsV1Response UserGetUsergroupsV1(int pkiUserID, int operationIndex = 0);
+
+        /// <summary>
+        /// Get User&#39;s Usergroups
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserGetUsergroupsV1Response</returns>
+        ApiResponse<UserGetUsergroupsV1Response> UserGetUsergroupsV1WithHttpInfo(int pkiUserID, int operationIndex = 0);
+        /// <summary>
         /// Send password reset
         /// </summary>
         /// <remarks>
@@ -319,6 +382,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserCreateObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserCreateObjectV1Response>> UserCreateObjectV1WithHttpInfoAsync(UserCreateObjectV1Request userCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Create a new User
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userCreateObjectV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserCreateObjectV2Response</returns>
+        System.Threading.Tasks.Task<UserCreateObjectV2Response> UserCreateObjectV2Async(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create a new User
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userCreateObjectV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserCreateObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserCreateObjectV2Response>> UserCreateObjectV2WithHttpInfoAsync(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing User
         /// </summary>
@@ -562,6 +650,56 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetSubnetsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserGetSubnetsV1Response>> UserGetSubnetsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get User&#39;s Usergroupexternals
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserGetUsergroupexternalsV1Response</returns>
+        System.Threading.Tasks.Task<UserGetUsergroupexternalsV1Response> UserGetUsergroupexternalsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get User&#39;s Usergroupexternals
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserGetUsergroupexternalsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserGetUsergroupexternalsV1Response>> UserGetUsergroupexternalsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get User&#39;s Usergroups
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserGetUsergroupsV1Response</returns>
+        System.Threading.Tasks.Task<UserGetUsergroupsV1Response> UserGetUsergroupsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get User&#39;s Usergroups
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserGetUsergroupsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserGetUsergroupsV1Response>> UserGetUsergroupsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Send password reset
         /// </summary>
@@ -856,6 +994,162 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UserCreateObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create a new User The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userCreateObjectV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserCreateObjectV2Response</returns>
+        public UserCreateObjectV2Response UserCreateObjectV2(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<UserCreateObjectV2Response> localVarResponse = UserCreateObjectV2WithHttpInfo(userCreateObjectV2Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new User The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userCreateObjectV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserCreateObjectV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<UserCreateObjectV2Response> UserCreateObjectV2WithHttpInfo(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'userCreateObjectV2Request' is set
+            if (userCreateObjectV2Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'userCreateObjectV2Request' when calling ObjectUserApi->UserCreateObjectV2");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = userCreateObjectV2Request;
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserCreateObjectV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<UserCreateObjectV2Response>("/2/object/user", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserCreateObjectV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create a new User The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userCreateObjectV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserCreateObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<UserCreateObjectV2Response> UserCreateObjectV2Async(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<UserCreateObjectV2Response> localVarResponse = await UserCreateObjectV2WithHttpInfoAsync(userCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new User The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userCreateObjectV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserCreateObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserCreateObjectV2Response>> UserCreateObjectV2WithHttpInfoAsync(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userCreateObjectV2Request' is set
+            if (userCreateObjectV2Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'userCreateObjectV2Request' when calling ObjectUserApi->UserCreateObjectV2");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = userCreateObjectV2Request;
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserCreateObjectV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<UserCreateObjectV2Response>("/2/object/user", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserCreateObjectV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2278,6 +2572,290 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UserGetSubnetsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get User&#39;s Usergroupexternals 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserGetUsergroupexternalsV1Response</returns>
+        public UserGetUsergroupexternalsV1Response UserGetUsergroupexternalsV1(int pkiUserID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<UserGetUsergroupexternalsV1Response> localVarResponse = UserGetUsergroupexternalsV1WithHttpInfo(pkiUserID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get User&#39;s Usergroupexternals 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserGetUsergroupexternalsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<UserGetUsergroupexternalsV1Response> UserGetUsergroupexternalsV1WithHttpInfo(int pkiUserID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserGetUsergroupexternalsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<UserGetUsergroupexternalsV1Response>("/1/object/user/{pkiUserID}/getUsergroupexternals", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserGetUsergroupexternalsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get User&#39;s Usergroupexternals 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserGetUsergroupexternalsV1Response</returns>
+        public async System.Threading.Tasks.Task<UserGetUsergroupexternalsV1Response> UserGetUsergroupexternalsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<UserGetUsergroupexternalsV1Response> localVarResponse = await UserGetUsergroupexternalsV1WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get User&#39;s Usergroupexternals 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserGetUsergroupexternalsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetUsergroupexternalsV1Response>> UserGetUsergroupexternalsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserGetUsergroupexternalsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<UserGetUsergroupexternalsV1Response>("/1/object/user/{pkiUserID}/getUsergroupexternals", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserGetUsergroupexternalsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get User&#39;s Usergroups 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserGetUsergroupsV1Response</returns>
+        public UserGetUsergroupsV1Response UserGetUsergroupsV1(int pkiUserID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<UserGetUsergroupsV1Response> localVarResponse = UserGetUsergroupsV1WithHttpInfo(pkiUserID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get User&#39;s Usergroups 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserGetUsergroupsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<UserGetUsergroupsV1Response> UserGetUsergroupsV1WithHttpInfo(int pkiUserID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserGetUsergroupsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<UserGetUsergroupsV1Response>("/1/object/user/{pkiUserID}/getUsergroups", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserGetUsergroupsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get User&#39;s Usergroups 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserGetUsergroupsV1Response</returns>
+        public async System.Threading.Tasks.Task<UserGetUsergroupsV1Response> UserGetUsergroupsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<UserGetUsergroupsV1Response> localVarResponse = await UserGetUsergroupsV1WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get User&#39;s Usergroups 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserGetUsergroupsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetUsergroupsV1Response>> UserGetUsergroupsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserGetUsergroupsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<UserGetUsergroupsV1Response>("/1/object/user/{pkiUserID}/getUsergroups", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserGetUsergroupsV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

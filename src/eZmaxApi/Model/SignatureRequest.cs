@@ -113,7 +113,7 @@ namespace eZmaxApi.Model
 
             if (this.TSignatureSvg != null) {
                 // TSignatureSvg (string) pattern
-                Regex regexTSignatureSvg = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
+                Regex regexTSignatureSvg = new Regex(@"^.{60,65535}$", RegexOptions.CultureInvariant);
                 if (!regexTSignatureSvg.Match(this.TSignatureSvg).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TSignatureSvg, must match a pattern of " + regexTSignatureSvg, new [] { "TSignatureSvg" });

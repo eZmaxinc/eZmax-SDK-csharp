@@ -81,6 +81,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsigntemplateCreateObjectV2
+        /// </summary>
+        [Fact]
+        public void EzsigntemplateCreateObjectV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request = null;
+            //var response = instance.EzsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request);
+            //Assert.IsType<EzsigntemplateCreateObjectV2Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsigntemplateDeleteObjectV1
         /// </summary>
         [Fact]
@@ -103,6 +115,19 @@ namespace eZmaxApi.Test.Api
             //EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request = null;
             //var response = instance.EzsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
             //Assert.IsType<EzsigntemplateEditObjectV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test EzsigntemplateEditObjectV2
+        /// </summary>
+        [Fact]
+        public void EzsigntemplateEditObjectV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigntemplateID = null;
+            //EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request = null;
+            //var response = instance.EzsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
+            //Assert.IsType<EzsigntemplateEditObjectV2Response>(response);
         }
 
         /// <summary>

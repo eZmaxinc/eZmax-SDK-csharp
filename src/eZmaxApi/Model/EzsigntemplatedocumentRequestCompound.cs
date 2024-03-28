@@ -123,9 +123,9 @@ namespace eZmaxApi.Model
         [DataMember(Name = "eEzsigntemplatedocumentFormat", EmitDefaultValue = false)]
         public EEzsigntemplatedocumentFormatEnum? EEzsigntemplatedocumentFormat { get; set; }
         /// <summary>
-        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**
+        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document
         /// </summary>
-        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**</value>
+        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum EEzsigntemplatedocumentFormEnum
         {
@@ -139,14 +139,20 @@ namespace eZmaxApi.Model
             /// Enum Convert for value: Convert
             /// </summary>
             [EnumMember(Value = "Convert")]
-            Convert = 2
+            Convert = 2,
+
+            /// <summary>
+            /// Enum Discard for value: Discard
+            /// </summary>
+            [EnumMember(Value = "Discard")]
+            Discard = 3
         }
 
 
         /// <summary>
-        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**
+        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document
         /// </summary>
-        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**</value>
+        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document</value>
         [DataMember(Name = "eEzsigntemplatedocumentForm", EmitDefaultValue = false)]
         public EEzsigntemplatedocumentFormEnum? EEzsigntemplatedocumentForm { get; set; }
         /// <summary>
@@ -167,7 +173,7 @@ namespace eZmaxApi.Model
         /// <param name="sEzsigntemplatedocumentBase64">The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64..</param>
         /// <param name="sEzsigntemplatedocumentUrl">The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Url..</param>
         /// <param name="bEzsigntemplatedocumentForcerepair">Try to repair the document or flatten it if it cannot be used for electronic signature..</param>
-        /// <param name="eEzsigntemplatedocumentForm">If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**.</param>
+        /// <param name="eEzsigntemplatedocumentForm">If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document.</param>
         /// <param name="sEzsigntemplatedocumentPassword">If the source template is password protected, the password to open/modify it. (default to &quot;&quot;).</param>
         public EzsigntemplatedocumentRequestCompound(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), string sEzsigntemplatedocumentName = default(string), EEzsigntemplatedocumentSourceEnum eEzsigntemplatedocumentSource = default(EEzsigntemplatedocumentSourceEnum), EEzsigntemplatedocumentFormatEnum? eEzsigntemplatedocumentFormat = default(EEzsigntemplatedocumentFormatEnum?), byte[] sEzsigntemplatedocumentBase64 = default(byte[]), string sEzsigntemplatedocumentUrl = default(string), bool bEzsigntemplatedocumentForcerepair = default(bool), EEzsigntemplatedocumentFormEnum? eEzsigntemplatedocumentForm = default(EEzsigntemplatedocumentFormEnum?), string sEzsigntemplatedocumentPassword = @"")
         {

@@ -191,6 +191,24 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SWebhookEvent'
+        /// </summary>
+        [Fact]
+        public void SWebhookEventTest()
+        {
+            // TODO unit test for the property 'SWebhookEvent'
+        }
+
+        /// <summary>
+        /// Test the property 'AObjWebhookheader'
+        /// </summary>
+        [Fact]
+        public void AObjWebhookheaderTest()
+        {
+            // TODO unit test for the property 'AObjWebhookheader'
+        }
+
+        /// <summary>
         /// Test the property 'PksCustomerCode'
         /// </summary>
         [Fact]

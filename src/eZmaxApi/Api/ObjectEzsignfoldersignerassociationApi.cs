@@ -28,6 +28,31 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Creates an Url to allow embedded signing
+        /// </summary>
+        /// <remarks>
+        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationCreateEmbeddedUrlV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfoldersignerassociationCreateEmbeddedUrlV1Response</returns>
+        EzsignfoldersignerassociationCreateEmbeddedUrlV1Response EzsignfoldersignerassociationCreateEmbeddedUrlV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Creates an Url to allow embedded signing
+        /// </summary>
+        /// <remarks>
+        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationCreateEmbeddedUrlV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfoldersignerassociationCreateEmbeddedUrlV1Response</returns>
+        ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0);
+        /// <summary>
         /// Create a new Ezsignfoldersignerassociation
         /// </summary>
         /// <remarks>
@@ -235,6 +260,33 @@ namespace eZmaxApi.Api
     public interface IObjectEzsignfoldersignerassociationApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Creates an Url to allow embedded signing
+        /// </summary>
+        /// <remarks>
+        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationCreateEmbeddedUrlV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfoldersignerassociationCreateEmbeddedUrlV1Response</returns>
+        System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> EzsignfoldersignerassociationCreateEmbeddedUrlV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Creates an Url to allow embedded signing
+        /// </summary>
+        /// <remarks>
+        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationCreateEmbeddedUrlV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateEmbeddedUrlV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>> EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create a new Ezsignfoldersignerassociation
         /// </summary>
@@ -588,6 +640,168 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationCreateEmbeddedUrlV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfoldersignerassociationCreateEmbeddedUrlV1Response</returns>
+        public EzsignfoldersignerassociationCreateEmbeddedUrlV1Response EzsignfoldersignerassociationCreateEmbeddedUrlV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> localVarResponse = EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationCreateEmbeddedUrlV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfoldersignerassociationCreateEmbeddedUrlV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' is set
+            if (ezsignfoldersignerassociationCreateEmbeddedUrlV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' when calling ObjectEzsignfoldersignerassociationApi->EzsignfoldersignerassociationCreateEmbeddedUrlV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfoldersignerassociationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfoldersignerassociationID)); // path parameter
+            localVarRequestOptions.Data = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsignfoldersignerassociationApi.EzsignfoldersignerassociationCreateEmbeddedUrlV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfoldersignerassociationCreateEmbeddedUrlV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationCreateEmbeddedUrlV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfoldersignerassociationCreateEmbeddedUrlV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> EzsignfoldersignerassociationCreateEmbeddedUrlV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> localVarResponse = await EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationCreateEmbeddedUrlV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateEmbeddedUrlV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>> EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' is set
+            if (ezsignfoldersignerassociationCreateEmbeddedUrlV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' when calling ObjectEzsignfoldersignerassociationApi->EzsignfoldersignerassociationCreateEmbeddedUrlV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfoldersignerassociationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfoldersignerassociationID)); // path parameter
+            localVarRequestOptions.Data = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsignfoldersignerassociationApi.EzsignfoldersignerassociationCreateEmbeddedUrlV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfoldersignerassociationCreateEmbeddedUrlV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>

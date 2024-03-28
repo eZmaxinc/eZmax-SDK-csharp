@@ -254,12 +254,12 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'BEzsignfoldertypeReassign'
+        /// Test the property 'BEzsignfoldertypeDiscussion'
         /// </summary>
         [Fact]
-        public void BEzsignfoldertypeReassignTest()
+        public void BEzsignfoldertypeDiscussionTest()
         {
-            // TODO unit test for the property 'BEzsignfoldertypeReassign'
+            // TODO unit test for the property 'BEzsignfoldertypeDiscussion'
         }
 
         /// <summary>
@@ -278,15 +278,6 @@ namespace eZmaxApi.Test.Model
         public void BEzsignfoldertypeReassignuserTest()
         {
             // TODO unit test for the property 'BEzsignfoldertypeReassignuser'
-        }
-
-        /// <summary>
-        /// Test the property 'BEzsignfoldertypeSendattatchmentsigner'
-        /// </summary>
-        [Fact]
-        public void BEzsignfoldertypeSendattatchmentsignerTest()
-        {
-            // TODO unit test for the property 'BEzsignfoldertypeSendattatchmentsigner'
         }
 
         /// <summary>
@@ -470,30 +461,21 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'BEzsignfoldertypeIncludeproofsigner'
-        /// </summary>
-        [Fact]
-        public void BEzsignfoldertypeIncludeproofsignerTest()
-        {
-            // TODO unit test for the property 'BEzsignfoldertypeIncludeproofsigner'
-        }
-
-        /// <summary>
-        /// Test the property 'BEzsignfoldertypeIncludeproofuser'
-        /// </summary>
-        [Fact]
-        public void BEzsignfoldertypeIncludeproofuserTest()
-        {
-            // TODO unit test for the property 'BEzsignfoldertypeIncludeproofuser'
-        }
-
-        /// <summary>
         /// Test the property 'BEzsignfoldertypeIsactive'
         /// </summary>
         [Fact]
         public void BEzsignfoldertypeIsactiveTest()
         {
             // TODO unit test for the property 'BEzsignfoldertypeIsactive'
+        }
+
+        /// <summary>
+        /// Test the property 'AObjUserlogintype'
+        /// </summary>
+        [Fact]
+        public void AObjUserlogintypeTest()
+        {
+            // TODO unit test for the property 'AObjUserlogintype'
         }
 
         /// <summary>

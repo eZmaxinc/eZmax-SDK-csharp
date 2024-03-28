@@ -156,6 +156,19 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsignfolderEndPrematurelyV1
+        /// </summary>
+        [Fact]
+        public void EzsignfolderEndPrematurelyV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //Object body = null;
+            //var response = instance.EzsignfolderEndPrematurelyV1(pkiEzsignfolderID, body);
+            //Assert.IsType<EzsignfolderEndPrematurelyV1Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsignfolderGetActionableElementsV1
         /// </summary>
         [Fact]
@@ -377,19 +390,6 @@ namespace eZmaxApi.Test.Api
             //EzsignfolderSendV1Request ezsignfolderSendV1Request = null;
             //var response = instance.EzsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
             //Assert.IsType<EzsignfolderSendV1Response>(response);
-        }
-
-        /// <summary>
-        /// Test EzsignfolderSendV2
-        /// </summary>
-        [Fact]
-        public void EzsignfolderSendV2Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsignfolderID = null;
-            //EzsignfolderSendV2Request ezsignfolderSendV2Request = null;
-            //var response = instance.EzsignfolderSendV2(pkiEzsignfolderID, ezsignfolderSendV2Request);
-            //Assert.IsType<EzsignfolderSendV2Response>(response);
         }
 
         /// <summary>

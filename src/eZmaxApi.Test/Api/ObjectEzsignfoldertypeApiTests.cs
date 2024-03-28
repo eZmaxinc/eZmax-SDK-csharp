@@ -56,15 +56,15 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzsignfoldertypeCreateObjectV1
+        /// Test EzsignfoldertypeCreateObjectV2
         /// </summary>
         [Fact]
-        public void EzsignfoldertypeCreateObjectV1Test()
+        public void EzsignfoldertypeCreateObjectV2Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //EzsignfoldertypeCreateObjectV1Request ezsignfoldertypeCreateObjectV1Request = null;
-            //var response = instance.EzsignfoldertypeCreateObjectV1(ezsignfoldertypeCreateObjectV1Request);
-            //Assert.IsType<EzsignfoldertypeCreateObjectV1Response>(response);
+            //EzsignfoldertypeCreateObjectV2Request ezsignfoldertypeCreateObjectV2Request = null;
+            //var response = instance.EzsignfoldertypeCreateObjectV2(ezsignfoldertypeCreateObjectV2Request);
+            //Assert.IsType<EzsignfoldertypeCreateObjectV2Response>(response);
         }
 
         /// <summary>
@@ -81,18 +81,16 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzsignfoldertypeGetAutocompleteV1
+        /// Test EzsignfoldertypeEditObjectV2
         /// </summary>
         [Fact]
-        public void EzsignfoldertypeGetAutocompleteV1Test()
+        public void EzsignfoldertypeEditObjectV2Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string sSelector = null;
-            //string? eFilterActive = null;
-            //string? sQuery = null;
-            //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.EzsignfoldertypeGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-            //Assert.IsType<CommonGetAutocompleteV1Response>(response);
+            //int pkiEzsignfoldertypeID = null;
+            //EzsignfoldertypeEditObjectV2Request ezsignfoldertypeEditObjectV2Request = null;
+            //var response = instance.EzsignfoldertypeEditObjectV2(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV2Request);
+            //Assert.IsType<EzsignfoldertypeEditObjectV2Response>(response);
         }
 
         /// <summary>
@@ -136,6 +134,18 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignfoldertypeID = null;
             //var response = instance.EzsignfoldertypeGetObjectV2(pkiEzsignfoldertypeID);
             //Assert.IsType<EzsignfoldertypeGetObjectV2Response>(response);
+        }
+
+        /// <summary>
+        /// Test EzsignfoldertypeGetObjectV3
+        /// </summary>
+        [Fact]
+        public void EzsignfoldertypeGetObjectV3Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfoldertypeID = null;
+            //var response = instance.EzsignfoldertypeGetObjectV3(pkiEzsignfoldertypeID);
+            //Assert.IsType<EzsignfoldertypeGetObjectV3Response>(response);
         }
     }
 }

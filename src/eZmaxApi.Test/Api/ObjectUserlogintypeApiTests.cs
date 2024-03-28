@@ -63,10 +63,11 @@ namespace eZmaxApi.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string sSelector = null;
+            //int? fkiEzsignfoldertypeID = null;
             //string? eFilterActive = null;
             //string? sQuery = null;
             //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.UserlogintypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+            //var response = instance.UserlogintypeGetAutocompleteV2(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsType<UserlogintypeGetAutocompleteV2Response>(response);
         }
     }

@@ -119,12 +119,39 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ESystemconfigurationEzsignofficeplan'
+        /// </summary>
+        [Fact]
+        public void ESystemconfigurationEzsignofficeplanTest()
+        {
+            // TODO unit test for the property 'ESystemconfigurationEzsignofficeplan'
+        }
+
+        /// <summary>
+        /// Test the property 'BSystemconfigurationEzsignpaidbyoffice'
+        /// </summary>
+        [Fact]
+        public void BSystemconfigurationEzsignpaidbyofficeTest()
+        {
+            // TODO unit test for the property 'BSystemconfigurationEzsignpaidbyoffice'
+        }
+
+        /// <summary>
         /// Test the property 'BSystemconfigurationEzsignpersonnal'
         /// </summary>
         [Fact]
         public void BSystemconfigurationEzsignpersonnalTest()
         {
             // TODO unit test for the property 'BSystemconfigurationEzsignpersonnal'
+        }
+
+        /// <summary>
+        /// Test the property 'BSystemconfigurationIsdisposalactive'
+        /// </summary>
+        [Fact]
+        public void BSystemconfigurationIsdisposalactiveTest()
+        {
+            // TODO unit test for the property 'BSystemconfigurationIsdisposalactive'
         }
 
         /// <summary>

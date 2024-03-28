@@ -35,12 +35,13 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Userlogintypes to return</param>
+        /// <param name="fkiEzsignfoldertypeID"> (optional)</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>UserlogintypeGetAutocompleteV2Response</returns>
-        UserlogintypeGetAutocompleteV2Response UserlogintypeGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
+        UserlogintypeGetAutocompleteV2Response UserlogintypeGetAutocompleteV2(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
 
         /// <summary>
         /// Retrieve Userlogintypes and IDs
@@ -50,12 +51,13 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Userlogintypes to return</param>
+        /// <param name="fkiEzsignfoldertypeID"> (optional)</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UserlogintypeGetAutocompleteV2Response</returns>
-        ApiResponse<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
+        ApiResponse<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2WithHttpInfo(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -73,13 +75,14 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Userlogintypes to return</param>
+        /// <param name="fkiEzsignfoldertypeID"> (optional)</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserlogintypeGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2Async(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Userlogintypes and IDs
@@ -89,13 +92,14 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Userlogintypes to return</param>
+        /// <param name="fkiEzsignfoldertypeID"> (optional)</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserlogintypeGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserlogintypeGetAutocompleteV2Response>> UserlogintypeGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserlogintypeGetAutocompleteV2Response>> UserlogintypeGetAutocompleteV2WithHttpInfoAsync(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -221,14 +225,15 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Userlogintypes to return</param>
+        /// <param name="fkiEzsignfoldertypeID"> (optional)</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>UserlogintypeGetAutocompleteV2Response</returns>
-        public UserlogintypeGetAutocompleteV2Response UserlogintypeGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0)
+        public UserlogintypeGetAutocompleteV2Response UserlogintypeGetAutocompleteV2(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response> localVarResponse = UserlogintypeGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+            eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response> localVarResponse = UserlogintypeGetAutocompleteV2WithHttpInfo(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
             return localVarResponse.Data;
         }
 
@@ -237,12 +242,13 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Userlogintypes to return</param>
+        /// <param name="fkiEzsignfoldertypeID"> (optional)</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UserlogintypeGetAutocompleteV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0)
+        public eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2WithHttpInfo(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0)
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -273,6 +279,10 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("sSelector", eZmaxApi.Client.ClientUtils.ParameterToString(sSelector)); // path parameter
+            if (fkiEzsignfoldertypeID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
+            }
             if (eFilterActive != null)
             {
                 localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eFilterActive", eFilterActive));
@@ -314,15 +324,16 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Userlogintypes to return</param>
+        /// <param name="fkiEzsignfoldertypeID"> (optional)</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserlogintypeGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2Async(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response> localVarResponse = await UserlogintypeGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response> localVarResponse = await UserlogintypeGetAutocompleteV2WithHttpInfoAsync(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -331,13 +342,14 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Userlogintypes to return</param>
+        /// <param name="fkiEzsignfoldertypeID"> (optional)</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserlogintypeGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response>> UserlogintypeGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response>> UserlogintypeGetAutocompleteV2WithHttpInfoAsync(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -369,6 +381,10 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("sSelector", eZmaxApi.Client.ClientUtils.ParameterToString(sSelector)); // path parameter
+            if (fkiEzsignfoldertypeID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
+            }
             if (eFilterActive != null)
             {
                 localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eFilterActive", eFilterActive));

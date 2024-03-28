@@ -18,14 +18,13 @@ Name | Type | Description | Notes
 **EEzsignfoldertypeSendreminderfrequency** | **FieldEEzsignfoldertypeSendreminderfrequency** |  | [optional] 
 **IEzsignfoldertypeArchivaldays** | **int** | The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype | 
 **EEzsignfoldertypeDisposal** | **FieldEEzsignfoldertypeDisposal** |  | 
-**EEzsignfoldertypeCompletion** | **FieldEEzsignfoldertypeCompletion** |  | [optional] 
+**EEzsignfoldertypeCompletion** | **FieldEEzsignfoldertypeCompletion** |  | 
 **IEzsignfoldertypeDisposaldays** | **int** | The number of days after the archival before the disposal of the Ezsignfolder | [optional] 
 **IEzsignfoldertypeDeadlinedays** | **int** | The number of days to get all Ezsignsignatures | 
 **BEzsignfoldertypeDelegate** | **bool** | Wheter if delegation of signature is allowed to another user or not | [optional] 
-**BEzsignfoldertypeReassign** | **bool** | Wheter if Reassignment of signature is allowed to another signatory or not | [optional] 
+**BEzsignfoldertypeDiscussion** | **bool** | Wheter if creating a new Discussion is allowed or not | [optional] 
 **BEzsignfoldertypeReassignezsignsigner** | **bool** | Wheter if Reassignment of signature is allowed by a signatory to another signatory or not | [optional] 
 **BEzsignfoldertypeReassignuser** | **bool** | Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not | [optional] 
-**BEzsignfoldertypeSendattatchmentsigner** | **bool** | THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email | [optional] 
 **BEzsignfoldertypeSendsignedtoezsignsigner** | **bool** | Whether we send an email to Ezsignsigner  when document is completed | [optional] 
 **BEzsignfoldertypeSendsignedtouser** | **bool** | Whether we send an email to User who signed when document is completed | [optional] 
 **BEzsignfoldertypeSendattachmentezsignsigner** | **bool** | Whether we send the Ezsigndocument in the email to Ezsignsigner | [optional] 
@@ -46,8 +45,6 @@ Name | Type | Description | Notes
 **BEzsignfoldertypeSendsummarytofullgroup** | **bool** | Whether we send the summary to the Usergroup that has acces to all Ezsignfolders | [optional] 
 **BEzsignfoldertypeSendsummarytolimitedgroup** | **bool** | Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders | [optional] 
 **BEzsignfoldertypeSendsummarytocolleague** | **bool** | Whether we send the summary to the colleagues | 
-**BEzsignfoldertypeIncludeproofsigner** | **bool** | THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners | [optional] 
-**BEzsignfoldertypeIncludeproofuser** | **bool** | Whether we include the proof with the signed Ezsigndocument for users | 
 **BEzsignfoldertypeIsactive** | **bool** | Whether the Ezsignfoldertype is active or not | 
 **AFkiUserIDSigned** | **List&lt;int&gt;** |  | [optional] 
 **AFkiUserIDSummary** | **List&lt;int&gt;** |  | [optional] 

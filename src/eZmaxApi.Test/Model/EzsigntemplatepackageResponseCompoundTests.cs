@@ -137,6 +137,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BEzsigntemplatepackageEditallowed'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplatepackageEditallowedTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplatepackageEditallowed'
+        }
+
+        /// <summary>
         /// Test the property 'AObjEzsigntemplatepackagesigner'
         /// </summary>
         [Fact]

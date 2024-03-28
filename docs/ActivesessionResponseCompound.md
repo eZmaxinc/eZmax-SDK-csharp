@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **PksCustomerCode** | **string** | The customer code assigned to your account | 
 **FkiSystemconfigurationtypeID** | **int** | The unique ID of the Systemconfigurationtype | 
 **FkiSignatureID** | **int** | The unique ID of the Signature | [optional] 
+**BSystemconfigurationEzsignpaidbyoffice** | **bool** | Whether if Ezsign is paid by the company or not | [optional] 
+**ESystemconfigurationEzsignofficeplan** | **FieldESystemconfigurationEzsignofficeplan** |  | [optional] 
 **EUserEzsignaccess** | **FieldEUserEzsignaccess** |  | 
 **EUserEzsignprepaid** | **FieldEUserEzsignprepaid** |  | [optional] 
 **DtUserEzsignprepaidexpiration** | **string** | The eZsign prepaid expiration date | [optional] 

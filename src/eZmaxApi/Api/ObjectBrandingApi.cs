@@ -105,7 +105,7 @@ namespace eZmaxApi.Api
         /// Retrieve Branding list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -121,7 +121,7 @@ namespace eZmaxApi.Api
         /// Retrieve Branding list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -248,7 +248,7 @@ namespace eZmaxApi.Api
         /// Retrieve Branding list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -265,7 +265,7 @@ namespace eZmaxApi.Api
         /// Retrieve Branding list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -931,7 +931,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Branding list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
+        /// Retrieve Branding list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -948,7 +948,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Branding list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
+        /// Retrieve Branding list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1028,7 +1028,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Branding list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
+        /// Retrieve Branding list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1046,7 +1046,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Branding list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
+        /// Retrieve Branding list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>

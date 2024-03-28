@@ -42,8 +42,9 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Gets or Sets EEzsignformfieldgroupSignerrequirement
         /// </summary>
-        [DataMember(Name = "eEzsignformfieldgroupSignerrequirement", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEEzsignformfieldgroupSignerrequirement EEzsignformfieldgroupSignerrequirement { get; set; }
+        [DataMember(Name = "eEzsignformfieldgroupSignerrequirement", EmitDefaultValue = false)]
+        [Obsolete]
+        public FieldEEzsignformfieldgroupSignerrequirement? EEzsignformfieldgroupSignerrequirement { get; set; }
 
         /// <summary>
         /// Gets or Sets EEzsignformfieldgroupTextvalidation
@@ -67,10 +68,10 @@ namespace eZmaxApi.Model
         /// <param name="pkiEzsignformfieldgroupID">The unique ID of the Ezsignformfieldgroup (required).</param>
         /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
         /// <param name="eEzsignformfieldgroupType">eEzsignformfieldgroupType (required).</param>
-        /// <param name="eEzsignformfieldgroupSignerrequirement">eEzsignformfieldgroupSignerrequirement (required).</param>
+        /// <param name="eEzsignformfieldgroupSignerrequirement">eEzsignformfieldgroupSignerrequirement.</param>
         /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup (required).</param>
         /// <param name="iEzsignformfieldgroupStep">The step when the Ezsignsigner will be invited to fill the form fields (required).</param>
-        /// <param name="sEzsignformfieldgroupDefaultvalue">The default value for the Ezsignformfieldgroup.</param>
+        /// <param name="sEzsignformfieldgroupDefaultvalue">The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |.</param>
         /// <param name="iEzsignformfieldgroupFilledmin">The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup (required).</param>
         /// <param name="iEzsignformfieldgroupFilledmax">The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup (required).</param>
         /// <param name="bEzsignformfieldgroupReadonly">Whether the Ezsignformfieldgroup is read only or not. (required).</param>
@@ -80,12 +81,11 @@ namespace eZmaxApi.Model
         /// <param name="sEzsignformfieldgroupRegexp">A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**.</param>
         /// <param name="tEzsignformfieldgroupTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup.</param>
         /// <param name="eEzsignformfieldgroupTooltipposition">eEzsignformfieldgroupTooltipposition.</param>
-        public EzsignformfieldgroupResponse(int pkiEzsignformfieldgroupID = default(int), int fkiEzsigndocumentID = default(int), FieldEEzsignformfieldgroupType eEzsignformfieldgroupType = default(FieldEEzsignformfieldgroupType), FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement = default(FieldEEzsignformfieldgroupSignerrequirement), string sEzsignformfieldgroupLabel = default(string), int iEzsignformfieldgroupStep = default(int), string sEzsignformfieldgroupDefaultvalue = default(string), int iEzsignformfieldgroupFilledmin = default(int), int iEzsignformfieldgroupFilledmax = default(int), bool bEzsignformfieldgroupReadonly = default(bool), int iEzsignformfieldgroupMaxlength = default(int), bool bEzsignformfieldgroupEncrypted = default(bool), EnumTextvalidation? eEzsignformfieldgroupTextvalidation = default(EnumTextvalidation?), string sEzsignformfieldgroupRegexp = default(string), string tEzsignformfieldgroupTooltip = default(string), FieldEEzsignformfieldgroupTooltipposition? eEzsignformfieldgroupTooltipposition = default(FieldEEzsignformfieldgroupTooltipposition?))
+        public EzsignformfieldgroupResponse(int pkiEzsignformfieldgroupID = default(int), int fkiEzsigndocumentID = default(int), FieldEEzsignformfieldgroupType eEzsignformfieldgroupType = default(FieldEEzsignformfieldgroupType), FieldEEzsignformfieldgroupSignerrequirement? eEzsignformfieldgroupSignerrequirement = default(FieldEEzsignformfieldgroupSignerrequirement?), string sEzsignformfieldgroupLabel = default(string), int iEzsignformfieldgroupStep = default(int), string sEzsignformfieldgroupDefaultvalue = default(string), int iEzsignformfieldgroupFilledmin = default(int), int iEzsignformfieldgroupFilledmax = default(int), bool bEzsignformfieldgroupReadonly = default(bool), int iEzsignformfieldgroupMaxlength = default(int), bool bEzsignformfieldgroupEncrypted = default(bool), EnumTextvalidation? eEzsignformfieldgroupTextvalidation = default(EnumTextvalidation?), string sEzsignformfieldgroupRegexp = default(string), string tEzsignformfieldgroupTooltip = default(string), FieldEEzsignformfieldgroupTooltipposition? eEzsignformfieldgroupTooltipposition = default(FieldEEzsignformfieldgroupTooltipposition?))
         {
             this.PkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
             this.FkiEzsigndocumentID = fkiEzsigndocumentID;
             this.EEzsignformfieldgroupType = eEzsignformfieldgroupType;
-            this.EEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
             // to ensure "sEzsignformfieldgroupLabel" is required (not null)
             if (sEzsignformfieldgroupLabel == null)
             {
@@ -96,6 +96,7 @@ namespace eZmaxApi.Model
             this.IEzsignformfieldgroupFilledmin = iEzsignformfieldgroupFilledmin;
             this.IEzsignformfieldgroupFilledmax = iEzsignformfieldgroupFilledmax;
             this.BEzsignformfieldgroupReadonly = bEzsignformfieldgroupReadonly;
+            this.EEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
             this.SEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
             this.IEzsignformfieldgroupMaxlength = iEzsignformfieldgroupMaxlength;
             this.BEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
@@ -138,9 +139,9 @@ namespace eZmaxApi.Model
         public int IEzsignformfieldgroupStep { get; set; }
 
         /// <summary>
-        /// The default value for the Ezsignformfieldgroup
+        /// The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
         /// </summary>
-        /// <value>The default value for the Ezsignformfieldgroup</value>
+        /// <value>The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |</value>
         /* <example>Foo</example>*/
         [DataMember(Name = "sEzsignformfieldgroupDefaultvalue", EmitDefaultValue = false)]
         public string SEzsignformfieldgroupDefaultvalue { get; set; }

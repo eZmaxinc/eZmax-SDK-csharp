@@ -68,6 +68,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test UserCreateObjectV2
+        /// </summary>
+        [Fact]
+        public void UserCreateObjectV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UserCreateObjectV2Request userCreateObjectV2Request = null;
+            //var response = instance.UserCreateObjectV2(userCreateObjectV2Request);
+            //Assert.IsType<UserCreateObjectV2Response>(response);
+        }
+
+        /// <summary>
         /// Test UserEditObjectV1
         /// </summary>
         [Fact]
@@ -182,6 +194,30 @@ namespace eZmaxApi.Test.Api
             //int pkiUserID = null;
             //var response = instance.UserGetSubnetsV1(pkiUserID);
             //Assert.IsType<UserGetSubnetsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test UserGetUsergroupexternalsV1
+        /// </summary>
+        [Fact]
+        public void UserGetUsergroupexternalsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUserID = null;
+            //var response = instance.UserGetUsergroupexternalsV1(pkiUserID);
+            //Assert.IsType<UserGetUsergroupexternalsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test UserGetUsergroupsV1
+        /// </summary>
+        [Fact]
+        public void UserGetUsergroupsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUserID = null;
+            //var response = instance.UserGetUsergroupsV1(pkiUserID);
+            //Assert.IsType<UserGetUsergroupsV1Response>(response);
         }
 
         /// <summary>

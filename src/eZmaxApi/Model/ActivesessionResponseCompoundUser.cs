@@ -48,10 +48,10 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiUserID">The unique ID of the User (required).</param>
         /// <param name="fkiTimezoneID">The unique ID of the Timezone (required).</param>
-        /// <param name="sAvatarUrl">The url of the picture used as avatar (required).</param>
+        /// <param name="sAvatarUrl">The url of the picture used as avatar.</param>
         /// <param name="sUserFirstname">The first name of the user (required).</param>
         /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sEmailAddress">The email address. (required).</param>
+        /// <param name="sEmailAddress">The email address..</param>
         /// <param name="eUserEzsignsendreminderfrequency">eUserEzsignsendreminderfrequency (required).</param>
         /// <param name="iUserInterfacecolor">The int32 representation of the interface color. For example, RGB color #39435B would be 3752795 (required).</param>
         /// <param name="bUserInterfacedark">Whether to use a dark mode interface (required).</param>
@@ -60,12 +60,6 @@ namespace eZmaxApi.Model
         {
             this.PkiUserID = pkiUserID;
             this.FkiTimezoneID = fkiTimezoneID;
-            // to ensure "sAvatarUrl" is required (not null)
-            if (sAvatarUrl == null)
-            {
-                throw new ArgumentNullException("sAvatarUrl is a required property for ActivesessionResponseCompoundUser and cannot be null");
-            }
-            this.SAvatarUrl = sAvatarUrl;
             // to ensure "sUserFirstname" is required (not null)
             if (sUserFirstname == null)
             {
@@ -78,16 +72,12 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sUserLastname is a required property for ActivesessionResponseCompoundUser and cannot be null");
             }
             this.SUserLastname = sUserLastname;
-            // to ensure "sEmailAddress" is required (not null)
-            if (sEmailAddress == null)
-            {
-                throw new ArgumentNullException("sEmailAddress is a required property for ActivesessionResponseCompoundUser and cannot be null");
-            }
-            this.SEmailAddress = sEmailAddress;
             this.EUserEzsignsendreminderfrequency = eUserEzsignsendreminderfrequency;
             this.IUserInterfacecolor = iUserInterfacecolor;
             this.BUserInterfacedark = bUserInterfacedark;
             this.IUserListresult = iUserListresult;
+            this.SAvatarUrl = sAvatarUrl;
+            this.SEmailAddress = sEmailAddress;
         }
 
         /// <summary>
@@ -111,7 +101,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The url of the picture used as avatar</value>
         /* <example>http://www.website.com/avatar.jpg</example>*/
-        [DataMember(Name = "sAvatarUrl", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sAvatarUrl", EmitDefaultValue = false)]
         public string SAvatarUrl { get; set; }
 
         /// <summary>
@@ -135,7 +125,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The email address.</value>
         /* <example>email@example.com</example>*/
-        [DataMember(Name = "sEmailAddress", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sEmailAddress", EmitDefaultValue = false)]
         public string SEmailAddress { get; set; }
 
         /// <summary>

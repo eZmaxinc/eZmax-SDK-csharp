@@ -56,18 +56,6 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test WebhookCreateObjectV1
-        /// </summary>
-        [Fact]
-        public void WebhookCreateObjectV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //WebhookCreateObjectV1Request webhookCreateObjectV1Request = null;
-            //var response = instance.WebhookCreateObjectV1(webhookCreateObjectV1Request);
-            //Assert.IsType<WebhookCreateObjectV1Response>(response);
-        }
-
-        /// <summary>
         /// Test WebhookCreateObjectV2
         /// </summary>
         [Fact]

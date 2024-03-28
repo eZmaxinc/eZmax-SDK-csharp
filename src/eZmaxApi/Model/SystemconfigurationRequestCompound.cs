@@ -55,7 +55,14 @@ namespace eZmaxApi.Model
         /// Gets or Sets ESystemconfigurationEzsign
         /// </summary>
         [DataMember(Name = "eSystemconfigurationEzsign", EmitDefaultValue = false)]
+        [Obsolete]
         public FieldESystemconfigurationEzsign? ESystemconfigurationEzsign { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ESystemconfigurationEzsignofficeplan
+        /// </summary>
+        [DataMember(Name = "eSystemconfigurationEzsignofficeplan", EmitDefaultValue = false)]
+        public FieldESystemconfigurationEzsignofficeplan? ESystemconfigurationEzsignofficeplan { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemconfigurationRequestCompound" /> class.
         /// </summary>
@@ -69,11 +76,13 @@ namespace eZmaxApi.Model
         /// <param name="eSystemconfigurationLanguage1">eSystemconfigurationLanguage1 (required).</param>
         /// <param name="eSystemconfigurationLanguage2">eSystemconfigurationLanguage2 (required).</param>
         /// <param name="eSystemconfigurationEzsign">eSystemconfigurationEzsign.</param>
+        /// <param name="eSystemconfigurationEzsignofficeplan">eSystemconfigurationEzsignofficeplan.</param>
+        /// <param name="bSystemconfigurationEzsignpaidbyoffice">Whether if Ezsign is paid by the company or not.</param>
         /// <param name="bSystemconfigurationEzsignpersonnal">Whether if we allow the creation of personal files in eZsign (required).</param>
         /// <param name="bSystemconfigurationSspr">Whether if we allow SSPR (required).</param>
         /// <param name="dtSystemconfigurationReadonlyexpirationstart">The start date where the system will be in read only.</param>
         /// <param name="dtSystemconfigurationReadonlyexpirationend">The end date where the system will be in read only.</param>
-        public SystemconfigurationRequestCompound(int pkiSystemconfigurationID = default(int), FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default(FieldESystemconfigurationEzsign?), bool bSystemconfigurationEzsignpersonnal = default(bool), bool bSystemconfigurationSspr = default(bool), string dtSystemconfigurationReadonlyexpirationstart = default(string), string dtSystemconfigurationReadonlyexpirationend = default(string))
+        public SystemconfigurationRequestCompound(int pkiSystemconfigurationID = default(int), FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), bool bSystemconfigurationEzsignpersonnal = default(bool), bool bSystemconfigurationSspr = default(bool), string dtSystemconfigurationReadonlyexpirationstart = default(string), string dtSystemconfigurationReadonlyexpirationend = default(string))
         {
             this.ESystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
             this.ESystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
@@ -82,6 +91,8 @@ namespace eZmaxApi.Model
             this.BSystemconfigurationSspr = bSystemconfigurationSspr;
             this.PkiSystemconfigurationID = pkiSystemconfigurationID;
             this.ESystemconfigurationEzsign = eSystemconfigurationEzsign;
+            this.ESystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
+            this.BSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
             this.DtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
             this.DtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
         }
@@ -93,6 +104,14 @@ namespace eZmaxApi.Model
         /* <example>1</example>*/
         [DataMember(Name = "pkiSystemconfigurationID", EmitDefaultValue = false)]
         public int PkiSystemconfigurationID { get; set; }
+
+        /// <summary>
+        /// Whether if Ezsign is paid by the company or not
+        /// </summary>
+        /// <value>Whether if Ezsign is paid by the company or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bSystemconfigurationEzsignpaidbyoffice", EmitDefaultValue = true)]
+        public bool BSystemconfigurationEzsignpaidbyoffice { get; set; }
 
         /// <summary>
         /// Whether if we allow the creation of personal files in eZsign
@@ -139,6 +158,8 @@ namespace eZmaxApi.Model
             sb.Append("  ESystemconfigurationLanguage1: ").Append(ESystemconfigurationLanguage1).Append("\n");
             sb.Append("  ESystemconfigurationLanguage2: ").Append(ESystemconfigurationLanguage2).Append("\n");
             sb.Append("  ESystemconfigurationEzsign: ").Append(ESystemconfigurationEzsign).Append("\n");
+            sb.Append("  ESystemconfigurationEzsignofficeplan: ").Append(ESystemconfigurationEzsignofficeplan).Append("\n");
+            sb.Append("  BSystemconfigurationEzsignpaidbyoffice: ").Append(BSystemconfigurationEzsignpaidbyoffice).Append("\n");
             sb.Append("  BSystemconfigurationEzsignpersonnal: ").Append(BSystemconfigurationEzsignpersonnal).Append("\n");
             sb.Append("  BSystemconfigurationSspr: ").Append(BSystemconfigurationSspr).Append("\n");
             sb.Append("  DtSystemconfigurationReadonlyexpirationstart: ").Append(DtSystemconfigurationReadonlyexpirationstart).Append("\n");

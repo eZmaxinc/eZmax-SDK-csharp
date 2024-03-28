@@ -83,6 +83,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiUsergroupexternalID'
+        /// </summary>
+        [Fact]
+        public void FkiUsergroupexternalIDTest()
+        {
+            // TODO unit test for the property 'FkiUsergroupexternalID'
+        }
+
+        /// <summary>
         /// Test the property 'SUserFirstname'
         /// </summary>
         [Fact]
@@ -125,6 +134,15 @@ namespace eZmaxApi.Test.Model
         public void SUsergroupNameXTest()
         {
             // TODO unit test for the property 'SUsergroupNameX'
+        }
+
+        /// <summary>
+        /// Test the property 'SUsergroupexternalName'
+        /// </summary>
+        [Fact]
+        public void SUsergroupexternalNameTest()
+        {
+            // TODO unit test for the property 'SUsergroupexternalName'
         }
     }
 }

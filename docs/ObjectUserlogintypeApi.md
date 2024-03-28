@@ -8,7 +8,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="userlogintypegetautocompletev2"></a>
 # **UserlogintypeGetAutocompleteV2**
-> UserlogintypeGetAutocompleteV2Response UserlogintypeGetAutocompleteV2 (string sSelector, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+> UserlogintypeGetAutocompleteV2Response UserlogintypeGetAutocompleteV2 (string sSelector, int? fkiEzsignfoldertypeID = null, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
 
 Retrieve Userlogintypes and IDs
 
@@ -37,6 +37,7 @@ namespace Example
 
             var apiInstance = new ObjectUserlogintypeApi(config);
             var sSelector = "All";  // string | The type of Userlogintypes to return
+            var fkiEzsignfoldertypeID = 56;  // int? |  (optional) 
             var eFilterActive = "All";  // string? | Specify which results we want to display. (optional)  (default to Active)
             var sQuery = "sQuery_example";  // string? | Allow to filter the returned results (optional) 
             var acceptLanguage = new HeaderAcceptLanguage?(); // HeaderAcceptLanguage? |  (optional) 
@@ -44,7 +45,7 @@ namespace Example
             try
             {
                 // Retrieve Userlogintypes and IDs
-                UserlogintypeGetAutocompleteV2Response result = apiInstance.UserlogintypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+                UserlogintypeGetAutocompleteV2Response result = apiInstance.UserlogintypeGetAutocompleteV2(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -65,7 +66,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Retrieve Userlogintypes and IDs
-    ApiResponse<UserlogintypeGetAutocompleteV2Response> response = apiInstance.UserlogintypeGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+    ApiResponse<UserlogintypeGetAutocompleteV2Response> response = apiInstance.UserlogintypeGetAutocompleteV2WithHttpInfo(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -83,6 +84,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **sSelector** | **string** | The type of Userlogintypes to return |  |
+| **fkiEzsignfoldertypeID** | **int?** |  | [optional]  |
 | **eFilterActive** | **string?** | Specify which results we want to display. | [optional] [default to Active] |
 | **sQuery** | **string?** | Allow to filter the returned results | [optional]  |
 | **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md) |  | [optional]  |
