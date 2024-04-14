@@ -1251,7 +1251,7 @@ namespace eZmaxApi.Model
             }
 
             // IAttachmentSize (int) maximum
-            if (this.IAttachmentSize > (int)4294967295)
+            if (this.IAttachmentSize > (uint)4294967295)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAttachmentSize, must be a value less than or equal to 4294967295.", new [] { "IAttachmentSize" });
             }

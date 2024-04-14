@@ -167,7 +167,7 @@ namespace eZmaxApi.Model
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCommunicationreferenceID (int) maximum
-            if (this.PkiCommunicationreferenceID > (int)4294967295)
+            if (this.PkiCommunicationreferenceID > (uint)4294967295)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCommunicationreferenceID, must be a value less than or equal to 4294967295.", new [] { "PkiCommunicationreferenceID" });
             }
