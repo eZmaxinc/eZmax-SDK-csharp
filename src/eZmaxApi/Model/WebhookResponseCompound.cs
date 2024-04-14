@@ -279,6 +279,15 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
+            if (this.SWebhookUrl != null) {
+                // SWebhookUrl (string) pattern
+                Regex regexSWebhookUrl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
+                if (!regexSWebhookUrl.Match(this.SWebhookUrl).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SWebhookUrl, must match a pattern of " + regexSWebhookUrl, new [] { "SWebhookUrl" });
+                }
+            }
+
             yield break;
         }
     }

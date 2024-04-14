@@ -130,7 +130,7 @@ namespace eZmaxApi.Model
 
             if (this.SCorsEntryurl != null) {
                 // SCorsEntryurl (string) pattern
-                Regex regexSCorsEntryurl = new Regex(@"^.{0,2048}$", RegexOptions.CultureInvariant);
+                Regex regexSCorsEntryurl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
                 if (!regexSCorsEntryurl.Match(this.SCorsEntryurl).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCorsEntryurl, must match a pattern of " + regexSCorsEntryurl, new [] { "SCorsEntryurl" });

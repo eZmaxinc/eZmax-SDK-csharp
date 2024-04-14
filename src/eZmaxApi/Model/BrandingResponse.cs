@@ -279,6 +279,15 @@ namespace eZmaxApi.Model
                 }
             }
 
+            if (this.SEmailAddress != null) {
+                // SEmailAddress (string) pattern
+                Regex regexSEmailAddress = new Regex(@"^[\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$", RegexOptions.CultureInvariant);
+                if (!regexSEmailAddress.Match(this.SEmailAddress).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEmailAddress, must match a pattern of " + regexSEmailAddress, new [] { "SEmailAddress" });
+                }
+            }
+
             // IBrandingColortext (int) maximum
             if (this.IBrandingColortext > (int)16777215)
             {

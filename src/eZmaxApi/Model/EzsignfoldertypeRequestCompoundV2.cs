@@ -591,6 +591,24 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
             }
 
+            if (this.SEmailAddressSigned != null) {
+                // SEmailAddressSigned (string) pattern
+                Regex regexSEmailAddressSigned = new Regex(@"^[\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$", RegexOptions.CultureInvariant);
+                if (!regexSEmailAddressSigned.Match(this.SEmailAddressSigned).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEmailAddressSigned, must match a pattern of " + regexSEmailAddressSigned, new [] { "SEmailAddressSigned" });
+                }
+            }
+
+            if (this.SEmailAddressSummary != null) {
+                // SEmailAddressSummary (string) pattern
+                Regex regexSEmailAddressSummary = new Regex(@"^[\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$", RegexOptions.CultureInvariant);
+                if (!regexSEmailAddressSummary.Match(this.SEmailAddressSummary).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEmailAddressSummary, must match a pattern of " + regexSEmailAddressSummary, new [] { "SEmailAddressSummary" });
+                }
+            }
+
             // IEzsignfoldertypeArchivaldays (int) maximum
             if (this.IEzsignfoldertypeArchivaldays > (int)180)
             {

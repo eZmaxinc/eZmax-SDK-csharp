@@ -157,6 +157,13 @@ Class | Method | HTTP request | Description
 *ObjectCorsApi* | [**CorsEditObjectV1**](docs/ObjectCorsApi.md#corseditobjectv1) | **PUT** /1/object/cors/{pkiCorsID} | Edit an existing Cors
 *ObjectCorsApi* | [**CorsGetObjectV2**](docs/ObjectCorsApi.md#corsgetobjectv2) | **GET** /2/object/cors/{pkiCorsID} | Retrieve an existing Cors
 *ObjectCountryApi* | [**CountryGetAutocompleteV2**](docs/ObjectCountryApi.md#countrygetautocompletev2) | **GET** /2/object/country/getAutocomplete/{sSelector} | Retrieve Countries and IDs
+*ObjectCreditcardclientApi* | [**CreditcardclientCreateObjectV1**](docs/ObjectCreditcardclientApi.md#creditcardclientcreateobjectv1) | **POST** /1/object/creditcardclient | Create a new Creditcardclient
+*ObjectCreditcardclientApi* | [**CreditcardclientDeleteObjectV1**](docs/ObjectCreditcardclientApi.md#creditcardclientdeleteobjectv1) | **DELETE** /1/object/creditcardclient/{pkiCreditcardclientID} | Delete an existing Creditcardclient
+*ObjectCreditcardclientApi* | [**CreditcardclientEditObjectV1**](docs/ObjectCreditcardclientApi.md#creditcardclienteditobjectv1) | **PUT** /1/object/creditcardclient/{pkiCreditcardclientID} | Edit an existing Creditcardclient
+*ObjectCreditcardclientApi* | [**CreditcardclientGetAutocompleteV2**](docs/ObjectCreditcardclientApi.md#creditcardclientgetautocompletev2) | **GET** /2/object/creditcardclient/getAutocomplete/{sSelector} | Retrieve Creditcardclients and IDs
+*ObjectCreditcardclientApi* | [**CreditcardclientGetListV1**](docs/ObjectCreditcardclientApi.md#creditcardclientgetlistv1) | **GET** /1/object/creditcardclient/getList | Retrieve Creditcardclient list
+*ObjectCreditcardclientApi* | [**CreditcardclientGetObjectV2**](docs/ObjectCreditcardclientApi.md#creditcardclientgetobjectv2) | **GET** /2/object/creditcardclient/{pkiCreditcardclientID} | Retrieve an existing Creditcardclient
+*ObjectCreditcardtypeApi* | [**CreditcardtypeGetAutocompleteV2**](docs/ObjectCreditcardtypeApi.md#creditcardtypegetautocompletev2) | **GET** /2/object/creditcardtype/getAutocomplete/{sSelector} | Retrieve Creditcardtypes and IDs
 *ObjectDepartmentApi* | [**DepartmentGetAutocompleteV2**](docs/ObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *ObjectDiscussionApi* | [**DiscussionCreateObjectV1**](docs/ObjectDiscussionApi.md#discussioncreateobjectv1) | **POST** /1/object/discussion | Create a new Discussion
 *ObjectDiscussionApi* | [**DiscussionDeleteObjectV1**](docs/ObjectDiscussionApi.md#discussiondeleteobjectv1) | **DELETE** /1/object/discussion/{pkiDiscussionID} | Delete an existing Discussion
@@ -634,6 +641,30 @@ Class | Method | HTTP request | Description
  - [Model.CountryAutocompleteElementResponse](docs/CountryAutocompleteElementResponse.md)
  - [Model.CountryGetAutocompleteV2Response](docs/CountryGetAutocompleteV2Response.md)
  - [Model.CountryGetAutocompleteV2ResponseMPayload](docs/CountryGetAutocompleteV2ResponseMPayload.md)
+ - [Model.CreditcardclientAutocompleteElementResponse](docs/CreditcardclientAutocompleteElementResponse.md)
+ - [Model.CreditcardclientCreateObjectV1Request](docs/CreditcardclientCreateObjectV1Request.md)
+ - [Model.CreditcardclientCreateObjectV1Response](docs/CreditcardclientCreateObjectV1Response.md)
+ - [Model.CreditcardclientCreateObjectV1ResponseMPayload](docs/CreditcardclientCreateObjectV1ResponseMPayload.md)
+ - [Model.CreditcardclientDeleteObjectV1Response](docs/CreditcardclientDeleteObjectV1Response.md)
+ - [Model.CreditcardclientEditObjectV1Request](docs/CreditcardclientEditObjectV1Request.md)
+ - [Model.CreditcardclientEditObjectV1Response](docs/CreditcardclientEditObjectV1Response.md)
+ - [Model.CreditcardclientGetAutocompleteV2Response](docs/CreditcardclientGetAutocompleteV2Response.md)
+ - [Model.CreditcardclientGetAutocompleteV2ResponseMPayload](docs/CreditcardclientGetAutocompleteV2ResponseMPayload.md)
+ - [Model.CreditcardclientGetListV1Response](docs/CreditcardclientGetListV1Response.md)
+ - [Model.CreditcardclientGetListV1ResponseMPayload](docs/CreditcardclientGetListV1ResponseMPayload.md)
+ - [Model.CreditcardclientGetObjectV2Response](docs/CreditcardclientGetObjectV2Response.md)
+ - [Model.CreditcardclientGetObjectV2ResponseMPayload](docs/CreditcardclientGetObjectV2ResponseMPayload.md)
+ - [Model.CreditcardclientListElement](docs/CreditcardclientListElement.md)
+ - [Model.CreditcardclientRequest](docs/CreditcardclientRequest.md)
+ - [Model.CreditcardclientRequestCompound](docs/CreditcardclientRequestCompound.md)
+ - [Model.CreditcardclientResponse](docs/CreditcardclientResponse.md)
+ - [Model.CreditcardclientResponseCompound](docs/CreditcardclientResponseCompound.md)
+ - [Model.CreditcarddetailRequest](docs/CreditcarddetailRequest.md)
+ - [Model.CreditcarddetailResponse](docs/CreditcarddetailResponse.md)
+ - [Model.CreditcarddetailResponseCompound](docs/CreditcarddetailResponseCompound.md)
+ - [Model.CreditcardtypeAutocompleteElementResponse](docs/CreditcardtypeAutocompleteElementResponse.md)
+ - [Model.CreditcardtypeGetAutocompleteV2Response](docs/CreditcardtypeGetAutocompleteV2Response.md)
+ - [Model.CreditcardtypeGetAutocompleteV2ResponseMPayload](docs/CreditcardtypeGetAutocompleteV2ResponseMPayload.md)
  - [Model.CustomAttachmentResponse](docs/CustomAttachmentResponse.md)
  - [Model.CustomAttachmentdocumenttypeResponse](docs/CustomAttachmentdocumenttypeResponse.md)
  - [Model.CustomCommunicationListElementResponse](docs/CustomCommunicationListElementResponse.md)

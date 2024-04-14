@@ -272,7 +272,7 @@ namespace eZmaxApi.Model
 
             if (this.SUserLoginnameCloning != null) {
                 // SUserLoginnameCloning (string) pattern
-                Regex regexSUserLoginnameCloning = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
+                Regex regexSUserLoginnameCloning = new Regex(@"^(?:([\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
                 if (!regexSUserLoginnameCloning.Match(this.SUserLoginnameCloning).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginnameCloning, must match a pattern of " + regexSUserLoginnameCloning, new [] { "SUserLoginnameCloning" });
@@ -281,7 +281,7 @@ namespace eZmaxApi.Model
 
             if (this.SUserLoginnameCloned != null) {
                 // SUserLoginnameCloned (string) pattern
-                Regex regexSUserLoginnameCloned = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
+                Regex regexSUserLoginnameCloned = new Regex(@"^(?:([\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
                 if (!regexSUserLoginnameCloned.Match(this.SUserLoginnameCloned).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginnameCloned, must match a pattern of " + regexSUserLoginnameCloned, new [] { "SUserLoginnameCloned" });

@@ -365,7 +365,7 @@ Mary</example>*/
 
             if (this.SEzsignfolderExternalid != null) {
                 // SEzsignfolderExternalid (string) pattern
-                Regex regexSEzsignfolderExternalid = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
+                Regex regexSEzsignfolderExternalid = new Regex(@"^.{0,128}$", RegexOptions.CultureInvariant);
                 if (!regexSEzsignfolderExternalid.Match(this.SEzsignfolderExternalid).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignfolderExternalid, must match a pattern of " + regexSEzsignfolderExternalid, new [] { "SEzsignfolderExternalid" });

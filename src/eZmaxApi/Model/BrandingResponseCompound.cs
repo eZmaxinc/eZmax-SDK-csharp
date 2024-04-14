@@ -301,6 +301,15 @@ namespace eZmaxApi.Model
                 }
             }
 
+            if (this.SEmailAddress != null) {
+                // SEmailAddress (string) pattern
+                Regex regexSEmailAddress = new Regex(@"^[\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$", RegexOptions.CultureInvariant);
+                if (!regexSEmailAddress.Match(this.SEmailAddress).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEmailAddress, must match a pattern of " + regexSEmailAddress, new [] { "SEmailAddress" });
+                }
+            }
+
             // IBrandingColortext (int) maximum
             if (this.IBrandingColortext > (int)16777215)
             {
@@ -383,6 +392,24 @@ namespace eZmaxApi.Model
             if (this.IBrandingInterfacecolor < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingInterfacecolor, must be a value greater than or equal to 0.", new [] { "IBrandingInterfacecolor" });
+            }
+
+            if (this.SBrandingLogourl != null) {
+                // SBrandingLogourl (string) pattern
+                Regex regexSBrandingLogourl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
+                if (!regexSBrandingLogourl.Match(this.SBrandingLogourl).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SBrandingLogourl, must match a pattern of " + regexSBrandingLogourl, new [] { "SBrandingLogourl" });
+                }
+            }
+
+            if (this.SBrandingLogointerfaceurl != null) {
+                // SBrandingLogointerfaceurl (string) pattern
+                Regex regexSBrandingLogointerfaceurl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
+                if (!regexSBrandingLogointerfaceurl.Match(this.SBrandingLogointerfaceurl).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SBrandingLogointerfaceurl, must match a pattern of " + regexSBrandingLogointerfaceurl, new [] { "SBrandingLogointerfaceurl" });
+                }
             }
 
             yield break;

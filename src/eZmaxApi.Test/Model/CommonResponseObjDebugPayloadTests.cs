@@ -90,5 +90,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'BVersionDeprecated'
         }
+
+        /// <summary>
+        /// Test the property 'DtResponseDate'
+        /// </summary>
+        [Fact]
+        public void DtResponseDateTest()
+        {
+            // TODO unit test for the property 'DtResponseDate'
+        }
     }
 }

@@ -191,6 +191,15 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
+            if (this.SEmailAddress != null) {
+                // SEmailAddress (string) pattern
+                Regex regexSEmailAddress = new Regex(@"^[\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$", RegexOptions.CultureInvariant);
+                if (!regexSEmailAddress.Match(this.SEmailAddress).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEmailAddress, must match a pattern of " + regexSEmailAddress, new [] { "SEmailAddress" });
+                }
+            }
+
             if (this.SPhoneE164 != null) {
                 // SPhoneE164 (string) pattern
                 Regex regexSPhoneE164 = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);

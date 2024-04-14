@@ -44,7 +44,8 @@ namespace eZmaxApi.Model
         /// <param name="iVersionMax">The maximum version of the function that can be called (required).</param>
         /// <param name="aRequiredPermission">An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them. (required).</param>
         /// <param name="bVersionDeprecated">Wheter the current route is deprecated or not (required).</param>
-        public CommonResponseObjDebugPayload(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), bool bVersionDeprecated = default(bool))
+        /// <param name="dtResponseDate">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
+        public CommonResponseObjDebugPayload(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), bool bVersionDeprecated = default(bool), string dtResponseDate = default(string))
         {
             this.IVersionMin = iVersionMin;
             this.IVersionMax = iVersionMax;
@@ -55,6 +56,12 @@ namespace eZmaxApi.Model
             }
             this.ARequiredPermission = aRequiredPermission;
             this.BVersionDeprecated = bVersionDeprecated;
+            // to ensure "dtResponseDate" is required (not null)
+            if (dtResponseDate == null)
+            {
+                throw new ArgumentNullException("dtResponseDate is a required property for CommonResponseObjDebugPayload and cannot be null");
+            }
+            this.DtResponseDate = dtResponseDate;
         }
 
         /// <summary>
@@ -89,6 +96,14 @@ namespace eZmaxApi.Model
         public bool BVersionDeprecated { get; set; }
 
         /// <summary>
+        /// Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
+        /// </summary>
+        /// <value>Represent a Date Time. The timezone is the one configured in the User&#39;s profile.</value>
+        /* <example>2020-12-31 23:59:59</example>*/
+        [DataMember(Name = "dtResponseDate", IsRequired = true, EmitDefaultValue = true)]
+        public string DtResponseDate { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -100,6 +115,7 @@ namespace eZmaxApi.Model
             sb.Append("  IVersionMax: ").Append(IVersionMax).Append("\n");
             sb.Append("  ARequiredPermission: ").Append(ARequiredPermission).Append("\n");
             sb.Append("  BVersionDeprecated: ").Append(BVersionDeprecated).Append("\n");
+            sb.Append("  DtResponseDate: ").Append(DtResponseDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

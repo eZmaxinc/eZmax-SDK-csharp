@@ -101,19 +101,10 @@ namespace eZmaxApi.Model
         {
             if (this.SReturnUrl != null) {
                 // SReturnUrl (string) pattern
-                Regex regexSReturnUrl = new Regex(@"^.{0,2048}$", RegexOptions.CultureInvariant);
+                Regex regexSReturnUrl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
                 if (!regexSReturnUrl.Match(this.SReturnUrl).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SReturnUrl, must match a pattern of " + regexSReturnUrl, new [] { "SReturnUrl" });
-                }
-            }
-
-            if (this.SIframedomain != null) {
-                // SIframedomain (string) pattern
-                Regex regexSIframedomain = new Regex(@"^.{0,2048}$", RegexOptions.CultureInvariant);
-                if (!regexSIframedomain.Match(this.SIframedomain).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SIframedomain, must match a pattern of " + regexSIframedomain, new [] { "SIframedomain" });
                 }
             }
 

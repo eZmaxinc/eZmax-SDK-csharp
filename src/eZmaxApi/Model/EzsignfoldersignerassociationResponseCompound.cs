@@ -45,10 +45,11 @@ namespace eZmaxApi.Model
         /// <param name="bEzsignfoldersignerassociationDelayedsend">If this flag is true the signatory is part of a delayed send. (required).</param>
         /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. (required).</param>
         /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent. (required).</param>
+        /// <param name="bEzsignfoldersignerassociationAllowsigninginperson">If the Ezsignfoldersignerassociation is allowed to sign in person or not (required).</param>
         /// <param name="objEzsignsignergroup">objEzsignsignergroup.</param>
         /// <param name="objUser">objUser.</param>
         /// <param name="objEzsignsigner">objEzsignsigner.</param>
-        public EzsignfoldersignerassociationResponseCompound(int pkiEzsignfoldersignerassociationID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationDelayedsend = default(bool), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string), EzsignsignergroupResponseCompound objEzsignsignergroup = default(EzsignsignergroupResponseCompound), EzsignfoldersignerassociationResponseCompoundUser objUser = default(EzsignfoldersignerassociationResponseCompoundUser), EzsignsignerResponseCompound objEzsignsigner = default(EzsignsignerResponseCompound))
+        public EzsignfoldersignerassociationResponseCompound(int pkiEzsignfoldersignerassociationID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationDelayedsend = default(bool), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string), bool bEzsignfoldersignerassociationAllowsigninginperson = default(bool), EzsignsignergroupResponseCompound objEzsignsignergroup = default(EzsignsignergroupResponseCompound), EzsignfoldersignerassociationResponseCompoundUser objUser = default(EzsignfoldersignerassociationResponseCompoundUser), EzsignsignerResponseCompound objEzsignsigner = default(EzsignsignerResponseCompound))
         {
             this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
             this.FkiEzsignfolderID = fkiEzsignfolderID;
@@ -60,6 +61,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("tEzsignfoldersignerassociationMessage is a required property for EzsignfoldersignerassociationResponseCompound and cannot be null");
             }
             this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
+            this.BEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
             this.ObjEzsignsignergroup = objEzsignsignergroup;
             this.ObjUser = objUser;
             this.ObjEzsignsigner = objEzsignsigner;
@@ -112,6 +114,14 @@ Mary</example>*/
         public string TEzsignfoldersignerassociationMessage { get; set; }
 
         /// <summary>
+        /// If the Ezsignfoldersignerassociation is allowed to sign in person or not
+        /// </summary>
+        /// <value>If the Ezsignfoldersignerassociation is allowed to sign in person or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzsignfoldersignerassociationAllowsigninginperson", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzsignfoldersignerassociationAllowsigninginperson { get; set; }
+
+        /// <summary>
         /// Gets or Sets ObjEzsignsignergroup
         /// </summary>
         [DataMember(Name = "objEzsignsignergroup", EmitDefaultValue = false)]
@@ -142,6 +152,7 @@ Mary</example>*/
             sb.Append("  BEzsignfoldersignerassociationDelayedsend: ").Append(BEzsignfoldersignerassociationDelayedsend).Append("\n");
             sb.Append("  BEzsignfoldersignerassociationReceivecopy: ").Append(BEzsignfoldersignerassociationReceivecopy).Append("\n");
             sb.Append("  TEzsignfoldersignerassociationMessage: ").Append(TEzsignfoldersignerassociationMessage).Append("\n");
+            sb.Append("  BEzsignfoldersignerassociationAllowsigninginperson: ").Append(BEzsignfoldersignerassociationAllowsigninginperson).Append("\n");
             sb.Append("  ObjEzsignsignergroup: ").Append(ObjEzsignsignergroup).Append("\n");
             sb.Append("  ObjUser: ").Append(ObjUser).Append("\n");
             sb.Append("  ObjEzsignsigner: ").Append(ObjEzsignsigner).Append("\n");

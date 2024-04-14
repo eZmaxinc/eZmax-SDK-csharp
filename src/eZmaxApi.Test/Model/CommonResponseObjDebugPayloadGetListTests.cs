@@ -92,6 +92,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'DtResponseDate'
+        /// </summary>
+        [Fact]
+        public void DtResponseDateTest()
+        {
+            // TODO unit test for the property 'DtResponseDate'
+        }
+
+        /// <summary>
         /// Test the property 'AFilter'
         /// </summary>
         [Fact]

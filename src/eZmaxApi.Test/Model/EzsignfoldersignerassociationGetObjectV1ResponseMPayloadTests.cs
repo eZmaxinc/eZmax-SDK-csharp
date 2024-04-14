@@ -101,6 +101,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BEzsignfoldersignerassociationAllowsigninginperson'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldersignerassociationAllowsigninginpersonTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldersignerassociationAllowsigninginperson'
+        }
+
+        /// <summary>
         /// Test the property 'ObjEzsignsignergroup'
         /// </summary>
         [Fact]

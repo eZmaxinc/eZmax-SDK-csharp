@@ -44,11 +44,12 @@ namespace eZmaxApi.Model
         /// <param name="iVersionMax">The maximum version of the function that can be called (required).</param>
         /// <param name="aRequiredPermission">An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them. (required).</param>
         /// <param name="bVersionDeprecated">Wheter the current route is deprecated or not (required).</param>
+        /// <param name="dtResponseDate">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
         /// <param name="aFilter">aFilter (required).</param>
         /// <param name="aOrderBy">List of available values for *eOrderBy* (required).</param>
         /// <param name="iRowMax">The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it&#39;s **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned. (required).</param>
         /// <param name="iRowOffset">The starting element from where to start retrieving the results. For example if you started at iRowOffset&#x3D;0 and asked for iRowMax&#x3D;100, to get the next 100 results, you could specify iRowOffset&#x3D;100&amp;iRowMax&#x3D;100, (required) (default to 0).</param>
-        public CommonResponseObjDebugPayloadGetList(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), bool bVersionDeprecated = default(bool), CommonResponseFilter aFilter = default(CommonResponseFilter), Dictionary<string, string> aOrderBy = default(Dictionary<string, string>), int iRowMax = default(int), int iRowOffset = 0)
+        public CommonResponseObjDebugPayloadGetList(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), bool bVersionDeprecated = default(bool), string dtResponseDate = default(string), CommonResponseFilter aFilter = default(CommonResponseFilter), Dictionary<string, string> aOrderBy = default(Dictionary<string, string>), int iRowMax = default(int), int iRowOffset = 0)
         {
             this.IVersionMin = iVersionMin;
             this.IVersionMax = iVersionMax;
@@ -59,6 +60,12 @@ namespace eZmaxApi.Model
             }
             this.ARequiredPermission = aRequiredPermission;
             this.BVersionDeprecated = bVersionDeprecated;
+            // to ensure "dtResponseDate" is required (not null)
+            if (dtResponseDate == null)
+            {
+                throw new ArgumentNullException("dtResponseDate is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
+            }
+            this.DtResponseDate = dtResponseDate;
             // to ensure "aFilter" is required (not null)
             if (aFilter == null)
             {
@@ -107,6 +114,14 @@ namespace eZmaxApi.Model
         public bool BVersionDeprecated { get; set; }
 
         /// <summary>
+        /// Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
+        /// </summary>
+        /// <value>Represent a Date Time. The timezone is the one configured in the User&#39;s profile.</value>
+        /* <example>2020-12-31 23:59:59</example>*/
+        [DataMember(Name = "dtResponseDate", IsRequired = true, EmitDefaultValue = true)]
+        public string DtResponseDate { get; set; }
+
+        /// <summary>
         /// Gets or Sets AFilter
         /// </summary>
         [DataMember(Name = "a_Filter", IsRequired = true, EmitDefaultValue = true)]
@@ -147,6 +162,7 @@ namespace eZmaxApi.Model
             sb.Append("  IVersionMax: ").Append(IVersionMax).Append("\n");
             sb.Append("  ARequiredPermission: ").Append(ARequiredPermission).Append("\n");
             sb.Append("  BVersionDeprecated: ").Append(BVersionDeprecated).Append("\n");
+            sb.Append("  DtResponseDate: ").Append(DtResponseDate).Append("\n");
             sb.Append("  AFilter: ").Append(AFilter).Append("\n");
             sb.Append("  AOrderBy: ").Append(AOrderBy).Append("\n");
             sb.Append("  IRowMax: ").Append(IRowMax).Append("\n");

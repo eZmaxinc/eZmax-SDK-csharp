@@ -454,7 +454,7 @@ namespace eZmaxApi.Model
 
             if (this.SEzsigndocumentExternalid != null) {
                 // SEzsigndocumentExternalid (string) pattern
-                Regex regexSEzsigndocumentExternalid = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
+                Regex regexSEzsigndocumentExternalid = new Regex(@"^.{0,128}$", RegexOptions.CultureInvariant);
                 if (!regexSEzsigndocumentExternalid.Match(this.SEzsigndocumentExternalid).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigndocumentExternalid, must match a pattern of " + regexSEzsigndocumentExternalid, new [] { "SEzsigndocumentExternalid" });

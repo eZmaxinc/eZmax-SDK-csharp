@@ -215,7 +215,7 @@ namespace eZmaxApi.Model
 
             if (this.SUserLoginname != null) {
                 // SUserLoginname (string) pattern
-                Regex regexSUserLoginname = new Regex(@"^(?:([\w\.-]+@[\w\.-]+\.\w{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
+                Regex regexSUserLoginname = new Regex(@"^(?:([\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
                 if (!regexSUserLoginname.Match(this.SUserLoginname).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
@@ -228,6 +228,15 @@ namespace eZmaxApi.Model
                 if (!regexDtUserEzsignprepaidexpiration.Match(this.DtUserEzsignprepaidexpiration).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtUserEzsignprepaidexpiration, must match a pattern of " + regexDtUserEzsignprepaidexpiration, new [] { "DtUserEzsignprepaidexpiration" });
+                }
+            }
+
+            if (this.SEmailAddress != null) {
+                // SEmailAddress (string) pattern
+                Regex regexSEmailAddress = new Regex(@"^[\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$", RegexOptions.CultureInvariant);
+                if (!regexSEmailAddress.Match(this.SEmailAddress).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEmailAddress, must match a pattern of " + regexSEmailAddress, new [] { "SEmailAddress" });
                 }
             }
 

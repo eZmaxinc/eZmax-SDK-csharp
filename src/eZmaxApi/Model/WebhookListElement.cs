@@ -196,6 +196,15 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            if (this.SWebhookUrl != null) {
+                // SWebhookUrl (string) pattern
+                Regex regexSWebhookUrl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
+                if (!regexSWebhookUrl.Match(this.SWebhookUrl).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SWebhookUrl, must match a pattern of " + regexSWebhookUrl, new [] { "SWebhookUrl" });
+                }
+            }
+
             yield break;
         }
     }

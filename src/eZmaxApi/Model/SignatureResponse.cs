@@ -113,7 +113,7 @@ namespace eZmaxApi.Model
 
             if (this.SSignatureUrl != null) {
                 // SSignatureUrl (string) pattern
-                Regex regexSSignatureUrl = new Regex(@"^.{0,2048}$", RegexOptions.CultureInvariant);
+                Regex regexSSignatureUrl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
                 if (!regexSSignatureUrl.Match(this.SSignatureUrl).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SSignatureUrl, must match a pattern of " + regexSSignatureUrl, new [] { "SSignatureUrl" });

@@ -117,6 +117,15 @@ namespace eZmaxApi.Model
                 }
             }
 
+            if (this.STemporaryFileUrl != null) {
+                // STemporaryFileUrl (string) pattern
+                Regex regexSTemporaryFileUrl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
+                if (!regexSTemporaryFileUrl.Match(this.STemporaryFileUrl).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for STemporaryFileUrl, must match a pattern of " + regexSTemporaryFileUrl, new [] { "STemporaryFileUrl" });
+                }
+            }
+
             yield break;
         }
     }

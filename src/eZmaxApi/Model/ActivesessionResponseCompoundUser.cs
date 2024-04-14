@@ -202,6 +202,24 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
             }
 
+            if (this.SAvatarUrl != null) {
+                // SAvatarUrl (string) pattern
+                Regex regexSAvatarUrl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
+                if (!regexSAvatarUrl.Match(this.SAvatarUrl).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAvatarUrl, must match a pattern of " + regexSAvatarUrl, new [] { "SAvatarUrl" });
+                }
+            }
+
+            if (this.SEmailAddress != null) {
+                // SEmailAddress (string) pattern
+                Regex regexSEmailAddress = new Regex(@"^[\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$", RegexOptions.CultureInvariant);
+                if (!regexSEmailAddress.Match(this.SEmailAddress).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEmailAddress, must match a pattern of " + regexSEmailAddress, new [] { "SEmailAddress" });
+                }
+            }
+
             // IUserInterfacecolor (int) minimum
             if (this.IUserInterfacecolor < (int)0)
             {
