@@ -182,6 +182,24 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BEzsignsignatureHandwritten'
+        /// </summary>
+        [Fact]
+        public void BEzsignsignatureHandwrittenTest()
+        {
+            // TODO unit test for the property 'BEzsignsignatureHandwritten'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignsignatureReason'
+        /// </summary>
+        [Fact]
+        public void BEzsignsignatureReasonTest()
+        {
+            // TODO unit test for the property 'BEzsignsignatureReason'
+        }
+
+        /// <summary>
         /// Test the property 'BEzsignsignatureRequired'
         /// </summary>
         [Fact]
@@ -209,6 +227,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EEzsignsignatureConsultationtrigger'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureConsultationtriggerTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureConsultationtrigger'
+        }
+
+        /// <summary>
         /// Test the property 'IEzsignsignatureValidationstep'
         /// </summary>
         [Fact]
@@ -227,12 +254,30 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SEzsignsignatureDefaultvalue'
+        /// </summary>
+        [Fact]
+        public void SEzsignsignatureDefaultvalueTest()
+        {
+            // TODO unit test for the property 'SEzsignsignatureDefaultvalue'
+        }
+
+        /// <summary>
         /// Test the property 'EEzsignsignatureTextvalidation'
         /// </summary>
         [Fact]
         public void EEzsignsignatureTextvalidationTest()
         {
             // TODO unit test for the property 'EEzsignsignatureTextvalidation'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignsignatureTextvalidationcustommessage'
+        /// </summary>
+        [Fact]
+        public void SEzsignsignatureTextvalidationcustommessageTest()
+        {
+            // TODO unit test for the property 'SEzsignsignatureTextvalidationcustommessage'
         }
 
         /// <summary>

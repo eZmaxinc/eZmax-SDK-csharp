@@ -56,6 +56,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiAddressID'
+        /// </summary>
+        [Fact]
+        public void PkiAddressIDTest()
+        {
+            // TODO unit test for the property 'PkiAddressID'
+        }
+
+        /// <summary>
         /// Test the property 'FkiAddresstypeID'
         /// </summary>
         [Fact]

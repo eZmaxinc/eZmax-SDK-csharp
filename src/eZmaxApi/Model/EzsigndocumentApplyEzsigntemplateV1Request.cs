@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentApplyEzsigntemplateV1Request" /> class.
         /// </summary>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="aSEzsigntemplatesigner">aSEzsigntemplatesigner (required).</param>
-        /// <param name="aPkiEzsignfoldersignerassociationID">aPkiEzsignfoldersignerassociationID (required).</param>
-        public EzsigndocumentApplyEzsigntemplateV1Request(int fkiEzsigntemplateID = default(int), List<string> aSEzsigntemplatesigner = default(List<string>), List<int> aPkiEzsignfoldersignerassociationID = default(List<int>))
+        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsigndocumentApplyEzsigntemplateV1Request(int  = default(int), List<string>  = default(List<string>), List<int>  = default(List<int>))
         {
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
-            // to ensure "aSEzsigntemplatesigner" is required (not null)
-            if (aSEzsigntemplatesigner == null)
+            this.FkiEzsigntemplateID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aSEzsigntemplatesigner is a required property for EzsigndocumentApplyEzsigntemplateV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentApplyEzsigntemplateV1Request and cannot be null");
             }
-            this.ASEzsigntemplatesigner = aSEzsigntemplatesigner;
-            // to ensure "aPkiEzsignfoldersignerassociationID" is required (not null)
-            if (aPkiEzsignfoldersignerassociationID == null)
+            this.ASEzsigntemplatesigner = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsignfoldersignerassociationID is a required property for EzsigndocumentApplyEzsigntemplateV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentApplyEzsigntemplateV1Request and cannot be null");
             }
-            this.APkiEzsignfoldersignerassociationID = aPkiEzsignfoldersignerassociationID;
+            this.APkiEzsignfoldersignerassociationID = ;
         }
 
         /// <summary>

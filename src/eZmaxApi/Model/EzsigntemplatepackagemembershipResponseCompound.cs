@@ -40,30 +40,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership (required).</param>
-        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="iEzsigntemplatepackagemembershipOrder">The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage. (required).</param>
-        /// <param name="objEzsigntemplate">objEzsigntemplate (required).</param>
-        /// <param name="aObjEzsigntemplatepackagesignermembership">aObjEzsigntemplatepackagesignermembership (required).</param>
-        public EzsigntemplatepackagemembershipResponseCompound(int pkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int), int iEzsigntemplatepackagemembershipOrder = default(int), EzsigntemplateResponseCompound objEzsigntemplate = default(EzsigntemplateResponseCompound), List<EzsigntemplatepackagesignermembershipResponseCompound> aObjEzsigntemplatepackagesignermembership = default(List<EzsigntemplatepackagesignermembershipResponseCompound>))
+        /// <param name="">The unique ID of the Ezsigntemplatepackagemembership (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="">The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage. (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsigntemplatepackagemembershipResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), EzsigntemplateResponseCompound  = default(EzsigntemplateResponseCompound), List<EzsigntemplatepackagesignermembershipResponseCompound>  = default(List<EzsigntemplatepackagesignermembershipResponseCompound>))
         {
-            this.PkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
-            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
-            this.IEzsigntemplatepackagemembershipOrder = iEzsigntemplatepackagemembershipOrder;
-            // to ensure "objEzsigntemplate" is required (not null)
-            if (objEzsigntemplate == null)
+            this.PkiEzsigntemplatepackagemembershipID = ;
+            this.FkiEzsigntemplatepackageID = ;
+            this.FkiEzsigntemplateID = ;
+            this.IEzsigntemplatepackagemembershipOrder = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsigntemplate is a required property for EzsigntemplatepackagemembershipResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackagemembershipResponseCompound and cannot be null");
             }
-            this.ObjEzsigntemplate = objEzsigntemplate;
-            // to ensure "aObjEzsigntemplatepackagesignermembership" is required (not null)
-            if (aObjEzsigntemplatepackagesignermembership == null)
+            this.ObjEzsigntemplate = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsigntemplatepackagesignermembership is a required property for EzsigntemplatepackagemembershipResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackagemembershipResponseCompound and cannot be null");
             }
-            this.AObjEzsigntemplatepackagesignermembership = aObjEzsigntemplatepackagesignermembership;
+            this.AObjEzsigntemplatepackagesignermembership = ;
         }
 
         /// <summary>

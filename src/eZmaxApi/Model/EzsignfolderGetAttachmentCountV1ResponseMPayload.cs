@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetAttachmentCountV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iAttachmentCount">The count of Attachment. (required).</param>
-        public EzsignfolderGetAttachmentCountV1ResponseMPayload(int iAttachmentCount = default(int))
+        /// <param name="">The count of Attachment. (required).</param>
+        public EzsignfolderGetAttachmentCountV1ResponseMPayload(int  = default(int))
         {
-            this.IAttachmentCount = iAttachmentCount;
+            this.IAttachmentCount = ;
         }
 
         /// <summary>

@@ -40,35 +40,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryinternalResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzmaxinvoicingsummaryinternalID">The unique ID of the Ezmaxinvoicingsummaryinternal.</param>
-        /// <param name="objEzmaxinvoicingsummaryinternalDescription">objEzmaxinvoicingsummaryinternalDescription (required).</param>
-        /// <param name="sEzmaxinvoicingsummaryinternalDescriptionX">The Ezmaxinvoicingsummaryinternal description in the language of the requester (required).</param>
-        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        public EzmaxinvoicingsummaryinternalResponse(int pkiEzmaxinvoicingsummaryinternalID = default(int), MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription = default(MultilingualEzmaxinvoicingsummaryinternalDescription), string sEzmaxinvoicingsummaryinternalDescriptionX = default(string), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string))
+        /// <param name="">The unique ID of the Ezmaxinvoicingsummaryinternal.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The Ezmaxinvoicingsummaryinternal description in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="">The description of the Billingentityinternal in the language of the requester (required).</param>
+        public EzmaxinvoicingsummaryinternalResponse(int  = default(int), MultilingualEzmaxinvoicingsummaryinternalDescription  = default(MultilingualEzmaxinvoicingsummaryinternalDescription), string  = default(string), int  = default(int), int  = default(int), string  = default(string))
         {
-            // to ensure "objEzmaxinvoicingsummaryinternalDescription" is required (not null)
-            if (objEzmaxinvoicingsummaryinternalDescription == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzmaxinvoicingsummaryinternalDescription is a required property for EzmaxinvoicingsummaryinternalResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryinternalResponse and cannot be null");
             }
-            this.ObjEzmaxinvoicingsummaryinternalDescription = objEzmaxinvoicingsummaryinternalDescription;
-            // to ensure "sEzmaxinvoicingsummaryinternalDescriptionX" is required (not null)
-            if (sEzmaxinvoicingsummaryinternalDescriptionX == null)
+            this.ObjEzmaxinvoicingsummaryinternalDescription = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzmaxinvoicingsummaryinternalDescriptionX is a required property for EzmaxinvoicingsummaryinternalResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryinternalResponse and cannot be null");
             }
-            this.SEzmaxinvoicingsummaryinternalDescriptionX = sEzmaxinvoicingsummaryinternalDescriptionX;
-            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
-            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
-            if (sBillingentityinternalDescriptionX == null)
+            this.SEzmaxinvoicingsummaryinternalDescriptionX = ;
+            this.FkiBillingentityinternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for EzmaxinvoicingsummaryinternalResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryinternalResponse and cannot be null");
             }
-            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-            this.PkiEzmaxinvoicingsummaryinternalID = pkiEzmaxinvoicingsummaryinternalID;
-            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
+            this.SBillingentityinternalDescriptionX = ;
+            this.PkiEzmaxinvoicingsummaryinternalID = ;
+            this.FkiEzmaxinvoicingID = ;
         }
 
         /// <summary>

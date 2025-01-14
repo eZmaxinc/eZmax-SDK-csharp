@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **PkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
 **FkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | [optional] 
 **ObjEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  | [optional] 
+**FkiTimezoneID** | **int** | The unique ID of the Timezone | [optional] 
 **EEzsignfolderCompletion** | **FieldEEzsignfolderCompletion** |  | 
 **SEzsignfoldertypeNameX** | **string** |  | [optional] 
 **FkiBillingentityinternalID** | **int** | The unique ID of the Billingentityinternal. | [optional] 
@@ -18,6 +19,8 @@ Name | Type | Description | Notes
 **TEzsignfolderNote** | **string** | Note about the Ezsignfolder | [optional] 
 **BEzsignfolderIsdisposable** | **bool** | If the Ezsigndocument can be disposed | [optional] 
 **EEzsignfolderSendreminderfrequency** | **FieldEEzsignfolderSendreminderfrequency** |  | [optional] 
+**IEzsignfolderSendreminderfirstdays** | **int** | The number of days before the the first reminder sending | [optional] 
+**IEzsignfolderSendreminderotherdays** | **int** | The number of days after the first reminder sending | [optional] 
 **DtEzsignfolderDelayedsenddate** | **string** | The date and time at which the Ezsignfolder will be sent in the future. | [optional] 
 **DtEzsignfolderDuedate** | **string** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 
 **DtEzsignfolderSentdate** | **string** | The date and time at which the Ezsignfolder was sent the last time. | [optional] 
@@ -28,6 +31,7 @@ Name | Type | Description | Notes
 **TEzsignfolderMessage** | **string** | A custom text message that will be added to the email sent. | [optional] 
 **ObjAudit** | [**CommonAudit**](CommonAudit.md) |  | [optional] 
 **SEzsignfolderExternalid** | **string** | This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  | [optional] 
+**ObjTimezone** | [**CustomTimezoneWithCodeResponse**](CustomTimezoneWithCodeResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

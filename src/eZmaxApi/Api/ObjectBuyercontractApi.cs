@@ -28,6 +28,26 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractGetCommunicationCountV1Response</returns>
+        BuyercontractGetCommunicationCountV1Response BuyercontractGetCommunicationCountV1(int pkiBuyercontractID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractGetCommunicationCountV1Response</returns>
+        ApiResponse<BuyercontractGetCommunicationCountV1Response> BuyercontractGetCommunicationCountV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Communication list
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -47,6 +67,46 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BuyercontractGetCommunicationListV1Response</returns>
         ApiResponse<BuyercontractGetCommunicationListV1Response> BuyercontractGetCommunicationListV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationrecipient
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractGetCommunicationrecipientsV1Response</returns>
+        BuyercontractGetCommunicationrecipientsV1Response BuyercontractGetCommunicationrecipientsV1(int pkiBuyercontractID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<BuyercontractGetCommunicationrecipientsV1Response> BuyercontractGetCommunicationrecipientsV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationsender
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractGetCommunicationsendersV1Response</returns>
+        BuyercontractGetCommunicationsendersV1Response BuyercontractGetCommunicationsendersV1(int pkiBuyercontractID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractGetCommunicationsendersV1Response</returns>
+        ApiResponse<BuyercontractGetCommunicationsendersV1Response> BuyercontractGetCommunicationsendersV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -56,6 +116,31 @@ namespace eZmaxApi.Api
     public interface IObjectBuyercontractApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<BuyercontractGetCommunicationCountV1Response> BuyercontractGetCommunicationCountV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationCountV1Response>> BuyercontractGetCommunicationCountV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -81,6 +166,56 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BuyercontractGetCommunicationListV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationListV1Response>> BuyercontractGetCommunicationListV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<BuyercontractGetCommunicationrecipientsV1Response> BuyercontractGetCommunicationrecipientsV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationrecipientsV1Response>> BuyercontractGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<BuyercontractGetCommunicationsendersV1Response> BuyercontractGetCommunicationsendersV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationsendersV1Response>> BuyercontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -199,6 +334,148 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractGetCommunicationCountV1Response</returns>
+        public BuyercontractGetCommunicationCountV1Response BuyercontractGetCommunicationCountV1(int pkiBuyercontractID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationCountV1Response> localVarResponse = BuyercontractGetCommunicationCountV1WithHttpInfo(pkiBuyercontractID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationCountV1Response> BuyercontractGetCommunicationCountV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<BuyercontractGetCommunicationCountV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationCountV1Response> BuyercontractGetCommunicationCountV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationCountV1Response> localVarResponse = await BuyercontractGetCommunicationCountV1WithHttpInfoAsync(pkiBuyercontractID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationCountV1Response>> BuyercontractGetCommunicationCountV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BuyercontractGetCommunicationCountV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>
@@ -334,6 +611,290 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BuyercontractGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractGetCommunicationrecipientsV1Response</returns>
+        public BuyercontractGetCommunicationrecipientsV1Response BuyercontractGetCommunicationrecipientsV1(int pkiBuyercontractID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationrecipientsV1Response> localVarResponse = BuyercontractGetCommunicationrecipientsV1WithHttpInfo(pkiBuyercontractID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationrecipientsV1Response> BuyercontractGetCommunicationrecipientsV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<BuyercontractGetCommunicationrecipientsV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationrecipientsV1Response> BuyercontractGetCommunicationrecipientsV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationrecipientsV1Response> localVarResponse = await BuyercontractGetCommunicationrecipientsV1WithHttpInfoAsync(pkiBuyercontractID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationrecipientsV1Response>> BuyercontractGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BuyercontractGetCommunicationrecipientsV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractGetCommunicationsendersV1Response</returns>
+        public BuyercontractGetCommunicationsendersV1Response BuyercontractGetCommunicationsendersV1(int pkiBuyercontractID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationsendersV1Response> localVarResponse = BuyercontractGetCommunicationsendersV1WithHttpInfo(pkiBuyercontractID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationsendersV1Response> BuyercontractGetCommunicationsendersV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<BuyercontractGetCommunicationsendersV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationsendersV1Response> BuyercontractGetCommunicationsendersV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationsendersV1Response> localVarResponse = await BuyercontractGetCommunicationsendersV1WithHttpInfoAsync(pkiBuyercontractID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationsendersV1Response>> BuyercontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BuyercontractGetCommunicationsendersV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

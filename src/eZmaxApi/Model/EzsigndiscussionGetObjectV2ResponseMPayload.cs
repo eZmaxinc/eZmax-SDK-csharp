@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndiscussionGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objEzsigndiscussion">objEzsigndiscussion (required).</param>
-        public EzsigndiscussionGetObjectV2ResponseMPayload(EzsigndiscussionResponseCompound objEzsigndiscussion = default(EzsigndiscussionResponseCompound))
+        /// <param name=""> (required).</param>
+        public EzsigndiscussionGetObjectV2ResponseMPayload(EzsigndiscussionResponseCompound  = default(EzsigndiscussionResponseCompound))
         {
-            // to ensure "objEzsigndiscussion" is required (not null)
-            if (objEzsigndiscussion == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsigndiscussion is a required property for EzsigndiscussionGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndiscussionGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsigndiscussion = objEzsigndiscussion;
+            this.ObjEzsigndiscussion = ;
         }
 
         /// <summary>

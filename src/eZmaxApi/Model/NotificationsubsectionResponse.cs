@@ -40,23 +40,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationsubsectionResponse" /> class.
         /// </summary>
-        /// <param name="pkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
-        /// <param name="fkiNotificationsectionID">The unique ID of the Notificationsection (required).</param>
-        /// <param name="objNotificationsubsectionName">objNotificationsubsectionName.</param>
-        /// <param name="sNotificationsectionNameX">The name of the Notificationsection in the language of the requester.</param>
-        /// <param name="sNotificationsubsectionNameX">The name of the Notificationsubsection in the language of the requester (required).</param>
-        public NotificationsubsectionResponse(int pkiNotificationsubsectionID = default(int), int fkiNotificationsectionID = default(int), MultilingualNotificationsubsectionName objNotificationsubsectionName = default(MultilingualNotificationsubsectionName), string sNotificationsectionNameX = default(string), string sNotificationsubsectionNameX = default(string))
+        /// <param name="">The unique ID of the Notificationsubsection (required).</param>
+        /// <param name="">The unique ID of the Notificationsection (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">The name of the Notificationsection in the language of the requester.</param>
+        /// <param name="">The name of the Notificationsubsection in the language of the requester (required).</param>
+        public NotificationsubsectionResponse(int  = default(int), int  = default(int), MultilingualNotificationsubsectionName  = default(MultilingualNotificationsubsectionName), string  = default(string), string  = default(string))
         {
-            this.PkiNotificationsubsectionID = pkiNotificationsubsectionID;
-            this.FkiNotificationsectionID = fkiNotificationsectionID;
-            // to ensure "sNotificationsubsectionNameX" is required (not null)
-            if (sNotificationsubsectionNameX == null)
+            this.PkiNotificationsubsectionID = ;
+            this.FkiNotificationsectionID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sNotificationsubsectionNameX is a required property for NotificationsubsectionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for NotificationsubsectionResponse and cannot be null");
             }
-            this.SNotificationsubsectionNameX = sNotificationsubsectionNameX;
-            this.ObjNotificationsubsectionName = objNotificationsubsectionName;
-            this.SNotificationsectionNameX = sNotificationsectionNameX;
+            this.SNotificationsubsectionNameX = ;
+            this.ObjNotificationsubsectionName = ;
+            this.SNotificationsectionNameX = ;
         }
 
         /// <summary>

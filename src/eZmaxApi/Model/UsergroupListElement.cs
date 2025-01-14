@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupListElement" /> class.
         /// </summary>
-        /// <param name="pkiUsergroupID">The unique ID of the Usergroup (required).</param>
-        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
-        /// <param name="iCountUser">Number of users in group (required).</param>
-        public UsergroupListElement(int pkiUsergroupID = default(int), string sUsergroupNameX = default(string), int iCountUser = default(int))
+        /// <param name="">The unique ID of the Usergroup (required).</param>
+        /// <param name="">The Name of the Usergroup in the language of the requester (required).</param>
+        /// <param name="">Number of users in group (required).</param>
+        public UsergroupListElement(int  = default(int), string  = default(string), int  = default(int))
         {
-            this.PkiUsergroupID = pkiUsergroupID;
-            // to ensure "sUsergroupNameX" is required (not null)
-            if (sUsergroupNameX == null)
+            this.PkiUsergroupID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUsergroupNameX is a required property for UsergroupListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupListElement and cannot be null");
             }
-            this.SUsergroupNameX = sUsergroupNameX;
-            this.ICountUser = iCountUser;
+            this.SUsergroupNameX = ;
+            this.ICountUser = ;
         }
 
         /// <summary>

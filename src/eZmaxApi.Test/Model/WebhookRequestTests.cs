@@ -65,6 +65,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiAuthenticationexternalID'
+        /// </summary>
+        [Fact]
+        public void FkiAuthenticationexternalIDTest()
+        {
+            // TODO unit test for the property 'FkiAuthenticationexternalID'
+        }
+
+        /// <summary>
         /// Test the property 'FkiEzsignfoldertypeID'
         /// </summary>
         [Fact]

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentDeclineToSignV1Request" /> class.
         /// </summary>
-        /// <param name="sReason">Reason for refusal (required).</param>
-        public EzsigndocumentDeclineToSignV1Request(string sReason = default(string))
+        /// <param name="">Reason for refusal (required).</param>
+        public EzsigndocumentDeclineToSignV1Request(string  = default(string))
         {
-            // to ensure "sReason" is required (not null)
-            if (sReason == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sReason is a required property for EzsigndocumentDeclineToSignV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentDeclineToSignV1Request and cannot be null");
             }
-            this.SReason = sReason;
+            this.SReason = ;
         }
 
         /// <summary>

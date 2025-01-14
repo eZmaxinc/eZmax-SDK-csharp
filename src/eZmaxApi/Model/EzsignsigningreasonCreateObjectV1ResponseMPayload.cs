@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsigningreasonCreateObjectV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiEzsignsigningreasonID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public EzsignsigningreasonCreateObjectV1ResponseMPayload(List<int> aPkiEzsignsigningreasonID = default(List<int>))
+        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public EzsignsigningreasonCreateObjectV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsignsigningreasonID" is required (not null)
-            if (aPkiEzsignsigningreasonID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsignsigningreasonID is a required property for EzsignsigningreasonCreateObjectV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsigningreasonCreateObjectV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsignsigningreasonID = aPkiEzsignsigningreasonID;
+            this.APkiEzsignsigningreasonID = ;
         }
 
         /// <summary>

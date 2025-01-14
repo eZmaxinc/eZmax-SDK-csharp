@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookCreateObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjWebhook">aObjWebhook (required).</param>
-        public WebhookCreateObjectV2ResponseMPayload(List<WebhookResponseCompound> aObjWebhook = default(List<WebhookResponseCompound>))
+        /// <param name=""> (required).</param>
+        public WebhookCreateObjectV2ResponseMPayload(List<WebhookResponseCompound>  = default(List<WebhookResponseCompound>))
         {
-            // to ensure "aObjWebhook" is required (not null)
-            if (aObjWebhook == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjWebhook is a required property for WebhookCreateObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookCreateObjectV2ResponseMPayload and cannot be null");
             }
-            this.AObjWebhook = aObjWebhook;
+            this.AObjWebhook = ;
         }
 
         /// <summary>

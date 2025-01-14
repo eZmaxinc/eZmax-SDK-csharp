@@ -56,6 +56,19 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test BillingentityexternalGenerateFederationTokenV1
+        /// </summary>
+        [Fact]
+        public void BillingentityexternalGenerateFederationTokenV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiBillingentityexternalID = null;
+            //BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request = null;
+            //var response = instance.BillingentityexternalGenerateFederationTokenV1(pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request);
+            //Assert.IsType<BillingentityexternalGenerateFederationTokenV1Response>(response);
+        }
+
+        /// <summary>
         /// Test BillingentityexternalGetAutocompleteV2
         /// </summary>
         [Fact]

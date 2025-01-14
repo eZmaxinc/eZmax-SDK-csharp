@@ -40,32 +40,32 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmembershipResponse" /> class.
         /// </summary>
-        /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership (required).</param>
-        /// <param name="fkiDiscussionID">The unique ID of the Discussion (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
-        /// <param name="fkiModulesectionID">The unique ID of the Modulesection.</param>
-        /// <param name="sDiscussionmembershipDescription">The Description containing the detail of who the Discussionmembership refers to (required).</param>
-        /// <param name="dtDiscussionmembershipJoined">The joined date of the Discussionmembership (required).</param>
-        public DiscussionmembershipResponse(int pkiDiscussionmembershipID = default(int), int fkiDiscussionID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int), int fkiModulesectionID = default(int), string sDiscussionmembershipDescription = default(string), string dtDiscussionmembershipJoined = default(string))
+        /// <param name="">The unique ID of the Discussionmembership (required).</param>
+        /// <param name="">The unique ID of the Discussion (required).</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Usergroup.</param>
+        /// <param name="">The unique ID of the Modulesection.</param>
+        /// <param name="">The Description containing the detail of who the Discussionmembership refers to (required).</param>
+        /// <param name="">The joined date of the Discussionmembership (required).</param>
+        public DiscussionmembershipResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string))
         {
-            this.PkiDiscussionmembershipID = pkiDiscussionmembershipID;
-            this.FkiDiscussionID = fkiDiscussionID;
-            // to ensure "sDiscussionmembershipDescription" is required (not null)
-            if (sDiscussionmembershipDescription == null)
+            this.PkiDiscussionmembershipID = ;
+            this.FkiDiscussionID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sDiscussionmembershipDescription is a required property for DiscussionmembershipResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionmembershipResponse and cannot be null");
             }
-            this.SDiscussionmembershipDescription = sDiscussionmembershipDescription;
-            // to ensure "dtDiscussionmembershipJoined" is required (not null)
-            if (dtDiscussionmembershipJoined == null)
+            this.SDiscussionmembershipDescription = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtDiscussionmembershipJoined is a required property for DiscussionmembershipResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionmembershipResponse and cannot be null");
             }
-            this.DtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
-            this.FkiUserID = fkiUserID;
-            this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiModulesectionID = fkiModulesectionID;
+            this.DtDiscussionmembershipJoined = ;
+            this.FkiUserID = ;
+            this.FkiUsergroupID = ;
+            this.FkiModulesectionID = ;
         }
 
         /// <summary>

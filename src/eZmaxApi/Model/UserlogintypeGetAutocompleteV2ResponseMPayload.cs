@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserlogintypeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjUserlogintype">An array of Userlogintype autocomplete element response. (required).</param>
-        public UserlogintypeGetAutocompleteV2ResponseMPayload(List<UserlogintypeAutocompleteElementResponse> aObjUserlogintype = default(List<UserlogintypeAutocompleteElementResponse>))
+        /// <param name="">An array of Userlogintype autocomplete element response. (required).</param>
+        public UserlogintypeGetAutocompleteV2ResponseMPayload(List<UserlogintypeAutocompleteElementResponse>  = default(List<UserlogintypeAutocompleteElementResponse>))
         {
-            // to ensure "aObjUserlogintype" is required (not null)
-            if (aObjUserlogintype == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUserlogintype is a required property for UserlogintypeGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserlogintypeGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjUserlogintype = aObjUserlogintype;
+            this.AObjUserlogintype = ;
         }
 
         /// <summary>

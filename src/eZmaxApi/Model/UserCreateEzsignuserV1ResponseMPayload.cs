@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aSEmailAddressSuccess">An array of email addresses that succeeded. (required).</param>
-        /// <param name="aSEmailAddressFailure">An array of email addresses that failed. (required).</param>
-        public UserCreateEzsignuserV1ResponseMPayload(List<string> aSEmailAddressSuccess = default(List<string>), List<string> aSEmailAddressFailure = default(List<string>))
+        /// <param name="">An array of email addresses that succeeded. (required).</param>
+        /// <param name="">An array of email addresses that failed. (required).</param>
+        public UserCreateEzsignuserV1ResponseMPayload(List<string>  = default(List<string>), List<string>  = default(List<string>))
         {
-            // to ensure "aSEmailAddressSuccess" is required (not null)
-            if (aSEmailAddressSuccess == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aSEmailAddressSuccess is a required property for UserCreateEzsignuserV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserCreateEzsignuserV1ResponseMPayload and cannot be null");
             }
-            this.ASEmailAddressSuccess = aSEmailAddressSuccess;
-            // to ensure "aSEmailAddressFailure" is required (not null)
-            if (aSEmailAddressFailure == null)
+            this.ASEmailAddressSuccess = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aSEmailAddressFailure is a required property for UserCreateEzsignuserV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserCreateEzsignuserV1ResponseMPayload and cannot be null");
             }
-            this.ASEmailAddressFailure = aSEmailAddressFailure;
+            this.ASEmailAddressFailure = ;
         }
 
         /// <summary>

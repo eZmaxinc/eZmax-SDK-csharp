@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaxassignmentAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sTaxassignmentDescriptionX">The description of the Taxassignment  in the language of the requester (required).</param>
-        /// <param name="pkiTaxassignmentID">The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| (required).</param>
-        /// <param name="bTaxassignmentIsactive">Whether the Taxassignment is active or not (required).</param>
-        public TaxassignmentAutocompleteElementResponse(string sTaxassignmentDescriptionX = default(string), int pkiTaxassignmentID = default(int), bool bTaxassignmentIsactive = default(bool))
+        /// <param name="">The description of the Taxassignment  in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| (required).</param>
+        /// <param name="">Whether the Taxassignment is active or not (required).</param>
+        public TaxassignmentAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sTaxassignmentDescriptionX" is required (not null)
-            if (sTaxassignmentDescriptionX == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sTaxassignmentDescriptionX is a required property for TaxassignmentAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for TaxassignmentAutocompleteElementResponse and cannot be null");
             }
-            this.STaxassignmentDescriptionX = sTaxassignmentDescriptionX;
-            this.PkiTaxassignmentID = pkiTaxassignmentID;
-            this.BTaxassignmentIsactive = bTaxassignmentIsactive;
+            this.STaxassignmentDescriptionX = ;
+            this.PkiTaxassignmentID = ;
+            this.BTaxassignmentIsactive = ;
         }
 
         /// <summary>

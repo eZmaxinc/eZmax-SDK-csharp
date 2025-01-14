@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisebrokerGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjFranchisebroker">An array of Franchisebroker autocomplete element response. (required).</param>
-        public FranchisebrokerGetAutocompleteV2ResponseMPayload(List<FranchisebrokerAutocompleteElementResponse> aObjFranchisebroker = default(List<FranchisebrokerAutocompleteElementResponse>))
+        /// <param name="">An array of Franchisebroker autocomplete element response. (required).</param>
+        public FranchisebrokerGetAutocompleteV2ResponseMPayload(List<FranchisebrokerAutocompleteElementResponse>  = default(List<FranchisebrokerAutocompleteElementResponse>))
         {
-            // to ensure "aObjFranchisebroker" is required (not null)
-            if (aObjFranchisebroker == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjFranchisebroker is a required property for FranchisebrokerGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisebrokerGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjFranchisebroker = aObjFranchisebroker;
+            this.AObjFranchisebroker = ;
         }
 
         /// <summary>

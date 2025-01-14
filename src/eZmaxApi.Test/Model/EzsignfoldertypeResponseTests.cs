@@ -245,6 +245,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BEzsignfoldertypeAutomaticsignature'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeAutomaticsignatureTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeAutomaticsignature'
+        }
+
+        /// <summary>
         /// Test the property 'BEzsignfoldertypeDelegate'
         /// </summary>
         [Fact]
@@ -278,6 +287,15 @@ namespace eZmaxApi.Test.Model
         public void BEzsignfoldertypeReassignuserTest()
         {
             // TODO unit test for the property 'BEzsignfoldertypeReassignuser'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeReassigngroup'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeReassigngroupTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeReassigngroup'
         }
 
         /// <summary>

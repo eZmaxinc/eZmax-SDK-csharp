@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupmembershipCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="aObjUsergroupmembership">aObjUsergroupmembership (required).</param>
-        public UsergroupmembershipCreateObjectV1Request(List<UsergroupmembershipRequestCompound> aObjUsergroupmembership = default(List<UsergroupmembershipRequestCompound>))
+        /// <param name=""> (required).</param>
+        public UsergroupmembershipCreateObjectV1Request(List<UsergroupmembershipRequestCompound>  = default(List<UsergroupmembershipRequestCompound>))
         {
-            // to ensure "aObjUsergroupmembership" is required (not null)
-            if (aObjUsergroupmembership == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUsergroupmembership is a required property for UsergroupmembershipCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupmembershipCreateObjectV1Request and cannot be null");
             }
-            this.AObjUsergroupmembership = aObjUsergroupmembership;
+            this.AObjUsergroupmembership = ;
         }
 
         /// <summary>

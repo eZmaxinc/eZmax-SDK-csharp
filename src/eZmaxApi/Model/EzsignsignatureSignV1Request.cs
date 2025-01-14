@@ -67,22 +67,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureSignV1Request" /> class.
         /// </summary>
-        /// <param name="fkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason.</param>
-        /// <param name="sValue">The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**.</param>
-        /// <param name="eAttachmentsConfirmationDecision">Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
-        /// <param name="sAttachmentsRefusalReason">The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
-        /// <param name="sSvg">The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false.</param>
-        /// <param name="aObjFile">aObjFile.</param>
-        /// <param name="bIsAutomatic">Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**.  (required).</param>
-        public EzsignsignatureSignV1Request(int fkiEzsignsigningreasonID = default(int), string sValue = default(string), EAttachmentsConfirmationDecisionEnum? eAttachmentsConfirmationDecision = default(EAttachmentsConfirmationDecisionEnum?), string sAttachmentsRefusalReason = default(string), string sSvg = default(string), List<CommonFile> aObjFile = default(List<CommonFile>), bool bIsAutomatic = default(bool))
+        /// <param name="">The unique ID of the Ezsignsigningreason.</param>
+        /// <param name="">The unique ID of the Font.</param>
+        /// <param name="">The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**.</param>
+        /// <param name="">Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
+        /// <param name="">The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
+        /// <param name="">The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false.</param>
+        /// <param name="">.</param>
+        /// <param name="">Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**.  (required).</param>
+        public EzsignsignatureSignV1Request(int  = default(int), int  = default(int), string  = default(string), EAttachmentsConfirmationDecisionEnum?  = default(EAttachmentsConfirmationDecisionEnum?), string  = default(string), string  = default(string), List<CommonFile>  = default(List<CommonFile>), bool  = default(bool))
         {
-            this.BIsAutomatic = bIsAutomatic;
-            this.FkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
-            this.SValue = sValue;
-            this.EAttachmentsConfirmationDecision = eAttachmentsConfirmationDecision;
-            this.SAttachmentsRefusalReason = sAttachmentsRefusalReason;
-            this.SSvg = sSvg;
-            this.AObjFile = aObjFile;
+            this.BIsAutomatic = ;
+            this.FkiEzsignsigningreasonID = ;
+            this.FkiFontID = ;
+            this.SValue = ;
+            this.EAttachmentsConfirmationDecision = ;
+            this.SAttachmentsRefusalReason = ;
+            this.SSvg = ;
+            this.AObjFile = ;
         }
 
         /// <summary>
@@ -92,6 +94,14 @@ namespace eZmaxApi.Model
         /* <example>194</example>*/
         [DataMember(Name = "fkiEzsignsigningreasonID", EmitDefaultValue = false)]
         public int FkiEzsignsigningreasonID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Font
+        /// </summary>
+        /// <value>The unique ID of the Font</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiFontID", EmitDefaultValue = false)]
+        public int FkiFontID { get; set; }
 
         /// <summary>
         /// The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
@@ -108,9 +118,9 @@ namespace eZmaxApi.Model
         public string SAttachmentsRefusalReason { get; set; }
 
         /// <summary>
-        /// The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false
+        /// The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false
         /// </summary>
-        /// <value>The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false</value>
+        /// <value>The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false</value>
         /* <example>{&quot;$ref&quot;:&quot;#/components/examples/Svg/value&quot;}</example>*/
         [DataMember(Name = "sSvg", EmitDefaultValue = false)]
         public string SSvg { get; set; }
@@ -122,9 +132,9 @@ namespace eZmaxApi.Model
         public List<CommonFile> AObjFile { get; set; }
 
         /// <summary>
-        /// Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. 
+        /// Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. 
         /// </summary>
-        /// <value>Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. </value>
+        /// <value>Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. </value>
         [DataMember(Name = "bIsAutomatic", IsRequired = true, EmitDefaultValue = true)]
         public bool BIsAutomatic { get; set; }
 
@@ -137,6 +147,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignsignatureSignV1Request {\n");
             sb.Append("  FkiEzsignsigningreasonID: ").Append(FkiEzsignsigningreasonID).Append("\n");
+            sb.Append("  FkiFontID: ").Append(FkiFontID).Append("\n");
             sb.Append("  SValue: ").Append(SValue).Append("\n");
             sb.Append("  EAttachmentsConfirmationDecision: ").Append(EAttachmentsConfirmationDecision).Append("\n");
             sb.Append("  SAttachmentsRefusalReason: ").Append(SAttachmentsRefusalReason).Append("\n");
@@ -173,6 +184,12 @@ namespace eZmaxApi.Model
             if (this.FkiEzsignsigningreasonID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsigningreasonID" });
+            }
+
+            // FkiFontID (int) minimum
+            if (this.FkiFontID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
             }
 
             if (this.SSvg != null) {

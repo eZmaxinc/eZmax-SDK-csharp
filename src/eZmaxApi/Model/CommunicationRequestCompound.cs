@@ -79,61 +79,61 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiCommunicationID">The unique ID of the Communication..</param>
-        /// <param name="eCommunicationImportance">eCommunicationImportance.</param>
-        /// <param name="eCommunicationType">eCommunicationType (required).</param>
-        /// <param name="objCommunicationsender">objCommunicationsender.</param>
-        /// <param name="sCommunicationSubject">The subject of the Communication.</param>
-        /// <param name="tCommunicationBody">The Body of the Communication (required).</param>
-        /// <param name="bCommunicationPrivate">Whether the Communication is private or not (required).</param>
-        /// <param name="eCommunicationAttachmenttype">How the attachment should be included in the email.   Only used if eCommunicationType is **Email**.</param>
-        /// <param name="iCommunicationAttachmentlinkexpiration">The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**.</param>
-        /// <param name="bCommunicationReadreceipt">Whether we ask for a read receipt or not..</param>
-        /// <param name="aObjCommunicationattachment">aObjCommunicationattachment (required).</param>
-        /// <param name="aObjCommunicationrecipient">aObjCommunicationrecipient (required).</param>
-        /// <param name="aObjCommunicationreference">aObjCommunicationreference (required).</param>
-        /// <param name="aObjCommunicationexternalrecipient">aObjCommunicationexternalrecipient (required).</param>
-        public CommunicationRequestCompound(int pkiCommunicationID = default(int), FieldECommunicationImportance? eCommunicationImportance = default(FieldECommunicationImportance?), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), CustomCommunicationsenderRequest objCommunicationsender = default(CustomCommunicationsenderRequest), string sCommunicationSubject = default(string), string tCommunicationBody = default(string), bool bCommunicationPrivate = default(bool), ECommunicationAttachmenttypeEnum? eCommunicationAttachmenttype = default(ECommunicationAttachmenttypeEnum?), int iCommunicationAttachmentlinkexpiration = default(int), bool bCommunicationReadreceipt = default(bool), List<CustomCommunicationattachmentRequest> aObjCommunicationattachment = default(List<CustomCommunicationattachmentRequest>), List<CommunicationrecipientRequestCompound> aObjCommunicationrecipient = default(List<CommunicationrecipientRequestCompound>), List<CommunicationreferenceRequestCompound> aObjCommunicationreference = default(List<CommunicationreferenceRequestCompound>), List<CommunicationexternalrecipientRequestCompound> aObjCommunicationexternalrecipient = default(List<CommunicationexternalrecipientRequestCompound>))
+        /// <param name="">The unique ID of the Communication..</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">The subject of the Communication.</param>
+        /// <param name="">The Body of the Communication (required).</param>
+        /// <param name="">Whether the Communication is private or not (required).</param>
+        /// <param name="">How the attachment should be included in the email.   Only used if eCommunicationType is **Email**.</param>
+        /// <param name="">The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**.</param>
+        /// <param name="">Whether we ask for a read receipt or not..</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public CommunicationRequestCompound(int  = default(int), FieldECommunicationImportance?  = default(FieldECommunicationImportance?), FieldECommunicationType  = default(FieldECommunicationType), CustomCommunicationsenderRequest  = default(CustomCommunicationsenderRequest), string  = default(string), string  = default(string), bool  = default(bool), ECommunicationAttachmenttypeEnum?  = default(ECommunicationAttachmenttypeEnum?), int  = default(int), bool  = default(bool), List<CustomCommunicationattachmentRequest>  = default(List<CustomCommunicationattachmentRequest>), List<CommunicationrecipientRequestCompound>  = default(List<CommunicationrecipientRequestCompound>), List<CommunicationreferenceRequestCompound>  = default(List<CommunicationreferenceRequestCompound>), List<CommunicationexternalrecipientRequestCompound>  = default(List<CommunicationexternalrecipientRequestCompound>))
         {
-            this.ECommunicationType = eCommunicationType;
-            // to ensure "tCommunicationBody" is required (not null)
-            if (tCommunicationBody == null)
+            this.ECommunicationType = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("tCommunicationBody is a required property for CommunicationRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommunicationRequestCompound and cannot be null");
             }
-            this.TCommunicationBody = tCommunicationBody;
-            this.BCommunicationPrivate = bCommunicationPrivate;
-            // to ensure "aObjCommunicationattachment" is required (not null)
-            if (aObjCommunicationattachment == null)
+            this.TCommunicationBody = ;
+            this.BCommunicationPrivate = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCommunicationattachment is a required property for CommunicationRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommunicationRequestCompound and cannot be null");
             }
-            this.AObjCommunicationattachment = aObjCommunicationattachment;
-            // to ensure "aObjCommunicationrecipient" is required (not null)
-            if (aObjCommunicationrecipient == null)
+            this.AObjCommunicationattachment = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCommunicationrecipient is a required property for CommunicationRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommunicationRequestCompound and cannot be null");
             }
-            this.AObjCommunicationrecipient = aObjCommunicationrecipient;
-            // to ensure "aObjCommunicationreference" is required (not null)
-            if (aObjCommunicationreference == null)
+            this.AObjCommunicationrecipient = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCommunicationreference is a required property for CommunicationRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommunicationRequestCompound and cannot be null");
             }
-            this.AObjCommunicationreference = aObjCommunicationreference;
-            // to ensure "aObjCommunicationexternalrecipient" is required (not null)
-            if (aObjCommunicationexternalrecipient == null)
+            this.AObjCommunicationreference = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCommunicationexternalrecipient is a required property for CommunicationRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommunicationRequestCompound and cannot be null");
             }
-            this.AObjCommunicationexternalrecipient = aObjCommunicationexternalrecipient;
-            this.PkiCommunicationID = pkiCommunicationID;
-            this.ECommunicationImportance = eCommunicationImportance;
-            this.ObjCommunicationsender = objCommunicationsender;
-            this.SCommunicationSubject = sCommunicationSubject;
-            this.ECommunicationAttachmenttype = eCommunicationAttachmenttype;
-            this.ICommunicationAttachmentlinkexpiration = iCommunicationAttachmentlinkexpiration;
-            this.BCommunicationReadreceipt = bCommunicationReadreceipt;
+            this.AObjCommunicationexternalrecipient = ;
+            this.PkiCommunicationID = ;
+            this.ECommunicationImportance = ;
+            this.ObjCommunicationsender = ;
+            this.SCommunicationSubject = ;
+            this.ECommunicationAttachmenttype = ;
+            this.ICommunicationAttachmentlinkexpiration = ;
+            this.BCommunicationReadreceipt = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsigningreasonEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objEzsignsigningreason">objEzsignsigningreason (required).</param>
-        public EzsignsigningreasonEditObjectV1Request(EzsignsigningreasonRequestCompound objEzsignsigningreason = default(EzsignsigningreasonRequestCompound))
+        /// <param name=""> (required).</param>
+        public EzsignsigningreasonEditObjectV1Request(EzsignsigningreasonRequestCompound  = default(EzsignsigningreasonRequestCompound))
         {
-            // to ensure "objEzsignsigningreason" is required (not null)
-            if (objEzsignsigningreason == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignsigningreason is a required property for EzsignsigningreasonEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsigningreasonEditObjectV1Request and cannot be null");
             }
-            this.ObjEzsignsigningreason = objEzsignsigningreason;
+            this.ObjEzsignsigningreason = ;
         }
 
         /// <summary>

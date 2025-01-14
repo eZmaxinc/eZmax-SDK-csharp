@@ -40,14 +40,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupdelegationRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation.</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        public UsergroupdelegationRequestCompound(int pkiUsergroupdelegationID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int))
+        /// <param name="">The unique ID of the Usergroupdelegation.</param>
+        /// <param name="">The unique ID of the Usergroup (required).</param>
+        /// <param name="">The unique ID of the User (required).</param>
+        public UsergroupdelegationRequestCompound(int  = default(int), int  = default(int), int  = default(int))
         {
-            this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiUserID = fkiUserID;
-            this.PkiUsergroupdelegationID = pkiUsergroupdelegationID;
+            this.FkiUsergroupID = ;
+            this.FkiUserID = ;
+            this.PkiUsergroupdelegationID = ;
         }
 
         /// <summary>

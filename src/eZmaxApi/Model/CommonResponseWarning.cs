@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseWarning" /> class.
         /// </summary>
-        /// <param name="sWarningMessage">More detail about the warning (required).</param>
-        /// <param name="eWarningCode">The warning code. See documentation for valid values (required).</param>
-        public CommonResponseWarning(string sWarningMessage = default(string), string eWarningCode = default(string))
+        /// <param name="">More detail about the warning (required).</param>
+        /// <param name="">The warning code. See documentation for valid values (required).</param>
+        public CommonResponseWarning(string  = default(string), string  = default(string))
         {
-            // to ensure "sWarningMessage" is required (not null)
-            if (sWarningMessage == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sWarningMessage is a required property for CommonResponseWarning and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseWarning and cannot be null");
             }
-            this.SWarningMessage = sWarningMessage;
-            // to ensure "eWarningCode" is required (not null)
-            if (eWarningCode == null)
+            this.SWarningMessage = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("eWarningCode is a required property for CommonResponseWarning and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseWarning and cannot be null");
             }
-            this.EWarningCode = eWarningCode;
+            this.EWarningCode = ;
         }
 
         /// <summary>

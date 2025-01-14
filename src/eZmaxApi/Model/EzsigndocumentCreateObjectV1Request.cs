@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objEzsigndocument">objEzsigndocument.</param>
-        /// <param name="objEzsigndocumentCompound">objEzsigndocumentCompound.</param>
-        public EzsigndocumentCreateObjectV1Request(EzsigndocumentRequest objEzsigndocument = default(EzsigndocumentRequest), EzsigndocumentRequestCompound objEzsigndocumentCompound = default(EzsigndocumentRequestCompound))
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public EzsigndocumentCreateObjectV1Request(EzsigndocumentRequest  = default(EzsigndocumentRequest), EzsigndocumentRequestCompound  = default(EzsigndocumentRequestCompound))
         {
-            this.ObjEzsigndocument = objEzsigndocument;
-            this.ObjEzsigndocumentCompound = objEzsigndocumentCompound;
+            this.ObjEzsigndocument = ;
+            this.ObjEzsigndocumentCompound = ;
         }
 
         /// <summary>

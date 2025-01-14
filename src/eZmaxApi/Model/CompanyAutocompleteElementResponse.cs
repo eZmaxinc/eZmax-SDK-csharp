@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CompanyAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiCompanyID">The unique ID of the Company (required).</param>
-        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="bCompanyIsactive">Whether the Company is active or not (required).</param>
-        public CompanyAutocompleteElementResponse(int pkiCompanyID = default(int), string sCompanyNameX = default(string), bool bCompanyIsactive = default(bool))
+        /// <param name="">The unique ID of the Company (required).</param>
+        /// <param name="">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="">Whether the Company is active or not (required).</param>
+        public CompanyAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiCompanyID = pkiCompanyID;
-            // to ensure "sCompanyNameX" is required (not null)
-            if (sCompanyNameX == null)
+            this.PkiCompanyID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCompanyNameX is a required property for CompanyAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CompanyAutocompleteElementResponse and cannot be null");
             }
-            this.SCompanyNameX = sCompanyNameX;
-            this.BCompanyIsactive = bCompanyIsactive;
+            this.SCompanyNameX = ;
+            this.BCompanyIsactive = ;
         }
 
         /// <summary>

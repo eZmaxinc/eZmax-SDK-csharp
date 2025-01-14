@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulegroupResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiModulegroupID">The unique ID of the Modulegroup (required).</param>
-        /// <param name="sModulegroupNameX">The name of the Modulegroup in the language of the requester (required).</param>
-        /// <param name="aObjModule">aObjModule.</param>
-        public ModulegroupResponseCompound(int pkiModulegroupID = default(int), string sModulegroupNameX = default(string), List<ModuleResponseCompound> aObjModule = default(List<ModuleResponseCompound>))
+        /// <param name="">The unique ID of the Modulegroup (required).</param>
+        /// <param name="">The name of the Modulegroup in the language of the requester (required).</param>
+        /// <param name="">.</param>
+        public ModulegroupResponseCompound(int  = default(int), string  = default(string), List<ModuleResponseCompound>  = default(List<ModuleResponseCompound>))
         {
-            this.PkiModulegroupID = pkiModulegroupID;
-            // to ensure "sModulegroupNameX" is required (not null)
-            if (sModulegroupNameX == null)
+            this.PkiModulegroupID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sModulegroupNameX is a required property for ModulegroupResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for ModulegroupResponseCompound and cannot be null");
             }
-            this.SModulegroupNameX = sModulegroupNameX;
-            this.AObjModule = aObjModule;
+            this.SModulegroupNameX = ;
+            this.AObjModule = ;
         }
 
         /// <summary>

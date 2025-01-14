@@ -28,6 +28,26 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InscriptiontempGetCommunicationCountV1Response</returns>
+        InscriptiontempGetCommunicationCountV1Response InscriptiontempGetCommunicationCountV1(int pkiInscriptiontempID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InscriptiontempGetCommunicationCountV1Response</returns>
+        ApiResponse<InscriptiontempGetCommunicationCountV1Response> InscriptiontempGetCommunicationCountV1WithHttpInfo(int pkiInscriptiontempID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Communication list
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -47,6 +67,46 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of InscriptiontempGetCommunicationListV1Response</returns>
         ApiResponse<InscriptiontempGetCommunicationListV1Response> InscriptiontempGetCommunicationListV1WithHttpInfo(int pkiInscriptiontempID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationrecipient
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InscriptiontempGetCommunicationrecipientsV1Response</returns>
+        InscriptiontempGetCommunicationrecipientsV1Response InscriptiontempGetCommunicationrecipientsV1(int pkiInscriptiontempID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InscriptiontempGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<InscriptiontempGetCommunicationrecipientsV1Response> InscriptiontempGetCommunicationrecipientsV1WithHttpInfo(int pkiInscriptiontempID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationsender
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InscriptiontempGetCommunicationsendersV1Response</returns>
+        InscriptiontempGetCommunicationsendersV1Response InscriptiontempGetCommunicationsendersV1(int pkiInscriptiontempID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InscriptiontempGetCommunicationsendersV1Response</returns>
+        ApiResponse<InscriptiontempGetCommunicationsendersV1Response> InscriptiontempGetCommunicationsendersV1WithHttpInfo(int pkiInscriptiontempID, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -56,6 +116,31 @@ namespace eZmaxApi.Api
     public interface IObjectInscriptiontempApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InscriptiontempGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<InscriptiontempGetCommunicationCountV1Response> InscriptiontempGetCommunicationCountV1Async(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InscriptiontempGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InscriptiontempGetCommunicationCountV1Response>> InscriptiontempGetCommunicationCountV1WithHttpInfoAsync(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -81,6 +166,56 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptiontempGetCommunicationListV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<InscriptiontempGetCommunicationListV1Response>> InscriptiontempGetCommunicationListV1WithHttpInfoAsync(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InscriptiontempGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<InscriptiontempGetCommunicationrecipientsV1Response> InscriptiontempGetCommunicationrecipientsV1Async(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InscriptiontempGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InscriptiontempGetCommunicationrecipientsV1Response>> InscriptiontempGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InscriptiontempGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<InscriptiontempGetCommunicationsendersV1Response> InscriptiontempGetCommunicationsendersV1Async(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InscriptiontempGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InscriptiontempGetCommunicationsendersV1Response>> InscriptiontempGetCommunicationsendersV1WithHttpInfoAsync(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -199,6 +334,148 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InscriptiontempGetCommunicationCountV1Response</returns>
+        public InscriptiontempGetCommunicationCountV1Response InscriptiontempGetCommunicationCountV1(int pkiInscriptiontempID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationCountV1Response> localVarResponse = InscriptiontempGetCommunicationCountV1WithHttpInfo(pkiInscriptiontempID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InscriptiontempGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationCountV1Response> InscriptiontempGetCommunicationCountV1WithHttpInfo(int pkiInscriptiontempID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptiontempID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptiontempID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInscriptiontempApi.InscriptiontempGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<InscriptiontempGetCommunicationCountV1Response>("/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptiontempGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InscriptiontempGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<InscriptiontempGetCommunicationCountV1Response> InscriptiontempGetCommunicationCountV1Async(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationCountV1Response> localVarResponse = await InscriptiontempGetCommunicationCountV1WithHttpInfoAsync(pkiInscriptiontempID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InscriptiontempGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationCountV1Response>> InscriptiontempGetCommunicationCountV1WithHttpInfoAsync(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptiontempID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptiontempID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInscriptiontempApi.InscriptiontempGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<InscriptiontempGetCommunicationCountV1Response>("/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptiontempGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>
@@ -334,6 +611,290 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InscriptiontempGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InscriptiontempGetCommunicationrecipientsV1Response</returns>
+        public InscriptiontempGetCommunicationrecipientsV1Response InscriptiontempGetCommunicationrecipientsV1(int pkiInscriptiontempID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationrecipientsV1Response> localVarResponse = InscriptiontempGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptiontempID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InscriptiontempGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationrecipientsV1Response> InscriptiontempGetCommunicationrecipientsV1WithHttpInfo(int pkiInscriptiontempID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptiontempID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptiontempID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInscriptiontempApi.InscriptiontempGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<InscriptiontempGetCommunicationrecipientsV1Response>("/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptiontempGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InscriptiontempGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<InscriptiontempGetCommunicationrecipientsV1Response> InscriptiontempGetCommunicationrecipientsV1Async(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationrecipientsV1Response> localVarResponse = await InscriptiontempGetCommunicationrecipientsV1WithHttpInfoAsync(pkiInscriptiontempID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InscriptiontempGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationrecipientsV1Response>> InscriptiontempGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptiontempID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptiontempID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInscriptiontempApi.InscriptiontempGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<InscriptiontempGetCommunicationrecipientsV1Response>("/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptiontempGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InscriptiontempGetCommunicationsendersV1Response</returns>
+        public InscriptiontempGetCommunicationsendersV1Response InscriptiontempGetCommunicationsendersV1(int pkiInscriptiontempID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationsendersV1Response> localVarResponse = InscriptiontempGetCommunicationsendersV1WithHttpInfo(pkiInscriptiontempID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InscriptiontempGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationsendersV1Response> InscriptiontempGetCommunicationsendersV1WithHttpInfo(int pkiInscriptiontempID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptiontempID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptiontempID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInscriptiontempApi.InscriptiontempGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<InscriptiontempGetCommunicationsendersV1Response>("/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptiontempGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InscriptiontempGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<InscriptiontempGetCommunicationsendersV1Response> InscriptiontempGetCommunicationsendersV1Async(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationsendersV1Response> localVarResponse = await InscriptiontempGetCommunicationsendersV1WithHttpInfoAsync(pkiInscriptiontempID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InscriptiontempGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptiontempGetCommunicationsendersV1Response>> InscriptiontempGetCommunicationsendersV1WithHttpInfoAsync(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptiontempID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptiontempID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInscriptiontempApi.InscriptiontempGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<InscriptiontempGetCommunicationsendersV1Response>("/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptiontempGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

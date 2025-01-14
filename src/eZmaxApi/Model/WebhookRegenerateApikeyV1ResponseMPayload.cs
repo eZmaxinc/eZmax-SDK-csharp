@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookRegenerateApikeyV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objWebhook">objWebhook (required).</param>
-        public WebhookRegenerateApikeyV1ResponseMPayload(WebhookResponseCompound objWebhook = default(WebhookResponseCompound))
+        /// <param name=""> (required).</param>
+        public WebhookRegenerateApikeyV1ResponseMPayload(WebhookResponseCompound  = default(WebhookResponseCompound))
         {
-            // to ensure "objWebhook" is required (not null)
-            if (objWebhook == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objWebhook is a required property for WebhookRegenerateApikeyV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookRegenerateApikeyV1ResponseMPayload and cannot be null");
             }
-            this.ObjWebhook = objWebhook;
+            this.ObjWebhook = ;
         }
 
         /// <summary>

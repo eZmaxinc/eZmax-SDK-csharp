@@ -40,28 +40,28 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulesectionResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiModulesectionID">The unique ID of the Modulesection (required).</param>
-        /// <param name="fkiModuleID">The unique ID of the Module (required).</param>
-        /// <param name="sModulesectionInternalname">The Internal name of the Module section. (required).</param>
-        /// <param name="sModulesectionNameX">The Name of the Modulesection in the language of the requester (required).</param>
-        /// <param name="aObjPermission">aObjPermission.</param>
-        public ModulesectionResponseCompound(int pkiModulesectionID = default(int), int fkiModuleID = default(int), string sModulesectionInternalname = default(string), string sModulesectionNameX = default(string), List<PermissionResponseCompound> aObjPermission = default(List<PermissionResponseCompound>))
+        /// <param name="">The unique ID of the Modulesection (required).</param>
+        /// <param name="">The unique ID of the Module (required).</param>
+        /// <param name="">The Internal name of the Module section. (required).</param>
+        /// <param name="">The Name of the Modulesection in the language of the requester (required).</param>
+        /// <param name="">.</param>
+        public ModulesectionResponseCompound(int  = default(int), int  = default(int), string  = default(string), string  = default(string), List<PermissionResponseCompound>  = default(List<PermissionResponseCompound>))
         {
-            this.PkiModulesectionID = pkiModulesectionID;
-            this.FkiModuleID = fkiModuleID;
-            // to ensure "sModulesectionInternalname" is required (not null)
-            if (sModulesectionInternalname == null)
+            this.PkiModulesectionID = ;
+            this.FkiModuleID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sModulesectionInternalname is a required property for ModulesectionResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for ModulesectionResponseCompound and cannot be null");
             }
-            this.SModulesectionInternalname = sModulesectionInternalname;
-            // to ensure "sModulesectionNameX" is required (not null)
-            if (sModulesectionNameX == null)
+            this.SModulesectionInternalname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sModulesectionNameX is a required property for ModulesectionResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for ModulesectionResponseCompound and cannot be null");
             }
-            this.SModulesectionNameX = sModulesectionNameX;
-            this.AObjPermission = aObjPermission;
+            this.SModulesectionNameX = ;
+            this.AObjPermission = ;
         }
 
         /// <summary>

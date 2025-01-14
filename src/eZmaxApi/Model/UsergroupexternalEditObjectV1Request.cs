@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objUsergroupexternal">objUsergroupexternal (required).</param>
-        public UsergroupexternalEditObjectV1Request(UsergroupexternalRequestCompound objUsergroupexternal = default(UsergroupexternalRequestCompound))
+        /// <param name=""> (required).</param>
+        public UsergroupexternalEditObjectV1Request(UsergroupexternalRequestCompound  = default(UsergroupexternalRequestCompound))
         {
-            // to ensure "objUsergroupexternal" is required (not null)
-            if (objUsergroupexternal == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objUsergroupexternal is a required property for UsergroupexternalEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupexternalEditObjectV1Request and cannot be null");
             }
-            this.ObjUsergroupexternal = objUsergroupexternal;
+            this.ObjUsergroupexternal = ;
         }
 
         /// <summary>

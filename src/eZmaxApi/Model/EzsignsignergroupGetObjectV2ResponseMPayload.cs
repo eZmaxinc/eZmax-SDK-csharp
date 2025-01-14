@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objEzsignsignergroup">objEzsignsignergroup (required).</param>
-        public EzsignsignergroupGetObjectV2ResponseMPayload(EzsignsignergroupResponseCompound objEzsignsignergroup = default(EzsignsignergroupResponseCompound))
+        /// <param name=""> (required).</param>
+        public EzsignsignergroupGetObjectV2ResponseMPayload(EzsignsignergroupResponseCompound  = default(EzsignsignergroupResponseCompound))
         {
-            // to ensure "objEzsignsignergroup" is required (not null)
-            if (objEzsignsignergroup == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignsignergroup is a required property for EzsignsignergroupGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsignergroupGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignsignergroup = objEzsignsignergroup;
+            this.ObjEzsignsignergroup = ;
         }
 
         /// <summary>

@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiPaymenttermID">The unique ID of the Paymentterm (required).</param>
-        /// <param name="sPaymenttermDescriptionX">The description of the Paymentterm in the language of the requester (required).</param>
-        /// <param name="bPaymenttermIsactive">Whether the Paymentterm is active or not (required).</param>
-        public PaymenttermAutocompleteElementResponse(int pkiPaymenttermID = default(int), string sPaymenttermDescriptionX = default(string), bool bPaymenttermIsactive = default(bool))
+        /// <param name="">The unique ID of the Paymentterm (required).</param>
+        /// <param name="">The description of the Paymentterm in the language of the requester (required).</param>
+        /// <param name="">Whether the Paymentterm is active or not (required).</param>
+        public PaymenttermAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiPaymenttermID = pkiPaymenttermID;
-            // to ensure "sPaymenttermDescriptionX" is required (not null)
-            if (sPaymenttermDescriptionX == null)
+            this.PkiPaymenttermID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sPaymenttermDescriptionX is a required property for PaymenttermAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for PaymenttermAutocompleteElementResponse and cannot be null");
             }
-            this.SPaymenttermDescriptionX = sPaymenttermDescriptionX;
-            this.BPaymenttermIsactive = bPaymenttermIsactive;
+            this.SPaymenttermDescriptionX = ;
+            this.BPaymenttermIsactive = ;
         }
 
         /// <summary>

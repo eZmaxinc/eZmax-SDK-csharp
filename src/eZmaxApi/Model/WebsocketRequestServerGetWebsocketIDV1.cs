@@ -61,10 +61,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsocketRequestServerGetWebsocketIDV1" /> class.
         /// </summary>
-        /// <param name="eWebsocketMessagetype">The Type of message (required).</param>
-        public WebsocketRequestServerGetWebsocketIDV1(EWebsocketMessagetypeEnum eWebsocketMessagetype = default(EWebsocketMessagetypeEnum))
+        /// <param name="">The Type of message (required).</param>
+        public WebsocketRequestServerGetWebsocketIDV1(EWebsocketMessagetypeEnum  = default(EWebsocketMessagetypeEnum))
         {
-            this.EWebsocketMessagetype = eWebsocketMessagetype;
+            this.EWebsocketMessagetype = ;
         }
 
         /// <summary>

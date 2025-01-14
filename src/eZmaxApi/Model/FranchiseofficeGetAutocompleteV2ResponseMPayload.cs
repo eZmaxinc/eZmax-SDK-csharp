@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchiseofficeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjFranchiseoffice">An array of Franchiseoffice autocomplete element response. (required).</param>
-        public FranchiseofficeGetAutocompleteV2ResponseMPayload(List<FranchiseofficeAutocompleteElementResponse> aObjFranchiseoffice = default(List<FranchiseofficeAutocompleteElementResponse>))
+        /// <param name="">An array of Franchiseoffice autocomplete element response. (required).</param>
+        public FranchiseofficeGetAutocompleteV2ResponseMPayload(List<FranchiseofficeAutocompleteElementResponse>  = default(List<FranchiseofficeAutocompleteElementResponse>))
         {
-            // to ensure "aObjFranchiseoffice" is required (not null)
-            if (aObjFranchiseoffice == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjFranchiseoffice is a required property for FranchiseofficeGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchiseofficeGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjFranchiseoffice = aObjFranchiseoffice;
+            this.AObjFranchiseoffice = ;
         }
 
         /// <summary>

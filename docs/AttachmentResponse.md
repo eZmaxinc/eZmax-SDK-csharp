@@ -57,7 +57,7 @@ Name | Type | Description | Notes
 **EAttachmentPrivacy** | **FieldEAttachmentPrivacy** |  | 
 **FkiUserIDSpecific** | **int** | The unique ID of the User | [optional] 
 **EAttachmentType** | **FieldEAttachmentType** |  | 
-**IAttachmentSize** | **int** | The size of the Attachment | 
+**IAttachmentSize** | **long** | The size of the Attachment | 
 **IAttachmentEDMmoduleflag** | **int** | The edmmoduleflag of the Attachment | [optional] 
 **SAttachmentMD5** | **string** | The md5 of the Attachment | 
 **BAttachmentDeleted** | **bool** | Whether if it&#39;s deleted | 

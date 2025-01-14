@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiEzsignfoldersignerassociationID">aPkiEzsignfoldersignerassociationID (required).</param>
-        public EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload(List<int> aPkiEzsignfoldersignerassociationID = default(List<int>))
+        /// <param name=""> (required).</param>
+        public EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsignfoldersignerassociationID" is required (not null)
-            if (aPkiEzsignfoldersignerassociationID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsignfoldersignerassociationID is a required property for EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsignfoldersignerassociationID = aPkiEzsignfoldersignerassociationID;
+            this.APkiEzsignfoldersignerassociationID = ;
         }
 
         /// <summary>

@@ -92,6 +92,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IEzsignfolderFormfieldtotal'
+        /// </summary>
+        [Fact]
+        public void IEzsignfolderFormfieldtotalTest()
+        {
+            // TODO unit test for the property 'IEzsignfolderFormfieldtotal'
+        }
+
+        /// <summary>
         /// Test the property 'IEzsignfolderSignaturesigned'
         /// </summary>
         [Fact]

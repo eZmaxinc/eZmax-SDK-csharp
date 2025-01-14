@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobalAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplateglobalID">The unique ID of the Ezsigntemplateglobal (required).</param>
-        /// <param name="sEzsigntemplateglobalDescription">The description of the Ezsigntemplate (required).</param>
-        /// <param name="bEzsigntemplateglobalIsactive">Whether the Ezsigntemplate is active or not (required).</param>
-        public EzsigntemplateglobalAutocompleteElementResponse(int pkiEzsigntemplateglobalID = default(int), string sEzsigntemplateglobalDescription = default(string), bool bEzsigntemplateglobalIsactive = default(bool))
+        /// <param name="">The unique ID of the Ezsigntemplateglobal (required).</param>
+        /// <param name="">The description of the Ezsigntemplate (required).</param>
+        /// <param name="">Whether the Ezsigntemplate is active or not (required).</param>
+        public EzsigntemplateglobalAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
-            // to ensure "sEzsigntemplateglobalDescription" is required (not null)
-            if (sEzsigntemplateglobalDescription == null)
+            this.PkiEzsigntemplateglobalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplateglobalDescription is a required property for EzsigntemplateglobalAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalAutocompleteElementResponse and cannot be null");
             }
-            this.SEzsigntemplateglobalDescription = sEzsigntemplateglobalDescription;
-            this.BEzsigntemplateglobalIsactive = bEzsigntemplateglobalIsactive;
+            this.SEzsigntemplateglobalDescription = ;
+            this.BEzsigntemplateglobalIsactive = ;
         }
 
         /// <summary>

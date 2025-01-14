@@ -69,27 +69,15 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzsigntemplateCreateObjectV1
+        /// Test EzsigntemplateCreateObjectV3
         /// </summary>
         [Fact]
-        public void EzsigntemplateCreateObjectV1Test()
+        public void EzsigntemplateCreateObjectV3Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request = null;
-            //var response = instance.EzsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request);
-            //Assert.IsType<EzsigntemplateCreateObjectV1Response>(response);
-        }
-
-        /// <summary>
-        /// Test EzsigntemplateCreateObjectV2
-        /// </summary>
-        [Fact]
-        public void EzsigntemplateCreateObjectV2Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request = null;
-            //var response = instance.EzsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request);
-            //Assert.IsType<EzsigntemplateCreateObjectV2Response>(response);
+            //EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request = null;
+            //var response = instance.EzsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request);
+            //Assert.IsType<EzsigntemplateCreateObjectV3Response>(response);
         }
 
         /// <summary>
@@ -105,29 +93,16 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzsigntemplateEditObjectV1
+        /// Test EzsigntemplateEditObjectV3
         /// </summary>
         [Fact]
-        public void EzsigntemplateEditObjectV1Test()
+        public void EzsigntemplateEditObjectV3Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsigntemplateID = null;
-            //EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request = null;
-            //var response = instance.EzsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
-            //Assert.IsType<EzsigntemplateEditObjectV1Response>(response);
-        }
-
-        /// <summary>
-        /// Test EzsigntemplateEditObjectV2
-        /// </summary>
-        [Fact]
-        public void EzsigntemplateEditObjectV2Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsigntemplateID = null;
-            //EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request = null;
-            //var response = instance.EzsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
-            //Assert.IsType<EzsigntemplateEditObjectV2Response>(response);
+            //EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request = null;
+            //var response = instance.EzsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
+            //Assert.IsType<EzsigntemplateEditObjectV3Response>(response);
         }
 
         /// <summary>
@@ -141,7 +116,8 @@ namespace eZmaxApi.Test.Api
             //string? eFilterActive = null;
             //string? sQuery = null;
             //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.EzsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+            //int? fkiEzsignfoldertypeID = null;
+            //var response = instance.EzsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
             //Assert.IsType<EzsigntemplateGetAutocompleteV2Response>(response);
         }
 
@@ -162,27 +138,15 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzsigntemplateGetObjectV1
+        /// Test EzsigntemplateGetObjectV3
         /// </summary>
         [Fact]
-        public void EzsigntemplateGetObjectV1Test()
+        public void EzsigntemplateGetObjectV3Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsigntemplateID = null;
-            //var response = instance.EzsigntemplateGetObjectV1(pkiEzsigntemplateID);
-            //Assert.IsType<EzsigntemplateGetObjectV1Response>(response);
-        }
-
-        /// <summary>
-        /// Test EzsigntemplateGetObjectV2
-        /// </summary>
-        [Fact]
-        public void EzsigntemplateGetObjectV2Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiEzsigntemplateID = null;
-            //var response = instance.EzsigntemplateGetObjectV2(pkiEzsigntemplateID);
-            //Assert.IsType<EzsigntemplateGetObjectV2Response>(response);
+            //var response = instance.EzsigntemplateGetObjectV3(pkiEzsigntemplateID);
+            //Assert.IsType<EzsigntemplateGetObjectV3Response>(response);
         }
     }
 }

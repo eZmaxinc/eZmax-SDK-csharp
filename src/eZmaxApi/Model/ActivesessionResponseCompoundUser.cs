@@ -46,38 +46,38 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundUser" /> class.
         /// </summary>
-        /// <param name="pkiUserID">The unique ID of the User (required).</param>
-        /// <param name="fkiTimezoneID">The unique ID of the Timezone (required).</param>
-        /// <param name="sAvatarUrl">The url of the picture used as avatar.</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="eUserEzsignsendreminderfrequency">eUserEzsignsendreminderfrequency (required).</param>
-        /// <param name="iUserInterfacecolor">The int32 representation of the interface color. For example, RGB color #39435B would be 3752795 (required).</param>
-        /// <param name="bUserInterfacedark">Whether to use a dark mode interface (required).</param>
-        /// <param name="iUserListresult">The number of rows to return by default in lists (required).</param>
-        public ActivesessionResponseCompoundUser(int pkiUserID = default(int), int fkiTimezoneID = default(int), string sAvatarUrl = default(string), string sUserFirstname = default(string), string sUserLastname = default(string), string sEmailAddress = default(string), FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency = default(FieldEUserEzsignsendreminderfrequency), int iUserInterfacecolor = default(int), bool bUserInterfacedark = default(bool), int iUserListresult = default(int))
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name="">The unique ID of the Timezone (required).</param>
+        /// <param name="">The url of the picture used as avatar.</param>
+        /// <param name="">The first name of the user (required).</param>
+        /// <param name="">The last name of the user (required).</param>
+        /// <param name="">The email address..</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The int32 representation of the interface color. For example, RGB color #39435B would be 3752795 (required).</param>
+        /// <param name="">Whether to use a dark mode interface (required).</param>
+        /// <param name="">The number of rows to return by default in lists (required).</param>
+        public ActivesessionResponseCompoundUser(int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), FieldEUserEzsignsendreminderfrequency  = default(FieldEUserEzsignsendreminderfrequency), int  = default(int), bool  = default(bool), int  = default(int))
         {
-            this.PkiUserID = pkiUserID;
-            this.FkiTimezoneID = fkiTimezoneID;
-            // to ensure "sUserFirstname" is required (not null)
-            if (sUserFirstname == null)
+            this.PkiUserID = ;
+            this.FkiTimezoneID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserFirstname is a required property for ActivesessionResponseCompoundUser and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionResponseCompoundUser and cannot be null");
             }
-            this.SUserFirstname = sUserFirstname;
-            // to ensure "sUserLastname" is required (not null)
-            if (sUserLastname == null)
+            this.SUserFirstname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserLastname is a required property for ActivesessionResponseCompoundUser and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionResponseCompoundUser and cannot be null");
             }
-            this.SUserLastname = sUserLastname;
-            this.EUserEzsignsendreminderfrequency = eUserEzsignsendreminderfrequency;
-            this.IUserInterfacecolor = iUserInterfacecolor;
-            this.BUserInterfacedark = bUserInterfacedark;
-            this.IUserListresult = iUserListresult;
-            this.SAvatarUrl = sAvatarUrl;
-            this.SEmailAddress = sEmailAddress;
+            this.SUserLastname = ;
+            this.EUserEzsignsendreminderfrequency = ;
+            this.IUserInterfacecolor = ;
+            this.BUserInterfacedark = ;
+            this.IUserListresult = ;
+            this.SAvatarUrl = ;
+            this.SEmailAddress = ;
         }
 
         /// <summary>

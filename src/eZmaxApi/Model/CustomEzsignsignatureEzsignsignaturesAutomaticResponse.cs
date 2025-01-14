@@ -46,14 +46,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignsignatureEzsignsignaturesAutomaticResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature (required).</param>
-        /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
-        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
-        public CustomEzsignsignatureEzsignsignaturesAutomaticResponse(int pkiEzsignsignatureID = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int iEzsignpagePagenumber = default(int))
+        /// <param name="">The unique ID of the Ezsignsignature (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The page number in the Ezsigndocument (required).</param>
+        public CustomEzsignsignatureEzsignsignaturesAutomaticResponse(int  = default(int), FieldEEzsignsignatureType  = default(FieldEEzsignsignatureType), int  = default(int))
         {
-            this.PkiEzsignsignatureID = pkiEzsignsignatureID;
-            this.EEzsignsignatureType = eEzsignsignatureType;
-            this.IEzsignpagePagenumber = iEzsignpagePagenumber;
+            this.PkiEzsignsignatureID = ;
+            this.EEzsignsignatureType = ;
+            this.IEzsignpagePagenumber = ;
         }
 
         /// <summary>

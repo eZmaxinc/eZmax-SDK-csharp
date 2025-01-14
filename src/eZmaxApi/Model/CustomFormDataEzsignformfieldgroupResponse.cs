@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomFormDataEzsignformfieldgroupResponse" /> class.
         /// </summary>
-        /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup (required).</param>
-        /// <param name="aObjEzsignformfield">aObjEzsignformfield (required).</param>
-        public CustomFormDataEzsignformfieldgroupResponse(string sEzsignformfieldgroupLabel = default(string), List<CustomFormDataEzsignformfieldResponse> aObjEzsignformfield = default(List<CustomFormDataEzsignformfieldResponse>))
+        /// <param name="">The Label for the Ezsignformfieldgroup (required).</param>
+        /// <param name=""> (required).</param>
+        public CustomFormDataEzsignformfieldgroupResponse(string  = default(string), List<CustomFormDataEzsignformfieldResponse>  = default(List<CustomFormDataEzsignformfieldResponse>))
         {
-            // to ensure "sEzsignformfieldgroupLabel" is required (not null)
-            if (sEzsignformfieldgroupLabel == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignformfieldgroupLabel is a required property for CustomFormDataEzsignformfieldgroupResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomFormDataEzsignformfieldgroupResponse and cannot be null");
             }
-            this.SEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
-            // to ensure "aObjEzsignformfield" is required (not null)
-            if (aObjEzsignformfield == null)
+            this.SEzsignformfieldgroupLabel = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignformfield is a required property for CustomFormDataEzsignformfieldgroupResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomFormDataEzsignformfieldgroupResponse and cannot be null");
             }
-            this.AObjEzsignformfield = aObjEzsignformfield;
+            this.AObjEzsignformfield = ;
         }
 
         /// <summary>

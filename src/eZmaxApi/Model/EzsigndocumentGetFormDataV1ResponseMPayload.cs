@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetFormDataV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objFormDataDocument">objFormDataDocument (required).</param>
-        public EzsigndocumentGetFormDataV1ResponseMPayload(CustomFormDataDocumentResponse objFormDataDocument = default(CustomFormDataDocumentResponse))
+        /// <param name=""> (required).</param>
+        public EzsigndocumentGetFormDataV1ResponseMPayload(CustomFormDataDocumentResponse  = default(CustomFormDataDocumentResponse))
         {
-            // to ensure "objFormDataDocument" is required (not null)
-            if (objFormDataDocument == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objFormDataDocument is a required property for EzsigndocumentGetFormDataV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentGetFormDataV1ResponseMPayload and cannot be null");
             }
-            this.ObjFormDataDocument = objFormDataDocument;
+            this.ObjFormDataDocument = ;
         }
 
         /// <summary>

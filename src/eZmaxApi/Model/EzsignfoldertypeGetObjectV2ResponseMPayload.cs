@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldertypeGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objEzsignfoldertype">objEzsignfoldertype (required).</param>
-        public EzsignfoldertypeGetObjectV2ResponseMPayload(EzsignfoldertypeResponseCompound objEzsignfoldertype = default(EzsignfoldertypeResponseCompound))
+        /// <param name=""> (required).</param>
+        public EzsignfoldertypeGetObjectV2ResponseMPayload(EzsignfoldertypeResponseCompound  = default(EzsignfoldertypeResponseCompound))
         {
-            // to ensure "objEzsignfoldertype" is required (not null)
-            if (objEzsignfoldertype == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignfoldertype is a required property for EzsignfoldertypeGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldertypeGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignfoldertype = objEzsignfoldertype;
+            this.ObjEzsignfoldertype = ;
         }
 
         /// <summary>

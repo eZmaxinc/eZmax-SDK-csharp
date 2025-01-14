@@ -65,12 +65,30 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiFontID'
+        /// </summary>
+        [Fact]
+        public void FkiFontIDTest()
+        {
+            // TODO unit test for the property 'FkiFontID'
+        }
+
+        /// <summary>
         /// Test the property 'SSignatureUrl'
         /// </summary>
         [Fact]
         public void SSignatureUrlTest()
         {
             // TODO unit test for the property 'SSignatureUrl'
+        }
+
+        /// <summary>
+        /// Test the property 'SSignatureUrlinitials'
+        /// </summary>
+        [Fact]
+        public void SSignatureUrlinitialsTest()
+        {
+            // TODO unit test for the property 'SSignatureUrlinitials'
         }
     }
 }

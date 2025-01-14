@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseRedirectSSecretquestionTextX" /> class.
         /// </summary>
-        /// <param name="sSecretquestionTextX">The text of the Secretquestion in the language of the requester (required).</param>
-        public CommonResponseRedirectSSecretquestionTextX(string sSecretquestionTextX = default(string))
+        /// <param name="">The text of the Secretquestion in the language of the requester (required).</param>
+        public CommonResponseRedirectSSecretquestionTextX(string  = default(string))
         {
-            // to ensure "sSecretquestionTextX" is required (not null)
-            if (sSecretquestionTextX == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sSecretquestionTextX is a required property for CommonResponseRedirectSSecretquestionTextX and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseRedirectSSecretquestionTextX and cannot be null");
             }
-            this.SSecretquestionTextX = sSecretquestionTextX;
+            this.SSecretquestionTextX = ;
         }
 
         /// <summary>

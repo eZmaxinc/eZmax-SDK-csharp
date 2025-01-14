@@ -5,7 +5,7 @@ A Communicationreference Object and children
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PkiCommunicationreferenceID** | **int** | The unique ID of the Communicationreference | [optional] 
+**PkiCommunicationreferenceID** | **long** | The unique ID of the Communicationreference | [optional] 
 **FkiBuyercontractID** | **int** | The unique ID of the Buyercontract | [optional] 
 **FkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | [optional] 
 **FkiInscriptionID** | **int** | The unique ID of the Inscription. | [optional] 

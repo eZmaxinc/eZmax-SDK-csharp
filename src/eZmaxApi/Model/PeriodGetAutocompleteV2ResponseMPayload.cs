@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PeriodGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjPeriod">An array of Period autocomplete element response. (required).</param>
-        public PeriodGetAutocompleteV2ResponseMPayload(List<PeriodAutocompleteElementResponse> aObjPeriod = default(List<PeriodAutocompleteElementResponse>))
+        /// <param name="">An array of Period autocomplete element response. (required).</param>
+        public PeriodGetAutocompleteV2ResponseMPayload(List<PeriodAutocompleteElementResponse>  = default(List<PeriodAutocompleteElementResponse>))
         {
-            // to ensure "aObjPeriod" is required (not null)
-            if (aObjPeriod == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjPeriod is a required property for PeriodGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for PeriodGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjPeriod = aObjPeriod;
+            this.AObjPeriod = ;
         }
 
         /// <summary>

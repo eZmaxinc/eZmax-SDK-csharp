@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuyercontractGetCommunicationListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjCommunication">aObjCommunication (required).</param>
-        public BuyercontractGetCommunicationListV1ResponseMPayload(List<CustomCommunicationListElementResponse> aObjCommunication = default(List<CustomCommunicationListElementResponse>))
+        /// <param name=""> (required).</param>
+        public BuyercontractGetCommunicationListV1ResponseMPayload(List<CustomCommunicationListElementResponse>  = default(List<CustomCommunicationListElementResponse>))
         {
-            // to ensure "aObjCommunication" is required (not null)
-            if (aObjCommunication == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCommunication is a required property for BuyercontractGetCommunicationListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for BuyercontractGetCommunicationListV1ResponseMPayload and cannot be null");
             }
-            this.AObjCommunication = aObjCommunication;
+            this.AObjCommunication = ;
         }
 
         /// <summary>

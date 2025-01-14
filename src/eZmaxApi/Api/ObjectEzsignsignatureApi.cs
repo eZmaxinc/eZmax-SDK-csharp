@@ -62,6 +62,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsignatureCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsignsignatureCreateObjectV2Response</returns>
+        [Obsolete]
         EzsignsignatureCreateObjectV2Response EzsignsignatureCreateObjectV2(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request, int operationIndex = 0);
 
         /// <summary>
@@ -74,7 +75,31 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsignatureCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsignsignatureCreateObjectV2Response</returns>
+        [Obsolete]
         ApiResponse<EzsignsignatureCreateObjectV2Response> EzsignsignatureCreateObjectV2WithHttpInfo(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request, int operationIndex = 0);
+        /// <summary>
+        /// Create a new Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignsignatureCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignsignatureCreateObjectV3Response</returns>
+        EzsignsignatureCreateObjectV3Response EzsignsignatureCreateObjectV3(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Create a new Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignsignatureCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignsignatureCreateObjectV3Response</returns>
+        ApiResponse<EzsignsignatureCreateObjectV3Response> EzsignsignatureCreateObjectV3WithHttpInfo(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request, int operationIndex = 0);
         /// <summary>
         /// Delete an existing Ezsignsignature
         /// </summary>
@@ -100,10 +125,10 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
-        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="ezsignsignatureEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignsignatureEditObjectV1Response</returns>
-        EzsignsignatureEditObjectV1Response EzsignsignatureEditObjectV1(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, int operationIndex = 0);
+        /// <returns>EzsignsignatureEditObjectV2Response</returns>
+        EzsignsignatureEditObjectV2Response EzsignsignatureEditObjectV2(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezsignsignature
@@ -113,10 +138,10 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
-        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="ezsignsignatureEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignsignatureEditObjectV1Response</returns>
-        ApiResponse<EzsignsignatureEditObjectV1Response> EzsignsignatureEditObjectV1WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsignsignatureEditObjectV2Response</returns>
+        ApiResponse<EzsignsignatureEditObjectV2Response> EzsignsignatureEditObjectV2WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
         /// </summary>
@@ -164,8 +189,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignsignatureGetObjectV2Response</returns>
-        EzsignsignatureGetObjectV2Response EzsignsignatureGetObjectV2(int pkiEzsignsignatureID, int operationIndex = 0);
+        /// <returns>EzsignsignatureGetObjectV3Response</returns>
+        EzsignsignatureGetObjectV3Response EzsignsignatureGetObjectV3(int pkiEzsignsignatureID, int operationIndex = 0);
 
         /// <summary>
         /// Retrieve an existing Ezsignsignature
@@ -176,8 +201,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignsignatureGetObjectV2Response</returns>
-        ApiResponse<EzsignsignatureGetObjectV2Response> EzsignsignatureGetObjectV2WithHttpInfo(int pkiEzsignsignatureID, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsignsignatureGetObjectV3Response</returns>
+        ApiResponse<EzsignsignatureGetObjectV3Response> EzsignsignatureGetObjectV3WithHttpInfo(int pkiEzsignsignatureID, int operationIndex = 0);
         /// <summary>
         /// Sign the Ezsignsignature
         /// </summary>
@@ -247,6 +272,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsignatureCreateObjectV2Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<EzsignsignatureCreateObjectV2Response> EzsignsignatureCreateObjectV2Async(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
@@ -260,7 +286,33 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsignatureCreateObjectV2Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EzsignsignatureCreateObjectV2Response>> EzsignsignatureCreateObjectV2WithHttpInfoAsync(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Create a new Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignsignatureCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignsignatureCreateObjectV3Response</returns>
+        System.Threading.Tasks.Task<EzsignsignatureCreateObjectV3Response> EzsignsignatureCreateObjectV3Async(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create a new Ezsignsignature
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignsignatureCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignsignatureCreateObjectV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignsignatureCreateObjectV3Response>> EzsignsignatureCreateObjectV3WithHttpInfoAsync(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Ezsignsignature
         /// </summary>
@@ -294,11 +346,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
-        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="ezsignsignatureEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignsignatureEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignsignatureEditObjectV1Response> EzsignsignatureEditObjectV1Async(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of EzsignsignatureEditObjectV2Response</returns>
+        System.Threading.Tasks.Task<EzsignsignatureEditObjectV2Response> EzsignsignatureEditObjectV2Async(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezsignsignature
@@ -308,11 +360,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
-        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="ezsignsignatureEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignsignatureEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsignatureEditObjectV1Response>> EzsignsignatureEditObjectV1WithHttpInfoAsync(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsignsignatureEditObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignsignatureEditObjectV2Response>> EzsignsignatureEditObjectV2WithHttpInfoAsync(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
         /// </summary>
@@ -371,8 +423,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignsignatureGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsignsignatureGetObjectV2Response> EzsignsignatureGetObjectV2Async(int pkiEzsignsignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of EzsignsignatureGetObjectV3Response</returns>
+        System.Threading.Tasks.Task<EzsignsignatureGetObjectV3Response> EzsignsignatureGetObjectV3Async(int pkiEzsignsignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsignsignature
@@ -384,8 +436,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignsignatureGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsignatureGetObjectV2Response>> EzsignsignatureGetObjectV2WithHttpInfoAsync(int pkiEzsignsignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsignsignatureGetObjectV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignsignatureGetObjectV3Response>> EzsignsignatureGetObjectV3WithHttpInfoAsync(int pkiEzsignsignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Sign the Ezsignsignature
         /// </summary>
@@ -700,6 +752,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsignatureCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsignsignatureCreateObjectV2Response</returns>
+        [Obsolete]
         public EzsignsignatureCreateObjectV2Response EzsignsignatureCreateObjectV2(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request, int operationIndex = 0)
         {
             eZmaxApi.Client.ApiResponse<EzsignsignatureCreateObjectV2Response> localVarResponse = EzsignsignatureCreateObjectV2WithHttpInfo(ezsignsignatureCreateObjectV2Request);
@@ -713,6 +766,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsignatureCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsignsignatureCreateObjectV2Response</returns>
+        [Obsolete]
         public eZmaxApi.Client.ApiResponse<EzsignsignatureCreateObjectV2Response> EzsignsignatureCreateObjectV2WithHttpInfo(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsignsignatureCreateObjectV2Request' is set
@@ -777,6 +831,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsignatureCreateObjectV2Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<EzsignsignatureCreateObjectV2Response> EzsignsignatureCreateObjectV2Async(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignsignatureCreateObjectV2Response> localVarResponse = await EzsignsignatureCreateObjectV2WithHttpInfoAsync(ezsignsignatureCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
@@ -791,6 +846,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsignatureCreateObjectV2Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignatureCreateObjectV2Response>> EzsignsignatureCreateObjectV2WithHttpInfoAsync(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignsignatureCreateObjectV2Request' is set
@@ -840,6 +896,162 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignsignatureCreateObjectV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create a new Ezsignsignature The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignsignatureCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignsignatureCreateObjectV3Response</returns>
+        public EzsignsignatureCreateObjectV3Response EzsignsignatureCreateObjectV3(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsignsignatureCreateObjectV3Response> localVarResponse = EzsignsignatureCreateObjectV3WithHttpInfo(ezsignsignatureCreateObjectV3Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Ezsignsignature The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignsignatureCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignsignatureCreateObjectV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignsignatureCreateObjectV3Response> EzsignsignatureCreateObjectV3WithHttpInfo(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'ezsignsignatureCreateObjectV3Request' is set
+            if (ezsignsignatureCreateObjectV3Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignsignatureCreateObjectV3Request' when calling ObjectEzsignsignatureApi->EzsignsignatureCreateObjectV3");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = ezsignsignatureCreateObjectV3Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsignsignatureApi.EzsignsignatureCreateObjectV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EzsignsignatureCreateObjectV3Response>("/3/object/ezsignsignature", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignsignatureCreateObjectV3", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create a new Ezsignsignature The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignsignatureCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignsignatureCreateObjectV3Response</returns>
+        public async System.Threading.Tasks.Task<EzsignsignatureCreateObjectV3Response> EzsignsignatureCreateObjectV3Async(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsignsignatureCreateObjectV3Response> localVarResponse = await EzsignsignatureCreateObjectV3WithHttpInfoAsync(ezsignsignatureCreateObjectV3Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Ezsignsignature The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignsignatureCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignsignatureCreateObjectV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignatureCreateObjectV3Response>> EzsignsignatureCreateObjectV3WithHttpInfoAsync(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'ezsignsignatureCreateObjectV3Request' is set
+            if (ezsignsignatureCreateObjectV3Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignsignatureCreateObjectV3Request' when calling ObjectEzsignsignatureApi->EzsignsignatureCreateObjectV3");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = ezsignsignatureCreateObjectV3Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsignsignatureApi.EzsignsignatureCreateObjectV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsignsignatureCreateObjectV3Response>("/3/object/ezsignsignature", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignsignatureCreateObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -996,12 +1208,12 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
-        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="ezsignsignatureEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignsignatureEditObjectV1Response</returns>
-        public EzsignsignatureEditObjectV1Response EzsignsignatureEditObjectV1(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, int operationIndex = 0)
+        /// <returns>EzsignsignatureEditObjectV2Response</returns>
+        public EzsignsignatureEditObjectV2Response EzsignsignatureEditObjectV2(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignsignatureEditObjectV1Response> localVarResponse = EzsignsignatureEditObjectV1WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<EzsignsignatureEditObjectV2Response> localVarResponse = EzsignsignatureEditObjectV2WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
             return localVarResponse.Data;
         }
 
@@ -1010,15 +1222,15 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
-        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="ezsignsignatureEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignsignatureEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignsignatureEditObjectV1Response> EzsignsignatureEditObjectV1WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsignsignatureEditObjectV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignsignatureEditObjectV2Response> EzsignsignatureEditObjectV2WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, int operationIndex = 0)
         {
-            // verify the required parameter 'ezsignsignatureEditObjectV1Request' is set
-            if (ezsignsignatureEditObjectV1Request == null)
+            // verify the required parameter 'ezsignsignatureEditObjectV2Request' is set
+            if (ezsignsignatureEditObjectV2Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignsignatureEditObjectV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignsignatureEditObjectV2Request' when calling ObjectEzsignsignatureApi->EzsignsignatureEditObjectV2");
             }
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1045,9 +1257,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiEzsignsignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignsignatureID)); // path parameter
-            localVarRequestOptions.Data = ezsignsignatureEditObjectV1Request;
+            localVarRequestOptions.Data = ezsignsignatureEditObjectV2Request;
 
-            localVarRequestOptions.Operation = "ObjectEzsignsignatureApi.EzsignsignatureEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectEzsignsignatureApi.EzsignsignatureEditObjectV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -1057,10 +1269,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EzsignsignatureEditObjectV1Response>("/1/object/ezsignsignature/{pkiEzsignsignatureID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<EzsignsignatureEditObjectV2Response>("/2/object/ezsignsignature/{pkiEzsignsignatureID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsignsignatureEditObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsignsignatureEditObjectV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1075,13 +1287,13 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
-        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="ezsignsignatureEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignsignatureEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsignatureEditObjectV1Response> EzsignsignatureEditObjectV1Async(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of EzsignsignatureEditObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<EzsignsignatureEditObjectV2Response> EzsignsignatureEditObjectV2Async(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignsignatureEditObjectV1Response> localVarResponse = await EzsignsignatureEditObjectV1WithHttpInfoAsync(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsignsignatureEditObjectV2Response> localVarResponse = await EzsignsignatureEditObjectV2WithHttpInfoAsync(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1090,16 +1302,16 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
-        /// <param name="ezsignsignatureEditObjectV1Request"></param>
+        /// <param name="ezsignsignatureEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignsignatureEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignatureEditObjectV1Response>> EzsignsignatureEditObjectV1WithHttpInfoAsync(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsignsignatureEditObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignatureEditObjectV2Response>> EzsignsignatureEditObjectV2WithHttpInfoAsync(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'ezsignsignatureEditObjectV1Request' is set
-            if (ezsignsignatureEditObjectV1Request == null)
+            // verify the required parameter 'ezsignsignatureEditObjectV2Request' is set
+            if (ezsignsignatureEditObjectV2Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignsignatureEditObjectV1Request' when calling ObjectEzsignsignatureApi->EzsignsignatureEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignsignatureEditObjectV2Request' when calling ObjectEzsignsignatureApi->EzsignsignatureEditObjectV2");
             }
 
 
@@ -1127,9 +1339,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiEzsignsignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignsignatureID)); // path parameter
-            localVarRequestOptions.Data = ezsignsignatureEditObjectV1Request;
+            localVarRequestOptions.Data = ezsignsignatureEditObjectV2Request;
 
-            localVarRequestOptions.Operation = "ObjectEzsignsignatureApi.EzsignsignatureEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectEzsignsignatureApi.EzsignsignatureEditObjectV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -1139,11 +1351,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsignsignatureEditObjectV1Response>("/1/object/ezsignsignature/{pkiEzsignsignatureID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsignsignatureEditObjectV2Response>("/2/object/ezsignsignature/{pkiEzsignsignatureID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsignsignatureEditObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsignsignatureEditObjectV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1437,10 +1649,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignsignatureGetObjectV2Response</returns>
-        public EzsignsignatureGetObjectV2Response EzsignsignatureGetObjectV2(int pkiEzsignsignatureID, int operationIndex = 0)
+        /// <returns>EzsignsignatureGetObjectV3Response</returns>
+        public EzsignsignatureGetObjectV3Response EzsignsignatureGetObjectV3(int pkiEzsignsignatureID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignsignatureGetObjectV2Response> localVarResponse = EzsignsignatureGetObjectV2WithHttpInfo(pkiEzsignsignatureID);
+            eZmaxApi.Client.ApiResponse<EzsignsignatureGetObjectV3Response> localVarResponse = EzsignsignatureGetObjectV3WithHttpInfo(pkiEzsignsignatureID);
             return localVarResponse.Data;
         }
 
@@ -1450,8 +1662,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignsignatureGetObjectV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignsignatureGetObjectV2Response> EzsignsignatureGetObjectV2WithHttpInfo(int pkiEzsignsignatureID, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsignsignatureGetObjectV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignsignatureGetObjectV3Response> EzsignsignatureGetObjectV3WithHttpInfo(int pkiEzsignsignatureID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -1477,7 +1689,7 @@ namespace eZmaxApi.Api
 
             localVarRequestOptions.PathParameters.Add("pkiEzsignsignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignsignatureID)); // path parameter
 
-            localVarRequestOptions.Operation = "ObjectEzsignsignatureApi.EzsignsignatureGetObjectV2";
+            localVarRequestOptions.Operation = "ObjectEzsignsignatureApi.EzsignsignatureGetObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -1487,10 +1699,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<EzsignsignatureGetObjectV2Response>("/2/object/ezsignsignature/{pkiEzsignsignatureID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<EzsignsignatureGetObjectV3Response>("/3/object/ezsignsignature/{pkiEzsignsignatureID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsignsignatureGetObjectV2", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsignsignatureGetObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1507,10 +1719,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignsignatureGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsignatureGetObjectV2Response> EzsignsignatureGetObjectV2Async(int pkiEzsignsignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of EzsignsignatureGetObjectV3Response</returns>
+        public async System.Threading.Tasks.Task<EzsignsignatureGetObjectV3Response> EzsignsignatureGetObjectV3Async(int pkiEzsignsignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignsignatureGetObjectV2Response> localVarResponse = await EzsignsignatureGetObjectV2WithHttpInfoAsync(pkiEzsignsignatureID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsignsignatureGetObjectV3Response> localVarResponse = await EzsignsignatureGetObjectV3WithHttpInfoAsync(pkiEzsignsignatureID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1521,8 +1733,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignatureID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignsignatureGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignatureGetObjectV2Response>> EzsignsignatureGetObjectV2WithHttpInfoAsync(int pkiEzsignsignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsignsignatureGetObjectV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignatureGetObjectV3Response>> EzsignsignatureGetObjectV3WithHttpInfoAsync(int pkiEzsignsignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1549,7 +1761,7 @@ namespace eZmaxApi.Api
 
             localVarRequestOptions.PathParameters.Add("pkiEzsignsignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignsignatureID)); // path parameter
 
-            localVarRequestOptions.Operation = "ObjectEzsignsignatureApi.EzsignsignatureGetObjectV2";
+            localVarRequestOptions.Operation = "ObjectEzsignsignatureApi.EzsignsignatureGetObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -1559,11 +1771,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsignsignatureGetObjectV2Response>("/2/object/ezsignsignature/{pkiEzsignsignatureID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsignsignatureGetObjectV3Response>("/3/object/ezsignsignature/{pkiEzsignsignatureID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsignsignatureGetObjectV2", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsignsignatureGetObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

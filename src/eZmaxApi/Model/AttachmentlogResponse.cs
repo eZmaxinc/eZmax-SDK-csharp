@@ -46,23 +46,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachmentlogResponse" /> class.
         /// </summary>
-        /// <param name="fkiAttachmentID">The unique ID of the Attachment. (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="dtAttachmentlogDatetime">The created date (required).</param>
-        /// <param name="eAttachmentlogType">eAttachmentlogType (required).</param>
-        /// <param name="sAttachmentlogDetail">The additionnal detail.</param>
-        public AttachmentlogResponse(int fkiAttachmentID = default(int), int fkiUserID = default(int), string dtAttachmentlogDatetime = default(string), FieldEAttachmentlogType eAttachmentlogType = default(FieldEAttachmentlogType), string sAttachmentlogDetail = default(string))
+        /// <param name="">The unique ID of the Attachment. (required).</param>
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name="">The created date (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The additionnal detail.</param>
+        public AttachmentlogResponse(int  = default(int), int  = default(int), string  = default(string), FieldEAttachmentlogType  = default(FieldEAttachmentlogType), string  = default(string))
         {
-            this.FkiAttachmentID = fkiAttachmentID;
-            this.FkiUserID = fkiUserID;
-            // to ensure "dtAttachmentlogDatetime" is required (not null)
-            if (dtAttachmentlogDatetime == null)
+            this.FkiAttachmentID = ;
+            this.FkiUserID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtAttachmentlogDatetime is a required property for AttachmentlogResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for AttachmentlogResponse and cannot be null");
             }
-            this.DtAttachmentlogDatetime = dtAttachmentlogDatetime;
-            this.EAttachmentlogType = eAttachmentlogType;
-            this.SAttachmentlogDetail = sAttachmentlogDetail;
+            this.DtAttachmentlogDatetime = ;
+            this.EAttachmentlogType = ;
+            this.SAttachmentlogDetail = ;
         }
 
         /// <summary>

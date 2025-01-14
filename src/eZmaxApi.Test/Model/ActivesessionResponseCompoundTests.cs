@@ -128,6 +128,78 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BActivesessionAttachment'
+        /// </summary>
+        [Fact]
+        public void BActivesessionAttachmentTest()
+        {
+            // TODO unit test for the property 'BActivesessionAttachment'
+        }
+
+        /// <summary>
+        /// Test the property 'BActivesessionCanafe'
+        /// </summary>
+        [Fact]
+        public void BActivesessionCanafeTest()
+        {
+            // TODO unit test for the property 'BActivesessionCanafe'
+        }
+
+        /// <summary>
+        /// Test the property 'BActivesessionFinancial'
+        /// </summary>
+        [Fact]
+        public void BActivesessionFinancialTest()
+        {
+            // TODO unit test for the property 'BActivesessionFinancial'
+        }
+
+        /// <summary>
+        /// Test the property 'BActivesessionRealestatecompleted'
+        /// </summary>
+        [Fact]
+        public void BActivesessionRealestatecompletedTest()
+        {
+            // TODO unit test for the property 'BActivesessionRealestatecompleted'
+        }
+
+        /// <summary>
+        /// Test the property 'EActivesessionEzsign'
+        /// </summary>
+        [Fact]
+        public void EActivesessionEzsignTest()
+        {
+            // TODO unit test for the property 'EActivesessionEzsign'
+        }
+
+        /// <summary>
+        /// Test the property 'EActivesessionEzsignaccess'
+        /// </summary>
+        [Fact]
+        public void EActivesessionEzsignaccessTest()
+        {
+            // TODO unit test for the property 'EActivesessionEzsignaccess'
+        }
+
+        /// <summary>
+        /// Test the property 'EActivesessionEzsignprepaid'
+        /// </summary>
+        [Fact]
+        public void EActivesessionEzsignprepaidTest()
+        {
+            // TODO unit test for the property 'EActivesessionEzsignprepaid'
+        }
+
+        /// <summary>
+        /// Test the property 'EActivesessionRealestateinprogress'
+        /// </summary>
+        [Fact]
+        public void EActivesessionRealestateinprogressTest()
+        {
+            // TODO unit test for the property 'EActivesessionRealestateinprogress'
+        }
+
+        /// <summary>
         /// Test the property 'PksCustomerCode'
         /// </summary>
         [Fact]
@@ -152,6 +224,15 @@ namespace eZmaxApi.Test.Model
         public void FkiSignatureIDTest()
         {
             // TODO unit test for the property 'FkiSignatureID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsignuserID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsignuserIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsignuserID'
         }
 
         /// <summary>
@@ -188,6 +269,15 @@ namespace eZmaxApi.Test.Model
         public void EUserEzsignprepaidTest()
         {
             // TODO unit test for the property 'EUserEzsignprepaid'
+        }
+
+        /// <summary>
+        /// Test the property 'BUserEzsigntrial'
+        /// </summary>
+        [Fact]
+        public void BUserEzsigntrialTest()
+        {
+            // TODO unit test for the property 'BUserEzsigntrial'
         }
 
         /// <summary>

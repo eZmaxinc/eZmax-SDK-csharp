@@ -74,6 +74,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiTimezoneID'
+        /// </summary>
+        [Fact]
+        public void FkiTimezoneIDTest()
+        {
+            // TODO unit test for the property 'FkiTimezoneID'
+        }
+
+        /// <summary>
         /// Test the property 'FkiEzsigntsarequirementID'
         /// </summary>
         [Fact]

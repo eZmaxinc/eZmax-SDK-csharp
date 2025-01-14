@@ -6,11 +6,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 |--------|--------------|-------------|
 | [**EzsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature |
 | [**EzsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature |
+| [**EzsignsignatureCreateObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv3) | **POST** /3/object/ezsignsignature | Create a new Ezsignsignature |
 | [**EzsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature |
-| [**EzsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature |
+| [**EzsignsignatureEditObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv2) | **PUT** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature |
 | [**EzsignsignatureGetEzsignsignatureattachmentV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetezsignsignatureattachmentv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments |
 | [**EzsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures |
-| [**EzsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature |
+| [**EzsignsignatureGetObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv3) | **GET** /3/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature |
 | [**EzsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignaturesignv1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature |
 
 <a id="ezsignsignaturecreateobjectv1"></a>
@@ -205,6 +206,102 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="ezsignsignaturecreateobjectv3"></a>
+# **EzsignsignatureCreateObjectV3**
+> EzsignsignatureCreateObjectV3Response EzsignsignatureCreateObjectV3 (EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request)
+
+Create a new Ezsignsignature
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignsignatureCreateObjectV3Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignsignatureApi(config);
+            var ezsignsignatureCreateObjectV3Request = new EzsignsignatureCreateObjectV3Request(); // EzsignsignatureCreateObjectV3Request | 
+
+            try
+            {
+                // Create a new Ezsignsignature
+                EzsignsignatureCreateObjectV3Response result = apiInstance.EzsignsignatureCreateObjectV3(ezsignsignatureCreateObjectV3Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureCreateObjectV3: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsignsignatureCreateObjectV3WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a new Ezsignsignature
+    ApiResponse<EzsignsignatureCreateObjectV3Response> response = apiInstance.EzsignsignatureCreateObjectV3WithHttpInfo(ezsignsignatureCreateObjectV3Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureCreateObjectV3WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **ezsignsignatureCreateObjectV3Request** | [**EzsignsignatureCreateObjectV3Request**](EzsignsignatureCreateObjectV3Request.md) |  |  |
+
+### Return type
+
+[**EzsignsignatureCreateObjectV3Response**](EzsignsignatureCreateObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Successful response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="ezsignsignaturedeleteobjectv1"></a>
 # **EzsignsignatureDeleteObjectV1**
 > EzsignsignatureDeleteObjectV1Response EzsignsignatureDeleteObjectV1 (int pkiEzsignsignatureID)
@@ -301,9 +398,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="ezsignsignatureeditobjectv1"></a>
-# **EzsignsignatureEditObjectV1**
-> EzsignsignatureEditObjectV1Response EzsignsignatureEditObjectV1 (int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request)
+<a id="ezsignsignatureeditobjectv2"></a>
+# **EzsignsignatureEditObjectV2**
+> EzsignsignatureEditObjectV2Response EzsignsignatureEditObjectV2 (int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request)
 
 Edit an existing Ezsignsignature
 
@@ -317,7 +414,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsignsignatureEditObjectV1Example
+    public class EzsignsignatureEditObjectV2Example
     {
         public static void Main()
         {
@@ -330,17 +427,17 @@ namespace Example
 
             var apiInstance = new ObjectEzsignsignatureApi(config);
             var pkiEzsignsignatureID = 56;  // int | 
-            var ezsignsignatureEditObjectV1Request = new EzsignsignatureEditObjectV1Request(); // EzsignsignatureEditObjectV1Request | 
+            var ezsignsignatureEditObjectV2Request = new EzsignsignatureEditObjectV2Request(); // EzsignsignatureEditObjectV2Request | 
 
             try
             {
                 // Edit an existing Ezsignsignature
-                EzsignsignatureEditObjectV1Response result = apiInstance.EzsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request);
+                EzsignsignatureEditObjectV2Response result = apiInstance.EzsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureEditObjectV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureEditObjectV2: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -349,21 +446,21 @@ namespace Example
 }
 ```
 
-#### Using the EzsignsignatureEditObjectV1WithHttpInfo variant
+#### Using the EzsignsignatureEditObjectV2WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Edit an existing Ezsignsignature
-    ApiResponse<EzsignsignatureEditObjectV1Response> response = apiInstance.EzsignsignatureEditObjectV1WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request);
+    ApiResponse<EzsignsignatureEditObjectV2Response> response = apiInstance.EzsignsignatureEditObjectV2WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureEditObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureEditObjectV2WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -374,11 +471,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **pkiEzsignsignatureID** | **int** |  |  |
-| **ezsignsignatureEditObjectV1Request** | [**EzsignsignatureEditObjectV1Request**](EzsignsignatureEditObjectV1Request.md) |  |  |
+| **ezsignsignatureEditObjectV2Request** | [**EzsignsignatureEditObjectV2Request**](EzsignsignatureEditObjectV2Request.md) |  |  |
 
 ### Return type
 
-[**EzsignsignatureEditObjectV1Response**](EzsignsignatureEditObjectV1Response.md)
+[**EzsignsignatureEditObjectV2Response**](EzsignsignatureEditObjectV2Response.md)
 
 ### Authorization
 
@@ -586,9 +683,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="ezsignsignaturegetobjectv2"></a>
-# **EzsignsignatureGetObjectV2**
-> EzsignsignatureGetObjectV2Response EzsignsignatureGetObjectV2 (int pkiEzsignsignatureID)
+<a id="ezsignsignaturegetobjectv3"></a>
+# **EzsignsignatureGetObjectV3**
+> EzsignsignatureGetObjectV3Response EzsignsignatureGetObjectV3 (int pkiEzsignsignatureID)
 
 Retrieve an existing Ezsignsignature
 
@@ -602,7 +699,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsignsignatureGetObjectV2Example
+    public class EzsignsignatureGetObjectV3Example
     {
         public static void Main()
         {
@@ -619,12 +716,12 @@ namespace Example
             try
             {
                 // Retrieve an existing Ezsignsignature
-                EzsignsignatureGetObjectV2Response result = apiInstance.EzsignsignatureGetObjectV2(pkiEzsignsignatureID);
+                EzsignsignatureGetObjectV3Response result = apiInstance.EzsignsignatureGetObjectV3(pkiEzsignsignatureID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureGetObjectV2: " + e.Message);
+                Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureGetObjectV3: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -633,21 +730,21 @@ namespace Example
 }
 ```
 
-#### Using the EzsignsignatureGetObjectV2WithHttpInfo variant
+#### Using the EzsignsignatureGetObjectV3WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve an existing Ezsignsignature
-    ApiResponse<EzsignsignatureGetObjectV2Response> response = apiInstance.EzsignsignatureGetObjectV2WithHttpInfo(pkiEzsignsignatureID);
+    ApiResponse<EzsignsignatureGetObjectV3Response> response = apiInstance.EzsignsignatureGetObjectV3WithHttpInfo(pkiEzsignsignatureID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureGetObjectV2WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectEzsignsignatureApi.EzsignsignatureGetObjectV3WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -661,7 +758,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignsignatureGetObjectV2Response**](EzsignsignatureGetObjectV2Response.md)
+[**EzsignsignatureGetObjectV3Response**](EzsignsignatureGetObjectV3Response.md)
 
 ### Authorization
 

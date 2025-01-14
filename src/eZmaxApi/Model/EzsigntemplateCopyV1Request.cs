@@ -35,27 +35,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateCopyV1Request" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected EzsigntemplateCopyV1Request() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EzsigntemplateCopyV1Request" /> class.
-        /// </summary>
-        /// <param name="aFkiEzsignfoldertypeID">aFkiEzsignfoldertypeID (required).</param>
-        public EzsigntemplateCopyV1Request(List<int> aFkiEzsignfoldertypeID = default(List<int>))
+        /// <param name="">.</param>
+        /// <param name="">Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate.</param>
+        /// <param name="">Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate.</param>
+        public EzsigntemplateCopyV1Request(List<int>  = default(List<int>), bool  = default(bool), bool  = default(bool))
         {
-            // to ensure "aFkiEzsignfoldertypeID" is required (not null)
-            if (aFkiEzsignfoldertypeID == null)
-            {
-                throw new ArgumentNullException("aFkiEzsignfoldertypeID is a required property for EzsigntemplateCopyV1Request and cannot be null");
-            }
-            this.AFkiEzsignfoldertypeID = aFkiEzsignfoldertypeID;
+            this.AFkiEzsignfoldertypeID = ;
+            this.BCopyCompany = ;
+            this.BCopyUser = ;
         }
 
         /// <summary>
         /// Gets or Sets AFkiEzsignfoldertypeID
         /// </summary>
-        [DataMember(Name = "a_fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "a_fkiEzsignfoldertypeID", EmitDefaultValue = false)]
         public List<int> AFkiEzsignfoldertypeID { get; set; }
+
+        /// <summary>
+        /// Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate
+        /// </summary>
+        /// <value>Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate</value>
+        [DataMember(Name = "bCopyCompany", EmitDefaultValue = true)]
+        public bool BCopyCompany { get; set; }
+
+        /// <summary>
+        /// Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate
+        /// </summary>
+        /// <value>Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate</value>
+        [DataMember(Name = "bCopyUser", EmitDefaultValue = true)]
+        public bool BCopyUser { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,6 +74,8 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplateCopyV1Request {\n");
             sb.Append("  AFkiEzsignfoldertypeID: ").Append(AFkiEzsignfoldertypeID).Append("\n");
+            sb.Append("  BCopyCompany: ").Append(BCopyCompany).Append("\n");
+            sb.Append("  BCopyUser: ").Append(BCopyUser).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

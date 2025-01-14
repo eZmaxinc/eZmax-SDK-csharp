@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="aObjUsergroup">aObjUsergroup (required).</param>
-        public UsergroupCreateObjectV1Request(List<UsergroupRequestCompound> aObjUsergroup = default(List<UsergroupRequestCompound>))
+        /// <param name=""> (required).</param>
+        public UsergroupCreateObjectV1Request(List<UsergroupRequestCompound>  = default(List<UsergroupRequestCompound>))
         {
-            // to ensure "aObjUsergroup" is required (not null)
-            if (aObjUsergroup == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUsergroup is a required property for UsergroupCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupCreateObjectV1Request and cannot be null");
             }
-            this.AObjUsergroup = aObjUsergroup;
+            this.AObjUsergroup = ;
         }
 
         /// <summary>

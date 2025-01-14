@@ -56,6 +56,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test RejectedoffertopurchaseGetCommunicationCountV1
+        /// </summary>
+        [Fact]
+        public void RejectedoffertopurchaseGetCommunicationCountV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiRejectedoffertopurchaseID = null;
+            //var response = instance.RejectedoffertopurchaseGetCommunicationCountV1(pkiRejectedoffertopurchaseID);
+            //Assert.IsType<RejectedoffertopurchaseGetCommunicationCountV1Response>(response);
+        }
+
+        /// <summary>
         /// Test RejectedoffertopurchaseGetCommunicationListV1
         /// </summary>
         [Fact]
@@ -65,6 +77,30 @@ namespace eZmaxApi.Test.Api
             //int pkiRejectedoffertopurchaseID = null;
             //var response = instance.RejectedoffertopurchaseGetCommunicationListV1(pkiRejectedoffertopurchaseID);
             //Assert.IsType<RejectedoffertopurchaseGetCommunicationListV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test RejectedoffertopurchaseGetCommunicationrecipientsV1
+        /// </summary>
+        [Fact]
+        public void RejectedoffertopurchaseGetCommunicationrecipientsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiRejectedoffertopurchaseID = null;
+            //var response = instance.RejectedoffertopurchaseGetCommunicationrecipientsV1(pkiRejectedoffertopurchaseID);
+            //Assert.IsType<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test RejectedoffertopurchaseGetCommunicationsendersV1
+        /// </summary>
+        [Fact]
+        public void RejectedoffertopurchaseGetCommunicationsendersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiRejectedoffertopurchaseID = null;
+            //var response = instance.RejectedoffertopurchaseGetCommunicationsendersV1(pkiRejectedoffertopurchaseID);
+            //Assert.IsType<RejectedoffertopurchaseGetCommunicationsendersV1Response>(response);
         }
     }
 }

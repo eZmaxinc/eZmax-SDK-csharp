@@ -56,6 +56,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test BuyercontractGetCommunicationCountV1
+        /// </summary>
+        [Fact]
+        public void BuyercontractGetCommunicationCountV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiBuyercontractID = null;
+            //var response = instance.BuyercontractGetCommunicationCountV1(pkiBuyercontractID);
+            //Assert.IsType<BuyercontractGetCommunicationCountV1Response>(response);
+        }
+
+        /// <summary>
         /// Test BuyercontractGetCommunicationListV1
         /// </summary>
         [Fact]
@@ -65,6 +77,30 @@ namespace eZmaxApi.Test.Api
             //int pkiBuyercontractID = null;
             //var response = instance.BuyercontractGetCommunicationListV1(pkiBuyercontractID);
             //Assert.IsType<BuyercontractGetCommunicationListV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test BuyercontractGetCommunicationrecipientsV1
+        /// </summary>
+        [Fact]
+        public void BuyercontractGetCommunicationrecipientsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiBuyercontractID = null;
+            //var response = instance.BuyercontractGetCommunicationrecipientsV1(pkiBuyercontractID);
+            //Assert.IsType<BuyercontractGetCommunicationrecipientsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test BuyercontractGetCommunicationsendersV1
+        /// </summary>
+        [Fact]
+        public void BuyercontractGetCommunicationsendersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiBuyercontractID = null;
+            //var response = instance.BuyercontractGetCommunicationsendersV1(pkiBuyercontractID);
+            //Assert.IsType<BuyercontractGetCommunicationsendersV1Response>(response);
         }
     }
 }

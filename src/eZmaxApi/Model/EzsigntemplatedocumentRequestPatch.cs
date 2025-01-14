@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentRequestPatch" /> class.
         /// </summary>
-        /// <param name="sEzsigntemplatedocumentName">The name of the Ezsigntemplatedocument..</param>
-        public EzsigntemplatedocumentRequestPatch(string sEzsigntemplatedocumentName = default(string))
+        /// <param name="">The name of the Ezsigntemplatedocument..</param>
+        public EzsigntemplatedocumentRequestPatch(string  = default(string))
         {
-            this.SEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
+            this.SEzsigntemplatedocumentName = ;
         }
 
         /// <summary>

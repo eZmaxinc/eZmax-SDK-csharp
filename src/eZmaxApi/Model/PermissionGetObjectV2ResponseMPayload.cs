@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objPermission">objPermission (required).</param>
-        public PermissionGetObjectV2ResponseMPayload(PermissionResponseCompound objPermission = default(PermissionResponseCompound))
+        /// <param name=""> (required).</param>
+        public PermissionGetObjectV2ResponseMPayload(PermissionResponseCompound  = default(PermissionResponseCompound))
         {
-            // to ensure "objPermission" is required (not null)
-            if (objPermission == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objPermission is a required property for PermissionGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for PermissionGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjPermission = objPermission;
+            this.ObjPermission = ;
         }
 
         /// <summary>

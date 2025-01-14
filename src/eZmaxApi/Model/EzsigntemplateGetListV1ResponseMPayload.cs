@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjEzsigntemplate">aObjEzsigntemplate (required).</param>
-        public EzsigntemplateGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<EzsigntemplateListElement> aObjEzsigntemplate = default(List<EzsigntemplateListElement>))
+        /// <param name="">The number of rows returned (required).</param>
+        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsigntemplateGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<EzsigntemplateListElement>  = default(List<EzsigntemplateListElement>))
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
-            // to ensure "aObjEzsigntemplate" is required (not null)
-            if (aObjEzsigntemplate == null)
+            this.IRowReturned = ;
+            this.IRowFiltered = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsigntemplate is a required property for EzsigntemplateGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsigntemplate = aObjEzsigntemplate;
+            this.AObjEzsigntemplate = ;
         }
 
         /// <summary>

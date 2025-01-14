@@ -46,28 +46,28 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportsection" /> class.
         /// </summary>
-        /// <param name="aObjReportsubsection">aObjReportsubsection (required).</param>
-        /// <param name="aObjReportcolumn">aObjReportcolumn (required).</param>
-        /// <param name="eReportsectionHorizontalalignment">eReportsectionHorizontalalignment (required).</param>
-        /// <param name="iReportsectionColumncount">The number of Reportcolumns in the Reportsection (required).</param>
-        /// <param name="iReportsectionWidth">The combined width of all the Reportcolumns in the Reportsection (required).</param>
-        public CommonReportsection(List<CommonReportsubsection> aObjReportsubsection = default(List<CommonReportsubsection>), List<CommonReportcolumn> aObjReportcolumn = default(List<CommonReportcolumn>), EnumHorizontalalignment eReportsectionHorizontalalignment = default(EnumHorizontalalignment), int iReportsectionColumncount = default(int), int iReportsectionWidth = default(int))
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The number of Reportcolumns in the Reportsection (required).</param>
+        /// <param name="">The combined width of all the Reportcolumns in the Reportsection (required).</param>
+        public CommonReportsection(List<CommonReportsubsection>  = default(List<CommonReportsubsection>), List<CommonReportcolumn>  = default(List<CommonReportcolumn>), EnumHorizontalalignment  = default(EnumHorizontalalignment), int  = default(int), int  = default(int))
         {
-            // to ensure "aObjReportsubsection" is required (not null)
-            if (aObjReportsubsection == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjReportsubsection is a required property for CommonReportsection and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonReportsection and cannot be null");
             }
-            this.AObjReportsubsection = aObjReportsubsection;
-            // to ensure "aObjReportcolumn" is required (not null)
-            if (aObjReportcolumn == null)
+            this.AObjReportsubsection = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjReportcolumn is a required property for CommonReportsection and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonReportsection and cannot be null");
             }
-            this.AObjReportcolumn = aObjReportcolumn;
-            this.EReportsectionHorizontalalignment = eReportsectionHorizontalalignment;
-            this.IReportsectionColumncount = iReportsectionColumncount;
-            this.IReportsectionWidth = iReportsectionWidth;
+            this.AObjReportcolumn = ;
+            this.EReportsectionHorizontalalignment = ;
+            this.IReportsectionColumncount = ;
+            this.IReportsectionWidth = ;
         }
 
         /// <summary>

@@ -86,24 +86,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimAuthenticationScheme" /> class.
         /// </summary>
-        /// <param name="description">A description of the authentication scheme. (required).</param>
-        /// <param name="name">The common authentication scheme name (required).</param>
-        /// <param name="type">The authentication scheme. (required).</param>
-        public ScimAuthenticationScheme(string description = default(string), string name = default(string), TypeEnum type = default(TypeEnum))
+        /// <param name="">A description of the authentication scheme. (required).</param>
+        /// <param name="">The common authentication scheme name (required).</param>
+        /// <param name="">The authentication scheme. (required).</param>
+        public ScimAuthenticationScheme(string  = default(string), string  = default(string), TypeEnum  = default(TypeEnum))
         {
-            // to ensure "description" is required (not null)
-            if (description == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("description is a required property for ScimAuthenticationScheme and cannot be null");
+                throw new ArgumentNullException(" is a required property for ScimAuthenticationScheme and cannot be null");
             }
-            this.Description = description;
-            // to ensure "name" is required (not null)
-            if (name == null)
+            this.Description = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("name is a required property for ScimAuthenticationScheme and cannot be null");
+                throw new ArgumentNullException(" is a required property for ScimAuthenticationScheme and cannot be null");
             }
-            this.Name = name;
-            this.Type = type;
+            this.Name = ;
+            this.Type = ;
         }
 
         /// <summary>

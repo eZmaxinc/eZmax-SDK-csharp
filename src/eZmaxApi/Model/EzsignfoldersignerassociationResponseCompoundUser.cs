@@ -40,33 +40,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponseCompoundUser" /> class.
         /// </summary>
-        /// <param name="pkiUserID">The unique ID of the User (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sEmailAddress">The email address. (required).</param>
-        public EzsignfoldersignerassociationResponseCompoundUser(int pkiUserID = default(int), int fkiLanguageID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sEmailAddress = default(string))
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="">The first name of the user (required).</param>
+        /// <param name="">The last name of the user (required).</param>
+        /// <param name="">The email address. (required).</param>
+        public EzsignfoldersignerassociationResponseCompoundUser(int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.PkiUserID = pkiUserID;
-            this.FkiLanguageID = fkiLanguageID;
-            // to ensure "sUserFirstname" is required (not null)
-            if (sUserFirstname == null)
+            this.PkiUserID = ;
+            this.FkiLanguageID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserFirstname is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
             }
-            this.SUserFirstname = sUserFirstname;
-            // to ensure "sUserLastname" is required (not null)
-            if (sUserLastname == null)
+            this.SUserFirstname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserLastname is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
             }
-            this.SUserLastname = sUserLastname;
-            // to ensure "sEmailAddress" is required (not null)
-            if (sEmailAddress == null)
+            this.SUserLastname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEmailAddress is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
             }
-            this.SEmailAddress = sEmailAddress;
+            this.SEmailAddress = ;
         }
 
         /// <summary>

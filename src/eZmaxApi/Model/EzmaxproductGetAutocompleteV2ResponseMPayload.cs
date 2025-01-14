@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxproductGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzmaxproduct">An array of Ezmaxproduct autocomplete element response. (required).</param>
-        public EzmaxproductGetAutocompleteV2ResponseMPayload(List<EzmaxproductAutocompleteElementResponse> aObjEzmaxproduct = default(List<EzmaxproductAutocompleteElementResponse>))
+        /// <param name="">An array of Ezmaxproduct autocomplete element response. (required).</param>
+        public EzmaxproductGetAutocompleteV2ResponseMPayload(List<EzmaxproductAutocompleteElementResponse>  = default(List<EzmaxproductAutocompleteElementResponse>))
         {
-            // to ensure "aObjEzmaxproduct" is required (not null)
-            if (aObjEzmaxproduct == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzmaxproduct is a required property for EzmaxproductGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxproductGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjEzmaxproduct = aObjEzmaxproduct;
+            this.AObjEzmaxproduct = ;
         }
 
         /// <summary>

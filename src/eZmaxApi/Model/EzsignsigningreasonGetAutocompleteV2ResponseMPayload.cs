@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsigningreasonGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsignsigningreason">An array of Ezsignsigningreason autocomplete element response. (required).</param>
-        public EzsignsigningreasonGetAutocompleteV2ResponseMPayload(List<EzsignsigningreasonAutocompleteElementResponse> aObjEzsignsigningreason = default(List<EzsignsigningreasonAutocompleteElementResponse>))
+        /// <param name="">An array of Ezsignsigningreason autocomplete element response. (required).</param>
+        public EzsignsigningreasonGetAutocompleteV2ResponseMPayload(List<EzsignsigningreasonAutocompleteElementResponse>  = default(List<EzsignsigningreasonAutocompleteElementResponse>))
         {
-            // to ensure "aObjEzsignsigningreason" is required (not null)
-            if (aObjEzsignsigningreason == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignsigningreason is a required property for EzsignsigningreasonGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsigningreasonGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignsigningreason = aObjEzsignsigningreason;
+            this.AObjEzsignsigningreason = ;
         }
 
         /// <summary>

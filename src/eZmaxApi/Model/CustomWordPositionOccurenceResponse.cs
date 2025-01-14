@@ -35,14 +35,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomWordPositionOccurenceResponse" /> class.
         /// </summary>
-        /// <param name="iPage">The page where the word occurence was found.</param>
-        /// <param name="iX">The X coordinate (Horizontal) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch)..</param>
-        /// <param name="iY">The Y coordinate (Vertical) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch)..</param>
-        public CustomWordPositionOccurenceResponse(int iPage = default(int), int iX = default(int), int iY = default(int))
+        /// <param name="">The page where the word occurence was found.</param>
+        /// <param name="">The X coordinate (Horizontal) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch)..</param>
+        /// <param name="">The Y coordinate (Vertical) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch)..</param>
+        public CustomWordPositionOccurenceResponse(int  = default(int), int  = default(int), int  = default(int))
         {
-            this.IPage = iPage;
-            this.IX = iX;
-            this.IY = iY;
+            this.IPage = ;
+            this.IX = ;
+            this.IY = ;
         }
 
         /// <summary>

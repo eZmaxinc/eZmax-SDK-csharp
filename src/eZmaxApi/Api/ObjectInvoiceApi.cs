@@ -48,6 +48,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of InvoiceGetAttachmentsV1Response</returns>
         ApiResponse<InvoiceGetAttachmentsV1Response> InvoiceGetAttachmentsV1WithHttpInfo(int pkiInvoiceID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InvoiceGetCommunicationCountV1Response</returns>
+        InvoiceGetCommunicationCountV1Response InvoiceGetCommunicationCountV1(int pkiInvoiceID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InvoiceGetCommunicationCountV1Response</returns>
+        ApiResponse<InvoiceGetCommunicationCountV1Response> InvoiceGetCommunicationCountV1WithHttpInfo(int pkiInvoiceID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Communication list
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -67,6 +87,46 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of InvoiceGetCommunicationListV1Response</returns>
         ApiResponse<InvoiceGetCommunicationListV1Response> InvoiceGetCommunicationListV1WithHttpInfo(int pkiInvoiceID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationrecipient
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InvoiceGetCommunicationrecipientsV1Response</returns>
+        InvoiceGetCommunicationrecipientsV1Response InvoiceGetCommunicationrecipientsV1(int pkiInvoiceID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InvoiceGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<InvoiceGetCommunicationrecipientsV1Response> InvoiceGetCommunicationrecipientsV1WithHttpInfo(int pkiInvoiceID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationsender
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InvoiceGetCommunicationsendersV1Response</returns>
+        InvoiceGetCommunicationsendersV1Response InvoiceGetCommunicationsendersV1(int pkiInvoiceID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InvoiceGetCommunicationsendersV1Response</returns>
+        ApiResponse<InvoiceGetCommunicationsendersV1Response> InvoiceGetCommunicationsendersV1WithHttpInfo(int pkiInvoiceID, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -102,6 +162,31 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (InvoiceGetAttachmentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<InvoiceGetAttachmentsV1Response>> InvoiceGetAttachmentsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InvoiceGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<InvoiceGetCommunicationCountV1Response> InvoiceGetCommunicationCountV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InvoiceGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationCountV1Response>> InvoiceGetCommunicationCountV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Retrieve Communication list
         /// </summary>
         /// <remarks>
@@ -126,6 +211,56 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetCommunicationListV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationListV1Response>> InvoiceGetCommunicationListV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InvoiceGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<InvoiceGetCommunicationrecipientsV1Response> InvoiceGetCommunicationrecipientsV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InvoiceGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationrecipientsV1Response>> InvoiceGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InvoiceGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<InvoiceGetCommunicationsendersV1Response> InvoiceGetCommunicationsendersV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InvoiceGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationsendersV1Response>> InvoiceGetCommunicationsendersV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -389,6 +524,148 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InvoiceGetCommunicationCountV1Response</returns>
+        public InvoiceGetCommunicationCountV1Response InvoiceGetCommunicationCountV1(int pkiInvoiceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationCountV1Response> localVarResponse = InvoiceGetCommunicationCountV1WithHttpInfo(pkiInvoiceID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InvoiceGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationCountV1Response> InvoiceGetCommunicationCountV1WithHttpInfo(int pkiInvoiceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInvoiceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInvoiceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInvoiceApi.InvoiceGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<InvoiceGetCommunicationCountV1Response>("/1/object/invoice/{pkiInvoiceID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InvoiceGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InvoiceGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<InvoiceGetCommunicationCountV1Response> InvoiceGetCommunicationCountV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationCountV1Response> localVarResponse = await InvoiceGetCommunicationCountV1WithHttpInfoAsync(pkiInvoiceID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InvoiceGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationCountV1Response>> InvoiceGetCommunicationCountV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInvoiceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInvoiceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInvoiceApi.InvoiceGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<InvoiceGetCommunicationCountV1Response>("/1/object/invoice/{pkiInvoiceID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InvoiceGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Retrieve Communication list 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -521,6 +798,290 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InvoiceGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InvoiceGetCommunicationrecipientsV1Response</returns>
+        public InvoiceGetCommunicationrecipientsV1Response InvoiceGetCommunicationrecipientsV1(int pkiInvoiceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationrecipientsV1Response> localVarResponse = InvoiceGetCommunicationrecipientsV1WithHttpInfo(pkiInvoiceID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InvoiceGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationrecipientsV1Response> InvoiceGetCommunicationrecipientsV1WithHttpInfo(int pkiInvoiceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInvoiceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInvoiceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInvoiceApi.InvoiceGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<InvoiceGetCommunicationrecipientsV1Response>("/1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InvoiceGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InvoiceGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<InvoiceGetCommunicationrecipientsV1Response> InvoiceGetCommunicationrecipientsV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationrecipientsV1Response> localVarResponse = await InvoiceGetCommunicationrecipientsV1WithHttpInfoAsync(pkiInvoiceID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InvoiceGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationrecipientsV1Response>> InvoiceGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInvoiceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInvoiceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInvoiceApi.InvoiceGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<InvoiceGetCommunicationrecipientsV1Response>("/1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InvoiceGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InvoiceGetCommunicationsendersV1Response</returns>
+        public InvoiceGetCommunicationsendersV1Response InvoiceGetCommunicationsendersV1(int pkiInvoiceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationsendersV1Response> localVarResponse = InvoiceGetCommunicationsendersV1WithHttpInfo(pkiInvoiceID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InvoiceGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationsendersV1Response> InvoiceGetCommunicationsendersV1WithHttpInfo(int pkiInvoiceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInvoiceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInvoiceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInvoiceApi.InvoiceGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<InvoiceGetCommunicationsendersV1Response>("/1/object/invoice/{pkiInvoiceID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InvoiceGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InvoiceGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<InvoiceGetCommunicationsendersV1Response> InvoiceGetCommunicationsendersV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationsendersV1Response> localVarResponse = await InvoiceGetCommunicationsendersV1WithHttpInfoAsync(pkiInvoiceID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InvoiceGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationsendersV1Response>> InvoiceGetCommunicationsendersV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInvoiceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInvoiceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInvoiceApi.InvoiceGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<InvoiceGetCommunicationsendersV1Response>("/1/object/invoice/{pkiInvoiceID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InvoiceGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

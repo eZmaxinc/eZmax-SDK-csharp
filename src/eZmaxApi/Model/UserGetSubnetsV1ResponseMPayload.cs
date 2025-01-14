@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetSubnetsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjSubnet">aObjSubnet (required).</param>
-        public UserGetSubnetsV1ResponseMPayload(List<SubnetResponseCompound> aObjSubnet = default(List<SubnetResponseCompound>))
+        /// <param name=""> (required).</param>
+        public UserGetSubnetsV1ResponseMPayload(List<SubnetResponseCompound>  = default(List<SubnetResponseCompound>))
         {
-            // to ensure "aObjSubnet" is required (not null)
-            if (aObjSubnet == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjSubnet is a required property for UserGetSubnetsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserGetSubnetsV1ResponseMPayload and cannot be null");
             }
-            this.AObjSubnet = aObjSubnet;
+            this.AObjSubnet = ;
         }
 
         /// <summary>

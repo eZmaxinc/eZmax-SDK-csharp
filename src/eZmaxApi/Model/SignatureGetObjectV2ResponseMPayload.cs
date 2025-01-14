@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objSignature">objSignature (required).</param>
-        public SignatureGetObjectV2ResponseMPayload(SignatureResponseCompound objSignature = default(SignatureResponseCompound))
+        /// <param name=""> (required).</param>
+        public SignatureGetObjectV2ResponseMPayload(SignatureResponseCompound  = default(SignatureResponseCompound))
         {
-            // to ensure "objSignature" is required (not null)
-            if (objSignature == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objSignature is a required property for SignatureGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for SignatureGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjSignature = objSignature;
+            this.ObjSignature = ;
         }
 
         /// <summary>

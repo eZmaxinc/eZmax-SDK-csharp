@@ -40,41 +40,41 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiDiscussionID">The unique ID of the Discussion (required).</param>
-        /// <param name="sDiscussionDescription">The description of the Discussion (required).</param>
-        /// <param name="bDiscussionClosed">Whether if it&#39;s an closed (required).</param>
-        /// <param name="dtDiscussionLastread">The date the Discussion was last read.</param>
-        /// <param name="iDiscussionmessageCount">The count of Attachment. (required).</param>
-        /// <param name="iDiscussionmessageCountunread">The count of Attachment. (required).</param>
-        /// <param name="objDiscussionconfiguration">objDiscussionconfiguration.</param>
-        /// <param name="aObjDiscussionmembership">aObjDiscussionmembership (required).</param>
-        /// <param name="aObjDiscussionmessage">aObjDiscussionmessage (required).</param>
-        public DiscussionResponseCompound(int pkiDiscussionID = default(int), string sDiscussionDescription = default(string), bool bDiscussionClosed = default(bool), string dtDiscussionLastread = default(string), int iDiscussionmessageCount = default(int), int iDiscussionmessageCountunread = default(int), CustomDiscussionconfigurationResponse objDiscussionconfiguration = default(CustomDiscussionconfigurationResponse), List<DiscussionmembershipResponseCompound> aObjDiscussionmembership = default(List<DiscussionmembershipResponseCompound>), List<DiscussionmessageResponseCompound> aObjDiscussionmessage = default(List<DiscussionmessageResponseCompound>))
+        /// <param name="">The unique ID of the Discussion (required).</param>
+        /// <param name="">The description of the Discussion (required).</param>
+        /// <param name="">Whether if it&#39;s an closed (required).</param>
+        /// <param name="">The date the Discussion was last read.</param>
+        /// <param name="">The count of Attachment. (required).</param>
+        /// <param name="">The count of Attachment. (required).</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public DiscussionResponseCompound(int  = default(int), string  = default(string), bool  = default(bool), string  = default(string), int  = default(int), int  = default(int), CustomDiscussionconfigurationResponse  = default(CustomDiscussionconfigurationResponse), List<DiscussionmembershipResponseCompound>  = default(List<DiscussionmembershipResponseCompound>), List<DiscussionmessageResponseCompound>  = default(List<DiscussionmessageResponseCompound>))
         {
-            this.PkiDiscussionID = pkiDiscussionID;
-            // to ensure "sDiscussionDescription" is required (not null)
-            if (sDiscussionDescription == null)
+            this.PkiDiscussionID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sDiscussionDescription is a required property for DiscussionResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionResponseCompound and cannot be null");
             }
-            this.SDiscussionDescription = sDiscussionDescription;
-            this.BDiscussionClosed = bDiscussionClosed;
-            this.IDiscussionmessageCount = iDiscussionmessageCount;
-            this.IDiscussionmessageCountunread = iDiscussionmessageCountunread;
-            // to ensure "aObjDiscussionmembership" is required (not null)
-            if (aObjDiscussionmembership == null)
+            this.SDiscussionDescription = ;
+            this.BDiscussionClosed = ;
+            this.IDiscussionmessageCount = ;
+            this.IDiscussionmessageCountunread = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjDiscussionmembership is a required property for DiscussionResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionResponseCompound and cannot be null");
             }
-            this.AObjDiscussionmembership = aObjDiscussionmembership;
-            // to ensure "aObjDiscussionmessage" is required (not null)
-            if (aObjDiscussionmessage == null)
+            this.AObjDiscussionmembership = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjDiscussionmessage is a required property for DiscussionResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionResponseCompound and cannot be null");
             }
-            this.AObjDiscussionmessage = aObjDiscussionmessage;
-            this.DtDiscussionLastread = dtDiscussionLastread;
-            this.ObjDiscussionconfiguration = objDiscussionconfiguration;
+            this.AObjDiscussionmessage = ;
+            this.DtDiscussionLastread = ;
+            this.ObjDiscussionconfiguration = ;
         }
 
         /// <summary>

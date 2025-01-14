@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjEzsignbulksend">aObjEzsignbulksend (required).</param>
-        public EzsignbulksendGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<EzsignbulksendListElement> aObjEzsignbulksend = default(List<EzsignbulksendListElement>))
+        /// <param name="">The number of rows returned (required).</param>
+        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsignbulksendGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<EzsignbulksendListElement>  = default(List<EzsignbulksendListElement>))
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
-            // to ensure "aObjEzsignbulksend" is required (not null)
-            if (aObjEzsignbulksend == null)
+            this.IRowReturned = ;
+            this.IRowFiltered = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignbulksend is a required property for EzsignbulksendGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignbulksend = aObjEzsignbulksend;
+            this.AObjEzsignbulksend = ;
         }
 
         /// <summary>

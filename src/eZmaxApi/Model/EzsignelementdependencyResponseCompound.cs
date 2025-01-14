@@ -52,26 +52,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignelementdependencyResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsignelementdependencyID">The unique ID of the Ezsignelementdependency (required).</param>
-        /// <param name="fkiEzsignformfieldID">The unique ID of the Ezsignformfield.</param>
-        /// <param name="fkiEzsignsignatureID">The unique ID of the Ezsignsignature.</param>
-        /// <param name="fkiEzsignformfieldIDValidation">The unique ID of the Ezsignformfield.</param>
-        /// <param name="fkiEzsignformfieldgroupIDValidation">The unique ID of the Ezsignformfieldgroup.</param>
-        /// <param name="eEzsignelementdependencyValidation">eEzsignelementdependencyValidation (required).</param>
-        /// <param name="bEzsignelementdependencySelected">Whether if it&#39;s selected or not when using eEzsignelementdependencyValidation &#x3D; Selected.</param>
-        /// <param name="eEzsignelementdependencyOperator">eEzsignelementdependencyOperator.</param>
-        /// <param name="sEzsignelementdependencyValue">The value of the Ezsignelementdependency.</param>
-        public EzsignelementdependencyResponseCompound(int pkiEzsignelementdependencyID = default(int), int fkiEzsignformfieldID = default(int), int fkiEzsignsignatureID = default(int), int fkiEzsignformfieldIDValidation = default(int), int fkiEzsignformfieldgroupIDValidation = default(int), FieldEEzsignelementdependencyValidation eEzsignelementdependencyValidation = default(FieldEEzsignelementdependencyValidation), bool bEzsignelementdependencySelected = default(bool), FieldEEzsignelementdependencyOperator? eEzsignelementdependencyOperator = default(FieldEEzsignelementdependencyOperator?), string sEzsignelementdependencyValue = default(string))
+        /// <param name="">The unique ID of the Ezsignelementdependency (required).</param>
+        /// <param name="">The unique ID of the Ezsignformfield.</param>
+        /// <param name="">The unique ID of the Ezsignsignature.</param>
+        /// <param name="">The unique ID of the Ezsignformfield.</param>
+        /// <param name="">The unique ID of the Ezsignformfieldgroup.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">Whether if it&#39;s selected or not when using eEzsignelementdependencyValidation &#x3D; Selected.</param>
+        /// <param name="">.</param>
+        /// <param name="">The value of the Ezsignelementdependency.</param>
+        public EzsignelementdependencyResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEEzsignelementdependencyValidation  = default(FieldEEzsignelementdependencyValidation), bool  = default(bool), FieldEEzsignelementdependencyOperator?  = default(FieldEEzsignelementdependencyOperator?), string  = default(string))
         {
-            this.PkiEzsignelementdependencyID = pkiEzsignelementdependencyID;
-            this.EEzsignelementdependencyValidation = eEzsignelementdependencyValidation;
-            this.FkiEzsignformfieldID = fkiEzsignformfieldID;
-            this.FkiEzsignsignatureID = fkiEzsignsignatureID;
-            this.FkiEzsignformfieldIDValidation = fkiEzsignformfieldIDValidation;
-            this.FkiEzsignformfieldgroupIDValidation = fkiEzsignformfieldgroupIDValidation;
-            this.BEzsignelementdependencySelected = bEzsignelementdependencySelected;
-            this.EEzsignelementdependencyOperator = eEzsignelementdependencyOperator;
-            this.SEzsignelementdependencyValue = sEzsignelementdependencyValue;
+            this.PkiEzsignelementdependencyID = ;
+            this.EEzsignelementdependencyValidation = ;
+            this.FkiEzsignformfieldID = ;
+            this.FkiEzsignsignatureID = ;
+            this.FkiEzsignformfieldIDValidation = ;
+            this.FkiEzsignformfieldgroupIDValidation = ;
+            this.BEzsignelementdependencySelected = ;
+            this.EEzsignelementdependencyOperator = ;
+            this.SEzsignelementdependencyValue = ;
         }
 
         /// <summary>
@@ -168,9 +168,9 @@ namespace eZmaxApi.Model
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignelementdependencyID (int) maximum
-            if (this.PkiEzsignelementdependencyID > (int)65535)
+            if (this.PkiEzsignelementdependencyID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value less than or equal to 65535.", new [] { "PkiEzsignelementdependencyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignelementdependencyID" });
             }
 
             // PkiEzsignelementdependencyID (int) minimum

@@ -68,6 +68,19 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1
+        /// </summary>
+        [Fact]
+        public void EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigntemplatedocumentID = null;
+            //EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request = null;
+            //var response = instance.EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request);
+            //Assert.IsType<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1
         /// </summary>
         [Fact]
@@ -107,6 +120,19 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsigntemplatedocumentExtractTextV1
+        /// </summary>
+        [Fact]
+        public void EzsigntemplatedocumentExtractTextV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigntemplatedocumentID = null;
+            //EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request = null;
+            //var response = instance.EzsigntemplatedocumentExtractTextV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentExtractTextV1Request);
+            //Assert.IsType<EzsigntemplatedocumentExtractTextV1Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsigntemplatedocumentFlattenV1
         /// </summary>
         [Fact]
@@ -117,6 +143,18 @@ namespace eZmaxApi.Test.Api
             //Object body = null;
             //var response = instance.EzsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body);
             //Assert.IsType<EzsigntemplatedocumentFlattenV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1
+        /// </summary>
+        [Fact]
+        public void EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigntemplatedocumentID = null;
+            //var response = instance.EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1(pkiEzsigntemplatedocumentID);
+            //Assert.IsType<EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response>(response);
         }
 
         /// <summary>

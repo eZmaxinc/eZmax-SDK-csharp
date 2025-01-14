@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfolderEzsignsignaturesAutomaticResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
-        /// <param name="aObjEzsigndocument">aObjEzsigndocument (required).</param>
-        public CustomEzsignfolderEzsignsignaturesAutomaticResponse(int pkiEzsignfolderID = default(int), string sEzsignfolderDescription = default(string), List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> aObjEzsigndocument = default(List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse>))
+        /// <param name="">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="">The description of the Ezsignfolder (required).</param>
+        /// <param name=""> (required).</param>
+        public CustomEzsignfolderEzsignsignaturesAutomaticResponse(int  = default(int), string  = default(string), List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse>  = default(List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse>))
         {
-            this.PkiEzsignfolderID = pkiEzsignfolderID;
-            // to ensure "sEzsignfolderDescription" is required (not null)
-            if (sEzsignfolderDescription == null)
+            this.PkiEzsignfolderID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignfolderDescription is a required property for CustomEzsignfolderEzsignsignaturesAutomaticResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsignfolderEzsignsignaturesAutomaticResponse and cannot be null");
             }
-            this.SEzsignfolderDescription = sEzsignfolderDescription;
-            // to ensure "aObjEzsigndocument" is required (not null)
-            if (aObjEzsigndocument == null)
+            this.SEzsignfolderDescription = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsigndocument is a required property for CustomEzsignfolderEzsignsignaturesAutomaticResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsignfolderEzsignsignaturesAutomaticResponse and cannot be null");
             }
-            this.AObjEzsigndocument = aObjEzsigndocument;
+            this.AObjEzsigndocument = ;
         }
 
         /// <summary>
@@ -117,6 +117,15 @@ namespace eZmaxApi.Model
             if (this.PkiEzsignfolderID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
+            }
+
+            if (this.SEzsignfolderDescription != null) {
+                // SEzsignfolderDescription (string) pattern
+                Regex regexSEzsignfolderDescription = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsignfolderDescription.Match(this.SEzsignfolderDescription).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignfolderDescription, must match a pattern of " + regexSEzsignfolderDescription, new [] { "SEzsignfolderDescription" });
+                }
             }
 
             yield break;

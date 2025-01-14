@@ -40,28 +40,28 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsignbulksendtransmissionID">The unique ID of the Ezsignbulksendtransmission (required).</param>
-        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
-        /// <param name="iEzsignbulksendtransmissionErrors">The number of errors during the Ezsignbulksendtransmission (required).</param>
-        /// <param name="objAudit">objAudit (required).</param>
-        public EzsignbulksendtransmissionResponse(int pkiEzsignbulksendtransmissionID = default(int), int fkiEzsignbulksendID = default(int), string sEzsignbulksendtransmissionDescription = default(string), int iEzsignbulksendtransmissionErrors = default(int), CommonAudit objAudit = default(CommonAudit))
+        /// <param name="">The unique ID of the Ezsignbulksendtransmission (required).</param>
+        /// <param name="">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="">The description of the Ezsignbulksendtransmission (required).</param>
+        /// <param name="">The number of errors during the Ezsignbulksendtransmission (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsignbulksendtransmissionResponse(int  = default(int), int  = default(int), string  = default(string), int  = default(int), CommonAudit  = default(CommonAudit))
         {
-            this.PkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
-            this.FkiEzsignbulksendID = fkiEzsignbulksendID;
-            // to ensure "sEzsignbulksendtransmissionDescription" is required (not null)
-            if (sEzsignbulksendtransmissionDescription == null)
+            this.PkiEzsignbulksendtransmissionID = ;
+            this.FkiEzsignbulksendID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignbulksendtransmissionDescription is a required property for EzsignbulksendtransmissionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendtransmissionResponse and cannot be null");
             }
-            this.SEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
-            this.IEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
-            // to ensure "objAudit" is required (not null)
-            if (objAudit == null)
+            this.SEzsignbulksendtransmissionDescription = ;
+            this.IEzsignbulksendtransmissionErrors = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objAudit is a required property for EzsignbulksendtransmissionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendtransmissionResponse and cannot be null");
             }
-            this.ObjAudit = objAudit;
+            this.ObjAudit = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndiscussionCreateObjectV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiEzsigndiscussionID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public EzsigndiscussionCreateObjectV1ResponseMPayload(List<int> aPkiEzsigndiscussionID = default(List<int>))
+        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public EzsigndiscussionCreateObjectV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsigndiscussionID" is required (not null)
-            if (aPkiEzsigndiscussionID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsigndiscussionID is a required property for EzsigndiscussionCreateObjectV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndiscussionCreateObjectV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsigndiscussionID = aPkiEzsigndiscussionID;
+            this.APkiEzsigndiscussionID = ;
         }
 
         /// <summary>

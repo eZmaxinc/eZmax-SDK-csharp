@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsigntemplate">An array of Ezsigntemplate autocomplete element response. (required).</param>
-        public EzsigntemplateGetAutocompleteV2ResponseMPayload(List<EzsigntemplateAutocompleteElementResponse> aObjEzsigntemplate = default(List<EzsigntemplateAutocompleteElementResponse>))
+        /// <param name="">An array of Ezsigntemplate autocomplete element response. (required).</param>
+        public EzsigntemplateGetAutocompleteV2ResponseMPayload(List<EzsigntemplateAutocompleteElementResponse>  = default(List<EzsigntemplateAutocompleteElementResponse>))
         {
-            // to ensure "aObjEzsigntemplate" is required (not null)
-            if (aObjEzsigntemplate == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsigntemplate is a required property for EzsigntemplateGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjEzsigntemplate = aObjEzsigntemplate;
+            this.AObjEzsigntemplate = ;
         }
 
         /// <summary>

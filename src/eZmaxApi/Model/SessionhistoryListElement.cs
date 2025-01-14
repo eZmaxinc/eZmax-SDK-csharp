@@ -46,48 +46,48 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionhistoryListElement" /> class.
         /// </summary>
-        /// <param name="pkiSessionhistoryID">The unique ID of the Sessionhistory (required).</param>
-        /// <param name="fkiComputerID">The unique ID of the Computer.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="dtSessionhistoryFirsthit">The first hit of the Sessionhistory (required).</param>
-        /// <param name="dtSessionhistoryLasthit">The last hit of the Sessionhistory (required).</param>
-        /// <param name="eSessionhistoryEndby">eSessionhistoryEndby (required).</param>
-        /// <param name="sComputerDescription">The description of the Computer.</param>
-        /// <param name="sSessionhistoryDuration">The duration of the session (required).</param>
-        /// <param name="sSessionhistoryIP">Represent an IP address. (required).</param>
-        /// <param name="sUserLoginname">The login name of the User..</param>
-        public SessionhistoryListElement(int pkiSessionhistoryID = default(int), int fkiComputerID = default(int), int fkiUserID = default(int), string dtSessionhistoryFirsthit = default(string), string dtSessionhistoryLasthit = default(string), FieldESessionhistoryEndby eSessionhistoryEndby = default(FieldESessionhistoryEndby), string sComputerDescription = default(string), string sSessionhistoryDuration = default(string), string sSessionhistoryIP = default(string), string sUserLoginname = default(string))
+        /// <param name="">The unique ID of the Sessionhistory (required).</param>
+        /// <param name="">The unique ID of the Computer.</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The first hit of the Sessionhistory (required).</param>
+        /// <param name="">The last hit of the Sessionhistory (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The description of the Computer.</param>
+        /// <param name="">The duration of the session (required).</param>
+        /// <param name="">Represent an IP address. (required).</param>
+        /// <param name="">The login name of the User..</param>
+        public SessionhistoryListElement(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), FieldESessionhistoryEndby  = default(FieldESessionhistoryEndby), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.PkiSessionhistoryID = pkiSessionhistoryID;
-            // to ensure "dtSessionhistoryFirsthit" is required (not null)
-            if (dtSessionhistoryFirsthit == null)
+            this.PkiSessionhistoryID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtSessionhistoryFirsthit is a required property for SessionhistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for SessionhistoryListElement and cannot be null");
             }
-            this.DtSessionhistoryFirsthit = dtSessionhistoryFirsthit;
-            // to ensure "dtSessionhistoryLasthit" is required (not null)
-            if (dtSessionhistoryLasthit == null)
+            this.DtSessionhistoryFirsthit = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtSessionhistoryLasthit is a required property for SessionhistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for SessionhistoryListElement and cannot be null");
             }
-            this.DtSessionhistoryLasthit = dtSessionhistoryLasthit;
-            this.ESessionhistoryEndby = eSessionhistoryEndby;
-            // to ensure "sSessionhistoryDuration" is required (not null)
-            if (sSessionhistoryDuration == null)
+            this.DtSessionhistoryLasthit = ;
+            this.ESessionhistoryEndby = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sSessionhistoryDuration is a required property for SessionhistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for SessionhistoryListElement and cannot be null");
             }
-            this.SSessionhistoryDuration = sSessionhistoryDuration;
-            // to ensure "sSessionhistoryIP" is required (not null)
-            if (sSessionhistoryIP == null)
+            this.SSessionhistoryDuration = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sSessionhistoryIP is a required property for SessionhistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for SessionhistoryListElement and cannot be null");
             }
-            this.SSessionhistoryIP = sSessionhistoryIP;
-            this.FkiComputerID = fkiComputerID;
-            this.FkiUserID = fkiUserID;
-            this.SComputerDescription = sComputerDescription;
-            this.SUserLoginname = sUserLoginname;
+            this.SSessionhistoryIP = ;
+            this.FkiComputerID = ;
+            this.FkiUserID = ;
+            this.SComputerDescription = ;
+            this.SUserLoginname = ;
         }
 
         /// <summary>

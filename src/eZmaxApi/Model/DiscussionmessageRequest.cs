@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmessageRequest" /> class.
         /// </summary>
-        /// <param name="pkiDiscussionmessageID">The unique ID of the Discussionmessage.</param>
-        /// <param name="fkiDiscussionID">The unique ID of the Discussion (required).</param>
-        /// <param name="fkiDiscussionmembershipIDActionrequired">The unique ID of the Discussionmembership.</param>
-        /// <param name="tDiscussionmessageContent">The content of the Discussionmessage (required).</param>
-        public DiscussionmessageRequest(int pkiDiscussionmessageID = default(int), int fkiDiscussionID = default(int), int fkiDiscussionmembershipIDActionrequired = default(int), string tDiscussionmessageContent = default(string))
+        /// <param name="">The unique ID of the Discussionmessage.</param>
+        /// <param name="">The unique ID of the Discussion (required).</param>
+        /// <param name="">The unique ID of the Discussionmembership.</param>
+        /// <param name="">The content of the Discussionmessage (required).</param>
+        public DiscussionmessageRequest(int  = default(int), int  = default(int), int  = default(int), string  = default(string))
         {
-            this.FkiDiscussionID = fkiDiscussionID;
-            // to ensure "tDiscussionmessageContent" is required (not null)
-            if (tDiscussionmessageContent == null)
+            this.FkiDiscussionID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("tDiscussionmessageContent is a required property for DiscussionmessageRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionmessageRequest and cannot be null");
             }
-            this.TDiscussionmessageContent = tDiscussionmessageContent;
-            this.PkiDiscussionmessageID = pkiDiscussionmessageID;
-            this.FkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
+            this.TDiscussionmessageContent = ;
+            this.PkiDiscussionmessageID = ;
+            this.FkiDiscussionmembershipIDActionrequired = ;
         }
 
         /// <summary>

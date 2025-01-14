@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objUserstaged">objUserstaged (required).</param>
-        public UserstagedGetObjectV2ResponseMPayload(UserstagedResponseCompound objUserstaged = default(UserstagedResponseCompound))
+        /// <param name=""> (required).</param>
+        public UserstagedGetObjectV2ResponseMPayload(UserstagedResponseCompound  = default(UserstagedResponseCompound))
         {
-            // to ensure "objUserstaged" is required (not null)
-            if (objUserstaged == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objUserstaged is a required property for UserstagedGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserstagedGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjUserstaged = objUserstaged;
+            this.ObjUserstaged = ;
         }
 
         /// <summary>

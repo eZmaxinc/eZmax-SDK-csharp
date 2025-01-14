@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldgroupGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objEzsignformfieldgroup">objEzsignformfieldgroup (required).</param>
-        public EzsignformfieldgroupGetObjectV2ResponseMPayload(EzsignformfieldgroupResponseCompound objEzsignformfieldgroup = default(EzsignformfieldgroupResponseCompound))
+        /// <param name=""> (required).</param>
+        public EzsignformfieldgroupGetObjectV2ResponseMPayload(EzsignformfieldgroupResponseCompound  = default(EzsignformfieldgroupResponseCompound))
         {
-            // to ensure "objEzsignformfieldgroup" is required (not null)
-            if (objEzsignformfieldgroup == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignformfieldgroup is a required property for EzsignformfieldgroupGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignformfieldgroupGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignformfieldgroup = objEzsignformfieldgroup;
+            this.ObjEzsignformfieldgroup = ;
         }
 
         /// <summary>

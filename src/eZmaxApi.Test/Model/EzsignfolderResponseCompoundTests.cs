@@ -83,6 +83,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiTimezoneID'
+        /// </summary>
+        [Fact]
+        public void FkiTimezoneIDTest()
+        {
+            // TODO unit test for the property 'FkiTimezoneID'
+        }
+
+        /// <summary>
         /// Test the property 'EEzsignfolderCompletion'
         /// </summary>
         [Fact]
@@ -173,6 +182,24 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IEzsignfolderSendreminderfirstdays'
+        /// </summary>
+        [Fact]
+        public void IEzsignfolderSendreminderfirstdaysTest()
+        {
+            // TODO unit test for the property 'IEzsignfolderSendreminderfirstdays'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignfolderSendreminderotherdays'
+        /// </summary>
+        [Fact]
+        public void IEzsignfolderSendreminderotherdaysTest()
+        {
+            // TODO unit test for the property 'IEzsignfolderSendreminderotherdays'
+        }
+
+        /// <summary>
         /// Test the property 'DtEzsignfolderDelayedsenddate'
         /// </summary>
         [Fact]
@@ -260,6 +287,15 @@ namespace eZmaxApi.Test.Model
         public void SEzsignfolderExternalidTest()
         {
             // TODO unit test for the property 'SEzsignfolderExternalid'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjTimezone'
+        /// </summary>
+        [Fact]
+        public void ObjTimezoneTest()
+        {
+            // TODO unit test for the property 'ObjTimezone'
         }
     }
 }

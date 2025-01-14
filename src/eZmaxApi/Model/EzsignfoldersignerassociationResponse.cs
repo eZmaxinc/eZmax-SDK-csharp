@@ -40,25 +40,25 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="bEzsignfoldersignerassociationDelayedsend">If this flag is true the signatory is part of a delayed send. (required).</param>
-        /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. (required).</param>
-        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent. (required).</param>
-        /// <param name="bEzsignfoldersignerassociationAllowsigninginperson">If the Ezsignfoldersignerassociation is allowed to sign in person or not (required).</param>
-        public EzsignfoldersignerassociationResponse(int pkiEzsignfoldersignerassociationID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationDelayedsend = default(bool), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string), bool bEzsignfoldersignerassociationAllowsigninginperson = default(bool))
+        /// <param name="">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="">If this flag is true the signatory is part of a delayed send. (required).</param>
+        /// <param name="">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. (required).</param>
+        /// <param name="">A custom text message that will be added to the email sent. (required).</param>
+        /// <param name="">If the Ezsignfoldersignerassociation is allowed to sign in person or not (required).</param>
+        public EzsignfoldersignerassociationResponse(int  = default(int), int  = default(int), bool  = default(bool), bool  = default(bool), string  = default(string), bool  = default(bool))
         {
-            this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
-            this.FkiEzsignfolderID = fkiEzsignfolderID;
-            this.BEzsignfoldersignerassociationDelayedsend = bEzsignfoldersignerassociationDelayedsend;
-            this.BEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
-            // to ensure "tEzsignfoldersignerassociationMessage" is required (not null)
-            if (tEzsignfoldersignerassociationMessage == null)
+            this.PkiEzsignfoldersignerassociationID = ;
+            this.FkiEzsignfolderID = ;
+            this.BEzsignfoldersignerassociationDelayedsend = ;
+            this.BEzsignfoldersignerassociationReceivecopy = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("tEzsignfoldersignerassociationMessage is a required property for EzsignfoldersignerassociationResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationResponse and cannot be null");
             }
-            this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
-            this.BEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+            this.TEzsignfoldersignerassociationMessage = ;
+            this.BEzsignfoldersignerassociationAllowsigninginperson = ;
         }
 
         /// <summary>

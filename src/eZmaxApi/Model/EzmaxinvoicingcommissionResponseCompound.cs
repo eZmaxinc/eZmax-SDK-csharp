@@ -40,41 +40,41 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingcommissionResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzmaxinvoicingcommissionID">The unique ID of the Ezmaxinvoicingcommission.</param>
-        /// <param name="fkiEzmaxinvoicingsummaryglobalID">The unique ID of the Ezmaxinvoicingsummaryglobal.</param>
-        /// <param name="fkiEzmaxpartnerID">The unique ID of the Ezmaxpartner.</param>
-        /// <param name="fkiEzmaxrepresentativeID">The unique ID of the Ezmaxrepresentative.</param>
-        /// <param name="dtEzmaxinvoicingcommissionStart">The start date for the Ezmaxinvoicingcommission (required).</param>
-        /// <param name="dtEzmaxinvoicingcommissionEnd">The end date for the Ezmaxinvoicingcommission (required).</param>
-        /// <param name="iEzmaxinvoicingcommissionDays">This is the number of days during the month on which the Ezmaxinvoigcommission applies (required).</param>
-        /// <param name="dEzmaxinvoicingcommissionAmount">The amount of Ezmaxinvoicingcommission (required).</param>
-        /// <param name="objContactName">objContactName.</param>
-        public EzmaxinvoicingcommissionResponseCompound(int pkiEzmaxinvoicingcommissionID = default(int), int fkiEzmaxinvoicingsummaryglobalID = default(int), int fkiEzmaxpartnerID = default(int), int fkiEzmaxrepresentativeID = default(int), string dtEzmaxinvoicingcommissionStart = default(string), string dtEzmaxinvoicingcommissionEnd = default(string), int iEzmaxinvoicingcommissionDays = default(int), string dEzmaxinvoicingcommissionAmount = default(string), CustomContactNameResponse objContactName = default(CustomContactNameResponse))
+        /// <param name="">The unique ID of the Ezmaxinvoicingcommission.</param>
+        /// <param name="">The unique ID of the Ezmaxinvoicingsummaryglobal.</param>
+        /// <param name="">The unique ID of the Ezmaxpartner.</param>
+        /// <param name="">The unique ID of the Ezmaxrepresentative.</param>
+        /// <param name="">The start date for the Ezmaxinvoicingcommission (required).</param>
+        /// <param name="">The end date for the Ezmaxinvoicingcommission (required).</param>
+        /// <param name="">This is the number of days during the month on which the Ezmaxinvoigcommission applies (required).</param>
+        /// <param name="">The amount of Ezmaxinvoicingcommission (required).</param>
+        /// <param name="">.</param>
+        public EzmaxinvoicingcommissionResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), int  = default(int), string  = default(string), CustomContactNameResponse  = default(CustomContactNameResponse))
         {
-            // to ensure "dtEzmaxinvoicingcommissionStart" is required (not null)
-            if (dtEzmaxinvoicingcommissionStart == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtEzmaxinvoicingcommissionStart is a required property for EzmaxinvoicingcommissionResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingcommissionResponseCompound and cannot be null");
             }
-            this.DtEzmaxinvoicingcommissionStart = dtEzmaxinvoicingcommissionStart;
-            // to ensure "dtEzmaxinvoicingcommissionEnd" is required (not null)
-            if (dtEzmaxinvoicingcommissionEnd == null)
+            this.DtEzmaxinvoicingcommissionStart = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtEzmaxinvoicingcommissionEnd is a required property for EzmaxinvoicingcommissionResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingcommissionResponseCompound and cannot be null");
             }
-            this.DtEzmaxinvoicingcommissionEnd = dtEzmaxinvoicingcommissionEnd;
-            this.IEzmaxinvoicingcommissionDays = iEzmaxinvoicingcommissionDays;
-            // to ensure "dEzmaxinvoicingcommissionAmount" is required (not null)
-            if (dEzmaxinvoicingcommissionAmount == null)
+            this.DtEzmaxinvoicingcommissionEnd = ;
+            this.IEzmaxinvoicingcommissionDays = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingcommissionAmount is a required property for EzmaxinvoicingcommissionResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingcommissionResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingcommissionAmount = dEzmaxinvoicingcommissionAmount;
-            this.PkiEzmaxinvoicingcommissionID = pkiEzmaxinvoicingcommissionID;
-            this.FkiEzmaxinvoicingsummaryglobalID = fkiEzmaxinvoicingsummaryglobalID;
-            this.FkiEzmaxpartnerID = fkiEzmaxpartnerID;
-            this.FkiEzmaxrepresentativeID = fkiEzmaxrepresentativeID;
-            this.ObjContactName = objContactName;
+            this.DEzmaxinvoicingcommissionAmount = ;
+            this.PkiEzmaxinvoicingcommissionID = ;
+            this.FkiEzmaxinvoicingsummaryglobalID = ;
+            this.FkiEzmaxpartnerID = ;
+            this.FkiEzmaxrepresentativeID = ;
+            this.ObjContactName = ;
         }
 
         /// <summary>

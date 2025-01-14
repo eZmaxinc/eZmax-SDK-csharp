@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualPaymenttermDescription" /> class.
         /// </summary>
-        /// <param name="sPaymenttermDescription1">The description of the Paymentterm in French.</param>
-        /// <param name="sPaymenttermDescription2">The description of the Paymentterm in English.</param>
-        public MultilingualPaymenttermDescription(string sPaymenttermDescription1 = default(string), string sPaymenttermDescription2 = default(string))
+        /// <param name="">The description of the Paymentterm in French.</param>
+        /// <param name="">The description of the Paymentterm in English.</param>
+        public MultilingualPaymenttermDescription(string  = default(string), string  = default(string))
         {
-            this.SPaymenttermDescription1 = sPaymenttermDescription1;
-            this.SPaymenttermDescription2 = sPaymenttermDescription2;
+            this.SPaymenttermDescription1 = ;
+            this.SPaymenttermDescription2 = ;
         }
 
         /// <summary>

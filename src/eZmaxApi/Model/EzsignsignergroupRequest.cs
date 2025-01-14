@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupRequest" /> class.
         /// </summary>
-        /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup.</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="objEzsignsignergroupDescription">objEzsignsignergroupDescription (required).</param>
-        public EzsignsignergroupRequest(int pkiEzsignsignergroupID = default(int), int fkiEzsignfolderID = default(int), MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription = default(MultilingualEzsignsignergroupDescription))
+        /// <param name="">The unique ID of the Ezsignsignergroup.</param>
+        /// <param name="">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsignsignergroupRequest(int  = default(int), int  = default(int), MultilingualEzsignsignergroupDescription  = default(MultilingualEzsignsignergroupDescription))
         {
-            this.FkiEzsignfolderID = fkiEzsignfolderID;
-            // to ensure "objEzsignsignergroupDescription" is required (not null)
-            if (objEzsignsignergroupDescription == null)
+            this.FkiEzsignfolderID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignsignergroupDescription is a required property for EzsignsignergroupRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsignergroupRequest and cannot be null");
             }
-            this.ObjEzsignsignergroupDescription = objEzsignsignergroupDescription;
-            this.PkiEzsignsignergroupID = pkiEzsignsignergroupID;
+            this.ObjEzsignsignergroupDescription = ;
+            this.PkiEzsignsignergroupID = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemconfigurationGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objSystemconfiguration">objSystemconfiguration (required).</param>
-        public SystemconfigurationGetObjectV2ResponseMPayload(SystemconfigurationResponseCompound objSystemconfiguration = default(SystemconfigurationResponseCompound))
+        /// <param name=""> (required).</param>
+        public SystemconfigurationGetObjectV2ResponseMPayload(SystemconfigurationResponseCompound  = default(SystemconfigurationResponseCompound))
         {
-            // to ensure "objSystemconfiguration" is required (not null)
-            if (objSystemconfiguration == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objSystemconfiguration is a required property for SystemconfigurationGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for SystemconfigurationGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjSystemconfiguration = objSystemconfiguration;
+            this.ObjSystemconfiguration = ;
         }
 
         /// <summary>

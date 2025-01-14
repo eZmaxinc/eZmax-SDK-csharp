@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjUsergroupexternalmembership">aObjUsergroupexternalmembership (required).</param>
-        public UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload(List<UsergroupexternalmembershipResponseCompound> aObjUsergroupexternalmembership = default(List<UsergroupexternalmembershipResponseCompound>))
+        /// <param name=""> (required).</param>
+        public UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload(List<UsergroupexternalmembershipResponseCompound>  = default(List<UsergroupexternalmembershipResponseCompound>))
         {
-            // to ensure "aObjUsergroupexternalmembership" is required (not null)
-            if (aObjUsergroupexternalmembership == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUsergroupexternalmembership is a required property for UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload and cannot be null");
             }
-            this.AObjUsergroupexternalmembership = aObjUsergroupexternalmembership;
+            this.AObjUsergroupexternalmembership = ;
         }
 
         /// <summary>

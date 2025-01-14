@@ -74,6 +74,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiEzdoctemplatedocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzdoctemplatedocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzdoctemplatedocumentID'
+        }
+
+        /// <summary>
         /// Test the property 'FkiLanguageID'
         /// </summary>
         [Fact]

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objPermission">objPermission (required).</param>
-        public PermissionEditObjectV1Request(PermissionRequestCompound objPermission = default(PermissionRequestCompound))
+        /// <param name=""> (required).</param>
+        public PermissionEditObjectV1Request(PermissionRequestCompound  = default(PermissionRequestCompound))
         {
-            // to ensure "objPermission" is required (not null)
-            if (objPermission == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objPermission is a required property for PermissionEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for PermissionEditObjectV1Request and cannot be null");
             }
-            this.ObjPermission = objPermission;
+            this.ObjPermission = ;
         }
 
         /// <summary>

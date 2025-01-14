@@ -40,25 +40,25 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndiscussionRequest" /> class.
         /// </summary>
-        /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion.</param>
-        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="iEzsigndiscussionPagenumber">The page number in the Ezsigndocument for the Ezsigndiscussion (required).</param>
-        /// <param name="iEzsigndiscussionX">The x of the Ezsigndiscussion (required).</param>
-        /// <param name="iEzsigndiscussionY">The y of the Ezsigndiscussion (required).</param>
-        /// <param name="objDiscussion">objDiscussion (required).</param>
-        public EzsigndiscussionRequest(int pkiEzsigndiscussionID = default(int), int fkiEzsigndocumentID = default(int), int iEzsigndiscussionPagenumber = default(int), int iEzsigndiscussionX = default(int), int iEzsigndiscussionY = default(int), DiscussionRequest objDiscussion = default(DiscussionRequest))
+        /// <param name="">The unique ID of the Ezsigndiscussion.</param>
+        /// <param name="">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="">The page number in the Ezsigndocument for the Ezsigndiscussion (required).</param>
+        /// <param name="">The x of the Ezsigndiscussion (required).</param>
+        /// <param name="">The y of the Ezsigndiscussion (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsigndiscussionRequest(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), DiscussionRequest  = default(DiscussionRequest))
         {
-            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
-            this.IEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
-            this.IEzsigndiscussionX = iEzsigndiscussionX;
-            this.IEzsigndiscussionY = iEzsigndiscussionY;
-            // to ensure "objDiscussion" is required (not null)
-            if (objDiscussion == null)
+            this.FkiEzsigndocumentID = ;
+            this.IEzsigndiscussionPagenumber = ;
+            this.IEzsigndiscussionX = ;
+            this.IEzsigndiscussionY = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objDiscussion is a required property for EzsigndiscussionRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndiscussionRequest and cannot be null");
             }
-            this.ObjDiscussion = objDiscussion;
-            this.PkiEzsigndiscussionID = pkiEzsigndiscussionID;
+            this.ObjDiscussion = ;
+            this.PkiEzsigndiscussionID = ;
         }
 
         /// <summary>

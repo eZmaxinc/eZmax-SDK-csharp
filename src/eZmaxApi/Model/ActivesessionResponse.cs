@@ -50,6 +50,30 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eActivesessionWeekdaystart", IsRequired = true, EmitDefaultValue = true)]
         public FieldEActivesessionWeekdaystart EActivesessionWeekdaystart { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EActivesessionEzsign
+        /// </summary>
+        [DataMember(Name = "eActivesessionEzsign", EmitDefaultValue = false)]
+        public FieldEActivesessionEzsign? EActivesessionEzsign { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EActivesessionEzsignaccess
+        /// </summary>
+        [DataMember(Name = "eActivesessionEzsignaccess", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEActivesessionEzsignaccess EActivesessionEzsignaccess { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EActivesessionEzsignprepaid
+        /// </summary>
+        [DataMember(Name = "eActivesessionEzsignprepaid", EmitDefaultValue = false)]
+        public FieldEActivesessionEzsignprepaid? EActivesessionEzsignprepaid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EActivesessionRealestateinprogress
+        /// </summary>
+        [DataMember(Name = "eActivesessionRealestateinprogress", EmitDefaultValue = false)]
+        public FieldEActivesessionRealestateinprogress? EActivesessionRealestateinprogress { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponse" /> class.
         /// </summary>
@@ -58,45 +82,61 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponse" /> class.
         /// </summary>
-        /// <param name="eActivesessionUsertype">eActivesessionUsertype (required).</param>
-        /// <param name="eActivesessionOrigin">eActivesessionOrigin (required).</param>
-        /// <param name="eActivesessionWeekdaystart">eActivesessionWeekdaystart (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
-        /// <param name="bActivesessionDebug">Whether the active session is in debug or not (required).</param>
-        /// <param name="bActivesessionIssuperadmin">Whether the active session is superadmin or not (required).</param>
-        /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
-        /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
-        /// <param name="fkiSignatureID">The unique ID of the Signature.</param>
-        public ActivesessionResponse(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin eActivesessionOrigin = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), bool bActivesessionIssuperadmin = default(bool), string pksCustomerCode = default(string), int fkiSystemconfigurationtypeID = default(int), int fkiSignatureID = default(int))
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="">The Name of the Department in the language of the requester (required).</param>
+        /// <param name="">Whether the active session is in debug or not (required).</param>
+        /// <param name="">Whether the active session is superadmin or not (required).</param>
+        /// <param name="">Can access attachment when we clone a user.</param>
+        /// <param name="">Can access canafe when we clone a user.</param>
+        /// <param name="">Can access financial element when we clone a user.</param>
+        /// <param name="">Can access closed realestate folders when we clone a user.</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">The customer code assigned to your account (required).</param>
+        /// <param name="">The unique ID of the Systemconfigurationtype (required).</param>
+        /// <param name="">The unique ID of the Signature.</param>
+        public ActivesessionResponse(FieldEActivesessionUsertype  = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin  = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart  = default(FieldEActivesessionWeekdaystart), int  = default(int), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), FieldEActivesessionEzsign?  = default(FieldEActivesessionEzsign?), FieldEActivesessionEzsignaccess  = default(FieldEActivesessionEzsignaccess), FieldEActivesessionEzsignprepaid?  = default(FieldEActivesessionEzsignprepaid?), FieldEActivesessionRealestateinprogress?  = default(FieldEActivesessionRealestateinprogress?), string  = default(string), int  = default(int), int  = default(int))
         {
-            this.EActivesessionUsertype = eActivesessionUsertype;
-            this.EActivesessionOrigin = eActivesessionOrigin;
-            this.EActivesessionWeekdaystart = eActivesessionWeekdaystart;
-            this.FkiLanguageID = fkiLanguageID;
-            // to ensure "sCompanyNameX" is required (not null)
-            if (sCompanyNameX == null)
+            this.EActivesessionUsertype = ;
+            this.EActivesessionOrigin = ;
+            this.EActivesessionWeekdaystart = ;
+            this.FkiLanguageID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCompanyNameX is a required property for ActivesessionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionResponse and cannot be null");
             }
-            this.SCompanyNameX = sCompanyNameX;
-            // to ensure "sDepartmentNameX" is required (not null)
-            if (sDepartmentNameX == null)
+            this.SCompanyNameX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sDepartmentNameX is a required property for ActivesessionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionResponse and cannot be null");
             }
-            this.SDepartmentNameX = sDepartmentNameX;
-            this.BActivesessionDebug = bActivesessionDebug;
-            this.BActivesessionIssuperadmin = bActivesessionIssuperadmin;
-            // to ensure "pksCustomerCode" is required (not null)
-            if (pksCustomerCode == null)
+            this.SDepartmentNameX = ;
+            this.BActivesessionDebug = ;
+            this.BActivesessionIssuperadmin = ;
+            this.EActivesessionEzsignaccess = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("pksCustomerCode is a required property for ActivesessionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionResponse and cannot be null");
             }
-            this.PksCustomerCode = pksCustomerCode;
-            this.FkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
-            this.FkiSignatureID = fkiSignatureID;
+            this.PksCustomerCode = ;
+            this.FkiSystemconfigurationtypeID = ;
+            this.BActivesessionAttachment = ;
+            this.BActivesessionCanafe = ;
+            this.BActivesessionFinancial = ;
+            this.BActivesessionRealestatecompleted = ;
+            this.EActivesessionEzsign = ;
+            this.EActivesessionEzsignprepaid = ;
+            this.EActivesessionRealestateinprogress = ;
+            this.FkiSignatureID = ;
         }
 
         /// <summary>
@@ -140,6 +180,38 @@ namespace eZmaxApi.Model
         public bool BActivesessionIssuperadmin { get; set; }
 
         /// <summary>
+        /// Can access attachment when we clone a user
+        /// </summary>
+        /// <value>Can access attachment when we clone a user</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bActivesessionAttachment", EmitDefaultValue = true)]
+        public bool BActivesessionAttachment { get; set; }
+
+        /// <summary>
+        /// Can access canafe when we clone a user
+        /// </summary>
+        /// <value>Can access canafe when we clone a user</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bActivesessionCanafe", EmitDefaultValue = true)]
+        public bool BActivesessionCanafe { get; set; }
+
+        /// <summary>
+        /// Can access financial element when we clone a user
+        /// </summary>
+        /// <value>Can access financial element when we clone a user</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bActivesessionFinancial", EmitDefaultValue = true)]
+        public bool BActivesessionFinancial { get; set; }
+
+        /// <summary>
+        /// Can access closed realestate folders when we clone a user
+        /// </summary>
+        /// <value>Can access closed realestate folders when we clone a user</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bActivesessionRealestatecompleted", EmitDefaultValue = true)]
+        public bool BActivesessionRealestatecompleted { get; set; }
+
+        /// <summary>
         /// The customer code assigned to your account
         /// </summary>
         /// <value>The customer code assigned to your account</value>
@@ -179,6 +251,14 @@ namespace eZmaxApi.Model
             sb.Append("  SDepartmentNameX: ").Append(SDepartmentNameX).Append("\n");
             sb.Append("  BActivesessionDebug: ").Append(BActivesessionDebug).Append("\n");
             sb.Append("  BActivesessionIssuperadmin: ").Append(BActivesessionIssuperadmin).Append("\n");
+            sb.Append("  BActivesessionAttachment: ").Append(BActivesessionAttachment).Append("\n");
+            sb.Append("  BActivesessionCanafe: ").Append(BActivesessionCanafe).Append("\n");
+            sb.Append("  BActivesessionFinancial: ").Append(BActivesessionFinancial).Append("\n");
+            sb.Append("  BActivesessionRealestatecompleted: ").Append(BActivesessionRealestatecompleted).Append("\n");
+            sb.Append("  EActivesessionEzsign: ").Append(EActivesessionEzsign).Append("\n");
+            sb.Append("  EActivesessionEzsignaccess: ").Append(EActivesessionEzsignaccess).Append("\n");
+            sb.Append("  EActivesessionEzsignprepaid: ").Append(EActivesessionEzsignprepaid).Append("\n");
+            sb.Append("  EActivesessionRealestateinprogress: ").Append(EActivesessionRealestateinprogress).Append("\n");
             sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
             sb.Append("  FkiSystemconfigurationtypeID: ").Append(FkiSystemconfigurationtypeID).Append("\n");
             sb.Append("  FkiSignatureID: ").Append(FkiSignatureID).Append("\n");

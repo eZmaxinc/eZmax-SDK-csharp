@@ -35,16 +35,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignformfieldRequest" /> class.
         /// </summary>
-        /// <param name="pkiEzsignformfieldID">The unique ID of the Ezsignformfield.</param>
-        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield.</param>
-        /// <param name="bEzsignformfieldSelected">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
-        /// <param name="sEzsignformfieldEnteredvalue">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
-        public CustomEzsignformfieldRequest(int pkiEzsignformfieldID = default(int), string sEzsignformfieldLabel = default(string), bool bEzsignformfieldSelected = default(bool), string sEzsignformfieldEnteredvalue = default(string))
+        /// <param name="">The unique ID of the Ezsignformfield.</param>
+        /// <param name="">The Label for the Ezsignformfield.</param>
+        /// <param name="">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
+        /// <param name="">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
+        public CustomEzsignformfieldRequest(int  = default(int), string  = default(string), bool  = default(bool), string  = default(string))
         {
-            this.PkiEzsignformfieldID = pkiEzsignformfieldID;
-            this.SEzsignformfieldLabel = sEzsignformfieldLabel;
-            this.BEzsignformfieldSelected = bEzsignformfieldSelected;
-            this.SEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
+            this.PkiEzsignformfieldID = ;
+            this.SEzsignformfieldLabel = ;
+            this.BEzsignformfieldSelected = ;
+            this.SEzsignformfieldEnteredvalue = ;
         }
 
         /// <summary>

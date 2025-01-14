@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiCreditcarddetailID** | **int** | The unique ID of the Creditcarddetail | 
 **FkiCreditcardtypeID** | **int** | The unique ID of the Creditcardtype | 
-**SCreditcarddetailNumbermasked** | **string** | The numbermasked of the Creditcarddetail | 
+**ICreditcarddetailLastdigits** | **int** | The last digits of the Creditcarddetail | 
 **ICreditcarddetailExpirationmonth** | **int** | The expirationmonth of the Creditcarddetail | 
 **ICreditcarddetailExpirationyear** | **int** | The expirationyear of the Creditcarddetail | 
 **SCreditcarddetailCivic** | **string** | The civic of the Creditcarddetail | 

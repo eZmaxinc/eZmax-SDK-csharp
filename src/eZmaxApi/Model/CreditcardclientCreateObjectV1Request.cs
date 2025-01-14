@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="aObjCreditcardclient">aObjCreditcardclient (required).</param>
-        public CreditcardclientCreateObjectV1Request(List<CreditcardclientRequestCompound> aObjCreditcardclient = default(List<CreditcardclientRequestCompound>))
+        /// <param name=""> (required).</param>
+        public CreditcardclientCreateObjectV1Request(List<CreditcardclientRequestCompound>  = default(List<CreditcardclientRequestCompound>))
         {
-            // to ensure "aObjCreditcardclient" is required (not null)
-            if (aObjCreditcardclient == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCreditcardclient is a required property for CreditcardclientCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardclientCreateObjectV1Request and cannot be null");
             }
-            this.AObjCreditcardclient = aObjCreditcardclient;
+            this.AObjCreditcardclient = ;
         }
 
         /// <summary>

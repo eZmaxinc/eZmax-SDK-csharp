@@ -52,53 +52,53 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingagentResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzmaxinvoicingagentID">The unique ID of the Ezmaxinvoicingagent.</param>
-        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
-        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
-        /// <param name="iEzmaxinvoicingagentSession">The number of sessions (required).</param>
-        /// <param name="iEzmaxinvoicingagentCloned">The number of times this user was cloned (required).</param>
-        /// <param name="iEzmaxinvoicingagentInvoice">The number of invoices (required).</param>
-        /// <param name="iEzmaxinvoicingagentInscription">The number of inscriptions (required).</param>
-        /// <param name="iEzmaxinvoicingagentInscriptionactive">The number of active inscriptions (required).</param>
-        /// <param name="iEzmaxinvoicingagentSale">The number of sales (required).</param>
-        /// <param name="iEzmaxinvoicingagentOtherincome">The number of otherincomes (required).</param>
-        /// <param name="iEzmaxinvoicingagentCommissioncalculation">The number of commission calculations (required).</param>
-        /// <param name="iEzmaxinvoicingagentEzsigndocument">The number of ezsign documents (required).</param>
-        /// <param name="bEzmaxinvoicingagentEzsignaccount">Whether the agent has an eZsign account (required).</param>
-        /// <param name="bEzmaxinvoicingagentBillableezmax">Whether it is billable for eZmax (required).</param>
-        /// <param name="eEzmaxinvoicingagentVariationezmax">eEzmaxinvoicingagentVariationezmax (required).</param>
-        /// <param name="bEzmaxinvoicingagentBillableezsign">Whether it is billable for eZsign (required).</param>
-        /// <param name="eEzmaxinvoicingagentVariationezsign">eEzmaxinvoicingagentVariationezsign (required).</param>
-        public EzmaxinvoicingagentResponse(int pkiEzmaxinvoicingagentID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiAgentID = default(int), int fkiBrokerID = default(int), int iEzmaxinvoicingagentSession = default(int), int iEzmaxinvoicingagentCloned = default(int), int iEzmaxinvoicingagentInvoice = default(int), int iEzmaxinvoicingagentInscription = default(int), int iEzmaxinvoicingagentInscriptionactive = default(int), int iEzmaxinvoicingagentSale = default(int), int iEzmaxinvoicingagentOtherincome = default(int), int iEzmaxinvoicingagentCommissioncalculation = default(int), int iEzmaxinvoicingagentEzsigndocument = default(int), bool bEzmaxinvoicingagentEzsignaccount = default(bool), bool bEzmaxinvoicingagentBillableezmax = default(bool), FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax = default(FieldEEzmaxinvoicingagentVariationezmax), bool bEzmaxinvoicingagentBillableezsign = default(bool), FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign = default(FieldEEzmaxinvoicingagentVariationezsign))
+        /// <param name="">The unique ID of the Ezmaxinvoicingagent.</param>
+        /// <param name="">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Agent..</param>
+        /// <param name="">The unique ID of the Broker..</param>
+        /// <param name="">The number of sessions (required).</param>
+        /// <param name="">The number of times this user was cloned (required).</param>
+        /// <param name="">The number of invoices (required).</param>
+        /// <param name="">The number of inscriptions (required).</param>
+        /// <param name="">The number of active inscriptions (required).</param>
+        /// <param name="">The number of sales (required).</param>
+        /// <param name="">The number of otherincomes (required).</param>
+        /// <param name="">The number of commission calculations (required).</param>
+        /// <param name="">The number of ezsign documents (required).</param>
+        /// <param name="">Whether the agent has an eZsign account (required).</param>
+        /// <param name="">Whether it is billable for eZmax (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">Whether it is billable for eZsign (required).</param>
+        /// <param name=""> (required).</param>
+        public EzmaxinvoicingagentResponse(int  = default(int), int  = default(int), int  = default(int), string  = default(string), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), bool  = default(bool), bool  = default(bool), FieldEEzmaxinvoicingagentVariationezmax  = default(FieldEEzmaxinvoicingagentVariationezmax), bool  = default(bool), FieldEEzmaxinvoicingagentVariationezsign  = default(FieldEEzmaxinvoicingagentVariationezsign))
         {
-            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
-            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
-            if (sBillingentityinternalDescriptionX == null)
+            this.FkiBillingentityinternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for EzmaxinvoicingagentResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingagentResponse and cannot be null");
             }
-            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-            this.IEzmaxinvoicingagentSession = iEzmaxinvoicingagentSession;
-            this.IEzmaxinvoicingagentCloned = iEzmaxinvoicingagentCloned;
-            this.IEzmaxinvoicingagentInvoice = iEzmaxinvoicingagentInvoice;
-            this.IEzmaxinvoicingagentInscription = iEzmaxinvoicingagentInscription;
-            this.IEzmaxinvoicingagentInscriptionactive = iEzmaxinvoicingagentInscriptionactive;
-            this.IEzmaxinvoicingagentSale = iEzmaxinvoicingagentSale;
-            this.IEzmaxinvoicingagentOtherincome = iEzmaxinvoicingagentOtherincome;
-            this.IEzmaxinvoicingagentCommissioncalculation = iEzmaxinvoicingagentCommissioncalculation;
-            this.IEzmaxinvoicingagentEzsigndocument = iEzmaxinvoicingagentEzsigndocument;
-            this.BEzmaxinvoicingagentEzsignaccount = bEzmaxinvoicingagentEzsignaccount;
-            this.BEzmaxinvoicingagentBillableezmax = bEzmaxinvoicingagentBillableezmax;
-            this.EEzmaxinvoicingagentVariationezmax = eEzmaxinvoicingagentVariationezmax;
-            this.BEzmaxinvoicingagentBillableezsign = bEzmaxinvoicingagentBillableezsign;
-            this.EEzmaxinvoicingagentVariationezsign = eEzmaxinvoicingagentVariationezsign;
-            this.PkiEzmaxinvoicingagentID = pkiEzmaxinvoicingagentID;
-            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
-            this.FkiAgentID = fkiAgentID;
-            this.FkiBrokerID = fkiBrokerID;
+            this.SBillingentityinternalDescriptionX = ;
+            this.IEzmaxinvoicingagentSession = ;
+            this.IEzmaxinvoicingagentCloned = ;
+            this.IEzmaxinvoicingagentInvoice = ;
+            this.IEzmaxinvoicingagentInscription = ;
+            this.IEzmaxinvoicingagentInscriptionactive = ;
+            this.IEzmaxinvoicingagentSale = ;
+            this.IEzmaxinvoicingagentOtherincome = ;
+            this.IEzmaxinvoicingagentCommissioncalculation = ;
+            this.IEzmaxinvoicingagentEzsigndocument = ;
+            this.BEzmaxinvoicingagentEzsignaccount = ;
+            this.BEzmaxinvoicingagentBillableezmax = ;
+            this.EEzmaxinvoicingagentVariationezmax = ;
+            this.BEzmaxinvoicingagentBillableezsign = ;
+            this.EEzmaxinvoicingagentVariationezsign = ;
+            this.PkiEzmaxinvoicingagentID = ;
+            this.FkiEzmaxinvoicingID = ;
+            this.FkiAgentID = ;
+            this.FkiBrokerID = ;
         }
 
         /// <summary>

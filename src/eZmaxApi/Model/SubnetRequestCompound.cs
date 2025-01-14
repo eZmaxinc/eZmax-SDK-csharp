@@ -40,25 +40,25 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubnetRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiSubnetID">The unique ID of the Subnet.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
-        /// <param name="objSubnetDescription">objSubnetDescription (required).</param>
-        /// <param name="iSubnetNetwork">The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064 (required).</param>
-        /// <param name="iSubnetMask">The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040 (required).</param>
-        public SubnetRequestCompound(int pkiSubnetID = default(int), int fkiUserID = default(int), int fkiApikeyID = default(int), MultilingualSubnetDescription objSubnetDescription = default(MultilingualSubnetDescription), long iSubnetNetwork = default(long), long iSubnetMask = default(long))
+        /// <param name="">The unique ID of the Subnet.</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Apikey.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064 (required).</param>
+        /// <param name="">The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040 (required).</param>
+        public SubnetRequestCompound(int  = default(int), int  = default(int), int  = default(int), MultilingualSubnetDescription  = default(MultilingualSubnetDescription), long  = default(long), long  = default(long))
         {
-            // to ensure "objSubnetDescription" is required (not null)
-            if (objSubnetDescription == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objSubnetDescription is a required property for SubnetRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for SubnetRequestCompound and cannot be null");
             }
-            this.ObjSubnetDescription = objSubnetDescription;
-            this.ISubnetNetwork = iSubnetNetwork;
-            this.ISubnetMask = iSubnetMask;
-            this.PkiSubnetID = pkiSubnetID;
-            this.FkiUserID = fkiUserID;
-            this.FkiApikeyID = fkiApikeyID;
+            this.ObjSubnetDescription = ;
+            this.ISubnetNetwork = ;
+            this.ISubnetMask = ;
+            this.PkiSubnetID = ;
+            this.FkiUserID = ;
+            this.FkiApikeyID = ;
         }
 
         /// <summary>

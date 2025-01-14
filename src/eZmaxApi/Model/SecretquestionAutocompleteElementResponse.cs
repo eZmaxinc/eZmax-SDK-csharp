@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SecretquestionAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sSecretquestionTextX">The text of the Secretquestion in the language of the requester (required).</param>
-        /// <param name="pkiSecretquestionID">The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code| (required).</param>
-        /// <param name="bSecretquestionIsactive">Whether the Secretquestion is active or not (required).</param>
-        public SecretquestionAutocompleteElementResponse(string sSecretquestionTextX = default(string), int pkiSecretquestionID = default(int), bool bSecretquestionIsactive = default(bool))
+        /// <param name="">The text of the Secretquestion in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code| (required).</param>
+        /// <param name="">Whether the Secretquestion is active or not (required).</param>
+        public SecretquestionAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sSecretquestionTextX" is required (not null)
-            if (sSecretquestionTextX == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sSecretquestionTextX is a required property for SecretquestionAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for SecretquestionAutocompleteElementResponse and cannot be null");
             }
-            this.SSecretquestionTextX = sSecretquestionTextX;
-            this.PkiSecretquestionID = pkiSecretquestionID;
-            this.BSecretquestionIsactive = bSecretquestionIsactive;
+            this.SSecretquestionTextX = ;
+            this.PkiSecretquestionID = ;
+            this.BSecretquestionIsactive = ;
         }
 
         /// <summary>

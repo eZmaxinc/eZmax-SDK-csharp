@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CorsRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiCorsID">The unique ID of the Cors.</param>
-        /// <param name="fkiApikeyID">The unique ID of the Apikey (required).</param>
-        /// <param name="sCorsEntryurl">The entryurl of the Cors (required).</param>
-        public CorsRequestCompound(int pkiCorsID = default(int), int fkiApikeyID = default(int), string sCorsEntryurl = default(string))
+        /// <param name="">The unique ID of the Cors.</param>
+        /// <param name="">The unique ID of the Apikey (required).</param>
+        /// <param name="">The entryurl of the Cors (required).</param>
+        public CorsRequestCompound(int  = default(int), int  = default(int), string  = default(string))
         {
-            this.FkiApikeyID = fkiApikeyID;
-            // to ensure "sCorsEntryurl" is required (not null)
-            if (sCorsEntryurl == null)
+            this.FkiApikeyID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCorsEntryurl is a required property for CorsRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CorsRequestCompound and cannot be null");
             }
-            this.SCorsEntryurl = sCorsEntryurl;
-            this.PkiCorsID = pkiCorsID;
+            this.SCorsEntryurl = ;
+            this.PkiCorsID = ;
         }
 
         /// <summary>

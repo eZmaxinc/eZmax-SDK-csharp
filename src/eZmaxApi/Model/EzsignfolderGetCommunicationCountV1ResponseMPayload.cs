@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationCountV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iCommunicationCount">The count of Communication. (required).</param>
-        public EzsignfolderGetCommunicationCountV1ResponseMPayload(int iCommunicationCount = default(int))
+        /// <param name="">The count of Communication. (required).</param>
+        public EzsignfolderGetCommunicationCountV1ResponseMPayload(int  = default(int))
         {
-            this.ICommunicationCount = iCommunicationCount;
+            this.ICommunicationCount = ;
         }
 
         /// <summary>

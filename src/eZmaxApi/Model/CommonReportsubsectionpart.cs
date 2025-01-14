@@ -73,17 +73,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportsubsectionpart" /> class.
         /// </summary>
-        /// <param name="eReportsubsectionpartType">The type of the Reportsubsectionpart (required).</param>
-        /// <param name="aObjReportrow">aObjReportrow (required).</param>
-        public CommonReportsubsectionpart(EReportsubsectionpartTypeEnum eReportsubsectionpartType = default(EReportsubsectionpartTypeEnum), List<CommonReportrow> aObjReportrow = default(List<CommonReportrow>))
+        /// <param name="">The type of the Reportsubsectionpart (required).</param>
+        /// <param name=""> (required).</param>
+        public CommonReportsubsectionpart(EReportsubsectionpartTypeEnum  = default(EReportsubsectionpartTypeEnum), List<CommonReportrow>  = default(List<CommonReportrow>))
         {
-            this.EReportsubsectionpartType = eReportsubsectionpartType;
-            // to ensure "aObjReportrow" is required (not null)
-            if (aObjReportrow == null)
+            this.EReportsubsectionpartType = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjReportrow is a required property for CommonReportsubsectionpart and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonReportsubsectionpart and cannot be null");
             }
-            this.AObjReportrow = aObjReportrow;
+            this.AObjReportrow = ;
         }
 
         /// <summary>

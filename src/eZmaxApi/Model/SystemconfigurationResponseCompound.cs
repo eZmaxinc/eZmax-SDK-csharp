@@ -71,41 +71,47 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemconfigurationResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration (required).</param>
-        /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
-        /// <param name="sSystemconfigurationtypeDescriptionX">The description of the Systemconfigurationtype in the language of the requester (required).</param>
-        /// <param name="eSystemconfigurationNewexternaluseraction">eSystemconfigurationNewexternaluseraction (required).</param>
-        /// <param name="eSystemconfigurationLanguage1">eSystemconfigurationLanguage1 (required).</param>
-        /// <param name="eSystemconfigurationLanguage2">eSystemconfigurationLanguage2 (required).</param>
-        /// <param name="eSystemconfigurationEzsign">eSystemconfigurationEzsign.</param>
-        /// <param name="eSystemconfigurationEzsignofficeplan">eSystemconfigurationEzsignofficeplan.</param>
-        /// <param name="bSystemconfigurationEzsignpaidbyoffice">Whether if Ezsign is paid by the company or not.</param>
-        /// <param name="bSystemconfigurationEzsignpersonnal">Whether if we allow the creation of personal files in eZsign (required).</param>
-        /// <param name="bSystemconfigurationIsdisposalactive">Whether is Disposal processus is active or not.</param>
-        /// <param name="bSystemconfigurationSspr">Whether if we allow SSPR (required).</param>
-        /// <param name="dtSystemconfigurationReadonlyexpirationstart">The start date where the system will be in read only.</param>
-        /// <param name="dtSystemconfigurationReadonlyexpirationend">The end date where the system will be in read only.</param>
-        public SystemconfigurationResponseCompound(int pkiSystemconfigurationID = default(int), int fkiSystemconfigurationtypeID = default(int), string sSystemconfigurationtypeDescriptionX = default(string), FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), bool bSystemconfigurationEzsignpersonnal = default(bool), bool bSystemconfigurationIsdisposalactive = default(bool), bool bSystemconfigurationSspr = default(bool), string dtSystemconfigurationReadonlyexpirationstart = default(string), string dtSystemconfigurationReadonlyexpirationend = default(string))
+        /// <param name="">The unique ID of the Systemconfiguration (required).</param>
+        /// <param name="">The unique ID of the Systemconfigurationtype (required).</param>
+        /// <param name="">The unique ID of the Branding.</param>
+        /// <param name="">The description of the Systemconfigurationtype in the language of the requester (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">Whether if Ezsign is paid by the company or not.</param>
+        /// <param name="">Whether if we allow the creation of personal files in eZsign (required).</param>
+        /// <param name="">Whether there is a creditcard merchant configured or not.</param>
+        /// <param name="">Whether is Disposal processus is active or not.</param>
+        /// <param name="">Whether if we allow SSPR (required).</param>
+        /// <param name="">The start date where the system will be in read only.</param>
+        /// <param name="">The end date where the system will be in read only.</param>
+        /// <param name="">.</param>
+        public SystemconfigurationResponseCompound(int  = default(int), int  = default(int), int  = default(int), string  = default(string), FieldESystemconfigurationNewexternaluseraction  = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1  = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2  = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign?  = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan?  = default(FieldESystemconfigurationEzsignofficeplan?), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), string  = default(string), string  = default(string), CustomBrandingResponse  = default(CustomBrandingResponse))
         {
-            this.PkiSystemconfigurationID = pkiSystemconfigurationID;
-            this.FkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
-            // to ensure "sSystemconfigurationtypeDescriptionX" is required (not null)
-            if (sSystemconfigurationtypeDescriptionX == null)
+            this.PkiSystemconfigurationID = ;
+            this.FkiSystemconfigurationtypeID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sSystemconfigurationtypeDescriptionX is a required property for SystemconfigurationResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for SystemconfigurationResponseCompound and cannot be null");
             }
-            this.SSystemconfigurationtypeDescriptionX = sSystemconfigurationtypeDescriptionX;
-            this.ESystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
-            this.ESystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
-            this.ESystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
-            this.BSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
-            this.BSystemconfigurationSspr = bSystemconfigurationSspr;
-            this.ESystemconfigurationEzsign = eSystemconfigurationEzsign;
-            this.ESystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
-            this.BSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
-            this.BSystemconfigurationIsdisposalactive = bSystemconfigurationIsdisposalactive;
-            this.DtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
-            this.DtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
+            this.SSystemconfigurationtypeDescriptionX = ;
+            this.ESystemconfigurationNewexternaluseraction = ;
+            this.ESystemconfigurationLanguage1 = ;
+            this.ESystemconfigurationLanguage2 = ;
+            this.BSystemconfigurationEzsignpersonnal = ;
+            this.BSystemconfigurationSspr = ;
+            this.FkiBrandingID = ;
+            this.ESystemconfigurationEzsign = ;
+            this.ESystemconfigurationEzsignofficeplan = ;
+            this.BSystemconfigurationEzsignpaidbyoffice = ;
+            this.BSystemconfigurationHascreditcardmerchant = ;
+            this.BSystemconfigurationIsdisposalactive = ;
+            this.DtSystemconfigurationReadonlyexpirationstart = ;
+            this.DtSystemconfigurationReadonlyexpirationend = ;
+            this.ObjBranding = ;
         }
 
         /// <summary>
@@ -123,6 +129,14 @@ namespace eZmaxApi.Model
         /* <example>28</example>*/
         [DataMember(Name = "fkiSystemconfigurationtypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiSystemconfigurationtypeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Branding
+        /// </summary>
+        /// <value>The unique ID of the Branding</value>
+        /* <example>78</example>*/
+        [DataMember(Name = "fkiBrandingID", EmitDefaultValue = false)]
+        public int FkiBrandingID { get; set; }
 
         /// <summary>
         /// The description of the Systemconfigurationtype in the language of the requester
@@ -147,6 +161,13 @@ namespace eZmaxApi.Model
         /* <example>true</example>*/
         [DataMember(Name = "bSystemconfigurationEzsignpersonnal", IsRequired = true, EmitDefaultValue = true)]
         public bool BSystemconfigurationEzsignpersonnal { get; set; }
+
+        /// <summary>
+        /// Whether there is a creditcard merchant configured or not
+        /// </summary>
+        /// <value>Whether there is a creditcard merchant configured or not</value>
+        [DataMember(Name = "bSystemconfigurationHascreditcardmerchant", EmitDefaultValue = true)]
+        public bool BSystemconfigurationHascreditcardmerchant { get; set; }
 
         /// <summary>
         /// Whether is Disposal processus is active or not
@@ -180,6 +201,12 @@ namespace eZmaxApi.Model
         public string DtSystemconfigurationReadonlyexpirationend { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjBranding
+        /// </summary>
+        [DataMember(Name = "objBranding", EmitDefaultValue = false)]
+        public CustomBrandingResponse ObjBranding { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -189,6 +216,7 @@ namespace eZmaxApi.Model
             sb.Append("class SystemconfigurationResponseCompound {\n");
             sb.Append("  PkiSystemconfigurationID: ").Append(PkiSystemconfigurationID).Append("\n");
             sb.Append("  FkiSystemconfigurationtypeID: ").Append(FkiSystemconfigurationtypeID).Append("\n");
+            sb.Append("  FkiBrandingID: ").Append(FkiBrandingID).Append("\n");
             sb.Append("  SSystemconfigurationtypeDescriptionX: ").Append(SSystemconfigurationtypeDescriptionX).Append("\n");
             sb.Append("  ESystemconfigurationNewexternaluseraction: ").Append(ESystemconfigurationNewexternaluseraction).Append("\n");
             sb.Append("  ESystemconfigurationLanguage1: ").Append(ESystemconfigurationLanguage1).Append("\n");
@@ -197,10 +225,12 @@ namespace eZmaxApi.Model
             sb.Append("  ESystemconfigurationEzsignofficeplan: ").Append(ESystemconfigurationEzsignofficeplan).Append("\n");
             sb.Append("  BSystemconfigurationEzsignpaidbyoffice: ").Append(BSystemconfigurationEzsignpaidbyoffice).Append("\n");
             sb.Append("  BSystemconfigurationEzsignpersonnal: ").Append(BSystemconfigurationEzsignpersonnal).Append("\n");
+            sb.Append("  BSystemconfigurationHascreditcardmerchant: ").Append(BSystemconfigurationHascreditcardmerchant).Append("\n");
             sb.Append("  BSystemconfigurationIsdisposalactive: ").Append(BSystemconfigurationIsdisposalactive).Append("\n");
             sb.Append("  BSystemconfigurationSspr: ").Append(BSystemconfigurationSspr).Append("\n");
             sb.Append("  DtSystemconfigurationReadonlyexpirationstart: ").Append(DtSystemconfigurationReadonlyexpirationstart).Append("\n");
             sb.Append("  DtSystemconfigurationReadonlyexpirationend: ").Append(DtSystemconfigurationReadonlyexpirationend).Append("\n");
+            sb.Append("  ObjBranding: ").Append(ObjBranding).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -237,6 +267,12 @@ namespace eZmaxApi.Model
             if (this.FkiSystemconfigurationtypeID < (int)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
+            }
+
+            // FkiBrandingID (int) minimum
+            if (this.FkiBrandingID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
             }
 
             if (this.DtSystemconfigurationReadonlyexpirationstart != null) {

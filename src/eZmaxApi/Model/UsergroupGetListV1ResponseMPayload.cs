@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjUsergroup">aObjUsergroup (required).</param>
-        public UsergroupGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<UsergroupListElement> aObjUsergroup = default(List<UsergroupListElement>))
+        /// <param name="">The number of rows returned (required).</param>
+        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name=""> (required).</param>
+        public UsergroupGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<UsergroupListElement>  = default(List<UsergroupListElement>))
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
-            // to ensure "aObjUsergroup" is required (not null)
-            if (aObjUsergroup == null)
+            this.IRowReturned = ;
+            this.IRowFiltered = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUsergroup is a required property for UsergroupGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjUsergroup = aObjUsergroup;
+            this.AObjUsergroup = ;
         }
 
         /// <summary>

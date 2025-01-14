@@ -46,17 +46,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseErrorTooManyRequests" /> class.
         /// </summary>
-        /// <param name="sErrorMessage">The message giving details about the error (required).</param>
-        /// <param name="eErrorCode">eErrorCode (required).</param>
-        public CommonResponseErrorTooManyRequests(string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode))
+        /// <param name="">The message giving details about the error (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">More error message detail.</param>
+        public CommonResponseErrorTooManyRequests(string  = default(string), FieldEErrorCode  = default(FieldEErrorCode), List<string>  = default(List<string>))
         {
-            // to ensure "sErrorMessage" is required (not null)
-            if (sErrorMessage == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sErrorMessage is a required property for CommonResponseErrorTooManyRequests and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseErrorTooManyRequests and cannot be null");
             }
-            this.SErrorMessage = sErrorMessage;
-            this.EErrorCode = eErrorCode;
+            this.SErrorMessage = ;
+            this.EErrorCode = ;
+            this.ASErrorMessagedetail = ;
         }
 
         /// <summary>
@@ -68,6 +70,13 @@ namespace eZmaxApi.Model
         public string SErrorMessage { get; set; }
 
         /// <summary>
+        /// More error message detail
+        /// </summary>
+        /// <value>More error message detail</value>
+        [DataMember(Name = "a_sErrorMessagedetail", EmitDefaultValue = false)]
+        public List<string> ASErrorMessagedetail { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -77,6 +86,7 @@ namespace eZmaxApi.Model
             sb.Append("class CommonResponseErrorTooManyRequests {\n");
             sb.Append("  SErrorMessage: ").Append(SErrorMessage).Append("\n");
             sb.Append("  EErrorCode: ").Append(EErrorCode).Append("\n");
+            sb.Append("  ASErrorMessagedetail: ").Append(ASErrorMessagedetail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

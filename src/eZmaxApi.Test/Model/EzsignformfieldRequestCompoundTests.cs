@@ -164,6 +164,24 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EEzsignformfieldHorizontalalignment'
+        /// </summary>
+        [Fact]
+        public void EEzsignformfieldHorizontalalignmentTest()
+        {
+            // TODO unit test for the property 'EEzsignformfieldHorizontalalignment'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjTextstylestatic'
+        /// </summary>
+        [Fact]
+        public void ObjTextstylestaticTest()
+        {
+            // TODO unit test for the property 'ObjTextstylestatic'
+        }
+
+        /// <summary>
         /// Test the property 'AObjEzsignelementdependency'
         /// </summary>
         [Fact]

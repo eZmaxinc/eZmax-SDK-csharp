@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PeriodAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sPeriodYYYYMM">The YYYYMM of the Period (required).</param>
-        /// <param name="pkiPeriodID">The unique ID of the Period (required).</param>
-        /// <param name="bPeriodIsactive">Whether the Period is active or not (required).</param>
-        public PeriodAutocompleteElementResponse(string sPeriodYYYYMM = default(string), int pkiPeriodID = default(int), bool bPeriodIsactive = default(bool))
+        /// <param name="">The YYYYMM of the Period (required).</param>
+        /// <param name="">The unique ID of the Period (required).</param>
+        /// <param name="">Whether the Period is active or not (required).</param>
+        public PeriodAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sPeriodYYYYMM" is required (not null)
-            if (sPeriodYYYYMM == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sPeriodYYYYMM is a required property for PeriodAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for PeriodAutocompleteElementResponse and cannot be null");
             }
-            this.SPeriodYYYYMM = sPeriodYYYYMM;
-            this.PkiPeriodID = pkiPeriodID;
-            this.BPeriodIsactive = bPeriodIsactive;
+            this.SPeriodYYYYMM = ;
+            this.PkiPeriodID = ;
+            this.BPeriodIsactive = ;
         }
 
         /// <summary>

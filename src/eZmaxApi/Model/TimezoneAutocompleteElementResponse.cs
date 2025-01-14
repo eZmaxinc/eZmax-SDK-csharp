@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimezoneAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sTimezoneName">The description of the Timezone (required).</param>
-        /// <param name="pkiTimezoneID">The unique ID of the Timezone (required).</param>
-        /// <param name="bTimezoneIsactive">Whether the Timezone is active or not (required).</param>
-        public TimezoneAutocompleteElementResponse(string sTimezoneName = default(string), int pkiTimezoneID = default(int), bool bTimezoneIsactive = default(bool))
+        /// <param name="">The description of the Timezone (required).</param>
+        /// <param name="">The unique ID of the Timezone (required).</param>
+        /// <param name="">Whether the Timezone is active or not (required).</param>
+        public TimezoneAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sTimezoneName" is required (not null)
-            if (sTimezoneName == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sTimezoneName is a required property for TimezoneAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for TimezoneAutocompleteElementResponse and cannot be null");
             }
-            this.STimezoneName = sTimezoneName;
-            this.PkiTimezoneID = pkiTimezoneID;
-            this.BTimezoneIsactive = bTimezoneIsactive;
+            this.STimezoneName = ;
+            this.PkiTimezoneID = ;
+            this.BTimezoneIsactive = ;
         }
 
         /// <summary>

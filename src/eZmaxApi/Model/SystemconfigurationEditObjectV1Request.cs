@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemconfigurationEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objSystemconfiguration">objSystemconfiguration (required).</param>
-        public SystemconfigurationEditObjectV1Request(SystemconfigurationRequestCompound objSystemconfiguration = default(SystemconfigurationRequestCompound))
+        /// <param name=""> (required).</param>
+        public SystemconfigurationEditObjectV1Request(SystemconfigurationRequestCompound  = default(SystemconfigurationRequestCompound))
         {
-            // to ensure "objSystemconfiguration" is required (not null)
-            if (objSystemconfiguration == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objSystemconfiguration is a required property for SystemconfigurationEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for SystemconfigurationEditObjectV1Request and cannot be null");
             }
-            this.ObjSystemconfiguration = objSystemconfiguration;
+            this.ObjSystemconfiguration = ;
         }
 
         /// <summary>

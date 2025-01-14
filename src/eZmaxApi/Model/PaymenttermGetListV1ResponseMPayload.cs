@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjPaymentterm">aObjPaymentterm (required).</param>
-        public PaymenttermGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<PaymenttermListElement> aObjPaymentterm = default(List<PaymenttermListElement>))
+        /// <param name="">The number of rows returned (required).</param>
+        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name=""> (required).</param>
+        public PaymenttermGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<PaymenttermListElement>  = default(List<PaymenttermListElement>))
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
-            // to ensure "aObjPaymentterm" is required (not null)
-            if (aObjPaymentterm == null)
+            this.IRowReturned = ;
+            this.IRowFiltered = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjPaymentterm is a required property for PaymenttermGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for PaymenttermGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjPaymentterm = aObjPaymentterm;
+            this.AObjPaymentterm = ;
         }
 
         /// <summary>

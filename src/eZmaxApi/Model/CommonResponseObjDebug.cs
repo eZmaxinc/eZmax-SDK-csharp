@@ -40,33 +40,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseObjDebug" /> class.
         /// </summary>
-        /// <param name="sMemoryUsage">The peak memory allocated during the API request execution. Formatted as a human readable string (required).</param>
-        /// <param name="sRunTime">The total server execution time of the API request execution. Formatted as a human readable string (required).</param>
-        /// <param name="iSQLSelects">The number of SQL SELECT queries that were sent to the database server during the API request execution (required).</param>
-        /// <param name="iSQLQueries">The number of SQL INSERT/UPDATE/DELETE queries that were sent to the database server during the API request execution (required).</param>
-        /// <param name="aObjSQLQuery">An array of the SQL Queries that were executed during the API request execution (required).</param>
-        public CommonResponseObjDebug(string sMemoryUsage = default(string), string sRunTime = default(string), int iSQLSelects = default(int), int iSQLQueries = default(int), List<CommonResponseObjSQLQuery> aObjSQLQuery = default(List<CommonResponseObjSQLQuery>))
+        /// <param name="">The peak memory allocated during the API request execution. Formatted as a human readable string (required).</param>
+        /// <param name="">The total server execution time of the API request execution. Formatted as a human readable string (required).</param>
+        /// <param name="">The number of SQL SELECT queries that were sent to the database server during the API request execution (required).</param>
+        /// <param name="">The number of SQL INSERT/UPDATE/DELETE queries that were sent to the database server during the API request execution (required).</param>
+        /// <param name="">An array of the SQL Queries that were executed during the API request execution (required).</param>
+        public CommonResponseObjDebug(string  = default(string), string  = default(string), int  = default(int), int  = default(int), List<CommonResponseObjSQLQuery>  = default(List<CommonResponseObjSQLQuery>))
         {
-            // to ensure "sMemoryUsage" is required (not null)
-            if (sMemoryUsage == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sMemoryUsage is a required property for CommonResponseObjDebug and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseObjDebug and cannot be null");
             }
-            this.SMemoryUsage = sMemoryUsage;
-            // to ensure "sRunTime" is required (not null)
-            if (sRunTime == null)
+            this.SMemoryUsage = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sRunTime is a required property for CommonResponseObjDebug and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseObjDebug and cannot be null");
             }
-            this.SRunTime = sRunTime;
-            this.ISQLSelects = iSQLSelects;
-            this.ISQLQueries = iSQLQueries;
-            // to ensure "aObjSQLQuery" is required (not null)
-            if (aObjSQLQuery == null)
+            this.SRunTime = ;
+            this.ISQLSelects = ;
+            this.ISQLQueries = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjSQLQuery is a required property for CommonResponseObjDebug and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseObjDebug and cannot be null");
             }
-            this.AObjSQLQuery = aObjSQLQuery;
+            this.AObjSQLQuery = ;
         }
 
         /// <summary>

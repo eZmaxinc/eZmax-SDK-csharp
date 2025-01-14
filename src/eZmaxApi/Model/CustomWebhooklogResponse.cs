@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomWebhooklogResponse" /> class.
         /// </summary>
-        /// <param name="dtWebhooklogDate">The date and time at which the Webhooklog happened. (required).</param>
-        /// <param name="tWebhooklogJson">The Json containing the Webhook call and return (required).</param>
-        public CustomWebhooklogResponse(string dtWebhooklogDate = default(string), string tWebhooklogJson = default(string))
+        /// <param name="">The date and time at which the Webhooklog happened. (required).</param>
+        /// <param name="">The Json containing the Webhook call and return (required).</param>
+        public CustomWebhooklogResponse(string  = default(string), string  = default(string))
         {
-            // to ensure "dtWebhooklogDate" is required (not null)
-            if (dtWebhooklogDate == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtWebhooklogDate is a required property for CustomWebhooklogResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomWebhooklogResponse and cannot be null");
             }
-            this.DtWebhooklogDate = dtWebhooklogDate;
-            // to ensure "tWebhooklogJson" is required (not null)
-            if (tWebhooklogJson == null)
+            this.DtWebhooklogDate = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("tWebhooklogJson is a required property for CustomWebhooklogResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomWebhooklogResponse and cannot be null");
             }
-            this.TWebhooklogJson = tWebhooklogJson;
+            this.TWebhooklogJson = ;
         }
 
         /// <summary>

@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualBrandingDescription" /> class.
         /// </summary>
-        /// <param name="sBrandingDescription1">The description of the Branding in French.</param>
-        /// <param name="sBrandingDescription2">The description of the Branding in English.</param>
-        public MultilingualBrandingDescription(string sBrandingDescription1 = default(string), string sBrandingDescription2 = default(string))
+        /// <param name="">The description of the Branding in French.</param>
+        /// <param name="">The description of the Branding in English.</param>
+        public MultilingualBrandingDescription(string  = default(string), string  = default(string))
         {
-            this.SBrandingDescription1 = sBrandingDescription1;
-            this.SBrandingDescription2 = sBrandingDescription2;
+            this.SBrandingDescription1 = ;
+            this.SBrandingDescription2 = ;
         }
 
         /// <summary>

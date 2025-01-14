@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="aObjUsergroupexternal">aObjUsergroupexternal (required).</param>
-        public UsergroupexternalCreateObjectV1Request(List<UsergroupexternalRequestCompound> aObjUsergroupexternal = default(List<UsergroupexternalRequestCompound>))
+        /// <param name=""> (required).</param>
+        public UsergroupexternalCreateObjectV1Request(List<UsergroupexternalRequestCompound>  = default(List<UsergroupexternalRequestCompound>))
         {
-            // to ensure "aObjUsergroupexternal" is required (not null)
-            if (aObjUsergroupexternal == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUsergroupexternal is a required property for UsergroupexternalCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupexternalCreateObjectV1Request and cannot be null");
             }
-            this.AObjUsergroupexternal = aObjUsergroupexternal;
+            this.AObjUsergroupexternal = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CompanyGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjCompany">An array of Company autocomplete element response. (required).</param>
-        public CompanyGetAutocompleteV2ResponseMPayload(List<CompanyAutocompleteElementResponse> aObjCompany = default(List<CompanyAutocompleteElementResponse>))
+        /// <param name="">An array of Company autocomplete element response. (required).</param>
+        public CompanyGetAutocompleteV2ResponseMPayload(List<CompanyAutocompleteElementResponse>  = default(List<CompanyAutocompleteElementResponse>))
         {
-            // to ensure "aObjCompany" is required (not null)
-            if (aObjCompany == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCompany is a required property for CompanyGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for CompanyGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjCompany = aObjCompany;
+            this.AObjCompany = ;
         }
 
         /// <summary>

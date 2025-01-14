@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objEzsignbulksendtransmission">objEzsignbulksendtransmission (required).</param>
-        public EzsignbulksendtransmissionGetObjectV2ResponseMPayload(EzsignbulksendtransmissionResponseCompound objEzsignbulksendtransmission = default(EzsignbulksendtransmissionResponseCompound))
+        /// <param name=""> (required).</param>
+        public EzsignbulksendtransmissionGetObjectV2ResponseMPayload(EzsignbulksendtransmissionResponseCompound  = default(EzsignbulksendtransmissionResponseCompound))
         {
-            // to ensure "objEzsignbulksendtransmission" is required (not null)
-            if (objEzsignbulksendtransmission == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignbulksendtransmission is a required property for EzsignbulksendtransmissionGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendtransmissionGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignbulksendtransmission = objEzsignbulksendtransmission;
+            this.ObjEzsignbulksendtransmission = ;
         }
 
         /// <summary>

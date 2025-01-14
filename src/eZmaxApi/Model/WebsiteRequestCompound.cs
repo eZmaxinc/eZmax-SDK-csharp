@@ -40,18 +40,28 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsiteRequestCompound" /> class.
         /// </summary>
-        /// <param name="fkiWebsitetypeID">The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey| (required).</param>
-        /// <param name="sWebsiteAddress">The URL of the website. (required).</param>
-        public WebsiteRequestCompound(int fkiWebsitetypeID = default(int), string sWebsiteAddress = default(string))
+        /// <param name="">The unique ID of the Website Default.</param>
+        /// <param name="">The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey| (required).</param>
+        /// <param name="">The URL of the website. (required).</param>
+        public WebsiteRequestCompound(int  = default(int), int  = default(int), string  = default(string))
         {
-            this.FkiWebsitetypeID = fkiWebsitetypeID;
-            // to ensure "sWebsiteAddress" is required (not null)
-            if (sWebsiteAddress == null)
+            this.FkiWebsitetypeID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sWebsiteAddress is a required property for WebsiteRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebsiteRequestCompound and cannot be null");
             }
-            this.SWebsiteAddress = sWebsiteAddress;
+            this.SWebsiteAddress = ;
+            this.PkiWebsiteID = ;
         }
+
+        /// <summary>
+        /// The unique ID of the Website Default
+        /// </summary>
+        /// <value>The unique ID of the Website Default</value>
+        /* <example>145</example>*/
+        [DataMember(Name = "pkiWebsiteID", EmitDefaultValue = false)]
+        public int PkiWebsiteID { get; set; }
 
         /// <summary>
         /// The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|
@@ -77,6 +87,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class WebsiteRequestCompound {\n");
+            sb.Append("  PkiWebsiteID: ").Append(PkiWebsiteID).Append("\n");
             sb.Append("  FkiWebsitetypeID: ").Append(FkiWebsitetypeID).Append("\n");
             sb.Append("  SWebsiteAddress: ").Append(SWebsiteAddress).Append("\n");
             sb.Append("}\n");
@@ -99,6 +110,18 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // PkiWebsiteID (int) maximum
+            if (this.PkiWebsiteID > (int)16777215)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiWebsiteID, must be a value less than or equal to 16777215.", new [] { "PkiWebsiteID" });
+            }
+
+            // PkiWebsiteID (int) minimum
+            if (this.PkiWebsiteID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiWebsiteID, must be a value greater than or equal to 0.", new [] { "PkiWebsiteID" });
+            }
+
             // FkiWebsitetypeID (int) minimum
             if (this.FkiWebsitetypeID < (int)0)
             {

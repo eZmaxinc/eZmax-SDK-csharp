@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiEzsignsignatureID">aPkiEzsignsignatureID (required).</param>
-        /// <param name="aPkiEzsignformfieldgroupID">aPkiEzsignformfieldgroupID (required).</param>
-        public EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload(List<int> aPkiEzsignsignatureID = default(List<int>), List<int> aPkiEzsignformfieldgroupID = default(List<int>))
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload(List<int>  = default(List<int>), List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsignsignatureID" is required (not null)
-            if (aPkiEzsignsignatureID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsignsignatureID is a required property for EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsignsignatureID = aPkiEzsignsignatureID;
-            // to ensure "aPkiEzsignformfieldgroupID" is required (not null)
-            if (aPkiEzsignformfieldgroupID == null)
+            this.APkiEzsignsignatureID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsignformfieldgroupID is a required property for EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsignformfieldgroupID = aPkiEzsignformfieldgroupID;
+            this.APkiEzsignformfieldgroupID = ;
         }
 
         /// <summary>

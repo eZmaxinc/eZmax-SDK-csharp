@@ -40,30 +40,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomNotificationsubsectiongetnotificationtestsResponse" /> class.
         /// </summary>
-        /// <param name="pkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
-        /// <param name="fkiNotificationsectionID">The unique ID of the Notificationsection (required).</param>
-        /// <param name="objNotificationsubsectionName">objNotificationsubsectionName.</param>
-        /// <param name="sNotificationsectionNameX">The name of the Notificationsection in the language of the requester.</param>
-        /// <param name="sNotificationsubsectionNameX">The name of the Notificationsubsection in the language of the requester (required).</param>
-        /// <param name="aObjNotificationtest">aObjNotificationtest (required).</param>
-        public CustomNotificationsubsectiongetnotificationtestsResponse(int pkiNotificationsubsectionID = default(int), int fkiNotificationsectionID = default(int), MultilingualNotificationsubsectionName objNotificationsubsectionName = default(MultilingualNotificationsubsectionName), string sNotificationsectionNameX = default(string), string sNotificationsubsectionNameX = default(string), List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest = default(List<CustomNotificationtestgetnotificationtestsResponse>))
+        /// <param name="">The unique ID of the Notificationsubsection (required).</param>
+        /// <param name="">The unique ID of the Notificationsection (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">The name of the Notificationsection in the language of the requester.</param>
+        /// <param name="">The name of the Notificationsubsection in the language of the requester (required).</param>
+        /// <param name=""> (required).</param>
+        public CustomNotificationsubsectiongetnotificationtestsResponse(int  = default(int), int  = default(int), MultilingualNotificationsubsectionName  = default(MultilingualNotificationsubsectionName), string  = default(string), string  = default(string), List<CustomNotificationtestgetnotificationtestsResponse>  = default(List<CustomNotificationtestgetnotificationtestsResponse>))
         {
-            this.PkiNotificationsubsectionID = pkiNotificationsubsectionID;
-            this.FkiNotificationsectionID = fkiNotificationsectionID;
-            // to ensure "sNotificationsubsectionNameX" is required (not null)
-            if (sNotificationsubsectionNameX == null)
+            this.PkiNotificationsubsectionID = ;
+            this.FkiNotificationsectionID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sNotificationsubsectionNameX is a required property for CustomNotificationsubsectiongetnotificationtestsResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomNotificationsubsectiongetnotificationtestsResponse and cannot be null");
             }
-            this.SNotificationsubsectionNameX = sNotificationsubsectionNameX;
-            // to ensure "aObjNotificationtest" is required (not null)
-            if (aObjNotificationtest == null)
+            this.SNotificationsubsectionNameX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjNotificationtest is a required property for CustomNotificationsubsectiongetnotificationtestsResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomNotificationsubsectiongetnotificationtestsResponse and cannot be null");
             }
-            this.AObjNotificationtest = aObjNotificationtest;
-            this.ObjNotificationsubsectionName = objNotificationsubsectionName;
-            this.SNotificationsectionNameX = sNotificationsectionNameX;
+            this.AObjNotificationtest = ;
+            this.ObjNotificationsubsectionName = ;
+            this.SNotificationsectionNameX = ;
         }
 
         /// <summary>

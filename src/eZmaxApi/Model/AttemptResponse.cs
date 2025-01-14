@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttemptResponse" /> class.
         /// </summary>
-        /// <param name="dtAttemptStart">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
-        /// <param name="sAttemptResult">The Success or Failure message of the attempt when we tried to call the URL to deliver the webhook event. (required).</param>
-        /// <param name="iAttemptDuration">The number of second it took to process the webhook or get an error (required).</param>
-        public AttemptResponse(string dtAttemptStart = default(string), string sAttemptResult = default(string), int iAttemptDuration = default(int))
+        /// <param name="">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
+        /// <param name="">The Success or Failure message of the attempt when we tried to call the URL to deliver the webhook event. (required).</param>
+        /// <param name="">The number of second it took to process the webhook or get an error (required).</param>
+        public AttemptResponse(string  = default(string), string  = default(string), int  = default(int))
         {
-            // to ensure "dtAttemptStart" is required (not null)
-            if (dtAttemptStart == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtAttemptStart is a required property for AttemptResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for AttemptResponse and cannot be null");
             }
-            this.DtAttemptStart = dtAttemptStart;
-            // to ensure "sAttemptResult" is required (not null)
-            if (sAttemptResult == null)
+            this.DtAttemptStart = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sAttemptResult is a required property for AttemptResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for AttemptResponse and cannot be null");
             }
-            this.SAttemptResult = sAttemptResult;
-            this.IAttemptDuration = iAttemptDuration;
+            this.SAttemptResult = ;
+            this.IAttemptDuration = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderReorderV1Request" /> class.
         /// </summary>
-        /// <param name="aPkiEzsigndocumentID">aPkiEzsigndocumentID (required).</param>
-        public EzsignfolderReorderV1Request(List<int> aPkiEzsigndocumentID = default(List<int>))
+        /// <param name=""> (required).</param>
+        public EzsignfolderReorderV1Request(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsigndocumentID" is required (not null)
-            if (aPkiEzsigndocumentID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsigndocumentID is a required property for EzsignfolderReorderV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderReorderV1Request and cannot be null");
             }
-            this.APkiEzsigndocumentID = aPkiEzsigndocumentID;
+            this.APkiEzsigndocumentID = ;
         }
 
         /// <summary>

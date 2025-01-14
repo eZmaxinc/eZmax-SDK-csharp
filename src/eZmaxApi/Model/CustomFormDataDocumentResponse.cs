@@ -40,33 +40,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomFormDataDocumentResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="dtModifiedDate">The date and time at which the object was last modified (required).</param>
-        /// <param name="aObjFormDataSigner">aObjFormDataSigner (required).</param>
-        public CustomFormDataDocumentResponse(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), string sEzsigndocumentName = default(string), string dtModifiedDate = default(string), List<CustomFormDataSignerResponse> aObjFormDataSigner = default(List<CustomFormDataSignerResponse>))
+        /// <param name="">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
+        /// <param name="">The date and time at which the object was last modified (required).</param>
+        /// <param name=""> (required).</param>
+        public CustomFormDataDocumentResponse(int  = default(int), int  = default(int), string  = default(string), string  = default(string), List<CustomFormDataSignerResponse>  = default(List<CustomFormDataSignerResponse>))
         {
-            this.PkiEzsigndocumentID = pkiEzsigndocumentID;
-            this.FkiEzsignfolderID = fkiEzsignfolderID;
-            // to ensure "sEzsigndocumentName" is required (not null)
-            if (sEzsigndocumentName == null)
+            this.PkiEzsigndocumentID = ;
+            this.FkiEzsignfolderID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigndocumentName is a required property for CustomFormDataDocumentResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomFormDataDocumentResponse and cannot be null");
             }
-            this.SEzsigndocumentName = sEzsigndocumentName;
-            // to ensure "dtModifiedDate" is required (not null)
-            if (dtModifiedDate == null)
+            this.SEzsigndocumentName = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtModifiedDate is a required property for CustomFormDataDocumentResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomFormDataDocumentResponse and cannot be null");
             }
-            this.DtModifiedDate = dtModifiedDate;
-            // to ensure "aObjFormDataSigner" is required (not null)
-            if (aObjFormDataSigner == null)
+            this.DtModifiedDate = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjFormDataSigner is a required property for CustomFormDataDocumentResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomFormDataDocumentResponse and cannot be null");
             }
-            this.AObjFormDataSigner = aObjFormDataSigner;
+            this.AObjFormDataSigner = ;
         }
 
         /// <summary>

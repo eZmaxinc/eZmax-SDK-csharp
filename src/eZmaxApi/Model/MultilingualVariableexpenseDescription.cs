@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualVariableexpenseDescription" /> class.
         /// </summary>
-        /// <param name="sVariableexpenseDescription1">The description of the Variableexpense in French.</param>
-        /// <param name="sVariableexpenseDescription2">The description of the Variableexpense in English.</param>
-        public MultilingualVariableexpenseDescription(string sVariableexpenseDescription1 = default(string), string sVariableexpenseDescription2 = default(string))
+        /// <param name="">The description of the Variableexpense in French.</param>
+        /// <param name="">The description of the Variableexpense in English.</param>
+        public MultilingualVariableexpenseDescription(string  = default(string), string  = default(string))
         {
-            this.SVariableexpenseDescription1 = sVariableexpenseDescription1;
-            this.SVariableexpenseDescription2 = sVariableexpenseDescription2;
+            this.SVariableexpenseDescription1 = ;
+            this.SVariableexpenseDescription2 = ;
         }
 
         /// <summary>

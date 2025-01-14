@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VersionhistoryGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objVersionhistory">objVersionhistory (required).</param>
-        public VersionhistoryGetObjectV2ResponseMPayload(VersionhistoryResponseCompound objVersionhistory = default(VersionhistoryResponseCompound))
+        /// <param name=""> (required).</param>
+        public VersionhistoryGetObjectV2ResponseMPayload(VersionhistoryResponseCompound  = default(VersionhistoryResponseCompound))
         {
-            // to ensure "objVersionhistory" is required (not null)
-            if (objVersionhistory == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objVersionhistory is a required property for VersionhistoryGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for VersionhistoryGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjVersionhistory = objVersionhistory;
+            this.ObjVersionhistory = ;
         }
 
         /// <summary>

@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aEEzsignsignatureType">All eEzsignsignatureType contained in the response (required).</param>
-        /// <param name="aObjEzsignfolder">aObjEzsignfolder (required).</param>
-        public EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload(List<FieldEEzsignsignatureType> aEEzsignsignatureType = default(List<FieldEEzsignsignatureType>), List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder = default(List<CustomEzsignfolderEzsignsignaturesAutomaticResponse>))
+        /// <param name="">All eEzsignsignatureType contained in the response (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload(List<FieldEEzsignsignatureType>  = default(List<FieldEEzsignsignatureType>), List<CustomEzsignfolderEzsignsignaturesAutomaticResponse>  = default(List<CustomEzsignfolderEzsignsignaturesAutomaticResponse>))
         {
-            // to ensure "aEEzsignsignatureType" is required (not null)
-            if (aEEzsignsignatureType == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aEEzsignsignatureType is a required property for EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload and cannot be null");
             }
-            this.AEEzsignsignatureType = aEEzsignsignatureType;
-            // to ensure "aObjEzsignfolder" is required (not null)
-            if (aObjEzsignfolder == null)
+            this.AEEzsignsignatureType = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignfolder is a required property for EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignfolder = aObjEzsignfolder;
+            this.AObjEzsignfolder = ;
         }
 
         /// <summary>

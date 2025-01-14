@@ -40,14 +40,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigBulk" /> class.
         /// </summary>
-        /// <param name="supported">A Boolean value specifying whether or not the operation is supported. (required).</param>
-        /// <param name="maxOperations">An integer value specifying the maximum number of operations. (required).</param>
-        /// <param name="maxPayloadSize">An integer value specifying the maximum payload size in bytes. (required).</param>
-        public ScimServiceProviderConfigBulk(bool supported = default(bool), int maxOperations = default(int), int maxPayloadSize = default(int))
+        /// <param name="">A Boolean value specifying whether or not the operation is supported. (required).</param>
+        /// <param name="">An integer value specifying the maximum number of operations. (required).</param>
+        /// <param name="">An integer value specifying the maximum payload size in bytes. (required).</param>
+        public ScimServiceProviderConfigBulk(bool  = default(bool), int  = default(int), int  = default(int))
         {
-            this.Supported = supported;
-            this.MaxOperations = maxOperations;
-            this.MaxPayloadSize = maxPayloadSize;
+            this.Supported = ;
+            this.MaxOperations = ;
+            this.MaxPayloadSize = ;
         }
 
         /// <summary>

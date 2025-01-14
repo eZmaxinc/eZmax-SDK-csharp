@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobalGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objEzsigntemplateglobal">objEzsigntemplateglobal (required).</param>
-        public EzsigntemplateglobalGetObjectV2ResponseMPayload(EzsigntemplateglobalResponseCompound objEzsigntemplateglobal = default(EzsigntemplateglobalResponseCompound))
+        /// <param name=""> (required).</param>
+        public EzsigntemplateglobalGetObjectV2ResponseMPayload(EzsigntemplateglobalResponseCompound  = default(EzsigntemplateglobalResponseCompound))
         {
-            // to ensure "objEzsigntemplateglobal" is required (not null)
-            if (objEzsigntemplateglobal == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsigntemplateglobal is a required property for EzsigntemplateglobalGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsigntemplateglobal = objEzsigntemplateglobal;
+            this.ObjEzsigntemplateglobal = ;
         }
 
         /// <summary>

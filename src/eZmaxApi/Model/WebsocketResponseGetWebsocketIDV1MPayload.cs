@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1MPayload" /> class.
         /// </summary>
-        /// <param name="sWebsocketID">The Unique ID of the Websocket Connection (required).</param>
-        public WebsocketResponseGetWebsocketIDV1MPayload(string sWebsocketID = default(string))
+        /// <param name="">The Unique ID of the Websocket Connection (required).</param>
+        public WebsocketResponseGetWebsocketIDV1MPayload(string  = default(string))
         {
-            // to ensure "sWebsocketID" is required (not null)
-            if (sWebsocketID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sWebsocketID is a required property for WebsocketResponseGetWebsocketIDV1MPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebsocketResponseGetWebsocketIDV1MPayload and cannot be null");
             }
-            this.SWebsocketID = sWebsocketID;
+            this.SWebsocketID = ;
         }
 
         /// <summary>

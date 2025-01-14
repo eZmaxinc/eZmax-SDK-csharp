@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="aObjEzsigntemplatepackagesigner">aObjEzsigntemplatepackagesigner (required).</param>
-        public EzsigntemplatepackagesignerCreateObjectV1Request(List<EzsigntemplatepackagesignerRequestCompound> aObjEzsigntemplatepackagesigner = default(List<EzsigntemplatepackagesignerRequestCompound>))
+        /// <param name=""> (required).</param>
+        public EzsigntemplatepackagesignerCreateObjectV1Request(List<EzsigntemplatepackagesignerRequestCompound>  = default(List<EzsigntemplatepackagesignerRequestCompound>))
         {
-            // to ensure "aObjEzsigntemplatepackagesigner" is required (not null)
-            if (aObjEzsigntemplatepackagesigner == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsigntemplatepackagesigner is a required property for EzsigntemplatepackagesignerCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackagesignerCreateObjectV1Request and cannot be null");
             }
-            this.AObjEzsigntemplatepackagesigner = aObjEzsigntemplatepackagesigner;
+            this.AObjEzsigntemplatepackagesigner = ;
         }
 
         /// <summary>

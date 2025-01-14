@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiEzsigntemplatepackagesignerID">aPkiEzsigntemplatepackagesignerID (required).</param>
-        public EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload(List<int> aPkiEzsigntemplatepackagesignerID = default(List<int>))
+        /// <param name=""> (required).</param>
+        public EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsigntemplatepackagesignerID" is required (not null)
-            if (aPkiEzsigntemplatepackagesignerID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsigntemplatepackagesignerID is a required property for EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsigntemplatepackagesignerID = aPkiEzsigntemplatepackagesignerID;
+            this.APkiEzsigntemplatepackagesignerID = ;
         }
 
         /// <summary>

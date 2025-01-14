@@ -56,6 +56,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test ElectronicfundstransferGetCommunicationCountV1
+        /// </summary>
+        [Fact]
+        public void ElectronicfundstransferGetCommunicationCountV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiElectronicfundstransferID = null;
+            //var response = instance.ElectronicfundstransferGetCommunicationCountV1(pkiElectronicfundstransferID);
+            //Assert.IsType<ElectronicfundstransferGetCommunicationCountV1Response>(response);
+        }
+
+        /// <summary>
         /// Test ElectronicfundstransferGetCommunicationListV1
         /// </summary>
         [Fact]
@@ -65,6 +77,30 @@ namespace eZmaxApi.Test.Api
             //int pkiElectronicfundstransferID = null;
             //var response = instance.ElectronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
             //Assert.IsType<ElectronicfundstransferGetCommunicationListV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test ElectronicfundstransferGetCommunicationrecipientsV1
+        /// </summary>
+        [Fact]
+        public void ElectronicfundstransferGetCommunicationrecipientsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiElectronicfundstransferID = null;
+            //var response = instance.ElectronicfundstransferGetCommunicationrecipientsV1(pkiElectronicfundstransferID);
+            //Assert.IsType<ElectronicfundstransferGetCommunicationrecipientsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test ElectronicfundstransferGetCommunicationsendersV1
+        /// </summary>
+        [Fact]
+        public void ElectronicfundstransferGetCommunicationsendersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiElectronicfundstransferID = null;
+            //var response = instance.ElectronicfundstransferGetCommunicationsendersV1(pkiElectronicfundstransferID);
+            //Assert.IsType<ElectronicfundstransferGetCommunicationsendersV1Response>(response);
         }
     }
 }

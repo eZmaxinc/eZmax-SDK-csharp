@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="aObjEzsignbulksend">aObjEzsignbulksend (required).</param>
-        public EzsignbulksendCreateObjectV1Request(List<EzsignbulksendRequestCompound> aObjEzsignbulksend = default(List<EzsignbulksendRequestCompound>))
+        /// <param name=""> (required).</param>
+        public EzsignbulksendCreateObjectV1Request(List<EzsignbulksendRequestCompound>  = default(List<EzsignbulksendRequestCompound>))
         {
-            // to ensure "aObjEzsignbulksend" is required (not null)
-            if (aObjEzsignbulksend == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignbulksend is a required property for EzsignbulksendCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendCreateObjectV1Request and cannot be null");
             }
-            this.AObjEzsignbulksend = aObjEzsignbulksend;
+            this.AObjEzsignbulksend = ;
         }
 
         /// <summary>

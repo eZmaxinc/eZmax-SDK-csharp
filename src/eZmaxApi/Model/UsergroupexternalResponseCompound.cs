@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal (required).</param>
-        /// <param name="sUsergroupexternalName">The name of the Usergroupexternal (required).</param>
-        /// <param name="sUsergroupexternalID">The id of the Usergroupexternal (required).</param>
-        public UsergroupexternalResponseCompound(int pkiUsergroupexternalID = default(int), string sUsergroupexternalName = default(string), string sUsergroupexternalID = default(string))
+        /// <param name="">The unique ID of the Usergroupexternal (required).</param>
+        /// <param name="">The name of the Usergroupexternal (required).</param>
+        /// <param name="">The id of the Usergroupexternal (required).</param>
+        public UsergroupexternalResponseCompound(int  = default(int), string  = default(string), string  = default(string))
         {
-            this.PkiUsergroupexternalID = pkiUsergroupexternalID;
-            // to ensure "sUsergroupexternalName" is required (not null)
-            if (sUsergroupexternalName == null)
+            this.PkiUsergroupexternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUsergroupexternalName is a required property for UsergroupexternalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupexternalResponseCompound and cannot be null");
             }
-            this.SUsergroupexternalName = sUsergroupexternalName;
-            // to ensure "sUsergroupexternalID" is required (not null)
-            if (sUsergroupexternalID == null)
+            this.SUsergroupexternalName = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUsergroupexternalID is a required property for UsergroupexternalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupexternalResponseCompound and cannot be null");
             }
-            this.SUsergroupexternalID = sUsergroupexternalID;
+            this.SUsergroupexternalID = ;
         }
 
         /// <summary>

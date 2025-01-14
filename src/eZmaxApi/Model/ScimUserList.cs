@@ -35,18 +35,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimUserList" /> class.
         /// </summary>
-        /// <param name="totalResults">totalResults.</param>
-        /// <param name="itemsPerPage">itemsPerPage.</param>
-        /// <param name="startIndex">startIndex.</param>
-        /// <param name="schemas">schemas.</param>
-        /// <param name="resources">resources.</param>
-        public ScimUserList(int totalResults = default(int), int itemsPerPage = default(int), int startIndex = default(int), List<string> schemas = default(List<string>), List<ScimUser> resources = default(List<ScimUser>))
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public ScimUserList(int  = default(int), int  = default(int), int  = default(int), List<string>  = default(List<string>), List<ScimUser>  = default(List<ScimUser>))
         {
-            this.TotalResults = totalResults;
-            this.ItemsPerPage = itemsPerPage;
-            this.StartIndex = startIndex;
-            this.Schemas = schemas;
-            this.Resources = resources;
+            this.TotalResults = ;
+            this.ItemsPerPage = ;
+            this.StartIndex = ;
+            this.Schemas = ;
+            this.Resources = ;
         }
 
         /// <summary>

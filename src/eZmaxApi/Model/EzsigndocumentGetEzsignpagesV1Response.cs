@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignpagesV1Response" /> class.
         /// </summary>
-        /// <param name="objDebugPayload">objDebugPayload (required).</param>
-        /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">mPayload (required).</param>
-        public EzsigndocumentGetEzsignpagesV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsigndocumentGetEzsignpagesV1ResponseMPayload mPayload = default(EzsigndocumentGetEzsignpagesV1ResponseMPayload))
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        public EzsigndocumentGetEzsignpagesV1Response(CommonResponseObjDebugPayload  = default(CommonResponseObjDebugPayload), CommonResponseObjDebug  = default(CommonResponseObjDebug), EzsigndocumentGetEzsignpagesV1ResponseMPayload  = default(EzsigndocumentGetEzsignpagesV1ResponseMPayload))
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objDebugPayload is a required property for EzsigndocumentGetEzsignpagesV1Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentGetEzsignpagesV1Response and cannot be null");
             }
-            this.ObjDebugPayload = objDebugPayload;
-            // to ensure "mPayload" is required (not null)
-            if (mPayload == null)
+            this.ObjDebugPayload = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("mPayload is a required property for EzsigndocumentGetEzsignpagesV1Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentGetEzsignpagesV1Response and cannot be null");
             }
-            this.MPayload = mPayload;
-            this.ObjDebug = objDebug;
+            this.MPayload = ;
+            this.ObjDebug = ;
         }
 
         /// <summary>

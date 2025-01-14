@@ -40,19 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient (required).</param>
-        /// <param name="sCreditcardclientDescription">The description of the Creditcardclient (required).</param>
-        /// <param name="bCreditcardclientIsactive">Whether the creditcardclient is active or not (required).</param>
-        public CreditcardclientAutocompleteElementResponse(int pkiCreditcardclientID = default(int), string sCreditcardclientDescription = default(string), bool bCreditcardclientIsactive = default(bool))
+        /// <param name="">The unique ID of the Creditcardclient (required).</param>
+        /// <param name="">The description of the Creditcardclient (required).</param>
+        public CreditcardclientAutocompleteElementResponse(int  = default(int), string  = default(string))
         {
-            this.PkiCreditcardclientID = pkiCreditcardclientID;
-            // to ensure "sCreditcardclientDescription" is required (not null)
-            if (sCreditcardclientDescription == null)
+            this.PkiCreditcardclientID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcardclientDescription is a required property for CreditcardclientAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardclientAutocompleteElementResponse and cannot be null");
             }
-            this.SCreditcardclientDescription = sCreditcardclientDescription;
-            this.BCreditcardclientIsactive = bCreditcardclientIsactive;
+            this.SCreditcardclientDescription = ;
         }
 
         /// <summary>
@@ -72,14 +70,6 @@ namespace eZmaxApi.Model
         public string SCreditcardclientDescription { get; set; }
 
         /// <summary>
-        /// Whether the creditcardclient is active or not
-        /// </summary>
-        /// <value>Whether the creditcardclient is active or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bCreditcardclientIsactive", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCreditcardclientIsactive { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -89,7 +79,6 @@ namespace eZmaxApi.Model
             sb.Append("class CreditcardclientAutocompleteElementResponse {\n");
             sb.Append("  PkiCreditcardclientID: ").Append(PkiCreditcardclientID).Append("\n");
             sb.Append("  SCreditcardclientDescription: ").Append(SCreditcardclientDescription).Append("\n");
-            sb.Append("  BCreditcardclientIsactive: ").Append(BCreditcardclientIsactive).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

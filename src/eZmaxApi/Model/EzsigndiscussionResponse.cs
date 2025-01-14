@@ -40,27 +40,27 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndiscussionResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion (required).</param>
-        /// <param name="fkiEzsignpageID">The unique ID of the Ezsignpage (required).</param>
-        /// <param name="fkiDiscussionID">The unique ID of the Discussion (required).</param>
-        /// <param name="iEzsigndiscussionX">The x of the Ezsigndiscussion (required).</param>
-        /// <param name="iEzsigndiscussionY">The y of the Ezsigndiscussion (required).</param>
-        /// <param name="iEzsigndiscussionPagenumber">The page number in the Ezsigndocument for the Ezsigndiscussion (required).</param>
-        /// <param name="objDiscussion">objDiscussion (required).</param>
-        public EzsigndiscussionResponse(int pkiEzsigndiscussionID = default(int), int fkiEzsignpageID = default(int), int fkiDiscussionID = default(int), int iEzsigndiscussionX = default(int), int iEzsigndiscussionY = default(int), int iEzsigndiscussionPagenumber = default(int), DiscussionResponseCompound objDiscussion = default(DiscussionResponseCompound))
+        /// <param name="">The unique ID of the Ezsigndiscussion (required).</param>
+        /// <param name="">The unique ID of the Ezsignpage (required).</param>
+        /// <param name="">The unique ID of the Discussion (required).</param>
+        /// <param name="">The x of the Ezsigndiscussion (required).</param>
+        /// <param name="">The y of the Ezsigndiscussion (required).</param>
+        /// <param name="">The page number in the Ezsigndocument for the Ezsigndiscussion (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsigndiscussionResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), DiscussionResponseCompound  = default(DiscussionResponseCompound))
         {
-            this.PkiEzsigndiscussionID = pkiEzsigndiscussionID;
-            this.FkiEzsignpageID = fkiEzsignpageID;
-            this.FkiDiscussionID = fkiDiscussionID;
-            this.IEzsigndiscussionX = iEzsigndiscussionX;
-            this.IEzsigndiscussionY = iEzsigndiscussionY;
-            this.IEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
-            // to ensure "objDiscussion" is required (not null)
-            if (objDiscussion == null)
+            this.PkiEzsigndiscussionID = ;
+            this.FkiEzsignpageID = ;
+            this.FkiDiscussionID = ;
+            this.IEzsigndiscussionX = ;
+            this.IEzsigndiscussionY = ;
+            this.IEzsigndiscussionPagenumber = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objDiscussion is a required property for EzsigndiscussionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndiscussionResponse and cannot be null");
             }
-            this.ObjDiscussion = objDiscussion;
+            this.ObjDiscussion = ;
         }
 
         /// <summary>

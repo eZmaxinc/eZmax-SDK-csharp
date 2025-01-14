@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objEzsignfoldersignerassociation">objEzsignfoldersignerassociation (required).</param>
-        public EzsignfoldersignerassociationEditObjectV1Request(EzsignfoldersignerassociationRequestCompound objEzsignfoldersignerassociation = default(EzsignfoldersignerassociationRequestCompound))
+        /// <param name=""> (required).</param>
+        public EzsignfoldersignerassociationEditObjectV1Request(EzsignfoldersignerassociationRequestCompound  = default(EzsignfoldersignerassociationRequestCompound))
         {
-            // to ensure "objEzsignfoldersignerassociation" is required (not null)
-            if (objEzsignfoldersignerassociation == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignfoldersignerassociation is a required property for EzsignfoldersignerassociationEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationEditObjectV1Request and cannot be null");
             }
-            this.ObjEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
+            this.ObjEzsignfoldersignerassociation = ;
         }
 
         /// <summary>

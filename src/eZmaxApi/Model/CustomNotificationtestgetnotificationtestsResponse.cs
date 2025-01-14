@@ -46,37 +46,37 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomNotificationtestgetnotificationtestsResponse" /> class.
         /// </summary>
-        /// <param name="pkiNotificationtestID">The unique ID of the Notificationtest (required).</param>
-        /// <param name="objNotificationtestName">objNotificationtestName (required).</param>
-        /// <param name="fkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
-        /// <param name="sNotificationtestFunction">The function name of the Notificationtest (required).</param>
-        /// <param name="sNotificationtestNameX">The name of the Notificationtest in the language of the requester (required).</param>
-        /// <param name="eNotificationpreferenceStatus">eNotificationpreferenceStatus (required).</param>
-        /// <param name="iNotificationtest">The number of elements returned by the Notificationtest (required).</param>
-        public CustomNotificationtestgetnotificationtestsResponse(int pkiNotificationtestID = default(int), MultilingualNotificationtestName objNotificationtestName = default(MultilingualNotificationtestName), int fkiNotificationsubsectionID = default(int), string sNotificationtestFunction = default(string), string sNotificationtestNameX = default(string), FieldENotificationpreferenceStatus eNotificationpreferenceStatus = default(FieldENotificationpreferenceStatus), int iNotificationtest = default(int))
+        /// <param name="">The unique ID of the Notificationtest (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The unique ID of the Notificationsubsection (required).</param>
+        /// <param name="">The function name of the Notificationtest (required).</param>
+        /// <param name="">The name of the Notificationtest in the language of the requester (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The number of elements returned by the Notificationtest (required).</param>
+        public CustomNotificationtestgetnotificationtestsResponse(int  = default(int), MultilingualNotificationtestName  = default(MultilingualNotificationtestName), int  = default(int), string  = default(string), string  = default(string), FieldENotificationpreferenceStatus  = default(FieldENotificationpreferenceStatus), int  = default(int))
         {
-            this.PkiNotificationtestID = pkiNotificationtestID;
-            // to ensure "objNotificationtestName" is required (not null)
-            if (objNotificationtestName == null)
+            this.PkiNotificationtestID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objNotificationtestName is a required property for CustomNotificationtestgetnotificationtestsResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomNotificationtestgetnotificationtestsResponse and cannot be null");
             }
-            this.ObjNotificationtestName = objNotificationtestName;
-            this.FkiNotificationsubsectionID = fkiNotificationsubsectionID;
-            // to ensure "sNotificationtestFunction" is required (not null)
-            if (sNotificationtestFunction == null)
+            this.ObjNotificationtestName = ;
+            this.FkiNotificationsubsectionID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sNotificationtestFunction is a required property for CustomNotificationtestgetnotificationtestsResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomNotificationtestgetnotificationtestsResponse and cannot be null");
             }
-            this.SNotificationtestFunction = sNotificationtestFunction;
-            // to ensure "sNotificationtestNameX" is required (not null)
-            if (sNotificationtestNameX == null)
+            this.SNotificationtestFunction = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sNotificationtestNameX is a required property for CustomNotificationtestgetnotificationtestsResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomNotificationtestgetnotificationtestsResponse and cannot be null");
             }
-            this.SNotificationtestNameX = sNotificationtestNameX;
-            this.ENotificationpreferenceStatus = eNotificationpreferenceStatus;
-            this.INotificationtest = iNotificationtest;
+            this.SNotificationtestNameX = ;
+            this.ENotificationpreferenceStatus = ;
+            this.INotificationtest = ;
         }
 
         /// <summary>

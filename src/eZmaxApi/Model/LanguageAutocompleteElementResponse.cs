@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LanguageAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
-        /// <param name="bLanguageIsactive">Whether the Language is active or not (required).</param>
-        public LanguageAutocompleteElementResponse(int pkiLanguageID = default(int), string sLanguageNameX = default(string), bool bLanguageIsactive = default(bool))
+        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="">The Name of the Language in the language of the requester (required).</param>
+        /// <param name="">Whether the Language is active or not (required).</param>
+        public LanguageAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiLanguageID = pkiLanguageID;
-            // to ensure "sLanguageNameX" is required (not null)
-            if (sLanguageNameX == null)
+            this.PkiLanguageID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sLanguageNameX is a required property for LanguageAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for LanguageAutocompleteElementResponse and cannot be null");
             }
-            this.SLanguageNameX = sLanguageNameX;
-            this.BLanguageIsactive = bLanguageIsactive;
+            this.SLanguageNameX = ;
+            this.BLanguageIsactive = ;
         }
 
         /// <summary>

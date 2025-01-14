@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionUpdateDiscussionreadstatusV1Request" /> class.
         /// </summary>
-        /// <param name="dtDiscussionreadstatusDate">The date of the last discussion message read.</param>
-        public DiscussionUpdateDiscussionreadstatusV1Request(string dtDiscussionreadstatusDate = default(string))
+        /// <param name="">The date of the last discussion message read.</param>
+        public DiscussionUpdateDiscussionreadstatusV1Request(string  = default(string))
         {
-            this.DtDiscussionreadstatusDate = dtDiscussionreadstatusDate;
+            this.DtDiscussionreadstatusDate = ;
         }
 
         /// <summary>

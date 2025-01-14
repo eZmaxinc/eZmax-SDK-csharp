@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmessageRequestPatch" /> class.
         /// </summary>
-        /// <param name="fkiDiscussionmembershipIDActionrequired">The unique ID of the Discussionmembership.</param>
-        /// <param name="tDiscussionmessageContent">The content of the Discussionmessage.</param>
-        public DiscussionmessageRequestPatch(int fkiDiscussionmembershipIDActionrequired = default(int), string tDiscussionmessageContent = default(string))
+        /// <param name="">The unique ID of the Discussionmembership.</param>
+        /// <param name="">The content of the Discussionmessage.</param>
+        public DiscussionmessageRequestPatch(int  = default(int), string  = default(string))
         {
-            this.FkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
-            this.TDiscussionmessageContent = tDiscussionmessageContent;
+            this.FkiDiscussionmembershipIDActionrequired = ;
+            this.TDiscussionmessageContent = ;
         }
 
         /// <summary>

@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentApplyEzsigntemplateglobalV1Response" /> class.
         /// </summary>
-        /// <param name="objDebugPayload">objDebugPayload (required).</param>
-        /// <param name="objDebug">objDebug.</param>
-        /// <param name="aObjWarning">aObjWarning.</param>
-        public EzsigndocumentApplyEzsigntemplateglobalV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), List<CommonResponseWarning> aObjWarning = default(List<CommonResponseWarning>))
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public EzsigndocumentApplyEzsigntemplateglobalV1Response(CommonResponseObjDebugPayload  = default(CommonResponseObjDebugPayload), CommonResponseObjDebug  = default(CommonResponseObjDebug), List<CommonResponseWarning>  = default(List<CommonResponseWarning>))
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objDebugPayload is a required property for EzsigndocumentApplyEzsigntemplateglobalV1Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentApplyEzsigntemplateglobalV1Response and cannot be null");
             }
-            this.ObjDebugPayload = objDebugPayload;
-            this.ObjDebug = objDebug;
-            this.AObjWarning = aObjWarning;
+            this.ObjDebugPayload = ;
+            this.ObjDebug = ;
+            this.AObjWarning = ;
         }
 
         /// <summary>

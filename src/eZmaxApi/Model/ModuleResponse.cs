@@ -40,30 +40,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModuleResponse" /> class.
         /// </summary>
-        /// <param name="pkiModuleID">The unique ID of the Module (required).</param>
-        /// <param name="fkiModulegroupID">The unique ID of the Modulegroup (required).</param>
-        /// <param name="eModuleInternalname">The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all. (required).</param>
-        /// <param name="sModuleNameX">The Name of the Module in the language of the requester (required).</param>
-        /// <param name="bModuleRegistered">Whether the Module is registered or not (required).</param>
-        /// <param name="bModuleRegisteredapi">Whether the Module is registered or not for api use (required).</param>
-        public ModuleResponse(int pkiModuleID = default(int), int fkiModulegroupID = default(int), string eModuleInternalname = default(string), string sModuleNameX = default(string), bool bModuleRegistered = default(bool), bool bModuleRegisteredapi = default(bool))
+        /// <param name="">The unique ID of the Module (required).</param>
+        /// <param name="">The unique ID of the Modulegroup (required).</param>
+        /// <param name="">The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all. (required).</param>
+        /// <param name="">The Name of the Module in the language of the requester (required).</param>
+        /// <param name="">Whether the Module is registered or not (required).</param>
+        /// <param name="">Whether the Module is registered or not for api use (required).</param>
+        public ModuleResponse(int  = default(int), int  = default(int), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool))
         {
-            this.PkiModuleID = pkiModuleID;
-            this.FkiModulegroupID = fkiModulegroupID;
-            // to ensure "eModuleInternalname" is required (not null)
-            if (eModuleInternalname == null)
+            this.PkiModuleID = ;
+            this.FkiModulegroupID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("eModuleInternalname is a required property for ModuleResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for ModuleResponse and cannot be null");
             }
-            this.EModuleInternalname = eModuleInternalname;
-            // to ensure "sModuleNameX" is required (not null)
-            if (sModuleNameX == null)
+            this.EModuleInternalname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sModuleNameX is a required property for ModuleResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for ModuleResponse and cannot be null");
             }
-            this.SModuleNameX = sModuleNameX;
-            this.BModuleRegistered = bModuleRegistered;
-            this.BModuleRegisteredapi = bModuleRegisteredapi;
+            this.SModuleNameX = ;
+            this.BModuleRegistered = ;
+            this.BModuleRegisteredapi = ;
         }
 
         /// <summary>

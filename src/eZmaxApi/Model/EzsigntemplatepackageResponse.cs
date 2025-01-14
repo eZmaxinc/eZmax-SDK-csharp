@@ -40,43 +40,47 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
-        /// <param name="sEzsigntemplatepackageDescription">The description of the Ezsigntemplatepackage (required).</param>
-        /// <param name="bEzsigntemplatepackageAdminonly">Whether the Ezsigntemplatepackage can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
-        /// <param name="bEzsigntemplatepackageNeedvalidation">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
-        /// <param name="bEzsigntemplatepackageIsactive">Whether the Ezsigntemplatepackage is active or not (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="bEzsigntemplatepackageEditallowed">Whether the Ezsigntemplatepackage if allowed to edit or not (required).</param>
-        public EzsigntemplatepackageResponse(int pkiEzsigntemplatepackageID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sLanguageNameX = default(string), string sEzsigntemplatepackageDescription = default(string), bool bEzsigntemplatepackageAdminonly = default(bool), bool bEzsigntemplatepackageNeedvalidation = default(bool), bool bEzsigntemplatepackageIsactive = default(bool), string sEzsignfoldertypeNameX = default(string), bool bEzsigntemplatepackageEditallowed = default(bool))
+        /// <param name="">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="">The unique ID of the Ezdoctemplatedocument.</param>
+        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="">The name of the Ezdoctemplatedocument in the language of the requester.</param>
+        /// <param name="">The Name of the Language in the language of the requester (required).</param>
+        /// <param name="">The description of the Ezsigntemplatepackage (required).</param>
+        /// <param name="">Whether the Ezsigntemplatepackage can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
+        /// <param name="">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
+        /// <param name="">Whether the Ezsigntemplatepackage is active or not (required).</param>
+        /// <param name="">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="">Whether the Ezsigntemplatepackage if allowed to edit or not (required).</param>
+        public EzsigntemplatepackageResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool), bool  = default(bool), string  = default(string), bool  = default(bool))
         {
-            this.PkiEzsigntemplatepackageID = pkiEzsigntemplatepackageID;
-            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
-            this.FkiLanguageID = fkiLanguageID;
-            // to ensure "sLanguageNameX" is required (not null)
-            if (sLanguageNameX == null)
+            this.PkiEzsigntemplatepackageID = ;
+            this.FkiEzsignfoldertypeID = ;
+            this.FkiLanguageID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sLanguageNameX is a required property for EzsigntemplatepackageResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackageResponse and cannot be null");
             }
-            this.SLanguageNameX = sLanguageNameX;
-            // to ensure "sEzsigntemplatepackageDescription" is required (not null)
-            if (sEzsigntemplatepackageDescription == null)
+            this.SLanguageNameX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplatepackageDescription is a required property for EzsigntemplatepackageResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackageResponse and cannot be null");
             }
-            this.SEzsigntemplatepackageDescription = sEzsigntemplatepackageDescription;
-            this.BEzsigntemplatepackageAdminonly = bEzsigntemplatepackageAdminonly;
-            this.BEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
-            this.BEzsigntemplatepackageIsactive = bEzsigntemplatepackageIsactive;
-            // to ensure "sEzsignfoldertypeNameX" is required (not null)
-            if (sEzsignfoldertypeNameX == null)
+            this.SEzsigntemplatepackageDescription = ;
+            this.BEzsigntemplatepackageAdminonly = ;
+            this.BEzsigntemplatepackageNeedvalidation = ;
+            this.BEzsigntemplatepackageIsactive = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignfoldertypeNameX is a required property for EzsigntemplatepackageResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackageResponse and cannot be null");
             }
-            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
-            this.BEzsigntemplatepackageEditallowed = bEzsigntemplatepackageEditallowed;
+            this.SEzsignfoldertypeNameX = ;
+            this.BEzsigntemplatepackageEditallowed = ;
+            this.FkiEzdoctemplatedocumentID = ;
+            this.SEzdoctemplatedocumentNameX = ;
         }
 
         /// <summary>
@@ -96,12 +100,28 @@ namespace eZmaxApi.Model
         public int FkiEzsignfoldertypeID { get; set; }
 
         /// <summary>
+        /// The unique ID of the Ezdoctemplatedocument
+        /// </summary>
+        /// <value>The unique ID of the Ezdoctemplatedocument</value>
+        /* <example>95</example>*/
+        [DataMember(Name = "fkiEzdoctemplatedocumentID", EmitDefaultValue = false)]
+        public int FkiEzdoctemplatedocumentID { get; set; }
+
+        /// <summary>
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
         /* <example>2</example>*/
         [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiLanguageID { get; set; }
+
+        /// <summary>
+        /// The name of the Ezdoctemplatedocument in the language of the requester
+        /// </summary>
+        /// <value>The name of the Ezdoctemplatedocument in the language of the requester</value>
+        /* <example>Standard Contract</example>*/
+        [DataMember(Name = "sEzdoctemplatedocumentNameX", EmitDefaultValue = false)]
+        public string SEzdoctemplatedocumentNameX { get; set; }
 
         /// <summary>
         /// The Name of the Language in the language of the requester
@@ -166,7 +186,9 @@ namespace eZmaxApi.Model
             sb.Append("class EzsigntemplatepackageResponse {\n");
             sb.Append("  PkiEzsigntemplatepackageID: ").Append(PkiEzsigntemplatepackageID).Append("\n");
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
+            sb.Append("  FkiEzdoctemplatedocumentID: ").Append(FkiEzdoctemplatedocumentID).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
+            sb.Append("  SEzdoctemplatedocumentNameX: ").Append(SEzdoctemplatedocumentNameX).Append("\n");
             sb.Append("  SLanguageNameX: ").Append(SLanguageNameX).Append("\n");
             sb.Append("  SEzsigntemplatepackageDescription: ").Append(SEzsigntemplatepackageDescription).Append("\n");
             sb.Append("  BEzsigntemplatepackageAdminonly: ").Append(BEzsigntemplatepackageAdminonly).Append("\n");
@@ -212,6 +234,18 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
+            // FkiEzdoctemplatedocumentID (int) maximum
+            if (this.FkiEzdoctemplatedocumentID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "FkiEzdoctemplatedocumentID" });
+            }
+
+            // FkiEzdoctemplatedocumentID (int) minimum
+            if (this.FkiEzdoctemplatedocumentID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatedocumentID" });
+            }
+
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
@@ -222,6 +256,24 @@ namespace eZmaxApi.Model
             if (this.FkiLanguageID < (int)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+            if (this.SEzdoctemplatedocumentNameX != null) {
+                // SEzdoctemplatedocumentNameX (string) pattern
+                Regex regexSEzdoctemplatedocumentNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSEzdoctemplatedocumentNameX.Match(this.SEzdoctemplatedocumentNameX).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzdoctemplatedocumentNameX, must match a pattern of " + regexSEzdoctemplatedocumentNameX, new [] { "SEzdoctemplatedocumentNameX" });
+                }
+            }
+
+            if (this.SEzsigntemplatepackageDescription != null) {
+                // SEzsigntemplatepackageDescription (string) pattern
+                Regex regexSEzsigntemplatepackageDescription = new Regex(@"^.{0,80}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsigntemplatepackageDescription.Match(this.SEzsigntemplatepackageDescription).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatepackageDescription, must match a pattern of " + regexSEzsigntemplatepackageDescription, new [] { "SEzsigntemplatepackageDescription" });
+                }
             }
 
             yield break;

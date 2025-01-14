@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objEzmaxinvoicing">objEzmaxinvoicing (required).</param>
-        public EzmaxinvoicingGetObjectV2ResponseMPayload(EzmaxinvoicingResponseCompound objEzmaxinvoicing = default(EzmaxinvoicingResponseCompound))
+        /// <param name=""> (required).</param>
+        public EzmaxinvoicingGetObjectV2ResponseMPayload(EzmaxinvoicingResponseCompound  = default(EzmaxinvoicingResponseCompound))
         {
-            // to ensure "objEzmaxinvoicing" is required (not null)
-            if (objEzmaxinvoicing == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzmaxinvoicing is a required property for EzmaxinvoicingGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzmaxinvoicing = objEzmaxinvoicing;
+            this.ObjEzmaxinvoicing = ;
         }
 
         /// <summary>

@@ -40,20 +40,20 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionRequest" /> class.
         /// </summary>
-        /// <param name="pkiPermissionID">The unique ID of the Permission.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
-        /// <param name="fkiCompanyID">The unique ID of the Company.</param>
-        /// <param name="fkiModulesectionID">The unique ID of the Modulesection (required).</param>
-        public PermissionRequest(int pkiPermissionID = default(int), int fkiUserID = default(int), int fkiApikeyID = default(int), int fkiUsergroupID = default(int), int fkiCompanyID = default(int), int fkiModulesectionID = default(int))
+        /// <param name="">The unique ID of the Permission.</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Apikey.</param>
+        /// <param name="">The unique ID of the Usergroup.</param>
+        /// <param name="">The unique ID of the Company.</param>
+        /// <param name="">The unique ID of the Modulesection (required).</param>
+        public PermissionRequest(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int))
         {
-            this.FkiModulesectionID = fkiModulesectionID;
-            this.PkiPermissionID = pkiPermissionID;
-            this.FkiUserID = fkiUserID;
-            this.FkiApikeyID = fkiApikeyID;
-            this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiCompanyID = fkiCompanyID;
+            this.FkiModulesectionID = ;
+            this.PkiPermissionID = ;
+            this.FkiUserID = ;
+            this.FkiApikeyID = ;
+            this.FkiUsergroupID = ;
+            this.FkiCompanyID = ;
         }
 
         /// <summary>

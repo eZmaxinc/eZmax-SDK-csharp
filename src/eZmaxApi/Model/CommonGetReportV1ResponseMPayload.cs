@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonGetReportV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objReportgroup">objReportgroup (required).</param>
-        public CommonGetReportV1ResponseMPayload(CommonReportgroup objReportgroup = default(CommonReportgroup))
+        /// <param name=""> (required).</param>
+        public CommonGetReportV1ResponseMPayload(CommonReportgroup  = default(CommonReportgroup))
         {
-            // to ensure "objReportgroup" is required (not null)
-            if (objReportgroup == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objReportgroup is a required property for CommonGetReportV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonGetReportV1ResponseMPayload and cannot be null");
             }
-            this.ObjReportgroup = objReportgroup;
+            this.ObjReportgroup = ;
         }
 
         /// <summary>

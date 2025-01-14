@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objVariableexpense">objVariableexpense (required).</param>
-        public VariableexpenseGetObjectV2ResponseMPayload(VariableexpenseResponseCompound objVariableexpense = default(VariableexpenseResponseCompound))
+        /// <param name=""> (required).</param>
+        public VariableexpenseGetObjectV2ResponseMPayload(VariableexpenseResponseCompound  = default(VariableexpenseResponseCompound))
         {
-            // to ensure "objVariableexpense" is required (not null)
-            if (objVariableexpense == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objVariableexpense is a required property for VariableexpenseGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for VariableexpenseGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjVariableexpense = objVariableexpense;
+            this.ObjVariableexpense = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderDisposeEzsignfoldersV1Request" /> class.
         /// </summary>
-        /// <param name="aPkiEzsignfolderID">aPkiEzsignfolderID (required).</param>
-        public EzsignfolderDisposeEzsignfoldersV1Request(List<int> aPkiEzsignfolderID = default(List<int>))
+        /// <param name=""> (required).</param>
+        public EzsignfolderDisposeEzsignfoldersV1Request(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsignfolderID" is required (not null)
-            if (aPkiEzsignfolderID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsignfolderID is a required property for EzsignfolderDisposeEzsignfoldersV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderDisposeEzsignfoldersV1Request and cannot be null");
             }
-            this.APkiEzsignfolderID = aPkiEzsignfolderID;
+            this.APkiEzsignfolderID = ;
         }
 
         /// <summary>

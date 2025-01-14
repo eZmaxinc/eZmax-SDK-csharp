@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InscriptionGetAttachmentsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjAttachmentdocumenttype">aObjAttachmentdocumenttype (required).</param>
-        public InscriptionGetAttachmentsV1ResponseMPayload(List<CustomAttachmentdocumenttypeResponse> aObjAttachmentdocumenttype = default(List<CustomAttachmentdocumenttypeResponse>))
+        /// <param name=""> (required).</param>
+        public InscriptionGetAttachmentsV1ResponseMPayload(List<CustomAttachmentdocumenttypeResponse>  = default(List<CustomAttachmentdocumenttypeResponse>))
         {
-            // to ensure "aObjAttachmentdocumenttype" is required (not null)
-            if (aObjAttachmentdocumenttype == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjAttachmentdocumenttype is a required property for InscriptionGetAttachmentsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for InscriptionGetAttachmentsV1ResponseMPayload and cannot be null");
             }
-            this.AObjAttachmentdocumenttype = aObjAttachmentdocumenttype;
+            this.AObjAttachmentdocumenttype = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupEditUsergroupmembershipsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiUsergroupmembershipID">aPkiUsergroupmembershipID (required).</param>
-        public UsergroupEditUsergroupmembershipsV1ResponseMPayload(List<int> aPkiUsergroupmembershipID = default(List<int>))
+        /// <param name=""> (required).</param>
+        public UsergroupEditUsergroupmembershipsV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiUsergroupmembershipID" is required (not null)
-            if (aPkiUsergroupmembershipID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiUsergroupmembershipID is a required property for UsergroupEditUsergroupmembershipsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupEditUsergroupmembershipsV1ResponseMPayload and cannot be null");
             }
-            this.APkiUsergroupmembershipID = aPkiUsergroupmembershipID;
+            this.APkiUsergroupmembershipID = ;
         }
 
         /// <summary>

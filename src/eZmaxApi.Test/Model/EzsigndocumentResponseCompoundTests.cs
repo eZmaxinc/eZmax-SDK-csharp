@@ -182,6 +182,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IEzsigndocumentFormfieldtotal'
+        /// </summary>
+        [Fact]
+        public void IEzsigndocumentFormfieldtotalTest()
+        {
+            // TODO unit test for the property 'IEzsigndocumentFormfieldtotal'
+        }
+
+        /// <summary>
         /// Test the property 'SEzsigndocumentMD5initial'
         /// </summary>
         [Fact]
@@ -314,6 +323,15 @@ namespace eZmaxApi.Test.Model
         public void AObjEzsignfoldersignerassociationstatusTest()
         {
             // TODO unit test for the property 'AObjEzsignfoldersignerassociationstatus'
+        }
+
+        /// <summary>
+        /// Test the property 'AObjEzsigndocumentdependency'
+        /// </summary>
+        [Fact]
+        public void AObjEzsigndocumentdependencyTest()
+        {
+            // TODO unit test for the property 'AObjEzsigndocumentdependency'
         }
     }
 }

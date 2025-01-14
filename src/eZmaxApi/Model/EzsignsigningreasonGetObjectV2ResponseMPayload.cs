@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsigningreasonGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objEzsignsigningreason">objEzsignsigningreason (required).</param>
-        public EzsignsigningreasonGetObjectV2ResponseMPayload(EzsignsigningreasonResponseCompound objEzsignsigningreason = default(EzsignsigningreasonResponseCompound))
+        /// <param name=""> (required).</param>
+        public EzsignsigningreasonGetObjectV2ResponseMPayload(EzsignsigningreasonResponseCompound  = default(EzsignsigningreasonResponseCompound))
         {
-            // to ensure "objEzsignsigningreason" is required (not null)
-            if (objEzsignsigningreason == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignsigningreason is a required property for EzsignsigningreasonGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsigningreasonGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignsigningreason = objEzsignsigningreason;
+            this.ObjEzsignsigningreason = ;
         }
 
         /// <summary>

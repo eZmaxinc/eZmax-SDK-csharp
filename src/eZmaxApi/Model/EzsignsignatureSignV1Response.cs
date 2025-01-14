@@ -40,17 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureSignV1Response" /> class.
         /// </summary>
-        /// <param name="objDebugPayload">objDebugPayload (required).</param>
-        /// <param name="objDebug">objDebug.</param>
-        public EzsignsignatureSignV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        public EzsignsignatureSignV1Response(CommonResponseObjDebugPayload  = default(CommonResponseObjDebugPayload), CommonResponseObjDebug  = default(CommonResponseObjDebug), EzsignsignatureSignV1ResponseMPayload  = default(EzsignsignatureSignV1ResponseMPayload))
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objDebugPayload is a required property for EzsignsignatureSignV1Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsignatureSignV1Response and cannot be null");
             }
-            this.ObjDebugPayload = objDebugPayload;
-            this.ObjDebug = objDebug;
+            this.ObjDebugPayload = ;
+            // to ensure "" is required (not null)
+            if ( == null)
+            {
+                throw new ArgumentNullException(" is a required property for EzsignsignatureSignV1Response and cannot be null");
+            }
+            this.MPayload = ;
+            this.ObjDebug = ;
         }
 
         /// <summary>
@@ -66,6 +73,12 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
+        /// Gets or Sets MPayload
+        /// </summary>
+        [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
+        public EzsignsignatureSignV1ResponseMPayload MPayload { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -75,6 +88,7 @@ namespace eZmaxApi.Model
             sb.Append("class EzsignsignatureSignV1Response {\n");
             sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
             sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
+            sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubnetDeleteObjectV1Response" /> class.
         /// </summary>
-        /// <param name="objDebugPayload">objDebugPayload (required).</param>
-        /// <param name="objDebug">objDebug.</param>
-        public SubnetDeleteObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        public SubnetDeleteObjectV1Response(CommonResponseObjDebugPayload  = default(CommonResponseObjDebugPayload), CommonResponseObjDebug  = default(CommonResponseObjDebug))
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objDebugPayload is a required property for SubnetDeleteObjectV1Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for SubnetDeleteObjectV1Response and cannot be null");
             }
-            this.ObjDebugPayload = objDebugPayload;
-            this.ObjDebug = objDebug;
+            this.ObjDebugPayload = ;
+            this.ObjDebug = ;
         }
 
         /// <summary>

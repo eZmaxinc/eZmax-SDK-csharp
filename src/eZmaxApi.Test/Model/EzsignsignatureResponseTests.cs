@@ -92,6 +92,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiFontID'
+        /// </summary>
+        [Fact]
+        public void FkiFontIDTest()
+        {
+            // TODO unit test for the property 'FkiFontID'
+        }
+
+        /// <summary>
         /// Test the property 'SEzsignsigningreasonDescriptionX'
         /// </summary>
         [Fact]
@@ -227,6 +236,33 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EEzsignsignatureConsultationtrigger'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureConsultationtriggerTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureConsultationtrigger'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignsignatureHandwritten'
+        /// </summary>
+        [Fact]
+        public void BEzsignsignatureHandwrittenTest()
+        {
+            // TODO unit test for the property 'BEzsignsignatureHandwritten'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignsignatureReason'
+        /// </summary>
+        [Fact]
+        public void BEzsignsignatureReasonTest()
+        {
+            // TODO unit test for the property 'BEzsignsignatureReason'
+        }
+
+        /// <summary>
         /// Test the property 'BEzsignsignatureRequired'
         /// </summary>
         [Fact]
@@ -290,12 +326,30 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SEzsignsignatureTextvalidationcustommessage'
+        /// </summary>
+        [Fact]
+        public void SEzsignsignatureTextvalidationcustommessageTest()
+        {
+            // TODO unit test for the property 'SEzsignsignatureTextvalidationcustommessage'
+        }
+
+        /// <summary>
         /// Test the property 'EEzsignsignatureDependencyrequirement'
         /// </summary>
         [Fact]
         public void EEzsignsignatureDependencyrequirementTest()
         {
             // TODO unit test for the property 'EEzsignsignatureDependencyrequirement'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignsignatureDefaultvalue'
+        /// </summary>
+        [Fact]
+        public void SEzsignsignatureDefaultvalueTest()
+        {
+            // TODO unit test for the property 'SEzsignsignatureDefaultvalue'
         }
 
         /// <summary>

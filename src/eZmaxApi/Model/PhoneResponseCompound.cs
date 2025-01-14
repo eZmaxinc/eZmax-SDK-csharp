@@ -47,20 +47,20 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiPhoneID">The unique ID of the Phone. (required).</param>
-        /// <param name="fkiPhonetypeID">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
-        /// <param name="ePhoneType">ePhoneType.</param>
-        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
-        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
-        /// <param name="bPhoneInternational">Indicate the phone number is an international phone number..</param>
-        public PhoneResponseCompound(int pkiPhoneID = default(int), int fkiPhonetypeID = default(int), FieldEPhoneType? ePhoneType = default(FieldEPhoneType?), string sPhoneE164 = default(string), string sPhoneExtension = default(string), bool bPhoneInternational = default(bool))
+        /// <param name="">The unique ID of the Phone. (required).</param>
+        /// <param name="">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">A phone number in E.164 Format.</param>
+        /// <param name="">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
+        /// <param name="">Indicate the phone number is an international phone number..</param>
+        public PhoneResponseCompound(int  = default(int), int  = default(int), FieldEPhoneType?  = default(FieldEPhoneType?), string  = default(string), string  = default(string), bool  = default(bool))
         {
-            this.PkiPhoneID = pkiPhoneID;
-            this.FkiPhonetypeID = fkiPhonetypeID;
-            this.EPhoneType = ePhoneType;
-            this.SPhoneE164 = sPhoneE164;
-            this.SPhoneExtension = sPhoneExtension;
-            this.BPhoneInternational = bPhoneInternational;
+            this.PkiPhoneID = ;
+            this.FkiPhonetypeID = ;
+            this.EPhoneType = ;
+            this.SPhoneE164 = ;
+            this.SPhoneExtension = ;
+            this.BPhoneInternational = ;
         }
 
         /// <summary>

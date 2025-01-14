@@ -40,18 +40,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupmembershipRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsignsignergroupmembershipID">The unique ID of the Ezsignsignergroupmembership.</param>
-        /// <param name="fkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup (required).</param>
-        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
-        public EzsignsignergroupmembershipRequestCompound(int pkiEzsignsignergroupmembershipID = default(int), int fkiEzsignsignergroupID = default(int), int fkiEzsignsignerID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int))
+        /// <param name="">The unique ID of the Ezsignsignergroupmembership.</param>
+        /// <param name="">The unique ID of the Ezsignsignergroup (required).</param>
+        /// <param name="">The unique ID of the Ezsignsigner.</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Usergroup.</param>
+        public EzsignsignergroupmembershipRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int))
         {
-            this.FkiEzsignsignergroupID = fkiEzsignsignergroupID;
-            this.PkiEzsignsignergroupmembershipID = pkiEzsignsignergroupmembershipID;
-            this.FkiEzsignsignerID = fkiEzsignsignerID;
-            this.FkiUserID = fkiUserID;
-            this.FkiUsergroupID = fkiUsergroupID;
+            this.FkiEzsignsignergroupID = ;
+            this.PkiEzsignsignergroupmembershipID = ;
+            this.FkiEzsignsignerID = ;
+            this.FkiUserID = ;
+            this.FkiUsergroupID = ;
         }
 
         /// <summary>

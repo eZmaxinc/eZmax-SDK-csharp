@@ -46,21 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldertypeListElement" /> class.
         /// </summary>
-        /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
-        public EzsignfoldertypeListElement(int pkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), bool bEzsignfoldertypeIsactive = default(bool))
+        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="">Whether the Ezsignfoldertype is active or not (required).</param>
+        public EzsignfoldertypeListElement(int  = default(int), FieldEEzsignfoldertypePrivacylevel  = default(FieldEEzsignfoldertypePrivacylevel), string  = default(string), bool  = default(bool))
         {
-            this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
-            this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
-            // to ensure "sEzsignfoldertypeNameX" is required (not null)
-            if (sEzsignfoldertypeNameX == null)
+            this.PkiEzsignfoldertypeID = ;
+            this.EEzsignfoldertypePrivacylevel = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignfoldertypeNameX is a required property for EzsignfoldertypeListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldertypeListElement and cannot be null");
             }
-            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
-            this.BEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
+            this.SEzsignfoldertypeNameX = ;
+            this.BEzsignfoldertypeIsactive = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objEzsigntemplatedocument">objEzsigntemplatedocument (required).</param>
-        public EzsigntemplatedocumentGetObjectV2ResponseMPayload(EzsigntemplatedocumentResponseCompound objEzsigntemplatedocument = default(EzsigntemplatedocumentResponseCompound))
+        /// <param name=""> (required).</param>
+        public EzsigntemplatedocumentGetObjectV2ResponseMPayload(EzsigntemplatedocumentResponseCompound  = default(EzsigntemplatedocumentResponseCompound))
         {
-            // to ensure "objEzsigntemplatedocument" is required (not null)
-            if (objEzsigntemplatedocument == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsigntemplatedocument is a required property for EzsigntemplatedocumentGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsigntemplatedocument = objEzsigntemplatedocument;
+            this.ObjEzsigntemplatedocument = ;
         }
 
         /// <summary>

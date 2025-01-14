@@ -80,6 +80,19 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test UserEditColleaguesV2
+        /// </summary>
+        [Fact]
+        public void UserEditColleaguesV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUserID = null;
+            //UserEditColleaguesV2Request userEditColleaguesV2Request = null;
+            //var response = instance.UserEditColleaguesV2(pkiUserID, userEditColleaguesV2Request);
+            //Assert.IsType<UserEditColleaguesV2Response>(response);
+        }
+
+        /// <summary>
         /// Test UserEditObjectV1
         /// </summary>
         [Fact]
@@ -130,6 +143,18 @@ namespace eZmaxApi.Test.Api
             //HeaderAcceptLanguage? acceptLanguage = null;
             //var response = instance.UserGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
             //Assert.IsType<UserGetAutocompleteV2Response>(response);
+        }
+
+        /// <summary>
+        /// Test UserGetColleaguesV2
+        /// </summary>
+        [Fact]
+        public void UserGetColleaguesV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiUserID = null;
+            //var response = instance.UserGetColleaguesV2(pkiUserID);
+            //Assert.IsType<UserGetColleaguesV2Response>(response);
         }
 
         /// <summary>

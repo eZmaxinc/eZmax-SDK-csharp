@@ -74,12 +74,30 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiEzdoctemplatedocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzdoctemplatedocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzdoctemplatedocumentID'
+        }
+
+        /// <summary>
         /// Test the property 'FkiLanguageID'
         /// </summary>
         [Fact]
         public void FkiLanguageIDTest()
         {
             // TODO unit test for the property 'FkiLanguageID'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzdoctemplatedocumentNameX'
+        /// </summary>
+        [Fact]
+        public void SEzdoctemplatedocumentNameXTest()
+        {
+            // TODO unit test for the property 'SEzdoctemplatedocumentNameX'
         }
 
         /// <summary>

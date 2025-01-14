@@ -40,76 +40,76 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiFranchisereferalincomeID">The unique ID of the Franchisereferalincome.</param>
-        /// <param name="fkiFranchisebrokerID">The unique ID of the Franchisebroker (required).</param>
-        /// <param name="fkiFranchisereferalincomeprogramID">The unique ID of the Franchisereferalincomeprogram (required).</param>
-        /// <param name="fkiPeriodID">The unique ID of the Period (required).</param>
-        /// <param name="dFranchisereferalincomeLoan">The loan amount (required).</param>
-        /// <param name="dFranchisereferalincomeFranchiseamount">The amount that will be given to the franchise (required).</param>
-        /// <param name="dFranchisereferalincomeFranchisoramount">The amount that will be kept by the franchisor (required).</param>
-        /// <param name="dFranchisereferalincomeAgentamount">The amount that will be given to the agent (required).</param>
-        /// <param name="dtFranchisereferalincomeDisbursed">The date the amounts were disbursed (required).</param>
-        /// <param name="tFranchisereferalincomeComment">Comment about the transaction (required).</param>
-        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
-        /// <param name="sFranchisereferalincomeRemoteid">sFranchisereferalincomeRemoteid (required).</param>
-        /// <param name="objAddress">objAddress.</param>
-        /// <param name="aObjContact">aObjContact (required).</param>
-        public FranchisereferalincomeRequestCompound(int pkiFranchisereferalincomeID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchisereferalincomeprogramID = default(int), int fkiPeriodID = default(int), string dFranchisereferalincomeLoan = default(string), string dFranchisereferalincomeFranchiseamount = default(string), string dFranchisereferalincomeFranchisoramount = default(string), string dFranchisereferalincomeAgentamount = default(string), string dtFranchisereferalincomeDisbursed = default(string), string tFranchisereferalincomeComment = default(string), int fkiFranchiseofficeID = default(int), string sFranchisereferalincomeRemoteid = default(string), AddressRequest objAddress = default(AddressRequest), List<ContactRequestCompound> aObjContact = default(List<ContactRequestCompound>))
+        /// <param name="">The unique ID of the Franchisereferalincome.</param>
+        /// <param name="">The unique ID of the Franchisebroker (required).</param>
+        /// <param name="">The unique ID of the Franchisereferalincomeprogram (required).</param>
+        /// <param name="">The unique ID of the Period (required).</param>
+        /// <param name="">The loan amount (required).</param>
+        /// <param name="">The amount that will be given to the franchise (required).</param>
+        /// <param name="">The amount that will be kept by the franchisor (required).</param>
+        /// <param name="">The amount that will be given to the agent (required).</param>
+        /// <param name="">The date the amounts were disbursed (required).</param>
+        /// <param name="">Comment about the transaction (required).</param>
+        /// <param name="">The unique ID of the Franchisereoffice (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        public FranchisereferalincomeRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), int  = default(int), string  = default(string), AddressRequest  = default(AddressRequest), List<ContactRequestCompound>  = default(List<ContactRequestCompound>))
         {
-            this.FkiFranchisebrokerID = fkiFranchisebrokerID;
-            this.FkiFranchisereferalincomeprogramID = fkiFranchisereferalincomeprogramID;
-            this.FkiPeriodID = fkiPeriodID;
-            // to ensure "dFranchisereferalincomeLoan" is required (not null)
-            if (dFranchisereferalincomeLoan == null)
+            this.FkiFranchisebrokerID = ;
+            this.FkiFranchisereferalincomeprogramID = ;
+            this.FkiPeriodID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dFranchisereferalincomeLoan is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.DFranchisereferalincomeLoan = dFranchisereferalincomeLoan;
-            // to ensure "dFranchisereferalincomeFranchiseamount" is required (not null)
-            if (dFranchisereferalincomeFranchiseamount == null)
+            this.DFranchisereferalincomeLoan = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dFranchisereferalincomeFranchiseamount is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.DFranchisereferalincomeFranchiseamount = dFranchisereferalincomeFranchiseamount;
-            // to ensure "dFranchisereferalincomeFranchisoramount" is required (not null)
-            if (dFranchisereferalincomeFranchisoramount == null)
+            this.DFranchisereferalincomeFranchiseamount = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dFranchisereferalincomeFranchisoramount is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.DFranchisereferalincomeFranchisoramount = dFranchisereferalincomeFranchisoramount;
-            // to ensure "dFranchisereferalincomeAgentamount" is required (not null)
-            if (dFranchisereferalincomeAgentamount == null)
+            this.DFranchisereferalincomeFranchisoramount = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dFranchisereferalincomeAgentamount is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.DFranchisereferalincomeAgentamount = dFranchisereferalincomeAgentamount;
-            // to ensure "dtFranchisereferalincomeDisbursed" is required (not null)
-            if (dtFranchisereferalincomeDisbursed == null)
+            this.DFranchisereferalincomeAgentamount = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtFranchisereferalincomeDisbursed is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.DtFranchisereferalincomeDisbursed = dtFranchisereferalincomeDisbursed;
-            // to ensure "tFranchisereferalincomeComment" is required (not null)
-            if (tFranchisereferalincomeComment == null)
+            this.DtFranchisereferalincomeDisbursed = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("tFranchisereferalincomeComment is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.TFranchisereferalincomeComment = tFranchisereferalincomeComment;
-            this.FkiFranchiseofficeID = fkiFranchiseofficeID;
-            // to ensure "sFranchisereferalincomeRemoteid" is required (not null)
-            if (sFranchisereferalincomeRemoteid == null)
+            this.TFranchisereferalincomeComment = ;
+            this.FkiFranchiseofficeID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sFranchisereferalincomeRemoteid is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.SFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
-            // to ensure "aObjContact" is required (not null)
-            if (aObjContact == null)
+            this.SFranchisereferalincomeRemoteid = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjContact is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.AObjContact = aObjContact;
-            this.PkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
-            this.ObjAddress = objAddress;
+            this.AObjContact = ;
+            this.PkiFranchisereferalincomeID = ;
+            this.ObjAddress = ;
         }
 
         /// <summary>

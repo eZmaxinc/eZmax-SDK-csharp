@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzsignfoldertypeName" /> class.
         /// </summary>
-        /// <param name="sEzsignfoldertypeName1">The name of the Ezsignfoldertype in French.</param>
-        /// <param name="sEzsignfoldertypeName2">The name of the Ezsignfoldertype in English.</param>
-        public MultilingualEzsignfoldertypeName(string sEzsignfoldertypeName1 = default(string), string sEzsignfoldertypeName2 = default(string))
+        /// <param name="">The name of the Ezsignfoldertype in French.</param>
+        /// <param name="">The name of the Ezsignfoldertype in English.</param>
+        public MultilingualEzsignfoldertypeName(string  = default(string), string  = default(string))
         {
-            this.SEzsignfoldertypeName1 = sEzsignfoldertypeName1;
-            this.SEzsignfoldertypeName2 = sEzsignfoldertypeName2;
+            this.SEzsignfoldertypeName1 = ;
+            this.SEzsignfoldertypeName2 = ;
         }
 
         /// <summary>

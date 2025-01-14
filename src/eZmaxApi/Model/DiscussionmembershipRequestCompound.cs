@@ -40,25 +40,25 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmembershipRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership.</param>
-        /// <param name="fkiDiscussionID">The unique ID of the Discussion (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
-        /// <param name="fkiModulesectionID">The unique ID of the Modulesection.</param>
-        /// <param name="dtDiscussionmembershipJoined">The joined date of the Discussionmembership (required).</param>
-        public DiscussionmembershipRequestCompound(int pkiDiscussionmembershipID = default(int), int fkiDiscussionID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int), int fkiModulesectionID = default(int), string dtDiscussionmembershipJoined = default(string))
+        /// <param name="">The unique ID of the Discussionmembership.</param>
+        /// <param name="">The unique ID of the Discussion (required).</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Usergroup.</param>
+        /// <param name="">The unique ID of the Modulesection.</param>
+        /// <param name="">The joined date of the Discussionmembership (required).</param>
+        public DiscussionmembershipRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string))
         {
-            this.FkiDiscussionID = fkiDiscussionID;
-            // to ensure "dtDiscussionmembershipJoined" is required (not null)
-            if (dtDiscussionmembershipJoined == null)
+            this.FkiDiscussionID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtDiscussionmembershipJoined is a required property for DiscussionmembershipRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionmembershipRequestCompound and cannot be null");
             }
-            this.DtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
-            this.PkiDiscussionmembershipID = pkiDiscussionmembershipID;
-            this.FkiUserID = fkiUserID;
-            this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiModulesectionID = fkiModulesectionID;
+            this.DtDiscussionmembershipJoined = ;
+            this.PkiDiscussionmembershipID = ;
+            this.FkiUserID = ;
+            this.FkiUsergroupID = ;
+            this.FkiModulesectionID = ;
         }
 
         /// <summary>

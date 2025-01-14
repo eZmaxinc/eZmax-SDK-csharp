@@ -40,14 +40,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalproductRequest" /> class.
         /// </summary>
-        /// <param name="pkiBillingentityinternalproductID">The unique ID of the Billingentityinternalproduct.</param>
-        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
-        public BillingentityinternalproductRequest(int pkiBillingentityinternalproductID = default(int), int fkiEzmaxproductID = default(int), int fkiBillingentityexternalID = default(int))
+        /// <param name="">The unique ID of the Billingentityinternalproduct.</param>
+        /// <param name="">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="">The unique ID of the Billingentityexternal (required).</param>
+        public BillingentityinternalproductRequest(int  = default(int), int  = default(int), int  = default(int))
         {
-            this.FkiEzmaxproductID = fkiEzmaxproductID;
-            this.FkiBillingentityexternalID = fkiBillingentityexternalID;
-            this.PkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
+            this.FkiEzmaxproductID = ;
+            this.FkiBillingentityexternalID = ;
+            this.PkiBillingentityinternalproductID = ;
         }
 
         /// <summary>

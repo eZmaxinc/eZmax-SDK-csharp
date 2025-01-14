@@ -116,7 +116,8 @@ namespace eZmaxApi.Test.Api
             //string? eFilterActive = null;
             //string? sQuery = null;
             //HeaderAcceptLanguage? acceptLanguage = null;
-            //var response = instance.EzsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+            //int? fkiEzsignfoldertypeID = null;
+            //var response = instance.EzsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
             //Assert.IsType<EzsigntemplatepackageGetAutocompleteV2Response>(response);
         }
 

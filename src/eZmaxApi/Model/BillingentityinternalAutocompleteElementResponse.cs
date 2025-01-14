@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="bBillingentityinternalIsactive">Whether the Billingentityinternal is active or not (required).</param>
-        public BillingentityinternalAutocompleteElementResponse(int pkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), bool bBillingentityinternalIsactive = default(bool))
+        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="">Whether the Billingentityinternal is active or not (required).</param>
+        public BillingentityinternalAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiBillingentityinternalID = pkiBillingentityinternalID;
-            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
-            if (sBillingentityinternalDescriptionX == null)
+            this.PkiBillingentityinternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for BillingentityinternalAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalAutocompleteElementResponse and cannot be null");
             }
-            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-            this.BBillingentityinternalIsactive = bBillingentityinternalIsactive;
+            this.SBillingentityinternalDescriptionX = ;
+            this.BBillingentityinternalIsactive = ;
         }
 
         /// <summary>

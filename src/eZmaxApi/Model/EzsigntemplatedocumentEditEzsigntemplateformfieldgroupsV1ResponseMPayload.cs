@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiEzsigntemplateformfieldgroupID">aPkiEzsigntemplateformfieldgroupID (required).</param>
-        public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload(List<int> aPkiEzsigntemplateformfieldgroupID = default(List<int>))
+        /// <param name=""> (required).</param>
+        public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsigntemplateformfieldgroupID" is required (not null)
-            if (aPkiEzsigntemplateformfieldgroupID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsigntemplateformfieldgroupID is a required property for EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsigntemplateformfieldgroupID = aPkiEzsigntemplateformfieldgroupID;
+            this.APkiEzsigntemplateformfieldgroupID = ;
         }
 
         /// <summary>

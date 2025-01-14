@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiDiscussionID">The unique ID of the Discussion.</param>
-        /// <param name="sDiscussionDescription">The description of the Discussion (required).</param>
-        /// <param name="bDiscussionClosed">Whether if it&#39;s an closed.</param>
-        public DiscussionRequestCompound(int pkiDiscussionID = default(int), string sDiscussionDescription = default(string), bool bDiscussionClosed = default(bool))
+        /// <param name="">The unique ID of the Discussion.</param>
+        /// <param name="">The description of the Discussion (required).</param>
+        /// <param name="">Whether if it&#39;s an closed.</param>
+        public DiscussionRequestCompound(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            // to ensure "sDiscussionDescription" is required (not null)
-            if (sDiscussionDescription == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sDiscussionDescription is a required property for DiscussionRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionRequestCompound and cannot be null");
             }
-            this.SDiscussionDescription = sDiscussionDescription;
-            this.PkiDiscussionID = pkiDiscussionID;
-            this.BDiscussionClosed = bDiscussionClosed;
+            this.SDiscussionDescription = ;
+            this.PkiDiscussionID = ;
+            this.BDiscussionClosed = ;
         }
 
         /// <summary>

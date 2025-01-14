@@ -46,117 +46,117 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiEzmaxinvoicingcontractID">The unique ID of the Ezmaxinvoicingcontract (required).</param>
-        /// <param name="fkiEzmaxpricingID">The unique ID of the Ezmaxpricing (required).</param>
-        /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
-        /// <param name="sSystemconfigurationtypeDescriptionX">The description of the Systemconfigurationtype in the language of the requester (required).</param>
-        /// <param name="yyyymmEzmaxinvoicing">The YYYYMM period of the Ezmaxinvoicing (required).</param>
-        /// <param name="iEzmaxinvoicingDays">The number of days invoiced (required).</param>
-        /// <param name="eEzmaxinvoicingPaymenttype">eEzmaxinvoicingPaymenttype (required).</param>
-        /// <param name="dEzmaxinvoicingRebatepaymenttype">The percentage of rebate depending of the payment type (required).</param>
-        /// <param name="iEzmaxinvoicingContractlength">The length of the contract in years (required).</param>
-        /// <param name="dEzmaxinvoicingRebatecontractlength">The percentage of rebate depending of the contract length (required).</param>
-        /// <param name="bEzmaxinvoicingRebateEzsignallagents">Whether the rebate for eZsign is for all agents (required).</param>
-        /// <param name="objAudit">objAudit.</param>
-        /// <param name="objEzmaxinvoicingcontract">objEzmaxinvoicingcontract (required).</param>
-        /// <param name="objEzmaxpricing">objEzmaxpricing (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryglobal">aObjEzmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryexternal">aObjEzmaxinvoicingsummaryexternal (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryinternal">aObjEzmaxinvoicingsummaryinternal (required).</param>
-        /// <param name="aObjEzmaxinvoicingagent">aObjEzmaxinvoicingagent (required).</param>
-        /// <param name="aObjEzmaxinvoicinguser">aObjEzmaxinvoicinguser (required).</param>
-        /// <param name="aObjEzmaxinvoicingezsignfolder">aObjEzmaxinvoicingezsignfolder (required).</param>
-        /// <param name="aObjEzmaxinvoicingezsigndocument">aObjEzmaxinvoicingezsigndocument (required).</param>
-        public EzmaxinvoicingResponseCompound(int pkiEzmaxinvoicingID = default(int), int fkiEzmaxinvoicingcontractID = default(int), int fkiEzmaxpricingID = default(int), int fkiSystemconfigurationtypeID = default(int), string sSystemconfigurationtypeDescriptionX = default(string), string yyyymmEzmaxinvoicing = default(string), int iEzmaxinvoicingDays = default(int), FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype = default(FieldEEzmaxinvoicingPaymenttype), string dEzmaxinvoicingRebatepaymenttype = default(string), int iEzmaxinvoicingContractlength = default(int), string dEzmaxinvoicingRebatecontractlength = default(string), bool bEzmaxinvoicingRebateEzsignallagents = default(bool), CommonAudit objAudit = default(CommonAudit), EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract = default(EzmaxinvoicingcontractResponseCompound), CustomEzmaxpricingResponse objEzmaxpricing = default(CustomEzmaxpricingResponse), List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal = default(List<EzmaxinvoicingsummaryglobalResponseCompound>), List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal = default(List<EzmaxinvoicingsummaryexternalResponseCompound>), List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal = default(List<EzmaxinvoicingsummaryinternalResponseCompound>), List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent = default(List<EzmaxinvoicingagentResponseCompound>), List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser = default(List<EzmaxinvoicinguserResponseCompound>), List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder = default(List<CustomEzmaxinvoicingEzsignfolderResponse>), List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument = default(List<CustomEzmaxinvoicingEzsigndocumentResponse>))
+        /// <param name="">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="">The unique ID of the Ezmaxinvoicingcontract (required).</param>
+        /// <param name="">The unique ID of the Ezmaxpricing (required).</param>
+        /// <param name="">The unique ID of the Systemconfigurationtype (required).</param>
+        /// <param name="">The description of the Systemconfigurationtype in the language of the requester (required).</param>
+        /// <param name="">The YYYYMM period of the Ezmaxinvoicing (required).</param>
+        /// <param name="">The number of days invoiced (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The percentage of rebate depending of the payment type (required).</param>
+        /// <param name="">The length of the contract in years (required).</param>
+        /// <param name="">The percentage of rebate depending of the contract length (required).</param>
+        /// <param name="">Whether the rebate for eZsign is for all agents (required).</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public EzmaxinvoicingResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), int  = default(int), FieldEEzmaxinvoicingPaymenttype  = default(FieldEEzmaxinvoicingPaymenttype), string  = default(string), int  = default(int), string  = default(string), bool  = default(bool), CommonAudit  = default(CommonAudit), EzmaxinvoicingcontractResponseCompound  = default(EzmaxinvoicingcontractResponseCompound), CustomEzmaxpricingResponse  = default(CustomEzmaxpricingResponse), List<EzmaxinvoicingsummaryglobalResponseCompound>  = default(List<EzmaxinvoicingsummaryglobalResponseCompound>), List<EzmaxinvoicingsummaryexternalResponseCompound>  = default(List<EzmaxinvoicingsummaryexternalResponseCompound>), List<EzmaxinvoicingsummaryinternalResponseCompound>  = default(List<EzmaxinvoicingsummaryinternalResponseCompound>), List<EzmaxinvoicingagentResponseCompound>  = default(List<EzmaxinvoicingagentResponseCompound>), List<EzmaxinvoicinguserResponseCompound>  = default(List<EzmaxinvoicinguserResponseCompound>), List<CustomEzmaxinvoicingEzsignfolderResponse>  = default(List<CustomEzmaxinvoicingEzsignfolderResponse>), List<CustomEzmaxinvoicingEzsigndocumentResponse>  = default(List<CustomEzmaxinvoicingEzsigndocumentResponse>))
         {
-            this.FkiEzmaxinvoicingcontractID = fkiEzmaxinvoicingcontractID;
-            this.FkiEzmaxpricingID = fkiEzmaxpricingID;
-            this.FkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
-            // to ensure "sSystemconfigurationtypeDescriptionX" is required (not null)
-            if (sSystemconfigurationtypeDescriptionX == null)
+            this.FkiEzmaxinvoicingcontractID = ;
+            this.FkiEzmaxpricingID = ;
+            this.FkiSystemconfigurationtypeID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sSystemconfigurationtypeDescriptionX is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.SSystemconfigurationtypeDescriptionX = sSystemconfigurationtypeDescriptionX;
-            // to ensure "yyyymmEzmaxinvoicing" is required (not null)
-            if (yyyymmEzmaxinvoicing == null)
+            this.SSystemconfigurationtypeDescriptionX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("yyyymmEzmaxinvoicing is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.YyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
-            this.IEzmaxinvoicingDays = iEzmaxinvoicingDays;
-            this.EEzmaxinvoicingPaymenttype = eEzmaxinvoicingPaymenttype;
-            // to ensure "dEzmaxinvoicingRebatepaymenttype" is required (not null)
-            if (dEzmaxinvoicingRebatepaymenttype == null)
+            this.YyyymmEzmaxinvoicing = ;
+            this.IEzmaxinvoicingDays = ;
+            this.EEzmaxinvoicingPaymenttype = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingRebatepaymenttype is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingRebatepaymenttype = dEzmaxinvoicingRebatepaymenttype;
-            this.IEzmaxinvoicingContractlength = iEzmaxinvoicingContractlength;
-            // to ensure "dEzmaxinvoicingRebatecontractlength" is required (not null)
-            if (dEzmaxinvoicingRebatecontractlength == null)
+            this.DEzmaxinvoicingRebatepaymenttype = ;
+            this.IEzmaxinvoicingContractlength = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingRebatecontractlength is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingRebatecontractlength = dEzmaxinvoicingRebatecontractlength;
-            this.BEzmaxinvoicingRebateEzsignallagents = bEzmaxinvoicingRebateEzsignallagents;
-            // to ensure "objEzmaxinvoicingcontract" is required (not null)
-            if (objEzmaxinvoicingcontract == null)
+            this.DEzmaxinvoicingRebatecontractlength = ;
+            this.BEzmaxinvoicingRebateEzsignallagents = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzmaxinvoicingcontract is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.ObjEzmaxinvoicingcontract = objEzmaxinvoicingcontract;
-            // to ensure "objEzmaxpricing" is required (not null)
-            if (objEzmaxpricing == null)
+            this.ObjEzmaxinvoicingcontract = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzmaxpricing is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.ObjEzmaxpricing = objEzmaxpricing;
-            // to ensure "aObjEzmaxinvoicingsummaryglobal" is required (not null)
-            if (aObjEzmaxinvoicingsummaryglobal == null)
+            this.ObjEzmaxpricing = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzmaxinvoicingsummaryglobal is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.AObjEzmaxinvoicingsummaryglobal = aObjEzmaxinvoicingsummaryglobal;
-            // to ensure "aObjEzmaxinvoicingsummaryexternal" is required (not null)
-            if (aObjEzmaxinvoicingsummaryexternal == null)
+            this.AObjEzmaxinvoicingsummaryglobal = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzmaxinvoicingsummaryexternal is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.AObjEzmaxinvoicingsummaryexternal = aObjEzmaxinvoicingsummaryexternal;
-            // to ensure "aObjEzmaxinvoicingsummaryinternal" is required (not null)
-            if (aObjEzmaxinvoicingsummaryinternal == null)
+            this.AObjEzmaxinvoicingsummaryexternal = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzmaxinvoicingsummaryinternal is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.AObjEzmaxinvoicingsummaryinternal = aObjEzmaxinvoicingsummaryinternal;
-            // to ensure "aObjEzmaxinvoicingagent" is required (not null)
-            if (aObjEzmaxinvoicingagent == null)
+            this.AObjEzmaxinvoicingsummaryinternal = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzmaxinvoicingagent is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.AObjEzmaxinvoicingagent = aObjEzmaxinvoicingagent;
-            // to ensure "aObjEzmaxinvoicinguser" is required (not null)
-            if (aObjEzmaxinvoicinguser == null)
+            this.AObjEzmaxinvoicingagent = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzmaxinvoicinguser is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.AObjEzmaxinvoicinguser = aObjEzmaxinvoicinguser;
-            // to ensure "aObjEzmaxinvoicingezsignfolder" is required (not null)
-            if (aObjEzmaxinvoicingezsignfolder == null)
+            this.AObjEzmaxinvoicinguser = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzmaxinvoicingezsignfolder is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.AObjEzmaxinvoicingezsignfolder = aObjEzmaxinvoicingezsignfolder;
-            // to ensure "aObjEzmaxinvoicingezsigndocument" is required (not null)
-            if (aObjEzmaxinvoicingezsigndocument == null)
+            this.AObjEzmaxinvoicingezsignfolder = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzmaxinvoicingezsigndocument is a required property for EzmaxinvoicingResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingResponseCompound and cannot be null");
             }
-            this.AObjEzmaxinvoicingezsigndocument = aObjEzmaxinvoicingezsigndocument;
-            this.PkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
-            this.ObjAudit = objAudit;
+            this.AObjEzmaxinvoicingezsigndocument = ;
+            this.PkiEzmaxinvoicingID = ;
+            this.ObjAudit = ;
         }
 
         /// <summary>

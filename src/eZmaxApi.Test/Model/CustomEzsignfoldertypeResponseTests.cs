@@ -65,6 +65,33 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiFontIDAnnotation'
+        /// </summary>
+        [Fact]
+        public void FkiFontIDAnnotationTest()
+        {
+            // TODO unit test for the property 'FkiFontIDAnnotation'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFontIDFormfield'
+        /// </summary>
+        [Fact]
+        public void FkiFontIDFormfieldTest()
+        {
+            // TODO unit test for the property 'FkiFontIDFormfield'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFontIDSignature'
+        /// </summary>
+        [Fact]
+        public void FkiFontIDSignatureTest()
+        {
+            // TODO unit test for the property 'FkiFontIDSignature'
+        }
+
+        /// <summary>
         /// Test the property 'SEzsignfoldertypeNameX'
         /// </summary>
         [Fact]
@@ -101,6 +128,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BEzsignfoldertypeAutomaticsignature'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeAutomaticsignatureTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeAutomaticsignature'
+        }
+
+        /// <summary>
         /// Test the property 'BEzsignfoldertypeDelegate'
         /// </summary>
         [Fact]
@@ -134,6 +170,42 @@ namespace eZmaxApi.Test.Model
         public void BEzsignfoldertypeReassignuserTest()
         {
             // TODO unit test for the property 'BEzsignfoldertypeReassignuser'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfoldertypeReassigngroup'
+        /// </summary>
+        [Fact]
+        public void BEzsignfoldertypeReassigngroupTest()
+        {
+            // TODO unit test for the property 'BEzsignfoldertypeReassigngroup'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignfoldertypeDeadlinedays'
+        /// </summary>
+        [Fact]
+        public void IEzsignfoldertypeDeadlinedaysTest()
+        {
+            // TODO unit test for the property 'IEzsignfoldertypeDeadlinedays'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignfoldertypeFontsizeannotation'
+        /// </summary>
+        [Fact]
+        public void IEzsignfoldertypeFontsizeannotationTest()
+        {
+            // TODO unit test for the property 'IEzsignfoldertypeFontsizeannotation'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignfoldertypeFontsizeformfield'
+        /// </summary>
+        [Fact]
+        public void IEzsignfoldertypeFontsizeformfieldTest()
+        {
+            // TODO unit test for the property 'IEzsignfoldertypeFontsizeformfield'
         }
     }
 }

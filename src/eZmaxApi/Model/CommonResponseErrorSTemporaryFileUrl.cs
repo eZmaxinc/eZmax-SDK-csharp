@@ -46,19 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseErrorSTemporaryFileUrl" /> class.
         /// </summary>
-        /// <param name="sErrorMessage">The message giving details about the error (required).</param>
-        /// <param name="eErrorCode">eErrorCode (required).</param>
-        /// <param name="sTemporaryFileUrl">The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again..</param>
-        public CommonResponseErrorSTemporaryFileUrl(string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode), string sTemporaryFileUrl = default(string))
+        /// <param name="">The message giving details about the error (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">More error message detail.</param>
+        /// <param name="">The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again..</param>
+        public CommonResponseErrorSTemporaryFileUrl(string  = default(string), FieldEErrorCode  = default(FieldEErrorCode), List<string>  = default(List<string>), string  = default(string))
         {
-            // to ensure "sErrorMessage" is required (not null)
-            if (sErrorMessage == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sErrorMessage is a required property for CommonResponseErrorSTemporaryFileUrl and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseErrorSTemporaryFileUrl and cannot be null");
             }
-            this.SErrorMessage = sErrorMessage;
-            this.EErrorCode = eErrorCode;
-            this.STemporaryFileUrl = sTemporaryFileUrl;
+            this.SErrorMessage = ;
+            this.EErrorCode = ;
+            this.ASErrorMessagedetail = ;
+            this.STemporaryFileUrl = ;
         }
 
         /// <summary>
@@ -68,6 +70,13 @@ namespace eZmaxApi.Model
         /* <example>Invalid Signature Headers</example>*/
         [DataMember(Name = "sErrorMessage", IsRequired = true, EmitDefaultValue = true)]
         public string SErrorMessage { get; set; }
+
+        /// <summary>
+        /// More error message detail
+        /// </summary>
+        /// <value>More error message detail</value>
+        [DataMember(Name = "a_sErrorMessagedetail", EmitDefaultValue = false)]
+        public List<string> ASErrorMessagedetail { get; set; }
 
         /// <summary>
         /// The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
@@ -87,6 +96,7 @@ namespace eZmaxApi.Model
             sb.Append("class CommonResponseErrorSTemporaryFileUrl {\n");
             sb.Append("  SErrorMessage: ").Append(SErrorMessage).Append("\n");
             sb.Append("  EErrorCode: ").Append(EErrorCode).Append("\n");
+            sb.Append("  ASErrorMessagedetail: ").Append(ASErrorMessagedetail).Append("\n");
             sb.Append("  STemporaryFileUrl: ").Append(STemporaryFileUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

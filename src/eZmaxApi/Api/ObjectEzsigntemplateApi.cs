@@ -56,11 +56,10 @@ namespace eZmaxApi.Api
         /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV1Request"></param>
+        /// <param name="ezsigntemplateCreateObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateCreateObjectV1Response</returns>
-        [Obsolete]
-        EzsigntemplateCreateObjectV1Response EzsigntemplateCreateObjectV1(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, int operationIndex = 0);
+        /// <returns>EzsigntemplateCreateObjectV3Response</returns>
+        EzsigntemplateCreateObjectV3Response EzsigntemplateCreateObjectV3(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, int operationIndex = 0);
 
         /// <summary>
         /// Create a new Ezsigntemplate
@@ -69,34 +68,10 @@ namespace eZmaxApi.Api
         /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV1Request"></param>
+        /// <param name="ezsigntemplateCreateObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateCreateObjectV1Response</returns>
-        [Obsolete]
-        ApiResponse<EzsigntemplateCreateObjectV1Response> EzsigntemplateCreateObjectV1WithHttpInfo(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, int operationIndex = 0);
-        /// <summary>
-        /// Create a new Ezsigntemplate
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateCreateObjectV2Response</returns>
-        EzsigntemplateCreateObjectV2Response EzsigntemplateCreateObjectV2(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, int operationIndex = 0);
-
-        /// <summary>
-        /// Create a new Ezsigntemplate
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateCreateObjectV2Response</returns>
-        ApiResponse<EzsigntemplateCreateObjectV2Response> EzsigntemplateCreateObjectV2WithHttpInfo(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigntemplateCreateObjectV3Response</returns>
+        ApiResponse<EzsigntemplateCreateObjectV3Response> EzsigntemplateCreateObjectV3WithHttpInfo(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, int operationIndex = 0);
         /// <summary>
         /// Delete an existing Ezsigntemplate
         /// </summary>
@@ -122,11 +97,10 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV1Request"></param>
+        /// <param name="ezsigntemplateEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateEditObjectV1Response</returns>
-        [Obsolete]
-        EzsigntemplateEditObjectV1Response EzsigntemplateEditObjectV1(int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, int operationIndex = 0);
+        /// <returns>EzsigntemplateEditObjectV3Response</returns>
+        EzsigntemplateEditObjectV3Response EzsigntemplateEditObjectV3(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezsigntemplate
@@ -136,33 +110,10 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV1Request"></param>
+        /// <param name="ezsigntemplateEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateEditObjectV1Response</returns>
-        [Obsolete]
-        ApiResponse<EzsigntemplateEditObjectV1Response> EzsigntemplateEditObjectV1WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, int operationIndex = 0);
-        /// <summary>
-        /// Edit an existing Ezsigntemplate
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateEditObjectV2Response</returns>
-        EzsigntemplateEditObjectV2Response EzsigntemplateEditObjectV2(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, int operationIndex = 0);
-
-        /// <summary>
-        /// Edit an existing Ezsigntemplate
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateEditObjectV2Response</returns>
-        ApiResponse<EzsigntemplateEditObjectV2Response> EzsigntemplateEditObjectV2WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigntemplateEditObjectV3Response</returns>
+        ApiResponse<EzsigntemplateEditObjectV3Response> EzsigntemplateEditObjectV3WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Ezsigntemplates and IDs
         /// </summary>
@@ -174,9 +125,10 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigntemplateGetAutocompleteV2Response</returns>
-        EzsigntemplateGetAutocompleteV2Response EzsigntemplateGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
+        EzsigntemplateGetAutocompleteV2Response EzsigntemplateGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// Retrieve Ezsigntemplates and IDs
@@ -189,9 +141,10 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigntemplateGetAutocompleteV2Response</returns>
-        ApiResponse<EzsigntemplateGetAutocompleteV2Response> EzsigntemplateGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
+        ApiResponse<EzsigntemplateGetAutocompleteV2Response> EzsigntemplateGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0);
         /// <summary>
         /// Retrieve Ezsigntemplate list
         /// </summary>
@@ -229,9 +182,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateGetObjectV1Response</returns>
-        [Obsolete]
-        EzsigntemplateGetObjectV1Response EzsigntemplateGetObjectV1(int pkiEzsigntemplateID, int operationIndex = 0);
+        /// <returns>EzsigntemplateGetObjectV3Response</returns>
+        EzsigntemplateGetObjectV3Response EzsigntemplateGetObjectV3(int pkiEzsigntemplateID, int operationIndex = 0);
 
         /// <summary>
         /// Retrieve an existing Ezsigntemplate
@@ -242,29 +194,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateGetObjectV1Response</returns>
-        [Obsolete]
-        ApiResponse<EzsigntemplateGetObjectV1Response> EzsigntemplateGetObjectV1WithHttpInfo(int pkiEzsigntemplateID, int operationIndex = 0);
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplate
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateGetObjectV2Response</returns>
-        EzsigntemplateGetObjectV2Response EzsigntemplateGetObjectV2(int pkiEzsigntemplateID, int operationIndex = 0);
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplate
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateGetObjectV2Response</returns>
-        ApiResponse<EzsigntemplateGetObjectV2Response> EzsigntemplateGetObjectV2WithHttpInfo(int pkiEzsigntemplateID, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigntemplateGetObjectV3Response</returns>
+        ApiResponse<EzsigntemplateGetObjectV3Response> EzsigntemplateGetObjectV3WithHttpInfo(int pkiEzsigntemplateID, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -308,12 +239,11 @@ namespace eZmaxApi.Api
         /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV1Request"></param>
+        /// <param name="ezsigntemplateCreateObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateCreateObjectV1Response</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<EzsigntemplateCreateObjectV1Response> EzsigntemplateCreateObjectV1Async(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of EzsigntemplateCreateObjectV3Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplateCreateObjectV3Response> EzsigntemplateCreateObjectV3Async(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Ezsigntemplate
@@ -322,37 +252,11 @@ namespace eZmaxApi.Api
         /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV1Request"></param>
+        /// <param name="ezsigntemplateCreateObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateCreateObjectV1Response)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateCreateObjectV1Response>> EzsigntemplateCreateObjectV1WithHttpInfoAsync(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Create a new Ezsigntemplate
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateCreateObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplateCreateObjectV2Response> EzsigntemplateCreateObjectV2Async(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Create a new Ezsigntemplate
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateCreateObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateCreateObjectV2Response>> EzsigntemplateCreateObjectV2WithHttpInfoAsync(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigntemplateCreateObjectV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateCreateObjectV3Response>> EzsigntemplateCreateObjectV3WithHttpInfoAsync(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Ezsigntemplate
         /// </summary>
@@ -386,12 +290,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV1Request"></param>
+        /// <param name="ezsigntemplateEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateEditObjectV1Response</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<EzsigntemplateEditObjectV1Response> EzsigntemplateEditObjectV1Async(int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of EzsigntemplateEditObjectV3Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplateEditObjectV3Response> EzsigntemplateEditObjectV3Async(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezsigntemplate
@@ -401,39 +304,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV1Request"></param>
+        /// <param name="ezsigntemplateEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateEditObjectV1Response)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateEditObjectV1Response>> EzsigntemplateEditObjectV1WithHttpInfoAsync(int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Edit an existing Ezsigntemplate
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateEditObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplateEditObjectV2Response> EzsigntemplateEditObjectV2Async(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Edit an existing Ezsigntemplate
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateEditObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateEditObjectV2Response>> EzsigntemplateEditObjectV2WithHttpInfoAsync(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigntemplateEditObjectV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateEditObjectV3Response>> EzsigntemplateEditObjectV3WithHttpInfoAsync(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Ezsigntemplates and IDs
         /// </summary>
@@ -445,10 +320,11 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplateGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplateGetAutocompleteV2Response> EzsigntemplateGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplateGetAutocompleteV2Response> EzsigntemplateGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsigntemplates and IDs
@@ -461,10 +337,11 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplateGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateGetAutocompleteV2Response>> EzsigntemplateGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateGetAutocompleteV2Response>> EzsigntemplateGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Ezsigntemplate list
         /// </summary>
@@ -508,9 +385,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplateID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateGetObjectV1Response</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<EzsigntemplateGetObjectV1Response> EzsigntemplateGetObjectV1Async(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of EzsigntemplateGetObjectV3Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplateGetObjectV3Response> EzsigntemplateGetObjectV3Async(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsigntemplate
@@ -522,34 +398,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplateID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateGetObjectV1Response)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateGetObjectV1Response>> EzsigntemplateGetObjectV1WithHttpInfoAsync(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplate
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplateGetObjectV2Response> EzsigntemplateGetObjectV2Async(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplate
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateGetObjectV2Response>> EzsigntemplateGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigntemplateGetObjectV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateGetObjectV3Response>> EzsigntemplateGetObjectV3WithHttpInfoAsync(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -836,13 +686,12 @@ namespace eZmaxApi.Api
         /// Create a new Ezsigntemplate The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV1Request"></param>
+        /// <param name="ezsigntemplateCreateObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateCreateObjectV1Response</returns>
-        [Obsolete]
-        public EzsigntemplateCreateObjectV1Response EzsigntemplateCreateObjectV1(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, int operationIndex = 0)
+        /// <returns>EzsigntemplateCreateObjectV3Response</returns>
+        public EzsigntemplateCreateObjectV3Response EzsigntemplateCreateObjectV3(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV1Response> localVarResponse = EzsigntemplateCreateObjectV1WithHttpInfo(ezsigntemplateCreateObjectV1Request);
+            eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV3Response> localVarResponse = EzsigntemplateCreateObjectV3WithHttpInfo(ezsigntemplateCreateObjectV3Request);
             return localVarResponse.Data;
         }
 
@@ -850,16 +699,15 @@ namespace eZmaxApi.Api
         /// Create a new Ezsigntemplate The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV1Request"></param>
+        /// <param name="ezsigntemplateCreateObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateCreateObjectV1Response</returns>
-        [Obsolete]
-        public eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV1Response> EzsigntemplateCreateObjectV1WithHttpInfo(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigntemplateCreateObjectV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV3Response> EzsigntemplateCreateObjectV3WithHttpInfo(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, int operationIndex = 0)
         {
-            // verify the required parameter 'ezsigntemplateCreateObjectV1Request' is set
-            if (ezsigntemplateCreateObjectV1Request == null)
+            // verify the required parameter 'ezsigntemplateCreateObjectV3Request' is set
+            if (ezsigntemplateCreateObjectV3Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateCreateObjectV1Request' when calling ObjectEzsigntemplateApi->EzsigntemplateCreateObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateCreateObjectV3Request' when calling ObjectEzsigntemplateApi->EzsigntemplateCreateObjectV3");
             }
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -885,9 +733,9 @@ namespace eZmaxApi.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = ezsigntemplateCreateObjectV1Request;
+            localVarRequestOptions.Data = ezsigntemplateCreateObjectV3Request;
 
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV1";
+            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -897,10 +745,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<EzsigntemplateCreateObjectV1Response>("/1/object/ezsigntemplate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<EzsigntemplateCreateObjectV3Response>("/3/object/ezsigntemplate", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateCreateObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsigntemplateCreateObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -914,14 +762,13 @@ namespace eZmaxApi.Api
         /// Create a new Ezsigntemplate The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV1Request"></param>
+        /// <param name="ezsigntemplateCreateObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateCreateObjectV1Response</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<EzsigntemplateCreateObjectV1Response> EzsigntemplateCreateObjectV1Async(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of EzsigntemplateCreateObjectV3Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplateCreateObjectV3Response> EzsigntemplateCreateObjectV3Async(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV1Response> localVarResponse = await EzsigntemplateCreateObjectV1WithHttpInfoAsync(ezsigntemplateCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV3Response> localVarResponse = await EzsigntemplateCreateObjectV3WithHttpInfoAsync(ezsigntemplateCreateObjectV3Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -929,17 +776,16 @@ namespace eZmaxApi.Api
         /// Create a new Ezsigntemplate The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV1Request"></param>
+        /// <param name="ezsigntemplateCreateObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateCreateObjectV1Response)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV1Response>> EzsigntemplateCreateObjectV1WithHttpInfoAsync(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsigntemplateCreateObjectV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV3Response>> EzsigntemplateCreateObjectV3WithHttpInfoAsync(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'ezsigntemplateCreateObjectV1Request' is set
-            if (ezsigntemplateCreateObjectV1Request == null)
+            // verify the required parameter 'ezsigntemplateCreateObjectV3Request' is set
+            if (ezsigntemplateCreateObjectV3Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateCreateObjectV1Request' when calling ObjectEzsigntemplateApi->EzsigntemplateCreateObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateCreateObjectV3Request' when calling ObjectEzsigntemplateApi->EzsigntemplateCreateObjectV3");
             }
 
 
@@ -966,9 +812,9 @@ namespace eZmaxApi.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = ezsigntemplateCreateObjectV1Request;
+            localVarRequestOptions.Data = ezsigntemplateCreateObjectV3Request;
 
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV1";
+            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -978,167 +824,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigntemplateCreateObjectV1Response>("/1/object/ezsigntemplate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigntemplateCreateObjectV3Response>("/3/object/ezsigntemplate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateCreateObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Create a new Ezsigntemplate The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateCreateObjectV2Response</returns>
-        public EzsigntemplateCreateObjectV2Response EzsigntemplateCreateObjectV2(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV2Response> localVarResponse = EzsigntemplateCreateObjectV2WithHttpInfo(ezsigntemplateCreateObjectV2Request);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create a new Ezsigntemplate The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateCreateObjectV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV2Response> EzsigntemplateCreateObjectV2WithHttpInfo(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, int operationIndex = 0)
-        {
-            // verify the required parameter 'ezsigntemplateCreateObjectV2Request' is set
-            if (ezsigntemplateCreateObjectV2Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateCreateObjectV2Request' when calling ObjectEzsigntemplateApi->EzsigntemplateCreateObjectV2");
-            }
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = ezsigntemplateCreateObjectV2Request;
-
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV2";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EzsigntemplateCreateObjectV2Response>("/2/object/ezsigntemplate", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateCreateObjectV2", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Create a new Ezsigntemplate The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateCreateObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplateCreateObjectV2Response> EzsigntemplateCreateObjectV2Async(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV2Response> localVarResponse = await EzsigntemplateCreateObjectV2WithHttpInfoAsync(ezsigntemplateCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create a new Ezsigntemplate The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ezsigntemplateCreateObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateCreateObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateCreateObjectV2Response>> EzsigntemplateCreateObjectV2WithHttpInfoAsync(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'ezsigntemplateCreateObjectV2Request' is set
-            if (ezsigntemplateCreateObjectV2Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateCreateObjectV2Request' when calling ObjectEzsigntemplateApi->EzsigntemplateCreateObjectV2");
-            }
-
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = ezsigntemplateCreateObjectV2Request;
-
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV2";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigntemplateCreateObjectV2Response>("/2/object/ezsigntemplate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateCreateObjectV2", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsigntemplateCreateObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1295,13 +985,12 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV1Request"></param>
+        /// <param name="ezsigntemplateEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateEditObjectV1Response</returns>
-        [Obsolete]
-        public EzsigntemplateEditObjectV1Response EzsigntemplateEditObjectV1(int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, int operationIndex = 0)
+        /// <returns>EzsigntemplateEditObjectV3Response</returns>
+        public EzsigntemplateEditObjectV3Response EzsigntemplateEditObjectV3(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV1Response> localVarResponse = EzsigntemplateEditObjectV1WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV3Response> localVarResponse = EzsigntemplateEditObjectV3WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
             return localVarResponse.Data;
         }
 
@@ -1310,16 +999,15 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV1Request"></param>
+        /// <param name="ezsigntemplateEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateEditObjectV1Response</returns>
-        [Obsolete]
-        public eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV1Response> EzsigntemplateEditObjectV1WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigntemplateEditObjectV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV3Response> EzsigntemplateEditObjectV3WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, int operationIndex = 0)
         {
-            // verify the required parameter 'ezsigntemplateEditObjectV1Request' is set
-            if (ezsigntemplateEditObjectV1Request == null)
+            // verify the required parameter 'ezsigntemplateEditObjectV3Request' is set
+            if (ezsigntemplateEditObjectV3Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateEditObjectV1Request' when calling ObjectEzsigntemplateApi->EzsigntemplateEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateEditObjectV3Request' when calling ObjectEzsigntemplateApi->EzsigntemplateEditObjectV3");
             }
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1346,9 +1034,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiEzsigntemplateID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplateID)); // path parameter
-            localVarRequestOptions.Data = ezsigntemplateEditObjectV1Request;
+            localVarRequestOptions.Data = ezsigntemplateEditObjectV3Request;
 
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateEditObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -1358,10 +1046,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EzsigntemplateEditObjectV1Response>("/1/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<EzsigntemplateEditObjectV3Response>("/3/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateEditObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsigntemplateEditObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1376,14 +1064,13 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV1Request"></param>
+        /// <param name="ezsigntemplateEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateEditObjectV1Response</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<EzsigntemplateEditObjectV1Response> EzsigntemplateEditObjectV1Async(int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of EzsigntemplateEditObjectV3Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplateEditObjectV3Response> EzsigntemplateEditObjectV3Async(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV1Response> localVarResponse = await EzsigntemplateEditObjectV1WithHttpInfoAsync(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV3Response> localVarResponse = await EzsigntemplateEditObjectV3WithHttpInfoAsync(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1392,17 +1079,16 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV1Request"></param>
+        /// <param name="ezsigntemplateEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateEditObjectV1Response)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV1Response>> EzsigntemplateEditObjectV1WithHttpInfoAsync(int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsigntemplateEditObjectV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV3Response>> EzsigntemplateEditObjectV3WithHttpInfoAsync(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'ezsigntemplateEditObjectV1Request' is set
-            if (ezsigntemplateEditObjectV1Request == null)
+            // verify the required parameter 'ezsigntemplateEditObjectV3Request' is set
+            if (ezsigntemplateEditObjectV3Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateEditObjectV1Request' when calling ObjectEzsigntemplateApi->EzsigntemplateEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateEditObjectV3Request' when calling ObjectEzsigntemplateApi->EzsigntemplateEditObjectV3");
             }
 
 
@@ -1430,9 +1116,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiEzsigntemplateID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplateID)); // path parameter
-            localVarRequestOptions.Data = ezsigntemplateEditObjectV1Request;
+            localVarRequestOptions.Data = ezsigntemplateEditObjectV3Request;
 
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateEditObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -1442,173 +1128,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsigntemplateEditObjectV1Response>("/1/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsigntemplateEditObjectV3Response>("/3/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateEditObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Edit an existing Ezsigntemplate 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateEditObjectV2Response</returns>
-        public EzsigntemplateEditObjectV2Response EzsigntemplateEditObjectV2(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV2Response> localVarResponse = EzsigntemplateEditObjectV2WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Edit an existing Ezsigntemplate 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateEditObjectV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV2Response> EzsigntemplateEditObjectV2WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, int operationIndex = 0)
-        {
-            // verify the required parameter 'ezsigntemplateEditObjectV2Request' is set
-            if (ezsigntemplateEditObjectV2Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateEditObjectV2Request' when calling ObjectEzsigntemplateApi->EzsigntemplateEditObjectV2");
-            }
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiEzsigntemplateID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplateID)); // path parameter
-            localVarRequestOptions.Data = ezsigntemplateEditObjectV2Request;
-
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateEditObjectV2";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Put<EzsigntemplateEditObjectV2Response>("/2/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateEditObjectV2", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Edit an existing Ezsigntemplate 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateEditObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplateEditObjectV2Response> EzsigntemplateEditObjectV2Async(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV2Response> localVarResponse = await EzsigntemplateEditObjectV2WithHttpInfoAsync(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Edit an existing Ezsigntemplate 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="ezsigntemplateEditObjectV2Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateEditObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateEditObjectV2Response>> EzsigntemplateEditObjectV2WithHttpInfoAsync(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'ezsigntemplateEditObjectV2Request' is set
-            if (ezsigntemplateEditObjectV2Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplateEditObjectV2Request' when calling ObjectEzsigntemplateApi->EzsigntemplateEditObjectV2");
-            }
-
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiEzsigntemplateID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplateID)); // path parameter
-            localVarRequestOptions.Data = ezsigntemplateEditObjectV2Request;
-
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateEditObjectV2";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsigntemplateEditObjectV2Response>("/2/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateEditObjectV2", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsigntemplateEditObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1626,11 +1150,12 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigntemplateGetAutocompleteV2Response</returns>
-        public EzsigntemplateGetAutocompleteV2Response EzsigntemplateGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0)
+        public EzsigntemplateGetAutocompleteV2Response EzsigntemplateGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateGetAutocompleteV2Response> localVarResponse = EzsigntemplateGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+            eZmaxApi.Client.ApiResponse<EzsigntemplateGetAutocompleteV2Response> localVarResponse = EzsigntemplateGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
             return localVarResponse.Data;
         }
 
@@ -1642,9 +1167,10 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigntemplateGetAutocompleteV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsigntemplateGetAutocompleteV2Response> EzsigntemplateGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0)
+        public eZmaxApi.Client.ApiResponse<EzsigntemplateGetAutocompleteV2Response> EzsigntemplateGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -1682,6 +1208,10 @@ namespace eZmaxApi.Api
             if (sQuery != null)
             {
                 localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sQuery", sQuery));
+            }
+            if (fkiEzsignfoldertypeID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
             }
             if (acceptLanguage != null)
             {
@@ -1719,12 +1249,13 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplateGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplateGetAutocompleteV2Response> EzsigntemplateGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplateGetAutocompleteV2Response> EzsigntemplateGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateGetAutocompleteV2Response> localVarResponse = await EzsigntemplateGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigntemplateGetAutocompleteV2Response> localVarResponse = await EzsigntemplateGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1736,10 +1267,11 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplateGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateGetAutocompleteV2Response>> EzsigntemplateGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateGetAutocompleteV2Response>> EzsigntemplateGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -1778,6 +1310,10 @@ namespace eZmaxApi.Api
             if (sQuery != null)
             {
                 localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sQuery", sQuery));
+            }
+            if (fkiEzsignfoldertypeID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
             }
             if (acceptLanguage != null)
             {
@@ -2012,11 +1548,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateGetObjectV1Response</returns>
-        [Obsolete]
-        public EzsigntemplateGetObjectV1Response EzsigntemplateGetObjectV1(int pkiEzsigntemplateID, int operationIndex = 0)
+        /// <returns>EzsigntemplateGetObjectV3Response</returns>
+        public EzsigntemplateGetObjectV3Response EzsigntemplateGetObjectV3(int pkiEzsigntemplateID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV1Response> localVarResponse = EzsigntemplateGetObjectV1WithHttpInfo(pkiEzsigntemplateID);
+            eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV3Response> localVarResponse = EzsigntemplateGetObjectV3WithHttpInfo(pkiEzsigntemplateID);
             return localVarResponse.Data;
         }
 
@@ -2026,9 +1561,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplateID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateGetObjectV1Response</returns>
-        [Obsolete]
-        public eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV1Response> EzsigntemplateGetObjectV1WithHttpInfo(int pkiEzsigntemplateID, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigntemplateGetObjectV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV3Response> EzsigntemplateGetObjectV3WithHttpInfo(int pkiEzsigntemplateID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -2054,7 +1588,7 @@ namespace eZmaxApi.Api
 
             localVarRequestOptions.PathParameters.Add("pkiEzsigntemplateID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplateID)); // path parameter
 
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateGetObjectV1";
+            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateGetObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -2064,10 +1598,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<EzsigntemplateGetObjectV1Response>("/1/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<EzsigntemplateGetObjectV3Response>("/3/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateGetObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsigntemplateGetObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2084,11 +1618,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplateID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateGetObjectV1Response</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<EzsigntemplateGetObjectV1Response> EzsigntemplateGetObjectV1Async(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of EzsigntemplateGetObjectV3Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplateGetObjectV3Response> EzsigntemplateGetObjectV3Async(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV1Response> localVarResponse = await EzsigntemplateGetObjectV1WithHttpInfoAsync(pkiEzsigntemplateID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV3Response> localVarResponse = await EzsigntemplateGetObjectV3WithHttpInfoAsync(pkiEzsigntemplateID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2099,9 +1632,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplateID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateGetObjectV1Response)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV1Response>> EzsigntemplateGetObjectV1WithHttpInfoAsync(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsigntemplateGetObjectV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV3Response>> EzsigntemplateGetObjectV3WithHttpInfoAsync(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -2128,7 +1660,7 @@ namespace eZmaxApi.Api
 
             localVarRequestOptions.PathParameters.Add("pkiEzsigntemplateID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplateID)); // path parameter
 
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateGetObjectV1";
+            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateGetObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -2138,153 +1670,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsigntemplateGetObjectV1Response>("/1/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsigntemplateGetObjectV3Response>("/3/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateGetObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplate 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplateGetObjectV2Response</returns>
-        public EzsigntemplateGetObjectV2Response EzsigntemplateGetObjectV2(int pkiEzsigntemplateID, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV2Response> localVarResponse = EzsigntemplateGetObjectV2WithHttpInfo(pkiEzsigntemplateID);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplate 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplateGetObjectV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV2Response> EzsigntemplateGetObjectV2WithHttpInfo(int pkiEzsigntemplateID, int operationIndex = 0)
-        {
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiEzsigntemplateID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplateID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateGetObjectV2";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Get<EzsigntemplateGetObjectV2Response>("/2/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateGetObjectV2", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplate 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplateGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplateGetObjectV2Response> EzsigntemplateGetObjectV2Async(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV2Response> localVarResponse = await EzsigntemplateGetObjectV2WithHttpInfoAsync(pkiEzsigntemplateID, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve an existing Ezsigntemplate 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigntemplateID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplateGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateGetObjectV2Response>> EzsigntemplateGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplateID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiEzsigntemplateID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplateID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectEzsigntemplateApi.EzsigntemplateGetObjectV2";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsigntemplateGetObjectV2Response>("/2/object/ezsigntemplate/{pkiEzsigntemplateID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("EzsigntemplateGetObjectV2", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsigntemplateGetObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

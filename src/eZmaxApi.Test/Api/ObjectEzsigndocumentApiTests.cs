@@ -132,6 +132,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsigndocumentCreateObjectV3
+        /// </summary>
+        [Fact]
+        public void EzsigndocumentCreateObjectV3Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //EzsigndocumentCreateObjectV3Request ezsigndocumentCreateObjectV3Request = null;
+            //var response = instance.EzsigndocumentCreateObjectV3(ezsigndocumentCreateObjectV3Request);
+            //Assert.IsType<EzsigndocumentCreateObjectV3Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsigndocumentDeclineToSignV1
         /// </summary>
         [Fact]
@@ -154,6 +166,19 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigndocumentID = null;
             //var response = instance.EzsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
             //Assert.IsType<EzsigndocumentDeleteObjectV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test EzsigndocumentEditEzsignannotationsV1
+        /// </summary>
+        [Fact]
+        public void EzsigndocumentEditEzsignannotationsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //EzsigndocumentEditEzsignannotationsV1Request ezsigndocumentEditEzsignannotationsV1Request = null;
+            //var response = instance.EzsigndocumentEditEzsignannotationsV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignannotationsV1Request);
+            //Assert.IsType<EzsigndocumentEditEzsignannotationsV1Response>(response);
         }
 
         /// <summary>
@@ -183,6 +208,19 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsigndocumentEditObjectV1
+        /// </summary>
+        [Fact]
+        public void EzsigndocumentEditObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //EzsigndocumentEditObjectV1Request ezsigndocumentEditObjectV1Request = null;
+            //var response = instance.EzsigndocumentEditObjectV1(pkiEzsigndocumentID, ezsigndocumentEditObjectV1Request);
+            //Assert.IsType<EzsigndocumentEditObjectV1Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsigndocumentEndPrematurelyV1
         /// </summary>
         [Fact]
@@ -193,6 +231,19 @@ namespace eZmaxApi.Test.Api
             //Object body = null;
             //var response = instance.EzsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
             //Assert.IsType<EzsigndocumentEndPrematurelyV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test EzsigndocumentExtractTextV1
+        /// </summary>
+        [Fact]
+        public void EzsigndocumentExtractTextV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsigndocumentID = null;
+            //EzsigndocumentExtractTextV1Request ezsigndocumentExtractTextV1Request = null;
+            //var response = instance.EzsigndocumentExtractTextV1(pkiEzsigndocumentID, ezsigndocumentExtractTextV1Request);
+            //Assert.IsType<EzsigndocumentExtractTextV1Response>(response);
         }
 
         /// <summary>

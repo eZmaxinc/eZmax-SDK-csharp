@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objUser">objUser (required).</param>
-        public UserEditObjectV1Request(UserRequestCompound objUser = default(UserRequestCompound))
+        /// <param name=""> (required).</param>
+        public UserEditObjectV1Request(UserRequestCompound  = default(UserRequestCompound))
         {
-            // to ensure "objUser" is required (not null)
-            if (objUser == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objUser is a required property for UserEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserEditObjectV1Request and cannot be null");
             }
-            this.ObjUser = objUser;
+            this.ObjUser = ;
         }
 
         /// <summary>

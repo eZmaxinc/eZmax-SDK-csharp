@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request" /> class.
         /// </summary>
-        /// <param name="aObjEzsigntemplateformfieldgroup">aObjEzsigntemplateformfieldgroup (required).</param>
-        public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request(List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup = default(List<EzsigntemplateformfieldgroupRequestCompound>))
+        /// <param name=""> (required).</param>
+        public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request(List<EzsigntemplateformfieldgroupRequestCompound>  = default(List<EzsigntemplateformfieldgroupRequestCompound>))
         {
-            // to ensure "aObjEzsigntemplateformfieldgroup" is required (not null)
-            if (aObjEzsigntemplateformfieldgroup == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsigntemplateformfieldgroup is a required property for EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request and cannot be null");
             }
-            this.AObjEzsigntemplateformfieldgroup = aObjEzsigntemplateformfieldgroup;
+            this.AObjEzsigntemplateformfieldgroup = ;
         }
 
         /// <summary>

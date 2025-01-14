@@ -46,21 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="eUserType">eUserType (required).</param>
-        /// <param name="sUserName">The description of the User in the language of the requester (required).</param>
-        /// <param name="pkiUserID">The unique ID of the User (required).</param>
-        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
-        public UserAutocompleteElementResponse(FieldEUserType eUserType = default(FieldEUserType), string sUserName = default(string), int pkiUserID = default(int), bool bUserIsactive = default(bool))
+        /// <param name=""> (required).</param>
+        /// <param name="">The description of the User in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name="">Whether the User is active or not (required).</param>
+        public UserAutocompleteElementResponse(FieldEUserType  = default(FieldEUserType), string  = default(string), int  = default(int), bool  = default(bool))
         {
-            this.EUserType = eUserType;
-            // to ensure "sUserName" is required (not null)
-            if (sUserName == null)
+            this.EUserType = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserName is a required property for UserAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserAutocompleteElementResponse and cannot be null");
             }
-            this.SUserName = sUserName;
-            this.PkiUserID = pkiUserID;
-            this.BUserIsactive = bUserIsactive;
+            this.SUserName = ;
+            this.PkiUserID = ;
+            this.BUserIsactive = ;
         }
 
         /// <summary>

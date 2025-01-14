@@ -106,6 +106,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsignfolderCreateObjectV3
+        /// </summary>
+        [Fact]
+        public void EzsignfolderCreateObjectV3Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request = null;
+            //var response = instance.EzsignfolderCreateObjectV3(ezsignfolderCreateObjectV3Request);
+            //Assert.IsType<EzsignfolderCreateObjectV3Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsignfolderDeleteObjectV1
         /// </summary>
         [Fact]
@@ -143,16 +155,16 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzsignfolderEditObjectV1
+        /// Test EzsignfolderEditObjectV3
         /// </summary>
         [Fact]
-        public void EzsignfolderEditObjectV1Test()
+        public void EzsignfolderEditObjectV3Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsignfolderID = null;
-            //EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request = null;
-            //var response = instance.EzsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
-            //Assert.IsType<EzsignfolderEditObjectV1Response>(response);
+            //EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request = null;
+            //var response = instance.EzsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
+            //Assert.IsType<EzsignfolderEditObjectV3Response>(response);
         }
 
         /// <summary>
@@ -341,6 +353,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsignfolderGetObjectV3
+        /// </summary>
+        [Fact]
+        public void EzsignfolderGetObjectV3Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //var response = instance.EzsignfolderGetObjectV3(pkiEzsignfolderID);
+            //Assert.IsType<EzsignfolderGetObjectV3Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsignfolderImportEzsignfoldersignerassociationsV1
         /// </summary>
         [Fact]
@@ -377,6 +401,19 @@ namespace eZmaxApi.Test.Api
             //EzsignfolderReorderV1Request ezsignfolderReorderV1Request = null;
             //var response = instance.EzsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request);
             //Assert.IsType<EzsignfolderReorderV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test EzsignfolderReorderV2
+        /// </summary>
+        [Fact]
+        public void EzsignfolderReorderV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfolderID = null;
+            //EzsignfolderReorderV2Request ezsignfolderReorderV2Request = null;
+            //var response = instance.EzsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request);
+            //Assert.IsType<EzsignfolderReorderV2Response>(response);
         }
 
         /// <summary>

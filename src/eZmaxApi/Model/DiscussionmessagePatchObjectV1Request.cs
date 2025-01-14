@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmessagePatchObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objDiscussionmessage">objDiscussionmessage (required).</param>
-        public DiscussionmessagePatchObjectV1Request(DiscussionmessageRequestPatch objDiscussionmessage = default(DiscussionmessageRequestPatch))
+        /// <param name=""> (required).</param>
+        public DiscussionmessagePatchObjectV1Request(DiscussionmessageRequestPatch  = default(DiscussionmessageRequestPatch))
         {
-            // to ensure "objDiscussionmessage" is required (not null)
-            if (objDiscussionmessage == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objDiscussionmessage is a required property for DiscussionmessagePatchObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionmessagePatchObjectV1Request and cannot be null");
             }
-            this.ObjDiscussionmessage = objDiscussionmessage;
+            this.ObjDiscussionmessage = ;
         }
 
         /// <summary>

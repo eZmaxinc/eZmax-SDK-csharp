@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardtypeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjCreditcardtype">An array of Creditcardtype object containing the description, ID and active status about the element. (required).</param>
-        public CreditcardtypeGetAutocompleteV2ResponseMPayload(List<CreditcardtypeAutocompleteElementResponse> aObjCreditcardtype = default(List<CreditcardtypeAutocompleteElementResponse>))
+        /// <param name="">An array of Creditcardtype object containing the description, ID and active status about the element. (required).</param>
+        public CreditcardtypeGetAutocompleteV2ResponseMPayload(List<CreditcardtypeAutocompleteElementResponse>  = default(List<CreditcardtypeAutocompleteElementResponse>))
         {
-            // to ensure "aObjCreditcardtype" is required (not null)
-            if (aObjCreditcardtype == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCreditcardtype is a required property for CreditcardtypeGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardtypeGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjCreditcardtype = aObjCreditcardtype;
+            this.AObjCreditcardtype = ;
         }
 
         /// <summary>

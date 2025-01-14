@@ -28,6 +28,26 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OtherincomeGetCommunicationCountV1Response</returns>
+        OtherincomeGetCommunicationCountV1Response OtherincomeGetCommunicationCountV1(int pkiOtherincomeID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OtherincomeGetCommunicationCountV1Response</returns>
+        ApiResponse<OtherincomeGetCommunicationCountV1Response> OtherincomeGetCommunicationCountV1WithHttpInfo(int pkiOtherincomeID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Communication list
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -47,6 +67,46 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OtherincomeGetCommunicationListV1Response</returns>
         ApiResponse<OtherincomeGetCommunicationListV1Response> OtherincomeGetCommunicationListV1WithHttpInfo(int pkiOtherincomeID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationrecipient
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OtherincomeGetCommunicationrecipientsV1Response</returns>
+        OtherincomeGetCommunicationrecipientsV1Response OtherincomeGetCommunicationrecipientsV1(int pkiOtherincomeID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OtherincomeGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<OtherincomeGetCommunicationrecipientsV1Response> OtherincomeGetCommunicationrecipientsV1WithHttpInfo(int pkiOtherincomeID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationsender
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OtherincomeGetCommunicationsendersV1Response</returns>
+        OtherincomeGetCommunicationsendersV1Response OtherincomeGetCommunicationsendersV1(int pkiOtherincomeID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OtherincomeGetCommunicationsendersV1Response</returns>
+        ApiResponse<OtherincomeGetCommunicationsendersV1Response> OtherincomeGetCommunicationsendersV1WithHttpInfo(int pkiOtherincomeID, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -56,6 +116,31 @@ namespace eZmaxApi.Api
     public interface IObjectOtherincomeApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OtherincomeGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<OtherincomeGetCommunicationCountV1Response> OtherincomeGetCommunicationCountV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OtherincomeGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationCountV1Response>> OtherincomeGetCommunicationCountV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -81,6 +166,56 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OtherincomeGetCommunicationListV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationListV1Response>> OtherincomeGetCommunicationListV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OtherincomeGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<OtherincomeGetCommunicationrecipientsV1Response> OtherincomeGetCommunicationrecipientsV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OtherincomeGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationrecipientsV1Response>> OtherincomeGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OtherincomeGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<OtherincomeGetCommunicationsendersV1Response> OtherincomeGetCommunicationsendersV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OtherincomeGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationsendersV1Response>> OtherincomeGetCommunicationsendersV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -199,6 +334,148 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OtherincomeGetCommunicationCountV1Response</returns>
+        public OtherincomeGetCommunicationCountV1Response OtherincomeGetCommunicationCountV1(int pkiOtherincomeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationCountV1Response> localVarResponse = OtherincomeGetCommunicationCountV1WithHttpInfo(pkiOtherincomeID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OtherincomeGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationCountV1Response> OtherincomeGetCommunicationCountV1WithHttpInfo(int pkiOtherincomeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOtherincomeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOtherincomeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOtherincomeApi.OtherincomeGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<OtherincomeGetCommunicationCountV1Response>("/1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OtherincomeGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OtherincomeGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationCountV1Response> OtherincomeGetCommunicationCountV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationCountV1Response> localVarResponse = await OtherincomeGetCommunicationCountV1WithHttpInfoAsync(pkiOtherincomeID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OtherincomeGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationCountV1Response>> OtherincomeGetCommunicationCountV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOtherincomeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOtherincomeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOtherincomeApi.OtherincomeGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OtherincomeGetCommunicationCountV1Response>("/1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OtherincomeGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>
@@ -334,6 +611,290 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OtherincomeGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OtherincomeGetCommunicationrecipientsV1Response</returns>
+        public OtherincomeGetCommunicationrecipientsV1Response OtherincomeGetCommunicationrecipientsV1(int pkiOtherincomeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationrecipientsV1Response> localVarResponse = OtherincomeGetCommunicationrecipientsV1WithHttpInfo(pkiOtherincomeID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OtherincomeGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationrecipientsV1Response> OtherincomeGetCommunicationrecipientsV1WithHttpInfo(int pkiOtherincomeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOtherincomeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOtherincomeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOtherincomeApi.OtherincomeGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<OtherincomeGetCommunicationrecipientsV1Response>("/1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OtherincomeGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OtherincomeGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationrecipientsV1Response> OtherincomeGetCommunicationrecipientsV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationrecipientsV1Response> localVarResponse = await OtherincomeGetCommunicationrecipientsV1WithHttpInfoAsync(pkiOtherincomeID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OtherincomeGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationrecipientsV1Response>> OtherincomeGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOtherincomeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOtherincomeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOtherincomeApi.OtherincomeGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OtherincomeGetCommunicationrecipientsV1Response>("/1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OtherincomeGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OtherincomeGetCommunicationsendersV1Response</returns>
+        public OtherincomeGetCommunicationsendersV1Response OtherincomeGetCommunicationsendersV1(int pkiOtherincomeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationsendersV1Response> localVarResponse = OtherincomeGetCommunicationsendersV1WithHttpInfo(pkiOtherincomeID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OtherincomeGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationsendersV1Response> OtherincomeGetCommunicationsendersV1WithHttpInfo(int pkiOtherincomeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOtherincomeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOtherincomeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOtherincomeApi.OtherincomeGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<OtherincomeGetCommunicationsendersV1Response>("/1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OtherincomeGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OtherincomeGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationsendersV1Response> OtherincomeGetCommunicationsendersV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationsendersV1Response> localVarResponse = await OtherincomeGetCommunicationsendersV1WithHttpInfoAsync(pkiOtherincomeID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Otherincome&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOtherincomeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OtherincomeGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationsendersV1Response>> OtherincomeGetCommunicationsendersV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOtherincomeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOtherincomeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOtherincomeApi.OtherincomeGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OtherincomeGetCommunicationsendersV1Response>("/1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OtherincomeGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -74,6 +74,31 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of UserCreateObjectV2Response</returns>
         ApiResponse<UserCreateObjectV2Response> UserCreateObjectV2WithHttpInfo(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0);
         /// <summary>
+        /// Edit multiple Colleagues
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Colleagues at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userEditColleaguesV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserEditColleaguesV2Response</returns>
+        UserEditColleaguesV2Response UserEditColleaguesV2(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Edit multiple Colleagues
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Colleagues at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userEditColleaguesV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserEditColleaguesV2Response</returns>
+        ApiResponse<UserEditColleaguesV2Response> UserEditColleaguesV2WithHttpInfo(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0);
+        /// <summary>
         /// Edit an existing User
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -169,6 +194,26 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UserGetAutocompleteV2Response</returns>
         ApiResponse<UserGetAutocompleteV2Response> UserGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
+        /// <summary>
+        /// Retrieve an existing User&#39;s Colleagues
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserGetColleaguesV2Response</returns>
+        UserGetColleaguesV2Response UserGetColleaguesV2(int pkiUserID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve an existing User&#39;s Colleagues
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserGetColleaguesV2Response</returns>
+        ApiResponse<UserGetColleaguesV2Response> UserGetColleaguesV2WithHttpInfo(int pkiUserID, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing User&#39;s Effective Permissions
         /// </summary>
@@ -408,6 +453,33 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (UserCreateObjectV2Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserCreateObjectV2Response>> UserCreateObjectV2WithHttpInfoAsync(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// Edit multiple Colleagues
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Colleagues at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userEditColleaguesV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserEditColleaguesV2Response</returns>
+        System.Threading.Tasks.Task<UserEditColleaguesV2Response> UserEditColleaguesV2Async(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Edit multiple Colleagues
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Colleagues at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userEditColleaguesV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserEditColleaguesV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserEditColleaguesV2Response>> UserEditColleaguesV2WithHttpInfoAsync(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Edit an existing User
         /// </summary>
         /// <remarks>
@@ -517,6 +589,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetAutocompleteV2Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserGetAutocompleteV2Response>> UserGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve an existing User&#39;s Colleagues
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserGetColleaguesV2Response</returns>
+        System.Threading.Tasks.Task<UserGetColleaguesV2Response> UserGetColleaguesV2Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing User&#39;s Colleagues
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserGetColleaguesV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserGetColleaguesV2Response>> UserGetColleaguesV2WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing User&#39;s Effective Permissions
         /// </summary>
@@ -1150,6 +1247,168 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UserCreateObjectV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Edit multiple Colleagues Using this endpoint, you can edit multiple Colleagues at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userEditColleaguesV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserEditColleaguesV2Response</returns>
+        public UserEditColleaguesV2Response UserEditColleaguesV2(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<UserEditColleaguesV2Response> localVarResponse = UserEditColleaguesV2WithHttpInfo(pkiUserID, userEditColleaguesV2Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit multiple Colleagues Using this endpoint, you can edit multiple Colleagues at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userEditColleaguesV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserEditColleaguesV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<UserEditColleaguesV2Response> UserEditColleaguesV2WithHttpInfo(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'userEditColleaguesV2Request' is set
+            if (userEditColleaguesV2Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'userEditColleaguesV2Request' when calling ObjectUserApi->UserEditColleaguesV2");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+            localVarRequestOptions.Data = userEditColleaguesV2Request;
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserEditColleaguesV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Put<UserEditColleaguesV2Response>("/2/object/user/{pkiUserID}/editColleagues", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserEditColleaguesV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Edit multiple Colleagues Using this endpoint, you can edit multiple Colleagues at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userEditColleaguesV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserEditColleaguesV2Response</returns>
+        public async System.Threading.Tasks.Task<UserEditColleaguesV2Response> UserEditColleaguesV2Async(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<UserEditColleaguesV2Response> localVarResponse = await UserEditColleaguesV2WithHttpInfoAsync(pkiUserID, userEditColleaguesV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit multiple Colleagues Using this endpoint, you can edit multiple Colleagues at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userEditColleaguesV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserEditColleaguesV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserEditColleaguesV2Response>> UserEditColleaguesV2WithHttpInfoAsync(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userEditColleaguesV2Request' is set
+            if (userEditColleaguesV2Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'userEditColleaguesV2Request' when calling ObjectUserApi->UserEditColleaguesV2");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+            localVarRequestOptions.Data = userEditColleaguesV2Request;
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserEditColleaguesV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PutAsync<UserEditColleaguesV2Response>("/2/object/user/{pkiUserID}/editColleagues", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserEditColleaguesV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1806,6 +2065,148 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UserGetAutocompleteV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing User&#39;s Colleagues 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserGetColleaguesV2Response</returns>
+        public UserGetColleaguesV2Response UserGetColleaguesV2(int pkiUserID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<UserGetColleaguesV2Response> localVarResponse = UserGetColleaguesV2WithHttpInfo(pkiUserID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing User&#39;s Colleagues 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserGetColleaguesV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<UserGetColleaguesV2Response> UserGetColleaguesV2WithHttpInfo(int pkiUserID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserGetColleaguesV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<UserGetColleaguesV2Response>("/2/object/user/{pkiUserID}/getColleagues", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserGetColleaguesV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing User&#39;s Colleagues 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserGetColleaguesV2Response</returns>
+        public async System.Threading.Tasks.Task<UserGetColleaguesV2Response> UserGetColleaguesV2Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<UserGetColleaguesV2Response> localVarResponse = await UserGetColleaguesV2WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing User&#39;s Colleagues 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserGetColleaguesV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetColleaguesV2Response>> UserGetColleaguesV2WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserGetColleaguesV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<UserGetColleaguesV2Response>("/2/object/user/{pkiUserID}/getColleagues", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserGetColleaguesV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

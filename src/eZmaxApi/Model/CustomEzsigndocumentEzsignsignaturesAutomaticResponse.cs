@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsigndocumentEzsignsignaturesAutomaticResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="aObjEzsignsignature">aObjEzsignsignature (required).</param>
-        public CustomEzsigndocumentEzsignsignaturesAutomaticResponse(int pkiEzsigndocumentID = default(int), string sEzsigndocumentName = default(string), List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse> aObjEzsignsignature = default(List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>))
+        /// <param name="">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
+        /// <param name=""> (required).</param>
+        public CustomEzsigndocumentEzsignsignaturesAutomaticResponse(int  = default(int), string  = default(string), List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>  = default(List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>))
         {
-            this.PkiEzsigndocumentID = pkiEzsigndocumentID;
-            // to ensure "sEzsigndocumentName" is required (not null)
-            if (sEzsigndocumentName == null)
+            this.PkiEzsigndocumentID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigndocumentName is a required property for CustomEzsigndocumentEzsignsignaturesAutomaticResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsigndocumentEzsignsignaturesAutomaticResponse and cannot be null");
             }
-            this.SEzsigndocumentName = sEzsigndocumentName;
-            // to ensure "aObjEzsignsignature" is required (not null)
-            if (aObjEzsignsignature == null)
+            this.SEzsigndocumentName = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignsignature is a required property for CustomEzsigndocumentEzsignsignaturesAutomaticResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsigndocumentEzsignsignaturesAutomaticResponse and cannot be null");
             }
-            this.AObjEzsignsignature = aObjEzsignsignature;
+            this.AObjEzsignsignature = ;
         }
 
         /// <summary>

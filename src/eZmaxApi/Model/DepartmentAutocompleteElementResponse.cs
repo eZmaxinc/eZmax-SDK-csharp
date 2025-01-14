@@ -40,26 +40,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DepartmentAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
-        /// <param name="pkiDepartmentID">The unique ID of the Department (required).</param>
-        /// <param name="bDepartmentIsactive">Whether the Department is active or not (required).</param>
-        public DepartmentAutocompleteElementResponse(string sCompanyNameX = default(string), string sDepartmentNameX = default(string), int pkiDepartmentID = default(int), bool bDepartmentIsactive = default(bool))
+        /// <param name="">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="">The Name of the Department in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Department (required).</param>
+        /// <param name="">Whether the Department is active or not (required).</param>
+        public DepartmentAutocompleteElementResponse(string  = default(string), string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sCompanyNameX" is required (not null)
-            if (sCompanyNameX == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCompanyNameX is a required property for DepartmentAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for DepartmentAutocompleteElementResponse and cannot be null");
             }
-            this.SCompanyNameX = sCompanyNameX;
-            // to ensure "sDepartmentNameX" is required (not null)
-            if (sDepartmentNameX == null)
+            this.SCompanyNameX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sDepartmentNameX is a required property for DepartmentAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for DepartmentAutocompleteElementResponse and cannot be null");
             }
-            this.SDepartmentNameX = sDepartmentNameX;
-            this.PkiDepartmentID = pkiDepartmentID;
-            this.BDepartmentIsactive = bDepartmentIsactive;
+            this.SDepartmentNameX = ;
+            this.PkiDepartmentID = ;
+            this.BDepartmentIsactive = ;
         }
 
         /// <summary>

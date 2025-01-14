@@ -182,6 +182,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SEzsignformfieldgroupTextvalidationcustommessage'
+        /// </summary>
+        [Fact]
+        public void SEzsignformfieldgroupTextvalidationcustommessageTest()
+        {
+            // TODO unit test for the property 'SEzsignformfieldgroupTextvalidationcustommessage'
+        }
+
+        /// <summary>
         /// Test the property 'TEzsignformfieldgroupTooltip'
         /// </summary>
         [Fact]

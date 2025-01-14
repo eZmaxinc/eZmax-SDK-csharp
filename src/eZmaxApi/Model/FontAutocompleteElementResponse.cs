@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FontAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sFontName">The name of the Font (required).</param>
-        /// <param name="pkiFontID">The unique ID of the Font (required).</param>
-        /// <param name="bFontIsactive">Whether the Font is active or not (required).</param>
-        public FontAutocompleteElementResponse(string sFontName = default(string), int pkiFontID = default(int), bool bFontIsactive = default(bool))
+        /// <param name="">The name of the Font (required).</param>
+        /// <param name="">The unique ID of the Font (required).</param>
+        /// <param name="">Whether the Font is active or not (required).</param>
+        public FontAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sFontName" is required (not null)
-            if (sFontName == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sFontName is a required property for FontAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for FontAutocompleteElementResponse and cannot be null");
             }
-            this.SFontName = sFontName;
-            this.PkiFontID = pkiFontID;
-            this.BFontIsactive = bFontIsactive;
+            this.SFontName = ;
+            this.PkiFontID = ;
+            this.BFontIsactive = ;
         }
 
         /// <summary>

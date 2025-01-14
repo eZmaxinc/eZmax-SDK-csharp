@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedMapV1Request" /> class.
         /// </summary>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        public UserstagedMapV1Request(int fkiUserID = default(int))
+        /// <param name="">The unique ID of the User (required).</param>
+        public UserstagedMapV1Request(int  = default(int))
         {
-            this.FkiUserID = fkiUserID;
+            this.FkiUserID = ;
         }
 
         /// <summary>

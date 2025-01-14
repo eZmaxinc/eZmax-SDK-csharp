@@ -58,32 +58,32 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignannotationResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsignannotationID">The unique ID of the Ezsignannotation (required).</param>
-        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="eEzsignannotationHorizontalalignment">eEzsignannotationHorizontalalignment.</param>
-        /// <param name="eEzsignannotationVerticalalignment">eEzsignannotationVerticalalignment.</param>
-        /// <param name="eEzsignannotationType">eEzsignannotationType (required).</param>
-        /// <param name="iEzsignannotationX">The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="iEzsignannotationY">The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
-        /// <param name="iEzsignannotationWidth">The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \&quot;300\&quot; for the Width..</param>
-        /// <param name="iEzsignannotationHeight">The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**.</param>
-        /// <param name="sEzsignannotationText">The Text of the Ezsignannotation.</param>
-        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
-        /// <param name="objTextstylestatic">objTextstylestatic.</param>
-        public EzsignannotationResponseCompound(int pkiEzsignannotationID = default(int), int fkiEzsigndocumentID = default(int), EnumHorizontalalignment? eEzsignannotationHorizontalalignment = default(EnumHorizontalalignment?), EnumVerticalalignment? eEzsignannotationVerticalalignment = default(EnumVerticalalignment?), FieldEEzsignannotationType eEzsignannotationType = default(FieldEEzsignannotationType), int iEzsignannotationX = default(int), int iEzsignannotationY = default(int), int iEzsignannotationWidth = default(int), int iEzsignannotationHeight = default(int), string sEzsignannotationText = default(string), int iEzsignpagePagenumber = default(int), TextstylestaticResponseCompound objTextstylestatic = default(TextstylestaticResponseCompound))
+        /// <param name="">The unique ID of the Ezsignannotation (required).</param>
+        /// <param name="">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
+        /// <param name="">The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="">The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \&quot;300\&quot; for the Width..</param>
+        /// <param name="">The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**.</param>
+        /// <param name="">The Text of the Ezsignannotation.</param>
+        /// <param name="">The page number in the Ezsigndocument (required).</param>
+        /// <param name="">.</param>
+        public EzsignannotationResponseCompound(int  = default(int), int  = default(int), EnumHorizontalalignment?  = default(EnumHorizontalalignment?), EnumVerticalalignment?  = default(EnumVerticalalignment?), FieldEEzsignannotationType  = default(FieldEEzsignannotationType), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), int  = default(int), TextstylestaticResponseCompound  = default(TextstylestaticResponseCompound))
         {
-            this.PkiEzsignannotationID = pkiEzsignannotationID;
-            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
-            this.EEzsignannotationType = eEzsignannotationType;
-            this.IEzsignannotationX = iEzsignannotationX;
-            this.IEzsignannotationY = iEzsignannotationY;
-            this.IEzsignpagePagenumber = iEzsignpagePagenumber;
-            this.EEzsignannotationHorizontalalignment = eEzsignannotationHorizontalalignment;
-            this.EEzsignannotationVerticalalignment = eEzsignannotationVerticalalignment;
-            this.IEzsignannotationWidth = iEzsignannotationWidth;
-            this.IEzsignannotationHeight = iEzsignannotationHeight;
-            this.SEzsignannotationText = sEzsignannotationText;
-            this.ObjTextstylestatic = objTextstylestatic;
+            this.PkiEzsignannotationID = ;
+            this.FkiEzsigndocumentID = ;
+            this.EEzsignannotationType = ;
+            this.IEzsignannotationX = ;
+            this.IEzsignannotationY = ;
+            this.IEzsignpagePagenumber = ;
+            this.EEzsignannotationHorizontalalignment = ;
+            this.EEzsignannotationVerticalalignment = ;
+            this.IEzsignannotationWidth = ;
+            this.IEzsignannotationHeight = ;
+            this.SEzsignannotationText = ;
+            this.ObjTextstylestatic = ;
         }
 
         /// <summary>

@@ -40,27 +40,27 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionResponse" /> class.
         /// </summary>
-        /// <param name="pkiDiscussionID">The unique ID of the Discussion (required).</param>
-        /// <param name="sDiscussionDescription">The description of the Discussion (required).</param>
-        /// <param name="bDiscussionClosed">Whether if it&#39;s an closed (required).</param>
-        /// <param name="dtDiscussionLastread">The date the Discussion was last read.</param>
-        /// <param name="iDiscussionmessageCount">The count of Attachment. (required).</param>
-        /// <param name="iDiscussionmessageCountunread">The count of Attachment. (required).</param>
-        /// <param name="objDiscussionconfiguration">objDiscussionconfiguration.</param>
-        public DiscussionResponse(int pkiDiscussionID = default(int), string sDiscussionDescription = default(string), bool bDiscussionClosed = default(bool), string dtDiscussionLastread = default(string), int iDiscussionmessageCount = default(int), int iDiscussionmessageCountunread = default(int), CustomDiscussionconfigurationResponse objDiscussionconfiguration = default(CustomDiscussionconfigurationResponse))
+        /// <param name="">The unique ID of the Discussion (required).</param>
+        /// <param name="">The description of the Discussion (required).</param>
+        /// <param name="">Whether if it&#39;s an closed (required).</param>
+        /// <param name="">The date the Discussion was last read.</param>
+        /// <param name="">The count of Attachment. (required).</param>
+        /// <param name="">The count of Attachment. (required).</param>
+        /// <param name="">.</param>
+        public DiscussionResponse(int  = default(int), string  = default(string), bool  = default(bool), string  = default(string), int  = default(int), int  = default(int), CustomDiscussionconfigurationResponse  = default(CustomDiscussionconfigurationResponse))
         {
-            this.PkiDiscussionID = pkiDiscussionID;
-            // to ensure "sDiscussionDescription" is required (not null)
-            if (sDiscussionDescription == null)
+            this.PkiDiscussionID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sDiscussionDescription is a required property for DiscussionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionResponse and cannot be null");
             }
-            this.SDiscussionDescription = sDiscussionDescription;
-            this.BDiscussionClosed = bDiscussionClosed;
-            this.IDiscussionmessageCount = iDiscussionmessageCount;
-            this.IDiscussionmessageCountunread = iDiscussionmessageCountunread;
-            this.DtDiscussionLastread = dtDiscussionLastread;
-            this.ObjDiscussionconfiguration = objDiscussionconfiguration;
+            this.SDiscussionDescription = ;
+            this.BDiscussionClosed = ;
+            this.IDiscussionmessageCount = ;
+            this.IDiscussionmessageCountunread = ;
+            this.DtDiscussionLastread = ;
+            this.ObjDiscussionconfiguration = ;
         }
 
         /// <summary>

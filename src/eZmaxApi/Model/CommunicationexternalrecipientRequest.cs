@@ -41,18 +41,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationexternalrecipientRequest" /> class.
         /// </summary>
-        /// <param name="pkiCommunicationexternalrecipientID">The unique ID of the Communicationexternalrecipient.</param>
-        /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
-        /// <param name="eCommunicationexternalrecipientType">eCommunicationexternalrecipientType.</param>
-        /// <param name="sCommunicationexternalrecipientName">The name of the Communicationexternalrecipient.</param>
-        public CommunicationexternalrecipientRequest(int pkiCommunicationexternalrecipientID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), FieldECommunicationexternalrecipientType? eCommunicationexternalrecipientType = default(FieldECommunicationexternalrecipientType?), string sCommunicationexternalrecipientName = default(string))
+        /// <param name="">The unique ID of the Communicationexternalrecipient.</param>
+        /// <param name="">The email address..</param>
+        /// <param name="">A phone number in E.164 Format.</param>
+        /// <param name="">.</param>
+        /// <param name="">The name of the Communicationexternalrecipient.</param>
+        public CommunicationexternalrecipientRequest(int  = default(int), string  = default(string), string  = default(string), FieldECommunicationexternalrecipientType?  = default(FieldECommunicationexternalrecipientType?), string  = default(string))
         {
-            this.PkiCommunicationexternalrecipientID = pkiCommunicationexternalrecipientID;
-            this.SEmailAddress = sEmailAddress;
-            this.SPhoneE164 = sPhoneE164;
-            this.ECommunicationexternalrecipientType = eCommunicationexternalrecipientType;
-            this.SCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
+            this.PkiCommunicationexternalrecipientID = ;
+            this.SEmailAddress = ;
+            this.SPhoneE164 = ;
+            this.ECommunicationexternalrecipientType = ;
+            this.SCommunicationexternalrecipientName = ;
         }
 
         /// <summary>

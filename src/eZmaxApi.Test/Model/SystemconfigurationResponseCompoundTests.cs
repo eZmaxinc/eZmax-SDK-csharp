@@ -74,6 +74,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiBrandingID'
+        /// </summary>
+        [Fact]
+        public void FkiBrandingIDTest()
+        {
+            // TODO unit test for the property 'FkiBrandingID'
+        }
+
+        /// <summary>
         /// Test the property 'SSystemconfigurationtypeDescriptionX'
         /// </summary>
         [Fact]
@@ -146,6 +155,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BSystemconfigurationHascreditcardmerchant'
+        /// </summary>
+        [Fact]
+        public void BSystemconfigurationHascreditcardmerchantTest()
+        {
+            // TODO unit test for the property 'BSystemconfigurationHascreditcardmerchant'
+        }
+
+        /// <summary>
         /// Test the property 'BSystemconfigurationIsdisposalactive'
         /// </summary>
         [Fact]
@@ -179,6 +197,15 @@ namespace eZmaxApi.Test.Model
         public void DtSystemconfigurationReadonlyexpirationendTest()
         {
             // TODO unit test for the property 'DtSystemconfigurationReadonlyexpirationend'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjBranding'
+        /// </summary>
+        [Fact]
+        public void ObjBrandingTest()
+        {
+            // TODO unit test for the property 'ObjBranding'
         }
     }
 }

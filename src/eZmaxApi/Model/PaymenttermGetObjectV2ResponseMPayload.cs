@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objPaymentterm">objPaymentterm (required).</param>
-        public PaymenttermGetObjectV2ResponseMPayload(PaymenttermResponseCompound objPaymentterm = default(PaymenttermResponseCompound))
+        /// <param name=""> (required).</param>
+        public PaymenttermGetObjectV2ResponseMPayload(PaymenttermResponseCompound  = default(PaymenttermResponseCompound))
         {
-            // to ensure "objPaymentterm" is required (not null)
-            if (objPaymentterm == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objPaymentterm is a required property for PaymenttermGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for PaymenttermGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjPaymentterm = objPaymentterm;
+            this.ObjPaymentterm = ;
         }
 
         /// <summary>

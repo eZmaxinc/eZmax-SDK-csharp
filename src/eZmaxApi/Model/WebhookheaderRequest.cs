@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookheaderRequest" /> class.
         /// </summary>
-        /// <param name="pkiWebhookheaderID">The unique ID of the Webhookheader.</param>
-        /// <param name="sWebhookheaderName">The Name of the Webhookheader (required).</param>
-        /// <param name="sWebhookheaderValue">The Value of the Webhookheader (required).</param>
-        public WebhookheaderRequest(int pkiWebhookheaderID = default(int), string sWebhookheaderName = default(string), string sWebhookheaderValue = default(string))
+        /// <param name="">The unique ID of the Webhookheader.</param>
+        /// <param name="">The Name of the Webhookheader (required).</param>
+        /// <param name="">The Value of the Webhookheader (required).</param>
+        public WebhookheaderRequest(int  = default(int), string  = default(string), string  = default(string))
         {
-            // to ensure "sWebhookheaderName" is required (not null)
-            if (sWebhookheaderName == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sWebhookheaderName is a required property for WebhookheaderRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookheaderRequest and cannot be null");
             }
-            this.SWebhookheaderName = sWebhookheaderName;
-            // to ensure "sWebhookheaderValue" is required (not null)
-            if (sWebhookheaderValue == null)
+            this.SWebhookheaderName = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sWebhookheaderValue is a required property for WebhookheaderRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookheaderRequest and cannot be null");
             }
-            this.SWebhookheaderValue = sWebhookheaderValue;
-            this.PkiWebhookheaderID = pkiWebhookheaderID;
+            this.SWebhookheaderValue = ;
+            this.PkiWebhookheaderID = ;
         }
 
         /// <summary>

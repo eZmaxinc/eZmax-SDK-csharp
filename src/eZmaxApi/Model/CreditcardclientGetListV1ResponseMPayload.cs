@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjCreditcardclient">aObjCreditcardclient (required).</param>
-        public CreditcardclientGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<CreditcardclientListElement> aObjCreditcardclient = default(List<CreditcardclientListElement>))
+        /// <param name="">The number of rows returned (required).</param>
+        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name=""> (required).</param>
+        public CreditcardclientGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<CreditcardclientListElement>  = default(List<CreditcardclientListElement>))
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
-            // to ensure "aObjCreditcardclient" is required (not null)
-            if (aObjCreditcardclient == null)
+            this.IRowReturned = ;
+            this.IRowFiltered = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCreditcardclient is a required property for CreditcardclientGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardclientGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjCreditcardclient = aObjCreditcardclient;
+            this.AObjCreditcardclient = ;
         }
 
         /// <summary>

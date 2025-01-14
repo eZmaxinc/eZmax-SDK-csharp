@@ -40,65 +40,65 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ClonehistoryListElement" /> class.
         /// </summary>
-        /// <param name="pkiClonehistoryID">The unique ID of the Clonehistory (required).</param>
-        /// <param name="fkiUserIDCloning">The unique ID of the User (required).</param>
-        /// <param name="fkiUserIDCloned">The unique ID of the User (required).</param>
-        /// <param name="dtClonehistoryFirsthit">The firsthit of the Clonehistory (required).</param>
-        /// <param name="dtClonehistoryLasthit">The lasthit of the Clonehistory.</param>
-        /// <param name="sUserLoginnameCloning">The login name of the User. (required).</param>
-        /// <param name="sUserFirstnameCloning">The first name of the user (required).</param>
-        /// <param name="sUserLastnameCloning">The last name of the user (required).</param>
-        /// <param name="sUserLoginnameCloned">The login name of the User. (required).</param>
-        /// <param name="sUserFirstnameCloned">The first name of the user (required).</param>
-        /// <param name="sUserLastnameCloned">The last name of the user (required).</param>
-        public ClonehistoryListElement(int pkiClonehistoryID = default(int), int fkiUserIDCloning = default(int), int fkiUserIDCloned = default(int), string dtClonehistoryFirsthit = default(string), string dtClonehistoryLasthit = default(string), string sUserLoginnameCloning = default(string), string sUserFirstnameCloning = default(string), string sUserLastnameCloning = default(string), string sUserLoginnameCloned = default(string), string sUserFirstnameCloned = default(string), string sUserLastnameCloned = default(string))
+        /// <param name="">The unique ID of the Clonehistory (required).</param>
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name="">The firsthit of the Clonehistory (required).</param>
+        /// <param name="">The lasthit of the Clonehistory.</param>
+        /// <param name="">The login name of the User. (required).</param>
+        /// <param name="">The first name of the user (required).</param>
+        /// <param name="">The last name of the user (required).</param>
+        /// <param name="">The login name of the User. (required).</param>
+        /// <param name="">The first name of the user (required).</param>
+        /// <param name="">The last name of the user (required).</param>
+        public ClonehistoryListElement(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.PkiClonehistoryID = pkiClonehistoryID;
-            this.FkiUserIDCloning = fkiUserIDCloning;
-            this.FkiUserIDCloned = fkiUserIDCloned;
-            // to ensure "dtClonehistoryFirsthit" is required (not null)
-            if (dtClonehistoryFirsthit == null)
+            this.PkiClonehistoryID = ;
+            this.FkiUserIDCloning = ;
+            this.FkiUserIDCloned = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtClonehistoryFirsthit is a required property for ClonehistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ClonehistoryListElement and cannot be null");
             }
-            this.DtClonehistoryFirsthit = dtClonehistoryFirsthit;
-            // to ensure "sUserLoginnameCloning" is required (not null)
-            if (sUserLoginnameCloning == null)
+            this.DtClonehistoryFirsthit = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserLoginnameCloning is a required property for ClonehistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ClonehistoryListElement and cannot be null");
             }
-            this.SUserLoginnameCloning = sUserLoginnameCloning;
-            // to ensure "sUserFirstnameCloning" is required (not null)
-            if (sUserFirstnameCloning == null)
+            this.SUserLoginnameCloning = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserFirstnameCloning is a required property for ClonehistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ClonehistoryListElement and cannot be null");
             }
-            this.SUserFirstnameCloning = sUserFirstnameCloning;
-            // to ensure "sUserLastnameCloning" is required (not null)
-            if (sUserLastnameCloning == null)
+            this.SUserFirstnameCloning = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserLastnameCloning is a required property for ClonehistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ClonehistoryListElement and cannot be null");
             }
-            this.SUserLastnameCloning = sUserLastnameCloning;
-            // to ensure "sUserLoginnameCloned" is required (not null)
-            if (sUserLoginnameCloned == null)
+            this.SUserLastnameCloning = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserLoginnameCloned is a required property for ClonehistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ClonehistoryListElement and cannot be null");
             }
-            this.SUserLoginnameCloned = sUserLoginnameCloned;
-            // to ensure "sUserFirstnameCloned" is required (not null)
-            if (sUserFirstnameCloned == null)
+            this.SUserLoginnameCloned = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserFirstnameCloned is a required property for ClonehistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ClonehistoryListElement and cannot be null");
             }
-            this.SUserFirstnameCloned = sUserFirstnameCloned;
-            // to ensure "sUserLastnameCloned" is required (not null)
-            if (sUserLastnameCloned == null)
+            this.SUserFirstnameCloned = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserLastnameCloned is a required property for ClonehistoryListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ClonehistoryListElement and cannot be null");
             }
-            this.SUserLastnameCloned = sUserLastnameCloned;
-            this.DtClonehistoryLasthit = dtClonehistoryLasthit;
+            this.SUserLastnameCloned = ;
+            this.DtClonehistoryLasthit = ;
         }
 
         /// <summary>

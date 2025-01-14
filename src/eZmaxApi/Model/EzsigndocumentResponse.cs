@@ -46,64 +46,66 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="fkiEzsignfoldersignerassociationIDDeclinedtosign">The unique ID of the Ezsignfoldersignerassociation.</param>
-        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
-        /// <param name="dtEzsignformCompleted">The date and time at which the Ezsignform has been completed..</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|.</param>
-        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="eEzsigndocumentStep">eEzsigndocumentStep (required).</param>
-        /// <param name="dtEzsigndocumentFirstsend">The date and time when the Ezsigndocument was first sent..</param>
-        /// <param name="dtEzsigndocumentLastsend">The date and time when the Ezsigndocument was sent the last time..</param>
-        /// <param name="iEzsigndocumentOrder">The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder. (required).</param>
-        /// <param name="iEzsigndocumentPagetotal">The number of pages in the Ezsigndocument. (required).</param>
-        /// <param name="iEzsigndocumentSignaturesigned">The number of signatures that were signed in the document. (required).</param>
-        /// <param name="iEzsigndocumentSignaturetotal">The number of total signatures that were requested in the Ezsigndocument. (required).</param>
-        /// <param name="sEzsigndocumentMD5initial">MD5 Hash of the initial PDF Document before signatures were applied to it..</param>
-        /// <param name="tEzsigndocumentDeclinedtosignreason">A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign.</param>
-        /// <param name="sEzsigndocumentMD5signed">MD5 Hash of the final PDF Document after all signatures were applied to it..</param>
-        /// <param name="bEzsigndocumentEzsignform">If the Ezsigndocument contains an Ezsignform or not.</param>
-        /// <param name="bEzsigndocumentHassignedsignatures">If the Ezsigndocument contains signed signatures (From internal or external sources).</param>
-        /// <param name="objAudit">objAudit.</param>
-        /// <param name="sEzsigndocumentExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
-        /// <param name="iEzsigndocumentEzsignsignatureattachmenttotal">The number of Ezsigndocumentattachment total (required).</param>
-        /// <param name="iEzsigndocumentEzsigndiscussiontotal">The total number of Ezsigndiscussions (required).</param>
-        public EzsigndocumentResponse(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), bool bEzsigndocumentHassignedsignatures = default(bool), CommonAudit objAudit = default(CommonAudit), string sEzsigndocumentExternalid = default(string), int iEzsigndocumentEzsignsignatureattachmenttotal = default(int), int iEzsigndocumentEzsigndiscussiontotal = default(int))
+        /// <param name="">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="">The unique ID of the Ezsignfoldersignerassociation.</param>
+        /// <param name="">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
+        /// <param name="">The date and time at which the Ezsignform has been completed..</param>
+        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|.</param>
+        /// <param name="">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The date and time when the Ezsigndocument was first sent..</param>
+        /// <param name="">The date and time when the Ezsigndocument was sent the last time..</param>
+        /// <param name="">The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder. (required).</param>
+        /// <param name="">The number of pages in the Ezsigndocument. (required).</param>
+        /// <param name="">The number of signatures that were signed in the document. (required).</param>
+        /// <param name="">The number of total signatures that were requested in the Ezsigndocument. (required).</param>
+        /// <param name="">The number of total Ezsignformfield that were requested in the Ezsigndocument. (required).</param>
+        /// <param name="">MD5 Hash of the initial PDF Document before signatures were applied to it..</param>
+        /// <param name="">A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign.</param>
+        /// <param name="">MD5 Hash of the final PDF Document after all signatures were applied to it..</param>
+        /// <param name="">If the Ezsigndocument contains an Ezsignform or not.</param>
+        /// <param name="">If the Ezsigndocument contains signed signatures (From internal or external sources).</param>
+        /// <param name="">.</param>
+        /// <param name="">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
+        /// <param name="">The number of Ezsigndocumentattachment total (required).</param>
+        /// <param name="">The total number of Ezsigndiscussions (required).</param>
+        public EzsigndocumentResponse(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), int  = default(int), string  = default(string), FieldEEzsigndocumentStep  = default(FieldEEzsigndocumentStep), string  = default(string), string  = default(string), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool), CommonAudit  = default(CommonAudit), string  = default(string), int  = default(int), int  = default(int))
         {
-            this.PkiEzsigndocumentID = pkiEzsigndocumentID;
-            this.FkiEzsignfolderID = fkiEzsignfolderID;
-            // to ensure "dtEzsigndocumentDuedate" is required (not null)
-            if (dtEzsigndocumentDuedate == null)
+            this.PkiEzsigndocumentID = ;
+            this.FkiEzsignfolderID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtEzsigndocumentDuedate is a required property for EzsigndocumentResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentResponse and cannot be null");
             }
-            this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
-            // to ensure "sEzsigndocumentName" is required (not null)
-            if (sEzsigndocumentName == null)
+            this.DtEzsigndocumentDuedate = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigndocumentName is a required property for EzsigndocumentResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentResponse and cannot be null");
             }
-            this.SEzsigndocumentName = sEzsigndocumentName;
-            this.EEzsigndocumentStep = eEzsigndocumentStep;
-            this.IEzsigndocumentOrder = iEzsigndocumentOrder;
-            this.IEzsigndocumentPagetotal = iEzsigndocumentPagetotal;
-            this.IEzsigndocumentSignaturesigned = iEzsigndocumentSignaturesigned;
-            this.IEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
-            this.IEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
-            this.IEzsigndocumentEzsigndiscussiontotal = iEzsigndocumentEzsigndiscussiontotal;
-            this.FkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
-            this.DtEzsignformCompleted = dtEzsignformCompleted;
-            this.FkiLanguageID = fkiLanguageID;
-            this.DtEzsigndocumentFirstsend = dtEzsigndocumentFirstsend;
-            this.DtEzsigndocumentLastsend = dtEzsigndocumentLastsend;
-            this.SEzsigndocumentMD5initial = sEzsigndocumentMD5initial;
-            this.TEzsigndocumentDeclinedtosignreason = tEzsigndocumentDeclinedtosignreason;
-            this.SEzsigndocumentMD5signed = sEzsigndocumentMD5signed;
-            this.BEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
-            this.BEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
-            this.ObjAudit = objAudit;
-            this.SEzsigndocumentExternalid = sEzsigndocumentExternalid;
+            this.SEzsigndocumentName = ;
+            this.EEzsigndocumentStep = ;
+            this.IEzsigndocumentOrder = ;
+            this.IEzsigndocumentPagetotal = ;
+            this.IEzsigndocumentSignaturesigned = ;
+            this.IEzsigndocumentSignaturetotal = ;
+            this.IEzsigndocumentFormfieldtotal = ;
+            this.IEzsigndocumentEzsignsignatureattachmenttotal = ;
+            this.IEzsigndocumentEzsigndiscussiontotal = ;
+            this.FkiEzsignfoldersignerassociationIDDeclinedtosign = ;
+            this.DtEzsignformCompleted = ;
+            this.FkiLanguageID = ;
+            this.DtEzsigndocumentFirstsend = ;
+            this.DtEzsigndocumentLastsend = ;
+            this.SEzsigndocumentMD5initial = ;
+            this.TEzsigndocumentDeclinedtosignreason = ;
+            this.SEzsigndocumentMD5signed = ;
+            this.BEzsigndocumentEzsignform = ;
+            this.BEzsigndocumentHassignedsignatures = ;
+            this.ObjAudit = ;
+            this.SEzsigndocumentExternalid = ;
         }
 
         /// <summary>
@@ -211,6 +213,14 @@ namespace eZmaxApi.Model
         public int IEzsigndocumentSignaturetotal { get; set; }
 
         /// <summary>
+        /// The number of total Ezsignformfield that were requested in the Ezsigndocument.
+        /// </summary>
+        /// <value>The number of total Ezsignformfield that were requested in the Ezsigndocument.</value>
+        /* <example>4</example>*/
+        [DataMember(Name = "iEzsigndocumentFormfieldtotal", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzsigndocumentFormfieldtotal { get; set; }
+
+        /// <summary>
         /// MD5 Hash of the initial PDF Document before signatures were applied to it.
         /// </summary>
         /// <value>MD5 Hash of the initial PDF Document before signatures were applied to it.</value>
@@ -302,6 +312,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsigndocumentPagetotal: ").Append(IEzsigndocumentPagetotal).Append("\n");
             sb.Append("  IEzsigndocumentSignaturesigned: ").Append(IEzsigndocumentSignaturesigned).Append("\n");
             sb.Append("  IEzsigndocumentSignaturetotal: ").Append(IEzsigndocumentSignaturetotal).Append("\n");
+            sb.Append("  IEzsigndocumentFormfieldtotal: ").Append(IEzsigndocumentFormfieldtotal).Append("\n");
             sb.Append("  SEzsigndocumentMD5initial: ").Append(SEzsigndocumentMD5initial).Append("\n");
             sb.Append("  TEzsigndocumentDeclinedtosignreason: ").Append(TEzsigndocumentDeclinedtosignreason).Append("\n");
             sb.Append("  SEzsigndocumentMD5signed: ").Append(SEzsigndocumentMD5signed).Append("\n");
@@ -383,6 +394,12 @@ namespace eZmaxApi.Model
             if (this.IEzsigndocumentSignaturetotal < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentSignaturetotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturetotal" });
+            }
+
+            // IEzsigndocumentFormfieldtotal (int) minimum
+            if (this.IEzsigndocumentFormfieldtotal < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentFormfieldtotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentFormfieldtotal" });
             }
 
             if (this.SEzsigndocumentExternalid != null) {

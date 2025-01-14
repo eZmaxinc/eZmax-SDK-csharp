@@ -46,17 +46,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomAttachmentdocumenttypeResponse" /> class.
         /// </summary>
-        /// <param name="eAttachmentDocumenttype">eAttachmentDocumenttype (required).</param>
-        /// <param name="aObjAttachment">aObjAttachment (required).</param>
-        public CustomAttachmentdocumenttypeResponse(FieldEAttachmentDocumenttype eAttachmentDocumenttype = default(FieldEAttachmentDocumenttype), List<CustomAttachmentResponse> aObjAttachment = default(List<CustomAttachmentResponse>))
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public CustomAttachmentdocumenttypeResponse(FieldEAttachmentDocumenttype  = default(FieldEAttachmentDocumenttype), List<CustomAttachmentResponse>  = default(List<CustomAttachmentResponse>))
         {
-            this.EAttachmentDocumenttype = eAttachmentDocumenttype;
-            // to ensure "aObjAttachment" is required (not null)
-            if (aObjAttachment == null)
+            this.EAttachmentDocumenttype = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjAttachment is a required property for CustomAttachmentdocumenttypeResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomAttachmentdocumenttypeResponse and cannot be null");
             }
-            this.AObjAttachment = aObjAttachment;
+            this.AObjAttachment = ;
         }
 
         /// <summary>

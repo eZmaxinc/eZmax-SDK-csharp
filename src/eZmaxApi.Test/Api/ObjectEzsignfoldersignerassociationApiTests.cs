@@ -178,5 +178,18 @@ namespace eZmaxApi.Test.Api
             //var response = instance.EzsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
             //Assert.IsType<EzsignfoldersignerassociationPatchObjectV1Response>(response);
         }
+
+        /// <summary>
+        /// Test EzsignfoldersignerassociationReassignV1
+        /// </summary>
+        [Fact]
+        public void EzsignfoldersignerassociationReassignV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiEzsignfoldersignerassociationID = null;
+            //EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request = null;
+            //var response = instance.EzsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
+            //Assert.IsType<EzsignfoldersignerassociationReassignV1Response>(response);
+        }
     }
 }

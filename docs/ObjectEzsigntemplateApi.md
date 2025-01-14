@@ -5,15 +5,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**EzsigntemplateCopyV1**](ObjectEzsigntemplateApi.md#ezsigntemplatecopyv1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate |
-| [**EzsigntemplateCreateObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate |
-| [**EzsigntemplateCreateObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv2) | **POST** /2/object/ezsigntemplate | Create a new Ezsigntemplate |
+| [**EzsigntemplateCreateObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv3) | **POST** /3/object/ezsigntemplate | Create a new Ezsigntemplate |
 | [**EzsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplatedeleteobjectv1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate |
-| [**EzsigntemplateEditObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate |
-| [**EzsigntemplateEditObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv2) | **PUT** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate |
+| [**EzsigntemplateEditObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv3) | **PUT** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate |
 | [**EzsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplategetautocompletev2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs |
 | [**EzsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplategetlistv1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list |
-| [**EzsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate |
-| [**EzsigntemplateGetObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate |
+| [**EzsigntemplateGetObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv3) | **GET** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate |
 
 <a id="ezsigntemplatecopyv1"></a>
 # **EzsigntemplateCopyV1**
@@ -112,9 +109,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="ezsigntemplatecreateobjectv1"></a>
-# **EzsigntemplateCreateObjectV1**
-> EzsigntemplateCreateObjectV1Response EzsigntemplateCreateObjectV1 (EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request)
+<a id="ezsigntemplatecreateobjectv3"></a>
+# **EzsigntemplateCreateObjectV3**
+> EzsigntemplateCreateObjectV3Response EzsigntemplateCreateObjectV3 (EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request)
 
 Create a new Ezsigntemplate
 
@@ -130,7 +127,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsigntemplateCreateObjectV1Example
+    public class EzsigntemplateCreateObjectV3Example
     {
         public static void Main()
         {
@@ -142,17 +139,17 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectEzsigntemplateApi(config);
-            var ezsigntemplateCreateObjectV1Request = new EzsigntemplateCreateObjectV1Request(); // EzsigntemplateCreateObjectV1Request | 
+            var ezsigntemplateCreateObjectV3Request = new EzsigntemplateCreateObjectV3Request(); // EzsigntemplateCreateObjectV3Request | 
 
             try
             {
                 // Create a new Ezsigntemplate
-                EzsigntemplateCreateObjectV1Response result = apiInstance.EzsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request);
+                EzsigntemplateCreateObjectV3Response result = apiInstance.EzsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV3: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -161,21 +158,21 @@ namespace Example
 }
 ```
 
-#### Using the EzsigntemplateCreateObjectV1WithHttpInfo variant
+#### Using the EzsigntemplateCreateObjectV3WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create a new Ezsigntemplate
-    ApiResponse<EzsigntemplateCreateObjectV1Response> response = apiInstance.EzsigntemplateCreateObjectV1WithHttpInfo(ezsigntemplateCreateObjectV1Request);
+    ApiResponse<EzsigntemplateCreateObjectV3Response> response = apiInstance.EzsigntemplateCreateObjectV3WithHttpInfo(ezsigntemplateCreateObjectV3Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV3WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -185,107 +182,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **ezsigntemplateCreateObjectV1Request** | [**EzsigntemplateCreateObjectV1Request**](EzsigntemplateCreateObjectV1Request.md) |  |  |
+| **ezsigntemplateCreateObjectV3Request** | [**EzsigntemplateCreateObjectV3Request**](EzsigntemplateCreateObjectV3Request.md) |  |  |
 
 ### Return type
 
-[**EzsigntemplateCreateObjectV1Response**](EzsigntemplateCreateObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **201** | Successful response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="ezsigntemplatecreateobjectv2"></a>
-# **EzsigntemplateCreateObjectV2**
-> EzsigntemplateCreateObjectV2Response EzsigntemplateCreateObjectV2 (EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request)
-
-Create a new Ezsigntemplate
-
-The endpoint allows to create one or many elements at once.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class EzsigntemplateCreateObjectV2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectEzsigntemplateApi(config);
-            var ezsigntemplateCreateObjectV2Request = new EzsigntemplateCreateObjectV2Request(); // EzsigntemplateCreateObjectV2Request | 
-
-            try
-            {
-                // Create a new Ezsigntemplate
-                EzsigntemplateCreateObjectV2Response result = apiInstance.EzsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV2: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the EzsigntemplateCreateObjectV2WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Create a new Ezsigntemplate
-    ApiResponse<EzsigntemplateCreateObjectV2Response> response = apiInstance.EzsigntemplateCreateObjectV2WithHttpInfo(ezsigntemplateCreateObjectV2Request);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateCreateObjectV2WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ezsigntemplateCreateObjectV2Request** | [**EzsigntemplateCreateObjectV2Request**](EzsigntemplateCreateObjectV2Request.md) |  |  |
-
-### Return type
-
-[**EzsigntemplateCreateObjectV2Response**](EzsigntemplateCreateObjectV2Response.md)
+[**EzsigntemplateCreateObjectV3Response**](EzsigntemplateCreateObjectV3Response.md)
 
 ### Authorization
 
@@ -399,9 +300,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="ezsigntemplateeditobjectv1"></a>
-# **EzsigntemplateEditObjectV1**
-> EzsigntemplateEditObjectV1Response EzsigntemplateEditObjectV1 (int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request)
+<a id="ezsigntemplateeditobjectv3"></a>
+# **EzsigntemplateEditObjectV3**
+> EzsigntemplateEditObjectV3Response EzsigntemplateEditObjectV3 (int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request)
 
 Edit an existing Ezsigntemplate
 
@@ -415,7 +316,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsigntemplateEditObjectV1Example
+    public class EzsigntemplateEditObjectV3Example
     {
         public static void Main()
         {
@@ -428,17 +329,17 @@ namespace Example
 
             var apiInstance = new ObjectEzsigntemplateApi(config);
             var pkiEzsigntemplateID = 56;  // int | 
-            var ezsigntemplateEditObjectV1Request = new EzsigntemplateEditObjectV1Request(); // EzsigntemplateEditObjectV1Request | 
+            var ezsigntemplateEditObjectV3Request = new EzsigntemplateEditObjectV3Request(); // EzsigntemplateEditObjectV3Request | 
 
             try
             {
                 // Edit an existing Ezsigntemplate
-                EzsigntemplateEditObjectV1Response result = apiInstance.EzsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
+                EzsigntemplateEditObjectV3Response result = apiInstance.EzsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateEditObjectV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateEditObjectV3: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -447,21 +348,21 @@ namespace Example
 }
 ```
 
-#### Using the EzsigntemplateEditObjectV1WithHttpInfo variant
+#### Using the EzsigntemplateEditObjectV3WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Edit an existing Ezsigntemplate
-    ApiResponse<EzsigntemplateEditObjectV1Response> response = apiInstance.EzsigntemplateEditObjectV1WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
+    ApiResponse<EzsigntemplateEditObjectV3Response> response = apiInstance.EzsigntemplateEditObjectV3WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateEditObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateEditObjectV3WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -472,109 +373,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **pkiEzsigntemplateID** | **int** |  |  |
-| **ezsigntemplateEditObjectV1Request** | [**EzsigntemplateEditObjectV1Request**](EzsigntemplateEditObjectV1Request.md) |  |  |
+| **ezsigntemplateEditObjectV3Request** | [**EzsigntemplateEditObjectV3Request**](EzsigntemplateEditObjectV3Request.md) |  |  |
 
 ### Return type
 
-[**EzsigntemplateEditObjectV1Response**](EzsigntemplateEditObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
-| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="ezsigntemplateeditobjectv2"></a>
-# **EzsigntemplateEditObjectV2**
-> EzsigntemplateEditObjectV2Response EzsigntemplateEditObjectV2 (int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request)
-
-Edit an existing Ezsigntemplate
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class EzsigntemplateEditObjectV2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectEzsigntemplateApi(config);
-            var pkiEzsigntemplateID = 56;  // int | 
-            var ezsigntemplateEditObjectV2Request = new EzsigntemplateEditObjectV2Request(); // EzsigntemplateEditObjectV2Request | 
-
-            try
-            {
-                // Edit an existing Ezsigntemplate
-                EzsigntemplateEditObjectV2Response result = apiInstance.EzsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateEditObjectV2: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the EzsigntemplateEditObjectV2WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Edit an existing Ezsigntemplate
-    ApiResponse<EzsigntemplateEditObjectV2Response> response = apiInstance.EzsigntemplateEditObjectV2WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateEditObjectV2WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiEzsigntemplateID** | **int** |  |  |
-| **ezsigntemplateEditObjectV2Request** | [**EzsigntemplateEditObjectV2Request**](EzsigntemplateEditObjectV2Request.md) |  |  |
-
-### Return type
-
-[**EzsigntemplateEditObjectV2Response**](EzsigntemplateEditObjectV2Response.md)
+[**EzsigntemplateEditObjectV3Response**](EzsigntemplateEditObjectV3Response.md)
 
 ### Authorization
 
@@ -597,7 +400,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplategetautocompletev2"></a>
 # **EzsigntemplateGetAutocompleteV2**
-> EzsigntemplateGetAutocompleteV2Response EzsigntemplateGetAutocompleteV2 (string sSelector, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+> EzsigntemplateGetAutocompleteV2Response EzsigntemplateGetAutocompleteV2 (string sSelector, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null, int? fkiEzsignfoldertypeID = null)
 
 Retrieve Ezsigntemplates and IDs
 
@@ -629,11 +432,12 @@ namespace Example
             var eFilterActive = "All";  // string? | Specify which results we want to display. (optional)  (default to Active)
             var sQuery = "sQuery_example";  // string? | Allow to filter the returned results (optional) 
             var acceptLanguage = new HeaderAcceptLanguage?(); // HeaderAcceptLanguage? |  (optional) 
+            var fkiEzsignfoldertypeID = 56;  // int? | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional) 
 
             try
             {
                 // Retrieve Ezsigntemplates and IDs
-                EzsigntemplateGetAutocompleteV2Response result = apiInstance.EzsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+                EzsigntemplateGetAutocompleteV2Response result = apiInstance.EzsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -654,7 +458,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Retrieve Ezsigntemplates and IDs
-    ApiResponse<EzsigntemplateGetAutocompleteV2Response> response = apiInstance.EzsigntemplateGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+    ApiResponse<EzsigntemplateGetAutocompleteV2Response> response = apiInstance.EzsigntemplateGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -675,6 +479,7 @@ catch (ApiException e)
 | **eFilterActive** | **string?** | Specify which results we want to display. | [optional] [default to Active] |
 | **sQuery** | **string?** | Allow to filter the returned results | [optional]  |
 | **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md) |  | [optional]  |
+| **fkiEzsignfoldertypeID** | **int?** | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic | [optional]  |
 
 ### Return type
 
@@ -802,9 +607,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="ezsigntemplategetobjectv1"></a>
-# **EzsigntemplateGetObjectV1**
-> EzsigntemplateGetObjectV1Response EzsigntemplateGetObjectV1 (int pkiEzsigntemplateID)
+<a id="ezsigntemplategetobjectv3"></a>
+# **EzsigntemplateGetObjectV3**
+> EzsigntemplateGetObjectV3Response EzsigntemplateGetObjectV3 (int pkiEzsigntemplateID)
 
 Retrieve an existing Ezsigntemplate
 
@@ -818,7 +623,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsigntemplateGetObjectV1Example
+    public class EzsigntemplateGetObjectV3Example
     {
         public static void Main()
         {
@@ -835,12 +640,12 @@ namespace Example
             try
             {
                 // Retrieve an existing Ezsigntemplate
-                EzsigntemplateGetObjectV1Response result = apiInstance.EzsigntemplateGetObjectV1(pkiEzsigntemplateID);
+                EzsigntemplateGetObjectV3Response result = apiInstance.EzsigntemplateGetObjectV3(pkiEzsigntemplateID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateGetObjectV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateGetObjectV3: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -849,21 +654,21 @@ namespace Example
 }
 ```
 
-#### Using the EzsigntemplateGetObjectV1WithHttpInfo variant
+#### Using the EzsigntemplateGetObjectV3WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve an existing Ezsigntemplate
-    ApiResponse<EzsigntemplateGetObjectV1Response> response = apiInstance.EzsigntemplateGetObjectV1WithHttpInfo(pkiEzsigntemplateID);
+    ApiResponse<EzsigntemplateGetObjectV3Response> response = apiInstance.EzsigntemplateGetObjectV3WithHttpInfo(pkiEzsigntemplateID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateGetObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateGetObjectV3WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -877,102 +682,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsigntemplateGetObjectV1Response**](EzsigntemplateGetObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="ezsigntemplategetobjectv2"></a>
-# **EzsigntemplateGetObjectV2**
-> EzsigntemplateGetObjectV2Response EzsigntemplateGetObjectV2 (int pkiEzsigntemplateID)
-
-Retrieve an existing Ezsigntemplate
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class EzsigntemplateGetObjectV2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectEzsigntemplateApi(config);
-            var pkiEzsigntemplateID = 56;  // int | 
-
-            try
-            {
-                // Retrieve an existing Ezsigntemplate
-                EzsigntemplateGetObjectV2Response result = apiInstance.EzsigntemplateGetObjectV2(pkiEzsigntemplateID);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateGetObjectV2: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the EzsigntemplateGetObjectV2WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Retrieve an existing Ezsigntemplate
-    ApiResponse<EzsigntemplateGetObjectV2Response> response = apiInstance.EzsigntemplateGetObjectV2WithHttpInfo(pkiEzsigntemplateID);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectEzsigntemplateApi.EzsigntemplateGetObjectV2WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiEzsigntemplateID** | **int** |  |  |
-
-### Return type
-
-[**EzsigntemplateGetObjectV2Response**](EzsigntemplateGetObjectV2Response.md)
+[**EzsigntemplateGetObjectV3Response**](EzsigntemplateGetObjectV3Response.md)
 
 ### Authorization
 

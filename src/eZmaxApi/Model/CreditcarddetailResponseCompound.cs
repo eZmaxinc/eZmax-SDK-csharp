@@ -40,44 +40,39 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcarddetailResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiCreditcarddetailID">The unique ID of the Creditcarddetail (required).</param>
-        /// <param name="fkiCreditcardtypeID">The unique ID of the Creditcardtype (required).</param>
-        /// <param name="sCreditcarddetailNumbermasked">The numbermasked of the Creditcarddetail (required).</param>
-        /// <param name="iCreditcarddetailExpirationmonth">The expirationmonth of the Creditcarddetail (required).</param>
-        /// <param name="iCreditcarddetailExpirationyear">The expirationyear of the Creditcarddetail (required).</param>
-        /// <param name="sCreditcarddetailCivic">The civic of the Creditcarddetail (required).</param>
-        /// <param name="sCreditcarddetailStreet">The street of the Creditcarddetail (required).</param>
-        /// <param name="sCreditcarddetailZip">The zip of the Creditcarddetail (required).</param>
-        public CreditcarddetailResponseCompound(int pkiCreditcarddetailID = default(int), int fkiCreditcardtypeID = default(int), string sCreditcarddetailNumbermasked = default(string), int iCreditcarddetailExpirationmonth = default(int), int iCreditcarddetailExpirationyear = default(int), string sCreditcarddetailCivic = default(string), string sCreditcarddetailStreet = default(string), string sCreditcarddetailZip = default(string))
+        /// <param name="">The unique ID of the Creditcarddetail (required).</param>
+        /// <param name="">The unique ID of the Creditcardtype (required).</param>
+        /// <param name="">The last digits of the Creditcarddetail (required).</param>
+        /// <param name="">The expirationmonth of the Creditcarddetail (required).</param>
+        /// <param name="">The expirationyear of the Creditcarddetail (required).</param>
+        /// <param name="">The civic of the Creditcarddetail (required).</param>
+        /// <param name="">The street of the Creditcarddetail (required).</param>
+        /// <param name="">The zip of the Creditcarddetail (required).</param>
+        public CreditcarddetailResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.PkiCreditcarddetailID = pkiCreditcarddetailID;
-            this.FkiCreditcardtypeID = fkiCreditcardtypeID;
-            // to ensure "sCreditcarddetailNumbermasked" is required (not null)
-            if (sCreditcarddetailNumbermasked == null)
+            this.PkiCreditcarddetailID = ;
+            this.FkiCreditcardtypeID = ;
+            this.ICreditcarddetailLastdigits = ;
+            this.ICreditcarddetailExpirationmonth = ;
+            this.ICreditcarddetailExpirationyear = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcarddetailNumbermasked is a required property for CreditcarddetailResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcarddetailResponseCompound and cannot be null");
             }
-            this.SCreditcarddetailNumbermasked = sCreditcarddetailNumbermasked;
-            this.ICreditcarddetailExpirationmonth = iCreditcarddetailExpirationmonth;
-            this.ICreditcarddetailExpirationyear = iCreditcarddetailExpirationyear;
-            // to ensure "sCreditcarddetailCivic" is required (not null)
-            if (sCreditcarddetailCivic == null)
+            this.SCreditcarddetailCivic = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcarddetailCivic is a required property for CreditcarddetailResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcarddetailResponseCompound and cannot be null");
             }
-            this.SCreditcarddetailCivic = sCreditcarddetailCivic;
-            // to ensure "sCreditcarddetailStreet" is required (not null)
-            if (sCreditcarddetailStreet == null)
+            this.SCreditcarddetailStreet = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcarddetailStreet is a required property for CreditcarddetailResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcarddetailResponseCompound and cannot be null");
             }
-            this.SCreditcarddetailStreet = sCreditcarddetailStreet;
-            // to ensure "sCreditcarddetailZip" is required (not null)
-            if (sCreditcarddetailZip == null)
-            {
-                throw new ArgumentNullException("sCreditcarddetailZip is a required property for CreditcarddetailResponseCompound and cannot be null");
-            }
-            this.SCreditcarddetailZip = sCreditcarddetailZip;
+            this.SCreditcarddetailZip = ;
         }
 
         /// <summary>
@@ -97,12 +92,12 @@ namespace eZmaxApi.Model
         public int FkiCreditcardtypeID { get; set; }
 
         /// <summary>
-        /// The numbermasked of the Creditcarddetail
+        /// The last digits of the Creditcarddetail
         /// </summary>
-        /// <value>The numbermasked of the Creditcarddetail</value>
-        /* <example>XXXX XXXX XXXX 4242</example>*/
-        [DataMember(Name = "sCreditcarddetailNumbermasked", IsRequired = true, EmitDefaultValue = true)]
-        public string SCreditcarddetailNumbermasked { get; set; }
+        /// <value>The last digits of the Creditcarddetail</value>
+        /* <example>4242</example>*/
+        [DataMember(Name = "iCreditcarddetailLastdigits", IsRequired = true, EmitDefaultValue = true)]
+        public int ICreditcarddetailLastdigits { get; set; }
 
         /// <summary>
         /// The expirationmonth of the Creditcarddetail
@@ -154,7 +149,7 @@ namespace eZmaxApi.Model
             sb.Append("class CreditcarddetailResponseCompound {\n");
             sb.Append("  PkiCreditcarddetailID: ").Append(PkiCreditcarddetailID).Append("\n");
             sb.Append("  FkiCreditcardtypeID: ").Append(FkiCreditcardtypeID).Append("\n");
-            sb.Append("  SCreditcarddetailNumbermasked: ").Append(SCreditcarddetailNumbermasked).Append("\n");
+            sb.Append("  ICreditcarddetailLastdigits: ").Append(ICreditcarddetailLastdigits).Append("\n");
             sb.Append("  ICreditcarddetailExpirationmonth: ").Append(ICreditcarddetailExpirationmonth).Append("\n");
             sb.Append("  ICreditcarddetailExpirationyear: ").Append(ICreditcarddetailExpirationyear).Append("\n");
             sb.Append("  SCreditcarddetailCivic: ").Append(SCreditcarddetailCivic).Append("\n");
@@ -204,13 +199,16 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCreditcardtypeID, must be a value greater than or equal to 0.", new [] { "FkiCreditcardtypeID" });
             }
 
-            if (this.SCreditcarddetailNumbermasked != null) {
-                // SCreditcarddetailNumbermasked (string) pattern
-                Regex regexSCreditcarddetailNumbermasked = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-                if (!regexSCreditcarddetailNumbermasked.Match(this.SCreditcarddetailNumbermasked).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCreditcarddetailNumbermasked, must match a pattern of " + regexSCreditcarddetailNumbermasked, new [] { "SCreditcarddetailNumbermasked" });
-                }
+            // ICreditcarddetailLastdigits (int) maximum
+            if (this.ICreditcarddetailLastdigits > (int)9999)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailLastdigits, must be a value less than or equal to 9999.", new [] { "ICreditcarddetailLastdigits" });
+            }
+
+            // ICreditcarddetailLastdigits (int) minimum
+            if (this.ICreditcarddetailLastdigits < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailLastdigits, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailLastdigits" });
             }
 
             // ICreditcarddetailExpirationmonth (int) maximum
@@ -239,7 +237,7 @@ namespace eZmaxApi.Model
 
             if (this.SCreditcarddetailCivic != null) {
                 // SCreditcarddetailCivic (string) pattern
-                Regex regexSCreditcarddetailCivic = new Regex(@"^.{0,8}$", RegexOptions.CultureInvariant);
+                Regex regexSCreditcarddetailCivic = new Regex(@"^[\d]{1,8}$", RegexOptions.CultureInvariant);
                 if (!regexSCreditcarddetailCivic.Match(this.SCreditcarddetailCivic).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCreditcarddetailCivic, must match a pattern of " + regexSCreditcarddetailCivic, new [] { "SCreditcarddetailCivic" });
@@ -248,7 +246,7 @@ namespace eZmaxApi.Model
 
             if (this.SCreditcarddetailStreet != null) {
                 // SCreditcarddetailStreet (string) pattern
-                Regex regexSCreditcarddetailStreet = new Regex(@"^.{0,40}$", RegexOptions.CultureInvariant);
+                Regex regexSCreditcarddetailStreet = new Regex(@"^.{1,19}$", RegexOptions.CultureInvariant);
                 if (!regexSCreditcarddetailStreet.Match(this.SCreditcarddetailStreet).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCreditcarddetailStreet, must match a pattern of " + regexSCreditcarddetailStreet, new [] { "SCreditcarddetailStreet" });
@@ -257,7 +255,7 @@ namespace eZmaxApi.Model
 
             if (this.SCreditcarddetailZip != null) {
                 // SCreditcarddetailZip (string) pattern
-                Regex regexSCreditcarddetailZip = new Regex(@"^.{0,10}$", RegexOptions.CultureInvariant);
+                Regex regexSCreditcarddetailZip = new Regex(@"^.{0,9}$", RegexOptions.CultureInvariant);
                 if (!regexSCreditcarddetailZip.Match(this.SCreditcarddetailZip).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCreditcarddetailZip, must match a pattern of " + regexSCreditcarddetailZip, new [] { "SCreditcarddetailZip" });

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailtypeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEmailtype">An array of Emailtype autocomplete element response. (required).</param>
-        public EmailtypeGetAutocompleteV2ResponseMPayload(List<EmailtypeAutocompleteElementResponse> aObjEmailtype = default(List<EmailtypeAutocompleteElementResponse>))
+        /// <param name="">An array of Emailtype autocomplete element response. (required).</param>
+        public EmailtypeGetAutocompleteV2ResponseMPayload(List<EmailtypeAutocompleteElementResponse>  = default(List<EmailtypeAutocompleteElementResponse>))
         {
-            // to ensure "aObjEmailtype" is required (not null)
-            if (aObjEmailtype == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEmailtype is a required property for EmailtypeGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EmailtypeGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjEmailtype = aObjEmailtype;
+            this.AObjEmailtype = ;
         }
 
         /// <summary>

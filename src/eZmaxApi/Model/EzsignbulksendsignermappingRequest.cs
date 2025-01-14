@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingRequest" /> class.
         /// </summary>
-        /// <param name="pkiEzsignbulksendsignermappingID">The unique ID of the Ezsignbulksendsignermapping.</param>
-        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="sEzsignbulksendsignermappingDescription">The description of the Ezsignbulksendsignermapping (required).</param>
-        public EzsignbulksendsignermappingRequest(int pkiEzsignbulksendsignermappingID = default(int), int fkiEzsignbulksendID = default(int), int fkiUserID = default(int), string sEzsignbulksendsignermappingDescription = default(string))
+        /// <param name="">The unique ID of the Ezsignbulksendsignermapping.</param>
+        /// <param name="">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The description of the Ezsignbulksendsignermapping (required).</param>
+        public EzsignbulksendsignermappingRequest(int  = default(int), int  = default(int), int  = default(int), string  = default(string))
         {
-            this.FkiEzsignbulksendID = fkiEzsignbulksendID;
-            // to ensure "sEzsignbulksendsignermappingDescription" is required (not null)
-            if (sEzsignbulksendsignermappingDescription == null)
+            this.FkiEzsignbulksendID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignbulksendsignermappingDescription is a required property for EzsignbulksendsignermappingRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendsignermappingRequest and cannot be null");
             }
-            this.SEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;
-            this.PkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
-            this.FkiUserID = fkiUserID;
+            this.SEzsignbulksendsignermappingDescription = ;
+            this.PkiEzsignbulksendsignermappingID = ;
+            this.FkiUserID = ;
         }
 
         /// <summary>

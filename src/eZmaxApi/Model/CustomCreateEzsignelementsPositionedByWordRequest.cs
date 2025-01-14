@@ -73,21 +73,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCreateEzsignelementsPositionedByWordRequest" /> class.
         /// </summary>
-        /// <param name="sCreateezsignelementspositionedbywordPattern">The word to search (required).</param>
-        /// <param name="iCreateezsignelementspositionedbywordOffsetx">The X offset (required).</param>
-        /// <param name="iCreateezsignelementspositionedbywordOffsety">The Y offset (required).</param>
-        /// <param name="eCreateezsignelementspositionedbywordOccurance">The occurance in the search to add the ezsign element (required).</param>
-        public CustomCreateEzsignelementsPositionedByWordRequest(string sCreateezsignelementspositionedbywordPattern = default(string), int iCreateezsignelementspositionedbywordOffsetx = default(int), int iCreateezsignelementspositionedbywordOffsety = default(int), ECreateezsignelementspositionedbywordOccuranceEnum eCreateezsignelementspositionedbywordOccurance = default(ECreateezsignelementspositionedbywordOccuranceEnum))
+        /// <param name="">The word to search (required).</param>
+        /// <param name="">The X offset (required).</param>
+        /// <param name="">The Y offset (required).</param>
+        /// <param name="">The occurance in the search to add the ezsign element (required).</param>
+        public CustomCreateEzsignelementsPositionedByWordRequest(string  = default(string), int  = default(int), int  = default(int), ECreateezsignelementspositionedbywordOccuranceEnum  = default(ECreateezsignelementspositionedbywordOccuranceEnum))
         {
-            // to ensure "sCreateezsignelementspositionedbywordPattern" is required (not null)
-            if (sCreateezsignelementspositionedbywordPattern == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreateezsignelementspositionedbywordPattern is a required property for CustomCreateEzsignelementsPositionedByWordRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCreateEzsignelementsPositionedByWordRequest and cannot be null");
             }
-            this.SCreateezsignelementspositionedbywordPattern = sCreateezsignelementspositionedbywordPattern;
-            this.ICreateezsignelementspositionedbywordOffsetx = iCreateezsignelementspositionedbywordOffsetx;
-            this.ICreateezsignelementspositionedbywordOffsety = iCreateezsignelementspositionedbywordOffsety;
-            this.ECreateezsignelementspositionedbywordOccurance = eCreateezsignelementspositionedbywordOccurance;
+            this.SCreateezsignelementspositionedbywordPattern = ;
+            this.ICreateezsignelementspositionedbywordOffsetx = ;
+            this.ICreateezsignelementspositionedbywordOffsety = ;
+            this.ECreateezsignelementspositionedbywordOccurance = ;
         }
 
         /// <summary>

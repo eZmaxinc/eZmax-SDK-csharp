@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProvinceGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjProvince">An array of Province autocomplete element response. (required).</param>
-        public ProvinceGetAutocompleteV2ResponseMPayload(List<ProvinceAutocompleteElementResponse> aObjProvince = default(List<ProvinceAutocompleteElementResponse>))
+        /// <param name="">An array of Province autocomplete element response. (required).</param>
+        public ProvinceGetAutocompleteV2ResponseMPayload(List<ProvinceAutocompleteElementResponse>  = default(List<ProvinceAutocompleteElementResponse>))
         {
-            // to ensure "aObjProvince" is required (not null)
-            if (aObjProvince == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjProvince is a required property for ProvinceGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for ProvinceGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjProvince = aObjProvince;
+            this.AObjProvince = ;
         }
 
         /// <summary>

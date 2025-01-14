@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobalGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsigntemplateglobal">An array of Ezsigntemplateglobal autocomplete element response. (required).</param>
-        public EzsigntemplateglobalGetAutocompleteV2ResponseMPayload(List<EzsigntemplateglobalAutocompleteElementResponse> aObjEzsigntemplateglobal = default(List<EzsigntemplateglobalAutocompleteElementResponse>))
+        /// <param name="">An array of Ezsigntemplateglobal autocomplete element response. (required).</param>
+        public EzsigntemplateglobalGetAutocompleteV2ResponseMPayload(List<EzsigntemplateglobalAutocompleteElementResponse>  = default(List<EzsigntemplateglobalAutocompleteElementResponse>))
         {
-            // to ensure "aObjEzsigntemplateglobal" is required (not null)
-            if (aObjEzsigntemplateglobal == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsigntemplateglobal is a required property for EzsigntemplateglobalGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjEzsigntemplateglobal = aObjEzsigntemplateglobal;
+            this.AObjEzsigntemplateglobal = ;
         }
 
         /// <summary>

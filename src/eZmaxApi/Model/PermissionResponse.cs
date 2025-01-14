@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionResponse" /> class.
         /// </summary>
-        /// <param name="pkiPermissionID">The unique ID of the Permission (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
-        /// <param name="fkiCompanyID">The unique ID of the Company.</param>
-        /// <param name="fkiModulesectionID">The unique ID of the Modulesection (required).</param>
-        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester.</param>
-        public PermissionResponse(int pkiPermissionID = default(int), int fkiUserID = default(int), int fkiApikeyID = default(int), int fkiUsergroupID = default(int), int fkiCompanyID = default(int), int fkiModulesectionID = default(int), string sCompanyNameX = default(string))
+        /// <param name="">The unique ID of the Permission (required).</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Apikey.</param>
+        /// <param name="">The unique ID of the Usergroup.</param>
+        /// <param name="">The unique ID of the Company.</param>
+        /// <param name="">The unique ID of the Modulesection (required).</param>
+        /// <param name="">The Name of the Company in the language of the requester.</param>
+        public PermissionResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string))
         {
-            this.PkiPermissionID = pkiPermissionID;
-            this.FkiModulesectionID = fkiModulesectionID;
-            this.FkiUserID = fkiUserID;
-            this.FkiApikeyID = fkiApikeyID;
-            this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiCompanyID = fkiCompanyID;
-            this.SCompanyNameX = sCompanyNameX;
+            this.PkiPermissionID = ;
+            this.FkiModulesectionID = ;
+            this.FkiUserID = ;
+            this.FkiApikeyID = ;
+            this.FkiUsergroupID = ;
+            this.FkiCompanyID = ;
+            this.SCompanyNameX = ;
         }
 
         /// <summary>

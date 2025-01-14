@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualSubnetDescription" /> class.
         /// </summary>
-        /// <param name="sSubnetDescription1">The description of the Subnet in French.</param>
-        /// <param name="sSubnetDescription2">The description of the Subnet in English.</param>
-        public MultilingualSubnetDescription(string sSubnetDescription1 = default(string), string sSubnetDescription2 = default(string))
+        /// <param name="">The description of the Subnet in French.</param>
+        /// <param name="">The description of the Subnet in English.</param>
+        public MultilingualSubnetDescription(string  = default(string), string  = default(string))
         {
-            this.SSubnetDescription1 = sSubnetDescription1;
-            this.SSubnetDescription2 = sSubnetDescription2;
+            this.SSubnetDescription1 = ;
+            this.SSubnetDescription2 = ;
         }
 
         /// <summary>

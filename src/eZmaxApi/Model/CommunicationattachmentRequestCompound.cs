@@ -35,16 +35,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationattachmentRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiCommunicationattachmentID">The unique ID of the Communicationattachment.</param>
-        /// <param name="fkiAttachmentID">The unique ID of the Attachment..</param>
-        /// <param name="fkiInvoiceID">The unique ID of the Invoice..</param>
-        /// <param name="fkiSalarypreparationID">The unique ID of the Salarypreparation..</param>
-        public CommunicationattachmentRequestCompound(int pkiCommunicationattachmentID = default(int), int fkiAttachmentID = default(int), int fkiInvoiceID = default(int), int fkiSalarypreparationID = default(int))
+        /// <param name="">The unique ID of the Communicationattachment.</param>
+        /// <param name="">The unique ID of the Attachment..</param>
+        /// <param name="">The unique ID of the Invoice..</param>
+        /// <param name="">The unique ID of the Salarypreparation..</param>
+        public CommunicationattachmentRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int))
         {
-            this.PkiCommunicationattachmentID = pkiCommunicationattachmentID;
-            this.FkiAttachmentID = fkiAttachmentID;
-            this.FkiInvoiceID = fkiInvoiceID;
-            this.FkiSalarypreparationID = fkiSalarypreparationID;
+            this.PkiCommunicationattachmentID = ;
+            this.FkiAttachmentID = ;
+            this.FkiInvoiceID = ;
+            this.FkiSalarypreparationID = ;
         }
 
         /// <summary>

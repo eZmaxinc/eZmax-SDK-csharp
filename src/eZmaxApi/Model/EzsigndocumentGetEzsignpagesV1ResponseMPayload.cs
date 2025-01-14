@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignpagesV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsignpage">aObjEzsignpage (required).</param>
-        public EzsigndocumentGetEzsignpagesV1ResponseMPayload(List<EzsignpageResponseCompound> aObjEzsignpage = default(List<EzsignpageResponseCompound>))
+        /// <param name=""> (required).</param>
+        public EzsigndocumentGetEzsignpagesV1ResponseMPayload(List<EzsignpageResponseCompound>  = default(List<EzsignpageResponseCompound>))
         {
-            // to ensure "aObjEzsignpage" is required (not null)
-            if (aObjEzsignpage == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignpage is a required property for EzsigndocumentGetEzsignpagesV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentGetEzsignpagesV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignpage = aObjEzsignpage;
+            this.AObjEzsignpage = ;
         }
 
         /// <summary>

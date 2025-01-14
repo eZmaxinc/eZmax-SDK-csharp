@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobaldocumentResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplateglobaldocumentID">The unique ID of the Ezsigntemplateglobaldocument (required).</param>
-        /// <param name="sEzsigntemplateglobaldocumentName">The name of the Ezsigntemplateglobaldocument. (required).</param>
-        /// <param name="iEzsigntemplateglobaldocumentPagetotal">The number of pages in the Ezsigntemplateglobaldocument. (required).</param>
-        /// <param name="iEzsigntemplateglobaldocumentSignaturetotal">The number of total signatures in the Ezsigntemplateglobal. (required).</param>
-        public EzsigntemplateglobaldocumentResponse(int pkiEzsigntemplateglobaldocumentID = default(int), string sEzsigntemplateglobaldocumentName = default(string), int iEzsigntemplateglobaldocumentPagetotal = default(int), int iEzsigntemplateglobaldocumentSignaturetotal = default(int))
+        /// <param name="">The unique ID of the Ezsigntemplateglobaldocument (required).</param>
+        /// <param name="">The name of the Ezsigntemplateglobaldocument. (required).</param>
+        /// <param name="">The number of pages in the Ezsigntemplateglobaldocument. (required).</param>
+        /// <param name="">The number of total signatures in the Ezsigntemplateglobal. (required).</param>
+        public EzsigntemplateglobaldocumentResponse(int  = default(int), string  = default(string), int  = default(int), int  = default(int))
         {
-            this.PkiEzsigntemplateglobaldocumentID = pkiEzsigntemplateglobaldocumentID;
-            // to ensure "sEzsigntemplateglobaldocumentName" is required (not null)
-            if (sEzsigntemplateglobaldocumentName == null)
+            this.PkiEzsigntemplateglobaldocumentID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplateglobaldocumentName is a required property for EzsigntemplateglobaldocumentResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateglobaldocumentResponse and cannot be null");
             }
-            this.SEzsigntemplateglobaldocumentName = sEzsigntemplateglobaldocumentName;
-            this.IEzsigntemplateglobaldocumentPagetotal = iEzsigntemplateglobaldocumentPagetotal;
-            this.IEzsigntemplateglobaldocumentSignaturetotal = iEzsigntemplateglobaldocumentSignaturetotal;
+            this.SEzsigntemplateglobaldocumentName = ;
+            this.IEzsigntemplateglobaldocumentPagetotal = ;
+            this.IEzsigntemplateglobaldocumentSignaturetotal = ;
         }
 
         /// <summary>

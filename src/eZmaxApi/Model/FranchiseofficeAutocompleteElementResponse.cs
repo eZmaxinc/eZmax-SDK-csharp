@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchiseofficeAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sFranchiseofficeDescription">The description of the Franchiseoffice in the language of the requester (required).</param>
-        /// <param name="pkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
-        /// <param name="bFranchiseofficeIsactive">Whether the Franchiseoffice is active or not (required).</param>
-        public FranchiseofficeAutocompleteElementResponse(string sFranchiseofficeDescription = default(string), int pkiFranchiseofficeID = default(int), bool bFranchiseofficeIsactive = default(bool))
+        /// <param name="">The description of the Franchiseoffice in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Franchisereoffice (required).</param>
+        /// <param name="">Whether the Franchiseoffice is active or not (required).</param>
+        public FranchiseofficeAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sFranchiseofficeDescription" is required (not null)
-            if (sFranchiseofficeDescription == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sFranchiseofficeDescription is a required property for FranchiseofficeAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchiseofficeAutocompleteElementResponse and cannot be null");
             }
-            this.SFranchiseofficeDescription = sFranchiseofficeDescription;
-            this.PkiFranchiseofficeID = pkiFranchiseofficeID;
-            this.BFranchiseofficeIsactive = bFranchiseofficeIsactive;
+            this.SFranchiseofficeDescription = ;
+            this.PkiFranchiseofficeID = ;
+            this.BFranchiseofficeIsactive = ;
         }
 
         /// <summary>

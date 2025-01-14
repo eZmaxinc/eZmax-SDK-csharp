@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objEzsignfoldersignerassociation">objEzsignfoldersignerassociation.</param>
-        /// <param name="objEzsignfoldersignerassociationCompound">objEzsignfoldersignerassociationCompound.</param>
-        public EzsignfoldersignerassociationCreateObjectV1Request(EzsignfoldersignerassociationRequest objEzsignfoldersignerassociation = default(EzsignfoldersignerassociationRequest), EzsignfoldersignerassociationRequestCompound objEzsignfoldersignerassociationCompound = default(EzsignfoldersignerassociationRequestCompound))
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public EzsignfoldersignerassociationCreateObjectV1Request(EzsignfoldersignerassociationRequest  = default(EzsignfoldersignerassociationRequest), EzsignfoldersignerassociationRequestCompound  = default(EzsignfoldersignerassociationRequestCompound))
         {
-            this.ObjEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
-            this.ObjEzsignfoldersignerassociationCompound = objEzsignfoldersignerassociationCompound;
+            this.ObjEzsignfoldersignerassociation = ;
+            this.ObjEzsignfoldersignerassociationCompound = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objUser">objUser (required).</param>
-        public UserGetObjectV2ResponseMPayload(UserResponseCompound objUser = default(UserResponseCompound))
+        /// <param name=""> (required).</param>
+        public UserGetObjectV2ResponseMPayload(UserResponseCompound  = default(UserResponseCompound))
         {
-            // to ensure "objUser" is required (not null)
-            if (objUser == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objUser is a required property for UserGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjUser = objUser;
+            this.ObjUser = ;
         }
 
         /// <summary>

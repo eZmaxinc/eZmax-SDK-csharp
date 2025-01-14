@@ -32,6 +32,12 @@ namespace eZmaxApi.Model
     [DataContract(Name = "ezsignfolder-send-v3-Request")]
     public partial class EzsignfolderSendV3Request : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EEzsignfolderMessageorder
+        /// </summary>
+        [DataMember(Name = "eEzsignfolderMessageorder", EmitDefaultValue = false)]
+        public FieldEEzsignfolderMessageorder? EEzsignfolderMessageorder { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderSendV3Request" /> class.
         /// </summary>
@@ -40,19 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderSendV3Request" /> class.
         /// </summary>
-        /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent..</param>
-        /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
-        /// <param name="aFkiEzsignfoldersignerassociationID">aFkiEzsignfoldersignerassociationID (required).</param>
-        public EzsignfolderSendV3Request(string tEzsignfolderMessage = default(string), string dtEzsignfolderDelayedsenddate = default(string), List<int> aFkiEzsignfoldersignerassociationID = default(List<int>))
+        /// <param name="">A custom text message that will be added to the email sent..</param>
+        /// <param name="">.</param>
+        /// <param name="">The date and time at which the Ezsignfolder will be sent in the future..</param>
+        /// <param name=""> (required).</param>
+        public EzsignfolderSendV3Request(string  = default(string), FieldEEzsignfolderMessageorder?  = default(FieldEEzsignfolderMessageorder?), string  = default(string), List<int>  = default(List<int>))
         {
-            // to ensure "aFkiEzsignfoldersignerassociationID" is required (not null)
-            if (aFkiEzsignfoldersignerassociationID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aFkiEzsignfoldersignerassociationID is a required property for EzsignfolderSendV3Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderSendV3Request and cannot be null");
             }
-            this.AFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
-            this.TEzsignfolderMessage = tEzsignfolderMessage;
-            this.DtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
+            this.AFkiEzsignfoldersignerassociationID = ;
+            this.TEzsignfolderMessage = ;
+            this.EEzsignfolderMessageorder = ;
+            this.DtEzsignfolderDelayedsenddate = ;
         }
 
         /// <summary>
@@ -94,6 +102,7 @@ Mary</example>*/
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignfolderSendV3Request {\n");
             sb.Append("  TEzsignfolderMessage: ").Append(TEzsignfolderMessage).Append("\n");
+            sb.Append("  EEzsignfolderMessageorder: ").Append(EEzsignfolderMessageorder).Append("\n");
             sb.Append("  DtEzsignfolderDelayedsenddate: ").Append(DtEzsignfolderDelayedsenddate).Append("\n");
             sb.Append("  AFkiEzsignfoldersignerassociationID: ").Append(AFkiEzsignfoldersignerassociationID).Append("\n");
             sb.Append("}\n");

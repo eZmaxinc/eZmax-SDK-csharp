@@ -71,30 +71,32 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemconfigurationRequest" /> class.
         /// </summary>
-        /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration.</param>
-        /// <param name="eSystemconfigurationNewexternaluseraction">eSystemconfigurationNewexternaluseraction (required).</param>
-        /// <param name="eSystemconfigurationLanguage1">eSystemconfigurationLanguage1 (required).</param>
-        /// <param name="eSystemconfigurationLanguage2">eSystemconfigurationLanguage2 (required).</param>
-        /// <param name="eSystemconfigurationEzsign">eSystemconfigurationEzsign.</param>
-        /// <param name="eSystemconfigurationEzsignofficeplan">eSystemconfigurationEzsignofficeplan.</param>
-        /// <param name="bSystemconfigurationEzsignpaidbyoffice">Whether if Ezsign is paid by the company or not.</param>
-        /// <param name="bSystemconfigurationEzsignpersonnal">Whether if we allow the creation of personal files in eZsign (required).</param>
-        /// <param name="bSystemconfigurationSspr">Whether if we allow SSPR (required).</param>
-        /// <param name="dtSystemconfigurationReadonlyexpirationstart">The start date where the system will be in read only.</param>
-        /// <param name="dtSystemconfigurationReadonlyexpirationend">The end date where the system will be in read only.</param>
-        public SystemconfigurationRequest(int pkiSystemconfigurationID = default(int), FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), bool bSystemconfigurationEzsignpersonnal = default(bool), bool bSystemconfigurationSspr = default(bool), string dtSystemconfigurationReadonlyexpirationstart = default(string), string dtSystemconfigurationReadonlyexpirationend = default(string))
+        /// <param name="">The unique ID of the Systemconfiguration.</param>
+        /// <param name="">The unique ID of the Branding.</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">Whether if Ezsign is paid by the company or not.</param>
+        /// <param name="">Whether if we allow the creation of personal files in eZsign (required).</param>
+        /// <param name="">Whether if we allow SSPR (required).</param>
+        /// <param name="">The start date where the system will be in read only.</param>
+        /// <param name="">The end date where the system will be in read only.</param>
+        public SystemconfigurationRequest(int  = default(int), int  = default(int), FieldESystemconfigurationNewexternaluseraction  = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1  = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2  = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign?  = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan?  = default(FieldESystemconfigurationEzsignofficeplan?), bool  = default(bool), bool  = default(bool), bool  = default(bool), string  = default(string), string  = default(string))
         {
-            this.ESystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
-            this.ESystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
-            this.ESystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
-            this.BSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
-            this.BSystemconfigurationSspr = bSystemconfigurationSspr;
-            this.PkiSystemconfigurationID = pkiSystemconfigurationID;
-            this.ESystemconfigurationEzsign = eSystemconfigurationEzsign;
-            this.ESystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
-            this.BSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
-            this.DtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
-            this.DtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
+            this.ESystemconfigurationNewexternaluseraction = ;
+            this.ESystemconfigurationLanguage1 = ;
+            this.ESystemconfigurationLanguage2 = ;
+            this.BSystemconfigurationEzsignpersonnal = ;
+            this.BSystemconfigurationSspr = ;
+            this.PkiSystemconfigurationID = ;
+            this.FkiBrandingID = ;
+            this.ESystemconfigurationEzsign = ;
+            this.ESystemconfigurationEzsignofficeplan = ;
+            this.BSystemconfigurationEzsignpaidbyoffice = ;
+            this.DtSystemconfigurationReadonlyexpirationstart = ;
+            this.DtSystemconfigurationReadonlyexpirationend = ;
         }
 
         /// <summary>
@@ -104,6 +106,14 @@ namespace eZmaxApi.Model
         /* <example>1</example>*/
         [DataMember(Name = "pkiSystemconfigurationID", EmitDefaultValue = false)]
         public int PkiSystemconfigurationID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Branding
+        /// </summary>
+        /// <value>The unique ID of the Branding</value>
+        /* <example>78</example>*/
+        [DataMember(Name = "fkiBrandingID", EmitDefaultValue = false)]
+        public int FkiBrandingID { get; set; }
 
         /// <summary>
         /// Whether if Ezsign is paid by the company or not
@@ -154,6 +164,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class SystemconfigurationRequest {\n");
             sb.Append("  PkiSystemconfigurationID: ").Append(PkiSystemconfigurationID).Append("\n");
+            sb.Append("  FkiBrandingID: ").Append(FkiBrandingID).Append("\n");
             sb.Append("  ESystemconfigurationNewexternaluseraction: ").Append(ESystemconfigurationNewexternaluseraction).Append("\n");
             sb.Append("  ESystemconfigurationLanguage1: ").Append(ESystemconfigurationLanguage1).Append("\n");
             sb.Append("  ESystemconfigurationLanguage2: ").Append(ESystemconfigurationLanguage2).Append("\n");
@@ -194,6 +205,12 @@ namespace eZmaxApi.Model
             if (this.PkiSystemconfigurationID < (int)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value greater than or equal to 1.", new [] { "PkiSystemconfigurationID" });
+            }
+
+            // FkiBrandingID (int) minimum
+            if (this.FkiBrandingID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
             }
 
             if (this.DtSystemconfigurationReadonlyexpirationstart != null) {

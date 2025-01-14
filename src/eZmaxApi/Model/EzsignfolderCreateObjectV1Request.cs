@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objEzsignfolder">objEzsignfolder.</param>
-        /// <param name="objEzsignfolderCompound">objEzsignfolderCompound.</param>
-        public EzsignfolderCreateObjectV1Request(EzsignfolderRequest objEzsignfolder = default(EzsignfolderRequest), EzsignfolderRequestCompound objEzsignfolderCompound = default(EzsignfolderRequestCompound))
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public EzsignfolderCreateObjectV1Request(EzsignfolderRequest  = default(EzsignfolderRequest), EzsignfolderRequestCompound  = default(EzsignfolderRequestCompound))
         {
-            this.ObjEzsignfolder = objEzsignfolder;
-            this.ObjEzsignfolderCompound = objEzsignfolderCompound;
+            this.ObjEzsignfolder = ;
+            this.ObjEzsignfolderCompound = ;
         }
 
         /// <summary>

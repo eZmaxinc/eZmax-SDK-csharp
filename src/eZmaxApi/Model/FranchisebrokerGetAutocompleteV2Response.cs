@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisebrokerGetAutocompleteV2Response" /> class.
         /// </summary>
-        /// <param name="objDebugPayload">objDebugPayload (required).</param>
-        /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">mPayload (required).</param>
-        public FranchisebrokerGetAutocompleteV2Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), FranchisebrokerGetAutocompleteV2ResponseMPayload mPayload = default(FranchisebrokerGetAutocompleteV2ResponseMPayload))
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        public FranchisebrokerGetAutocompleteV2Response(CommonResponseObjDebugPayload  = default(CommonResponseObjDebugPayload), CommonResponseObjDebug  = default(CommonResponseObjDebug), FranchisebrokerGetAutocompleteV2ResponseMPayload  = default(FranchisebrokerGetAutocompleteV2ResponseMPayload))
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objDebugPayload is a required property for FranchisebrokerGetAutocompleteV2Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisebrokerGetAutocompleteV2Response and cannot be null");
             }
-            this.ObjDebugPayload = objDebugPayload;
-            // to ensure "mPayload" is required (not null)
-            if (mPayload == null)
+            this.ObjDebugPayload = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("mPayload is a required property for FranchisebrokerGetAutocompleteV2Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisebrokerGetAutocompleteV2Response and cannot be null");
             }
-            this.MPayload = mPayload;
-            this.ObjDebug = objDebug;
+            this.MPayload = ;
+            this.ObjDebug = ;
         }
 
         /// <summary>

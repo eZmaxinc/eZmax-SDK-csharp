@@ -40,103 +40,103 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryglobalResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzmaxinvoicingsummaryglobalID">The unique ID of the Ezmaxinvoicingsummaryglobal.</param>
-        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="dtEzmaxinvoicingsummaryglobalStart">The start date for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dtEzmaxinvoicingsummaryglobalEnd">The end date for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="iEzmaxinvoicingsummaryglobalDays">The number of days for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalCountreal">The count item calculated (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalCountbilled">The count item billed (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalSubtotal">The Ezmaxinvoicingsummaryglobal subtotal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalRebateamount">The rebate amount for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalRebatepercent">The rebate percentage of the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalRebatetotal">The rebate amount total for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalTotal">The Ezmaxinvoicingsummaryglobal total (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalRepresentative">The amount of commission for the representative.</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalPartner">The amount of commission for the partner.</param>
-        /// <param name="dEzmaxinvoicingsummaryglobalNet">The net amount of the Ezmaxinvoicingsummaryglobal.</param>
-        /// <param name="bEzmaxinvoicingsummaryglobalAdjustment">Whether it is adjustment for the Ezmaxinvoicingsummaryglobal (required).</param>
-        /// <param name="tEzmaxproductHelpX">The help message of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="aObjEzmaxinvoicingcommission">aObjEzmaxinvoicingcommission.</param>
-        public EzmaxinvoicingsummaryglobalResponseCompound(int pkiEzmaxinvoicingsummaryglobalID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), string dtEzmaxinvoicingsummaryglobalStart = default(string), string dtEzmaxinvoicingsummaryglobalEnd = default(string), int iEzmaxinvoicingsummaryglobalDays = default(int), string dEzmaxinvoicingsummaryglobalCountreal = default(string), string dEzmaxinvoicingsummaryglobalCountbilled = default(string), string dEzmaxinvoicingsummaryglobalSubtotal = default(string), string dEzmaxinvoicingsummaryglobalRebateamount = default(string), string dEzmaxinvoicingsummaryglobalRebatepercent = default(string), string dEzmaxinvoicingsummaryglobalRebatetotal = default(string), string dEzmaxinvoicingsummaryglobalTotal = default(string), string dEzmaxinvoicingsummaryglobalRepresentative = default(string), string dEzmaxinvoicingsummaryglobalPartner = default(string), string dEzmaxinvoicingsummaryglobalNet = default(string), bool bEzmaxinvoicingsummaryglobalAdjustment = default(bool), string tEzmaxproductHelpX = default(string), List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission = default(List<EzmaxinvoicingcommissionResponseCompound>))
+        /// <param name="">The unique ID of the Ezmaxinvoicingsummaryglobal.</param>
+        /// <param name="">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="">The description of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="">The start date for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="">The end date for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="">The number of days for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="">The count item calculated (required).</param>
+        /// <param name="">The count item billed (required).</param>
+        /// <param name="">The Ezmaxinvoicingsummaryglobal subtotal (required).</param>
+        /// <param name="">The rebate amount for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="">The rebate percentage of the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="">The rebate amount total for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="">The Ezmaxinvoicingsummaryglobal total (required).</param>
+        /// <param name="">The amount of commission for the representative.</param>
+        /// <param name="">The amount of commission for the partner.</param>
+        /// <param name="">The net amount of the Ezmaxinvoicingsummaryglobal.</param>
+        /// <param name="">Whether it is adjustment for the Ezmaxinvoicingsummaryglobal (required).</param>
+        /// <param name="">The help message of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="">.</param>
+        public EzmaxinvoicingsummaryglobalResponseCompound(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), string  = default(string), List<EzmaxinvoicingcommissionResponseCompound>  = default(List<EzmaxinvoicingcommissionResponseCompound>))
         {
-            this.FkiEzmaxproductID = fkiEzmaxproductID;
-            // to ensure "sEzmaxproductDescriptionX" is required (not null)
-            if (sEzmaxproductDescriptionX == null)
+            this.FkiEzmaxproductID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzmaxproductDescriptionX is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.SEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
-            // to ensure "dtEzmaxinvoicingsummaryglobalStart" is required (not null)
-            if (dtEzmaxinvoicingsummaryglobalStart == null)
+            this.SEzmaxproductDescriptionX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtEzmaxinvoicingsummaryglobalStart is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.DtEzmaxinvoicingsummaryglobalStart = dtEzmaxinvoicingsummaryglobalStart;
-            // to ensure "dtEzmaxinvoicingsummaryglobalEnd" is required (not null)
-            if (dtEzmaxinvoicingsummaryglobalEnd == null)
+            this.DtEzmaxinvoicingsummaryglobalStart = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtEzmaxinvoicingsummaryglobalEnd is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.DtEzmaxinvoicingsummaryglobalEnd = dtEzmaxinvoicingsummaryglobalEnd;
-            this.IEzmaxinvoicingsummaryglobalDays = iEzmaxinvoicingsummaryglobalDays;
-            // to ensure "dEzmaxinvoicingsummaryglobalCountreal" is required (not null)
-            if (dEzmaxinvoicingsummaryglobalCountreal == null)
+            this.DtEzmaxinvoicingsummaryglobalEnd = ;
+            this.IEzmaxinvoicingsummaryglobalDays = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalCountreal is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryglobalCountreal = dEzmaxinvoicingsummaryglobalCountreal;
-            // to ensure "dEzmaxinvoicingsummaryglobalCountbilled" is required (not null)
-            if (dEzmaxinvoicingsummaryglobalCountbilled == null)
+            this.DEzmaxinvoicingsummaryglobalCountreal = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalCountbilled is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryglobalCountbilled = dEzmaxinvoicingsummaryglobalCountbilled;
-            // to ensure "dEzmaxinvoicingsummaryglobalSubtotal" is required (not null)
-            if (dEzmaxinvoicingsummaryglobalSubtotal == null)
+            this.DEzmaxinvoicingsummaryglobalCountbilled = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalSubtotal is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryglobalSubtotal = dEzmaxinvoicingsummaryglobalSubtotal;
-            // to ensure "dEzmaxinvoicingsummaryglobalRebateamount" is required (not null)
-            if (dEzmaxinvoicingsummaryglobalRebateamount == null)
+            this.DEzmaxinvoicingsummaryglobalSubtotal = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalRebateamount is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryglobalRebateamount = dEzmaxinvoicingsummaryglobalRebateamount;
-            // to ensure "dEzmaxinvoicingsummaryglobalRebatepercent" is required (not null)
-            if (dEzmaxinvoicingsummaryglobalRebatepercent == null)
+            this.DEzmaxinvoicingsummaryglobalRebateamount = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalRebatepercent is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryglobalRebatepercent = dEzmaxinvoicingsummaryglobalRebatepercent;
-            // to ensure "dEzmaxinvoicingsummaryglobalRebatetotal" is required (not null)
-            if (dEzmaxinvoicingsummaryglobalRebatetotal == null)
+            this.DEzmaxinvoicingsummaryglobalRebatepercent = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalRebatetotal is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryglobalRebatetotal = dEzmaxinvoicingsummaryglobalRebatetotal;
-            // to ensure "dEzmaxinvoicingsummaryglobalTotal" is required (not null)
-            if (dEzmaxinvoicingsummaryglobalTotal == null)
+            this.DEzmaxinvoicingsummaryglobalRebatetotal = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalTotal is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryglobalTotal = dEzmaxinvoicingsummaryglobalTotal;
-            this.BEzmaxinvoicingsummaryglobalAdjustment = bEzmaxinvoicingsummaryglobalAdjustment;
-            // to ensure "tEzmaxproductHelpX" is required (not null)
-            if (tEzmaxproductHelpX == null)
+            this.DEzmaxinvoicingsummaryglobalTotal = ;
+            this.BEzmaxinvoicingsummaryglobalAdjustment = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("tEzmaxproductHelpX is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
             }
-            this.TEzmaxproductHelpX = tEzmaxproductHelpX;
-            this.PkiEzmaxinvoicingsummaryglobalID = pkiEzmaxinvoicingsummaryglobalID;
-            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
-            this.DEzmaxinvoicingsummaryglobalRepresentative = dEzmaxinvoicingsummaryglobalRepresentative;
-            this.DEzmaxinvoicingsummaryglobalPartner = dEzmaxinvoicingsummaryglobalPartner;
-            this.DEzmaxinvoicingsummaryglobalNet = dEzmaxinvoicingsummaryglobalNet;
-            this.AObjEzmaxinvoicingcommission = aObjEzmaxinvoicingcommission;
+            this.TEzmaxproductHelpX = ;
+            this.PkiEzmaxinvoicingsummaryglobalID = ;
+            this.FkiEzmaxinvoicingID = ;
+            this.DEzmaxinvoicingsummaryglobalRepresentative = ;
+            this.DEzmaxinvoicingsummaryglobalPartner = ;
+            this.DEzmaxinvoicingsummaryglobalNet = ;
+            this.AObjEzmaxinvoicingcommission = ;
         }
 
         /// <summary>

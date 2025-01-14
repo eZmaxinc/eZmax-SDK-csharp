@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjUsergroupexternal">aObjUsergroupexternal (required).</param>
-        public UsergroupexternalGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<UsergroupexternalListElement> aObjUsergroupexternal = default(List<UsergroupexternalListElement>))
+        /// <param name="">The number of rows returned (required).</param>
+        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name=""> (required).</param>
+        public UsergroupexternalGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<UsergroupexternalListElement>  = default(List<UsergroupexternalListElement>))
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
-            // to ensure "aObjUsergroupexternal" is required (not null)
-            if (aObjUsergroupexternal == null)
+            this.IRowReturned = ;
+            this.IRowFiltered = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUsergroupexternal is a required property for UsergroupexternalGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupexternalGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjUsergroupexternal = aObjUsergroupexternal;
+            this.AObjUsergroupexternal = ;
         }
 
         /// <summary>

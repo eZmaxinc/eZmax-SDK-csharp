@@ -64,148 +64,148 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomAttachmentResponse" /> class.
         /// </summary>
-        /// <param name="pkiAttachmentID">The unique ID of the Attachment. (required).</param>
-        /// <param name="fkiComputerID">The unique ID of the Computer.</param>
-        /// <param name="fkiAdjustmentID">The unique ID of the Adjustment.</param>
-        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
-        /// <param name="fkiBankaccountID">The unique ID of the Bankaccount.</param>
-        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
-        /// <param name="fkiCommissionadvanceID">The unique ID of the Commissionadvance.</param>
-        /// <param name="fkiCommunicationID">The unique ID of the Communication..</param>
-        /// <param name="fkiCustomerID">The unique ID of the Customer..</param>
-        /// <param name="fkiCustomertemplateID">The unique ID of the Customertemplate.</param>
-        /// <param name="fkiDepositID">The unique ID of the Deposit.</param>
-        /// <param name="fkiDeposittransitchequeID">The unique ID of the Deposittransitcheque.</param>
-        /// <param name="fkiElectronicfundstransferID">The unique ID of the Electronicfundstransfer.</param>
-        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
-        /// <param name="fkiExternalbrokerID">The unique ID of the Externalbroker..</param>
-        /// <param name="fkiEzcomadvanceserverID">The unique ID of the Ezcomadvanceserver.</param>
-        /// <param name="fkiEzcomcompanyID">The unique ID of the Ezcomcompany.</param>
-        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument.</param>
-        /// <param name="fkiGhacqcontractID">The unique ID of the Ghacqcontract.</param>
-        /// <param name="fkiInscriptionID">The unique ID of the Inscription..</param>
-        /// <param name="fkiInscriptiontempID">The unique ID of the Inscriptiontemp.</param>
-        /// <param name="fkiInscriptionnotauthenticatedID">The unique ID of the Inscriptionnotauthenticated..</param>
-        /// <param name="fkiInvoiceID">The unique ID of the Invoice..</param>
-        /// <param name="fkiBuyercontractID">The unique ID of the Buyercontract.</param>
-        /// <param name="fkiFranchisebrokerID">The unique ID of the Franchisebroker.</param>
-        /// <param name="fkiFranchiseagenceID">The unique ID of the Franchiseagence.</param>
-        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice.</param>
-        /// <param name="fkiFranchisefranchiseID">The unique ID of the Franchisefranchise.</param>
-        /// <param name="fkiFranchisecomplaintID">The unique ID of the Franchisecomplaint.</param>
-        /// <param name="fkiLeadID">The unique ID of the Lead.</param>
-        /// <param name="fkiMarketingprogramID">The unique ID of the Marketingprogram.</param>
-        /// <param name="fkiMarketingfollowID">The unique ID of the Marketingfollow.</param>
-        /// <param name="fkiNotaryID">The unique ID of the Notary..</param>
-        /// <param name="fkiOfficetaxreportID">The unique ID of the Officetaxreport.</param>
-        /// <param name="fkiOtherincomeID">The unique ID of the Otherincome.</param>
-        /// <param name="fkiPaymentpreparationID">The unique ID of the Paymentpreparation.</param>
-        /// <param name="fkiPurchaseID">The unique ID of the Purchase.</param>
-        /// <param name="fkiSalaryID">The unique ID of the Salary.</param>
-        /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
-        /// <param name="fkiTranqcontractID">The unique ID of the Tranqcontract.</param>
-        /// <param name="fkiTemplateID">The unique ID of the Template.</param>
-        /// <param name="fkiInscriptionchecklistID">The unique ID of the Inscriptionchecklist.</param>
-        /// <param name="fkiFolderID">The unique ID of the Folder.</param>
-        /// <param name="fkiRejectedoffertopurchaseID">The unique ID of the Rejectedoffertopurchase.</param>
-        /// <param name="fkiDisclosureID">The unique ID of the Disclosure.</param>
-        /// <param name="fkiReconciliationID">The unique ID of the Reconciliation.</param>
-        /// <param name="fkiEzsigndocumentIDReference">The unique ID of the Ezsigndocument.</param>
-        /// <param name="eAttachmentDocumenttype">eAttachmentDocumenttype (required).</param>
-        /// <param name="sAttachmentName">The name of the Attachment (required).</param>
-        /// <param name="eAttachmentPrivacy">eAttachmentPrivacy (required).</param>
-        /// <param name="fkiUserIDSpecific">The unique ID of the User.</param>
-        /// <param name="eAttachmentType">eAttachmentType (required).</param>
-        /// <param name="iAttachmentSize">The size of the Attachment (required).</param>
-        /// <param name="iAttachmentEDMmoduleflag">The edmmoduleflag of the Attachment.</param>
-        /// <param name="sAttachmentMD5">The md5 of the Attachment (required).</param>
-        /// <param name="bAttachmentDeleted">Whether if it&#39;s deleted (required).</param>
-        /// <param name="bAttachmentValid">Whether if it&#39;s valid (required).</param>
-        /// <param name="eAttachmentVerified">eAttachmentVerified (required).</param>
-        /// <param name="tAttachmentRejectioncomment">The rejectioncomment of the Attachment.</param>
-        /// <param name="fkiUserIDOwner">The unique ID of the User.</param>
-        /// <param name="objAudit">objAudit.</param>
-        /// <param name="objAttachmentProof">objAttachmentProof.</param>
-        /// <param name="objAttachmentProofdocument">objAttachmentProofdocument.</param>
-        /// <param name="aObjAttachmentAttachment">aObjAttachmentAttachment.</param>
-        /// <param name="aObjAttachmentVersion">aObjAttachmentVersion.</param>
-        public CustomAttachmentResponse(int pkiAttachmentID = default(int), int fkiComputerID = default(int), int fkiAdjustmentID = default(int), int fkiAgentID = default(int), int fkiBankaccountID = default(int), int fkiBrokerID = default(int), int fkiCommissionadvanceID = default(int), int fkiCommunicationID = default(int), int fkiCustomerID = default(int), int fkiCustomertemplateID = default(int), int fkiDepositID = default(int), int fkiDeposittransitchequeID = default(int), int fkiElectronicfundstransferID = default(int), int fkiEmployeeID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomadvanceserverID = default(int), int fkiEzcomcompanyID = default(int), int fkiEzsigndocumentID = default(int), int fkiGhacqcontractID = default(int), int fkiInscriptionID = default(int), int fkiInscriptiontempID = default(int), int fkiInscriptionnotauthenticatedID = default(int), int fkiInvoiceID = default(int), int fkiBuyercontractID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchiseagenceID = default(int), int fkiFranchiseofficeID = default(int), int fkiFranchisefranchiseID = default(int), int fkiFranchisecomplaintID = default(int), int fkiLeadID = default(int), int fkiMarketingprogramID = default(int), int fkiMarketingfollowID = default(int), int fkiNotaryID = default(int), int fkiOfficetaxreportID = default(int), int fkiOtherincomeID = default(int), int fkiPaymentpreparationID = default(int), int fkiPurchaseID = default(int), int fkiSalaryID = default(int), int fkiSupplierID = default(int), int fkiTranqcontractID = default(int), int fkiTemplateID = default(int), int fkiInscriptionchecklistID = default(int), int fkiFolderID = default(int), int fkiRejectedoffertopurchaseID = default(int), int fkiDisclosureID = default(int), int fkiReconciliationID = default(int), int fkiEzsigndocumentIDReference = default(int), FieldEAttachmentDocumenttype eAttachmentDocumenttype = default(FieldEAttachmentDocumenttype), string sAttachmentName = default(string), FieldEAttachmentPrivacy eAttachmentPrivacy = default(FieldEAttachmentPrivacy), int fkiUserIDSpecific = default(int), FieldEAttachmentType eAttachmentType = default(FieldEAttachmentType), int iAttachmentSize = default(int), int iAttachmentEDMmoduleflag = default(int), string sAttachmentMD5 = default(string), bool bAttachmentDeleted = default(bool), bool bAttachmentValid = default(bool), FieldEAttachmentVerified eAttachmentVerified = default(FieldEAttachmentVerified), string tAttachmentRejectioncomment = default(string), int fkiUserIDOwner = default(int), CommonAudit objAudit = default(CommonAudit), AttachmentResponseCompound objAttachmentProof = default(AttachmentResponseCompound), AttachmentResponseCompound objAttachmentProofdocument = default(AttachmentResponseCompound), List<AttachmentResponseCompound> aObjAttachmentAttachment = default(List<AttachmentResponseCompound>), List<AttachmentResponseCompound> aObjAttachmentVersion = default(List<AttachmentResponseCompound>))
+        /// <param name="">The unique ID of the Attachment. (required).</param>
+        /// <param name="">The unique ID of the Computer.</param>
+        /// <param name="">The unique ID of the Adjustment.</param>
+        /// <param name="">The unique ID of the Agent..</param>
+        /// <param name="">The unique ID of the Bankaccount.</param>
+        /// <param name="">The unique ID of the Broker..</param>
+        /// <param name="">The unique ID of the Commissionadvance.</param>
+        /// <param name="">The unique ID of the Communication..</param>
+        /// <param name="">The unique ID of the Customer..</param>
+        /// <param name="">The unique ID of the Customertemplate.</param>
+        /// <param name="">The unique ID of the Deposit.</param>
+        /// <param name="">The unique ID of the Deposittransitcheque.</param>
+        /// <param name="">The unique ID of the Electronicfundstransfer.</param>
+        /// <param name="">The unique ID of the Employee..</param>
+        /// <param name="">The unique ID of the Externalbroker..</param>
+        /// <param name="">The unique ID of the Ezcomadvanceserver.</param>
+        /// <param name="">The unique ID of the Ezcomcompany.</param>
+        /// <param name="">The unique ID of the Ezsigndocument.</param>
+        /// <param name="">The unique ID of the Ghacqcontract.</param>
+        /// <param name="">The unique ID of the Inscription..</param>
+        /// <param name="">The unique ID of the Inscriptiontemp.</param>
+        /// <param name="">The unique ID of the Inscriptionnotauthenticated..</param>
+        /// <param name="">The unique ID of the Invoice..</param>
+        /// <param name="">The unique ID of the Buyercontract.</param>
+        /// <param name="">The unique ID of the Franchisebroker.</param>
+        /// <param name="">The unique ID of the Franchiseagence.</param>
+        /// <param name="">The unique ID of the Franchisereoffice.</param>
+        /// <param name="">The unique ID of the Franchisefranchise.</param>
+        /// <param name="">The unique ID of the Franchisecomplaint.</param>
+        /// <param name="">The unique ID of the Lead.</param>
+        /// <param name="">The unique ID of the Marketingprogram.</param>
+        /// <param name="">The unique ID of the Marketingfollow.</param>
+        /// <param name="">The unique ID of the Notary..</param>
+        /// <param name="">The unique ID of the Officetaxreport.</param>
+        /// <param name="">The unique ID of the Otherincome.</param>
+        /// <param name="">The unique ID of the Paymentpreparation.</param>
+        /// <param name="">The unique ID of the Purchase.</param>
+        /// <param name="">The unique ID of the Salary.</param>
+        /// <param name="">The unique ID of the Supplier..</param>
+        /// <param name="">The unique ID of the Tranqcontract.</param>
+        /// <param name="">The unique ID of the Template.</param>
+        /// <param name="">The unique ID of the Inscriptionchecklist.</param>
+        /// <param name="">The unique ID of the Folder.</param>
+        /// <param name="">The unique ID of the Rejectedoffertopurchase.</param>
+        /// <param name="">The unique ID of the Disclosure.</param>
+        /// <param name="">The unique ID of the Reconciliation.</param>
+        /// <param name="">The unique ID of the Ezsigndocument.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The name of the Attachment (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The size of the Attachment (required).</param>
+        /// <param name="">The edmmoduleflag of the Attachment.</param>
+        /// <param name="">The md5 of the Attachment (required).</param>
+        /// <param name="">Whether if it&#39;s deleted (required).</param>
+        /// <param name="">Whether if it&#39;s valid (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The rejectioncomment of the Attachment.</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public CustomAttachmentResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEAttachmentDocumenttype  = default(FieldEAttachmentDocumenttype), string  = default(string), FieldEAttachmentPrivacy  = default(FieldEAttachmentPrivacy), int  = default(int), FieldEAttachmentType  = default(FieldEAttachmentType), int  = default(int), int  = default(int), string  = default(string), bool  = default(bool), bool  = default(bool), FieldEAttachmentVerified  = default(FieldEAttachmentVerified), string  = default(string), int  = default(int), CommonAudit  = default(CommonAudit), AttachmentResponseCompound  = default(AttachmentResponseCompound), AttachmentResponseCompound  = default(AttachmentResponseCompound), List<AttachmentResponseCompound>  = default(List<AttachmentResponseCompound>), List<AttachmentResponseCompound>  = default(List<AttachmentResponseCompound>))
         {
-            this.PkiAttachmentID = pkiAttachmentID;
-            this.EAttachmentDocumenttype = eAttachmentDocumenttype;
-            // to ensure "sAttachmentName" is required (not null)
-            if (sAttachmentName == null)
+            this.PkiAttachmentID = ;
+            this.EAttachmentDocumenttype = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sAttachmentName is a required property for CustomAttachmentResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomAttachmentResponse and cannot be null");
             }
-            this.SAttachmentName = sAttachmentName;
-            this.EAttachmentPrivacy = eAttachmentPrivacy;
-            this.EAttachmentType = eAttachmentType;
-            this.IAttachmentSize = iAttachmentSize;
-            // to ensure "sAttachmentMD5" is required (not null)
-            if (sAttachmentMD5 == null)
+            this.SAttachmentName = ;
+            this.EAttachmentPrivacy = ;
+            this.EAttachmentType = ;
+            this.IAttachmentSize = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sAttachmentMD5 is a required property for CustomAttachmentResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomAttachmentResponse and cannot be null");
             }
-            this.SAttachmentMD5 = sAttachmentMD5;
-            this.BAttachmentDeleted = bAttachmentDeleted;
-            this.BAttachmentValid = bAttachmentValid;
-            this.EAttachmentVerified = eAttachmentVerified;
-            this.FkiComputerID = fkiComputerID;
-            this.FkiAdjustmentID = fkiAdjustmentID;
-            this.FkiAgentID = fkiAgentID;
-            this.FkiBankaccountID = fkiBankaccountID;
-            this.FkiBrokerID = fkiBrokerID;
-            this.FkiCommissionadvanceID = fkiCommissionadvanceID;
-            this.FkiCommunicationID = fkiCommunicationID;
-            this.FkiCustomerID = fkiCustomerID;
-            this.FkiCustomertemplateID = fkiCustomertemplateID;
-            this.FkiDepositID = fkiDepositID;
-            this.FkiDeposittransitchequeID = fkiDeposittransitchequeID;
-            this.FkiElectronicfundstransferID = fkiElectronicfundstransferID;
-            this.FkiEmployeeID = fkiEmployeeID;
-            this.FkiExternalbrokerID = fkiExternalbrokerID;
-            this.FkiEzcomadvanceserverID = fkiEzcomadvanceserverID;
-            this.FkiEzcomcompanyID = fkiEzcomcompanyID;
-            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
-            this.FkiGhacqcontractID = fkiGhacqcontractID;
-            this.FkiInscriptionID = fkiInscriptionID;
-            this.FkiInscriptiontempID = fkiInscriptiontempID;
-            this.FkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
-            this.FkiInvoiceID = fkiInvoiceID;
-            this.FkiBuyercontractID = fkiBuyercontractID;
-            this.FkiFranchisebrokerID = fkiFranchisebrokerID;
-            this.FkiFranchiseagenceID = fkiFranchiseagenceID;
-            this.FkiFranchiseofficeID = fkiFranchiseofficeID;
-            this.FkiFranchisefranchiseID = fkiFranchisefranchiseID;
-            this.FkiFranchisecomplaintID = fkiFranchisecomplaintID;
-            this.FkiLeadID = fkiLeadID;
-            this.FkiMarketingprogramID = fkiMarketingprogramID;
-            this.FkiMarketingfollowID = fkiMarketingfollowID;
-            this.FkiNotaryID = fkiNotaryID;
-            this.FkiOfficetaxreportID = fkiOfficetaxreportID;
-            this.FkiOtherincomeID = fkiOtherincomeID;
-            this.FkiPaymentpreparationID = fkiPaymentpreparationID;
-            this.FkiPurchaseID = fkiPurchaseID;
-            this.FkiSalaryID = fkiSalaryID;
-            this.FkiSupplierID = fkiSupplierID;
-            this.FkiTranqcontractID = fkiTranqcontractID;
-            this.FkiTemplateID = fkiTemplateID;
-            this.FkiInscriptionchecklistID = fkiInscriptionchecklistID;
-            this.FkiFolderID = fkiFolderID;
-            this.FkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
-            this.FkiDisclosureID = fkiDisclosureID;
-            this.FkiReconciliationID = fkiReconciliationID;
-            this.FkiEzsigndocumentIDReference = fkiEzsigndocumentIDReference;
-            this.FkiUserIDSpecific = fkiUserIDSpecific;
-            this.IAttachmentEDMmoduleflag = iAttachmentEDMmoduleflag;
-            this.TAttachmentRejectioncomment = tAttachmentRejectioncomment;
-            this.FkiUserIDOwner = fkiUserIDOwner;
-            this.ObjAudit = objAudit;
-            this.ObjAttachmentProof = objAttachmentProof;
-            this.ObjAttachmentProofdocument = objAttachmentProofdocument;
-            this.AObjAttachmentAttachment = aObjAttachmentAttachment;
-            this.AObjAttachmentVersion = aObjAttachmentVersion;
+            this.SAttachmentMD5 = ;
+            this.BAttachmentDeleted = ;
+            this.BAttachmentValid = ;
+            this.EAttachmentVerified = ;
+            this.FkiComputerID = ;
+            this.FkiAdjustmentID = ;
+            this.FkiAgentID = ;
+            this.FkiBankaccountID = ;
+            this.FkiBrokerID = ;
+            this.FkiCommissionadvanceID = ;
+            this.FkiCommunicationID = ;
+            this.FkiCustomerID = ;
+            this.FkiCustomertemplateID = ;
+            this.FkiDepositID = ;
+            this.FkiDeposittransitchequeID = ;
+            this.FkiElectronicfundstransferID = ;
+            this.FkiEmployeeID = ;
+            this.FkiExternalbrokerID = ;
+            this.FkiEzcomadvanceserverID = ;
+            this.FkiEzcomcompanyID = ;
+            this.FkiEzsigndocumentID = ;
+            this.FkiGhacqcontractID = ;
+            this.FkiInscriptionID = ;
+            this.FkiInscriptiontempID = ;
+            this.FkiInscriptionnotauthenticatedID = ;
+            this.FkiInvoiceID = ;
+            this.FkiBuyercontractID = ;
+            this.FkiFranchisebrokerID = ;
+            this.FkiFranchiseagenceID = ;
+            this.FkiFranchiseofficeID = ;
+            this.FkiFranchisefranchiseID = ;
+            this.FkiFranchisecomplaintID = ;
+            this.FkiLeadID = ;
+            this.FkiMarketingprogramID = ;
+            this.FkiMarketingfollowID = ;
+            this.FkiNotaryID = ;
+            this.FkiOfficetaxreportID = ;
+            this.FkiOtherincomeID = ;
+            this.FkiPaymentpreparationID = ;
+            this.FkiPurchaseID = ;
+            this.FkiSalaryID = ;
+            this.FkiSupplierID = ;
+            this.FkiTranqcontractID = ;
+            this.FkiTemplateID = ;
+            this.FkiInscriptionchecklistID = ;
+            this.FkiFolderID = ;
+            this.FkiRejectedoffertopurchaseID = ;
+            this.FkiDisclosureID = ;
+            this.FkiReconciliationID = ;
+            this.FkiEzsigndocumentIDReference = ;
+            this.FkiUserIDSpecific = ;
+            this.IAttachmentEDMmoduleflag = ;
+            this.TAttachmentRejectioncomment = ;
+            this.FkiUserIDOwner = ;
+            this.ObjAudit = ;
+            this.ObjAttachmentProof = ;
+            this.ObjAttachmentProofdocument = ;
+            this.AObjAttachmentAttachment = ;
+            this.AObjAttachmentVersion = ;
         }
 
         /// <summary>
@@ -606,7 +606,7 @@ namespace eZmaxApi.Model
         /// <value>The size of the Attachment</value>
         /* <example>277465200</example>*/
         [DataMember(Name = "iAttachmentSize", IsRequired = true, EmitDefaultValue = true)]
-        public int IAttachmentSize { get; set; }
+        public long IAttachmentSize { get; set; }
 
         /// <summary>
         /// The edmmoduleflag of the Attachment
@@ -1250,14 +1250,14 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDSpecific, must be a value greater than or equal to 0.", new [] { "FkiUserIDSpecific" });
             }
 
-            // IAttachmentSize (int) maximum
-            if (this.IAttachmentSize > (int)4294967295)
+            // IAttachmentSize (long) maximum
+            if (this.IAttachmentSize > (long)4294967295)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAttachmentSize, must be a value less than or equal to 4294967295.", new [] { "IAttachmentSize" });
             }
 
-            // IAttachmentSize (int) minimum
-            if (this.IAttachmentSize < (int)0)
+            // IAttachmentSize (long) minimum
+            if (this.IAttachmentSize < (long)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAttachmentSize, must be a value greater than or equal to 0.", new [] { "IAttachmentSize" });
             }

@@ -4,15 +4,15 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**BrandingCreateObjectV1**](ObjectBrandingApi.md#brandingcreateobjectv1) | **POST** /1/object/branding | Create a new Branding |
-| [**BrandingEditObjectV1**](ObjectBrandingApi.md#brandingeditobjectv1) | **PUT** /1/object/branding/{pkiBrandingID} | Edit an existing Branding |
+| [**BrandingCreateObjectV2**](ObjectBrandingApi.md#brandingcreateobjectv2) | **POST** /2/object/branding | Create a new Branding |
+| [**BrandingEditObjectV2**](ObjectBrandingApi.md#brandingeditobjectv2) | **PUT** /2/object/branding/{pkiBrandingID} | Edit an existing Branding |
 | [**BrandingGetAutocompleteV2**](ObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs |
 | [**BrandingGetListV1**](ObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list |
-| [**BrandingGetObjectV2**](ObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding |
+| [**BrandingGetObjectV3**](ObjectBrandingApi.md#brandinggetobjectv3) | **GET** /3/object/branding/{pkiBrandingID} | Retrieve an existing Branding |
 
-<a id="brandingcreateobjectv1"></a>
-# **BrandingCreateObjectV1**
-> BrandingCreateObjectV1Response BrandingCreateObjectV1 (BrandingCreateObjectV1Request brandingCreateObjectV1Request)
+<a id="brandingcreateobjectv2"></a>
+# **BrandingCreateObjectV2**
+> BrandingCreateObjectV2Response BrandingCreateObjectV2 (BrandingCreateObjectV2Request brandingCreateObjectV2Request)
 
 Create a new Branding
 
@@ -28,7 +28,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class BrandingCreateObjectV1Example
+    public class BrandingCreateObjectV2Example
     {
         public static void Main()
         {
@@ -40,17 +40,17 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ObjectBrandingApi(config);
-            var brandingCreateObjectV1Request = new BrandingCreateObjectV1Request(); // BrandingCreateObjectV1Request | 
+            var brandingCreateObjectV2Request = new BrandingCreateObjectV2Request(); // BrandingCreateObjectV2Request | 
 
             try
             {
                 // Create a new Branding
-                BrandingCreateObjectV1Response result = apiInstance.BrandingCreateObjectV1(brandingCreateObjectV1Request);
+                BrandingCreateObjectV2Response result = apiInstance.BrandingCreateObjectV2(brandingCreateObjectV2Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectBrandingApi.BrandingCreateObjectV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectBrandingApi.BrandingCreateObjectV2: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -59,21 +59,21 @@ namespace Example
 }
 ```
 
-#### Using the BrandingCreateObjectV1WithHttpInfo variant
+#### Using the BrandingCreateObjectV2WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create a new Branding
-    ApiResponse<BrandingCreateObjectV1Response> response = apiInstance.BrandingCreateObjectV1WithHttpInfo(brandingCreateObjectV1Request);
+    ApiResponse<BrandingCreateObjectV2Response> response = apiInstance.BrandingCreateObjectV2WithHttpInfo(brandingCreateObjectV2Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectBrandingApi.BrandingCreateObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectBrandingApi.BrandingCreateObjectV2WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -83,11 +83,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **brandingCreateObjectV1Request** | [**BrandingCreateObjectV1Request**](BrandingCreateObjectV1Request.md) |  |  |
+| **brandingCreateObjectV2Request** | [**BrandingCreateObjectV2Request**](BrandingCreateObjectV2Request.md) |  |  |
 
 ### Return type
 
-[**BrandingCreateObjectV1Response**](BrandingCreateObjectV1Response.md)
+[**BrandingCreateObjectV2Response**](BrandingCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -106,9 +106,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="brandingeditobjectv1"></a>
-# **BrandingEditObjectV1**
-> BrandingEditObjectV1Response BrandingEditObjectV1 (int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request)
+<a id="brandingeditobjectv2"></a>
+# **BrandingEditObjectV2**
+> BrandingEditObjectV2Response BrandingEditObjectV2 (int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request)
 
 Edit an existing Branding
 
@@ -122,7 +122,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class BrandingEditObjectV1Example
+    public class BrandingEditObjectV2Example
     {
         public static void Main()
         {
@@ -135,17 +135,17 @@ namespace Example
 
             var apiInstance = new ObjectBrandingApi(config);
             var pkiBrandingID = 56;  // int | 
-            var brandingEditObjectV1Request = new BrandingEditObjectV1Request(); // BrandingEditObjectV1Request | 
+            var brandingEditObjectV2Request = new BrandingEditObjectV2Request(); // BrandingEditObjectV2Request | 
 
             try
             {
                 // Edit an existing Branding
-                BrandingEditObjectV1Response result = apiInstance.BrandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request);
+                BrandingEditObjectV2Response result = apiInstance.BrandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectBrandingApi.BrandingEditObjectV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectBrandingApi.BrandingEditObjectV2: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -154,21 +154,21 @@ namespace Example
 }
 ```
 
-#### Using the BrandingEditObjectV1WithHttpInfo variant
+#### Using the BrandingEditObjectV2WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Edit an existing Branding
-    ApiResponse<BrandingEditObjectV1Response> response = apiInstance.BrandingEditObjectV1WithHttpInfo(pkiBrandingID, brandingEditObjectV1Request);
+    ApiResponse<BrandingEditObjectV2Response> response = apiInstance.BrandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectBrandingApi.BrandingEditObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectBrandingApi.BrandingEditObjectV2WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -179,11 +179,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **pkiBrandingID** | **int** |  |  |
-| **brandingEditObjectV1Request** | [**BrandingEditObjectV1Request**](BrandingEditObjectV1Request.md) |  |  |
+| **brandingEditObjectV2Request** | [**BrandingEditObjectV2Request**](BrandingEditObjectV2Request.md) |  |  |
 
 ### Return type
 
-[**BrandingEditObjectV1Response**](BrandingEditObjectV1Response.md)
+[**BrandingEditObjectV2Response**](BrandingEditObjectV2Response.md)
 
 ### Authorization
 
@@ -410,9 +410,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="brandinggetobjectv2"></a>
-# **BrandingGetObjectV2**
-> BrandingGetObjectV2Response BrandingGetObjectV2 (int pkiBrandingID)
+<a id="brandinggetobjectv3"></a>
+# **BrandingGetObjectV3**
+> BrandingGetObjectV3Response BrandingGetObjectV3 (int pkiBrandingID)
 
 Retrieve an existing Branding
 
@@ -426,7 +426,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class BrandingGetObjectV2Example
+    public class BrandingGetObjectV3Example
     {
         public static void Main()
         {
@@ -443,12 +443,12 @@ namespace Example
             try
             {
                 // Retrieve an existing Branding
-                BrandingGetObjectV2Response result = apiInstance.BrandingGetObjectV2(pkiBrandingID);
+                BrandingGetObjectV3Response result = apiInstance.BrandingGetObjectV3(pkiBrandingID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectBrandingApi.BrandingGetObjectV2: " + e.Message);
+                Debug.Print("Exception when calling ObjectBrandingApi.BrandingGetObjectV3: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -457,21 +457,21 @@ namespace Example
 }
 ```
 
-#### Using the BrandingGetObjectV2WithHttpInfo variant
+#### Using the BrandingGetObjectV3WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve an existing Branding
-    ApiResponse<BrandingGetObjectV2Response> response = apiInstance.BrandingGetObjectV2WithHttpInfo(pkiBrandingID);
+    ApiResponse<BrandingGetObjectV3Response> response = apiInstance.BrandingGetObjectV3WithHttpInfo(pkiBrandingID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectBrandingApi.BrandingGetObjectV2WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectBrandingApi.BrandingGetObjectV3WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -485,7 +485,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**BrandingGetObjectV2Response**](BrandingGetObjectV2Response.md)
+[**BrandingGetObjectV3Response**](BrandingGetObjectV3Response.md)
 
 ### Authorization
 

@@ -40,35 +40,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyListElement" /> class.
         /// </summary>
-        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
-        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="bApikeyIsactive">Whether the apikey is active or not (required).</param>
-        /// <param name="bApikeyIssigned">Whether the apikey is signed or not (required).</param>
-        public ApikeyListElement(int pkiApikeyID = default(int), string sApikeyDescriptionX = default(string), string sUserFirstname = default(string), string sUserLastname = default(string), bool bApikeyIsactive = default(bool), bool bApikeyIssigned = default(bool))
+        /// <param name="">The unique ID of the Apikey (required).</param>
+        /// <param name="">The description of the Apikey in the language of the requester (required).</param>
+        /// <param name="">The first name of the user (required).</param>
+        /// <param name="">The last name of the user (required).</param>
+        /// <param name="">Whether the apikey is active or not (required).</param>
+        /// <param name="">Whether the apikey is signed or not (required).</param>
+        public ApikeyListElement(int  = default(int), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool))
         {
-            this.PkiApikeyID = pkiApikeyID;
-            // to ensure "sApikeyDescriptionX" is required (not null)
-            if (sApikeyDescriptionX == null)
+            this.PkiApikeyID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sApikeyDescriptionX is a required property for ApikeyListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ApikeyListElement and cannot be null");
             }
-            this.SApikeyDescriptionX = sApikeyDescriptionX;
-            // to ensure "sUserFirstname" is required (not null)
-            if (sUserFirstname == null)
+            this.SApikeyDescriptionX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserFirstname is a required property for ApikeyListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ApikeyListElement and cannot be null");
             }
-            this.SUserFirstname = sUserFirstname;
-            // to ensure "sUserLastname" is required (not null)
-            if (sUserLastname == null)
+            this.SUserFirstname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserLastname is a required property for ApikeyListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ApikeyListElement and cannot be null");
             }
-            this.SUserLastname = sUserLastname;
-            this.BApikeyIsactive = bApikeyIsactive;
-            this.BApikeyIssigned = bApikeyIssigned;
+            this.SUserLastname = ;
+            this.BApikeyIsactive = ;
+            this.BApikeyIssigned = ;
         }
 
         /// <summary>

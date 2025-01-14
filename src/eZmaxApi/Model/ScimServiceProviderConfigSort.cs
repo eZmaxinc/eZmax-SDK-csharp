@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigSort" /> class.
         /// </summary>
-        /// <param name="supported">A Boolean value specifying whether or not sorting is supported. (required).</param>
-        public ScimServiceProviderConfigSort(bool supported = default(bool))
+        /// <param name="">A Boolean value specifying whether or not sorting is supported. (required).</param>
+        public ScimServiceProviderConfigSort(bool  = default(bool))
         {
-            this.Supported = supported;
+            this.Supported = ;
         }
 
         /// <summary>

@@ -150,53 +150,53 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationrecipientsrecipientResponse" /> class.
         /// </summary>
-        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
-        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
-        /// <param name="fkiContactID">The unique ID of the Contact.</param>
-        /// <param name="fkiCustomerID">The unique ID of the Customer..</param>
-        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
-        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
-        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiAgentincorporationID">The unique ID of the Agentincorporation..</param>
-        /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
-        /// <param name="fkiExternalbrokerID">The unique ID of the Externalbroker..</param>
-        /// <param name="fkiEzcomagentID">The unique ID of the Ezcomagent..</param>
-        /// <param name="fkiNotaryID">The unique ID of the Notary..</param>
-        /// <param name="fkiRewardmemberID">The unique ID of the Rewardmember..</param>
-        /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
-        /// <param name="eCommunicationrecipientsrecipientObjecttype">eCommunicationrecipientsrecipientObjecttype (required).</param>
-        /// <param name="objContactName">objContactName (required).</param>
-        /// <param name="objEmail">objEmail.</param>
-        /// <param name="objPhoneFax">objPhoneFax.</param>
-        /// <param name="objPhoneSMS">objPhoneSMS.</param>
-        public CustomCommunicationrecipientsrecipientResponse(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiContactID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiEzsignsignerID = default(int), int fkiFranchiseofficeID = default(int), int fkiUserID = default(int), int fkiAgentincorporationID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomagentID = default(int), int fkiNotaryID = default(int), int fkiRewardmemberID = default(int), int fkiSupplierID = default(int), ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype = default(ECommunicationrecipientsrecipientObjecttypeEnum), CustomContactNameResponse objContactName = default(CustomContactNameResponse), EmailResponseCompound objEmail = default(EmailResponseCompound), PhoneResponseCompound objPhoneFax = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound))
+        /// <param name="">The unique ID of the Agent..</param>
+        /// <param name="">The unique ID of the Broker..</param>
+        /// <param name="">The unique ID of the Contact.</param>
+        /// <param name="">The unique ID of the Customer..</param>
+        /// <param name="">The unique ID of the Employee..</param>
+        /// <param name="">The unique ID of the Ezsignsigner.</param>
+        /// <param name="">The unique ID of the Franchisereoffice.</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Agentincorporation..</param>
+        /// <param name="">The unique ID of the Assistant..</param>
+        /// <param name="">The unique ID of the Externalbroker..</param>
+        /// <param name="">The unique ID of the Ezcomagent..</param>
+        /// <param name="">The unique ID of the Notary..</param>
+        /// <param name="">The unique ID of the Rewardmember..</param>
+        /// <param name="">The unique ID of the Supplier..</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public CustomCommunicationrecipientsrecipientResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), ECommunicationrecipientsrecipientObjecttypeEnum  = default(ECommunicationrecipientsrecipientObjecttypeEnum), CustomContactNameResponse  = default(CustomContactNameResponse), EmailResponseCompound  = default(EmailResponseCompound), PhoneResponseCompound  = default(PhoneResponseCompound), PhoneResponseCompound  = default(PhoneResponseCompound))
         {
-            this.ECommunicationrecipientsrecipientObjecttype = eCommunicationrecipientsrecipientObjecttype;
-            // to ensure "objContactName" is required (not null)
-            if (objContactName == null)
+            this.ECommunicationrecipientsrecipientObjecttype = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objContactName is a required property for CustomCommunicationrecipientsrecipientResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCommunicationrecipientsrecipientResponse and cannot be null");
             }
-            this.ObjContactName = objContactName;
-            this.FkiAgentID = fkiAgentID;
-            this.FkiBrokerID = fkiBrokerID;
-            this.FkiContactID = fkiContactID;
-            this.FkiCustomerID = fkiCustomerID;
-            this.FkiEmployeeID = fkiEmployeeID;
-            this.FkiEzsignsignerID = fkiEzsignsignerID;
-            this.FkiFranchiseofficeID = fkiFranchiseofficeID;
-            this.FkiUserID = fkiUserID;
-            this.FkiAgentincorporationID = fkiAgentincorporationID;
-            this.FkiAssistantID = fkiAssistantID;
-            this.FkiExternalbrokerID = fkiExternalbrokerID;
-            this.FkiEzcomagentID = fkiEzcomagentID;
-            this.FkiNotaryID = fkiNotaryID;
-            this.FkiRewardmemberID = fkiRewardmemberID;
-            this.FkiSupplierID = fkiSupplierID;
-            this.ObjEmail = objEmail;
-            this.ObjPhoneFax = objPhoneFax;
-            this.ObjPhoneSMS = objPhoneSMS;
+            this.ObjContactName = ;
+            this.FkiAgentID = ;
+            this.FkiBrokerID = ;
+            this.FkiContactID = ;
+            this.FkiCustomerID = ;
+            this.FkiEmployeeID = ;
+            this.FkiEzsignsignerID = ;
+            this.FkiFranchiseofficeID = ;
+            this.FkiUserID = ;
+            this.FkiAgentincorporationID = ;
+            this.FkiAssistantID = ;
+            this.FkiExternalbrokerID = ;
+            this.FkiEzcomagentID = ;
+            this.FkiNotaryID = ;
+            this.FkiRewardmemberID = ;
+            this.FkiSupplierID = ;
+            this.ObjEmail = ;
+            this.ObjPhoneFax = ;
+            this.ObjPhoneSMS = ;
         }
 
         /// <summary>

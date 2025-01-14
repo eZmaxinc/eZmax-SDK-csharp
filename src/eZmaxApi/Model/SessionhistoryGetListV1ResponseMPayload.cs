@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionhistoryGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjSessionhistory">aObjSessionhistory (required).</param>
-        public SessionhistoryGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<SessionhistoryListElement> aObjSessionhistory = default(List<SessionhistoryListElement>))
+        /// <param name="">The number of rows returned (required).</param>
+        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name=""> (required).</param>
+        public SessionhistoryGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<SessionhistoryListElement>  = default(List<SessionhistoryListElement>))
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
-            // to ensure "aObjSessionhistory" is required (not null)
-            if (aObjSessionhistory == null)
+            this.IRowReturned = ;
+            this.IRowFiltered = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjSessionhistory is a required property for SessionhistoryGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for SessionhistoryGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjSessionhistory = aObjSessionhistory;
+            this.AObjSessionhistory = ;
         }
 
         /// <summary>

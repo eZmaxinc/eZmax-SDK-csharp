@@ -40,14 +40,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomImportEzsigntemplatepackageRelationRequest" /> class.
         /// </summary>
-        /// <param name="fkiEzsigntemplatepackagesignerID">The unique ID of the Ezsigntemplatepackagesigner.</param>
-        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="sEzsigntemplatepackagesignerDescription">The description of the Ezsigntemplatepackagesigner.</param>
-        public CustomImportEzsigntemplatepackageRelationRequest(int fkiEzsigntemplatepackagesignerID = default(int), int fkiEzsignfoldersignerassociationID = default(int), string sEzsigntemplatepackagesignerDescription = default(string))
+        /// <param name="">The unique ID of the Ezsigntemplatepackagesigner.</param>
+        /// <param name="">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="">The description of the Ezsigntemplatepackagesigner.</param>
+        public CustomImportEzsigntemplatepackageRelationRequest(int  = default(int), int  = default(int), string  = default(string))
         {
-            this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
-            this.FkiEzsigntemplatepackagesignerID = fkiEzsigntemplatepackagesignerID;
-            this.SEzsigntemplatepackagesignerDescription = sEzsigntemplatepackagesignerDescription;
+            this.FkiEzsignfoldersignerassociationID = ;
+            this.FkiEzsigntemplatepackagesignerID = ;
+            this.SEzsigntemplatepackagesignerDescription = ;
         }
 
         /// <summary>

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **SEzsignfolderDescription** | **string** | The description of the Ezsignfolder | 
 **EEzsignfolderStep** | **FieldEEzsignfolderStep** |  | 
 **IEzsignfolderSignaturetotal** | **int** | The number of total signatures that were requested in the Ezsignfolder | 
+**IEzsignfolderFormfieldtotal** | **int** | The number of total form fields that were requested in the Ezsignfolder | 
 **IEzsignfolderSignaturesigned** | **int** | The number of signatures that were signed in the Ezsignfolder. | 
 **AObjEzsignfoldertransmissionSigner** | [**List&lt;CustomEzsignfoldertransmissionSignerResponse&gt;**](CustomEzsignfoldertransmissionSignerResponse.md) |  | 
 

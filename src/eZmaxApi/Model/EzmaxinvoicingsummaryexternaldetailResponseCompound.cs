@@ -40,58 +40,58 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternaldetailResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzmaxinvoicingsummaryexternaldetailID">The unique ID of the Ezmaxinvoicingsummaryexternaldetail.</param>
-        /// <param name="fkiEzmaxinvoicingsummaryexternalID">The unique ID of the Ezmaxinvoicingsummaryexternal.</param>
-        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryexternaldetailCountreal">The count item invoiced for the product (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryexternaldetailSubtotal">The subtotal invoiced for the product (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryexternaldetailRebate">The rebate for the product (required).</param>
-        /// <param name="dEzmaxinvoicingsummaryexternaldetailTotal">The total invoiced for the product (required).</param>
-        /// <param name="bEzmaxinvoicingsummaryexternaldetailAdjustment">Whether it&#39;s an adjustment (required).</param>
-        /// <param name="tEzmaxproductHelpX">The help message of the Ezmaxproduct in the language of the requester (required).</param>
-        public EzmaxinvoicingsummaryexternaldetailResponseCompound(int pkiEzmaxinvoicingsummaryexternaldetailID = default(int), int fkiEzmaxinvoicingsummaryexternalID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), string dEzmaxinvoicingsummaryexternaldetailCountreal = default(string), string dEzmaxinvoicingsummaryexternaldetailSubtotal = default(string), string dEzmaxinvoicingsummaryexternaldetailRebate = default(string), string dEzmaxinvoicingsummaryexternaldetailTotal = default(string), bool bEzmaxinvoicingsummaryexternaldetailAdjustment = default(bool), string tEzmaxproductHelpX = default(string))
+        /// <param name="">The unique ID of the Ezmaxinvoicingsummaryexternaldetail.</param>
+        /// <param name="">The unique ID of the Ezmaxinvoicingsummaryexternal.</param>
+        /// <param name="">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="">The description of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="">The count item invoiced for the product (required).</param>
+        /// <param name="">The subtotal invoiced for the product (required).</param>
+        /// <param name="">The rebate for the product (required).</param>
+        /// <param name="">The total invoiced for the product (required).</param>
+        /// <param name="">Whether it&#39;s an adjustment (required).</param>
+        /// <param name="">The help message of the Ezmaxproduct in the language of the requester (required).</param>
+        public EzmaxinvoicingsummaryexternaldetailResponseCompound(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), string  = default(string))
         {
-            this.FkiEzmaxproductID = fkiEzmaxproductID;
-            // to ensure "sEzmaxproductDescriptionX" is required (not null)
-            if (sEzmaxproductDescriptionX == null)
+            this.FkiEzmaxproductID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzmaxproductDescriptionX is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
             }
-            this.SEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
-            // to ensure "dEzmaxinvoicingsummaryexternaldetailCountreal" is required (not null)
-            if (dEzmaxinvoicingsummaryexternaldetailCountreal == null)
+            this.SEzmaxproductDescriptionX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryexternaldetailCountreal is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryexternaldetailCountreal = dEzmaxinvoicingsummaryexternaldetailCountreal;
-            // to ensure "dEzmaxinvoicingsummaryexternaldetailSubtotal" is required (not null)
-            if (dEzmaxinvoicingsummaryexternaldetailSubtotal == null)
+            this.DEzmaxinvoicingsummaryexternaldetailCountreal = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryexternaldetailSubtotal is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryexternaldetailSubtotal = dEzmaxinvoicingsummaryexternaldetailSubtotal;
-            // to ensure "dEzmaxinvoicingsummaryexternaldetailRebate" is required (not null)
-            if (dEzmaxinvoicingsummaryexternaldetailRebate == null)
+            this.DEzmaxinvoicingsummaryexternaldetailSubtotal = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryexternaldetailRebate is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryexternaldetailRebate = dEzmaxinvoicingsummaryexternaldetailRebate;
-            // to ensure "dEzmaxinvoicingsummaryexternaldetailTotal" is required (not null)
-            if (dEzmaxinvoicingsummaryexternaldetailTotal == null)
+            this.DEzmaxinvoicingsummaryexternaldetailRebate = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dEzmaxinvoicingsummaryexternaldetailTotal is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingsummaryexternaldetailTotal = dEzmaxinvoicingsummaryexternaldetailTotal;
-            this.BEzmaxinvoicingsummaryexternaldetailAdjustment = bEzmaxinvoicingsummaryexternaldetailAdjustment;
-            // to ensure "tEzmaxproductHelpX" is required (not null)
-            if (tEzmaxproductHelpX == null)
+            this.DEzmaxinvoicingsummaryexternaldetailTotal = ;
+            this.BEzmaxinvoicingsummaryexternaldetailAdjustment = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("tEzmaxproductHelpX is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternaldetailResponseCompound and cannot be null");
             }
-            this.TEzmaxproductHelpX = tEzmaxproductHelpX;
-            this.PkiEzmaxinvoicingsummaryexternaldetailID = pkiEzmaxinvoicingsummaryexternaldetailID;
-            this.FkiEzmaxinvoicingsummaryexternalID = fkiEzmaxinvoicingsummaryexternalID;
+            this.TEzmaxproductHelpX = ;
+            this.PkiEzmaxinvoicingsummaryexternaldetailID = ;
+            this.FkiEzmaxinvoicingsummaryexternalID = ;
         }
 
         /// <summary>

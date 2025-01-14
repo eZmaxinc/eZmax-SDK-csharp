@@ -106,6 +106,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfolderCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsignfolderCreateObjectV2Response</returns>
+        [Obsolete]
         EzsignfolderCreateObjectV2Response EzsignfolderCreateObjectV2(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, int operationIndex = 0);
 
         /// <summary>
@@ -118,7 +119,31 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfolderCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsignfolderCreateObjectV2Response</returns>
+        [Obsolete]
         ApiResponse<EzsignfolderCreateObjectV2Response> EzsignfolderCreateObjectV2WithHttpInfo(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, int operationIndex = 0);
+        /// <summary>
+        /// Create a new Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfolderCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfolderCreateObjectV3Response</returns>
+        EzsignfolderCreateObjectV3Response EzsignfolderCreateObjectV3(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Create a new Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfolderCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfolderCreateObjectV3Response</returns>
+        ApiResponse<EzsignfolderCreateObjectV3Response> EzsignfolderCreateObjectV3WithHttpInfo(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, int operationIndex = 0);
         /// <summary>
         /// Delete an existing Ezsignfolder
         /// </summary>
@@ -186,10 +211,10 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
-        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="ezsignfolderEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfolderEditObjectV1Response</returns>
-        EzsignfolderEditObjectV1Response EzsignfolderEditObjectV1(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, int operationIndex = 0);
+        /// <returns>EzsignfolderEditObjectV3Response</returns>
+        EzsignfolderEditObjectV3Response EzsignfolderEditObjectV3(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezsignfolder
@@ -199,10 +224,10 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
-        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="ezsignfolderEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfolderEditObjectV1Response</returns>
-        ApiResponse<EzsignfolderEditObjectV1Response> EzsignfolderEditObjectV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsignfolderEditObjectV3Response</returns>
+        ApiResponse<EzsignfolderEditObjectV3Response> EzsignfolderEditObjectV3WithHttpInfo(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, int operationIndex = 0);
         /// <summary>
         /// End prematurely
         /// </summary>
@@ -458,7 +483,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -474,7 +499,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -514,6 +539,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsignfolderGetObjectV2Response</returns>
+        [Obsolete]
         EzsignfolderGetObjectV2Response EzsignfolderGetObjectV2(int pkiEzsignfolderID, int operationIndex = 0);
 
         /// <summary>
@@ -526,7 +552,28 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsignfolderGetObjectV2Response</returns>
+        [Obsolete]
         ApiResponse<EzsignfolderGetObjectV2Response> EzsignfolderGetObjectV2WithHttpInfo(int pkiEzsignfolderID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfolderGetObjectV3Response</returns>
+        EzsignfolderGetObjectV3Response EzsignfolderGetObjectV3(int pkiEzsignfolderID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfolderGetObjectV3Response</returns>
+        ApiResponse<EzsignfolderGetObjectV3Response> EzsignfolderGetObjectV3WithHttpInfo(int pkiEzsignfolderID, int operationIndex = 0);
         /// <summary>
         /// Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
         /// </summary>
@@ -582,6 +629,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfolderReorderV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsignfolderReorderV1Response</returns>
+        [Obsolete]
         EzsignfolderReorderV1Response EzsignfolderReorderV1(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, int operationIndex = 0);
 
         /// <summary>
@@ -595,7 +643,30 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfolderReorderV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsignfolderReorderV1Response</returns>
+        [Obsolete]
         ApiResponse<EzsignfolderReorderV1Response> EzsignfolderReorderV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfolderReorderV2Response</returns>
+        EzsignfolderReorderV2Response EzsignfolderReorderV2(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfolderReorderV2Response</returns>
+        ApiResponse<EzsignfolderReorderV2Response> EzsignfolderReorderV2WithHttpInfo(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, int operationIndex = 0);
         /// <summary>
         /// Send the Ezsignfolder to the signatories for signature
         /// </summary>
@@ -768,6 +839,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfolderCreateObjectV2Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<EzsignfolderCreateObjectV2Response> EzsignfolderCreateObjectV2Async(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
@@ -781,7 +853,33 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfolderCreateObjectV2Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EzsignfolderCreateObjectV2Response>> EzsignfolderCreateObjectV2WithHttpInfoAsync(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Create a new Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfolderCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfolderCreateObjectV3Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderCreateObjectV3Response> EzsignfolderCreateObjectV3Async(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create a new Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to create one or many elements at once.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfolderCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfolderCreateObjectV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderCreateObjectV3Response>> EzsignfolderCreateObjectV3WithHttpInfoAsync(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Ezsignfolder
         /// </summary>
@@ -867,11 +965,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
-        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="ezsignfolderEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfolderEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfolderEditObjectV1Response> EzsignfolderEditObjectV1Async(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of EzsignfolderEditObjectV3Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderEditObjectV3Response> EzsignfolderEditObjectV3Async(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezsignfolder
@@ -881,11 +979,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
-        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="ezsignfolderEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfolderEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfolderEditObjectV1Response>> EzsignfolderEditObjectV1WithHttpInfoAsync(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsignfolderEditObjectV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderEditObjectV3Response>> EzsignfolderEditObjectV3WithHttpInfoAsync(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// End prematurely
         /// </summary>
@@ -1192,7 +1290,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1209,7 +1307,7 @@ namespace eZmaxApi.Api
         /// Retrieve Ezsignfolder list
         /// </summary>
         /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -1259,6 +1357,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfolderGetObjectV2Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<EzsignfolderGetObjectV2Response> EzsignfolderGetObjectV2Async(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
@@ -1272,7 +1371,33 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfolderGetObjectV2Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EzsignfolderGetObjectV2Response>> EzsignfolderGetObjectV2WithHttpInfoAsync(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfolderGetObjectV3Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderGetObjectV3Response> EzsignfolderGetObjectV3Async(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfolderGetObjectV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderGetObjectV3Response>> EzsignfolderGetObjectV3WithHttpInfoAsync(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
         /// </summary>
@@ -1339,6 +1464,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfolderReorderV1Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<EzsignfolderReorderV1Response> EzsignfolderReorderV1Async(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
@@ -1353,7 +1479,35 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfolderReorderV1Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EzsignfolderReorderV1Response>> EzsignfolderReorderV1WithHttpInfoAsync(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfolderReorderV2Response</returns>
+        System.Threading.Tasks.Task<EzsignfolderReorderV2Response> EzsignfolderReorderV2Async(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfolderReorderV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfolderReorderV2Response>> EzsignfolderReorderV2WithHttpInfoAsync(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Send the Ezsignfolder to the signatories for signature
         /// </summary>
@@ -2050,6 +2204,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfolderCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsignfolderCreateObjectV2Response</returns>
+        [Obsolete]
         public EzsignfolderCreateObjectV2Response EzsignfolderCreateObjectV2(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, int operationIndex = 0)
         {
             eZmaxApi.Client.ApiResponse<EzsignfolderCreateObjectV2Response> localVarResponse = EzsignfolderCreateObjectV2WithHttpInfo(ezsignfolderCreateObjectV2Request);
@@ -2063,6 +2218,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfolderCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsignfolderCreateObjectV2Response</returns>
+        [Obsolete]
         public eZmaxApi.Client.ApiResponse<EzsignfolderCreateObjectV2Response> EzsignfolderCreateObjectV2WithHttpInfo(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsignfolderCreateObjectV2Request' is set
@@ -2127,6 +2283,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfolderCreateObjectV2Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<EzsignfolderCreateObjectV2Response> EzsignfolderCreateObjectV2Async(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignfolderCreateObjectV2Response> localVarResponse = await EzsignfolderCreateObjectV2WithHttpInfoAsync(ezsignfolderCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
@@ -2141,6 +2298,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfolderCreateObjectV2Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfolderCreateObjectV2Response>> EzsignfolderCreateObjectV2WithHttpInfoAsync(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignfolderCreateObjectV2Request' is set
@@ -2190,6 +2348,162 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignfolderCreateObjectV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create a new Ezsignfolder The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfolderCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfolderCreateObjectV3Response</returns>
+        public EzsignfolderCreateObjectV3Response EzsignfolderCreateObjectV3(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfolderCreateObjectV3Response> localVarResponse = EzsignfolderCreateObjectV3WithHttpInfo(ezsignfolderCreateObjectV3Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Ezsignfolder The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfolderCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfolderCreateObjectV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignfolderCreateObjectV3Response> EzsignfolderCreateObjectV3WithHttpInfo(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'ezsignfolderCreateObjectV3Request' is set
+            if (ezsignfolderCreateObjectV3Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfolderCreateObjectV3Request' when calling ObjectEzsignfolderApi->EzsignfolderCreateObjectV3");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = ezsignfolderCreateObjectV3Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderCreateObjectV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EzsignfolderCreateObjectV3Response>("/3/object/ezsignfolder", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfolderCreateObjectV3", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create a new Ezsignfolder The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfolderCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfolderCreateObjectV3Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderCreateObjectV3Response> EzsignfolderCreateObjectV3Async(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfolderCreateObjectV3Response> localVarResponse = await EzsignfolderCreateObjectV3WithHttpInfoAsync(ezsignfolderCreateObjectV3Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Ezsignfolder The endpoint allows to create one or many elements at once.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ezsignfolderCreateObjectV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfolderCreateObjectV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfolderCreateObjectV3Response>> EzsignfolderCreateObjectV3WithHttpInfoAsync(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'ezsignfolderCreateObjectV3Request' is set
+            if (ezsignfolderCreateObjectV3Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfolderCreateObjectV3Request' when calling ObjectEzsignfolderApi->EzsignfolderCreateObjectV3");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = ezsignfolderCreateObjectV3Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderCreateObjectV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsignfolderCreateObjectV3Response>("/3/object/ezsignfolder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfolderCreateObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2664,12 +2978,12 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
-        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="ezsignfolderEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfolderEditObjectV1Response</returns>
-        public EzsignfolderEditObjectV1Response EzsignfolderEditObjectV1(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, int operationIndex = 0)
+        /// <returns>EzsignfolderEditObjectV3Response</returns>
+        public EzsignfolderEditObjectV3Response EzsignfolderEditObjectV3(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignfolderEditObjectV1Response> localVarResponse = EzsignfolderEditObjectV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<EzsignfolderEditObjectV3Response> localVarResponse = EzsignfolderEditObjectV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
             return localVarResponse.Data;
         }
 
@@ -2678,15 +2992,15 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
-        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="ezsignfolderEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfolderEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignfolderEditObjectV1Response> EzsignfolderEditObjectV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsignfolderEditObjectV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignfolderEditObjectV3Response> EzsignfolderEditObjectV3WithHttpInfo(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, int operationIndex = 0)
         {
-            // verify the required parameter 'ezsignfolderEditObjectV1Request' is set
-            if (ezsignfolderEditObjectV1Request == null)
+            // verify the required parameter 'ezsignfolderEditObjectV3Request' is set
+            if (ezsignfolderEditObjectV3Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfolderEditObjectV1Request' when calling ObjectEzsignfolderApi->EzsignfolderEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfolderEditObjectV3Request' when calling ObjectEzsignfolderApi->EzsignfolderEditObjectV3");
             }
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -2713,9 +3027,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiEzsignfolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfolderID)); // path parameter
-            localVarRequestOptions.Data = ezsignfolderEditObjectV1Request;
+            localVarRequestOptions.Data = ezsignfolderEditObjectV3Request;
 
-            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderEditObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -2725,10 +3039,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EzsignfolderEditObjectV1Response>("/1/object/ezsignfolder/{pkiEzsignfolderID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<EzsignfolderEditObjectV3Response>("/3/object/ezsignfolder/{pkiEzsignfolderID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsignfolderEditObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsignfolderEditObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2743,13 +3057,13 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
-        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="ezsignfolderEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfolderEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfolderEditObjectV1Response> EzsignfolderEditObjectV1Async(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of EzsignfolderEditObjectV3Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderEditObjectV3Response> EzsignfolderEditObjectV3Async(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignfolderEditObjectV1Response> localVarResponse = await EzsignfolderEditObjectV1WithHttpInfoAsync(pkiEzsignfolderID, ezsignfolderEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsignfolderEditObjectV3Response> localVarResponse = await EzsignfolderEditObjectV3WithHttpInfoAsync(pkiEzsignfolderID, ezsignfolderEditObjectV3Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2758,16 +3072,16 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
-        /// <param name="ezsignfolderEditObjectV1Request"></param>
+        /// <param name="ezsignfolderEditObjectV3Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfolderEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfolderEditObjectV1Response>> EzsignfolderEditObjectV1WithHttpInfoAsync(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsignfolderEditObjectV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfolderEditObjectV3Response>> EzsignfolderEditObjectV3WithHttpInfoAsync(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'ezsignfolderEditObjectV1Request' is set
-            if (ezsignfolderEditObjectV1Request == null)
+            // verify the required parameter 'ezsignfolderEditObjectV3Request' is set
+            if (ezsignfolderEditObjectV3Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfolderEditObjectV1Request' when calling ObjectEzsignfolderApi->EzsignfolderEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfolderEditObjectV3Request' when calling ObjectEzsignfolderApi->EzsignfolderEditObjectV3");
             }
 
 
@@ -2795,9 +3109,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiEzsignfolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfolderID)); // path parameter
-            localVarRequestOptions.Data = ezsignfolderEditObjectV1Request;
+            localVarRequestOptions.Data = ezsignfolderEditObjectV3Request;
 
-            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderEditObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -2807,11 +3121,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsignfolderEditObjectV1Response>("/1/object/ezsignfolder/{pkiEzsignfolderID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsignfolderEditObjectV3Response>("/3/object/ezsignfolder/{pkiEzsignfolderID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsignfolderEditObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsignfolderEditObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4548,7 +4862,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -4565,7 +4879,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -4645,7 +4959,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -4663,7 +4977,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+        /// Retrieve Ezsignfolder list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
@@ -4898,6 +5212,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsignfolderGetObjectV2Response</returns>
+        [Obsolete]
         public EzsignfolderGetObjectV2Response EzsignfolderGetObjectV2(int pkiEzsignfolderID, int operationIndex = 0)
         {
             eZmaxApi.Client.ApiResponse<EzsignfolderGetObjectV2Response> localVarResponse = EzsignfolderGetObjectV2WithHttpInfo(pkiEzsignfolderID);
@@ -4911,6 +5226,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsignfolderGetObjectV2Response</returns>
+        [Obsolete]
         public eZmaxApi.Client.ApiResponse<EzsignfolderGetObjectV2Response> EzsignfolderGetObjectV2WithHttpInfo(int pkiEzsignfolderID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -4968,6 +5284,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfolderGetObjectV2Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<EzsignfolderGetObjectV2Response> EzsignfolderGetObjectV2Async(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignfolderGetObjectV2Response> localVarResponse = await EzsignfolderGetObjectV2WithHttpInfoAsync(pkiEzsignfolderID, operationIndex, cancellationToken).ConfigureAwait(false);
@@ -4982,6 +5299,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfolderGetObjectV2Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfolderGetObjectV2Response>> EzsignfolderGetObjectV2WithHttpInfoAsync(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
@@ -5024,6 +5342,148 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignfolderGetObjectV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfolderGetObjectV3Response</returns>
+        public EzsignfolderGetObjectV3Response EzsignfolderGetObjectV3(int pkiEzsignfolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfolderGetObjectV3Response> localVarResponse = EzsignfolderGetObjectV3WithHttpInfo(pkiEzsignfolderID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfolderGetObjectV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignfolderGetObjectV3Response> EzsignfolderGetObjectV3WithHttpInfo(int pkiEzsignfolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderGetObjectV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<EzsignfolderGetObjectV3Response>("/3/object/ezsignfolder/{pkiEzsignfolderID}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfolderGetObjectV3", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfolderGetObjectV3Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderGetObjectV3Response> EzsignfolderGetObjectV3Async(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfolderGetObjectV3Response> localVarResponse = await EzsignfolderGetObjectV3WithHttpInfoAsync(pkiEzsignfolderID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfolderGetObjectV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfolderGetObjectV3Response>> EzsignfolderGetObjectV3WithHttpInfoAsync(int pkiEzsignfolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderGetObjectV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsignfolderGetObjectV3Response>("/3/object/ezsignfolder/{pkiEzsignfolderID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfolderGetObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5365,6 +5825,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfolderReorderV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsignfolderReorderV1Response</returns>
+        [Obsolete]
         public EzsignfolderReorderV1Response EzsignfolderReorderV1(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, int operationIndex = 0)
         {
             eZmaxApi.Client.ApiResponse<EzsignfolderReorderV1Response> localVarResponse = EzsignfolderReorderV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV1Request);
@@ -5379,6 +5840,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfolderReorderV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsignfolderReorderV1Response</returns>
+        [Obsolete]
         public eZmaxApi.Client.ApiResponse<EzsignfolderReorderV1Response> EzsignfolderReorderV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsignfolderReorderV1Request' is set
@@ -5445,6 +5907,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfolderReorderV1Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<EzsignfolderReorderV1Response> EzsignfolderReorderV1Async(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignfolderReorderV1Response> localVarResponse = await EzsignfolderReorderV1WithHttpInfoAsync(pkiEzsignfolderID, ezsignfolderReorderV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
@@ -5460,6 +5923,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfolderReorderV1Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfolderReorderV1Response>> EzsignfolderReorderV1WithHttpInfoAsync(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignfolderReorderV1Request' is set
@@ -5510,6 +5974,168 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignfolderReorderV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfolderReorderV2Response</returns>
+        public EzsignfolderReorderV2Response EzsignfolderReorderV2(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfolderReorderV2Response> localVarResponse = EzsignfolderReorderV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV2Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfolderReorderV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignfolderReorderV2Response> EzsignfolderReorderV2WithHttpInfo(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'ezsignfolderReorderV2Request' is set
+            if (ezsignfolderReorderV2Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfolderReorderV2Request' when calling ObjectEzsignfolderApi->EzsignfolderReorderV2");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfolderID)); // path parameter
+            localVarRequestOptions.Data = ezsignfolderReorderV2Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderReorderV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EzsignfolderReorderV2Response>("/2/object/ezsignfolder/{pkiEzsignfolderID}/reorder", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfolderReorderV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfolderReorderV2Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfolderReorderV2Response> EzsignfolderReorderV2Async(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfolderReorderV2Response> localVarResponse = await EzsignfolderReorderV2WithHttpInfoAsync(pkiEzsignfolderID, ezsignfolderReorderV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reorder Ezsigndocuments in the Ezsignfolder 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfolderID"></param>
+        /// <param name="ezsignfolderReorderV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfolderReorderV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfolderReorderV2Response>> EzsignfolderReorderV2WithHttpInfoAsync(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'ezsignfolderReorderV2Request' is set
+            if (ezsignfolderReorderV2Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfolderReorderV2Request' when calling ObjectEzsignfolderApi->EzsignfolderReorderV2");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfolderID)); // path parameter
+            localVarRequestOptions.Data = ezsignfolderReorderV2Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsignfolderApi.EzsignfolderReorderV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsignfolderReorderV2Response>("/2/object/ezsignfolder/{pkiEzsignfolderID}/reorder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfolderReorderV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

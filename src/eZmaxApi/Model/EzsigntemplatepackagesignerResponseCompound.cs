@@ -32,6 +32,12 @@ namespace eZmaxApi.Model
     [DataContract(Name = "ezsigntemplatepackagesigner-ResponseCompound")]
     public partial class EzsigntemplatepackagesignerResponseCompound : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EEzsigntemplatepackagesignerMapping
+        /// </summary>
+        [DataMember(Name = "eEzsigntemplatepackagesignerMapping", EmitDefaultValue = false)]
+        public FieldEEzsigntemplatepackagesignerMapping? EEzsigntemplatepackagesignerMapping { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerResponseCompound" /> class.
         /// </summary>
@@ -40,19 +46,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplatepackagesignerID">The unique ID of the Ezsigntemplatepackagesigner (required).</param>
-        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="sEzsigntemplatepackagesignerDescription">The description of the Ezsigntemplatepackagesigner (required).</param>
-        public EzsigntemplatepackagesignerResponseCompound(int pkiEzsigntemplatepackagesignerID = default(int), int fkiEzsigntemplatepackageID = default(int), string sEzsigntemplatepackagesignerDescription = default(string))
+        /// <param name="">The unique ID of the Ezsigntemplatepackagesigner (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="">The unique ID of the Ezdoctemplatedocument.</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Usergroup.</param>
+        /// <param name="">The name of the Ezdoctemplatedocument in the language of the requester.</param>
+        /// <param name="">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
+        /// <param name="">.</param>
+        /// <param name="">The description of the Ezsigntemplatepackagesigner (required).</param>
+        /// <param name="">The description of the User in the language of the requester.</param>
+        /// <param name="">The Name of the Usergroup in the language of the requester.</param>
+        public EzsigntemplatepackagesignerResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), bool  = default(bool), FieldEEzsigntemplatepackagesignerMapping?  = default(FieldEEzsigntemplatepackagesignerMapping?), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.PkiEzsigntemplatepackagesignerID = pkiEzsigntemplatepackagesignerID;
-            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-            // to ensure "sEzsigntemplatepackagesignerDescription" is required (not null)
-            if (sEzsigntemplatepackagesignerDescription == null)
+            this.PkiEzsigntemplatepackagesignerID = ;
+            this.FkiEzsigntemplatepackageID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplatepackagesignerDescription is a required property for EzsigntemplatepackagesignerResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackagesignerResponseCompound and cannot be null");
             }
-            this.SEzsigntemplatepackagesignerDescription = sEzsigntemplatepackagesignerDescription;
+            this.SEzsigntemplatepackagesignerDescription = ;
+            this.FkiEzdoctemplatedocumentID = ;
+            this.FkiUserID = ;
+            this.FkiUsergroupID = ;
+            this.SEzdoctemplatedocumentNameX = ;
+            this.BEzsigntemplatepackagesignerReceivecopy = ;
+            this.EEzsigntemplatepackagesignerMapping = ;
+            this.SUserName = ;
+            this.SUsergroupNameX = ;
         }
 
         /// <summary>
@@ -72,12 +94,67 @@ namespace eZmaxApi.Model
         public int FkiEzsigntemplatepackageID { get; set; }
 
         /// <summary>
+        /// The unique ID of the Ezdoctemplatedocument
+        /// </summary>
+        /// <value>The unique ID of the Ezdoctemplatedocument</value>
+        /* <example>95</example>*/
+        [DataMember(Name = "fkiEzdoctemplatedocumentID", EmitDefaultValue = false)]
+        public int FkiEzdoctemplatedocumentID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the User
+        /// </summary>
+        /// <value>The unique ID of the User</value>
+        /* <example>70</example>*/
+        [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
+        public int FkiUserID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Usergroup
+        /// </summary>
+        /// <value>The unique ID of the Usergroup</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "fkiUsergroupID", EmitDefaultValue = false)]
+        public int FkiUsergroupID { get; set; }
+
+        /// <summary>
+        /// The name of the Ezdoctemplatedocument in the language of the requester
+        /// </summary>
+        /// <value>The name of the Ezdoctemplatedocument in the language of the requester</value>
+        /* <example>Standard Contract</example>*/
+        [DataMember(Name = "sEzdoctemplatedocumentNameX", EmitDefaultValue = false)]
+        public string SEzdoctemplatedocumentNameX { get; set; }
+
+        /// <summary>
+        /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.
+        /// </summary>
+        /// <value>If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.</value>
+        [DataMember(Name = "bEzsigntemplatepackagesignerReceivecopy", EmitDefaultValue = true)]
+        public bool BEzsigntemplatepackagesignerReceivecopy { get; set; }
+
+        /// <summary>
         /// The description of the Ezsigntemplatepackagesigner
         /// </summary>
         /// <value>The description of the Ezsigntemplatepackagesigner</value>
         /* <example>Customer</example>*/
         [DataMember(Name = "sEzsigntemplatepackagesignerDescription", IsRequired = true, EmitDefaultValue = true)]
         public string SEzsigntemplatepackagesignerDescription { get; set; }
+
+        /// <summary>
+        /// The description of the User in the language of the requester
+        /// </summary>
+        /// <value>The description of the User in the language of the requester</value>
+        /* <example>Default</example>*/
+        [DataMember(Name = "sUserName", EmitDefaultValue = false)]
+        public string SUserName { get; set; }
+
+        /// <summary>
+        /// The Name of the Usergroup in the language of the requester
+        /// </summary>
+        /// <value>The Name of the Usergroup in the language of the requester</value>
+        /* <example>Administration</example>*/
+        [DataMember(Name = "sUsergroupNameX", EmitDefaultValue = false)]
+        public string SUsergroupNameX { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,7 +166,15 @@ namespace eZmaxApi.Model
             sb.Append("class EzsigntemplatepackagesignerResponseCompound {\n");
             sb.Append("  PkiEzsigntemplatepackagesignerID: ").Append(PkiEzsigntemplatepackagesignerID).Append("\n");
             sb.Append("  FkiEzsigntemplatepackageID: ").Append(FkiEzsigntemplatepackageID).Append("\n");
+            sb.Append("  FkiEzdoctemplatedocumentID: ").Append(FkiEzdoctemplatedocumentID).Append("\n");
+            sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  FkiUsergroupID: ").Append(FkiUsergroupID).Append("\n");
+            sb.Append("  SEzdoctemplatedocumentNameX: ").Append(SEzdoctemplatedocumentNameX).Append("\n");
+            sb.Append("  BEzsigntemplatepackagesignerReceivecopy: ").Append(BEzsigntemplatepackagesignerReceivecopy).Append("\n");
+            sb.Append("  EEzsigntemplatepackagesignerMapping: ").Append(EEzsigntemplatepackagesignerMapping).Append("\n");
             sb.Append("  SEzsigntemplatepackagesignerDescription: ").Append(SEzsigntemplatepackagesignerDescription).Append("\n");
+            sb.Append("  SUserName: ").Append(SUserName).Append("\n");
+            sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -120,6 +205,54 @@ namespace eZmaxApi.Model
             if (this.FkiEzsigntemplatepackageID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
+            }
+
+            // FkiEzdoctemplatedocumentID (int) maximum
+            if (this.FkiEzdoctemplatedocumentID > (int)65535)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "FkiEzdoctemplatedocumentID" });
+            }
+
+            // FkiEzdoctemplatedocumentID (int) minimum
+            if (this.FkiEzdoctemplatedocumentID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatedocumentID" });
+            }
+
+            // FkiUserID (int) minimum
+            if (this.FkiUserID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+            // FkiUsergroupID (int) maximum
+            if (this.FkiUsergroupID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
+            }
+
+            // FkiUsergroupID (int) minimum
+            if (this.FkiUsergroupID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
+            }
+
+            if (this.SEzdoctemplatedocumentNameX != null) {
+                // SEzdoctemplatedocumentNameX (string) pattern
+                Regex regexSEzdoctemplatedocumentNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSEzdoctemplatedocumentNameX.Match(this.SEzdoctemplatedocumentNameX).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzdoctemplatedocumentNameX, must match a pattern of " + regexSEzdoctemplatedocumentNameX, new [] { "SEzdoctemplatedocumentNameX" });
+                }
+            }
+
+            if (this.SUsergroupNameX != null) {
+                // SUsergroupNameX (string) pattern
+                Regex regexSUsergroupNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSUsergroupNameX.Match(this.SUsergroupNameX).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameX, must match a pattern of " + regexSUsergroupNameX, new [] { "SUsergroupNameX" });
+                }
             }
 
             yield break;

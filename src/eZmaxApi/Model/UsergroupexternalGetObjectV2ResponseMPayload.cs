@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objUsergroupexternal">objUsergroupexternal (required).</param>
-        public UsergroupexternalGetObjectV2ResponseMPayload(UsergroupexternalResponseCompound objUsergroupexternal = default(UsergroupexternalResponseCompound))
+        /// <param name=""> (required).</param>
+        public UsergroupexternalGetObjectV2ResponseMPayload(UsergroupexternalResponseCompound  = default(UsergroupexternalResponseCompound))
         {
-            // to ensure "objUsergroupexternal" is required (not null)
-            if (objUsergroupexternal == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objUsergroupexternal is a required property for UsergroupexternalGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupexternalGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjUsergroupexternal = objUsergroupexternal;
+            this.ObjUsergroupexternal = ;
         }
 
         /// <summary>

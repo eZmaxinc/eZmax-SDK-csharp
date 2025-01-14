@@ -128,9 +128,10 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
+        EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// Retrieve Ezsigntemplatepackages and IDs
@@ -143,9 +144,10 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
+        ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0);
         /// <summary>
         /// Retrieve Ezsigntemplatepackage list
         /// </summary>
@@ -321,10 +323,11 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsigntemplatepackages and IDs
@@ -337,10 +340,11 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepackageGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response>> EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response>> EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Ezsigntemplatepackage list
         /// </summary>
@@ -1149,11 +1153,12 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        public EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0)
+        public EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> localVarResponse = EzsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+            eZmaxApi.Client.ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> localVarResponse = EzsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
             return localVarResponse.Data;
         }
 
@@ -1165,9 +1170,10 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0)
+        public eZmaxApi.Client.ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -1205,6 +1211,10 @@ namespace eZmaxApi.Api
             if (sQuery != null)
             {
                 localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sQuery", sQuery));
+            }
+            if (fkiEzsignfoldertypeID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
             }
             if (acceptLanguage != null)
             {
@@ -1242,12 +1252,13 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepackageGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepackageGetAutocompleteV2Response> EzsigntemplatepackageGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> localVarResponse = await EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> localVarResponse = await EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1259,10 +1270,11 @@ namespace eZmaxApi.Api
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="fkiEzsignfoldertypeID">The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepackageGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response>> EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response>> EzsigntemplatepackageGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int? fkiEzsignfoldertypeID = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -1301,6 +1313,10 @@ namespace eZmaxApi.Api
             if (sQuery != null)
             {
                 localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sQuery", sQuery));
+            }
+            if (fkiEzsignfoldertypeID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
             }
             if (acceptLanguage != null)
             {

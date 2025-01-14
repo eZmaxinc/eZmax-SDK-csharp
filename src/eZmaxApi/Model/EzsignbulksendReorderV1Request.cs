@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendReorderV1Request" /> class.
         /// </summary>
-        /// <param name="aPkiEzsignbulksenddocumentmappingID">aPkiEzsignbulksenddocumentmappingID (required).</param>
-        public EzsignbulksendReorderV1Request(List<int> aPkiEzsignbulksenddocumentmappingID = default(List<int>))
+        /// <param name=""> (required).</param>
+        public EzsignbulksendReorderV1Request(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsignbulksenddocumentmappingID" is required (not null)
-            if (aPkiEzsignbulksenddocumentmappingID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsignbulksenddocumentmappingID is a required property for EzsignbulksendReorderV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendReorderV1Request and cannot be null");
             }
-            this.APkiEzsignbulksenddocumentmappingID = aPkiEzsignbulksenddocumentmappingID;
+            this.APkiEzsignbulksenddocumentmappingID = ;
         }
 
         /// <summary>

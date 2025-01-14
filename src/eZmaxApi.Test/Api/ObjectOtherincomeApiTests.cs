@@ -56,6 +56,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test OtherincomeGetCommunicationCountV1
+        /// </summary>
+        [Fact]
+        public void OtherincomeGetCommunicationCountV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiOtherincomeID = null;
+            //var response = instance.OtherincomeGetCommunicationCountV1(pkiOtherincomeID);
+            //Assert.IsType<OtherincomeGetCommunicationCountV1Response>(response);
+        }
+
+        /// <summary>
         /// Test OtherincomeGetCommunicationListV1
         /// </summary>
         [Fact]
@@ -65,6 +77,30 @@ namespace eZmaxApi.Test.Api
             //int pkiOtherincomeID = null;
             //var response = instance.OtherincomeGetCommunicationListV1(pkiOtherincomeID);
             //Assert.IsType<OtherincomeGetCommunicationListV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test OtherincomeGetCommunicationrecipientsV1
+        /// </summary>
+        [Fact]
+        public void OtherincomeGetCommunicationrecipientsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiOtherincomeID = null;
+            //var response = instance.OtherincomeGetCommunicationrecipientsV1(pkiOtherincomeID);
+            //Assert.IsType<OtherincomeGetCommunicationrecipientsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test OtherincomeGetCommunicationsendersV1
+        /// </summary>
+        [Fact]
+        public void OtherincomeGetCommunicationsendersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiOtherincomeID = null;
+            //var response = instance.OtherincomeGetCommunicationsendersV1(pkiOtherincomeID);
+            //Assert.IsType<OtherincomeGetCommunicationsendersV1Response>(response);
         }
     }
 }

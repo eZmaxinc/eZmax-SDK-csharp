@@ -40,35 +40,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzmaxinvoicingsummaryexternalID">The unique ID of the Ezmaxinvoicingsummaryexternal.</param>
-        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
-        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
-        /// <param name="sEzmaxinvoicingsummaryexternalDescription">The description of the Ezmaxinvoicingsummaryexternal (required).</param>
-        /// <param name="aObjEzmaxinvoicingsummaryexternaldetail">aObjEzmaxinvoicingsummaryexternaldetail (required).</param>
-        public EzmaxinvoicingsummaryexternalResponseCompound(int pkiEzmaxinvoicingsummaryexternalID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string), string sEzmaxinvoicingsummaryexternalDescription = default(string), List<EzmaxinvoicingsummaryexternaldetailResponseCompound> aObjEzmaxinvoicingsummaryexternaldetail = default(List<EzmaxinvoicingsummaryexternaldetailResponseCompound>))
+        /// <param name="">The unique ID of the Ezmaxinvoicingsummaryexternal.</param>
+        /// <param name="">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="">The unique ID of the Billingentityexternal (required).</param>
+        /// <param name="">The description of the Billingentityexternal (required).</param>
+        /// <param name="">The description of the Ezmaxinvoicingsummaryexternal (required).</param>
+        /// <param name=""> (required).</param>
+        public EzmaxinvoicingsummaryexternalResponseCompound(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), List<EzmaxinvoicingsummaryexternaldetailResponseCompound>  = default(List<EzmaxinvoicingsummaryexternaldetailResponseCompound>))
         {
-            this.FkiBillingentityexternalID = fkiBillingentityexternalID;
-            // to ensure "sBillingentityexternalDescription" is required (not null)
-            if (sBillingentityexternalDescription == null)
+            this.FkiBillingentityexternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sBillingentityexternalDescription is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
             }
-            this.SBillingentityexternalDescription = sBillingentityexternalDescription;
-            // to ensure "sEzmaxinvoicingsummaryexternalDescription" is required (not null)
-            if (sEzmaxinvoicingsummaryexternalDescription == null)
+            this.SBillingentityexternalDescription = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzmaxinvoicingsummaryexternalDescription is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
             }
-            this.SEzmaxinvoicingsummaryexternalDescription = sEzmaxinvoicingsummaryexternalDescription;
-            // to ensure "aObjEzmaxinvoicingsummaryexternaldetail" is required (not null)
-            if (aObjEzmaxinvoicingsummaryexternaldetail == null)
+            this.SEzmaxinvoicingsummaryexternalDescription = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzmaxinvoicingsummaryexternaldetail is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
             }
-            this.AObjEzmaxinvoicingsummaryexternaldetail = aObjEzmaxinvoicingsummaryexternaldetail;
-            this.PkiEzmaxinvoicingsummaryexternalID = pkiEzmaxinvoicingsummaryexternalID;
-            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
+            this.AObjEzmaxinvoicingsummaryexternaldetail = ;
+            this.PkiEzmaxinvoicingsummaryexternalID = ;
+            this.FkiEzmaxinvoicingID = ;
         }
 
         /// <summary>

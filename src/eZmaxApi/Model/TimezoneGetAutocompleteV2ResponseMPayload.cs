@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimezoneGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjTimezone">An array of Timezone autocomplete element response. (required).</param>
-        public TimezoneGetAutocompleteV2ResponseMPayload(List<TimezoneAutocompleteElementResponse> aObjTimezone = default(List<TimezoneAutocompleteElementResponse>))
+        /// <param name="">An array of Timezone autocomplete element response. (required).</param>
+        public TimezoneGetAutocompleteV2ResponseMPayload(List<TimezoneAutocompleteElementResponse>  = default(List<TimezoneAutocompleteElementResponse>))
         {
-            // to ensure "aObjTimezone" is required (not null)
-            if (aObjTimezone == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjTimezone is a required property for TimezoneGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for TimezoneGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjTimezone = aObjTimezone;
+            this.AObjTimezone = ;
         }
 
         /// <summary>

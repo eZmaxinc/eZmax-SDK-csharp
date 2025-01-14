@@ -40,29 +40,29 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookUserUserCreated" /> class.
         /// </summary>
-        /// <param name="objWebhook">objWebhook (required).</param>
-        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        /// <param name="objUser">objUser (required).</param>
-        public WebhookUserUserCreated(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), UserResponseCompound objUser = default(UserResponseCompound))
+        /// <param name=""> (required).</param>
+        /// <param name="">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
+        /// <param name=""> (required).</param>
+        public WebhookUserUserCreated(CustomWebhookResponse  = default(CustomWebhookResponse), List<AttemptResponseCompound>  = default(List<AttemptResponseCompound>), UserResponseCompound  = default(UserResponseCompound))
         {
-            // to ensure "objWebhook" is required (not null)
-            if (objWebhook == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objWebhook is a required property for WebhookUserUserCreated and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookUserUserCreated and cannot be null");
             }
-            this.ObjWebhook = objWebhook;
-            // to ensure "aObjAttempt" is required (not null)
-            if (aObjAttempt == null)
+            this.ObjWebhook = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjAttempt is a required property for WebhookUserUserCreated and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookUserUserCreated and cannot be null");
             }
-            this.AObjAttempt = aObjAttempt;
-            // to ensure "objUser" is required (not null)
-            if (objUser == null)
+            this.AObjAttempt = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objUser is a required property for WebhookUserUserCreated and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookUserUserCreated and cannot be null");
             }
-            this.ObjUser = objUser;
+            this.ObjUser = ;
         }
 
         /// <summary>

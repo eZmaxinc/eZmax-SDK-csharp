@@ -147,6 +147,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test WebhookSendWebhookV1
+        /// </summary>
+        [Fact]
+        public void WebhookSendWebhookV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //WebhookSendWebhookV1Request webhookSendWebhookV1Request = null;
+            //var response = instance.WebhookSendWebhookV1(webhookSendWebhookV1Request);
+            //Assert.IsType<WebhookSendWebhookV1Response>(response);
+        }
+
+        /// <summary>
         /// Test WebhookTestV1
         /// </summary>
         [Fact]

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetDownloadUrlV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="sDownloadUrl">The Url to the requested document.  Url will expire after 5 minutes. (required).</param>
-        public EzsigndocumentGetDownloadUrlV1ResponseMPayload(string sDownloadUrl = default(string))
+        /// <param name="">The Url to the requested document.  Url will expire after 5 minutes. (required).</param>
+        public EzsigndocumentGetDownloadUrlV1ResponseMPayload(string  = default(string))
         {
-            // to ensure "sDownloadUrl" is required (not null)
-            if (sDownloadUrl == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sDownloadUrl is a required property for EzsigndocumentGetDownloadUrlV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentGetDownloadUrlV1ResponseMPayload and cannot be null");
             }
-            this.SDownloadUrl = sDownloadUrl;
+            this.SDownloadUrl = ;
         }
 
         /// <summary>

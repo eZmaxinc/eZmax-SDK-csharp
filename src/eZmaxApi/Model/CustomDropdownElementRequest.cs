@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomDropdownElementRequest" /> class.
         /// </summary>
-        /// <param name="sLabel">The Description of the element (required).</param>
-        /// <param name="sValue">The Value of the element (required).</param>
-        public CustomDropdownElementRequest(string sLabel = default(string), string sValue = default(string))
+        /// <param name="">The Description of the element (required).</param>
+        /// <param name="">The Value of the element (required).</param>
+        public CustomDropdownElementRequest(string  = default(string), string  = default(string))
         {
-            // to ensure "sLabel" is required (not null)
-            if (sLabel == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sLabel is a required property for CustomDropdownElementRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomDropdownElementRequest and cannot be null");
             }
-            this.SLabel = sLabel;
-            // to ensure "sValue" is required (not null)
-            if (sValue == null)
+            this.SLabel = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sValue is a required property for CustomDropdownElementRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomDropdownElementRequest and cannot be null");
             }
-            this.SValue = sValue;
+            this.SValue = ;
         }
 
         /// <summary>

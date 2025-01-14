@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SecretquestionGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjSecretquestion">An array of Secretquestion autocomplete element response. (required).</param>
-        public SecretquestionGetAutocompleteV2ResponseMPayload(List<SecretquestionAutocompleteElementResponse> aObjSecretquestion = default(List<SecretquestionAutocompleteElementResponse>))
+        /// <param name="">An array of Secretquestion autocomplete element response. (required).</param>
+        public SecretquestionGetAutocompleteV2ResponseMPayload(List<SecretquestionAutocompleteElementResponse>  = default(List<SecretquestionAutocompleteElementResponse>))
         {
-            // to ensure "aObjSecretquestion" is required (not null)
-            if (aObjSecretquestion == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjSecretquestion is a required property for SecretquestionGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for SecretquestionGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjSecretquestion = aObjSecretquestion;
+            this.AObjSecretquestion = ;
         }
 
         /// <summary>

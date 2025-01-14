@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objWebhook">objWebhook (required).</param>
-        public WebhookEditObjectV1Request(WebhookRequestCompound objWebhook = default(WebhookRequestCompound))
+        /// <param name=""> (required).</param>
+        public WebhookEditObjectV1Request(WebhookRequestCompound  = default(WebhookRequestCompound))
         {
-            // to ensure "objWebhook" is required (not null)
-            if (objWebhook == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objWebhook is a required property for WebhookEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookEditObjectV1Request and cannot be null");
             }
-            this.ObjWebhook = objWebhook;
+            this.ObjWebhook = ;
         }
 
         /// <summary>

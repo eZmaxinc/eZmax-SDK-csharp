@@ -46,28 +46,28 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense.</param>
-        /// <param name="sVariableexpenseCode">The code of the Variableexpense (required).</param>
-        /// <param name="objVariableexpenseDescription">objVariableexpenseDescription (required).</param>
-        /// <param name="eVariableexpenseTaxable">eVariableexpenseTaxable (required).</param>
-        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not (required).</param>
-        public VariableexpenseRequestCompound(int pkiVariableexpenseID = default(int), string sVariableexpenseCode = default(string), MultilingualVariableexpenseDescription objVariableexpenseDescription = default(MultilingualVariableexpenseDescription), FieldEVariableexpenseTaxable eVariableexpenseTaxable = default(FieldEVariableexpenseTaxable), bool bVariableexpenseIsactive = default(bool))
+        /// <param name="">The unique ID of the Variableexpense.</param>
+        /// <param name="">The code of the Variableexpense (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">Whether the variableexpense is active or not (required).</param>
+        public VariableexpenseRequestCompound(int  = default(int), string  = default(string), MultilingualVariableexpenseDescription  = default(MultilingualVariableexpenseDescription), FieldEVariableexpenseTaxable  = default(FieldEVariableexpenseTaxable), bool  = default(bool))
         {
-            // to ensure "sVariableexpenseCode" is required (not null)
-            if (sVariableexpenseCode == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sVariableexpenseCode is a required property for VariableexpenseRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for VariableexpenseRequestCompound and cannot be null");
             }
-            this.SVariableexpenseCode = sVariableexpenseCode;
-            // to ensure "objVariableexpenseDescription" is required (not null)
-            if (objVariableexpenseDescription == null)
+            this.SVariableexpenseCode = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objVariableexpenseDescription is a required property for VariableexpenseRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for VariableexpenseRequestCompound and cannot be null");
             }
-            this.ObjVariableexpenseDescription = objVariableexpenseDescription;
-            this.EVariableexpenseTaxable = eVariableexpenseTaxable;
-            this.BVariableexpenseIsactive = bVariableexpenseIsactive;
-            this.PkiVariableexpenseID = pkiVariableexpenseID;
+            this.ObjVariableexpenseDescription = ;
+            this.EVariableexpenseTaxable = ;
+            this.BVariableexpenseIsactive = ;
+            this.PkiVariableexpenseID = ;
         }
 
         /// <summary>

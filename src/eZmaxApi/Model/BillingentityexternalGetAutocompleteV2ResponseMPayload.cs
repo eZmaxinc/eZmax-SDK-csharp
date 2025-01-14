@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityexternalGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjBillingentityexternal">An array of Billingentityexternal autocomplete element response. (required).</param>
-        public BillingentityexternalGetAutocompleteV2ResponseMPayload(List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal = default(List<BillingentityexternalAutocompleteElementResponse>))
+        /// <param name="">An array of Billingentityexternal autocomplete element response. (required).</param>
+        public BillingentityexternalGetAutocompleteV2ResponseMPayload(List<BillingentityexternalAutocompleteElementResponse>  = default(List<BillingentityexternalAutocompleteElementResponse>))
         {
-            // to ensure "aObjBillingentityexternal" is required (not null)
-            if (aObjBillingentityexternal == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjBillingentityexternal is a required property for BillingentityexternalGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityexternalGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjBillingentityexternal = aObjBillingentityexternal;
+            this.AObjBillingentityexternal = ;
         }
 
         /// <summary>

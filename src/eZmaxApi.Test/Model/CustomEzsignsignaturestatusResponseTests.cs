@@ -90,5 +90,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'IEzsignsignaturestatusSigned'
         }
+
+        /// <summary>
+        /// Test the property 'IEzsignsignaturestatusConditional'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignaturestatusConditionalTest()
+        {
+            // TODO unit test for the property 'IEzsignsignaturestatusConditional'
+        }
     }
 }

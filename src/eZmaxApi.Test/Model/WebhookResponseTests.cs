@@ -65,6 +65,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiAuthenticationexternalID'
+        /// </summary>
+        [Fact]
+        public void FkiAuthenticationexternalIDTest()
+        {
+            // TODO unit test for the property 'FkiAuthenticationexternalID'
+        }
+
+        /// <summary>
         /// Test the property 'SWebhookDescription'
         /// </summary>
         [Fact]
@@ -179,6 +188,15 @@ namespace eZmaxApi.Test.Model
         public void BWebhookSkipsslvalidationTest()
         {
             // TODO unit test for the property 'BWebhookSkipsslvalidation'
+        }
+
+        /// <summary>
+        /// Test the property 'SAuthenticationexternalDescription'
+        /// </summary>
+        [Fact]
+        public void SAuthenticationexternalDescriptionTest()
+        {
+            // TODO unit test for the property 'SAuthenticationexternalDescription'
         }
 
         /// <summary>

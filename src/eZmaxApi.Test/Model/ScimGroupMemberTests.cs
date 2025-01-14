@@ -83,12 +83,12 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'VarRef'
+        /// Test the property 'Ref'
         /// </summary>
         [Fact]
-        public void VarRefTest()
+        public void RefTest()
         {
-            // TODO unit test for the property 'VarRef'
+            // TODO unit test for the property 'Ref'
         }
     }
 }

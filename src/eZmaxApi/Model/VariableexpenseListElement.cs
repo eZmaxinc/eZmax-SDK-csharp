@@ -46,18 +46,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseListElement" /> class.
         /// </summary>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense (required).</param>
-        /// <param name="sVariableexpenseCode">The code of the Variableexpense.</param>
-        /// <param name="sVariableexpenseDescriptionX">The description of the Variableexpense in the language of the requester.</param>
-        /// <param name="eVariableexpenseTaxable">eVariableexpenseTaxable.</param>
-        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not.</param>
-        public VariableexpenseListElement(int pkiVariableexpenseID = default(int), string sVariableexpenseCode = default(string), string sVariableexpenseDescriptionX = default(string), FieldEVariableexpenseTaxable? eVariableexpenseTaxable = default(FieldEVariableexpenseTaxable?), bool bVariableexpenseIsactive = default(bool))
+        /// <param name="">The unique ID of the Variableexpense (required).</param>
+        /// <param name="">The code of the Variableexpense.</param>
+        /// <param name="">The description of the Variableexpense in the language of the requester.</param>
+        /// <param name="">.</param>
+        /// <param name="">Whether the variableexpense is active or not.</param>
+        public VariableexpenseListElement(int  = default(int), string  = default(string), string  = default(string), FieldEVariableexpenseTaxable?  = default(FieldEVariableexpenseTaxable?), bool  = default(bool))
         {
-            this.PkiVariableexpenseID = pkiVariableexpenseID;
-            this.SVariableexpenseCode = sVariableexpenseCode;
-            this.SVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
-            this.EVariableexpenseTaxable = eVariableexpenseTaxable;
-            this.BVariableexpenseIsactive = bVariableexpenseIsactive;
+            this.PkiVariableexpenseID = ;
+            this.SVariableexpenseCode = ;
+            this.SVariableexpenseDescriptionX = ;
+            this.EVariableexpenseTaxable = ;
+            this.BVariableexpenseIsactive = ;
         }
 
         /// <summary>

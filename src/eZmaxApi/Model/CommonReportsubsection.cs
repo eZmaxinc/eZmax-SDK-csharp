@@ -40,29 +40,29 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportsubsection" /> class.
         /// </summary>
-        /// <param name="objReportsubsectionpartHeader">objReportsubsectionpartHeader (required).</param>
-        /// <param name="objReportsubsectionpartBody">objReportsubsectionpartBody (required).</param>
-        /// <param name="objReportsubsectionpartFooter">objReportsubsectionpartFooter (required).</param>
-        public CommonReportsubsection(CommonReportsubsectionpart objReportsubsectionpartHeader = default(CommonReportsubsectionpart), CommonReportsubsectionpart objReportsubsectionpartBody = default(CommonReportsubsectionpart), CommonReportsubsectionpart objReportsubsectionpartFooter = default(CommonReportsubsectionpart))
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public CommonReportsubsection(CommonReportsubsectionpart  = default(CommonReportsubsectionpart), CommonReportsubsectionpart  = default(CommonReportsubsectionpart), CommonReportsubsectionpart  = default(CommonReportsubsectionpart))
         {
-            // to ensure "objReportsubsectionpartHeader" is required (not null)
-            if (objReportsubsectionpartHeader == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objReportsubsectionpartHeader is a required property for CommonReportsubsection and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonReportsubsection and cannot be null");
             }
-            this.ObjReportsubsectionpartHeader = objReportsubsectionpartHeader;
-            // to ensure "objReportsubsectionpartBody" is required (not null)
-            if (objReportsubsectionpartBody == null)
+            this.ObjReportsubsectionpartHeader = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objReportsubsectionpartBody is a required property for CommonReportsubsection and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonReportsubsection and cannot be null");
             }
-            this.ObjReportsubsectionpartBody = objReportsubsectionpartBody;
-            // to ensure "objReportsubsectionpartFooter" is required (not null)
-            if (objReportsubsectionpartFooter == null)
+            this.ObjReportsubsectionpartBody = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objReportsubsectionpartFooter is a required property for CommonReportsubsection and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonReportsubsection and cannot be null");
             }
-            this.ObjReportsubsectionpartFooter = objReportsubsectionpartFooter;
+            this.ObjReportsubsectionpartFooter = ;
         }
 
         /// <summary>

@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup.</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
-        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent..</param>
-        /// <param name="objEzsignsigner">objEzsignsigner.</param>
-        public EzsignfoldersignerassociationRequestCompound(int pkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), int fkiEzsignsignergroupID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string), EzsignsignerRequestCompound objEzsignsigner = default(EzsignsignerRequestCompound))
+        /// <param name="">The unique ID of the Ezsignfoldersignerassociation.</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Ezsignsignergroup.</param>
+        /// <param name="">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
+        /// <param name="">A custom text message that will be added to the email sent..</param>
+        /// <param name="">.</param>
+        public EzsignfoldersignerassociationRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), bool  = default(bool), string  = default(string), EzsignsignerRequestCompound  = default(EzsignsignerRequestCompound))
         {
-            this.FkiEzsignfolderID = fkiEzsignfolderID;
-            this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
-            this.FkiUserID = fkiUserID;
-            this.FkiEzsignsignergroupID = fkiEzsignsignergroupID;
-            this.BEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
-            this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
-            this.ObjEzsignsigner = objEzsignsigner;
+            this.FkiEzsignfolderID = ;
+            this.PkiEzsignfoldersignerassociationID = ;
+            this.FkiUserID = ;
+            this.FkiEzsignsignergroupID = ;
+            this.BEzsignfoldersignerassociationReceivecopy = ;
+            this.TEzsignfoldersignerassociationMessage = ;
+            this.ObjEzsignsigner = ;
         }
 
         /// <summary>

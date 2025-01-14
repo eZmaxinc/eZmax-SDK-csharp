@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InscriptionGetCommunicationsendersV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjCommunicationsenders">aObjCommunicationsenders (required).</param>
-        public InscriptionGetCommunicationsendersV1ResponseMPayload(List<CustomCommunicationsenderResponse> aObjCommunicationsenders = default(List<CustomCommunicationsenderResponse>))
+        /// <param name=""> (required).</param>
+        public InscriptionGetCommunicationsendersV1ResponseMPayload(List<CustomCommunicationsenderResponse>  = default(List<CustomCommunicationsenderResponse>))
         {
-            // to ensure "aObjCommunicationsenders" is required (not null)
-            if (aObjCommunicationsenders == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCommunicationsenders is a required property for InscriptionGetCommunicationsendersV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for InscriptionGetCommunicationsendersV1ResponseMPayload and cannot be null");
             }
-            this.AObjCommunicationsenders = aObjCommunicationsenders;
+            this.AObjCommunicationsenders = ;
         }
 
         /// <summary>

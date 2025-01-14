@@ -40,29 +40,29 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEzsignFolderSent" /> class.
         /// </summary>
-        /// <param name="objWebhook">objWebhook (required).</param>
-        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        /// <param name="objEzsignfolder">objEzsignfolder (required).</param>
-        public WebhookEzsignFolderSent(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), EzsignfolderResponse objEzsignfolder = default(EzsignfolderResponse))
+        /// <param name=""> (required).</param>
+        /// <param name="">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
+        /// <param name=""> (required).</param>
+        public WebhookEzsignFolderSent(CustomWebhookResponse  = default(CustomWebhookResponse), List<AttemptResponseCompound>  = default(List<AttemptResponseCompound>), EzsignfolderResponse  = default(EzsignfolderResponse))
         {
-            // to ensure "objWebhook" is required (not null)
-            if (objWebhook == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objWebhook is a required property for WebhookEzsignFolderSent and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookEzsignFolderSent and cannot be null");
             }
-            this.ObjWebhook = objWebhook;
-            // to ensure "aObjAttempt" is required (not null)
-            if (aObjAttempt == null)
+            this.ObjWebhook = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjAttempt is a required property for WebhookEzsignFolderSent and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookEzsignFolderSent and cannot be null");
             }
-            this.AObjAttempt = aObjAttempt;
-            // to ensure "objEzsignfolder" is required (not null)
-            if (objEzsignfolder == null)
+            this.AObjAttempt = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignfolder is a required property for WebhookEzsignFolderSent and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookEzsignFolderSent and cannot be null");
             }
-            this.ObjEzsignfolder = objEzsignfolder;
+            this.ObjEzsignfolder = ;
         }
 
         /// <summary>

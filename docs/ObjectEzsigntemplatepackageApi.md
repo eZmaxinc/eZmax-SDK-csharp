@@ -403,7 +403,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatepackagegetautocompletev2"></a>
 # **EzsigntemplatepackageGetAutocompleteV2**
-> EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2 (string sSelector, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+> EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2 (string sSelector, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null, int? fkiEzsignfoldertypeID = null)
 
 Retrieve Ezsigntemplatepackages and IDs
 
@@ -435,11 +435,12 @@ namespace Example
             var eFilterActive = "All";  // string? | Specify which results we want to display. (optional)  (default to Active)
             var sQuery = "sQuery_example";  // string? | Allow to filter the returned results (optional) 
             var acceptLanguage = new HeaderAcceptLanguage?(); // HeaderAcceptLanguage? |  (optional) 
+            var fkiEzsignfoldertypeID = 56;  // int? | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional) 
 
             try
             {
                 // Retrieve Ezsigntemplatepackages and IDs
-                EzsigntemplatepackageGetAutocompleteV2Response result = apiInstance.EzsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+                EzsigntemplatepackageGetAutocompleteV2Response result = apiInstance.EzsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -460,7 +461,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Retrieve Ezsigntemplatepackages and IDs
-    ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> response = apiInstance.EzsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+    ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> response = apiInstance.EzsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -481,6 +482,7 @@ catch (ApiException e)
 | **eFilterActive** | **string?** | Specify which results we want to display. | [optional] [default to Active] |
 | **sQuery** | **string?** | Allow to filter the returned results | [optional]  |
 | **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md) |  | [optional]  |
+| **fkiEzsignfoldertypeID** | **int?** | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic | [optional]  |
 
 ### Return type
 

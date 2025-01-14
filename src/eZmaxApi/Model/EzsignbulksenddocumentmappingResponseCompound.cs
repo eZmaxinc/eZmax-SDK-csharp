@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsignbulksenddocumentmappingID">The unique ID of the Ezsignbulksenddocumentmapping. (required).</param>
-        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage.</param>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
-        /// <param name="iEzsignbulksenddocumentmappingOrder">The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. (required).</param>
-        /// <param name="objEzsigntemplate">objEzsigntemplate.</param>
-        /// <param name="objEzsigntemplatepackage">objEzsigntemplatepackage.</param>
-        public EzsignbulksenddocumentmappingResponseCompound(int pkiEzsignbulksenddocumentmappingID = default(int), int fkiEzsignbulksendID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int), int iEzsignbulksenddocumentmappingOrder = default(int), EzsigntemplateResponseCompound objEzsigntemplate = default(EzsigntemplateResponseCompound), EzsigntemplatepackageResponseCompound objEzsigntemplatepackage = default(EzsigntemplatepackageResponseCompound))
+        /// <param name="">The unique ID of the Ezsignbulksenddocumentmapping. (required).</param>
+        /// <param name="">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplatepackage.</param>
+        /// <param name="">The unique ID of the Ezsigntemplate.</param>
+        /// <param name="">The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public EzsignbulksenddocumentmappingResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), EzsigntemplateResponseCompound  = default(EzsigntemplateResponseCompound), EzsigntemplatepackageResponseCompound  = default(EzsigntemplatepackageResponseCompound))
         {
-            this.PkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
-            this.FkiEzsignbulksendID = fkiEzsignbulksendID;
-            this.IEzsignbulksenddocumentmappingOrder = iEzsignbulksenddocumentmappingOrder;
-            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
-            this.ObjEzsigntemplate = objEzsigntemplate;
-            this.ObjEzsigntemplatepackage = objEzsigntemplatepackage;
+            this.PkiEzsignbulksenddocumentmappingID = ;
+            this.FkiEzsignbulksendID = ;
+            this.IEzsignbulksenddocumentmappingOrder = ;
+            this.FkiEzsigntemplatepackageID = ;
+            this.FkiEzsigntemplateID = ;
+            this.ObjEzsigntemplate = ;
+            this.ObjEzsigntemplatepackage = ;
         }
 
         /// <summary>

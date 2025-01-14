@@ -84,33 +84,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationsenderResponse" /> class.
         /// </summary>
-        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
-        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiMailboxsharedID">The unique ID of the Mailboxshared.</param>
-        /// <param name="fkiPhonelinesharedID">The unique ID of the Phonelineshared.</param>
-        /// <param name="eCommunicationsenderObjecttype">eCommunicationsenderObjecttype (required).</param>
-        /// <param name="objContactName">objContactName (required).</param>
-        /// <param name="objEmail">objEmail.</param>
-        /// <param name="objPhoneFax">objPhoneFax.</param>
-        /// <param name="objPhoneSMS">objPhoneSMS.</param>
-        public CustomCommunicationsenderResponse(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiUserID = default(int), int fkiMailboxsharedID = default(int), int fkiPhonelinesharedID = default(int), ECommunicationsenderObjecttypeEnum eCommunicationsenderObjecttype = default(ECommunicationsenderObjecttypeEnum), CustomContactNameResponse objContactName = default(CustomContactNameResponse), EmailResponseCompound objEmail = default(EmailResponseCompound), PhoneResponseCompound objPhoneFax = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound))
+        /// <param name="">The unique ID of the Agent..</param>
+        /// <param name="">The unique ID of the Broker..</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Mailboxshared.</param>
+        /// <param name="">The unique ID of the Phonelineshared.</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public CustomCommunicationsenderResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), ECommunicationsenderObjecttypeEnum  = default(ECommunicationsenderObjecttypeEnum), CustomContactNameResponse  = default(CustomContactNameResponse), EmailResponseCompound  = default(EmailResponseCompound), PhoneResponseCompound  = default(PhoneResponseCompound), PhoneResponseCompound  = default(PhoneResponseCompound))
         {
-            this.ECommunicationsenderObjecttype = eCommunicationsenderObjecttype;
-            // to ensure "objContactName" is required (not null)
-            if (objContactName == null)
+            this.ECommunicationsenderObjecttype = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objContactName is a required property for CustomCommunicationsenderResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCommunicationsenderResponse and cannot be null");
             }
-            this.ObjContactName = objContactName;
-            this.FkiAgentID = fkiAgentID;
-            this.FkiBrokerID = fkiBrokerID;
-            this.FkiUserID = fkiUserID;
-            this.FkiMailboxsharedID = fkiMailboxsharedID;
-            this.FkiPhonelinesharedID = fkiPhonelinesharedID;
-            this.ObjEmail = objEmail;
-            this.ObjPhoneFax = objPhoneFax;
-            this.ObjPhoneSMS = objPhoneSMS;
+            this.ObjContactName = ;
+            this.FkiAgentID = ;
+            this.FkiBrokerID = ;
+            this.FkiUserID = ;
+            this.FkiMailboxsharedID = ;
+            this.FkiPhonelinesharedID = ;
+            this.ObjEmail = ;
+            this.ObjPhoneFax = ;
+            this.ObjPhoneSMS = ;
         }
 
         /// <summary>

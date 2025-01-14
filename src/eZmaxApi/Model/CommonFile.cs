@@ -67,21 +67,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonFile" /> class.
         /// </summary>
-        /// <param name="sFileName">The name of the file (required).</param>
-        /// <param name="sFileUrl">The URL used to reach the File.</param>
-        /// <param name="sFileBase64">The Base64 encoded binary content of the File.</param>
-        /// <param name="eFileSource">The source of the File (required).</param>
-        public CommonFile(string sFileName = default(string), string sFileUrl = default(string), byte[] sFileBase64 = default(byte[]), EFileSourceEnum eFileSource = default(EFileSourceEnum))
+        /// <param name="">The name of the file (required).</param>
+        /// <param name="">The URL used to reach the File.</param>
+        /// <param name="">The Base64 encoded binary content of the File.</param>
+        /// <param name="">The source of the File (required).</param>
+        public CommonFile(string  = default(string), string  = default(string), byte[]  = default(byte[]), EFileSourceEnum  = default(EFileSourceEnum))
         {
-            // to ensure "sFileName" is required (not null)
-            if (sFileName == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sFileName is a required property for CommonFile and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonFile and cannot be null");
             }
-            this.SFileName = sFileName;
-            this.EFileSource = eFileSource;
-            this.SFileUrl = sFileUrl;
-            this.SFileBase64 = sFileBase64;
+            this.SFileName = ;
+            this.EFileSource = ;
+            this.SFileUrl = ;
+            this.SFileBase64 = ;
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the File
         /// </summary>
         /// <value>The Base64 encoded binary content of the File</value>
-        /* <example>[B@74cec793</example>*/
+        /* <example>[B@2c95ac9e</example>*/
         [DataMember(Name = "sFileBase64", EmitDefaultValue = false)]
         public byte[] SFileBase64 { get; set; }
 

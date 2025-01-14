@@ -52,40 +52,40 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VersionhistoryResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiVersionhistoryID">The unique ID of the Versionhistory (required).</param>
-        /// <param name="fkiModuleID">The unique ID of the Module.</param>
-        /// <param name="fkiModulesectionID">The unique ID of the Modulesection.</param>
-        /// <param name="sModuleNameX">The Name of the Module in the language of the requester.</param>
-        /// <param name="sModulesectionNameX">The Name of the Modulesection in the language of the requester.</param>
-        /// <param name="eVersionhistoryUsertype">eVersionhistoryUsertype.</param>
-        /// <param name="objVersionhistoryDetail">objVersionhistoryDetail (required).</param>
-        /// <param name="dtVersionhistoryDate">The date  at which the Versionhistory was published or should be published (required).</param>
-        /// <param name="dtVersionhistoryDateend">The date  at which the Versionhistory will no longer be visible.</param>
-        /// <param name="eVersionhistoryType">eVersionhistoryType (required).</param>
-        /// <param name="bVersionhistoryDraft">Whether the Versionhistory is published or still a draft (required).</param>
-        public VersionhistoryResponseCompound(int pkiVersionhistoryID = default(int), int fkiModuleID = default(int), int fkiModulesectionID = default(int), string sModuleNameX = default(string), string sModulesectionNameX = default(string), FieldEVersionhistoryUsertype? eVersionhistoryUsertype = default(FieldEVersionhistoryUsertype?), MultilingualVersionhistoryDetail objVersionhistoryDetail = default(MultilingualVersionhistoryDetail), string dtVersionhistoryDate = default(string), string dtVersionhistoryDateend = default(string), FieldEVersionhistoryType eVersionhistoryType = default(FieldEVersionhistoryType), bool bVersionhistoryDraft = default(bool))
+        /// <param name="">The unique ID of the Versionhistory (required).</param>
+        /// <param name="">The unique ID of the Module.</param>
+        /// <param name="">The unique ID of the Modulesection.</param>
+        /// <param name="">The Name of the Module in the language of the requester.</param>
+        /// <param name="">The Name of the Modulesection in the language of the requester.</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The date  at which the Versionhistory was published or should be published (required).</param>
+        /// <param name="">The date  at which the Versionhistory will no longer be visible.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">Whether the Versionhistory is published or still a draft (required).</param>
+        public VersionhistoryResponseCompound(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), FieldEVersionhistoryUsertype?  = default(FieldEVersionhistoryUsertype?), MultilingualVersionhistoryDetail  = default(MultilingualVersionhistoryDetail), string  = default(string), string  = default(string), FieldEVersionhistoryType  = default(FieldEVersionhistoryType), bool  = default(bool))
         {
-            this.PkiVersionhistoryID = pkiVersionhistoryID;
-            // to ensure "objVersionhistoryDetail" is required (not null)
-            if (objVersionhistoryDetail == null)
+            this.PkiVersionhistoryID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objVersionhistoryDetail is a required property for VersionhistoryResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for VersionhistoryResponseCompound and cannot be null");
             }
-            this.ObjVersionhistoryDetail = objVersionhistoryDetail;
-            // to ensure "dtVersionhistoryDate" is required (not null)
-            if (dtVersionhistoryDate == null)
+            this.ObjVersionhistoryDetail = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtVersionhistoryDate is a required property for VersionhistoryResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for VersionhistoryResponseCompound and cannot be null");
             }
-            this.DtVersionhistoryDate = dtVersionhistoryDate;
-            this.EVersionhistoryType = eVersionhistoryType;
-            this.BVersionhistoryDraft = bVersionhistoryDraft;
-            this.FkiModuleID = fkiModuleID;
-            this.FkiModulesectionID = fkiModulesectionID;
-            this.SModuleNameX = sModuleNameX;
-            this.SModulesectionNameX = sModulesectionNameX;
-            this.EVersionhistoryUsertype = eVersionhistoryUsertype;
-            this.DtVersionhistoryDateend = dtVersionhistoryDateend;
+            this.DtVersionhistoryDate = ;
+            this.EVersionhistoryType = ;
+            this.BVersionhistoryDraft = ;
+            this.FkiModuleID = ;
+            this.FkiModulesectionID = ;
+            this.SModuleNameX = ;
+            this.SModulesectionNameX = ;
+            this.EVersionhistoryUsertype = ;
+            this.DtVersionhistoryDateend = ;
         }
 
         /// <summary>

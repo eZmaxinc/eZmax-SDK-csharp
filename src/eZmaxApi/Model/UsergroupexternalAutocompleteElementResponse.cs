@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal (required).</param>
-        /// <param name="sUsergroupexternalName">The name of the Usergroupexternal (required).</param>
-        /// <param name="bUsergroupexternalIsactive">Whether the Usergroupexternal is active or not (required).</param>
-        public UsergroupexternalAutocompleteElementResponse(int pkiUsergroupexternalID = default(int), string sUsergroupexternalName = default(string), bool bUsergroupexternalIsactive = default(bool))
+        /// <param name="">The unique ID of the Usergroupexternal (required).</param>
+        /// <param name="">The name of the Usergroupexternal (required).</param>
+        /// <param name="">Whether the Usergroupexternal is active or not (required).</param>
+        public UsergroupexternalAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiUsergroupexternalID = pkiUsergroupexternalID;
-            // to ensure "sUsergroupexternalName" is required (not null)
-            if (sUsergroupexternalName == null)
+            this.PkiUsergroupexternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUsergroupexternalName is a required property for UsergroupexternalAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupexternalAutocompleteElementResponse and cannot be null");
             }
-            this.SUsergroupexternalName = sUsergroupexternalName;
-            this.BUsergroupexternalIsactive = bUsergroupexternalIsactive;
+            this.SUsergroupexternalName = ;
+            this.BUsergroupexternalIsactive = ;
         }
 
         /// <summary>

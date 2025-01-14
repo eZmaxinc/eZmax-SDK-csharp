@@ -56,6 +56,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test InscriptionnotauthenticatedGetCommunicationCountV1
+        /// </summary>
+        [Fact]
+        public void InscriptionnotauthenticatedGetCommunicationCountV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInscriptionnotauthenticatedID = null;
+            //var response = instance.InscriptionnotauthenticatedGetCommunicationCountV1(pkiInscriptionnotauthenticatedID);
+            //Assert.IsType<InscriptionnotauthenticatedGetCommunicationCountV1Response>(response);
+        }
+
+        /// <summary>
         /// Test InscriptionnotauthenticatedGetCommunicationListV1
         /// </summary>
         [Fact]
@@ -65,6 +77,30 @@ namespace eZmaxApi.Test.Api
             //int pkiInscriptionnotauthenticatedID = null;
             //var response = instance.InscriptionnotauthenticatedGetCommunicationListV1(pkiInscriptionnotauthenticatedID);
             //Assert.IsType<InscriptionnotauthenticatedGetCommunicationListV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test InscriptionnotauthenticatedGetCommunicationrecipientsV1
+        /// </summary>
+        [Fact]
+        public void InscriptionnotauthenticatedGetCommunicationrecipientsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInscriptionnotauthenticatedID = null;
+            //var response = instance.InscriptionnotauthenticatedGetCommunicationrecipientsV1(pkiInscriptionnotauthenticatedID);
+            //Assert.IsType<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test InscriptionnotauthenticatedGetCommunicationsendersV1
+        /// </summary>
+        [Fact]
+        public void InscriptionnotauthenticatedGetCommunicationsendersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInscriptionnotauthenticatedID = null;
+            //var response = instance.InscriptionnotauthenticatedGetCommunicationsendersV1(pkiInscriptionnotauthenticatedID);
+            //Assert.IsType<InscriptionnotauthenticatedGetCommunicationsendersV1Response>(response);
         }
     }
 }

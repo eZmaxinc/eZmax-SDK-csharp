@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="aObjSignature">aObjSignature (required).</param>
-        public SignatureCreateObjectV1Request(List<SignatureRequestCompound> aObjSignature = default(List<SignatureRequestCompound>))
+        /// <param name=""> (required).</param>
+        public SignatureCreateObjectV1Request(List<SignatureRequestCompound>  = default(List<SignatureRequestCompound>))
         {
-            // to ensure "aObjSignature" is required (not null)
-            if (aObjSignature == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjSignature is a required property for SignatureCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for SignatureCreateObjectV1Request and cannot be null");
             }
-            this.AObjSignature = aObjSignature;
+            this.AObjSignature = ;
         }
 
         /// <summary>

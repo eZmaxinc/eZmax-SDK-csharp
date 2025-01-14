@@ -92,30 +92,21 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'BCreditcardclientIsactive'
+        /// Test the property 'BCreditcardclientAllowedcompanypayment'
         /// </summary>
         [Fact]
-        public void BCreditcardclientIsactiveTest()
+        public void BCreditcardclientAllowedcompanypaymentTest()
         {
-            // TODO unit test for the property 'BCreditcardclientIsactive'
+            // TODO unit test for the property 'BCreditcardclientAllowedcompanypayment'
         }
 
         /// <summary>
-        /// Test the property 'BCreditcardclientAllowedagencypayment'
+        /// Test the property 'BCreditcardclientAllowedezsign'
         /// </summary>
         [Fact]
-        public void BCreditcardclientAllowedagencypaymentTest()
+        public void BCreditcardclientAllowedezsignTest()
         {
-            // TODO unit test for the property 'BCreditcardclientAllowedagencypayment'
-        }
-
-        /// <summary>
-        /// Test the property 'BCreditcardclientAllowedroyallepageprotection'
-        /// </summary>
-        [Fact]
-        public void BCreditcardclientAllowedroyallepageprotectionTest()
-        {
-            // TODO unit test for the property 'BCreditcardclientAllowedroyallepageprotection'
+            // TODO unit test for the property 'BCreditcardclientAllowedezsign'
         }
 
         /// <summary>

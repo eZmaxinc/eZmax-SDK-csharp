@@ -46,31 +46,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCreditcardtransactionResponse" /> class.
         /// </summary>
-        /// <param name="eCreditcardtypeCodename">eCreditcardtypeCodename (required).</param>
-        /// <param name="dCreditcardtransactionAmount">The amount of the Creditcardtransaction (required).</param>
-        /// <param name="sCreditcardtransactionPartiallydecryptednumber">The partially decrypted credit card number used in the Creditcardtransaction (required).</param>
-        /// <param name="sCreditcardtransactionReferencenumber">The reference number on the creditcard service for the Creditcardtransaction (required).</param>
-        public CustomCreditcardtransactionResponse(FieldECreditcardtypeCodename eCreditcardtypeCodename = default(FieldECreditcardtypeCodename), string dCreditcardtransactionAmount = default(string), string sCreditcardtransactionPartiallydecryptednumber = default(string), string sCreditcardtransactionReferencenumber = default(string))
+        /// <param name=""> (required).</param>
+        /// <param name="">The amount of the Creditcardtransaction (required).</param>
+        /// <param name="">The partially decrypted credit card number used in the Creditcardtransaction (required).</param>
+        /// <param name="">The reference number on the creditcard service for the Creditcardtransaction (required).</param>
+        public CustomCreditcardtransactionResponse(FieldECreditcardtypeCodename  = default(FieldECreditcardtypeCodename), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.ECreditcardtypeCodename = eCreditcardtypeCodename;
-            // to ensure "dCreditcardtransactionAmount" is required (not null)
-            if (dCreditcardtransactionAmount == null)
+            this.ECreditcardtypeCodename = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dCreditcardtransactionAmount is a required property for CustomCreditcardtransactionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCreditcardtransactionResponse and cannot be null");
             }
-            this.DCreditcardtransactionAmount = dCreditcardtransactionAmount;
-            // to ensure "sCreditcardtransactionPartiallydecryptednumber" is required (not null)
-            if (sCreditcardtransactionPartiallydecryptednumber == null)
+            this.DCreditcardtransactionAmount = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcardtransactionPartiallydecryptednumber is a required property for CustomCreditcardtransactionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCreditcardtransactionResponse and cannot be null");
             }
-            this.SCreditcardtransactionPartiallydecryptednumber = sCreditcardtransactionPartiallydecryptednumber;
-            // to ensure "sCreditcardtransactionReferencenumber" is required (not null)
-            if (sCreditcardtransactionReferencenumber == null)
+            this.SCreditcardtransactionPartiallydecryptednumber = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcardtransactionReferencenumber is a required property for CustomCreditcardtransactionResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCreditcardtransactionResponse and cannot be null");
             }
-            this.SCreditcardtransactionReferencenumber = sCreditcardtransactionReferencenumber;
+            this.SCreditcardtransactionReferencenumber = ;
         }
 
         /// <summary>

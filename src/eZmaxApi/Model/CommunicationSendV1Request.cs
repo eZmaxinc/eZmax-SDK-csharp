@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationSendV1Request" /> class.
         /// </summary>
-        /// <param name="aObjCommunication">aObjCommunication (required).</param>
-        public CommunicationSendV1Request(List<CommunicationRequestCompound> aObjCommunication = default(List<CommunicationRequestCompound>))
+        /// <param name=""> (required).</param>
+        public CommunicationSendV1Request(List<CommunicationRequestCompound>  = default(List<CommunicationRequestCompound>))
         {
-            // to ensure "aObjCommunication" is required (not null)
-            if (aObjCommunication == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCommunication is a required property for CommunicationSendV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommunicationSendV1Request and cannot be null");
             }
-            this.AObjCommunication = aObjCommunication;
+            this.AObjCommunication = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="sLoginUrl">The Url to login to the signing application.    Url will expire after 30 minutes.   (required).</param>
-        public EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload(string sLoginUrl = default(string))
+        /// <param name="">The Url to login to the signing application.    Url will expire after 30 minutes.   (required).</param>
+        public EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload(string  = default(string))
         {
-            // to ensure "sLoginUrl" is required (not null)
-            if (sLoginUrl == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sLoginUrl is a required property for EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload and cannot be null");
             }
-            this.SLoginUrl = sLoginUrl;
+            this.SLoginUrl = ;
         }
 
         /// <summary>

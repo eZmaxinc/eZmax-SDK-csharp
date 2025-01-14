@@ -40,12 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupsignerResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplateformfieldgroupsignerID">The unique ID of the Ezsigntemplateformfieldgroupsigner (required).</param>
-        /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
-        public EzsigntemplateformfieldgroupsignerResponseCompound(int pkiEzsigntemplateformfieldgroupsignerID = default(int), int fkiEzsigntemplatesignerID = default(int))
+        /// <param name="">The unique ID of the Ezsigntemplateformfieldgroupsigner (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplatesigner (required).</param>
+        public EzsigntemplateformfieldgroupsignerResponseCompound(int  = default(int), int  = default(int))
         {
-            this.PkiEzsigntemplateformfieldgroupsignerID = pkiEzsigntemplateformfieldgroupsignerID;
-            this.FkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
+            this.PkiEzsigntemplateformfieldgroupsignerID = ;
+            this.FkiEzsigntemplatesignerID = ;
         }
 
         /// <summary>

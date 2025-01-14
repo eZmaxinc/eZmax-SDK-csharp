@@ -40,46 +40,46 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetList" /> class.
         /// </summary>
-        /// <param name="iVersionMin">The minimum version of the function that can be called (required).</param>
-        /// <param name="iVersionMax">The maximum version of the function that can be called (required).</param>
-        /// <param name="aRequiredPermission">An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them. (required).</param>
-        /// <param name="bVersionDeprecated">Wheter the current route is deprecated or not (required).</param>
-        /// <param name="dtResponseDate">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
-        /// <param name="aFilter">aFilter (required).</param>
-        /// <param name="aOrderBy">List of available values for *eOrderBy* (required).</param>
-        /// <param name="iRowMax">The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it&#39;s **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned. (required).</param>
-        /// <param name="iRowOffset">The starting element from where to start retrieving the results. For example if you started at iRowOffset&#x3D;0 and asked for iRowMax&#x3D;100, to get the next 100 results, you could specify iRowOffset&#x3D;100&amp;iRowMax&#x3D;100, (required) (default to 0).</param>
-        public CommonResponseObjDebugPayloadGetList(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), bool bVersionDeprecated = default(bool), string dtResponseDate = default(string), CommonResponseFilter aFilter = default(CommonResponseFilter), Dictionary<string, string> aOrderBy = default(Dictionary<string, string>), int iRowMax = default(int), int iRowOffset = 0)
+        /// <param name="">The minimum version of the function that can be called (required).</param>
+        /// <param name="">The maximum version of the function that can be called (required).</param>
+        /// <param name="">An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them. (required).</param>
+        /// <param name="">Wheter the current route is deprecated or not (required).</param>
+        /// <param name="">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">List of available values for *eOrderBy* (required).</param>
+        /// <param name="">The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it&#39;s **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned. (required).</param>
+        /// <param name="">The starting element from where to start retrieving the results. For example if you started at iRowOffset&#x3D;0 and asked for iRowMax&#x3D;100, to get the next 100 results, you could specify iRowOffset&#x3D;100&amp;iRowMax&#x3D;100, (required) (default to 0).</param>
+        public CommonResponseObjDebugPayloadGetList(int  = default(int), int  = default(int), List<int>  = default(List<int>), bool  = default(bool), string  = default(string), CommonResponseFilter  = default(CommonResponseFilter), Dictionary<string, string>  = default(Dictionary<string, string>), int  = default(int), int  = 0)
         {
-            this.IVersionMin = iVersionMin;
-            this.IVersionMax = iVersionMax;
-            // to ensure "aRequiredPermission" is required (not null)
-            if (aRequiredPermission == null)
+            this.IVersionMin = ;
+            this.IVersionMax = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aRequiredPermission is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
             }
-            this.ARequiredPermission = aRequiredPermission;
-            this.BVersionDeprecated = bVersionDeprecated;
-            // to ensure "dtResponseDate" is required (not null)
-            if (dtResponseDate == null)
+            this.ARequiredPermission = ;
+            this.BVersionDeprecated = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtResponseDate is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
             }
-            this.DtResponseDate = dtResponseDate;
-            // to ensure "aFilter" is required (not null)
-            if (aFilter == null)
+            this.DtResponseDate = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aFilter is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
             }
-            this.AFilter = aFilter;
-            // to ensure "aOrderBy" is required (not null)
-            if (aOrderBy == null)
+            this.AFilter = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aOrderBy is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
             }
-            this.AOrderBy = aOrderBy;
-            this.IRowMax = iRowMax;
-            this.IRowOffset = iRowOffset;
+            this.AOrderBy = ;
+            this.IRowMax = ;
+            this.IRowOffset = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeCreateObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiFranchisereferalincomeID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public FranchisereferalincomeCreateObjectV2ResponseMPayload(List<int> aPkiFranchisereferalincomeID = default(List<int>))
+        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public FranchisereferalincomeCreateObjectV2ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiFranchisereferalincomeID" is required (not null)
-            if (aPkiFranchisereferalincomeID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiFranchisereferalincomeID is a required property for FranchisereferalincomeCreateObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisereferalincomeCreateObjectV2ResponseMPayload and cannot be null");
             }
-            this.APkiFranchisereferalincomeID = aPkiFranchisereferalincomeID;
+            this.APkiFranchisereferalincomeID = ;
         }
 
         /// <summary>

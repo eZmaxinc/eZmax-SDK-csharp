@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsigningreasonRequest" /> class.
         /// </summary>
-        /// <param name="pkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason.</param>
-        /// <param name="objEzsignsigningreasonDescription">objEzsignsigningreasonDescription (required).</param>
-        /// <param name="bEzsignsigningreasonIsactive">Whether the ezsignsigningreason is active or not (required).</param>
-        public EzsignsigningreasonRequest(int pkiEzsignsigningreasonID = default(int), MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription = default(MultilingualEzsignsigningreasonDescription), bool bEzsignsigningreasonIsactive = default(bool))
+        /// <param name="">The unique ID of the Ezsignsigningreason.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">Whether the ezsignsigningreason is active or not (required).</param>
+        public EzsignsigningreasonRequest(int  = default(int), MultilingualEzsignsigningreasonDescription  = default(MultilingualEzsignsigningreasonDescription), bool  = default(bool))
         {
-            // to ensure "objEzsignsigningreasonDescription" is required (not null)
-            if (objEzsignsigningreasonDescription == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignsigningreasonDescription is a required property for EzsignsigningreasonRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsigningreasonRequest and cannot be null");
             }
-            this.ObjEzsignsigningreasonDescription = objEzsignsigningreasonDescription;
-            this.BEzsignsigningreasonIsactive = bEzsignsigningreasonIsactive;
-            this.PkiEzsignsigningreasonID = pkiEzsignsigningreasonID;
+            this.ObjEzsignsigningreasonDescription = ;
+            this.BEzsignsigningreasonIsactive = ;
+            this.PkiEzsignsigningreasonID = ;
         }
 
         /// <summary>

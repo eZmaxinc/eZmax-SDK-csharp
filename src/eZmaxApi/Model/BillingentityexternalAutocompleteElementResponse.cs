@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityexternalAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
-        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
-        /// <param name="bBillingentityexternalIsactive">Whether the Billingentityexternal is active or not (required).</param>
-        public BillingentityexternalAutocompleteElementResponse(int pkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string), bool bBillingentityexternalIsactive = default(bool))
+        /// <param name="">The unique ID of the Billingentityexternal (required).</param>
+        /// <param name="">The description of the Billingentityexternal (required).</param>
+        /// <param name="">Whether the Billingentityexternal is active or not (required).</param>
+        public BillingentityexternalAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiBillingentityexternalID = pkiBillingentityexternalID;
-            // to ensure "sBillingentityexternalDescription" is required (not null)
-            if (sBillingentityexternalDescription == null)
+            this.PkiBillingentityexternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sBillingentityexternalDescription is a required property for BillingentityexternalAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityexternalAutocompleteElementResponse and cannot be null");
             }
-            this.SBillingentityexternalDescription = sBillingentityexternalDescription;
-            this.BBillingentityexternalIsactive = bBillingentityexternalIsactive;
+            this.SBillingentityexternalDescription = ;
+            this.BBillingentityexternalIsactive = ;
         }
 
         /// <summary>

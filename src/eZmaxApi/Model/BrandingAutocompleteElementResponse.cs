@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
-        /// <param name="pkiBrandingID">The unique ID of the Branding (required).</param>
-        /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
-        public BrandingAutocompleteElementResponse(string sBrandingDescriptionX = default(string), int pkiBrandingID = default(int), bool bBrandingIsactive = default(bool))
+        /// <param name="">The Description of the Branding in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Branding (required).</param>
+        /// <param name="">Whether the Branding is active or not (required).</param>
+        public BrandingAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sBrandingDescriptionX" is required (not null)
-            if (sBrandingDescriptionX == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sBrandingDescriptionX is a required property for BrandingAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for BrandingAutocompleteElementResponse and cannot be null");
             }
-            this.SBrandingDescriptionX = sBrandingDescriptionX;
-            this.PkiBrandingID = pkiBrandingID;
-            this.BBrandingIsactive = bBrandingIsactive;
+            this.SBrandingDescriptionX = ;
+            this.PkiBrandingID = ;
+            this.BBrandingIsactive = ;
         }
 
         /// <summary>

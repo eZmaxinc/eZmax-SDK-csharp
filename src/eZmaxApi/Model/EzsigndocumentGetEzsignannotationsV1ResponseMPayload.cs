@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsignannotationsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsignannotation">aObjEzsignannotation (required).</param>
-        public EzsigndocumentGetEzsignannotationsV1ResponseMPayload(List<EzsignannotationResponseCompound> aObjEzsignannotation = default(List<EzsignannotationResponseCompound>))
+        /// <param name=""> (required).</param>
+        public EzsigndocumentGetEzsignannotationsV1ResponseMPayload(List<EzsignannotationResponseCompound>  = default(List<EzsignannotationResponseCompound>))
         {
-            // to ensure "aObjEzsignannotation" is required (not null)
-            if (aObjEzsignannotation == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignannotation is a required property for EzsigndocumentGetEzsignannotationsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentGetEzsignannotationsV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignannotation = aObjEzsignannotation;
+            this.AObjEzsignannotation = ;
         }
 
         /// <summary>

@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxproductAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="bEzmaxproductIsactive">Whether the Ezmaxproduct is active or not (required).</param>
-        public EzmaxproductAutocompleteElementResponse(int pkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), bool bEzmaxproductIsactive = default(bool))
+        /// <param name="">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="">The description of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="">Whether the Ezmaxproduct is active or not (required).</param>
+        public EzmaxproductAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiEzmaxproductID = pkiEzmaxproductID;
-            // to ensure "sEzmaxproductDescriptionX" is required (not null)
-            if (sEzmaxproductDescriptionX == null)
+            this.PkiEzmaxproductID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzmaxproductDescriptionX is a required property for EzmaxproductAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxproductAutocompleteElementResponse and cannot be null");
             }
-            this.SEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
-            this.BEzmaxproductIsactive = bEzmaxproductIsactive;
+            this.SEzmaxproductDescriptionX = ;
+            this.BEzmaxproductIsactive = ;
         }
 
         /// <summary>

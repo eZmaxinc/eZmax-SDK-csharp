@@ -40,36 +40,36 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignerRequestCompoundContact" /> class.
         /// </summary>
-        /// <param name="sContactFirstname">The First name of the contact (required).</param>
-        /// <param name="sContactLastname">The Last name of the contact (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
-        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
-        /// <param name="sPhoneE164Cell">A phone number in E.164 Format.</param>
-        /// <param name="sPhoneNumber">sPhoneNumber.</param>
-        /// <param name="sPhoneNumberCell">sPhoneNumberCell.</param>
-        public EzsignsignerRequestCompoundContact(string sContactFirstname = default(string), string sContactLastname = default(string), int fkiLanguageID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), string sPhoneExtension = default(string), string sPhoneE164Cell = default(string), string sPhoneNumber = default(string), string sPhoneNumberCell = default(string))
+        /// <param name="">The First name of the contact (required).</param>
+        /// <param name="">The Last name of the contact (required).</param>
+        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="">The email address..</param>
+        /// <param name="">A phone number in E.164 Format.</param>
+        /// <param name="">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
+        /// <param name="">A phone number in E.164 Format.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public EzsignsignerRequestCompoundContact(string  = default(string), string  = default(string), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
         {
-            // to ensure "sContactFirstname" is required (not null)
-            if (sContactFirstname == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sContactFirstname is a required property for EzsignsignerRequestCompoundContact and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsignerRequestCompoundContact and cannot be null");
             }
-            this.SContactFirstname = sContactFirstname;
-            // to ensure "sContactLastname" is required (not null)
-            if (sContactLastname == null)
+            this.SContactFirstname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sContactLastname is a required property for EzsignsignerRequestCompoundContact and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsignerRequestCompoundContact and cannot be null");
             }
-            this.SContactLastname = sContactLastname;
-            this.FkiLanguageID = fkiLanguageID;
-            this.SEmailAddress = sEmailAddress;
-            this.SPhoneE164 = sPhoneE164;
-            this.SPhoneExtension = sPhoneExtension;
-            this.SPhoneE164Cell = sPhoneE164Cell;
-            this.SPhoneNumber = sPhoneNumber;
-            this.SPhoneNumberCell = sPhoneNumberCell;
+            this.SContactLastname = ;
+            this.FkiLanguageID = ;
+            this.SEmailAddress = ;
+            this.SPhoneE164 = ;
+            this.SPhoneExtension = ;
+            this.SPhoneE164Cell = ;
+            this.SPhoneNumber = ;
+            this.SPhoneNumberCell = ;
         }
 
         /// <summary>

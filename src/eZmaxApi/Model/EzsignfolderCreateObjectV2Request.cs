@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderCreateObjectV2Request" /> class.
         /// </summary>
-        /// <param name="aObjEzsignfolder">aObjEzsignfolder (required).</param>
-        public EzsignfolderCreateObjectV2Request(List<EzsignfolderRequestCompound> aObjEzsignfolder = default(List<EzsignfolderRequestCompound>))
+        /// <param name=""> (required).</param>
+        public EzsignfolderCreateObjectV2Request(List<EzsignfolderRequestCompound>  = default(List<EzsignfolderRequestCompound>))
         {
-            // to ensure "aObjEzsignfolder" is required (not null)
-            if (aObjEzsignfolder == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignfolder is a required property for EzsignfolderCreateObjectV2Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderCreateObjectV2Request and cannot be null");
             }
-            this.AObjEzsignfolder = aObjEzsignfolder;
+            this.AObjEzsignfolder = ;
         }
 
         /// <summary>

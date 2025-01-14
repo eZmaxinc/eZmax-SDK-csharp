@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalCustomerGetEndpointV1Response" /> class.
         /// </summary>
-        /// <param name="sEndpointURL">The endpoint&#39;s URL (required).</param>
-        public GlobalCustomerGetEndpointV1Response(string sEndpointURL = default(string))
+        /// <param name="">The endpoint&#39;s URL (required).</param>
+        public GlobalCustomerGetEndpointV1Response(string  = default(string))
         {
-            // to ensure "sEndpointURL" is required (not null)
-            if (sEndpointURL == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEndpointURL is a required property for GlobalCustomerGetEndpointV1Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for GlobalCustomerGetEndpointV1Response and cannot be null");
             }
-            this.SEndpointURL = sEndpointURL;
+            this.SEndpointURL = ;
         }
 
         /// <summary>

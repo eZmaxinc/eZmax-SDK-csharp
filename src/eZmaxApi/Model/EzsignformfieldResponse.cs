@@ -38,6 +38,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eEzsignformfieldDependencyrequirement", EmitDefaultValue = false)]
         public FieldEEzsignformfieldDependencyrequirement? EEzsignformfieldDependencyrequirement { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignformfieldHorizontalalignment
+        /// </summary>
+        [DataMember(Name = "eEzsignformfieldHorizontalalignment", EmitDefaultValue = false)]
+        public EnumHorizontalalignment? EEzsignformfieldHorizontalalignment { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldResponse" /> class.
         /// </summary>
@@ -46,37 +52,41 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsignformfieldID">The unique ID of the Ezsignformfield (required).</param>
-        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
-        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield (required).</param>
-        /// <param name="sEzsignformfieldValue">The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio.</param>
-        /// <param name="iEzsignformfieldX">The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="iEzsignformfieldY">The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
-        /// <param name="iEzsignformfieldWidth">The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | (required).</param>
-        /// <param name="iEzsignformfieldHeight">The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  (required).</param>
-        /// <param name="bEzsignformfieldAutocomplete">Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**.</param>
-        /// <param name="bEzsignformfieldSelected">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
-        /// <param name="sEzsignformfieldEnteredvalue">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
-        /// <param name="eEzsignformfieldDependencyrequirement">eEzsignformfieldDependencyrequirement.</param>
-        public EzsignformfieldResponse(int pkiEzsignformfieldID = default(int), int iEzsignpagePagenumber = default(int), string sEzsignformfieldLabel = default(string), string sEzsignformfieldValue = default(string), int iEzsignformfieldX = default(int), int iEzsignformfieldY = default(int), int iEzsignformfieldWidth = default(int), int iEzsignformfieldHeight = default(int), bool bEzsignformfieldAutocomplete = default(bool), bool bEzsignformfieldSelected = default(bool), string sEzsignformfieldEnteredvalue = default(string), FieldEEzsignformfieldDependencyrequirement? eEzsignformfieldDependencyrequirement = default(FieldEEzsignformfieldDependencyrequirement?))
+        /// <param name="">The unique ID of the Ezsignformfield (required).</param>
+        /// <param name="">The page number in the Ezsigndocument (required).</param>
+        /// <param name="">The Label for the Ezsignformfield (required).</param>
+        /// <param name="">The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio.</param>
+        /// <param name="">The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
+        /// <param name="">The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="">The Width of the Ezsignformfield in pixels calculated at 100 DPI (required).</param>
+        /// <param name="">The Height of the Ezsignformfield in pixels calculated at 100 DPI  (required).</param>
+        /// <param name="">Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**.</param>
+        /// <param name="">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
+        /// <param name="">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public EzsignformfieldResponse(int  = default(int), int  = default(int), string  = default(string), string  = default(string), int  = default(int), int  = default(int), int  = default(int), int  = default(int), bool  = default(bool), bool  = default(bool), string  = default(string), FieldEEzsignformfieldDependencyrequirement?  = default(FieldEEzsignformfieldDependencyrequirement?), EnumHorizontalalignment?  = default(EnumHorizontalalignment?), TextstylestaticResponseCompound  = default(TextstylestaticResponseCompound))
         {
-            this.PkiEzsignformfieldID = pkiEzsignformfieldID;
-            this.IEzsignpagePagenumber = iEzsignpagePagenumber;
-            // to ensure "sEzsignformfieldLabel" is required (not null)
-            if (sEzsignformfieldLabel == null)
+            this.PkiEzsignformfieldID = ;
+            this.IEzsignpagePagenumber = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignformfieldLabel is a required property for EzsignformfieldResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignformfieldResponse and cannot be null");
             }
-            this.SEzsignformfieldLabel = sEzsignformfieldLabel;
-            this.IEzsignformfieldX = iEzsignformfieldX;
-            this.IEzsignformfieldY = iEzsignformfieldY;
-            this.IEzsignformfieldWidth = iEzsignformfieldWidth;
-            this.IEzsignformfieldHeight = iEzsignformfieldHeight;
-            this.SEzsignformfieldValue = sEzsignformfieldValue;
-            this.BEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
-            this.BEzsignformfieldSelected = bEzsignformfieldSelected;
-            this.SEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
-            this.EEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
+            this.SEzsignformfieldLabel = ;
+            this.IEzsignformfieldX = ;
+            this.IEzsignformfieldY = ;
+            this.IEzsignformfieldWidth = ;
+            this.IEzsignformfieldHeight = ;
+            this.SEzsignformfieldValue = ;
+            this.BEzsignformfieldAutocomplete = ;
+            this.BEzsignformfieldSelected = ;
+            this.SEzsignformfieldEnteredvalue = ;
+            this.EEzsignformfieldDependencyrequirement = ;
+            this.EEzsignformfieldHorizontalalignment = ;
+            this.ObjTextstylestatic = ;
         }
 
         /// <summary>
@@ -128,17 +138,17 @@ namespace eZmaxApi.Model
         public int IEzsignformfieldY { get; set; }
 
         /// <summary>
-        /// The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+        /// The Width of the Ezsignformfield in pixels calculated at 100 DPI
         /// </summary>
-        /// <value>The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |</value>
+        /// <value>The Width of the Ezsignformfield in pixels calculated at 100 DPI</value>
         /* <example>102</example>*/
         [DataMember(Name = "iEzsignformfieldWidth", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignformfieldWidth { get; set; }
 
         /// <summary>
-        /// The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+        /// The Height of the Ezsignformfield in pixels calculated at 100 DPI 
         /// </summary>
-        /// <value>The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | </value>
+        /// <value>The Height of the Ezsignformfield in pixels calculated at 100 DPI </value>
         /* <example>22</example>*/
         [DataMember(Name = "iEzsignformfieldHeight", IsRequired = true, EmitDefaultValue = true)]
         public int IEzsignformfieldHeight { get; set; }
@@ -166,6 +176,12 @@ namespace eZmaxApi.Model
         public string SEzsignformfieldEnteredvalue { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjTextstylestatic
+        /// </summary>
+        [DataMember(Name = "objTextstylestatic", EmitDefaultValue = false)]
+        public TextstylestaticResponseCompound ObjTextstylestatic { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -185,6 +201,8 @@ namespace eZmaxApi.Model
             sb.Append("  BEzsignformfieldSelected: ").Append(BEzsignformfieldSelected).Append("\n");
             sb.Append("  SEzsignformfieldEnteredvalue: ").Append(SEzsignformfieldEnteredvalue).Append("\n");
             sb.Append("  EEzsignformfieldDependencyrequirement: ").Append(EEzsignformfieldDependencyrequirement).Append("\n");
+            sb.Append("  EEzsignformfieldHorizontalalignment: ").Append(EEzsignformfieldHorizontalalignment).Append("\n");
+            sb.Append("  ObjTextstylestatic: ").Append(ObjTextstylestatic).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

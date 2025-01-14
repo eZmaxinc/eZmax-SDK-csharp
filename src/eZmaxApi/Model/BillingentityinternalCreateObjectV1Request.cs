@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="aObjBillingentityinternal">aObjBillingentityinternal (required).</param>
-        public BillingentityinternalCreateObjectV1Request(List<BillingentityinternalRequestCompound> aObjBillingentityinternal = default(List<BillingentityinternalRequestCompound>))
+        /// <param name=""> (required).</param>
+        public BillingentityinternalCreateObjectV1Request(List<BillingentityinternalRequestCompound>  = default(List<BillingentityinternalRequestCompound>))
         {
-            // to ensure "aObjBillingentityinternal" is required (not null)
-            if (aObjBillingentityinternal == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjBillingentityinternal is a required property for BillingentityinternalCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalCreateObjectV1Request and cannot be null");
             }
-            this.AObjBillingentityinternal = aObjBillingentityinternal;
+            this.AObjBillingentityinternal = ;
         }
 
         /// <summary>

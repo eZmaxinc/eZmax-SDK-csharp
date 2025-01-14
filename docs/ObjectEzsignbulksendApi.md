@@ -4,7 +4,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**EzsignbulksendCreateEzsignbulksendtransmissionV1**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateezsignbulksendtransmissionv1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend |
+| [**EzsignbulksendCreateEzsignbulksendtransmissionV2**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateezsignbulksendtransmissionv2) | **POST** /2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend |
 | [**EzsignbulksendCreateObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateobjectv1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend |
 | [**EzsignbulksendDeleteObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksenddeleteobjectv1) | **DELETE** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Delete an existing Ezsignbulksend |
 | [**EzsignbulksendEditObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendeditobjectv1) | **PUT** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend |
@@ -16,9 +16,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**EzsignbulksendGetObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend |
 | [**EzsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendreorderv1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend |
 
-<a id="ezsignbulksendcreateezsignbulksendtransmissionv1"></a>
-# **EzsignbulksendCreateEzsignbulksendtransmissionV1**
-> EzsignbulksendCreateEzsignbulksendtransmissionV1Response EzsignbulksendCreateEzsignbulksendtransmissionV1 (int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request)
+<a id="ezsignbulksendcreateezsignbulksendtransmissionv2"></a>
+# **EzsignbulksendCreateEzsignbulksendtransmissionV2**
+> EzsignbulksendCreateEzsignbulksendtransmissionV2Response EzsignbulksendCreateEzsignbulksendtransmissionV2 (int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request)
 
 Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 
@@ -32,7 +32,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class EzsignbulksendCreateEzsignbulksendtransmissionV1Example
+    public class EzsignbulksendCreateEzsignbulksendtransmissionV2Example
     {
         public static void Main()
         {
@@ -45,17 +45,17 @@ namespace Example
 
             var apiInstance = new ObjectEzsignbulksendApi(config);
             var pkiEzsignbulksendID = 56;  // int | 
-            var ezsignbulksendCreateEzsignbulksendtransmissionV1Request = new EzsignbulksendCreateEzsignbulksendtransmissionV1Request(); // EzsignbulksendCreateEzsignbulksendtransmissionV1Request | 
+            var ezsignbulksendCreateEzsignbulksendtransmissionV2Request = new EzsignbulksendCreateEzsignbulksendtransmissionV2Request(); // EzsignbulksendCreateEzsignbulksendtransmissionV2Request | 
 
             try
             {
                 // Create a new Ezsignbulksendtransmission in the Ezsignbulksend
-                EzsignbulksendCreateEzsignbulksendtransmissionV1Response result = apiInstance.EzsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request);
+                EzsignbulksendCreateEzsignbulksendtransmissionV2Response result = apiInstance.EzsignbulksendCreateEzsignbulksendtransmissionV2(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectEzsignbulksendApi.EzsignbulksendCreateEzsignbulksendtransmissionV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectEzsignbulksendApi.EzsignbulksendCreateEzsignbulksendtransmissionV2: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -64,21 +64,21 @@ namespace Example
 }
 ```
 
-#### Using the EzsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo variant
+#### Using the EzsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create a new Ezsignbulksendtransmission in the Ezsignbulksend
-    ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> response = apiInstance.EzsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request);
+    ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> response = apiInstance.EzsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectEzsignbulksendApi.EzsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectEzsignbulksendApi.EzsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -89,11 +89,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **pkiEzsignbulksendID** | **int** |  |  |
-| **ezsignbulksendCreateEzsignbulksendtransmissionV1Request** | [**EzsignbulksendCreateEzsignbulksendtransmissionV1Request**](EzsignbulksendCreateEzsignbulksendtransmissionV1Request.md) |  |  |
+| **ezsignbulksendCreateEzsignbulksendtransmissionV2Request** | [**EzsignbulksendCreateEzsignbulksendtransmissionV2Request**](EzsignbulksendCreateEzsignbulksendtransmissionV2Request.md) |  |  |
 
 ### Return type
 
-[**EzsignbulksendCreateEzsignbulksendtransmissionV1Response**](EzsignbulksendCreateEzsignbulksendtransmissionV1Response.md)
+[**EzsignbulksendCreateEzsignbulksendtransmissionV2Response**](EzsignbulksendCreateEzsignbulksendtransmissionV2Response.md)
 
 ### Authorization
 

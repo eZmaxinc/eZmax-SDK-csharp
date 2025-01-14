@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingCreateObjectV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiEzsignbulksendsignermappingID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public EzsignbulksendsignermappingCreateObjectV1ResponseMPayload(List<int> aPkiEzsignbulksendsignermappingID = default(List<int>))
+        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public EzsignbulksendsignermappingCreateObjectV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsignbulksendsignermappingID" is required (not null)
-            if (aPkiEzsignbulksendsignermappingID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsignbulksendsignermappingID is a required property for EzsignbulksendsignermappingCreateObjectV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendsignermappingCreateObjectV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsignbulksendsignermappingID = aPkiEzsignbulksendsignermappingID;
+            this.APkiEzsignbulksendsignermappingID = ;
         }
 
         /// <summary>

@@ -46,21 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldertypeAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
-        public EzsignfoldertypeAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), int pkiEzsignfoldertypeID = default(int), bool bEzsignfoldertypeIsactive = default(bool))
+        /// <param name=""> (required).</param>
+        /// <param name="">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="">Whether the Ezsignfoldertype is active or not (required).</param>
+        public EzsignfoldertypeAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel  = default(FieldEEzsignfoldertypePrivacylevel), string  = default(string), int  = default(int), bool  = default(bool))
         {
-            this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
-            // to ensure "sEzsignfoldertypeNameX" is required (not null)
-            if (sEzsignfoldertypeNameX == null)
+            this.EEzsignfoldertypePrivacylevel = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignfoldertypeNameX is a required property for EzsignfoldertypeAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldertypeAutocompleteElementResponse and cannot be null");
             }
-            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
-            this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
-            this.BEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
+            this.SEzsignfoldertypeNameX = ;
+            this.PkiEzsignfoldertypeID = ;
+            this.BEzsignfoldertypeIsactive = ;
         }
 
         /// <summary>

@@ -40,27 +40,27 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignpageResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsignpageID">The unique ID of the Ezsignpage (required).</param>
-        /// <param name="iEzsignpageWidthimage">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="iEzsignpageHeightimage">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="iEzsignpageWidthpdf">The Width of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="iEzsignpageHeightpdf">The Height of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
-        /// <param name="sComputedImageurl">The Url to the Ezsignpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
-        public EzsignpageResponseCompound(int pkiEzsignpageID = default(int), int iEzsignpageWidthimage = default(int), int iEzsignpageHeightimage = default(int), int iEzsignpageWidthpdf = default(int), int iEzsignpageHeightpdf = default(int), int iEzsignpagePagenumber = default(int), string sComputedImageurl = default(string))
+        /// <param name="">The unique ID of the Ezsignpage (required).</param>
+        /// <param name="">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="">The Width of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="">The Height of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="">The page number in the Ezsigndocument (required).</param>
+        /// <param name="">The Url to the Ezsignpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
+        public EzsignpageResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string))
         {
-            this.PkiEzsignpageID = pkiEzsignpageID;
-            this.IEzsignpageWidthimage = iEzsignpageWidthimage;
-            this.IEzsignpageHeightimage = iEzsignpageHeightimage;
-            this.IEzsignpageWidthpdf = iEzsignpageWidthpdf;
-            this.IEzsignpageHeightpdf = iEzsignpageHeightpdf;
-            this.IEzsignpagePagenumber = iEzsignpagePagenumber;
-            // to ensure "sComputedImageurl" is required (not null)
-            if (sComputedImageurl == null)
+            this.PkiEzsignpageID = ;
+            this.IEzsignpageWidthimage = ;
+            this.IEzsignpageHeightimage = ;
+            this.IEzsignpageWidthpdf = ;
+            this.IEzsignpageHeightpdf = ;
+            this.IEzsignpagePagenumber = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sComputedImageurl is a required property for EzsignpageResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignpageResponseCompound and cannot be null");
             }
-            this.SComputedImageurl = sComputedImageurl;
+            this.SComputedImageurl = ;
         }
 
         /// <summary>

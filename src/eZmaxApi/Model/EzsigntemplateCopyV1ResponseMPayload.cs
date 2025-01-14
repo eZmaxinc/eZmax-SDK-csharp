@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateCopyV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiEzsigntemplateID">An array of unique IDs representing the object that were requested to be copied.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public EzsigntemplateCopyV1ResponseMPayload(List<int> aPkiEzsigntemplateID = default(List<int>))
+        /// <param name="">An array of unique IDs representing the object that were requested to be copied.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public EzsigntemplateCopyV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsigntemplateID" is required (not null)
-            if (aPkiEzsigntemplateID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsigntemplateID is a required property for EzsigntemplateCopyV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateCopyV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsigntemplateID = aPkiEzsigntemplateID;
+            this.APkiEzsigntemplateID = ;
         }
 
         /// <summary>

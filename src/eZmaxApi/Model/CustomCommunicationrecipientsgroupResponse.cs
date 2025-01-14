@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationrecipientsgroupResponse" /> class.
         /// </summary>
-        /// <param name="sCommunicationrecipientsgroupLabel">The label for the Communicationrecipientsgroup (required).</param>
-        /// <param name="aObjCommunicationrecipientsrecipient">aObjCommunicationrecipientsrecipient (required).</param>
-        public CustomCommunicationrecipientsgroupResponse(string sCommunicationrecipientsgroupLabel = default(string), List<CustomCommunicationrecipientsrecipientResponse> aObjCommunicationrecipientsrecipient = default(List<CustomCommunicationrecipientsrecipientResponse>))
+        /// <param name="">The label for the Communicationrecipientsgroup (required).</param>
+        /// <param name=""> (required).</param>
+        public CustomCommunicationrecipientsgroupResponse(string  = default(string), List<CustomCommunicationrecipientsrecipientResponse>  = default(List<CustomCommunicationrecipientsrecipientResponse>))
         {
-            // to ensure "sCommunicationrecipientsgroupLabel" is required (not null)
-            if (sCommunicationrecipientsgroupLabel == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCommunicationrecipientsgroupLabel is a required property for CustomCommunicationrecipientsgroupResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCommunicationrecipientsgroupResponse and cannot be null");
             }
-            this.SCommunicationrecipientsgroupLabel = sCommunicationrecipientsgroupLabel;
-            // to ensure "aObjCommunicationrecipientsrecipient" is required (not null)
-            if (aObjCommunicationrecipientsrecipient == null)
+            this.SCommunicationrecipientsgroupLabel = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCommunicationrecipientsrecipient is a required property for CustomCommunicationrecipientsgroupResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCommunicationrecipientsgroupResponse and cannot be null");
             }
-            this.AObjCommunicationrecipientsrecipient = aObjCommunicationrecipientsrecipient;
+            this.AObjCommunicationrecipientsrecipient = ;
         }
 
         /// <summary>

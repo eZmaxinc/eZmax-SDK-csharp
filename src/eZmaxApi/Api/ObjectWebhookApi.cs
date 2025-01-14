@@ -188,6 +188,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of WebhookRegenerateApikeyV1Response</returns>
         ApiResponse<WebhookRegenerateApikeyV1Response> WebhookRegenerateApikeyV1WithHttpInfo(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, int operationIndex = 0);
         /// <summary>
+        /// Emit a Webhook event
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="webhookSendWebhookV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>WebhookSendWebhookV1Response</returns>
+        WebhookSendWebhookV1Response WebhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Emit a Webhook event
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="webhookSendWebhookV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of WebhookSendWebhookV1Response</returns>
+        ApiResponse<WebhookSendWebhookV1Response> WebhookSendWebhookV1WithHttpInfo(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0);
+        /// <summary>
         /// Test the Webhook by calling the Url
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -407,6 +427,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookRegenerateApikeyV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<WebhookRegenerateApikeyV1Response>> WebhookRegenerateApikeyV1WithHttpInfoAsync(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Emit a Webhook event
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="webhookSendWebhookV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of WebhookSendWebhookV1Response</returns>
+        System.Threading.Tasks.Task<WebhookSendWebhookV1Response> WebhookSendWebhookV1Async(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Emit a Webhook event
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="webhookSendWebhookV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (WebhookSendWebhookV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WebhookSendWebhookV1Response>> WebhookSendWebhookV1WithHttpInfoAsync(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Test the Webhook by calling the Url
         /// </summary>
@@ -1667,6 +1712,162 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WebhookRegenerateApikeyV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Emit a Webhook event 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="webhookSendWebhookV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>WebhookSendWebhookV1Response</returns>
+        public WebhookSendWebhookV1Response WebhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<WebhookSendWebhookV1Response> localVarResponse = WebhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Emit a Webhook event 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="webhookSendWebhookV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of WebhookSendWebhookV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<WebhookSendWebhookV1Response> WebhookSendWebhookV1WithHttpInfo(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'webhookSendWebhookV1Request' is set
+            if (webhookSendWebhookV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'webhookSendWebhookV1Request' when calling ObjectWebhookApi->WebhookSendWebhookV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = webhookSendWebhookV1Request;
+
+            localVarRequestOptions.Operation = "ObjectWebhookApi.WebhookSendWebhookV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<WebhookSendWebhookV1Response>("/1/object/webhook/sendWebhook", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("WebhookSendWebhookV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Emit a Webhook event 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="webhookSendWebhookV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of WebhookSendWebhookV1Response</returns>
+        public async System.Threading.Tasks.Task<WebhookSendWebhookV1Response> WebhookSendWebhookV1Async(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<WebhookSendWebhookV1Response> localVarResponse = await WebhookSendWebhookV1WithHttpInfoAsync(webhookSendWebhookV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Emit a Webhook event 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="webhookSendWebhookV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (WebhookSendWebhookV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookSendWebhookV1Response>> WebhookSendWebhookV1WithHttpInfoAsync(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'webhookSendWebhookV1Request' is set
+            if (webhookSendWebhookV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'webhookSendWebhookV1Request' when calling ObjectWebhookApi->WebhookSendWebhookV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = webhookSendWebhookV1Request;
+
+            localVarRequestOptions.Operation = "ObjectWebhookApi.WebhookSendWebhookV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<WebhookSendWebhookV1Response>("/1/object/webhook/sendWebhook", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("WebhookSendWebhookV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -40,37 +40,37 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalproductResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiBillingentityinternalproductID">The unique ID of the Billingentityinternalproduct (required).</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
-        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
-        public BillingentityinternalproductResponseCompound(int pkiBillingentityinternalproductID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string))
+        /// <param name="">The unique ID of the Billingentityinternalproduct (required).</param>
+        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="">The description of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Billingentityexternal (required).</param>
+        /// <param name="">The description of the Billingentityexternal (required).</param>
+        public BillingentityinternalproductResponseCompound(int  = default(int), int  = default(int), string  = default(string), int  = default(int), string  = default(string), int  = default(int), string  = default(string))
         {
-            this.PkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
-            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
-            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
-            if (sBillingentityinternalDescriptionX == null)
+            this.PkiBillingentityinternalproductID = ;
+            this.FkiBillingentityinternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for BillingentityinternalproductResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalproductResponseCompound and cannot be null");
             }
-            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-            this.FkiEzmaxproductID = fkiEzmaxproductID;
-            // to ensure "sEzmaxproductDescriptionX" is required (not null)
-            if (sEzmaxproductDescriptionX == null)
+            this.SBillingentityinternalDescriptionX = ;
+            this.FkiEzmaxproductID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzmaxproductDescriptionX is a required property for BillingentityinternalproductResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalproductResponseCompound and cannot be null");
             }
-            this.SEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
-            this.FkiBillingentityexternalID = fkiBillingentityexternalID;
-            // to ensure "sBillingentityexternalDescription" is required (not null)
-            if (sBillingentityexternalDescription == null)
+            this.SEzmaxproductDescriptionX = ;
+            this.FkiBillingentityexternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sBillingentityexternalDescription is a required property for BillingentityinternalproductResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalproductResponseCompound and cannot be null");
             }
-            this.SBillingentityexternalDescription = sBillingentityexternalDescription;
+            this.SBillingentityexternalDescription = ;
         }
 
         /// <summary>

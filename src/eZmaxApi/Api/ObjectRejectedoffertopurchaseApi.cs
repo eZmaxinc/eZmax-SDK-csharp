@@ -28,6 +28,26 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RejectedoffertopurchaseGetCommunicationCountV1Response</returns>
+        RejectedoffertopurchaseGetCommunicationCountV1Response RejectedoffertopurchaseGetCommunicationCountV1(int pkiRejectedoffertopurchaseID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RejectedoffertopurchaseGetCommunicationCountV1Response</returns>
+        ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response> RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(int pkiRejectedoffertopurchaseID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Communication list
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -47,6 +67,46 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RejectedoffertopurchaseGetCommunicationListV1Response</returns>
         ApiResponse<RejectedoffertopurchaseGetCommunicationListV1Response> RejectedoffertopurchaseGetCommunicationListV1WithHttpInfo(int pkiRejectedoffertopurchaseID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RejectedoffertopurchaseGetCommunicationrecipientsV1Response</returns>
+        RejectedoffertopurchaseGetCommunicationrecipientsV1Response RejectedoffertopurchaseGetCommunicationrecipientsV1(int pkiRejectedoffertopurchaseID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RejectedoffertopurchaseGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(int pkiRejectedoffertopurchaseID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationsender
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RejectedoffertopurchaseGetCommunicationsendersV1Response</returns>
+        RejectedoffertopurchaseGetCommunicationsendersV1Response RejectedoffertopurchaseGetCommunicationsendersV1(int pkiRejectedoffertopurchaseID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RejectedoffertopurchaseGetCommunicationsendersV1Response</returns>
+        ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response> RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(int pkiRejectedoffertopurchaseID, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -56,6 +116,31 @@ namespace eZmaxApi.Api
     public interface IObjectRejectedoffertopurchaseApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RejectedoffertopurchaseGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationCountV1Response> RejectedoffertopurchaseGetCommunicationCountV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response>> RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -81,6 +166,56 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationListV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationListV1Response>> RejectedoffertopurchaseGetCommunicationListV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RejectedoffertopurchaseGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> RejectedoffertopurchaseGetCommunicationrecipientsV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>> RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RejectedoffertopurchaseGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationsendersV1Response> RejectedoffertopurchaseGetCommunicationsendersV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationsender
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response>> RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -199,6 +334,148 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RejectedoffertopurchaseGetCommunicationCountV1Response</returns>
+        public RejectedoffertopurchaseGetCommunicationCountV1Response RejectedoffertopurchaseGetCommunicationCountV1(int pkiRejectedoffertopurchaseID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response> localVarResponse = RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(pkiRejectedoffertopurchaseID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RejectedoffertopurchaseGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response> RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(int pkiRejectedoffertopurchaseID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiRejectedoffertopurchaseID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiRejectedoffertopurchaseID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<RejectedoffertopurchaseGetCommunicationCountV1Response>("/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RejectedoffertopurchaseGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationCountV1Response> RejectedoffertopurchaseGetCommunicationCountV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response> localVarResponse = await RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfoAsync(pkiRejectedoffertopurchaseID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response>> RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiRejectedoffertopurchaseID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiRejectedoffertopurchaseID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<RejectedoffertopurchaseGetCommunicationCountV1Response>("/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>
@@ -334,6 +611,290 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RejectedoffertopurchaseGetCommunicationrecipientsV1Response</returns>
+        public RejectedoffertopurchaseGetCommunicationrecipientsV1Response RejectedoffertopurchaseGetCommunicationrecipientsV1(int pkiRejectedoffertopurchaseID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> localVarResponse = RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(pkiRejectedoffertopurchaseID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RejectedoffertopurchaseGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(int pkiRejectedoffertopurchaseID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiRejectedoffertopurchaseID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiRejectedoffertopurchaseID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>("/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RejectedoffertopurchaseGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> RejectedoffertopurchaseGetCommunicationrecipientsV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> localVarResponse = await RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfoAsync(pkiRejectedoffertopurchaseID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>> RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiRejectedoffertopurchaseID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiRejectedoffertopurchaseID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>("/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RejectedoffertopurchaseGetCommunicationsendersV1Response</returns>
+        public RejectedoffertopurchaseGetCommunicationsendersV1Response RejectedoffertopurchaseGetCommunicationsendersV1(int pkiRejectedoffertopurchaseID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response> localVarResponse = RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(pkiRejectedoffertopurchaseID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RejectedoffertopurchaseGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response> RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(int pkiRejectedoffertopurchaseID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiRejectedoffertopurchaseID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiRejectedoffertopurchaseID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<RejectedoffertopurchaseGetCommunicationsendersV1Response>("/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RejectedoffertopurchaseGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationsendersV1Response> RejectedoffertopurchaseGetCommunicationsendersV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response> localVarResponse = await RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfoAsync(pkiRejectedoffertopurchaseID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s Communicationsender 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response>> RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiRejectedoffertopurchaseID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiRejectedoffertopurchaseID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<RejectedoffertopurchaseGetCommunicationsendersV1Response>("/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

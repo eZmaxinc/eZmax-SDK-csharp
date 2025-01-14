@@ -40,44 +40,44 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupdelegationResponse" /> class.
         /// </summary>
-        /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation (required).</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sUserLoginname">The login name of the User. (required).</param>
-        /// <param name="sEmailAddress">The email address..</param>
-        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
-        public UsergroupdelegationResponse(int pkiUsergroupdelegationID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sEmailAddress = default(string), string sUsergroupNameX = default(string))
+        /// <param name="">The unique ID of the Usergroupdelegation (required).</param>
+        /// <param name="">The unique ID of the Usergroup (required).</param>
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name="">The first name of the user (required).</param>
+        /// <param name="">The last name of the user (required).</param>
+        /// <param name="">The login name of the User. (required).</param>
+        /// <param name="">The email address..</param>
+        /// <param name="">The Name of the Usergroup in the language of the requester (required).</param>
+        public UsergroupdelegationResponse(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.PkiUsergroupdelegationID = pkiUsergroupdelegationID;
-            this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiUserID = fkiUserID;
-            // to ensure "sUserFirstname" is required (not null)
-            if (sUserFirstname == null)
+            this.PkiUsergroupdelegationID = ;
+            this.FkiUsergroupID = ;
+            this.FkiUserID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserFirstname is a required property for UsergroupdelegationResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupdelegationResponse and cannot be null");
             }
-            this.SUserFirstname = sUserFirstname;
-            // to ensure "sUserLastname" is required (not null)
-            if (sUserLastname == null)
+            this.SUserFirstname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserLastname is a required property for UsergroupdelegationResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupdelegationResponse and cannot be null");
             }
-            this.SUserLastname = sUserLastname;
-            // to ensure "sUserLoginname" is required (not null)
-            if (sUserLoginname == null)
+            this.SUserLastname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserLoginname is a required property for UsergroupdelegationResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupdelegationResponse and cannot be null");
             }
-            this.SUserLoginname = sUserLoginname;
-            // to ensure "sUsergroupNameX" is required (not null)
-            if (sUsergroupNameX == null)
+            this.SUserLoginname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUsergroupNameX is a required property for UsergroupdelegationResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupdelegationResponse and cannot be null");
             }
-            this.SUsergroupNameX = sUsergroupNameX;
-            this.SEmailAddress = sEmailAddress;
+            this.SUsergroupNameX = ;
+            this.SEmailAddress = ;
         }
 
         /// <summary>

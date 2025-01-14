@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestPatch" /> class.
         /// </summary>
-        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent..</param>
-        public EzsignfoldersignerassociationRequestPatch(string tEzsignfoldersignerassociationMessage = default(string))
+        /// <param name="">A custom text message that will be added to the email sent..</param>
+        public EzsignfoldersignerassociationRequestPatch(string  = default(string))
         {
-            this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
+            this.TEzsignfoldersignerassociationMessage = ;
         }
 
         /// <summary>

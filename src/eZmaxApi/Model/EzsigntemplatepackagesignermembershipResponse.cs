@@ -40,18 +40,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplatepackagesignermembershipID">The unique ID of the Ezsigntemplatepackagesignermembership (required).</param>
-        /// <param name="fkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership (required).</param>
-        /// <param name="fkiEzsigntemplatepackagesignerID">The unique ID of the Ezsigntemplatepackagesigner (required).</param>
-        /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
-        /// <param name="iEzsigntemplatepackagesignermembershipCopy">The Copy number in case of multiple copies..</param>
-        public EzsigntemplatepackagesignermembershipResponse(int pkiEzsigntemplatepackagesignermembershipID = default(int), int fkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackagesignerID = default(int), int fkiEzsigntemplatesignerID = default(int), int iEzsigntemplatepackagesignermembershipCopy = default(int))
+        /// <param name="">The unique ID of the Ezsigntemplatepackagesignermembership (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplatepackagemembership (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplatepackagesigner (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplatesigner (required).</param>
+        /// <param name="">The Copy number in case of multiple copies..</param>
+        public EzsigntemplatepackagesignermembershipResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int))
         {
-            this.PkiEzsigntemplatepackagesignermembershipID = pkiEzsigntemplatepackagesignermembershipID;
-            this.FkiEzsigntemplatepackagemembershipID = fkiEzsigntemplatepackagemembershipID;
-            this.FkiEzsigntemplatepackagesignerID = fkiEzsigntemplatepackagesignerID;
-            this.FkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
-            this.IEzsigntemplatepackagesignermembershipCopy = iEzsigntemplatepackagesignermembershipCopy;
+            this.PkiEzsigntemplatepackagesignermembershipID = ;
+            this.FkiEzsigntemplatepackagemembershipID = ;
+            this.FkiEzsigntemplatepackagesignerID = ;
+            this.FkiEzsigntemplatesignerID = ;
+            this.IEzsigntemplatepackagesignermembershipCopy = ;
         }
 
         /// <summary>

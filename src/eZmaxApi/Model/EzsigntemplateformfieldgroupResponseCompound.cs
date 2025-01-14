@@ -65,61 +65,63 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplateformfieldgroupID">The unique ID of the Ezsigntemplateformfieldgroup (required).</param>
-        /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
-        /// <param name="eEzsigntemplateformfieldgroupType">eEzsigntemplateformfieldgroupType (required).</param>
-        /// <param name="eEzsigntemplateformfieldgroupSignerrequirement">eEzsigntemplateformfieldgroupSignerrequirement.</param>
-        /// <param name="sEzsigntemplateformfieldgroupLabel">The Label for the Ezsigntemplateformfieldgroup (required).</param>
-        /// <param name="iEzsigntemplateformfieldgroupStep">The step when the Ezsigntemplatesigner will be invited to fill the form fields (required).</param>
-        /// <param name="sEzsigntemplateformfieldgroupDefaultvalue">The default value for the Ezsigntemplateformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |.</param>
-        /// <param name="iEzsigntemplateformfieldgroupFilledmin">The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup (required).</param>
-        /// <param name="iEzsigntemplateformfieldgroupFilledmax">The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup (required).</param>
-        /// <param name="bEzsigntemplateformfieldgroupReadonly">Whether the Ezsigntemplateformfieldgroup is read only or not. (required).</param>
-        /// <param name="iEzsigntemplateformfieldgroupMaxlength">The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
-        /// <param name="bEzsigntemplateformfieldgroupEncrypted">Whether the Ezsigntemplateformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
-        /// <param name="sEzsigntemplateformfieldgroupRegexp">A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
-        /// <param name="eEzsigntemplateformfieldgroupTextvalidation">eEzsigntemplateformfieldgroupTextvalidation.</param>
-        /// <param name="tEzsigntemplateformfieldgroupTooltip">A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup.</param>
-        /// <param name="eEzsigntemplateformfieldgroupTooltipposition">eEzsigntemplateformfieldgroupTooltipposition.</param>
-        /// <param name="aObjEzsigntemplateformfieldgroupsigner">aObjEzsigntemplateformfieldgroupsigner (required).</param>
-        /// <param name="aObjDropdownElement">aObjDropdownElement.</param>
-        /// <param name="aObjEzsigntemplateformfield">aObjEzsigntemplateformfield (required).</param>
-        public EzsigntemplateformfieldgroupResponseCompound(int pkiEzsigntemplateformfieldgroupID = default(int), int fkiEzsigntemplatedocumentID = default(int), FieldEEzsigntemplateformfieldgroupType eEzsigntemplateformfieldgroupType = default(FieldEEzsigntemplateformfieldgroupType), FieldEEzsigntemplateformfieldgroupSignerrequirement? eEzsigntemplateformfieldgroupSignerrequirement = default(FieldEEzsigntemplateformfieldgroupSignerrequirement?), string sEzsigntemplateformfieldgroupLabel = default(string), int iEzsigntemplateformfieldgroupStep = default(int), string sEzsigntemplateformfieldgroupDefaultvalue = default(string), int iEzsigntemplateformfieldgroupFilledmin = default(int), int iEzsigntemplateformfieldgroupFilledmax = default(int), bool bEzsigntemplateformfieldgroupReadonly = default(bool), int iEzsigntemplateformfieldgroupMaxlength = default(int), bool bEzsigntemplateformfieldgroupEncrypted = default(bool), string sEzsigntemplateformfieldgroupRegexp = default(string), EnumTextvalidation? eEzsigntemplateformfieldgroupTextvalidation = default(EnumTextvalidation?), string tEzsigntemplateformfieldgroupTooltip = default(string), FieldEEzsigntemplateformfieldgroupTooltipposition? eEzsigntemplateformfieldgroupTooltipposition = default(FieldEEzsigntemplateformfieldgroupTooltipposition?), List<EzsigntemplateformfieldgroupsignerResponseCompound> aObjEzsigntemplateformfieldgroupsigner = default(List<EzsigntemplateformfieldgroupsignerResponseCompound>), List<CustomDropdownElementResponseCompound> aObjDropdownElement = default(List<CustomDropdownElementResponseCompound>), List<EzsigntemplateformfieldResponseCompound> aObjEzsigntemplateformfield = default(List<EzsigntemplateformfieldResponseCompound>))
+        /// <param name="">The unique ID of the Ezsigntemplateformfieldgroup (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplatedocument (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">The Label for the Ezsigntemplateformfieldgroup (required).</param>
+        /// <param name="">The step when the Ezsigntemplatesigner will be invited to fill the form fields (required).</param>
+        /// <param name="">The default value for the Ezsigntemplateformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |.</param>
+        /// <param name="">The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup (required).</param>
+        /// <param name="">The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup (required).</param>
+        /// <param name="">Whether the Ezsigntemplateformfieldgroup is read only or not. (required).</param>
+        /// <param name="">The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="">Whether the Ezsigntemplateformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="">A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**.</param>
+        /// <param name="">Description of validation rule. Show by signatory..</param>
+        /// <param name="">.</param>
+        /// <param name="">A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup.</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        public EzsigntemplateformfieldgroupResponseCompound(int  = default(int), int  = default(int), FieldEEzsigntemplateformfieldgroupType  = default(FieldEEzsigntemplateformfieldgroupType), FieldEEzsigntemplateformfieldgroupSignerrequirement?  = default(FieldEEzsigntemplateformfieldgroupSignerrequirement?), string  = default(string), int  = default(int), string  = default(string), int  = default(int), int  = default(int), bool  = default(bool), int  = default(int), bool  = default(bool), string  = default(string), string  = default(string), EnumTextvalidation?  = default(EnumTextvalidation?), string  = default(string), FieldEEzsigntemplateformfieldgroupTooltipposition?  = default(FieldEEzsigntemplateformfieldgroupTooltipposition?), List<EzsigntemplateformfieldgroupsignerResponseCompound>  = default(List<EzsigntemplateformfieldgroupsignerResponseCompound>), List<CustomDropdownElementResponseCompound>  = default(List<CustomDropdownElementResponseCompound>), List<EzsigntemplateformfieldResponseCompound>  = default(List<EzsigntemplateformfieldResponseCompound>))
         {
-            this.PkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID;
-            this.FkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
-            this.EEzsigntemplateformfieldgroupType = eEzsigntemplateformfieldgroupType;
-            // to ensure "sEzsigntemplateformfieldgroupLabel" is required (not null)
-            if (sEzsigntemplateformfieldgroupLabel == null)
+            this.PkiEzsigntemplateformfieldgroupID = ;
+            this.FkiEzsigntemplatedocumentID = ;
+            this.EEzsigntemplateformfieldgroupType = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplateformfieldgroupLabel is a required property for EzsigntemplateformfieldgroupResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateformfieldgroupResponseCompound and cannot be null");
             }
-            this.SEzsigntemplateformfieldgroupLabel = sEzsigntemplateformfieldgroupLabel;
-            this.IEzsigntemplateformfieldgroupStep = iEzsigntemplateformfieldgroupStep;
-            this.IEzsigntemplateformfieldgroupFilledmin = iEzsigntemplateformfieldgroupFilledmin;
-            this.IEzsigntemplateformfieldgroupFilledmax = iEzsigntemplateformfieldgroupFilledmax;
-            this.BEzsigntemplateformfieldgroupReadonly = bEzsigntemplateformfieldgroupReadonly;
-            // to ensure "aObjEzsigntemplateformfieldgroupsigner" is required (not null)
-            if (aObjEzsigntemplateformfieldgroupsigner == null)
+            this.SEzsigntemplateformfieldgroupLabel = ;
+            this.IEzsigntemplateformfieldgroupStep = ;
+            this.IEzsigntemplateformfieldgroupFilledmin = ;
+            this.IEzsigntemplateformfieldgroupFilledmax = ;
+            this.BEzsigntemplateformfieldgroupReadonly = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsigntemplateformfieldgroupsigner is a required property for EzsigntemplateformfieldgroupResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateformfieldgroupResponseCompound and cannot be null");
             }
-            this.AObjEzsigntemplateformfieldgroupsigner = aObjEzsigntemplateformfieldgroupsigner;
-            // to ensure "aObjEzsigntemplateformfield" is required (not null)
-            if (aObjEzsigntemplateformfield == null)
+            this.AObjEzsigntemplateformfieldgroupsigner = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsigntemplateformfield is a required property for EzsigntemplateformfieldgroupResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateformfieldgroupResponseCompound and cannot be null");
             }
-            this.AObjEzsigntemplateformfield = aObjEzsigntemplateformfield;
-            this.EEzsigntemplateformfieldgroupSignerrequirement = eEzsigntemplateformfieldgroupSignerrequirement;
-            this.SEzsigntemplateformfieldgroupDefaultvalue = sEzsigntemplateformfieldgroupDefaultvalue;
-            this.IEzsigntemplateformfieldgroupMaxlength = iEzsigntemplateformfieldgroupMaxlength;
-            this.BEzsigntemplateformfieldgroupEncrypted = bEzsigntemplateformfieldgroupEncrypted;
-            this.SEzsigntemplateformfieldgroupRegexp = sEzsigntemplateformfieldgroupRegexp;
-            this.EEzsigntemplateformfieldgroupTextvalidation = eEzsigntemplateformfieldgroupTextvalidation;
-            this.TEzsigntemplateformfieldgroupTooltip = tEzsigntemplateformfieldgroupTooltip;
-            this.EEzsigntemplateformfieldgroupTooltipposition = eEzsigntemplateformfieldgroupTooltipposition;
-            this.AObjDropdownElement = aObjDropdownElement;
+            this.AObjEzsigntemplateformfield = ;
+            this.EEzsigntemplateformfieldgroupSignerrequirement = ;
+            this.SEzsigntemplateformfieldgroupDefaultvalue = ;
+            this.IEzsigntemplateformfieldgroupMaxlength = ;
+            this.BEzsigntemplateformfieldgroupEncrypted = ;
+            this.SEzsigntemplateformfieldgroupRegexp = ;
+            this.SEzsigntemplateformfieldgroupTextvalidationcustommessage = ;
+            this.EEzsigntemplateformfieldgroupTextvalidation = ;
+            this.TEzsigntemplateformfieldgroupTooltip = ;
+            this.EEzsigntemplateformfieldgroupTooltipposition = ;
+            this.AObjDropdownElement = ;
         }
 
         /// <summary>
@@ -209,6 +211,14 @@ namespace eZmaxApi.Model
         public string SEzsigntemplateformfieldgroupRegexp { get; set; }
 
         /// <summary>
+        /// Description of validation rule. Show by signatory.
+        /// </summary>
+        /// <value>Description of validation rule. Show by signatory.</value>
+        /* <example>Phone number</example>*/
+        [DataMember(Name = "sEzsigntemplateformfieldgroupTextvalidationcustommessage", EmitDefaultValue = false)]
+        public string SEzsigntemplateformfieldgroupTextvalidationcustommessage { get; set; }
+
+        /// <summary>
         /// A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup
         /// </summary>
         /// <value>A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup</value>
@@ -255,6 +265,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsigntemplateformfieldgroupMaxlength: ").Append(IEzsigntemplateformfieldgroupMaxlength).Append("\n");
             sb.Append("  BEzsigntemplateformfieldgroupEncrypted: ").Append(BEzsigntemplateformfieldgroupEncrypted).Append("\n");
             sb.Append("  SEzsigntemplateformfieldgroupRegexp: ").Append(SEzsigntemplateformfieldgroupRegexp).Append("\n");
+            sb.Append("  SEzsigntemplateformfieldgroupTextvalidationcustommessage: ").Append(SEzsigntemplateformfieldgroupTextvalidationcustommessage).Append("\n");
             sb.Append("  EEzsigntemplateformfieldgroupTextvalidation: ").Append(EEzsigntemplateformfieldgroupTextvalidation).Append("\n");
             sb.Append("  TEzsigntemplateformfieldgroupTooltip: ").Append(TEzsigntemplateformfieldgroupTooltip).Append("\n");
             sb.Append("  EEzsigntemplateformfieldgroupTooltipposition: ").Append(EEzsigntemplateformfieldgroupTooltipposition).Append("\n");
@@ -342,6 +353,18 @@ namespace eZmaxApi.Model
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateformfieldgroupRegexp, must match a pattern of " + regexSEzsigntemplateformfieldgroupRegexp, new [] { "SEzsigntemplateformfieldgroupRegexp" });
                 }
+            }
+
+            // SEzsigntemplateformfieldgroupTextvalidationcustommessage (string) maxLength
+            if (this.SEzsigntemplateformfieldgroupTextvalidationcustommessage != null && this.SEzsigntemplateformfieldgroupTextvalidationcustommessage.Length > 50)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateformfieldgroupTextvalidationcustommessage, length must be less than 50.", new [] { "SEzsigntemplateformfieldgroupTextvalidationcustommessage" });
+            }
+
+            // SEzsigntemplateformfieldgroupTextvalidationcustommessage (string) minLength
+            if (this.SEzsigntemplateformfieldgroupTextvalidationcustommessage != null && this.SEzsigntemplateformfieldgroupTextvalidationcustommessage.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateformfieldgroupTextvalidationcustommessage, length must be greater than 0.", new [] { "SEzsigntemplateformfieldgroupTextvalidationcustommessage" });
             }
 
             yield break;

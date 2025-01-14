@@ -65,6 +65,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EEzsignfolderMessageorder'
+        /// </summary>
+        [Fact]
+        public void EEzsignfolderMessageorderTest()
+        {
+            // TODO unit test for the property 'EEzsignfolderMessageorder'
+        }
+
+        /// <summary>
         /// Test the property 'DtEzsignfolderDelayedsenddate'
         /// </summary>
         [Fact]

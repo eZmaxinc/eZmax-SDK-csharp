@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupdelegationEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objUsergroupdelegation">objUsergroupdelegation (required).</param>
-        public UsergroupdelegationEditObjectV1Request(UsergroupdelegationRequestCompound objUsergroupdelegation = default(UsergroupdelegationRequestCompound))
+        /// <param name=""> (required).</param>
+        public UsergroupdelegationEditObjectV1Request(UsergroupdelegationRequestCompound  = default(UsergroupdelegationRequestCompound))
         {
-            // to ensure "objUsergroupdelegation" is required (not null)
-            if (objUsergroupdelegation == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objUsergroupdelegation is a required property for UsergroupdelegationEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupdelegationEditObjectV1Request and cannot be null");
             }
-            this.ObjUsergroupdelegation = objUsergroupdelegation;
+            this.ObjUsergroupdelegation = ;
         }
 
         /// <summary>

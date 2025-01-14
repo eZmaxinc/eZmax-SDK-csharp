@@ -40,38 +40,38 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedListElement" /> class.
         /// </summary>
-        /// <param name="pkiUserstagedID">The unique ID of the Userstaged (required).</param>
-        /// <param name="sEmailAddress">The email address. (required).</param>
-        /// <param name="sUserstagedFirstname">The firstname of the Userstaged (required).</param>
-        /// <param name="sUserstagedLastname">The lastname of the Userstaged (required).</param>
-        /// <param name="sUserstagedExternalid">The externalid of the Userstaged (required).</param>
-        public UserstagedListElement(int pkiUserstagedID = default(int), string sEmailAddress = default(string), string sUserstagedFirstname = default(string), string sUserstagedLastname = default(string), string sUserstagedExternalid = default(string))
+        /// <param name="">The unique ID of the Userstaged (required).</param>
+        /// <param name="">The email address. (required).</param>
+        /// <param name="">The firstname of the Userstaged (required).</param>
+        /// <param name="">The lastname of the Userstaged (required).</param>
+        /// <param name="">The externalid of the Userstaged (required).</param>
+        public UserstagedListElement(int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.PkiUserstagedID = pkiUserstagedID;
-            // to ensure "sEmailAddress" is required (not null)
-            if (sEmailAddress == null)
+            this.PkiUserstagedID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEmailAddress is a required property for UserstagedListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserstagedListElement and cannot be null");
             }
-            this.SEmailAddress = sEmailAddress;
-            // to ensure "sUserstagedFirstname" is required (not null)
-            if (sUserstagedFirstname == null)
+            this.SEmailAddress = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserstagedFirstname is a required property for UserstagedListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserstagedListElement and cannot be null");
             }
-            this.SUserstagedFirstname = sUserstagedFirstname;
-            // to ensure "sUserstagedLastname" is required (not null)
-            if (sUserstagedLastname == null)
+            this.SUserstagedFirstname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserstagedLastname is a required property for UserstagedListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserstagedListElement and cannot be null");
             }
-            this.SUserstagedLastname = sUserstagedLastname;
-            // to ensure "sUserstagedExternalid" is required (not null)
-            if (sUserstagedExternalid == null)
+            this.SUserstagedLastname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserstagedExternalid is a required property for UserstagedListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserstagedListElement and cannot be null");
             }
-            this.SUserstagedExternalid = sUserstagedExternalid;
+            this.SUserstagedExternalid = ;
         }
 
         /// <summary>

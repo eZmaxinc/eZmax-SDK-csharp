@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetTemporaryProofV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsigndocumentlog">aObjEzsigndocumentlog (required).</param>
-        public EzsigndocumentGetTemporaryProofV1ResponseMPayload(List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog = default(List<EzsigndocumentlogResponseCompound>))
+        /// <param name=""> (required).</param>
+        public EzsigndocumentGetTemporaryProofV1ResponseMPayload(List<EzsigndocumentlogResponseCompound>  = default(List<EzsigndocumentlogResponseCompound>))
         {
-            // to ensure "aObjEzsigndocumentlog" is required (not null)
-            if (aObjEzsigndocumentlog == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsigndocumentlog is a required property for EzsigndocumentGetTemporaryProofV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentGetTemporaryProofV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsigndocumentlog = aObjEzsigndocumentlog;
+            this.AObjEzsigndocumentlog = ;
         }
 
         /// <summary>

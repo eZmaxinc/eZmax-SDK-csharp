@@ -46,21 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
-        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="bEzsigntemplateIsactive">Whether the Ezsigntemplate is active or not (required).</param>
-        public EzsigntemplateAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsigntemplateDescription = default(string), int pkiEzsigntemplateID = default(int), bool bEzsigntemplateIsactive = default(bool))
+        /// <param name=""> (required).</param>
+        /// <param name="">The description of the Ezsigntemplate (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="">Whether the Ezsigntemplate is active or not (required).</param>
+        public EzsigntemplateAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel  = default(FieldEEzsignfoldertypePrivacylevel), string  = default(string), int  = default(int), bool  = default(bool))
         {
-            this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
-            // to ensure "sEzsigntemplateDescription" is required (not null)
-            if (sEzsigntemplateDescription == null)
+            this.EEzsignfoldertypePrivacylevel = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplateDescription is a required property for EzsigntemplateAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateAutocompleteElementResponse and cannot be null");
             }
-            this.SEzsigntemplateDescription = sEzsigntemplateDescription;
-            this.PkiEzsigntemplateID = pkiEzsigntemplateID;
-            this.BEzsigntemplateIsactive = bEzsigntemplateIsactive;
+            this.SEzsigntemplateDescription = ;
+            this.PkiEzsigntemplateID = ;
+            this.BEzsigntemplateIsactive = ;
         }
 
         /// <summary>
@@ -119,6 +119,15 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            if (this.SEzsigntemplateDescription != null) {
+                // SEzsigntemplateDescription (string) pattern
+                Regex regexSEzsigntemplateDescription = new Regex(@"^.{0,80}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsigntemplateDescription.Match(this.SEzsigntemplateDescription).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateDescription, must match a pattern of " + regexSEzsigntemplateDescription, new [] { "SEzsigntemplateDescription" });
+                }
+            }
+
             // PkiEzsigntemplateID (int) minimum
             if (this.PkiEzsigntemplateID < (int)0)
             {

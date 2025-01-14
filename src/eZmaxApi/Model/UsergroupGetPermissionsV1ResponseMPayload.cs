@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupGetPermissionsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjModulegroup">aObjModulegroup (required).</param>
-        public UsergroupGetPermissionsV1ResponseMPayload(List<ModulegroupResponseCompound> aObjModulegroup = default(List<ModulegroupResponseCompound>))
+        /// <param name=""> (required).</param>
+        public UsergroupGetPermissionsV1ResponseMPayload(List<ModulegroupResponseCompound>  = default(List<ModulegroupResponseCompound>))
         {
-            // to ensure "aObjModulegroup" is required (not null)
-            if (aObjModulegroup == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjModulegroup is a required property for UsergroupGetPermissionsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupGetPermissionsV1ResponseMPayload and cannot be null");
             }
-            this.AObjModulegroup = aObjModulegroup;
+            this.AObjModulegroup = ;
         }
 
         /// <summary>

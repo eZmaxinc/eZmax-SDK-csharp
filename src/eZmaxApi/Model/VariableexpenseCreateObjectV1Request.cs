@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="aObjVariableexpense">aObjVariableexpense (required).</param>
-        public VariableexpenseCreateObjectV1Request(List<VariableexpenseRequestCompound> aObjVariableexpense = default(List<VariableexpenseRequestCompound>))
+        /// <param name=""> (required).</param>
+        public VariableexpenseCreateObjectV1Request(List<VariableexpenseRequestCompound>  = default(List<VariableexpenseRequestCompound>))
         {
-            // to ensure "aObjVariableexpense" is required (not null)
-            if (aObjVariableexpense == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjVariableexpense is a required property for VariableexpenseCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for VariableexpenseCreateObjectV1Request and cannot be null");
             }
-            this.AObjVariableexpense = aObjVariableexpense;
+            this.AObjVariableexpense = ;
         }
 
         /// <summary>

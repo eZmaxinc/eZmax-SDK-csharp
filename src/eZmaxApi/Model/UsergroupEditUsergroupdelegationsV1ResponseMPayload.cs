@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupEditUsergroupdelegationsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiUsergroupdelegationID">aPkiUsergroupdelegationID (required).</param>
-        public UsergroupEditUsergroupdelegationsV1ResponseMPayload(List<int> aPkiUsergroupdelegationID = default(List<int>))
+        /// <param name=""> (required).</param>
+        public UsergroupEditUsergroupdelegationsV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiUsergroupdelegationID" is required (not null)
-            if (aPkiUsergroupdelegationID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiUsergroupdelegationID is a required property for UsergroupEditUsergroupdelegationsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupEditUsergroupdelegationsV1ResponseMPayload and cannot be null");
             }
-            this.APkiUsergroupdelegationID = aPkiUsergroupdelegationID;
+            this.APkiUsergroupdelegationID = ;
         }
 
         /// <summary>

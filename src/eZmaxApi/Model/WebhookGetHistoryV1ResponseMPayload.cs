@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookGetHistoryV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjWebhooklog">aObjWebhooklog (required).</param>
-        public WebhookGetHistoryV1ResponseMPayload(List<CustomWebhooklogResponse> aObjWebhooklog = default(List<CustomWebhooklogResponse>))
+        /// <param name=""> (required).</param>
+        public WebhookGetHistoryV1ResponseMPayload(List<CustomWebhooklogResponse>  = default(List<CustomWebhooklogResponse>))
         {
-            // to ensure "aObjWebhooklog" is required (not null)
-            if (aObjWebhooklog == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjWebhooklog is a required property for WebhookGetHistoryV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookGetHistoryV1ResponseMPayload and cannot be null");
             }
-            this.AObjWebhooklog = aObjWebhooklog;
+            this.AObjWebhooklog = ;
         }
 
         /// <summary>

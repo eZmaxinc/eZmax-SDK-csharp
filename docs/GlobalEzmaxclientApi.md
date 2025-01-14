@@ -31,7 +31,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             var apiInstance = new GlobalEzmaxclientApi(config);
-            var pksEzmaxclientOs = new FieldPksEzmaxclientOs(); // FieldPksEzmaxclientOs | 
+            var pksEzmaxclientOs = (FieldPksEzmaxclientOs) "Android";  // FieldPksEzmaxclientOs | 
 
             try
             {
@@ -74,7 +74,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **pksEzmaxclientOs** | [**FieldPksEzmaxclientOs**](FieldPksEzmaxclientOs.md) |  |  |
+| **pksEzmaxclientOs** | **FieldPksEzmaxclientOs** |  |  |
 
 ### Return type
 

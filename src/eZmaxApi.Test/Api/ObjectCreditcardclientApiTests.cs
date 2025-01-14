@@ -134,5 +134,18 @@ namespace eZmaxApi.Test.Api
             //var response = instance.CreditcardclientGetObjectV2(pkiCreditcardclientID);
             //Assert.IsType<CreditcardclientGetObjectV2Response>(response);
         }
+
+        /// <summary>
+        /// Test CreditcardclientPatchObjectV1
+        /// </summary>
+        [Fact]
+        public void CreditcardclientPatchObjectV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiCreditcardclientID = null;
+            //CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request = null;
+            //var response = instance.CreditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
+            //Assert.IsType<CreditcardclientPatchObjectV1Response>(response);
+        }
     }
 }

@@ -40,67 +40,67 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionListElement" /> class.
         /// </summary>
-        /// <param name="pkiActivesessionID">The unique ID of the Activesession (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="fkiComputerID">The unique ID of the Computer (required).</param>
-        /// <param name="fkiCompanyID">The unique ID of the Company (required).</param>
-        /// <param name="fkiDepartmentID">The unique ID of the Department (required).</param>
-        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
-        /// <param name="sActivesessionLoginname">The loginname of the Activesession (required).</param>
-        /// <param name="sComputerDescription">The description of the Computer (required).</param>
-        /// <param name="dtActivesessionFirsthit">The first hit of the Activesession (required).</param>
-        /// <param name="dtActivesessionLasthit">The last hit of the Activesession (required).</param>
-        /// <param name="sActivesessionIP">Represent an IP address. (required).</param>
-        public ActivesessionListElement(int pkiActivesessionID = default(int), int fkiUserID = default(int), int fkiComputerID = default(int), int fkiCompanyID = default(int), int fkiDepartmentID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), string sActivesessionLoginname = default(string), string sComputerDescription = default(string), string dtActivesessionFirsthit = default(string), string dtActivesessionLasthit = default(string), string sActivesessionIP = default(string))
+        /// <param name="">The unique ID of the Activesession (required).</param>
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name="">The unique ID of the Computer (required).</param>
+        /// <param name="">The unique ID of the Company (required).</param>
+        /// <param name="">The unique ID of the Department (required).</param>
+        /// <param name="">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="">The Name of the Department in the language of the requester (required).</param>
+        /// <param name="">The loginname of the Activesession (required).</param>
+        /// <param name="">The description of the Computer (required).</param>
+        /// <param name="">The first hit of the Activesession (required).</param>
+        /// <param name="">The last hit of the Activesession (required).</param>
+        /// <param name="">Represent an IP address. (required).</param>
+        public ActivesessionListElement(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.PkiActivesessionID = pkiActivesessionID;
-            this.FkiUserID = fkiUserID;
-            this.FkiComputerID = fkiComputerID;
-            this.FkiCompanyID = fkiCompanyID;
-            this.FkiDepartmentID = fkiDepartmentID;
-            // to ensure "sCompanyNameX" is required (not null)
-            if (sCompanyNameX == null)
+            this.PkiActivesessionID = ;
+            this.FkiUserID = ;
+            this.FkiComputerID = ;
+            this.FkiCompanyID = ;
+            this.FkiDepartmentID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCompanyNameX is a required property for ActivesessionListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionListElement and cannot be null");
             }
-            this.SCompanyNameX = sCompanyNameX;
-            // to ensure "sDepartmentNameX" is required (not null)
-            if (sDepartmentNameX == null)
+            this.SCompanyNameX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sDepartmentNameX is a required property for ActivesessionListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionListElement and cannot be null");
             }
-            this.SDepartmentNameX = sDepartmentNameX;
-            // to ensure "sActivesessionLoginname" is required (not null)
-            if (sActivesessionLoginname == null)
+            this.SDepartmentNameX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sActivesessionLoginname is a required property for ActivesessionListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionListElement and cannot be null");
             }
-            this.SActivesessionLoginname = sActivesessionLoginname;
-            // to ensure "sComputerDescription" is required (not null)
-            if (sComputerDescription == null)
+            this.SActivesessionLoginname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sComputerDescription is a required property for ActivesessionListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionListElement and cannot be null");
             }
-            this.SComputerDescription = sComputerDescription;
-            // to ensure "dtActivesessionFirsthit" is required (not null)
-            if (dtActivesessionFirsthit == null)
+            this.SComputerDescription = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtActivesessionFirsthit is a required property for ActivesessionListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionListElement and cannot be null");
             }
-            this.DtActivesessionFirsthit = dtActivesessionFirsthit;
-            // to ensure "dtActivesessionLasthit" is required (not null)
-            if (dtActivesessionLasthit == null)
+            this.DtActivesessionFirsthit = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtActivesessionLasthit is a required property for ActivesessionListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionListElement and cannot be null");
             }
-            this.DtActivesessionLasthit = dtActivesessionLasthit;
-            // to ensure "sActivesessionIP" is required (not null)
-            if (sActivesessionIP == null)
+            this.DtActivesessionLasthit = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sActivesessionIP is a required property for ActivesessionListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionListElement and cannot be null");
             }
-            this.SActivesessionIP = sActivesessionIP;
+            this.SActivesessionIP = ;
         }
 
         /// <summary>

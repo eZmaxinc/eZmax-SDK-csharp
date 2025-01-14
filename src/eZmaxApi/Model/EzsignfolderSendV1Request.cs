@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderSendV1Request" /> class.
         /// </summary>
-        /// <param name="tExtraMessage">A custom text message that will be added to the email sent. (required).</param>
-        public EzsignfolderSendV1Request(string tExtraMessage = default(string))
+        /// <param name="">A custom text message that will be added to the email sent. (required).</param>
+        public EzsignfolderSendV1Request(string  = default(string))
         {
-            // to ensure "tExtraMessage" is required (not null)
-            if (tExtraMessage == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("tExtraMessage is a required property for EzsignfolderSendV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderSendV1Request and cannot be null");
             }
-            this.TExtraMessage = tExtraMessage;
+            this.TExtraMessage = ;
         }
 
         /// <summary>

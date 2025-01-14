@@ -40,23 +40,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationstatusResponse" /> class.
         /// </summary>
-        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="sEzsignfoldersignerassociationstatusLastname">The last name of the Ezsignsigner.</param>
-        /// <param name="sEzsignfoldersignerassociationstatusFirstname">The first name of the Ezsignsigner.</param>
-        /// <param name="sEzsignfoldersignerassociationstatusDescriptionX">The description of the Ezsignsigner.</param>
-        /// <param name="aObjEzsignsignaturestatus">aObjEzsignsignaturestatus (required).</param>
-        public CustomEzsignfoldersignerassociationstatusResponse(int fkiEzsignfoldersignerassociationID = default(int), string sEzsignfoldersignerassociationstatusLastname = default(string), string sEzsignfoldersignerassociationstatusFirstname = default(string), string sEzsignfoldersignerassociationstatusDescriptionX = default(string), List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus = default(List<CustomEzsignsignaturestatusResponse>))
+        /// <param name="">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="">The last name of the Ezsignsigner.</param>
+        /// <param name="">The first name of the Ezsignsigner.</param>
+        /// <param name="">The description of the Ezsignsigner.</param>
+        /// <param name=""> (required).</param>
+        public CustomEzsignfoldersignerassociationstatusResponse(int  = default(int), string  = default(string), string  = default(string), string  = default(string), List<CustomEzsignsignaturestatusResponse>  = default(List<CustomEzsignsignaturestatusResponse>))
         {
-            this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
-            // to ensure "aObjEzsignsignaturestatus" is required (not null)
-            if (aObjEzsignsignaturestatus == null)
+            this.FkiEzsignfoldersignerassociationID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignsignaturestatus is a required property for CustomEzsignfoldersignerassociationstatusResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsignfoldersignerassociationstatusResponse and cannot be null");
             }
-            this.AObjEzsignsignaturestatus = aObjEzsignsignaturestatus;
-            this.SEzsignfoldersignerassociationstatusLastname = sEzsignfoldersignerassociationstatusLastname;
-            this.SEzsignfoldersignerassociationstatusFirstname = sEzsignfoldersignerassociationstatusFirstname;
-            this.SEzsignfoldersignerassociationstatusDescriptionX = sEzsignfoldersignerassociationstatusDescriptionX;
+            this.AObjEzsignsignaturestatus = ;
+            this.SEzsignfoldersignerassociationstatusLastname = ;
+            this.SEzsignfoldersignerassociationstatusFirstname = ;
+            this.SEzsignfoldersignerassociationstatusDescriptionX = ;
         }
 
         /// <summary>

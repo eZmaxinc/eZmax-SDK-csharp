@@ -226,12 +226,6 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of GlobalEzmaxclientVersionV1Response</returns>
         public eZmaxApi.Client.ApiResponse<GlobalEzmaxclientVersionV1Response> GlobalEzmaxclientVersionV1WithHttpInfo(FieldPksEzmaxclientOs pksEzmaxclientOs, int operationIndex = 0)
         {
-            // verify the required parameter 'pksEzmaxclientOs' is set
-            if (pksEzmaxclientOs == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'pksEzmaxclientOs' when calling GlobalEzmaxclientApi->GlobalEzmaxclientVersionV1");
-            }
-
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -298,12 +292,6 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (GlobalEzmaxclientVersionV1Response)</returns>
         public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<GlobalEzmaxclientVersionV1Response>> GlobalEzmaxclientVersionV1WithHttpInfoAsync(FieldPksEzmaxclientOs pksEzmaxclientOs, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'pksEzmaxclientOs' is set
-            if (pksEzmaxclientOs == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'pksEzmaxclientOs' when calling GlobalEzmaxclientApi->GlobalEzmaxclientVersionV1");
-            }
-
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 

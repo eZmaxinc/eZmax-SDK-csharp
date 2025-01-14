@@ -56,28 +56,28 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test BrandingCreateObjectV1
+        /// Test BrandingCreateObjectV2
         /// </summary>
         [Fact]
-        public void BrandingCreateObjectV1Test()
+        public void BrandingCreateObjectV2Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //BrandingCreateObjectV1Request brandingCreateObjectV1Request = null;
-            //var response = instance.BrandingCreateObjectV1(brandingCreateObjectV1Request);
-            //Assert.IsType<BrandingCreateObjectV1Response>(response);
+            //BrandingCreateObjectV2Request brandingCreateObjectV2Request = null;
+            //var response = instance.BrandingCreateObjectV2(brandingCreateObjectV2Request);
+            //Assert.IsType<BrandingCreateObjectV2Response>(response);
         }
 
         /// <summary>
-        /// Test BrandingEditObjectV1
+        /// Test BrandingEditObjectV2
         /// </summary>
         [Fact]
-        public void BrandingEditObjectV1Test()
+        public void BrandingEditObjectV2Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiBrandingID = null;
-            //BrandingEditObjectV1Request brandingEditObjectV1Request = null;
-            //var response = instance.BrandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request);
-            //Assert.IsType<BrandingEditObjectV1Response>(response);
+            //BrandingEditObjectV2Request brandingEditObjectV2Request = null;
+            //var response = instance.BrandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
+            //Assert.IsType<BrandingEditObjectV2Response>(response);
         }
 
         /// <summary>
@@ -112,15 +112,15 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test BrandingGetObjectV2
+        /// Test BrandingGetObjectV3
         /// </summary>
         [Fact]
-        public void BrandingGetObjectV2Test()
+        public void BrandingGetObjectV3Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiBrandingID = null;
-            //var response = instance.BrandingGetObjectV2(pkiBrandingID);
-            //Assert.IsType<BrandingGetObjectV2Response>(response);
+            //var response = instance.BrandingGetObjectV3(pkiBrandingID);
+            //Assert.IsType<BrandingGetObjectV3Response>(response);
         }
     }
 }

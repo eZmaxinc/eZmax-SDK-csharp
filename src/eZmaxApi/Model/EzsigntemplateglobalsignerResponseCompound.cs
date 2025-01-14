@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobalsignerResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplateglobalsignerID">The unique ID of the Ezsigntemplateglobalsigner (required).</param>
-        /// <param name="fkiEzsigntemplateglobalID">The unique ID of the Ezsigntemplateglobal (required).</param>
-        /// <param name="sEzsigntemplateglobalsignerDescription">The description of the Ezsigntemplateglobalsigner (required).</param>
-        public EzsigntemplateglobalsignerResponseCompound(int pkiEzsigntemplateglobalsignerID = default(int), int fkiEzsigntemplateglobalID = default(int), string sEzsigntemplateglobalsignerDescription = default(string))
+        /// <param name="">The unique ID of the Ezsigntemplateglobalsigner (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplateglobal (required).</param>
+        /// <param name="">The description of the Ezsigntemplateglobalsigner (required).</param>
+        public EzsigntemplateglobalsignerResponseCompound(int  = default(int), int  = default(int), string  = default(string))
         {
-            this.PkiEzsigntemplateglobalsignerID = pkiEzsigntemplateglobalsignerID;
-            this.FkiEzsigntemplateglobalID = fkiEzsigntemplateglobalID;
-            // to ensure "sEzsigntemplateglobalsignerDescription" is required (not null)
-            if (sEzsigntemplateglobalsignerDescription == null)
+            this.PkiEzsigntemplateglobalsignerID = ;
+            this.FkiEzsigntemplateglobalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplateglobalsignerDescription is a required property for EzsigntemplateglobalsignerResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalsignerResponseCompound and cannot be null");
             }
-            this.SEzsigntemplateglobalsignerDescription = sEzsigntemplateglobalsignerDescription;
+            this.SEzsigntemplateglobalsignerDescription = ;
         }
 
         /// <summary>

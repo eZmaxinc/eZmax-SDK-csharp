@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfoldertransmissionSignerResponse" /> class.
         /// </summary>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="sContactFirstname">The First name of the contact (required).</param>
-        /// <param name="sContactLastname">The Last name of the contact (required).</param>
-        public CustomEzsignfoldertransmissionSignerResponse(int fkiUserID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string))
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The First name of the contact (required).</param>
+        /// <param name="">The Last name of the contact (required).</param>
+        public CustomEzsignfoldertransmissionSignerResponse(int  = default(int), string  = default(string), string  = default(string))
         {
-            // to ensure "sContactFirstname" is required (not null)
-            if (sContactFirstname == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sContactFirstname is a required property for CustomEzsignfoldertransmissionSignerResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsignfoldertransmissionSignerResponse and cannot be null");
             }
-            this.SContactFirstname = sContactFirstname;
-            // to ensure "sContactLastname" is required (not null)
-            if (sContactLastname == null)
+            this.SContactFirstname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sContactLastname is a required property for CustomEzsignfoldertransmissionSignerResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsignfoldertransmissionSignerResponse and cannot be null");
             }
-            this.SContactLastname = sContactLastname;
-            this.FkiUserID = fkiUserID;
+            this.SContactLastname = ;
+            this.FkiUserID = ;
         }
 
         /// <summary>

@@ -40,12 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigFilter" /> class.
         /// </summary>
-        /// <param name="supported">A Boolean value specifying whether or not the operation is supported. (required).</param>
-        /// <param name="maxResults">An integer value specifying the maximum number of resources returned in a response. (required).</param>
-        public ScimServiceProviderConfigFilter(bool supported = default(bool), int maxResults = default(int))
+        /// <param name="">A Boolean value specifying whether or not the operation is supported. (required).</param>
+        /// <param name="">An integer value specifying the maximum number of resources returned in a response. (required).</param>
+        public ScimServiceProviderConfigFilter(bool  = default(bool), int  = default(int))
         {
-            this.Supported = supported;
-            this.MaxResults = maxResults;
+            this.Supported = ;
+            this.MaxResults = ;
         }
 
         /// <summary>

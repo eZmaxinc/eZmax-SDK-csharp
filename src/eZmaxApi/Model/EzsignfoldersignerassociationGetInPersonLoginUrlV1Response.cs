@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationGetInPersonLoginUrlV1Response" /> class.
         /// </summary>
-        /// <param name="objDebugPayload">objDebugPayload (required).</param>
-        /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">mPayload (required).</param>
-        public EzsignfoldersignerassociationGetInPersonLoginUrlV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload mPayload = default(EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload))
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        public EzsignfoldersignerassociationGetInPersonLoginUrlV1Response(CommonResponseObjDebugPayload  = default(CommonResponseObjDebugPayload), CommonResponseObjDebug  = default(CommonResponseObjDebug), EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload  = default(EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload))
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objDebugPayload is a required property for EzsignfoldersignerassociationGetInPersonLoginUrlV1Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationGetInPersonLoginUrlV1Response and cannot be null");
             }
-            this.ObjDebugPayload = objDebugPayload;
-            // to ensure "mPayload" is required (not null)
-            if (mPayload == null)
+            this.ObjDebugPayload = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("mPayload is a required property for EzsignfoldersignerassociationGetInPersonLoginUrlV1Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationGetInPersonLoginUrlV1Response and cannot be null");
             }
-            this.MPayload = mPayload;
-            this.ObjDebug = objDebug;
+            this.MPayload = ;
+            this.ObjDebug = ;
         }
 
         /// <summary>

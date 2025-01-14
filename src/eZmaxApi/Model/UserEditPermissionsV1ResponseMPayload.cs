@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEditPermissionsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiPermissionID">aPkiPermissionID (required).</param>
-        public UserEditPermissionsV1ResponseMPayload(List<int> aPkiPermissionID = default(List<int>))
+        /// <param name=""> (required).</param>
+        public UserEditPermissionsV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiPermissionID" is required (not null)
-            if (aPkiPermissionID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiPermissionID is a required property for UserEditPermissionsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserEditPermissionsV1ResponseMPayload and cannot be null");
             }
-            this.APkiPermissionID = aPkiPermissionID;
+            this.APkiPermissionID = ;
         }
 
         /// <summary>

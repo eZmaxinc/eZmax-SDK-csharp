@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailtypeAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiEmailtypeID">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
-        /// <param name="sEmailtypeNameX">The name of the Emailtype in the language of the requester (required).</param>
-        /// <param name="bEmailtypeIsactive">Whether the Emailtype is active or not (required).</param>
-        public EmailtypeAutocompleteElementResponse(int pkiEmailtypeID = default(int), string sEmailtypeNameX = default(string), bool bEmailtypeIsactive = default(bool))
+        /// <param name="">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
+        /// <param name="">The name of the Emailtype in the language of the requester (required).</param>
+        /// <param name="">Whether the Emailtype is active or not (required).</param>
+        public EmailtypeAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiEmailtypeID = pkiEmailtypeID;
-            // to ensure "sEmailtypeNameX" is required (not null)
-            if (sEmailtypeNameX == null)
+            this.PkiEmailtypeID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEmailtypeNameX is a required property for EmailtypeAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EmailtypeAutocompleteElementResponse and cannot be null");
             }
-            this.SEmailtypeNameX = sEmailtypeNameX;
-            this.BEmailtypeIsactive = bEmailtypeIsactive;
+            this.SEmailtypeNameX = ;
+            this.BEmailtypeIsactive = ;
         }
 
         /// <summary>

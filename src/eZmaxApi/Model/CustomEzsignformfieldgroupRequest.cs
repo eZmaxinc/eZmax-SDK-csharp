@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignformfieldgroupRequest" /> class.
         /// </summary>
-        /// <param name="pkiEzsignformfieldgroupID">The unique ID of the Ezsignformfieldgroup.</param>
-        /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup.</param>
-        /// <param name="aObjEzsignformfield">An array containing all the values to fill the Ezsignform. (required).</param>
-        public CustomEzsignformfieldgroupRequest(int pkiEzsignformfieldgroupID = default(int), string sEzsignformfieldgroupLabel = default(string), List<CustomEzsignformfieldRequest> aObjEzsignformfield = default(List<CustomEzsignformfieldRequest>))
+        /// <param name="">The unique ID of the Ezsignformfieldgroup.</param>
+        /// <param name="">The Label for the Ezsignformfieldgroup.</param>
+        /// <param name="">An array containing all the values to fill the Ezsignform. (required).</param>
+        public CustomEzsignformfieldgroupRequest(int  = default(int), string  = default(string), List<CustomEzsignformfieldRequest>  = default(List<CustomEzsignformfieldRequest>))
         {
-            // to ensure "aObjEzsignformfield" is required (not null)
-            if (aObjEzsignformfield == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignformfield is a required property for CustomEzsignformfieldgroupRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsignformfieldgroupRequest and cannot be null");
             }
-            this.AObjEzsignformfield = aObjEzsignformfield;
-            this.PkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
-            this.SEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
+            this.AObjEzsignformfield = ;
+            this.PkiEzsignformfieldgroupID = ;
+            this.SEzsignformfieldgroupLabel = ;
         }
 
         /// <summary>

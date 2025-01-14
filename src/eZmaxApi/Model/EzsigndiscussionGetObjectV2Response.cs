@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndiscussionGetObjectV2Response" /> class.
         /// </summary>
-        /// <param name="objDebugPayload">objDebugPayload (required).</param>
-        /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">mPayload (required).</param>
-        public EzsigndiscussionGetObjectV2Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsigndiscussionGetObjectV2ResponseMPayload mPayload = default(EzsigndiscussionGetObjectV2ResponseMPayload))
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        public EzsigndiscussionGetObjectV2Response(CommonResponseObjDebugPayload  = default(CommonResponseObjDebugPayload), CommonResponseObjDebug  = default(CommonResponseObjDebug), EzsigndiscussionGetObjectV2ResponseMPayload  = default(EzsigndiscussionGetObjectV2ResponseMPayload))
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objDebugPayload is a required property for EzsigndiscussionGetObjectV2Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndiscussionGetObjectV2Response and cannot be null");
             }
-            this.ObjDebugPayload = objDebugPayload;
-            // to ensure "mPayload" is required (not null)
-            if (mPayload == null)
+            this.ObjDebugPayload = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("mPayload is a required property for EzsigndiscussionGetObjectV2Response and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndiscussionGetObjectV2Response and cannot be null");
             }
-            this.MPayload = mPayload;
-            this.ObjDebug = objDebug;
+            this.MPayload = ;
+            this.ObjDebug = ;
         }
 
         /// <summary>

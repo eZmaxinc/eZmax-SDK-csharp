@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjUserstaged">aObjUserstaged (required).</param>
-        public UserstagedGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<UserstagedListElement> aObjUserstaged = default(List<UserstagedListElement>))
+        /// <param name="">The number of rows returned (required).</param>
+        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name=""> (required).</param>
+        public UserstagedGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<UserstagedListElement>  = default(List<UserstagedListElement>))
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
-            // to ensure "aObjUserstaged" is required (not null)
-            if (aObjUserstaged == null)
+            this.IRowReturned = ;
+            this.IRowFiltered = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUserstaged is a required property for UserstagedGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserstagedGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjUserstaged = aObjUserstaged;
+            this.AObjUserstaged = ;
         }
 
         /// <summary>

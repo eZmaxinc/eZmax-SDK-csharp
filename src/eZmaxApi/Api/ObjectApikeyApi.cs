@@ -98,6 +98,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of ApikeyEditPermissionsV1Response</returns>
         ApiResponse<ApikeyEditPermissionsV1Response> ApikeyEditPermissionsV1WithHttpInfo(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, int operationIndex = 0);
         /// <summary>
+        /// Generate a delegated credentials
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyGenerateDelegatedCredentialsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApikeyGenerateDelegatedCredentialsV1Response</returns>
+        ApikeyGenerateDelegatedCredentialsV1Response ApikeyGenerateDelegatedCredentialsV1(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Generate a delegated credentials
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyGenerateDelegatedCredentialsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ApikeyGenerateDelegatedCredentialsV1Response</returns>
+        ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response> ApikeyGenerateDelegatedCredentialsV1WithHttpInfo(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0);
+        /// <summary>
         /// Retrieve an existing Apikey&#39;s cors
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -318,6 +338,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyEditPermissionsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApikeyEditPermissionsV1Response>> ApikeyEditPermissionsV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Generate a delegated credentials
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyGenerateDelegatedCredentialsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApikeyGenerateDelegatedCredentialsV1Response</returns>
+        System.Threading.Tasks.Task<ApikeyGenerateDelegatedCredentialsV1Response> ApikeyGenerateDelegatedCredentialsV1Async(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Generate a delegated credentials
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyGenerateDelegatedCredentialsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ApikeyGenerateDelegatedCredentialsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response>> ApikeyGenerateDelegatedCredentialsV1WithHttpInfoAsync(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Apikey&#39;s cors
         /// </summary>
@@ -1069,6 +1114,162 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ApikeyEditPermissionsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Generate a delegated credentials 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyGenerateDelegatedCredentialsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApikeyGenerateDelegatedCredentialsV1Response</returns>
+        public ApikeyGenerateDelegatedCredentialsV1Response ApikeyGenerateDelegatedCredentialsV1(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response> localVarResponse = ApikeyGenerateDelegatedCredentialsV1WithHttpInfo(apikeyGenerateDelegatedCredentialsV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Generate a delegated credentials 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyGenerateDelegatedCredentialsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ApikeyGenerateDelegatedCredentialsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response> ApikeyGenerateDelegatedCredentialsV1WithHttpInfo(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'apikeyGenerateDelegatedCredentialsV1Request' is set
+            if (apikeyGenerateDelegatedCredentialsV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'apikeyGenerateDelegatedCredentialsV1Request' when calling ObjectApikeyApi->ApikeyGenerateDelegatedCredentialsV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = apikeyGenerateDelegatedCredentialsV1Request;
+
+            localVarRequestOptions.Operation = "ObjectApikeyApi.ApikeyGenerateDelegatedCredentialsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ApikeyGenerateDelegatedCredentialsV1Response>("/1/object/apikey/generateDelegatedCredentials", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApikeyGenerateDelegatedCredentialsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Generate a delegated credentials 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyGenerateDelegatedCredentialsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApikeyGenerateDelegatedCredentialsV1Response</returns>
+        public async System.Threading.Tasks.Task<ApikeyGenerateDelegatedCredentialsV1Response> ApikeyGenerateDelegatedCredentialsV1Async(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response> localVarResponse = await ApikeyGenerateDelegatedCredentialsV1WithHttpInfoAsync(apikeyGenerateDelegatedCredentialsV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Generate a delegated credentials 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apikeyGenerateDelegatedCredentialsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ApikeyGenerateDelegatedCredentialsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response>> ApikeyGenerateDelegatedCredentialsV1WithHttpInfoAsync(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'apikeyGenerateDelegatedCredentialsV1Request' is set
+            if (apikeyGenerateDelegatedCredentialsV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'apikeyGenerateDelegatedCredentialsV1Request' when calling ObjectApikeyApi->ApikeyGenerateDelegatedCredentialsV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = apikeyGenerateDelegatedCredentialsV1Request;
+
+            localVarRequestOptions.Operation = "ObjectApikeyApi.ApikeyGenerateDelegatedCredentialsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ApikeyGenerateDelegatedCredentialsV1Response>("/1/object/apikey/generateDelegatedCredentials", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApikeyGenerateDelegatedCredentialsV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

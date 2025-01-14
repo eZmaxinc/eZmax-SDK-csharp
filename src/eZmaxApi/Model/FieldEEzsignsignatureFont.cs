@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials**
+    /// The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials** **Deprecated**
     /// </summary>
-    /// <value>The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials**</value>
+    /// <value>The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials** **Deprecated**</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEEzsignsignatureFont
     {

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsignfoldersignerassociation">aObjEzsignfoldersignerassociation (required).</param>
-        public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload(List<CustomEzsignfoldersignerassociationActionableElementResponse> aObjEzsignfoldersignerassociation = default(List<CustomEzsignfoldersignerassociationActionableElementResponse>))
+        /// <param name=""> (required).</param>
+        public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload(List<CustomEzsignfoldersignerassociationActionableElementResponse>  = default(List<CustomEzsignfoldersignerassociationActionableElementResponse>))
         {
-            // to ensure "aObjEzsignfoldersignerassociation" is required (not null)
-            if (aObjEzsignfoldersignerassociation == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignfoldersignerassociation is a required property for EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignfoldersignerassociation = aObjEzsignfoldersignerassociation;
+            this.AObjEzsignfoldersignerassociation = ;
         }
 
         /// <summary>

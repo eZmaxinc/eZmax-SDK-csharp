@@ -74,6 +74,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SFontName'
+        /// </summary>
+        [Fact]
+        public void SFontNameTest()
+        {
+            // TODO unit test for the property 'SFontName'
+        }
+
+        /// <summary>
         /// Test the property 'BTextstylestaticBold'
         /// </summary>
         [Fact]

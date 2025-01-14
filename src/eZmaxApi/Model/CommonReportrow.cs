@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportrow" /> class.
         /// </summary>
-        /// <param name="aObjReportcell">aObjReportcell (required).</param>
-        /// <param name="iReportrowHeight">The reportrow height in pixels (required).</param>
-        public CommonReportrow(List<CommonReportcell> aObjReportcell = default(List<CommonReportcell>), int iReportrowHeight = default(int))
+        /// <param name=""> (required).</param>
+        /// <param name="">The reportrow height in pixels (required).</param>
+        public CommonReportrow(List<CommonReportcell>  = default(List<CommonReportcell>), int  = default(int))
         {
-            // to ensure "aObjReportcell" is required (not null)
-            if (aObjReportcell == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjReportcell is a required property for CommonReportrow and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonReportrow and cannot be null");
             }
-            this.AObjReportcell = aObjReportcell;
-            this.IReportrowHeight = iReportrowHeight;
+            this.AObjReportcell = ;
+            this.IReportrowHeight = ;
         }
 
         /// <summary>

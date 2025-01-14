@@ -40,27 +40,27 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentpageResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplatedocumentpageID">The unique ID of the Ezsigntemplatedocumentpage (required).</param>
-        /// <param name="iEzsigntemplatedocumentpageWidthimage">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="iEzsigntemplatedocumentpageHeightimage">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="iEzsigntemplatedocumentpageWidthpdf">The Width of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="iEzsigntemplatedocumentpageHeightpdf">The Height of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="iEzsigntemplatedocumentpagePagenumber">The page number in the Ezsigntemplatedocument (required).</param>
-        /// <param name="sComputedImageurl">The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
-        public EzsigntemplatedocumentpageResponse(int pkiEzsigntemplatedocumentpageID = default(int), int iEzsigntemplatedocumentpageWidthimage = default(int), int iEzsigntemplatedocumentpageHeightimage = default(int), int iEzsigntemplatedocumentpageWidthpdf = default(int), int iEzsigntemplatedocumentpageHeightpdf = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), string sComputedImageurl = default(string))
+        /// <param name="">The unique ID of the Ezsigntemplatedocumentpage (required).</param>
+        /// <param name="">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="">The Width of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="">The Height of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="">The page number in the Ezsigntemplatedocument (required).</param>
+        /// <param name="">The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
+        public EzsigntemplatedocumentpageResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string))
         {
-            this.PkiEzsigntemplatedocumentpageID = pkiEzsigntemplatedocumentpageID;
-            this.IEzsigntemplatedocumentpageWidthimage = iEzsigntemplatedocumentpageWidthimage;
-            this.IEzsigntemplatedocumentpageHeightimage = iEzsigntemplatedocumentpageHeightimage;
-            this.IEzsigntemplatedocumentpageWidthpdf = iEzsigntemplatedocumentpageWidthpdf;
-            this.IEzsigntemplatedocumentpageHeightpdf = iEzsigntemplatedocumentpageHeightpdf;
-            this.IEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
-            // to ensure "sComputedImageurl" is required (not null)
-            if (sComputedImageurl == null)
+            this.PkiEzsigntemplatedocumentpageID = ;
+            this.IEzsigntemplatedocumentpageWidthimage = ;
+            this.IEzsigntemplatedocumentpageHeightimage = ;
+            this.IEzsigntemplatedocumentpageWidthpdf = ;
+            this.IEzsigntemplatedocumentpageHeightpdf = ;
+            this.IEzsigntemplatedocumentpagePagenumber = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sComputedImageurl is a required property for EzsigntemplatedocumentpageResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentpageResponse and cannot be null");
             }
-            this.SComputedImageurl = sComputedImageurl;
+            this.SComputedImageurl = ;
         }
 
         /// <summary>

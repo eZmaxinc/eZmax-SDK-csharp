@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objBillingentityinternal">objBillingentityinternal (required).</param>
-        public BillingentityinternalGetObjectV2ResponseMPayload(BillingentityinternalResponseCompound objBillingentityinternal = default(BillingentityinternalResponseCompound))
+        /// <param name=""> (required).</param>
+        public BillingentityinternalGetObjectV2ResponseMPayload(BillingentityinternalResponseCompound  = default(BillingentityinternalResponseCompound))
         {
-            // to ensure "objBillingentityinternal" is required (not null)
-            if (objBillingentityinternal == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objBillingentityinternal is a required property for BillingentityinternalGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjBillingentityinternal = objBillingentityinternal;
+            this.ObjBillingentityinternal = ;
         }
 
         /// <summary>

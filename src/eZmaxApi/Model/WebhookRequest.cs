@@ -58,45 +58,47 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookRequest" /> class.
         /// </summary>
-        /// <param name="pkiWebhookID">The unique ID of the Webhook.</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
-        /// <param name="sWebhookDescription">The description of the Webhook (required).</param>
-        /// <param name="eWebhookModule">eWebhookModule (required).</param>
-        /// <param name="eWebhookEzsignevent">eWebhookEzsignevent.</param>
-        /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
-        /// <param name="sWebhookUrl">The URL of the Webhook callback (required).</param>
-        /// <param name="sWebhookEmailfailed">The email that will receive the Webhook in case all attempts fail (required).</param>
-        /// <param name="bWebhookIsactive">Whether the Webhook is active or not (required).</param>
-        /// <param name="bWebhookIssigned">Whether the requests will be signed or not.</param>
-        /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
-        public WebhookRequest(int pkiWebhookID = default(int), int fkiEzsignfoldertypeID = default(int), string sWebhookDescription = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool), bool bWebhookSkipsslvalidation = default(bool))
+        /// <param name="">The unique ID of the Webhook.</param>
+        /// <param name="">The unique ID of the Authenticationexternal.</param>
+        /// <param name="">The unique ID of the Ezsignfoldertype..</param>
+        /// <param name="">The description of the Webhook (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">The URL of the Webhook callback (required).</param>
+        /// <param name="">The email that will receive the Webhook in case all attempts fail (required).</param>
+        /// <param name="">Whether the Webhook is active or not (required).</param>
+        /// <param name="">Whether the requests will be signed or not.</param>
+        /// <param name="">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
+        public WebhookRequest(int  = default(int), int  = default(int), int  = default(int), string  = default(string), FieldEWebhookModule  = default(FieldEWebhookModule), FieldEWebhookEzsignevent?  = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent?  = default(FieldEWebhookManagementevent?), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool), bool  = default(bool))
         {
-            // to ensure "sWebhookDescription" is required (not null)
-            if (sWebhookDescription == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sWebhookDescription is a required property for WebhookRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookRequest and cannot be null");
             }
-            this.SWebhookDescription = sWebhookDescription;
-            this.EWebhookModule = eWebhookModule;
-            // to ensure "sWebhookUrl" is required (not null)
-            if (sWebhookUrl == null)
+            this.SWebhookDescription = ;
+            this.EWebhookModule = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sWebhookUrl is a required property for WebhookRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookRequest and cannot be null");
             }
-            this.SWebhookUrl = sWebhookUrl;
-            // to ensure "sWebhookEmailfailed" is required (not null)
-            if (sWebhookEmailfailed == null)
+            this.SWebhookUrl = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sWebhookEmailfailed is a required property for WebhookRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebhookRequest and cannot be null");
             }
-            this.SWebhookEmailfailed = sWebhookEmailfailed;
-            this.BWebhookIsactive = bWebhookIsactive;
-            this.BWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
-            this.PkiWebhookID = pkiWebhookID;
-            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
-            this.EWebhookEzsignevent = eWebhookEzsignevent;
-            this.EWebhookManagementevent = eWebhookManagementevent;
-            this.BWebhookIssigned = bWebhookIssigned;
+            this.SWebhookEmailfailed = ;
+            this.BWebhookIsactive = ;
+            this.BWebhookSkipsslvalidation = ;
+            this.PkiWebhookID = ;
+            this.FkiAuthenticationexternalID = ;
+            this.FkiEzsignfoldertypeID = ;
+            this.EWebhookEzsignevent = ;
+            this.EWebhookManagementevent = ;
+            this.BWebhookIssigned = ;
         }
 
         /// <summary>
@@ -106,6 +108,14 @@ namespace eZmaxApi.Model
         /* <example>77</example>*/
         [DataMember(Name = "pkiWebhookID", EmitDefaultValue = false)]
         public int PkiWebhookID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Authenticationexternal
+        /// </summary>
+        /// <value>The unique ID of the Authenticationexternal</value>
+        /* <example>56</example>*/
+        [DataMember(Name = "fkiAuthenticationexternalID", EmitDefaultValue = false)]
+        public int FkiAuthenticationexternalID { get; set; }
 
         /// <summary>
         /// The unique ID of the Ezsignfoldertype.
@@ -172,6 +182,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class WebhookRequest {\n");
             sb.Append("  PkiWebhookID: ").Append(PkiWebhookID).Append("\n");
+            sb.Append("  FkiAuthenticationexternalID: ").Append(FkiAuthenticationexternalID).Append("\n");
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
             sb.Append("  SWebhookDescription: ").Append(SWebhookDescription).Append("\n");
             sb.Append("  EWebhookModule: ").Append(EWebhookModule).Append("\n");
@@ -202,6 +213,18 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // FkiAuthenticationexternalID (int) maximum
+            if (this.FkiAuthenticationexternalID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "FkiAuthenticationexternalID" });
+            }
+
+            // FkiAuthenticationexternalID (int) minimum
+            if (this.FkiAuthenticationexternalID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "FkiAuthenticationexternalID" });
+            }
+
             // FkiEzsignfoldertypeID (int) maximum
             if (this.FkiEzsignfoldertypeID > (int)65535)
             {

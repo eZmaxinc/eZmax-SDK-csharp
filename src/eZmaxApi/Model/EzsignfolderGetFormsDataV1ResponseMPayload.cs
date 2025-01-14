@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetFormsDataV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objFormsDataFolder">objFormsDataFolder (required).</param>
-        public EzsignfolderGetFormsDataV1ResponseMPayload(CustomFormsDataFolderResponse objFormsDataFolder = default(CustomFormsDataFolderResponse))
+        /// <param name=""> (required).</param>
+        public EzsignfolderGetFormsDataV1ResponseMPayload(CustomFormsDataFolderResponse  = default(CustomFormsDataFolderResponse))
         {
-            // to ensure "objFormsDataFolder" is required (not null)
-            if (objFormsDataFolder == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objFormsDataFolder is a required property for EzsignfolderGetFormsDataV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderGetFormsDataV1ResponseMPayload and cannot be null");
             }
-            this.ObjFormsDataFolder = objFormsDataFolder;
+            this.ObjFormsDataFolder = ;
         }
 
         /// <summary>

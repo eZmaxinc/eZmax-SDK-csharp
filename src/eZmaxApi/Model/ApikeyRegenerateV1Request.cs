@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyRegenerateV1Request" /> class.
         /// </summary>
-        /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
-        public ApikeyRegenerateV1Request(bool bApikeyIssigned = default(bool))
+        /// <param name="">Whether the apikey is signed or not.</param>
+        public ApikeyRegenerateV1Request(bool  = default(bool))
         {
-            this.BApikeyIssigned = bApikeyIssigned;
+            this.BApikeyIssigned = ;
         }
 
         /// <summary>

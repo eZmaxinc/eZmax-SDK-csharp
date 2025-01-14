@@ -35,18 +35,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationsenderRequest" /> class.
         /// </summary>
-        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
-        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
-        /// <param name="fkiMailboxsharedID">The unique ID of the Mailboxshared.</param>
-        /// <param name="fkiPhonelinesharedID">The unique ID of the Phonelineshared.</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        public CustomCommunicationsenderRequest(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiMailboxsharedID = default(int), int fkiPhonelinesharedID = default(int), int fkiUserID = default(int))
+        /// <param name="">The unique ID of the Agent..</param>
+        /// <param name="">The unique ID of the Broker..</param>
+        /// <param name="">The unique ID of the Mailboxshared.</param>
+        /// <param name="">The unique ID of the Phonelineshared.</param>
+        /// <param name="">The unique ID of the User.</param>
+        public CustomCommunicationsenderRequest(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int))
         {
-            this.FkiAgentID = fkiAgentID;
-            this.FkiBrokerID = fkiBrokerID;
-            this.FkiMailboxsharedID = fkiMailboxsharedID;
-            this.FkiPhonelinesharedID = fkiPhonelinesharedID;
-            this.FkiUserID = fkiUserID;
+            this.FkiAgentID = ;
+            this.FkiBrokerID = ;
+            this.FkiMailboxsharedID = ;
+            this.FkiPhonelinesharedID = ;
+            this.FkiUserID = ;
         }
 
         /// <summary>

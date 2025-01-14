@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeCreateObjectV2Request" /> class.
         /// </summary>
-        /// <param name="aObjFranchisereferalincome">aObjFranchisereferalincome (required).</param>
-        public FranchisereferalincomeCreateObjectV2Request(List<FranchisereferalincomeRequestCompound> aObjFranchisereferalincome = default(List<FranchisereferalincomeRequestCompound>))
+        /// <param name=""> (required).</param>
+        public FranchisereferalincomeCreateObjectV2Request(List<FranchisereferalincomeRequestCompound>  = default(List<FranchisereferalincomeRequestCompound>))
         {
-            // to ensure "aObjFranchisereferalincome" is required (not null)
-            if (aObjFranchisereferalincome == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjFranchisereferalincome is a required property for FranchisereferalincomeCreateObjectV2Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisereferalincomeCreateObjectV2Request and cannot be null");
             }
-            this.AObjFranchisereferalincome = aObjFranchisereferalincome;
+            this.AObjFranchisereferalincome = ;
         }
 
         /// <summary>

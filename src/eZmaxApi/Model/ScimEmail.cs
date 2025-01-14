@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimEmail" /> class.
         /// </summary>
-        /// <param name="value">The email address..</param>
-        /// <param name="primary">primary.</param>
-        public ScimEmail(string value = default(string), bool primary = default(bool))
+        /// <param name="">The email address..</param>
+        /// <param name="">.</param>
+        public ScimEmail(string  = default(string), bool  = default(bool))
         {
-            this.Value = value;
-            this.Primary = primary;
+            this.Value = ;
+            this.Primary = ;
         }
 
         /// <summary>

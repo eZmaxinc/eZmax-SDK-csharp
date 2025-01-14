@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportcolumn" /> class.
         /// </summary>
-        /// <param name="objReportcellstyleDefault">objReportcellstyleDefault (required).</param>
-        /// <param name="iReportcolumnWidth">The Reportcolumn width in pixels (required).</param>
-        public CommonReportcolumn(CommonReportcellstyle objReportcellstyleDefault = default(CommonReportcellstyle), int iReportcolumnWidth = default(int))
+        /// <param name=""> (required).</param>
+        /// <param name="">The Reportcolumn width in pixels (required).</param>
+        public CommonReportcolumn(CommonReportcellstyle  = default(CommonReportcellstyle), int  = default(int))
         {
-            // to ensure "objReportcellstyleDefault" is required (not null)
-            if (objReportcellstyleDefault == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objReportcellstyleDefault is a required property for CommonReportcolumn and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonReportcolumn and cannot be null");
             }
-            this.ObjReportcellstyleDefault = objReportcellstyleDefault;
-            this.IReportcolumnWidth = iReportcolumnWidth;
+            this.ObjReportcellstyleDefault = ;
+            this.IReportcolumnWidth = ;
         }
 
         /// <summary>

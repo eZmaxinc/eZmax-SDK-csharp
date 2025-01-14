@@ -65,6 +65,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiAuthenticationexternalID'
+        /// </summary>
+        [Fact]
+        public void FkiAuthenticationexternalIDTest()
+        {
+            // TODO unit test for the property 'FkiAuthenticationexternalID'
+        }
+
+        /// <summary>
         /// Test the property 'SWebhookDescription'
         /// </summary>
         [Fact]
@@ -182,6 +191,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SAuthenticationexternalDescription'
+        /// </summary>
+        [Fact]
+        public void SAuthenticationexternalDescriptionTest()
+        {
+            // TODO unit test for the property 'SAuthenticationexternalDescription'
+        }
+
+        /// <summary>
         /// Test the property 'ObjAudit'
         /// </summary>
         [Fact]
@@ -224,6 +242,15 @@ namespace eZmaxApi.Test.Model
         public void BWebhookTestTest()
         {
             // TODO unit test for the property 'BWebhookTest'
+        }
+
+        /// <summary>
+        /// Test the property 'EWebhookEmittype'
+        /// </summary>
+        [Fact]
+        public void EWebhookEmittypeTest()
+        {
+            // TODO unit test for the property 'EWebhookEmittype'
         }
     }
 }

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyGetPermissionsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjModulegroup">aObjModulegroup (required).</param>
-        public ApikeyGetPermissionsV1ResponseMPayload(List<ModulegroupResponseCompound> aObjModulegroup = default(List<ModulegroupResponseCompound>))
+        /// <param name=""> (required).</param>
+        public ApikeyGetPermissionsV1ResponseMPayload(List<ModulegroupResponseCompound>  = default(List<ModulegroupResponseCompound>))
         {
-            // to ensure "aObjModulegroup" is required (not null)
-            if (aObjModulegroup == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjModulegroup is a required property for ApikeyGetPermissionsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for ApikeyGetPermissionsV1ResponseMPayload and cannot be null");
             }
-            this.AObjModulegroup = aObjModulegroup;
+            this.AObjModulegroup = ;
         }
 
         /// <summary>

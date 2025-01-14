@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualNotificationtestName" /> class.
         /// </summary>
-        /// <param name="sNotificationtestName1">The name of the Notificationtest in French.</param>
-        /// <param name="sNotificationtestName2">The name of the Notificationtest in English.</param>
-        public MultilingualNotificationtestName(string sNotificationtestName1 = default(string), string sNotificationtestName2 = default(string))
+        /// <param name="">The name of the Notificationtest in French.</param>
+        /// <param name="">The name of the Notificationtest in English.</param>
+        public MultilingualNotificationtestName(string  = default(string), string  = default(string))
         {
-            this.SNotificationtestName1 = sNotificationtestName1;
-            this.SNotificationtestName2 = sNotificationtestName2;
+            this.SNotificationtestName1 = ;
+            this.SNotificationtestName2 = ;
         }
 
         /// <summary>

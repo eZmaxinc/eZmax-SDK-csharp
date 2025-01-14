@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhonetypeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjPhonetype">An array of Phonetype autocomplete element response. (required).</param>
-        public PhonetypeGetAutocompleteV2ResponseMPayload(List<PhonetypeAutocompleteElementResponse> aObjPhonetype = default(List<PhonetypeAutocompleteElementResponse>))
+        /// <param name="">An array of Phonetype autocomplete element response. (required).</param>
+        public PhonetypeGetAutocompleteV2ResponseMPayload(List<PhonetypeAutocompleteElementResponse>  = default(List<PhonetypeAutocompleteElementResponse>))
         {
-            // to ensure "aObjPhonetype" is required (not null)
-            if (aObjPhonetype == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjPhonetype is a required property for PhonetypeGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for PhonetypeGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjPhonetype = aObjPhonetype;
+            this.AObjPhonetype = ;
         }
 
         /// <summary>

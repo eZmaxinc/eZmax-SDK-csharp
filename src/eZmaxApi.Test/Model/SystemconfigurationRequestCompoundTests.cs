@@ -65,6 +65,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiBrandingID'
+        /// </summary>
+        [Fact]
+        public void FkiBrandingIDTest()
+        {
+            // TODO unit test for the property 'FkiBrandingID'
+        }
+
+        /// <summary>
         /// Test the property 'ESystemconfigurationNewexternaluseraction'
         /// </summary>
         [Fact]

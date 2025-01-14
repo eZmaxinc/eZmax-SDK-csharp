@@ -40,16 +40,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneRequestCompoundV2" /> class.
         /// </summary>
-        /// <param name="pkiPhoneID">The unique ID of the Phone..</param>
-        /// <param name="fkiPhonetypeID">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
-        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
-        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
-        public PhoneRequestCompoundV2(int pkiPhoneID = default(int), int fkiPhonetypeID = default(int), string sPhoneExtension = default(string), string sPhoneE164 = default(string))
+        /// <param name="">The unique ID of the Phone..</param>
+        /// <param name="">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
+        /// <param name="">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
+        /// <param name="">A phone number in E.164 Format.</param>
+        public PhoneRequestCompoundV2(int  = default(int), int  = default(int), string  = default(string), string  = default(string))
         {
-            this.FkiPhonetypeID = fkiPhonetypeID;
-            this.PkiPhoneID = pkiPhoneID;
-            this.SPhoneExtension = sPhoneExtension;
-            this.SPhoneE164 = sPhoneE164;
+            this.FkiPhonetypeID = ;
+            this.PkiPhoneID = ;
+            this.SPhoneExtension = ;
+            this.SPhoneE164 = ;
         }
 
         /// <summary>

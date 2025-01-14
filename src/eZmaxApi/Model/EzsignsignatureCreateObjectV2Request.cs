@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureCreateObjectV2Request" /> class.
         /// </summary>
-        /// <param name="aObjEzsignsignature">aObjEzsignsignature (required).</param>
-        public EzsignsignatureCreateObjectV2Request(List<EzsignsignatureRequestCompound> aObjEzsignsignature = default(List<EzsignsignatureRequestCompound>))
+        /// <param name=""> (required).</param>
+        public EzsignsignatureCreateObjectV2Request(List<EzsignsignatureRequestCompound>  = default(List<EzsignsignatureRequestCompound>))
         {
-            // to ensure "aObjEzsignsignature" is required (not null)
-            if (aObjEzsignsignature == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignsignature is a required property for EzsignsignatureCreateObjectV2Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsignatureCreateObjectV2Request and cannot be null");
             }
-            this.AObjEzsignsignature = aObjEzsignsignature;
+            this.AObjEzsignsignature = ;
         }
 
         /// <summary>

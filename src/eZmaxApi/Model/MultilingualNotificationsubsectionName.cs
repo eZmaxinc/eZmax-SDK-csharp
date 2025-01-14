@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualNotificationsubsectionName" /> class.
         /// </summary>
-        /// <param name="sNotificationsubsectionName1">The name of the Notificationsubsection in French.</param>
-        /// <param name="sNotificationsubsectionName2">The name of the Notificationsubsection in English.</param>
-        public MultilingualNotificationsubsectionName(string sNotificationsubsectionName1 = default(string), string sNotificationsubsectionName2 = default(string))
+        /// <param name="">The name of the Notificationsubsection in French.</param>
+        /// <param name="">The name of the Notificationsubsection in English.</param>
+        public MultilingualNotificationsubsectionName(string  = default(string), string  = default(string))
         {
-            this.SNotificationsubsectionName1 = sNotificationsubsectionName1;
-            this.SNotificationsubsectionName2 = sNotificationsubsectionName2;
+            this.SNotificationsubsectionName1 = ;
+            this.SNotificationsubsectionName2 = ;
         }
 
         /// <summary>

@@ -40,36 +40,32 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientResponse" /> class.
         /// </summary>
-        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient (required).</param>
-        /// <param name="fkiCreditcarddetailID">The unique ID of the Creditcarddetail (required).</param>
-        /// <param name="bCreditcardclientrelationIsdefault">Whether if it&#39;s an relationisdefault (required).</param>
-        /// <param name="sCreditcardclientDescription">The description of the Creditcardclient (required).</param>
-        /// <param name="bCreditcardclientIsactive">Whether the creditcardclient is active or not (required).</param>
-        /// <param name="bCreditcardclientAllowedagencypayment">Whether if it&#39;s an allowedagencypayment (required).</param>
-        /// <param name="bCreditcardclientAllowedroyallepageprotection">Whether if it&#39;s an allowedroyallepageprotection (required).</param>
-        /// <param name="bCreditcardclientAllowedtranquillit">Whether if it&#39;s an allowedtranquillit (required).</param>
-        /// <param name="objCreditcarddetail">objCreditcarddetail (required).</param>
-        public CreditcardclientResponse(int pkiCreditcardclientID = default(int), int fkiCreditcarddetailID = default(int), bool bCreditcardclientrelationIsdefault = default(bool), string sCreditcardclientDescription = default(string), bool bCreditcardclientIsactive = default(bool), bool bCreditcardclientAllowedagencypayment = default(bool), bool bCreditcardclientAllowedroyallepageprotection = default(bool), bool bCreditcardclientAllowedtranquillit = default(bool), CreditcarddetailResponseCompound objCreditcarddetail = default(CreditcarddetailResponseCompound))
+        /// <param name="">The unique ID of the Creditcardclient (required).</param>
+        /// <param name="">The unique ID of the Creditcarddetail (required).</param>
+        /// <param name="">Whether if it&#39;s the creditcardclient is the default one (required).</param>
+        /// <param name="">The description of the Creditcardclient (required).</param>
+        /// <param name="">Whether if it&#39;s an allowedagencypayment (required).</param>
+        /// <param name="">Whether if it&#39;s an allowedtranquillit (required).</param>
+        /// <param name=""> (required).</param>
+        public CreditcardclientResponse(int  = default(int), int  = default(int), bool  = default(bool), string  = default(string), bool  = default(bool), bool  = default(bool), CreditcarddetailResponseCompound  = default(CreditcarddetailResponseCompound))
         {
-            this.PkiCreditcardclientID = pkiCreditcardclientID;
-            this.FkiCreditcarddetailID = fkiCreditcarddetailID;
-            this.BCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
-            // to ensure "sCreditcardclientDescription" is required (not null)
-            if (sCreditcardclientDescription == null)
+            this.PkiCreditcardclientID = ;
+            this.FkiCreditcarddetailID = ;
+            this.BCreditcardclientrelationIsdefault = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcardclientDescription is a required property for CreditcardclientResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardclientResponse and cannot be null");
             }
-            this.SCreditcardclientDescription = sCreditcardclientDescription;
-            this.BCreditcardclientIsactive = bCreditcardclientIsactive;
-            this.BCreditcardclientAllowedagencypayment = bCreditcardclientAllowedagencypayment;
-            this.BCreditcardclientAllowedroyallepageprotection = bCreditcardclientAllowedroyallepageprotection;
-            this.BCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
-            // to ensure "objCreditcarddetail" is required (not null)
-            if (objCreditcarddetail == null)
+            this.SCreditcardclientDescription = ;
+            this.BCreditcardclientAllowedcompanypayment = ;
+            this.BCreditcardclientAllowedtranquillit = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objCreditcarddetail is a required property for CreditcardclientResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardclientResponse and cannot be null");
             }
-            this.ObjCreditcarddetail = objCreditcarddetail;
+            this.ObjCreditcarddetail = ;
         }
 
         /// <summary>
@@ -89,9 +85,9 @@ namespace eZmaxApi.Model
         public int FkiCreditcarddetailID { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an relationisdefault
+        /// Whether if it&#39;s the creditcardclient is the default one
         /// </summary>
-        /// <value>Whether if it&#39;s an relationisdefault</value>
+        /// <value>Whether if it&#39;s the creditcardclient is the default one</value>
         /* <example>true</example>*/
         [DataMember(Name = "bCreditcardclientrelationIsdefault", IsRequired = true, EmitDefaultValue = true)]
         public bool BCreditcardclientrelationIsdefault { get; set; }
@@ -105,28 +101,12 @@ namespace eZmaxApi.Model
         public string SCreditcardclientDescription { get; set; }
 
         /// <summary>
-        /// Whether the creditcardclient is active or not
-        /// </summary>
-        /// <value>Whether the creditcardclient is active or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bCreditcardclientIsactive", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCreditcardclientIsactive { get; set; }
-
-        /// <summary>
         /// Whether if it&#39;s an allowedagencypayment
         /// </summary>
         /// <value>Whether if it&#39;s an allowedagencypayment</value>
         /* <example>true</example>*/
-        [DataMember(Name = "bCreditcardclientAllowedagencypayment", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCreditcardclientAllowedagencypayment { get; set; }
-
-        /// <summary>
-        /// Whether if it&#39;s an allowedroyallepageprotection
-        /// </summary>
-        /// <value>Whether if it&#39;s an allowedroyallepageprotection</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bCreditcardclientAllowedroyallepageprotection", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCreditcardclientAllowedroyallepageprotection { get; set; }
+        [DataMember(Name = "bCreditcardclientAllowedcompanypayment", IsRequired = true, EmitDefaultValue = true)]
+        public bool BCreditcardclientAllowedcompanypayment { get; set; }
 
         /// <summary>
         /// Whether if it&#39;s an allowedtranquillit
@@ -154,9 +134,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiCreditcarddetailID: ").Append(FkiCreditcarddetailID).Append("\n");
             sb.Append("  BCreditcardclientrelationIsdefault: ").Append(BCreditcardclientrelationIsdefault).Append("\n");
             sb.Append("  SCreditcardclientDescription: ").Append(SCreditcardclientDescription).Append("\n");
-            sb.Append("  BCreditcardclientIsactive: ").Append(BCreditcardclientIsactive).Append("\n");
-            sb.Append("  BCreditcardclientAllowedagencypayment: ").Append(BCreditcardclientAllowedagencypayment).Append("\n");
-            sb.Append("  BCreditcardclientAllowedroyallepageprotection: ").Append(BCreditcardclientAllowedroyallepageprotection).Append("\n");
+            sb.Append("  BCreditcardclientAllowedcompanypayment: ").Append(BCreditcardclientAllowedcompanypayment).Append("\n");
             sb.Append("  BCreditcardclientAllowedtranquillit: ").Append(BCreditcardclientAllowedtranquillit).Append("\n");
             sb.Append("  ObjCreditcarddetail: ").Append(ObjCreditcarddetail).Append("\n");
             sb.Append("}\n");

@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsigningreasonListElement" /> class.
         /// </summary>
-        /// <param name="pkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason (required).</param>
-        /// <param name="sEzsignsigningreasonDescriptionX">The description of the Ezsignsigningreason in the language of the requester (required).</param>
-        /// <param name="bEzsignsigningreasonIsactive">Whether the ezsignsigningreason is active or not (required).</param>
-        public EzsignsigningreasonListElement(int pkiEzsignsigningreasonID = default(int), string sEzsignsigningreasonDescriptionX = default(string), bool bEzsignsigningreasonIsactive = default(bool))
+        /// <param name="">The unique ID of the Ezsignsigningreason (required).</param>
+        /// <param name="">The description of the Ezsignsigningreason in the language of the requester (required).</param>
+        /// <param name="">Whether the ezsignsigningreason is active or not (required).</param>
+        public EzsignsigningreasonListElement(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiEzsignsigningreasonID = pkiEzsignsigningreasonID;
-            // to ensure "sEzsignsigningreasonDescriptionX" is required (not null)
-            if (sEzsignsigningreasonDescriptionX == null)
+            this.PkiEzsignsigningreasonID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignsigningreasonDescriptionX is a required property for EzsignsigningreasonListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsigningreasonListElement and cannot be null");
             }
-            this.SEzsignsigningreasonDescriptionX = sEzsignsigningreasonDescriptionX;
-            this.BEzsignsigningreasonIsactive = bEzsignsigningreasonIsactive;
+            this.SEzsignsigningreasonDescriptionX = ;
+            this.BEzsignsigningreasonIsactive = ;
         }
 
         /// <summary>

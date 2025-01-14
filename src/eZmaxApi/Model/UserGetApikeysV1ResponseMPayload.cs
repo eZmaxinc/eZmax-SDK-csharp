@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetApikeysV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjApikey">aObjApikey (required).</param>
-        public UserGetApikeysV1ResponseMPayload(List<ApikeyResponseCompound> aObjApikey = default(List<ApikeyResponseCompound>))
+        /// <param name=""> (required).</param>
+        public UserGetApikeysV1ResponseMPayload(List<ApikeyResponseCompound>  = default(List<ApikeyResponseCompound>))
         {
-            // to ensure "aObjApikey" is required (not null)
-            if (aObjApikey == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjApikey is a required property for UserGetApikeysV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserGetApikeysV1ResponseMPayload and cannot be null");
             }
-            this.AObjApikey = aObjApikey;
+            this.AObjApikey = ;
         }
 
         /// <summary>

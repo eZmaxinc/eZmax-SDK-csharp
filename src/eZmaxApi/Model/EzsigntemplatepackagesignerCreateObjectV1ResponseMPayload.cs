@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignerCreateObjectV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiEzsigntemplatepackagesignerID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public EzsigntemplatepackagesignerCreateObjectV1ResponseMPayload(List<int> aPkiEzsigntemplatepackagesignerID = default(List<int>))
+        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public EzsigntemplatepackagesignerCreateObjectV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiEzsigntemplatepackagesignerID" is required (not null)
-            if (aPkiEzsigntemplatepackagesignerID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiEzsigntemplatepackagesignerID is a required property for EzsigntemplatepackagesignerCreateObjectV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackagesignerCreateObjectV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsigntemplatepackagesignerID = aPkiEzsigntemplatepackagesignerID;
+            this.APkiEzsigntemplatepackagesignerID = ;
         }
 
         /// <summary>

@@ -28,6 +28,26 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Generate a federation token
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activesessionGenerateFederationTokenV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ActivesessionGenerateFederationTokenV1Response</returns>
+        ActivesessionGenerateFederationTokenV1Response ActivesessionGenerateFederationTokenV1(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Generate a federation token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activesessionGenerateFederationTokenV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ActivesessionGenerateFederationTokenV1Response</returns>
+        ApiResponse<ActivesessionGenerateFederationTokenV1Response> ActivesessionGenerateFederationTokenV1WithHttpInfo(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, int operationIndex = 0);
+        /// <summary>
         /// Get Current Activesession
         /// </summary>
         /// <remarks>
@@ -85,6 +105,31 @@ namespace eZmaxApi.Api
     public interface IObjectActivesessionApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Generate a federation token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activesessionGenerateFederationTokenV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ActivesessionGenerateFederationTokenV1Response</returns>
+        System.Threading.Tasks.Task<ActivesessionGenerateFederationTokenV1Response> ActivesessionGenerateFederationTokenV1Async(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Generate a federation token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activesessionGenerateFederationTokenV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ActivesessionGenerateFederationTokenV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ActivesessionGenerateFederationTokenV1Response>> ActivesessionGenerateFederationTokenV1WithHttpInfoAsync(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Current Activesession
         /// </summary>
@@ -259,6 +304,162 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Generate a federation token 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activesessionGenerateFederationTokenV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ActivesessionGenerateFederationTokenV1Response</returns>
+        public ActivesessionGenerateFederationTokenV1Response ActivesessionGenerateFederationTokenV1(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<ActivesessionGenerateFederationTokenV1Response> localVarResponse = ActivesessionGenerateFederationTokenV1WithHttpInfo(activesessionGenerateFederationTokenV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Generate a federation token 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activesessionGenerateFederationTokenV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ActivesessionGenerateFederationTokenV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<ActivesessionGenerateFederationTokenV1Response> ActivesessionGenerateFederationTokenV1WithHttpInfo(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'activesessionGenerateFederationTokenV1Request' is set
+            if (activesessionGenerateFederationTokenV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'activesessionGenerateFederationTokenV1Request' when calling ObjectActivesessionApi->ActivesessionGenerateFederationTokenV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = activesessionGenerateFederationTokenV1Request;
+
+            localVarRequestOptions.Operation = "ObjectActivesessionApi.ActivesessionGenerateFederationTokenV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ActivesessionGenerateFederationTokenV1Response>("/1/object/activesession/generateFederationToken", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ActivesessionGenerateFederationTokenV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Generate a federation token 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activesessionGenerateFederationTokenV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ActivesessionGenerateFederationTokenV1Response</returns>
+        public async System.Threading.Tasks.Task<ActivesessionGenerateFederationTokenV1Response> ActivesessionGenerateFederationTokenV1Async(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<ActivesessionGenerateFederationTokenV1Response> localVarResponse = await ActivesessionGenerateFederationTokenV1WithHttpInfoAsync(activesessionGenerateFederationTokenV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Generate a federation token 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activesessionGenerateFederationTokenV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ActivesessionGenerateFederationTokenV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ActivesessionGenerateFederationTokenV1Response>> ActivesessionGenerateFederationTokenV1WithHttpInfoAsync(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'activesessionGenerateFederationTokenV1Request' is set
+            if (activesessionGenerateFederationTokenV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'activesessionGenerateFederationTokenV1Request' when calling ObjectActivesessionApi->ActivesessionGenerateFederationTokenV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = activesessionGenerateFederationTokenV1Request;
+
+            localVarRequestOptions.Operation = "ObjectActivesessionApi.ActivesessionGenerateFederationTokenV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ActivesessionGenerateFederationTokenV1Response>("/1/object/activesession/generateFederationToken", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ActivesessionGenerateFederationTokenV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>

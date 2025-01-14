@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundApikey" /> class.
         /// </summary>
-        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
-        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester (required).</param>
-        public ActivesessionResponseCompoundApikey(int pkiApikeyID = default(int), string sApikeyDescriptionX = default(string))
+        /// <param name="">The unique ID of the Apikey (required).</param>
+        /// <param name="">The description of the Apikey in the language of the requester (required).</param>
+        public ActivesessionResponseCompoundApikey(int  = default(int), string  = default(string))
         {
-            this.PkiApikeyID = pkiApikeyID;
-            // to ensure "sApikeyDescriptionX" is required (not null)
-            if (sApikeyDescriptionX == null)
+            this.PkiApikeyID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sApikeyDescriptionX is a required property for ActivesessionResponseCompoundApikey and cannot be null");
+                throw new ArgumentNullException(" is a required property for ActivesessionResponseCompoundApikey and cannot be null");
             }
-            this.SApikeyDescriptionX = sApikeyDescriptionX;
+            this.SApikeyDescriptionX = ;
         }
 
         /// <summary>

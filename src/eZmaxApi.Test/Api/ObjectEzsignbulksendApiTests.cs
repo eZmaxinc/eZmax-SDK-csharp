@@ -56,16 +56,16 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzsignbulksendCreateEzsignbulksendtransmissionV1
+        /// Test EzsignbulksendCreateEzsignbulksendtransmissionV2
         /// </summary>
         [Fact]
-        public void EzsignbulksendCreateEzsignbulksendtransmissionV1Test()
+        public void EzsignbulksendCreateEzsignbulksendtransmissionV2Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsignbulksendID = null;
-            //EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request = null;
-            //var response = instance.EzsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request);
-            //Assert.IsType<EzsignbulksendCreateEzsignbulksendtransmissionV1Response>(response);
+            //EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request = null;
+            //var response = instance.EzsignbulksendCreateEzsignbulksendtransmissionV2(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request);
+            //Assert.IsType<EzsignbulksendCreateEzsignbulksendtransmissionV2Response>(response);
         }
 
         /// <summary>

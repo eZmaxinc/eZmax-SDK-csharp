@@ -46,23 +46,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="sEzsigntemplatepackageDescription">The description of the Ezsigntemplatepackage (required).</param>
-        /// <param name="pkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="bEzsigntemplatepackageIsactive">Whether the Ezsigntemplatepackage is active or not (required).</param>
-        /// <param name="bDisabled">Indicates if the element is disabled in the context (required).</param>
-        public EzsigntemplatepackageAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsigntemplatepackageDescription = default(string), int pkiEzsigntemplatepackageID = default(int), bool bEzsigntemplatepackageIsactive = default(bool), bool bDisabled = default(bool))
+        /// <param name=""> (required).</param>
+        /// <param name="">The description of the Ezsigntemplatepackage (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="">Whether the Ezsigntemplatepackage is active or not (required).</param>
+        /// <param name="">Indicates if the element is disabled in the context (required).</param>
+        public EzsigntemplatepackageAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel  = default(FieldEEzsignfoldertypePrivacylevel), string  = default(string), int  = default(int), bool  = default(bool), bool  = default(bool))
         {
-            this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
-            // to ensure "sEzsigntemplatepackageDescription" is required (not null)
-            if (sEzsigntemplatepackageDescription == null)
+            this.EEzsignfoldertypePrivacylevel = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplatepackageDescription is a required property for EzsigntemplatepackageAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackageAutocompleteElementResponse and cannot be null");
             }
-            this.SEzsigntemplatepackageDescription = sEzsigntemplatepackageDescription;
-            this.PkiEzsigntemplatepackageID = pkiEzsigntemplatepackageID;
-            this.BEzsigntemplatepackageIsactive = bEzsigntemplatepackageIsactive;
-            this.BDisabled = bDisabled;
+            this.SEzsigntemplatepackageDescription = ;
+            this.PkiEzsigntemplatepackageID = ;
+            this.BEzsigntemplatepackageIsactive = ;
+            this.BDisabled = ;
         }
 
         /// <summary>
@@ -129,6 +129,15 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            if (this.SEzsigntemplatepackageDescription != null) {
+                // SEzsigntemplatepackageDescription (string) pattern
+                Regex regexSEzsigntemplatepackageDescription = new Regex(@"^.{0,80}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsigntemplatepackageDescription.Match(this.SEzsigntemplatepackageDescription).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatepackageDescription, must match a pattern of " + regexSEzsigntemplatepackageDescription, new [] { "SEzsigntemplatepackageDescription" });
+                }
+            }
+
             // PkiEzsigntemplatepackageID (int) minimum
             if (this.PkiEzsigntemplatepackageID < (int)0)
             {

@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimUser" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="userName">A service provider&#39;s unique identifier for the user, typically used by the user to directly authenticate to the service provider.  Often displayed to the user as their unique identifier within the system (as opposed to \&quot;id\&quot; or \&quot;externalId\&quot;, which are generally opaque and not user-friendly identifiers).  Each User MUST include a non-empty userName value.  This identifier MUST be unique across the service provider&#39;s entire set of Users.  This attribute is REQUIRED and is case insensitive. (required).</param>
-        /// <param name="displayName">displayName.</param>
-        /// <param name="emails">emails.</param>
-        public ScimUser(string id = default(string), string userName = default(string), string displayName = default(string), List<ScimEmail> emails = default(List<ScimEmail>))
+        /// <param name="">.</param>
+        /// <param name="">A service provider&#39;s unique identifier for the user, typically used by the user to directly authenticate to the service provider.  Often displayed to the user as their unique identifier within the system (as opposed to \&quot;id\&quot; or \&quot;externalId\&quot;, which are generally opaque and not user-friendly identifiers).  Each User MUST include a non-empty userName value.  This identifier MUST be unique across the service provider&#39;s entire set of Users.  This attribute is REQUIRED and is case insensitive. (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public ScimUser(string  = default(string), string  = default(string), string  = default(string), List<ScimEmail>  = default(List<ScimEmail>))
         {
-            // to ensure "userName" is required (not null)
-            if (userName == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("userName is a required property for ScimUser and cannot be null");
+                throw new ArgumentNullException(" is a required property for ScimUser and cannot be null");
             }
-            this.UserName = userName;
-            this.Id = id;
-            this.DisplayName = displayName;
-            this.Emails = emails;
+            this.UserName = ;
+            this.Id = ;
+            this.DisplayName = ;
+            this.Emails = ;
         }
 
         /// <summary>

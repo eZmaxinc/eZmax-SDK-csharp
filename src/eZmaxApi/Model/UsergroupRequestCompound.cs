@@ -40,17 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiUsergroupID">The unique ID of the Usergroup.</param>
-        /// <param name="objUsergroupName">objUsergroupName (required).</param>
-        public UsergroupRequestCompound(int pkiUsergroupID = default(int), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName))
+        /// <param name="">The unique ID of the Usergroup.</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        public UsergroupRequestCompound(int  = default(int), EmailRequest  = default(EmailRequest), MultilingualUsergroupName  = default(MultilingualUsergroupName))
         {
-            // to ensure "objUsergroupName" is required (not null)
-            if (objUsergroupName == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objUsergroupName is a required property for UsergroupRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupRequestCompound and cannot be null");
             }
-            this.ObjUsergroupName = objUsergroupName;
-            this.PkiUsergroupID = pkiUsergroupID;
+            this.ObjUsergroupName = ;
+            this.PkiUsergroupID = ;
+            this.ObjEmail = ;
         }
 
         /// <summary>
@@ -60,6 +62,12 @@ namespace eZmaxApi.Model
         /* <example>2</example>*/
         [DataMember(Name = "pkiUsergroupID", EmitDefaultValue = false)]
         public int PkiUsergroupID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEmail
+        /// </summary>
+        [DataMember(Name = "objEmail", EmitDefaultValue = false)]
+        public EmailRequest ObjEmail { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjUsergroupName
@@ -76,6 +84,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class UsergroupRequestCompound {\n");
             sb.Append("  PkiUsergroupID: ").Append(PkiUsergroupID).Append("\n");
+            sb.Append("  ObjEmail: ").Append(ObjEmail).Append("\n");
             sb.Append("  ObjUsergroupName: ").Append(ObjUsergroupName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

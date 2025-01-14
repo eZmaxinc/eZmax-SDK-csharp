@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalCreateObjectV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiUsergroupexternalID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public UsergroupexternalCreateObjectV1ResponseMPayload(List<int> aPkiUsergroupexternalID = default(List<int>))
+        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public UsergroupexternalCreateObjectV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiUsergroupexternalID" is required (not null)
-            if (aPkiUsergroupexternalID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiUsergroupexternalID is a required property for UsergroupexternalCreateObjectV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupexternalCreateObjectV1ResponseMPayload and cannot be null");
             }
-            this.APkiUsergroupexternalID = aPkiUsergroupexternalID;
+            this.APkiUsergroupexternalID = ;
         }
 
         /// <summary>

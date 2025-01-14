@@ -41,38 +41,38 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationrecipientRequest" /> class.
         /// </summary>
-        /// <param name="pkiCommunicationrecipientID">The unique ID of the Communicationrecipient..</param>
-        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
-        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
-        /// <param name="fkiContactID">The unique ID of the Contact.</param>
-        /// <param name="fkiCustomerID">The unique ID of the Customer..</param>
-        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
-        /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
-        /// <param name="fkiExternalbrokerID">The unique ID of the Externalbroker..</param>
-        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
-        /// <param name="fkiNotaryID">The unique ID of the Notary..</param>
-        /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="fkiMailboxsharedID">The unique ID of the Mailboxshared.</param>
-        /// <param name="fkiPhonelinesharedID">The unique ID of the Phonelineshared.</param>
-        /// <param name="eCommunicationrecipientType">eCommunicationrecipientType.</param>
-        public CommunicationrecipientRequest(int pkiCommunicationrecipientID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiContactID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzsignsignerID = default(int), int fkiNotaryID = default(int), int fkiSupplierID = default(int), int fkiUserID = default(int), int fkiMailboxsharedID = default(int), int fkiPhonelinesharedID = default(int), FieldECommunicationrecipientType? eCommunicationrecipientType = default(FieldECommunicationrecipientType?))
+        /// <param name="">The unique ID of the Communicationrecipient..</param>
+        /// <param name="">The unique ID of the Agent..</param>
+        /// <param name="">The unique ID of the Broker..</param>
+        /// <param name="">The unique ID of the Contact.</param>
+        /// <param name="">The unique ID of the Customer..</param>
+        /// <param name="">The unique ID of the Employee..</param>
+        /// <param name="">The unique ID of the Assistant..</param>
+        /// <param name="">The unique ID of the Externalbroker..</param>
+        /// <param name="">The unique ID of the Ezsignsigner.</param>
+        /// <param name="">The unique ID of the Notary..</param>
+        /// <param name="">The unique ID of the Supplier..</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The unique ID of the Mailboxshared.</param>
+        /// <param name="">The unique ID of the Phonelineshared.</param>
+        /// <param name="">.</param>
+        public CommunicationrecipientRequest(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldECommunicationrecipientType?  = default(FieldECommunicationrecipientType?))
         {
-            this.PkiCommunicationrecipientID = pkiCommunicationrecipientID;
-            this.FkiAgentID = fkiAgentID;
-            this.FkiBrokerID = fkiBrokerID;
-            this.FkiContactID = fkiContactID;
-            this.FkiCustomerID = fkiCustomerID;
-            this.FkiEmployeeID = fkiEmployeeID;
-            this.FkiAssistantID = fkiAssistantID;
-            this.FkiExternalbrokerID = fkiExternalbrokerID;
-            this.FkiEzsignsignerID = fkiEzsignsignerID;
-            this.FkiNotaryID = fkiNotaryID;
-            this.FkiSupplierID = fkiSupplierID;
-            this.FkiUserID = fkiUserID;
-            this.FkiMailboxsharedID = fkiMailboxsharedID;
-            this.FkiPhonelinesharedID = fkiPhonelinesharedID;
-            this.ECommunicationrecipientType = eCommunicationrecipientType;
+            this.PkiCommunicationrecipientID = ;
+            this.FkiAgentID = ;
+            this.FkiBrokerID = ;
+            this.FkiContactID = ;
+            this.FkiCustomerID = ;
+            this.FkiEmployeeID = ;
+            this.FkiAssistantID = ;
+            this.FkiExternalbrokerID = ;
+            this.FkiEzsignsignerID = ;
+            this.FkiNotaryID = ;
+            this.FkiSupplierID = ;
+            this.FkiUserID = ;
+            this.FkiMailboxsharedID = ;
+            this.FkiPhonelinesharedID = ;
+            this.ECommunicationrecipientType = ;
         }
 
         /// <summary>

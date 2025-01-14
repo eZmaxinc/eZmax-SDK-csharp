@@ -35,16 +35,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimGroupMember" /> class.
         /// </summary>
-        /// <param name="value">value.</param>
-        /// <param name="display">display.</param>
-        /// <param name="type">type.</param>
-        /// <param name="varRef">varRef.</param>
-        public ScimGroupMember(string value = default(string), string display = default(string), string type = default(string), string varRef = default(string))
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public ScimGroupMember(string  = default(string), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.Value = value;
-            this.Display = display;
-            this.Type = type;
-            this.VarRef = varRef;
+            this.Value = ;
+            this.Display = ;
+            this.Type = ;
+            this.Ref = ;
         }
 
         /// <summary>
@@ -66,10 +66,10 @@ namespace eZmaxApi.Model
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets VarRef
+        /// Gets or Sets Ref
         /// </summary>
         [DataMember(Name = "$ref", EmitDefaultValue = false)]
-        public string VarRef { get; set; }
+        public string Ref { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -82,7 +82,7 @@ namespace eZmaxApi.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Display: ").Append(Display).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  VarRef: ").Append(VarRef).Append("\n");
+            sb.Append("  Ref: ").Append(Ref).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sVariableexpenseDescriptionX">The description of the Variableexpense in the language of the requester (required).</param>
-        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense (required).</param>
-        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not (required).</param>
-        public VariableexpenseAutocompleteElementResponse(string sVariableexpenseDescriptionX = default(string), int pkiVariableexpenseID = default(int), bool bVariableexpenseIsactive = default(bool))
+        /// <param name="">The description of the Variableexpense in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Variableexpense (required).</param>
+        /// <param name="">Whether the variableexpense is active or not (required).</param>
+        public VariableexpenseAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sVariableexpenseDescriptionX" is required (not null)
-            if (sVariableexpenseDescriptionX == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sVariableexpenseDescriptionX is a required property for VariableexpenseAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for VariableexpenseAutocompleteElementResponse and cannot be null");
             }
-            this.SVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
-            this.PkiVariableexpenseID = pkiVariableexpenseID;
-            this.BVariableexpenseIsactive = bVariableexpenseIsactive;
+            this.SVariableexpenseDescriptionX = ;
+            this.PkiVariableexpenseID = ;
+            this.BVariableexpenseIsactive = ;
         }
 
         /// <summary>

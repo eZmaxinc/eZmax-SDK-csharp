@@ -37,6 +37,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets EEzsignfolderSendreminderfrequency
         /// </summary>
         [DataMember(Name = "eEzsignfolderSendreminderfrequency", IsRequired = true, EmitDefaultValue = true)]
+        [Obsolete]
         public FieldEEzsignfolderSendreminderfrequency EEzsignfolderSendreminderfrequency { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderRequest" /> class.
@@ -46,27 +47,29 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderRequest" /> class.
         /// </summary>
-        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder.</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
-        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
-        /// <param name="tEzsignfolderNote">Note about the Ezsignfolder.</param>
-        /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency (required).</param>
-        /// <param name="sEzsignfolderExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
-        public EzsignfolderRequest(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiEzsigntsarequirementID = default(int), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency), string sEzsignfolderExternalid = default(string))
+        /// <param name="">The unique ID of the Ezsignfolder.</param>
+        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="">The unique ID of the Timezone.</param>
+        /// <param name="">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
+        /// <param name="">The description of the Ezsignfolder (required).</param>
+        /// <param name="">Note about the Ezsignfolder.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
+        public EzsignfolderRequest(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), FieldEEzsignfolderSendreminderfrequency  = default(FieldEEzsignfolderSendreminderfrequency), string  = default(string))
         {
-            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
-            // to ensure "sEzsignfolderDescription" is required (not null)
-            if (sEzsignfolderDescription == null)
+            this.FkiEzsignfoldertypeID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignfolderDescription is a required property for EzsignfolderRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderRequest and cannot be null");
             }
-            this.SEzsignfolderDescription = sEzsignfolderDescription;
-            this.EEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
-            this.PkiEzsignfolderID = pkiEzsignfolderID;
-            this.FkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
-            this.TEzsignfolderNote = tEzsignfolderNote;
-            this.SEzsignfolderExternalid = sEzsignfolderExternalid;
+            this.SEzsignfolderDescription = ;
+            this.EEzsignfolderSendreminderfrequency = ;
+            this.PkiEzsignfolderID = ;
+            this.FkiTimezoneID = ;
+            this.FkiEzsigntsarequirementID = ;
+            this.TEzsignfolderNote = ;
+            this.SEzsignfolderExternalid = ;
         }
 
         /// <summary>
@@ -84,6 +87,14 @@ namespace eZmaxApi.Model
         /* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldertypeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Timezone
+        /// </summary>
+        /// <value>The unique ID of the Timezone</value>
+        /* <example>247</example>*/
+        [DataMember(Name = "fkiTimezoneID", EmitDefaultValue = false)]
+        public int FkiTimezoneID { get; set; }
 
         /// <summary>
         /// The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
@@ -127,6 +138,7 @@ namespace eZmaxApi.Model
             sb.Append("class EzsignfolderRequest {\n");
             sb.Append("  PkiEzsignfolderID: ").Append(PkiEzsignfolderID).Append("\n");
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
+            sb.Append("  FkiTimezoneID: ").Append(FkiTimezoneID).Append("\n");
             sb.Append("  FkiEzsigntsarequirementID: ").Append(FkiEzsigntsarequirementID).Append("\n");
             sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
             sb.Append("  TEzsignfolderNote: ").Append(TEzsignfolderNote).Append("\n");
@@ -170,6 +182,12 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
+            // FkiTimezoneID (int) minimum
+            if (this.FkiTimezoneID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
+            }
+
             // FkiEzsigntsarequirementID (int) maximum
             if (this.FkiEzsigntsarequirementID > (int)3)
             {
@@ -180,6 +198,15 @@ namespace eZmaxApi.Model
             if (this.FkiEzsigntsarequirementID < (int)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
+            }
+
+            if (this.SEzsignfolderDescription != null) {
+                // SEzsignfolderDescription (string) pattern
+                Regex regexSEzsignfolderDescription = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsignfolderDescription.Match(this.SEzsignfolderDescription).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignfolderDescription, must match a pattern of " + regexSEzsignfolderDescription, new [] { "SEzsignfolderDescription" });
+                }
             }
 
             if (this.SEzsignfolderExternalid != null) {

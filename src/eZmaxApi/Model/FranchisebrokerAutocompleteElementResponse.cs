@@ -40,25 +40,25 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisebrokerAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sFranchisebrokerName">The name of the Franchisebroker in the language of the requester (required).</param>
-        /// <param name="pkiFranchisebrokerID">The unique ID of the Franchisebroker (required).</param>
-        /// <param name="bFranchisebrokerIsactive">Whether the Franchisebroker is active or not (required).</param>
-        public FranchisebrokerAutocompleteElementResponse(string sFranchisebrokerName = default(string), int pkiFranchisebrokerID = default(int), bool bFranchisebrokerIsactive = default(bool))
+        /// <param name="">The name of the Franchisebroker (required).</param>
+        /// <param name="">The unique ID of the Franchisebroker (required).</param>
+        /// <param name="">Whether the Franchisebroker is active or not (required).</param>
+        public FranchisebrokerAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sFranchisebrokerName" is required (not null)
-            if (sFranchisebrokerName == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sFranchisebrokerName is a required property for FranchisebrokerAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for FranchisebrokerAutocompleteElementResponse and cannot be null");
             }
-            this.SFranchisebrokerName = sFranchisebrokerName;
-            this.PkiFranchisebrokerID = pkiFranchisebrokerID;
-            this.BFranchisebrokerIsactive = bFranchisebrokerIsactive;
+            this.SFranchisebrokerName = ;
+            this.PkiFranchisebrokerID = ;
+            this.BFranchisebrokerIsactive = ;
         }
 
         /// <summary>
-        /// The name of the Franchisebroker in the language of the requester
+        /// The name of the Franchisebroker
         /// </summary>
-        /// <value>The name of the Franchisebroker in the language of the requester</value>
+        /// <value>The name of the Franchisebroker</value>
         /* <example>Default</example>*/
         [DataMember(Name = "sFranchisebrokerName", IsRequired = true, EmitDefaultValue = true)]
         public string SFranchisebrokerName { get; set; }

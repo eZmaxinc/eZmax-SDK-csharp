@@ -40,23 +40,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyRequest" /> class.
         /// </summary>
-        /// <param name="pkiApikeyID">The unique ID of the Apikey.</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
-        /// <param name="bApikeyIsactive">Whether the apikey is active or not.</param>
-        /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
-        public ApikeyRequest(int pkiApikeyID = default(int), int fkiUserID = default(int), MultilingualApikeyDescription objApikeyDescription = default(MultilingualApikeyDescription), bool bApikeyIsactive = default(bool), bool bApikeyIssigned = default(bool))
+        /// <param name="">The unique ID of the Apikey.</param>
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">Whether the apikey is active or not.</param>
+        /// <param name="">Whether the apikey is signed or not.</param>
+        public ApikeyRequest(int  = default(int), int  = default(int), MultilingualApikeyDescription  = default(MultilingualApikeyDescription), bool  = default(bool), bool  = default(bool))
         {
-            this.FkiUserID = fkiUserID;
-            // to ensure "objApikeyDescription" is required (not null)
-            if (objApikeyDescription == null)
+            this.FkiUserID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objApikeyDescription is a required property for ApikeyRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for ApikeyRequest and cannot be null");
             }
-            this.ObjApikeyDescription = objApikeyDescription;
-            this.PkiApikeyID = pkiApikeyID;
-            this.BApikeyIsactive = bApikeyIsactive;
-            this.BApikeyIssigned = bApikeyIssigned;
+            this.ObjApikeyDescription = ;
+            this.PkiApikeyID = ;
+            this.BApikeyIsactive = ;
+            this.BApikeyIssigned = ;
         }
 
         /// <summary>

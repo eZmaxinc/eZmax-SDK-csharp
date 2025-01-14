@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldEEzsigntemplateType
-The Type of Ezsigntemplate
+The Type of Ezsigntemplate  **Usergroup** is now deprecated and replace with **Ezsignfoldertype**
 
 ## Properties
 

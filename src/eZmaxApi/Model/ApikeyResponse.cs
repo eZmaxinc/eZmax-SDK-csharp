@@ -40,41 +40,41 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyResponse" /> class.
         /// </summary>
-        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
-        /// <param name="objContactName">objContactName (required).</param>
-        /// <param name="sApikeyApikey">The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
-        /// <param name="sApikeySecret">The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
-        /// <param name="bApikeyIsactive">Whether the apikey is active or not (required).</param>
-        /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
-        /// <param name="objAudit">objAudit (required).</param>
-        public ApikeyResponse(int pkiApikeyID = default(int), int fkiUserID = default(int), MultilingualApikeyDescription objApikeyDescription = default(MultilingualApikeyDescription), CustomContactNameResponse objContactName = default(CustomContactNameResponse), string sApikeyApikey = default(string), string sApikeySecret = default(string), bool bApikeyIsactive = default(bool), bool bApikeyIssigned = default(bool), CommonAudit objAudit = default(CommonAudit))
+        /// <param name="">The unique ID of the Apikey (required).</param>
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
+        /// <param name="">The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
+        /// <param name="">Whether the apikey is active or not (required).</param>
+        /// <param name="">Whether the apikey is signed or not.</param>
+        /// <param name=""> (required).</param>
+        public ApikeyResponse(int  = default(int), int  = default(int), MultilingualApikeyDescription  = default(MultilingualApikeyDescription), CustomContactNameResponse  = default(CustomContactNameResponse), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool), CommonAudit  = default(CommonAudit))
         {
-            this.PkiApikeyID = pkiApikeyID;
-            this.FkiUserID = fkiUserID;
-            // to ensure "objApikeyDescription" is required (not null)
-            if (objApikeyDescription == null)
+            this.PkiApikeyID = ;
+            this.FkiUserID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objApikeyDescription is a required property for ApikeyResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for ApikeyResponse and cannot be null");
             }
-            this.ObjApikeyDescription = objApikeyDescription;
-            // to ensure "objContactName" is required (not null)
-            if (objContactName == null)
+            this.ObjApikeyDescription = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objContactName is a required property for ApikeyResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for ApikeyResponse and cannot be null");
             }
-            this.ObjContactName = objContactName;
-            this.BApikeyIsactive = bApikeyIsactive;
-            // to ensure "objAudit" is required (not null)
-            if (objAudit == null)
+            this.ObjContactName = ;
+            this.BApikeyIsactive = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objAudit is a required property for ApikeyResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for ApikeyResponse and cannot be null");
             }
-            this.ObjAudit = objAudit;
-            this.SApikeyApikey = sApikeyApikey;
-            this.SApikeySecret = sApikeySecret;
-            this.BApikeyIssigned = bApikeyIssigned;
+            this.ObjAudit = ;
+            this.SApikeyApikey = ;
+            this.SApikeySecret = ;
+            this.BApikeyIssigned = ;
         }
 
         /// <summary>

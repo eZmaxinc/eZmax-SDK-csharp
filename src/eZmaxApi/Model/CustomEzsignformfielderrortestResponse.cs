@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignformfielderrortestResponse" /> class.
         /// </summary>
-        /// <param name="sEzsignformfielderrortestName">The name of the test (required).</param>
-        /// <param name="sEzsignformfielderrortestDetail">The detail why the test failed (required).</param>
-        public CustomEzsignformfielderrortestResponse(string sEzsignformfielderrortestName = default(string), string sEzsignformfielderrortestDetail = default(string))
+        /// <param name="">The name of the test (required).</param>
+        /// <param name="">The detail why the test failed (required).</param>
+        public CustomEzsignformfielderrortestResponse(string  = default(string), string  = default(string))
         {
-            // to ensure "sEzsignformfielderrortestName" is required (not null)
-            if (sEzsignformfielderrortestName == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignformfielderrortestName is a required property for CustomEzsignformfielderrortestResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsignformfielderrortestResponse and cannot be null");
             }
-            this.SEzsignformfielderrortestName = sEzsignformfielderrortestName;
-            // to ensure "sEzsignformfielderrortestDetail" is required (not null)
-            if (sEzsignformfielderrortestDetail == null)
+            this.SEzsignformfielderrortestName = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignformfielderrortestDetail is a required property for CustomEzsignformfielderrortestResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsignformfielderrortestResponse and cannot be null");
             }
-            this.SEzsignformfielderrortestDetail = sEzsignformfielderrortestDetail;
+            this.SEzsignformfielderrortestDetail = ;
         }
 
         /// <summary>

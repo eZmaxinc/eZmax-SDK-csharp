@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalResponse" /> class.
         /// </summary>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="objBillingentityinternalDescription">objBillingentityinternalDescription (required).</param>
-        public BillingentityinternalResponse(int pkiBillingentityinternalID = default(int), MultilingualBillingentityinternalDescription objBillingentityinternalDescription = default(MultilingualBillingentityinternalDescription))
+        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name=""> (required).</param>
+        public BillingentityinternalResponse(int  = default(int), MultilingualBillingentityinternalDescription  = default(MultilingualBillingentityinternalDescription))
         {
-            this.PkiBillingentityinternalID = pkiBillingentityinternalID;
-            // to ensure "objBillingentityinternalDescription" is required (not null)
-            if (objBillingentityinternalDescription == null)
+            this.PkiBillingentityinternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objBillingentityinternalDescription is a required property for BillingentityinternalResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalResponse and cannot be null");
             }
-            this.ObjBillingentityinternalDescription = objBillingentityinternalDescription;
+            this.ObjBillingentityinternalDescription = ;
         }
 
         /// <summary>

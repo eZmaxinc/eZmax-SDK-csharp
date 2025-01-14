@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LanguageGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjLanguage">An array of Language autocomplete element response. (required).</param>
-        public LanguageGetAutocompleteV2ResponseMPayload(List<LanguageAutocompleteElementResponse> aObjLanguage = default(List<LanguageAutocompleteElementResponse>))
+        /// <param name="">An array of Language autocomplete element response. (required).</param>
+        public LanguageGetAutocompleteV2ResponseMPayload(List<LanguageAutocompleteElementResponse>  = default(List<LanguageAutocompleteElementResponse>))
         {
-            // to ensure "aObjLanguage" is required (not null)
-            if (aObjLanguage == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjLanguage is a required property for LanguageGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for LanguageGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjLanguage = aObjLanguage;
+            this.AObjLanguage = ;
         }
 
         /// <summary>

@@ -40,43 +40,41 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient.</param>
-        /// <param name="fksCreditcardtokenID">The creditcard token identifier.</param>
-        /// <param name="bCreditcardclientrelationIsdefault">Whether if it&#39;s an relationisdefault (required).</param>
-        /// <param name="sCreditcardclientDescription">The description of the Creditcardclient (required).</param>
-        /// <param name="bCreditcardclientIsactive">Whether the creditcardclient is active or not (required).</param>
-        /// <param name="bCreditcardclientAllowedagencypayment">Whether if it&#39;s an allowedagencypayment (required).</param>
-        /// <param name="bCreditcardclientAllowedroyallepageprotection">Whether if it&#39;s an allowedroyallepageprotection (required).</param>
-        /// <param name="bCreditcardclientAllowedtranquillit">Whether if it&#39;s an allowedtranquillit (required).</param>
-        /// <param name="objCreditcarddetail">objCreditcarddetail (required).</param>
-        /// <param name="sCreditcardclientCVV">The creditcard card CVV (required).</param>
-        public CreditcardclientRequestCompound(int pkiCreditcardclientID = default(int), string fksCreditcardtokenID = default(string), bool bCreditcardclientrelationIsdefault = default(bool), string sCreditcardclientDescription = default(string), bool bCreditcardclientIsactive = default(bool), bool bCreditcardclientAllowedagencypayment = default(bool), bool bCreditcardclientAllowedroyallepageprotection = default(bool), bool bCreditcardclientAllowedtranquillit = default(bool), CreditcarddetailRequest objCreditcarddetail = default(CreditcarddetailRequest), string sCreditcardclientCVV = default(string))
+        /// <param name="">The unique ID of the Creditcardclient.</param>
+        /// <param name="">The creditcard token identifier.</param>
+        /// <param name="">Whether if it&#39;s the creditcardclient is the default one (required).</param>
+        /// <param name="">The description of the Creditcardclient (required).</param>
+        /// <param name="">Whether if it&#39;s an allowedagencypayment (required).</param>
+        /// <param name="">Whether if it&#39;s an allowedroyallepageprotection (required).</param>
+        /// <param name="">Whether if it&#39;s an allowedtranquillit (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The creditcard card CVV (required).</param>
+        public CreditcardclientRequestCompound(int  = default(int), string  = default(string), bool  = default(bool), string  = default(string), bool  = default(bool), bool  = default(bool), bool  = default(bool), CreditcarddetailRequest  = default(CreditcarddetailRequest), string  = default(string))
         {
-            this.BCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
-            // to ensure "sCreditcardclientDescription" is required (not null)
-            if (sCreditcardclientDescription == null)
+            this.BCreditcardclientrelationIsdefault = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcardclientDescription is a required property for CreditcardclientRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardclientRequestCompound and cannot be null");
             }
-            this.SCreditcardclientDescription = sCreditcardclientDescription;
-            this.BCreditcardclientIsactive = bCreditcardclientIsactive;
-            this.BCreditcardclientAllowedagencypayment = bCreditcardclientAllowedagencypayment;
-            this.BCreditcardclientAllowedroyallepageprotection = bCreditcardclientAllowedroyallepageprotection;
-            this.BCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
-            // to ensure "objCreditcarddetail" is required (not null)
-            if (objCreditcarddetail == null)
+            this.SCreditcardclientDescription = ;
+            this.BCreditcardclientAllowedcompanypayment = ;
+            this.BCreditcardclientAllowedezsign = ;
+            this.BCreditcardclientAllowedtranquillit = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objCreditcarddetail is a required property for CreditcardclientRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardclientRequestCompound and cannot be null");
             }
-            this.ObjCreditcarddetail = objCreditcarddetail;
-            // to ensure "sCreditcardclientCVV" is required (not null)
-            if (sCreditcardclientCVV == null)
+            this.ObjCreditcarddetail = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcardclientCVV is a required property for CreditcardclientRequestCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardclientRequestCompound and cannot be null");
             }
-            this.SCreditcardclientCVV = sCreditcardclientCVV;
-            this.PkiCreditcardclientID = pkiCreditcardclientID;
-            this.FksCreditcardtokenID = fksCreditcardtokenID;
+            this.SCreditcardclientCVV = ;
+            this.PkiCreditcardclientID = ;
+            this.FksCreditcardtokenID = ;
         }
 
         /// <summary>
@@ -96,9 +94,9 @@ namespace eZmaxApi.Model
         public string FksCreditcardtokenID { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an relationisdefault
+        /// Whether if it&#39;s the creditcardclient is the default one
         /// </summary>
-        /// <value>Whether if it&#39;s an relationisdefault</value>
+        /// <value>Whether if it&#39;s the creditcardclient is the default one</value>
         /* <example>true</example>*/
         [DataMember(Name = "bCreditcardclientrelationIsdefault", IsRequired = true, EmitDefaultValue = true)]
         public bool BCreditcardclientrelationIsdefault { get; set; }
@@ -112,28 +110,20 @@ namespace eZmaxApi.Model
         public string SCreditcardclientDescription { get; set; }
 
         /// <summary>
-        /// Whether the creditcardclient is active or not
-        /// </summary>
-        /// <value>Whether the creditcardclient is active or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bCreditcardclientIsactive", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCreditcardclientIsactive { get; set; }
-
-        /// <summary>
         /// Whether if it&#39;s an allowedagencypayment
         /// </summary>
         /// <value>Whether if it&#39;s an allowedagencypayment</value>
         /* <example>true</example>*/
-        [DataMember(Name = "bCreditcardclientAllowedagencypayment", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCreditcardclientAllowedagencypayment { get; set; }
+        [DataMember(Name = "bCreditcardclientAllowedcompanypayment", IsRequired = true, EmitDefaultValue = true)]
+        public bool BCreditcardclientAllowedcompanypayment { get; set; }
 
         /// <summary>
         /// Whether if it&#39;s an allowedroyallepageprotection
         /// </summary>
         /// <value>Whether if it&#39;s an allowedroyallepageprotection</value>
         /* <example>true</example>*/
-        [DataMember(Name = "bCreditcardclientAllowedroyallepageprotection", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCreditcardclientAllowedroyallepageprotection { get; set; }
+        [DataMember(Name = "bCreditcardclientAllowedezsign", IsRequired = true, EmitDefaultValue = true)]
+        public bool BCreditcardclientAllowedezsign { get; set; }
 
         /// <summary>
         /// Whether if it&#39;s an allowedtranquillit
@@ -168,9 +158,8 @@ namespace eZmaxApi.Model
             sb.Append("  FksCreditcardtokenID: ").Append(FksCreditcardtokenID).Append("\n");
             sb.Append("  BCreditcardclientrelationIsdefault: ").Append(BCreditcardclientrelationIsdefault).Append("\n");
             sb.Append("  SCreditcardclientDescription: ").Append(SCreditcardclientDescription).Append("\n");
-            sb.Append("  BCreditcardclientIsactive: ").Append(BCreditcardclientIsactive).Append("\n");
-            sb.Append("  BCreditcardclientAllowedagencypayment: ").Append(BCreditcardclientAllowedagencypayment).Append("\n");
-            sb.Append("  BCreditcardclientAllowedroyallepageprotection: ").Append(BCreditcardclientAllowedroyallepageprotection).Append("\n");
+            sb.Append("  BCreditcardclientAllowedcompanypayment: ").Append(BCreditcardclientAllowedcompanypayment).Append("\n");
+            sb.Append("  BCreditcardclientAllowedezsign: ").Append(BCreditcardclientAllowedezsign).Append("\n");
             sb.Append("  BCreditcardclientAllowedtranquillit: ").Append(BCreditcardclientAllowedtranquillit).Append("\n");
             sb.Append("  ObjCreditcarddetail: ").Append(ObjCreditcarddetail).Append("\n");
             sb.Append("  SCreditcardclientCVV: ").Append(SCreditcardclientCVV).Append("\n");

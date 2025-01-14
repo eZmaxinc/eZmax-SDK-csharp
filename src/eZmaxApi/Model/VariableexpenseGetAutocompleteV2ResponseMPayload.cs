@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjVariableexpense">An array of Variableexpense autocomplete element response. (required).</param>
-        public VariableexpenseGetAutocompleteV2ResponseMPayload(List<VariableexpenseAutocompleteElementResponse> aObjVariableexpense = default(List<VariableexpenseAutocompleteElementResponse>))
+        /// <param name="">An array of Variableexpense autocomplete element response. (required).</param>
+        public VariableexpenseGetAutocompleteV2ResponseMPayload(List<VariableexpenseAutocompleteElementResponse>  = default(List<VariableexpenseAutocompleteElementResponse>))
         {
-            // to ensure "aObjVariableexpense" is required (not null)
-            if (aObjVariableexpense == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjVariableexpense is a required property for VariableexpenseGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for VariableexpenseGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjVariableexpense = aObjVariableexpense;
+            this.AObjVariableexpense = ;
         }
 
         /// <summary>

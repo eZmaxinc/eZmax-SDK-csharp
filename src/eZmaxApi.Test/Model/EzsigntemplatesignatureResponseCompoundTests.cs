@@ -92,6 +92,24 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BEzsigntemplatesignatureHandwritten'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplatesignatureHandwrittenTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplatesignatureHandwritten'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsigntemplatesignatureReason'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplatesignatureReasonTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplatesignatureReason'
+        }
+
+        /// <summary>
         /// Test the property 'EEzsigntemplatesignaturePositioning'
         /// </summary>
         [Fact]
@@ -161,6 +179,15 @@ namespace eZmaxApi.Test.Model
         public void EEzsigntemplatesignatureTypeTest()
         {
             // TODO unit test for the property 'EEzsigntemplatesignatureType'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplatesignatureConsultationtrigger'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplatesignatureConsultationtriggerTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatesignatureConsultationtrigger'
         }
 
         /// <summary>
@@ -236,6 +263,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SEzsigntemplatesignatureDefaultvalue'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplatesignatureDefaultvalueTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplatesignatureDefaultvalue'
+        }
+
+        /// <summary>
         /// Test the property 'SEzsigntemplatesignatureRegexp'
         /// </summary>
         [Fact]
@@ -251,6 +287,15 @@ namespace eZmaxApi.Test.Model
         public void EEzsigntemplatesignatureTextvalidationTest()
         {
             // TODO unit test for the property 'EEzsigntemplatesignatureTextvalidation'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplatesignatureTextvalidationcustommessage'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplatesignatureTextvalidationcustommessageTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplatesignatureTextvalidationcustommessage'
         }
 
         /// <summary>

@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjApikey">aObjApikey (required).</param>
-        public ApikeyGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<ApikeyListElement> aObjApikey = default(List<ApikeyListElement>))
+        /// <param name="">The number of rows returned (required).</param>
+        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name=""> (required).</param>
+        public ApikeyGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<ApikeyListElement>  = default(List<ApikeyListElement>))
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
-            // to ensure "aObjApikey" is required (not null)
-            if (aObjApikey == null)
+            this.IRowReturned = ;
+            this.IRowFiltered = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjApikey is a required property for ApikeyGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for ApikeyGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjApikey = aObjApikey;
+            this.AObjApikey = ;
         }
 
         /// <summary>

@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionRequestPatch" /> class.
         /// </summary>
-        /// <param name="sDiscussionDescription">The description of the Discussion.</param>
-        /// <param name="bDiscussionClosed">Whether if it&#39;s an closed.</param>
-        public DiscussionRequestPatch(string sDiscussionDescription = default(string), bool bDiscussionClosed = default(bool))
+        /// <param name="">The description of the Discussion.</param>
+        /// <param name="">Whether if it&#39;s an closed.</param>
+        public DiscussionRequestPatch(string  = default(string), bool  = default(bool))
         {
-            this.SDiscussionDescription = sDiscussionDescription;
-            this.BDiscussionClosed = bDiscussionClosed;
+            this.SDiscussionDescription = ;
+            this.BDiscussionClosed = ;
         }
 
         /// <summary>

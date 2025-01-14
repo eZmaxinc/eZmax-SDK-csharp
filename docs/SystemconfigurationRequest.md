@@ -6,6 +6,7 @@ A Systemconfiguration Object
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiSystemconfigurationID** | **int** | The unique ID of the Systemconfiguration | [optional] 
+**FkiBrandingID** | **int** | The unique ID of the Branding | [optional] 
 **ESystemconfigurationNewexternaluseraction** | **FieldESystemconfigurationNewexternaluseraction** |  | 
 **ESystemconfigurationLanguage1** | **FieldESystemconfigurationLanguage1** |  | 
 **ESystemconfigurationLanguage2** | **FieldESystemconfigurationLanguage2** |  | 

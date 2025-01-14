@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
-        /// <param name="pkiUsergroupID">The unique ID of the Usergroup (required).</param>
-        /// <param name="bUsergroupIsactive">Whether the Usergroup is active or not (required).</param>
-        public UsergroupAutocompleteElementResponse(string sUsergroupNameX = default(string), int pkiUsergroupID = default(int), bool bUsergroupIsactive = default(bool))
+        /// <param name="">The Name of the Usergroup in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the Usergroup (required).</param>
+        /// <param name="">Whether the Usergroup is active or not (required).</param>
+        public UsergroupAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
         {
-            // to ensure "sUsergroupNameX" is required (not null)
-            if (sUsergroupNameX == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUsergroupNameX is a required property for UsergroupAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupAutocompleteElementResponse and cannot be null");
             }
-            this.SUsergroupNameX = sUsergroupNameX;
-            this.PkiUsergroupID = pkiUsergroupID;
-            this.BUsergroupIsactive = bUsergroupIsactive;
+            this.SUsergroupNameX = ;
+            this.PkiUsergroupID = ;
+            this.BUsergroupIsactive = ;
         }
 
         /// <summary>

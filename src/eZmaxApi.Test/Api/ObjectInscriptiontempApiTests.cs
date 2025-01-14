@@ -56,6 +56,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test InscriptiontempGetCommunicationCountV1
+        /// </summary>
+        [Fact]
+        public void InscriptiontempGetCommunicationCountV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInscriptiontempID = null;
+            //var response = instance.InscriptiontempGetCommunicationCountV1(pkiInscriptiontempID);
+            //Assert.IsType<InscriptiontempGetCommunicationCountV1Response>(response);
+        }
+
+        /// <summary>
         /// Test InscriptiontempGetCommunicationListV1
         /// </summary>
         [Fact]
@@ -65,6 +77,30 @@ namespace eZmaxApi.Test.Api
             //int pkiInscriptiontempID = null;
             //var response = instance.InscriptiontempGetCommunicationListV1(pkiInscriptiontempID);
             //Assert.IsType<InscriptiontempGetCommunicationListV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test InscriptiontempGetCommunicationrecipientsV1
+        /// </summary>
+        [Fact]
+        public void InscriptiontempGetCommunicationrecipientsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInscriptiontempID = null;
+            //var response = instance.InscriptiontempGetCommunicationrecipientsV1(pkiInscriptiontempID);
+            //Assert.IsType<InscriptiontempGetCommunicationrecipientsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test InscriptiontempGetCommunicationsendersV1
+        /// </summary>
+        [Fact]
+        public void InscriptiontempGetCommunicationsendersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInscriptiontempID = null;
+            //var response = instance.InscriptiontempGetCommunicationsendersV1(pkiInscriptiontempID);
+            //Assert.IsType<InscriptiontempGetCommunicationsendersV1Response>(response);
         }
     }
 }

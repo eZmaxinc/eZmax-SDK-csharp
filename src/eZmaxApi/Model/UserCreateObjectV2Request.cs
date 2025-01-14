@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserCreateObjectV2Request" /> class.
         /// </summary>
-        /// <param name="aObjUser">aObjUser (required).</param>
-        public UserCreateObjectV2Request(List<UserRequestCompoundV2> aObjUser = default(List<UserRequestCompoundV2>))
+        /// <param name=""> (required).</param>
+        public UserCreateObjectV2Request(List<UserRequestCompoundV2>  = default(List<UserRequestCompoundV2>))
         {
-            // to ensure "aObjUser" is required (not null)
-            if (aObjUser == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUser is a required property for UserCreateObjectV2Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserCreateObjectV2Request and cannot be null");
             }
-            this.AObjUser = aObjUser;
+            this.AObjUser = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjUsergroupexternal">An array of Usergroupexternal autocomplete element response. (required).</param>
-        public UsergroupexternalGetAutocompleteV2ResponseMPayload(List<UsergroupexternalAutocompleteElementResponse> aObjUsergroupexternal = default(List<UsergroupexternalAutocompleteElementResponse>))
+        /// <param name="">An array of Usergroupexternal autocomplete element response. (required).</param>
+        public UsergroupexternalGetAutocompleteV2ResponseMPayload(List<UsergroupexternalAutocompleteElementResponse>  = default(List<UsergroupexternalAutocompleteElementResponse>))
         {
-            // to ensure "aObjUsergroupexternal" is required (not null)
-            if (aObjUsergroupexternal == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUsergroupexternal is a required property for UsergroupexternalGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupexternalGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjUsergroupexternal = aObjUsergroupexternal;
+            this.AObjUsergroupexternal = ;
         }
 
         /// <summary>

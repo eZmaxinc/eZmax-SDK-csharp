@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignformfielderrorResponse" /> class.
         /// </summary>
-        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield (required).</param>
-        /// <param name="aObjEzsignformfielderrortest">aObjEzsignformfielderrortest (required).</param>
-        public CustomEzsignformfielderrorResponse(string sEzsignformfieldLabel = default(string), List<CustomEzsignformfielderrortestResponse> aObjEzsignformfielderrortest = default(List<CustomEzsignformfielderrortestResponse>))
+        /// <param name="">The Label for the Ezsignformfield (required).</param>
+        /// <param name=""> (required).</param>
+        public CustomEzsignformfielderrorResponse(string  = default(string), List<CustomEzsignformfielderrortestResponse>  = default(List<CustomEzsignformfielderrortestResponse>))
         {
-            // to ensure "sEzsignformfieldLabel" is required (not null)
-            if (sEzsignformfieldLabel == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignformfieldLabel is a required property for CustomEzsignformfielderrorResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsignformfielderrorResponse and cannot be null");
             }
-            this.SEzsignformfieldLabel = sEzsignformfieldLabel;
-            // to ensure "aObjEzsignformfielderrortest" is required (not null)
-            if (aObjEzsignformfielderrortest == null)
+            this.SEzsignformfieldLabel = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignformfielderrortest is a required property for CustomEzsignformfielderrorResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomEzsignformfielderrorResponse and cannot be null");
             }
-            this.AObjEzsignformfielderrortest = aObjEzsignformfielderrortest;
+            this.AObjEzsignformfielderrortest = ;
         }
 
         /// <summary>

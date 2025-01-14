@@ -79,33 +79,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationRequest" /> class.
         /// </summary>
-        /// <param name="pkiCommunicationID">The unique ID of the Communication..</param>
-        /// <param name="eCommunicationImportance">eCommunicationImportance.</param>
-        /// <param name="eCommunicationType">eCommunicationType (required).</param>
-        /// <param name="objCommunicationsender">objCommunicationsender.</param>
-        /// <param name="sCommunicationSubject">The subject of the Communication.</param>
-        /// <param name="tCommunicationBody">The Body of the Communication (required).</param>
-        /// <param name="bCommunicationPrivate">Whether the Communication is private or not (required).</param>
-        /// <param name="eCommunicationAttachmenttype">How the attachment should be included in the email.   Only used if eCommunicationType is **Email**.</param>
-        /// <param name="iCommunicationAttachmentlinkexpiration">The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**.</param>
-        /// <param name="bCommunicationReadreceipt">Whether we ask for a read receipt or not..</param>
-        public CommunicationRequest(int pkiCommunicationID = default(int), FieldECommunicationImportance? eCommunicationImportance = default(FieldECommunicationImportance?), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), CustomCommunicationsenderRequest objCommunicationsender = default(CustomCommunicationsenderRequest), string sCommunicationSubject = default(string), string tCommunicationBody = default(string), bool bCommunicationPrivate = default(bool), ECommunicationAttachmenttypeEnum? eCommunicationAttachmenttype = default(ECommunicationAttachmenttypeEnum?), int iCommunicationAttachmentlinkexpiration = default(int), bool bCommunicationReadreceipt = default(bool))
+        /// <param name="">The unique ID of the Communication..</param>
+        /// <param name="">.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">The subject of the Communication.</param>
+        /// <param name="">The Body of the Communication (required).</param>
+        /// <param name="">Whether the Communication is private or not (required).</param>
+        /// <param name="">How the attachment should be included in the email.   Only used if eCommunicationType is **Email**.</param>
+        /// <param name="">The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**.</param>
+        /// <param name="">Whether we ask for a read receipt or not..</param>
+        public CommunicationRequest(int  = default(int), FieldECommunicationImportance?  = default(FieldECommunicationImportance?), FieldECommunicationType  = default(FieldECommunicationType), CustomCommunicationsenderRequest  = default(CustomCommunicationsenderRequest), string  = default(string), string  = default(string), bool  = default(bool), ECommunicationAttachmenttypeEnum?  = default(ECommunicationAttachmenttypeEnum?), int  = default(int), bool  = default(bool))
         {
-            this.ECommunicationType = eCommunicationType;
-            // to ensure "tCommunicationBody" is required (not null)
-            if (tCommunicationBody == null)
+            this.ECommunicationType = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("tCommunicationBody is a required property for CommunicationRequest and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommunicationRequest and cannot be null");
             }
-            this.TCommunicationBody = tCommunicationBody;
-            this.BCommunicationPrivate = bCommunicationPrivate;
-            this.PkiCommunicationID = pkiCommunicationID;
-            this.ECommunicationImportance = eCommunicationImportance;
-            this.ObjCommunicationsender = objCommunicationsender;
-            this.SCommunicationSubject = sCommunicationSubject;
-            this.ECommunicationAttachmenttype = eCommunicationAttachmenttype;
-            this.ICommunicationAttachmentlinkexpiration = iCommunicationAttachmentlinkexpiration;
-            this.BCommunicationReadreceipt = bCommunicationReadreceipt;
+            this.TCommunicationBody = ;
+            this.BCommunicationPrivate = ;
+            this.PkiCommunicationID = ;
+            this.ECommunicationImportance = ;
+            this.ObjCommunicationsender = ;
+            this.SCommunicationSubject = ;
+            this.ECommunicationAttachmenttype = ;
+            this.ICommunicationAttachmentlinkexpiration = ;
+            this.BCommunicationReadreceipt = ;
         }
 
         /// <summary>

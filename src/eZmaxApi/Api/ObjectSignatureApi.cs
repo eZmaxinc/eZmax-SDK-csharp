@@ -99,6 +99,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SignatureGetObjectV2Response</returns>
+        [Obsolete]
         SignatureGetObjectV2Response SignatureGetObjectV2(int pkiSignatureID, int operationIndex = 0);
 
         /// <summary>
@@ -111,7 +112,68 @@ namespace eZmaxApi.Api
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SignatureGetObjectV2Response</returns>
+        [Obsolete]
         ApiResponse<SignatureGetObjectV2Response> SignatureGetObjectV2WithHttpInfo(int pkiSignatureID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve an existing Signature
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>SignatureGetObjectV3Response</returns>
+        SignatureGetObjectV3Response SignatureGetObjectV3(int pkiSignatureID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve an existing Signature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of SignatureGetObjectV3Response</returns>
+        ApiResponse<SignatureGetObjectV3Response> SignatureGetObjectV3WithHttpInfo(int pkiSignatureID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve an existing Signature initial SVG
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns></returns>
+        void SignatureGetSVGInitialsV1(int pkiSignatureID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve an existing Signature initial SVG
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SignatureGetSVGInitialsV1WithHttpInfo(int pkiSignatureID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve an existing Signature SVG
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns></returns>
+        void SignatureGetSVGSignatureV1(int pkiSignatureID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve an existing Signature SVG
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SignatureGetSVGSignatureV1WithHttpInfo(int pkiSignatureID, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -209,6 +271,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SignatureGetObjectV2Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<SignatureGetObjectV2Response> SignatureGetObjectV2Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
@@ -222,7 +285,83 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SignatureGetObjectV2Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<SignatureGetObjectV2Response>> SignatureGetObjectV2WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve an existing Signature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SignatureGetObjectV3Response</returns>
+        System.Threading.Tasks.Task<SignatureGetObjectV3Response> SignatureGetObjectV3Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Signature
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SignatureGetObjectV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SignatureGetObjectV3Response>> SignatureGetObjectV3WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve an existing Signature initial SVG
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SignatureGetSVGInitialsV1Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Signature initial SVG
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SignatureGetSVGInitialsV1WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve an existing Signature SVG
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SignatureGetSVGSignatureV1Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing Signature SVG
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SignatureGetSVGSignatureV1WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -810,6 +949,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SignatureGetObjectV2Response</returns>
+        [Obsolete]
         public SignatureGetObjectV2Response SignatureGetObjectV2(int pkiSignatureID, int operationIndex = 0)
         {
             eZmaxApi.Client.ApiResponse<SignatureGetObjectV2Response> localVarResponse = SignatureGetObjectV2WithHttpInfo(pkiSignatureID);
@@ -823,6 +963,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SignatureGetObjectV2Response</returns>
+        [Obsolete]
         public eZmaxApi.Client.ApiResponse<SignatureGetObjectV2Response> SignatureGetObjectV2WithHttpInfo(int pkiSignatureID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -880,6 +1021,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SignatureGetObjectV2Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<SignatureGetObjectV2Response> SignatureGetObjectV2Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<SignatureGetObjectV2Response> localVarResponse = await SignatureGetObjectV2WithHttpInfoAsync(pkiSignatureID, operationIndex, cancellationToken).ConfigureAwait(false);
@@ -894,6 +1036,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SignatureGetObjectV2Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SignatureGetObjectV2Response>> SignatureGetObjectV2WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
@@ -936,6 +1079,428 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SignatureGetObjectV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>SignatureGetObjectV3Response</returns>
+        public SignatureGetObjectV3Response SignatureGetObjectV3(int pkiSignatureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<SignatureGetObjectV3Response> localVarResponse = SignatureGetObjectV3WithHttpInfo(pkiSignatureID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of SignatureGetObjectV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<SignatureGetObjectV3Response> SignatureGetObjectV3WithHttpInfo(int pkiSignatureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiSignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiSignatureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectSignatureApi.SignatureGetObjectV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<SignatureGetObjectV3Response>("/3/object/signature/{pkiSignatureID}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SignatureGetObjectV3", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SignatureGetObjectV3Response</returns>
+        public async System.Threading.Tasks.Task<SignatureGetObjectV3Response> SignatureGetObjectV3Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<SignatureGetObjectV3Response> localVarResponse = await SignatureGetObjectV3WithHttpInfoAsync(pkiSignatureID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SignatureGetObjectV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SignatureGetObjectV3Response>> SignatureGetObjectV3WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiSignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiSignatureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectSignatureApi.SignatureGetObjectV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<SignatureGetObjectV3Response>("/3/object/signature/{pkiSignatureID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SignatureGetObjectV3", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature initial SVG 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns></returns>
+        public void SignatureGetSVGInitialsV1(int pkiSignatureID, int operationIndex = 0)
+        {
+            SignatureGetSVGInitialsV1WithHttpInfo(pkiSignatureID);
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature initial SVG 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public eZmaxApi.Client.ApiResponse<Object> SignatureGetSVGInitialsV1WithHttpInfo(int pkiSignatureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiSignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiSignatureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectSignatureApi.SignatureGetSVGInitialsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<Object>("/1/object/signature/{pkiSignatureID}/getSVGInitials", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SignatureGetSVGInitialsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature initial SVG 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SignatureGetSVGInitialsV1Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await SignatureGetSVGInitialsV1WithHttpInfoAsync(pkiSignatureID, operationIndex, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature initial SVG 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<Object>> SignatureGetSVGInitialsV1WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiSignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiSignatureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectSignatureApi.SignatureGetSVGInitialsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/1/object/signature/{pkiSignatureID}/getSVGInitials", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SignatureGetSVGInitialsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature SVG 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns></returns>
+        public void SignatureGetSVGSignatureV1(int pkiSignatureID, int operationIndex = 0)
+        {
+            SignatureGetSVGSignatureV1WithHttpInfo(pkiSignatureID);
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature SVG 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public eZmaxApi.Client.ApiResponse<Object> SignatureGetSVGSignatureV1WithHttpInfo(int pkiSignatureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiSignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiSignatureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectSignatureApi.SignatureGetSVGSignatureV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<Object>("/1/object/signature/{pkiSignatureID}/getSVGSignature", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SignatureGetSVGSignatureV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature SVG 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SignatureGetSVGSignatureV1Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await SignatureGetSVGSignatureV1WithHttpInfoAsync(pkiSignatureID, operationIndex, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Retrieve an existing Signature SVG 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<Object>> SignatureGetSVGSignatureV1WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiSignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiSignatureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectSignatureApi.SignatureGetSVGSignatureV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/1/object/signature/{pkiSignatureID}/getSVGSignature", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SignatureGetSVGSignatureV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

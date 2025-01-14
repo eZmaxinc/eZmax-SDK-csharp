@@ -72,5 +72,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'ObjDebug'
         }
+
+        /// <summary>
+        /// Test the property 'MPayload'
+        /// </summary>
+        [Fact]
+        public void MPayloadTest()
+        {
+            // TODO unit test for the property 'MPayload'
+        }
     }
 }

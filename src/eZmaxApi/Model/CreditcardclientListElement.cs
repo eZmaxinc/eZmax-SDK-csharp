@@ -40,40 +40,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientListElement" /> class.
         /// </summary>
-        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient (required).</param>
-        /// <param name="fkiCreditcarddetailID">The unique ID of the Creditcarddetail (required).</param>
-        /// <param name="bCreditcardclientrelationIsdefault">Whether if it&#39;s an relationisdefault (required).</param>
-        /// <param name="sCreditcardclientDescription">The description of the Creditcardclient (required).</param>
-        /// <param name="bCreditcardclientIsactive">Whether the creditcardclient is active or not (required).</param>
-        /// <param name="bCreditcardclientAllowedagencypayment">Whether if it&#39;s an allowedagencypayment (required).</param>
-        /// <param name="bCreditcardclientAllowedroyallepageprotection">Whether if it&#39;s an allowedroyallepageprotection (required).</param>
-        /// <param name="bCreditcardclientAllowedtranquillit">Whether if it&#39;s an allowedtranquillit (required).</param>
-        /// <param name="iCreditcarddetailExpirationmonth">The expirationmonth of the Creditcarddetail (required).</param>
-        /// <param name="iCreditcarddetailExpirationyear">The expirationyear of the Creditcarddetail (required).</param>
-        /// <param name="sCreditcarddetailNumbermasked">The numbermasked of the Creditcarddetail (required).</param>
-        public CreditcardclientListElement(int pkiCreditcardclientID = default(int), int fkiCreditcarddetailID = default(int), bool bCreditcardclientrelationIsdefault = default(bool), string sCreditcardclientDescription = default(string), bool bCreditcardclientIsactive = default(bool), bool bCreditcardclientAllowedagencypayment = default(bool), bool bCreditcardclientAllowedroyallepageprotection = default(bool), bool bCreditcardclientAllowedtranquillit = default(bool), int iCreditcarddetailExpirationmonth = default(int), int iCreditcarddetailExpirationyear = default(int), string sCreditcarddetailNumbermasked = default(string))
+        /// <param name="">The unique ID of the Creditcardclient (required).</param>
+        /// <param name="">The unique ID of the Creditcarddetail (required).</param>
+        /// <param name="">The unique ID of the Creditcardtype (required).</param>
+        /// <param name="">Whether if it&#39;s the creditcardclient is the default one (required).</param>
+        /// <param name="">The description of the Creditcardclient (required).</param>
+        /// <param name="">Whether if it&#39;s an allowedagencypayment (required).</param>
+        /// <param name="">Whether if it&#39;s an allowedtranquillit (required).</param>
+        /// <param name="">The expirationmonth of the Creditcarddetail (required).</param>
+        /// <param name="">The expirationyear of the Creditcarddetail (required).</param>
+        /// <param name="">The last digits of the Creditcarddetail (required).</param>
+        public CreditcardclientListElement(int  = default(int), int  = default(int), int  = default(int), bool  = default(bool), string  = default(string), bool  = default(bool), bool  = default(bool), int  = default(int), int  = default(int), int  = default(int))
         {
-            this.PkiCreditcardclientID = pkiCreditcardclientID;
-            this.FkiCreditcarddetailID = fkiCreditcarddetailID;
-            this.BCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
-            // to ensure "sCreditcardclientDescription" is required (not null)
-            if (sCreditcardclientDescription == null)
+            this.PkiCreditcardclientID = ;
+            this.FkiCreditcarddetailID = ;
+            this.FkiCreditcardtypeID = ;
+            this.BCreditcardclientrelationIsdefault = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcardclientDescription is a required property for CreditcardclientListElement and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardclientListElement and cannot be null");
             }
-            this.SCreditcardclientDescription = sCreditcardclientDescription;
-            this.BCreditcardclientIsactive = bCreditcardclientIsactive;
-            this.BCreditcardclientAllowedagencypayment = bCreditcardclientAllowedagencypayment;
-            this.BCreditcardclientAllowedroyallepageprotection = bCreditcardclientAllowedroyallepageprotection;
-            this.BCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
-            this.ICreditcarddetailExpirationmonth = iCreditcarddetailExpirationmonth;
-            this.ICreditcarddetailExpirationyear = iCreditcarddetailExpirationyear;
-            // to ensure "sCreditcarddetailNumbermasked" is required (not null)
-            if (sCreditcarddetailNumbermasked == null)
-            {
-                throw new ArgumentNullException("sCreditcarddetailNumbermasked is a required property for CreditcardclientListElement and cannot be null");
-            }
-            this.SCreditcarddetailNumbermasked = sCreditcarddetailNumbermasked;
+            this.SCreditcardclientDescription = ;
+            this.BCreditcardclientAllowedcompanypayment = ;
+            this.BCreditcardclientAllowedtranquillit = ;
+            this.ICreditcarddetailExpirationmonth = ;
+            this.ICreditcarddetailExpirationyear = ;
+            this.ICreditcarddetailLastdigits = ;
         }
 
         /// <summary>
@@ -93,9 +86,17 @@ namespace eZmaxApi.Model
         public int FkiCreditcarddetailID { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an relationisdefault
+        /// The unique ID of the Creditcardtype
         /// </summary>
-        /// <value>Whether if it&#39;s an relationisdefault</value>
+        /// <value>The unique ID of the Creditcardtype</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "fkiCreditcardtypeID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiCreditcardtypeID { get; set; }
+
+        /// <summary>
+        /// Whether if it&#39;s the creditcardclient is the default one
+        /// </summary>
+        /// <value>Whether if it&#39;s the creditcardclient is the default one</value>
         /* <example>true</example>*/
         [DataMember(Name = "bCreditcardclientrelationIsdefault", IsRequired = true, EmitDefaultValue = true)]
         public bool BCreditcardclientrelationIsdefault { get; set; }
@@ -109,28 +110,12 @@ namespace eZmaxApi.Model
         public string SCreditcardclientDescription { get; set; }
 
         /// <summary>
-        /// Whether the creditcardclient is active or not
-        /// </summary>
-        /// <value>Whether the creditcardclient is active or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bCreditcardclientIsactive", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCreditcardclientIsactive { get; set; }
-
-        /// <summary>
         /// Whether if it&#39;s an allowedagencypayment
         /// </summary>
         /// <value>Whether if it&#39;s an allowedagencypayment</value>
         /* <example>true</example>*/
-        [DataMember(Name = "bCreditcardclientAllowedagencypayment", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCreditcardclientAllowedagencypayment { get; set; }
-
-        /// <summary>
-        /// Whether if it&#39;s an allowedroyallepageprotection
-        /// </summary>
-        /// <value>Whether if it&#39;s an allowedroyallepageprotection</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bCreditcardclientAllowedroyallepageprotection", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCreditcardclientAllowedroyallepageprotection { get; set; }
+        [DataMember(Name = "bCreditcardclientAllowedcompanypayment", IsRequired = true, EmitDefaultValue = true)]
+        public bool BCreditcardclientAllowedcompanypayment { get; set; }
 
         /// <summary>
         /// Whether if it&#39;s an allowedtranquillit
@@ -157,12 +142,12 @@ namespace eZmaxApi.Model
         public int ICreditcarddetailExpirationyear { get; set; }
 
         /// <summary>
-        /// The numbermasked of the Creditcarddetail
+        /// The last digits of the Creditcarddetail
         /// </summary>
-        /// <value>The numbermasked of the Creditcarddetail</value>
-        /* <example>XXXX XXXX XXXX 4242</example>*/
-        [DataMember(Name = "sCreditcarddetailNumbermasked", IsRequired = true, EmitDefaultValue = true)]
-        public string SCreditcarddetailNumbermasked { get; set; }
+        /// <value>The last digits of the Creditcarddetail</value>
+        /* <example>4242</example>*/
+        [DataMember(Name = "iCreditcarddetailLastdigits", IsRequired = true, EmitDefaultValue = true)]
+        public int ICreditcarddetailLastdigits { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -174,15 +159,14 @@ namespace eZmaxApi.Model
             sb.Append("class CreditcardclientListElement {\n");
             sb.Append("  PkiCreditcardclientID: ").Append(PkiCreditcardclientID).Append("\n");
             sb.Append("  FkiCreditcarddetailID: ").Append(FkiCreditcarddetailID).Append("\n");
+            sb.Append("  FkiCreditcardtypeID: ").Append(FkiCreditcardtypeID).Append("\n");
             sb.Append("  BCreditcardclientrelationIsdefault: ").Append(BCreditcardclientrelationIsdefault).Append("\n");
             sb.Append("  SCreditcardclientDescription: ").Append(SCreditcardclientDescription).Append("\n");
-            sb.Append("  BCreditcardclientIsactive: ").Append(BCreditcardclientIsactive).Append("\n");
-            sb.Append("  BCreditcardclientAllowedagencypayment: ").Append(BCreditcardclientAllowedagencypayment).Append("\n");
-            sb.Append("  BCreditcardclientAllowedroyallepageprotection: ").Append(BCreditcardclientAllowedroyallepageprotection).Append("\n");
+            sb.Append("  BCreditcardclientAllowedcompanypayment: ").Append(BCreditcardclientAllowedcompanypayment).Append("\n");
             sb.Append("  BCreditcardclientAllowedtranquillit: ").Append(BCreditcardclientAllowedtranquillit).Append("\n");
             sb.Append("  ICreditcarddetailExpirationmonth: ").Append(ICreditcarddetailExpirationmonth).Append("\n");
             sb.Append("  ICreditcarddetailExpirationyear: ").Append(ICreditcarddetailExpirationyear).Append("\n");
-            sb.Append("  SCreditcarddetailNumbermasked: ").Append(SCreditcarddetailNumbermasked).Append("\n");
+            sb.Append("  ICreditcarddetailLastdigits: ").Append(ICreditcarddetailLastdigits).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -227,6 +211,18 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCreditcarddetailID, must be a value greater than or equal to 0.", new [] { "FkiCreditcarddetailID" });
             }
 
+            // FkiCreditcardtypeID (int) maximum
+            if (this.FkiCreditcardtypeID > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCreditcardtypeID, must be a value less than or equal to 255.", new [] { "FkiCreditcardtypeID" });
+            }
+
+            // FkiCreditcardtypeID (int) minimum
+            if (this.FkiCreditcardtypeID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCreditcardtypeID, must be a value greater than or equal to 0.", new [] { "FkiCreditcardtypeID" });
+            }
+
             if (this.SCreditcardclientDescription != null) {
                 // SCreditcardclientDescription (string) pattern
                 Regex regexSCreditcardclientDescription = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
@@ -260,13 +256,16 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationyear" });
             }
 
-            if (this.SCreditcarddetailNumbermasked != null) {
-                // SCreditcarddetailNumbermasked (string) pattern
-                Regex regexSCreditcarddetailNumbermasked = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-                if (!regexSCreditcarddetailNumbermasked.Match(this.SCreditcarddetailNumbermasked).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCreditcarddetailNumbermasked, must match a pattern of " + regexSCreditcarddetailNumbermasked, new [] { "SCreditcarddetailNumbermasked" });
-                }
+            // ICreditcarddetailLastdigits (int) maximum
+            if (this.ICreditcarddetailLastdigits > (int)9999)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailLastdigits, must be a value less than or equal to 9999.", new [] { "ICreditcarddetailLastdigits" });
+            }
+
+            // ICreditcarddetailLastdigits (int) minimum
+            if (this.ICreditcarddetailLastdigits < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailLastdigits, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailLastdigits" });
             }
 
             yield break;

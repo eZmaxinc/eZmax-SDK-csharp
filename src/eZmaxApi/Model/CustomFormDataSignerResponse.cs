@@ -40,33 +40,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomFormDataSignerResponse" /> class.
         /// </summary>
-        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User.</param>
-        /// <param name="sContactFirstname">The First name of the contact (required).</param>
-        /// <param name="sContactLastname">The Last name of the contact (required).</param>
-        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup (required).</param>
-        public CustomFormDataSignerResponse(int fkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup = default(List<CustomFormDataEzsignformfieldgroupResponse>))
+        /// <param name="">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="">The unique ID of the User.</param>
+        /// <param name="">The First name of the contact (required).</param>
+        /// <param name="">The Last name of the contact (required).</param>
+        /// <param name=""> (required).</param>
+        public CustomFormDataSignerResponse(int  = default(int), int  = default(int), string  = default(string), string  = default(string), List<CustomFormDataEzsignformfieldgroupResponse>  = default(List<CustomFormDataEzsignformfieldgroupResponse>))
         {
-            this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
-            // to ensure "sContactFirstname" is required (not null)
-            if (sContactFirstname == null)
+            this.FkiEzsignfoldersignerassociationID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sContactFirstname is a required property for CustomFormDataSignerResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomFormDataSignerResponse and cannot be null");
             }
-            this.SContactFirstname = sContactFirstname;
-            // to ensure "sContactLastname" is required (not null)
-            if (sContactLastname == null)
+            this.SContactFirstname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sContactLastname is a required property for CustomFormDataSignerResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomFormDataSignerResponse and cannot be null");
             }
-            this.SContactLastname = sContactLastname;
-            // to ensure "aObjEzsignformfieldgroup" is required (not null)
-            if (aObjEzsignformfieldgroup == null)
+            this.SContactLastname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignformfieldgroup is a required property for CustomFormDataSignerResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomFormDataSignerResponse and cannot be null");
             }
-            this.AObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
-            this.FkiUserID = fkiUserID;
+            this.AObjEzsignformfieldgroup = ;
+            this.FkiUserID = ;
         }
 
         /// <summary>

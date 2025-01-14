@@ -103,5 +103,39 @@ namespace eZmaxApi.Test.Api
             //var response = instance.SignatureGetObjectV2(pkiSignatureID);
             //Assert.IsType<SignatureGetObjectV2Response>(response);
         }
+
+        /// <summary>
+        /// Test SignatureGetObjectV3
+        /// </summary>
+        [Fact]
+        public void SignatureGetObjectV3Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiSignatureID = null;
+            //var response = instance.SignatureGetObjectV3(pkiSignatureID);
+            //Assert.IsType<SignatureGetObjectV3Response>(response);
+        }
+
+        /// <summary>
+        /// Test SignatureGetSVGInitialsV1
+        /// </summary>
+        [Fact]
+        public void SignatureGetSVGInitialsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiSignatureID = null;
+            //instance.SignatureGetSVGInitialsV1(pkiSignatureID);
+        }
+
+        /// <summary>
+        /// Test SignatureGetSVGSignatureV1
+        /// </summary>
+        [Fact]
+        public void SignatureGetSVGSignatureV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiSignatureID = null;
+            //instance.SignatureGetSVGSignatureV1(pkiSignatureID);
+        }
     }
 }

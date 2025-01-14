@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetCommunicationrecipientsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjCommunicationrecipientsgroup">aObjCommunicationrecipientsgroup (required).</param>
-        public EzsignfolderGetCommunicationrecipientsV1ResponseMPayload(List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup = default(List<CustomCommunicationrecipientsgroupResponse>))
+        /// <param name=""> (required).</param>
+        public EzsignfolderGetCommunicationrecipientsV1ResponseMPayload(List<CustomCommunicationrecipientsgroupResponse>  = default(List<CustomCommunicationrecipientsgroupResponse>))
         {
-            // to ensure "aObjCommunicationrecipientsgroup" is required (not null)
-            if (aObjCommunicationrecipientsgroup == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCommunicationrecipientsgroup is a required property for EzsignfolderGetCommunicationrecipientsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderGetCommunicationrecipientsV1ResponseMPayload and cannot be null");
             }
-            this.AObjCommunicationrecipientsgroup = aObjCommunicationrecipientsgroup;
+            this.AObjCommunicationrecipientsgroup = ;
         }
 
         /// <summary>

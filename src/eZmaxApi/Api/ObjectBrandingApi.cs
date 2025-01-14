@@ -34,10 +34,10 @@ namespace eZmaxApi.Api
         /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="brandingCreateObjectV1Request"></param>
+        /// <param name="brandingCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BrandingCreateObjectV1Response</returns>
-        BrandingCreateObjectV1Response BrandingCreateObjectV1(BrandingCreateObjectV1Request brandingCreateObjectV1Request, int operationIndex = 0);
+        /// <returns>BrandingCreateObjectV2Response</returns>
+        BrandingCreateObjectV2Response BrandingCreateObjectV2(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0);
 
         /// <summary>
         /// Create a new Branding
@@ -46,19 +46,19 @@ namespace eZmaxApi.Api
         /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="brandingCreateObjectV1Request"></param>
+        /// <param name="brandingCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BrandingCreateObjectV1Response</returns>
-        ApiResponse<BrandingCreateObjectV1Response> BrandingCreateObjectV1WithHttpInfo(BrandingCreateObjectV1Request brandingCreateObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of BrandingCreateObjectV2Response</returns>
+        ApiResponse<BrandingCreateObjectV2Response> BrandingCreateObjectV2WithHttpInfo(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Branding
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
-        /// <param name="brandingEditObjectV1Request"></param>
+        /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BrandingEditObjectV1Response</returns>
-        BrandingEditObjectV1Response BrandingEditObjectV1(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, int operationIndex = 0);
+        /// <returns>BrandingEditObjectV2Response</returns>
+        BrandingEditObjectV2Response BrandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Branding
@@ -68,10 +68,10 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
-        /// <param name="brandingEditObjectV1Request"></param>
+        /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BrandingEditObjectV1Response</returns>
-        ApiResponse<BrandingEditObjectV1Response> BrandingEditObjectV1WithHttpInfo(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of BrandingEditObjectV2Response</returns>
+        ApiResponse<BrandingEditObjectV2Response> BrandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Brandings and IDs
         /// </summary>
@@ -138,8 +138,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BrandingGetObjectV2Response</returns>
-        BrandingGetObjectV2Response BrandingGetObjectV2(int pkiBrandingID, int operationIndex = 0);
+        /// <returns>BrandingGetObjectV3Response</returns>
+        BrandingGetObjectV3Response BrandingGetObjectV3(int pkiBrandingID, int operationIndex = 0);
 
         /// <summary>
         /// Retrieve an existing Branding
@@ -150,8 +150,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BrandingGetObjectV2Response</returns>
-        ApiResponse<BrandingGetObjectV2Response> BrandingGetObjectV2WithHttpInfo(int pkiBrandingID, int operationIndex = 0);
+        /// <returns>ApiResponse of BrandingGetObjectV3Response</returns>
+        ApiResponse<BrandingGetObjectV3Response> BrandingGetObjectV3WithHttpInfo(int pkiBrandingID, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -168,11 +168,11 @@ namespace eZmaxApi.Api
         /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="brandingCreateObjectV1Request"></param>
+        /// <param name="brandingCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BrandingCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<BrandingCreateObjectV1Response> BrandingCreateObjectV1Async(BrandingCreateObjectV1Request brandingCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of BrandingCreateObjectV2Response</returns>
+        System.Threading.Tasks.Task<BrandingCreateObjectV2Response> BrandingCreateObjectV2Async(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Branding
@@ -181,11 +181,11 @@ namespace eZmaxApi.Api
         /// The endpoint allows to create one or many elements at once.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="brandingCreateObjectV1Request"></param>
+        /// <param name="brandingCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BrandingCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingCreateObjectV1Response>> BrandingCreateObjectV1WithHttpInfoAsync(BrandingCreateObjectV1Request brandingCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (BrandingCreateObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BrandingCreateObjectV2Response>> BrandingCreateObjectV2WithHttpInfoAsync(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Branding
         /// </summary>
@@ -194,11 +194,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
-        /// <param name="brandingEditObjectV1Request"></param>
+        /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BrandingEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<BrandingEditObjectV1Response> BrandingEditObjectV1Async(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of BrandingEditObjectV2Response</returns>
+        System.Threading.Tasks.Task<BrandingEditObjectV2Response> BrandingEditObjectV2Async(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Branding
@@ -208,11 +208,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
-        /// <param name="brandingEditObjectV1Request"></param>
+        /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BrandingEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingEditObjectV1Response>> BrandingEditObjectV1WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (BrandingEditObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BrandingEditObjectV2Response>> BrandingEditObjectV2WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Brandings and IDs
         /// </summary>
@@ -287,8 +287,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BrandingGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<BrandingGetObjectV2Response> BrandingGetObjectV2Async(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of BrandingGetObjectV3Response</returns>
+        System.Threading.Tasks.Task<BrandingGetObjectV3Response> BrandingGetObjectV3Async(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Branding
@@ -300,8 +300,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BrandingGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingGetObjectV2Response>> BrandingGetObjectV2WithHttpInfoAsync(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (BrandingGetObjectV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BrandingGetObjectV3Response>> BrandingGetObjectV3WithHttpInfoAsync(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -426,12 +426,12 @@ namespace eZmaxApi.Api
         /// Create a new Branding The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="brandingCreateObjectV1Request"></param>
+        /// <param name="brandingCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BrandingCreateObjectV1Response</returns>
-        public BrandingCreateObjectV1Response BrandingCreateObjectV1(BrandingCreateObjectV1Request brandingCreateObjectV1Request, int operationIndex = 0)
+        /// <returns>BrandingCreateObjectV2Response</returns>
+        public BrandingCreateObjectV2Response BrandingCreateObjectV2(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<BrandingCreateObjectV1Response> localVarResponse = BrandingCreateObjectV1WithHttpInfo(brandingCreateObjectV1Request);
+            eZmaxApi.Client.ApiResponse<BrandingCreateObjectV2Response> localVarResponse = BrandingCreateObjectV2WithHttpInfo(brandingCreateObjectV2Request);
             return localVarResponse.Data;
         }
 
@@ -439,15 +439,15 @@ namespace eZmaxApi.Api
         /// Create a new Branding The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="brandingCreateObjectV1Request"></param>
+        /// <param name="brandingCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BrandingCreateObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<BrandingCreateObjectV1Response> BrandingCreateObjectV1WithHttpInfo(BrandingCreateObjectV1Request brandingCreateObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of BrandingCreateObjectV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<BrandingCreateObjectV2Response> BrandingCreateObjectV2WithHttpInfo(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0)
         {
-            // verify the required parameter 'brandingCreateObjectV1Request' is set
-            if (brandingCreateObjectV1Request == null)
+            // verify the required parameter 'brandingCreateObjectV2Request' is set
+            if (brandingCreateObjectV2Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'brandingCreateObjectV1Request' when calling ObjectBrandingApi->BrandingCreateObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'brandingCreateObjectV2Request' when calling ObjectBrandingApi->BrandingCreateObjectV2");
             }
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -473,9 +473,9 @@ namespace eZmaxApi.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = brandingCreateObjectV1Request;
+            localVarRequestOptions.Data = brandingCreateObjectV2Request;
 
-            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingCreateObjectV1";
+            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingCreateObjectV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -485,10 +485,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<BrandingCreateObjectV1Response>("/1/object/branding", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<BrandingCreateObjectV2Response>("/2/object/branding", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("BrandingCreateObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("BrandingCreateObjectV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -502,13 +502,13 @@ namespace eZmaxApi.Api
         /// Create a new Branding The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="brandingCreateObjectV1Request"></param>
+        /// <param name="brandingCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BrandingCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<BrandingCreateObjectV1Response> BrandingCreateObjectV1Async(BrandingCreateObjectV1Request brandingCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of BrandingCreateObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<BrandingCreateObjectV2Response> BrandingCreateObjectV2Async(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<BrandingCreateObjectV1Response> localVarResponse = await BrandingCreateObjectV1WithHttpInfoAsync(brandingCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<BrandingCreateObjectV2Response> localVarResponse = await BrandingCreateObjectV2WithHttpInfoAsync(brandingCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -516,16 +516,16 @@ namespace eZmaxApi.Api
         /// Create a new Branding The endpoint allows to create one or many elements at once.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="brandingCreateObjectV1Request"></param>
+        /// <param name="brandingCreateObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BrandingCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingCreateObjectV1Response>> BrandingCreateObjectV1WithHttpInfoAsync(BrandingCreateObjectV1Request brandingCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (BrandingCreateObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingCreateObjectV2Response>> BrandingCreateObjectV2WithHttpInfoAsync(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'brandingCreateObjectV1Request' is set
-            if (brandingCreateObjectV1Request == null)
+            // verify the required parameter 'brandingCreateObjectV2Request' is set
+            if (brandingCreateObjectV2Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'brandingCreateObjectV1Request' when calling ObjectBrandingApi->BrandingCreateObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'brandingCreateObjectV2Request' when calling ObjectBrandingApi->BrandingCreateObjectV2");
             }
 
 
@@ -552,9 +552,9 @@ namespace eZmaxApi.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = brandingCreateObjectV1Request;
+            localVarRequestOptions.Data = brandingCreateObjectV2Request;
 
-            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingCreateObjectV1";
+            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingCreateObjectV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -564,11 +564,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<BrandingCreateObjectV1Response>("/1/object/branding", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<BrandingCreateObjectV2Response>("/2/object/branding", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("BrandingCreateObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("BrandingCreateObjectV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -583,12 +583,12 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
-        /// <param name="brandingEditObjectV1Request"></param>
+        /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BrandingEditObjectV1Response</returns>
-        public BrandingEditObjectV1Response BrandingEditObjectV1(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, int operationIndex = 0)
+        /// <returns>BrandingEditObjectV2Response</returns>
+        public BrandingEditObjectV2Response BrandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<BrandingEditObjectV1Response> localVarResponse = BrandingEditObjectV1WithHttpInfo(pkiBrandingID, brandingEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response> localVarResponse = BrandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
             return localVarResponse.Data;
         }
 
@@ -597,15 +597,15 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
-        /// <param name="brandingEditObjectV1Request"></param>
+        /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BrandingEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<BrandingEditObjectV1Response> BrandingEditObjectV1WithHttpInfo(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of BrandingEditObjectV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response> BrandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0)
         {
-            // verify the required parameter 'brandingEditObjectV1Request' is set
-            if (brandingEditObjectV1Request == null)
+            // verify the required parameter 'brandingEditObjectV2Request' is set
+            if (brandingEditObjectV2Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'brandingEditObjectV1Request' when calling ObjectBrandingApi->BrandingEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'brandingEditObjectV2Request' when calling ObjectBrandingApi->BrandingEditObjectV2");
             }
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -632,9 +632,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiBrandingID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrandingID)); // path parameter
-            localVarRequestOptions.Data = brandingEditObjectV1Request;
+            localVarRequestOptions.Data = brandingEditObjectV2Request;
 
-            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingEditObjectV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -644,10 +644,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<BrandingEditObjectV1Response>("/1/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<BrandingEditObjectV2Response>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("BrandingEditObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("BrandingEditObjectV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -662,13 +662,13 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
-        /// <param name="brandingEditObjectV1Request"></param>
+        /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BrandingEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<BrandingEditObjectV1Response> BrandingEditObjectV1Async(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of BrandingEditObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<BrandingEditObjectV2Response> BrandingEditObjectV2Async(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<BrandingEditObjectV1Response> localVarResponse = await BrandingEditObjectV1WithHttpInfoAsync(pkiBrandingID, brandingEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response> localVarResponse = await BrandingEditObjectV2WithHttpInfoAsync(pkiBrandingID, brandingEditObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -677,16 +677,16 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
-        /// <param name="brandingEditObjectV1Request"></param>
+        /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BrandingEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingEditObjectV1Response>> BrandingEditObjectV1WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (BrandingEditObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response>> BrandingEditObjectV2WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'brandingEditObjectV1Request' is set
-            if (brandingEditObjectV1Request == null)
+            // verify the required parameter 'brandingEditObjectV2Request' is set
+            if (brandingEditObjectV2Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'brandingEditObjectV1Request' when calling ObjectBrandingApi->BrandingEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'brandingEditObjectV2Request' when calling ObjectBrandingApi->BrandingEditObjectV2");
             }
 
 
@@ -714,9 +714,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiBrandingID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrandingID)); // path parameter
-            localVarRequestOptions.Data = brandingEditObjectV1Request;
+            localVarRequestOptions.Data = brandingEditObjectV2Request;
 
-            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingEditObjectV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -726,11 +726,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<BrandingEditObjectV1Response>("/1/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<BrandingEditObjectV2Response>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("BrandingEditObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("BrandingEditObjectV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1134,10 +1134,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BrandingGetObjectV2Response</returns>
-        public BrandingGetObjectV2Response BrandingGetObjectV2(int pkiBrandingID, int operationIndex = 0)
+        /// <returns>BrandingGetObjectV3Response</returns>
+        public BrandingGetObjectV3Response BrandingGetObjectV3(int pkiBrandingID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<BrandingGetObjectV2Response> localVarResponse = BrandingGetObjectV2WithHttpInfo(pkiBrandingID);
+            eZmaxApi.Client.ApiResponse<BrandingGetObjectV3Response> localVarResponse = BrandingGetObjectV3WithHttpInfo(pkiBrandingID);
             return localVarResponse.Data;
         }
 
@@ -1147,8 +1147,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBrandingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BrandingGetObjectV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<BrandingGetObjectV2Response> BrandingGetObjectV2WithHttpInfo(int pkiBrandingID, int operationIndex = 0)
+        /// <returns>ApiResponse of BrandingGetObjectV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<BrandingGetObjectV3Response> BrandingGetObjectV3WithHttpInfo(int pkiBrandingID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -1174,7 +1174,7 @@ namespace eZmaxApi.Api
 
             localVarRequestOptions.PathParameters.Add("pkiBrandingID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrandingID)); // path parameter
 
-            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingGetObjectV2";
+            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingGetObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -1184,10 +1184,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<BrandingGetObjectV2Response>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<BrandingGetObjectV3Response>("/3/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("BrandingGetObjectV2", localVarResponse);
+                Exception _exception = this.ExceptionFactory("BrandingGetObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1204,10 +1204,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BrandingGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<BrandingGetObjectV2Response> BrandingGetObjectV2Async(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of BrandingGetObjectV3Response</returns>
+        public async System.Threading.Tasks.Task<BrandingGetObjectV3Response> BrandingGetObjectV3Async(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<BrandingGetObjectV2Response> localVarResponse = await BrandingGetObjectV2WithHttpInfoAsync(pkiBrandingID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<BrandingGetObjectV3Response> localVarResponse = await BrandingGetObjectV3WithHttpInfoAsync(pkiBrandingID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1218,8 +1218,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BrandingGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingGetObjectV2Response>> BrandingGetObjectV2WithHttpInfoAsync(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (BrandingGetObjectV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingGetObjectV3Response>> BrandingGetObjectV3WithHttpInfoAsync(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1246,7 +1246,7 @@ namespace eZmaxApi.Api
 
             localVarRequestOptions.PathParameters.Add("pkiBrandingID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrandingID)); // path parameter
 
-            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingGetObjectV2";
+            localVarRequestOptions.Operation = "ObjectBrandingApi.BrandingGetObjectV3";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -1256,11 +1256,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<BrandingGetObjectV2Response>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BrandingGetObjectV3Response>("/3/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("BrandingGetObjectV2", localVarResponse);
+                Exception _exception = this.ExceptionFactory("BrandingGetObjectV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

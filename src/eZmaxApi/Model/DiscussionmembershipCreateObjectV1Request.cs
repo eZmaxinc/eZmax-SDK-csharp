@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmembershipCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="aObjDiscussionmembership">aObjDiscussionmembership (required).</param>
-        public DiscussionmembershipCreateObjectV1Request(List<DiscussionmembershipRequestCompound> aObjDiscussionmembership = default(List<DiscussionmembershipRequestCompound>))
+        /// <param name=""> (required).</param>
+        public DiscussionmembershipCreateObjectV1Request(List<DiscussionmembershipRequestCompound>  = default(List<DiscussionmembershipRequestCompound>))
         {
-            // to ensure "aObjDiscussionmembership" is required (not null)
-            if (aObjDiscussionmembership == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjDiscussionmembership is a required property for DiscussionmembershipCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionmembershipCreateObjectV1Request and cannot be null");
             }
-            this.AObjDiscussionmembership = aObjDiscussionmembership;
+            this.AObjDiscussionmembership = ;
         }
 
         /// <summary>

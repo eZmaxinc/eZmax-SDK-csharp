@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjBillingentityinternal">An array of Billingentityinternal object containing the description, ID and active status about the element. (required).</param>
-        public BillingentityinternalGetAutocompleteV2ResponseMPayload(List<BillingentityinternalAutocompleteElementResponse> aObjBillingentityinternal = default(List<BillingentityinternalAutocompleteElementResponse>))
+        /// <param name="">An array of Billingentityinternal object containing the description, ID and active status about the element. (required).</param>
+        public BillingentityinternalGetAutocompleteV2ResponseMPayload(List<BillingentityinternalAutocompleteElementResponse>  = default(List<BillingentityinternalAutocompleteElementResponse>))
         {
-            // to ensure "aObjBillingentityinternal" is required (not null)
-            if (aObjBillingentityinternal == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjBillingentityinternal is a required property for BillingentityinternalGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjBillingentityinternal = aObjBillingentityinternal;
+            this.AObjBillingentityinternal = ;
         }
 
         /// <summary>

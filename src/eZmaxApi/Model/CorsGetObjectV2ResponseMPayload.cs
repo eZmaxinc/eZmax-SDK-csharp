@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CorsGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objCors">objCors (required).</param>
-        public CorsGetObjectV2ResponseMPayload(CorsResponseCompound objCors = default(CorsResponseCompound))
+        /// <param name=""> (required).</param>
+        public CorsGetObjectV2ResponseMPayload(CorsResponseCompound  = default(CorsResponseCompound))
         {
-            // to ensure "objCors" is required (not null)
-            if (objCors == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objCors is a required property for CorsGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for CorsGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjCors = objCors;
+            this.ObjCors = ;
         }
 
         /// <summary>

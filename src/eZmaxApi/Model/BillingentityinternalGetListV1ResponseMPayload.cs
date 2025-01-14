@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="iRowReturned">The number of rows returned (required).</param>
-        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjBillingentityinternal">aObjBillingentityinternal (required).</param>
-        public BillingentityinternalGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<BillingentityinternalListElement> aObjBillingentityinternal = default(List<BillingentityinternalListElement>))
+        /// <param name="">The number of rows returned (required).</param>
+        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name=""> (required).</param>
+        public BillingentityinternalGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<BillingentityinternalListElement>  = default(List<BillingentityinternalListElement>))
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
-            // to ensure "aObjBillingentityinternal" is required (not null)
-            if (aObjBillingentityinternal == null)
+            this.IRowReturned = ;
+            this.IRowFiltered = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjBillingentityinternal is a required property for BillingentityinternalGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjBillingentityinternal = aObjBillingentityinternal;
+            this.AObjBillingentityinternal = ;
         }
 
         /// <summary>

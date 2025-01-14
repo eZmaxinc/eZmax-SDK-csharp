@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonAudit" /> class.
         /// </summary>
-        /// <param name="objAuditdetailCreated">objAuditdetailCreated (required).</param>
-        /// <param name="objAuditdetailModified">objAuditdetailModified.</param>
-        public CommonAudit(CommonAuditdetail objAuditdetailCreated = default(CommonAuditdetail), CommonAuditdetail objAuditdetailModified = default(CommonAuditdetail))
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        public CommonAudit(CommonAuditdetail  = default(CommonAuditdetail), CommonAuditdetail  = default(CommonAuditdetail))
         {
-            // to ensure "objAuditdetailCreated" is required (not null)
-            if (objAuditdetailCreated == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objAuditdetailCreated is a required property for CommonAudit and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonAudit and cannot be null");
             }
-            this.ObjAuditdetailCreated = objAuditdetailCreated;
-            this.ObjAuditdetailModified = objAuditdetailModified;
+            this.ObjAuditdetailCreated = ;
+            this.ObjAuditdetailModified = ;
         }
 
         /// <summary>

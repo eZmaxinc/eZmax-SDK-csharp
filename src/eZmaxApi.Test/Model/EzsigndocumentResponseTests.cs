@@ -182,6 +182,15 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IEzsigndocumentFormfieldtotal'
+        /// </summary>
+        [Fact]
+        public void IEzsigndocumentFormfieldtotalTest()
+        {
+            // TODO unit test for the property 'IEzsigndocumentFormfieldtotal'
+        }
+
+        /// <summary>
         /// Test the property 'SEzsigndocumentMD5initial'
         /// </summary>
         [Fact]

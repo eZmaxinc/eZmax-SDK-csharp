@@ -77,17 +77,5 @@ namespace eZmaxApi.Test.Api
             //var response = instance.AttachmentGetAttachmentlogsV1(pkiAttachmentID);
             //Assert.IsType<AttachmentGetAttachmentlogsV1Response>(response);
         }
-
-        /// <summary>
-        /// Test AttachmentGetDownloadUrlV1
-        /// </summary>
-        [Fact]
-        public void AttachmentGetDownloadUrlV1Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int pkiAttachmentID = null;
-            //var response = instance.AttachmentGetDownloadUrlV1(pkiAttachmentID);
-            //Assert.IsType<AttachmentGetDownloadUrlV1Response>(response);
-        }
     }
 }

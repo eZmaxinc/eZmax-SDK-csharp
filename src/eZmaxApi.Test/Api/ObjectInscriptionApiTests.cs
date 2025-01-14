@@ -68,6 +68,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test InscriptionGetCommunicationCountV1
+        /// </summary>
+        [Fact]
+        public void InscriptionGetCommunicationCountV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInscriptionID = null;
+            //var response = instance.InscriptionGetCommunicationCountV1(pkiInscriptionID);
+            //Assert.IsType<InscriptionGetCommunicationCountV1Response>(response);
+        }
+
+        /// <summary>
         /// Test InscriptionGetCommunicationListV1
         /// </summary>
         [Fact]
@@ -77,6 +89,18 @@ namespace eZmaxApi.Test.Api
             //int pkiInscriptionID = null;
             //var response = instance.InscriptionGetCommunicationListV1(pkiInscriptionID);
             //Assert.IsType<InscriptionGetCommunicationListV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test InscriptionGetCommunicationrecipientsV1
+        /// </summary>
+        [Fact]
+        public void InscriptionGetCommunicationrecipientsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInscriptionID = null;
+            //var response = instance.InscriptionGetCommunicationrecipientsV1(pkiInscriptionID);
+            //Assert.IsType<InscriptionGetCommunicationrecipientsV1Response>(response);
         }
 
         /// <summary>

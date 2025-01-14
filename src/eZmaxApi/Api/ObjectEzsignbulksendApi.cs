@@ -32,10 +32,10 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendID"></param>
-        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV1Request"></param>
+        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignbulksendCreateEzsignbulksendtransmissionV1Response</returns>
-        EzsignbulksendCreateEzsignbulksendtransmissionV1Response EzsignbulksendCreateEzsignbulksendtransmissionV1(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, int operationIndex = 0);
+        /// <returns>EzsignbulksendCreateEzsignbulksendtransmissionV2Response</returns>
+        EzsignbulksendCreateEzsignbulksendtransmissionV2Response EzsignbulksendCreateEzsignbulksendtransmissionV2(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, int operationIndex = 0);
 
         /// <summary>
         /// Create a new Ezsignbulksendtransmission in the Ezsignbulksend
@@ -45,10 +45,10 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendID"></param>
-        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV1Request"></param>
+        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignbulksendCreateEzsignbulksendtransmissionV1Response</returns>
-        ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> EzsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsignbulksendCreateEzsignbulksendtransmissionV2Response</returns>
+        ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> EzsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, int operationIndex = 0);
         /// <summary>
         /// Create a new Ezsignbulksend
         /// </summary>
@@ -289,11 +289,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendID"></param>
-        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV1Request"></param>
+        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignbulksendCreateEzsignbulksendtransmissionV1Response</returns>
-        System.Threading.Tasks.Task<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> EzsignbulksendCreateEzsignbulksendtransmissionV1Async(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of EzsignbulksendCreateEzsignbulksendtransmissionV2Response</returns>
+        System.Threading.Tasks.Task<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> EzsignbulksendCreateEzsignbulksendtransmissionV2Async(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Ezsignbulksendtransmission in the Ezsignbulksend
@@ -303,11 +303,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendID"></param>
-        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV1Request"></param>
+        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignbulksendCreateEzsignbulksendtransmissionV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response>> EzsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfoAsync(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsignbulksendCreateEzsignbulksendtransmissionV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response>> EzsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfoAsync(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create a new Ezsignbulksend
         /// </summary>
@@ -697,12 +697,12 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendID"></param>
-        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV1Request"></param>
+        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignbulksendCreateEzsignbulksendtransmissionV1Response</returns>
-        public EzsignbulksendCreateEzsignbulksendtransmissionV1Response EzsignbulksendCreateEzsignbulksendtransmissionV1(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, int operationIndex = 0)
+        /// <returns>EzsignbulksendCreateEzsignbulksendtransmissionV2Response</returns>
+        public EzsignbulksendCreateEzsignbulksendtransmissionV2Response EzsignbulksendCreateEzsignbulksendtransmissionV2(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> localVarResponse = EzsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request);
+            eZmaxApi.Client.ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> localVarResponse = EzsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request);
             return localVarResponse.Data;
         }
 
@@ -711,15 +711,15 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendID"></param>
-        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV1Request"></param>
+        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignbulksendCreateEzsignbulksendtransmissionV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> EzsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsignbulksendCreateEzsignbulksendtransmissionV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> EzsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, int operationIndex = 0)
         {
-            // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' is set
-            if (ezsignbulksendCreateEzsignbulksendtransmissionV1Request == null)
+            // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' is set
+            if (ezsignbulksendCreateEzsignbulksendtransmissionV2Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' when calling ObjectEzsignbulksendApi->EzsignbulksendCreateEzsignbulksendtransmissionV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' when calling ObjectEzsignbulksendApi->EzsignbulksendCreateEzsignbulksendtransmissionV2");
             }
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -746,9 +746,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiEzsignbulksendID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignbulksendID)); // path parameter
-            localVarRequestOptions.Data = ezsignbulksendCreateEzsignbulksendtransmissionV1Request;
+            localVarRequestOptions.Data = ezsignbulksendCreateEzsignbulksendtransmissionV2Request;
 
-            localVarRequestOptions.Operation = "ObjectEzsignbulksendApi.EzsignbulksendCreateEzsignbulksendtransmissionV1";
+            localVarRequestOptions.Operation = "ObjectEzsignbulksendApi.EzsignbulksendCreateEzsignbulksendtransmissionV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -758,10 +758,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<EzsignbulksendCreateEzsignbulksendtransmissionV1Response>("/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<EzsignbulksendCreateEzsignbulksendtransmissionV2Response>("/2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsignbulksendCreateEzsignbulksendtransmissionV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsignbulksendCreateEzsignbulksendtransmissionV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -776,13 +776,13 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendID"></param>
-        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV1Request"></param>
+        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignbulksendCreateEzsignbulksendtransmissionV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> EzsignbulksendCreateEzsignbulksendtransmissionV1Async(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of EzsignbulksendCreateEzsignbulksendtransmissionV2Response</returns>
+        public async System.Threading.Tasks.Task<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> EzsignbulksendCreateEzsignbulksendtransmissionV2Async(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> localVarResponse = await EzsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfoAsync(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> localVarResponse = await EzsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfoAsync(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -791,16 +791,16 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendID"></param>
-        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV1Request"></param>
+        /// <param name="ezsignbulksendCreateEzsignbulksendtransmissionV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignbulksendCreateEzsignbulksendtransmissionV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response>> EzsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfoAsync(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsignbulksendCreateEzsignbulksendtransmissionV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response>> EzsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfoAsync(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' is set
-            if (ezsignbulksendCreateEzsignbulksendtransmissionV1Request == null)
+            // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' is set
+            if (ezsignbulksendCreateEzsignbulksendtransmissionV2Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' when calling ObjectEzsignbulksendApi->EzsignbulksendCreateEzsignbulksendtransmissionV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' when calling ObjectEzsignbulksendApi->EzsignbulksendCreateEzsignbulksendtransmissionV2");
             }
 
 
@@ -828,9 +828,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiEzsignbulksendID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignbulksendID)); // path parameter
-            localVarRequestOptions.Data = ezsignbulksendCreateEzsignbulksendtransmissionV1Request;
+            localVarRequestOptions.Data = ezsignbulksendCreateEzsignbulksendtransmissionV2Request;
 
-            localVarRequestOptions.Operation = "ObjectEzsignbulksendApi.EzsignbulksendCreateEzsignbulksendtransmissionV1";
+            localVarRequestOptions.Operation = "ObjectEzsignbulksendApi.EzsignbulksendCreateEzsignbulksendtransmissionV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -840,11 +840,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsignbulksendCreateEzsignbulksendtransmissionV1Response>("/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsignbulksendCreateEzsignbulksendtransmissionV2Response>("/2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("EzsignbulksendCreateEzsignbulksendtransmissionV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzsignbulksendCreateEzsignbulksendtransmissionV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

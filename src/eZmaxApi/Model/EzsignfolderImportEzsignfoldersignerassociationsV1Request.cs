@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderImportEzsignfoldersignerassociationsV1Request" /> class.
         /// </summary>
-        /// <param name="aFkiEzsignfoldersignerassociationID">aFkiEzsignfoldersignerassociationID (required).</param>
-        public EzsignfolderImportEzsignfoldersignerassociationsV1Request(List<int> aFkiEzsignfoldersignerassociationID = default(List<int>))
+        /// <param name=""> (required).</param>
+        public EzsignfolderImportEzsignfoldersignerassociationsV1Request(List<int>  = default(List<int>))
         {
-            // to ensure "aFkiEzsignfoldersignerassociationID" is required (not null)
-            if (aFkiEzsignfoldersignerassociationID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aFkiEzsignfoldersignerassociationID is a required property for EzsignfolderImportEzsignfoldersignerassociationsV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderImportEzsignfoldersignerassociationsV1Request and cannot be null");
             }
-            this.AFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
+            this.AFkiEzsignfoldersignerassociationID = ;
         }
 
         /// <summary>

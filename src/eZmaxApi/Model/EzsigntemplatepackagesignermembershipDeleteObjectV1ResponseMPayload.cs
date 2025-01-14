@@ -40,12 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="bEzsigntemplatepackageNeedvalidation">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
-        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
-        public EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload(bool bEzsigntemplatepackageNeedvalidation = default(bool), bool bEzsignbulksendNeedvalidation = default(bool))
+        /// <param name="">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
+        /// <param name="">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
+        public EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload(bool  = default(bool), bool  = default(bool))
         {
-            this.BEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
-            this.BEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
+            this.BEzsigntemplatepackageNeedvalidation = ;
+            this.BEzsignbulksendNeedvalidation = ;
         }
 
         /// <summary>

@@ -74,12 +74,12 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'SCreditcarddetailNumbermasked'
+        /// Test the property 'ICreditcarddetailLastdigits'
         /// </summary>
         [Fact]
-        public void SCreditcarddetailNumbermaskedTest()
+        public void ICreditcarddetailLastdigitsTest()
         {
-            // TODO unit test for the property 'SCreditcarddetailNumbermasked'
+            // TODO unit test for the property 'ICreditcarddetailLastdigits'
         }
 
         /// <summary>

@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="objBillingentityinternalDescription">objBillingentityinternalDescription (required).</param>
-        /// <param name="aObjBillingentityinternalproduct">aObjBillingentityinternalproduct (required).</param>
-        public BillingentityinternalResponseCompound(int pkiBillingentityinternalID = default(int), MultilingualBillingentityinternalDescription objBillingentityinternalDescription = default(MultilingualBillingentityinternalDescription), List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct = default(List<BillingentityinternalproductResponseCompound>))
+        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public BillingentityinternalResponseCompound(int  = default(int), MultilingualBillingentityinternalDescription  = default(MultilingualBillingentityinternalDescription), List<BillingentityinternalproductResponseCompound>  = default(List<BillingentityinternalproductResponseCompound>))
         {
-            this.PkiBillingentityinternalID = pkiBillingentityinternalID;
-            // to ensure "objBillingentityinternalDescription" is required (not null)
-            if (objBillingentityinternalDescription == null)
+            this.PkiBillingentityinternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objBillingentityinternalDescription is a required property for BillingentityinternalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalResponseCompound and cannot be null");
             }
-            this.ObjBillingentityinternalDescription = objBillingentityinternalDescription;
-            // to ensure "aObjBillingentityinternalproduct" is required (not null)
-            if (aObjBillingentityinternalproduct == null)
+            this.ObjBillingentityinternalDescription = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjBillingentityinternalproduct is a required property for BillingentityinternalResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for BillingentityinternalResponseCompound and cannot be null");
             }
-            this.AObjBillingentityinternalproduct = aObjBillingentityinternalproduct;
+            this.AObjBillingentityinternalproduct = ;
         }
 
         /// <summary>

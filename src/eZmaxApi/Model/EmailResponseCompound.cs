@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEmailID">The unique ID of the Email (required).</param>
-        /// <param name="fkiEmailtypeID">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
-        /// <param name="sEmailAddress">The email address. (required).</param>
-        public EmailResponseCompound(int pkiEmailID = default(int), int fkiEmailtypeID = default(int), string sEmailAddress = default(string))
+        /// <param name="">The unique ID of the Email (required).</param>
+        /// <param name="">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
+        /// <param name="">The email address. (required).</param>
+        public EmailResponseCompound(int  = default(int), int  = default(int), string  = default(string))
         {
-            this.PkiEmailID = pkiEmailID;
-            this.FkiEmailtypeID = fkiEmailtypeID;
-            // to ensure "sEmailAddress" is required (not null)
-            if (sEmailAddress == null)
+            this.PkiEmailID = ;
+            this.FkiEmailtypeID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEmailAddress is a required property for EmailResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EmailResponseCompound and cannot be null");
             }
-            this.SEmailAddress = sEmailAddress;
+            this.SEmailAddress = ;
         }
 
         /// <summary>

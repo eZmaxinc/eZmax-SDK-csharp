@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaxassignmentGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjTaxassignment">An array of Taxassignment autocomplete element response. (required).</param>
-        public TaxassignmentGetAutocompleteV2ResponseMPayload(List<TaxassignmentAutocompleteElementResponse> aObjTaxassignment = default(List<TaxassignmentAutocompleteElementResponse>))
+        /// <param name="">An array of Taxassignment autocomplete element response. (required).</param>
+        public TaxassignmentGetAutocompleteV2ResponseMPayload(List<TaxassignmentAutocompleteElementResponse>  = default(List<TaxassignmentAutocompleteElementResponse>))
         {
-            // to ensure "aObjTaxassignment" is required (not null)
-            if (aObjTaxassignment == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjTaxassignment is a required property for TaxassignmentGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for TaxassignmentGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjTaxassignment = aObjTaxassignment;
+            this.AObjTaxassignment = ;
         }
 
         /// <summary>

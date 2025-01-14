@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionCreateObjectV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiDiscussionID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public DiscussionCreateObjectV1ResponseMPayload(List<int> aPkiDiscussionID = default(List<int>))
+        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public DiscussionCreateObjectV1ResponseMPayload(List<int>  = default(List<int>))
         {
-            // to ensure "aPkiDiscussionID" is required (not null)
-            if (aPkiDiscussionID == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aPkiDiscussionID is a required property for DiscussionCreateObjectV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for DiscussionCreateObjectV1ResponseMPayload and cannot be null");
             }
-            this.APkiDiscussionID = aPkiDiscussionID;
+            this.APkiDiscussionID = ;
         }
 
         /// <summary>

@@ -169,6 +169,28 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreditcardclientGetObjectV2Response</returns>
         ApiResponse<CreditcardclientGetObjectV2Response> CreditcardclientGetObjectV2WithHttpInfo(int pkiCreditcardclientID, int operationIndex = 0);
+        /// <summary>
+        /// Patch an existing Creditcardclient
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
+        /// <param name="creditcardclientPatchObjectV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CreditcardclientPatchObjectV1Response</returns>
+        CreditcardclientPatchObjectV1Response CreditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Patch an existing Creditcardclient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
+        /// <param name="creditcardclientPatchObjectV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CreditcardclientPatchObjectV1Response</returns>
+        ApiResponse<CreditcardclientPatchObjectV1Response> CreditcardclientPatchObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -344,6 +366,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreditcardclientGetObjectV2Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<CreditcardclientGetObjectV2Response>> CreditcardclientGetObjectV2WithHttpInfoAsync(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Patch an existing Creditcardclient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
+        /// <param name="creditcardclientPatchObjectV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CreditcardclientPatchObjectV1Response</returns>
+        System.Threading.Tasks.Task<CreditcardclientPatchObjectV1Response> CreditcardclientPatchObjectV1Async(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Patch an existing Creditcardclient
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
+        /// <param name="creditcardclientPatchObjectV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CreditcardclientPatchObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreditcardclientPatchObjectV1Response>> CreditcardclientPatchObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1445,6 +1494,168 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreditcardclientGetObjectV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Patch an existing Creditcardclient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
+        /// <param name="creditcardclientPatchObjectV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CreditcardclientPatchObjectV1Response</returns>
+        public CreditcardclientPatchObjectV1Response CreditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<CreditcardclientPatchObjectV1Response> localVarResponse = CreditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Patch an existing Creditcardclient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
+        /// <param name="creditcardclientPatchObjectV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CreditcardclientPatchObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<CreditcardclientPatchObjectV1Response> CreditcardclientPatchObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'creditcardclientPatchObjectV1Request' is set
+            if (creditcardclientPatchObjectV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'creditcardclientPatchObjectV1Request' when calling ObjectCreditcardclientApi->CreditcardclientPatchObjectV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCreditcardclientID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCreditcardclientID)); // path parameter
+            localVarRequestOptions.Data = creditcardclientPatchObjectV1Request;
+
+            localVarRequestOptions.Operation = "ObjectCreditcardclientApi.CreditcardclientPatchObjectV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Patch<CreditcardclientPatchObjectV1Response>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreditcardclientPatchObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Patch an existing Creditcardclient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
+        /// <param name="creditcardclientPatchObjectV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CreditcardclientPatchObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<CreditcardclientPatchObjectV1Response> CreditcardclientPatchObjectV1Async(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<CreditcardclientPatchObjectV1Response> localVarResponse = await CreditcardclientPatchObjectV1WithHttpInfoAsync(pkiCreditcardclientID, creditcardclientPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Patch an existing Creditcardclient 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
+        /// <param name="creditcardclientPatchObjectV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CreditcardclientPatchObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientPatchObjectV1Response>> CreditcardclientPatchObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'creditcardclientPatchObjectV1Request' is set
+            if (creditcardclientPatchObjectV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'creditcardclientPatchObjectV1Request' when calling ObjectCreditcardclientApi->CreditcardclientPatchObjectV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCreditcardclientID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCreditcardclientID)); // path parameter
+            localVarRequestOptions.Data = creditcardclientPatchObjectV1Request;
+
+            localVarRequestOptions.Operation = "ObjectCreditcardclientApi.CreditcardclientPatchObjectV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<CreditcardclientPatchObjectV1Response>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreditcardclientPatchObjectV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

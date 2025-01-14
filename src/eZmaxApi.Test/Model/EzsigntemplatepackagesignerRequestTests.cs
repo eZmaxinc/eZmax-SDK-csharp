@@ -74,6 +74,51 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiEzdoctemplatedocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzdoctemplatedocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzdoctemplatedocumentID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUserID'
+        /// </summary>
+        [Fact]
+        public void FkiUserIDTest()
+        {
+            // TODO unit test for the property 'FkiUserID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUsergroupID'
+        /// </summary>
+        [Fact]
+        public void FkiUsergroupIDTest()
+        {
+            // TODO unit test for the property 'FkiUsergroupID'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsigntemplatepackagesignerReceivecopy'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplatepackagesignerReceivecopyTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplatepackagesignerReceivecopy'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplatepackagesignerMapping'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplatepackagesignerMappingTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatepackagesignerMapping'
+        }
+
+        /// <summary>
         /// Test the property 'SEzsigntemplatepackagesignerDescription'
         /// </summary>
         [Fact]

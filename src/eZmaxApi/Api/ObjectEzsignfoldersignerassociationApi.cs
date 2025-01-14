@@ -31,7 +31,7 @@ namespace eZmaxApi.Api
         /// Creates an Url to allow embedded signing
         /// </summary>
         /// <remarks>
-        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
@@ -44,7 +44,7 @@ namespace eZmaxApi.Api
         /// Creates an Url to allow embedded signing
         /// </summary>
         /// <remarks>
-        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
@@ -251,6 +251,31 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsignfoldersignerassociationPatchObjectV1Response</returns>
         ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response> EzsignfoldersignerassociationPatchObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Reassign remaining unsigned signatures and forms
+        /// </summary>
+        /// <remarks>
+        /// Reassign remaining unsigned signatures and forms
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfoldersignerassociationReassignV1Response</returns>
+        EzsignfoldersignerassociationReassignV1Response EzsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Reassign remaining unsigned signatures and forms
+        /// </summary>
+        /// <remarks>
+        /// Reassign remaining unsigned signatures and forms
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfoldersignerassociationReassignV1Response</returns>
+        ApiResponse<EzsignfoldersignerassociationReassignV1Response> EzsignfoldersignerassociationReassignV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -264,7 +289,7 @@ namespace eZmaxApi.Api
         /// Creates an Url to allow embedded signing
         /// </summary>
         /// <remarks>
-        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
@@ -278,7 +303,7 @@ namespace eZmaxApi.Api
         /// Creates an Url to allow embedded signing
         /// </summary>
         /// <remarks>
-        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+        /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
@@ -522,6 +547,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationPatchObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response>> EzsignfoldersignerassociationPatchObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Reassign remaining unsigned signatures and forms
+        /// </summary>
+        /// <remarks>
+        /// Reassign remaining unsigned signatures and forms
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfoldersignerassociationReassignV1Response</returns>
+        System.Threading.Tasks.Task<EzsignfoldersignerassociationReassignV1Response> EzsignfoldersignerassociationReassignV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Reassign remaining unsigned signatures and forms
+        /// </summary>
+        /// <remarks>
+        /// Reassign remaining unsigned signatures and forms
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationReassignV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationReassignV1Response>> EzsignfoldersignerassociationReassignV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -643,7 +695,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
@@ -657,7 +709,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
@@ -722,7 +774,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
@@ -737,7 +789,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+        /// Creates an Url to allow embedded signing This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
@@ -2169,6 +2221,168 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignfoldersignerassociationPatchObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Reassign remaining unsigned signatures and forms Reassign remaining unsigned signatures and forms
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsignfoldersignerassociationReassignV1Response</returns>
+        public EzsignfoldersignerassociationReassignV1Response EzsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationReassignV1Response> localVarResponse = EzsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reassign remaining unsigned signatures and forms Reassign remaining unsigned signatures and forms
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsignfoldersignerassociationReassignV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationReassignV1Response> EzsignfoldersignerassociationReassignV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'ezsignfoldersignerassociationReassignV1Request' is set
+            if (ezsignfoldersignerassociationReassignV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfoldersignerassociationReassignV1Request' when calling ObjectEzsignfoldersignerassociationApi->EzsignfoldersignerassociationReassignV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfoldersignerassociationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfoldersignerassociationID)); // path parameter
+            localVarRequestOptions.Data = ezsignfoldersignerassociationReassignV1Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsignfoldersignerassociationApi.EzsignfoldersignerassociationReassignV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EzsignfoldersignerassociationReassignV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfoldersignerassociationReassignV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Reassign remaining unsigned signatures and forms Reassign remaining unsigned signatures and forms
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignfoldersignerassociationReassignV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationReassignV1Response> EzsignfoldersignerassociationReassignV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationReassignV1Response> localVarResponse = await EzsignfoldersignerassociationReassignV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reassign remaining unsigned signatures and forms Reassign remaining unsigned signatures and forms
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignfoldersignerassociationID"></param>
+        /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationReassignV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationReassignV1Response>> EzsignfoldersignerassociationReassignV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'ezsignfoldersignerassociationReassignV1Request' is set
+            if (ezsignfoldersignerassociationReassignV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsignfoldersignerassociationReassignV1Request' when calling ObjectEzsignfoldersignerassociationApi->EzsignfoldersignerassociationReassignV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignfoldersignerassociationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignfoldersignerassociationID)); // path parameter
+            localVarRequestOptions.Data = ezsignfoldersignerassociationReassignV1Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsignfoldersignerassociationApi.EzsignfoldersignerassociationReassignV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsignfoldersignerassociationReassignV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignfoldersignerassociationReassignV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

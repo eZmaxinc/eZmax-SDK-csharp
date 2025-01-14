@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetUsergroupsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjUsergroup">aObjUsergroup (required).</param>
-        public UserGetUsergroupsV1ResponseMPayload(List<UsergroupResponseCompound> aObjUsergroup = default(List<UsergroupResponseCompound>))
+        /// <param name=""> (required).</param>
+        public UserGetUsergroupsV1ResponseMPayload(List<UsergroupResponseCompound>  = default(List<UsergroupResponseCompound>))
         {
-            // to ensure "aObjUsergroup" is required (not null)
-            if (aObjUsergroup == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUsergroup is a required property for UserGetUsergroupsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserGetUsergroupsV1ResponseMPayload and cannot be null");
             }
-            this.AObjUsergroup = aObjUsergroup;
+            this.AObjUsergroup = ;
         }
 
         /// <summary>

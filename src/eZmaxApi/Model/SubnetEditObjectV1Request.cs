@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubnetEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objSubnet">objSubnet (required).</param>
-        public SubnetEditObjectV1Request(SubnetRequestCompound objSubnet = default(SubnetRequestCompound))
+        /// <param name=""> (required).</param>
+        public SubnetEditObjectV1Request(SubnetRequestCompound  = default(SubnetRequestCompound))
         {
-            // to ensure "objSubnet" is required (not null)
-            if (objSubnet == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objSubnet is a required property for SubnetEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for SubnetEditObjectV1Request and cannot be null");
             }
-            this.ObjSubnet = objSubnet;
+            this.ObjSubnet = ;
         }
 
         /// <summary>

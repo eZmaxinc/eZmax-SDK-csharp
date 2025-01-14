@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentRequestPatch" /> class.
         /// </summary>
-        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed..</param>
-        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations.</param>
-        public EzsigndocumentRequestPatch(string dtEzsigndocumentDuedate = default(string), string sEzsigndocumentName = default(string))
+        /// <param name="">The maximum date and time at which the Ezsigndocument can be signed..</param>
+        /// <param name="">The name of the document that will be presented to Ezsignfoldersignerassociations.</param>
+        public EzsigndocumentRequestPatch(string  = default(string), string  = default(string))
         {
-            this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
-            this.SEzsigndocumentName = sEzsigndocumentName;
+            this.DtEzsigndocumentDuedate = ;
+            this.SEzsigndocumentName = ;
         }
 
         /// <summary>

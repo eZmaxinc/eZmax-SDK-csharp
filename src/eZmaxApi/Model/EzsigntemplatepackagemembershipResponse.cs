@@ -40,16 +40,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership (required).</param>
-        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="iEzsigntemplatepackagemembershipOrder">The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage. (required).</param>
-        public EzsigntemplatepackagemembershipResponse(int pkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int), int iEzsigntemplatepackagemembershipOrder = default(int))
+        /// <param name="">The unique ID of the Ezsigntemplatepackagemembership (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="">The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage. (required).</param>
+        public EzsigntemplatepackagemembershipResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int))
         {
-            this.PkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
-            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
-            this.IEzsigntemplatepackagemembershipOrder = iEzsigntemplatepackagemembershipOrder;
+            this.PkiEzsigntemplatepackagemembershipID = ;
+            this.FkiEzsigntemplatepackageID = ;
+            this.FkiEzsigntemplateID = ;
+            this.IEzsigntemplatepackagemembershipOrder = ;
         }
 
         /// <summary>

@@ -34,28 +34,34 @@ namespace eZmaxApi.Model
     public enum FieldPksEzmaxclientOs
     {
         /// <summary>
+        /// Enum Android for value: Android
+        /// </summary>
+        [EnumMember(Value = "Android")]
+        Android = 1,
+
+        /// <summary>
         /// Enum IOS for value: iOS
         /// </summary>
         [EnumMember(Value = "iOS")]
-        IOS = 1,
+        IOS = 2,
 
         /// <summary>
         /// Enum IPadOS for value: iPadOS
         /// </summary>
         [EnumMember(Value = "iPadOS")]
-        IPadOS = 2,
+        IPadOS = 3,
 
         /// <summary>
         /// Enum MacOS for value: macOS
         /// </summary>
         [EnumMember(Value = "macOS")]
-        MacOS = 3,
+        MacOS = 4,
 
         /// <summary>
         /// Enum Windows for value: Windows
         /// </summary>
         [EnumMember(Value = "Windows")]
-        Windows = 4
+        Windows = 5
     }
 
 }

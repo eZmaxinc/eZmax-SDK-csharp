@@ -46,55 +46,55 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="sEzsignbulksendDescription">The description of the Ezsignbulksend (required).</param>
-        /// <param name="tEzsignbulksendNote">Note about the Ezsignbulksend (required).</param>
-        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
-        /// <param name="bEzsignbulksendIsactive">Whether the Ezsignbulksend is active or not (required).</param>
-        /// <param name="objAudit">objAudit (required).</param>
-        public EzsignbulksendResponse(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sLanguageNameX = default(string), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), string sEzsignbulksendDescription = default(string), string tEzsignbulksendNote = default(string), bool bEzsignbulksendNeedvalidation = default(bool), bool bEzsignbulksendIsactive = default(bool), CommonAudit objAudit = default(CommonAudit))
+        /// <param name="">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="">The Name of the Language in the language of the requester (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="">The description of the Ezsignbulksend (required).</param>
+        /// <param name="">Note about the Ezsignbulksend (required).</param>
+        /// <param name="">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
+        /// <param name="">Whether the Ezsignbulksend is active or not (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsignbulksendResponse(int  = default(int), int  = default(int), int  = default(int), string  = default(string), FieldEEzsignfoldertypePrivacylevel  = default(FieldEEzsignfoldertypePrivacylevel), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool), CommonAudit  = default(CommonAudit))
         {
-            this.PkiEzsignbulksendID = pkiEzsignbulksendID;
-            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
-            this.FkiLanguageID = fkiLanguageID;
-            // to ensure "sLanguageNameX" is required (not null)
-            if (sLanguageNameX == null)
+            this.PkiEzsignbulksendID = ;
+            this.FkiEzsignfoldertypeID = ;
+            this.FkiLanguageID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sLanguageNameX is a required property for EzsignbulksendResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendResponse and cannot be null");
             }
-            this.SLanguageNameX = sLanguageNameX;
-            this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
-            // to ensure "sEzsignfoldertypeNameX" is required (not null)
-            if (sEzsignfoldertypeNameX == null)
+            this.SLanguageNameX = ;
+            this.EEzsignfoldertypePrivacylevel = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignfoldertypeNameX is a required property for EzsignbulksendResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendResponse and cannot be null");
             }
-            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
-            // to ensure "sEzsignbulksendDescription" is required (not null)
-            if (sEzsignbulksendDescription == null)
+            this.SEzsignfoldertypeNameX = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsignbulksendDescription is a required property for EzsignbulksendResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendResponse and cannot be null");
             }
-            this.SEzsignbulksendDescription = sEzsignbulksendDescription;
-            // to ensure "tEzsignbulksendNote" is required (not null)
-            if (tEzsignbulksendNote == null)
+            this.SEzsignbulksendDescription = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("tEzsignbulksendNote is a required property for EzsignbulksendResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendResponse and cannot be null");
             }
-            this.TEzsignbulksendNote = tEzsignbulksendNote;
-            this.BEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
-            this.BEzsignbulksendIsactive = bEzsignbulksendIsactive;
-            // to ensure "objAudit" is required (not null)
-            if (objAudit == null)
+            this.TEzsignbulksendNote = ;
+            this.BEzsignbulksendNeedvalidation = ;
+            this.BEzsignbulksendIsactive = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objAudit is a required property for EzsignbulksendResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendResponse and cannot be null");
             }
-            this.ObjAudit = objAudit;
+            this.ObjAudit = ;
         }
 
         /// <summary>

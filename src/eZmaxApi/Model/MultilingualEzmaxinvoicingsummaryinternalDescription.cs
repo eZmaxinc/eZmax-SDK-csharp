@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzmaxinvoicingsummaryinternalDescription" /> class.
         /// </summary>
-        /// <param name="sEzmaxinvoicingsummaryinternalDescription1">The Ezmaxinvoicingsummaryinternal description in French.</param>
-        /// <param name="sEzmaxinvoicingsummaryinternalDescription2">The Ezmaxinvoicingsummaryinternal description in English.</param>
-        public MultilingualEzmaxinvoicingsummaryinternalDescription(string sEzmaxinvoicingsummaryinternalDescription1 = default(string), string sEzmaxinvoicingsummaryinternalDescription2 = default(string))
+        /// <param name="">The Ezmaxinvoicingsummaryinternal description in French.</param>
+        /// <param name="">The Ezmaxinvoicingsummaryinternal description in English.</param>
+        public MultilingualEzmaxinvoicingsummaryinternalDescription(string  = default(string), string  = default(string))
         {
-            this.SEzmaxinvoicingsummaryinternalDescription1 = sEzmaxinvoicingsummaryinternalDescription1;
-            this.SEzmaxinvoicingsummaryinternalDescription2 = sEzmaxinvoicingsummaryinternalDescription2;
+            this.SEzmaxinvoicingsummaryinternalDescription1 = ;
+            this.SEzmaxinvoicingsummaryinternalDescription2 = ;
         }
 
         /// <summary>

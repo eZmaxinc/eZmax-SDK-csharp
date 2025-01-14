@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookRegenerateApikeyV1Request" /> class.
         /// </summary>
-        /// <param name="bWebhookIssigned">Whether the requests will be signed or not.</param>
-        public WebhookRegenerateApikeyV1Request(bool bWebhookIssigned = default(bool))
+        /// <param name="">Whether the requests will be signed or not.</param>
+        public WebhookRegenerateApikeyV1Request(bool  = default(bool))
         {
-            this.BWebhookIssigned = bWebhookIssigned;
+            this.BWebhookIssigned = ;
         }
 
         /// <summary>

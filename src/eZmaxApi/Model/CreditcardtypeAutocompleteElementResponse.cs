@@ -46,19 +46,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardtypeAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="sCreditcardtypeName">The name of the Creditcardtype (required).</param>
-        /// <param name="pkiCreditcardtypeID">The unique ID of the Creditcardtype (required).</param>
-        /// <param name="eCreditcardtypeCodename">eCreditcardtypeCodename (required).</param>
-        public CreditcardtypeAutocompleteElementResponse(string sCreditcardtypeName = default(string), int pkiCreditcardtypeID = default(int), FieldECreditcardtypeCodename eCreditcardtypeCodename = default(FieldECreditcardtypeCodename))
+        /// <param name="">The name of the Creditcardtype (required).</param>
+        /// <param name="">The unique ID of the Creditcardtype (required).</param>
+        /// <param name=""> (required).</param>
+        public CreditcardtypeAutocompleteElementResponse(string  = default(string), int  = default(int), FieldECreditcardtypeCodename  = default(FieldECreditcardtypeCodename))
         {
-            // to ensure "sCreditcardtypeName" is required (not null)
-            if (sCreditcardtypeName == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCreditcardtypeName is a required property for CreditcardtypeAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CreditcardtypeAutocompleteElementResponse and cannot be null");
             }
-            this.SCreditcardtypeName = sCreditcardtypeName;
-            this.PkiCreditcardtypeID = pkiCreditcardtypeID;
-            this.ECreditcardtypeCodename = eCreditcardtypeCodename;
+            this.SCreditcardtypeName = ;
+            this.PkiCreditcardtypeID = ;
+            this.ECreditcardtypeCodename = ;
         }
 
         /// <summary>

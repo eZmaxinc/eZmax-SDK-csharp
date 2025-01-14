@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjPaymentterm">An array of Paymentterm autocomplete element response. (required).</param>
-        public PaymenttermGetAutocompleteV2ResponseMPayload(List<PaymenttermAutocompleteElementResponse> aObjPaymentterm = default(List<PaymenttermAutocompleteElementResponse>))
+        /// <param name="">An array of Paymentterm autocomplete element response. (required).</param>
+        public PaymenttermGetAutocompleteV2ResponseMPayload(List<PaymenttermAutocompleteElementResponse>  = default(List<PaymenttermAutocompleteElementResponse>))
         {
-            // to ensure "aObjPaymentterm" is required (not null)
-            if (aObjPaymentterm == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjPaymentterm is a required property for PaymenttermGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for PaymenttermGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjPaymentterm = aObjPaymentterm;
+            this.AObjPaymentterm = ;
         }
 
         /// <summary>

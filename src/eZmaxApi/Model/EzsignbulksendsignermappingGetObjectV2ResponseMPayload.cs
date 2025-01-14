@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objEzsignbulksendsignermapping">objEzsignbulksendsignermapping (required).</param>
-        public EzsignbulksendsignermappingGetObjectV2ResponseMPayload(EzsignbulksendsignermappingResponseCompound objEzsignbulksendsignermapping = default(EzsignbulksendsignermappingResponseCompound))
+        /// <param name=""> (required).</param>
+        public EzsignbulksendsignermappingGetObjectV2ResponseMPayload(EzsignbulksendsignermappingResponseCompound  = default(EzsignbulksendsignermappingResponseCompound))
         {
-            // to ensure "objEzsignbulksendsignermapping" is required (not null)
-            if (objEzsignbulksendsignermapping == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignbulksendsignermapping is a required property for EzsignbulksendsignermappingGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignbulksendsignermappingGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignbulksendsignermapping = objEzsignbulksendsignermapping;
+            this.ObjEzsignbulksendsignermapping = ;
         }
 
         /// <summary>

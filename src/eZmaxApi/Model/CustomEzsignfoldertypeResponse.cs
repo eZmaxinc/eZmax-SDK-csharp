@@ -40,26 +40,42 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfoldertypeResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester.</param>
-        /// <param name="bEzsignfoldertypeSendproofezsignsigner">Whether we send the proof in the email to Ezsignsigner.</param>
-        /// <param name="bEzsignfoldertypeAllowdownloadattachmentezsignsigner">Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner.</param>
-        /// <param name="bEzsignfoldertypeAllowdownloadproofezsignsigner">Whether we allow the proof to be downloaded by an Ezsignsigner.</param>
-        /// <param name="bEzsignfoldertypeDelegate">Wheter if delegation of signature is allowed to another user or not.</param>
-        /// <param name="bEzsignfoldertypeDiscussion">Wheter if creating a new Discussion is allowed or not.</param>
-        /// <param name="bEzsignfoldertypeReassignezsignsigner">Wheter if Reassignment of signature is allowed by a signatory to another signatory or not.</param>
-        /// <param name="bEzsignfoldertypeReassignuser">Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not.</param>
-        public CustomEzsignfoldertypeResponse(int pkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), bool bEzsignfoldertypeSendproofezsignsigner = default(bool), bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner = default(bool), bool bEzsignfoldertypeAllowdownloadproofezsignsigner = default(bool), bool bEzsignfoldertypeDelegate = default(bool), bool bEzsignfoldertypeDiscussion = default(bool), bool bEzsignfoldertypeReassignezsignsigner = default(bool), bool bEzsignfoldertypeReassignuser = default(bool))
+        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="">The unique ID of the Font.</param>
+        /// <param name="">The unique ID of the Font.</param>
+        /// <param name="">The unique ID of the Font.</param>
+        /// <param name="">The name of the Ezsignfoldertype in the language of the requester.</param>
+        /// <param name="">Whether we send the proof in the email to Ezsignsigner.</param>
+        /// <param name="">Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner.</param>
+        /// <param name="">Whether we allow the proof to be downloaded by an Ezsignsigner.</param>
+        /// <param name="">Whether we allow the automatic signature by an User.</param>
+        /// <param name="">Wheter if delegation of signature is allowed to another user or not.</param>
+        /// <param name="">Wheter if creating a new Discussion is allowed or not.</param>
+        /// <param name="">Wheter if Reassignment of signature is allowed by a signatory to another signatory or not.</param>
+        /// <param name="">Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not.</param>
+        /// <param name="">Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself.</param>
+        /// <param name="">The number of days to get all Ezsignsignatures.</param>
+        /// <param name="">Font size for annotations.</param>
+        /// <param name="">Font size for form fields.</param>
+        public CustomEzsignfoldertypeResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), int  = default(int), int  = default(int), int  = default(int))
         {
-            this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
-            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
-            this.BEzsignfoldertypeSendproofezsignsigner = bEzsignfoldertypeSendproofezsignsigner;
-            this.BEzsignfoldertypeAllowdownloadattachmentezsignsigner = bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
-            this.BEzsignfoldertypeAllowdownloadproofezsignsigner = bEzsignfoldertypeAllowdownloadproofezsignsigner;
-            this.BEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
-            this.BEzsignfoldertypeDiscussion = bEzsignfoldertypeDiscussion;
-            this.BEzsignfoldertypeReassignezsignsigner = bEzsignfoldertypeReassignezsignsigner;
-            this.BEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
+            this.PkiEzsignfoldertypeID = ;
+            this.FkiFontIDAnnotation = ;
+            this.FkiFontIDFormfield = ;
+            this.FkiFontIDSignature = ;
+            this.SEzsignfoldertypeNameX = ;
+            this.BEzsignfoldertypeSendproofezsignsigner = ;
+            this.BEzsignfoldertypeAllowdownloadattachmentezsignsigner = ;
+            this.BEzsignfoldertypeAllowdownloadproofezsignsigner = ;
+            this.BEzsignfoldertypeAutomaticsignature = ;
+            this.BEzsignfoldertypeDelegate = ;
+            this.BEzsignfoldertypeDiscussion = ;
+            this.BEzsignfoldertypeReassignezsignsigner = ;
+            this.BEzsignfoldertypeReassignuser = ;
+            this.BEzsignfoldertypeReassigngroup = ;
+            this.IEzsignfoldertypeDeadlinedays = ;
+            this.IEzsignfoldertypeFontsizeannotation = ;
+            this.IEzsignfoldertypeFontsizeformfield = ;
         }
 
         /// <summary>
@@ -69,6 +85,30 @@ namespace eZmaxApi.Model
         /* <example>5</example>*/
         [DataMember(Name = "pkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiEzsignfoldertypeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Font
+        /// </summary>
+        /// <value>The unique ID of the Font</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiFontIDAnnotation", EmitDefaultValue = false)]
+        public int FkiFontIDAnnotation { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Font
+        /// </summary>
+        /// <value>The unique ID of the Font</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiFontIDFormfield", EmitDefaultValue = false)]
+        public int FkiFontIDFormfield { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Font
+        /// </summary>
+        /// <value>The unique ID of the Font</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiFontIDSignature", EmitDefaultValue = false)]
+        public int FkiFontIDSignature { get; set; }
 
         /// <summary>
         /// The name of the Ezsignfoldertype in the language of the requester
@@ -103,6 +143,14 @@ namespace eZmaxApi.Model
         public bool BEzsignfoldertypeAllowdownloadproofezsignsigner { get; set; }
 
         /// <summary>
+        /// Whether we allow the automatic signature by an User
+        /// </summary>
+        /// <value>Whether we allow the automatic signature by an User</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bEzsignfoldertypeAutomaticsignature", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeAutomaticsignature { get; set; }
+
+        /// <summary>
         /// Wheter if delegation of signature is allowed to another user or not
         /// </summary>
         /// <value>Wheter if delegation of signature is allowed to another user or not</value>
@@ -135,6 +183,38 @@ namespace eZmaxApi.Model
         public bool BEzsignfoldertypeReassignuser { get; set; }
 
         /// <summary>
+        /// Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+        /// </summary>
+        /// <value>Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzsignfoldertypeReassigngroup", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeReassigngroup { get; set; }
+
+        /// <summary>
+        /// The number of days to get all Ezsignsignatures
+        /// </summary>
+        /// <value>The number of days to get all Ezsignsignatures</value>
+        /* <example>5</example>*/
+        [DataMember(Name = "iEzsignfoldertypeDeadlinedays", EmitDefaultValue = false)]
+        public int IEzsignfoldertypeDeadlinedays { get; set; }
+
+        /// <summary>
+        /// Font size for annotations
+        /// </summary>
+        /// <value>Font size for annotations</value>
+        /* <example>10</example>*/
+        [DataMember(Name = "iEzsignfoldertypeFontsizeannotation", EmitDefaultValue = false)]
+        public int IEzsignfoldertypeFontsizeannotation { get; set; }
+
+        /// <summary>
+        /// Font size for form fields
+        /// </summary>
+        /// <value>Font size for form fields</value>
+        /* <example>12</example>*/
+        [DataMember(Name = "iEzsignfoldertypeFontsizeformfield", EmitDefaultValue = false)]
+        public int IEzsignfoldertypeFontsizeformfield { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -143,14 +223,22 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class CustomEzsignfoldertypeResponse {\n");
             sb.Append("  PkiEzsignfoldertypeID: ").Append(PkiEzsignfoldertypeID).Append("\n");
+            sb.Append("  FkiFontIDAnnotation: ").Append(FkiFontIDAnnotation).Append("\n");
+            sb.Append("  FkiFontIDFormfield: ").Append(FkiFontIDFormfield).Append("\n");
+            sb.Append("  FkiFontIDSignature: ").Append(FkiFontIDSignature).Append("\n");
             sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
             sb.Append("  BEzsignfoldertypeSendproofezsignsigner: ").Append(BEzsignfoldertypeSendproofezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeAllowdownloadattachmentezsignsigner: ").Append(BEzsignfoldertypeAllowdownloadattachmentezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeAllowdownloadproofezsignsigner: ").Append(BEzsignfoldertypeAllowdownloadproofezsignsigner).Append("\n");
+            sb.Append("  BEzsignfoldertypeAutomaticsignature: ").Append(BEzsignfoldertypeAutomaticsignature).Append("\n");
             sb.Append("  BEzsignfoldertypeDelegate: ").Append(BEzsignfoldertypeDelegate).Append("\n");
             sb.Append("  BEzsignfoldertypeDiscussion: ").Append(BEzsignfoldertypeDiscussion).Append("\n");
             sb.Append("  BEzsignfoldertypeReassignezsignsigner: ").Append(BEzsignfoldertypeReassignezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeReassignuser: ").Append(BEzsignfoldertypeReassignuser).Append("\n");
+            sb.Append("  BEzsignfoldertypeReassigngroup: ").Append(BEzsignfoldertypeReassigngroup).Append("\n");
+            sb.Append("  IEzsignfoldertypeDeadlinedays: ").Append(IEzsignfoldertypeDeadlinedays).Append("\n");
+            sb.Append("  IEzsignfoldertypeFontsizeannotation: ").Append(IEzsignfoldertypeFontsizeannotation).Append("\n");
+            sb.Append("  IEzsignfoldertypeFontsizeformfield: ").Append(IEzsignfoldertypeFontsizeformfield).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -181,6 +269,60 @@ namespace eZmaxApi.Model
             if (this.PkiEzsignfoldertypeID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldertypeID" });
+            }
+
+            // FkiFontIDAnnotation (int) minimum
+            if (this.FkiFontIDAnnotation < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontIDAnnotation, must be a value greater than or equal to 0.", new [] { "FkiFontIDAnnotation" });
+            }
+
+            // FkiFontIDFormfield (int) minimum
+            if (this.FkiFontIDFormfield < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontIDFormfield, must be a value greater than or equal to 0.", new [] { "FkiFontIDFormfield" });
+            }
+
+            // FkiFontIDSignature (int) minimum
+            if (this.FkiFontIDSignature < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontIDSignature, must be a value greater than or equal to 0.", new [] { "FkiFontIDSignature" });
+            }
+
+            // IEzsignfoldertypeDeadlinedays (int) maximum
+            if (this.IEzsignfoldertypeDeadlinedays > (int)60)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeDeadlinedays, must be a value less than or equal to 60.", new [] { "IEzsignfoldertypeDeadlinedays" });
+            }
+
+            // IEzsignfoldertypeDeadlinedays (int) minimum
+            if (this.IEzsignfoldertypeDeadlinedays < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeDeadlinedays, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeDeadlinedays" });
+            }
+
+            // IEzsignfoldertypeFontsizeannotation (int) maximum
+            if (this.IEzsignfoldertypeFontsizeannotation > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeannotation, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeFontsizeannotation" });
+            }
+
+            // IEzsignfoldertypeFontsizeannotation (int) minimum
+            if (this.IEzsignfoldertypeFontsizeannotation < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeannotation, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeFontsizeannotation" });
+            }
+
+            // IEzsignfoldertypeFontsizeformfield (int) maximum
+            if (this.IEzsignfoldertypeFontsizeformfield > (int)255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeformfield, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeFontsizeformfield" });
+            }
+
+            // IEzsignfoldertypeFontsizeformfield (int) minimum
+            if (this.IEzsignfoldertypeFontsizeformfield < (int)1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeformfield, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeFontsizeformfield" });
             }
 
             yield break;

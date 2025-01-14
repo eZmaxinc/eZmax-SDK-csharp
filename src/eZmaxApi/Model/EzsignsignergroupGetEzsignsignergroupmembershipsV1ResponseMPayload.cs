@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsignsignergroupmembership">aObjEzsignsignergroupmembership (required).</param>
-        public EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload(List<EzsignsignergroupmembershipResponseCompound> aObjEzsignsignergroupmembership = default(List<EzsignsignergroupmembershipResponseCompound>))
+        /// <param name=""> (required).</param>
+        public EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload(List<EzsignsignergroupmembershipResponseCompound>  = default(List<EzsignsignergroupmembershipResponseCompound>))
         {
-            // to ensure "aObjEzsignsignergroupmembership" is required (not null)
-            if (aObjEzsignsignergroupmembership == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignsignergroupmembership is a required property for EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignsignergroupmembership = aObjEzsignsignergroupmembership;
+            this.AObjEzsignsignergroupmembership = ;
         }
 
         /// <summary>

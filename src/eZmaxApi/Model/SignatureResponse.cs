@@ -40,17 +40,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureResponse" /> class.
         /// </summary>
-        /// <param name="pkiSignatureID">The unique ID of the Signature (required).</param>
-        /// <param name="sSignatureUrl">The URL of the SVG file for the Signature (required).</param>
-        public SignatureResponse(int pkiSignatureID = default(int), string sSignatureUrl = default(string))
+        /// <param name="">The unique ID of the Signature (required).</param>
+        /// <param name="">The unique ID of the Font.</param>
+        /// <param name="">The URL of the SVG file for the Signature.</param>
+        /// <param name="">The URL of the SVG file for the Initials.</param>
+        public SignatureResponse(int  = default(int), int  = default(int), string  = default(string), string  = default(string))
         {
-            this.PkiSignatureID = pkiSignatureID;
-            // to ensure "sSignatureUrl" is required (not null)
-            if (sSignatureUrl == null)
-            {
-                throw new ArgumentNullException("sSignatureUrl is a required property for SignatureResponse and cannot be null");
-            }
-            this.SSignatureUrl = sSignatureUrl;
+            this.PkiSignatureID = ;
+            this.FkiFontID = ;
+            this.SSignatureUrl = ;
+            this.SSignatureUrlinitials = ;
         }
 
         /// <summary>
@@ -62,12 +61,28 @@ namespace eZmaxApi.Model
         public int PkiSignatureID { get; set; }
 
         /// <summary>
+        /// The unique ID of the Font
+        /// </summary>
+        /// <value>The unique ID of the Font</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiFontID", EmitDefaultValue = false)]
+        public int FkiFontID { get; set; }
+
+        /// <summary>
         /// The URL of the SVG file for the Signature
         /// </summary>
         /// <value>The URL of the SVG file for the Signature</value>
         /* <example>https://www.example.com/signature.svg</example>*/
-        [DataMember(Name = "sSignatureUrl", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sSignatureUrl", EmitDefaultValue = false)]
         public string SSignatureUrl { get; set; }
+
+        /// <summary>
+        /// The URL of the SVG file for the Initials
+        /// </summary>
+        /// <value>The URL of the SVG file for the Initials</value>
+        /* <example>https://www.example.com/signature.svg</example>*/
+        [DataMember(Name = "sSignatureUrlinitials", EmitDefaultValue = false)]
+        public string SSignatureUrlinitials { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -78,7 +93,9 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class SignatureResponse {\n");
             sb.Append("  PkiSignatureID: ").Append(PkiSignatureID).Append("\n");
+            sb.Append("  FkiFontID: ").Append(FkiFontID).Append("\n");
             sb.Append("  SSignatureUrl: ").Append(SSignatureUrl).Append("\n");
+            sb.Append("  SSignatureUrlinitials: ").Append(SSignatureUrlinitials).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,12 +128,27 @@ namespace eZmaxApi.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSignatureID, must be a value greater than or equal to 0.", new [] { "PkiSignatureID" });
             }
 
+            // FkiFontID (int) minimum
+            if (this.FkiFontID < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
+            }
+
             if (this.SSignatureUrl != null) {
                 // SSignatureUrl (string) pattern
                 Regex regexSSignatureUrl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
                 if (!regexSSignatureUrl.Match(this.SSignatureUrl).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SSignatureUrl, must match a pattern of " + regexSSignatureUrl, new [] { "SSignatureUrl" });
+                }
+            }
+
+            if (this.SSignatureUrlinitials != null) {
+                // SSignatureUrlinitials (string) pattern
+                Regex regexSSignatureUrlinitials = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
+                if (!regexSSignatureUrlinitials.Match(this.SSignatureUrlinitials).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SSignatureUrlinitials, must match a pattern of " + regexSSignatureUrlinitials, new [] { "SSignatureUrlinitials" });
                 }
             }
 

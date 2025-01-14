@@ -72,5 +72,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'EErrorCode'
         }
+
+        /// <summary>
+        /// Test the property 'ASErrorMessagedetail'
+        /// </summary>
+        [Fact]
+        public void ASErrorMessagedetailTest()
+        {
+            // TODO unit test for the property 'ASErrorMessagedetail'
+        }
     }
 }

@@ -52,43 +52,43 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobalResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplateglobalID">The unique ID of the Ezsigntemplateglobal (required).</param>
-        /// <param name="fkiEzsigntemplateglobaldocumentID">The unique ID of the Ezsigntemplateglobaldocument (required).</param>
-        /// <param name="fkiModuleID">The unique ID of the Module (required).</param>
-        /// <param name="sModuleNameX">The Name of the Module in the language of the requester.</param>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
-        /// <param name="eEzsigntemplateglobalModule">eEzsigntemplateglobalModule (required).</param>
-        /// <param name="eEzsigntemplateglobalSupplier">eEzsigntemplateglobalSupplier (required).</param>
-        /// <param name="sEzsigntemplateglobalCode">The Code of the Ezsigntemplateglobal (required).</param>
-        /// <param name="sEzsigntemplateglobalDescription">The description of the Ezsigntemplate (required).</param>
-        public EzsigntemplateglobalResponse(int pkiEzsigntemplateglobalID = default(int), int fkiEzsigntemplateglobaldocumentID = default(int), int fkiModuleID = default(int), string sModuleNameX = default(string), int fkiLanguageID = default(int), string sLanguageNameX = default(string), FieldEEzsigntemplateglobalModule eEzsigntemplateglobalModule = default(FieldEEzsigntemplateglobalModule), FieldEEzsigntemplateglobalSupplier eEzsigntemplateglobalSupplier = default(FieldEEzsigntemplateglobalSupplier), string sEzsigntemplateglobalCode = default(string), string sEzsigntemplateglobalDescription = default(string))
+        /// <param name="">The unique ID of the Ezsigntemplateglobal (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplateglobaldocument (required).</param>
+        /// <param name="">The unique ID of the Module (required).</param>
+        /// <param name="">The Name of the Module in the language of the requester.</param>
+        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="">The Name of the Language in the language of the requester (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The Code of the Ezsigntemplateglobal (required).</param>
+        /// <param name="">The description of the Ezsigntemplate (required).</param>
+        public EzsigntemplateglobalResponse(int  = default(int), int  = default(int), int  = default(int), string  = default(string), int  = default(int), string  = default(string), FieldEEzsigntemplateglobalModule  = default(FieldEEzsigntemplateglobalModule), FieldEEzsigntemplateglobalSupplier  = default(FieldEEzsigntemplateglobalSupplier), string  = default(string), string  = default(string))
         {
-            this.PkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
-            this.FkiEzsigntemplateglobaldocumentID = fkiEzsigntemplateglobaldocumentID;
-            this.FkiModuleID = fkiModuleID;
-            this.FkiLanguageID = fkiLanguageID;
-            // to ensure "sLanguageNameX" is required (not null)
-            if (sLanguageNameX == null)
+            this.PkiEzsigntemplateglobalID = ;
+            this.FkiEzsigntemplateglobaldocumentID = ;
+            this.FkiModuleID = ;
+            this.FkiLanguageID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sLanguageNameX is a required property for EzsigntemplateglobalResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalResponse and cannot be null");
             }
-            this.SLanguageNameX = sLanguageNameX;
-            this.EEzsigntemplateglobalModule = eEzsigntemplateglobalModule;
-            this.EEzsigntemplateglobalSupplier = eEzsigntemplateglobalSupplier;
-            // to ensure "sEzsigntemplateglobalCode" is required (not null)
-            if (sEzsigntemplateglobalCode == null)
+            this.SLanguageNameX = ;
+            this.EEzsigntemplateglobalModule = ;
+            this.EEzsigntemplateglobalSupplier = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplateglobalCode is a required property for EzsigntemplateglobalResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalResponse and cannot be null");
             }
-            this.SEzsigntemplateglobalCode = sEzsigntemplateglobalCode;
-            // to ensure "sEzsigntemplateglobalDescription" is required (not null)
-            if (sEzsigntemplateglobalDescription == null)
+            this.SEzsigntemplateglobalCode = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplateglobalDescription is a required property for EzsigntemplateglobalResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalResponse and cannot be null");
             }
-            this.SEzsigntemplateglobalDescription = sEzsigntemplateglobalDescription;
-            this.SModuleNameX = sModuleNameX;
+            this.SEzsigntemplateglobalDescription = ;
+            this.SModuleNameX = ;
         }
 
         /// <summary>

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReport" /> class.
         /// </summary>
-        /// <param name="aObjReportsection">aObjReportsection (required).</param>
-        public CommonReport(List<CommonReportsection> aObjReportsection = default(List<CommonReportsection>))
+        /// <param name=""> (required).</param>
+        public CommonReport(List<CommonReportsection>  = default(List<CommonReportsection>))
         {
-            // to ensure "aObjReportsection" is required (not null)
-            if (aObjReportsection == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjReportsection is a required property for CommonReport and cannot be null");
+                throw new ArgumentNullException(" is a required property for CommonReport and cannot be null");
             }
-            this.AObjReportsection = aObjReportsection;
+            this.AObjReportsection = ;
         }
 
         /// <summary>

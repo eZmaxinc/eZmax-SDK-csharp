@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationsectionGetNotificationtestsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjNotificationsubsection">aObjNotificationsubsection (required).</param>
-        public NotificationsectionGetNotificationtestsV1ResponseMPayload(List<CustomNotificationsubsectiongetnotificationtestsResponse> aObjNotificationsubsection = default(List<CustomNotificationsubsectiongetnotificationtestsResponse>))
+        /// <param name=""> (required).</param>
+        public NotificationsectionGetNotificationtestsV1ResponseMPayload(List<CustomNotificationsubsectiongetnotificationtestsResponse>  = default(List<CustomNotificationsubsectiongetnotificationtestsResponse>))
         {
-            // to ensure "aObjNotificationsubsection" is required (not null)
-            if (aObjNotificationsubsection == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjNotificationsubsection is a required property for NotificationsectionGetNotificationtestsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for NotificationsectionGetNotificationtestsV1ResponseMPayload and cannot be null");
             }
-            this.AObjNotificationsubsection = aObjNotificationsubsection;
+            this.AObjNotificationsubsection = ;
         }
 
         /// <summary>

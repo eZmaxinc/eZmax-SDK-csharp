@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModuleAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiModuleID">The unique ID of the Module (required).</param>
-        /// <param name="sModuleNameX">The Name of the Module in the language of the requester (required).</param>
-        /// <param name="bModuleIsactive">Whether the Module is active or not (required).</param>
-        public ModuleAutocompleteElementResponse(int pkiModuleID = default(int), string sModuleNameX = default(string), bool bModuleIsactive = default(bool))
+        /// <param name="">The unique ID of the Module (required).</param>
+        /// <param name="">The Name of the Module in the language of the requester (required).</param>
+        /// <param name="">Whether the Module is active or not (required).</param>
+        public ModuleAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
         {
-            this.PkiModuleID = pkiModuleID;
-            // to ensure "sModuleNameX" is required (not null)
-            if (sModuleNameX == null)
+            this.PkiModuleID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sModuleNameX is a required property for ModuleAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for ModuleAutocompleteElementResponse and cannot be null");
             }
-            this.SModuleNameX = sModuleNameX;
-            this.BModuleIsactive = bModuleIsactive;
+            this.SModuleNameX = ;
+            this.BModuleIsactive = ;
         }
 
         /// <summary>

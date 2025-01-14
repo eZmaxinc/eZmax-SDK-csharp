@@ -40,19 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiUsergroupID">The unique ID of the Usergroup (required).</param>
-        /// <param name="objUsergroupName">objUsergroupName (required).</param>
-        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester.</param>
-        public UsergroupResponseCompound(int pkiUsergroupID = default(int), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName), string sUsergroupNameX = default(string))
+        /// <param name="">The unique ID of the Usergroup (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The Name of the Usergroup in the language of the requester.</param>
+        /// <param name="">.</param>
+        public UsergroupResponseCompound(int  = default(int), MultilingualUsergroupName  = default(MultilingualUsergroupName), string  = default(string), EmailRequest  = default(EmailRequest))
         {
-            this.PkiUsergroupID = pkiUsergroupID;
-            // to ensure "objUsergroupName" is required (not null)
-            if (objUsergroupName == null)
+            this.PkiUsergroupID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objUsergroupName is a required property for UsergroupResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for UsergroupResponseCompound and cannot be null");
             }
-            this.ObjUsergroupName = objUsergroupName;
-            this.SUsergroupNameX = sUsergroupNameX;
+            this.ObjUsergroupName = ;
+            this.SUsergroupNameX = ;
+            this.ObjEmail = ;
         }
 
         /// <summary>
@@ -78,6 +80,12 @@ namespace eZmaxApi.Model
         public string SUsergroupNameX { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjEmail
+        /// </summary>
+        [DataMember(Name = "objEmail", EmitDefaultValue = false)]
+        public EmailRequest ObjEmail { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -88,6 +96,7 @@ namespace eZmaxApi.Model
             sb.Append("  PkiUsergroupID: ").Append(PkiUsergroupID).Append("\n");
             sb.Append("  ObjUsergroupName: ").Append(ObjUsergroupName).Append("\n");
             sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
+            sb.Append("  ObjEmail: ").Append(ObjEmail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

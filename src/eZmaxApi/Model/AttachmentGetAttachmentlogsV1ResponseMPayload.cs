@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachmentGetAttachmentlogsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjAttachmentlog">aObjAttachmentlog (required).</param>
-        public AttachmentGetAttachmentlogsV1ResponseMPayload(List<AttachmentlogResponseCompound> aObjAttachmentlog = default(List<AttachmentlogResponseCompound>))
+        /// <param name=""> (required).</param>
+        public AttachmentGetAttachmentlogsV1ResponseMPayload(List<AttachmentlogResponseCompound>  = default(List<AttachmentlogResponseCompound>))
         {
-            // to ensure "aObjAttachmentlog" is required (not null)
-            if (aObjAttachmentlog == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjAttachmentlog is a required property for AttachmentGetAttachmentlogsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for AttachmentGetAttachmentlogsV1ResponseMPayload and cannot be null");
             }
-            this.AObjAttachmentlog = aObjAttachmentlog;
+            this.AObjAttachmentlog = ;
         }
 
         /// <summary>

@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzsignsigningreasonDescription" /> class.
         /// </summary>
-        /// <param name="sEzsignsigningreasonDescription1">The description of the Ezsignsigningreason in French.</param>
-        /// <param name="sEzsignsigningreasonDescription2">The description of the Ezsignsigningreason in English.</param>
-        public MultilingualEzsignsigningreasonDescription(string sEzsignsigningreasonDescription1 = default(string), string sEzsignsigningreasonDescription2 = default(string))
+        /// <param name="">The description of the Ezsignsigningreason in French.</param>
+        /// <param name="">The description of the Ezsignsigningreason in English.</param>
+        public MultilingualEzsignsigningreasonDescription(string  = default(string), string  = default(string))
         {
-            this.SEzsignsigningreasonDescription1 = sEzsignsigningreasonDescription1;
-            this.SEzsignsigningreasonDescription2 = sEzsignsigningreasonDescription2;
+            this.SEzsignsigningreasonDescription1 = ;
+            this.SEzsignsigningreasonDescription2 = ;
         }
 
         /// <summary>

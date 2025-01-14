@@ -67,16 +67,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignsignaturestatusResponse" /> class.
         /// </summary>
-        /// <param name="eEzsignsignaturestatusSteptype">Type of step (required).</param>
-        /// <param name="iEzsignsignaturestatusStep">The step at which the Ezsignsigner will be invited to sign or fill the form fields (required).</param>
-        /// <param name="iEzsignsignaturestatusTotal">The total number of signature or form fields the Ezsignsigner must process at the current step (required).</param>
-        /// <param name="iEzsignsignaturestatusSigned">The number of signature or form fields the Ezsignsigner has already processed at the current step (required).</param>
-        public CustomEzsignsignaturestatusResponse(EEzsignsignaturestatusSteptypeEnum eEzsignsignaturestatusSteptype = default(EEzsignsignaturestatusSteptypeEnum), int iEzsignsignaturestatusStep = default(int), int iEzsignsignaturestatusTotal = default(int), int iEzsignsignaturestatusSigned = default(int))
+        /// <param name="">Type of step (required).</param>
+        /// <param name="">The step at which the Ezsignsigner will be invited to sign or fill the form fields (required).</param>
+        /// <param name="">The total number of signature or form fields the Ezsignsigner must process at the current step (required).</param>
+        /// <param name="">The number of signature or form fields the Ezsignsigner has already processed at the current step (required).</param>
+        /// <param name="">The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions. (required).</param>
+        public CustomEzsignsignaturestatusResponse(EEzsignsignaturestatusSteptypeEnum  = default(EEzsignsignaturestatusSteptypeEnum), int  = default(int), int  = default(int), int  = default(int), int  = default(int))
         {
-            this.EEzsignsignaturestatusSteptype = eEzsignsignaturestatusSteptype;
-            this.IEzsignsignaturestatusStep = iEzsignsignaturestatusStep;
-            this.IEzsignsignaturestatusTotal = iEzsignsignaturestatusTotal;
-            this.IEzsignsignaturestatusSigned = iEzsignsignaturestatusSigned;
+            this.EEzsignsignaturestatusSteptype = ;
+            this.IEzsignsignaturestatusStep = ;
+            this.IEzsignsignaturestatusTotal = ;
+            this.IEzsignsignaturestatusSigned = ;
+            this.IEzsignsignaturestatusConditional = ;
         }
 
         /// <summary>
@@ -104,6 +106,14 @@ namespace eZmaxApi.Model
         public int IEzsignsignaturestatusSigned { get; set; }
 
         /// <summary>
+        /// The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions.
+        /// </summary>
+        /// <value>The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "iEzsignsignaturestatusConditional", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzsignsignaturestatusConditional { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -115,6 +125,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsignsignaturestatusStep: ").Append(IEzsignsignaturestatusStep).Append("\n");
             sb.Append("  IEzsignsignaturestatusTotal: ").Append(IEzsignsignaturestatusTotal).Append("\n");
             sb.Append("  IEzsignsignaturestatusSigned: ").Append(IEzsignsignaturestatusSigned).Append("\n");
+            sb.Append("  IEzsignsignaturestatusConditional: ").Append(IEzsignsignaturestatusConditional).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

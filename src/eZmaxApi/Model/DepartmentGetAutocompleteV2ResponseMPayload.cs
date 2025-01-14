@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DepartmentGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjDepartment">An array of Department autocomplete element response. (required).</param>
-        public DepartmentGetAutocompleteV2ResponseMPayload(List<DepartmentAutocompleteElementResponse> aObjDepartment = default(List<DepartmentAutocompleteElementResponse>))
+        /// <param name="">An array of Department autocomplete element response. (required).</param>
+        public DepartmentGetAutocompleteV2ResponseMPayload(List<DepartmentAutocompleteElementResponse>  = default(List<DepartmentAutocompleteElementResponse>))
         {
-            // to ensure "aObjDepartment" is required (not null)
-            if (aObjDepartment == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjDepartment is a required property for DepartmentGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for DepartmentGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjDepartment = aObjDepartment;
+            this.AObjDepartment = ;
         }
 
         /// <summary>

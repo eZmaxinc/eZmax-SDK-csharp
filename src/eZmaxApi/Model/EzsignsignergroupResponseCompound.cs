@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup (required).</param>
-        /// <param name="objEzsignsignergroupDescription">objEzsignsignergroupDescription (required).</param>
-        /// <param name="sEzsignsignergroupDescriptionX">The Description of the Ezsignsignergroup in the language of the requester.</param>
-        public EzsignsignergroupResponseCompound(int pkiEzsignsignergroupID = default(int), MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription = default(MultilingualEzsignsignergroupDescription), string sEzsignsignergroupDescriptionX = default(string))
+        /// <param name="">The unique ID of the Ezsignsignergroup (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The Description of the Ezsignsignergroup in the language of the requester.</param>
+        public EzsignsignergroupResponseCompound(int  = default(int), MultilingualEzsignsignergroupDescription  = default(MultilingualEzsignsignergroupDescription), string  = default(string))
         {
-            this.PkiEzsignsignergroupID = pkiEzsignsignergroupID;
-            // to ensure "objEzsignsignergroupDescription" is required (not null)
-            if (objEzsignsignergroupDescription == null)
+            this.PkiEzsignsignergroupID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignsignergroupDescription is a required property for EzsignsignergroupResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignsignergroupResponseCompound and cannot be null");
             }
-            this.ObjEzsignsignergroupDescription = objEzsignsignergroupDescription;
-            this.SEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
+            this.ObjEzsignsignergroupDescription = ;
+            this.SEzsignsignergroupDescriptionX = ;
         }
 
         /// <summary>

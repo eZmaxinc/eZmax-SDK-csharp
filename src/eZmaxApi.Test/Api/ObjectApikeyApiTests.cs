@@ -94,6 +94,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test ApikeyGenerateDelegatedCredentialsV1
+        /// </summary>
+        [Fact]
+        public void ApikeyGenerateDelegatedCredentialsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request = null;
+            //var response = instance.ApikeyGenerateDelegatedCredentialsV1(apikeyGenerateDelegatedCredentialsV1Request);
+            //Assert.IsType<ApikeyGenerateDelegatedCredentialsV1Response>(response);
+        }
+
+        /// <summary>
         /// Test ApikeyGetCorsV1
         /// </summary>
         [Fact]

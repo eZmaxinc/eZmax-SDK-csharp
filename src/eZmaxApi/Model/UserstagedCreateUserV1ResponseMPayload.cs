@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedCreateUserV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="pkiUserID">The unique ID of the User (required).</param>
-        public UserstagedCreateUserV1ResponseMPayload(int pkiUserID = default(int))
+        /// <param name="">The unique ID of the User (required).</param>
+        public UserstagedCreateUserV1ResponseMPayload(int  = default(int))
         {
-            this.PkiUserID = pkiUserID;
+            this.PkiUserID = ;
         }
 
         /// <summary>

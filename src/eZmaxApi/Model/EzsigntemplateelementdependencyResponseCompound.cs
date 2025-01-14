@@ -52,26 +52,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateelementdependencyResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplateelementdependencyID">The unique ID of the Ezsigntemplateelementdependency (required).</param>
-        /// <param name="fkiEzsigntemplateformfieldID">The unique ID of the Ezsigntemplateformfield.</param>
-        /// <param name="fkiEzsigntemplatesignatureID">The unique ID of the Ezsigntemplatesignature.</param>
-        /// <param name="fkiEzsigntemplateformfieldIDValidation">The unique ID of the Ezsigntemplateformfield.</param>
-        /// <param name="fkiEzsigntemplateformfieldgroupIDValidation">The unique ID of the Ezsigntemplateformfieldgroup.</param>
-        /// <param name="eEzsigntemplateelementdependencyValidation">eEzsigntemplateelementdependencyValidation (required).</param>
-        /// <param name="bEzsigntemplateelementdependencySelected">Whether if it&#39;s selected or not when using eEzsigntemplateelementdependencyValidation &#x3D; Selected.</param>
-        /// <param name="eEzsigntemplateelementdependencyOperator">eEzsigntemplateelementdependencyOperator.</param>
-        /// <param name="sEzsigntemplateelementdependencyValue">The value of the Ezsignelementdependency.</param>
-        public EzsigntemplateelementdependencyResponseCompound(int pkiEzsigntemplateelementdependencyID = default(int), int fkiEzsigntemplateformfieldID = default(int), int fkiEzsigntemplatesignatureID = default(int), int fkiEzsigntemplateformfieldIDValidation = default(int), int fkiEzsigntemplateformfieldgroupIDValidation = default(int), FieldEEzsigntemplateelementdependencyValidation eEzsigntemplateelementdependencyValidation = default(FieldEEzsigntemplateelementdependencyValidation), bool bEzsigntemplateelementdependencySelected = default(bool), FieldEEzsigntemplateelementdependencyOperator? eEzsigntemplateelementdependencyOperator = default(FieldEEzsigntemplateelementdependencyOperator?), string sEzsigntemplateelementdependencyValue = default(string))
+        /// <param name="">The unique ID of the Ezsigntemplateelementdependency (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplateformfield.</param>
+        /// <param name="">The unique ID of the Ezsigntemplatesignature.</param>
+        /// <param name="">The unique ID of the Ezsigntemplateformfield.</param>
+        /// <param name="">The unique ID of the Ezsigntemplateformfieldgroup.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">Whether if it&#39;s selected or not when using eEzsigntemplateelementdependencyValidation &#x3D; Selected.</param>
+        /// <param name="">.</param>
+        /// <param name="">The value of the Ezsignelementdependency.</param>
+        public EzsigntemplateelementdependencyResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEEzsigntemplateelementdependencyValidation  = default(FieldEEzsigntemplateelementdependencyValidation), bool  = default(bool), FieldEEzsigntemplateelementdependencyOperator?  = default(FieldEEzsigntemplateelementdependencyOperator?), string  = default(string))
         {
-            this.PkiEzsigntemplateelementdependencyID = pkiEzsigntemplateelementdependencyID;
-            this.EEzsigntemplateelementdependencyValidation = eEzsigntemplateelementdependencyValidation;
-            this.FkiEzsigntemplateformfieldID = fkiEzsigntemplateformfieldID;
-            this.FkiEzsigntemplatesignatureID = fkiEzsigntemplatesignatureID;
-            this.FkiEzsigntemplateformfieldIDValidation = fkiEzsigntemplateformfieldIDValidation;
-            this.FkiEzsigntemplateformfieldgroupIDValidation = fkiEzsigntemplateformfieldgroupIDValidation;
-            this.BEzsigntemplateelementdependencySelected = bEzsigntemplateelementdependencySelected;
-            this.EEzsigntemplateelementdependencyOperator = eEzsigntemplateelementdependencyOperator;
-            this.SEzsigntemplateelementdependencyValue = sEzsigntemplateelementdependencyValue;
+            this.PkiEzsigntemplateelementdependencyID = ;
+            this.EEzsigntemplateelementdependencyValidation = ;
+            this.FkiEzsigntemplateformfieldID = ;
+            this.FkiEzsigntemplatesignatureID = ;
+            this.FkiEzsigntemplateformfieldIDValidation = ;
+            this.FkiEzsigntemplateformfieldgroupIDValidation = ;
+            this.BEzsigntemplateelementdependencySelected = ;
+            this.EEzsigntemplateelementdependencyOperator = ;
+            this.SEzsigntemplateelementdependencyValue = ;
         }
 
         /// <summary>

@@ -35,26 +35,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationreferenceRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiCommunicationreferenceID">The unique ID of the Communicationreference.</param>
-        /// <param name="fkiBuyercontractID">The unique ID of the Buyercontract.</param>
-        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder.</param>
-        /// <param name="fkiInscriptionID">The unique ID of the Inscription..</param>
-        /// <param name="fkiInscriptiontempID">The unique ID of the Inscriptiontemp.</param>
-        /// <param name="fkiInvoiceID">The unique ID of the Invoice..</param>
-        /// <param name="fkiOtherincomeID">The unique ID of the Otherincome.</param>
-        /// <param name="fkiElectronicfundstransferID">The unique ID of the Electronicfundstransfer.</param>
-        /// <param name="fkiRejectedoffertopurchaseID">The unique ID of the Rejectedoffertopurchase.</param>
-        public CommunicationreferenceRequestCompound(int pkiCommunicationreferenceID = default(int), int fkiBuyercontractID = default(int), int fkiEzsignfolderID = default(int), int fkiInscriptionID = default(int), int fkiInscriptiontempID = default(int), int fkiInvoiceID = default(int), int fkiOtherincomeID = default(int), int fkiElectronicfundstransferID = default(int), int fkiRejectedoffertopurchaseID = default(int))
+        /// <param name="">The unique ID of the Communicationreference.</param>
+        /// <param name="">The unique ID of the Buyercontract.</param>
+        /// <param name="">The unique ID of the Ezsignfolder.</param>
+        /// <param name="">The unique ID of the Inscription..</param>
+        /// <param name="">The unique ID of the Inscriptiontemp.</param>
+        /// <param name="">The unique ID of the Invoice..</param>
+        /// <param name="">The unique ID of the Otherincome.</param>
+        /// <param name="">The unique ID of the Electronicfundstransfer.</param>
+        /// <param name="">The unique ID of the Rejectedoffertopurchase.</param>
+        public CommunicationreferenceRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int))
         {
-            this.PkiCommunicationreferenceID = pkiCommunicationreferenceID;
-            this.FkiBuyercontractID = fkiBuyercontractID;
-            this.FkiEzsignfolderID = fkiEzsignfolderID;
-            this.FkiInscriptionID = fkiInscriptionID;
-            this.FkiInscriptiontempID = fkiInscriptiontempID;
-            this.FkiInvoiceID = fkiInvoiceID;
-            this.FkiOtherincomeID = fkiOtherincomeID;
-            this.FkiElectronicfundstransferID = fkiElectronicfundstransferID;
-            this.FkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
+            this.PkiCommunicationreferenceID = ;
+            this.FkiBuyercontractID = ;
+            this.FkiEzsignfolderID = ;
+            this.FkiInscriptionID = ;
+            this.FkiInscriptiontempID = ;
+            this.FkiInvoiceID = ;
+            this.FkiOtherincomeID = ;
+            this.FkiElectronicfundstransferID = ;
+            this.FkiRejectedoffertopurchaseID = ;
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace eZmaxApi.Model
         /// <value>The unique ID of the Communicationreference</value>
         /* <example>1263</example>*/
         [DataMember(Name = "pkiCommunicationreferenceID", EmitDefaultValue = false)]
-        public int PkiCommunicationreferenceID { get; set; }
+        public long PkiCommunicationreferenceID { get; set; }
 
         /// <summary>
         /// The unique ID of the Buyercontract
@@ -166,14 +166,14 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiCommunicationreferenceID (int) maximum
-            if (this.PkiCommunicationreferenceID > (int)4294967295)
+            // PkiCommunicationreferenceID (long) maximum
+            if (this.PkiCommunicationreferenceID > (long)4294967295)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCommunicationreferenceID, must be a value less than or equal to 4294967295.", new [] { "PkiCommunicationreferenceID" });
             }
 
-            // PkiCommunicationreferenceID (int) minimum
-            if (this.PkiCommunicationreferenceID < (int)0)
+            // PkiCommunicationreferenceID (long) minimum
+            if (this.PkiCommunicationreferenceID < (long)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCommunicationreferenceID, must be a value greater than or equal to 0.", new [] { "PkiCommunicationreferenceID" });
             }

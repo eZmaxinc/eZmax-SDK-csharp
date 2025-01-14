@@ -40,25 +40,27 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentResponse" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="sEzsigntemplatedocumentName">The name of the Ezsigntemplatedocument. (required).</param>
-        /// <param name="iEzsigntemplatedocumentPagetotal">The number of pages in the Ezsigntemplatedocument. (required).</param>
-        /// <param name="iEzsigntemplatedocumentSignaturetotal">The number of total signatures in the Ezsigntemplate. (required).</param>
-        /// <param name="bEzsigntemplatedocumentHassignedsignatures">If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) (required).</param>
-        public EzsigntemplatedocumentResponse(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), string sEzsigntemplatedocumentName = default(string), int iEzsigntemplatedocumentPagetotal = default(int), int iEzsigntemplatedocumentSignaturetotal = default(int), bool bEzsigntemplatedocumentHassignedsignatures = default(bool))
+        /// <param name="">The unique ID of the Ezsigntemplatedocument (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="">The name of the Ezsigntemplatedocument. (required).</param>
+        /// <param name="">The number of pages in the Ezsigntemplatedocument. (required).</param>
+        /// <param name="">The number of total signatures in the Ezsigntemplate. (required).</param>
+        /// <param name="">The number of total form fields in the Ezsigntemplate. (required).</param>
+        /// <param name="">If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) (required).</param>
+        public EzsigntemplatedocumentResponse(int  = default(int), int  = default(int), string  = default(string), int  = default(int), int  = default(int), int  = default(int), bool  = default(bool))
         {
-            this.PkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID;
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
-            // to ensure "sEzsigntemplatedocumentName" is required (not null)
-            if (sEzsigntemplatedocumentName == null)
+            this.PkiEzsigntemplatedocumentID = ;
+            this.FkiEzsigntemplateID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEzsigntemplatedocumentName is a required property for EzsigntemplatedocumentResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentResponse and cannot be null");
             }
-            this.SEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
-            this.IEzsigntemplatedocumentPagetotal = iEzsigntemplatedocumentPagetotal;
-            this.IEzsigntemplatedocumentSignaturetotal = iEzsigntemplatedocumentSignaturetotal;
-            this.BEzsigntemplatedocumentHassignedsignatures = bEzsigntemplatedocumentHassignedsignatures;
+            this.SEzsigntemplatedocumentName = ;
+            this.IEzsigntemplatedocumentPagetotal = ;
+            this.IEzsigntemplatedocumentSignaturetotal = ;
+            this.IEzsigntemplatedocumentFormfieldtotal = ;
+            this.BEzsigntemplatedocumentHassignedsignatures = ;
         }
 
         /// <summary>
@@ -102,6 +104,14 @@ namespace eZmaxApi.Model
         public int IEzsigntemplatedocumentSignaturetotal { get; set; }
 
         /// <summary>
+        /// The number of total form fields in the Ezsigntemplate.
+        /// </summary>
+        /// <value>The number of total form fields in the Ezsigntemplate.</value>
+        /* <example>8</example>*/
+        [DataMember(Name = "iEzsigntemplatedocumentFormfieldtotal", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzsigntemplatedocumentFormfieldtotal { get; set; }
+
+        /// <summary>
         /// If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
         /// </summary>
         /// <value>If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)</value>
@@ -122,6 +132,7 @@ namespace eZmaxApi.Model
             sb.Append("  SEzsigntemplatedocumentName: ").Append(SEzsigntemplatedocumentName).Append("\n");
             sb.Append("  IEzsigntemplatedocumentPagetotal: ").Append(IEzsigntemplatedocumentPagetotal).Append("\n");
             sb.Append("  IEzsigntemplatedocumentSignaturetotal: ").Append(IEzsigntemplatedocumentSignaturetotal).Append("\n");
+            sb.Append("  IEzsigntemplatedocumentFormfieldtotal: ").Append(IEzsigntemplatedocumentFormfieldtotal).Append("\n");
             sb.Append("  BEzsigntemplatedocumentHassignedsignatures: ").Append(BEzsigntemplatedocumentHassignedsignatures).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

@@ -81,5 +81,14 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'SUsergroupNameX'
         }
+
+        /// <summary>
+        /// Test the property 'ObjEmail'
+        /// </summary>
+        [Fact]
+        public void ObjEmailTest()
+        {
+            // TODO unit test for the property 'ObjEmail'
+        }
     }
 }

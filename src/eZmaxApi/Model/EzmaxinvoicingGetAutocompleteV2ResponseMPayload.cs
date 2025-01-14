@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzmaxinvoicing">An array of Ezmaxinvoicing autocomplete element response. (required).</param>
-        public EzmaxinvoicingGetAutocompleteV2ResponseMPayload(List<EzmaxinvoicingAutocompleteElementResponse> aObjEzmaxinvoicing = default(List<EzmaxinvoicingAutocompleteElementResponse>))
+        /// <param name="">An array of Ezmaxinvoicing autocomplete element response. (required).</param>
+        public EzmaxinvoicingGetAutocompleteV2ResponseMPayload(List<EzmaxinvoicingAutocompleteElementResponse>  = default(List<EzmaxinvoicingAutocompleteElementResponse>))
         {
-            // to ensure "aObjEzmaxinvoicing" is required (not null)
-            if (aObjEzmaxinvoicing == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzmaxinvoicing is a required property for EzmaxinvoicingGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicingGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjEzmaxinvoicing = aObjEzmaxinvoicing;
+            this.AObjEzmaxinvoicing = ;
         }
 
         /// <summary>

@@ -56,6 +56,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test ActivesessionGenerateFederationTokenV1
+        /// </summary>
+        [Fact]
+        public void ActivesessionGenerateFederationTokenV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request = null;
+            //var response = instance.ActivesessionGenerateFederationTokenV1(activesessionGenerateFederationTokenV1Request);
+            //Assert.IsType<ActivesessionGenerateFederationTokenV1Response>(response);
+        }
+
+        /// <summary>
         /// Test ActivesessionGetCurrentV1
         /// </summary>
         [Fact]

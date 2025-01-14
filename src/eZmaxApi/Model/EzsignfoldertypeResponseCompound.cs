@@ -64,121 +64,125 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldertypeResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="objEzsignfoldertypeName">objEzsignfoldertypeName (required).</param>
-        /// <param name="fkiBrandingID">The unique ID of the Branding (required).</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
-        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
-        /// <param name="fkiUsergroupIDRestricted">The unique ID of the Usergroup.</param>
-        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
-        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester.</param>
-        /// <param name="sEzsigntsarequirementDescriptionX">The description of the Ezsigntsarequirement in the language of the requester.</param>
-        /// <param name="sEmailAddressSigned">The email address..</param>
-        /// <param name="sEmailAddressSummary">The email address..</param>
-        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester.</param>
-        /// <param name="sUsergroupNameXRestricted">The Name of the Usergroup in the language of the requester.</param>
-        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
-        /// <param name="eEzsignfoldertypeSendreminderfrequency">eEzsignfoldertypeSendreminderfrequency.</param>
-        /// <param name="iEzsignfoldertypeArchivaldays">The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype (required).</param>
-        /// <param name="eEzsignfoldertypeDisposal">eEzsignfoldertypeDisposal (required).</param>
-        /// <param name="eEzsignfoldertypeCompletion">eEzsignfoldertypeCompletion (required).</param>
-        /// <param name="iEzsignfoldertypeDisposaldays">The number of days after the archival before the disposal of the Ezsignfolder.</param>
-        /// <param name="iEzsignfoldertypeDeadlinedays">The number of days to get all Ezsignsignatures (required).</param>
-        /// <param name="bEzsignfoldertypeDelegate">Wheter if delegation of signature is allowed to another user or not.</param>
-        /// <param name="bEzsignfoldertypeDiscussion">Wheter if creating a new Discussion is allowed or not.</param>
-        /// <param name="bEzsignfoldertypeReassignezsignsigner">Wheter if Reassignment of signature is allowed by a signatory to another signatory or not.</param>
-        /// <param name="bEzsignfoldertypeReassignuser">Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not.</param>
-        /// <param name="bEzsignfoldertypeSendsignedtoezsignsigner">Whether we send an email to Ezsignsigner  when document is completed.</param>
-        /// <param name="bEzsignfoldertypeSendsignedtouser">Whether we send an email to User who signed when document is completed.</param>
-        /// <param name="bEzsignfoldertypeSendattachmentezsignsigner">Whether we send the Ezsigndocument in the email to Ezsignsigner.</param>
-        /// <param name="bEzsignfoldertypeSendproofezsignsigner">Whether we send the proof in the email to Ezsignsigner.</param>
-        /// <param name="bEzsignfoldertypeSendattachmentuser">Whether we send the Ezsigndocument in the email to User.</param>
-        /// <param name="bEzsignfoldertypeSendproofuser">Whether we send the proof in the email to User.</param>
-        /// <param name="bEzsignfoldertypeSendproofemail">Whether we send the proof in the email to external recipient.</param>
-        /// <param name="bEzsignfoldertypeAllowdownloadattachmentezsignsigner">Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner.</param>
-        /// <param name="bEzsignfoldertypeAllowdownloadproofezsignsigner">Whether we allow the proof to be downloaded by an Ezsignsigner.</param>
-        /// <param name="bEzsignfoldertypeSendproofreceivealldocument">Whether we send the proof to user and Ezsignsigner who receive all documents..</param>
-        /// <param name="bEzsignfoldertypeSendsignedtodocumentowner">Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner (required).</param>
-        /// <param name="bEzsignfoldertypeSendsignedtofolderowner">Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner (required).</param>
-        /// <param name="bEzsignfoldertypeSendsignedtofullgroup">Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders.</param>
-        /// <param name="bEzsignfoldertypeSendsignedtolimitedgroup">THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders.</param>
-        /// <param name="bEzsignfoldertypeSendsignedtocolleague">Whether we send the signed Ezsigndocument to the colleagues (required).</param>
-        /// <param name="bEzsignfoldertypeSendsummarytodocumentowner">Whether we send the summary to the Ezsigndocument&#39;s owner (required).</param>
-        /// <param name="bEzsignfoldertypeSendsummarytofolderowner">Whether we send the summary to the Ezsignfolder&#39;s owner (required).</param>
-        /// <param name="bEzsignfoldertypeSendsummarytofullgroup">Whether we send the summary to the Usergroup that has acces to all Ezsignfolders.</param>
-        /// <param name="bEzsignfoldertypeSendsummarytolimitedgroup">Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders.</param>
-        /// <param name="bEzsignfoldertypeSendsummarytocolleague">Whether we send the summary to the colleagues (required).</param>
-        /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
-        /// <param name="aObjUserlogintype">aObjUserlogintype (required).</param>
-        /// <param name="aFkiUserIDSigned">aFkiUserIDSigned.</param>
-        /// <param name="aFkiUserIDSummary">aFkiUserIDSummary.</param>
-        public EzsignfoldertypeResponseCompound(int pkiEzsignfoldertypeID = default(int), MultilingualEzsignfoldertypeName objEzsignfoldertypeName = default(MultilingualEzsignfoldertypeName), int fkiBrandingID = default(int), int fkiBillingentityinternalID = default(int), int fkiUsergroupID = default(int), int fkiUsergroupIDRestricted = default(int), int fkiEzsigntsarequirementID = default(int), string sBrandingDescriptionX = default(string), string sBillingentityinternalDescriptionX = default(string), string sEzsigntsarequirementDescriptionX = default(string), string sEmailAddressSigned = default(string), string sEmailAddressSummary = default(string), string sUsergroupNameX = default(string), string sUsergroupNameXRestricted = default(string), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), FieldEEzsignfoldertypeSendreminderfrequency? eEzsignfoldertypeSendreminderfrequency = default(FieldEEzsignfoldertypeSendreminderfrequency?), int iEzsignfoldertypeArchivaldays = default(int), FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal = default(FieldEEzsignfoldertypeDisposal), FieldEEzsignfoldertypeCompletion eEzsignfoldertypeCompletion = default(FieldEEzsignfoldertypeCompletion), int iEzsignfoldertypeDisposaldays = default(int), int iEzsignfoldertypeDeadlinedays = default(int), bool bEzsignfoldertypeDelegate = default(bool), bool bEzsignfoldertypeDiscussion = default(bool), bool bEzsignfoldertypeReassignezsignsigner = default(bool), bool bEzsignfoldertypeReassignuser = default(bool), bool bEzsignfoldertypeSendsignedtoezsignsigner = default(bool), bool bEzsignfoldertypeSendsignedtouser = default(bool), bool bEzsignfoldertypeSendattachmentezsignsigner = default(bool), bool bEzsignfoldertypeSendproofezsignsigner = default(bool), bool bEzsignfoldertypeSendattachmentuser = default(bool), bool bEzsignfoldertypeSendproofuser = default(bool), bool bEzsignfoldertypeSendproofemail = default(bool), bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner = default(bool), bool bEzsignfoldertypeAllowdownloadproofezsignsigner = default(bool), bool bEzsignfoldertypeSendproofreceivealldocument = default(bool), bool bEzsignfoldertypeSendsignedtodocumentowner = default(bool), bool bEzsignfoldertypeSendsignedtofolderowner = default(bool), bool bEzsignfoldertypeSendsignedtofullgroup = default(bool), bool bEzsignfoldertypeSendsignedtolimitedgroup = default(bool), bool bEzsignfoldertypeSendsignedtocolleague = default(bool), bool bEzsignfoldertypeSendsummarytodocumentowner = default(bool), bool bEzsignfoldertypeSendsummarytofolderowner = default(bool), bool bEzsignfoldertypeSendsummarytofullgroup = default(bool), bool bEzsignfoldertypeSendsummarytolimitedgroup = default(bool), bool bEzsignfoldertypeSendsummarytocolleague = default(bool), bool bEzsignfoldertypeIsactive = default(bool), List<UserlogintypeResponse> aObjUserlogintype = default(List<UserlogintypeResponse>), List<int> aFkiUserIDSigned = default(List<int>), List<int> aFkiUserIDSummary = default(List<int>))
+        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The unique ID of the Branding (required).</param>
+        /// <param name="">The unique ID of the Billingentityinternal..</param>
+        /// <param name="">The unique ID of the Usergroup.</param>
+        /// <param name="">The unique ID of the Usergroup.</param>
+        /// <param name="">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
+        /// <param name="">The Description of the Branding in the language of the requester (required).</param>
+        /// <param name="">The description of the Billingentityinternal in the language of the requester.</param>
+        /// <param name="">The description of the Ezsigntsarequirement in the language of the requester.</param>
+        /// <param name="">The email address..</param>
+        /// <param name="">The email address..</param>
+        /// <param name="">The Name of the Usergroup in the language of the requester.</param>
+        /// <param name="">The Name of the Usergroup in the language of the requester.</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The number of days after the archival before the disposal of the Ezsignfolder.</param>
+        /// <param name="">The number of days to get all Ezsignsignatures (required).</param>
+        /// <param name="">Whether we allow the automatic signature by an User.</param>
+        /// <param name="">Wheter if delegation of signature is allowed to another user or not.</param>
+        /// <param name="">Wheter if creating a new Discussion is allowed or not.</param>
+        /// <param name="">Wheter if Reassignment of signature is allowed by a signatory to another signatory or not.</param>
+        /// <param name="">Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not.</param>
+        /// <param name="">Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself.</param>
+        /// <param name="">Whether we send an email to Ezsignsigner  when document is completed.</param>
+        /// <param name="">Whether we send an email to User who signed when document is completed.</param>
+        /// <param name="">Whether we send the Ezsigndocument in the email to Ezsignsigner.</param>
+        /// <param name="">Whether we send the proof in the email to Ezsignsigner.</param>
+        /// <param name="">Whether we send the Ezsigndocument in the email to User.</param>
+        /// <param name="">Whether we send the proof in the email to User.</param>
+        /// <param name="">Whether we send the proof in the email to external recipient.</param>
+        /// <param name="">Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner.</param>
+        /// <param name="">Whether we allow the proof to be downloaded by an Ezsignsigner.</param>
+        /// <param name="">Whether we send the proof to user and Ezsignsigner who receive all documents..</param>
+        /// <param name="">Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner (required).</param>
+        /// <param name="">Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner (required).</param>
+        /// <param name="">Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders.</param>
+        /// <param name="">THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders.</param>
+        /// <param name="">Whether we send the signed Ezsigndocument to the colleagues (required).</param>
+        /// <param name="">Whether we send the summary to the Ezsigndocument&#39;s owner (required).</param>
+        /// <param name="">Whether we send the summary to the Ezsignfolder&#39;s owner (required).</param>
+        /// <param name="">Whether we send the summary to the Usergroup that has acces to all Ezsignfolders.</param>
+        /// <param name="">Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders.</param>
+        /// <param name="">Whether we send the summary to the colleagues (required).</param>
+        /// <param name="">Whether the Ezsignfoldertype is active or not (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public EzsignfoldertypeResponseCompound(int  = default(int), MultilingualEzsignfoldertypeName  = default(MultilingualEzsignfoldertypeName), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), FieldEEzsignfoldertypePrivacylevel  = default(FieldEEzsignfoldertypePrivacylevel), FieldEEzsignfoldertypeSendreminderfrequency?  = default(FieldEEzsignfoldertypeSendreminderfrequency?), int  = default(int), FieldEEzsignfoldertypeDisposal  = default(FieldEEzsignfoldertypeDisposal), FieldEEzsignfoldertypeCompletion  = default(FieldEEzsignfoldertypeCompletion), int  = default(int), int  = default(int), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), List<UserlogintypeResponse>  = default(List<UserlogintypeResponse>), List<int>  = default(List<int>), List<int>  = default(List<int>))
         {
-            this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
-            // to ensure "objEzsignfoldertypeName" is required (not null)
-            if (objEzsignfoldertypeName == null)
+            this.PkiEzsignfoldertypeID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsignfoldertypeName is a required property for EzsignfoldertypeResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldertypeResponseCompound and cannot be null");
             }
-            this.ObjEzsignfoldertypeName = objEzsignfoldertypeName;
-            this.FkiBrandingID = fkiBrandingID;
-            // to ensure "sBrandingDescriptionX" is required (not null)
-            if (sBrandingDescriptionX == null)
+            this.ObjEzsignfoldertypeName = ;
+            this.FkiBrandingID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sBrandingDescriptionX is a required property for EzsignfoldertypeResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldertypeResponseCompound and cannot be null");
             }
-            this.SBrandingDescriptionX = sBrandingDescriptionX;
-            this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
-            this.IEzsignfoldertypeArchivaldays = iEzsignfoldertypeArchivaldays;
-            this.EEzsignfoldertypeDisposal = eEzsignfoldertypeDisposal;
-            this.EEzsignfoldertypeCompletion = eEzsignfoldertypeCompletion;
-            this.IEzsignfoldertypeDeadlinedays = iEzsignfoldertypeDeadlinedays;
-            this.BEzsignfoldertypeSendsignedtodocumentowner = bEzsignfoldertypeSendsignedtodocumentowner;
-            this.BEzsignfoldertypeSendsignedtofolderowner = bEzsignfoldertypeSendsignedtofolderowner;
-            this.BEzsignfoldertypeSendsignedtocolleague = bEzsignfoldertypeSendsignedtocolleague;
-            this.BEzsignfoldertypeSendsummarytodocumentowner = bEzsignfoldertypeSendsummarytodocumentowner;
-            this.BEzsignfoldertypeSendsummarytofolderowner = bEzsignfoldertypeSendsummarytofolderowner;
-            this.BEzsignfoldertypeSendsummarytocolleague = bEzsignfoldertypeSendsummarytocolleague;
-            this.BEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
-            // to ensure "aObjUserlogintype" is required (not null)
-            if (aObjUserlogintype == null)
+            this.SBrandingDescriptionX = ;
+            this.EEzsignfoldertypePrivacylevel = ;
+            this.IEzsignfoldertypeArchivaldays = ;
+            this.EEzsignfoldertypeDisposal = ;
+            this.EEzsignfoldertypeCompletion = ;
+            this.IEzsignfoldertypeDeadlinedays = ;
+            this.BEzsignfoldertypeSendsignedtodocumentowner = ;
+            this.BEzsignfoldertypeSendsignedtofolderowner = ;
+            this.BEzsignfoldertypeSendsignedtocolleague = ;
+            this.BEzsignfoldertypeSendsummarytodocumentowner = ;
+            this.BEzsignfoldertypeSendsummarytofolderowner = ;
+            this.BEzsignfoldertypeSendsummarytocolleague = ;
+            this.BEzsignfoldertypeIsactive = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUserlogintype is a required property for EzsignfoldertypeResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfoldertypeResponseCompound and cannot be null");
             }
-            this.AObjUserlogintype = aObjUserlogintype;
-            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
-            this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiUsergroupIDRestricted = fkiUsergroupIDRestricted;
-            this.FkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
-            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-            this.SEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
-            this.SEmailAddressSigned = sEmailAddressSigned;
-            this.SEmailAddressSummary = sEmailAddressSummary;
-            this.SUsergroupNameX = sUsergroupNameX;
-            this.SUsergroupNameXRestricted = sUsergroupNameXRestricted;
-            this.EEzsignfoldertypeSendreminderfrequency = eEzsignfoldertypeSendreminderfrequency;
-            this.IEzsignfoldertypeDisposaldays = iEzsignfoldertypeDisposaldays;
-            this.BEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
-            this.BEzsignfoldertypeDiscussion = bEzsignfoldertypeDiscussion;
-            this.BEzsignfoldertypeReassignezsignsigner = bEzsignfoldertypeReassignezsignsigner;
-            this.BEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
-            this.BEzsignfoldertypeSendsignedtoezsignsigner = bEzsignfoldertypeSendsignedtoezsignsigner;
-            this.BEzsignfoldertypeSendsignedtouser = bEzsignfoldertypeSendsignedtouser;
-            this.BEzsignfoldertypeSendattachmentezsignsigner = bEzsignfoldertypeSendattachmentezsignsigner;
-            this.BEzsignfoldertypeSendproofezsignsigner = bEzsignfoldertypeSendproofezsignsigner;
-            this.BEzsignfoldertypeSendattachmentuser = bEzsignfoldertypeSendattachmentuser;
-            this.BEzsignfoldertypeSendproofuser = bEzsignfoldertypeSendproofuser;
-            this.BEzsignfoldertypeSendproofemail = bEzsignfoldertypeSendproofemail;
-            this.BEzsignfoldertypeAllowdownloadattachmentezsignsigner = bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
-            this.BEzsignfoldertypeAllowdownloadproofezsignsigner = bEzsignfoldertypeAllowdownloadproofezsignsigner;
-            this.BEzsignfoldertypeSendproofreceivealldocument = bEzsignfoldertypeSendproofreceivealldocument;
-            this.BEzsignfoldertypeSendsignedtofullgroup = bEzsignfoldertypeSendsignedtofullgroup;
-            this.BEzsignfoldertypeSendsignedtolimitedgroup = bEzsignfoldertypeSendsignedtolimitedgroup;
-            this.BEzsignfoldertypeSendsummarytofullgroup = bEzsignfoldertypeSendsummarytofullgroup;
-            this.BEzsignfoldertypeSendsummarytolimitedgroup = bEzsignfoldertypeSendsummarytolimitedgroup;
-            this.AFkiUserIDSigned = aFkiUserIDSigned;
-            this.AFkiUserIDSummary = aFkiUserIDSummary;
+            this.AObjUserlogintype = ;
+            this.FkiBillingentityinternalID = ;
+            this.FkiUsergroupID = ;
+            this.FkiUsergroupIDRestricted = ;
+            this.FkiEzsigntsarequirementID = ;
+            this.SBillingentityinternalDescriptionX = ;
+            this.SEzsigntsarequirementDescriptionX = ;
+            this.SEmailAddressSigned = ;
+            this.SEmailAddressSummary = ;
+            this.SUsergroupNameX = ;
+            this.SUsergroupNameXRestricted = ;
+            this.EEzsignfoldertypeSendreminderfrequency = ;
+            this.IEzsignfoldertypeDisposaldays = ;
+            this.BEzsignfoldertypeAutomaticsignature = ;
+            this.BEzsignfoldertypeDelegate = ;
+            this.BEzsignfoldertypeDiscussion = ;
+            this.BEzsignfoldertypeReassignezsignsigner = ;
+            this.BEzsignfoldertypeReassignuser = ;
+            this.BEzsignfoldertypeReassigngroup = ;
+            this.BEzsignfoldertypeSendsignedtoezsignsigner = ;
+            this.BEzsignfoldertypeSendsignedtouser = ;
+            this.BEzsignfoldertypeSendattachmentezsignsigner = ;
+            this.BEzsignfoldertypeSendproofezsignsigner = ;
+            this.BEzsignfoldertypeSendattachmentuser = ;
+            this.BEzsignfoldertypeSendproofuser = ;
+            this.BEzsignfoldertypeSendproofemail = ;
+            this.BEzsignfoldertypeAllowdownloadattachmentezsignsigner = ;
+            this.BEzsignfoldertypeAllowdownloadproofezsignsigner = ;
+            this.BEzsignfoldertypeSendproofreceivealldocument = ;
+            this.BEzsignfoldertypeSendsignedtofullgroup = ;
+            this.BEzsignfoldertypeSendsignedtolimitedgroup = ;
+            this.BEzsignfoldertypeSendsummarytofullgroup = ;
+            this.BEzsignfoldertypeSendsummarytolimitedgroup = ;
+            this.AFkiUserIDSigned = ;
+            this.AFkiUserIDSummary = ;
         }
 
         /// <summary>
@@ -316,6 +320,14 @@ namespace eZmaxApi.Model
         public int IEzsignfoldertypeDeadlinedays { get; set; }
 
         /// <summary>
+        /// Whether we allow the automatic signature by an User
+        /// </summary>
+        /// <value>Whether we allow the automatic signature by an User</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bEzsignfoldertypeAutomaticsignature", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeAutomaticsignature { get; set; }
+
+        /// <summary>
         /// Wheter if delegation of signature is allowed to another user or not
         /// </summary>
         /// <value>Wheter if delegation of signature is allowed to another user or not</value>
@@ -346,6 +358,14 @@ namespace eZmaxApi.Model
         /* <example>true</example>*/
         [DataMember(Name = "bEzsignfoldertypeReassignuser", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeReassignuser { get; set; }
+
+        /// <summary>
+        /// Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+        /// </summary>
+        /// <value>Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzsignfoldertypeReassigngroup", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeReassigngroup { get; set; }
 
         /// <summary>
         /// Whether we send an email to Ezsignsigner  when document is completed
@@ -562,10 +582,12 @@ namespace eZmaxApi.Model
             sb.Append("  EEzsignfoldertypeCompletion: ").Append(EEzsignfoldertypeCompletion).Append("\n");
             sb.Append("  IEzsignfoldertypeDisposaldays: ").Append(IEzsignfoldertypeDisposaldays).Append("\n");
             sb.Append("  IEzsignfoldertypeDeadlinedays: ").Append(IEzsignfoldertypeDeadlinedays).Append("\n");
+            sb.Append("  BEzsignfoldertypeAutomaticsignature: ").Append(BEzsignfoldertypeAutomaticsignature).Append("\n");
             sb.Append("  BEzsignfoldertypeDelegate: ").Append(BEzsignfoldertypeDelegate).Append("\n");
             sb.Append("  BEzsignfoldertypeDiscussion: ").Append(BEzsignfoldertypeDiscussion).Append("\n");
             sb.Append("  BEzsignfoldertypeReassignezsignsigner: ").Append(BEzsignfoldertypeReassignezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeReassignuser: ").Append(BEzsignfoldertypeReassignuser).Append("\n");
+            sb.Append("  BEzsignfoldertypeReassigngroup: ").Append(BEzsignfoldertypeReassigngroup).Append("\n");
             sb.Append("  BEzsignfoldertypeSendsignedtoezsignsigner: ").Append(BEzsignfoldertypeSendsignedtoezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeSendsignedtouser: ").Append(BEzsignfoldertypeSendsignedtouser).Append("\n");
             sb.Append("  BEzsignfoldertypeSendattachmentezsignsigner: ").Append(BEzsignfoldertypeSendattachmentezsignsigner).Append("\n");

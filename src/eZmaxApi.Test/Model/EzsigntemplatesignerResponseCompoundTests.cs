@@ -74,12 +74,75 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiUserID'
+        /// </summary>
+        [Fact]
+        public void FkiUserIDTest()
+        {
+            // TODO unit test for the property 'FkiUserID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUsergroupID'
+        /// </summary>
+        [Fact]
+        public void FkiUsergroupIDTest()
+        {
+            // TODO unit test for the property 'FkiUsergroupID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzdoctemplatedocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzdoctemplatedocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzdoctemplatedocumentID'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsigntemplatesignerReceivecopy'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplatesignerReceivecopyTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplatesignerReceivecopy'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplatesignerMapping'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplatesignerMappingTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatesignerMapping'
+        }
+
+        /// <summary>
         /// Test the property 'SEzsigntemplatesignerDescription'
         /// </summary>
         [Fact]
         public void SEzsigntemplatesignerDescriptionTest()
         {
             // TODO unit test for the property 'SEzsigntemplatesignerDescription'
+        }
+
+        /// <summary>
+        /// Test the property 'SUserName'
+        /// </summary>
+        [Fact]
+        public void SUserNameTest()
+        {
+            // TODO unit test for the property 'SUserName'
+        }
+
+        /// <summary>
+        /// Test the property 'SUsergroupNameX'
+        /// </summary>
+        [Fact]
+        public void SUsergroupNameXTest()
+        {
+            // TODO unit test for the property 'SUsergroupNameX'
         }
     }
 }

@@ -56,6 +56,17 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test CommunicationGetCommunicationBodyV1
+        /// </summary>
+        [Fact]
+        public void CommunicationGetCommunicationBodyV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiCommunicationID = null;
+            //instance.CommunicationGetCommunicationBodyV1(pkiCommunicationID);
+        }
+
+        /// <summary>
         /// Test CommunicationSendV1
         /// </summary>
         [Fact]

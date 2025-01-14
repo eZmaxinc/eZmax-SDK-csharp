@@ -40,24 +40,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextstylestaticResponse" /> class.
         /// </summary>
-        /// <param name="pkiTextstylestaticID">The unique ID of the Textstylestatic.</param>
-        /// <param name="fkiFontID">The unique ID of the Font (required).</param>
-        /// <param name="bTextstylestaticBold">Whether the Textstylestatic is Bold or not (required).</param>
-        /// <param name="bTextstylestaticUnderline">Whether the Textstylestatic is Underline or not (required).</param>
-        /// <param name="bTextstylestaticItalic">Whether the Textstylestatic is Italic or not (required).</param>
-        /// <param name="bTextstylestaticStrikethrough">Whether the Textstylestatic is Strikethrough or not (required).</param>
-        /// <param name="iTextstylestaticFontcolor">The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795 (required).</param>
-        /// <param name="iTextstylestaticSize">The Size for the Font of the Textstylestatic (required).</param>
-        public TextstylestaticResponse(int pkiTextstylestaticID = default(int), int fkiFontID = default(int), bool bTextstylestaticBold = default(bool), bool bTextstylestaticUnderline = default(bool), bool bTextstylestaticItalic = default(bool), bool bTextstylestaticStrikethrough = default(bool), int iTextstylestaticFontcolor = default(int), int iTextstylestaticSize = default(int))
+        /// <param name="">The unique ID of the Textstylestatic.</param>
+        /// <param name="">The unique ID of the Font (required).</param>
+        /// <param name="">The name of the Font (required).</param>
+        /// <param name="">Whether the Textstylestatic is Bold or not (required).</param>
+        /// <param name="">Whether the Textstylestatic is Underline or not (required).</param>
+        /// <param name="">Whether the Textstylestatic is Italic or not (required).</param>
+        /// <param name="">Whether the Textstylestatic is Strikethrough or not (required).</param>
+        /// <param name="">The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795 (required).</param>
+        /// <param name="">The Size for the Font of the Textstylestatic (required).</param>
+        public TextstylestaticResponse(int  = default(int), int  = default(int), string  = default(string), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), int  = default(int), int  = default(int))
         {
-            this.FkiFontID = fkiFontID;
-            this.BTextstylestaticBold = bTextstylestaticBold;
-            this.BTextstylestaticUnderline = bTextstylestaticUnderline;
-            this.BTextstylestaticItalic = bTextstylestaticItalic;
-            this.BTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
-            this.ITextstylestaticFontcolor = iTextstylestaticFontcolor;
-            this.ITextstylestaticSize = iTextstylestaticSize;
-            this.PkiTextstylestaticID = pkiTextstylestaticID;
+            this.FkiFontID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
+            {
+                throw new ArgumentNullException(" is a required property for TextstylestaticResponse and cannot be null");
+            }
+            this.SFontName = ;
+            this.BTextstylestaticBold = ;
+            this.BTextstylestaticUnderline = ;
+            this.BTextstylestaticItalic = ;
+            this.BTextstylestaticStrikethrough = ;
+            this.ITextstylestaticFontcolor = ;
+            this.ITextstylestaticSize = ;
+            this.PkiTextstylestaticID = ;
         }
 
         /// <summary>
@@ -75,6 +82,14 @@ namespace eZmaxApi.Model
         /* <example>1</example>*/
         [DataMember(Name = "fkiFontID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiFontID { get; set; }
+
+        /// <summary>
+        /// The name of the Font
+        /// </summary>
+        /// <value>The name of the Font</value>
+        /* <example>Arial</example>*/
+        [DataMember(Name = "sFontName", IsRequired = true, EmitDefaultValue = true)]
+        public string SFontName { get; set; }
 
         /// <summary>
         /// Whether the Textstylestatic is Bold or not
@@ -134,6 +149,7 @@ namespace eZmaxApi.Model
             sb.Append("class TextstylestaticResponse {\n");
             sb.Append("  PkiTextstylestaticID: ").Append(PkiTextstylestaticID).Append("\n");
             sb.Append("  FkiFontID: ").Append(FkiFontID).Append("\n");
+            sb.Append("  SFontName: ").Append(SFontName).Append("\n");
             sb.Append("  BTextstylestaticBold: ").Append(BTextstylestaticBold).Append("\n");
             sb.Append("  BTextstylestaticUnderline: ").Append(BTextstylestaticUnderline).Append("\n");
             sb.Append("  BTextstylestaticItalic: ").Append(BTextstylestaticItalic).Append("\n");
@@ -170,6 +186,15 @@ namespace eZmaxApi.Model
             if (this.FkiFontID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
+            }
+
+            if (this.SFontName != null) {
+                // SFontName (string) pattern
+                Regex regexSFontName = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSFontName.Match(this.SFontName).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SFontName, must match a pattern of " + regexSFontName, new [] { "SFontName" });
+                }
             }
 
             // ITextstylestaticFontcolor (int) maximum

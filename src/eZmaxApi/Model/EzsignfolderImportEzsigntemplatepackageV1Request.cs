@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderImportEzsigntemplatepackageV1Request" /> class.
         /// </summary>
-        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
-        /// <param name="aObjImportEzsigntemplatepackageRelation">aObjImportEzsigntemplatepackageRelation (required).</param>
-        public EzsignfolderImportEzsigntemplatepackageV1Request(int fkiEzsigntemplatepackageID = default(int), string dtEzsigndocumentDuedate = default(string), List<CustomImportEzsigntemplatepackageRelationRequest> aObjImportEzsigntemplatepackageRelation = default(List<CustomImportEzsigntemplatepackageRelationRequest>))
+        /// <param name="">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsignfolderImportEzsigntemplatepackageV1Request(int  = default(int), string  = default(string), List<CustomImportEzsigntemplatepackageRelationRequest>  = default(List<CustomImportEzsigntemplatepackageRelationRequest>))
         {
-            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-            // to ensure "dtEzsigndocumentDuedate" is required (not null)
-            if (dtEzsigndocumentDuedate == null)
+            this.FkiEzsigntemplatepackageID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtEzsigndocumentDuedate is a required property for EzsignfolderImportEzsigntemplatepackageV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderImportEzsigntemplatepackageV1Request and cannot be null");
             }
-            this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
-            // to ensure "aObjImportEzsigntemplatepackageRelation" is required (not null)
-            if (aObjImportEzsigntemplatepackageRelation == null)
+            this.DtEzsigndocumentDuedate = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjImportEzsigntemplatepackageRelation is a required property for EzsignfolderImportEzsigntemplatepackageV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsignfolderImportEzsigntemplatepackageV1Request and cannot be null");
             }
-            this.AObjImportEzsigntemplatepackageRelation = aObjImportEzsigntemplatepackageRelation;
+            this.AObjImportEzsigntemplatepackageRelation = ;
         }
 
         /// <summary>

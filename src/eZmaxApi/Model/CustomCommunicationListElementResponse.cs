@@ -58,46 +58,46 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationListElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiCommunicationID">The unique ID of the Communication. (required).</param>
-        /// <param name="dtCreatedDate">The date and time at which the object was created (required).</param>
-        /// <param name="eCommunicationDirection">eCommunicationDirection (required).</param>
-        /// <param name="eCommunicationImportance">eCommunicationImportance (required).</param>
-        /// <param name="eCommunicationType">eCommunicationType (required).</param>
-        /// <param name="iCommunicationrecipientCount">The count of Communicationrecipient (required).</param>
-        /// <param name="sCommunicationSubject">The subject of the Communication (required).</param>
-        /// <param name="sCommunicationSender">The sender name of the Communication (required).</param>
-        /// <param name="sCommunicationRecipient">The recipients&#39; name of the Communication (required).</param>
-        public CustomCommunicationListElementResponse(int pkiCommunicationID = default(int), string dtCreatedDate = default(string), ComputedECommunicationDirection eCommunicationDirection = default(ComputedECommunicationDirection), FieldECommunicationImportance eCommunicationImportance = default(FieldECommunicationImportance), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), int iCommunicationrecipientCount = default(int), string sCommunicationSubject = default(string), string sCommunicationSender = default(string), string sCommunicationRecipient = default(string))
+        /// <param name="">The unique ID of the Communication. (required).</param>
+        /// <param name="">The date and time at which the object was created (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name="">The count of Communicationrecipient (required).</param>
+        /// <param name="">The subject of the Communication (required).</param>
+        /// <param name="">The sender name of the Communication (required).</param>
+        /// <param name="">The recipients&#39; name of the Communication (required).</param>
+        public CustomCommunicationListElementResponse(int  = default(int), string  = default(string), ComputedECommunicationDirection  = default(ComputedECommunicationDirection), FieldECommunicationImportance  = default(FieldECommunicationImportance), FieldECommunicationType  = default(FieldECommunicationType), int  = default(int), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.PkiCommunicationID = pkiCommunicationID;
-            // to ensure "dtCreatedDate" is required (not null)
-            if (dtCreatedDate == null)
+            this.PkiCommunicationID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("dtCreatedDate is a required property for CustomCommunicationListElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCommunicationListElementResponse and cannot be null");
             }
-            this.DtCreatedDate = dtCreatedDate;
-            this.ECommunicationDirection = eCommunicationDirection;
-            this.ECommunicationImportance = eCommunicationImportance;
-            this.ECommunicationType = eCommunicationType;
-            this.ICommunicationrecipientCount = iCommunicationrecipientCount;
-            // to ensure "sCommunicationSubject" is required (not null)
-            if (sCommunicationSubject == null)
+            this.DtCreatedDate = ;
+            this.ECommunicationDirection = ;
+            this.ECommunicationImportance = ;
+            this.ECommunicationType = ;
+            this.ICommunicationrecipientCount = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCommunicationSubject is a required property for CustomCommunicationListElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCommunicationListElementResponse and cannot be null");
             }
-            this.SCommunicationSubject = sCommunicationSubject;
-            // to ensure "sCommunicationSender" is required (not null)
-            if (sCommunicationSender == null)
+            this.SCommunicationSubject = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCommunicationSender is a required property for CustomCommunicationListElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCommunicationListElementResponse and cannot be null");
             }
-            this.SCommunicationSender = sCommunicationSender;
-            // to ensure "sCommunicationRecipient" is required (not null)
-            if (sCommunicationRecipient == null)
+            this.SCommunicationSender = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sCommunicationRecipient is a required property for CustomCommunicationListElementResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for CustomCommunicationListElementResponse and cannot be null");
             }
-            this.SCommunicationRecipient = sCommunicationRecipient;
+            this.SCommunicationRecipient = ;
         }
 
         /// <summary>

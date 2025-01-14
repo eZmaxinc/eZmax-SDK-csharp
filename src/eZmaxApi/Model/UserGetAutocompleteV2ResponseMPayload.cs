@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjUser">An array of User autocomplete element response. (required).</param>
-        public UserGetAutocompleteV2ResponseMPayload(List<UserAutocompleteElementResponse> aObjUser = default(List<UserAutocompleteElementResponse>))
+        /// <param name="">An array of User autocomplete element response. (required).</param>
+        public UserGetAutocompleteV2ResponseMPayload(List<UserAutocompleteElementResponse>  = default(List<UserAutocompleteElementResponse>))
         {
-            // to ensure "aObjUser" is required (not null)
-            if (aObjUser == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjUser is a required property for UserGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjUser = aObjUser;
+            this.AObjUser = ;
         }
 
         /// <summary>

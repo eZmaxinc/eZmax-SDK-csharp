@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyGetCorsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjCors">aObjCors (required).</param>
-        public ApikeyGetCorsV1ResponseMPayload(List<CorsResponseCompound> aObjCors = default(List<CorsResponseCompound>))
+        /// <param name=""> (required).</param>
+        public ApikeyGetCorsV1ResponseMPayload(List<CorsResponseCompound>  = default(List<CorsResponseCompound>))
         {
-            // to ensure "aObjCors" is required (not null)
-            if (aObjCors == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjCors is a required property for ApikeyGetCorsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for ApikeyGetCorsV1ResponseMPayload and cannot be null");
             }
-            this.AObjCors = aObjCors;
+            this.AObjCors = ;
         }
 
         /// <summary>

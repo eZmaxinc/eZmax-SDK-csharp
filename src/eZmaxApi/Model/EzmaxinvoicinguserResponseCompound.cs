@@ -46,38 +46,38 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicinguserResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzmaxinvoicinguserID">The unique ID of the Ezmaxinvoicinguser.</param>
-        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="iEzmaxinvoicinguserEzsigndocument">The number of ezsign documents (required).</param>
-        /// <param name="bEzmaxinvoicinguserEzsignaccount">Whether there is an eZsign account (required).</param>
-        /// <param name="bEzmaxinvoicinguserBillableezsign">Whether it is billable for eZsign (required).</param>
-        /// <param name="eEzmaxinvoicinguserVariationezsign">eEzmaxinvoicinguserVariationezsign (required).</param>
-        /// <param name="objContactName">objContactName (required).</param>
-        public EzmaxinvoicinguserResponseCompound(int pkiEzmaxinvoicinguserID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiUserID = default(int), int iEzmaxinvoicinguserEzsigndocument = default(int), bool bEzmaxinvoicinguserEzsignaccount = default(bool), bool bEzmaxinvoicinguserBillableezsign = default(bool), FieldEEzmaxinvoicinguserVariationezsign eEzmaxinvoicinguserVariationezsign = default(FieldEEzmaxinvoicinguserVariationezsign), CustomContactNameResponse objContactName = default(CustomContactNameResponse))
+        /// <param name="">The unique ID of the Ezmaxinvoicinguser.</param>
+        /// <param name="">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="">The unique ID of the User (required).</param>
+        /// <param name="">The number of ezsign documents (required).</param>
+        /// <param name="">Whether there is an eZsign account (required).</param>
+        /// <param name="">Whether it is billable for eZsign (required).</param>
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public EzmaxinvoicinguserResponseCompound(int  = default(int), int  = default(int), int  = default(int), string  = default(string), int  = default(int), int  = default(int), bool  = default(bool), bool  = default(bool), FieldEEzmaxinvoicinguserVariationezsign  = default(FieldEEzmaxinvoicinguserVariationezsign), CustomContactNameResponse  = default(CustomContactNameResponse))
         {
-            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
-            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
-            if (sBillingentityinternalDescriptionX == null)
+            this.FkiBillingentityinternalID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for EzmaxinvoicinguserResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicinguserResponseCompound and cannot be null");
             }
-            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-            this.FkiUserID = fkiUserID;
-            this.IEzmaxinvoicinguserEzsigndocument = iEzmaxinvoicinguserEzsigndocument;
-            this.BEzmaxinvoicinguserEzsignaccount = bEzmaxinvoicinguserEzsignaccount;
-            this.BEzmaxinvoicinguserBillableezsign = bEzmaxinvoicinguserBillableezsign;
-            this.EEzmaxinvoicinguserVariationezsign = eEzmaxinvoicinguserVariationezsign;
-            // to ensure "objContactName" is required (not null)
-            if (objContactName == null)
+            this.SBillingentityinternalDescriptionX = ;
+            this.FkiUserID = ;
+            this.IEzmaxinvoicinguserEzsigndocument = ;
+            this.BEzmaxinvoicinguserEzsignaccount = ;
+            this.BEzmaxinvoicinguserBillableezsign = ;
+            this.EEzmaxinvoicinguserVariationezsign = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objContactName is a required property for EzmaxinvoicinguserResponseCompound and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzmaxinvoicinguserResponseCompound and cannot be null");
             }
-            this.ObjContactName = objContactName;
-            this.PkiEzmaxinvoicinguserID = pkiEzmaxinvoicinguserID;
-            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
+            this.ObjContactName = ;
+            this.PkiEzmaxinvoicinguserID = ;
+            this.FkiEzmaxinvoicingID = ;
         }
 
         /// <summary>

@@ -40,14 +40,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipRequestCompound" /> class.
         /// </summary>
-        /// <param name="pkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership.</param>
-        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        public EzsigntemplatepackagemembershipRequestCompound(int pkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int))
+        /// <param name="">The unique ID of the Ezsigntemplatepackagemembership.</param>
+        /// <param name="">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
+        public EzsigntemplatepackagemembershipRequestCompound(int  = default(int), int  = default(int), int  = default(int))
         {
-            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
-            this.PkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
+            this.FkiEzsigntemplatepackageID = ;
+            this.FkiEzsigntemplateID = ;
+            this.PkiEzsigntemplatepackagemembershipID = ;
         }
 
         /// <summary>

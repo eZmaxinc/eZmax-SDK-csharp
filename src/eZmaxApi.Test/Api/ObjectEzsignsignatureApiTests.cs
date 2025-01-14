@@ -80,6 +80,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test EzsignsignatureCreateObjectV3
+        /// </summary>
+        [Fact]
+        public void EzsignsignatureCreateObjectV3Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request = null;
+            //var response = instance.EzsignsignatureCreateObjectV3(ezsignsignatureCreateObjectV3Request);
+            //Assert.IsType<EzsignsignatureCreateObjectV3Response>(response);
+        }
+
+        /// <summary>
         /// Test EzsignsignatureDeleteObjectV1
         /// </summary>
         [Fact]
@@ -92,16 +104,16 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzsignsignatureEditObjectV1
+        /// Test EzsignsignatureEditObjectV2
         /// </summary>
         [Fact]
-        public void EzsignsignatureEditObjectV1Test()
+        public void EzsignsignatureEditObjectV2Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsignsignatureID = null;
-            //EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request = null;
-            //var response = instance.EzsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request);
-            //Assert.IsType<EzsignsignatureEditObjectV1Response>(response);
+            //EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request = null;
+            //var response = instance.EzsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
+            //Assert.IsType<EzsignsignatureEditObjectV2Response>(response);
         }
 
         /// <summary>
@@ -128,15 +140,15 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
-        /// Test EzsignsignatureGetObjectV2
+        /// Test EzsignsignatureGetObjectV3
         /// </summary>
         [Fact]
-        public void EzsignsignatureGetObjectV2Test()
+        public void EzsignsignatureGetObjectV3Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsignsignatureID = null;
-            //var response = instance.EzsignsignatureGetObjectV2(pkiEzsignsignatureID);
-            //Assert.IsType<EzsignsignatureGetObjectV2Response>(response);
+            //var response = instance.EzsignsignatureGetObjectV3(pkiEzsignsignatureID);
+            //Assert.IsType<EzsignsignatureGetObjectV3Response>(response);
         }
 
         /// <summary>

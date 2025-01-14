@@ -68,6 +68,18 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test InvoiceGetCommunicationCountV1
+        /// </summary>
+        [Fact]
+        public void InvoiceGetCommunicationCountV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInvoiceID = null;
+            //var response = instance.InvoiceGetCommunicationCountV1(pkiInvoiceID);
+            //Assert.IsType<InvoiceGetCommunicationCountV1Response>(response);
+        }
+
+        /// <summary>
         /// Test InvoiceGetCommunicationListV1
         /// </summary>
         [Fact]
@@ -77,6 +89,30 @@ namespace eZmaxApi.Test.Api
             //int pkiInvoiceID = null;
             //var response = instance.InvoiceGetCommunicationListV1(pkiInvoiceID);
             //Assert.IsType<InvoiceGetCommunicationListV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test InvoiceGetCommunicationrecipientsV1
+        /// </summary>
+        [Fact]
+        public void InvoiceGetCommunicationrecipientsV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInvoiceID = null;
+            //var response = instance.InvoiceGetCommunicationrecipientsV1(pkiInvoiceID);
+            //Assert.IsType<InvoiceGetCommunicationrecipientsV1Response>(response);
+        }
+
+        /// <summary>
+        /// Test InvoiceGetCommunicationsendersV1
+        /// </summary>
+        [Fact]
+        public void InvoiceGetCommunicationsendersV1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int pkiInvoiceID = null;
+            //var response = instance.InvoiceGetCommunicationsendersV1(pkiInvoiceID);
+            //Assert.IsType<InvoiceGetCommunicationsendersV1Response>(response);
         }
     }
 }

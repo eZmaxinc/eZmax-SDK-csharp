@@ -40,54 +40,54 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1Request" /> class.
         /// </summary>
-        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="sUserFirstname">The first name of the user (required).</param>
-        /// <param name="sUserLastname">The last name of the user (required).</param>
-        /// <param name="sEmailAddress">The email address. (required).</param>
-        /// <param name="sPhoneRegion">The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
-        /// <param name="sPhoneExchange">The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
-        /// <param name="sPhoneNumber">The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
-        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
-        public UserCreateEzsignuserV1Request(int fkiLanguageID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sEmailAddress = default(string), string sPhoneRegion = default(string), string sPhoneExchange = default(string), string sPhoneNumber = default(string), string sPhoneExtension = default(string))
+        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="">The first name of the user (required).</param>
+        /// <param name="">The last name of the user (required).</param>
+        /// <param name="">The email address. (required).</param>
+        /// <param name="">The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
+        /// <param name="">The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
+        /// <param name="">The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123 (required).</param>
+        /// <param name="">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
+        public UserCreateEzsignuserV1Request(int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
         {
-            this.FkiLanguageID = fkiLanguageID;
-            // to ensure "sUserFirstname" is required (not null)
-            if (sUserFirstname == null)
+            this.FkiLanguageID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserFirstname is a required property for UserCreateEzsignuserV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserCreateEzsignuserV1Request and cannot be null");
             }
-            this.SUserFirstname = sUserFirstname;
-            // to ensure "sUserLastname" is required (not null)
-            if (sUserLastname == null)
+            this.SUserFirstname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sUserLastname is a required property for UserCreateEzsignuserV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserCreateEzsignuserV1Request and cannot be null");
             }
-            this.SUserLastname = sUserLastname;
-            // to ensure "sEmailAddress" is required (not null)
-            if (sEmailAddress == null)
+            this.SUserLastname = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sEmailAddress is a required property for UserCreateEzsignuserV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserCreateEzsignuserV1Request and cannot be null");
             }
-            this.SEmailAddress = sEmailAddress;
-            // to ensure "sPhoneRegion" is required (not null)
-            if (sPhoneRegion == null)
+            this.SEmailAddress = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sPhoneRegion is a required property for UserCreateEzsignuserV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserCreateEzsignuserV1Request and cannot be null");
             }
-            this.SPhoneRegion = sPhoneRegion;
-            // to ensure "sPhoneExchange" is required (not null)
-            if (sPhoneExchange == null)
+            this.SPhoneRegion = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sPhoneExchange is a required property for UserCreateEzsignuserV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserCreateEzsignuserV1Request and cannot be null");
             }
-            this.SPhoneExchange = sPhoneExchange;
-            // to ensure "sPhoneNumber" is required (not null)
-            if (sPhoneNumber == null)
+            this.SPhoneExchange = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sPhoneNumber is a required property for UserCreateEzsignuserV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for UserCreateEzsignuserV1Request and cannot be null");
             }
-            this.SPhoneNumber = sPhoneNumber;
-            this.SPhoneExtension = sPhoneExtension;
+            this.SPhoneNumber = ;
+            this.SPhoneExtension = ;
         }
 
         /// <summary>

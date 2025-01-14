@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objEzsigntemplatepackage">objEzsigntemplatepackage (required).</param>
-        public EzsigntemplatepackageEditObjectV1Request(EzsigntemplatepackageRequestCompound objEzsigntemplatepackage = default(EzsigntemplatepackageRequestCompound))
+        /// <param name=""> (required).</param>
+        public EzsigntemplatepackageEditObjectV1Request(EzsigntemplatepackageRequestCompound  = default(EzsigntemplatepackageRequestCompound))
         {
-            // to ensure "objEzsigntemplatepackage" is required (not null)
-            if (objEzsigntemplatepackage == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("objEzsigntemplatepackage is a required property for EzsigntemplatepackageEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigntemplatepackageEditObjectV1Request and cannot be null");
             }
-            this.ObjEzsigntemplatepackage = objEzsigntemplatepackage;
+            this.ObjEzsigntemplatepackage = ;
         }
 
         /// <summary>

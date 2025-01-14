@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationattachmentRequest" /> class.
         /// </summary>
-        /// <param name="objCommunicationattachment">objCommunicationattachment.</param>
-        /// <param name="objCommunicationexternalattachment">objCommunicationexternalattachment.</param>
-        public CustomCommunicationattachmentRequest(CommunicationattachmentRequestCompound objCommunicationattachment = default(CommunicationattachmentRequestCompound), CommonFile objCommunicationexternalattachment = default(CommonFile))
+        /// <param name="">.</param>
+        /// <param name="">.</param>
+        public CustomCommunicationattachmentRequest(CommunicationattachmentRequestCompound  = default(CommunicationattachmentRequestCompound), CommonFile  = default(CommonFile))
         {
-            this.ObjCommunicationattachment = objCommunicationattachment;
-            this.ObjCommunicationexternalattachment = objCommunicationexternalattachment;
+            this.ObjCommunicationattachment = ;
+            this.ObjCommunicationexternalattachment = ;
         }
 
         /// <summary>

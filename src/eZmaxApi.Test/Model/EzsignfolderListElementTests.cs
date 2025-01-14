@@ -216,5 +216,32 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'DEzsignfolderCompletedpercentage'
         }
+
+        /// <summary>
+        /// Test the property 'DEzsignfolderFormcompletedpercentage'
+        /// </summary>
+        [Fact]
+        public void DEzsignfolderFormcompletedpercentageTest()
+        {
+            // TODO unit test for the property 'DEzsignfolderFormcompletedpercentage'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzsignfolderSignaturecompletedpercentage'
+        /// </summary>
+        [Fact]
+        public void DEzsignfolderSignaturecompletedpercentageTest()
+        {
+            // TODO unit test for the property 'DEzsignfolderSignaturecompletedpercentage'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignfolderSigner'
+        /// </summary>
+        [Fact]
+        public void BEzsignfolderSignerTest()
+        {
+            // TODO unit test for the property 'BEzsignfolderSigner'
+        }
     }
 }

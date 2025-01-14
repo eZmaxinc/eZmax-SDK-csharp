@@ -72,14 +72,5 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'SCreditcardclientDescription'
         }
-
-        /// <summary>
-        /// Test the property 'BCreditcardclientIsactive'
-        /// </summary>
-        [Fact]
-        public void BCreditcardclientIsactiveTest()
-        {
-            // TODO unit test for the property 'BCreditcardclientIsactive'
-        }
     }
 }

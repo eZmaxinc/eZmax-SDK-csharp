@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetCompletedElementsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjEzsignsignature">aObjEzsignsignature (required).</param>
-        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup (required).</param>
-        public EzsigndocumentGetCompletedElementsV1ResponseMPayload(List<EzsignsignatureResponseCompound> aObjEzsignsignature = default(List<EzsignsignatureResponseCompound>), List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup = default(List<EzsignformfieldgroupResponseCompound>))
+        /// <param name=""> (required).</param>
+        /// <param name=""> (required).</param>
+        public EzsigndocumentGetCompletedElementsV1ResponseMPayload(List<EzsignsignatureResponseCompound>  = default(List<EzsignsignatureResponseCompound>), List<EzsignformfieldgroupResponseCompound>  = default(List<EzsignformfieldgroupResponseCompound>))
         {
-            // to ensure "aObjEzsignsignature" is required (not null)
-            if (aObjEzsignsignature == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignsignature is a required property for EzsigndocumentGetCompletedElementsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentGetCompletedElementsV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignsignature = aObjEzsignsignature;
-            // to ensure "aObjEzsignformfieldgroup" is required (not null)
-            if (aObjEzsignformfieldgroup == null)
+            this.AObjEzsignsignature = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("aObjEzsignformfieldgroup is a required property for EzsigndocumentGetCompletedElementsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for EzsigndocumentGetCompletedElementsV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
+            this.AObjEzsignformfieldgroup = ;
         }
 
         /// <summary>

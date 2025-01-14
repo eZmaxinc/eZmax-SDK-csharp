@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsocketResponseInformationV1MPayload" /> class.
         /// </summary>
-        /// <param name="sInformationMessage">Information message (required).</param>
-        public WebsocketResponseInformationV1MPayload(string sInformationMessage = default(string))
+        /// <param name="">Information message (required).</param>
+        public WebsocketResponseInformationV1MPayload(string  = default(string))
         {
-            // to ensure "sInformationMessage" is required (not null)
-            if (sInformationMessage == null)
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sInformationMessage is a required property for WebsocketResponseInformationV1MPayload and cannot be null");
+                throw new ArgumentNullException(" is a required property for WebsocketResponseInformationV1MPayload and cannot be null");
             }
-            this.SInformationMessage = sInformationMessage;
+            this.SInformationMessage = ;
         }
 
         /// <summary>

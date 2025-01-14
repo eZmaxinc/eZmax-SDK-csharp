@@ -63,5 +63,23 @@ namespace eZmaxApi.Test.Model
         {
             // TODO unit test for the property 'AFkiEzsignfoldertypeID'
         }
+
+        /// <summary>
+        /// Test the property 'BCopyCompany'
+        /// </summary>
+        [Fact]
+        public void BCopyCompanyTest()
+        {
+            // TODO unit test for the property 'BCopyCompany'
+        }
+
+        /// <summary>
+        /// Test the property 'BCopyUser'
+        /// </summary>
+        [Fact]
+        public void BCopyUserTest()
+        {
+            // TODO unit test for the property 'BCopyUser'
+        }
     }
 }

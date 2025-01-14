@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The Type of Ezsigntemplate
+    /// The Type of Ezsigntemplate  **Usergroup** is now deprecated and replace with **Ezsignfoldertype**
     /// </summary>
-    /// <value>The Type of Ezsigntemplate</value>
+    /// <value>The Type of Ezsigntemplate  **Usergroup** is now deprecated and replace with **Ezsignfoldertype**</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEEzsigntemplateType
     {
@@ -49,7 +49,13 @@ namespace eZmaxApi.Model
         /// Enum Company for value: Company
         /// </summary>
         [EnumMember(Value = "Company")]
-        Company = 3
+        Company = 3,
+
+        /// <summary>
+        /// Enum Ezsignfoldertype for value: Ezsignfoldertype
+        /// </summary>
+        [EnumMember(Value = "Ezsignfoldertype")]
+        Ezsignfoldertype = 4
     }
 
 }

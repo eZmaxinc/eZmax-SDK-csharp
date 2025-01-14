@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulegroupResponse" /> class.
         /// </summary>
-        /// <param name="pkiModulegroupID">The unique ID of the Modulegroup (required).</param>
-        /// <param name="sModulegroupNameX">The name of the Modulegroup in the language of the requester (required).</param>
-        public ModulegroupResponse(int pkiModulegroupID = default(int), string sModulegroupNameX = default(string))
+        /// <param name="">The unique ID of the Modulegroup (required).</param>
+        /// <param name="">The name of the Modulegroup in the language of the requester (required).</param>
+        public ModulegroupResponse(int  = default(int), string  = default(string))
         {
-            this.PkiModulegroupID = pkiModulegroupID;
-            // to ensure "sModulegroupNameX" is required (not null)
-            if (sModulegroupNameX == null)
+            this.PkiModulegroupID = ;
+            // to ensure "" is required (not null)
+            if ( == null)
             {
-                throw new ArgumentNullException("sModulegroupNameX is a required property for ModulegroupResponse and cannot be null");
+                throw new ArgumentNullException(" is a required property for ModulegroupResponse and cannot be null");
             }
-            this.SModulegroupNameX = sModulegroupNameX;
+            this.SModulegroupNameX = ;
         }
 
         /// <summary>
